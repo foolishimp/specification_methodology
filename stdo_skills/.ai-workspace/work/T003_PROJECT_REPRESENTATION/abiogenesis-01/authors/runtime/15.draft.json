@@ -1,0 +1,517 @@
+{
+  "concepts": [
+    {
+      "key": "iteration_projection",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FAcceptance%20Criteria",
+          "start_line": 23,
+          "end_line": 47,
+          "quote": "**REQ-R-ABG3-ITERATION-001**: ABG shall derive one active-boundary iteration outcome projection from admitted replay truth.\n\n**REQ-R-ABG3-ITERATION-002**: Evaluator outputs shall contribute semantic satisfaction rows only. They shall not emit runtime, transport, liveness, or evidence-lifecycle authority.\n\n**REQ-R-ABG3-ITERATION-003**: ABG shall derive evidence lifecycle as active, preserved/rebased, or superseded before evidence participates in a closure satisfaction fold. Orphan evidence shall be represented as a failed current-authority binding guard, not as a lifecycle or evaluator category.\n\n**REQ-R-ABG3-ITERATION-004**: ABG shall derive the next iteration outcome from one total priority fold over typed rows. Terminal fallback shall not outrank typed row state and shall not redispatch an active boundary whose current active or preserved/rebased rows already converge or defer.\n\n**REQ-R-ABG3-ITERATION-005**: Every non-close outcome projection shall expose the category, lifecycle, provenance, and failed binding facts needed for replay-visible diagnosis.\n\n**REQ-R-ABG3-ITERATION-006**: Evaluator retry, when allowed by policy, shall be a first-class redispatch target of the same iteration algebra. It shall be distinct from product-worker same-edge redispatch and shall fold to terminate-blocked when its retry policy is exhausted or when the evaluator failure is non-retryable.\n\n**REQ-R-ABG3-ITERATION-007**: Reports, summaries, pressure refs, terminal fallback refs, plugin outcomes, and runner branches may provide source facts or read models for iteration state, but they shall not become rival next-transition truth surfaces.\n\n**REQ-R-ABG3-ITERATION-008**: The public iteration outcome carrier shall expose only primitive outcome constructors: terminate, redispatch, or suspend. Named cases such as close, block, defer, retry, evaluator retry, graph re-entry, and reprice shall be represented as dispositions, redispatch targets, lawful re-entry refs, or reasons over those constructors.\n\n**REQ-R-ABG3-ITERATION-009**: Redispatch targets shall reuse existing `GraphReentryPoint` and target-vector identity. `GraphChangeClass` remains provenance/classification for why that surface was selected; it shall not become a parallel redispatch discriminator.\n\n**REQ-R-ABG3-ITERATION-010**: The total fold shall declare an explicit precedence order for mixed rows. Convergence shall be selected only when no blocking, constitutional re-entry, redispatch, or suspend row remains.\n\n**REQ-R-ABG3-ITERATION-011**: Preserved/rebased evidence shall remain eligible to satisfy current closure only when its authority binding is still current after re-entry. Evidence invalidated by the re-entry scope shall become superseded, and evidence with no lawful current binding shall surface through the binding guard.\n\n**REQ-R-ABG3-ITERATION-012**: Suspend shall be derived from runtime rows such as progressing, awaiting observer, or handoff. Suspend shall not be inferred from semantic satisfaction rows.\n\n**REQ-R-ABG3-ITERATION-013**: The iteration-boundary transition path shall carry exactly one outcome projection. Every consumer shall derive next-transition truth from the one outcome projection or from source-row projection; no adapter, wrapper, or intermediate outcome surface shall stand between them.\n"
+        }
+      ],
+      "label": "One active-boundary iteration projection",
+      "definition": "ABG derives one next-outcome truth from admitted replay using a total priority fold. Public constructors are only terminate,redispatch,suspend; close/block/defer/retry/evaluator-retry/reentry/reprice are dispositions,targets,reentry refs or reasons. Evaluators supply semantic satisfaction only, never runtime/transport/liveness/evidence-lifecycle authority.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "evidence_lifecycle_binding",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FAcceptance%20Criteria",
+          "start_line": 27,
+          "end_line": 43,
+          "quote": "**REQ-R-ABG3-ITERATION-003**: ABG shall derive evidence lifecycle as active, preserved/rebased, or superseded before evidence participates in a closure satisfaction fold. Orphan evidence shall be represented as a failed current-authority binding guard, not as a lifecycle or evaluator category.\n\n**REQ-R-ABG3-ITERATION-004**: ABG shall derive the next iteration outcome from one total priority fold over typed rows. Terminal fallback shall not outrank typed row state and shall not redispatch an active boundary whose current active or preserved/rebased rows already converge or defer.\n\n**REQ-R-ABG3-ITERATION-005**: Every non-close outcome projection shall expose the category, lifecycle, provenance, and failed binding facts needed for replay-visible diagnosis.\n\n**REQ-R-ABG3-ITERATION-006**: Evaluator retry, when allowed by policy, shall be a first-class redispatch target of the same iteration algebra. It shall be distinct from product-worker same-edge redispatch and shall fold to terminate-blocked when its retry policy is exhausted or when the evaluator failure is non-retryable.\n\n**REQ-R-ABG3-ITERATION-007**: Reports, summaries, pressure refs, terminal fallback refs, plugin outcomes, and runner branches may provide source facts or read models for iteration state, but they shall not become rival next-transition truth surfaces.\n\n**REQ-R-ABG3-ITERATION-008**: The public iteration outcome carrier shall expose only primitive outcome constructors: terminate, redispatch, or suspend. Named cases such as close, block, defer, retry, evaluator retry, graph re-entry, and reprice shall be represented as dispositions, redispatch targets, lawful re-entry refs, or reasons over those constructors.\n\n**REQ-R-ABG3-ITERATION-009**: Redispatch targets shall reuse existing `GraphReentryPoint` and target-vector identity. `GraphChangeClass` remains provenance/classification for why that surface was selected; it shall not become a parallel redispatch discriminator.\n\n**REQ-R-ABG3-ITERATION-010**: The total fold shall declare an explicit precedence order for mixed rows. Convergence shall be selected only when no blocking, constitutional re-entry, redispatch, or suspend row remains.\n\n**REQ-R-ABG3-ITERATION-011**: Preserved/rebased evidence shall remain eligible to satisfy current closure only when its authority binding is still current after re-entry. Evidence invalidated by the re-entry scope shall become superseded, and evidence with no lawful current binding shall surface through the binding guard.\n"
+        }
+      ],
+      "label": "Evidence lifecycle and current binding",
+      "definition": "Before closure fold ABG classifies evidence active,preserved/rebased,superseded. Orphan evidence is failed current-authority binding guard, not evaluator/lifecycle category. Preserved/rebased evidence satisfies only while authority remains current after reentry; invalidated scope supersedes evidence and absent lawful binding surfaces guard.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "scoped_iteration_rows",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FAcceptance%20Criteria",
+          "start_line": 51,
+          "end_line": 64,
+          "quote": "**REQ-R-ABG3-ITERATION-015**: Iteration satisfaction, runtime, binding-guard, and redispatch target rows may carry an admitted evaluation scope ref subordinate to the current graph call, frame, graph function, graph vector, vector index, and selected composition. Scoped rows shall remain facts for the active graph-vector boundary; they shall not create a public GTL topology object or a second traversal target family.\n\n**REQ-R-ABG3-ITERATION-016**: Scoped redispatch shall reuse the existing `redispatch` outcome constructor. Segment, dimension-cell, fold, or relation failures shall be represented as scope metadata on rows and redispatch targets, not as new iteration outcome constructors.\n\n**REQ-R-ABG3-ITERATION-017**: A failed scoped row may redispatch only that admitted scope when the scope binding is current and sibling scoped evidence remains current. ABG shall preserve sibling scoped rows unless authority, input, correction, or re-entry lineage makes them stale, superseded, orphan-bound, or contradictory.\n\n**REQ-R-ABG3-ITERATION-018**: Malformed, stale, mismatched, or topology-unbound evaluation scope refs shall fail closed as admission, binding-guard, stale-input, orphan, block, or re-entry truth. ABG shall not infer evaluation scope identity from prompt text, diagnostic strings, filenames, wall-clock completion order, or downstream product naming convention.\n\n**REQ-R-ABG3-ITERATION-019**: The iteration outcome algebra shall recognize\nexecutive-observer pressure facts as typed projection inputs for attenuation,\nnon-attenuating retry, local repair, nonlocal re-entry, reprice, block, or\nclose-candidate state. Exact same-pressure retry shall remain detectable as\n`non_attenuating_retry` unless admitted evidence, scope narrowing, route\nchange, re-entry, reprice, block, or closure truth changes the pressure basis.\n"
+        }
+      ],
+      "label": "Admitted scoped iteration rows",
+      "definition": "Satisfaction,runtime,guard and redispatch rows may carry evaluation scope subordinate to current call/frame/function/vector/index/composition. Scope remains active-vector fact, not public topology or new target/outcome family; segment/dimension/fold/relation failures use scope metadata on existing redispatch.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "semantic_runtime_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-JOB-WORKER.md#REQ-R-ABG3-JOB-WORKER%20%E2%80%94%20Semantic%20Work%20And%20Runtime%20Execution%20Separation",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-JOB-WORKER — Semantic Work And Runtime Execution Separation\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Semantic/runtime separation provenance",
+      "definition": "Active Constraint/Guarantee dated 2026-04-05 with legacy method/intent/Product derivations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "semantic_runtime_separation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-JOB-WORKER.md#REQ-R-ABG3-JOB-WORKER%20%E2%80%94%20Semantic%20Work%20And%20Runtime%20Execution%20Separation%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "Keep semantic GTL work surfaces distinct from concrete ABG runtime aggregates.\n"
+        }
+      ],
+      "label": "Semantic/runtime separation",
+      "definition": "Semantic GTL work and concrete ABG aggregates remain distinct.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "leaf_task_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LEAFTASK.md#REQ-R-ABG3-LEAFTASK%20%E2%80%94%20Bounded%20Subordinate%20Work",
+          "start_line": 1,
+          "end_line": 7,
+          "quote": "# REQ-R-ABG3-LEAFTASK — Bounded Subordinate Work\n\n**Status**: Active\n**Lineage**: T-283 Product basis; T-284 bounded owner repair\n**Category**: Capability\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Leaf task provenance",
+      "definition": "Active capability dated 2026-04-05 with T-283 basis/T-284 repair lineage and legacy method/intent/Product derivation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "bounded_leaf_task",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LEAFTASK.md#REQ-R-ABG3-LEAFTASK%20%E2%80%94%20Bounded%20Subordinate%20Work%2FPurpose",
+          "start_line": 13,
+          "end_line": 15,
+          "quote": "Define bounded subordinate subwork as GTL-declared work checked by the\nvalidator, traversed by HoG, realized by a selected implementation binding, and\nadmitted as runtime truth by ABG rather than an imperative escape hatch.\n"
+        }
+      ],
+      "label": "Bounded subordinate work",
+      "definition": "GTL declares subordinate work, validator checks it, HoG traverses, selected implementation realizes, ABG admits runtime truth; no imperative escape hatch.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "lineage_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LINEAGE.md#REQ-R-ABG3-LINEAGE%20%E2%80%94%20Work%20Identity%20And%20Causal%20Lineage",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-LINEAGE — Work Identity And Causal Lineage\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Lineage provenance",
+      "definition": "Active Constraint/Guarantee dated 2026-04-05 with legacy method/intent/Product derivations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "causal_lineage",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LINEAGE.md#REQ-R-ABG3-LINEAGE%20%E2%80%94%20Work%20Identity%20And%20Causal%20Lineage%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define lineage and causal identity across runs, graph calls, frames, and\ncontinuations.\n"
+        }
+      ],
+      "label": "Causal lineage",
+      "definition": "Lineage and causal identity span run,graph-call,frame and continuation aggregates.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "payload_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-PAYLOAD — Event-Sourced Payload Ledger\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-07-11\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-EVENTS.md](REQ-R-ABG3-EVENTS.md), [REQ-R-ABG3-PROJECTION.md](REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-ASSURANCE.md](REQ-R-ABG3-ASSURANCE.md), [REQ-R-ABG3-TRANSPORT.md](REQ-R-ABG3-TRANSPORT.md), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md)\n"
+        }
+      ],
+      "label": "Payload ledger provenance",
+      "definition": "Active Constraint/Guarantee dated 2026-07-11 deriving from legacy method, intent/Product and event/projection/assurance/transport/hooks owners.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "payload_ledger",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FPurpose",
+          "start_line": 12,
+          "end_line": 17,
+          "quote": "Define ABG's payload ledger as an event-sourced runtime truth surface.\n\nPayloads that matter to traversal, authority, evidence, ambiguity, closure,\nprovenance, or downstream register projection shall pass through ABG admission.\nLedgers are deterministic projections over admitted ABG events and declared GTL\nsurfaces. They are not writable truth stores.\n"
+        }
+      ],
+      "label": "Event-sourced payload ledger",
+      "definition": "Payloads affecting traversal,authority,evidence,ambiguity,closure,provenance or downstream registers pass ABG admission. Ledgers deterministically project admitted events and GTL; they are not writable truth stores.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "scoped_rows_feed_one_outcome",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FAcceptance%20Criteria",
+          "start_line": 51,
+          "end_line": 55,
+          "quote": "**REQ-R-ABG3-ITERATION-015**: Iteration satisfaction, runtime, binding-guard, and redispatch target rows may carry an admitted evaluation scope ref subordinate to the current graph call, frame, graph function, graph vector, vector index, and selected composition. Scoped rows shall remain facts for the active graph-vector boundary; they shall not create a public GTL topology object or a second traversal target family.\n\n**REQ-R-ABG3-ITERATION-016**: Scoped redispatch shall reuse the existing `redispatch` outcome constructor. Segment, dimension-cell, fold, or relation failures shall be represented as scope metadata on rows and redispatch targets, not as new iteration outcome constructors.\n\n**REQ-R-ABG3-ITERATION-017**: A failed scoped row may redispatch only that admitted scope when the scope binding is current and sibling scoped evidence remains current. ABG shall preserve sibling scoped rows unless authority, input, correction, or re-entry lineage makes them stale, superseded, orphan-bound, or contradictory.\n"
+        }
+      ],
+      "source_key": "scoped_iteration_rows",
+      "target_key": "iteration_projection",
+      "kind": "fold_input",
+      "meaning": "Scoped facts participate in the existing active-boundary outcome algebra and redispatch constructor.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "iteration_total_precedence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 49,
+          "quote": "**REQ-R-ABG3-ITERATION-004**: ABG shall derive the next iteration outcome from one total priority fold over typed rows. Terminal fallback shall not outrank typed row state and shall not redispatch an active boundary whose current active or preserved/rebased rows already converge or defer.\n\n**REQ-R-ABG3-ITERATION-005**: Every non-close outcome projection shall expose the category, lifecycle, provenance, and failed binding facts needed for replay-visible diagnosis.\n\n**REQ-R-ABG3-ITERATION-006**: Evaluator retry, when allowed by policy, shall be a first-class redispatch target of the same iteration algebra. It shall be distinct from product-worker same-edge redispatch and shall fold to terminate-blocked when its retry policy is exhausted or when the evaluator failure is non-retryable.\n\n**REQ-R-ABG3-ITERATION-007**: Reports, summaries, pressure refs, terminal fallback refs, plugin outcomes, and runner branches may provide source facts or read models for iteration state, but they shall not become rival next-transition truth surfaces.\n\n**REQ-R-ABG3-ITERATION-008**: The public iteration outcome carrier shall expose only primitive outcome constructors: terminate, redispatch, or suspend. Named cases such as close, block, defer, retry, evaluator retry, graph re-entry, and reprice shall be represented as dispositions, redispatch targets, lawful re-entry refs, or reasons over those constructors.\n\n**REQ-R-ABG3-ITERATION-009**: Redispatch targets shall reuse existing `GraphReentryPoint` and target-vector identity. `GraphChangeClass` remains provenance/classification for why that surface was selected; it shall not become a parallel redispatch discriminator.\n\n**REQ-R-ABG3-ITERATION-010**: The total fold shall declare an explicit precedence order for mixed rows. Convergence shall be selected only when no blocking, constitutional re-entry, redispatch, or suspend row remains.\n\n**REQ-R-ABG3-ITERATION-011**: Preserved/rebased evidence shall remain eligible to satisfy current closure only when its authority binding is still current after re-entry. Evidence invalidated by the re-entry scope shall become superseded, and evidence with no lawful current binding shall surface through the binding guard.\n\n**REQ-R-ABG3-ITERATION-012**: Suspend shall be derived from runtime rows such as progressing, awaiting observer, or handoff. Suspend shall not be inferred from semantic satisfaction rows.\n\n**REQ-R-ABG3-ITERATION-013**: The iteration-boundary transition path shall carry exactly one outcome projection. Every consumer shall derive next-transition truth from the one outcome projection or from source-row projection; no adapter, wrapper, or intermediate outcome surface shall stand between them.\n\n**REQ-R-ABG3-ITERATION-014**: A caller-provided close-eligible flag may only act as compact evidence that the current active or preserved/rebased satisfaction set is fully satisfied. It shall not converge a boundary when any current satisfaction row is unsatisfied, deferred, orphan-bound, or blocked by runtime facts.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "iteration_projection",
+        "evidence_lifecycle_binding"
+      ],
+      "statement": "Declare explicit mixed-row precedence; converge only absent blocking,constitutional reentry,redispatch or suspend rows. Terminal fallback cannot outrank rows or redispatch when active/preserved evidence converges or defers. Every nonclose exposes category,lifecycle,provenance,failed binding for replay diagnosis. Suspend comes from runtime progressing/observer-wait/handoff, never semantic satisfaction. Close-eligible caller flag only abbreviates fully satisfied current set and cannot converge with unsatisfied,deferred,orphan-bound or runtime-blocked row.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "iteration_routing_single_surface",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FAcceptance%20Criteria",
+          "start_line": 33,
+          "end_line": 47,
+          "quote": "**REQ-R-ABG3-ITERATION-006**: Evaluator retry, when allowed by policy, shall be a first-class redispatch target of the same iteration algebra. It shall be distinct from product-worker same-edge redispatch and shall fold to terminate-blocked when its retry policy is exhausted or when the evaluator failure is non-retryable.\n\n**REQ-R-ABG3-ITERATION-007**: Reports, summaries, pressure refs, terminal fallback refs, plugin outcomes, and runner branches may provide source facts or read models for iteration state, but they shall not become rival next-transition truth surfaces.\n\n**REQ-R-ABG3-ITERATION-008**: The public iteration outcome carrier shall expose only primitive outcome constructors: terminate, redispatch, or suspend. Named cases such as close, block, defer, retry, evaluator retry, graph re-entry, and reprice shall be represented as dispositions, redispatch targets, lawful re-entry refs, or reasons over those constructors.\n\n**REQ-R-ABG3-ITERATION-009**: Redispatch targets shall reuse existing `GraphReentryPoint` and target-vector identity. `GraphChangeClass` remains provenance/classification for why that surface was selected; it shall not become a parallel redispatch discriminator.\n\n**REQ-R-ABG3-ITERATION-010**: The total fold shall declare an explicit precedence order for mixed rows. Convergence shall be selected only when no blocking, constitutional re-entry, redispatch, or suspend row remains.\n\n**REQ-R-ABG3-ITERATION-011**: Preserved/rebased evidence shall remain eligible to satisfy current closure only when its authority binding is still current after re-entry. Evidence invalidated by the re-entry scope shall become superseded, and evidence with no lawful current binding shall surface through the binding guard.\n\n**REQ-R-ABG3-ITERATION-012**: Suspend shall be derived from runtime rows such as progressing, awaiting observer, or handoff. Suspend shall not be inferred from semantic satisfaction rows.\n\n**REQ-R-ABG3-ITERATION-013**: The iteration-boundary transition path shall carry exactly one outcome projection. Every consumer shall derive next-transition truth from the one outcome projection or from source-row projection; no adapter, wrapper, or intermediate outcome surface shall stand between them.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "iteration_projection"
+      ],
+      "statement": "Policy-permitted evaluator retry is first-class redispatch distinct from Product worker same-edge retry, and terminates blocked when exhausted/nonretryable. Reports/summaries/pressure/fallback/plugin/runner sources are not rival next-transition truth. Redispatch reuses GraphReentryPoint and vector identity; GraphChangeClass only provenance, not parallel discriminator. Exactly one outcome projection crosses transition boundary; all consumers use it or source rows without intermediate wrapper/adapter outcome.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "scoped_iteration_preservation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FAcceptance%20Criteria",
+          "start_line": 55,
+          "end_line": 64,
+          "quote": "**REQ-R-ABG3-ITERATION-017**: A failed scoped row may redispatch only that admitted scope when the scope binding is current and sibling scoped evidence remains current. ABG shall preserve sibling scoped rows unless authority, input, correction, or re-entry lineage makes them stale, superseded, orphan-bound, or contradictory.\n\n**REQ-R-ABG3-ITERATION-018**: Malformed, stale, mismatched, or topology-unbound evaluation scope refs shall fail closed as admission, binding-guard, stale-input, orphan, block, or re-entry truth. ABG shall not infer evaluation scope identity from prompt text, diagnostic strings, filenames, wall-clock completion order, or downstream product naming convention.\n\n**REQ-R-ABG3-ITERATION-019**: The iteration outcome algebra shall recognize\nexecutive-observer pressure facts as typed projection inputs for attenuation,\nnon-attenuating retry, local repair, nonlocal re-entry, reprice, block, or\nclose-candidate state. Exact same-pressure retry shall remain detectable as\n`non_attenuating_retry` unless admitted evidence, scope narrowing, route\nchange, re-entry, reprice, block, or closure truth changes the pressure basis.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "scoped_iteration_rows"
+      ],
+      "statement": "Failed scope may redispatch alone only with current scope binding and current sibling evidence. Preserve siblings unless authority/input/correction/reentry makes them stale/superseded/orphan/contradictory. Malformed/stale/mismatched/unbound refs fail as admission/guard/stale/orphan/block/reentry; no scope inference from prompts/diagnostics/files/time/naming. Observer pressure inputs classify attenuation,nonattenuating retry,repair,reentry,reprice,block,close-candidate. Exact same pressure retry remains non_attenuating_retry unless admitted evidence,scope narrowing,route,reentry,reprice,block or closure changes basis.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Admitted authority/input/correction/reentry invalidation may invalidate siblings."
+      ]
+    },
+    {
+      "key": "semantic_runtime_ownership",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-JOB-WORKER.md#REQ-R-ABG3-JOB-WORKER%20%E2%80%94%20Semantic%20Work%20And%20Runtime%20Execution%20Separation%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 22,
+          "quote": "**REQ-R-ABG3-JOB-WORKER-001**: Semantic `Job` and `Role` shall remain GTL-owned surfaces. `Worker`, `Run`, `GraphCall`, `Frame`, and `Continuation` shall remain ABG-owned runtime surfaces.\n\n**REQ-R-ABG3-JOB-WORKER-002**: Binding, replay, and provenance surfaces shall preserve the distinction between semantic work declarations and concrete runtime execution identity.\n\n**REQ-R-ABG3-JOB-WORKER-003**: Internal runtime-local wrapper jobs used for frame progression or termination checks shall not be treated as public semantic work contracts.\n\n**REQ-R-ABG3-JOB-WORKER-004**: ABG shall not collapse runtime execution truth into GTL semantic work declarations or product-local imperative controller state.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "semantic_runtime_separation"
+      ],
+      "statement": "GTL owns Job/Role; ABG owns Worker/Run/GraphCall/Frame/Continuation. Binding/replay/provenance preserve semantic declaration vs execution identity. Runtime-local wrapper jobs for progression/termination are not public work contracts. Do not collapse runtime truth into GTL declaration or imperative Product controller state.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "leaf_task_parent_boundary",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LEAFTASK.md#REQ-R-ABG3-LEAFTASK%20%E2%80%94%20Bounded%20Subordinate%20Work%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 25,
+          "quote": "**REQ-R-ABG3-LEAFTASK-001**: GTL shall declare bounded subordinate subwork with explicit schema-validated input/output, scope, and parent relation. The validator shall check those static relations. HoG shall traverse the admitted declaration and the selected implementation binding shall realize its leaf effect only after ABG admits the exact parent execution and binding identity.\n\n**REQ-R-ABG3-LEAFTASK-002**: Leaf-task dispatch shall remain subordinate to the parent GTL/HoG traversal and ABG runtime boundary. It shall not become a rival top-level execution ontology.\n\n**REQ-R-ABG3-LEAFTASK-003**: Leaf-task failures shall classify distinctly at the runtime or payload boundary without parsing agent internals as domain truth.\n\n**REQ-R-ABG3-LEAFTASK-004**: Implementation realization of leaf-task execution shall remain replay-visible through lawful ABG runtime events or authoritative parent-boundary facts.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "bounded_leaf_task"
+      ],
+      "statement": "Declare schema-validated I/O,scope,parent relation and statically validate. Leaf effect occurs only after exact parent execution/binding admission. Dispatch stays subordinate to parent GTL/HoG and ABG boundary, never rival top-level ontology. Classify failures distinctly at runtime/payload without interpreting agent internals as domain truth. Realization remains replay-visible in lawful events or authoritative parent facts.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "lineage_identity_conservation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LINEAGE.md#REQ-R-ABG3-LINEAGE%20%E2%80%94%20Work%20Identity%20And%20Causal%20Lineage%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 25,
+          "quote": "**REQ-R-ABG3-LINEAGE-001**: `work_key` shall remain the lineage identity of graph application scope across run attempts.\n\n**REQ-R-ABG3-LINEAGE-002**: Spawn, foldback, substitution, fan-out, and fan-in shall preserve explainable lineage through event causation/correlation.\n\n**REQ-R-ABG3-LINEAGE-003**: `frame_lineage_id` shall remain stable across reopening or retry of the same recursive invocation boundary, while `frame_attempt_id` shall mint fresh attempt identity.\n\n**REQ-R-ABG3-LINEAGE-004**: Each retry, reopen, or replacement callable attempt shall mint a fresh `GraphCall` identity. Cross-call relation shall be carried by event causation/correlation rather than a rival graph-call lineage aggregate.\n\n**REQ-R-ABG3-LINEAGE-005**: `Continuation` shall be strictly run-local. Cross-run carry-forward shall be represented by authoritative closure of the old continuation and opening of a new continuation with explicit causal linkage.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "causal_lineage"
+      ],
+      "statement": "work_key identifies graph-application lineage across attempts. Spawn/foldback/substitution/fanout/fanin use explainable event causation/correlation. Same recursive boundary retains frame_lineage_id with fresh frame_attempt_id on reopen/retry. Every callable retry/reopen/replacement gets new GraphCall id; causation/correlation relates calls, no rival lineage aggregate. Continuation is run-local; cross-run carry authoritatively closes old and opens new with causal link.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "payload_body_location_and_ownership",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FScope",
+          "start_line": 21,
+          "end_line": 28,
+          "quote": "This requirement governs payload envelopes and their runtime truth. Payload\nbodies may live outside ABG as files, artifacts, object-store entries, archives,\nor downstream product assets. ABG owns the authoritative envelope, reference,\ndigest, schema or contract identity, runtime binding, provenance, and admission\nstatus when the payload participates in runtime or assurance truth.\n\nThis requirement does not make ABG own private worker reasoning, domain payload\nmeaning, product-specific gain functions, or downstream release interpretation.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "payload_ledger"
+      ],
+      "allowed": [
+        "Bodies may be external files,artifacts,object-store entries,archives or Product assets; ABG owns authoritative envelope/ref/digest/schema-contract/runtime binding/provenance/admission when participating in runtime/assurance."
+      ],
+      "forbidden": [
+        "Treat envelope governance as ABG ownership of private reasoning,domain meaning,Product gain functions or downstream release interpretation."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "iteration_fold_execution_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FAcceptance%20Criteria",
+          "start_line": 41,
+          "end_line": 43,
+          "quote": "**REQ-R-ABG3-ITERATION-010**: The total fold shall declare an explicit precedence order for mixed rows. Convergence shall be selected only when no blocking, constitutional re-entry, redispatch, or suspend row remains.\n\n**REQ-R-ABG3-ITERATION-011**: Preserved/rebased evidence shall remain eligible to satisfy current closure only when its authority binding is still current after re-entry. Evidence invalidated by the re-entry scope shall become superseded, and evidence with no lawful current binding shall surface through the binding guard.\n"
+        }
+      ],
+      "subject_key": "iteration_projection",
+      "uncertainty": "The source requires explicit precedence and current binding but does not provide the complete concrete fold table or execution evidence.",
+      "consequence": "Do not invent a precedence algorithm or assert runtime conformity."
+    },
+    {
+      "key": "semantic_runtime_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-JOB-WORKER.md#REQ-R-ABG3-JOB-WORKER%20%E2%80%94%20Semantic%20Work%20And%20Runtime%20Execution%20Separation",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "semantic_runtime_metadata",
+      "uncertainty": "Referenced source contents absent.",
+      "consequence": "Metadata does not resolve authority identities."
+    },
+    {
+      "key": "leaf_task_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LEAFTASK.md#REQ-R-ABG3-LEAFTASK%20%E2%80%94%20Bounded%20Subordinate%20Work",
+          "start_line": 4,
+          "end_line": 7,
+          "quote": "**Lineage**: T-283 Product basis; T-284 bounded owner repair\n**Category**: Capability\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "leaf_task_metadata",
+      "uncertainty": "Referenced lineage and source contents absent.",
+      "consequence": "No current acceptance or external identity is inferred."
+    },
+    {
+      "key": "lineage_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LINEAGE.md#REQ-R-ABG3-LINEAGE%20%E2%80%94%20Work%20Identity%20And%20Causal%20Lineage",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "lineage_metadata",
+      "uncertainty": "Referenced source contents absent.",
+      "consequence": "No cross-chunk identity resolution is made."
+    },
+    {
+      "key": "payload_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-EVENTS.md](REQ-R-ABG3-EVENTS.md), [REQ-R-ABG3-PROJECTION.md](REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-ASSURANCE.md](REQ-R-ABG3-ASSURANCE.md), [REQ-R-ABG3-TRANSPORT.md](REQ-R-ABG3-TRANSPORT.md), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md)\n"
+        }
+      ],
+      "subject_key": "payload_metadata",
+      "uncertainty": "Referenced source contents absent.",
+      "consequence": "Retain derivation references without resolving them."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "iteration_projection",
+        "evidence_lifecycle_binding",
+        "scoped_iteration_rows",
+        "scoped_rows_feed_one_outcome",
+        "iteration_total_precedence",
+        "iteration_routing_single_surface",
+        "scoped_iteration_preservation",
+        "iteration_fold_execution_unresolved"
+      ],
+      "reason": "Outcome laws retained while complete concrete operational fold remains unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-JOB-WORKER.md#REQ-R-ABG3-JOB-WORKER%20%E2%80%94%20Semantic%20Work%20And%20Runtime%20Execution%20Separation",
+      "decision": "residual",
+      "keys": [
+        "semantic_runtime_metadata",
+        "semantic_runtime_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved links."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-JOB-WORKER.md#REQ-R-ABG3-JOB-WORKER%20%E2%80%94%20Semantic%20Work%20And%20Runtime%20Execution%20Separation%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "semantic_runtime_separation"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-JOB-WORKER.md#REQ-R-ABG3-JOB-WORKER%20%E2%80%94%20Semantic%20Work%20And%20Runtime%20Execution%20Separation%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "semantic_runtime_ownership"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LEAFTASK.md#REQ-R-ABG3-LEAFTASK%20%E2%80%94%20Bounded%20Subordinate%20Work",
+      "decision": "residual",
+      "keys": [
+        "leaf_task_metadata",
+        "leaf_task_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved lineage."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LEAFTASK.md#REQ-R-ABG3-LEAFTASK%20%E2%80%94%20Bounded%20Subordinate%20Work%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "bounded_leaf_task"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LEAFTASK.md#REQ-R-ABG3-LEAFTASK%20%E2%80%94%20Bounded%20Subordinate%20Work%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "leaf_task_parent_boundary"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LINEAGE.md#REQ-R-ABG3-LINEAGE%20%E2%80%94%20Work%20Identity%20And%20Causal%20Lineage",
+      "decision": "residual",
+      "keys": [
+        "lineage_metadata",
+        "lineage_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved links."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LINEAGE.md#REQ-R-ABG3-LINEAGE%20%E2%80%94%20Work%20Identity%20And%20Causal%20Lineage%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "causal_lineage"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-LINEAGE.md#REQ-R-ABG3-LINEAGE%20%E2%80%94%20Work%20Identity%20And%20Causal%20Lineage%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "lineage_identity_conservation"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger",
+      "decision": "residual",
+      "keys": [
+        "payload_metadata",
+        "payload_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved links."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "payload_ledger"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FScope",
+      "decision": "retained",
+      "keys": [
+        "payload_body_location_and_ownership"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    }
+  ],
+  "limitations": [
+    "The three iteration constructors and evidence lifecycle/current-binding distinction are retained without inventing a missing concrete precedence table.",
+    "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+  ]
+}

@@ -1,0 +1,884 @@
+{
+  "concepts": [
+    {
+      "key": "gtl_law",
+      "label": "GTL language law",
+      "definition": "Governing graph, type, interface, composition, recursion, identity, publication, diagnostic and declaration laws for engine-independent event-sourced interpretation.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 50,
+          "quote": "**REQ-L-GTL3-LAWS-001**: Graph primacy — all workflow structure is graph.\n\n**REQ-L-GTL3-LAWS-002**: Typed node law — local graph meaning is carried by typed nodes.\n\n**REQ-L-GTL3-LAWS-003**: Interface law — composition and substitution are lawful only when interfaces align.\n\n**REQ-L-GTL3-LAWS-004**: Operator/evaluator separation — work and convergence are distinct concerns.\n\n**REQ-L-GTL3-LAWS-005**: Composition associativity — lawful composition groups without changing the outer contract.\n\n**REQ-L-GTL3-LAWS-006**: Identity graph function — an identity graph function preserves the interface.\n\n**REQ-L-GTL3-LAWS-007**: Substitutability — interface-equivalent graph functions are interchangeable at the contract boundary.\n\n**REQ-L-GTL3-LAWS-008**: Contract preservation — refinement may change internals but shall preserve the declared outer contract.\n\n**REQ-L-GTL3-LAWS-009**: Recursion with preserved lineage and explicit foldback — recursive graph application preserves explainable lineage and declared rebinding law.\n\n**REQ-L-GTL3-LAWS-010**: Higher-order legality — fan-out, fan-in, gate, and promote preserve interface and type truth.\n\n**REQ-L-GTL3-LAWS-011**: Separation from hidden strategic choice — GTL exposes lawful structure, candidates, and hooks, not hidden selection.\n\n**REQ-L-GTL3-LAWS-012**: Suitability for event-sourced interpretation — GTL constructs shall be lawfully interpretable by an event-sourced runtime.\n\n**REQ-L-GTL3-LAWS-013**: Engine independence — language semantics do not depend on any single engine implementation.\n\n**REQ-L-GTL3-LAWS-014**: Categorical identity — first-class declarations carry opaque identity distinct from labels, and targeting occurs by identity.\n\n**REQ-L-GTL3-LAWS-015**: Semantic work and execution separation — GTL declares jobs over published graph functions and roles; engines realize runs, workers, materialization, internal traversal, and runtime truth.\n\n**REQ-L-GTL3-LAWS-016**: Governance by hook attachment — GTL exposes governance hook surfaces and opaque configuration rather than tactic prescription or a policy semantic language.\n\n**REQ-L-GTL3-LAWS-017**: Explicit invariant traversal visibility — contract boundaries may visibly declare invariant traversal truth.\n\n**REQ-L-GTL3-LAWS-018**: Replayable hook and publication truth — publication, materialization, hook attachment, and derived bundle truth shall remain inspectable and replayable.\n"
+        }
+      ]
+    },
+    {
+      "key": "conformance_diagnostic",
+      "label": "Conformance diagnostic",
+      "definition": "Typed failure with stable published or declaration-carried identity and optional ratified admissible-repair carrier; a diagnostic does not authorize or execute repair.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 52,
+          "end_line": 62,
+          "quote": "**REQ-L-GTL3-LAWS-019**: Typed diagnostic identity — conformance failure is\ntyped truth: every conformance diagnostic carries a stable diagnostic identity\nfrom the published closed `GTL_PROGRAM_DIAGNOSTIC_ID_VALUES` vocabulary and\n`GtlProgramDiagnosticId` type located by contract group\n`abg.contract.abg.m03`, or a declaration-carried identity whose namespace is\nadmitted from declared policy rows. An unknown identity fails closed at the\ndiagnostic constructor boundary; declaration-carried identities are validated\nagainst the admitted declaration set as successor law. Diagnostic identities\nare stable across releases and are removed only by supersession, not by renaming.\n\n**REQ-L-GTL3-LAWS-020**: Admissible repair affordance — a ratified diagnostic may carry a typed admissible-repair set naming the lawful repair moves for that failure: the repair surface, the smallest lawful edit class, and the governing change class when the repair is constitutional. Repair affordances are typed carriers over declared truth, not prose advice, and they do not perform, select, or authorize the repair.\n"
+        }
+      ]
+    },
+    {
+      "key": "canonical_declaration",
+      "label": "Canonical authored declaration",
+      "definition": "Pure declaration data with one stably ordered serialization and content-addressed digest; the same serialization law governs identity canonicalization and authored form.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 64,
+          "end_line": 76,
+          "quote": "**REQ-L-GTL3-LAWS-021**: Canonical authored form — an authored GTL program has one canonical data serialization with stable ordering and content-addressable digest identity. Identity canonicalization for digests and the canonical authored form are the same serialization law; alternate orderings or spellings are not rival authored truth.\n\n**REQ-L-GTL3-LAWS-022**: Declarations are data — authored GTL declaration\ntruth is pure data in the canonical form. A published native constructor may\nuse total deterministic host-language computation to assemble that data from\nexplicit typed inputs when the result serializes to the one canonical form,\nround-trips through raw admission without loss, and derives the same content\ndigest. The constructor is authoring syntax, not a second declaration\nauthority. Declaration content derived from ambient process state, runtime\nevents, filesystem discovery, randomness, clock time, unstable iteration, or\nhidden defaults is drift; so is a module export without an exact canonical\nround-trip witness. Conformance rejects those sources at the declaration\nboundary.\n"
+        }
+      ]
+    },
+    {
+      "key": "conformance_corpus",
+      "label": "Language conformance corpus",
+      "definition": "One canonical content-addressed, implementation-independent Program/expected-diagnostic corpus located through public contract catalog asset abg.asset.gtl.language-conformance-corpus, distinct from requirement corpus and qualification evidence.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 86,
+          "end_line": 93,
+          "quote": "**REQ-L-GTL3-LAWS-027**: Language conformance corpus — the language publishes\none canonical, content-addressed corpus pairing programs with expected\ndiagnostic identities. The exact product public contract catalog locates its\nschema, asset, digest, and diagnostic-vocabulary dependency under\n`abg.asset.gtl.language-conformance-corpus`. The corpus is the\nimplementation-independent oracle: a conforming toolchain replays every entry\nto the exact expected identities. A test-only fixture is not publication. The\ncorpus is distinct from the requirements corpus and qualification evidence.\n"
+        }
+      ]
+    },
+    {
+      "key": "constitutional_witness",
+      "label": "Constitutional surface witness",
+      "definition": "Surface reference/content digest/version disposition/declared version line/separate version-binding reference/cited ticket references, joined to separately authorized surface-subject bindings and live facts.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 95,
+          "end_line": 108,
+          "quote": "**REQ-L-GTL3-LAWS-028**: Constitutional surfaces are witnessed data and\ndrift is a typed conformance failure. A loader witnesses constitutional\nsurfaces (surface ref, content digest, version disposition, declared version\nline, separate version-binding ref, and cited ticket refs), separately\nauthorized surface-to-subject bindings, and live facts. Version subjects are a\nclosed tagged family: mutable source project, immutable published RC cut,\ntapped release cut, released product, and stamped installed product. These\nsubjects never substitute for one another. For every versioned surface the\nGTL validator shall resolve exactly one binding by binding ref and surface\nref, then exactly one version fact for that binding's exact tagged subject,\nbefore comparing values. Missing, duplicate, or kind-incoherent basis is\n`version-basis-unresolved`; a declared version that disagrees with its resolved\nsame-subject fact is `version-line-drift`. A surface, its path, its version text,\nor an inferred latest cut shall not select or fabricate its own version basis.\n"
+        }
+      ]
+    },
+    {
+      "key": "module",
+      "label": "Module",
+      "definition": "Constitutional publication boundary owning graphs, GraphFunctions, refinements, candidate families, Jobs, Roles, Operators, Evaluators, Rules, imports and metadata; Package is not a distinct constitutional carrier.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-MODULE.md#REQ-L-GTL3-MODULE%20%E2%80%94%20Module%20And%20Library%20Structure%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "Define `Module` as the publication boundary for GTL 3 declarations.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-MODULE.md#REQ-L-GTL3-MODULE%20%E2%80%94%20Module%20And%20Library%20Structure%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 20,
+          "quote": "**REQ-L-GTL3-MODULE-001**: `Module` shall own graphs, graph functions, refinement boundaries, candidate families, jobs, roles, operators, evaluators, rules, imports, and metadata.\n\n**REQ-L-GTL3-MODULE-002**: Modules may be published as reusable GTL workflow libraries.\n\n**REQ-L-GTL3-MODULE-003**: `Module` is the constitutional publication carrier. `Package` is not a distinct constitutional carrier.\n"
+        }
+      ]
+    },
+    {
+      "key": "node",
+      "label": "Node",
+      "definition": "First-class typed local graph locus of meaning, invariant state and asset interface; its schema/type and declared Markov conditions form one language surface.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define `Node` as the typed local locus of graph meaning, invariant state, and\nasset-surface declaration in GTL 3.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 21,
+          "quote": "**REQ-L-GTL3-NODE-001**: `Node` shall be a first-class GTL declaration representing a typed local locus within a graph.\n\n**REQ-L-GTL3-NODE-002**: A node shall carry declared schema/type and declared markov conditions as one language surface.\n\n**REQ-L-GTL3-NODE-003**: `markov` shall express declarative state, outcome, or acceptance conditions at that node locus.\n"
+        }
+      ]
+    },
+    {
+      "key": "operator",
+      "label": "Operator",
+      "definition": "Frozen immutable declaration of effectful work with at least name, regime, binding and tags, distinct from convergence-checking Evaluators.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-OPERATOR.md#REQ-L-GTL3-OPERATOR%20%E2%80%94%20Operators%20As%20First-Class%20Work%20Surfaces%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "Define operators as first-class GTL declarations for effectful work.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-OPERATOR.md#REQ-L-GTL3-OPERATOR%20%E2%80%94%20Operators%20As%20First-Class%20Work%20Surfaces%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 22,
+          "quote": "**REQ-L-GTL3-OPERATOR-001**: `Operator` shall be a frozen, immutable declaration type with at minimum: `name`, `regime`, `binding`, and `tags`.\n\n**REQ-L-GTL3-OPERATOR-002**: GTL shall support at minimum three operator regimes: deterministic (`F_D`), probabilistic (`F_P`), and human (`F_H`).\n\n**REQ-L-GTL3-OPERATOR-003**: Operators perform work. They are distinct from evaluators, which check or attest convergence.\n\n**REQ-L-GTL3-OPERATOR-004**: Operator `binding` shall be a declared implementation reference resolved by an engine or plugin. Raw executable callables shall not be the published language truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "recursive_application",
+      "label": "Recursive GraphFunction application",
+      "definition": "recurse(graph_function,termination,foldback) expresses repeated/child application under explicit recursion law, preserving the callable outer interface.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RECURSE.md#REQ-L-GTL3-RECURSE%20%E2%80%94%20Recursive%20Graph%20Application%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "Define recursion as a lawful graph-function capability of GTL 3.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RECURSE.md#REQ-L-GTL3-RECURSE%20%E2%80%94%20Recursive%20Graph%20Application%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 20,
+          "quote": "**REQ-L-GTL3-RECURSE-001**: `recurse(graph_function, termination, foldback)` shall express repeated or child graph-function application under declared recursion law.\n\n**REQ-L-GTL3-RECURSE-002**: Recursive application shall preserve the declared outer interface of the recursively applied graph function.\n\n**REQ-L-GTL3-RECURSE-003**: Recursion shall expose explicit termination and foldback truth in declarations rather than hiding recursion policy in the interpreter.\n"
+        }
+      ]
+    },
+    {
+      "key": "requirement_wrappers",
+      "label": "GTL requirement declaration wrappers",
+      "definition": "Human-agent authoring declarations for requirement identity/relations/spans/staged context/destination topology/proof-evidence/evidence policy within GTL, without a second requirements language.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FPurpose",
+          "start_line": 12,
+          "end_line": 19,
+          "quote": "Define the GTL-facing declaration wrappers that let human-agent authors express\nrequirement identity, relations, spans, staged context, destination topology,\nproof-evidence relations, and evidence policy without creating a second requirements\nlanguage beside GTL.\n\nGTL exposes declarations. HoG traverses admitted requirement-bearing GTL\nstructure. ABG owns admission, replay, projection, fold, residual,\ncontinuation, closure, and query truth.\n"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "diagnostic_reports_declaration_failure",
+      "kind": "reports_failure_of",
+      "source_key": "conformance_diagnostic",
+      "target_key": "canonical_declaration",
+      "meaning": "Declaration drift and canonical-data faults are typed conformance failures, not repair authorization.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 52,
+          "end_line": 76,
+          "quote": "**REQ-L-GTL3-LAWS-019**: Typed diagnostic identity — conformance failure is\ntyped truth: every conformance diagnostic carries a stable diagnostic identity\nfrom the published closed `GTL_PROGRAM_DIAGNOSTIC_ID_VALUES` vocabulary and\n`GtlProgramDiagnosticId` type located by contract group\n`abg.contract.abg.m03`, or a declaration-carried identity whose namespace is\nadmitted from declared policy rows. An unknown identity fails closed at the\ndiagnostic constructor boundary; declaration-carried identities are validated\nagainst the admitted declaration set as successor law. Diagnostic identities\nare stable across releases and are removed only by supersession, not by renaming.\n\n**REQ-L-GTL3-LAWS-020**: Admissible repair affordance — a ratified diagnostic may carry a typed admissible-repair set naming the lawful repair moves for that failure: the repair surface, the smallest lawful edit class, and the governing change class when the repair is constitutional. Repair affordances are typed carriers over declared truth, not prose advice, and they do not perform, select, or authorize the repair.\n\n**REQ-L-GTL3-LAWS-021**: Canonical authored form — an authored GTL program has one canonical data serialization with stable ordering and content-addressable digest identity. Identity canonicalization for digests and the canonical authored form are the same serialization law; alternate orderings or spellings are not rival authored truth.\n\n**REQ-L-GTL3-LAWS-022**: Declarations are data — authored GTL declaration\ntruth is pure data in the canonical form. A published native constructor may\nuse total deterministic host-language computation to assemble that data from\nexplicit typed inputs when the result serializes to the one canonical form,\nround-trips through raw admission without loss, and derives the same content\ndigest. The constructor is authoring syntax, not a second declaration\nauthority. Declaration content derived from ambient process state, runtime\nevents, filesystem discovery, randomness, clock time, unstable iteration, or\nhidden defaults is drift; so is a module export without an exact canonical\nround-trip witness. Conformance rejects those sources at the declaration\nboundary.\n"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "key": "structural_language_laws",
+      "applies_to_keys": [
+        "gtl_law"
+      ],
+      "statement": "All workflow structure is graph, with typed nodes carrying local meaning. Composition/substitution require aligned interfaces; work and convergence remain distinct. Associativity preserves outer contract, identity preserves interface, interface-equivalent functions interchange, refinement may alter only internals, recursion preserves explainable lineage and declared rebinding, and fan-out/fan-in/gate/promote preserve type/interface truth.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 34,
+          "quote": "**REQ-L-GTL3-LAWS-001**: Graph primacy — all workflow structure is graph.\n\n**REQ-L-GTL3-LAWS-002**: Typed node law — local graph meaning is carried by typed nodes.\n\n**REQ-L-GTL3-LAWS-003**: Interface law — composition and substitution are lawful only when interfaces align.\n\n**REQ-L-GTL3-LAWS-004**: Operator/evaluator separation — work and convergence are distinct concerns.\n\n**REQ-L-GTL3-LAWS-005**: Composition associativity — lawful composition groups without changing the outer contract.\n\n**REQ-L-GTL3-LAWS-006**: Identity graph function — an identity graph function preserves the interface.\n\n**REQ-L-GTL3-LAWS-007**: Substitutability — interface-equivalent graph functions are interchangeable at the contract boundary.\n\n**REQ-L-GTL3-LAWS-008**: Contract preservation — refinement may change internals but shall preserve the declared outer contract.\n\n**REQ-L-GTL3-LAWS-009**: Recursion with preserved lineage and explicit foldback — recursive graph application preserves explainable lineage and declared rebinding law.\n\n**REQ-L-GTL3-LAWS-010**: Higher-order legality — fan-out, fan-in, gate, and promote preserve interface and type truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "language_authority_laws",
+      "applies_to_keys": [
+        "gtl_law"
+      ],
+      "statement": "GTL exposes lawful structure/candidates/hooks without hidden selection and supports event-sourced interpretation independently of a single engine. First-class opaque identities, not labels, target declarations. GTL declares Jobs over published functions/Roles; engines realize Runs, Workers, materialization, traversal and runtime truth. Hooks/config govern without tactic prescription or policy DSL. Boundaries may visibly declare invariant traversal, and publication/materialization/hooks/derived bundles stay inspectable and replayable.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 36,
+          "end_line": 50,
+          "quote": "**REQ-L-GTL3-LAWS-011**: Separation from hidden strategic choice — GTL exposes lawful structure, candidates, and hooks, not hidden selection.\n\n**REQ-L-GTL3-LAWS-012**: Suitability for event-sourced interpretation — GTL constructs shall be lawfully interpretable by an event-sourced runtime.\n\n**REQ-L-GTL3-LAWS-013**: Engine independence — language semantics do not depend on any single engine implementation.\n\n**REQ-L-GTL3-LAWS-014**: Categorical identity — first-class declarations carry opaque identity distinct from labels, and targeting occurs by identity.\n\n**REQ-L-GTL3-LAWS-015**: Semantic work and execution separation — GTL declares jobs over published graph functions and roles; engines realize runs, workers, materialization, internal traversal, and runtime truth.\n\n**REQ-L-GTL3-LAWS-016**: Governance by hook attachment — GTL exposes governance hook surfaces and opaque configuration rather than tactic prescription or a policy semantic language.\n\n**REQ-L-GTL3-LAWS-017**: Explicit invariant traversal visibility — contract boundaries may visibly declare invariant traversal truth.\n\n**REQ-L-GTL3-LAWS-018**: Replayable hook and publication truth — publication, materialization, hook attachment, and derived bundle truth shall remain inspectable and replayable.\n"
+        }
+      ]
+    },
+    {
+      "key": "diagnostic_identity_law",
+      "applies_to_keys": [
+        "conformance_diagnostic"
+      ],
+      "statement": "Every conformance diagnostic uses stable identity from closed GTL_PROGRAM_DIAGNOSTIC_ID_VALUES and GtlProgramDiagnosticId located by abg.contract.abg.m03, or an identity whose namespace is admitted from declared policy rows. Unknown identity fails closed at construction. Declaration-carried identities are validated against admitted declarations as successor law. Release-stable identities may be removed only by supersession, never renamed.",
+      "conditions": [],
+      "exceptions": [
+        "Declared policy rows may admit the namespace of a declaration-carried diagnostic identity."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 52,
+          "end_line": 60,
+          "quote": "**REQ-L-GTL3-LAWS-019**: Typed diagnostic identity — conformance failure is\ntyped truth: every conformance diagnostic carries a stable diagnostic identity\nfrom the published closed `GTL_PROGRAM_DIAGNOSTIC_ID_VALUES` vocabulary and\n`GtlProgramDiagnosticId` type located by contract group\n`abg.contract.abg.m03`, or a declaration-carried identity whose namespace is\nadmitted from declared policy rows. An unknown identity fails closed at the\ndiagnostic constructor boundary; declaration-carried identities are validated\nagainst the admitted declaration set as successor law. Diagnostic identities\nare stable across releases and are removed only by supersession, not by renaming.\n"
+        }
+      ]
+    },
+    {
+      "key": "typed_repair_affordances",
+      "applies_to_keys": [
+        "conformance_diagnostic"
+      ],
+      "statement": "A ratified diagnostic may carry typed lawful repair moves naming repair surface, smallest lawful edit class and constitutional governing change class. Such carriers express declared truth, not prose advice, and never perform/select/authorize repair.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 62,
+          "end_line": 62,
+          "quote": "**REQ-L-GTL3-LAWS-020**: Admissible repair affordance — a ratified diagnostic may carry a typed admissible-repair set naming the lawful repair moves for that failure: the repair surface, the smallest lawful edit class, and the governing change class when the repair is constitutional. Repair affordances are typed carriers over declared truth, not prose advice, and they do not perform, select, or authorize the repair.\n"
+        }
+      ]
+    },
+    {
+      "key": "canonical_data_construction",
+      "applies_to_keys": [
+        "canonical_declaration"
+      ],
+      "statement": "Use one stable canonical ordering/spelling and digest; alternatives are not rival truth. Native constructors may use total deterministic host computation on explicit typed inputs only if canonical serialization, lossless raw-admission roundtrip and same digest are witnessed. They are syntax, not declaration authority. Reject ambient process state, runtime events, filesystem discovery, randomness, clock time, unstable iteration, hidden defaults or Module export without exact roundtrip witness at the declaration boundary.",
+      "conditions": [
+        "Native construction must be total, deterministic, explicit-input and canonically roundtrippable."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 64,
+          "end_line": 76,
+          "quote": "**REQ-L-GTL3-LAWS-021**: Canonical authored form — an authored GTL program has one canonical data serialization with stable ordering and content-addressable digest identity. Identity canonicalization for digests and the canonical authored form are the same serialization law; alternate orderings or spellings are not rival authored truth.\n\n**REQ-L-GTL3-LAWS-022**: Declarations are data — authored GTL declaration\ntruth is pure data in the canonical form. A published native constructor may\nuse total deterministic host-language computation to assemble that data from\nexplicit typed inputs when the result serializes to the one canonical form,\nround-trips through raw admission without loss, and derives the same content\ndigest. The constructor is authoring syntax, not a second declaration\nauthority. Declaration content derived from ambient process state, runtime\nevents, filesystem discovery, randomness, clock time, unstable iteration, or\nhidden defaults is drift; so is a module export without an exact canonical\nround-trip witness. Conformance rejects those sources at the declaration\nboundary.\n"
+        }
+      ]
+    },
+    {
+      "key": "evolution_by_supersession",
+      "applies_to_keys": [
+        "canonical_declaration",
+        "conformance_diagnostic"
+      ],
+      "statement": "Requirement relations include supersession. Contract/declaration evolution uses that existing relation-kind family without a second vocabulary; ratified identities can be removed only by supersession.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 84,
+          "end_line": 84,
+          "quote": "**REQ-L-GTL3-LAWS-026**: Evolution vocabulary — requirement relation kinds include supersession; contract and declaration evolution is expressed through the existing relation-kind family rather than a second relation vocabulary. Removal of ratified identities happens only by supersession.\n"
+        }
+      ]
+    },
+    {
+      "key": "conformance_corpus_publication",
+      "applies_to_keys": [
+        "conformance_corpus"
+      ],
+      "statement": "Publish exact corpus schema, asset, digest and diagnostic-vocabulary dependency through the Product public catalog. Every conforming toolchain replays every corpus entry to the exact expected diagnostic identities. Test-only fixtures are not publication; corpus is separate from requirement corpus and qualification evidence.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 86,
+          "end_line": 93,
+          "quote": "**REQ-L-GTL3-LAWS-027**: Language conformance corpus — the language publishes\none canonical, content-addressed corpus pairing programs with expected\ndiagnostic identities. The exact product public contract catalog locates its\nschema, asset, digest, and diagnostic-vocabulary dependency under\n`abg.asset.gtl.language-conformance-corpus`. The corpus is the\nimplementation-independent oracle: a conforming toolchain replays every entry\nto the exact expected identities. A test-only fixture is not publication. The\ncorpus is distinct from the requirements corpus and qualification evidence.\n"
+        }
+      ]
+    },
+    {
+      "key": "version_subject_binding",
+      "applies_to_keys": [
+        "constitutional_witness"
+      ],
+      "statement": "Version subjects are a closed tagged family: mutable source project, immutable published RC cut, tapped release cut, released Product and stamped installed Product, never interchangeable. For every versioned surface resolve exactly one binding by binding ref and surface ref, then exactly one fact for its exact tagged subject before comparison. Missing, duplicate or kind-incoherent basis is version-basis-unresolved; disagreement with resolved same-subject fact is version-line-drift. Path, surface, version text and inferred latest cut cannot select/fabricate basis.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 95,
+          "end_line": 108,
+          "quote": "**REQ-L-GTL3-LAWS-028**: Constitutional surfaces are witnessed data and\ndrift is a typed conformance failure. A loader witnesses constitutional\nsurfaces (surface ref, content digest, version disposition, declared version\nline, separate version-binding ref, and cited ticket refs), separately\nauthorized surface-to-subject bindings, and live facts. Version subjects are a\nclosed tagged family: mutable source project, immutable published RC cut,\ntapped release cut, released product, and stamped installed product. These\nsubjects never substitute for one another. For every versioned surface the\nGTL validator shall resolve exactly one binding by binding ref and surface\nref, then exactly one version fact for that binding's exact tagged subject,\nbefore comparing values. Missing, duplicate, or kind-incoherent basis is\n`version-basis-unresolved`; a declared version that disagrees with its resolved\nsame-subject fact is `version-line-drift`. A surface, its path, its version text,\nor an inferred latest cut shall not select or fabricate its own version basis.\n"
+        }
+      ]
+    },
+    {
+      "key": "independent_drift_checks",
+      "applies_to_keys": [
+        "constitutional_witness",
+        "conformance_diagnostic"
+      ],
+      "statement": "Assess live active-ticket references and public-seam keys against engine passthrough authority even if version basis fails. A release-bearing surface citing an active ticket yields release-claim-cites-active-ticket; missing witness digest yields surface-digest-missing; seam-key divergence yields seam-parity-drift. Every drift diagnostic carries ratified identity and an admissible existing-vocabulary repair. Detection belongs inside GTL validator, never a second checker or prose checklist.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 109,
+          "end_line": 117,
+          "quote": "Active ticket refs and public-seam key sets against the engine passthrough\nauthority remain live facts: a release-bearing surface citing an active ticket\nis `release-claim-cites-active-ticket`; a witnessed surface without a content\ndigest is `surface-digest-missing`; and a public seam whose key set diverges\nfrom the passthrough authority is `seam-parity-drift`. Version-basis failure\nshall not suppress ticket or seam assessment. Each drift diagnostic carries a\nratified identity and an admissible repair from the existing repair vocabulary.\nDrift detection shall not be a second checker outside the GTL validator,\nand drift rules shall not be prose review checklists.\n"
+        }
+      ]
+    },
+    {
+      "key": "uniform_retry_failure_law",
+      "applies_to_keys": [
+        "gtl_law"
+      ],
+      "statement": "One RETRYABLE_RUNTIME_FAILURE_CLASS_VALUES allowlist judges uniform C-call spine outcomes under CCALL-009; no per-arm detours. Evaluator and composed-arm failures route identically to transform-arm failures.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAmendment%20%28T-200%20P0%29",
+          "start_line": 121,
+          "end_line": 125,
+          "quote": "The retryable-failure allowlist (one typed home,\n`RETRYABLE_RUNTIME_FAILURE_CLASS_VALUES`) judges uniform C-call spine\noutcomes (`REQ-R-ABG3-CCALL-009`): no per-arm classification detours;\nevaluator- and composed-arm failures route identically to transform-arm\nfailures.\n"
+        }
+      ]
+    },
+    {
+      "key": "module_publication_conservation",
+      "applies_to_keys": [
+        "module"
+      ],
+      "statement": "Published GraphFunctions, refinements, candidate families, Jobs and Roles remain inspectable to importers, never anonymous realized surfaces. Module metadata is immutable and visible to consumers, policy and replay.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-MODULE.md#REQ-L-GTL3-MODULE%20%E2%80%94%20Module%20And%20Library%20Structure%2FAcceptance%20Criteria",
+          "start_line": 22,
+          "end_line": 24,
+          "quote": "**REQ-L-GTL3-MODULE-004**: Published graph functions, refinement boundaries, candidate families, jobs, and roles shall remain inspectable to importing consumers rather than collapsing into anonymous realized surfaces.\n\n**REQ-L-GTL3-MODULE-005**: Module metadata shall be an immutable declaration surface visible to consumers, policy resolution, and replay.\n"
+        }
+      ]
+    },
+    {
+      "key": "node_markov_meaning",
+      "applies_to_keys": [
+        "node"
+      ],
+      "statement": "Markov conditions declare local state/outcome/acceptance. Source conditions are upstream guarantees available downstream; target conditions are intended lawful-transformation obligations. Unspecified Markov defaults to empty tuple and declares no conditions.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 23,
+          "quote": "**REQ-L-GTL3-NODE-002**: A node shall carry declared schema/type and declared markov conditions as one language surface.\n\n**REQ-L-GTL3-NODE-003**: `markov` shall express declarative state, outcome, or acceptance conditions at that node locus.\n\n**REQ-L-GTL3-NODE-004**: Source-node markov conditions express upstream guarantees available to downstream graph application. Target-node markov conditions express declared conditions that a lawful transformation is intended to satisfy.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 31,
+          "end_line": 31,
+          "quote": "**REQ-L-GTL3-NODE-006**: `markov` shall default to the empty tuple when unspecified. Absence of `markov` means no declared conditions.\n"
+        }
+      ]
+    },
+    {
+      "key": "node_language_runtime_split",
+      "applies_to_keys": [
+        "node"
+      ],
+      "statement": "Markov and AssetSurface are GTL declaration truth. TypeScript/validator may validate; HoG traverses/resolves admitted binding; ABG admits observations and projects runtime facts but cannot own, interpret or invent the declaration or missing asset law. Every interpretation/serialization/bridge preserves schema, Markov and AssetSurface contract without semantic loss.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 25,
+          "end_line": 35,
+          "quote": "**REQ-L-GTL3-NODE-005**: `markov` belongs to the GTL language declaration\nsurface, not to ABG runtime metadata. TypeScript and the GTL validator may\nvalidate it; HoG may traverse according to the admitted declaration; ABG may\nadmit observations against it and render or project the resulting runtime\ntruth. ABG shall not interpret, own, or invent the declaration.\n\n**REQ-L-GTL3-NODE-006**: `markov` shall default to the empty tuple when unspecified. Absence of `markov` means no declared conditions.\n\n**REQ-L-GTL3-NODE-007**: `Node.schema` shall support both concrete type references and symbolic schema names, including vectorized boundaries such as `Vector[T]`.\n\n**REQ-L-GTL3-NODE-008**: Any lawful GTL interpretation, serialization surface, or GTL to ABG bridge shall preserve node schema and markov conditions without semantic loss.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 39,
+          "end_line": 44,
+          "quote": "**REQ-L-GTL3-NODE-010**: `asset_surface` belongs to GTL declaration truth, not\nABG runtime invention. TypeScript and the GTL validator may validate it; HoG\nmay resolve its admitted traversal binding; ABG may admit and project runtime\nfacts against it. ABG shall not invent missing `asset_surface` law at runtime.\n\n**REQ-L-GTL3-NODE-011**: Any lawful GTL interpretation, serialization surface, or GTL to ABG bridge shall preserve declared `asset_surface` contract without semantic loss.\n"
+        }
+      ]
+    },
+    {
+      "key": "node_asset_interface_owner",
+      "applies_to_keys": [
+        "node"
+      ],
+      "statement": "Renderer-backed, prompt-like or otherwise policy-rich assets use the detailed ASSET-SURFACE requirement. Node stays typed locus; asset interface stays subordinate declaration.",
+      "conditions": [
+        "Node declares a policy-rich/renderer/prompt asset interface."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 46,
+          "end_line": 46,
+          "quote": "**REQ-L-GTL3-NODE-012**: When a node declares a renderer-backed, prompt-like, or otherwise policy-rich `asset_surface`, the detailed asset interface shall be governed by `REQ-L-GTL3-ASSET-SURFACE`. The node remains the typed locus; the asset surface remains subordinate declaration truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "optional_type_strengthening",
+      "applies_to_keys": [
+        "node"
+      ],
+      "statement": "When a type reference is present, construction/admission/serialization/conformance/bridges preserve it without loss. Satisfaction requires inline schema, Markov and AssetSurface to preserve or strengthen the referenced type; unknown reference or weakened declaration fails closed. Type reference is strengthening, not a mandatory admission field.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 52,
+          "end_line": 64,
+          "quote": "**REQ-L-GTL3-NODE-014**: A node type reference shall be optional declaration\ntruth, because a type reference is a strengthening declaration over the node's\ninline schema, markov, and asset-surface contract, not a mandatory admission\nfield: a node without a type reference carries exactly its inline contract.\nWhen present, the type reference shall be preserved by GTL construction,\nadmission, serialization, conformance, and GTL-to-ABG bridge surfaces without\nsemantic loss, and its satisfaction is enforced fail-closed per\nREQ-L-GTL3-NODE-015.\n\n**REQ-L-GTL3-NODE-015**: A node with inline schema, markov, and asset-surface\nlaw plus a type reference shall satisfy the referenced type only when the\ninline declaration preserves or strengthens the referenced type contract.\nUnknown type refs or weakened local declarations shall fail closed.\n"
+        }
+      ]
+    },
+    {
+      "key": "operator_binding_and_regime",
+      "applies_to_keys": [
+        "operator"
+      ],
+      "statement": "Support at least F_D, F_P and F_H regimes. Published binding is an engine/plugin-resolved implementation reference, not raw executable callable. Operators perform work separately from evaluators checking/attesting convergence.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-OPERATOR.md#REQ-L-GTL3-OPERATOR%20%E2%80%94%20Operators%20As%20First-Class%20Work%20Surfaces%2FAcceptance%20Criteria",
+          "start_line": 18,
+          "end_line": 22,
+          "quote": "**REQ-L-GTL3-OPERATOR-002**: GTL shall support at minimum three operator regimes: deterministic (`F_D`), probabilistic (`F_P`), and human (`F_H`).\n\n**REQ-L-GTL3-OPERATOR-003**: Operators perform work. They are distinct from evaluators, which check or attest convergence.\n\n**REQ-L-GTL3-OPERATOR-004**: Operator `binding` shall be a declared implementation reference resolved by an engine or plugin. Raw executable callables shall not be the published language truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "recursive_parent_conservation",
+      "applies_to_keys": [
+        "recursive_application"
+      ],
+      "statement": "Explicitly declare termination and foldback rather than interpreter-hidden policy. Foldback names lawful child-return rebinding and makes parent rebindable/re-evaluable; child closure alone never certifies parent convergence. Preserve outer interface and explainable parent/child lineage. Bound recursion by declared termination and/or other explicit interpreter-visible bounds.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RECURSE.md#REQ-L-GTL3-RECURSE%20%E2%80%94%20Recursive%20Graph%20Application%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 28,
+          "quote": "**REQ-L-GTL3-RECURSE-001**: `recurse(graph_function, termination, foldback)` shall express repeated or child graph-function application under declared recursion law.\n\n**REQ-L-GTL3-RECURSE-002**: Recursive application shall preserve the declared outer interface of the recursively applied graph function.\n\n**REQ-L-GTL3-RECURSE-003**: Recursion shall expose explicit termination and foldback truth in declarations rather than hiding recursion policy in the interpreter.\n\n**REQ-L-GTL3-RECURSE-004**: Foldback shall identify how child return material lawfully re-binds into the parent contract. Interpreter-local invention of foldback semantics is not lawful.\n\n**REQ-L-GTL3-RECURSE-005**: Foldback shall make the parent contract re-bindable and re-evaluable. Child closure alone shall not certify parent convergence.\n\n**REQ-L-GTL3-RECURSE-006**: Recursion shall preserve explainable work lineage across parent and child application.\n\n**REQ-L-GTL3-RECURSE-007**: Recursive application shall be bounded by declared termination truth and/or other explicit bounds visible to the interpreter.\n"
+        }
+      ]
+    },
+    {
+      "key": "requirement_wrapper_owner_split",
+      "applies_to_keys": [
+        "requirement_wrappers"
+      ],
+      "statement": "GTL exposes declarations, HoG traverses admitted requirement-bearing structures and ABG owns admission, replay, projection, fold, residual, continuation, closure and query truth.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FPurpose",
+          "start_line": 17,
+          "end_line": 19,
+          "quote": "GTL exposes declarations. HoG traverses admitted requirement-bearing GTL\nstructure. ABG owns admission, replay, projection, fold, residual,\ncontinuation, closure, and query truth.\n"
+        }
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "declared_data_latitude",
+      "applies_to_keys": [
+        "canonical_declaration"
+      ],
+      "allowed": [
+        "Bind ratified examples/counterexamples as content-digested admitted data through existing evidence-shape/counterexample-reference families for calibration and non-tautology mutation.",
+        "Explicitly mark deliberate underdetermination with owning F_P latitude or F_H decision route; invention is allowed only within that latitude.",
+        "Carry admitted author/authority factory provenance, with authorship checks governed by successor law."
+      ],
+      "forbidden": [
+        "Using golden data as closure authority.",
+        "Treating an undeclared hole as permission.",
+        "Letting authorship drive traversal; it joins runtime lineage by reference only."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 78,
+          "end_line": 82,
+          "quote": "**REQ-L-GTL3-LAWS-023**: Golden instance binding — a contract declaration may bind ratified example and counterexample instances as admitted data with content digests, promoting the existing evidence-shape and counterexample ref families rather than minting a rival surface. Golden instances calibrate evaluators and supply non-tautology mutation material; they are data, never closure authority.\n\n**REQ-L-GTL3-LAWS-024**: Declared underdetermination — a declaration may mark a scope as deliberately underdetermined with an owning decision route (`F_P` latitude or `F_H` decision). Invention is lawful only inside declared latitude; an undeclared hole is a defect, not permission.\n\n**REQ-L-GTL3-LAWS-025**: Declaration authorship — authored declarations may carry author and authority identity as factory provenance, admitted with the declaration. Authority checks over authorship bind as successor law. Authorship is provenance truth joined to runtime lineage only by reference; it never drives traversal decisions.\n"
+        }
+      ]
+    },
+    {
+      "key": "module_defaults",
+      "applies_to_keys": [
+        "module"
+      ],
+      "allowed": [
+        "Publish as reusable GTL workflow libraries.",
+        "Declare visible Module policy-hook defaults for imported callables, Jobs, Roles and runtime policy resolution."
+      ],
+      "forbidden": [
+        "Overriding more-specific hook truth unless the hook family explicitly declares that precedence."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-MODULE.md#REQ-L-GTL3-MODULE%20%E2%80%94%20Module%20And%20Library%20Structure%2FAcceptance%20Criteria",
+          "start_line": 18,
+          "end_line": 18,
+          "quote": "**REQ-L-GTL3-MODULE-002**: Modules may be published as reusable GTL workflow libraries.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-MODULE.md#REQ-L-GTL3-MODULE%20%E2%80%94%20Module%20And%20Library%20Structure%2FAcceptance%20Criteria",
+          "start_line": 26,
+          "end_line": 26,
+          "quote": "**REQ-L-GTL3-MODULE-006**: A module may declare module-level `policy_hooks` as visible publication defaults for imported graph functions, jobs, roles, and runtime policy resolution. Module policy hooks shall not override more specific declared hook truth unless the hook family explicitly names that precedence.\n"
+        }
+      ]
+    },
+    {
+      "key": "node_contract_variation",
+      "applies_to_keys": [
+        "node"
+      ],
+      "allowed": [
+        "Use concrete type refs or symbolic schemas, including Vector[T].",
+        "Declare asset_surface for kind/schema role, required carried Contexts and standards/output-contract references.",
+        "Optionally bind a reusable node type by explicit compiler-visible reference; absence means exactly the inline schema/Markov/asset contract."
+      ],
+      "forbidden": [
+        "Deriving node-type meaning only from schema spelling, tags, prompts, filenames or downstream convention."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 33,
+          "end_line": 37,
+          "quote": "**REQ-L-GTL3-NODE-007**: `Node.schema` shall support both concrete type references and symbolic schema names, including vectorized boundaries such as `Vector[T]`.\n\n**REQ-L-GTL3-NODE-008**: Any lawful GTL interpretation, serialization surface, or GTL to ABG bridge shall preserve node schema and markov conditions without semantic loss.\n\n**REQ-L-GTL3-NODE-009**: A node may declare an `asset_surface` describing the intended asset kind/schema role at that locus, required carried contexts, and standards or output-contract references associated to production of that asset.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 48,
+          "end_line": 59,
+          "quote": "**REQ-L-GTL3-NODE-013**: A node may bind to a reusable node type through an\nexplicit compiler-visible type reference. Type meaning shall not depend only\non `Node.schema`, tags, prompt prose, file names, or downstream convention.\n\n**REQ-L-GTL3-NODE-014**: A node type reference shall be optional declaration\ntruth, because a type reference is a strengthening declaration over the node's\ninline schema, markov, and asset-surface contract, not a mandatory admission\nfield: a node without a type reference carries exactly its inline contract.\nWhen present, the type reference shall be preserved by GTL construction,\nadmission, serialization, conformance, and GTL-to-ABG bridge surfaces without\nsemantic loss, and its satisfaction is enforced fail-closed per\nREQ-L-GTL3-NODE-015.\n"
+        }
+      ]
+    },
+    {
+      "key": "operator_attachment",
+      "applies_to_keys": [
+        "operator"
+      ],
+      "allowed": [
+        "Attach to vectors or graph-derived workflows."
+      ],
+      "forbidden": [
+        "Embedding concrete Worker identity, transport choice or runtime-dispatch logic in the language."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-OPERATOR.md#REQ-L-GTL3-OPERATOR%20%E2%80%94%20Operators%20As%20First-Class%20Work%20Surfaces%2FAcceptance%20Criteria",
+          "start_line": 24,
+          "end_line": 24,
+          "quote": "**REQ-L-GTL3-OPERATOR-005**: GTL may attach operators to graph vectors or graph-derived workflows without embedding concrete worker identity, transport choice, or runtime dispatch logic in the language.\n"
+        }
+      ]
+    },
+    {
+      "key": "recursive_frame_scope",
+      "applies_to_keys": [
+        "recursive_application"
+      ],
+      "allowed": [
+        "Keep inner steps frame-local unless a separate publication surface explicitly exports them."
+      ],
+      "forbidden": [
+        "Interpreter-local invention of foldback semantics."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RECURSE.md#REQ-L-GTL3-RECURSE%20%E2%80%94%20Recursive%20Graph%20Application%2FAcceptance%20Criteria",
+          "start_line": 22,
+          "end_line": 22,
+          "quote": "**REQ-L-GTL3-RECURSE-004**: Foldback shall identify how child return material lawfully re-binds into the parent contract. Interpreter-local invention of foldback semantics is not lawful.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RECURSE.md#REQ-L-GTL3-RECURSE%20%E2%80%94%20Recursive%20Graph%20Application%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 30,
+          "quote": "**REQ-L-GTL3-RECURSE-008**: Recursive inner steps may remain frame-local unless a separate publication surface explicitly exports them.\n"
+        }
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "published_vocabulary_dependency",
+      "subject_key": "conformance_diagnostic",
+      "uncertainty": "Exact diagnostic vocabulary, admitted namespace policies, corpus catalog identities and retry allowlist members are named but not enumerated in this chunk.",
+      "consequence": "Preserve source references and failure taxonomy without inventing allowed identifiers or reporting successful replay.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 52,
+          "end_line": 60,
+          "quote": "**REQ-L-GTL3-LAWS-019**: Typed diagnostic identity — conformance failure is\ntyped truth: every conformance diagnostic carries a stable diagnostic identity\nfrom the published closed `GTL_PROGRAM_DIAGNOSTIC_ID_VALUES` vocabulary and\n`GtlProgramDiagnosticId` type located by contract group\n`abg.contract.abg.m03`, or a declaration-carried identity whose namespace is\nadmitted from declared policy rows. An unknown identity fails closed at the\ndiagnostic constructor boundary; declaration-carried identities are validated\nagainst the admitted declaration set as successor law. Diagnostic identities\nare stable across releases and are removed only by supersession, not by renaming.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 86,
+          "end_line": 93,
+          "quote": "**REQ-L-GTL3-LAWS-027**: Language conformance corpus — the language publishes\none canonical, content-addressed corpus pairing programs with expected\ndiagnostic identities. The exact product public contract catalog locates its\nschema, asset, digest, and diagnostic-vocabulary dependency under\n`abg.asset.gtl.language-conformance-corpus`. The corpus is the\nimplementation-independent oracle: a conforming toolchain replays every entry\nto the exact expected identities. A test-only fixture is not publication. The\ncorpus is distinct from the requirements corpus and qualification evidence.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAmendment%20%28T-200%20P0%29",
+          "start_line": 121,
+          "end_line": 125,
+          "quote": "The retryable-failure allowlist (one typed home,\n`RETRYABLE_RUNTIME_FAILURE_CLASS_VALUES`) judges uniform C-call spine\noutcomes (`REQ-R-ABG3-CCALL-009`): no per-arm classification detours;\nevaluator- and composed-arm failures route identically to transform-arm\nfailures.\n"
+        }
+      ]
+    },
+    {
+      "key": "live_version_basis_dependency",
+      "subject_key": "constitutional_witness",
+      "uncertainty": "No actual surface-subject binding, live version fact, active-ticket set or passthrough seam-key set is supplied for evaluation.",
+      "consequence": "The drift rules are represented requirements; this draft issues no currentness, release or parity verdict.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+          "start_line": 95,
+          "end_line": 117,
+          "quote": "**REQ-L-GTL3-LAWS-028**: Constitutional surfaces are witnessed data and\ndrift is a typed conformance failure. A loader witnesses constitutional\nsurfaces (surface ref, content digest, version disposition, declared version\nline, separate version-binding ref, and cited ticket refs), separately\nauthorized surface-to-subject bindings, and live facts. Version subjects are a\nclosed tagged family: mutable source project, immutable published RC cut,\ntapped release cut, released product, and stamped installed product. These\nsubjects never substitute for one another. For every versioned surface the\nGTL validator shall resolve exactly one binding by binding ref and surface\nref, then exactly one version fact for that binding's exact tagged subject,\nbefore comparing values. Missing, duplicate, or kind-incoherent basis is\n`version-basis-unresolved`; a declared version that disagrees with its resolved\nsame-subject fact is `version-line-drift`. A surface, its path, its version text,\nor an inferred latest cut shall not select or fabricate its own version basis.\nActive ticket refs and public-seam key sets against the engine passthrough\nauthority remain live facts: a release-bearing surface citing an active ticket\nis `release-claim-cites-active-ticket`; a witnessed surface without a content\ndigest is `surface-digest-missing`; and a public seam whose key set diverges\nfrom the passthrough authority is `seam-parity-drift`. Version-basis failure\nshall not suppress ticket or seam assessment. Each drift diagnostic carries a\nratified identity and an admissible repair from the existing repair vocabulary.\nDrift detection shall not be a second checker outside the GTL validator,\nand drift rules shall not be prose review checklists.\n"
+        }
+      ]
+    },
+    {
+      "key": "detailed_asset_interface_dependency",
+      "subject_key": "node_asset_interface_owner",
+      "uncertainty": "The detailed ASSET-SURFACE law is referenced but its full body is outside this chunk.",
+      "consequence": "Keep the Node/subordinate-asset split and follow that exact requirement for full interface obligations.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+          "start_line": 46,
+          "end_line": 46,
+          "quote": "**REQ-L-GTL3-NODE-012**: When a node declares a renderer-backed, prompt-like, or otherwise policy-rich `asset_surface`, the detailed asset interface shall be governed by `REQ-L-GTL3-ASSET-SURFACE`. The node remains the typed locus; the asset surface remains subordinate declaration truth.\n"
+        }
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-MODULE.md#REQ-L-GTL3-MODULE%20%E2%80%94%20Module%20And%20Library%20Structure",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document title/status/date/category and historical derivation links are metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document title/status/date/category and historical derivation links are metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-OPERATOR.md#REQ-L-GTL3-OPERATOR%20%E2%80%94%20Operators%20As%20First-Class%20Work%20Surfaces",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document title/status/date/category and historical derivation links are metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RECURSE.md#REQ-L-GTL3-RECURSE%20%E2%80%94%20Recursive%20Graph%20Application",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document title/status/date/category and historical derivation links are metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document title/status/date/category and historical derivation links are metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "gtl_law",
+        "conformance_diagnostic",
+        "canonical_declaration",
+        "conformance_corpus",
+        "constitutional_witness",
+        "diagnostic_reports_declaration_failure",
+        "structural_language_laws",
+        "language_authority_laws",
+        "diagnostic_identity_law",
+        "typed_repair_affordances",
+        "canonical_data_construction",
+        "evolution_by_supersession",
+        "conformance_corpus_publication",
+        "version_subject_binding",
+        "independent_drift_checks",
+        "declared_data_latitude",
+        "published_vocabulary_dependency",
+        "live_version_basis_dependency"
+      ],
+      "reason": "Retains all stated laws and distinctions while making referenced vocabulary, live evidence or detailed asset law explicit dependencies."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FAmendment%20%28T-200%20P0%29",
+      "decision": "residual",
+      "keys": [
+        "uniform_retry_failure_law",
+        "published_vocabulary_dependency"
+      ],
+      "reason": "Retains all stated laws and distinctions while making referenced vocabulary, live evidence or detailed asset law explicit dependencies."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "node",
+        "node_markov_meaning",
+        "node_language_runtime_split",
+        "node_asset_interface_owner",
+        "optional_type_strengthening",
+        "node_contract_variation",
+        "detailed_asset_interface_dependency"
+      ],
+      "reason": "Retains all stated laws and distinctions while making referenced vocabulary, live evidence or detailed asset law explicit dependencies."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-MODULE.md#REQ-L-GTL3-MODULE%20%E2%80%94%20Module%20And%20Library%20Structure%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "module"
+      ],
+      "reason": "Retains substantive identity, semantics, obligations and authorized variation in this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-MODULE.md#REQ-L-GTL3-MODULE%20%E2%80%94%20Module%20And%20Library%20Structure%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "module",
+        "module_publication_conservation",
+        "module_defaults"
+      ],
+      "reason": "Retains substantive identity, semantics, obligations and authorized variation in this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-NODE.md#REQ-L-GTL3-NODE%20%E2%80%94%20Typed%20Loci%20With%20Markov%20And%20Asset%20Surface%20Declarations%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "node"
+      ],
+      "reason": "Retains substantive identity, semantics, obligations and authorized variation in this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-OPERATOR.md#REQ-L-GTL3-OPERATOR%20%E2%80%94%20Operators%20As%20First-Class%20Work%20Surfaces%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "operator"
+      ],
+      "reason": "Retains substantive identity, semantics, obligations and authorized variation in this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-OPERATOR.md#REQ-L-GTL3-OPERATOR%20%E2%80%94%20Operators%20As%20First-Class%20Work%20Surfaces%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "operator",
+        "operator_binding_and_regime",
+        "operator_attachment"
+      ],
+      "reason": "Retains substantive identity, semantics, obligations and authorized variation in this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RECURSE.md#REQ-L-GTL3-RECURSE%20%E2%80%94%20Recursive%20Graph%20Application%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "recursive_application"
+      ],
+      "reason": "Retains substantive identity, semantics, obligations and authorized variation in this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RECURSE.md#REQ-L-GTL3-RECURSE%20%E2%80%94%20Recursive%20Graph%20Application%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "recursive_application",
+        "recursive_parent_conservation",
+        "recursive_frame_scope"
+      ],
+      "reason": "Retains substantive identity, semantics, obligations and authorized variation in this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "requirement_wrappers",
+        "requirement_wrapper_owner_split"
+      ],
+      "reason": "Retains substantive identity, semantics, obligations and authorized variation in this section."
+    }
+  ],
+  "limitations": [
+    "All language and drift laws are propositions about the subject, not executed checks or qualification.",
+    "Published diagnostic/corpus/allowlist identities and live version/ticket/seam facts require exact source acquisition before judgments.",
+    "Detailed AssetSurface law is not imported by label; no cross-chunk identity is inferred.",
+    "Header metadata and historical derivation links are deliberately omitted as operative truth."
+  ]
+}

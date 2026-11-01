@@ -1,5 +1,13 @@
 # STDO Skills
 
+Both tenants now include a nominated-project representation workflow. Ask:
+“Build an a_c representation of `/path/to/my-project`.” Explicit entries are
+Codex `$stdo-work` and Claude `/stdo-tool-operations`. The current session authors
+the supplied source; the a_c provider produces the model, recoverable carrier,
+coverage and offline constraint explorer. Provider selection and installation
+are explained in each tenant's guide below. This workflow does not need the
+other coding host for authoring and does not claim Lean ran unless selected.
+
 Two independently designed skill tenants apply the same shared STDO requirements:
 
 | Tenant | Entry | Installation and verification |
@@ -29,7 +37,9 @@ writes and return/evidence operations. Native `results.conjoin` remains explicit
 unsupported. The two tenants consume the same contracts with different host designs.
 
 Read [Product](specification/PRODUCT.md), [requirements](specification/requirements/README.md)
-and [current work](.ai-workspace/tickets/active/T-001-skills-dogfood.md) for scope.
+and the [representation delivery](.ai-workspace/work/T003_PROJECT_REPRESENTATION/DELIVERY.md)
+for current use and evidence. The [initial delivery](.ai-workspace/tickets/active/T-001-skills-dogfood.md)
+retains its separate earlier scope.
 Use the package guides for a deliberately selected workspace-local installation.
 This Product's delivery, acceptance and release are separate from the already
 released methodology; no global skill deployment or efficiency claim is made.

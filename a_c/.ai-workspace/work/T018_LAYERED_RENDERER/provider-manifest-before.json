@@ -1,0 +1,120 @@
+{
+  "schema": "stdo-skills.project-representation-provider/1",
+  "selection": "T-003 owner-selected development provider; no release or semantic acceptance",
+  "relation": "urn:stdo-skills:composition:a-c-project-build:1",
+  "path_base": "repository root; provider paths do not supply acquisition or execution grants",
+  "entry": "a_c/build_tenants/graphify/code/ac_project.py",
+  "consumer_builder": "stdo://releases/v3.0.1-rc.1/",
+  "provider_builder": "stdo://releases/v2.5.1-rc.2/",
+  "authoring": "host-session; caller-declared provenance; no isolated actor telemetry",
+  "modes": [
+    "direct",
+    "graphify-ac"
+  ],
+  "optional_dependencies": {
+    "graphify_commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "formal_checker": "caller-selected trusted configuration with its own closed input/toolchain and resource contract"
+  },
+  "files": [
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_explore.py",
+      "sha256": "1b0c709841c51a4a1bbcad8d28f2d6c461b910a3bc64f8b8241ea5e4c43e4cf1",
+      "bytes": 8831
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_formal_gate.py",
+      "sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8",
+      "bytes": 22488
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_generate.py",
+      "sha256": "00d32296746265881aafd336e73797fca1fc431f6098ec3e9ee8bbbcdd92d16c",
+      "bytes": 92349
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_graph.py",
+      "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "bytes": 49166
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_project.py",
+      "sha256": "c6463bfed3e2e895bcfc8439bc6d3974206e2917b9ecf0fe1a96479bfbd7dec1",
+      "bytes": 23192
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/generation/author.schema.json",
+      "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+      "bytes": 11148
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/generation/author.txt",
+      "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc",
+      "bytes": 4240
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/generation/extraction.schema.json",
+      "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd",
+      "bytes": 4818
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/generation/isolation.txt",
+      "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1",
+      "bytes": 696
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/generation/requirements.txt",
+      "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2",
+      "bytes": 214
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/explorer.css",
+      "sha256": "bd3e5afe0ce09e117e3e68700d7ac41d4ec95aae90ff9fdb5229caa8173c396e",
+      "bytes": 12525
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/explorer.html",
+      "sha256": "884d1f334fd10c9f88b2985897f92be53a57d4513c2e5ac1b76a1eb53335bb2b",
+      "bytes": 4670
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/explorer.js",
+      "sha256": "afcdc33b84bcca0e31805cc13ba4aa25bd2d556e14a08eef48fb901028ca826c",
+      "bytes": 29018
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/vendor/3d-force-graph-1.80.1.min.js",
+      "sha256": "13088340aad408156064fd120c3bc3a47c93a3cc45b8f132d6284b20e2223be9",
+      "bytes": 1389954
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/vendor/3d-force-graph-LICENSE",
+      "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded",
+      "bytes": 1072
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/vendor/THIRD_PARTY_NOTICES.txt",
+      "sha256": "5550725cb2e36431fc64242442a5e0fb94be7a2d93749c3f55cc99f2f68fee22",
+      "bytes": 38944
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/vendor/manifest.json",
+      "sha256": "c8d258151ce83b7864d6579fd27d2f4ac79049cab7966a0db0e8eca3a6bc883f",
+      "bytes": 576
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/generation.md",
+      "sha256": "c7e596146596ef0929832fff73c04b5cc79bd2c4a5dcdc6f671b8782e7ed16d2",
+      "bytes": 13844
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/project-build.md",
+      "sha256": "d50294d54e55f452d9d1f30042c51a4316e2bad19c92a18b84abc03d0f39eaf6",
+      "bytes": 3744
+    },
+    {
+      "path": "a_c/specification/requirements/project-use.md",
+      "sha256": "365aaa555fff7b269e9cfd1e269a2da736b96d416824c1bfa84f4572211f5754",
+      "bytes": 7868
+    }
+  ]
+}

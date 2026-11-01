@@ -38,6 +38,16 @@ return is assessed by a nonauthor. This source increment establishes no new
 consumer frame set, lifecycle state, actor configuration or method-owned
 decision rule. Future tool checks bind the caller's exact selected contracts.
 
+## T-015 user-project Product refinement
+
+The [T-015 instruction](../.ai-workspace/tickets/active/T-015-user-project-product.md#owner-instruction)
+selects common Product refinement for a reusable user-project workflow. Its
+Writer territory is common source and work records. F-TOOL-CONTRACT evaluates
+ownership and integration scope; F-REALIZATION and F-INTEGRATION will evaluate
+the concrete public implementation and fresh installed user exercise when
+those are selected. F-USEFULNESS remains separate from structural success.
+Consumer-method profiles do not change this installed construction basis.
+
 ## T-008 owner-selected RC9 execution configuration
 
 Jim's [implementation instruction](../.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#owner-instruction)

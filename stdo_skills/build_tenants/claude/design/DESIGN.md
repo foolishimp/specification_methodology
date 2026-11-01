@@ -1,7 +1,7 @@
 # Claude tenant design — STDO Skills
 
 Sections 1–9 retain the original T-001 design and construction evidence boundary;
-the selected T-002 increment follows them. Historical qualification claims are not
+the selected T-002 and T-003 increments follow them. Historical qualification claims are not
 rebound to this changed package.
 
 Original identity: `urn:stdo-skills:T001:claude:candidate`.
@@ -184,3 +184,65 @@ optional guard cannot stand in for the selected capability. Native guard evidenc
 is mediated-local; no OS confinement, resolved nested authentication or completed
 Claude Q05 follows. T-001 qualification records stay frozen on their old subjects;
 this increment's source/package and host-neutral scenarios have separate evidence.
+
+## Nominated-project representation increment — T-003
+
+This section is the operative SK-14 addition and qualifies the earlier generic
+method/transport exclusions for this operation only. Root activates the Claude
+tenant Worker to edit only this tenant's design, skills, package guides and
+inventory. The outcome is a usable host-session representation-build route;
+the smallest re-entry is the tenant design under the selected common capability.
+The provider's `a_c/build_tenants/graphify/design/project-build.md` owns the public
+workflow. Skills consumes that contract and does not fork its source selection,
+grounding, carrier, coverage, viewer or formal-checking implementation.
+
+The five-skill decomposition remains. `stdo-workspace-change` recognizes a user's
+request to build a representation of their nominated project and routes directly
+to `stdo-tool-operations`. The latter also discovers that request from its own
+description and supports explicit `/stdo-tool-operations` invocation. Its packaged
+`references/representation.md` owns the conditional procedure. This route runs
+before the general 3.0.1 lifecycle branch: interpreting a nominated project's
+verified source does not ask for lifecycle admission under that project's method.
+
+| Requirement / boundary | Algorithm and Claude binding |
+|---|---|
+| SK-01, SK-14 discovery | Natural requests such as “build a representation of my project” load the tool skill through either description or workspace-change routing; explicit invocation takes the same route |
+| SK-02 exact subject | Bind the user's project root, exact Product Definition, selected local corpus and new run directory; provider `prepare` retains actual manager verification and frozen source identity |
+| SK-04 provider selection | Obtain `ac_project.py` and its Python runtime from the declared relation, activation, operator or `AC_PROJECT_TOOL`; call its public CLI with Bash, retaining actual JSON and refusal status |
+| SK-05, SK-13 eligible source | Keep scope finite and local; inspect any selected composition control before preparation, authoring or disclosure; withhold this raw-file route where required mediation is unsupported |
+| SK-06, SK-14 F_P construction | For each returned `task`, Claude reads the frozen prompt and schema, authors the grounded JSON in the current session under the run directory, and calls `submit`; the provider validates and retains it |
+| SK-08 continuation | Call `status` before resuming, preserve accepted answers, continue only pending tasks, and reuse only a current checked completed receipt; retain stale or partial outputs without overwrite |
+| SK-09, SK-14 outcome | Call `build` after all tasks, inspect actual artifacts and checks, then return model, carrier, coverage and offline explorer links with omissions/residuals; prepared prompts alone are incomplete |
+| SK-11, SK-12 limits | Package checks prove delivery structure only; fresh host observations are separately required for natural discovery, explicit invocation and authored completion |
+
+Claude uses Bash + Read + its authorized file-writing tool. The F_P author is the
+current Claude session; no Codex subprocess, batch-runner event simulation,
+isolated-child identity or authenticated actor telemetry is supplied. `--author`
+is an honest caller-declared label. Source excerpts are data, not instructions to
+broaden the work or grant effects. Schema/grounding validity and processed chunks
+do not prove faithful or complete semantics; uncertainties, omissions and residuals
+remain visible in the authored proposal and final return.
+
+The target's exact method (including a target 3.x cut), Skills' fixed 3.0.1 RC1
+builder and the a_c provider's 2.5.1 RC2 builder remain separate coordinates.
+No target adoption, blanket lifecycle compatibility or mutable-method dependency
+follows from a representation result. The ordinary manager's actual verification
+must succeed for the selected target; an unsupported verification is retained.
+Direct mode uses no Graphify upstream. Selecting `graphify-ac` requires the pinned
+upstream and actual discovery/round trip. Neither mode bypasses selected mediated
+composition controls. Lean is reported only when a selected required formal
+checker actually ran and its result was verified.
+
+The normal successful path is `prepare → task → author → submit` repeated over
+the finite returned chunks, then `build → status`. A source/definition/provider
+drift, invalid answer, required-tool failure, unresolved permission, unprocessed
+chunk or partial-output refusal prevents a completed-build claim. Work remains
+resumable only according to the provider's retained state and currentness checks.
+The result is a source-linked proposal, without acceptance or publication effects.
+
+This increment leaves the earlier Q05 Claude handoff obligation open. Static
+integrity checks, controlled CLI fixtures and installed-copy delivery checks do
+not establish actual Claude discovery, F_P authoring, independent review or host
+qualification. Such evidence must name its exact package, host, nominated fixture,
+invocation, source, submissions, checks and result; it does not rebind historical
+T-001/T-002 evidence to this package.

@@ -1,0 +1,554 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "Any halted/gap-stopped run gets typed replay-derived frontier,failure/rejection evidence,attempt history. Halt defect intake is admitted triage with owner,change_class,reentry per ticket method; ticket drafts derive intake and solutioning stops before action. Resumed changed declaration/binding/policy needs reprice event with before/after digests,class,ticket; missing reprice blocks.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 36,
+            "quote": "**REQ-R-ABG3-WITNESS-001**: ABG shall derive a typed halt-diagnosis projection for any halted or gap-stopped run: the implicated frontier, rejection or failure evidence refs, and attempt history, replay-derived without private diagnostic state.\n\n**REQ-R-ABG3-WITNESS-002**: Defect intake from a halt shall be a typed triage record admitted as an event, carrying owner, change_class, and re-entry point per TICKET_METHOD. Ticket drafts shall be generated FROM admitted intake records; intake is the gap-to-intent seam of the reflective loop, and solutioning proceeds up to — never into — action.\n\n**REQ-R-ABG3-WITNESS-003**: Resuming or continuing a run whose declaration, binding, or policy truth changed since the prior segment shall admit a `declaration_reprice_admitted` event carrying before/after digests, change_class, and the owning ticket ref. A substrate change without an admitted reprice event shall be a typed block, not a silent continuation.\n\n**REQ-R-ABG3-WITNESS-004**: Frozen-law classification shall be a replay predicate: a run span is frozen-law exactly when it contains zero admitted reprice events. Frozen-law status shall not rest on operator assertion or post-hoc judgment.\n\n**REQ-R-ABG3-WITNESS-005**: Each resumed segment shall stamp substrate identity (package/artifact identity and governing declaration digests) so mixed-substrate runs decompose per segment under replay.\n\n**REQ-R-ABG3-WITNESS-006**: Operator run lifecycle shall be actor-attributed F_H events: at minimum `run_resumed` and `run_stopped` with a typed reason. Lifecycle acts that bypass event admission shall not exist on the operator path.\n\n**REQ-R-ABG3-WITNESS-007**: ABG shall witness workspace hygiene over evidence surfaces: kernel digests at segment boundaries, detection and typed classification of foreign writes, and a copy-out diagnosis rule — diagnosis operates on copied-out artifacts, and foreign-written evidence is inadmissible for closure until re-measured.\n\n**REQ-R-ABG3-WITNESS-008**: Citability shall be a replay predicate: converged AND zero reprice events AND hygiene clean. The citability projection shall expose which conjunct fails when a run is not citable.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 22
+          }
+        ],
+        "key": "supervisor_witness",
+        "label": "Admitted supervisor witness"
+      },
+      {
+        "conditions": [],
+        "definition": "Accepted function-definition relation derives identities: workspace.create/open; project.read for catalog/status/result/evidence/replay/gaps/actions; product.verify/resolve/install; workspace.bind; catalog.admit/view/apply; run.invoke/continue; interaction.respond; result.assess; witness.admit; conformance.evaluate; product.materialize; release.snapshot, all prefixed abg.operation. Observer/tuner reads and tuning.transition reserved planned 5.1. Pure reads emit no events; CLI spellings are variants, reference CLI is adapter not identity.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 42,
+            "quote": "**REQ-R-ABG3-WITNESS-009**: There shall be ONE operator-command/event grammar projected from the accepted public function-definition relation. Every 5.0 operator interaction is a typed variant of exactly one derived public identity: workspace creation/opening map to `abg.operation.workspace.create` and `abg.operation.workspace.open`; pure catalog/status/result/evidence/replay/gap/action reads map to `abg.operation.project.read`; product verification, resolution, installation, workspace binding, contribution admission, catalog narrowing, and declaration application map respectively to `abg.operation.product.verify`, `abg.operation.product.resolve`, `abg.operation.product.install`, `abg.operation.workspace.bind`, `abg.operation.catalog.admit`, `abg.operation.catalog.view`, and `abg.operation.catalog.apply`; invoke/start and continuation map to `abg.operation.run.invoke` and `abg.operation.run.continue`; typed F_H response and assessed-result admission map to `abg.operation.interaction.respond` and `abg.operation.result.assess`; witness acts and run lifecycle attestations map to `abg.operation.witness.admit`; public GTL-program conformance, product-asset materialization, and qualified release materialization map to `abg.operation.conformance.evaluate`, `abg.operation.product.materialize`, and `abg.operation.release.snapshot`. Observer/tuner reads and `abg.operation.tuning.transition` are reserved for the planned 5.1 observer/tuner Product. Pure reads admit no events. Literal CLI spellings are ergonomic variant bindings, not operation identities. The abg CLI is the grammar's reference adapter, not the grammar itself: alternative operator surfaces are lawful only as adapters over the same typed admission and projection relations. A surface that bypasses the grammar is not an operator surface; tests driving a harness in-process are not operators.\n\n**REQ-R-ABG3-WITNESS-010**: Campaign lifecycle shall join the operator grammar: run/resume/stop scenario commands replace raw harness invocation, environment and sandbox capabilities are declared command arguments, each command admits the operator lifecycle events, and a run is reproducible from its admitted operator-command line.\n\n**REQ-R-ABG3-WITNESS-011**: Tier read surfaces shall be projections rendered through operator-grammar commands (in the reference adapter: CLI verbs): at minimum an observe-report command (gaps, drift, halts, citability) and draft review/ratify commands where ratification is itself an admitted F_H event. No tier surface may own a second truth store.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 38
+          }
+        ],
+        "key": "operator_grammar",
+        "label": "One public operator grammar"
+      },
+      {
+        "conditions": [],
+        "definition": "Crossing execution authority or immutable workspace binding on existing spine requires covering admitted reprice naming exact pair, else typed basis_fork_detected block at runner and every operator route. Same-authority new observation,cursor,readiness,worksite digest,projection is ordinary progress. Replay-derived route-grade basis contains admitted identities for read/diagnose/attest/route only; full traversal needs graph,module,intent execution basis.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 58,
+            "quote": "**REQ-R-ABG3-WITNESS-017**: Admission of a changed execution-authority basis or immutable workspace binding onto a spine previously run under another such identity shall fail closed as a typed block (`basis_fork_detected`) unless a covering declaration reprice names the exact identity pair being crossed. A newer `ObservationSnapshot`, replay cursor, readiness result, worksite digest, or projection under the same authority basis is ordinary progress and shall not trigger this guard. At the runner the authority-fork block is a typed fail-closed startup result; the guard applies at the runner and at every operator route; no operator surface may continue a run across an authority fork without the covering admitted reprice.\n\nGap: typed basis-fork results at operator routes are unrealized — the routes refuse the fork but fail untyped (a raw thrown error carrying the `basis_fork_detected` reason) rather than returning typed blocked truth. Owner: T-244 routing; implementation requires a singular realization leaf.\n\n**REQ-R-ABG3-WITNESS-018**: A route-grade basis reconstructable from replay may act on an existing run's spine without traversing it, carrying only admitted identity fields. Full traversal requires an execution basis carrying graph, module, and intent. Operator routes that only read, diagnose, attest, or route shall not be forced to reconstruct an execution basis, and a route-grade basis shall never advance, close, or materialize traversal truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 54
+          }
+        ],
+        "key": "authority_fork_guard",
+        "label": "Authority-fork guard and route basis"
+      },
+      {
+        "conditions": [],
+        "definition": "Active capability dated 2026-04-05 with legacy method/intent/Product derivations.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "# REQ-R-ABG3-TRANSPORT — Governed Probabilistic Transport\n\n**Status**: Active\n**Category**: Capability\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport",
+            "start_line": 1
+          }
+        ],
+        "key": "transport_metadata",
+        "label": "Transport requirement provenance"
+      },
+      {
+        "conditions": [],
+        "definition": "Probabilistic transport is substrate truth, not Product-local imperative runtime.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 13,
+            "quote": "Define transport for governed `F_P` work as substrate truth rather than\nproduct-local imperative code.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "governed_fp_transport",
+        "label": "Governed F_P transport"
+      },
+      {
+        "conditions": [],
+        "definition": "Each F_P dispatch has exactly one admitted runtime-derived actor identity for one worker/tool/process, never multiple hidden traversals. Retry/reentry makes fresh id with old evidence only via replay. Actor supervises own liveness/progress/process/artifact, not next-vector,closure,retry or domain truth outside event calculus.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 47,
+            "quote": "**REQ-R-ABG3-TRANSPORT-008**: Long-running `F_P` dispatch shall be governed by a progress lease over explicit observable facts such as result-artifact updates, bounded heartbeat/progress events, or equivalent declared liveness surfaces. Elapsed wall-clock alone is not sufficient runtime truth for long constructive work.\n\n**REQ-R-ABG3-TRANSPORT-009**: ABG shall observe `result_path` as a live writeback surface during supervised dispatch. Detection of a valid artifact before subprocess termination shall be replay-visible and available to closure/recovery logic without inventing new semantic truth.\n\n**REQ-R-ABG3-TRANSPORT-010**: Each governed `F_P` dispatch attempt shall be wrapped by exactly one ABG-owned actor invocation identity. The actor invocation is the supervised effect boundary for one worker, tool, or agent process and shall not hide multiple graph traversals.\n\n**REQ-R-ABG3-TRANSPORT-011**: Actor invocation identity shall be derived from admitted runtime truth for the current dispatch attempt. Same-edge retry or re-entry shall mint a fresh actor invocation identity and shall carry prior actor invocation evidence only through replay-derived context.\n\n**REQ-R-ABG3-TRANSPORT-012**: Actor invocation events shall be replay-visible. At minimum ABG shall preserve actor invocation start, result-artifact observation, and actor invocation closure or failure as runtime truth or as a closed ingest surface that is projected from runtime truth.\n\n**REQ-R-ABG3-TRANSPORT-013**: An actor invocation may supervise liveness, progress, subprocess execution, and result-artifact observation for its own dispatch attempt. It shall not select the next graph vector, close traversal, retry the edge, or append domain truth outside ABG event calculus.\n\n**REQ-R-ABG3-TRANSPORT-014**: When an actor invocation reports timeout, crash, nonzero exit, or equivalent transport failure after producing a candidate result artifact, ABG shall attempt deterministic admission of that artifact against the original `DispatchRequest`. A valid artifact shall be available to closure/recovery logic; an invalid artifact shall become typed failure or gap truth.\n\n**REQ-R-ABG3-TRANSPORT-015**: Downstream products may provide the concrete actor binding and domain-specific worker implementation, but they shall not replace ABG-owned actor invocation identity, progress observation, result admission, retry, or projection truth with a shadow runtime.\n\n**REQ-R-ABG3-TRANSPORT-016**: A supervised process actor shall use an explicit ABG-owned invocation contract covering command, arguments, working directory, stdin or prompt source, environment policy, timeout policy, stream capture targets, result artifact reference, and worker binding identity.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 31
+          }
+        ],
+        "key": "actor_invocation",
+        "label": "One supervised actor attempt"
+      },
+      {
+        "conditions": [],
+        "definition": "Termination/timeout/stall lacking admitted artifact/report,stream evidence or declared progress exposes replay-derived nonprogress, never Product-summary invention. Carrier keeps function/call/frame/vector/actor/attempt,available process id,timeout class,stream bytes,last heartbeat,signals,exit,artifact/report/progress flags,evidence.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 59,
+            "quote": "**REQ-R-ABG3-TRANSPORT-020**: When a supervised `F_P` actor invocation terminates, times out, or becomes non-progressing without an admitted result artifact, admitted report, stream evidence, or declared progress signal, ABG shall expose that fact as a typed traversal non-progress carrier. The carrier shall be derivable from admitted runtime truth and shall not be invented by a downstream product summary.\n\n**REQ-R-ABG3-TRANSPORT-021**: A traversal non-progress carrier shall preserve the graph function, graph call, frame, vector, actor invocation, attempt, process identity when available, timeout class, stream byte counts, last heartbeat, signal sequence, exit status, artifact/report/progress observation flags, and evidence references used for classification.\n\n**REQ-R-ABG3-TRANSPORT-022**: ABG shall not classify traversal non-progress when a valid result artifact or admitted report exists for the actor invocation. Artifact/report salvage and admission precede retry projection; no-progress is reserved for absence of semantically assessable worker output.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 55
+          }
+        ],
+        "key": "traversal_nonprogress",
+        "label": "Typed traversal non-progress"
+      },
+      {
+        "conditions": [],
+        "definition": "Every known liveness-affecting system/asset exposes declared boundary,source-kind,system/asset,evidence contract. Sources include logs,ledgers,manifests,PTY/stdout/stderr,results,reports/dossiers,archives/sidecars,heartbeat/status,external interruption; future backends allowed without vendor/span/non-ABG authority dependence.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 75,
+            "quote": "**REQ-R-ABG3-TRANSPORT-025**: Every ABG-known runtime system and runtime asset surface that can affect supervised traversal liveness shall expose a declared, substrate-neutral probe contract. Probe contracts shall identify the observed runtime boundary, the source kind, the system or asset ref, and the evidence refs that can prove activity or interruption. Runtime asset activity includes event log append, ledger append/update, manifest creation/update, PTY capture output, stdout/stderr capture, result artifact creation, projection/report/dossier creation, archive/sidecar write, heartbeat/status stream, and typed external interruption evidence. They may be adapted to future telemetry backends, but ABG liveness law shall not depend on a telemetry vendor, span model, or non-ABG trace authority.\n\n**REQ-R-ABG3-TRANSPORT-026**: Probe adapters shall publish raw runtime activity or interruption evidence only. They shall not decide retry, stop, graph advancement, closure, escalation, or traversal movement.\n\n**REQ-R-ABG3-TRANSPORT-027**: ABG runtime liveness shall be governed by an inactivity lease over admitted probe activity. Any admitted activity for the active invocation from a declared system or asset probe source shall reset the lease. Activity evidence is not domain truth, closure truth, or artifact admission by itself.\n\n**REQ-R-ABG3-TRANSPORT-028**: A hard elapsed-time safety cap may exist only as outer safety evidence. When it fires, ABG shall admit typed external interruption truth before any public summary or retry decision treats the invocation as stopped.\n\n**REQ-R-ABG3-TRANSPORT-029**: A valid result artifact, admitted report, or declared progress observation produced before transport failure shall be deterministically admitted or rejected before no-progress, retry, or block classification.\n\n**REQ-R-ABG3-TRANSPORT-030**: ABG-owned live transport paths shall prefer inactivity lease policy over flat subprocess timeout policy for long-running constructive work. A caller-local timeout shall not be the effective liveness authority for an invocation that continues to emit admitted probe activity.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 65
+          }
+        ],
+        "key": "runtime_probe_lease",
+        "label": "Substrate-neutral activity probe and lease"
+      },
+      {
+        "conditions": [
+          "Planned ABIogenesis 5.1 contract."
+        ],
+        "definition": "Capability/Constraint dated 2026-07-09 explicitly deferred to planned ABIogenesis 5.1, not applicable to 5.0; derivations name legacy method/Product/consciousness/witness/hooks and T-217 absorbing T-206.",
+        "exceptions": [
+          "Not applicable to 5.0."
+        ],
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "# REQ-R-ABG3-TUNER — Reflective Tuner And Annealing Authority\n\n**Status**: Deferred - planned ABIogenesis 5.1; not applicable to 5.0\n**Category**: Capability / Constraint\n**Date**: 2026-07-09\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md) (the reflective boundary; the atom criterion), [REQ-R-ABG3-FP-CONSCIOUSNESS.md](./REQ-R-ABG3-FP-CONSCIOUSNESS.md), [REQ-R-ABG3-SUPERVISOR-WITNESS.md](./REQ-R-ABG3-SUPERVISOR-WITNESS.md), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md), [T-217](../../../.ai-workspace/tickets/completed/T-217-consciousness-wave-higher-order-regulation.md) (absorbing [T-206](../../../.ai-workspace/tickets/completed/T-206-abg-shell-tuner-bundled-consciousness-loop.md))\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority",
+            "start_line": 1
+          }
+        ],
+        "key": "planned_tuner",
+        "label": "Deferred reflective tuner"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "supervisor_witness"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 36,
+            "quote": "**REQ-R-ABG3-WITNESS-004**: Frozen-law classification shall be a replay predicate: a run span is frozen-law exactly when it contains zero admitted reprice events. Frozen-law status shall not rest on operator assertion or post-hoc judgment.\n\n**REQ-R-ABG3-WITNESS-005**: Each resumed segment shall stamp substrate identity (package/artifact identity and governing declaration digests) so mixed-substrate runs decompose per segment under replay.\n\n**REQ-R-ABG3-WITNESS-006**: Operator run lifecycle shall be actor-attributed F_H events: at minimum `run_resumed` and `run_stopped` with a typed reason. Lifecycle acts that bypass event admission shall not exist on the operator path.\n\n**REQ-R-ABG3-WITNESS-007**: ABG shall witness workspace hygiene over evidence surfaces: kernel digests at segment boundaries, detection and typed classification of foreign writes, and a copy-out diagnosis rule — diagnosis operates on copied-out artifacts, and foreign-written evidence is inadmissible for closure until re-measured.\n\n**REQ-R-ABG3-WITNESS-008**: Citability shall be a replay predicate: converged AND zero reprice events AND hygiene clean. The citability projection shall expose which conjunct fails when a run is not citable.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 28
+          }
+        ],
+        "key": "witness_replay_predicates_and_hygiene",
+        "statement": "Frozen-law iff zero admitted reprice events in span, never assertion. Every resumed segment stamps package/artifact and declaration digests. Operator resume/stop are attributed F_H events with typed reasons, no bypass. Hygiene witnesses boundary kernel digests and typed foreign writes; diagnose copied-out artifacts, foreign-written evidence cannot close until remeasured. Citability is converged AND zero reprice AND hygiene clean, exposing failing conjuncts.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "operator_grammar",
+          "supervisor_witness"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 44,
+            "quote": "**REQ-R-ABG3-WITNESS-009**: There shall be ONE operator-command/event grammar projected from the accepted public function-definition relation. Every 5.0 operator interaction is a typed variant of exactly one derived public identity: workspace creation/opening map to `abg.operation.workspace.create` and `abg.operation.workspace.open`; pure catalog/status/result/evidence/replay/gap/action reads map to `abg.operation.project.read`; product verification, resolution, installation, workspace binding, contribution admission, catalog narrowing, and declaration application map respectively to `abg.operation.product.verify`, `abg.operation.product.resolve`, `abg.operation.product.install`, `abg.operation.workspace.bind`, `abg.operation.catalog.admit`, `abg.operation.catalog.view`, and `abg.operation.catalog.apply`; invoke/start and continuation map to `abg.operation.run.invoke` and `abg.operation.run.continue`; typed F_H response and assessed-result admission map to `abg.operation.interaction.respond` and `abg.operation.result.assess`; witness acts and run lifecycle attestations map to `abg.operation.witness.admit`; public GTL-program conformance, product-asset materialization, and qualified release materialization map to `abg.operation.conformance.evaluate`, `abg.operation.product.materialize`, and `abg.operation.release.snapshot`. Observer/tuner reads and `abg.operation.tuning.transition` are reserved for the planned 5.1 observer/tuner Product. Pure reads admit no events. Literal CLI spellings are ergonomic variant bindings, not operation identities. The abg CLI is the grammar's reference adapter, not the grammar itself: alternative operator surfaces are lawful only as adapters over the same typed admission and projection relations. A surface that bypasses the grammar is not an operator surface; tests driving a harness in-process are not operators.\n\n**REQ-R-ABG3-WITNESS-010**: Campaign lifecycle shall join the operator grammar: run/resume/stop scenario commands replace raw harness invocation, environment and sandbox capabilities are declared command arguments, each command admits the operator lifecycle events, and a run is reproducible from its admitted operator-command line.\n\n**REQ-R-ABG3-WITNESS-011**: Tier read surfaces shall be projections rendered through operator-grammar commands (in the reference adapter: CLI verbs): at minimum an observe-report command (gaps, drift, halts, citability) and draft review/ratify commands where ratification is itself an admitted F_H event. No tier surface may own a second truth store.\n\n**REQ-R-ABG3-WITNESS-012**: Witness truth shall audit the supervisor role separation. A constructive act performed outside admitted work (bypassing the ticket effector) shall surface as a reprice or hygiene violation in replay; witness events record the separation, they do not substitute for it.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 38
+          }
+        ],
+        "key": "operator_adapters_campaign_and_tiers",
+        "statement": "Alternate operator surfaces must adapt same typed admission/projection; bypass surfaces and in-process harness tests are not operators. Campaign run/resume/stop replaces raw harness with declared env/sandbox args, lifecycle events and reproducibility from admitted command line. Tier reads use grammar commands including observe reports and draft review/ratify with admitted F_H ratification, no second store. Construction outside admitted work/ticket effector surfaces reprice/hygiene violation; witness records role separation but cannot substitute for it.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "supervisor_witness"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 48,
+            "quote": "**REQ-R-ABG3-WITNESS-013**: Deterministic tests shall cover halt-diagnosis derivation, defect-intake admission and ticket-draft generation from it, reprice admission on changed substrate with block-on-missing-reprice, the frozen-law predicate over spans with and without reprice events, per-segment substrate stamps, operator lifecycle attribution, foreign-write detection with copy-out classification, the citability predicate and its failing-conjunct exposure, and operator-command-to-admitted-event conformance (for the reference adapter and for any alternative operator surface) before runtime/live closure can be claimed.\n\n**REQ-R-ABG3-WITNESS-014**: Witness event kinds that initiate, terminate, clip, or declip runtime fluent truth shall declare Event Calculus effects before implementation closure. Frozen-law and citability states are replay-derived predicate truth, never primary event authority.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 46
+          }
+        ],
+        "key": "witness_required_proof_and_effects",
+        "statement": "Before live/runtime closure deterministic tests cover halt derivation,intake/draft generation,changed-substrate reprice/block,zero/nonzero reprice spans,segment stamps,operator attribution,foreign-write/copy-out,citability/failing conjuncts and command-event conformance for reference and every alternative adapter. Fluent-changing witness kinds declare Event Calculus effects before implementation closure; frozen-law/citability remain derived predicates, not primary events.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "operator_grammar",
+          "supervisor_witness"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 52,
+            "quote": "**REQ-R-ABG3-WITNESS-015**: The session's allowed graph-function set shall be an ADMITTED initial condition of the root frame, supplied through the operator grammar: a view restriction over the declared catalog (which remains declared module truth per FPC-004 — never harness-local configuration), enforced at selection/admission, inherited down recursive frames as narrowing only, with violations failing closed as typed selection rejections. Recursive graph-function execution inside the session is bounded by exactly this admitted view.\n\n**REQ-R-ABG3-WITNESS-016**: Replay-log attestation shall be witness truth: the attestation digest shall chain over the full canonical event content of the attested span in admission-ordinal order, so that insertion, removal, or reorder inside an attested span is tamper-evident under cross-process re-derivation from the log alone. Attestation is admitted via the witness event family (`replay_log_attested`); a digest over event ids, counts, or partial fields shall not satisfy attestation.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 50
+          }
+        ],
+        "key": "catalog_view_and_replay_attestation",
+        "statement": "Allowed function set is admitted root-frame initial condition via grammar, narrowing declared catalog, enforced selection/admission and inherited recursively only as narrowing; violations typed reject. Attestation chains full canonical content across span in admission-ordinal order, cross-process reproducible from log and tamper-evident for insert/remove/reorder; admit replay_log_attested. Id/count/partial-field digests are insufficient.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "authority_fork_guard"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 58,
+            "quote": "**REQ-R-ABG3-WITNESS-018**: A route-grade basis reconstructable from replay may act on an existing run's spine without traversing it, carrying only admitted identity fields. Full traversal requires an execution basis carrying graph, module, and intent. Operator routes that only read, diagnose, attest, or route shall not be forced to reconstruct an execution basis, and a route-grade basis shall never advance, close, or materialize traversal truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 58
+          }
+        ],
+        "key": "route_grade_no_traversal",
+        "statement": "Read/diagnose/attest/route must not require execution-basis reconstruction; route-grade basis must never advance,close or materialize traversal.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governed_fp_transport"
+        ],
+        "conditions": [],
+        "exceptions": [
+          "Deterministically validated preserved authoritative same-boundary result can be ingested despite process failure."
+        ],
+        "grounding": [
+          {
+            "end_line": 29,
+            "quote": "**REQ-R-ABG3-TRANSPORT-001**: `F_P` dispatch shall use explicit transport surfaces owned by ABG. Product-local code shall not become the runtime fact owner after dispatch.\n\n**REQ-R-ABG3-TRANSPORT-002**: Transport shall return structured substrate output sufficient to classify runtime defect, transport failure, payload-contract failure, or timeout without parsing agent internals as domain truth.\n\n**REQ-R-ABG3-TRANSPORT-003**: Timeout, crash, nonzero exit, or equivalent subprocess failure shall remain substrate/runtime failure truth unless ABG can deterministically validate and ingest a preserved authoritative result artifact for the same boundary.\n\n**REQ-R-ABG3-TRANSPORT-004**: Missing, empty, malformed, or contract-invalid payload artifacts shall classify distinctly from transport/runtime defects.\n\n**REQ-R-ABG3-TRANSPORT-005**: Certification or proof failure after constructive work shall remain downstream proof/closure truth, not transport truth.\n\n**REQ-R-ABG3-TRANSPORT-006**: Agent CLI invocation contracts shall be owned by ABG but locally overrideable through runtime configuration so workspace/runtime-specific transport drift does not require product code changes.\n\n**REQ-R-ABG3-TRANSPORT-007**: Malformed or unreadable local transport-contract overrides shall fail closed as runtime/policy configuration defects rather than silently falling back to embedded defaults.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 17
+          }
+        ],
+        "key": "transport_failure_and_override_law",
+        "statement": "ABG explicitly owns dispatch/runtime facts and structured classification of runtime,transport,payload-contract,timeout without worker-internal parsing. Timeout/crash/nonzero failure remains runtime unless same-boundary preserved authoritative artifact is deterministically admitted. Missing/empty/malformed/invalid artifacts differ from runtime; post-construction proof failure remains downstream closure, not transport. Agent CLI contract is ABG-owned but runtime-config overrideable; unreadable/malformed overrides fail policy/runtime defect, never silent defaults.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "actor_invocation"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 45,
+            "quote": "**REQ-R-ABG3-TRANSPORT-008**: Long-running `F_P` dispatch shall be governed by a progress lease over explicit observable facts such as result-artifact updates, bounded heartbeat/progress events, or equivalent declared liveness surfaces. Elapsed wall-clock alone is not sufficient runtime truth for long constructive work.\n\n**REQ-R-ABG3-TRANSPORT-009**: ABG shall observe `result_path` as a live writeback surface during supervised dispatch. Detection of a valid artifact before subprocess termination shall be replay-visible and available to closure/recovery logic without inventing new semantic truth.\n\n**REQ-R-ABG3-TRANSPORT-010**: Each governed `F_P` dispatch attempt shall be wrapped by exactly one ABG-owned actor invocation identity. The actor invocation is the supervised effect boundary for one worker, tool, or agent process and shall not hide multiple graph traversals.\n\n**REQ-R-ABG3-TRANSPORT-011**: Actor invocation identity shall be derived from admitted runtime truth for the current dispatch attempt. Same-edge retry or re-entry shall mint a fresh actor invocation identity and shall carry prior actor invocation evidence only through replay-derived context.\n\n**REQ-R-ABG3-TRANSPORT-012**: Actor invocation events shall be replay-visible. At minimum ABG shall preserve actor invocation start, result-artifact observation, and actor invocation closure or failure as runtime truth or as a closed ingest surface that is projected from runtime truth.\n\n**REQ-R-ABG3-TRANSPORT-013**: An actor invocation may supervise liveness, progress, subprocess execution, and result-artifact observation for its own dispatch attempt. It shall not select the next graph vector, close traversal, retry the edge, or append domain truth outside ABG event calculus.\n\n**REQ-R-ABG3-TRANSPORT-014**: When an actor invocation reports timeout, crash, nonzero exit, or equivalent transport failure after producing a candidate result artifact, ABG shall attempt deterministic admission of that artifact against the original `DispatchRequest`. A valid artifact shall be available to closure/recovery logic; an invalid artifact shall become typed failure or gap truth.\n\n**REQ-R-ABG3-TRANSPORT-015**: Downstream products may provide the concrete actor binding and domain-specific worker implementation, but they shall not replace ABG-owned actor invocation identity, progress observation, result admission, retry, or projection truth with a shadow runtime.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 31
+          }
+        ],
+        "key": "live_artifacts_and_salvage",
+        "statement": "Long work uses progress lease over artifacts/heartbeats/declared observations, not elapsed time alone. Observe result_path while running; valid early artifact is replay-visible to recovery/closure without invented semantics. Retain start,artifact observations,closure/failure as truth or closed ingest projection. After failure with candidate artifact, attempt deterministic admission against original DispatchRequest; valid goes to closure/recovery,invalid becomes typed failure/gap. Product may supply binding/worker but cannot replace actor identity,progress,admission,retry,projection.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "actor_invocation"
+        ],
+        "conditions": [
+          "A supervised process actor is used."
+        ],
+        "exceptions": [
+          "Explicit unsafe-child policy may remove authentication/runtime capability inputs."
+        ],
+        "grounding": [
+          {
+            "end_line": 53,
+            "quote": "**REQ-R-ABG3-TRANSPORT-016**: A supervised process actor shall use an explicit ABG-owned invocation contract covering command, arguments, working directory, stdin or prompt source, environment policy, timeout policy, stream capture targets, result artifact reference, and worker binding identity.\n\n**REQ-R-ABG3-TRANSPORT-017**: Environment sanitation for supervised actors shall remove parent-session control variables only by explicit policy. It shall preserve required authentication or runtime capability inputs unless policy explicitly classifies them as unsafe for the child process.\n\n**REQ-R-ABG3-TRANSPORT-018**: Actor stdout and stderr observation shall be recorded as process-boundary evidence while the process is running when the transport can observe it. Post-exit transcript capture alone shall not satisfy live-observation proof for long-running actor dispatch.\n\n**REQ-R-ABG3-TRANSPORT-019**: Actor invocation may return, block, fail, or time out only through typed ABG transport and result-admission outcomes. Worker self-report fields may inform transform assessment, but they shall not own retry, vector closure, traversal convergence, or release closure.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 47
+          }
+        ],
+        "key": "process_contract_and_environment",
+        "statement": "Explicit ABG process contract includes command,args,cwd,stdin/prompt,environment/timeout policy,stream targets,result ref,worker id. Remove parent-session controls only by explicit policy; retain auth/runtime capabilities unless policy marks unsafe. Observe stdout/stderr live when transport can; post-exit-only capture does not prove live observation. Return/block/fail/timeout through typed transport/admission outcomes; worker self-report informs assessment only, never retry/closure/convergence/release.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "traversal_nonprogress",
+          "actor_invocation"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 73,
+            "quote": "**REQ-R-ABG3-TRANSPORT-022**: ABG shall not classify traversal non-progress when a valid result artifact or admitted report exists for the actor invocation. Artifact/report salvage and admission precede retry projection; no-progress is reserved for absence of semantically assessable worker output.\n\n**REQ-R-ABG3-TRANSPORT-023**: A modulated `F_P` dispatch handoff shall carry the ABG-derived traversal attempt envelope or a stable ref to it. The handoff surface shall preserve selected schedule items, ordering constraints, phase gates, required progress artifact refs, gap-pressure refs, and affect refs needed to drive the worker without making prompt prose the authority surface.\n\n**REQ-R-ABG3-TRANSPORT-024**: A worker or downstream product shall not invent a private schedule, retry, or chunking loop when a traversal attempt envelope is present. Any continuation, exhaustion, or forced-review result shall be admitted as ABG runtime truth.\n\n**REQ-R-ABG3-TRANSPORT-025**: Every ABG-known runtime system and runtime asset surface that can affect supervised traversal liveness shall expose a declared, substrate-neutral probe contract. Probe contracts shall identify the observed runtime boundary, the source kind, the system or asset ref, and the evidence refs that can prove activity or interruption. Runtime asset activity includes event log append, ledger append/update, manifest creation/update, PTY capture output, stdout/stderr capture, result artifact creation, projection/report/dossier creation, archive/sidecar write, heartbeat/status stream, and typed external interruption evidence. They may be adapted to future telemetry backends, but ABG liveness law shall not depend on a telemetry vendor, span model, or non-ABG trace authority.\n\n**REQ-R-ABG3-TRANSPORT-026**: Probe adapters shall publish raw runtime activity or interruption evidence only. They shall not decide retry, stop, graph advancement, closure, escalation, or traversal movement.\n\n**REQ-R-ABG3-TRANSPORT-027**: ABG runtime liveness shall be governed by an inactivity lease over admitted probe activity. Any admitted activity for the active invocation from a declared system or asset probe source shall reset the lease. Activity evidence is not domain truth, closure truth, or artifact admission by itself.\n\n**REQ-R-ABG3-TRANSPORT-028**: A hard elapsed-time safety cap may exist only as outer safety evidence. When it fires, ABG shall admit typed external interruption truth before any public summary or retry decision treats the invocation as stopped.\n\n**REQ-R-ABG3-TRANSPORT-029**: A valid result artifact, admitted report, or declared progress observation produced before transport failure shall be deterministically admitted or rejected before no-progress, retry, or block classification.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 59
+          }
+        ],
+        "key": "salvage_precedes_nonprogress",
+        "statement": "Valid result artifact or admitted report forbids no-progress classification; salvage/admission precedes retry. Before no-progress/retry/block, deterministically admit or reject any valid artifact,admitted report or declared progress from before transport failure; no-progress is absence of semantically assessable output.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governed_fp_transport"
+        ],
+        "conditions": [
+          "Modulated attempt envelope is present."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 63,
+            "quote": "**REQ-R-ABG3-TRANSPORT-023**: A modulated `F_P` dispatch handoff shall carry the ABG-derived traversal attempt envelope or a stable ref to it. The handoff surface shall preserve selected schedule items, ordering constraints, phase gates, required progress artifact refs, gap-pressure refs, and affect refs needed to drive the worker without making prompt prose the authority surface.\n\n**REQ-R-ABG3-TRANSPORT-024**: A worker or downstream product shall not invent a private schedule, retry, or chunking loop when a traversal attempt envelope is present. Any continuation, exhaustion, or forced-review result shall be admitted as ABG runtime truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 61
+          }
+        ],
+        "key": "modulated_transport_envelope",
+        "statement": "Modulated handoff carries ABG-derived attempt envelope/ref with selected schedule,order,phase gates,progress artifacts,gap/affect refs, not prose authority. With envelope worker/Product cannot invent private schedule/retry/chunk loop; continuation,exhaustion,forced review enter ABG truth.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "runtime_probe_lease"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 75,
+            "quote": "**REQ-R-ABG3-TRANSPORT-026**: Probe adapters shall publish raw runtime activity or interruption evidence only. They shall not decide retry, stop, graph advancement, closure, escalation, or traversal movement.\n\n**REQ-R-ABG3-TRANSPORT-027**: ABG runtime liveness shall be governed by an inactivity lease over admitted probe activity. Any admitted activity for the active invocation from a declared system or asset probe source shall reset the lease. Activity evidence is not domain truth, closure truth, or artifact admission by itself.\n\n**REQ-R-ABG3-TRANSPORT-028**: A hard elapsed-time safety cap may exist only as outer safety evidence. When it fires, ABG shall admit typed external interruption truth before any public summary or retry decision treats the invocation as stopped.\n\n**REQ-R-ABG3-TRANSPORT-029**: A valid result artifact, admitted report, or declared progress observation produced before transport failure shall be deterministically admitted or rejected before no-progress, retry, or block classification.\n\n**REQ-R-ABG3-TRANSPORT-030**: ABG-owned live transport paths shall prefer inactivity lease policy over flat subprocess timeout policy for long-running constructive work. A caller-local timeout shall not be the effective liveness authority for an invocation that continues to emit admitted probe activity.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 67
+          }
+        ],
+        "key": "probe_authority_and_time_policy",
+        "statement": "Adapters publish raw activity/interruption only, never retry/stop/advance/closure/escalation/movement. Inactivity lease resets on any admitted active-invocation declared-source activity; activity alone is not domain/closure/artifact admission. Hard elapsed cap only outer safety evidence and must admit external interruption before summaries/retry call stopped. Live long constructive paths prefer inactivity lease; caller timeout cannot become effective liveness authority while admitted activity continues.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "planned_tuner"
+        ],
+        "conditions": [
+          "Planned 5.1 tuner contract is applicable."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 25,
+            "quote": "Define the reflective optimisation loop as first-class system content:\nthe tuner consumes replay-derived read models and authors DECLARATION\nDRAFTS only, behind ratification. It is the sole annealing authority\n(F_P-to-F_D interiors exist only through admitted equivalence\ncontracts) and the sole crystallization authority (rails/emergence\ntrack changes are its drafts). Same manifold, different observables:\nthe tuner is the same machinery and worker class pointed at the\nsystem's own telemetry; it is not a meta-framework and holds no\ndownward control path.\n\nThis family preserves the planned ABIogenesis 5.1 Product contract. It does\nnot select 5.0 realization, public operations, qualification, or release work.\nABIogenesis 5.0 retains the replay, projection, catalog, GTL, HoG, ABG, and\nself-conformance substrate on which a later 5.1 re-entry may realize it.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "tuner_draft_only_and_release_scope",
+        "statement": "Reflective optimization consumes replay read models and authors declaration drafts only behind ratification. Sole annealing authority requires admitted F_P-to-F_D equivalence contracts; sole crystallization authority drafts rails/emergence track changes. Same worker/machinery over own telemetry, no metaframe or downward control. This preserves 5.1 contract and selects no 5.0 realization,public operations,qualification or release; 5.0 retains substrate for later reentry.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "residual",
+        "keys": [
+          "supervisor_witness",
+          "operator_grammar",
+          "authority_fork_guard",
+          "operator_routes_enforce_fork_guard",
+          "witness_replay_predicates_and_hygiene",
+          "operator_adapters_campaign_and_tiers",
+          "witness_required_proof_and_effects",
+          "catalog_view_and_replay_attestation",
+          "route_grade_no_traversal",
+          "operator_fork_typing_gap"
+        ],
+        "reason": "Witness laws retained with explicit typed operator-fork implementation gap.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "transport_metadata",
+          "transport_basis_unresolved"
+        ],
+        "reason": "Metadata retained with unresolved references.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "governed_fp_transport"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FPurpose"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "actor_invocation",
+          "traversal_nonprogress",
+          "runtime_probe_lease",
+          "probe_lease_governs_actor_liveness",
+          "transport_failure_and_override_law",
+          "live_artifacts_and_salvage",
+          "process_contract_and_environment",
+          "salvage_precedes_nonprogress",
+          "modulated_transport_envelope",
+          "probe_authority_and_time_policy",
+          "transport_realization_unverified"
+        ],
+        "reason": "Transport laws retained without claiming implementation or live proof.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "planned_tuner",
+          "tuner_reference_basis"
+        ],
+        "reason": "Deferred applicability and provenance retained; linked sources/future realization unresolved.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "tuner_draft_only_and_release_scope"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FPurpose"
+      }
+    ],
+    "latitude": [],
+    "limitations": [
+      "Supervisor operator routes have a reported untyped basis-fork refusal gap. Tuner content is preserved strictly as deferred 5.1 subject data, not a 5.0 obligation.",
+      "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 54,
+            "quote": "**REQ-R-ABG3-WITNESS-017**: Admission of a changed execution-authority basis or immutable workspace binding onto a spine previously run under another such identity shall fail closed as a typed block (`basis_fork_detected`) unless a covering declaration reprice names the exact identity pair being crossed. A newer `ObservationSnapshot`, replay cursor, readiness result, worksite digest, or projection under the same authority basis is ordinary progress and shall not trigger this guard. At the runner the authority-fork block is a typed fail-closed startup result; the guard applies at the runner and at every operator route; no operator surface may continue a run across an authority fork without the covering admitted reprice.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 54
+          }
+        ],
+        "key": "operator_routes_enforce_fork_guard",
+        "kind": "enforces",
+        "meaning": "No operator surface may continue an authority fork without exact covering admitted reprice.",
+        "source_key": "operator_grammar",
+        "target_key": "authority_fork_guard"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 75,
+            "quote": "**REQ-R-ABG3-TRANSPORT-027**: ABG runtime liveness shall be governed by an inactivity lease over admitted probe activity. Any admitted activity for the active invocation from a declared system or asset probe source shall reset the lease. Activity evidence is not domain truth, closure truth, or artifact admission by itself.\n\n**REQ-R-ABG3-TRANSPORT-028**: A hard elapsed-time safety cap may exist only as outer safety evidence. When it fires, ABG shall admit typed external interruption truth before any public summary or retry decision treats the invocation as stopped.\n\n**REQ-R-ABG3-TRANSPORT-029**: A valid result artifact, admitted report, or declared progress observation produced before transport failure shall be deterministically admitted or rejected before no-progress, retry, or block classification.\n\n**REQ-R-ABG3-TRANSPORT-030**: ABG-owned live transport paths shall prefer inactivity lease policy over flat subprocess timeout policy for long-running constructive work. A caller-local timeout shall not be the effective liveness authority for an invocation that continues to emit admitted probe activity.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 69
+          }
+        ],
+        "key": "probe_lease_governs_actor_liveness",
+        "kind": "governs",
+        "meaning": "Admitted activity resets the actor inactivity lease; elapsed cap is admitted interruption evidence, not rival liveness truth.",
+        "source_key": "runtime_probe_lease",
+        "target_key": "actor_invocation"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Keep normative fail-closed guard distinct from incomplete typed operator-route realization.",
+        "grounding": [
+          {
+            "end_line": 56,
+            "quote": "Gap: typed basis-fork results at operator routes are unrealized — the routes refuse the fork but fail untyped (a raw thrown error carrying the `basis_fork_detected` reason) rather than returning typed blocked truth. Owner: T-244 routing; implementation requires a singular realization leaf.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FAcceptance%20Criteria",
+            "start_line": 56
+          }
+        ],
+        "key": "operator_fork_typing_gap",
+        "subject_key": "authority_fork_guard",
+        "uncertainty": "Source reports operator routes refuse forks but throw raw basis_fork_detected errors instead of typed blocked truth; T-244 routing requires one realization leaf."
+      },
+      {
+        "consequence": "No linked authority identity is resolved.",
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport",
+            "start_line": 6
+          }
+        ],
+        "key": "transport_basis_unresolved",
+        "subject_key": "transport_metadata",
+        "uncertainty": "Referenced sources absent."
+      },
+      {
+        "consequence": "These requirements do not establish current running processes, successful salvage or live transport qualification.",
+        "grounding": [
+          {
+            "end_line": 75,
+            "quote": "**REQ-R-ABG3-TRANSPORT-008**: Long-running `F_P` dispatch shall be governed by a progress lease over explicit observable facts such as result-artifact updates, bounded heartbeat/progress events, or equivalent declared liveness surfaces. Elapsed wall-clock alone is not sufficient runtime truth for long constructive work.\n\n**REQ-R-ABG3-TRANSPORT-009**: ABG shall observe `result_path` as a live writeback surface during supervised dispatch. Detection of a valid artifact before subprocess termination shall be replay-visible and available to closure/recovery logic without inventing new semantic truth.\n\n**REQ-R-ABG3-TRANSPORT-010**: Each governed `F_P` dispatch attempt shall be wrapped by exactly one ABG-owned actor invocation identity. The actor invocation is the supervised effect boundary for one worker, tool, or agent process and shall not hide multiple graph traversals.\n\n**REQ-R-ABG3-TRANSPORT-011**: Actor invocation identity shall be derived from admitted runtime truth for the current dispatch attempt. Same-edge retry or re-entry shall mint a fresh actor invocation identity and shall carry prior actor invocation evidence only through replay-derived context.\n\n**REQ-R-ABG3-TRANSPORT-012**: Actor invocation events shall be replay-visible. At minimum ABG shall preserve actor invocation start, result-artifact observation, and actor invocation closure or failure as runtime truth or as a closed ingest surface that is projected from runtime truth.\n\n**REQ-R-ABG3-TRANSPORT-013**: An actor invocation may supervise liveness, progress, subprocess execution, and result-artifact observation for its own dispatch attempt. It shall not select the next graph vector, close traversal, retry the edge, or append domain truth outside ABG event calculus.\n\n**REQ-R-ABG3-TRANSPORT-014**: When an actor invocation reports timeout, crash, nonzero exit, or equivalent transport failure after producing a candidate result artifact, ABG shall attempt deterministic admission of that artifact against the original `DispatchRequest`. A valid artifact shall be available to closure/recovery logic; an invalid artifact shall become typed failure or gap truth.\n\n**REQ-R-ABG3-TRANSPORT-015**: Downstream products may provide the concrete actor binding and domain-specific worker implementation, but they shall not replace ABG-owned actor invocation identity, progress observation, result admission, retry, or projection truth with a shadow runtime.\n\n**REQ-R-ABG3-TRANSPORT-016**: A supervised process actor shall use an explicit ABG-owned invocation contract covering command, arguments, working directory, stdin or prompt source, environment policy, timeout policy, stream capture targets, result artifact reference, and worker binding identity.\n\n**REQ-R-ABG3-TRANSPORT-017**: Environment sanitation for supervised actors shall remove parent-session control variables only by explicit policy. It shall preserve required authentication or runtime capability inputs unless policy explicitly classifies them as unsafe for the child process.\n\n**REQ-R-ABG3-TRANSPORT-018**: Actor stdout and stderr observation shall be recorded as process-boundary evidence while the process is running when the transport can observe it. Post-exit transcript capture alone shall not satisfy live-observation proof for long-running actor dispatch.\n\n**REQ-R-ABG3-TRANSPORT-019**: Actor invocation may return, block, fail, or time out only through typed ABG transport and result-admission outcomes. Worker self-report fields may inform transform assessment, but they shall not own retry, vector closure, traversal convergence, or release closure.\n\n**REQ-R-ABG3-TRANSPORT-020**: When a supervised `F_P` actor invocation terminates, times out, or becomes non-progressing without an admitted result artifact, admitted report, stream evidence, or declared progress signal, ABG shall expose that fact as a typed traversal non-progress carrier. The carrier shall be derivable from admitted runtime truth and shall not be invented by a downstream product summary.\n\n**REQ-R-ABG3-TRANSPORT-021**: A traversal non-progress carrier shall preserve the graph function, graph call, frame, vector, actor invocation, attempt, process identity when available, timeout class, stream byte counts, last heartbeat, signal sequence, exit status, artifact/report/progress observation flags, and evidence references used for classification.\n\n**REQ-R-ABG3-TRANSPORT-022**: ABG shall not classify traversal non-progress when a valid result artifact or admitted report exists for the actor invocation. Artifact/report salvage and admission precede retry projection; no-progress is reserved for absence of semantically assessable worker output.\n\n**REQ-R-ABG3-TRANSPORT-023**: A modulated `F_P` dispatch handoff shall carry the ABG-derived traversal attempt envelope or a stable ref to it. The handoff surface shall preserve selected schedule items, ordering constraints, phase gates, required progress artifact refs, gap-pressure refs, and affect refs needed to drive the worker without making prompt prose the authority surface.\n\n**REQ-R-ABG3-TRANSPORT-024**: A worker or downstream product shall not invent a private schedule, retry, or chunking loop when a traversal attempt envelope is present. Any continuation, exhaustion, or forced-review result shall be admitted as ABG runtime truth.\n\n**REQ-R-ABG3-TRANSPORT-025**: Every ABG-known runtime system and runtime asset surface that can affect supervised traversal liveness shall expose a declared, substrate-neutral probe contract. Probe contracts shall identify the observed runtime boundary, the source kind, the system or asset ref, and the evidence refs that can prove activity or interruption. Runtime asset activity includes event log append, ledger append/update, manifest creation/update, PTY capture output, stdout/stderr capture, result artifact creation, projection/report/dossier creation, archive/sidecar write, heartbeat/status stream, and typed external interruption evidence. They may be adapted to future telemetry backends, but ABG liveness law shall not depend on a telemetry vendor, span model, or non-ABG trace authority.\n\n**REQ-R-ABG3-TRANSPORT-026**: Probe adapters shall publish raw runtime activity or interruption evidence only. They shall not decide retry, stop, graph advancement, closure, escalation, or traversal movement.\n\n**REQ-R-ABG3-TRANSPORT-027**: ABG runtime liveness shall be governed by an inactivity lease over admitted probe activity. Any admitted activity for the active invocation from a declared system or asset probe source shall reset the lease. Activity evidence is not domain truth, closure truth, or artifact admission by itself.\n\n**REQ-R-ABG3-TRANSPORT-028**: A hard elapsed-time safety cap may exist only as outer safety evidence. When it fires, ABG shall admit typed external interruption truth before any public summary or retry decision treats the invocation as stopped.\n\n**REQ-R-ABG3-TRANSPORT-029**: A valid result artifact, admitted report, or declared progress observation produced before transport failure shall be deterministically admitted or rejected before no-progress, retry, or block classification.\n\n**REQ-R-ABG3-TRANSPORT-030**: ABG-owned live transport paths shall prefer inactivity lease policy over flat subprocess timeout policy for long-running constructive work. A caller-local timeout shall not be the effective liveness authority for an invocation that continues to emit admitted probe activity.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TRANSPORT.md#REQ-R-ABG3-TRANSPORT%20%E2%80%94%20Governed%20Probabilistic%20Transport%2FAcceptance%20Criteria",
+            "start_line": 31
+          }
+        ],
+        "key": "transport_realization_unverified",
+        "subject_key": "governed_fp_transport",
+        "uncertainty": "Exact transport contracts,probe implementations,artifacts and live-observation/salvage proof are not supplied."
+      },
+      {
+        "consequence": "Retain planned contract without current runtime/admission claims.",
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md) (the reflective boundary; the atom criterion), [REQ-R-ABG3-FP-CONSCIOUSNESS.md](./REQ-R-ABG3-FP-CONSCIOUSNESS.md), [REQ-R-ABG3-SUPERVISOR-WITNESS.md](./REQ-R-ABG3-SUPERVISOR-WITNESS.md), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md), [T-217](../../../.ai-workspace/tickets/completed/T-217-consciousness-wave-higher-order-regulation.md) (absorbing [T-206](../../../.ai-workspace/tickets/completed/T-206-abg-shell-tuner-bundled-consciousness-loop.md))\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority",
+            "start_line": 6
+          }
+        ],
+        "key": "tuner_reference_basis",
+        "subject_key": "planned_tuner",
+        "uncertainty": "Referenced owners/tickets and future realization are not supplied."
+      }
+    ]
+  },
+  "answer_sha256": "5105e60b7f1b323e2193b47d6d0bd19aa25ddc78ffa3b37c14bee352039a6982",
+  "author": "codex-runtime-frame",
+  "chunk": "chunk-586bfc8c705d864073b7",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "95598993e05e3fc4433a237c892ef7b3e6ecccba6f29b9aa07446fda81b72b83"
+}

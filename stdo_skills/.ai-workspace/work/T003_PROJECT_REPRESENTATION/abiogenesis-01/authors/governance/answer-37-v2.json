@@ -1,0 +1,721 @@
+{
+  "concepts": [
+    {
+      "key": "public_contract_groups",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+          "start_line": 81,
+          "end_line": 95,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-005**: The ABG 5.0 TypeScript product shall publish\nthese contract-group identities and package export locators. The root export\n`.` may aggregate them but shall not replace their addressable identities.\n\n| Contract group identity | TypeScript package export | Required content |\n|---|---|---|\n| `abg.contract.gtl.m01` | `@abiogenesis/typescript-tenant/gtl/m01` | GTL graph, declaration, admission, canonical serialization, algebra, C, refinement, diagnostic carrier contracts |\n| `abg.contract.gtl.m02` | `@abiogenesis/typescript-tenant/gtl/m02` | Module, publication, lookup, descriptor-facing declaration contracts |\n| `abg.contract.gtl.requirements` | `@abiogenesis/typescript-tenant/gtl/requirements` | GTL requirement declaration and relation contracts |\n| `abg.contract.abg.requirements` | `@abiogenesis/typescript-tenant/abg/requirements` | ABG requirement and proof-carry contracts |\n| `abg.contract.abg.m03` | `@abiogenesis/typescript-tenant/abg/m03` | runtime event, admission, catalog, traversal, result, replay, continuation, and conformance contracts |\n| `abg.contract.abg.transport` | `@abiogenesis/typescript-tenant/abg/m03/transport` | replaceable transport input/result contracts; no runtime authority |\n| `abg.contract.app.m04` | `@abiogenesis/typescript-tenant/app/m04` | installed public SDK operation, workspace, catalog, invocation, result, replay, F_H, and installer contracts |\n| `abg.contract.qualification.m05` | `@abiogenesis/typescript-tenant/qualification/m05` | qualification, release-snapshot, manifest, and evidence contracts |\n| `abg.asset.gtl.language-conformance-corpus` | product-manifest asset locator | canonical GTL programs paired with exact expected diagnostic identities |"
+        }
+      ],
+      "label": "Public contract export groups",
+      "definition": "TypeScript 5.0 publishes gtl.m01 (graph/declaration/admission/serialization/algebra/C/refinement/diagnostic), gtl.m02 (module/publication/lookup/descriptor), gtl.requirements, abg.requirements, abg.m03 (runtime/admission/catalog/traversal/result/replay/continuation/conformance), abg.transport (transport only), app.m04 (SDK/workspace/catalog/invocation/result/replay/F_H/install) and qualification.m05 (qualification/snapshot/manifest/evidence), plus language-conformance corpus asset.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "public_function_definition",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+          "start_line": 97,
+          "end_line": 103,
+          "quote": "The complete public function surface shall derive from one closed\n`PublicFunctionDefinition<K>` family. That family owns each function identity,\nclosed variant domain, request/result/refusal contracts, authority and effect\nclass, operation-indexed workspace-binding requirement, capability refs, and\nadapter coordinates. Package exports, operation catalog rows, schemas, SDK\nmethods, and CLI paths are projections of that family; they shall not author\nparallel function meaning."
+        }
+      ],
+      "label": "PublicFunctionDefinition<K>",
+      "definition": "One closed family owns identity, variants, request/result/refusal, authority/effects, indexed binding, capabilities and adapter coordinates; exports/catalog/schema/SDK/CLI are projections without parallel meaning.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "addressable_schema_roster",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+          "start_line": 118,
+          "end_line": 171,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-006A**: The public contract catalog shall contain\nthese mandatory schema, vocabulary, and corpus row identities. A row may share\none export group or schema document with other rows, but it shall retain its own\nidentity, version, digest, authority refs, and locator:\n\n- `abg.schema.product-toolchain-manifest`\n- `abg.schema.public-contract-catalog`\n- `abg.schema.public-operation-contract`\n- `abg.schema.public-operation-invocation`\n- `abg.schema.public-operation-outcome`\n- `abg.schema.native-contract-inventory`\n- `abg.schema.capability-contract`\n- `abg.schema.closed-vocabulary`\n- `abg.schema.gtl-graph-function`\n- `abg.schema.gtl-module`\n- `abg.schema.gtl-c-program`\n- `abg.schema.gtl-program-conformance-input`\n- `abg.schema.catalog-product-descriptor`\n- `abg.schema.catalog-contribution-manifest`\n- `abg.schema.resolved-product-lock`\n- `abg.schema.workspace-binding`\n- `abg.schema.install-manifest`\n- `abg.schema.installer-manifest`\n- `abg.schema.catalog-admission`\n- `abg.schema.host-invocation`\n- `abg.schema.runtime-event`\n- `abg.schema.runtime-result`\n- `abg.schema.runtime-replay`\n- `abg.schema.fh-interaction`\n- `abg.schema.tenant-conformance-manifest`\n- `abg.schema.self-conformance-result`\n- `abg.schema.exact-candidate-qualification`\n- `abg.schema.consensus-subject`\n- `abg.schema.consensus-panel`\n- `abg.schema.consensus-reviewer-profile`\n- `abg.schema.review-findings`\n- `abg.schema.review-rulings`\n- `abg.schema.consensus-round-policy`\n- `abg.schema.consensus-round-outcome`\n- `abg.schema.consensus-result`\n- `abg.schema.ticket-consensus-projection`\n- `abg.schema.release-snapshot`\n- `abg.schema.a5-r1-release-manifest`\n- `abg.vocabulary.runtime-event-kind`\n- `abg.vocabulary.gtl-program-diagnostic-id`\n- `abg.vocabulary.gtl-program-repair-edit-class`\n- `abg.vocabulary.review-ruling-kind`\n- `abg.vocabulary.consensus-round-outcome`\n- `abg.asset.gtl.language-conformance-corpus`\n\nCanonical schema documents and addressable schema projections shall derive\nfrom one schema-definition source. Independent authoring of equivalent native,\nserialized, operation, and catalog schemas is not lawful merely because each\nprojection retains a distinct public identity."
+        }
+      ],
+      "label": "Mandatory schema, vocabulary and corpus rows",
+      "definition": "Individually versioned, digested, authority-linked and located identities may share groups/documents but remain distinct; canonical schemas and projections derive from one definition source.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prime_qualification_schema",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+          "start_line": 173,
+          "end_line": 181,
+          "quote": "`abg.schema.exact-candidate-qualification` shall locate one authoritative\nschema document with addressable definitions for\n`ExactCandidateQualification<basis>`,\n`ExactCandidateQualification<verdict>`, `QualificationLawBasis`,\n`QualificationCoverageCatalog`, and `QualificationVerdictInput`. The basis and verdict\nare addressable projections of the Prime qualification family;\n`QualificationLawBasis`, coverage and the native F11-result input remain\nsubordinate definitions and shall not become independently authored schema\nidentities."
+        }
+      ],
+      "label": "Prime exact-candidate qualification schema",
+      "definition": "abg.schema.exact-candidate-qualification locates one authoritative document with addressable ExactCandidateQualification<basis>/<verdict>, QualificationLawBasis, QualificationCoverageCatalog and QualificationVerdictInput definitions.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "invocation_outcome_schema",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPublic%20Operation%20Identities",
+          "start_line": 250,
+          "end_line": 267,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-010**: One common host-neutral\n`PublicInvocation<K>` descriptor family and one corresponding\n`PublicOutcome<K>` result/refusal/non-terminal family shall themselves be\ncatalog rows and schemas, shall serve every public operation, and shall remain\ngoverned by the selected `PublicFunctionDefinition<K>` and owning semantic\nfunction. The invocation shall bind the exact public\nfunction definition and variant, contract-catalog version, operation identity,\noperation-indexed invocation authority, required workspace/product/lock/\ncatalog-view identities, selected admitted GTL program and GraphFunction where\nexecution-scoped, input identity, allowlist, capability grants, steering inputs,\nactor attribution when required, and expected result/error schema identities.\nPre-binding variants shall forbid workspace binding; workspace- and\nexecution-scoped variants shall require exactly one immutable binding. The\ndescriptor shall contain no worker, continuation, event, traversal, retry,\nselection, evaluation, or closure authority. The owning semantic function shall\nconstruct the outcome; public ingress may validate, admit, and transport the\ninvocation and transport its outcome, but shall not construct either operation\nsemantics or outcome truth."
+        }
+      ],
+      "label": "PublicInvocation and PublicOutcome",
+      "definition": "One catalogued host-neutral descriptor/outcome family serves all operations under selected definition and owning semantic function.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "capability_definition_graph",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FCapability%20Catalog",
+          "start_line": 271,
+          "end_line": 281,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-011**: Each public contract row shall publish its\ncapability identities as stable strings of the form\n`abg.capability.<domain>.<name>@<major>`. At minimum, the catalog shall include\ncapabilities for GTL declaration/admission/serialization, Module publication,\ncatalog contribution and GraphFunction invocation, node-type and overlay\napplication, seven-term C execution, F_P result admission/materialization,\nruntime events/replay/continuation, the complete public operator contract,\ninstalled-product binding and qualification-bound self-conformance.\nConsensus capability publication is optional in 5.0 under\n[Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries);\nan actual published claim still binds its exact function and declared contract."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FCapability%20Catalog",
+          "start_line": 305,
+          "end_line": 308,
+          "quote": "The mandatory identities shall derive from one capability-definition graph\nwhose rows bind the owning public contract identities and dependencies.\nTenant-conformance manifests publish realized claims over that graph; they do\nnot author another capability vocabulary or infer support from package presence."
+        }
+      ],
+      "label": "Capability-definition graph",
+      "definition": "Stable abg.capability.<domain>.<name>@<major> identities derive from one graph binding owner contracts and dependencies; tenant manifests publish realized claims, not vocabulary or support inferred from package presence.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "qualification_infrastructure",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure",
+          "start_line": 3,
+          "end_line": 8,
+          "quote": "**Status**: Active - T-283 base; exact Definition-selected STDO qualification basis\n**Category**: Verification\n**Date**: 2026-07-25\n**Updated**: 2026-10-06\n**Derives from**: INT-001 (installed product and release qualification), INT-005 (run governance, failure classification), [PRODUCT.md](../../PRODUCT.md), [SPEC_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md) (Verification Layers)\n**Wave**: ABG 5.0"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FPurpose",
+          "start_line": 14,
+          "end_line": 16,
+          "quote": "The test and qualification infrastructure is a product surface with its own correctness requirements. Without formal requirements, failure modes are diagnosed ad-hoc, the same defects recur, and lineage cannot be established from intent through to test evidence.\n\nThis requirement establishes the constitutional rules for the qualification infrastructure itself — transport readiness, failure mode separation, artifact integrity, timeout contracts, and forensic evidence. Every test that validates product behavior must itself satisfy these requirements."
+        }
+      ],
+      "label": "Qualification infrastructure",
+      "definition": "Active exact-Definition-method verification surface has its own correctness law: transport readiness, failure separation, artifacts, timeout contracts and forensic evidence apply to every product-behavior test.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "transport_readiness",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FTransport%20Readiness",
+          "start_line": 30,
+          "end_line": 34,
+          "quote": "**REQ-P-QUAL-001**: An agent skip gate shall verify that the agent is **ready to serve requests**, not merely present on PATH. Readiness means the agent can accept a prompt and return a coherent response within a bounded probe timeout.\n\n**REQ-P-QUAL-002**: When a readiness probe fails, the test shall be **skipped with a diagnostic reason**, not failed. \"Agent not ready\" is an environment precondition, not a test failure.\n\n**REQ-P-QUAL-003**: The readiness probe shall be the **cheapest reliable check** — a trivial prompt with a deterministic expected response. It shall not perform substantive work or consume significant resources."
+        }
+      ],
+      "label": "Agent readiness probe",
+      "definition": "Ready means accepting a prompt and giving coherent response within bounded timeout, not merely being on PATH.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "qualification_failure_classes",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FFailure%20Mode%20Separation",
+          "start_line": 40,
+          "end_line": 46,
+          "quote": "**REQ-P-QUAL-004**: Each failure class in the INT-005 taxonomy (`transport_failure`, `no_output`, `contract_failure`, `certification_failure`) shall produce a **distinct, diagnosable signal** in test output. A test observer shall be able to determine the failure class from the test output alone, without reading source code.\n\n**REQ-P-QUAL-005**: Transport failures (nonzero exit, timeout, crash) shall remain **diagnosable transport truth**. They shall not be masked as artifact quality failures or silently converted to empty output. A preserved artifact may only rescue the turn when ABG deterministically validates it as the authoritative result for that boundary; mere artifact presence is insufficient.\n\n**REQ-P-QUAL-006**: The actual selected transport shall preserve nonzero exit,\ncrash and timeout as failure with attributable stdout/stderr and process truth;\nfailed output shall not be admitted as success merely because bytes exist."
+        }
+      ],
+      "label": "Diagnosable failure classes",
+      "definition": "transport_failure, no_output, contract_failure and certification_failure each remain distinguishable from test output alone.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "agent_artifact",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FArtifact%20Integrity",
+          "start_line": 52,
+          "end_line": 56,
+          "quote": "**REQ-P-QUAL-007**: If the agent did not write the expected artifact file, the test infrastructure shall raise an **artifact-missing error** with diagnostic context (raw response preview, expected path). It shall not substitute the agent's stdout as the artifact.\n\n**REQ-P-QUAL-008**: The deterministic judge shall only evaluate artifacts that were **written by the agent through the tool surface**, not artifacts synthesized from transport output by the test harness. Fallback masking converts transport/readiness failures into artifact-quality failures, making diagnosis impossible.\n\n**REQ-P-QUAL-009**: When an artifact exists but is below a minimum viable size (e.g., placeholder content), it shall be treated as **no_output**, not as a valid artifact to judge."
+        }
+      ],
+      "label": "Agent-written artifact",
+      "definition": "Deterministic judge evaluates only artifacts agent wrote through tool surface; missing expected file yields artifact-missing with raw preview/path, never stdout substitution or harness synthesis.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "supervision_bounds",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FTimeout%20Contracts",
+          "start_line": 62,
+          "end_line": 72,
+          "quote": "**REQ-P-QUAL-010**: Selected test, command, native actor and caller supervision\nbounds shall be explicit and proportional to the declared ask, with each\napplicable layer identified. No particular test runner or historical default\nis mandated.\n\n**REQ-P-QUAL-011**: Enclosing supervision shall allow the selected lower owner\nto report its terminal result and preserve failure evidence. A deadline or\nprocess termination shall identify the layer and bound; it shall not be\nreported as a completed test or successful qualification.\n\n**REQ-P-QUAL-012**: When a transport timeout fires, the resulting error shall **name the timeout value and the agent** so the operator can distinguish \"agent was slow\" from \"transport configuration too aggressive.\""
+        }
+      ],
+      "label": "Layered supervision bounds",
+      "definition": "Selected test, command, native actor and caller bounds are explicit, ask-proportional and layer-identified, with no mandated runner or historical default.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "definition_governs_invocation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPublic%20Operation%20Identities",
+          "start_line": 250,
+          "end_line": 267,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-010**: One common host-neutral\n`PublicInvocation<K>` descriptor family and one corresponding\n`PublicOutcome<K>` result/refusal/non-terminal family shall themselves be\ncatalog rows and schemas, shall serve every public operation, and shall remain\ngoverned by the selected `PublicFunctionDefinition<K>` and owning semantic\nfunction. The invocation shall bind the exact public\nfunction definition and variant, contract-catalog version, operation identity,\noperation-indexed invocation authority, required workspace/product/lock/\ncatalog-view identities, selected admitted GTL program and GraphFunction where\nexecution-scoped, input identity, allowlist, capability grants, steering inputs,\nactor attribution when required, and expected result/error schema identities.\nPre-binding variants shall forbid workspace binding; workspace- and\nexecution-scoped variants shall require exactly one immutable binding. The\ndescriptor shall contain no worker, continuation, event, traversal, retry,\nselection, evaluation, or closure authority. The owning semantic function shall\nconstruct the outcome; public ingress may validate, admit, and transport the\ninvocation and transport its outcome, but shall not construct either operation\nsemantics or outcome truth."
+        }
+      ],
+      "kind": "governs",
+      "source_key": "public_function_definition",
+      "target_key": "invocation_outcome_schema",
+      "meaning": "Selected definition governs invocation and outcome; owning semantic function constructs outcome, ingress validates/admit/transports only.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "group_export_addresses",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+          "start_line": 81,
+          "end_line": 108,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-005**: The ABG 5.0 TypeScript product shall publish\nthese contract-group identities and package export locators. The root export\n`.` may aggregate them but shall not replace their addressable identities.\n\n| Contract group identity | TypeScript package export | Required content |\n|---|---|---|\n| `abg.contract.gtl.m01` | `@abiogenesis/typescript-tenant/gtl/m01` | GTL graph, declaration, admission, canonical serialization, algebra, C, refinement, diagnostic carrier contracts |\n| `abg.contract.gtl.m02` | `@abiogenesis/typescript-tenant/gtl/m02` | Module, publication, lookup, descriptor-facing declaration contracts |\n| `abg.contract.gtl.requirements` | `@abiogenesis/typescript-tenant/gtl/requirements` | GTL requirement declaration and relation contracts |\n| `abg.contract.abg.requirements` | `@abiogenesis/typescript-tenant/abg/requirements` | ABG requirement and proof-carry contracts |\n| `abg.contract.abg.m03` | `@abiogenesis/typescript-tenant/abg/m03` | runtime event, admission, catalog, traversal, result, replay, continuation, and conformance contracts |\n| `abg.contract.abg.transport` | `@abiogenesis/typescript-tenant/abg/m03/transport` | replaceable transport input/result contracts; no runtime authority |\n| `abg.contract.app.m04` | `@abiogenesis/typescript-tenant/app/m04` | installed public SDK operation, workspace, catalog, invocation, result, replay, F_H, and installer contracts |\n| `abg.contract.qualification.m05` | `@abiogenesis/typescript-tenant/qualification/m05` | qualification, release-snapshot, manifest, and evidence contracts |\n| `abg.asset.gtl.language-conformance-corpus` | product-manifest asset locator | canonical GTL programs paired with exact expected diagnostic identities |\n\nThe complete public function surface shall derive from one closed\n`PublicFunctionDefinition<K>` family. That family owns each function identity,\nclosed variant domain, request/result/refusal contracts, authority and effect\nclass, operation-indexed workspace-binding requirement, capability refs, and\nadapter coordinates. Package exports, operation catalog rows, schemas, SDK\nmethods, and CLI paths are projections of that family; they shall not author\nparallel function meaning.\n\nThe `abg.contract.abg.executive` group and\n`@abiogenesis/typescript-tenant/abg/executive` locator are reserved candidate\nidentities for the planned 5.1 observer/tuner Product. ABIogenesis 5.0 does not\npublish or require them."
+        }
+      ],
+      "applies_to_keys": [
+        "public_contract_groups"
+      ],
+      "statement": "Exact group IDs abg.contract.gtl.m01, .gtl.m02, .gtl.requirements, .abg.requirements, .abg.m03, .abg.transport, .app.m04, .qualification.m05 locate @abiogenesis/typescript-tenant exports /gtl/m01, /gtl/m02, /gtl/requirements, /abg/requirements, /abg/m03, /abg/m03/transport, /app/m04, /qualification/m05 respectively. Root export may aggregate but cannot replace addressability. abg.asset.gtl.language-conformance-corpus uses manifest asset locator. abg.contract.abg.executive and /abg/executive are reserved 5.1 observer/tuner candidate identities, neither published nor required in 5.0.",
+      "uncertainty": "",
+      "conditions": [
+        "ABIogenesis 5.0 TypeScript Product."
+      ],
+      "exceptions": [
+        "Executive observer/tuner group is reserved 5.1, neither required nor published in 5.0."
+      ]
+    },
+    {
+      "key": "mandatory_schema_identities",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+          "start_line": 118,
+          "end_line": 171,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-006A**: The public contract catalog shall contain\nthese mandatory schema, vocabulary, and corpus row identities. A row may share\none export group or schema document with other rows, but it shall retain its own\nidentity, version, digest, authority refs, and locator:\n\n- `abg.schema.product-toolchain-manifest`\n- `abg.schema.public-contract-catalog`\n- `abg.schema.public-operation-contract`\n- `abg.schema.public-operation-invocation`\n- `abg.schema.public-operation-outcome`\n- `abg.schema.native-contract-inventory`\n- `abg.schema.capability-contract`\n- `abg.schema.closed-vocabulary`\n- `abg.schema.gtl-graph-function`\n- `abg.schema.gtl-module`\n- `abg.schema.gtl-c-program`\n- `abg.schema.gtl-program-conformance-input`\n- `abg.schema.catalog-product-descriptor`\n- `abg.schema.catalog-contribution-manifest`\n- `abg.schema.resolved-product-lock`\n- `abg.schema.workspace-binding`\n- `abg.schema.install-manifest`\n- `abg.schema.installer-manifest`\n- `abg.schema.catalog-admission`\n- `abg.schema.host-invocation`\n- `abg.schema.runtime-event`\n- `abg.schema.runtime-result`\n- `abg.schema.runtime-replay`\n- `abg.schema.fh-interaction`\n- `abg.schema.tenant-conformance-manifest`\n- `abg.schema.self-conformance-result`\n- `abg.schema.exact-candidate-qualification`\n- `abg.schema.consensus-subject`\n- `abg.schema.consensus-panel`\n- `abg.schema.consensus-reviewer-profile`\n- `abg.schema.review-findings`\n- `abg.schema.review-rulings`\n- `abg.schema.consensus-round-policy`\n- `abg.schema.consensus-round-outcome`\n- `abg.schema.consensus-result`\n- `abg.schema.ticket-consensus-projection`\n- `abg.schema.release-snapshot`\n- `abg.schema.a5-r1-release-manifest`\n- `abg.vocabulary.runtime-event-kind`\n- `abg.vocabulary.gtl-program-diagnostic-id`\n- `abg.vocabulary.gtl-program-repair-edit-class`\n- `abg.vocabulary.review-ruling-kind`\n- `abg.vocabulary.consensus-round-outcome`\n- `abg.asset.gtl.language-conformance-corpus`\n\nCanonical schema documents and addressable schema projections shall derive\nfrom one schema-definition source. Independent authoring of equivalent native,\nserialized, operation, and catalog schemas is not lawful merely because each\nprojection retains a distinct public identity."
+        }
+      ],
+      "applies_to_keys": [
+        "addressable_schema_roster"
+      ],
+      "statement": "Mandatory abg.schema suffixes are product-toolchain-manifest, public-contract-catalog, public-operation-contract, public-operation-invocation, public-operation-outcome, native-contract-inventory, capability-contract, closed-vocabulary, gtl-graph-function, gtl-module, gtl-c-program, gtl-program-conformance-input, catalog-product-descriptor, catalog-contribution-manifest, resolved-product-lock, workspace-binding, install-manifest, installer-manifest, catalog-admission, host-invocation, runtime-event, runtime-result, runtime-replay, fh-interaction, tenant-conformance-manifest, self-conformance-result, exact-candidate-qualification, consensus-subject, consensus-panel, consensus-reviewer-profile, review-findings, review-rulings, consensus-round-policy, consensus-round-outcome, consensus-result, ticket-consensus-projection, release-snapshot and a5-r1-release-manifest. Mandatory abg.vocabulary suffixes are runtime-event-kind, gtl-program-diagnostic-id, gtl-program-repair-edit-class, review-ruling-kind and consensus-round-outcome; mandatory corpus is abg.asset.gtl.language-conformance-corpus. Independent equivalent native/serialized/operation/catalog schema authoring is unlawful despite distinct public identities.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "m03_closed_symbol_roster",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+          "start_line": 110,
+          "end_line": 116,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-006**: The `abg.contract.abg.m03` roster shall locate\nthe named symbols `RuntimeEvent`, `CanonicalRuntimeEvent`, and\n`RUNTIME_EVENT_KIND_VALUES`; `GtlProgramDiagnosticId` and\n`GTL_PROGRAM_DIAGNOSTIC_ID_VALUES`; `GTL_PROGRAM_REPAIR_EDIT_CLASS_VALUES` and\n`GTL_PROGRAM_DEFAULT_ADMISSIBLE_REPAIRS`; and\n`admitGtlProgramConformanceInput` and `typecheckGtlProgram`. The value arrays are\nthe machine-readable closed rosters for their type unions."
+        }
+      ],
+      "applies_to_keys": [
+        "public_contract_groups"
+      ],
+      "statement": "abg.m03 locates RuntimeEvent, CanonicalRuntimeEvent, RUNTIME_EVENT_KIND_VALUES, GtlProgramDiagnosticId, GTL_PROGRAM_DIAGNOSTIC_ID_VALUES, GTL_PROGRAM_REPAIR_EDIT_CLASS_VALUES, GTL_PROGRAM_DEFAULT_ADMISSIBLE_REPAIRS, admitGtlProgramConformanceInput and typecheckGtlProgram; value arrays are machine-readable closed rosters for unions.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "qualification_schema_subordination",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+          "start_line": 173,
+          "end_line": 181,
+          "quote": "`abg.schema.exact-candidate-qualification` shall locate one authoritative\nschema document with addressable definitions for\n`ExactCandidateQualification<basis>`,\n`ExactCandidateQualification<verdict>`, `QualificationLawBasis`,\n`QualificationCoverageCatalog`, and `QualificationVerdictInput`. The basis and verdict\nare addressable projections of the Prime qualification family;\n`QualificationLawBasis`, coverage and the native F11-result input remain\nsubordinate definitions and shall not become independently authored schema\nidentities."
+        }
+      ],
+      "applies_to_keys": [
+        "prime_qualification_schema"
+      ],
+      "statement": "Basis/verdict are Prime-family projections; law basis, coverage and native F11-result input are subordinate definitions, never independently authored schema identities.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "corpus_and_serialization_locators",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+          "start_line": 183,
+          "end_line": 195,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-007**: The language conformance corpus shall be one\ncanonical content-addressed JSON product asset. Its catalog row shall locate\nthe asset and schema, bind its digest, and name the diagnostic-vocabulary\ncontract it expects. Test-only location is not publication.\n\n**REQ-P-PUBLIC-CONTRACTS-007A**: The GTL serialization rows shall locate the\nnative symbol pairs `admitGraphFunction`/`serializeGraphFunction`,\n`admitModule`/`serializeModule`, and\n`admitCProgramSyntax`/`serializeCProgramCanonical`, plus\n`GtlProgramConformanceInput`/`admitGtlProgramConformanceInput`. The installer\nrows shall locate `AbgTypescriptInstallerManifest` and the exact canonical\ninstall-manifest schema. Equivalent later symbols require a versioned catalog\nrow and supersession; broad M01/M02/M04 group membership alone is not a schema locator."
+        }
+      ],
+      "applies_to_keys": [
+        "addressable_schema_roster"
+      ],
+      "statement": "Language corpus is one canonical content-addressed JSON Product asset with asset/schema locator, digest and expected diagnostic vocabulary; test-only placement is not publication. Serialization locates admitGraphFunction/serializeGraphFunction, admitModule/serializeModule, admitCProgramSyntax/serializeCProgramCanonical, GtlProgramConformanceInput/admitGtlProgramConformanceInput. Installer rows locate AbgTypescriptInstallerManifest and exact canonical install schema; later equivalent symbols need versioned row and supersession, not broad group membership.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "public_operation_identity_roster",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPublic%20Operation%20Identities",
+          "start_line": 199,
+          "end_line": 223,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-008**: The public operation catalog shall derive the\nfollowing tenant-invariant 5.0 operation identities from the same\n`PublicFunctionDefinition<K>` family. Their stable identities and semantics\ndecompose Product behavior; their count is a derived no-silence projection and\nshall not define Product scope or substitute for an outcome scenario:\n\n| Operation identity | Closed variation |\n|---|---|\n| `abg.operation.workspace.create` | target plus explicit `clean` or `imported` creation policy |\n| `abg.operation.workspace.open` | expected stable workspace-authority basis plus readiness projection |\n| `abg.operation.project.read` | closed source/projection relation for catalog, runtime, evidence, replay, gaps, and lawful actions |\n| `abg.operation.product.verify` | artifact format and contract |\n| `abg.operation.product.resolve` | product requirements |\n| `abg.operation.product.install` | install target policy |\n| `abg.operation.workspace.bind` | exact product set, dependency lock, and roots |\n| `abg.operation.catalog.admit` | admitted contribution family |\n| `abg.operation.catalog.view` | narrowing allowlist |\n| `abg.operation.catalog.apply` | `node_type` or `overlay`; both non-callable |\n| `abg.operation.run.invoke` | `invoke` or `start` |\n| `abg.operation.run.continue` | automatic current-intent continuation or a newly admitted selected action; native human-response-driven resumption is reserved for 5.1 |\n| `abg.operation.result.assess` | declared result-assessment contract |\n| `abg.operation.witness.admit` | `reprice`, `attest`, `hygiene-stamp`, `intake`, `run-resumed`, or `run-stopped` |\n| `abg.operation.conformance.evaluate` | public `gtl_program`; self-conformance remains qualification-bound |\n| `abg.operation.product.materialize` | `context_bootstrap` or `configuration` |\n| `abg.operation.release.snapshot` | `published_rc` or `tapped_release` |"
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_definition"
+      ],
+      "statement": "The 5.0 abg.operation identities are workspace.create (target/clean|imported), workspace.open (stable authority/readiness), project.read (catalog/runtime/evidence/replay/gaps/actions), product.verify (artifact/contract), product.resolve (requirements), product.install (target policy), workspace.bind (exact set/lock/roots), catalog.admit (contributions), catalog.view (narrowing allowlist), catalog.apply (noncallable node_type|overlay), run.invoke (invoke|start), run.continue (automatic current intent or distinct new selected action), result.assess (assessment contract), witness.admit (reprice|attest|hygiene-stamp|intake|run-resumed|run-stopped), conformance.evaluate (public gtl_program; self-conformance qualification-bound), product.materialize (context_bootstrap|configuration), release.snapshot (published_rc|tapped_release). Derived count neither defines scope nor replaces outcome scenarios.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "reserved_variants_and_hard_break",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPublic%20Operation%20Identities",
+          "start_line": 225,
+          "end_line": 239,
+          "quote": "Observer-report, observer-drafts, and tuning-report `project.read` variants and\n`abg.operation.tuning.transition` are reserved candidate identities for\nABIogenesis 5.1. They are excluded from the closed 5.0 operation family.\n\n`abg.operation.interaction.respond` and its closed `select`, `approve`,\n`reject`, `assess` and `answer_escalation` variants are also reserved for 5.1.\nTheir response-driven `run.continue` use is excluded from 5.0 qualification;\nautomatic continuation and distinct new-action admission remain required.\nThis allocation does not grant a response capability to a direct-invoke root\nor permit an adapter to simulate the missing native path.\n\nThis is a hard break. Every non-derived legacy operation identity, facade,\nparallel register, default, or fallback shall be retired. CLI command paths may\nretain ergonomic spellings only when they bind one definition above and supply\nno independent semantics."
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_definition"
+      ],
+      "statement": "Observer-report/drafts/tuning-report project.read and tuning.transition are 5.1, excluded 5.0. interaction.respond select/approve/reject/assess/answer_escalation and response-driven continuation are 5.1; automatic continuation/new-action admission remain required. No response capability follows for direct-invoke root or adapter simulation. Retire non-derived legacy identities/facades/registers/defaults/fallbacks; ergonomic CLI spellings only bind one definition without independent semantics.",
+      "uncertainty": "",
+      "conditions": [
+        "Closed 5.0 public operation family."
+      ],
+      "exceptions": [
+        "Automatic current-intent continuation and distinct new-action admission remain required despite deferred native human response."
+      ]
+    },
+    {
+      "key": "operation_row_contract",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPublic%20Operation%20Identities",
+          "start_line": 241,
+          "end_line": 248,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-009**: Every operation row shall locate exact request,\nresult, error/refusal, and invocation-descriptor schemas and native symbols. It\nshall declare defaults, closed value domains, actor requirements, read/write or\nattestation class, event-admission behavior, terminal/non-terminal disposition,\nadapter exit classification, and the operation-and-variant-indexed\n`workspaceBindingRequirement` value `forbidden | exactly_one`. No concrete\nvariant shall carry a freely optional workspace binding. Prose spelling, CLI\nparsing, prior examples, or adapter convention shall not supply a missing field."
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_definition"
+      ],
+      "statement": "Each row locates exact request/result/error-refusal/invocation schemas and native symbols; declares defaults, closed domains, actor, read/write/attestation, admission, terminal/nonterminal, exits and per-variant workspaceBindingRequirement forbidden|exactly_one. No optional binding or missing-field completion from prose/CLI/examples/convention.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "invocation_indexed_authority",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPublic%20Operation%20Identities",
+          "start_line": 255,
+          "end_line": 267,
+          "quote": "function. The invocation shall bind the exact public\nfunction definition and variant, contract-catalog version, operation identity,\noperation-indexed invocation authority, required workspace/product/lock/\ncatalog-view identities, selected admitted GTL program and GraphFunction where\nexecution-scoped, input identity, allowlist, capability grants, steering inputs,\nactor attribution when required, and expected result/error schema identities.\nPre-binding variants shall forbid workspace binding; workspace- and\nexecution-scoped variants shall require exactly one immutable binding. The\ndescriptor shall contain no worker, continuation, event, traversal, retry,\nselection, evaluation, or closure authority. The owning semantic function shall\nconstruct the outcome; public ingress may validate, admit, and transport the\ninvocation and transport its outcome, but shall not construct either operation\nsemantics or outcome truth."
+        }
+      ],
+      "applies_to_keys": [
+        "invocation_outcome_schema"
+      ],
+      "statement": "Invocation binds exact definition/variant/catalog version/operation/indexed authority; required workspace/product/lock/view; admitted program/function for execution; input/allowlist/capabilities/steering/required actor/result-error schema identities. Prebinding forbids binding, workspace/execution requires exactly one immutable binding. Descriptor contains no worker/continuation/event/traversal/retry/selection/evaluation/closure authority; ingress constructs neither semantics nor outcome truth.",
+      "uncertainty": "",
+      "conditions": [
+        "Pre-binding variants forbid workspace binding; workspace/execution variants require exactly one.",
+        "Program and GraphFunction are bound where execution-scoped; actor attribution where required."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "mandatory_capability_roster",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FCapability%20Catalog",
+          "start_line": 271,
+          "end_line": 299,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-011**: Each public contract row shall publish its\ncapability identities as stable strings of the form\n`abg.capability.<domain>.<name>@<major>`. At minimum, the catalog shall include\ncapabilities for GTL declaration/admission/serialization, Module publication,\ncatalog contribution and GraphFunction invocation, node-type and overlay\napplication, seven-term C execution, F_P result admission/materialization,\nruntime events/replay/continuation, the complete public operator contract,\ninstalled-product binding and qualification-bound self-conformance.\nConsensus capability publication is optional in 5.0 under\n[Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries);\nan actual published claim still binds its exact function and declared contract.\n\nThe mandatory ABIogenesis 5.0 capability identities are:\n\n- `abg.capability.gtl.declare@5`\n- `abg.capability.gtl.admit@5`\n- `abg.capability.gtl.serialize@5`\n- `abg.capability.gtl.typecheck@5`\n- `abg.capability.module.publish@5`\n- `abg.capability.catalog.contribute@5`\n- `abg.capability.catalog.invoke-graph-function@5`\n- `abg.capability.catalog.apply-node-type@5`\n- `abg.capability.catalog.apply-overlay@5`\n- `abg.capability.runtime.execute-seven-term-c@5`\n- `abg.capability.runtime.admit-fp-result@5`\n- `abg.capability.runtime.replay-continuation@5`\n- `abg.capability.operator.public-contract@5`\n- `abg.capability.install.bind-products@5`\n- `abg.capability.qualification.self-conformance@5`"
+        }
+      ],
+      "applies_to_keys": [
+        "capability_definition_graph"
+      ],
+      "statement": "Mandatory @5 identities are abg.capability.gtl.declare, gtl.admit, gtl.serialize, gtl.typecheck, module.publish, catalog.contribute, catalog.invoke-graph-function, catalog.apply-node-type, catalog.apply-overlay, runtime.execute-seven-term-c, runtime.admit-fp-result, runtime.replay-continuation, operator.public-contract, install.bind-products and qualification.self-conformance. They cover declared GTL/module/catalog/C/F_P/runtime/public-operator/install/self-conformance contracts.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "tenant_claim_catalog_binding",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FCapability%20Catalog",
+          "start_line": 310,
+          "end_line": 314,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-012**: The tenant-conformance manifest shall reference\nonly contract and capability identities present in the exact product's public\ncontract catalog and shall bind the catalog identity/version/digest. Unknown,\nduplicate, incompatible, unlocated, or digest-mismatched identities shall be\ntyped conformance gaps."
+        }
+      ],
+      "applies_to_keys": [
+        "capability_definition_graph"
+      ],
+      "statement": "Tenant-conformance references only exact catalog-present contract/capability identities and binds catalog ID/version/digest; unknown, duplicate, incompatible, unlocated or digest-mismatched identities are typed gaps.",
+      "uncertainty": "",
+      "conditions": [
+        "For every tenant-conformance contract/capability claim over the exact catalog."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "source_blind_builder_obligation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FBuilder%20Walkthrough%20Contract",
+          "start_line": 318,
+          "end_line": 333,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-013**: A source-blind tenant builder shall be able to:\n\n1. verify `product-toolchain-manifest.json` and its public contract catalog;\n2. locate canonical GTL, Module, product, install, catalog, operation, event,\n   result, replay, F_H, conformance, and qualification schemas;\n3. locate the exact event-kind and diagnostic vocabularies and language corpus;\n4. construct a tenant-conformance manifest from catalog identities;\n5. derive the complete SDK, CLI, schema, and catalog operation projections from the\n   same `PublicFunctionDefinition<K>` family;\n6. implement a native typed adapter or canonical serialized adapter without\n   consulting ABIogenesis source, tickets, design history, or test fixtures; and\n7. run conformance and qualification against the same identities.\n\nFailure of any locator, digest, schema, vocabulary, operation row, capability\nrow, or corpus row shall refuse conformance; it shall not fall back to code\ninspection or prose inference."
+        }
+      ],
+      "applies_to_keys": [
+        "public_contract_groups",
+        "addressable_schema_roster",
+        "public_function_definition",
+        "capability_definition_graph"
+      ],
+      "statement": "Source-blind builders verify manifest/catalog, locate all canonical GTL/Module/product/install/catalog/operation/event/result/replay/F_H/conformance/qualification schemas, exact event/diagnostic vocabularies and corpus, build manifest from catalog IDs, derive SDK/CLI/schema/catalog operations from one family, implement native or serialized adapter without source/tickets/history/tests and run conformance/qualification against same identities. Any bad locator/digest/schema/vocabulary/operation/capability/corpus refuses conformance; no fallback code inspection or prose inference.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "qualification_release_allocation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FPurpose",
+          "start_line": 18,
+          "end_line": 24,
+          "quote": "Gate applicability follows [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries).\nStandalone Consensus, mandatory host parity, native human response/resume and\nthe dedicated F12/S04 observer/tuner Product are 5.1 qualification claims. Their\ndeferral does not waive retained local traversal, truthful blocking, runtime\nliveness, complete selected F17/S06 outcomes or actual human RC acceptance.\nThe selected ordinary governance/default-library discriminator follows\n`REQ-P-SCENARIOS-018` within existing S02/S03/S06, not an additional campaign."
+        }
+      ],
+      "applies_to_keys": [
+        "qualification_infrastructure"
+      ],
+      "statement": "Standalone Consensus, mandatory host parity, native human response/resume and dedicated F12/S04 observer/tuner are 5.1 claims. Their deferral does not waive local traversal, truthful blocking, runtime liveness, complete selected F17/S06 outcomes or actual human RC acceptance. Ordinary governance/default-library discriminator follows REQ-P-SCENARIOS-018 within S02/S03/S06, not an extra campaign.",
+      "uncertainty": "",
+      "conditions": [
+        "Qualification follows governing Product release boundaries."
+      ],
+      "exceptions": [
+        "Deferred dedicated features do not waive retained local/liveness/selected S06/human RC acceptance obligations."
+      ]
+    },
+    {
+      "key": "readiness_skip_policy",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FTransport%20Readiness",
+          "start_line": 30,
+          "end_line": 34,
+          "quote": "**REQ-P-QUAL-001**: An agent skip gate shall verify that the agent is **ready to serve requests**, not merely present on PATH. Readiness means the agent can accept a prompt and return a coherent response within a bounded probe timeout.\n\n**REQ-P-QUAL-002**: When a readiness probe fails, the test shall be **skipped with a diagnostic reason**, not failed. \"Agent not ready\" is an environment precondition, not a test failure.\n\n**REQ-P-QUAL-003**: The readiness probe shall be the **cheapest reliable check** — a trivial prompt with a deterministic expected response. It shall not perform substantive work or consume significant resources."
+        }
+      ],
+      "applies_to_keys": [
+        "transport_readiness"
+      ],
+      "statement": "Use cheapest reliable trivial deterministic-response probe without substantive work/significant resources. Failed probe causes diagnostic skip, not failed test, since readiness is environment precondition.",
+      "uncertainty": "",
+      "conditions": [
+        "If bounded readiness probe fails, skip with diagnostic as environment-precondition failure."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "transport_failure_integrity",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FFailure%20Mode%20Separation",
+          "start_line": 42,
+          "end_line": 46,
+          "quote": "**REQ-P-QUAL-005**: Transport failures (nonzero exit, timeout, crash) shall remain **diagnosable transport truth**. They shall not be masked as artifact quality failures or silently converted to empty output. A preserved artifact may only rescue the turn when ABG deterministically validates it as the authoritative result for that boundary; mere artifact presence is insufficient.\n\n**REQ-P-QUAL-006**: The actual selected transport shall preserve nonzero exit,\ncrash and timeout as failure with attributable stdout/stderr and process truth;\nfailed output shall not be admitted as success merely because bytes exist."
+        }
+      ],
+      "applies_to_keys": [
+        "qualification_failure_classes"
+      ],
+      "statement": "Nonzero exit, timeout and crash remain attributable failure with stdout/stderr/process truth, never masked as artifact-quality/empty output or success because bytes exist. Preserved artifact rescues only if ABG deterministically validates it as authoritative for that boundary; mere presence is insufficient.",
+      "uncertainty": "",
+      "conditions": [
+        "Selected transport exits nonzero, crashes or times out."
+      ],
+      "exceptions": [
+        "A preserved artifact may rescue only when ABG deterministically validates it as authoritative for that boundary."
+      ]
+    },
+    {
+      "key": "artifact_minimum_output",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FArtifact%20Integrity",
+          "start_line": 56,
+          "end_line": 56,
+          "quote": "**REQ-P-QUAL-009**: When an artifact exists but is below a minimum viable size (e.g., placeholder content), it shall be treated as **no_output**, not as a valid artifact to judge."
+        }
+      ],
+      "applies_to_keys": [
+        "agent_artifact"
+      ],
+      "statement": "Below-minimum-viable placeholder is no_output, not a valid artifact to judge.",
+      "uncertainty": "",
+      "conditions": [
+        "Artifact exists but below minimum viable size."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "timeout_terminal_truth",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FTimeout%20Contracts",
+          "start_line": 67,
+          "end_line": 72,
+          "quote": "**REQ-P-QUAL-011**: Enclosing supervision shall allow the selected lower owner\nto report its terminal result and preserve failure evidence. A deadline or\nprocess termination shall identify the layer and bound; it shall not be\nreported as a completed test or successful qualification.\n\n**REQ-P-QUAL-012**: When a transport timeout fires, the resulting error shall **name the timeout value and the agent** so the operator can distinguish \"agent was slow\" from \"transport configuration too aggressive.\""
+        }
+      ],
+      "applies_to_keys": [
+        "supervision_bounds"
+      ],
+      "statement": "Enclosing supervision allows lower owner to report terminal result and preserve evidence. Deadline/process termination names layer/bound and is not completed test/successful qualification. Transport timeout error names timeout value and agent.",
+      "uncertainty": "",
+      "conditions": [
+        "Deadline/process termination or transport timeout occurs."
+      ],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "optional_consensus_capability",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FCapability%20Catalog",
+          "start_line": 279,
+          "end_line": 303,
+          "quote": "Consensus capability publication is optional in 5.0 under\n[Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries);\nan actual published claim still binds its exact function and declared contract.\n\nThe mandatory ABIogenesis 5.0 capability identities are:\n\n- `abg.capability.gtl.declare@5`\n- `abg.capability.gtl.admit@5`\n- `abg.capability.gtl.serialize@5`\n- `abg.capability.gtl.typecheck@5`\n- `abg.capability.module.publish@5`\n- `abg.capability.catalog.contribute@5`\n- `abg.capability.catalog.invoke-graph-function@5`\n- `abg.capability.catalog.apply-node-type@5`\n- `abg.capability.catalog.apply-overlay@5`\n- `abg.capability.runtime.execute-seven-term-c@5`\n- `abg.capability.runtime.admit-fp-result@5`\n- `abg.capability.runtime.replay-continuation@5`\n- `abg.capability.operator.public-contract@5`\n- `abg.capability.install.bind-products@5`\n- `abg.capability.qualification.self-conformance@5`\n\n`abg.capability.graph-function.consensus@5` retains its stable identity for an\noptional published Consensus claim and the dedicated 5.1 qualification. Its\nabsence is not a 5.0 mandatory-capability gap."
+        }
+      ],
+      "applies_to_keys": [
+        "capability_definition_graph"
+      ],
+      "allowed": [
+        "Publish optional 5.0 abg.capability.graph-function.consensus@5 claim bound to exact function and declared contract; retain identity for dedicated 5.1 qualification."
+      ],
+      "forbidden": [
+        "Treat absent Consensus as a mandatory 5.0 capability gap."
+      ]
+    },
+    {
+      "key": "static_catalog_scope",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FBounded%20Scope",
+          "start_line": 337,
+          "end_line": 340,
+          "quote": "**REQ-P-PUBLIC-CONTRACTS-014**: The public contract catalog is an immutable\nmanifest section plus static package exports and schema/corpus assets. ABIogenesis\n5.0 does not require a hosted schema registry, runtime schema download service,\nsigning authority, multi-language code generator, or hostile-local tamper system."
+        }
+      ],
+      "applies_to_keys": [
+        "addressable_schema_roster"
+      ],
+      "allowed": [
+        "Use immutable manifest section, static exports and schema/corpus assets."
+      ],
+      "forbidden": [
+        "Require hosted schema registry/download service, signing authority, multi-language generator or hostile-local tamper system for 5.0."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "qualification_external_references",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "**Derives from**: INT-001 (installed product and release qualification), INT-005 (run governance, failure classification), [PRODUCT.md](../../PRODUCT.md), [SPEC_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md) (Verification Layers)"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FPurpose",
+          "start_line": 18,
+          "end_line": 24,
+          "quote": "Gate applicability follows [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries).\nStandalone Consensus, mandatory host parity, native human response/resume and\nthe dedicated F12/S04 observer/tuner Product are 5.1 qualification claims. Their\ndeferral does not waive retained local traversal, truthful blocking, runtime\nliveness, complete selected F17/S06 outcomes or actual human RC acceptance.\nThe selected ordinary governance/default-library discriminator follows\n`REQ-P-SCENARIOS-018` within existing S02/S03/S06, not an additional campaign."
+        }
+      ],
+      "subject_key": "qualification_infrastructure",
+      "uncertainty": "INT-001/INT-005, historical SPEC_METHOD v2.5.1-rc.2, controlling Product release boundaries and REQ-P-SCENARIOS-018 are referenced outside this chunk.",
+      "consequence": "Exact method remains Definition-selected; references do not adopt another method or resolve full gate applicability."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FRequired%20Contract%20Groups",
+      "decision": "retained",
+      "keys": [
+        "public_contract_groups",
+        "public_function_definition",
+        "addressable_schema_roster",
+        "prime_qualification_schema",
+        "group_export_addresses",
+        "mandatory_schema_identities",
+        "m03_closed_symbol_roster",
+        "qualification_schema_subordination",
+        "corpus_and_serialization_locators"
+      ],
+      "reason": "Retain exact groups/locators, schema roster, Prime qualification structure and canonical corpus/symbol requirements."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPublic%20Operation%20Identities",
+      "decision": "retained",
+      "keys": [
+        "invocation_outcome_schema",
+        "definition_governs_invocation",
+        "public_operation_identity_roster",
+        "reserved_variants_and_hard_break",
+        "operation_row_contract",
+        "invocation_indexed_authority"
+      ],
+      "reason": "Retain closed 5.0 operations, 5.1 exclusions, hard break and indexed invocation authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FCapability%20Catalog",
+      "decision": "retained",
+      "keys": [
+        "capability_definition_graph",
+        "mandatory_capability_roster",
+        "tenant_claim_catalog_binding",
+        "optional_consensus_capability"
+      ],
+      "reason": "Retain mandatory capabilities, optional Consensus and manifest conformance gaps."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FBuilder%20Walkthrough%20Contract",
+      "decision": "retained",
+      "keys": [
+        "source_blind_builder_obligation"
+      ],
+      "reason": "Retain source-blind builder sequence and refusal gate."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FBounded%20Scope",
+      "decision": "retained",
+      "keys": [
+        "static_catalog_scope"
+      ],
+      "reason": "Retain static scope and infrastructure exclusions."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure",
+      "decision": "residual",
+      "keys": [
+        "qualification_infrastructure",
+        "qualification_external_references"
+      ],
+      "reason": "Retain qualification identity and unresolved derivation sources."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FPurpose",
+      "decision": "residual",
+      "keys": [
+        "qualification_infrastructure",
+        "qualification_release_allocation",
+        "qualification_external_references"
+      ],
+      "reason": "Retain every-test infrastructure law and release allocation; referenced gate authorities stay unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FTransport%20Readiness",
+      "decision": "retained",
+      "keys": [
+        "transport_readiness",
+        "readiness_skip_policy"
+      ],
+      "reason": "Retain readiness semantics, cheap probe and diagnostic skip."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FFailure%20Mode%20Separation",
+      "decision": "retained",
+      "keys": [
+        "qualification_failure_classes",
+        "transport_failure_integrity"
+      ],
+      "reason": "Retain distinct failures and narrowly conditional artifact rescue."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FArtifact%20Integrity",
+      "decision": "retained",
+      "keys": [
+        "agent_artifact",
+        "artifact_minimum_output"
+      ],
+      "reason": "Retain tool-written artifact rule, missing diagnostic and no_output threshold."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FTimeout%20Contracts",
+      "decision": "retained",
+      "keys": [
+        "supervision_bounds",
+        "timeout_terminal_truth"
+      ],
+      "reason": "Retain proportional layers and timeout terminal-truth boundaries."
+    }
+  ],
+  "limitations": [
+    "This draft retains exact named public identities without claiming assets exist or conform.",
+    "Referenced release, scenario and method sources require exact re-entry; no cross-chunk identity merge is asserted.",
+    "Qualification rules are not executed tests or verdicts."
+  ]
+}

@@ -1203,6 +1203,19 @@ def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None
             provenance.append({"chunk": chunk["id"], "attempt": str(attempt.relative_to(output)), "answer_sha256": sha((attempt / "answer.json").read_bytes()),
                                "invocation_sha256": sha((attempt / "invocation.json").read_bytes())})
     require(allow_partial or len(answers) == len(chunks), "missing validated F_P chunks; normal assembly refuses. --allow-partial explicitly marks refused sections")
+    return emit_proposal(output, plan, chunks, answers, provenance, upstream=upstream,
+                         formal_checker=formal_checker)
+
+
+def emit_proposal(output: Path, plan: dict[str, Any], chunks: list[dict[str, Any]],
+                  answers: dict[str, dict[str, Any]], provenance: list[dict[str, str]], *,
+                  upstream: Path | None = None,
+                  formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
+    """Shared checked materialization; callers own their actual author evidence."""
+    known = {chunk["id"]: chunk for chunk in chunks}
+    require(set(answers) <= set(known), "answer for an unknown source chunk")
+    for identity, answer in answers.items():
+        author_check(answer, known[identity])
     model, coverage = model_from_answers(plan, chunks, answers, provenance)
     model_checked = ac_graph.validate(model)
     carrier = ac_graph.materialize(model_checked)

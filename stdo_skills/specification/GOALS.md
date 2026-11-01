@@ -2,6 +2,19 @@
 
 ## Current selection
 
+[T-003](../.ai-workspace/tickets/active/T-003-project-representation.md) implements
+representation-build requests over the user's nominated project in both tenants.
+SK-14 and the separate project-build provider relation bind actual source
+preparation, current-host F_P authoring, validation, carrier and documentation
+generation. The selected provider and both host workflows are implemented and
+independently reviewed. The [delivery record](../.ai-workspace/work/T003_PROJECT_REPRESENTATION/DELIVERY.md)
+retains the native invocation/resume outcomes, time bounds and current claim
+limits. Package checks and prior T-001 trials do not qualify this changed path;
+neither explicit invocation nor a finite fixture establishes automatic discovery
+reliability, general semantic adequacy or whole-Product acceptance.
+
+### Retained composition increment
+
 [T-002](../.ai-workspace/tickets/active/T-002-composition-support.md) selects the
 recursive-composition consumer increment: actual a_c dependency, capable manager
 resolution and the supported composition guard in both tenant workflows. The

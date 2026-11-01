@@ -1,0 +1,20 @@
+{
+  "kind": "summary-of-observed-tool-runs",
+  "viewer_tests": {
+    "command": "python3 -B -m unittest discover -s a_c/build_tenants/graphify/test_env -p test_ac_explore.py -v",
+    "passed": 9,
+    "exit_code": 0
+  },
+  "project_tests": {
+    "command": "AC_GRAPHIFY_UPSTREAM=/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout a_c/.venv/bin/python -B -m unittest discover -s a_c/build_tenants/graphify/test_env -p test_ac_project.py -v",
+    "passed": 14,
+    "skipped": 0,
+    "exit_code": 0
+  },
+  "planar_label_regression": {
+    "command": "NODE_PATH=<isolated-jsdom-26.1.0>/node_modules node a_c/build_tenants/graphify/test_env/test_explorer_labels.cjs",
+    "passed": 1,
+    "exit_code": 0
+  },
+  "repaired_test_expectation": "Initial actual-file test expected a record label to occur contiguously in Markdown. It failed because the source uses table separators. The check now compares every rendered source line exactly with the embedded source; no renderer or representation repair was needed."
+}

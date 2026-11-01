@@ -1,6 +1,14 @@
 {
   "schema": "stdo-skills.codex.source-routes/1",
-  "standing": "T-002 construction provenance; installed method remains 3.0.1; target workspace supplies its own definition, eligible context and grants",
+  "standing": "T-003 representation increment with retained T-001/T-002 construction provenance; installed Skills method remains 3.0.1; the nominated project's method is subject data and its activation supplies eligible context and grants",
+  "source_history": "Untagged source entries retain their T-001/T-002 acquisition identities, not a current readback or a coherent T-003 source inventory. Entries tagged T-003 identify the sources consumed for this increment. Historical host and provider evidence is not promoted.",
+  "representation_provider": {
+    "root": "product",
+    "path": "specification/composition/REPRESENTATION_MANIFEST.json",
+    "selection": "T-003",
+    "standing": "Exact T-003 development provider selection. Runtime locations and grants come from the activation; this source pin conveys no execution authority. Historical T-002 selection remains separate.",
+    "sha256": "d3fdbea6ce097f12fd4c952fb892b73495cbcfcecb3acfb3cb5147202e1b4c06"
+  },
   "method": {
     "uri": "stdo://releases/v3.0.1-rc.1/",
     "manifest_sha256": "60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8"
@@ -151,7 +159,88 @@
       "root": "tool",
       "selector": null,
       "sha256": "00a0449a5d2fd75eb091f487ba08377815567d3db42e95a8702063785aa88f07"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": ".ai-workspace/tickets/active/T-003-project-representation.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "9ae14567a5886e550524b3fd963bf71edb247900e2229e5f47875e1ac0c4bb7e",
+      "selection": "T-003"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/PRODUCT.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "0c4b1e591f9fc2d867cd114d9190e5f07a999381dfeff0bb16450be69701cf4c",
+      "selection": "T-003"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/REFERENCE_FRAME_BASIS.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "fa5049fc86465e88a7f02106ad6fa24993765faf5f8c5e876c06f6ef21a72c2c",
+      "selection": "T-003"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/requirements/README.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "80346f45841f6908d1bf4064bab727e3473c3f9c8e332c3ae6c98664e87d056f",
+      "selection": "T-003"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/requirements/SCENARIOS.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "88538d51fb9fbdaf6c2f38f3db010d8015aeca11e1ba3311ff417fbc04eb6340",
+      "selection": "T-003"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "stdo_skills.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "cf297546ce637134f31a39c7500c9ff1e47c5f8f51c2c1a8a6db91956971be10",
+      "selection": "T-003"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/composition/A_C_REPRESENTATION.md",
+      "root": "product",
+      "selector": null,
+      "sha256": "877ab790aeb425ff765650dbf0b6f0bf9c5786e21d4258a32fa5b0749edb9282",
+      "selection": "T-003"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "specification/composition/REPRESENTATION_MANIFEST.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "d3fdbea6ce097f12fd4c952fb892b73495cbcfcecb3acfb3cb5147202e1b4c06",
+      "selection": "T-003"
+    },
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/project-build.md",
+      "root": "tool",
+      "selector": null,
+      "sha256": "d50294d54e55f452d9d1f30042c51a4316e2bad19c92a18b84abc03d0f39eaf6",
+      "selection": "T-003"
     }
   ],
-  "resolution": "Root aliases require the active exact policy. Product is the STDO Skills source project; tool is the selected a_c provider; method is the verified installed release. Historical T001 HOST bytes retain their original provenance. SOURCE_MANIFEST selects the actual development code. These construction references grant no access or authority to a future activation."
+  "resolution": "Root aliases require the active exact policy. Product is the STDO Skills source project; tool is the selected a_c provider; method is the verified Skills installation. The nominated project supplies its own distinct definition/method identity. SOURCE_MANIFEST retains T-002's provider selection; REPRESENTATION_MANIFEST separately selects T-003 project-build support. Resolve executable locations from the operator, activation, declared relation or explicit AC_PROJECT_TOOL, never an assumed sibling. These construction references grant no access or authority to a future activation."
 }

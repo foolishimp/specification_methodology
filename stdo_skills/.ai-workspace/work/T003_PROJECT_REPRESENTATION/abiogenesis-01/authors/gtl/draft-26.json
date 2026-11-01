@@ -1,0 +1,876 @@
+{
+  "concepts": [
+    {
+      "key": "graph_function",
+      "label": "GraphFunction",
+      "definition": "Frozen immutable named callable workflow-library contract with at least name, environment, inputs, outputs, template, effects, declarations and tags; its explicit typed outer interface and cumulative environment govern materialization of a Graph.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 19,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-001**: `GraphFunction` shall be a frozen, immutable type with at minimum: `name`, `environment`, `inputs`, `outputs`, `template`, `effects`, `declarations`, and `tags`.\n\n**REQ-L-GTL3-GRAPHFUNCTION-002**: A graph function shall have an explicit typed outer interface and an explicit cumulative environment contract. It materializes a `Graph`, remains the reference contract boundary for callers, and is the sole public named callable workflow-library carrier of GTL 3.\n"
+        }
+      ]
+    },
+    {
+      "key": "cumulative_environment",
+      "label": "GraphFunction environment",
+      "definition": "Immutable cumulative environment reference with requires, provides and carries. Inputs match requires; outputs occur in provides; carries includes preserved upstream requirements and newly provided bindings available after lawful execution.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 54,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-016**: `GraphFunction.environment` shall be an explicit immutable cumulative environment reference with `requires`, `provides`, and `carries` surfaces.\n\n**REQ-L-GTL3-GRAPHFUNCTION-017**: `GraphFunction.inputs` shall match `environment.requires`, and `GraphFunction.outputs` shall be represented in `environment.provides`.\n\n**REQ-L-GTL3-GRAPHFUNCTION-018**: `environment.carries` shall represent the cumulative typed bindings available after lawful execution of the graph function, including required bindings preserved from upstream and newly provided bindings emitted by the function.\n"
+        }
+      ]
+    },
+    {
+      "key": "node_type",
+      "label": "Published node type",
+      "definition": "Reusable typed declaration identity and inspectable noncallable publication truth, distinct from GraphFunction and from runtime effects.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 69,
+          "end_line": 76,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-021**: A reusable node type shall retain its own\ntyped declaration identity and shall not be represented as a non-callable\nGraphFunction. Node-type publication is inspectable declaration truth, not\ncallable work.\n\n**REQ-L-GTL3-GRAPHFUNCTION-022**: A node-type realization shall preserve its\ndeclared node contract, non-callability, and publication semantics without\nminting a GraphFunction identity or runtime effects.\n"
+        }
+      ]
+    },
+    {
+      "key": "graph_vector",
+      "label": "GraphVector",
+      "definition": "First-class internal adjacency declaration and invariant traversal boundary with at least name, source, target, operators, evaluators, contexts, rule, allows_subwork, declarations and tags; not a public callable or semantic Job target.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define `GraphVector` as the invariant traversal boundary and internal adjacency\nrecord of GTL 3.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 19,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-001**: `GraphVector` shall be a first-class GTL declaration type with at minimum: `name`, `source`, `target`, `operators`, `evaluators`, `contexts`, `rule`, `allows_subwork`, `declarations`, and `tags`.\n\n**REQ-L-GTL3-GRAPHVECTOR-002**: `GraphVector` is the internal adjacency record of GTL. It is not a rival public ontology, not a public callable carrier, and not a semantic job target, but it is a real language declaration surface.\n"
+        }
+      ]
+    },
+    {
+      "key": "target_carrier_contract",
+      "label": "Target carrier contract",
+      "definition": "Effective contract for every vector output surface, selected by vector-local gtl.target_carrier_contract first and otherwise a visible GTL defaults config bundle.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 45,
+          "end_line": 47,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-015**: Every graph-vector output surface shall have an effective target carrier contract binding. A vector-local `GraphVector.declarations[\"gtl.target_carrier_contract\"]` declaration is the highest-precedence binding. If the vector does not declare a product-specific target carrier contract, the binding shall resolve from a visible GTL defaults config bundle rather than from code constants, prompt prose, parser convention, or null. Malformed present declarations and missing or malformed defaults fail closed.\n\n**REQ-L-GTL3-GRAPHVECTOR-016**: A target carrier contract binding shall declare at minimum the target node ref, output surface ref, output carrier family, output carrier kind, envelope contract ref, nested payload path, required fields, fixed protocol fields, worker-fillable fields, literal or enum domains, schema ref, admission ref, payload-ledger binding ref, edge-assurance binding ref, handoff projection ref, construction template ref, replay digest policy ref, materialization policy ref, closure precondition ref, and test-case generation ref.\n"
+        }
+      ]
+    },
+    {
+      "key": "higher_order_combinator",
+      "label": "Higher-order graph-function combinator",
+      "definition": "Lawful GTL graph-function operations preserving interface/type truth rather than hidden planning heuristics; includes fan_out, fan_in, gate and promote.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "Define higher-order graph-function combinators in GTL 3.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 38,
+          "quote": "**REQ-L-GTL3-HOF-002**: `fan_in(reducer, *, over=node)` shall reduce an explicit vector boundary into one synthesized result.\n\n**REQ-L-GTL3-HOF-003**: `gate(target, *, rule, evaluators)` shall block or allow continuation over an explicit boundary without choosing a candidate or inventing domain pass/fail semantics.\n\n**REQ-L-GTL3-HOF-004**: `promote(source=..., to=...)` shall lift one declared representation boundary into another without changing semantic truth.\n\n**REQ-L-GTL3-HOF-005**: Higher-order operations shall preserve interface and type truth.\n\n**REQ-L-GTL3-HOF-006**: Higher-order operations shall be lawful graph-function combinators, not hidden planner or interpreter heuristics.\n"
+        }
+      ]
+    },
+    {
+      "key": "fan_out_relation",
+      "label": "fan_out relation",
+      "definition": "Explicit f:A->B with over:Vector<A> and into:Vector<B> yields Vector<A>->Vector<B>, admitting the link from each structured vector schema to its member contract.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 28,
+          "quote": "**REQ-L-GTL3-HOF-001**: `fan_out(f, *, over, into)` shall accept an element\ngraph-function relation `f:A->B`, an explicit input-vector relation\n`over:Vector<A>`, and an explicit output-vector relation `into:Vector<B>`, and\nshall produce a graph-function relation `Vector<A>->Vector<B>`. The admitted\nrelation shall join each structured `Vector[T]` schema to an explicit member\ncontract; schema spelling alone is not type admission. On a wholly successful\nvector application, the relation shall preserve input cardinality and stable\n\tinput ordinal, pairing output member `i` only with input member `i`. Native\n\tauthoring, canonical serialization, raw admission, and GTL validation\nshall preserve the same first-class relation and shall not infer it from a\nfunction name, label, tag, shared node identity, or hidden cardinality.\nBlocked-member lineage and partial-failure behavior are runtime semantics and\nrequire their own requirement and design before implementation.\n"
+        }
+      ]
+    },
+    {
+      "key": "fan_in_relation",
+      "label": "fan_in relation",
+      "definition": "Explicit vector-boundary reduction into one synthesized result through its declared reducer GraphFunction.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 30,
+          "quote": "**REQ-L-GTL3-HOF-002**: `fan_in(reducer, *, over=node)` shall reduce an explicit vector boundary into one synthesized result.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 67,
+          "end_line": 74,
+          "quote": "**REQ-L-GTL3-HOF-011**: **Typed fan-in runtime.** Runtime realization of an\nadmitted `fan_in` relation shall consume one complete admitted vector matching\nthe declared vector node and contract, preserve its basis, cardinality,\nordinals, member attribution, and application lineage, and invoke the exact\ndeclared reducer GraphFunction once. An incomplete, mismatched, duplicated, or\nreordered vector shall stop before reducer traversal. Only an admitted reducer\ncompletion may become the synthesized result; blocked, held, malformed, or\nruntime-failed reducer truth shall remain non-success.\n"
+        }
+      ]
+    },
+    {
+      "key": "governance_hooks",
+      "label": "GTL governance hook surfaces",
+      "definition": "Governance declaration surfaces that do not introduce a policy semantic language.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define the governance hook surfaces of GTL 3 without introducing a policy\nsemantic language.\n"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "callable_carries_environment",
+      "kind": "declares",
+      "source_key": "graph_function",
+      "target_key": "cumulative_environment",
+      "meaning": "Each callable explicitly declares the cumulative typed environment used for its outer contract and lawful execution.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 19,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-002**: A graph function shall have an explicit typed outer interface and an explicit cumulative environment contract. It materializes a `Graph`, remains the reference contract boundary for callers, and is the sole public named callable workflow-library carrier of GTL 3.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 54,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-016**: `GraphFunction.environment` shall be an explicit immutable cumulative environment reference with `requires`, `provides`, and `carries` surfaces.\n\n**REQ-L-GTL3-GRAPHFUNCTION-017**: `GraphFunction.inputs` shall match `environment.requires`, and `GraphFunction.outputs` shall be represented in `environment.provides`.\n\n**REQ-L-GTL3-GRAPHFUNCTION-018**: `environment.carries` shall represent the cumulative typed bindings available after lawful execution of the graph function, including required bindings preserved from upstream and newly provided bindings emitted by the function.\n"
+        }
+      ]
+    },
+    {
+      "key": "vector_target_binding",
+      "kind": "requires_effective_contract",
+      "source_key": "graph_vector",
+      "target_key": "target_carrier_contract",
+      "meaning": "Every vector output uses its local or visible-default target carrier contract with fail-closed resolution.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 45,
+          "end_line": 47,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-015**: Every graph-vector output surface shall have an effective target carrier contract binding. A vector-local `GraphVector.declarations[\"gtl.target_carrier_contract\"]` declaration is the highest-precedence binding. If the vector does not declare a product-specific target carrier contract, the binding shall resolve from a visible GTL defaults config bundle rather than from code constants, prompt prose, parser convention, or null. Malformed present declarations and missing or malformed defaults fail closed.\n\n**REQ-L-GTL3-GRAPHVECTOR-016**: A target carrier contract binding shall declare at minimum the target node ref, output surface ref, output carrier family, output carrier kind, envelope contract ref, nested payload path, required fields, fixed protocol fields, worker-fillable fields, literal or enum domains, schema ref, admission ref, payload-ledger binding ref, edge-assurance binding ref, handoff projection ref, construction template ref, replay digest policy ref, materialization policy ref, closure precondition ref, and test-case generation ref.\n"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "key": "graph_function_template_and_reuse",
+      "applies_to_keys": [
+        "graph_function"
+      ],
+      "statement": "Template is replayable publication truth. HoG-local resolution is invocation convenience only, not the published contract or substitute program. Named work reuse uses GraphFunctions, not copied structures or Product shells. GraphFunction is the composition/substitution/recursion/HOF unit, and outer contract stays stable across internal refinement.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 24,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-003**: The template shall be represented as\nreplayable publication truth. HoG-local callable resolution may exist as an\ninvocation convenience, but it is not the published GraphFunction contract or\na substitute executable program.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 34,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-006**: Named workflow functions are reusable through graph functions, not through copied structure or product-local shells.\n\n**REQ-L-GTL3-GRAPHFUNCTION-007**: `GraphFunction` shall be the unit of lawful composition, substitution, recursion, and higher-order graph application.\n\n**REQ-L-GTL3-GRAPHFUNCTION-008**: A graph function's declared outer contract shall remain stable even when internal refinement changes realized graph structure.\n"
+        }
+      ]
+    },
+    {
+      "key": "graph_function_publication_surfaces",
+      "applies_to_keys": [
+        "graph_function"
+      ],
+      "statement": "Effects support static analysis, capability matching, lawful composition and workflow visibility. declarations canonically carries publication/materialization metadata, dispatch/evaluation/escalation/proof/closure/assurance hook references, opaque hook config and local publication surfaces. Publish discoverable first-class module surfaces, not anonymous realized graphs or helper code.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 28,
+          "end_line": 28,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-005**: The `effects` surface shall support static analysis, engine capability matching, lawful composition reasoning, and workflow visibility.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 36,
+          "end_line": 38,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-009**: `GraphFunction.declarations` shall be the canonical declaration surface for publication metadata, materialization metadata, hook references for dispatch, evaluation, escalation, deterministic proof, closure, and assurance, opaque hook configuration, and graph-function-local publication surfaces.\n\n**REQ-L-GTL3-GRAPHFUNCTION-010**: Published graph functions shall remain discoverable as first-class module surfaces rather than collapsing into anonymous realized graphs or helper code.\n"
+        }
+      ]
+    },
+    {
+      "key": "materialization_identity",
+      "applies_to_keys": [
+        "graph_function"
+      ],
+      "statement": "Expose which GraphFunction materialized, the declared input/parameter basis and resulting graph identity/provenance. Every callable publishes a template whose materialized graph passes GTL validation and is directly HoG-traversable. Implementation bindings realize only declared leaf seams. Reject implementation-only handlers/plugins/Workers/pointers claiming GraphFunction identity without matching template, graph, contracts, program membership and provenance.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 40,
+          "end_line": 40,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-011**: Graph-function materialization shall expose enough identity and provenance surface that a consumer or engine can answer which graph function materialized, which declared inputs or parameters were used, and which realized graph was produced.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 88,
+          "end_line": 96,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-025**: Every callable GraphFunction shall publish a\nGTL template that materializes a graph accepted by the GTL validator and\ndirectly traversable by HoG. An implementation binding may realize only a\ndeclared leaf seam inside that graph.\n\n**REQ-L-GTL3-GRAPHFUNCTION-026**: Admission shall reject an\nimplementation-only callable, handler, plugin, worker, or function pointer\nthat claims GraphFunction identity without the matching published template,\nmaterialized graph, contracts, program membership, and provenance.\n"
+        }
+      ]
+    },
+    {
+      "key": "callable_identity_partition",
+      "applies_to_keys": [
+        "graph_function",
+        "graph_vector"
+      ],
+      "statement": "GraphFunction is the public work entry for semantic Jobs and other starts; bare vectors are not callable. Realized vectors remain subordinate structure. The callable is distinct from materialized Graph and ABG graph-call instance and is not the whole Program, attempt, workspace, overlay or downstream asset. A Program/overlay composition instead binds callables, vectors, node types, starts, roles, security, policy, proofs and plugin/result contracts.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 46,
+          "end_line": 48,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-014**: Published graph functions shall be the callable work-entry surface for semantic jobs and other public execution entry points. Bare internal graph vectors are not public callable carriers.\n\n**REQ-L-GTL3-GRAPHFUNCTION-015**: A graph function may realize one or more internal `GraphVector` boundaries, but those realized vectors remain internal structural truth beneath the published graph-function carrier.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 56,
+          "end_line": 60,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-019**: A `GraphFunction` shall remain distinct from\nthe materialized `Graph` it produces and from any ABG graph-call execution\ninstance over that graph. It is a reusable workflow library function and\ncallable work contract, not the whole program, runtime attempt, workspace\nsurface, graph overlay, or downstream domain asset created by an attempt.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 82,
+          "end_line": 86,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-024**: A `GraphFunction` shall be a reusable library\nfunction or callable work contract. It shall not be treated as the whole\nproduct program when a graph overlay or GTL program composition declares the\nprogram that binds graph functions, vectors, node types, starts, roles,\nsecurity, policy, proof obligations, and plugin/result contracts.\n"
+        }
+      ]
+    },
+    {
+      "key": "graph_function_environment_consistency",
+      "applies_to_keys": [
+        "graph_function",
+        "cumulative_environment"
+      ],
+      "statement": "Keep environment explicit and immutable with requires/provides/carries; require inputs=requires and outputs represented in provides. After lawful execution, carries conserves upstream required bindings and new outputs.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 54,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-016**: `GraphFunction.environment` shall be an explicit immutable cumulative environment reference with `requires`, `provides`, and `carries` surfaces.\n\n**REQ-L-GTL3-GRAPHFUNCTION-017**: `GraphFunction.inputs` shall match `environment.requires`, and `GraphFunction.outputs` shall be represented in `environment.provides`.\n\n**REQ-L-GTL3-GRAPHFUNCTION-018**: `environment.carries` shall represent the cumulative typed bindings available after lawful execution of the graph function, including required bindings preserved from upstream and newly provided bindings emitted by the function.\n"
+        }
+      ]
+    },
+    {
+      "key": "observer_existing_workspace",
+      "applies_to_keys": [
+        "graph_function"
+      ],
+      "statement": "Publish executive observer as a GraphFunction over an existing declared target workspace and work, expressed through environment, Context locator/digest and AssetSurface required-context truth. Create no observer-specific workspace, graph, frame, replay or continuation topology.",
+      "conditions": [
+        "GraphFunction represents an ABG executive observer."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 62,
+          "end_line": 67,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-020**: An ABG executive observer shall be published\nas a graph function over an existing declared target workspace and target work.\nThe target shall be expressed through `GraphFunction.environment`, `Context`\nlocator/digest truth, and asset-surface required-context truth; GTL shall not\nintroduce a new observer-specific workspace, graph, frame, replay, or\ncontinuation topology object for that role.\n"
+        }
+      ]
+    },
+    {
+      "key": "node_type_noncallability",
+      "applies_to_keys": [
+        "node_type"
+      ],
+      "statement": "Preserve node-type identity, contract, publication semantics and noncallability. Neither realization nor publication mints GraphFunction identity or runtime effects. Job/public-start binding, runtime-registry callable selection, graph-call opening and invocation assertion reject node-type entries as callables.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 69,
+          "end_line": 80,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-021**: A reusable node type shall retain its own\ntyped declaration identity and shall not be represented as a non-callable\nGraphFunction. Node-type publication is inspectable declaration truth, not\ncallable work.\n\n**REQ-L-GTL3-GRAPHFUNCTION-022**: A node-type realization shall preserve its\ndeclared node contract, non-callability, and publication semantics without\nminting a GraphFunction identity or runtime effects.\n\n**REQ-L-GTL3-GRAPHFUNCTION-023**: Job binding, public start binding,\nruntime-registry graph-function selection, graph-call opening, and invocation\nassertion shall reject node-type entries as callable graph functions.\n"
+        }
+      ]
+    },
+    {
+      "key": "vector_structure_and_governance",
+      "applies_to_keys": [
+        "graph_vector"
+      ],
+      "statement": "A vector has one source node or ordered source tuple and one target. Operators/evaluators declare local construction/convergence, rule local constraint, and allows_subwork bounded capability. declarations canonically describes one invariant transition; preserve inspectability/replayability across publication, serialization and interpretation. Work entry and Jobs never target bare vectors beneath published callables.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 31,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-003**: A graph vector shall support one source node or an ordered tuple of source nodes and one target node.\n\n**REQ-L-GTL3-GRAPHVECTOR-004**: `operators` and `evaluators` shall express local constructive and convergence surfaces for the transition. `rule` shall express a local constraint. `allows_subwork` shall express bounded sub-work capability.\n\n**REQ-L-GTL3-GRAPHVECTOR-005**: `GraphVector.declarations` shall be the canonical transition-governance declaration surface for one invariant traversal boundary.\n\n**REQ-L-GTL3-GRAPHVECTOR-006**: `GraphVector.declarations` may carry explicit truth for invariant transition description, dispatch intent, evaluation policy, escalation policy, deterministic proof surfaces, closure contract, assurance hook references, other hook references, and opaque hook configuration.\n\n**REQ-L-GTL3-GRAPHVECTOR-007**: Graph-vector declarations shall remain inspectable and replayable across publication, serialization, and interpretation surfaces.\n\n**REQ-L-GTL3-GRAPHVECTOR-008**: Public execution entry and semantic work contracts shall not target bare graph vectors. Operative traversal boundaries remain internal realized structure beneath one or more published graph functions.\n"
+        }
+      ]
+    },
+    {
+      "key": "vector_local_precedence",
+      "applies_to_keys": [
+        "graph_vector"
+      ],
+      "statement": "When present, vector traversal-modulation qualifier has highest hook precedence and cannot be overridden by GraphFunction/Role defaults. Per-edge strategy is declared at abg.traversal_strategy; ABG carries its selection as runtime truth but the label remains descriptive Product metadata.",
+      "conditions": [
+        "A traversal-modulation qualifier is present."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 33,
+          "end_line": 35,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-009**: When a traversal modulation qualifier is present, the graph-vector declaration shall be the highest-precedence source for that edge's modulation hook. A graph-function or role default shall not override the vector-local qualifier.\n\n**REQ-L-GTL3-GRAPHVECTOR-010**: Per-edge traversal strategy shall be declared through `GraphVector.declarations[\"abg.traversal_strategy\"]`. ABG shall carry the selected strategy as runtime truth while treating the strategy label as descriptive product-owned metadata.\n"
+        }
+      ]
+    },
+    {
+      "key": "vector_temporal_contract",
+      "applies_to_keys": [
+        "graph_vector"
+      ],
+      "statement": "Single-boundary temporal eligibility may attach only through live canonical abg.temporal_constraint hook_ref with config constraint_ref, operator, not_before_ref, optional deadline_ref, schedule_policy_ref, timer_provider_ref and deadline_breach_action. Eligibility, breach pressure and policy consequences act only through ABG replay; vectors stay nonpublic. Reject alternate temporal keys as live authority.",
+      "conditions": [
+        "A temporal constraint governs one traversal boundary."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 37,
+          "end_line": 37,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-011**: Temporal eligibility constraints such as `not_before` may attach to a graph vector when the constraint governs one traversal boundary. The first canonical graph-vector temporal syntax shall be `GraphVector.declarations[\"abg.temporal_constraint\"]` as a `hook_ref` whose config carries `constraint_ref`, `operator`, `not_before_ref`, optional `deadline_ref`, `schedule_policy_ref`, `timer_provider_ref`, and `deadline_breach_action`. Such constraints shall affect eligibility, deadline-breach pressure, and schedule-policy consequence only through ABG replay and shall not make a graph vector a public execution target. Alternate temporal key spellings shall not be admitted as live authority surfaces.\n"
+        }
+      ]
+    },
+    {
+      "key": "edge_assurance_contract_scope",
+      "applies_to_keys": [
+        "graph_vector"
+      ],
+      "statement": "Optional abg.edge_assurance_contract hook/config describes scoped target outcome, authority, obligation bindings, F_P transform/eval, admissible evidence, gain, metric, closure decision, residual pressure, continuation, composition law, cheap checks and policy. Vector-local assurance has highest precedence; GraphFunction, Job, Role, Module and installed defaults cannot override it. If no edge assurance function is declared, automated closure is not licensed: default is F_H by absentia, with any human closure/continuation edge-scoped and ABG-replay-visible.",
+      "conditions": [],
+      "exceptions": [
+        "Wider/default declarations can supply absent assurance contracts, not override vector-local contracts."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 39,
+          "end_line": 43,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-012**: Edge assurance may attach to a graph vector through `GraphVector.declarations[\"abg.edge_assurance_contract\"]` as a hook/config declaration. The declaration shall describe the scoped edge assurance contract for target outcome, authority surfaces, obligation bindings, F_P transform/eval contracts, admissible evidence policy, gain report, metric, closure decision, residual pressure, continuation, composition law, cheap structural checks, and policy refs.\n\n**REQ-L-GTL3-GRAPHVECTOR-013**: A graph-vector edge assurance declaration shall be the highest-precedence assurance contract for that traversal boundary. Graph-function, job, role, module, or installed-default assurance declarations may provide defaults, but they shall not override a vector-local edge assurance contract.\n\n**REQ-L-GTL3-GRAPHVECTOR-014**: Absence of an edge assurance declaration shall not mean automated closure is lawful. When no assurance function is declared for an edge traversal, the default assurance disposition is F_H by absentia, and any human closure or continuation judgment must remain scoped to the edge and replay-visible through ABG.\n"
+        }
+      ]
+    },
+    {
+      "key": "effective_target_contract",
+      "applies_to_keys": [
+        "graph_vector",
+        "target_carrier_contract"
+      ],
+      "statement": "Every output surface requires an effective binding. Vector-local binding has highest precedence; absent Product-specific binding resolves from visible GTL config defaults, never code constants, prompts, parser conventions or null. Malformed present declarations or missing/malformed defaults fail closed.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 45,
+          "end_line": 45,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-015**: Every graph-vector output surface shall have an effective target carrier contract binding. A vector-local `GraphVector.declarations[\"gtl.target_carrier_contract\"]` declaration is the highest-precedence binding. If the vector does not declare a product-specific target carrier contract, the binding shall resolve from a visible GTL defaults config bundle rather than from code constants, prompt prose, parser convention, or null. Malformed present declarations and missing or malformed defaults fail closed.\n"
+        }
+      ]
+    },
+    {
+      "key": "target_contract_required_fields",
+      "applies_to_keys": [
+        "target_carrier_contract"
+      ],
+      "statement": "At minimum bind target node, output surface, carrier family/kind, envelope contract, nested payload path, required/fixed protocol/Worker-fillable fields, literal/enum domains, schema/admission references, payload-ledger and edge-assurance bindings, handoff projection, construction template, replay digest and materialization policies, closure precondition and test-case generation references.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 47,
+          "end_line": 47,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-016**: A target carrier contract binding shall declare at minimum the target node ref, output surface ref, output carrier family, output carrier kind, envelope contract ref, nested payload path, required fields, fixed protocol fields, worker-fillable fields, literal or enum domains, schema ref, admission ref, payload-ledger binding ref, edge-assurance binding ref, handoff projection ref, construction template ref, replay digest policy ref, materialization policy ref, closure precondition ref, and test-case generation ref.\n"
+        }
+      ]
+    },
+    {
+      "key": "vector_composition_binding",
+      "applies_to_keys": [
+        "graph_vector"
+      ],
+      "statement": "Closure-capable, mixed-regime, optimized or construction-substrate traversal requires effective abg.fn_composition. Vector-local selection wins over GraphFunction/Job/Role/Module/visible defaults. A vector-local composition is host-bound and fails closed if host vector, source node, target node, target schema, target-carrier or assurance contract reference mismatches the effective boundary.",
+      "conditions": [
+        "Traversal is closure-capable, mixed-regime, optimized or construction-substrate."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 49,
+          "end_line": 51,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-017**: A graph vector that participates in closure-capable, mixed-regime, optimized, or construction-substrate traversal shall have an effective `abg.fn_composition` binding. A vector-local `GraphVector.declarations[\"abg.fn_composition\"]` declaration is the highest-precedence composition binding for that traversal boundary. Wider graph-function, job, role, module, or visible default bindings may supply defaults, but they shall not override a vector-local composition declaration.\n\n**REQ-L-GTL3-GRAPHVECTOR-018**: A vector-local composition declaration shall be identity-bound to the hosting vector. It shall fail closed if its host graph-vector ref, source node ref, target node ref, target schema ref, target carrier contract ref, or edge assurance contract ref does not match the effective vector boundary.\n"
+        }
+      ]
+    },
+    {
+      "key": "traversal_unit_structural_scope",
+      "applies_to_keys": [
+        "graph_vector"
+      ],
+      "statement": "GraphVector<A,B> is a TraversalUnit<A,B> structural boundary only under a selected parent GraphFunction execution and abg.fn_composition. This notation creates no bare-vector public start/Job target, new topology or runtime controller.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 55,
+          "end_line": 55,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-020**: A `GraphVector<A, B>` shall be the structural boundary of a `TraversalUnit<A, B>` only under a selected parent `GraphFunction` execution and selected `abg.fn_composition`. `TraversalUnit<A, B>` is formal traversal notation over existing carriers; it shall not make bare graph vectors public-start targets, job targets, new topology objects, or runtime controllers.\n"
+        }
+      ]
+    },
+    {
+      "key": "fan_out_declaration_identity",
+      "applies_to_keys": [
+        "fan_out_relation"
+      ],
+      "statement": "Explicit element/input-vector/output-vector relation admission joins vector schemas to member contracts; schema strings alone do not admit types. Wholly successful application preserves input cardinality and stable ordinal, pairing output i only with input i. Native authoring, serialization, raw admission and validation preserve the first-class relation; no inference from names, labels, tags, shared node identity or hidden cardinality.",
+      "conditions": [
+        "Cardinality/ordinal preservation applies to a wholly successful vector application."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 26,
+          "quote": "**REQ-L-GTL3-HOF-001**: `fan_out(f, *, over, into)` shall accept an element\ngraph-function relation `f:A->B`, an explicit input-vector relation\n`over:Vector<A>`, and an explicit output-vector relation `into:Vector<B>`, and\nshall produce a graph-function relation `Vector<A>->Vector<B>`. The admitted\nrelation shall join each structured `Vector[T]` schema to an explicit member\ncontract; schema spelling alone is not type admission. On a wholly successful\nvector application, the relation shall preserve input cardinality and stable\n\tinput ordinal, pairing output member `i` only with input member `i`. Native\n\tauthoring, canonical serialization, raw admission, and GTL validation\nshall preserve the same first-class relation and shall not infer it from a\nfunction name, label, tag, shared node identity, or hidden cardinality.\n"
+        }
+      ]
+    },
+    {
+      "key": "higher_order_gate_and_promote",
+      "applies_to_keys": [
+        "higher_order_combinator"
+      ],
+      "statement": "gate(target, rule, evaluators) blocks/allows over an explicit boundary without choosing candidates or inventing domain pass/fail semantics. promote(source,to) changes declared representation boundary without changing semantic truth. All combinators preserve interface/type law.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 38,
+          "quote": "**REQ-L-GTL3-HOF-002**: `fan_in(reducer, *, over=node)` shall reduce an explicit vector boundary into one synthesized result.\n\n**REQ-L-GTL3-HOF-003**: `gate(target, *, rule, evaluators)` shall block or allow continuation over an explicit boundary without choosing a candidate or inventing domain pass/fail semantics.\n\n**REQ-L-GTL3-HOF-004**: `promote(source=..., to=...)` shall lift one declared representation boundary into another without changing semantic truth.\n\n**REQ-L-GTL3-HOF-005**: Higher-order operations shall preserve interface and type truth.\n\n**REQ-L-GTL3-HOF-006**: Higher-order operations shall be lawful graph-function combinators, not hidden planner or interpreter heuristics.\n"
+        }
+      ]
+    },
+    {
+      "key": "zoom_terms_need_owned_law",
+      "applies_to_keys": [
+        "higher_order_combinator"
+      ],
+      "statement": "Zoom-in/out/fold terminology must resolve to existing lawful operations or be repriced into new requirements before implementation.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 42,
+          "end_line": 46,
+          "quote": "**REQ-L-GTL3-HOF-008**: Zoom-in, zoom-out, and fold terminology shall resolve\nto existing lawful GTL higher-order operations or be repriced into new\nrequirements before implementation. Informal zoom or fold vocabulary shall not\nauthorize hidden interpreter heuristics, unowned registers, or duplicate graph\nalgebra.\n"
+        }
+      ]
+    },
+    {
+      "key": "fan_out_pointwise_batch",
+      "applies_to_keys": [
+        "fan_out_relation"
+      ],
+      "statement": "Runtime realization projects one admitted nonempty ordered input vector to one C.batch task per input member. Each preserves exact child GraphFunction, member I/O contracts, original zero-based ordinal, lineage and enclosing C program/stage/fibre/arm/composition authority. Batch reference is grouping only, never call, scheduler or closure authority.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 48,
+          "end_line": 56,
+          "quote": "**REQ-L-GTL3-HOF-009**: **Pointwise batch projection.** Runtime realization of an\nadmitted `fan_out` relation shall project one admitted non-empty ordered input\nvector into one `C.batch` task per input member. Each task shall preserve the\ndeclared child GraphFunction, exact member input/output contracts, original\nzero-based ordinal, member lineage, and the enclosing declared C-call program,\nstage, fibre, arm, and composition authority. The batch ref groups tasks but is\nnot a call, scheduler, or closure authority. Serial execution is a lawful\nrealization of the same projection; concurrency shall not be inferred from\n`fan_out` or `C.batch`.\n"
+        }
+      ]
+    },
+    {
+      "key": "fan_out_atomic_output_admission",
+      "applies_to_keys": [
+        "fan_out_relation"
+      ],
+      "statement": "Admit output vector only if every task completes exactly once under the declared output-member contract and rows conserve cardinality/ordinal. Completion time cannot change attribution/order. A blocked, held, malformed or runtime-failed member preserves completed evidence, names stopping ordinal and unstarted tasks, admits no output vector and permits no downstream fan-in or graph-success projection for that invocation.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 58,
+          "end_line": 65,
+          "quote": "**REQ-L-GTL3-HOF-010**: **Fan-out result and failure law.** A fan-out output vector\nshall be admitted only when every projected task completes exactly once with\nthe declared output-member contract and the output rows preserve input\ncardinality and ordinal. Completion order shall not change output order or\nattribution. If a member is blocked, held, malformed, or runtime-failed, ABG\nshall preserve completed-member evidence, identify the stopping ordinal and\nunstarted tasks, admit no output vector, and permit no downstream fan-in or\ngraph-success projection from that invocation.\n"
+        }
+      ]
+    },
+    {
+      "key": "fan_in_complete_vector",
+      "applies_to_keys": [
+        "fan_in_relation"
+      ],
+      "statement": "Consume one complete admitted vector matching declared node/contract, preserving basis, cardinality, ordinals, member attribution and application lineage; invoke the exact reducer GraphFunction once. Incomplete, mismatched, duplicated or reordered vectors stop before reducer traversal. Only admitted reducer completion becomes synthesized result; blocked/held/malformed/runtime-failed reducer truth remains non-success.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 67,
+          "end_line": 74,
+          "quote": "**REQ-L-GTL3-HOF-011**: **Typed fan-in runtime.** Runtime realization of an\nadmitted `fan_in` relation shall consume one complete admitted vector matching\nthe declared vector node and contract, preserve its basis, cardinality,\nordinals, member attribution, and application lineage, and invoke the exact\ndeclared reducer GraphFunction once. An incomplete, mismatched, duplicated, or\nreordered vector shall stop before reducer traversal. Only an admitted reducer\ncompletion may become the synthesized result; blocked, held, malformed, or\nruntime-failed reducer truth shall remain non-success.\n"
+        }
+      ]
+    },
+    {
+      "key": "higher_order_runtime_authority",
+      "applies_to_keys": [
+        "higher_order_combinator"
+      ],
+      "statement": "Runtime binding derives from exact selected catalog entry, admitted Module, structural HOF or GraphFunction-application declaration, and opaque callable/node identities. Names, tags, fixed cardinality, promise completion order and caller semantic defaults provide no authority. HoG traverses admitted HOF/C; ABG owns task frames, traversal evidence, result admission and failure. Product effects still need separately admitted traversal/capability gates.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 76,
+          "end_line": 84,
+          "quote": "**REQ-L-GTL3-HOF-012**: **Runtime authority.** HOF runtime bindings shall derive\nfrom the exact selected catalog entry, admitted Module, structural HOF or\nGraphFunction-application declaration, and opaque GraphFunction and Node\nidentities. Names, tags, fixed vector cardinality, promise completion order,\nand caller-authored semantic defaults are not authority. HoG traverses the\nadmitted HOF and C structure. ABG owns task C-call frames, traversal evidence,\nresult admission, and failure truth. Product\neffects remain subject to the separately admitted traversal and capability\ngates.\n"
+        }
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "materialization_latitude",
+      "applies_to_keys": [
+        "graph_function"
+      ],
+      "allowed": [
+        "Depend on declared inputs, selected workflow families and declared structural parameters.",
+        "Derive companion bundles if Graph stays primary output and derivation has replayable provenance.",
+        "Cache/reuse only under declared materialization-input plus GraphFunction identity.",
+        "Realize one or more internal GraphVector boundaries."
+      ],
+      "forbidden": [
+        "Relying on hidden ambient interpreter/process state for materialization or cache identity.",
+        "Treating HoG-local resolution as a substitute executable program."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 26,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-003**: The template shall be represented as\nreplayable publication truth. HoG-local callable resolution may exist as an\ninvocation convenience, but it is not the published GraphFunction contract or\na substitute executable program.\n\n**REQ-L-GTL3-GRAPHFUNCTION-004**: Graph-function materialization may depend on declared inputs, selected workflow families, and other declared structural parameters without relying on ambient hidden interpreter state.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+          "start_line": 42,
+          "end_line": 48,
+          "quote": "**REQ-L-GTL3-GRAPHFUNCTION-012**: Graph-derived companion bundles may be derived from a published graph function so long as graph remains the primary structural output and the derivation preserves replayable provenance.\n\n**REQ-L-GTL3-GRAPHFUNCTION-013**: A graph function may be cached or reused across executions only when the cache identity is derived from declared materialization inputs and graph-function identity rather than opaque ambient process state.\n\n**REQ-L-GTL3-GRAPHFUNCTION-014**: Published graph functions shall be the callable work-entry surface for semantic jobs and other public execution entry points. Bare internal graph vectors are not public callable carriers.\n\n**REQ-L-GTL3-GRAPHFUNCTION-015**: A graph function may realize one or more internal `GraphVector` boundaries, but those realized vectors remain internal structural truth beneath the published graph-function carrier.\n"
+        }
+      ]
+    },
+    {
+      "key": "vector_declaration_variation",
+      "applies_to_keys": [
+        "graph_vector"
+      ],
+      "allowed": [
+        "Declare transition description, dispatch/evaluation/escalation policy, deterministic proof, closure contract, assurance/other hooks and opaque config.",
+        "Declare subordinate evaluation-scope topology for segment, dimension-cell, fold or relation within the vector and selected composition."
+      ],
+      "forbidden": [
+        "Promoting evaluation segments/cells/folds/relations into public execution, semantic Job targets or new topology objects."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 27,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-006**: `GraphVector.declarations` may carry explicit truth for invariant transition description, dispatch intent, evaluation policy, escalation policy, deterministic proof surfaces, closure contract, assurance hook references, other hook references, and opaque hook configuration.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 53,
+          "end_line": 53,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-019**: A graph-vector evaluation policy or edge assurance declaration may declare a generic evaluation-scope topology for segment, dimension-cell, fold, or relation checks inside that vector. Such scope topology remains subordinate to the graph vector and selected composition. It shall not make a segment, cell, fold, or relation a public execution target, semantic job target, or new GTL topology object.\n"
+        }
+      ]
+    },
+    {
+      "key": "harvest_and_realization_latitude",
+      "applies_to_keys": [
+        "higher_order_combinator",
+        "fan_out_relation"
+      ],
+      "allowed": [
+        "Expose evaluator/candidate/other harvested vectors over a contract boundary while leaving merge semantics outside GTL.",
+        "Serial execution is a lawful realization of fan_out pointwise batch projection."
+      ],
+      "forbidden": [
+        "Inferring concurrency from fan_out or C.batch.",
+        "Using informal zoom/fold terms to authorize hidden heuristics, unowned registers or duplicate algebra."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 40,
+          "end_line": 46,
+          "quote": "**REQ-L-GTL3-HOF-007**: Higher-order vector operations may expose evaluator-result vectors, candidate-result vectors, or other harvested result vectors over a contract boundary while leaving merge semantics external to GTL.\n\n**REQ-L-GTL3-HOF-008**: Zoom-in, zoom-out, and fold terminology shall resolve\nto existing lawful GTL higher-order operations or be repriced into new\nrequirements before implementation. Informal zoom or fold vocabulary shall not\nauthorize hidden interpreter heuristics, unowned registers, or duplicate graph\nalgebra.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 48,
+          "end_line": 56,
+          "quote": "**REQ-L-GTL3-HOF-009**: **Pointwise batch projection.** Runtime realization of an\nadmitted `fan_out` relation shall project one admitted non-empty ordered input\nvector into one `C.batch` task per input member. Each task shall preserve the\ndeclared child GraphFunction, exact member input/output contracts, original\nzero-based ordinal, member lineage, and the enclosing declared C-call program,\nstage, fibre, arm, and composition authority. The batch ref groups tasks but is\nnot a call, scheduler, or closure authority. Serial execution is a lawful\nrealization of the same projection; concurrency shall not be inferred from\n`fan_out` or `C.batch`.\n"
+        }
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "hof_partial_failure_design",
+      "subject_key": "fan_out_atomic_output_admission",
+      "uncertainty": "HOF-001 explicitly requires owned runtime requirements and design before implementing blocked-member/partial-failure behavior. HOF-009 through HOF-012 supply runtime requirements here, but an accepted design and realization are not supplied.",
+      "consequence": "Retain the later explicit fail-closed law without interpreting its presence as implementation or design closure.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 27,
+          "end_line": 28,
+          "quote": "Blocked-member lineage and partial-failure behavior are runtime semantics and\nrequire their own requirement and design before implementation.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+          "start_line": 48,
+          "end_line": 84,
+          "quote": "**REQ-L-GTL3-HOF-009**: **Pointwise batch projection.** Runtime realization of an\nadmitted `fan_out` relation shall project one admitted non-empty ordered input\nvector into one `C.batch` task per input member. Each task shall preserve the\ndeclared child GraphFunction, exact member input/output contracts, original\nzero-based ordinal, member lineage, and the enclosing declared C-call program,\nstage, fibre, arm, and composition authority. The batch ref groups tasks but is\nnot a call, scheduler, or closure authority. Serial execution is a lawful\nrealization of the same projection; concurrency shall not be inferred from\n`fan_out` or `C.batch`.\n\n**REQ-L-GTL3-HOF-010**: **Fan-out result and failure law.** A fan-out output vector\nshall be admitted only when every projected task completes exactly once with\nthe declared output-member contract and the output rows preserve input\ncardinality and ordinal. Completion order shall not change output order or\nattribution. If a member is blocked, held, malformed, or runtime-failed, ABG\nshall preserve completed-member evidence, identify the stopping ordinal and\nunstarted tasks, admit no output vector, and permit no downstream fan-in or\ngraph-success projection from that invocation.\n\n**REQ-L-GTL3-HOF-011**: **Typed fan-in runtime.** Runtime realization of an\nadmitted `fan_in` relation shall consume one complete admitted vector matching\nthe declared vector node and contract, preserve its basis, cardinality,\nordinals, member attribution, and application lineage, and invoke the exact\ndeclared reducer GraphFunction once. An incomplete, mismatched, duplicated, or\nreordered vector shall stop before reducer traversal. Only an admitted reducer\ncompletion may become the synthesized result; blocked, held, malformed, or\nruntime-failed reducer truth shall remain non-success.\n\n**REQ-L-GTL3-HOF-012**: **Runtime authority.** HOF runtime bindings shall derive\nfrom the exact selected catalog entry, admitted Module, structural HOF or\nGraphFunction-application declaration, and opaque GraphFunction and Node\nidentities. Names, tags, fixed vector cardinality, promise completion order,\nand caller-authored semantic defaults are not authority. HoG traverses the\nadmitted HOF and C structure. ABG owns task C-call frames, traversal evidence,\nresult admission, and failure truth. Product\neffects remain subject to the separately admitted traversal and capability\ngates.\n"
+        }
+      ]
+    },
+    {
+      "key": "effective_boundary_dependencies",
+      "subject_key": "target_carrier_contract",
+      "uncertainty": "No concrete defaults bundle, assurance contract, composition or target-schema identity is instantiated in these generic requirements.",
+      "consequence": "Effective binding and match judgments remain unresolved until exact published declarations are admitted.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+          "start_line": 45,
+          "end_line": 51,
+          "quote": "**REQ-L-GTL3-GRAPHVECTOR-015**: Every graph-vector output surface shall have an effective target carrier contract binding. A vector-local `GraphVector.declarations[\"gtl.target_carrier_contract\"]` declaration is the highest-precedence binding. If the vector does not declare a product-specific target carrier contract, the binding shall resolve from a visible GTL defaults config bundle rather than from code constants, prompt prose, parser convention, or null. Malformed present declarations and missing or malformed defaults fail closed.\n\n**REQ-L-GTL3-GRAPHVECTOR-016**: A target carrier contract binding shall declare at minimum the target node ref, output surface ref, output carrier family, output carrier kind, envelope contract ref, nested payload path, required fields, fixed protocol fields, worker-fillable fields, literal or enum domains, schema ref, admission ref, payload-ledger binding ref, edge-assurance binding ref, handoff projection ref, construction template ref, replay digest policy ref, materialization policy ref, closure precondition ref, and test-case generation ref.\n\n**REQ-L-GTL3-GRAPHVECTOR-017**: A graph vector that participates in closure-capable, mixed-regime, optimized, or construction-substrate traversal shall have an effective `abg.fn_composition` binding. A vector-local `GraphVector.declarations[\"abg.fn_composition\"]` declaration is the highest-precedence composition binding for that traversal boundary. Wider graph-function, job, role, module, or visible default bindings may supply defaults, but they shall not override a vector-local composition declaration.\n\n**REQ-L-GTL3-GRAPHVECTOR-018**: A vector-local composition declaration shall be identity-bound to the hosting vector. It shall fail closed if its host graph-vector ref, source node ref, target node ref, target schema ref, target carrier contract ref, or edge assurance contract ref does not match the effective vector boundary.\n"
+        }
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header metadata and historical derivation links are omitted as operative domain assertions."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header metadata and historical derivation links are omitted as operative domain assertions."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header metadata and historical derivation links are omitted as operative domain assertions."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "graph_function",
+        "cumulative_environment",
+        "node_type",
+        "callable_carries_environment",
+        "graph_function_template_and_reuse",
+        "graph_function_publication_surfaces",
+        "materialization_identity",
+        "callable_identity_partition",
+        "graph_function_environment_consistency",
+        "observer_existing_workspace",
+        "node_type_noncallability",
+        "materialization_latitude"
+      ],
+      "reason": "Retains the section-specific identity and declaration/publication boundary."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "graph_vector"
+      ],
+      "reason": "Retains the section-specific identity and declaration/publication boundary."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "higher_order_combinator"
+      ],
+      "reason": "Retains the section-specific identity and declaration/publication boundary."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "governance_hooks"
+      ],
+      "reason": "Retains the section-specific identity and declaration/publication boundary."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHVECTOR.md#REQ-L-GTL3-GRAPHVECTOR%20%E2%80%94%20Invariant%20Traversal%20Boundaries%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "graph_vector",
+        "target_carrier_contract",
+        "vector_target_binding",
+        "vector_structure_and_governance",
+        "vector_local_precedence",
+        "vector_temporal_contract",
+        "edge_assurance_contract_scope",
+        "effective_target_contract",
+        "target_contract_required_fields",
+        "vector_composition_binding",
+        "traversal_unit_structural_scope",
+        "vector_declaration_variation",
+        "effective_boundary_dependencies"
+      ],
+      "reason": "Retains all substantive boundary and failure laws while exposing the remaining concrete-binding or design dependency."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOF.md#REQ-L-GTL3-HOF%20%E2%80%94%20Higher-Order%20Graph%20Operations%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "higher_order_combinator",
+        "fan_out_relation",
+        "fan_in_relation",
+        "fan_out_declaration_identity",
+        "higher_order_gate_and_promote",
+        "zoom_terms_need_owned_law",
+        "fan_out_pointwise_batch",
+        "fan_out_atomic_output_admission",
+        "fan_in_complete_vector",
+        "higher_order_runtime_authority",
+        "harvest_and_realization_latitude",
+        "hof_partial_failure_design"
+      ],
+      "reason": "Retains all substantive boundary and failure laws while exposing the remaining concrete-binding or design dependency."
+    }
+  ],
+  "limitations": [
+    "No runtime implementation, accepted HOF design, target-default resolution, evaluator closure or callable invocation is established.",
+    "HOF declaration law and later explicit runtime-failure requirements are both retained; the requirement for owned design before implementation is not silently discharged.",
+    "Specific bound identities remain source re-entry obligations; labels are not merged across chunks.",
+    "Header status/date and derivation-link metadata are omitted from modeled authority."
+  ]
+}

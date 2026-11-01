@@ -1,0 +1,72 @@
+{
+  "purpose": "Pre-candidate review routes derived only from the unchanged original model/source manifest; no viewer candidate inspected",
+  "same_basename_paths": {
+    "README.md": [
+      "specification/requirements/README.md",
+      "specification/requirements/abg/README.md",
+      "specification/requirements/gtl/README.md",
+      "specification/requirements/mapping/README.md",
+      "specification/requirements/product/README.md"
+    ]
+  },
+  "multi_file_records": [
+    {
+      "family": "objects",
+      "id": "urn:a-c:generation:025cfe79dad60a1311fe20e1:record:7376488a19e41e71bae31eee7abe064c",
+      "label": "GraphFunction",
+      "paths": [
+        "specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md",
+        "specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md"
+      ],
+      "grounding_occurrences": 2
+    },
+    {
+      "family": "relations",
+      "id": "urn:a-c:generation:025cfe79dad60a1311fe20e1:record:31bea526fb91a25464f6aaeec98103f5",
+      "label": null,
+      "paths": [
+        "specification/PRODUCT.md",
+        "specification/requirements/README.md"
+      ],
+      "grounding_occurrences": 2
+    },
+    {
+      "family": "relations",
+      "id": "urn:a-c:generation:025cfe79dad60a1311fe20e1:record:18428e2dae87fe02aaa822207a10dfb4",
+      "label": null,
+      "paths": [
+        "specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md",
+        "specification/requirements/gtl/REQ-L-GTL3-GRAPH.md"
+      ],
+      "grounding_occurrences": 2
+    },
+    {
+      "family": "residuals",
+      "id": "urn:a-c:generation:025cfe79dad60a1311fe20e1:record:f21b3ac608264597cb48760644730ceb",
+      "label": null,
+      "paths": [
+        "specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md",
+        "specification/requirements/gtl/REQ-L-GTL3-SUBSTITUTE.md",
+        "specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md"
+      ],
+      "grounding_occurrences": 3
+    }
+  ],
+  "root_r10_id": "urn:a-c:generation:025cfe79dad60a1311fe20e1:record:e18976fbac6949ba784dfdf37f03ef64",
+  "root_r10_source": [
+    {
+      "end_line": 1542,
+      "path": "specification/PRODUCT.md",
+      "quote": "| `R10 replay and CLI agree on typed terminal outcome` | `R9` | 0 |",
+      "section": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+      "start_line": 1542
+    }
+  ],
+  "synthetic_cases_needed": [
+    "Missing embedded source with retained grounded record",
+    "Embedded source with zero grounded records",
+    "Repeated grounding same record/file retaining exact quotations",
+    "HTML-looking source/path/record text remains text"
+  ],
+  "source_file_count": 86
+}

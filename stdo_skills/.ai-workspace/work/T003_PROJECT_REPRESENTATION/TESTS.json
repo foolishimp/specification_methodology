@@ -1,0 +1,40 @@
+{
+  "standing": "Root-observed execution summary; raw stdout for the first two suites was returned by the session tool, not copied into this file.",
+  "checks": [
+    {
+      "command": "AC_GRAPHIFY_UPSTREAM=<pinned checkout> a_c/.venv/bin/python -B -m unittest discover -s a_c/build_tenants/graphify/test_env -p test_ac_project.py -v",
+      "tests": 14,
+      "passed": 14,
+      "skipped": 0,
+      "result": "passed",
+      "scope": "public project-build path, currentness, negative inputs, metadata tampering, nested definition and actual pinned upstream"
+    },
+    {
+      "command": "AC_GRAPHIFY_UPSTREAM=<pinned checkout> a_c/.venv/bin/python -B -m unittest discover -s a_c/build_tenants/graphify/test_env -p test_ac_generate.py -v",
+      "tests": 30,
+      "passed": 30,
+      "skipped": 0,
+      "result": "passed",
+      "scope": "existing generation regression suite after shared emitter factoring; actual pinned upstream"
+    },
+    {
+      "command": "Claude tenant existing test_repair.py in granted fixture directory",
+      "tests": 16,
+      "passed": 16,
+      "result": "passed",
+      "evidence": "claude-package-fixtures/test-report.json",
+      "scope": "package integrity and installation controls"
+    }
+  ],
+  "upstream": {
+    "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "checkout": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout"
+  },
+  "source_sha256": {
+    "a_c/build_tenants/graphify/code/ac_project.py": "c6463bfed3e2e895bcfc8439bc6d3974206e2917b9ecf0fe1a96479bfbd7dec1",
+    "a_c/build_tenants/graphify/code/ac_generate.py": "00d32296746265881aafd336e73797fca1fc431f6098ec3e9ee8bbbcdd92d16c",
+    "a_c/build_tenants/graphify/test_env/test_ac_project.py": "1396d71c3048e0da826dc7e4dd1990a5b2ccea4be691d8d4c84637f3ca543780",
+    "a_c/build_tenants/graphify/test_env/test_ac_generate.py": "bf928fdb90c1df2cae5356336f0d56bd1c817515ef92c3a815348832d62a197d"
+  },
+  "qualification": "Finite implementation evidence; no statistical host reliability, new Lean proof, semantic acceptance or release claim."
+}

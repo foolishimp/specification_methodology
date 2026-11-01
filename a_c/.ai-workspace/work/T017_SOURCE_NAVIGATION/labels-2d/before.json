@@ -1,0 +1,10 @@
+{
+  "command": [
+    "node",
+    "a_c/build_tenants/graphify/test_env/test_explorer_labels.cjs"
+  ],
+  "source_sha256": "dfd2ba2d0512ab5c3ccfbea6c8cd91e9c861baa2ce5fbca41fde257a1198c2c5",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "node:internal/assert/utils:273\n    throw err;\n    ^\n\nAssertionError [ERR_ASSERTION]: 2D labels remain visible without node.z\n    at exercise (/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_explorer_labels.cjs:53:10)\n    at Object.<anonymous> (/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_explorer_labels.cjs:66:1)\n    at Module._compile (node:internal/modules/cjs/loader:1738:14)\n    at Object..js (node:internal/modules/cjs/loader:1871:10)\n    at Module.load (node:internal/modules/cjs/loader:1470:32)\n    at Module._load (node:internal/modules/cjs/loader:1290:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47 {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: false,\n  expected: true,\n  operator: '==',\n  diff: 'simple'\n}\n\nNode.js v24.7.0\n"
+}

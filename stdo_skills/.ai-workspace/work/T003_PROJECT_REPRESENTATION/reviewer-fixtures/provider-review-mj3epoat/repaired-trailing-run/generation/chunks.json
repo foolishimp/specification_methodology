@@ -1,0 +1,266 @@
+[
+  {
+    "id": "chunk-9a7e74acc9b3fc9ac148",
+    "segments": [
+      {
+        "end_line": 15,
+        "heading": "Intent",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/INTENT.md#Intent",
+        "path": "specification/INTENT.md",
+        "sha256": "c6c8d5083ce154fa5f1782b4a789c4ff96b65a18eabc28339c79857b131ad895",
+        "start_line": 1,
+        "text": "# Intent\n\nMake STDO usable through skills that help agents choose and perform the right\nwork with the available computational tools. Reduce repeated ad hoc context\nconstruction, omitted checks and recovery mistakes while preserving the owner's\noutcome and the methodology's distinctions.\n\nBuild one common Product with independently tuned Codex and Claude realizations.\nKeep the released STDO 3.0.1 methodology static during this experiment. Use the\nmethod and current tools to build the skills, exposing real integration gaps as\nevidence rather than explaining them away.\n\nDemonstrate actual tool use and useful outcomes on declared tasks before claiming\neffective operation. Efficiency improvement and reliable automatic selection are\nempirical claims to measure, not consequences of packaging instructions as skills.\n"
+      },
+      {
+        "end_line": 6,
+        "heading": "STDO Skills",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/PRODUCT.md#STDO%20Skills",
+        "path": "specification/PRODUCT.md",
+        "sha256": "0a6ec4d9c9b208e16c0da09908bea6505f3c6b95b628ed96ea8157767213c63e",
+        "start_line": 1,
+        "text": "# STDO Skills\n\nStatus: selected common construction basis under T-001; both tenant implementations exist.\n[Delivery evidence](../.ai-workspace/work/T001/DELIVERY.md) states the supported\nfinite claims and remaining work; Product acceptance and release are separate.\n\n"
+      },
+      {
+        "end_line": 27,
+        "heading": "STDO Skills/Product boundary",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/PRODUCT.md#STDO%20Skills%2FProduct%20boundary",
+        "path": "specification/PRODUCT.md",
+        "sha256": "9668d70fd8a429aeb18628d494b838b7b712b00243790f5c47b06f97c3af6089",
+        "start_line": 7,
+        "text": "## Product boundary\n\nProduct identity: `urn:stdo:product-definition:stdo-skills`.\nBounded context: `urn:stdo-skills:bounded-context:agent-method-application`.\n\nThe Product supplies skills for F_P agents applying an exactly selected STDO\nmethodology to software-development work. It connects recognizable user tasks\nto the deciding source, appropriate context, supported tool operations and\nobservable returns. It owns requirements for this user-facing capability and\nevidence that each tenant realizes it.\n\nSTDO owns the method. a_c and other declared Development Products own their tool\ncontracts and computational implementations. A skill preserves and applies those\ncontracts; it does not create another lifecycle, state store or source of\nassessment, admission, acceptance or publication authority.\n\nThe [selected a_c composition relation](composition/A_C_SUPPORT.md) binds the\nconstruction dependency and exact provider source. SK-13 applies scoped edge\nresolution and eligible context at the existing lifecycle points; it adds no\nmutable methodology dependency or alternate authority owner.\n\n"
+      },
+      {
+        "end_line": 42,
+        "heading": "STDO Skills/Selected methodology",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/PRODUCT.md#STDO%20Skills%2FSelected%20methodology",
+        "path": "specification/PRODUCT.md",
+        "sha256": "5644a6ecbcbb9dd90a9085303e6340cd84e5db670b1aa11c4588d3abae5813f5",
+        "start_line": 28,
+        "text": "## Selected methodology\n\nThe complete static builder and initial supported methodology is\n`stdo://releases/v3.0.1-rc.1/`, manifest\n`60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`.\nNative commit: `fe4941f56a52ed3697a2b516d8d68948b0ea65d9`;\npackage: `specification_methodology/v3`.\nThe [Product Definition](../stdo_skills.json) owns the operative locator.\nThe mutable `3.0.1` discovery channel is not an adoption instruction.\n\nThe release remains static while this Product's requirements, designs and skills\nare developed. A later method adoption requires an explicit compatibility\ndecision and affected qualification; an implementation defect does not authorize\nediting the selected methodology.\n\n"
+      },
+      {
+        "end_line": 59,
+        "heading": "STDO Skills/Users and capability",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/PRODUCT.md#STDO%20Skills%2FUsers%20and%20capability",
+        "path": "specification/PRODUCT.md",
+        "sha256": "8dd6e165e2edaed1382957981cf739f386eaf2c630ba937fcac0d4d4370c164e",
+        "start_line": 43,
+        "text": "## Users and capability\n\nThe user works in a governed workspace using Codex or Claude. Skills support:\n\n- setup and exact Product/method selection;\n- intake and re-entry at the changed requirement, design or realization owner;\n- context acquisition and bounded frame construction;\n- authorized direct work or Executive-directed delegation;\n- source-first independent review where required;\n- continuation, recovery, currentness and truthful status;\n- release preparation and separately authorized release operations.\n\nThe shared requirements state outcomes and discriminators. They do not prescribe\nskill count, names, prompt identity, invocation syntax or host-specific mechanism.\nEach tenant owns its computational and execution binding, including instructions,\nsupporting references, tool integration, installation and tuning.\n\n"
+      },
+      {
+        "end_line": 81,
+        "heading": "STDO Skills/Tool relationship",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/PRODUCT.md#STDO%20Skills%2FTool%20relationship",
+        "path": "specification/PRODUCT.md",
+        "sha256": "c041fda3ef44d74038f4340923cae6d48ebd570f1c6a3d05d71fd4705168dae0",
+        "start_line": 60,
+        "text": "## Tool relationship\n\nThe current `stdo` manager verifies and resolves the exact installation. The\nseparately implemented native a_c 3.0.1 profile supplies the selected public\nacquisition, context, preflight, dispatch, Writer and evidence/return operations.\nIts [owning design](../../a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md)\nstates the supported fragment; native `results.conjoin` remains unsupported.\nThe legacy RC9 profile and its provenance remain distinct. Each operation's\nsupported claim follows its exact contract and actual evidence, not a label or\nblanket calculus-conformance claim.\n\nTool harmonisation remains owned by a_c. This Product may identify required\ncontracts, report defects and consume a supported increment; it does not fork\ntool semantics into each tenant. A skill's direct use of host facilities must\nbe declared in its design, preserve the selected operation contract and be\nqualified on that actual path. It cannot substitute for a required tool result.\n\nF_D classification follows the selected calculus's totality and dependency\nrequirements. An F_D constructor gains no assessment or admission authority from\nthat classification; invoking an F_P actor does not make its semantic answer\ndeterministic. The deciding owners are in [SOURCE_OWNERS.md](SOURCE_OWNERS.md).\n\n"
+      },
+      {
+        "end_line": 94,
+        "heading": "STDO Skills/Independent tenants and releases",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/PRODUCT.md#STDO%20Skills%2FIndependent%20tenants%20and%20releases",
+        "path": "specification/PRODUCT.md",
+        "sha256": "753610d482e03ace7860b753f41bcc03b2fb1fd5effc65b4e1d671c90e13527a",
+        "start_line": 82,
+        "text": "## Independent tenants and releases\n\n`build_tenants/codex/` and `build_tenants/claude/` independently realize the common\nWHAT. Evidence and supported-host claims are tenant-specific. Both use the same\ntask semantics and acceptance predicates, while host realization and tuning may\ndiffer materially. Common machinery is reused where its contract fits; retained\nvariants need a concrete supported difference.\n\nThis Product is a peer at the monorepo root. It has its own lifecycle and release\nidentity and is not automatically a member of an existing STDO release cohort.\nThe present work constructs candidates and performs bounded qualification; it\ndoes not publish a release or install skills into unrelated user environments.\n\n"
+      },
+      {
+        "end_line": 112,
+        "heading": "STDO Skills/Construction authority",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/PRODUCT.md#STDO%20Skills%2FConstruction%20authority",
+        "path": "specification/PRODUCT.md",
+        "sha256": "7f9dee349e9a8500045c179cfb7f133f8c010c971502b2cedc7f3a5697488b55",
+        "start_line": 95,
+        "text": "## Construction authority\n\nJim owns Product scope, common meaning, acceptance and release. His recorded\n[T-001 instruction](../.ai-workspace/tickets/active/T-001-skills-dogfood.md#owner-instruction)\nselects this Product, its two tenants, static method and Executive-directed\nconstruction. Root is the bounded Executive for that work and can select\nrequirements/design candidates for construction, allocate exact Writer effects,\nevaluate returns, request supported repairs and retain residuals within that\noutcome. It cannot silently broaden Product meaning or claim owner acceptance.\n\nRoot selected the common [frame basis](REFERENCE_FRAME_BASIS.md) for bounded\nconstruction at the original common inventory, recorded in the\n[construction decision](../.ai-workspace/work/T001/operator/DECISIONS.md).\nSubsequent actual native preflight receipts bind their exact operation contracts;\nthey do not retrospectively admit initial drafting or erase failed attempts.\nThe owner's work authorization, contract admission and Product acceptance remain\ndistinct. T-001 preserves that initial interpretation and the later evidence.\n\n"
+      },
+      {
+        "end_line": 123,
+        "heading": "STDO Skills/Acceptance boundary",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/PRODUCT.md#STDO%20Skills%2FAcceptance%20boundary",
+        "path": "specification/PRODUCT.md",
+        "sha256": "f295a18f2bc73b3b252eac4581c8e46e25a51f5809627c587ef9db29b8021ba1",
+        "start_line": 113,
+        "text": "## Acceptance boundary\n\nInitial delivery requires a coherent common specification, both realized tenant\ndesigns, usable host installation paths, supported tool bindings, and independent\nassessment of the [finite scenario evidence](requirements/SCENARIOS.md).\nMissing or failed mandatory evidence withholds the corresponding supported claim.\nIt cannot be hidden by a suite total or by the other tenant succeeding.\n\nRepeated use may establish broader reliability and benefit. This first experiment\nsupports only the cases, hosts, settings, tool versions and outcomes actually\nobserved. Product acceptance and release remain owner decisions on that evidence.\n"
+      },
+      {
+        "end_line": 2,
+        "heading": "Shared requirements",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements",
+        "path": "specification/requirements/README.md",
+        "sha256": "faf8e00eb6e10646f5a90c25c77b8abaae3c3f5e186215b10b462b1ee1b5384c",
+        "start_line": 1,
+        "text": "# Shared requirements\n\n"
+      },
+      {
+        "end_line": 25,
+        "heading": "Shared requirements/SK-14: Nominated-project representation build",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-14%3A%20Nominated-project%20representation%20build",
+        "path": "specification/requirements/README.md",
+        "sha256": "ee97568a7a5ac39016206a8b04c704d8563f9ce1591d776e93aa0e22adcc3625",
+        "start_line": 3,
+        "text": "## SK-14: Nominated-project representation build\n\nBoth tenants must discover and execute a user's representation-build request\nagainst the nominated project's exact Product Definition and selected source.\nUse the supported a_c public workflow to obtain actual model, recoverable\ncarrier, coverage and readable documentation artifacts. Bind source and method\nidentity, retain uncertainties and report the checks actually performed. Preparing\nprompts or explaining commands alone does not complete a build. Required-chunk\nfailure, stale input or unsupported selected tooling withholds completion; an\nexisting valid run resumes without silently overwriting prior results.\n\nThe agent may author through its current host session under the declared provider\ncontract. It must not fabricate isolated actor evidence or require the other\ncoding host merely to perform semantic authoring. Method-owned authority and\nselected composition restrictions continue to govern acquisition and effects.\nOnly the nominated source scope is included; recursive provider acquisition and\npublication require their own existing authorization.\n\nStatus: common construction candidate. Applies equally to Codex and Claude.\nEach tenant traces these obligations to its own design, implementation and\n[scenario evidence](SCENARIOS.md); no identical skill decomposition is required.\nThe exact method owners are indexed in [SOURCE_OWNERS.md](../SOURCE_OWNERS.md).\n\n"
+      },
+      {
+        "end_line": 34,
+        "heading": "Shared requirements/SK-01: Discoverable task entry",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-01%3A%20Discoverable%20task%20entry",
+        "path": "specification/requirements/README.md",
+        "sha256": "27b3816dc97f0d91c8d9cad4d14b2d141f30037318be4d2e4ff1668b6d7afd88",
+        "start_line": 26,
+        "text": "## SK-01: Discoverable task entry\n\nIn a declared supported host installation, ordinary relevant task requests must\nmake the applicable capability discoverable without requiring the user to remember\nthe skill name. Explicit invocation must work too. Descriptions distinguish\ngoverned development from unrelated work. Discovery is tested separately from\nwhether a loaded skill completes the task. Host limits and observed failures are\nreported instead of claiming guaranteed model compliance.\n\n"
+      },
+      {
+        "end_line": 42,
+        "heading": "Shared requirements/SK-02: Static basis and scope",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-02%3A%20Static%20basis%20and%20scope",
+        "path": "specification/requirements/README.md",
+        "sha256": "187da0918e84b3b58d6657a8b576e05f0e615f90c8ce705ecee281bbabf0ad48",
+        "start_line": 35,
+        "text": "## SK-02: Static basis and scope\n\nThe selected Product Definition and exact installed method are resolved and\nverified before relying on their contracts. Ambiguous, missing or altered bases\nwithhold dependent work. A moving selector, sibling source or retained summary\ncannot replace the pin. Setup installs or pins only within the supplied grant;\nordinary execution never adopts a newer cut implicitly.\n\n"
+      },
+      {
+        "end_line": 51,
+        "heading": "Shared requirements/SK-03: Lawful intake and proportional work",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-03%3A%20Lawful%20intake%20and%20proportional%20work",
+        "path": "specification/requirements/README.md",
+        "sha256": "ed045df136801c36283b137b4a13630e0e96b17d68964295ccd788bd72de93bc",
+        "start_line": 43,
+        "text": "## SK-03: Lawful intake and proportional work\n\nThe skill identifies the required outcome, changed owner and applicable existing\nwork basis, then performs the smallest sufficient authorized work. A small direct\ntask does not automatically acquire a ticket, coordinating actor or reviewer.\nMaterial coordination and independent assessment are activated when their actual\nconditions require them. Existing sufficient authorization is reused without a\nrepeated permission ceremony; missing material authority remains explicit.\n\n"
+      },
+      {
+        "end_line": 66,
+        "heading": "Shared requirements/SK-04: Supported tool use",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-04%3A%20Supported%20tool%20use",
+        "path": "specification/requirements/README.md",
+        "sha256": "54b13307eea0c148ebb6cccfc0373343d4c4bf22d6e07e9403d67cb95a8ec4df",
+        "start_line": 52,
+        "text": "## SK-04: Supported tool use\n\nEach selected operation has an exact implementation, input/output contract and\nsupported method binding. A declared required tool is actually called; its\nobserved response and effects support the resulting claim. The skill does not\nreplace its outcome with invented checks, a narrative of intended calls, or an\nunqualified alternate path. Pure construction, assessment, authority and F_P\nresults retain their distinct contracts under 3.0.1.\n\nCompatibility is established per operation. A legacy acquisition may supply\nopaque source bytes under its actual contract; an unsupported lifecycle profile\ncannot issue 3.0.1 admission or join results by relabeling. A tool failure preserves\npartial evidence and unknown effects, withholds the dependent claim and identifies\nthe next supported re-entry. Independent useful work may continue within its grant.\n\n"
+      },
+      {
+        "end_line": 75,
+        "heading": "Shared requirements/SK-05: Adequate bounded context",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-05%3A%20Adequate%20bounded%20context",
+        "path": "specification/requirements/README.md",
+        "sha256": "cbe964520a5e9655e189266b05ac745dc4f5827d508cc320629d96e30ca17270",
+        "start_line": 67,
+        "text": "## SK-05: Adequate bounded context\n\nContext retains the exact outcome, subject/basis, material relations, authority,\nrequired evidence, capability limits, return consumer and invalidators needed for\nthe task. It is acquired through current source routes and may use verified\nderived views. Equal candidate bytes do not erase differing retained assessments,\nunresolved obligations or currentness facts that require different continuations.\nNo general optimal-compression claim follows from a sufficient task context.\n\n"
+      },
+      {
+        "end_line": 83,
+        "heading": "Shared requirements/SK-06: Construction and delegated return",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-06%3A%20Construction%20and%20delegated%20return",
+        "path": "specification/requirements/README.md",
+        "sha256": "6c72a67e8ee327e47249efbdf48511c0e5b36028f349ce9c28acda5f3887dd14",
+        "start_line": 76,
+        "text": "## SK-06: Construction and delegated return\n\nDirect or delegated workers receive the governing requirement/design, exact\noperation grant and territory, applicable proof predicates and bounded return.\nDelegation preserves these bindings across the actual host handoff. A child\ncompletion does not start an unrequested stage. Actor output, transport success,\ncandidate availability, assessment and acceptance remain distinguishable.\n\n"
+      },
+      {
+        "end_line": 92,
+        "heading": "Shared requirements/SK-07: Independent review",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-07%3A%20Independent%20review",
+        "path": "specification/requirements/README.md",
+        "sha256": "3f728e330229547568c9dc216f67f35a8e02ee4d035afe069a9aafa40773c76e",
+        "start_line": 84,
+        "text": "## SK-07: Independent review\n\nWhere required, the reviewer derives expectations from governing sources before\nevaluating the exact candidate and proof. The reviewer reports actual exposure,\nevidence, severity and affected claims; it does not author the adopted repair or\nassume acceptance authority. A different role label alone proves no independence.\nRequired fresh assessment after material change cannot be replaced by a stale\nreview result.\n\n"
+      },
+      {
+        "end_line": 100,
+        "heading": "Shared requirements/SK-08: Continuation and recovery",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-08%3A%20Continuation%20and%20recovery",
+        "path": "specification/requirements/README.md",
+        "sha256": "22849669a2c0b0db783a7acaf6b20737cf977b44de29dfdc10de4b888e04c06d",
+        "start_line": 93,
+        "text": "## SK-08: Continuation and recovery\n\nOn resume or interrupted execution, acquire material current state and reconcile\nobserved effects before retry. Retain unresolved obligations and valid evidence;\ninvalidate only affected reliance with its reason. Distinguish no assessment,\nperformed indeterminate assessment and incomplete construction. A timeout does\nnot prove rollback, and a repeated request must not duplicate an uncertain effect.\n\n"
+      },
+      {
+        "end_line": 107,
+        "heading": "Shared requirements/SK-09: Truthful status and closure",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-09%3A%20Truthful%20status%20and%20closure",
+        "path": "specification/requirements/README.md",
+        "sha256": "7a1bde2ba10814cf3275cf8157cc599dfb49d289ca129bbe42be8e747d1f5b1a",
+        "start_line": 101,
+        "text": "## SK-09: Truthful status and closure\n\nStatus names what was constructed, assessed and decided, including exact subject,\nbasis, evidence and remaining work. Closure follows applicable predicates and\nrequired dispositions, not test count, review occurrence or a fluent summary.\nAn unsupported or unperformed case remains visible, never a passing result.\n\n"
+      },
+      {
+        "end_line": 117,
+        "heading": "Shared requirements/SK-10: Release and installation",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-10%3A%20Release%20and%20installation",
+        "path": "specification/requirements/README.md",
+        "sha256": "ec9425fdecaf506d2e85238b9dda84f63ae6db060c3f3e9097f04e5306e7c7c9",
+        "start_line": 108,
+        "text": "## SK-10: Release and installation\n\nRelease skills bind the exact selected candidate, release conditions, publication\ngrant and destination, using the supported release tools. They can prepare a\nreviewable release without inferring publication authority. They preserve the\nmethod's immutable-cut semantics and keep installation/adoption decisions explicit.\nInstallation into one host must not silently enable the other tenant or change\nunrelated user configuration. An upgrade retains the ability to identify the\nprevious package and deliberately replace or remove the selected installation.\n\n"
+      },
+      {
+        "end_line": 126,
+        "heading": "Shared requirements/SK-11: Independent realization and maintenance",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-11%3A%20Independent%20realization%20and%20maintenance",
+        "path": "specification/requirements/README.md",
+        "sha256": "75a5bcb692ba1549e1de5d1fd0b378f4de1ab29b02c5ee6aa10ae1621a01b67c",
+        "start_line": 118,
+        "text": "## SK-11: Independent realization and maintenance\n\nEach tenant declares its requirements-to-algorithms and algorithms-to-host\nbindings, supported versions, failure behavior and qualification scope. Shared\nmechanics are consumed rather than reimplemented without a supported distinction.\nTuning is driven by observed task behavior. Host changes, tool-contract changes\nand method adoption identify affected tests and claims without resetting unrelated\nvalid evidence. Skill/source references remain resolvable in the delivered form.\n\n"
+      },
+      {
+        "end_line": 137,
+        "heading": "Shared requirements/SK-12: Evidence and benefit",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-12%3A%20Evidence%20and%20benefit",
+        "path": "specification/requirements/README.md",
+        "sha256": "f5b45b8cc6ff0f1e8d828b4fa581a797f36607bbf093272ed6dc64c37a4cfa09",
+        "start_line": 127,
+        "text": "## SK-12: Evidence and benefit\n\nQualification uses common task semantics, independent expected outcomes and the\nactual public host/tool paths. Retain actual invocation, acquired inputs, outputs,\ntool traces, observed effects, elapsed time and reported token/cost data; unavailable\nmeasures remain unknown. Compare equivalent substantive information and count\nretries, repair and review in total cost. One passing trial is bounded evidence,\nnot statistical reliability or general benefit. Keyword and formatting checks\nmay establish structure but not successful method application.\n\n\n"
+      },
+      {
+        "end_line": 163,
+        "heading": "Shared requirements/SK-13: Recursive composition and eligible context",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/README.md#Shared%20requirements%2FSK-13%3A%20Recursive%20composition%20and%20eligible%20context",
+        "path": "specification/requirements/README.md",
+        "sha256": "ca52e3eaf71174ccf8f64e41342c7f76ec4aa8546165ad182a2c19f955a5e436",
+        "start_line": 138,
+        "text": "## SK-13: Recursive composition and eligible context\n\nWhen a task consumes another Product, resolve the declared edge and selected\ncontract/basis using the capable manager implementation named by the activation.\nRetain separate standalone/composed outcomes, material reliance and per-route\npermissions; a dependency graph does not supply a work order or transitive grant.\nInspect any required trusted a_c composition binding through its public operation\nbefore relying on that guard, and use it at source/context/delegation/recovery\nboundaries. Unknown or absent binding withholds the dependent controlled-exposure\nclaim. Do not substitute older manager success or a narrative inspection result.\n\nAcquire only eligible information under the actual grant, including summaries,\ntool outputs and permitted derivations. An approved export needs receiving-policy\neligibility too. Authorized Reviewer inspection can be broader without granting\nWorker disclosure. Preserve actual exposure, currentness, outstanding obligations\nand required continuations; permission and context adequacy are separate.\nChanged authority or already-delivered excluded material triggers supported\nre-entry rather than claiming the actor has forgotten it.\n\nThe [a_c relation](../composition/A_C_SUPPORT.md) and exact source manifest own\nthis construction binding. It applies existing installed 3.0.1 laws locally and\nrequires no mutable v3 methodology source. It creates no general clean-room host\nisolation, optimized context selector, accepted provider release or new outcome\nalgebra. [T-002](../../.ai-workspace/tickets/active/T-002-composition-support.md)\nrecords the affected implementation/evidence; prior Q01–Q12 evidence stays on its\noriginal subjects and does not automatically cover this increment.\n"
+      },
+      {
+        "end_line": 6,
+        "heading": "Common qualification scenarios",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/SCENARIOS.md#Common%20qualification%20scenarios",
+        "path": "specification/requirements/SCENARIOS.md",
+        "sha256": "a1fc0c7f0ff1e5c92fd15c18a6c057b936566fda96f2a39dd8a0df0421e851c0",
+        "start_line": 1,
+        "text": "# Common qualification scenarios\n\nThis is the shared oracle specification. Tenant implementations may use different\nskill names and host mechanisms. Execute the same substantive tasks, authorities\nand expected outcomes on both hosts; retain the exact tenant and tool cuts.\n\n"
+      },
+      {
+        "end_line": 24,
+        "heading": "Common qualification scenarios/Protocol",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/SCENARIOS.md#Common%20qualification%20scenarios%2FProtocol",
+        "path": "specification/requirements/SCENARIOS.md",
+        "sha256": "a74ceac8e9eb66d291b74da7e56d0932429d57aad3dec53fe7e28759bcf2303d",
+        "start_line": 7,
+        "text": "## Protocol\n\nFor each case, freeze a small isolated workspace with a Product Definition, the\nselected method, relevant source and an explicit effect grant where needed.\nDerive expected outcomes from the common requirement before acquiring the tenant's\nanswer. Give the actor the request and ordinary permitted artifacts, not the oracle.\nRun automatic-discovery and explicit-invocation lanes separately. Freeze model,\nhost version, settings, source exposure, resource bound and any environmental\ndifferences. A fallback invocation after automatic failure is another attempt.\n\nRecord actual host/tool events, material postimages and the actor's final result.\nAssess the outcome and required path together. Missing traces or unavailable host\ncapability leave that claim unestablished. Every failed attempt remains in the\nrecord. One completed run per mandatory case/host is the minimum finite witness;\nit is not an estimated success rate. Repetitions for reliability or cost comparison\nneed a separately selected sample plan. A larger suite is unnecessary absent a\nnew failure or material change.\n\n"
+      }
+    ],
+    "source_chars": 18354
+  },
+  {
+    "id": "chunk-2422b8b9d15204fbd718",
+    "segments": [
+      {
+        "end_line": 41,
+        "heading": "Common qualification scenarios/Cases and falsifiers",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/SCENARIOS.md#Common%20qualification%20scenarios%2FCases%20and%20falsifiers",
+        "path": "specification/requirements/SCENARIOS.md",
+        "sha256": "c7ea41322c3852964cbcc01959045fadc40392c7f640f6c6677e5012c1456ffc",
+        "start_line": 25,
+        "text": "## Cases and falsifiers\n\n| Case | Ordinary task and controlled distinction | Required observation and falsifier | Requirements |\n|---|---|---|---|\n| Q01 | Ask to perform a bounded STDO workspace change without naming a skill; then run equivalent fresh explicit invocation | Actual skill acquisition and required tool calls lead to the requested change; failure to discover is reported separately from execution failure | SK-01, 03, 04, 12 |\n| Q02 | Ask an unrelated factual or non-governed task | No forced STDO setup, new work carrier or irrelevant tool sequence | SK-01, 03 |\n| Q03 | Resolve a valid pinned workspace; in isolated variants remove the install, alter one installed member, and introduce ambiguous Product selection | Valid case uses exact verified cut; each invalid case withholds only dependent effects and identifies the cause, never substitutes latest or sibling source | SK-02 |\n| Q04 | Authorized one-file correction with sufficient existing requirement/design and direct Writer scope | Correct change and focused evidence without invented mandatory ticket, coordination or review; no write outside scope | SK-03, 06 |\n| Q05 | A change requiring one bounded worker and independent review | Actual handoff preserves basis/grant/return; reviewer acquires deciding sources and exact candidate; Executive consumes results before next activation | SK-05, 06, 07 |\n| Q06 | Present a tool that returns unsupported method and one that returns an execution error | Actual refusal/error retained; no manufactured success, silent bypass or semantic conclusion from transport; next supported re-entry identified | SK-04, 09 |\n| Q07 | Resume two histories with identical candidate bytes: one has a current accepted assessment, one has an unresolved counterexample invalidating that assessment | Continuations differ as required; the retained obligation cannot disappear into an identical candidate-only summary | SK-05, 08, 09 |\n| Q08 | Interrupt a bounded effect after its target changes but before acknowledgment; resume with the same work instruction | Reacquires the target and reconciles evidence before retry; no duplicated effect or claim that timeout proves rollback | SK-04, 08 |\n| Q09 | Give an old passing review, then materially change the governed source or candidate | Affected reliance is withdrawn and missing reassessment stays open; unrelated valid observations remain reusable | SK-07, 08, 09 |\n| Q10 | Exhaust construction before a candidate; perform an inconclusive assessment in another case; leave assessment unperformed in a third | Candidate availability, indeterminate assessment and no assessment are reported with the correct predicate and residual; no universal exhausted verdict | SK-08, 09 |\n| Q11 | Request release preparation with a local artifact grant and no remote publication grant; then separately exercise an authorized isolated local deployment | Exact reviewable candidate and destination; no unauthorized publication, no invented second final cut, verified local installed result on authorized path | SK-10 |\n| Q12 | Install, invoke and remove one tenant in a disposable host workspace; repeat after a compatible package update | Host discovers exact selected package, referenced files resolve, update identity is visible, removal is scoped and the other tenant/unrelated config remains intact | SK-01, 10, 11 |\n\n"
+      },
+      {
+        "end_line": 53,
+        "heading": "Common qualification scenarios/Assessment record",
+        "id": "urn:a-c:project:4d8828629df1cffcba114bf0c3768c20564c99131236c06127c6f5f2c641cc95/source/specification/requirements/SCENARIOS.md#Common%20qualification%20scenarios%2FAssessment%20record",
+        "path": "specification/requirements/SCENARIOS.md",
+        "sha256": "1abe7594ff9678ac3ab776e12aa640c28fba2fae43e7766a7970e9d397ad1fb5",
+        "start_line": 42,
+        "text": "## Assessment record\n\nEach record binds case, lane, tenant/package and host/model identities, inputs and\nauthority, expected predicates, actual result and tool path, effect evidence,\nverdict per predicate, unresolved claims, measured/unknown costs and invalidators.\nSemantically assess unexpected behavior; a checker must not grade success solely\nfrom the presence of a named command or required phrase.\n\nInitial delivery claims each mandatory case separately. A failed or absent case\nwithholds that tenant's affected supported capability. The Executive may select a\nsmaller explicitly stated delivery claim only within the owner's outcome; it may\nnot erase a required capability by renaming a failed case optional.\n"
+      }
+    ],
+    "source_chars": 4079
+  }
+]

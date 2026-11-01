@@ -1,0 +1,3610 @@
+{
+  "basis": {
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "id": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+    "subject": {
+      "id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8",
+      "inventory": [
+        {
+          "id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+          "sha256": "5da329090378c94d00d2f61e3127119c6e1bbdb8b068d32536f3d4df85f05369"
+        },
+        {
+          "id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+          "sha256": "b4535439ab59d42915940e5150eea1bd6cc74fa6a71e49a4262b54741057704c"
+        },
+        {
+          "id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "sha256": "9a503033fb60f84b38c4e619cb325ac9ac7c5e0a68ae9983d48a62711a293e82"
+        },
+        {
+          "id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+          "sha256": "98e8fe2ec9292cfbe82d338477aa396eb08a294cbf383209079a9931aa227bcb"
+        }
+      ],
+      "sha256": "082972ff78f9ecaa04d924c92796788e75cd86c739612e56aa020f0e3f4fb7c7"
+    }
+  },
+  "coordinates": {
+    "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+    "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+    "scope": [
+      "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+    ]
+  },
+  "dependency_contract": {
+    "attachment_families": [
+      "constraints",
+      "latitude",
+      "residuals"
+    ],
+    "id": "urn:a-c:generation:416505f487e4cd6be98a8679:dependency-contract:authored-governing-relations",
+    "required_relation_kinds": []
+  },
+  "external_resolutions": [
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:authority:proposal-authoring-only",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:authority",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:authority:proposal-authoring-only"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:basis",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:basis"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:constraint-kind",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:context",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:invalidation",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:judgment-kind",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:exports",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:exports"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:has_columns",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:has_columns"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:member_of",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:member_of"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:produces",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:produces"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:subsection_of",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:subsection_of"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:yields",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:yields"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:residual-kind:authored-uncertainty",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:residual-kind",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:residual-kind:authored-uncertainty"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:scope",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:sort",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:stop",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:416505f487e4cd6be98a8679:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+      "external_target_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+      "resolved_target_identity": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy"
+    }
+  ],
+  "functor_bindings": {},
+  "id": "urn:a-c:generation:416505f487e4cd6be98a8679:model:bf6dbe20e49de47afdf96ea3",
+  "identity_universe": [
+    "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:authority:proposal-authoring-only",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:031355bc247a08166f003b4e95e64045",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:0827aa2b0fab3edf4bebf7207bd1e72c",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:1158bfce52c2639a5c1233bc9a86b6db",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:17ce4da35d80e3e520546371c9f69bea",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:1fbb62f95cbccb68d5561d041916a45d",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:205ce116d22a2f57665f9bed8d26fc0e",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:26981a68b6f468f95670a4e8a40c0590",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:2ac0e829f25481af3d803cfc99bd13be",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:2b011a4498fba39e16b4669ff93a6fea",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:33caceb5901651238cfc7cda026ee433",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:35827f5c34d8f93771715c8ca610ab3a",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:40647bdcf93e5fe291d3a83db02b67e5",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:40bd1ee74e177d0746f7839e9838d73d",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:45c648e2c60bb8064a1a371ada610264",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:4f20a5e4f0550350961d7dd3c7bc69e1",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:51cdb2c9fa3439332d78a07508f661ce",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:55b0c67f612a4636472023ee9491c375",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:6c33cd88c087fb75518b8f1807027180",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:70a72c9583a20fef56abebc570799c24",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:797ca91ec467fd7f34987713ce85b0fb",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:7ee04f0734ee5df292cc9b39eceb2027",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:90e86c90f5a71a06d2c9d90914924857",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:926e83f2d005f604f1d7dabf8ea98be1",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:a73825e966dcccfd04633dbddca77f9b",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:ab6329b0468413314c30624046ff72ac",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:aff16fe587db14501ca70bc84fe04708",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:c611795ccaa57f1c793608b9fd61dc88",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:ca547ebdae84154b9fc3fe08192557fc",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:ccd8492747b2c4a5925fc57bf62f0ba3",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:d30635ddf2c357a3af21419420061e35",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:e6381513a696b0f34ab1ae04a9128850",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:ed10b19ce4ca46fe278a2d0d73dbf582",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:record:f1ff0cbb3904551cbf98f29d09cfc91e",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:exports",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:has_columns",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:member_of",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:produces",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:subsection_of",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:yields",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:residual-kind:authored-uncertainty",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+    "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance",
+    "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+    "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+    "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+    "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy"
+  ],
+  "interpretation": {
+    "authority": {
+      "id": "urn:a-c:generation:416505f487e4cd6be98a8679:authority:proposal-authoring-only",
+      "sha256": "332110e600d3ac9be0047e9c5fed7dfc01d4cf9d6f8805b40ad871a91766e1ed"
+    },
+    "contract": {
+      "id": "urn:a-c:generation:416505f487e4cd6be98a8679:interpretation-contract",
+      "sha256": "de0c523005e51b2e9cedb909671f697be4aba999698ecdd024d316dceaa6a7d4"
+    },
+    "dispositions": [
+      {
+        "authority": "urn:a-c:generation:416505f487e4cd6be98a8679:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "decision": "retained",
+        "reason": "The single goal sentence is retained as a goal-level directive with its two named entities. Its undefined acceptance and scope are recorded as a residual rather than filled in.",
+        "records": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:aff16fe587db14501ca70bc84fe04708",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:6c33cd88c087fb75518b8f1807027180",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:2b011a4498fba39e16b4669ff93a6fea",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:d30635ddf2c357a3af21419420061e35"
+        ],
+        "source": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals"
+      },
+      {
+        "authority": "urn:a-c:generation:416505f487e4cd6be98a8679:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "decision": "residual",
+        "reason": "The intent sentence is retained as one constraint over invoice export, but its key term 'reproducible' has no stated criterion and its amount-preservation clause is linked to the product rule only by reading, so the section carries explicit residuals.",
+        "records": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:1158bfce52c2639a5c1233bc9a86b6db",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:205ce116d22a2f57665f9bed8d26fc0e",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:c611795ccaa57f1c793608b9fd61dc88",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:2ac0e829f25481af3d803cfc99bd13be",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:031355bc247a08166f003b4e95e64045",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:35827f5c34d8f93771715c8ca610ab3a"
+        ],
+        "source": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent"
+      },
+      {
+        "authority": "urn:a-c:generation:416505f487e4cd6be98a8679:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "decision": "retained",
+        "reason": "All three product sentences are retained: the CSV column order, the digit-preservation obligation with the floating-point prohibition as forbidden latitude, and the zero-row header rule with its condition. Unstated CSV format details are recorded as a residual, not invented. The blank lines carry no content.",
+        "records": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:1158bfce52c2639a5c1233bc9a86b6db",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:1fbb62f95cbccb68d5561d041916a45d",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:51cdb2c9fa3439332d78a07508f661ce",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:40bd1ee74e177d0746f7839e9838d73d",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:33caceb5901651238cfc7cda026ee433",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:7ee04f0734ee5df292cc9b39eceb2027",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:0827aa2b0fab3edf4bebf7207bd1e72c",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:26981a68b6f468f95670a4e8a40c0590",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:926e83f2d005f604f1d7dabf8ea98be1",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:e6381513a696b0f34ab1ae04a9128850",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:70a72c9583a20fef56abebc570799c24",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:ed10b19ce4ca46fe278a2d0d73dbf582",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:797ca91ec467fd7f34987713ce85b0fb",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:a73825e966dcccfd04633dbddca77f9b",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:55b0c67f612a4636472023ee9491c375",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:4f20a5e4f0550350961d7dd3c7bc69e1",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:45c648e2c60bb8064a1a371ada610264",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:ab6329b0468413314c30624046ff72ac",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:17ce4da35d80e3e520546371c9f69bea",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:35827f5c34d8f93771715c8ca610ab3a"
+        ],
+        "source": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export"
+      },
+      {
+        "authority": "urn:a-c:generation:416505f487e4cd6be98a8679:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "decision": "residual",
+        "reason": "The source itself declares rounding unresolved and forbids inventing a rule. The section is retained as an unresolved policy scoped to invoice export, with the prohibition as forbidden latitude and the unresolved state as an explicit residual.",
+        "records": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:40647bdcf93e5fe291d3a83db02b67e5",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:ca547ebdae84154b9fc3fe08192557fc",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:90e86c90f5a71a06d2c9d90914924857",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:f1ff0cbb3904551cbf98f29d09cfc91e",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:ccd8492747b2c4a5925fc57bf62f0ba3"
+        ],
+        "source": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy"
+      }
+    ],
+    "interpreter": {
+      "id": "urn:a-c:generation:416505f487e4cd6be98a8679:interpreter:f-p-cli",
+      "sha256": "e864b4a5131967f11654de61e43fb33f0e0e25adef63cb7516c387f21c748f5e"
+    },
+    "invalidation": {
+      "id": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+      "sha256": "ec23fb2d5994461d3e78305466f14b0922e86f4e3e25e66ce35749f4849b6e08"
+    },
+    "provenance": [
+      {
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:provenance:generation-plan",
+        "sha256": "747d4eb404ae3d1c47ddc2885999f246fbf632afc1e4ea991b4c485f27b8bc3c"
+      },
+      {
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:provenance:author-invocations",
+        "sha256": "e864b4a5131967f11654de61e43fb33f0e0e25adef63cb7516c387f21c748f5e"
+      }
+    ],
+    "selection_ledger": {
+      "id": "urn:a-c:generation:416505f487e4cd6be98a8679:selection-ledger",
+      "sha256": "8a86cd3d9ce32d5a73eaa0ef934425c71f67b4d378d5e5a0c0ba01557d7c8c0e"
+    },
+    "source_reentry": {
+      "id": "urn:a-c:generation:416505f487e4cd6be98a8679:source-reentry",
+      "sha256": "110142bea3b32d79cf89323c86a4ef7174f70864909592e8d34af0f430a5035c"
+    }
+  },
+  "populations": {
+    "constraints": [
+      {
+        "applies_to": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:6c33cd88c087fb75518b8f1807027180",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:aff16fe587db14501ca70bc84fe04708"
+        ],
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:2b011a4498fba39e16b4669ff93a6fea",
+        "judgment_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/GOALS.md",
+              "quote": "Build a source-linked proposal representation for this qualification project.",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+              "start_line": 2
+            }
+          ],
+          "statement": "The goal is to build a source-linked proposal representation for this qualification project.",
+          "uncertainty": "Goal-level directive. The source states no acceptance criterion, owner or scope for the representation, and does not say what counts as source-linked."
+        },
+        "refusal": "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:1158bfce52c2639a5c1233bc9a86b6db",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:205ce116d22a2f57665f9bed8d26fc0e",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:c611795ccaa57f1c793608b9fd61dc88"
+        ],
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:2ac0e829f25481af3d803cfc99bd13be",
+        "judgment_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/INTENT.md",
+              "quote": "Make invoice export reproducible while preserving exact supplied decimal amounts.",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+              "start_line": 2
+            }
+          ],
+          "statement": "Invoice export is to be made reproducible, and exact supplied decimal amounts are to be preserved while that is done. Reproducibility does not license altering the supplied amounts.",
+          "uncertainty": "Intent statement. 'Reproducible' has no stated criterion in the source."
+        },
+        "refusal": "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:1158bfce52c2639a5c1233bc9a86b6db",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:51cdb2c9fa3439332d78a07508f661ce",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:40bd1ee74e177d0746f7839e9838d73d"
+        ],
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:55b0c67f612a4636472023ee9491c375",
+        "judgment_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "Export rows as CSV with columns id, amount, currency in that order.",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            }
+          ],
+          "statement": "Rows are exported as CSV with exactly the columns id, amount, currency, in that order.",
+          "uncertainty": "The CSV dialect, header emission when rows exist, and row ordering are not stated."
+        },
+        "refusal": "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:33caceb5901651238cfc7cda026ee433",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:7ee04f0734ee5df292cc9b39eceb2027"
+        ],
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:4f20a5e4f0550350961d7dd3c7bc69e1",
+        "judgment_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 4,
+              "path": "specification/PRODUCT.md",
+              "quote": "Preserve every supplied decimal digit in amount",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 4
+            }
+          ],
+          "statement": "Every supplied decimal digit in amount is preserved in the export; no supplied digit may be dropped, added or altered.",
+          "uncertainty": ""
+        },
+        "refusal": "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:51cdb2c9fa3439332d78a07508f661ce",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:926e83f2d005f604f1d7dabf8ea98be1",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:26981a68b6f468f95670a4e8a40c0590"
+        ],
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:45c648e2c60bb8064a1a371ada610264",
+        "judgment_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "predicate": {
+          "conditions": [
+            "zero rows are supplied to the export"
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 5,
+              "path": "specification/PRODUCT.md",
+              "quote": "For zero rows, emit the header alone.",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 5
+            }
+          ],
+          "statement": "When zero rows are supplied, the export emits the header alone.",
+          "uncertainty": ""
+        },
+        "refusal": "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:40647bdcf93e5fe291d3a83db02b67e5"
+        ],
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:90e86c90f5a71a06d2c9d90914924857",
+        "judgment_kind": "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 9,
+              "path": "specification/PRODUCT.md",
+              "quote": "Rounding is not yet specified. Retain this as unresolved;",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+              "start_line": 9
+            }
+          ],
+          "statement": "Rounding is not yet specified, and this state is to be retained as unresolved.",
+          "uncertainty": "Unresolved by source declaration. Unresolved is not false and is not resolved by this interpretation."
+        },
+        "refusal": "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ]
+      }
+    ],
+    "judgments": [],
+    "latitude": [
+      {
+        "allowed_variation": {
+          "grounding": [
+            {
+              "end_line": 4,
+              "path": "specification/PRODUCT.md",
+              "quote": "binary floating-point conversion is forbidden",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 4
+            }
+          ],
+          "statements": []
+        },
+        "applies_to": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:33caceb5901651238cfc7cda026ee433",
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:0827aa2b0fab3edf4bebf7207bd1e72c"
+        ],
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "forbidden_variation": {
+          "grounding": [
+            {
+              "end_line": 4,
+              "path": "specification/PRODUCT.md",
+              "quote": "binary floating-point conversion is forbidden",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 4
+            }
+          ],
+          "statements": [
+            "Converting amount to a binary floating-point representation"
+          ]
+        },
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:ab6329b0468413314c30624046ff72ac",
+        "invalidation": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ]
+      },
+      {
+        "allowed_variation": {
+          "grounding": [
+            {
+              "end_line": 9,
+              "path": "specification/PRODUCT.md",
+              "quote": "do not invent a rounding rule",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+              "start_line": 9
+            }
+          ],
+          "statements": []
+        },
+        "applies_to": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:record:40647bdcf93e5fe291d3a83db02b67e5"
+        ],
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "forbidden_variation": {
+          "grounding": [
+            {
+              "end_line": 9,
+              "path": "specification/PRODUCT.md",
+              "quote": "do not invent a rounding rule",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+              "start_line": 9
+            }
+          ],
+          "statements": [
+            "Inventing a rounding rule"
+          ]
+        },
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:f1ff0cbb3904551cbf98f29d09cfc91e",
+        "invalidation": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ]
+      }
+    ],
+    "objects": [
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:aff16fe587db14501ca70bc84fe04708",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The project named by the goal as the subject for which a representation is built. The source gives no further identity for it.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/GOALS.md",
+              "quote": "this qualification project",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+              "start_line": 2
+            }
+          ],
+          "label": "Qualification project"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:6c33cd88c087fb75518b8f1807027180",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The deliverable the goal names: a representation of the qualification project that is linked to its source and has the standing of a proposal.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/GOALS.md",
+              "quote": "source-linked proposal representation",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+              "start_line": 2
+            }
+          ],
+          "label": "Source-linked proposal representation"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:1158bfce52c2639a5c1233bc9a86b6db",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The operation that exports supplied invoice rows as CSV. It is the subject of the intent and the product definition.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/INTENT.md",
+              "quote": "invoice export",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+              "start_line": 2
+            },
+            {
+              "end_line": 1,
+              "path": "specification/PRODUCT.md",
+              "quote": "Invoice export",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 1
+            },
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "Export rows as CSV",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            }
+          ],
+          "label": "Invoice export"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:205ce116d22a2f57665f9bed8d26fc0e",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The property the intent requires invoice export to have. The source names it and states no criterion for it.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/INTENT.md",
+              "quote": "reproducible",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+              "start_line": 2
+            }
+          ],
+          "label": "Reproducibility of invoice export"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:c611795ccaa57f1c793608b9fd61dc88",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The amounts as supplied to the export, in decimal form, which the intent requires to be preserved exactly.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/INTENT.md",
+              "quote": "exact supplied decimal amounts",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+              "start_line": 2
+            }
+          ],
+          "label": "Exact supplied decimal amounts"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:1fbb62f95cbccb68d5561d041916a45d",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A supplied row that the export emits as a CSV row. The source states no row content beyond the three named columns and no origin for the rows.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "Export rows",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            }
+          ],
+          "label": "Invoice row"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:51cdb2c9fa3439332d78a07508f661ce",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The document the export produces, in CSV form.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "as CSV",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            }
+          ],
+          "label": "CSV output"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:40bd1ee74e177d0746f7839e9838d73d",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The ordered column set of the CSV output: id first, amount second, currency third.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "columns id, amount, currency in that order",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            }
+          ],
+          "label": "CSV columns id, amount, currency"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:33caceb5901651238cfc7cda026ee433",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The CSV column that carries a supplied decimal amount. It is the column the digit-preservation rule and the floating-point prohibition address.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 4,
+              "path": "specification/PRODUCT.md",
+              "quote": "in amount",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 4
+            }
+          ],
+          "label": "Amount column"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:7ee04f0734ee5df292cc9b39eceb2027",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "Each decimal digit present in a supplied amount. The preservation rule quantifies over every such digit.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 4,
+              "path": "specification/PRODUCT.md",
+              "quote": "every supplied decimal digit in amount",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 4
+            }
+          ],
+          "label": "Supplied decimal digit"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:0827aa2b0fab3edf4bebf7207bd1e72c",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "Conversion of an amount into a binary floating-point representation. The source names it only to forbid it.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 4,
+              "path": "specification/PRODUCT.md",
+              "quote": "binary floating-point conversion",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 4
+            }
+          ],
+          "label": "Binary floating-point conversion"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:26981a68b6f468f95670a4e8a40c0590",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The header line of the CSV output. The source refers to it as a known part of the output and does not define its content separately; this interpretation reads it as the column names in order.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 5,
+              "path": "specification/PRODUCT.md",
+              "quote": "the header",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 5
+            }
+          ],
+          "label": "CSV header"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:926e83f2d005f604f1d7dabf8ea98be1",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The export case in which no rows are supplied.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 5,
+              "path": "specification/PRODUCT.md",
+              "quote": "zero rows",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 5
+            }
+          ],
+          "label": "Zero-row case"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:40647bdcf93e5fe291d3a83db02b67e5",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The rule that would govern rounding within invoice export. The source declares it not yet specified and unresolved.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "specification/PRODUCT.md",
+              "quote": "Unresolved rounding policy",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+              "start_line": 7
+            },
+            {
+              "end_line": 9,
+              "path": "specification/PRODUCT.md",
+              "quote": "Rounding is not yet specified.",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+              "start_line": 9
+            }
+          ],
+          "label": "Rounding policy"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:e6381513a696b0f34ab1ae04a9128850",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:produces",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "Export rows as CSV",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            }
+          ],
+          "kind": "produces",
+          "meaning": "Invoice export produces the CSV output."
+        },
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:416505f487e4cd6be98a8679:record:1158bfce52c2639a5c1233bc9a86b6db",
+        "target": "urn:a-c:generation:416505f487e4cd6be98a8679:record:51cdb2c9fa3439332d78a07508f661ce"
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:70a72c9583a20fef56abebc570799c24",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:exports",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "Export rows",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            }
+          ],
+          "kind": "exports",
+          "meaning": "Invoice export takes supplied rows as its input and emits each as a CSV row."
+        },
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:416505f487e4cd6be98a8679:record:1158bfce52c2639a5c1233bc9a86b6db",
+        "target": "urn:a-c:generation:416505f487e4cd6be98a8679:record:1fbb62f95cbccb68d5561d041916a45d"
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:ed10b19ce4ca46fe278a2d0d73dbf582",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:has_columns",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "with columns id, amount, currency in that order",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            }
+          ],
+          "kind": "has_columns",
+          "meaning": "The CSV output carries the columns id, amount, currency in that order."
+        },
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:416505f487e4cd6be98a8679:record:51cdb2c9fa3439332d78a07508f661ce",
+        "target": "urn:a-c:generation:416505f487e4cd6be98a8679:record:40bd1ee74e177d0746f7839e9838d73d"
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:797ca91ec467fd7f34987713ce85b0fb",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:member_of",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "id, amount, currency",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            }
+          ],
+          "kind": "member_of",
+          "meaning": "Amount is the second of the three ordered columns."
+        },
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:416505f487e4cd6be98a8679:record:33caceb5901651238cfc7cda026ee433",
+        "target": "urn:a-c:generation:416505f487e4cd6be98a8679:record:40bd1ee74e177d0746f7839e9838d73d"
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:a73825e966dcccfd04633dbddca77f9b",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:yields",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [
+            "zero rows are supplied to the export"
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 5,
+              "path": "specification/PRODUCT.md",
+              "quote": "For zero rows, emit the header alone.",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 5
+            }
+          ],
+          "kind": "yields",
+          "meaning": "In the zero-row case the output consists of the header and nothing else."
+        },
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:416505f487e4cd6be98a8679:record:926e83f2d005f604f1d7dabf8ea98be1",
+        "target": "urn:a-c:generation:416505f487e4cd6be98a8679:record:26981a68b6f468f95670a4e8a40c0590"
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:ca547ebdae84154b9fc3fe08192557fc",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:subsection_of",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "specification/PRODUCT.md",
+              "quote": "## Unresolved rounding policy",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+              "start_line": 7
+            },
+            {
+              "end_line": 1,
+              "path": "specification/PRODUCT.md",
+              "quote": "# Invoice export",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 1
+            }
+          ],
+          "kind": "subsection_of",
+          "meaning": "The unresolved rounding policy is a subsection of the invoice export definition, so it is scoped to invoice export. The source does not say which values rounding would apply to."
+        },
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:416505f487e4cd6be98a8679:record:40647bdcf93e5fe291d3a83db02b67e5",
+        "target": "urn:a-c:generation:416505f487e4cd6be98a8679:record:1158bfce52c2639a5c1233bc9a86b6db"
+      }
+    ],
+    "residuals": [
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "consequence": "No rounding behaviour can be derived. Any export case that would need rounding has no specified result in this representation, and the representation adds none.",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:ccd8492747b2c4a5925fc57bf62f0ba3",
+        "invalidation": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:416505f487e4cd6be98a8679:record:40647bdcf93e5fe291d3a83db02b67e5",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 9,
+              "path": "specification/PRODUCT.md",
+              "quote": "Rounding is not yet specified. Retain this as unresolved; do not invent a rounding rule.",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+              "start_line": 9
+            }
+          ],
+          "statement": "Rounding is not specified: the source gives no rule, no trigger, and no statement of which values rounding would apply to."
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "consequence": "No testable reproducibility condition can be derived from the source.",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:031355bc247a08166f003b4e95e64045",
+        "invalidation": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:416505f487e4cd6be98a8679:record:205ce116d22a2f57665f9bed8d26fc0e",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/INTENT.md",
+              "quote": "reproducible",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+              "start_line": 2
+            }
+          ],
+          "statement": "The source does not define 'reproducible', for example identical output for identical input across runs or hosts."
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "consequence": "The intent record and the product record stay separate. A reviewer must confirm the correspondence before treating them as one requirement.",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:35827f5c34d8f93771715c8ca610ab3a",
+        "invalidation": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:416505f487e4cd6be98a8679:record:c611795ccaa57f1c793608b9fd61dc88",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/INTENT.md",
+              "quote": "preserving exact supplied decimal amounts",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+              "start_line": 2
+            },
+            {
+              "end_line": 4,
+              "path": "specification/PRODUCT.md",
+              "quote": "Preserve every supplied decimal digit in amount",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 4
+            }
+          ],
+          "statement": "The intent's 'exact supplied decimal amounts' and the product's 'every supplied decimal digit in amount' read as one obligation, but the source states no explicit link between them. The identity is not resolved here by label match."
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "consequence": "The export format is determined only by the column order, the amount rules and the zero-row case. Other format choices are not constrained by this source.",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:17ce4da35d80e3e520546371c9f69bea",
+        "invalidation": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:416505f487e4cd6be98a8679:record:51cdb2c9fa3439332d78a07508f661ce",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "specification/PRODUCT.md",
+              "quote": "Export rows as CSV with columns id, amount, currency in that order.",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 3
+            },
+            {
+              "end_line": 5,
+              "path": "specification/PRODUCT.md",
+              "quote": "emit the header alone",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+              "start_line": 5
+            }
+          ],
+          "statement": "The CSV dialect (delimiter, quoting, line endings, encoding), header emission when rows exist, row ordering, and the formats of id and currency are not stated. The header content is read as the column names in order; the source does not define it."
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:416505f487e4cd6be98a8679:basis",
+        "consequence": "Completion of the goal cannot be judged from the source alone.",
+        "context": "urn:a-c:generation:416505f487e4cd6be98a8679:context:source-first-proposal",
+        "id": "urn:a-c:generation:416505f487e4cd6be98a8679:record:d30635ddf2c357a3af21419420061e35",
+        "invalidation": "urn:a-c:generation:416505f487e4cd6be98a8679:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:416505f487e4cd6be98a8679:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:416505f487e4cd6be98a8679:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:416505f487e4cd6be98a8679:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:416505f487e4cd6be98a8679:record:6c33cd88c087fb75518b8f1807027180",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "specification/GOALS.md",
+              "quote": "Build a source-linked proposal representation for this qualification project.",
+              "section": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+              "start_line": 2
+            }
+          ],
+          "statement": "The goal names the deliverable and 'this qualification project' without defining acceptance, owner, scope, or what makes the representation source-linked."
+        }
+      }
+    ],
+    "transformations": [],
+    "traversals": []
+  },
+  "profile": "a_c.graphify.model/1",
+  "signature": {
+    "definition": {
+      "constraint_kinds": {
+        "urn:a-c:generation:416505f487e4cd6be98a8679:constraint-kind:authored-source-statement": {
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "predicate": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "uncertainty": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "fields": {
+        "constraints": {
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "judgment_kind": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:judgment-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:constraint-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "latitude_ref": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "latitude"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "predicate": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "uncertainty": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "refusal": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:stop"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        },
+        "judgments": {
+          "authority": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "decided_at": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evaluator": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:judgment-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "subject_digest": {
+            "min_length": 1,
+            "type": "string"
+          }
+        },
+        "latitude": {
+          "allowed_variation": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statements": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "forbidden_variation": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statements": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        },
+        "objects": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "sort": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:sort"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "value": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "definition": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "label": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "relations": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:relation-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "residuals": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "consequence": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:residual-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "uncertainty": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "transformations": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "codomain_model": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:model"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "domain_model": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:model"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_introduced": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_preserved": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_removed": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_resolution_witnesses": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:witness"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "introduced": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:future-record"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "operation_authority": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "preconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "preservation_relation": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:preservation-law"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "preserved": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "removed": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "residuals": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "residuals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "stop_states": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:stop"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "traversal": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "traversals"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "traversals": {
+          "authority": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "codomain": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:domain"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "domain": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:domain"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "postconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "preconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "stop_states": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:stop"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        }
+      },
+      "functor_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:f-d",
+        "urn:stdo:concept:axiomatic-calculus:f-p",
+        "urn:stdo:concept:axiomatic-calculus:f-h"
+      ],
+      "judgment_kinds": {
+        "urn:a-c:generation:416505f487e4cd6be98a8679:judgment-kind:external-semantic-review": {
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        }
+      },
+      "relation_kinds": {
+        "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:exports": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:has_columns": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:member_of": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:produces": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:subsection_of": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "urn:a-c:generation:416505f487e4cd6be98a8679:relation-kind:discovery:yields": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        }
+      },
+      "required_families": [],
+      "residual_kinds": {
+        "urn:a-c:generation:416505f487e4cd6be98a8679:residual-kind:authored-uncertainty": {
+          "consequence": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+              "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+            "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "uncertainty": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "sorts": {
+        "urn:a-c:generation:416505f487e4cd6be98a8679:sort:authored-concept": {
+          "value": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "definition": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:416505f487e4cd6be98a8679:basis-relation:exact",
+                      "domain": "urn:a-c:generation:416505f487e4cd6be98a8679:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:416505f487e4cd6be98a8679:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "label": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "stop_kinds": [
+        "urn:a-c:generation:416505f487e4cd6be98a8679:stop:no-execution-or-acceptance"
+      ]
+    },
+    "id": "urn:a-c:generation:416505f487e4cd6be98a8679:signature:compact-source-proposal-v1",
+    "sha256": "a136db4f103a8fab80672281ff01c368147337af018f90bd3bf2be4d07bd6ac7"
+  }
+}

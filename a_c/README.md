@@ -1,5 +1,30 @@
 # Axiomatic Calculus Implementations
 
+a_c's next Product increment makes these tools usable on **your own STDO
+project**: represent its axiomatic program, read its constraints, run supported
+checks, and supply selected context to LLM builders and reviewers. See the
+[user-project requirements](specification/requirements/project-use.md) and
+[delivery plan](.ai-workspace/work/T015_USER_PROJECT_PRODUCT/PLAN.md). Existing
+components are usable now; the unified installed user workflow remains in work.
+
+The [STDO constraint explorer](applications/stdo-constraint-explorer/README.md)
+provides a local **3D/2D view with a full constraint reader**. Search constraints,
+follow labelled connections, inspect caveats and source passages, and navigate
+back through the reading trail. Its initial subject is the frozen common
+35fb4824 representation used in the Lean work.
+
+The [ABIogenesis reader](applications/abiogenesis-constraint-explorer/README.md)
+adds a **Files** flyout: browse the represented folder/file structure, open a
+file's records or source, follow logical relationships, and use **Back to file**
+or **Show in files** to move between the two views. The same navigation is part
+of the reusable viewer generator.
+
+The [unified ABIogenesis reader](applications/abiogenesis-constraint-explorer/index.html)
+switches the middle panel between 3D, 2D and left-to-right Layered tracks while
+retaining the selected information and navigation state. All three views share
+one embedded representation and source files. Public project builds produce one
+offline HTML page; no service or network is needed.
+
 `a_c` means **axiomatic calculus**. This independent source project builds
 realizations of the carrier-neutral STDO calculus. Shared requirements define
 the WHAT; each `build_tenants/` child binds those requirements to its own

@@ -1,0 +1,843 @@
+{
+  "concepts": [
+    {
+      "key": "compute_term",
+      "label": "Compute C term",
+      "definition": "Canonical typed compute composition generated exactly by C.of, C.id, C.compose, C.edge, workflow.C, C.batch and C.retry; transform/evaluate/consequence is bootstrap algebra data rather than a closed stage ontology.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 41,
+          "end_line": 46,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-001 - Closed generator set.** The compute algebra\ngenerator set is exactly `C.of`, `C.id`, `C.compose`, `C.edge`, `workflow.C`,\n`C.batch`, and `C.retry`. A build tenant shall represent the set with an\nexhaustively matchable typed carrier. The canonical transform/evaluate/\nconsequence edge is bootstrap data expressed by the algebra, not a closed stage\nontology.\n"
+        }
+      ]
+    },
+    {
+      "key": "stage_leaf",
+      "label": "Atomic C-call stage",
+      "definition": "One C.of<A,B,Role,Fibre> leaf with one C-call spine; its role, fibre, arm and carrier references combine with the enclosing CProgramDeclaration.programRef to identify one program/role/fibre/arm census member.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 48,
+          "end_line": 53,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-002 - Unit.**\n`C.of<A,B,Role,Fibre>(stage<A,B,Role,Fibre>) -> C<A,B>` introduces one atomic\nC-call leaf. The enclosing `CProgramDeclaration.programRef` supplies program\nidentity; the leaf supplies role, fibre, arm, and input/output carrier refs.\nTogether they name one `(program, role, fibre, arm)` census member. The leaf\nhas one C-call spine and an implementation may realize only its interior.\n"
+        }
+      ]
+    },
+    {
+      "key": "implementation_binding",
+      "label": "Implementation binding",
+      "definition": "A plugin or handler realization of a declared leaf interior, matched to program identity, role, fibre, arm and its own published seam carrier contract, with no runtime-truth authority.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 110,
+          "end_line": 118,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-010 - Implementation matching.** A plugin or handler\nbinding shall match the enclosing program identity and selected stage role,\nfibre, and arm. C input/output carrier continuity is a GTL-validator\njudgment. Each implementation separately matches the published carrier\ncontract of its plugin or handler seam; a uniform engine-plugin transport\ncarrier is not falsely equated with the domain C carrier ref. Its public type\nand admitted carrier shall not provide event emission, traversal selection,\ncontinuation, ledger, or closure authority. ABG admits its result and owns all\nresulting runtime truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "conformance_root",
+      "label": "Admitted submitted conformance root",
+      "definition": "One subjectRef-bound admitted module/program/graph-function/catalog root and declared expected-coverage contract; reachability and applicable inventory fields determine the validator report scope.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FConformance%20Root",
+          "start_line": 220,
+          "end_line": 229,
+          "quote": "A conformance report is scoped to one admitted submitted root identified by\n`subjectRef`: its admitted module, program, graph-function, and catalog rows, plus its\ndeclared expected-coverage contract. The GTL validator checks every declaration\nreachable from that root and reports required rows missing relative to that\nbound coverage contract where the contract carries an applicable inventory\nfield. For execution declarations, the validator proves declared-reference\ncompleteness and internal membership; the current coverage carrier does not\nexpress a total expected execution-declaration inventory. Product/install\nbinding selects the authoritative root and complete release manifest. Those\nare separate release contracts.\n"
+        }
+      ]
+    },
+    {
+      "key": "graph_function_composition",
+      "label": "Graph-function composition",
+      "definition": "compose(f,g) creates a new graph function with f.inputs and g.outputs when f carries the cumulative environment required by g.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPOSE.md#REQ-L-GTL3-COMPOSE%20%E2%80%94%20Lawful%20Composition%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "Define lawful graph-function composition in GTL 3.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPOSE.md#REQ-L-GTL3-COMPOSE%20%E2%80%94%20Lawful%20Composition%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 16,
+          "quote": "**REQ-L-GTL3-COMPOSE-001**: `compose(f, g)` shall compose two graph functions when `g.environment.requires` is satisfied by the cumulative environment carried by `f`. The result is a new graph function with `inputs = f.inputs` and `outputs = g.outputs`.\n"
+        }
+      ]
+    },
+    {
+      "key": "compute_notation",
+      "label": "Compute epistemic notation",
+      "definition": "fn<A,B>.C, transform.C, evaluate.C and consequence.C denote knowledge states and selected abg.fn_composition contract identity over existing lawful carriers; they add no literal language extension, topology object, runtime carrier or execution target.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FPurpose",
+          "start_line": 12,
+          "end_line": 20,
+          "quote": "Define the GTL-facing epistemology over the ratified GTL ontology and ABG\nruntime ontology without adding a new GTL topology object, ABG runtime carrier,\nor execution target.\n\nThe notation exists so authors and tools can distinguish what exists from how\nit is known. Ontology names the lawful carriers. Epistemology names the\nknowledge states over those carriers: candidate production, evaluation\nfindings, ABG admission, ABG ledger/projection truth, assurance fold,\ntraversal transition, and downstream consequence projection.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FScope",
+          "start_line": 24,
+          "end_line": 29,
+          "quote": "This requirement governs notation such as `fn<A, B>.C`, `transform.C`,\n`evaluate.C`, and `consequence.C`, and the ontology/epistemology boundary those\nterms rely on.\n\nIt is notation over existing GTL ontology and ABG runtime truth. It is not a\nliteral GTL language extension and not a second public carrier.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FEpistemic%20Boundary",
+          "start_line": 87,
+          "end_line": 88,
+          "quote": "`C` is selected composition notation: the selected `abg.fn_composition`\ncontract identity for the owning boundary.\n"
+        }
+      ]
+    },
+    {
+      "key": "ontology_partition",
+      "label": "GTL, ABG and Product ontology partition",
+      "definition": "GTL owns authored Graph, Node, GraphVector, Context, Operator, Evaluator, Rule, GraphFunction, RefinementBoundary, CandidateFamily, ContractRef, Role, Job and Module. ABG owns admitted composition, events, Run, GraphCall, Frame, ExecutionBasis, AdvancementTransition, IterationAdvanceDecision, Continuation, payload admission/ledgers, assurance/closure and traversal/replay. Product pressure maps, acceptance lenses, lifecycle registers and domain read models remain Product projections over admitted facts.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FOntology%20Boundary",
+          "start_line": 33,
+          "end_line": 68,
+          "quote": "GTL ontology contains the authored language carriers:\n\n- `Graph`\n- `Node`\n- `GraphVector`\n- `Context`\n- `Operator`\n- `Evaluator`\n- `Rule`\n- `GraphFunction`\n- `RefinementBoundary`\n- `CandidateFamily`\n- `ContractRef`\n- `Role`\n- `Job`\n- `Module`\n\nABG runtime ontology contains ABG-admitted runtime truth, including:\n\n- selected `abg.fn_composition`\n- runtime events\n- `Run`\n- `GraphCall`\n- `Frame`\n- `ExecutionBasis`\n- `AdvancementTransition`\n- `IterationAdvanceDecision`\n- `Continuation`\n- payload admission and payload ledgers\n- assurance projection and closure fold\n- traversal transition and replay projection\n\nProduct ontology remains outside GTL and ABG. A downstream product may define\npressure maps, acceptance lenses, lifecycle registers, and domain read models,\nbut those meanings are product projections over ABG-admitted facts, not new GTL\nor ABG ontology.\n"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "implementation_realizes_leaf",
+      "kind": "realizes_interior",
+      "source_key": "implementation_binding",
+      "target_key": "stage_leaf",
+      "meaning": "A matched implementation realizes only the interior of its one declared C-call leaf and supplies no runtime authority.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 48,
+          "end_line": 53,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-002 - Unit.**\n`C.of<A,B,Role,Fibre>(stage<A,B,Role,Fibre>) -> C<A,B>` introduces one atomic\nC-call leaf. The enclosing `CProgramDeclaration.programRef` supplies program\nidentity; the leaf supplies role, fibre, arm, and input/output carrier refs.\nTogether they name one `(program, role, fibre, arm)` census member. The leaf\nhas one C-call spine and an implementation may realize only its interior.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 110,
+          "end_line": 118,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-010 - Implementation matching.** A plugin or handler\nbinding shall match the enclosing program identity and selected stage role,\nfibre, and arm. C input/output carrier continuity is a GTL-validator\njudgment. Each implementation separately matches the published carrier\ncontract of its plugin or handler seam; a uniform engine-plugin transport\ncarrier is not falsely equated with the domain C carrier ref. Its public type\nand admitted carrier shall not provide event emission, traversal selection,\ncontinuation, ledger, or closure authority. ABG admits its result and owns all\nresulting runtime truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "notation_over_ontology",
+      "kind": "describes_knowledge_over",
+      "source_key": "compute_notation",
+      "target_key": "ontology_partition",
+      "meaning": "Notation describes epistemic states over the existing ontology without creating carriers; Product interpretations stay projections over ABG facts.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FPurpose",
+          "start_line": 12,
+          "end_line": 20,
+          "quote": "Define the GTL-facing epistemology over the ratified GTL ontology and ABG\nruntime ontology without adding a new GTL topology object, ABG runtime carrier,\nor execution target.\n\nThe notation exists so authors and tools can distinguish what exists from how\nit is known. Ontology names the lawful carriers. Epistemology names the\nknowledge states over those carriers: candidate production, evaluation\nfindings, ABG admission, ABG ledger/projection truth, assurance fold,\ntraversal transition, and downstream consequence projection.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FOntology%20Boundary",
+          "start_line": 65,
+          "end_line": 68,
+          "quote": "Product ontology remains outside GTL and ABG. A downstream product may define\npressure maps, acceptance lenses, lifecycle registers, and domain read models,\nbut those meanings are product projections over ABG-admitted facts, not new GTL\nor ABG ontology.\n"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "key": "closed_generators_and_leaf_authority",
+      "applies_to_keys": [
+        "compute_term",
+        "stage_leaf",
+        "implementation_binding"
+      ],
+      "statement": "Every tenant represents exactly the seven C generators in an exhaustively matchable typed carrier. One C.of supplies one atomic spine, and an implementation can realize only its interior.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 41,
+          "end_line": 53,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-001 - Closed generator set.** The compute algebra\ngenerator set is exactly `C.of`, `C.id`, `C.compose`, `C.edge`, `workflow.C`,\n`C.batch`, and `C.retry`. A build tenant shall represent the set with an\nexhaustively matchable typed carrier. The canonical transform/evaluate/\nconsequence edge is bootstrap data expressed by the algebra, not a closed stage\nontology.\n\n**REQ-L-GTL3-C-ALGEBRA-002 - Unit.**\n`C.of<A,B,Role,Fibre>(stage<A,B,Role,Fibre>) -> C<A,B>` introduces one atomic\nC-call leaf. The enclosing `CProgramDeclaration.programRef` supplies program\nidentity; the leaf supplies role, fibre, arm, and input/output carrier refs.\nTogether they name one `(program, role, fibre, arm)` census member. The leaf\nhas one C-call spine and an implementation may realize only its interior.\n"
+        }
+      ]
+    },
+    {
+      "key": "compute_identity_limits",
+      "applies_to_keys": [
+        "compute_term"
+      ],
+      "statement": "C.id<A> is C<A,A> and the left/right composition identity. It projects no_declared_check only where the owning contract requires no check; it cannot satisfy a mandatory gate or complete an otherwise empty executable edge program.",
+      "conditions": [
+        "no_declared_check requires an owning contract that demands no check."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 55,
+          "end_line": 58,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-003 - Identity.** `C.id<A> -> C<A,A>` is the left and\nright identity of composition. It projects `no_declared_check` only where the\nowning contract demands no check. It cannot satisfy a required gate and cannot\nmake an otherwise empty executable edge program complete.\n"
+        }
+      ]
+    },
+    {
+      "key": "flat_typed_compute_composition",
+      "applies_to_keys": [
+        "compute_term"
+      ],
+      "statement": "C.compose<A,B,D> is closed and associative. Nested syntax flattens by default into ordered C.of leaves within one declared boundary. Input/output mismatch is a host type error where decidable and otherwise a typed GTL-validator gap.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 60,
+          "end_line": 64,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-004 - Composition.**\n`C.compose<A,B,D>(C<A,B>, C<B,D>) -> C<A,D>` is closed and associative.\nComposition is flat by default: nested syntax erases to the ordered `C.of`\nleaves in one declared boundary. Input/output mismatch is a type error where\nthe host language can decide it and otherwise a typed GTL-validator gap.\n"
+        }
+      ]
+    },
+    {
+      "key": "edge_record_roles",
+      "applies_to_keys": [
+        "compute_term",
+        "stage_leaf"
+      ],
+      "statement": "C.edge records transform, evaluate and consequence fields as atomic direct C.of leaves with matching literal roles. Wrapping/composition is outside the record. Roles are ordinary open declaration data; other nonempty roles are permitted, but every open program names exactly one result-bearing role.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 66,
+          "end_line": 71,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-005 - Edge record.** `C.edge` is the named record form\nof a composition containing transform, evaluate, and consequence roles. The\nthree fields are atomic direct `C.of` leaves with the corresponding stage-role\nliteral; wrapping or composition occurs outside the record. The roles remain\nordinary declared stages. Open programs may contain other non-empty roles and\nshall name exactly one result-bearing role.\n"
+        }
+      ]
+    },
+    {
+      "key": "named_workflow_lift",
+      "applies_to_keys": [
+        "compute_term"
+      ],
+      "statement": "Only workflow.C(GraphFunctionRef<A,B>) lifts an admitted graph-function traversal into one transparent parent-level C, preserving the reference-declared A,B pair and yielding sub_traversal evidence. Raw validation proves resolution, not equality to a child published wire contract without an admitted outer-contract identity. Anonymous nesting creates no frame or monad boundary.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 73,
+          "end_line": 82,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-006 - Named workflow lift.**\n`workflow.C(GraphFunctionRef<A,B>) -> C<A,B>` is the only constructor that\nmakes an admitted graph-function traversal one transparent C at its parent\nlevel. The typed `GraphFunctionRef` binds the admitted graph function and the\ndeclared C input/output carriers; the lift preserves that `A,B` pair. Raw\nvalidation proves that the named graph function resolves. Equality between\nthose carrier refs and a child's published wire contract requires an admitted\nouter-contract identity and shall not be inferred when that identity is absent.\nThe lift yields `sub_traversal` evidence. Anonymous nesting never creates a\nframe or monad boundary.\n"
+        }
+      ]
+    },
+    {
+      "key": "batch_identity_cardinality",
+      "applies_to_keys": [
+        "compute_term",
+        "stage_leaf"
+      ],
+      "statement": "C.batch groups a nonempty ordered task family with equal input/output carriers and per-task result cardinality. Each invoking task retains one spine and one cardinality judgment; the parent grouping reference has no authority. Program cardinality stays the common per-task cardinality, not aggregate many. Distribution over composition requires equal-length compatible families paired by stable list position; task identity, evidence and judgments never collapse into one call.",
+      "conditions": [
+        "Pointwise distribution requires equal-length compatible ordered task families."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 84,
+          "end_line": 93,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-007 - Batch.** `C.batch(tasks, batchRef)` groups a\nnon-empty ordered task family whose members have the same input carrier,\noutput carrier, and per-task result cardinality. Stable list position pairs\ntasks when applying a pointwise distributive law. The batch preserves one\nC-call spine and one result-cardinality judgment per invoking task plus one\nnon-authoritative parent grouping ref; its program cardinality is that shared\nper-task cardinality, not an aggregate `many`. Batch distributes over\ncomposition only for equal-length compatible task families paired by stable\nposition. A batch never collapses task identity, evidence, or judgment into\none synthetic call.\n"
+        }
+      ]
+    },
+    {
+      "key": "retry_contract_boundary",
+      "applies_to_keys": [
+        "compute_term"
+      ],
+      "statement": "C.retry preserves input/output contract, uses a positive declared budget and closes attempts under the single declared retryable-failure allowlist. It neither creates per-fibre error algebras nor authorizes undeclared repair.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 95,
+          "end_line": 98,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-008 - Retry.** `C.retry(C<A,B>, budget) -> C<A,B>`\npreserves the input/output contract and closes attempts under the one declared\nretryable-failure allowlist. The budget is a positive declared value. Retry\ndoes not create a per-fibre error algebra or authorize undeclared repair.\n"
+        }
+      ]
+    },
+    {
+      "key": "role_fibre_separation",
+      "applies_to_keys": [
+        "compute_term",
+        "stage_leaf"
+      ],
+      "statement": "Stage roles are open program data; fibres are exactly F_D, F_P and F_H. Lawful substitution changes interior and evidence class only, preserving topology, program membership and spine kinds/order/count. Validator, HoG and ABG preserve the declared fibre; observed behavior cannot reclassify F_P as F_D. Prior F_P-to-F_D replacement requires declaration versioning and tuner/equivalence annealing.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 100,
+          "end_line": 108,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-009 - Role/fibre orthogonality.** Stage role is open\ndeclared program data. Fibre is one of `F_D`, `F_P`, or `F_H`. Substituting a\nlawful fibre changes the selected interior and evidence class only; it does not\nchange graph topology, program membership, spine kinds, spine order, or spine\ncount. The GTL validator, HoG, and ABG preserve the declared fibre and never\nreclassify semantic `F_P` work as `F_D` from observed behavior. Replacing a\nprior `F_P` declaration with `F_D` is a declaration-version and annealing\ndecision governed by the tuner/equivalence requirements, not a local validator\ninference.\n"
+        }
+      ]
+    },
+    {
+      "key": "binding_contract_separation",
+      "applies_to_keys": [
+        "implementation_binding",
+        "compute_term"
+      ],
+      "statement": "Implementation matching includes program/role/fibre/arm. GTL validates C carrier continuity separately from each implementation matching its seam contract; generic transport carriers must not be equated to domain C carrier references. Public/admitted bindings confer no event emission, traversal selection, continuation, ledger or closure authority. ABG admits results and owns resulting runtime truth.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 110,
+          "end_line": 118,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-010 - Implementation matching.** A plugin or handler\nbinding shall match the enclosing program identity and selected stage role,\nfibre, and arm. C input/output carrier continuity is a GTL-validator\njudgment. Each implementation separately matches the published carrier\ncontract of its plugin or handler seam; a uniform engine-plugin transport\ncarrier is not falsely equated with the domain C carrier ref. Its public type\nand admitted carrier shall not provide event emission, traversal selection,\ncontinuation, ledger, or closure authority. ABG admits its result and owns all\nresulting runtime truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "no_compiled_execution_authority",
+      "applies_to_keys": [
+        "compute_term",
+        "implementation_binding"
+      ],
+      "statement": "The admitted GTL program, C declaration, GraphFunction templates and implementation bindings fully declare execution. Reject abg.hog_program, catalog/ref/ladder variants, generated handler-program declarations and equivalent compiled runtime programs as executable authority. Bindings identify only declared leaf seams; opaque extension data gains no conventional runtime meaning.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 120,
+          "end_line": 127,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-011 - No rival execution declaration.** The admitted\nGTL program, its C declaration, GraphFunction templates, and implementation\nbindings are the complete execution declaration. `abg.hog_program`,\n`abg.hog_program_catalog`, `abg.hog_program_ref`,\n`abg.hog_program_ladder`, generated handler-program declarations, or any\nequivalent compiled runtime program shall be rejected as executable authority.\nImplementation bindings may identify declared leaf seams only. Opaque\nextension data shall not acquire runtime meaning by convention.\n"
+        }
+      ]
+    },
+    {
+      "key": "native_type_maximum",
+      "applies_to_keys": [
+        "compute_term"
+      ],
+      "statement": "Use native static type/API capabilities to the full extent they can decide law, including discriminated unions, generic I/O, opaque/nominal admitted states, exhaustive matching, constructor-only creation and role/fibre/host-indexed bindings. Do not erase locally decidable types into strings or bags by deferring to the validator.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 129,
+          "end_line": 134,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-012 - Native-language maximum.** Each conforming build\ntenant shall use its native static type system and API patterns as far as they\ncan decide the law: discriminated unions, generic input/output relations,\nnominal or opaque admitted states, exhaustive matching, constructor-only\ncreation, and role/fibre/host-indexed bindings. The GTL validator shall not\nbe used as an excuse to erase locally decidable types into strings or bags.\n"
+        }
+      ]
+    },
+    {
+      "key": "canonical_admission_states",
+      "applies_to_keys": [
+        "compute_term"
+      ],
+      "statement": "Authored GTL is canonical pure data. Native callers use typed constructors; files, generated/package input and API payloads use raw admission with the same sort/relation judgments. Authored, admitted, validated and runtime states stay distinct. A deterministic native constructor is lawful only if serialization/raw readmission preserves exact value and digest; its loops, branches and strings gain no authority and cannot consult ambient/runtime truth.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 136,
+          "end_line": 145,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-013 - Canonical-data admission.** Authored GTL remains\ncanonical pure data. Untyped files, generated data, package input, and API\npayloads enter through raw admission that applies the same sort and relation\njudgments as the native typed API. Native callers use the published typed\nconstructors; serialized callers use raw admission. Authored, admitted,\nvalidated, and runtime values remain distinct states. A deterministic\nnative constructor is lawful only as a projection into that canonical data:\nserialization plus raw readmission must preserve the exact value and digest.\nIts loops, branching, and string construction do not become declaration\nauthority and may not consult ambient or runtime truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "semantic_gap_ownership",
+      "applies_to_keys": [
+        "compute_term",
+        "conformance_root"
+      ],
+      "statement": "The validator decides closed facts beyond local types: decoded data, root-reachable references, program/catalog membership, carriers, cardinality, constructor coverage and seam declaration completeness. Runtime admission decides environmental availability and probabilistic result facts. Lawful unrealized terms return semantic_not_realized; unresolved named references return invalid_program. Neither may silently lower to another term or compiled plan.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 147,
+          "end_line": 155,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-014 - Semantic gap ownership.** The GTL validator shall\ndecide closed facts that a local host type cannot: decoded input, references\nreachable from the submitted root, program and catalog membership, carrier\ncontinuity, result cardinality, constructor coverage, and implementation-seam\ndeclaration completeness. Runtime admission shall decide environment-specific\navailability and probabilistic result facts. A lawful term with no admitted\nrealization produces `semantic_not_realized`; an unresolved named reference\nproduces `invalid_program`; neither is silently lowered into another term or\ncompiled plan.\n"
+        }
+      ]
+    },
+    {
+      "key": "diagnostics_do_not_repair",
+      "applies_to_keys": [
+        "compute_term"
+      ],
+      "statement": "C conformance failures carry stable diagnostic identity, subject path, governing axiom/requirement references, evidence and admissible repair moves. Execution-declaration admission carries typed refusal prefix/reason before effects. Rich C diagnostics name expected/actual sort or relation; generic diagnostics may use stable rule, message, evidence and repair fields. Suggested constructors, surfaces, reference corrections or constitutional re-entry do not select, perform or authorize repair.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 157,
+          "end_line": 165,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-015 - LLM repair protocol.** C-algebra conformance\nfailures shall carry a stable diagnostic identity, subject path, governing\naxiom and requirement refs, evidence, and admissible repair moves. Direct\nexecution-declaration admission shall carry a stable typed refusal prefix and\nreason before effects. Rich C diagnostics name the expected and actual sort or\nrelation; generic declaration diagnostics may use their stable rule, message,\nevidence, and repair fields. Repair moves identify lawful constructors,\ndeclaration surfaces, reference corrections, or constitutional re-entry. They\ndo not select, perform, or authorize a repair.\n"
+        }
+      ]
+    },
+    {
+      "key": "validate_before_effect",
+      "applies_to_keys": [
+        "compute_term",
+        "stage_leaf"
+      ],
+      "statement": "Local type/admission failures and unresolved semantic gaps stop before worker/plugin calls, archive writes, traversal, successful assessment or closure. Diagnostic fail-closed events may report refusal and terminal stop. HoG traverses original admitted terms only and cannot parse new meaning, infer behavioral types or repair declarations. Preserve every stage, order, role, fibre, arm, carrier and result-bearing designation. HoG/ABG preparation, result admission, evidence binding and materialization may surround a stage only as subordinate transitions, never replace/reorder/rename/count as authored membership or a rival plan.",
+      "conditions": [],
+      "exceptions": [
+        "Diagnostic fail-closed events may report the refusal and terminal stop."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 167,
+          "end_line": 178,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-016 - Validate before effects.** A program with a local\ntype failure, admission failure, or unresolved semantic gap shall stop before\nworker/plugin invocation, archive writes, traversal, or successful assessment\nor closure truth. Diagnostic fail-closed events may report the typed refusal\nand terminal stop. HoG shall traverse only the original admitted GTL terms. It\nshall not parse new program meaning, infer types from observed behavior, or\nrepair declarations. Validation and traversal admission preserve every\nauthored C stage, its order, role, fibre, arm, carriers, and result-bearing\ndesignation. HoG- and ABG-owned call preparation, result admission, evidence\nbinding, and materialization are subordinate runtime transitions. They may\nsurround an authored stage but shall not form a rival runtime plan or replace,\nrename, reorder, or count as authored program membership.\n"
+        }
+      ]
+    },
+    {
+      "key": "conformance_corpus_obligation",
+      "applies_to_keys": [
+        "compute_term"
+      ],
+      "statement": "Pair positive/negative LLM-authored programs with exact expected diagnostics covering sort coercion, interfaces, role/fibre and implementation mismatch, illegal declaration hosts, duplicate authority, malformed serialized data, missing root-required declarations, inferred undeclared terms, every realized law and stable semantic_not_realized for lawful unrealized constructors.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 180,
+          "end_line": 187,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-017 - Conformance corpus.** The language conformance\ncorpus shall pair canonical positive and negative LLM-authored programs with\nexact expected diagnostic identities. It shall cover sort coercion, interface\nmismatch, role/fibre confusion, implementation mismatch, illegal declaration\nhost, duplicate authority, malformed serialized data, required declarations\nnamed by declared references but absent from the submitted root, inferred\nundeclared terms, every realized algebra law above, and stable\n`semantic_not_realized` results for lawful unrealized constructors.\n"
+        }
+      ]
+    },
+    {
+      "key": "probabilistic_output_admission",
+      "applies_to_keys": [
+        "implementation_binding"
+      ],
+      "statement": "F_P transform, runtime-failure and live-evaluator outputs remain data until ABG checks closed schemas, required identities/evidence references and cross-field invariants. Attached artifacts admit base envelopes and closed assessment rows; declared artifact schemas govern domain extensions. Malformed outputs are blocked/rejected, and incomplete/contradictory evaluation yields retry or blocked truth, never closure by omission. Raw diagnostics may remain. This is output validation, not hostile-process protection.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 189,
+          "end_line": 198,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-018 - F_P response admission.** The standard `F_P`\ntransform, runtime-failure, and live-evaluator responses used by this execution\nsurface are data until ABG admits their closed schemas, required identities and\nevidence references, and cross-field invariants. Attached result artifacts\nadmit their base envelope and closed assessment rows while domain extension\nsections remain governed by the selected declared artifact schema. Malformed\noutput produces a typed blocked or rejected result. Incomplete or contradictory\nevaluation output produces retry or blocked truth, never accepted closure by\nomission. Raw diagnostic evidence may be retained. This is model-output\nvalidation, not hostile-process tamper protection.\n"
+        }
+      ]
+    },
+    {
+      "key": "desktop_trust_boundary",
+      "applies_to_keys": [
+        "implementation_binding",
+        "compute_term"
+      ],
+      "statement": "The specified single-developer desktop model trusts in-process native code and values returned by published typed constructors; it does not demand protection against hostile process code, reflection, forged local objects, filesystem attackers or cryptographic substitution. Reject malformed authored GTL at the earliest capable type/raw/lint/validator boundary. F_P external data still requires result-schema and contradiction checks before accepted assessment/closure; raw observations/diagnostics and non-close retry truth may remain. This family owns matching to the seam; ABG plugin/result requirements own returned schemas.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FOperating%20Trust%20Boundary",
+          "start_line": 202,
+          "end_line": 216,
+          "quote": "The current product is a single-developer desktop tool. Native code running in\nthe process and values already returned by the published typed constructors are\ntrusted. This requirement does not require tamper-proofing against hostile\nin-process code, reflected private fields, forged local objects, filesystem\nattackers, or cryptographic artifact substitution.\n\nMalformed authored GTL is expected and shall be rejected by native type\nmatching, raw admission, lint/source guards, or GTL validation at the\nearliest boundary capable of deciding the fault. `F_P` output is probabilistic\nexternal data and remains subject to its published result-schema admission and\ncontradiction checks before ABG projects accepted assessment or closure truth.\nRaw observed/diagnostic evidence and non-close retry truth may be retained.\nThis requirement owns the declaration and implementation match leading to that\nseam; the applicable ABG plugin/result requirement owns the returned-output\nschema.\n"
+        }
+      ]
+    },
+    {
+      "key": "conformance_is_root_bounded",
+      "applies_to_keys": [
+        "conformance_root"
+      ],
+      "statement": "Check every declaration reachable from the admitted subjectRef root and report required missing rows relative to applicable inventory fields in its bound expected-coverage contract. Execution checks prove declared-reference completeness and membership; authoritative Product/install root and complete release manifest belong to separate release contracts.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FConformance%20Root",
+          "start_line": 220,
+          "end_line": 229,
+          "quote": "A conformance report is scoped to one admitted submitted root identified by\n`subjectRef`: its admitted module, program, graph-function, and catalog rows, plus its\ndeclared expected-coverage contract. The GTL validator checks every declaration\nreachable from that root and reports required rows missing relative to that\nbound coverage contract where the contract carries an applicable inventory\nfield. For execution declarations, the validator proves declared-reference\ncompleteness and internal membership; the current coverage carrier does not\nexpress a total expected execution-declaration inventory. Product/install\nbinding selects the authoritative root and complete release manifest. Those\nare separate release contracts.\n"
+        }
+      ]
+    },
+    {
+      "key": "canonical_algebra_equations",
+      "applies_to_keys": [
+        "compute_term"
+      ],
+      "statement": "For all well-typed terms with agreeing named boundaries and effects: C.id is left/right identity, C.compose is associative, workflow.C preserves the reference-declared A,B, retry preserves its argument contract, batch distributes pointwise over equal-length ordered families, and fibre substitution preserves spine shape. Equality means admitted identity plus normalized canonical semantic data, never host object identity. Child GraphFunction equality requires an admitted outer-contract relation; workflow.C cannot synthesize one.",
+      "conditions": [
+        "Terms are well typed and named boundaries and effects agree.",
+        "Child wire-contract equality requires its admitted language-data relation."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FAlgebra%20Laws",
+          "start_line": 233,
+          "end_line": 250,
+          "quote": "For all well-typed terms where the named boundaries and effects agree:\n\n```text\nC.compose(C.id, c) == c\nC.compose(c, C.id) == c\nC.compose(C.compose(a, b), c) == C.compose(a, C.compose(b, c))\nworkflow.C(GraphFunctionRef<A,B>) preserves the ref's declared A,B contract\nC.retry(c, n) preserves the contract of c\nC.batch distributes pointwise over C.compose for equal-length ordered task families\nfibre substitution preserves C-call spine shape\n```\n\nEquality is canonical semantic equality under admitted identity and normalized\ndeclaration data, not host object identity.\n\nThe `workflow.C` law does not synthesize a missing wire-level outer-contract\nidentity. A build may certify equality to the child GraphFunction contract only\nwhen that relation is present as admitted language data.\n"
+        }
+      ]
+    },
+    {
+      "key": "nonconformance_conditions",
+      "applies_to_keys": [
+        "compute_term",
+        "conformance_root"
+      ],
+      "statement": "A toolchain is nonconforming if it relies on prose to prevent a type/validator-decidable category error, permits root-required module/catalog/coverage declarations to be absent, lets a runner interpret unregistered declarations, or permits invalid effects before diagnostics.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FNon-Conformance",
+          "start_line": 254,
+          "end_line": 259,
+          "quote": "A toolchain is non-conforming when it relies on prose prompting to prevent a\ncategory error that the native type system or GTL validator could reject;\nwhen a bound submitted root can omit a declaration required by its own module,\ncatalog, or expected-coverage truth; when a runner interprets an unregistered\ndeclaration; or when an invalid program can produce effects before its\ndiagnostic is emitted.\n"
+        }
+      ]
+    },
+    {
+      "key": "graph_composition_semantics",
+      "applies_to_keys": [
+        "graph_function_composition"
+      ],
+      "statement": "Composition is associative, has an interface-preserving left/right identity and stays replayable with structure/truth reconstructible from declarations and runtime truth. Deterministically propagate/merge visible effects, tags and structured declarations; fail closed on conflicting structured values instead of inventing semantics.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPOSE.md#REQ-L-GTL3-COMPOSE%20%E2%80%94%20Lawful%20Composition%2FAcceptance%20Criteria",
+          "start_line": 18,
+          "end_line": 26,
+          "quote": "**REQ-L-GTL3-COMPOSE-002**: Composition shall be associative as a semantic law.\n\n**REQ-L-GTL3-COMPOSE-003**: An identity graph function shall exist that preserves the interface under left and right composition.\n\n**REQ-L-GTL3-COMPOSE-004**: Composed graph functions shall remain replayable. Composition structure and resulting truth shall be reconstructable from declarations plus runtime truth.\n\n**REQ-L-GTL3-COMPOSE-005**: Composition shall propagate and deterministically merge composition-visible metadata such as `effects`, `tags`, and structured declarations.\n\n**REQ-L-GTL3-COMPOSE-006**: Structured declaration merge shall fail closed on conflicting values rather than silently inventing composition semantics.\n"
+        }
+      ]
+    },
+    {
+      "key": "composition_environment_conservation",
+      "applies_to_keys": [
+        "graph_function_composition"
+      ],
+      "statement": "Preserve cumulative carried environment immutably. Upstream bindings remain available unless the composition explicitly narrows the contract. Fail closed for missing downstream requirements, structural mismatch or conflicting carried outputs; never silently overwrite prior environment truth.",
+      "conditions": [],
+      "exceptions": [
+        "Explicit contract narrowing may reduce available carried bindings."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPOSE.md#REQ-L-GTL3-COMPOSE%20%E2%80%94%20Lawful%20Composition%2FAcceptance%20Criteria",
+          "start_line": 28,
+          "end_line": 32,
+          "quote": "**REQ-L-GTL3-COMPOSE-007**: Composition shall preserve cumulative environment truth immutably. Upstream carried bindings remain available to downstream functions unless composition explicitly narrows the contract.\n\n**REQ-L-GTL3-COMPOSE-008**: Composition shall fail closed when downstream required bindings are absent from the carried environment or structurally mismatch the available carried contracts.\n\n**REQ-L-GTL3-COMPOSE-009**: Composition shall fail closed on conflicting carried output bindings rather than silently overwriting prior environment truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "explicit_type_wiring",
+      "applies_to_keys": [
+        "graph_function_composition"
+      ],
+      "statement": "Distinguish port identity from type contract. Exact name-and-contract composition remains lawful but is not exclusive when explicit wiring is declared. Differently named endpoints compose only when declared GTL type law proves the provided type satisfies the required type. Unknown references, weakened obligations or ambiguous wiring fail closed; similar names/tags/schema strings/prose prove no equivalence.",
+      "conditions": [
+        "Differently named endpoints need explicit wiring and declared type-law satisfaction."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPOSE.md#REQ-L-GTL3-COMPOSE%20%E2%80%94%20Lawful%20Composition%2FAcceptance%20Criteria",
+          "start_line": 34,
+          "end_line": 46,
+          "quote": "**REQ-L-GTL3-COMPOSE-010**: Composition shall distinguish endpoint port\nidentity from endpoint type contract. Exact name-and-contract composition\nshall remain lawful, but it shall not be the only lawful form once explicit\ntype wiring is declared.\n\n**REQ-L-GTL3-COMPOSE-011**: Type-sensitive composition shall permit\ndifferently named endpoints to compose only when the provided endpoint type\nsatisfies the required endpoint type through declared GTL type law.\n\n**REQ-L-GTL3-COMPOSE-012**: Type-sensitive composition shall fail closed when\ntype refs are unknown, composed type obligations are weakened, or explicit\nwiring is ambiguous. It shall not infer semantic equivalence from similar\nnames, tags, schema strings, or prompt prose.\n"
+        }
+      ]
+    },
+    {
+      "key": "epistemic_order",
+      "applies_to_keys": [
+        "compute_notation"
+      ],
+      "statement": "The declared flow is A -> transform.C -> candidate/evidence references -> evaluate.C -> finding references -> ABG admission -> ABG event/ledger/assurance/traversal projections -> consequence.C -> Product read-model interpretation -> B or lawful continuation. Candidate and finding production is not admission.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FEpistemic%20Boundary",
+          "start_line": 72,
+          "end_line": 88,
+          "quote": "The stable epistemic flow is:\n\n```text\nA\n  -> transform.C\n  -> candidate/evidence refs\n  -> evaluate.C\n  -> evaluation finding refs\n  -> ABG admission\n  -> ABG events, ledgers, assurance projection, traversal projection\n  -> consequence.C\n  -> product read-model interpretation\n  -> B or lawful continuation\n```\n\n`C` is selected composition notation: the selected `abg.fn_composition`\ncontract identity for the owning boundary.\n"
+        }
+      ]
+    }
+  ],
+  "latitude": [],
+  "residuals": [
+    {
+      "key": "execution_inventory_limit",
+      "subject_key": "conformance_root",
+      "uncertainty": "The current coverage carrier does not express a total expected execution-declaration inventory.",
+      "consequence": "Root/reference checks alone cannot establish complete release execution coverage; authoritative Product/install manifest binding remains separate.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FConformance%20Root",
+          "start_line": 225,
+          "end_line": 229,
+          "quote": "field. For execution declarations, the validator proves declared-reference\ncompleteness and internal membership; the current coverage carrier does not\nexpress a total expected execution-declaration inventory. Product/install\nbinding selects the authoritative root and complete release manifest. Those\nare separate release contracts.\n"
+        }
+      ]
+    },
+    {
+      "key": "child_contract_identity_dependency",
+      "subject_key": "named_workflow_lift",
+      "uncertainty": "An admitted reference may resolve without a supplied admitted identity equating its carrier pair to the child published wire contract.",
+      "consequence": "Withhold that equality and preserve the lift contract rather than infer it.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+          "start_line": 73,
+          "end_line": 82,
+          "quote": "**REQ-L-GTL3-C-ALGEBRA-006 - Named workflow lift.**\n`workflow.C(GraphFunctionRef<A,B>) -> C<A,B>` is the only constructor that\nmakes an admitted graph-function traversal one transparent C at its parent\nlevel. The typed `GraphFunctionRef` binds the admitted graph function and the\ndeclared C input/output carriers; the lift preserves that `A,B` pair. Raw\nvalidation proves that the named graph function resolves. Equality between\nthose carrier refs and a child's published wire contract requires an admitted\nouter-contract identity and shall not be inferred when that identity is absent.\nThe lift yields `sub_traversal` evidence. Anonymous nesting never creates a\nframe or monad boundary.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FAlgebra%20Laws",
+          "start_line": 248,
+          "end_line": 250,
+          "quote": "The `workflow.C` law does not synthesize a missing wire-level outer-contract\nidentity. A build may certify equality to the child GraphFunction contract only\nwhen that relation is present as admitted language data.\n"
+        }
+      ]
+    },
+    {
+      "key": "external_result_schema",
+      "subject_key": "probabilistic_output_admission",
+      "uncertainty": "The complete returned-output schema belongs to applicable ABG plugin/result and selected artifact-schema requirements outside this supplied section.",
+      "consequence": "The admission obligation is retained without inventing result fields or executing schema admission.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FOperating%20Trust%20Boundary",
+          "start_line": 208,
+          "end_line": 216,
+          "quote": "Malformed authored GTL is expected and shall be rejected by native type\nmatching, raw admission, lint/source guards, or GTL validation at the\nearliest boundary capable of deciding the fault. `F_P` output is probabilistic\nexternal data and remains subject to its published result-schema admission and\ncontradiction checks before ABG projects accepted assessment or closure truth.\nRaw observed/diagnostic evidence and non-close retry truth may be retained.\nThis requirement owns the declaration and implementation match leading to that\nseam; the applicable ABG plugin/result requirement owns the returned-output\nschema.\n"
+        }
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPOSE.md#REQ-L-GTL3-COMPOSE%20%E2%80%94%20Lawful%20Composition",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header title/status/date/category and derivation links are metadata only here; referenced authorities are not imported or treated as the current method."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header title/status/date/category and derivation links are metadata only here; referenced authorities are not imported or treated as the current method."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FRequirements",
+      "decision": "residual",
+      "keys": [
+        "compute_term",
+        "stage_leaf",
+        "implementation_binding",
+        "implementation_realizes_leaf",
+        "closed_generators_and_leaf_authority",
+        "compute_identity_limits",
+        "flat_typed_compute_composition",
+        "edge_record_roles",
+        "named_workflow_lift",
+        "batch_identity_cardinality",
+        "retry_contract_boundary",
+        "role_fibre_separation",
+        "binding_contract_separation",
+        "no_compiled_execution_authority",
+        "native_type_maximum",
+        "canonical_admission_states",
+        "semantic_gap_ownership",
+        "diagnostics_do_not_repair",
+        "validate_before_effect",
+        "conformance_corpus_obligation",
+        "probabilistic_output_admission",
+        "child_contract_identity_dependency"
+      ],
+      "reason": "Preserves material laws and refusal distinctions with explicit unresolved wire-identity, result-schema or inventory limits."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FOperating%20Trust%20Boundary",
+      "decision": "residual",
+      "keys": [
+        "desktop_trust_boundary",
+        "external_result_schema"
+      ],
+      "reason": "Preserves material laws and refusal distinctions with explicit unresolved wire-identity, result-schema or inventory limits."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FConformance%20Root",
+      "decision": "residual",
+      "keys": [
+        "conformance_root",
+        "conformance_is_root_bounded",
+        "execution_inventory_limit"
+      ],
+      "reason": "Preserves material laws and refusal distinctions with explicit unresolved wire-identity, result-schema or inventory limits."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FAlgebra%20Laws",
+      "decision": "residual",
+      "keys": [
+        "canonical_algebra_equations",
+        "child_contract_identity_dependency"
+      ],
+      "reason": "Preserves material laws and refusal distinctions with explicit unresolved wire-identity, result-schema or inventory limits."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FNon-Conformance",
+      "decision": "retained",
+      "keys": [
+        "nonconformance_conditions"
+      ],
+      "reason": "Retains the substantive rule, identity, authority partition or flow in source-grounded records."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPOSE.md#REQ-L-GTL3-COMPOSE%20%E2%80%94%20Lawful%20Composition%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "graph_function_composition"
+      ],
+      "reason": "Retains the substantive rule, identity, authority partition or flow in source-grounded records."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPOSE.md#REQ-L-GTL3-COMPOSE%20%E2%80%94%20Lawful%20Composition%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "graph_function_composition",
+        "graph_composition_semantics",
+        "composition_environment_conservation",
+        "explicit_type_wiring"
+      ],
+      "reason": "Retains the substantive rule, identity, authority partition or flow in source-grounded records."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "compute_notation",
+        "notation_over_ontology"
+      ],
+      "reason": "Retains the substantive rule, identity, authority partition or flow in source-grounded records."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FScope",
+      "decision": "retained",
+      "keys": [
+        "compute_notation"
+      ],
+      "reason": "Retains the substantive rule, identity, authority partition or flow in source-grounded records."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FOntology%20Boundary",
+      "decision": "retained",
+      "keys": [
+        "ontology_partition",
+        "notation_over_ontology"
+      ],
+      "reason": "Retains the substantive rule, identity, authority partition or flow in source-grounded records."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FEpistemic%20Boundary",
+      "decision": "retained",
+      "keys": [
+        "compute_notation",
+        "epistemic_order"
+      ],
+      "reason": "Retains the substantive rule, identity, authority partition or flow in source-grounded records."
+    }
+  ],
+  "limitations": [
+    "Equational laws and runtime transitions are represented as propositions only; no operational family is instantiated or proved.",
+    "The submitted-root coverage contract explicitly lacks a total expected execution inventory.",
+    "Full external result schemas and admitted wire-contract identity relations must be re-entered; cross-chunk labels are not merged.",
+    "Header status/date and historical derivation links were deliberately omitted as authority claims."
+  ]
+}

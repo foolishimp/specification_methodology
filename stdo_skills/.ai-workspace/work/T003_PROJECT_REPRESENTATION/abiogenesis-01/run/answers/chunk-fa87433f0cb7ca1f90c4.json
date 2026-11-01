@@ -1,0 +1,726 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "Owning runtime maintains foldStep(S,newlyCommittedEvents) over L++newlyCommittedEvents; derived state is discardable and reproducible from the one admitted history, not independent authority.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 847,
+            "quote": "### Live State, Recovery And Valid Reuse\n\n```text\nL_next = L ++ newlyCommittedEvents\nS_next = foldStep(S, newlyCommittedEvents)\nrecover(P, L, referencedEvidence) == committedRuntimeState(S)\n```\n\nThe owning live runtime maintains this incremental projection. Ordinary internal\nhandoffs use its established state; they do not reconstruct or reauthenticate\nthe accumulated history merely\nbecause control crosses a function or role boundary. Cold acquisition,\nrecovery, requested historical reads and actual invalidation retain their\nnecessary reconstruction. Derived state is discardable and reproducible from\nthe one admitted history; it is never an independent authority. Recovery does\nnot establish that historical observations still describe the current `W`.\n\nRecovery restores the actual continuation position, current inputs, admitted\ncompleted work and unresolved obligations. If a producer succeeds and its\nconsumer cannot start, the result remains available at the consumer boundary\nwith its existing assessment status. Recovery neither reruns valid completed\nwork solely to recreate that boundary nor invents the missing assessment.\nReplacement Runs preserve causal linkage without transplanting Run identity,\ncontinuation aggregates, actor provenance or historical execution facts.\n\n```text\nreusable(a) = admitted(a)\n              AND dependenciesRemainValid(a)\n              AND applicableToCurrentUse(a)\n```\n\nOwners consume established facts with their exact subject, basis, scope,\nprovenance and invalidation conditions. Reuse preserves each owner's complete\nadmission responsibility and any independently required judgment. Changed\ndependencies invalidate the affected relations; unknown affectedness remains\nexplicit. Changed subjects, authority or evidence bases require their applicable\nchecks before reliance or effect. Internal call boundaries alone create no new\nsemantic proof obligation.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FLive%20State%2C%20Recovery%20And%20Valid%20Reuse",
+            "start_line": 810
+          }
+        ],
+        "key": "live_projection",
+        "label": "Live incremental state"
+      },
+      {
+        "conditions": [],
+        "definition": "Reconstructs the actual continuation position, current inputs, admitted completed work and unresolved obligations from exact Program/history/referenced evidence.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 847,
+            "quote": "### Live State, Recovery And Valid Reuse\n\n```text\nL_next = L ++ newlyCommittedEvents\nS_next = foldStep(S, newlyCommittedEvents)\nrecover(P, L, referencedEvidence) == committedRuntimeState(S)\n```\n\nThe owning live runtime maintains this incremental projection. Ordinary internal\nhandoffs use its established state; they do not reconstruct or reauthenticate\nthe accumulated history merely\nbecause control crosses a function or role boundary. Cold acquisition,\nrecovery, requested historical reads and actual invalidation retain their\nnecessary reconstruction. Derived state is discardable and reproducible from\nthe one admitted history; it is never an independent authority. Recovery does\nnot establish that historical observations still describe the current `W`.\n\nRecovery restores the actual continuation position, current inputs, admitted\ncompleted work and unresolved obligations. If a producer succeeds and its\nconsumer cannot start, the result remains available at the consumer boundary\nwith its existing assessment status. Recovery neither reruns valid completed\nwork solely to recreate that boundary nor invents the missing assessment.\nReplacement Runs preserve causal linkage without transplanting Run identity,\ncontinuation aggregates, actor provenance or historical execution facts.\n\n```text\nreusable(a) = admitted(a)\n              AND dependenciesRemainValid(a)\n              AND applicableToCurrentUse(a)\n```\n\nOwners consume established facts with their exact subject, basis, scope,\nprovenance and invalidation conditions. Reuse preserves each owner's complete\nadmission responsibility and any independently required judgment. Changed\ndependencies invalidate the affected relations; unknown affectedness remains\nexplicit. Changed subjects, authority or evidence bases require their applicable\nchecks before reliance or effect. Internal call boundaries alone create no new\nsemantic proof obligation.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FLive%20State%2C%20Recovery%20And%20Valid%20Reuse",
+            "start_line": 810
+          }
+        ],
+        "key": "recovery",
+        "label": "Recovery"
+      },
+      {
+        "conditions": [],
+        "definition": "An asset is reusable exactly when admitted, dependencies remain valid, and applicable to current use; subject, basis, scope, provenance and invalidation conditions remain bound.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 847,
+            "quote": "### Live State, Recovery And Valid Reuse\n\n```text\nL_next = L ++ newlyCommittedEvents\nS_next = foldStep(S, newlyCommittedEvents)\nrecover(P, L, referencedEvidence) == committedRuntimeState(S)\n```\n\nThe owning live runtime maintains this incremental projection. Ordinary internal\nhandoffs use its established state; they do not reconstruct or reauthenticate\nthe accumulated history merely\nbecause control crosses a function or role boundary. Cold acquisition,\nrecovery, requested historical reads and actual invalidation retain their\nnecessary reconstruction. Derived state is discardable and reproducible from\nthe one admitted history; it is never an independent authority. Recovery does\nnot establish that historical observations still describe the current `W`.\n\nRecovery restores the actual continuation position, current inputs, admitted\ncompleted work and unresolved obligations. If a producer succeeds and its\nconsumer cannot start, the result remains available at the consumer boundary\nwith its existing assessment status. Recovery neither reruns valid completed\nwork solely to recreate that boundary nor invents the missing assessment.\nReplacement Runs preserve causal linkage without transplanting Run identity,\ncontinuation aggregates, actor provenance or historical execution facts.\n\n```text\nreusable(a) = admitted(a)\n              AND dependenciesRemainValid(a)\n              AND applicableToCurrentUse(a)\n```\n\nOwners consume established facts with their exact subject, basis, scope,\nprovenance and invalidation conditions. Reuse preserves each owner's complete\nadmission responsibility and any independently required judgment. Changed\ndependencies invalidate the affected relations; unknown affectedness remains\nexplicit. Changed subjects, authority or evidence bases require their applicable\nchecks before reliance or effect. Internal call boundaries alone create no new\nsemantic proof obligation.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FLive%20State%2C%20Recovery%20And%20Valid%20Reuse",
+            "start_line": 810
+          }
+        ],
+        "key": "reusable_asset",
+        "label": "Reusable admitted asset"
+      },
+      {
+        "conditions": [],
+        "definition": "complete(T,S) is the task-declared completion predicate over admitted evidence; validResponse, satisfiedStage and completedTask are distinct.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 897,
+            "quote": "### Outcome And Computational Proportionality\n\n```text\ncomplete(T, S) = declaredCompletionCondition_T(admittedEvidence(S))\nvalidResponse != satisfiedStage != completedTask\ncost(T) = initialization + sum(selection + rendering + execution\n          + admission + persistence) + recovery\n```\n\nCompletion requires the selected outcome and its declared evidence and\njudgments. A terminal transport response, successful parse or local fixture\ndoes not substitute for that condition. The framework governs the worker's\ninput, output, effects and evidence boundary; its internal solution strategy\ndoes not acquire a framework lifecycle.\n\nFramework work is attributable to the rules, relevant data extent and effects\nbeing processed. Ordinary handoff cost does not grow with unrelated history\nwithout a named governing dependency. A necessary whole-history operation\nidentifies that dependency and its extent. No universal time limit, read\nmultiplier, token quota or per-operation benchmark is introduced by this law.\n\nQualification follows the actual declared composition: progressing values\ndiffer from graph entry, producer results survive consumer-preparation failure,\nlive and cold projections agree at the same committed boundary, role/context\nqualifications survive sharing, and unknown physical state stays unknown.\nFixtures preserve these relations; a newly invented basis or substituted\nproducer cannot qualify the real handoff. These are obligations within the\nexisting S02/S03/S06 and qualification scopes, not a new feature family or a\nclaim that current realization has passed.\n\nThe graph/frame calculus is constitutional execution law. Verification of a\nclaimed framed execution establishes the correspondence from the selected\nframe and observation basis to the context actually supplied, declared evaluator\nand compute regime, candidate result, ABG admission, and actual graph/effect\nconsequence, including child foldback and remaining obligations. Declaration\npresence, frame labels, schema validity and application output alone do not\nestablish that correspondence. Mechanical conformance and semantic adequacy\nremain separate claims. Changed constitutional relations reopen only dependent\nqualification claims; previous evidence is reused where its exact subject and\nobservations establish the required relation. This uses the existing evidence\nand execution owners, without requiring an extra auditor call or full-history\nscan at each handoff. [QUAL-072](requirements/product/REQ-P-QUAL.md#constitutional-execution-conformance)\nowns the derived execution-verification requirement.\n\nThe detailed acceptance owners are\n[C-call](requirements/abg/REQ-R-ABG3-CCALL.md),\n[instruction assembly](requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md),\n[projection](requirements/abg/REQ-R-ABG3-PROJECTION.md) and\n[continuation](requirements/abg/REQ-R-ABG3-CONTINUATION.md).",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FOutcome%20And%20Computational%20Proportionality",
+            "start_line": 849
+          }
+        ],
+        "key": "task_completion",
+        "label": "Declared task completion"
+      },
+      {
+        "conditions": [],
+        "definition": "Initialization plus selection/rendering/execution/admission/persistence over calls plus recovery; cost follows relevant rules/data extent/effects, not unrelated history.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 897,
+            "quote": "### Outcome And Computational Proportionality\n\n```text\ncomplete(T, S) = declaredCompletionCondition_T(admittedEvidence(S))\nvalidResponse != satisfiedStage != completedTask\ncost(T) = initialization + sum(selection + rendering + execution\n          + admission + persistence) + recovery\n```\n\nCompletion requires the selected outcome and its declared evidence and\njudgments. A terminal transport response, successful parse or local fixture\ndoes not substitute for that condition. The framework governs the worker's\ninput, output, effects and evidence boundary; its internal solution strategy\ndoes not acquire a framework lifecycle.\n\nFramework work is attributable to the rules, relevant data extent and effects\nbeing processed. Ordinary handoff cost does not grow with unrelated history\nwithout a named governing dependency. A necessary whole-history operation\nidentifies that dependency and its extent. No universal time limit, read\nmultiplier, token quota or per-operation benchmark is introduced by this law.\n\nQualification follows the actual declared composition: progressing values\ndiffer from graph entry, producer results survive consumer-preparation failure,\nlive and cold projections agree at the same committed boundary, role/context\nqualifications survive sharing, and unknown physical state stays unknown.\nFixtures preserve these relations; a newly invented basis or substituted\nproducer cannot qualify the real handoff. These are obligations within the\nexisting S02/S03/S06 and qualification scopes, not a new feature family or a\nclaim that current realization has passed.\n\nThe graph/frame calculus is constitutional execution law. Verification of a\nclaimed framed execution establishes the correspondence from the selected\nframe and observation basis to the context actually supplied, declared evaluator\nand compute regime, candidate result, ABG admission, and actual graph/effect\nconsequence, including child foldback and remaining obligations. Declaration\npresence, frame labels, schema validity and application output alone do not\nestablish that correspondence. Mechanical conformance and semantic adequacy\nremain separate claims. Changed constitutional relations reopen only dependent\nqualification claims; previous evidence is reused where its exact subject and\nobservations establish the required relation. This uses the existing evidence\nand execution owners, without requiring an extra auditor call or full-history\nscan at each handoff. [QUAL-072](requirements/product/REQ-P-QUAL.md#constitutional-execution-conformance)\nowns the derived execution-verification requirement.\n\nThe detailed acceptance owners are\n[C-call](requirements/abg/REQ-R-ABG3-CCALL.md),\n[instruction assembly](requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md),\n[projection](requirements/abg/REQ-R-ABG3-PROJECTION.md) and\n[continuation](requirements/abg/REQ-R-ABG3-CONTINUATION.md).",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FOutcome%20And%20Computational%20Proportionality",
+            "start_line": 849
+          }
+        ],
+        "key": "task_cost",
+        "label": "Attributed computational cost"
+      },
+      {
+        "conditions": [],
+        "definition": "Immutable source-independent trusted-desktop Product containing GTL constructors/types, raw admission/validator, HoG/ABG, standard module/catalog, public schemas/contracts, SDK/thin CLI, conformance/installed scenarios, identity/dependency/compatibility/provenance manifests and exact-byte qualification/release evidence.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 926,
+            "quote": "## Installed Product And Catalog\n\nABIogenesis 5.0 is an immutable, source-independent product for a trusted\ndeveloper desktop. A consumer can install and use it from exact release\nartifacts without importing the mutable source tree.\n\nThe installed product includes:\n\n- GTL.TypeScript types and constructors;\n- raw admission and GTL validation;\n- HoG and ABG runtime libraries;\n- the standard module and catalog;\n- public contracts and schemas;\n- a typed SDK and thin CLI;\n- conformance and installed-product scenarios;\n- product identity, dependency, compatibility, and provenance manifests; and\n- qualification and release evidence for the exact bytes.\n\nThe catalog publishes exact modules, programs, GraphFunctions, non-callable\ntypes and overlays, implementation bindings, schemas, versions, compatibility,\nand provenance. Catalog presence grants discoverability, not execution\nauthority. Invocation binds one installed product set, workspace, admitted\nprogram, catalog view, callable or start, input, context, implementation,\ncapability set, and ABG execution basis.\n\nOnly GraphFunction is a named callable library function. A program may be\nstarted at a declared entry. Types, nodes, vectors, and overlays may be\ninspected and composed but are not callable.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FInstalled%20Product%20And%20Catalog",
+            "start_line": 899
+          }
+        ],
+        "key": "installed_product",
+        "label": "Installed ABIogenesis"
+      },
+      {
+        "conditions": [],
+        "definition": "Publishes exact modules, Programs, GraphFunctions, noncallable types/overlays, implementation bindings, schemas, versions, compatibility and provenance; discovery is not invocation authority.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 926,
+            "quote": "## Installed Product And Catalog\n\nABIogenesis 5.0 is an immutable, source-independent product for a trusted\ndeveloper desktop. A consumer can install and use it from exact release\nartifacts without importing the mutable source tree.\n\nThe installed product includes:\n\n- GTL.TypeScript types and constructors;\n- raw admission and GTL validation;\n- HoG and ABG runtime libraries;\n- the standard module and catalog;\n- public contracts and schemas;\n- a typed SDK and thin CLI;\n- conformance and installed-product scenarios;\n- product identity, dependency, compatibility, and provenance manifests; and\n- qualification and release evidence for the exact bytes.\n\nThe catalog publishes exact modules, programs, GraphFunctions, non-callable\ntypes and overlays, implementation bindings, schemas, versions, compatibility,\nand provenance. Catalog presence grants discoverability, not execution\nauthority. Invocation binds one installed product set, workspace, admitted\nprogram, catalog view, callable or start, input, context, implementation,\ncapability set, and ABG execution basis.\n\nOnly GraphFunction is a named callable library function. A program may be\nstarted at a declared entry. Types, nodes, vectors, and overlays may be\ninspected and composed but are not callable.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FInstalled%20Product%20And%20Catalog",
+            "start_line": 899
+          }
+        ],
+        "key": "catalog",
+        "label": "Installed catalog"
+      },
+      {
+        "conditions": [],
+        "definition": "Reusable GTL environment/Context data explicitly adopted by a Program; Run binds exact released STDO source, required native material, role frames/instruction-policy references and permitted acquisition/evidence.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 991,
+            "quote": "## STDO-Governed Run Environment\n\nABIogenesis publishes a reusable STDO environment template as GTL-declared\nenvironment and Context data. An STDO-governed Program explicitly adopts the\ntemplate; its Run binds the exact released STDO source basis, required native\nsource material, role-specific frame and instruction-policy refs, and the\npermitted means and evidence of acquiring that material. A supplementary\nrepresentation, index or corpus-access implementation is required only when\nthe environment explicitly selects it. Each selected supplement binds its exact\nreleased identity, source relationship, access contract and required evidence.\nRelease identities are immutable and content-bound. An ambient installation,\nmutable version selector, available tool or prompt-only instruction supplies no\nRun binding.\n\nSource development and STDO-governed ABI runs consume the external released\nSTDO through their separately declared exact bindings. The source project's\nDefinition selects its development basis and composition; a Program's declared\nenvironment selects its runtime dependencies and access. Neither selection\nimplicitly supplies the other. In development, the LLM applies the framework\nand directs the work. In the ABI Product, the declared framework governs LLM\nexecution. Development's use of STDO or a supplementary tool does not establish\nthe Product's runtime capability, and ABI does not redefine or implement a\ncompeting STDO.\n\nGTL owns the environment declaration and required corpus-access relations.\nABG validates and admits the exact bindings and required access/context evidence\nthrough existing owners before dependent work. Required native material and\nevery explicitly selected supplementary dependency remain mandatory: missing,\nambiguous, mismatched, inaccessible or unpermitted inputs produce a typed\nrefusal or block before dependent dispatch. Exact native-source access does not\nrequire an unselected representation or index, but it still requires the\ndeclared content, permissions and access evidence. A selected `a_c` or other\ncorpus-access tool supplies only its declared access or structural computation;\nit does not replace source authority, apply open-world meaning, choose work,\nconfer authority or accept results. LLM interpretation and evaluation remain\ndistinct from mechanical binding and evidence checks. A successful retrieval\nproves access, not correct application of its contents. Valid access evidence is\nreusable within its declared basis and scope.\n\nHoG retains its existing linear Worker -> Evaluator -> Consequence workflow.\nEach step consumes its declared frame, policy and relevant current workspace\nobservations through the same instruction-assembly and admission path. The\ntemplate adds no role hierarchy, frame interpreter, controller or execution\nloop. The Run's governing basis remains explicit while ordinary worksite edits\nproduce successor observations. A material environment change requires its\ndeclared re-entry; it does not silently upgrade a running basis.\n\nRole instructions and context policy are tunable as declared, identified data.\nEach invocation preserves the policy and supplied context that produced its\nresult. Tuning does not change authority, requirements or acceptance conditions\nimplicitly. Current observations and affectedness govern reuse: authored work\nawaiting assessment remains available without being represented as accepted,\nand only invalidated support loses its prior claim. Local Consequence selects\ndeclared progress, correction, re-entry or truthful block without requiring\nunaffected work to be recreated.\n\nThis template realizes existing F02/F04/F07/F10/F17 obligations. General GTL and\nABG remain independent of STDO-specific interpretation. The selected Executive\noverlay follows the governance calculus and release allocation; autonomous\nupstream re-entry and native human-response resumption retain their 5.1 boundaries.\nThe V3 source adoption and this declared destination do not migrate a prior\nRun, accept a changed implementation or qualify an installed candidate.\nHistorical Runs and evidence retain their exact original bases; a changed\nruntime environment requires its declared re-entry and affected proof.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSTDO-Governed%20Run%20Environment",
+            "start_line": 928
+          }
+        ],
+        "key": "stdo_environment",
+        "label": "STDO-governed environment template"
+      },
+      {
+        "conditions": [],
+        "definition": "Representation/index/corpus-access implementation required only if the environment explicitly selects its exact released identity, source relationship, access contract and evidence.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 991,
+            "quote": "## STDO-Governed Run Environment\n\nABIogenesis publishes a reusable STDO environment template as GTL-declared\nenvironment and Context data. An STDO-governed Program explicitly adopts the\ntemplate; its Run binds the exact released STDO source basis, required native\nsource material, role-specific frame and instruction-policy refs, and the\npermitted means and evidence of acquiring that material. A supplementary\nrepresentation, index or corpus-access implementation is required only when\nthe environment explicitly selects it. Each selected supplement binds its exact\nreleased identity, source relationship, access contract and required evidence.\nRelease identities are immutable and content-bound. An ambient installation,\nmutable version selector, available tool or prompt-only instruction supplies no\nRun binding.\n\nSource development and STDO-governed ABI runs consume the external released\nSTDO through their separately declared exact bindings. The source project's\nDefinition selects its development basis and composition; a Program's declared\nenvironment selects its runtime dependencies and access. Neither selection\nimplicitly supplies the other. In development, the LLM applies the framework\nand directs the work. In the ABI Product, the declared framework governs LLM\nexecution. Development's use of STDO or a supplementary tool does not establish\nthe Product's runtime capability, and ABI does not redefine or implement a\ncompeting STDO.\n\nGTL owns the environment declaration and required corpus-access relations.\nABG validates and admits the exact bindings and required access/context evidence\nthrough existing owners before dependent work. Required native material and\nevery explicitly selected supplementary dependency remain mandatory: missing,\nambiguous, mismatched, inaccessible or unpermitted inputs produce a typed\nrefusal or block before dependent dispatch. Exact native-source access does not\nrequire an unselected representation or index, but it still requires the\ndeclared content, permissions and access evidence. A selected `a_c` or other\ncorpus-access tool supplies only its declared access or structural computation;\nit does not replace source authority, apply open-world meaning, choose work,\nconfer authority or accept results. LLM interpretation and evaluation remain\ndistinct from mechanical binding and evidence checks. A successful retrieval\nproves access, not correct application of its contents. Valid access evidence is\nreusable within its declared basis and scope.\n\nHoG retains its existing linear Worker -> Evaluator -> Consequence workflow.\nEach step consumes its declared frame, policy and relevant current workspace\nobservations through the same instruction-assembly and admission path. The\ntemplate adds no role hierarchy, frame interpreter, controller or execution\nloop. The Run's governing basis remains explicit while ordinary worksite edits\nproduce successor observations. A material environment change requires its\ndeclared re-entry; it does not silently upgrade a running basis.\n\nRole instructions and context policy are tunable as declared, identified data.\nEach invocation preserves the policy and supplied context that produced its\nresult. Tuning does not change authority, requirements or acceptance conditions\nimplicitly. Current observations and affectedness govern reuse: authored work\nawaiting assessment remains available without being represented as accepted,\nand only invalidated support loses its prior claim. Local Consequence selects\ndeclared progress, correction, re-entry or truthful block without requiring\nunaffected work to be recreated.\n\nThis template realizes existing F02/F04/F07/F10/F17 obligations. General GTL and\nABG remain independent of STDO-specific interpretation. The selected Executive\noverlay follows the governance calculus and release allocation; autonomous\nupstream re-entry and native human-response resumption retain their 5.1 boundaries.\nThe V3 source adoption and this declared destination do not migrate a prior\nRun, accept a changed implementation or qualify an installed candidate.\nHistorical Runs and evidence retain their exact original bases; a changed\nruntime environment requires its declared re-entry and affected proof.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSTDO-Governed%20Run%20Environment",
+            "start_line": 928
+          }
+        ],
+        "key": "supplementary_representation",
+        "label": "Optional selected corpus supplement"
+      },
+      {
+        "conditions": [],
+        "definition": "Typed projection of installed catalog and ABG, with a thin invocation shell over the same contracts.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1032,
+            "quote": "## SDK And CLI\n\nThe SDK is the typed programmatic projection of the installed catalog and ABG\nruntime. The CLI is a thin invocation shell over that same projection, analogous\nto a Python shell or Scala REPL over a loaded environment.\n\nThe user can:\n\n```text\ninspect installed products, modules, programs, functions, and contracts\nvalidate a GTL program\npublish or admit a lawful module\ncall a published GraphFunction\nstart a published GTL program\nread state, result, evidence, gaps, and replay\ninspect a typed human-required block and its handoff\ncontinue admitted work under existing specification, constraints and authority\nrun conformance and installed-product proof\n```\n\nThe public surface derives from one typed contract and catalog authority. Exact\noperation names, schemas, and capability projections are frozen for the release,\nbut their count does not define the engine or create separate semantic owners.\nOperation and exact-definition inventories are release-scoped projections of\nthis joined evaluator. Reserved human-response definitions do not become 5.0\ncapabilities merely because a schema or historical binding exists.\n\nThe SDK and CLI may parse, type, transport, ignite, and render. They may not:\n\n- compile or lower GTL;\n- choose hidden topology, vectors, C stages, or defaults;\n- resolve implementations outside admitted catalog authority;\n- invoke workers directly;\n- construct execution bases, events, retries, or continuations;\n- order One Surface; or\n- decide closure.\n\nOne bounded Codex projection may delegate to the same public contract. It owns\nno copied program, traversal, event, continuation, or product behavior. Native\noperation must not depend on Codex, Claude, or another marketplace host.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSDK%20And%20CLI",
+            "start_line": 993
+          }
+        ],
+        "key": "sdk_cli",
+        "label": "SDK and CLI"
+      },
+      {
+        "conditions": [],
+        "definition": "Product capabilities exercise the same public GTL/catalog/HoG/ABG path as downstream consumers to prove the general engine.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1037,
+            "quote": "## Standard GTL Product Constructions\n\n5.0 publishes product capabilities that prove the general engine by using the\nsame public GTL, catalog, HoG, and ABG path as downstream consumers.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions",
+            "start_line": 1034
+          }
+        ],
+        "key": "standard_constructions",
+        "label": "Standard GTL constructions"
+      },
+      {
+        "conditions": [],
+        "definition": "Standard system composes exactly four semantic authorities: synthesizeModel -> evalGap -> evaluateNext -> evaluateAction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1051,
+            "quote": "### System And One Surface\n\nThe standard system program composes exactly four semantic authorities:\n\n```text\nsynthesizeModel -> evalGap -> evaluateNext -> evaluateAction\n```\n\nIntent admission, GraphFunction invocation, evidence admission, and\ncontinuation are distinct ABG boundaries between and around those authorities;\nthey are not additional semantic authorities. The public SDK and CLI start or\ncontinue the program; they do not implement its loop. In 5.0, a required human\nresponse yields a truthful blocked handoff; native response/resume is 5.1.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FSystem%20And%20One%20Surface",
+            "start_line": 1039
+          }
+        ],
+        "key": "system_program",
+        "label": "System and One Surface"
+      },
+      {
+        "conditions": [],
+        "definition": "Bounded standard-library GraphFunction through ordinary GTL composition, demonstrating attributed parallel work/fan-out/fan-in/disagreement/bounded retry or recursion/mechanical validation/probabilistic evaluation/human escalation/typed results/replay.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1064,
+            "quote": "### Consensus\n\nDedicated Consensus qualification is reserved for 5.1. Existing ordinary\nGraphFunctions remain reusable; their presence does not claim S05 acceptance.\n\nConsensus is a bounded standard-library GraphFunction expressed through\nordinary GTL composition. It demonstrates attributed parallel work, fan-out,\nfan-in, disagreement, bounded retry or recursion, mechanical validation,\nprobabilistic evaluation, human escalation, typed results, and replay.\n\nConsensus has no special runner, scheduler, CLI command, event family, ticket\nmutation authority, or closure path.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FConsensus",
+            "start_line": 1053
+          }
+        ],
+        "key": "consensus",
+        "label": "Consensus"
+      },
+      {
+        "conditions": [],
+        "definition": "Planned 5.1 higher-order Product over immutable 5.0 execution/events/replay/catalog/Public substrate; attributed diagnostics or declaration-change proposals remain drafts.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1083,
+            "quote": "### Planned 5.1 Observer And Tuner\n\nThe observer and tuner read ABG replay truth and produce attributed diagnostic\nor change proposals. Their outputs remain drafts. Ratification or rejection\ncrosses the ordinary policy or `F_H` boundary; neither capability mutates\nspecification, configuration, or tickets directly.\n\nThis separate observer/tuner Product has the applicability defined in\n[Release Boundaries](#50-and-51-release-boundaries). Observer findings,\nConsequence proposals and tuner declaration drafts retain separate judgment\nand admission boundaries; tuning does not become runtime control. Ordinary\nExecutive/auditor graph composition follows the selected governance calculus\nwithout requiring this dedicated Product or its public surfaces.\n\nThis higher-order Product is reserved for ABIogenesis 5.1. It is not part of\nthe 5.0 feature, scenario, qualification, or release predicate. ABIogenesis\n5.0 supplies the immutable execution, event, replay, catalog, and public\nsubstrate over which the later 5.1 Product may be designed and qualified.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FPlanned%205.1%20Observer%20And%20Tuner",
+            "start_line": 1066
+          }
+        ],
+        "key": "observer_tuner",
+        "label": "Separate observer/tuner Product"
+      },
+      {
+        "conditions": [],
+        "definition": "Ordinary GTL recursion, child calls, HoG child frames, admitted foldback, parent re-evaluation and ABG continuation; not a separate runtime/controller/feature family.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1090,
+            "quote": "### Recursive Programs\n\nRecursive LLM work is an ordinary application of GTL recursion, child\nGraphFunction calls, HoG child frames, admitted result foldback, parent\nre-evaluation, and ABG continuation. It is not a separate runtime, controller,\nor product feature family.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FRecursive%20Programs",
+            "start_line": 1085
+          }
+        ],
+        "key": "recursive_program",
+        "label": "Recursive LLM Program"
+      },
+      {
+        "conditions": [],
+        "definition": "Publishes explicitly selected replaceable recursive Executive overlay and induction/specification/design/testing/UAT GraphFunctions through the same module/catalog path as users.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1110,
+            "quote": "### Default Governance And Lifecycle Library\n\nThe default library publishes a recursive Executive overlay and reusable\nGraphFunctions for induction, specification, design, testing and UAT through\nthe same module/catalog path as user declarations. They are explicitly selected,\nreplaceable compositions. Induction establishes the task model, governing\ncontext, assumptions and unknowns. Construction uses the declared coding-worker\ncapability. Applicable work, depth and repetition follow framed evaluation and\npolicy; the library imposes no unconditional lifecycle or mandatory hierarchy\nof Executive, auditor and strategic roles.\n\nGovernance preserves the original task, required outcomes and authority while\nselecting or revising the choice of preregistered graph work in response to\ncurrent evidence. Selection uses the declared purposes and contracts under\n[Framed Evaluation And Graph Consequence](#framed-evaluation-and-graph-consequence).\nThe declaration supplies the selection reason and its criteria; best fit is a\nwarranted judgment, not a global optimum. Domain instructions and scenario oracles belong to their\ndeclaring sources. Native coding agents retain their own work loop inside their\ndeclared invocation; the library does not reproduce that loop in another engine.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FDefault%20Governance%20And%20Lifecycle%20Library",
+            "start_line": 1092
+          }
+        ],
+        "key": "default_library",
+        "label": "Default governance and lifecycle library"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "live_projection",
+          "recovery",
+          "reusable_asset"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 847,
+            "quote": "### Live State, Recovery And Valid Reuse\n\n```text\nL_next = L ++ newlyCommittedEvents\nS_next = foldStep(S, newlyCommittedEvents)\nrecover(P, L, referencedEvidence) == committedRuntimeState(S)\n```\n\nThe owning live runtime maintains this incremental projection. Ordinary internal\nhandoffs use its established state; they do not reconstruct or reauthenticate\nthe accumulated history merely\nbecause control crosses a function or role boundary. Cold acquisition,\nrecovery, requested historical reads and actual invalidation retain their\nnecessary reconstruction. Derived state is discardable and reproducible from\nthe one admitted history; it is never an independent authority. Recovery does\nnot establish that historical observations still describe the current `W`.\n\nRecovery restores the actual continuation position, current inputs, admitted\ncompleted work and unresolved obligations. If a producer succeeds and its\nconsumer cannot start, the result remains available at the consumer boundary\nwith its existing assessment status. Recovery neither reruns valid completed\nwork solely to recreate that boundary nor invents the missing assessment.\nReplacement Runs preserve causal linkage without transplanting Run identity,\ncontinuation aggregates, actor provenance or historical execution facts.\n\n```text\nreusable(a) = admitted(a)\n              AND dependenciesRemainValid(a)\n              AND applicableToCurrentUse(a)\n```\n\nOwners consume established facts with their exact subject, basis, scope,\nprovenance and invalidation conditions. Reuse preserves each owner's complete\nadmission responsibility and any independently required judgment. Changed\ndependencies invalidate the affected relations; unknown affectedness remains\nexplicit. Changed subjects, authority or evidence bases require their applicable\nchecks before reliance or effect. Internal call boundaries alone create no new\nsemantic proof obligation.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FLive%20State%2C%20Recovery%20And%20Valid%20Reuse",
+            "start_line": 810
+          }
+        ],
+        "key": "incremental_and_recovery_law",
+        "statement": "Ordinary internal function/role handoffs consume established live state without reauthenticating/reconstructing accumulated history merely for the crossing. Cold acquisition, recovery, requested historical reads and actual invalidation retain required reconstruction. Recovery does not make historical observations current physical-workspace truth. A successful producer result survives consumer-preparation failure with existing assessment status, without replaying valid completed work or inventing assessment. Replacement Runs preserve causal links without transplanting Run identity, continuation aggregates, actors or historical facts. Reuse preserves complete owner admission duties and required independent judgment; changed dependencies invalidate affected relations, unknown affectedness remains explicit, and changed subject/authority/evidence needs applicable checks before reliance/effects. An internal call boundary alone creates no new semantic proof obligation.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "task_completion",
+          "task_cost"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 897,
+            "quote": "### Outcome And Computational Proportionality\n\n```text\ncomplete(T, S) = declaredCompletionCondition_T(admittedEvidence(S))\nvalidResponse != satisfiedStage != completedTask\ncost(T) = initialization + sum(selection + rendering + execution\n          + admission + persistence) + recovery\n```\n\nCompletion requires the selected outcome and its declared evidence and\njudgments. A terminal transport response, successful parse or local fixture\ndoes not substitute for that condition. The framework governs the worker's\ninput, output, effects and evidence boundary; its internal solution strategy\ndoes not acquire a framework lifecycle.\n\nFramework work is attributable to the rules, relevant data extent and effects\nbeing processed. Ordinary handoff cost does not grow with unrelated history\nwithout a named governing dependency. A necessary whole-history operation\nidentifies that dependency and its extent. No universal time limit, read\nmultiplier, token quota or per-operation benchmark is introduced by this law.\n\nQualification follows the actual declared composition: progressing values\ndiffer from graph entry, producer results survive consumer-preparation failure,\nlive and cold projections agree at the same committed boundary, role/context\nqualifications survive sharing, and unknown physical state stays unknown.\nFixtures preserve these relations; a newly invented basis or substituted\nproducer cannot qualify the real handoff. These are obligations within the\nexisting S02/S03/S06 and qualification scopes, not a new feature family or a\nclaim that current realization has passed.\n\nThe graph/frame calculus is constitutional execution law. Verification of a\nclaimed framed execution establishes the correspondence from the selected\nframe and observation basis to the context actually supplied, declared evaluator\nand compute regime, candidate result, ABG admission, and actual graph/effect\nconsequence, including child foldback and remaining obligations. Declaration\npresence, frame labels, schema validity and application output alone do not\nestablish that correspondence. Mechanical conformance and semantic adequacy\nremain separate claims. Changed constitutional relations reopen only dependent\nqualification claims; previous evidence is reused where its exact subject and\nobservations establish the required relation. This uses the existing evidence\nand execution owners, without requiring an extra auditor call or full-history\nscan at each handoff. [QUAL-072](requirements/product/REQ-P-QUAL.md#constitutional-execution-conformance)\nowns the derived execution-verification requirement.\n\nThe detailed acceptance owners are\n[C-call](requirements/abg/REQ-R-ABG3-CCALL.md),\n[instruction assembly](requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md),\n[projection](requirements/abg/REQ-R-ABG3-PROJECTION.md) and\n[continuation](requirements/abg/REQ-R-ABG3-CONTINUATION.md).",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FOutcome%20And%20Computational%20Proportionality",
+            "start_line": 849
+          }
+        ],
+        "key": "outcome_and_cost_law",
+        "statement": "Completion requires selected outcome/evidence/judgment, not terminal transport, successful parse or local fixture. Framework governs input/output/effects/evidence boundaries, not another lifecycle for the worker internal strategy. Whole-history operations need a named governing dependency and extent; ordinary handoff cost must not grow with unrelated history. No universal time/read/token/per-operation quota is introduced.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "task_completion"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 897,
+            "quote": "### Outcome And Computational Proportionality\n\n```text\ncomplete(T, S) = declaredCompletionCondition_T(admittedEvidence(S))\nvalidResponse != satisfiedStage != completedTask\ncost(T) = initialization + sum(selection + rendering + execution\n          + admission + persistence) + recovery\n```\n\nCompletion requires the selected outcome and its declared evidence and\njudgments. A terminal transport response, successful parse or local fixture\ndoes not substitute for that condition. The framework governs the worker's\ninput, output, effects and evidence boundary; its internal solution strategy\ndoes not acquire a framework lifecycle.\n\nFramework work is attributable to the rules, relevant data extent and effects\nbeing processed. Ordinary handoff cost does not grow with unrelated history\nwithout a named governing dependency. A necessary whole-history operation\nidentifies that dependency and its extent. No universal time limit, read\nmultiplier, token quota or per-operation benchmark is introduced by this law.\n\nQualification follows the actual declared composition: progressing values\ndiffer from graph entry, producer results survive consumer-preparation failure,\nlive and cold projections agree at the same committed boundary, role/context\nqualifications survive sharing, and unknown physical state stays unknown.\nFixtures preserve these relations; a newly invented basis or substituted\nproducer cannot qualify the real handoff. These are obligations within the\nexisting S02/S03/S06 and qualification scopes, not a new feature family or a\nclaim that current realization has passed.\n\nThe graph/frame calculus is constitutional execution law. Verification of a\nclaimed framed execution establishes the correspondence from the selected\nframe and observation basis to the context actually supplied, declared evaluator\nand compute regime, candidate result, ABG admission, and actual graph/effect\nconsequence, including child foldback and remaining obligations. Declaration\npresence, frame labels, schema validity and application output alone do not\nestablish that correspondence. Mechanical conformance and semantic adequacy\nremain separate claims. Changed constitutional relations reopen only dependent\nqualification claims; previous evidence is reused where its exact subject and\nobservations establish the required relation. This uses the existing evidence\nand execution owners, without requiring an extra auditor call or full-history\nscan at each handoff. [QUAL-072](requirements/product/REQ-P-QUAL.md#constitutional-execution-conformance)\nowns the derived execution-verification requirement.\n\nThe detailed acceptance owners are\n[C-call](requirements/abg/REQ-R-ABG3-CCALL.md),\n[instruction assembly](requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md),\n[projection](requirements/abg/REQ-R-ABG3-PROJECTION.md) and\n[continuation](requirements/abg/REQ-R-ABG3-CONTINUATION.md).",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FOutcome%20And%20Computational%20Proportionality",
+            "start_line": 849
+          }
+        ],
+        "key": "actual_composition_qualification",
+        "statement": "Qualification within existing S02/S03/S06/QUAL follows progressing inputs distinct from entry, producer survival of failed consumer preparation, equal live/cold projections at same committed boundary, preserved role/context qualifications and unknown physical state. A substituted producer or invented basis cannot qualify the real handoff. Claimed framed execution needs correspondence from selected frame/observations through supplied context, evaluator/regime, candidate, ABG admission and actual graph/effect consequence including foldback/remaining obligations. Labels/declarations/schema/output alone do not establish this. Mechanical conformance and semantic adequacy differ; reopen dependent claims only and reuse applicable exact evidence. No extra auditor or whole-history scan at every handoff is required; QUAL-072 owns the derived requirement.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "installed_product",
+          "catalog"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 926,
+            "quote": "## Installed Product And Catalog\n\nABIogenesis 5.0 is an immutable, source-independent product for a trusted\ndeveloper desktop. A consumer can install and use it from exact release\nartifacts without importing the mutable source tree.\n\nThe installed product includes:\n\n- GTL.TypeScript types and constructors;\n- raw admission and GTL validation;\n- HoG and ABG runtime libraries;\n- the standard module and catalog;\n- public contracts and schemas;\n- a typed SDK and thin CLI;\n- conformance and installed-product scenarios;\n- product identity, dependency, compatibility, and provenance manifests; and\n- qualification and release evidence for the exact bytes.\n\nThe catalog publishes exact modules, programs, GraphFunctions, non-callable\ntypes and overlays, implementation bindings, schemas, versions, compatibility,\nand provenance. Catalog presence grants discoverability, not execution\nauthority. Invocation binds one installed product set, workspace, admitted\nprogram, catalog view, callable or start, input, context, implementation,\ncapability set, and ABG execution basis.\n\nOnly GraphFunction is a named callable library function. A program may be\nstarted at a declared entry. Types, nodes, vectors, and overlays may be\ninspected and composed but are not callable.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FInstalled%20Product%20And%20Catalog",
+            "start_line": 899
+          }
+        ],
+        "key": "installed_invocation_binding",
+        "statement": "Consumer uses exact release artifacts without mutable source. Invocation binds installed Product set, workspace, admitted Program, catalog view, callable/start, input/context, implementation/capabilities and ABG basis. Only GraphFunction is a named callable; Programs start at declared entries; types/nodes/vectors/overlays are inspectable/composable but noncallable.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "stdo_environment"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 991,
+            "quote": "## STDO-Governed Run Environment\n\nABIogenesis publishes a reusable STDO environment template as GTL-declared\nenvironment and Context data. An STDO-governed Program explicitly adopts the\ntemplate; its Run binds the exact released STDO source basis, required native\nsource material, role-specific frame and instruction-policy refs, and the\npermitted means and evidence of acquiring that material. A supplementary\nrepresentation, index or corpus-access implementation is required only when\nthe environment explicitly selects it. Each selected supplement binds its exact\nreleased identity, source relationship, access contract and required evidence.\nRelease identities are immutable and content-bound. An ambient installation,\nmutable version selector, available tool or prompt-only instruction supplies no\nRun binding.\n\nSource development and STDO-governed ABI runs consume the external released\nSTDO through their separately declared exact bindings. The source project's\nDefinition selects its development basis and composition; a Program's declared\nenvironment selects its runtime dependencies and access. Neither selection\nimplicitly supplies the other. In development, the LLM applies the framework\nand directs the work. In the ABI Product, the declared framework governs LLM\nexecution. Development's use of STDO or a supplementary tool does not establish\nthe Product's runtime capability, and ABI does not redefine or implement a\ncompeting STDO.\n\nGTL owns the environment declaration and required corpus-access relations.\nABG validates and admits the exact bindings and required access/context evidence\nthrough existing owners before dependent work. Required native material and\nevery explicitly selected supplementary dependency remain mandatory: missing,\nambiguous, mismatched, inaccessible or unpermitted inputs produce a typed\nrefusal or block before dependent dispatch. Exact native-source access does not\nrequire an unselected representation or index, but it still requires the\ndeclared content, permissions and access evidence. A selected `a_c` or other\ncorpus-access tool supplies only its declared access or structural computation;\nit does not replace source authority, apply open-world meaning, choose work,\nconfer authority or accept results. LLM interpretation and evaluation remain\ndistinct from mechanical binding and evidence checks. A successful retrieval\nproves access, not correct application of its contents. Valid access evidence is\nreusable within its declared basis and scope.\n\nHoG retains its existing linear Worker -> Evaluator -> Consequence workflow.\nEach step consumes its declared frame, policy and relevant current workspace\nobservations through the same instruction-assembly and admission path. The\ntemplate adds no role hierarchy, frame interpreter, controller or execution\nloop. The Run's governing basis remains explicit while ordinary worksite edits\nproduce successor observations. A material environment change requires its\ndeclared re-entry; it does not silently upgrade a running basis.\n\nRole instructions and context policy are tunable as declared, identified data.\nEach invocation preserves the policy and supplied context that produced its\nresult. Tuning does not change authority, requirements or acceptance conditions\nimplicitly. Current observations and affectedness govern reuse: authored work\nawaiting assessment remains available without being represented as accepted,\nand only invalidated support loses its prior claim. Local Consequence selects\ndeclared progress, correction, re-entry or truthful block without requiring\nunaffected work to be recreated.\n\nThis template realizes existing F02/F04/F07/F10/F17 obligations. General GTL and\nABG remain independent of STDO-specific interpretation. The selected Executive\noverlay follows the governance calculus and release allocation; autonomous\nupstream re-entry and native human-response resumption retain their 5.1 boundaries.\nThe V3 source adoption and this declared destination do not migrate a prior\nRun, accept a changed implementation or qualify an installed candidate.\nHistorical Runs and evidence retain their exact original bases; a changed\nruntime environment requires its declared re-entry and affected proof.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSTDO-Governed%20Run%20Environment",
+            "start_line": 928
+          }
+        ],
+        "key": "development_runtime_binding_separation",
+        "statement": "Source Definition development basis/composition and Program runtime environment dependencies/access are separate exact bindings; neither supplies the other. Development LLM use does not establish runtime capability or create a rival STDO. Ambient installs, mutable selectors, tools and prompt-only text grant no Run binding. Historical Runs retain original bases; adoption does not migrate Runs, accept changed code or qualify candidates. Material environment change needs declared re-entry and affected proof.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "stdo_environment",
+          "supplementary_representation"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 991,
+            "quote": "## STDO-Governed Run Environment\n\nABIogenesis publishes a reusable STDO environment template as GTL-declared\nenvironment and Context data. An STDO-governed Program explicitly adopts the\ntemplate; its Run binds the exact released STDO source basis, required native\nsource material, role-specific frame and instruction-policy refs, and the\npermitted means and evidence of acquiring that material. A supplementary\nrepresentation, index or corpus-access implementation is required only when\nthe environment explicitly selects it. Each selected supplement binds its exact\nreleased identity, source relationship, access contract and required evidence.\nRelease identities are immutable and content-bound. An ambient installation,\nmutable version selector, available tool or prompt-only instruction supplies no\nRun binding.\n\nSource development and STDO-governed ABI runs consume the external released\nSTDO through their separately declared exact bindings. The source project's\nDefinition selects its development basis and composition; a Program's declared\nenvironment selects its runtime dependencies and access. Neither selection\nimplicitly supplies the other. In development, the LLM applies the framework\nand directs the work. In the ABI Product, the declared framework governs LLM\nexecution. Development's use of STDO or a supplementary tool does not establish\nthe Product's runtime capability, and ABI does not redefine or implement a\ncompeting STDO.\n\nGTL owns the environment declaration and required corpus-access relations.\nABG validates and admits the exact bindings and required access/context evidence\nthrough existing owners before dependent work. Required native material and\nevery explicitly selected supplementary dependency remain mandatory: missing,\nambiguous, mismatched, inaccessible or unpermitted inputs produce a typed\nrefusal or block before dependent dispatch. Exact native-source access does not\nrequire an unselected representation or index, but it still requires the\ndeclared content, permissions and access evidence. A selected `a_c` or other\ncorpus-access tool supplies only its declared access or structural computation;\nit does not replace source authority, apply open-world meaning, choose work,\nconfer authority or accept results. LLM interpretation and evaluation remain\ndistinct from mechanical binding and evidence checks. A successful retrieval\nproves access, not correct application of its contents. Valid access evidence is\nreusable within its declared basis and scope.\n\nHoG retains its existing linear Worker -> Evaluator -> Consequence workflow.\nEach step consumes its declared frame, policy and relevant current workspace\nobservations through the same instruction-assembly and admission path. The\ntemplate adds no role hierarchy, frame interpreter, controller or execution\nloop. The Run's governing basis remains explicit while ordinary worksite edits\nproduce successor observations. A material environment change requires its\ndeclared re-entry; it does not silently upgrade a running basis.\n\nRole instructions and context policy are tunable as declared, identified data.\nEach invocation preserves the policy and supplied context that produced its\nresult. Tuning does not change authority, requirements or acceptance conditions\nimplicitly. Current observations and affectedness govern reuse: authored work\nawaiting assessment remains available without being represented as accepted,\nand only invalidated support loses its prior claim. Local Consequence selects\ndeclared progress, correction, re-entry or truthful block without requiring\nunaffected work to be recreated.\n\nThis template realizes existing F02/F04/F07/F10/F17 obligations. General GTL and\nABG remain independent of STDO-specific interpretation. The selected Executive\noverlay follows the governance calculus and release allocation; autonomous\nupstream re-entry and native human-response resumption retain their 5.1 boundaries.\nThe V3 source adoption and this declared destination do not migrate a prior\nRun, accept a changed implementation or qualify an installed candidate.\nHistorical Runs and evidence retain their exact original bases; a changed\nruntime environment requires its declared re-entry and affected proof.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSTDO-Governed%20Run%20Environment",
+            "start_line": 928
+          }
+        ],
+        "key": "environment_admission_access",
+        "statement": "GTL declares required access; existing ABG owners admit exact bindings and access/context evidence before dependent work. Native material and explicitly selected supplements remain mandatory. Missing/ambiguous/mismatched/inaccessible/unpermitted inputs cause typed refusal/block before dispatch. Native access needs declared content, permissions and evidence but no unselected supplement. An a_c/access tool supplies only declared access/structural computation, not source authority, semantic application, work selection, grants or acceptance. Retrieval proves access, not correct application; valid evidence may be reused within scope/basis.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "stdo_environment"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 991,
+            "quote": "## STDO-Governed Run Environment\n\nABIogenesis publishes a reusable STDO environment template as GTL-declared\nenvironment and Context data. An STDO-governed Program explicitly adopts the\ntemplate; its Run binds the exact released STDO source basis, required native\nsource material, role-specific frame and instruction-policy refs, and the\npermitted means and evidence of acquiring that material. A supplementary\nrepresentation, index or corpus-access implementation is required only when\nthe environment explicitly selects it. Each selected supplement binds its exact\nreleased identity, source relationship, access contract and required evidence.\nRelease identities are immutable and content-bound. An ambient installation,\nmutable version selector, available tool or prompt-only instruction supplies no\nRun binding.\n\nSource development and STDO-governed ABI runs consume the external released\nSTDO through their separately declared exact bindings. The source project's\nDefinition selects its development basis and composition; a Program's declared\nenvironment selects its runtime dependencies and access. Neither selection\nimplicitly supplies the other. In development, the LLM applies the framework\nand directs the work. In the ABI Product, the declared framework governs LLM\nexecution. Development's use of STDO or a supplementary tool does not establish\nthe Product's runtime capability, and ABI does not redefine or implement a\ncompeting STDO.\n\nGTL owns the environment declaration and required corpus-access relations.\nABG validates and admits the exact bindings and required access/context evidence\nthrough existing owners before dependent work. Required native material and\nevery explicitly selected supplementary dependency remain mandatory: missing,\nambiguous, mismatched, inaccessible or unpermitted inputs produce a typed\nrefusal or block before dependent dispatch. Exact native-source access does not\nrequire an unselected representation or index, but it still requires the\ndeclared content, permissions and access evidence. A selected `a_c` or other\ncorpus-access tool supplies only its declared access or structural computation;\nit does not replace source authority, apply open-world meaning, choose work,\nconfer authority or accept results. LLM interpretation and evaluation remain\ndistinct from mechanical binding and evidence checks. A successful retrieval\nproves access, not correct application of its contents. Valid access evidence is\nreusable within its declared basis and scope.\n\nHoG retains its existing linear Worker -> Evaluator -> Consequence workflow.\nEach step consumes its declared frame, policy and relevant current workspace\nobservations through the same instruction-assembly and admission path. The\ntemplate adds no role hierarchy, frame interpreter, controller or execution\nloop. The Run's governing basis remains explicit while ordinary worksite edits\nproduce successor observations. A material environment change requires its\ndeclared re-entry; it does not silently upgrade a running basis.\n\nRole instructions and context policy are tunable as declared, identified data.\nEach invocation preserves the policy and supplied context that produced its\nresult. Tuning does not change authority, requirements or acceptance conditions\nimplicitly. Current observations and affectedness govern reuse: authored work\nawaiting assessment remains available without being represented as accepted,\nand only invalidated support loses its prior claim. Local Consequence selects\ndeclared progress, correction, re-entry or truthful block without requiring\nunaffected work to be recreated.\n\nThis template realizes existing F02/F04/F07/F10/F17 obligations. General GTL and\nABG remain independent of STDO-specific interpretation. The selected Executive\noverlay follows the governance calculus and release allocation; autonomous\nupstream re-entry and native human-response resumption retain their 5.1 boundaries.\nThe V3 source adoption and this declared destination do not migrate a prior\nRun, accept a changed implementation or qualify an installed candidate.\nHistorical Runs and evidence retain their exact original bases; a changed\nruntime environment requires its declared re-entry and affected proof.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSTDO-Governed%20Run%20Environment",
+            "start_line": 928
+          }
+        ],
+        "key": "role_policy_and_context_currentness",
+        "statement": "HoG retains linear Worker->Evaluator->Consequence, each through common assembly/admission with declared frame, policy and relevant current observations; no new hierarchy/frame interpreter/controller/loop. Ordinary worksite edits produce successor observations under explicit basis. Tunable role/policy data is identified and each invocation retains its actual policy/context; tuning cannot silently alter authority, requirements or acceptance. Awaiting assessment is not accepted; only invalidated support loses prior claim. Consequence selects declared progress/correction/re-entry/block without recreating unaffected work. Existing F02/F04/F07/F10/F17 are realized; general GTL/ABG need no STDO interpretation; autonomous upstream re-entry and native human response retain 5.1 allocation.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "sdk_cli"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1032,
+            "quote": "## SDK And CLI\n\nThe SDK is the typed programmatic projection of the installed catalog and ABG\nruntime. The CLI is a thin invocation shell over that same projection, analogous\nto a Python shell or Scala REPL over a loaded environment.\n\nThe user can:\n\n```text\ninspect installed products, modules, programs, functions, and contracts\nvalidate a GTL program\npublish or admit a lawful module\ncall a published GraphFunction\nstart a published GTL program\nread state, result, evidence, gaps, and replay\ninspect a typed human-required block and its handoff\ncontinue admitted work under existing specification, constraints and authority\nrun conformance and installed-product proof\n```\n\nThe public surface derives from one typed contract and catalog authority. Exact\noperation names, schemas, and capability projections are frozen for the release,\nbut their count does not define the engine or create separate semantic owners.\nOperation and exact-definition inventories are release-scoped projections of\nthis joined evaluator. Reserved human-response definitions do not become 5.0\ncapabilities merely because a schema or historical binding exists.\n\nThe SDK and CLI may parse, type, transport, ignite, and render. They may not:\n\n- compile or lower GTL;\n- choose hidden topology, vectors, C stages, or defaults;\n- resolve implementations outside admitted catalog authority;\n- invoke workers directly;\n- construct execution bases, events, retries, or continuations;\n- order One Surface; or\n- decide closure.\n\nOne bounded Codex projection may delegate to the same public contract. It owns\nno copied program, traversal, event, continuation, or product behavior. Native\noperation must not depend on Codex, Claude, or another marketplace host.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSDK%20And%20CLI",
+            "start_line": 993
+          }
+        ],
+        "key": "public_inventory_not_semantics",
+        "statement": "One typed contract/catalog authority supplies release-frozen operation names/schemas/capability projections; operation count defines neither engine nor independent owners. Reserved human response definitions/schemas/historical bindings do not create 5.0 capability.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "system_program"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1051,
+            "quote": "### System And One Surface\n\nThe standard system program composes exactly four semantic authorities:\n\n```text\nsynthesizeModel -> evalGap -> evaluateNext -> evaluateAction\n```\n\nIntent admission, GraphFunction invocation, evidence admission, and\ncontinuation are distinct ABG boundaries between and around those authorities;\nthey are not additional semantic authorities. The public SDK and CLI start or\ncontinue the program; they do not implement its loop. In 5.0, a required human\nresponse yields a truthful blocked handoff; native response/resume is 5.1.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FSystem%20And%20One%20Surface",
+            "start_line": 1039
+          }
+        ],
+        "key": "system_authority_count",
+        "statement": "Intent admission, invocation, evidence admission and continuation are ABG boundaries between/around the four authorities, not extra semantic authorities. SDK/CLI starts/continues but does not implement the loop. Required human response yields a truthful blocked handoff in 5.0; native response/resume is 5.1.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "consensus"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1064,
+            "quote": "### Consensus\n\nDedicated Consensus qualification is reserved for 5.1. Existing ordinary\nGraphFunctions remain reusable; their presence does not claim S05 acceptance.\n\nConsensus is a bounded standard-library GraphFunction expressed through\nordinary GTL composition. It demonstrates attributed parallel work, fan-out,\nfan-in, disagreement, bounded retry or recursion, mechanical validation,\nprobabilistic evaluation, human escalation, typed results, and replay.\n\nConsensus has no special runner, scheduler, CLI command, event family, ticket\nmutation authority, or closure path.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FConsensus",
+            "start_line": 1053
+          }
+        ],
+        "key": "consensus_release_and_owner_boundary",
+        "statement": "Dedicated Consensus qualification is 5.1. Existing ordinary functions remain reusable without S05 acceptance. No special runner, scheduler, CLI command, event family, ticket-mutation authority or closure path is created.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "observer_tuner"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1083,
+            "quote": "### Planned 5.1 Observer And Tuner\n\nThe observer and tuner read ABG replay truth and produce attributed diagnostic\nor change proposals. Their outputs remain drafts. Ratification or rejection\ncrosses the ordinary policy or `F_H` boundary; neither capability mutates\nspecification, configuration, or tickets directly.\n\nThis separate observer/tuner Product has the applicability defined in\n[Release Boundaries](#50-and-51-release-boundaries). Observer findings,\nConsequence proposals and tuner declaration drafts retain separate judgment\nand admission boundaries; tuning does not become runtime control. Ordinary\nExecutive/auditor graph composition follows the selected governance calculus\nwithout requiring this dedicated Product or its public surfaces.\n\nThis higher-order Product is reserved for ABIogenesis 5.1. It is not part of\nthe 5.0 feature, scenario, qualification, or release predicate. ABIogenesis\n5.0 supplies the immutable execution, event, replay, catalog, and public\nsubstrate over which the later 5.1 Product may be designed and qualified.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FPlanned%205.1%20Observer%20And%20Tuner",
+            "start_line": 1066
+          }
+        ],
+        "key": "observer_tuner_draft_boundary",
+        "statement": "Ratification/rejection uses ordinary policy or F_H; neither directly mutates specification/configuration/tickets. Observer findings, Consequence proposals and tuner drafts have separate judgment/admission; tuning is not runtime control. Ordinary Executive/auditor composition needs no dedicated observer Product or Public surfaces. It is excluded from 5.0 feature/scenario/qualification/release predicates.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "default_library"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1110,
+            "quote": "### Default Governance And Lifecycle Library\n\nThe default library publishes a recursive Executive overlay and reusable\nGraphFunctions for induction, specification, design, testing and UAT through\nthe same module/catalog path as user declarations. They are explicitly selected,\nreplaceable compositions. Induction establishes the task model, governing\ncontext, assumptions and unknowns. Construction uses the declared coding-worker\ncapability. Applicable work, depth and repetition follow framed evaluation and\npolicy; the library imposes no unconditional lifecycle or mandatory hierarchy\nof Executive, auditor and strategic roles.\n\nGovernance preserves the original task, required outcomes and authority while\nselecting or revising the choice of preregistered graph work in response to\ncurrent evidence. Selection uses the declared purposes and contracts under\n[Framed Evaluation And Graph Consequence](#framed-evaluation-and-graph-consequence).\nThe declaration supplies the selection reason and its criteria; best fit is a\nwarranted judgment, not a global optimum. Domain instructions and scenario oracles belong to their\ndeclaring sources. Native coding agents retain their own work loop inside their\ndeclared invocation; the library does not reproduce that loop in another engine.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FDefault%20Governance%20And%20Lifecycle%20Library",
+            "start_line": 1092
+          }
+        ],
+        "key": "library_governed_selection",
+        "statement": "Induction establishes task, governing context, assumptions and unknowns; construction uses declared coding-worker capability. Framed evaluation/policy controls applicable work/depth/repetition, without unconditional lifecycle or mandatory Executive/auditor/strategic hierarchy. Preserve original task/outcomes/authority while revising preregistered work choices from current evidence, declared purpose/contracts, reason and criteria; best fit is warranted judgment, not global optimum. Domain instructions/oracles stay with their owners. Coding agents retain their own internal work loop, not a library-reimplemented engine.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "retained",
+        "keys": [
+          "live_projection",
+          "recovery",
+          "reusable_asset",
+          "incremental_and_recovery_law",
+          "reuse_requires_live_validity",
+          "recovery_restores_live_state"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FLive%20State%2C%20Recovery%20And%20Valid%20Reuse"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "task_completion",
+          "task_cost",
+          "outcome_and_cost_law",
+          "actual_composition_qualification"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FOutcome%20And%20Computational%20Proportionality"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "installed_product",
+          "catalog",
+          "installed_invocation_binding",
+          "sdk_projects_catalog"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FInstalled%20Product%20And%20Catalog"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "stdo_environment",
+          "supplementary_representation",
+          "development_runtime_binding_separation",
+          "environment_admission_access",
+          "role_policy_and_context_currentness",
+          "supplement_selected_by_environment"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSTDO-Governed%20Run%20Environment"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "sdk_cli",
+          "public_inventory_not_semantics",
+          "sdk_projects_catalog",
+          "public_surface_permissions"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSDK%20And%20CLI"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "standard_constructions",
+          "library_uses_standard_path"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "system_program",
+          "system_authority_count"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FSystem%20And%20One%20Surface"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "consensus",
+          "consensus_release_and_owner_boundary"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FConsensus"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "observer_tuner",
+          "observer_tuner_draft_boundary"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FPlanned%205.1%20Observer%20And%20Tuner"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "recursive_program"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FRecursive%20Programs"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "default_library",
+          "library_governed_selection",
+          "library_uses_standard_path"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FDefault%20Governance%20And%20Lifecycle%20Library"
+      }
+    ],
+    "latitude": [
+      {
+        "allowed": [
+          "Inspect Products/modules/Programs/functions/contracts; validate; publish/admit lawful module; call GraphFunction/start Program; read state/results/evidence/gaps/replay; inspect human block/handoff; continue admitted work under existing authority; run conformance/installed proof.",
+          "Parse, type, transport, ignite and render; one bounded Codex projection may delegate to the same public contract."
+        ],
+        "applies_to_keys": [
+          "sdk_cli"
+        ],
+        "forbidden": [
+          "Compile/lower GTL; choose hidden topology/vectors/C stages/defaults; resolve outside catalog authority; invoke workers directly; construct execution bases/events/retries/continuations; order One Surface; decide closure.",
+          "Copied Program/traversal/event/continuation/Product semantics or a native dependency on Codex, Claude or marketplace host."
+        ],
+        "grounding": [
+          {
+            "end_line": 1032,
+            "quote": "## SDK And CLI\n\nThe SDK is the typed programmatic projection of the installed catalog and ABG\nruntime. The CLI is a thin invocation shell over that same projection, analogous\nto a Python shell or Scala REPL over a loaded environment.\n\nThe user can:\n\n```text\ninspect installed products, modules, programs, functions, and contracts\nvalidate a GTL program\npublish or admit a lawful module\ncall a published GraphFunction\nstart a published GTL program\nread state, result, evidence, gaps, and replay\ninspect a typed human-required block and its handoff\ncontinue admitted work under existing specification, constraints and authority\nrun conformance and installed-product proof\n```\n\nThe public surface derives from one typed contract and catalog authority. Exact\noperation names, schemas, and capability projections are frozen for the release,\nbut their count does not define the engine or create separate semantic owners.\nOperation and exact-definition inventories are release-scoped projections of\nthis joined evaluator. Reserved human-response definitions do not become 5.0\ncapabilities merely because a schema or historical binding exists.\n\nThe SDK and CLI may parse, type, transport, ignite, and render. They may not:\n\n- compile or lower GTL;\n- choose hidden topology, vectors, C stages, or defaults;\n- resolve implementations outside admitted catalog authority;\n- invoke workers directly;\n- construct execution bases, events, retries, or continuations;\n- order One Surface; or\n- decide closure.\n\nOne bounded Codex projection may delegate to the same public contract. It owns\nno copied program, traversal, event, continuation, or product behavior. Native\noperation must not depend on Codex, Claude, or another marketplace host.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSDK%20And%20CLI",
+            "start_line": 993
+          }
+        ],
+        "key": "public_surface_permissions"
+      }
+    ],
+    "limitations": [
+      "No current implementation qualification is inferred from these constitutional destination statements.",
+      "Dedicated Consensus and observer/tuner allocation is retained exactly as Product states; other chunks may retain conflicting downstream wording for review.",
+      "Recovery equations are represented as constraints, not executed replay or a proof that historical observations remain current."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 847,
+            "quote": "### Live State, Recovery And Valid Reuse\n\n```text\nL_next = L ++ newlyCommittedEvents\nS_next = foldStep(S, newlyCommittedEvents)\nrecover(P, L, referencedEvidence) == committedRuntimeState(S)\n```\n\nThe owning live runtime maintains this incremental projection. Ordinary internal\nhandoffs use its established state; they do not reconstruct or reauthenticate\nthe accumulated history merely\nbecause control crosses a function or role boundary. Cold acquisition,\nrecovery, requested historical reads and actual invalidation retain their\nnecessary reconstruction. Derived state is discardable and reproducible from\nthe one admitted history; it is never an independent authority. Recovery does\nnot establish that historical observations still describe the current `W`.\n\nRecovery restores the actual continuation position, current inputs, admitted\ncompleted work and unresolved obligations. If a producer succeeds and its\nconsumer cannot start, the result remains available at the consumer boundary\nwith its existing assessment status. Recovery neither reruns valid completed\nwork solely to recreate that boundary nor invents the missing assessment.\nReplacement Runs preserve causal linkage without transplanting Run identity,\ncontinuation aggregates, actor provenance or historical execution facts.\n\n```text\nreusable(a) = admitted(a)\n              AND dependenciesRemainValid(a)\n              AND applicableToCurrentUse(a)\n```\n\nOwners consume established facts with their exact subject, basis, scope,\nprovenance and invalidation conditions. Reuse preserves each owner's complete\nadmission responsibility and any independently required judgment. Changed\ndependencies invalidate the affected relations; unknown affectedness remains\nexplicit. Changed subjects, authority or evidence bases require their applicable\nchecks before reliance or effect. Internal call boundaries alone create no new\nsemantic proof obligation.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FLive%20State%2C%20Recovery%20And%20Valid%20Reuse",
+            "start_line": 810
+          }
+        ],
+        "key": "reuse_requires_live_validity",
+        "kind": "requires",
+        "meaning": "Admission, current dependency validity and applicability jointly govern reuse under current derived state.",
+        "source_key": "reusable_asset",
+        "target_key": "live_projection"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": false,
+        "grounding": [
+          {
+            "end_line": 847,
+            "quote": "### Live State, Recovery And Valid Reuse\n\n```text\nL_next = L ++ newlyCommittedEvents\nS_next = foldStep(S, newlyCommittedEvents)\nrecover(P, L, referencedEvidence) == committedRuntimeState(S)\n```\n\nThe owning live runtime maintains this incremental projection. Ordinary internal\nhandoffs use its established state; they do not reconstruct or reauthenticate\nthe accumulated history merely\nbecause control crosses a function or role boundary. Cold acquisition,\nrecovery, requested historical reads and actual invalidation retain their\nnecessary reconstruction. Derived state is discardable and reproducible from\nthe one admitted history; it is never an independent authority. Recovery does\nnot establish that historical observations still describe the current `W`.\n\nRecovery restores the actual continuation position, current inputs, admitted\ncompleted work and unresolved obligations. If a producer succeeds and its\nconsumer cannot start, the result remains available at the consumer boundary\nwith its existing assessment status. Recovery neither reruns valid completed\nwork solely to recreate that boundary nor invents the missing assessment.\nReplacement Runs preserve causal linkage without transplanting Run identity,\ncontinuation aggregates, actor provenance or historical execution facts.\n\n```text\nreusable(a) = admitted(a)\n              AND dependenciesRemainValid(a)\n              AND applicableToCurrentUse(a)\n```\n\nOwners consume established facts with their exact subject, basis, scope,\nprovenance and invalidation conditions. Reuse preserves each owner's complete\nadmission responsibility and any independently required judgment. Changed\ndependencies invalidate the affected relations; unknown affectedness remains\nexplicit. Changed subjects, authority or evidence bases require their applicable\nchecks before reliance or effect. Internal call boundaries alone create no new\nsemantic proof obligation.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExecution%20And%20Context%20Calculus%2FLive%20State%2C%20Recovery%20And%20Valid%20Reuse",
+            "start_line": 810
+          }
+        ],
+        "key": "recovery_restores_live_state",
+        "kind": "reconstructs",
+        "meaning": "Reconstruction must agree with the committed runtime state while historical physical observations need separate currentness.",
+        "source_key": "recovery",
+        "target_key": "live_projection"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": false,
+        "grounding": [
+          {
+            "end_line": 926,
+            "quote": "## Installed Product And Catalog\n\nABIogenesis 5.0 is an immutable, source-independent product for a trusted\ndeveloper desktop. A consumer can install and use it from exact release\nartifacts without importing the mutable source tree.\n\nThe installed product includes:\n\n- GTL.TypeScript types and constructors;\n- raw admission and GTL validation;\n- HoG and ABG runtime libraries;\n- the standard module and catalog;\n- public contracts and schemas;\n- a typed SDK and thin CLI;\n- conformance and installed-product scenarios;\n- product identity, dependency, compatibility, and provenance manifests; and\n- qualification and release evidence for the exact bytes.\n\nThe catalog publishes exact modules, programs, GraphFunctions, non-callable\ntypes and overlays, implementation bindings, schemas, versions, compatibility,\nand provenance. Catalog presence grants discoverability, not execution\nauthority. Invocation binds one installed product set, workspace, admitted\nprogram, catalog view, callable or start, input, context, implementation,\ncapability set, and ABG execution basis.\n\nOnly GraphFunction is a named callable library function. A program may be\nstarted at a declared entry. Types, nodes, vectors, and overlays may be\ninspected and composed but are not callable.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FInstalled%20Product%20And%20Catalog",
+            "start_line": 899
+          },
+          {
+            "end_line": 1032,
+            "quote": "## SDK And CLI\n\nThe SDK is the typed programmatic projection of the installed catalog and ABG\nruntime. The CLI is a thin invocation shell over that same projection, analogous\nto a Python shell or Scala REPL over a loaded environment.\n\nThe user can:\n\n```text\ninspect installed products, modules, programs, functions, and contracts\nvalidate a GTL program\npublish or admit a lawful module\ncall a published GraphFunction\nstart a published GTL program\nread state, result, evidence, gaps, and replay\ninspect a typed human-required block and its handoff\ncontinue admitted work under existing specification, constraints and authority\nrun conformance and installed-product proof\n```\n\nThe public surface derives from one typed contract and catalog authority. Exact\noperation names, schemas, and capability projections are frozen for the release,\nbut their count does not define the engine or create separate semantic owners.\nOperation and exact-definition inventories are release-scoped projections of\nthis joined evaluator. Reserved human-response definitions do not become 5.0\ncapabilities merely because a schema or historical binding exists.\n\nThe SDK and CLI may parse, type, transport, ignite, and render. They may not:\n\n- compile or lower GTL;\n- choose hidden topology, vectors, C stages, or defaults;\n- resolve implementations outside admitted catalog authority;\n- invoke workers directly;\n- construct execution bases, events, retries, or continuations;\n- order One Surface; or\n- decide closure.\n\nOne bounded Codex projection may delegate to the same public contract. It owns\nno copied program, traversal, event, continuation, or product behavior. Native\noperation must not depend on Codex, Claude, or another marketplace host.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSDK%20And%20CLI",
+            "start_line": 993
+          }
+        ],
+        "key": "sdk_projects_catalog",
+        "kind": "projects",
+        "meaning": "The SDK/CLI invokes/projects the one installed catalog and admitted runtime contract.",
+        "source_key": "sdk_cli",
+        "target_key": "catalog"
+      },
+      {
+        "conditions": [
+          "The environment selects the supplement."
+        ],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 991,
+            "quote": "## STDO-Governed Run Environment\n\nABIogenesis publishes a reusable STDO environment template as GTL-declared\nenvironment and Context data. An STDO-governed Program explicitly adopts the\ntemplate; its Run binds the exact released STDO source basis, required native\nsource material, role-specific frame and instruction-policy refs, and the\npermitted means and evidence of acquiring that material. A supplementary\nrepresentation, index or corpus-access implementation is required only when\nthe environment explicitly selects it. Each selected supplement binds its exact\nreleased identity, source relationship, access contract and required evidence.\nRelease identities are immutable and content-bound. An ambient installation,\nmutable version selector, available tool or prompt-only instruction supplies no\nRun binding.\n\nSource development and STDO-governed ABI runs consume the external released\nSTDO through their separately declared exact bindings. The source project's\nDefinition selects its development basis and composition; a Program's declared\nenvironment selects its runtime dependencies and access. Neither selection\nimplicitly supplies the other. In development, the LLM applies the framework\nand directs the work. In the ABI Product, the declared framework governs LLM\nexecution. Development's use of STDO or a supplementary tool does not establish\nthe Product's runtime capability, and ABI does not redefine or implement a\ncompeting STDO.\n\nGTL owns the environment declaration and required corpus-access relations.\nABG validates and admits the exact bindings and required access/context evidence\nthrough existing owners before dependent work. Required native material and\nevery explicitly selected supplementary dependency remain mandatory: missing,\nambiguous, mismatched, inaccessible or unpermitted inputs produce a typed\nrefusal or block before dependent dispatch. Exact native-source access does not\nrequire an unselected representation or index, but it still requires the\ndeclared content, permissions and access evidence. A selected `a_c` or other\ncorpus-access tool supplies only its declared access or structural computation;\nit does not replace source authority, apply open-world meaning, choose work,\nconfer authority or accept results. LLM interpretation and evaluation remain\ndistinct from mechanical binding and evidence checks. A successful retrieval\nproves access, not correct application of its contents. Valid access evidence is\nreusable within its declared basis and scope.\n\nHoG retains its existing linear Worker -> Evaluator -> Consequence workflow.\nEach step consumes its declared frame, policy and relevant current workspace\nobservations through the same instruction-assembly and admission path. The\ntemplate adds no role hierarchy, frame interpreter, controller or execution\nloop. The Run's governing basis remains explicit while ordinary worksite edits\nproduce successor observations. A material environment change requires its\ndeclared re-entry; it does not silently upgrade a running basis.\n\nRole instructions and context policy are tunable as declared, identified data.\nEach invocation preserves the policy and supplied context that produced its\nresult. Tuning does not change authority, requirements or acceptance conditions\nimplicitly. Current observations and affectedness govern reuse: authored work\nawaiting assessment remains available without being represented as accepted,\nand only invalidated support loses its prior claim. Local Consequence selects\ndeclared progress, correction, re-entry or truthful block without requiring\nunaffected work to be recreated.\n\nThis template realizes existing F02/F04/F07/F10/F17 obligations. General GTL and\nABG remain independent of STDO-specific interpretation. The selected Executive\noverlay follows the governance calculus and release allocation; autonomous\nupstream re-entry and native human-response resumption retain their 5.1 boundaries.\nThe V3 source adoption and this declared destination do not migrate a prior\nRun, accept a changed implementation or qualify an installed candidate.\nHistorical Runs and evidence retain their exact original bases; a changed\nruntime environment requires its declared re-entry and affected proof.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FSTDO-Governed%20Run%20Environment",
+            "start_line": 928
+          }
+        ],
+        "key": "supplement_selected_by_environment",
+        "kind": "requires_selection",
+        "meaning": "A supplement becomes a mandatory dependency only through explicit exact environment selection.",
+        "source_key": "supplementary_representation",
+        "target_key": "stdo_environment"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": false,
+        "grounding": [
+          {
+            "end_line": 1037,
+            "quote": "## Standard GTL Product Constructions\n\n5.0 publishes product capabilities that prove the general engine by using the\nsame public GTL, catalog, HoG, and ABG path as downstream consumers.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions",
+            "start_line": 1034
+          },
+          {
+            "end_line": 1110,
+            "quote": "### Default Governance And Lifecycle Library\n\nThe default library publishes a recursive Executive overlay and reusable\nGraphFunctions for induction, specification, design, testing and UAT through\nthe same module/catalog path as user declarations. They are explicitly selected,\nreplaceable compositions. Induction establishes the task model, governing\ncontext, assumptions and unknowns. Construction uses the declared coding-worker\ncapability. Applicable work, depth and repetition follow framed evaluation and\npolicy; the library imposes no unconditional lifecycle or mandatory hierarchy\nof Executive, auditor and strategic roles.\n\nGovernance preserves the original task, required outcomes and authority while\nselecting or revising the choice of preregistered graph work in response to\ncurrent evidence. Selection uses the declared purposes and contracts under\n[Framed Evaluation And Graph Consequence](#framed-evaluation-and-graph-consequence).\nThe declaration supplies the selection reason and its criteria; best fit is a\nwarranted judgment, not a global optimum. Domain instructions and scenario oracles belong to their\ndeclaring sources. Native coding agents retain their own work loop inside their\ndeclared invocation; the library does not reproduce that loop in another engine.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FStandard%20GTL%20Product%20Constructions%2FDefault%20Governance%20And%20Lifecycle%20Library",
+            "start_line": 1092
+          }
+        ],
+        "key": "library_uses_standard_path",
+        "kind": "realizes",
+        "meaning": "Default lifecycle compositions use the same public declaration/publication/execution path as users.",
+        "source_key": "default_library",
+        "target_key": "standard_constructions"
+      }
+    ],
+    "residuals": []
+  },
+  "answer_sha256": "6ef51aadb028341be38a603aa77b3455ba087fbafe66050439219580ee8e5a1a",
+  "author": "codex-product-frame",
+  "chunk": "chunk-fa87433f0cb7ca1f90c4",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "2cc64e06f3eda63379109ee73134e2a5c4bd64bd7f38fce72842859ee2c7a220"
+}

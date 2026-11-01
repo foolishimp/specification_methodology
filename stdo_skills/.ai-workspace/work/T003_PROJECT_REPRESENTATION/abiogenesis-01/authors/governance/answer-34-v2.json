@@ -1,0 +1,631 @@
+{
+  "concepts": [
+    {
+      "key": "install_truth",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FInstalled%20Runtime%20Truth",
+          "start_line": 107,
+          "end_line": 118,
+          "quote": "**REQ-P-INSTALL-010**: The installer shall write inspectable install truth in\nthe target workspace, including install manifest path, installer manifest path,\npackage identity, package root, command binding paths, runtime identity, event\nroot, projection or runtime state root, bootstrap entry path, and any selected\nshared toolchain binding.\n\n**REQ-P-INSTALL-011**: Installed command bindings shall resolve to the installed\nABG package, not to source-tree private paths or test harness helpers.\n\n**REQ-P-INSTALL-012**: The installed runtime identity shall remain structured\nand shall not be overwritten by reporting projections such as build labels or\ntest-run names."
+        }
+      ],
+      "label": "Inspectable installed substrate truth",
+      "definition": "Target workspace truth records install/installer manifest paths, package identity/root, commands, structured runtime identity, event/projection/runtime roots, bootstrap entry and selected shared toolchain binding.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "install_verification",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FInstalled%20Runtime%20Truth",
+          "start_line": 131,
+          "end_line": 136,
+          "quote": "**REQ-P-INSTALL-015**: The installer shall publish an operator-facing\nverification surface that can distinguish a complete installed substrate from\nan incomplete or stale substrate. If a build tenant replaces a command-line\n`verify` mode with manifest or archive verification, that replacement shall be\npublic, typed, and documented as a variant of\n`abg.operation.product.verify`, not as another operation identity."
+        }
+      ],
+      "label": "Public install verification",
+      "definition": "Operator-facing complete/incomplete/stale substrate classification through product.verify, with public typed documented manifest/archive variants allowed instead of CLI verify.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "target_scaffold",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FTarget%20Project%20Scaffold",
+          "start_line": 152,
+          "end_line": 167,
+          "quote": "**REQ-P-INSTALL-016**: The installer shall distinguish an imported target from\na clean target.\n\n**REQ-P-INSTALL-017**: For an imported target, the installer shall preserve\nproject-owned specification, source, docs, and realization roots. It may add\nsubstrate-owned surfaces but shall not rewrite imported project truth into ABG\nproject identity.\n\n**REQ-P-INSTALL-018**: For a clean target, the installer shall either scaffold\nstarter project authority surfaces or return a typed condition stating that no\nproject authority exists yet. The selected behavior shall be explicit in the\ninstaller request, manifest, and verification result.\n\n**REQ-P-INSTALL-019**: If clean-target scaffolding is enabled, scaffolded\nproject surfaces shall remain project-owned starter surfaces. They shall not be\ntreated as ABG substrate truth after installation."
+        }
+      ],
+      "label": "Target scaffold state",
+      "definition": "Installer distinguishes imported project from clean target, keeping project-owned authority separate from ABG substrate.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "method_reference_payload",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMethod%20Reference%20Payloads",
+          "start_line": 171,
+          "end_line": 193,
+          "quote": "**REQ-P-INSTALL-020**: The installer shall materialize method reference\npayloads under the selected versioned product root so a cold agent can resolve\nmethod standards through the workspace binding and product manifest without\nknowing the source workspace layout.\n\n**REQ-P-INSTALL-021**: The product standards payload shall include the full\nstandards tree from the source methodology distribution, including templates\nand secondary method surfaces. Tests may assert a representative minimum set\nsuch as `SPEC_METHOD.md`, `TICKET_METHOD.md`, `DESIGN_MODULE_METHOD.md`,\n`ODD_METHOD.md`, `RELEASE_METHOD.md`, `WRITING_GUIDE.md`, `POSTING_GUIDE.md`,\n`GLOSSARY_GUIDE.md`, the standards `README.md`, and `templates/`.\n\n**REQ-P-INSTALL-022**: The installer manifest shall record the standards source\nroot, product standards root, and copied file inventory or checksums.\n\n**REQ-P-INSTALL-023**: Installed standards are product reference payloads. They\ndo not outrank upstream `specification_methodology` when editing shared method\nlaw.\n\n**REQ-P-INSTALL-024**: The installer shall materialize domain-neutral ABG\nreference docs or bootstrap docs required for cold-agent operation under the\nselected product root. The docs surface shall be recorded in the product\nmanifest and installer manifest and shall not include downstream product HOW."
+        }
+      ],
+      "label": "Installed method reference payload",
+      "definition": "Versioned product-root reference standards, templates, secondary method surfaces and domain-neutral bootstrap/docs are discoverable through binding/manifests without source layout knowledge.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "cold_agent_bootstrap",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FCold-Agent%20Bootstrap",
+          "start_line": 197,
+          "end_line": 213,
+          "quote": "**REQ-P-INSTALL-030**: The installer shall leave the target workspace\ncold-agent-readable. A cold agent must be able to discover the installed ABG\nsubstrate, the installed command bindings, the method reference copies, and the\nworkspace ownership boundary without prior session memory.\n\n**REQ-P-INSTALL-031**: Substrate bootstrap instructions shall stay\ndomain-neutral. Product-specific instruction sections belong to downstream\ninstallers and must remain visibly separate.\n\n**REQ-P-INSTALL-032**: Installer-owned instruction delivery shall be\nmarker-governed or otherwise idempotent so refresh does not delete unrelated\nproject guidance.\n\n**REQ-P-INSTALL-033**: The installer shall materialize a versioned ABG/GTL\ncontext compression under the target `.abiogenesis/` surface. The context\ncontent is owned by the selected ABG/GTL product version and shall be recorded\nin installer manifest or provenance truth."
+        }
+      ],
+      "label": "Cold-agent bootstrap",
+      "definition": "Prior-memory-free discovery of installed substrate, command bindings, method references and workspace ownership boundary, with versioned ABG/GTL context under target .abiogenesis recorded in manifest/provenance.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "supplied_artifact",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FSupplied%20Artifact%20Verification%20And%20Installation",
+          "start_line": 251,
+          "end_line": 256,
+          "quote": "**REQ-P-INSTALL-043**: The public installer shall accept an immutable supplied\nproduct artifact together with its expected product descriptor, contribution\nmanifest, dependency lock, and content identity. Installation shall not require\naccess to the product's mutable source project. This request is the\n`abg.operation.product.install` public function and shall carry no implicit\nworkspace binding; binding remains a separate operation."
+        }
+      ],
+      "label": "Supplied immutable product artifact",
+      "definition": "Public product.install accepts an immutable artifact with expected descriptor, contribution manifest, dependency lock and content identity, without mutable source access or implicit workspace binding.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "multi_product_binding",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMulti-Product%20Workspace%20Binding",
+          "start_line": 286,
+          "end_line": 290,
+          "quote": "**REQ-P-INSTALL-049**: One workspace binding shall support an ordered set of\nexact installed product identities. The set shall include one selected ABG\nruntime product and may include independently released catalog products such as\nodd_glc. The binding shall be admitted by `abg.operation.workspace.bind` over\none stable workspace-authority basis."
+        }
+      ],
+      "label": "Multi-product workspace binding",
+      "definition": "workspace.bind admits an ordered exact installed product set with one selected ABG runtime and optional independent catalog products over one stable authority basis.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "workspace_create_open",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FWorkspace%20Create%20And%20Open",
+          "start_line": 348,
+          "end_line": 361,
+          "quote": "**REQ-P-INSTALL-059**: The public product shall distinguish workspace creation\nfrom product installation, product binding, catalog admission, and project\nscaffolding. Creating a clean workspace shall produce one inspectable workspace\nidentity and explicit authority/scaffold state without selecting mutable source\nor manufacturing project-owned constitutional truth. It shall bind\n`abg.operation.workspace.create`, whose pre-binding variants forbid a workspace\nbinding.\n\n**REQ-P-INSTALL-060**: Opening an existing workspace shall admit and report its\nworkspace identity, stable workspace-authority basis, authority mode, selected\nbinding/configuration refs, and typed readiness or stale/malformed condition.\nIt shall bind `abg.operation.workspace.open`, whose pre-binding variants forbid\na workspace binding. Opening shall not silently install, change a binding,\nresolve a new lock, admit a catalog, or start work."
+        }
+      ],
+      "label": "Workspace creation and opening",
+      "definition": "Distinct public workspace.create/open operations, separate from install, bind, catalog admission and scaffolding; pre-binding variants forbid a workspace binding.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "product_runtime_policy",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy",
+          "start_line": 3,
+          "end_line": 11,
+          "quote": "**Status**: Active\n**Lineage**: T-283 Product basis; T-284 bounded owner repair; T-281\npacked/installed verification clarification\n**Category**: Governance\n**Date**: 2026-04-19\n**Updated**: 2026-09-28\n**Derives from**: [INTENT.md](../../INTENT.md) INT-001 and INT-005,\n[PRODUCT.md](../../PRODUCT.md)\n**Wave**: 3; ABG 5.0 public operator contract"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPurpose",
+          "start_line": 17,
+          "end_line": 17,
+          "quote": "Product-level policy (feature closing, human proxy, merge gates, CLI behavior) lives above the GTL/ABG constitutional stack."
+        }
+      ],
+      "label": "Product and runtime policy",
+      "definition": "Active governance above the GTL/ABG constitutional stack covers feature closing, human proxy, merge gates and CLI behavior under declared T-283/T-284/T-281 lineage.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "bootstrap_resolves_reference",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FCold-Agent%20Bootstrap",
+          "start_line": 197,
+          "end_line": 200,
+          "quote": "**REQ-P-INSTALL-030**: The installer shall leave the target workspace\ncold-agent-readable. A cold agent must be able to discover the installed ABG\nsubstrate, the installed command bindings, the method reference copies, and the\nworkspace ownership boundary without prior session memory."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMethod%20Reference%20Payloads",
+          "start_line": 171,
+          "end_line": 174,
+          "quote": "**REQ-P-INSTALL-020**: The installer shall materialize method reference\npayloads under the selected versioned product root so a cold agent can resolve\nmethod standards through the workspace binding and product manifest without\nknowing the source workspace layout."
+        }
+      ],
+      "kind": "resolves",
+      "source_key": "cold_agent_bootstrap",
+      "target_key": "method_reference_payload",
+      "meaning": "Cold agents discover product-owned method reference copies through installed bootstrap and binding.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "verify_before_materialization",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FSupplied%20Artifact%20Verification%20And%20Installation",
+          "start_line": 258,
+          "end_line": 261,
+          "quote": "**REQ-P-INSTALL-044**: Before materializing or binding a supplied artifact, the\ninstaller shall verify its content digest, package and product identity,\ndescriptor identity, contribution-manifest identity, declared dependencies,\nresolved-lock membership, and compatibility with the selected ABG product."
+        }
+      ],
+      "kind": "required_before",
+      "source_key": "install_verification",
+      "target_key": "supplied_artifact",
+      "meaning": "Before materializing or binding a supplied artifact, verify content, package/product, descriptor, contribution, dependencies, lock membership and compatibility with selected ABG.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "install_truth_integrity",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FInstalled%20Runtime%20Truth",
+          "start_line": 113,
+          "end_line": 129,
+          "quote": "**REQ-P-INSTALL-011**: Installed command bindings shall resolve to the installed\nABG package, not to source-tree private paths or test harness helpers.\n\n**REQ-P-INSTALL-012**: The installed runtime identity shall remain structured\nand shall not be overwritten by reporting projections such as build labels or\ntest-run names.\n\n**REQ-P-INSTALL-013**: Re-running the installer against an already populated\ntarget workspace for the same exact selected identities shall either refresh\ninstaller-owned state deterministically or return a precise stale-install\nremediation result. This same-identity behavior shall not imply cross-version\nupdate, disable, unbind, uninstall, retirement, revocation, or supersession.\n\n**REQ-P-INSTALL-014**: The installer shall emit or persist an install\nprovenance record into the installed runtime truth. The record shall identify\nthe installed package, installer build, target workspace, command bindings,\nmanifest refs, standards-copy refs, runtime identity, and install result."
+        }
+      ],
+      "applies_to_keys": [
+        "install_truth"
+      ],
+      "statement": "Commands resolve to installed ABG package, never private source/test helpers. Reporting labels cannot overwrite structured runtime identity. Install provenance records package, installer build, target, commands, manifests, standards refs, runtime and result. Same exact identities either deterministically refresh installer-owned state or report precise stale-install remediation; this does not imply cross-version lifecycle operations.",
+      "uncertainty": "",
+      "conditions": [
+        "Same-identity refresh rule applies only to the same exact selected identities."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "installed_topology_resolution",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FInstalled%20Runtime%20Truth",
+          "start_line": 138,
+          "end_line": 148,
+          "quote": "**REQ-P-INSTALL-015A**: Topology verification shall validate the selected\ntoolchain binding and configured mutable state roots when a workspace is bound\nto a shared toolchain. Verification shall fail closed when the binding file,\nselected product root, command path, event log path, runtime root, projection\nroot, or archive root is missing.\n\n**REQ-P-INSTALL-015B**: Runtime commands that require installed workspace\ncontext shall load an admitted workspace toolchain binding before selecting\nevent, runtime, projection, or archive roots. Missing or malformed binding truth\nis a runtime-resolution error, not a reason to fall back to target-root\ndefaults."
+        }
+      ],
+      "applies_to_keys": [
+        "install_verification"
+      ],
+      "statement": "For shared-toolchain workspaces verify binding and configured mutable roots, failing closed for absent binding file, product root, command, event log, runtime, projection or archive root. Runtime commands needing installed context load admitted binding before choosing roots; missing/malformed binding is resolution error, never fallback to target defaults.",
+      "uncertainty": "",
+      "conditions": [
+        "Topology verification applies when workspace is bound to shared toolchain.",
+        "Runtime binding-load prerequisite applies to commands requiring installed workspace context."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "full_standards_payload",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMethod%20Reference%20Payloads",
+          "start_line": 176,
+          "end_line": 193,
+          "quote": "**REQ-P-INSTALL-021**: The product standards payload shall include the full\nstandards tree from the source methodology distribution, including templates\nand secondary method surfaces. Tests may assert a representative minimum set\nsuch as `SPEC_METHOD.md`, `TICKET_METHOD.md`, `DESIGN_MODULE_METHOD.md`,\n`ODD_METHOD.md`, `RELEASE_METHOD.md`, `WRITING_GUIDE.md`, `POSTING_GUIDE.md`,\n`GLOSSARY_GUIDE.md`, the standards `README.md`, and `templates/`.\n\n**REQ-P-INSTALL-022**: The installer manifest shall record the standards source\nroot, product standards root, and copied file inventory or checksums.\n\n**REQ-P-INSTALL-023**: Installed standards are product reference payloads. They\ndo not outrank upstream `specification_methodology` when editing shared method\nlaw.\n\n**REQ-P-INSTALL-024**: The installer shall materialize domain-neutral ABG\nreference docs or bootstrap docs required for cold-agent operation under the\nselected product root. The docs surface shall be recorded in the product\nmanifest and installer manifest and shall not include downstream product HOW."
+        }
+      ],
+      "applies_to_keys": [
+        "method_reference_payload"
+      ],
+      "statement": "Install full source-distribution standards tree, including templates/secondary surfaces; a representative test minimum does not reduce that obligation. Manifest records source/root and copied inventory or checksums. Reference docs needed by cold agents appear in product/installer manifests without downstream HOW. Installed standards remain reference payloads and do not outrank upstream specification_methodology for shared-law editing.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "bootstrap_idempotence_and_ownership",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FCold-Agent%20Bootstrap",
+          "start_line": 202,
+          "end_line": 231,
+          "quote": "**REQ-P-INSTALL-031**: Substrate bootstrap instructions shall stay\ndomain-neutral. Product-specific instruction sections belong to downstream\ninstallers and must remain visibly separate.\n\n**REQ-P-INSTALL-032**: Installer-owned instruction delivery shall be\nmarker-governed or otherwise idempotent so refresh does not delete unrelated\nproject guidance.\n\n**REQ-P-INSTALL-033**: The installer shall materialize a versioned ABG/GTL\ncontext compression under the target `.abiogenesis/` surface. The context\ncontent is owned by the selected ABG/GTL product version and shall be recorded\nin installer manifest or provenance truth.\n\n**REQ-P-INSTALL-034**: The installer shall refresh installer-owned ABG/GTL\ncontext sections in cold-agent instruction files such as `AGENTS.md` and\n`CLAUDE.md` on fresh install and same-identity installer refresh. Refresh shall\nbe marker-governed, idempotent, and shall preserve unrelated project-owned\nguidance.\n\n**REQ-P-INSTALL-035**: Downstream projects shall not be required to hand-edit\nABG/GTL compression to track current GTL/ABG semantics. A stale installed\ncontext section shall be replaced by the selected product version during\ninstaller refresh, and malformed paired markers shall fail closed.\n\n**REQ-P-INSTALL-036**: Target-workspace bootstrap shall bind the workspace to a\nselected shared product version through `.abiogenesis/` binding truth and shall\nnot install the GTL/ABG product payload inside each downstream project. Product\npayload materialization belongs to the shared product toolchain root; workspace\nbootstrap is a convenience for local reference, context refresh, and mutable\nstate initialization."
+        }
+      ],
+      "applies_to_keys": [
+        "cold_agent_bootstrap"
+      ],
+      "statement": "Keep substrate instructions domain-neutral and downstream-specific sections visibly separate. Installer delivery is marker-governed or otherwise idempotent. Fresh/same-identity refresh updates product-owned context in AGENTS.md/CLAUDE.md idempotently preserving unrelated project guidance; malformed paired markers fail closed. Downstream need not hand-edit semantic compression; selected product replaces stale owned sections. Bootstrap binds shared version via .abiogenesis and only provides local references/context/state initialization; product payload materializes at shared toolchain, not per downstream workspace.",
+      "uncertainty": "",
+      "conditions": [
+        "Refresh applies on fresh install and same-identity refresh; malformed paired markers refuse."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "installed_substrate_proof",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FSandbox%20And%20Archive%20Proof",
+          "start_line": 235,
+          "end_line": 247,
+          "quote": "**REQ-P-INSTALL-040**: Any downstream sandbox or qualification lane that claims\ninstalled ABG substrate truth shall populate the target workspace through the\npublic ABG installer.\n\n**REQ-P-INSTALL-041**: Installer qualification shall preserve a persistent\narchive or postmortem that includes install manifest evidence, installer\nmanifest evidence, package identity, command binding evidence, standards-copy\nevidence, runtime identity, event/projection roots, and an operator-facing\nsummary.\n\n**REQ-P-INSTALL-042**: Source-tree imports, private test helpers,\nharness-created runtime files, or manually copied `.abiogenesis` folders are\nnot sufficient proof of installed substrate behavior."
+        }
+      ],
+      "applies_to_keys": [
+        "install_truth"
+      ],
+      "statement": "Any downstream sandbox/qualification claiming installed truth must populate through public installer. Persistent archive/postmortem retains install/installer manifests, package, command, standards, runtime and event/projection-root evidence plus operator summary. Source imports, private helpers, harness-created runtime files or manual .abiogenesis copies are insufficient.",
+      "uncertainty": "",
+      "conditions": [
+        "A sandbox/qualification lane claims installed ABG substrate truth."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "artifact_refusal_and_identity",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FSupplied%20Artifact%20Verification%20And%20Installation",
+          "start_line": 263,
+          "end_line": 282,
+          "quote": "**REQ-P-INSTALL-045**: Artifact verification failure shall return a typed\nrefusal that distinguishes at least content mismatch, identity mismatch,\ndescriptor mismatch, contribution mismatch, unresolved dependency,\nincompatible dependency, and unsupported contract. A refused artifact shall\nnot become installed, bound, admitted, or callable.\n\n**REQ-P-INSTALL-046**: A verified artifact shall be installed under an immutable\nproduct identity that includes publisher or product namespace, product version,\nand content identity. Different bytes shall not overwrite or reuse the same\ninstalled identity.\n\n**REQ-P-INSTALL-047**: Re-installing the same exact artifact and identity may be\nidempotent. Reusing an existing product/version location for different content,\ndescriptor, contribution, or dependency-lock identity shall fail as a typed\nconflict.\n\n**REQ-P-INSTALL-048**: A source-blind downstream consumer shall be able to\nverify, install, and import the supplied release artifact using only published\nproduct contracts and release evidence. A mutable source path, private module,\ntest harness helper, or source-built compatibility shim shall not be required."
+        }
+      ],
+      "applies_to_keys": [
+        "supplied_artifact"
+      ],
+      "statement": "Verification refuses typed content, identity, descriptor or contribution mismatch, unresolved/incompatible dependency and unsupported contract; refused artifacts become neither installed, bound, admitted nor callable. Verified install identity includes namespace/version/content; different bytes cannot overwrite/reuse it. Existing product/version with different content, descriptor, contribution or lock is typed conflict. Source-blind verify/install/import uses only public contracts/release evidence, needing no mutable source, private module, helper or source-built shim.",
+      "uncertainty": "",
+      "conditions": [
+        "Supplied artifact verification must succeed before installation/binding.",
+        "Conflict checks apply when reusing an existing product/version location."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "binding_exactness",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMulti-Product%20Workspace%20Binding",
+          "start_line": 292,
+          "end_line": 317,
+          "quote": "**REQ-P-INSTALL-050**: Each bound product row shall record its publisher or\nproduct namespace, product and package identity, exact version, content digest,\nproduct descriptor and contribution-manifest identities, product-manifest path\nand digest, installed roots, dependency-lock identity, compatibility result,\nand public command or contract references when applicable.\n\n**REQ-P-INSTALL-051**: The workspace binding shall preserve the resolved\ndependency graph and exact lock used for the selected product set. An unbound,\nunresolved, incompatible, ambiguous, or content-mismatched product shall not be\nsubstituted from another workspace, a source checkout, an ambient package, or a\nprevious lock.\n\n**REQ-P-INSTALL-052**: Installation and binding shall remain distinct. A product\nmay be installed without being selected by a workspace, and installation shall\nnot silently alter an existing workspace binding. They bind\n`abg.operation.product.install` and `abg.operation.workspace.bind`\nrespectively; neither is a mode or alias of the other.\n\n**REQ-P-INSTALL-053**: Binding and catalog admission shall remain distinct. A\nbound product supplies candidate contribution truth; ABG admission determines\nwhether its rows are compatible, ready, visible, eligible, or callable.\n\n**REQ-P-INSTALL-054**: Binding a catalog product shall not give that product\ncontrol of workspace runtime roots, event admission, traversal, continuation,\nworker invocation, retry, or closure. Those authorities remain with the\nselected ABG runtime product."
+        }
+      ],
+      "applies_to_keys": [
+        "multi_product_binding"
+      ],
+      "statement": "Each row records namespace/product/package/version/digest/descriptor/contribution/product-manifest path+digest/installed roots/lock/compatibility and applicable public commands/contracts. Preserve exact dependency graph and lock; unbound, unresolved, incompatible, ambiguous or content-mismatched products cannot be substituted from another workspace/source/ambient package/previous lock. Install and bind are separate operations, not aliases; binding yields candidate contributions, not catalog admission/readiness/visibility/eligibility/callability. Catalog products acquire no runtime-root/event/traversal/continuation/worker/retry/closure control; selected ABG owns these.",
+      "uncertainty": "",
+      "conditions": [
+        "For each exact product row in an admitted multi-product binding."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "immutable_binding_evolution",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMulti-Product%20Workspace%20Binding",
+          "start_line": 319,
+          "end_line": 326,
+          "quote": "**REQ-P-INSTALL-055**: An existing workspace binding shall not change through\nautomatic re-resolution. ABG 5.0 conformance requires initial exact install and\nbind. Multiple immutable binding identities may exist for one workspace, but\nthere is no mutable global current-binding pointer. A different lock or product\nset requires a separately supplied and admitted binding identity. Introducing\nthat binding onto a continued execution spine requires an exact covering\nreprice. Changing an existing binding through update, disable, unbind,\nuninstall, retirement, revocation, or supersession is not required."
+        }
+      ],
+      "applies_to_keys": [
+        "multi_product_binding"
+      ],
+      "statement": "No automatic re-resolution or mutable global current-binding pointer. Multiple immutable identities may coexist; changed lock/product set needs separately supplied/admitted binding, and use on a continued spine needs exact covering reprice. 5.0 requires initial exact install/bind, not update/disable/unbind/uninstall/retirement/revocation/supersession.",
+      "uncertainty": "",
+      "conditions": [
+        "Different lock/product set requires separately supplied admitted binding.",
+        "Continuing an execution spine under changed binding requires exact covering reprice."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "binding_provenance_and_verification",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMulti-Product%20Workspace%20Binding",
+          "start_line": 328,
+          "end_line": 338,
+          "quote": "**REQ-P-INSTALL-056**: Install provenance shall record the supplied artifact\ndigest, verification disposition, descriptor and contribution identities,\nresolved lock, selected dependency graph, installed identity, workspace-binding\nidentity, and result sufficient to reproduce the install without source access.\n\n**REQ-P-INSTALL-057**: Public install verification shall compare the bound rows\nwith the exact installed artifacts, product manifests, descriptors,\ncontribution manifests, content digests, dependency lock, and command or public\ncontract references. It shall distinguish installed-but-unbound from missing,\nstale, incompatible, or content-mismatched state and shall bind\n`abg.operation.product.verify`."
+        }
+      ],
+      "applies_to_keys": [
+        "multi_product_binding",
+        "install_verification"
+      ],
+      "statement": "Install provenance retains artifact digest, verification disposition, descriptor/contributions, lock/graph, installed and workspace-binding identity, result sufficient for source-blind reproduction. product.verify compares bound rows with exact artifact/manifests/descriptors/contributions/digests/lock/public refs and distinguishes installed-but-unbound from missing, stale, incompatible or content-mismatched.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "workspace_create_open_effects",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FWorkspace%20Create%20And%20Open",
+          "start_line": 348,
+          "end_line": 361,
+          "quote": "**REQ-P-INSTALL-059**: The public product shall distinguish workspace creation\nfrom product installation, product binding, catalog admission, and project\nscaffolding. Creating a clean workspace shall produce one inspectable workspace\nidentity and explicit authority/scaffold state without selecting mutable source\nor manufacturing project-owned constitutional truth. It shall bind\n`abg.operation.workspace.create`, whose pre-binding variants forbid a workspace\nbinding.\n\n**REQ-P-INSTALL-060**: Opening an existing workspace shall admit and report its\nworkspace identity, stable workspace-authority basis, authority mode, selected\nbinding/configuration refs, and typed readiness or stale/malformed condition.\nIt shall bind `abg.operation.workspace.open`, whose pre-binding variants forbid\na workspace binding. Opening shall not silently install, change a binding,\nresolve a new lock, admit a catalog, or start work."
+        }
+      ],
+      "applies_to_keys": [
+        "workspace_create_open"
+      ],
+      "statement": "Clean create returns inspectable identity and explicit authority/scaffold state without selecting mutable source or manufacturing constitutional truth. Open admits/reports identity, stable authority basis/mode, selected binding/config refs and typed readiness/stale/malformed condition; it cannot silently install, alter binding, resolve lock, admit catalog or start work.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "installer_candidate_acceptance",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FAcceptance",
+          "start_line": 365,
+          "end_line": 405,
+          "quote": "A released tenant's installer is not release-candidate complete until a clean\ntarget workspace proves:\n\n- `.abiogenesis/` substrate root exists\n- installed package, command bindings, reference docs, and standards resolve\n  from an admitted shared product toolchain binding, with the product payload\n  resolving below `<toolchainRoot>/products/<product>/<packageVersion>/`\n- install and installer manifests record runtime and package truth\n- the workspace toolchain binding records selected products, product manifest\n  refs and digests, and mutable state roots\n- the target workspace does not require a full local product dependency copy\n  (reference-tenant example: no local\n  `node_modules/@abiogenesis/typescript-tenant` copy)\n- legacy environment aliases and missing toolchain selectors fail closed\n- product-version command paths are recorded, and no top-level toolchain shim is\n  generated\n- the selected product root contains the full standards tree\n- manifest proof records standards-copy evidence\n- install provenance/event truth records package, command, standards, and\n  runtime identity\n- clean-target versus imported-target behavior is explicit\n- public verification can classify the installed substrate\n- cold-agent bootstrap surfaces are discoverable\n- installed ABG/GTL context compression is versioned, manifest-recorded, and\n  marker-refreshed in cold-agent instruction files\n- repeat install behavior is deterministic or fails with precise remediation\n- sandbox/archive proof is persistent and target-workspace inspectable\n- immutable supplied artifacts verify before install or binding without source\n  access\n- a multi-product binding records exact ABG and catalog-product identities,\n  content digests, manifests, compatibility results, and one resolved lock\n- installed, bound, admitted, session-visible, and callable states remain\n  distinct\n- workspace authority and immutable binding survive ordinary observation\n  change; mutable observed truth remains in separately identified snapshots\n- initial exact install and bind do not imply broader product or registry-entry\n  lifecycle behavior\n- installer, workspace, and adapter paths bind the complete Product-derived\n  public function definitions without legacy operation identities or a\n  parallel register; an operation count is a derived no-silence projection,\n  not installation authority"
+        }
+      ],
+      "applies_to_keys": [
+        "install_truth",
+        "install_verification",
+        "cold_agent_bootstrap",
+        "multi_product_binding"
+      ],
+      "statement": "A tenant installer is not RC-complete until a clean workspace proves substrate root, shared binding/versioned product payload resolution, exact manifests/commands/mutable roots, no local full dependency copy or top-level shims, closed failure of legacy/missing selectors, full standards with copy evidence, structured provenance, explicit imported/clean behavior, classification, discoverable versioned marker-refreshed context, deterministic repeat/remediation, persistent inspectable proof, source-blind preverification, exact multi-product set/lock, separate installed/bound/admitted/visible/callable states, observation-stable authority/binding with separate snapshots and initial-lifecycle limit. All paths use complete Product-derived public definitions without legacy/parallel registers; operation count is only a derived no-silence projection.",
+      "uncertainty": "",
+      "conditions": [
+        "Before a released tenant installer is considered release-candidate complete."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "policy_release_allocation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPurpose",
+          "start_line": 19,
+          "end_line": 25,
+          "quote": "All clauses inherit [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries)\nand [requirement release applicability](../README.md#human-response-and-whole-run-oversight).\nNative human response/resume and dedicated observer/tuner portions retain 5.1\nscope. Selected graph-based Executive governance, ordinary system policy, local\ncorrection, liveness, block and handoff follow the 5.0 allocation. Reserved owner\nrulings are not waived. Governing policy is declared work; the generic GTL\nvalidator and HoG kernel do not invent domain priorities or frame semantics."
+        }
+      ],
+      "applies_to_keys": [
+        "product_runtime_policy"
+      ],
+      "statement": "All clauses inherit Product Release Boundaries and requirement applicability. Native human response/resume and dedicated observer/tuner remain 5.1; selected graph Executive governance, ordinary system policy, local correction/liveness/block/handoff follow 5.0. Reserved owner rulings are not waived. Governing policy is declared work; generic validator/HoG do not invent domain priorities/frame semantics.",
+      "uncertainty": "",
+      "conditions": [
+        "All clauses inherit controlling Product and requirement release applicability."
+      ],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "target_scaffold_choices",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FTarget%20Project%20Scaffold",
+          "start_line": 155,
+          "end_line": 167,
+          "quote": "**REQ-P-INSTALL-017**: For an imported target, the installer shall preserve\nproject-owned specification, source, docs, and realization roots. It may add\nsubstrate-owned surfaces but shall not rewrite imported project truth into ABG\nproject identity.\n\n**REQ-P-INSTALL-018**: For a clean target, the installer shall either scaffold\nstarter project authority surfaces or return a typed condition stating that no\nproject authority exists yet. The selected behavior shall be explicit in the\ninstaller request, manifest, and verification result.\n\n**REQ-P-INSTALL-019**: If clean-target scaffolding is enabled, scaffolded\nproject surfaces shall remain project-owned starter surfaces. They shall not be\ntreated as ABG substrate truth after installation."
+        }
+      ],
+      "applies_to_keys": [
+        "target_scaffold"
+      ],
+      "allowed": [
+        "For imported targets add substrate-owned surfaces while preserving project-owned specification/source/docs/realization.",
+        "For clean targets either scaffold starter authority or return typed no-authority-yet, explicitly selected in request, manifest and verification."
+      ],
+      "forbidden": [
+        "Rewrite imported project truth into ABG identity.",
+        "Treat scaffolded starter project surfaces as substrate truth."
+      ]
+    },
+    {
+      "key": "artifact_reinstall_latitude",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FSupplied%20Artifact%20Verification%20And%20Installation",
+          "start_line": 274,
+          "end_line": 277,
+          "quote": "**REQ-P-INSTALL-047**: Re-installing the same exact artifact and identity may be\nidempotent. Reusing an existing product/version location for different content,\ndescriptor, contribution, or dependency-lock identity shall fail as a typed\nconflict."
+        }
+      ],
+      "applies_to_keys": [
+        "supplied_artifact"
+      ],
+      "allowed": [
+        "Reinstall exactly equal artifact and identity idempotently."
+      ],
+      "forbidden": [
+        "Reuse product/version location for different content, descriptor, contribution or dependency-lock identity."
+      ]
+    },
+    {
+      "key": "installer_distribution_latitude",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMulti-Product%20Workspace%20Binding",
+          "start_line": 340,
+          "end_line": 344,
+          "quote": "**REQ-P-INSTALL-058**: ABG 5.0 installation shall not require a hosted package\nregistry, storefront, signing service, license service, organization RBAC, or\nmulti-user administration. A caller-supplied immutable repository or Git\nrelease artifact is a lawful distribution input when its expected identities\nand digests are provided."
+        }
+      ],
+      "applies_to_keys": [
+        "supplied_artifact"
+      ],
+      "allowed": [
+        "Use caller-supplied immutable repository or Git release artifacts with expected identities/digests."
+      ],
+      "forbidden": [
+        "Require hosted registry, storefront, signing/license service, organization RBAC or multi-user administration for 5.0 installation."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "policy_external_applicability",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy",
+          "start_line": 9,
+          "end_line": 10,
+          "quote": "**Derives from**: [INTENT.md](../../INTENT.md) INT-001 and INT-005,\n[PRODUCT.md](../../PRODUCT.md)"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPurpose",
+          "start_line": 19,
+          "end_line": 25,
+          "quote": "All clauses inherit [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries)\nand [requirement release applicability](../README.md#human-response-and-whole-run-oversight).\nNative human response/resume and dedicated observer/tuner portions retain 5.1\nscope. Selected graph-based Executive governance, ordinary system policy, local\ncorrection, liveness, block and handoff follow the 5.0 allocation. Reserved owner\nrulings are not waived. Governing policy is declared work; the generic GTL\nvalidator and HoG kernel do not invent domain priorities or frame semantics."
+        }
+      ],
+      "subject_key": "product_runtime_policy",
+      "uncertainty": "Referenced release boundaries, requirement applicability and INT-001/INT-005 are not supplied here.",
+      "consequence": "The local allocation is retained without resolving full governing context or cross-chunk identities."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FInstalled%20Runtime%20Truth",
+      "decision": "retained",
+      "keys": [
+        "install_truth",
+        "install_verification",
+        "install_truth_integrity",
+        "installed_topology_resolution"
+      ],
+      "reason": "Retain truth, command resolution, refresh, provenance and closed verification behavior."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FTarget%20Project%20Scaffold",
+      "decision": "retained",
+      "keys": [
+        "target_scaffold",
+        "target_scaffold_choices"
+      ],
+      "reason": "Retain imported/clean distinctions and scaffold ownership."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMethod%20Reference%20Payloads",
+      "decision": "retained",
+      "keys": [
+        "method_reference_payload",
+        "bootstrap_resolves_reference",
+        "full_standards_payload"
+      ],
+      "reason": "Retain full payload obligation, representative-test latitude and upstream authority boundary."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FCold-Agent%20Bootstrap",
+      "decision": "retained",
+      "keys": [
+        "cold_agent_bootstrap",
+        "bootstrap_resolves_reference",
+        "bootstrap_idempotence_and_ownership"
+      ],
+      "reason": "Retain cold-agent discovery, versioned context and safe idempotent refresh."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FSandbox%20And%20Archive%20Proof",
+      "decision": "retained",
+      "keys": [
+        "installed_substrate_proof"
+      ],
+      "reason": "Retain mandatory public-install path and durable proof, rejecting substitute proof."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FSupplied%20Artifact%20Verification%20And%20Installation",
+      "decision": "retained",
+      "keys": [
+        "supplied_artifact",
+        "verify_before_materialization",
+        "artifact_refusal_and_identity",
+        "artifact_reinstall_latitude"
+      ],
+      "reason": "Retain artifact inputs, verification prerequisites, typed refusal and immutable identity."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FMulti-Product%20Workspace%20Binding",
+      "decision": "retained",
+      "keys": [
+        "multi_product_binding",
+        "binding_exactness",
+        "immutable_binding_evolution",
+        "binding_provenance_and_verification",
+        "installer_distribution_latitude"
+      ],
+      "reason": "Retain exact ordered binding, separate states/authorities, reprice and verification."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FWorkspace%20Create%20And%20Open",
+      "decision": "retained",
+      "keys": [
+        "workspace_create_open",
+        "workspace_create_open_effects"
+      ],
+      "reason": "Retain create/open operation and side-effect boundaries."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FAcceptance",
+      "decision": "retained",
+      "keys": [
+        "installer_candidate_acceptance"
+      ],
+      "reason": "Retain conjunctive clean-workspace RC-completeness proof obligations."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy",
+      "decision": "residual",
+      "keys": [
+        "product_runtime_policy",
+        "policy_external_applicability"
+      ],
+      "reason": "Retain policy identity/lineage; intent references are unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPurpose",
+      "decision": "residual",
+      "keys": [
+        "product_runtime_policy",
+        "policy_release_allocation",
+        "policy_external_applicability"
+      ],
+      "reason": "Retain release allocation and reserved rulings; controlling external boundaries require re-entry."
+    }
+  ],
+  "limitations": [
+    "Source requirements are represented; no installation, verification, bootstrap mutation or acceptance was performed.",
+    "Referenced method, release and policy sources outside this chunk are not resolved by name matching."
+  ]
+}

@@ -1,0 +1,1 @@
+corrupt without new inventory

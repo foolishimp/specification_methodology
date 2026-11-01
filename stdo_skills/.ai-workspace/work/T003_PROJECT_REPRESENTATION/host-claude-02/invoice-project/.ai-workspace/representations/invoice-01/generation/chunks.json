@@ -1,0 +1,44 @@
+[
+  {
+    "id": "chunk-b1400522f235f48bac67",
+    "segments": [
+      {
+        "end_line": 2,
+        "heading": "Goals",
+        "id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+        "path": "specification/GOALS.md",
+        "sha256": "5da329090378c94d00d2f61e3127119c6e1bbdb8b068d32536f3d4df85f05369",
+        "start_line": 1,
+        "text": "# Goals\nBuild a source-linked proposal representation for this qualification project.\n"
+      },
+      {
+        "end_line": 2,
+        "heading": "Intent",
+        "id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+        "path": "specification/INTENT.md",
+        "sha256": "b4535439ab59d42915940e5150eea1bd6cc74fa6a71e49a4262b54741057704c",
+        "start_line": 1,
+        "text": "# Intent\nMake invoice export reproducible while preserving exact supplied decimal amounts.\n"
+      },
+      {
+        "end_line": 6,
+        "heading": "Invoice export",
+        "id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+        "path": "specification/PRODUCT.md",
+        "sha256": "9a503033fb60f84b38c4e619cb325ac9ac7c5e0a68ae9983d48a62711a293e82",
+        "start_line": 1,
+        "text": "# Invoice export\n\nExport rows as CSV with columns id, amount, currency in that order.\nPreserve every supplied decimal digit in amount; binary floating-point conversion is forbidden.\nFor zero rows, emit the header alone.\n\n"
+      },
+      {
+        "end_line": 9,
+        "heading": "Invoice export/Unresolved rounding policy",
+        "id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+        "path": "specification/PRODUCT.md",
+        "sha256": "98e8fe2ec9292cfbe82d338477aa396eb08a294cbf383209079a9931aa227bcb",
+        "start_line": 7,
+        "text": "## Unresolved rounding policy\n\nRounding is not yet specified. Retain this as unresolved; do not invent a rounding rule.\n"
+      }
+    ],
+    "source_chars": 518
+  }
+]

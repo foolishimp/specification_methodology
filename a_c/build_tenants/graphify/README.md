@@ -1,10 +1,60 @@
 # Graphify build tenant of axiomatic calculus
 
+For a user's nominated STDO project, start with
+[`code/ac_project.py`](code/ac_project.py) and its
+[public workflow contract](design/project-build.md). `prepare` freezes the exact
+project source, `task` supplies a bounded authoring task to the current Claude or
+Codex session, `submit` checks its real JSON answer, and `build` writes the model,
+carrier, coverage and one offline `explorer.html` with a **3D / 2D / Layered**
+switch in the middle panel. `status` and a repeated `build` verify
+currentness and safe reuse. `direct` needs Python and the STDO manager;
+`graphify-ac` additionally uses the exact pinned upstream. Formal verification
+is optional and must be selected with the existing trusted checker contract.
+
 This tenant implements a bounded structural realization of `a_c`. It runs
 independently of v3, Axiom Indexer and STDO Representation. The initial authored
 model family supports all eight core record shapes, exact basis and content
 identity, reversible graph representation, inspection, discovery and declared
 governing closure. The [design](design/README.md) defines the checked fragment.
+
+The [constraint explorer](../../applications/stdo-constraint-explorer/README.md)
+adds standalone offline 3D/2D and layered reading options. Search full constraints, inspect
+conditions/exceptions and source quotations, follow labelled dependencies and
+authored relations, and retain an exact reading trail. Generate a new viewer
+from a native model or recoverable Graphify carrier with
+`python3 build_tenants/graphify/code/ac_explore.py INPUT --out NEW.html`
+(from `a_c/`). Optional `--source-root` embeds referenced source files.
+The default page includes all three renderers over the same embedded data.
+Switching retains your selected record, visible neighbourhood, filters, file
+context and reading trail. Each HTML opens directly in a browser without a
+service or network. Use `--layout layered` or `--layout force` only when an
+explicit standalone variant is wanted.
+For example, from `a_c/`:
+
+```sh
+python3 build_tenants/graphify/code/ac_explore.py model.json --source-root corpus --out layered.html --layout layered
+```
+
+The [unified ABIogenesis example](../../applications/abiogenesis-constraint-explorer/index.html)
+starts in Layered and switches to 3D or 2D over the same selected information.
+In Layered, use scrollbars to navigate, +/− to zoom, **Fit** for the whole
+visible graph, and **Focus** or **Expand one hop** to choose its visible scope.
+[Viewer design](design/constraint-explorer.md) distinguishes retention,
+authored relations and other typed references; none is a prose-proof verdict.
+
+Newly generated readers include a **Files** flyout. Select a represented source
+file to browse its grounded records across families, read the embedded file, or
+show its file map. Logical traversal retains **Back to file**; each grounded
+record has **Show in files** for its source locations. The tree is the exported
+source-path view, not a live scan of the workspace. The
+[ABIogenesis example](../../applications/abiogenesis-constraint-explorer/README.md)
+demonstrates the feature with 86 source files.
+
+Offline navigation regression tests use `test_env/test_explorer_navigation.cjs`
+with `jsdom@26.1.0` in an isolated test environment (`NODE_PATH` points to that
+environment's `node_modules`). Pass an optional generated ABIogenesis HTML path
+to also exercise all 86 file mappings and the R10-to-R9 route. These DOM checks
+deliberately exercise the no-WebGL reader and do not qualify browser layout.
 
 T-012 adds an optional, caller-selected required [formal gate](design/formal-gate.md)
 using the independent [Lean tenant](../lean/README.md). Ordinary, grounded and

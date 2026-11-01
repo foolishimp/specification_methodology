@@ -1,0 +1,785 @@
+{
+  "concepts": [
+    {
+      "key": "framed_governance_ownership",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FFramed%20Governance",
+          "start_line": 121,
+          "end_line": 129,
+          "quote": "INT-008 and the Product Execution And Context Calculus own the selected\ngovernance meaning. `REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-015B` owns its\ncomposition vocabulary; CONTEXT-009..012 own frame bindings and observation\nuse; SELECTION-BOUNDARY-016..019 own evaluated preregistered selection and its\ndeclared-purpose boundary; MAPPING-007 owns\nrepresentation conservation; SCENARIOS-018 owns the bounded discriminator;\nQUAL-072 owns correspondence with actual execution and affected qualification.\nThese decompose one Product definition, not a new planner, frame runtime or\nrequirement family. Work state and current acceptance belong to T-287.\n"
+        }
+      ],
+      "label": "Framed governance ownership",
+      "definition": "One Product definition assigns selected governance meaning to INT-008 and Product Execution And Context Calculus; vocabulary to LANGUAGE-CAPABILITY-MODEL-015B; frame/observation to CONTEXT-009..012; evaluated preregistered selection and purpose to SELECTION-BOUNDARY-016..019; conservation to MAPPING-007; discriminator to SCENARIOS-018; execution/qualification correspondence to QUAL-072; current work and acceptance to T-287.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "selected_lifecycle_contract",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FSelected%20Lifecycle%20Witness%20And%20Testing",
+          "start_line": 133,
+          "end_line": 145,
+          "quote": "F17/S06 binds a prospectively selected meaningful real-specification contract\nunder Product Release Boundaries. Every selected outcome, its prerequisites,\nconsequential correction and admitted evidence remain mandatory. Original and\nexcluded source obligations remain visible; full original Data Mapper delivery\nstays open downstream and is not an ABI release gate. Proof carry-through and\ngeneric runtime requirements remain applicable to every selected obligation.\n\n`REQ-P-QUAL-071` owns the derived evidence sequencing: focused structural checks\nduring construction, early installed integration/UAT at usable steel threads,\nand broad applicable assurance at integrated qualification. A deferred scenario\ncannot remove a retained generic graph, admission, authority or replay law.\nOptional published capabilities still obey their declared contracts and cannot\nclaim unexecuted dedicated qualification.\n"
+        }
+      ],
+      "label": "Selected lifecycle witness",
+      "definition": "F17/S06 is a prospectively selected meaningful real-specification contract under Product Release Boundaries; QUAL-071 owns evidence sequencing.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "requirement_domains",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FActive%20Requirement%20Domains",
+          "start_line": 149,
+          "end_line": 154,
+          "quote": "| Domain | Path | Scope |\n| --- | --- | --- |\n| GTL | `specification/requirements/gtl/` | language semantics, graph law, jobs, roles, operators, identity, epistemic notation over ratified ontology |\n| ABG | `specification/requirements/abg/` | engine transport, binding, run model, projection, provenance, convergence |\n| Mapping | `specification/requirements/mapping/` | bridge law between GTL constitutional surfaces and runtime realization |\n| Product | `specification/requirements/product/` | policy, qualification, and end-to-end scenario obligations |\n"
+        }
+      ],
+      "label": "Requirement domains",
+      "definition": "The local ownership map separates GTL language/graph/jobs/roles/operators/identity/epistemic notation over ratified ontology, ABG transport/binding/run/projection/provenance/convergence, Mapping bridge law from constitutional GTL to runtime realization, and Product policy/qualification/end-to-end scenarios.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "abg_runtime_law",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/README.md#ABG%203%20Requirement%20Families",
+          "start_line": 3,
+          "end_line": 7,
+          "quote": "This domain owns the constitutional runtime law for the Abiogenesis engine.\n\nUse these families for event truth, replay/projection, graph-function-first\nexecution, runtime aggregates, policy/default law, provenance, transport, and\nrelated engine behavior.\n"
+        }
+      ],
+      "label": "ABG constitutional runtime law",
+      "definition": "ABG owns engine event truth, replay and projection, graph-function-first execution, aggregates, defaults/policy, provenance, transport and related engine behavior.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "abg_runtime_scope",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/README.md#ABG%203%20Requirement%20Families%2FScope",
+          "start_line": 11,
+          "end_line": 40,
+          "quote": "- append-only event substrate\n- replay-derived fluent and projection law\n- graph-function-first execution entry\n- replay-derived graph-function iteration and next-edge selection\n- runtime aggregates: run, graph call, frame, continuation\n- worker/binding/runtime identity\n- dependency-ready saga frontier and runtime-realization transparency\n- evaluation, proof, closure, and fallback law\n- total assurance projection and closure fold law\n- event-sourced payload envelope, admission, and ledger projection law\n- event-sourced requirement algebra, replay-derived requirement ledgers, and\n  requirement pressure query law\n- requirement proof carry-through from admitted requirement obligations into\n  paired realization and proof evidence before closure, including proof-policy\n  depth completeness and admitted proof-strength projection\n- instruction assembly and dispatch assurance over prompt materialization\n  plans, runtime-bound instruction envelopes, prompt manifests, and\n  deterministic instruction-validator checks\n- replay-stable ABG.Fn regime composition grammar\n- correction, supersession, derived-artifact governance, and post-release\n  successor-use behavior\n- one replay-derived active-iteration outcome algebra\n- supervisor/operator witness law: halt diagnosis, defect intake, reprice\n  admission, substrate stamps, operator lifecycle, workspace hygiene,\n  mechanical citability, CLI-as-control-plane\n- planned 5.1 reflective tuner law: declaration-draft-only optimisation,\n  ratification states, annealing equivalence contracts, crystallization\n  (rails/emergence) track changes; this family is not applicable to 5.0\n- kernel plugin adoption surface: the five plugin seams, the governed standard\n  catalog, fail-closed declared selection, F_H-approved live capability rows\n"
+        }
+      ],
+      "label": "ABG runtime scope",
+      "definition": "Scope spans append-only events; replay-derived fluents, iteration, next-edge choice and one outcome algebra; run/graph-call/frame/continuation; worker identity; dependency-ready saga and realization transparency; evaluation/proof/closure/fallback; total assurance; admitted payload and requirement ledgers/pressure; realization-plus-proof carry-through including policy depth and proof strength; instruction assembly/dispatch validators; replay-stable Fn grammar; correction/supersession/derived artifacts/successor use; supervisor diagnosis/intake/reprice/stamps/operator lifecycle/hygiene/citability/CLI; and governed plugin seams/catalog/selection/live capability rows.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "abg_family_catalog",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/README.md#ABG%203%20Requirement%20Families%2FFamilies",
+          "start_line": 44,
+          "end_line": 77,
+          "quote": "- `REQ-R-ABG3-EVENTS.md`\n- `REQ-R-ABG3-PROJECTION.md`\n- `REQ-R-ABG3-ITERATION.md`\n- `REQ-R-ABG3-SAGA-FRONTIER.md`\n- `REQ-R-ABG3-BINDING.md`\n- `REQ-R-ABG3-HANDLERS.md`\n- `REQ-R-ABG3-WORKER.md`\n- `REQ-R-ABG3-JOB-WORKER.md`\n- `REQ-R-ABG3-LINEAGE.md`\n- `REQ-R-ABG3-RUN.md`\n- `REQ-R-ABG3-GRAPHCALL.md`\n- `REQ-R-ABG3-CCALL.md`\n- `REQ-R-ABG3-FRAME.md`\n- `REQ-R-ABG3-CONTINUATION.md`\n- `REQ-R-ABG3-CONVERGENCE.md`\n- `REQ-R-ABG3-ASSURANCE.md`\n- `REQ-R-ABG3-FP-CONSCIOUSNESS.md`\n- `REQ-R-ABG3-FN-COMPOSITION.md`\n- `REQ-R-ABG3-PAYLOAD.md`\n- `REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md`\n- `REQ-R-ABG3-REQUIREMENT-PROOF-CARRY-THROUGH.md`\n- `REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md`\n- `REQ-R-ABG3-POLICY.md`\n- `REQ-R-ABG3-SELECTION-APPLICATION.md`\n- `REQ-R-ABG3-LEAFTASK.md`\n- `REQ-R-ABG3-PROVENANCE.md`\n- `REQ-R-ABG3-CORRECTION.md`\n- `REQ-R-ABG3-RETRY.md`\n- `REQ-R-ABG3-TRANSPORT.md`\n- `REQ-R-ABG3-INTERPRET.md`\n- `REQ-R-ABG3-SELFHOSTING.md`\n- `REQ-R-ABG3-SUPERVISOR-WITNESS.md`\n- `REQ-R-ABG3-TUNER.md` - planned 5.1; non-operative for 5.0\n- `REQ-R-ABG3-PLUGIN-SEAMS.md`\n"
+        }
+      ],
+      "label": "ABG requirement family catalog",
+      "definition": "A navigational catalog enumerates runtime event/projection/iteration/saga, binding/handlers/workers/lineage/aggregates, assurance/convergence/consciousness/composition, payload/requirements/proof/instructions, policy/selection/leaf-task/provenance/correction/retry/transport/interpret/self-hosting/supervisor/tuner/plugin documents. Tuner is explicitly planned 5.1 and non-operative for 5.0.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "assurance_requirement",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-ASSURANCE — Total Assurance Projection\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-29\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-EVENTS.md](REQ-R-ABG3-EVENTS.md), [REQ-R-ABG3-PROJECTION.md](REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-CONVERGENCE.md](REQ-R-ABG3-CONVERGENCE.md), [REQ-R-ABG3-CORRECTION.md](REQ-R-ABG3-CORRECTION.md)\n"
+        }
+      ],
+      "label": "Total Assurance Projection requirement",
+      "definition": "An active constraint/guarantee requirement dated 2026-04-29 declares derivation from method, intent/product, events, projection, convergence and correction sources.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "assurance_projection",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FPurpose",
+          "start_line": 12,
+          "end_line": 17,
+          "quote": "Define ABG-owned assurance as a total replay-derived projection and closure\nfold over current authority, current input state, and admitted runtime events.\n\nThis requirement prevents premature closure. A bounded compute scope may not\nclose merely because a worker succeeded, tests passed, a report was written, an\narchive has the expected shape, or no closure-register row exists.\n"
+        }
+      ],
+      "label": "Assurance projection and closure fold",
+      "definition": "ABG-owned total replay-derived assurance folds current authority, current inputs and admitted runtime events to prevent premature closure.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "assurance_runtime_boundary",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FScope",
+          "start_line": 21,
+          "end_line": 27,
+          "quote": "Assurance scope is invocation-local runtime truth inside the existing GTL edge\ntraversal boundary. It is projected over existing ABG aggregates such as\n`GraphCall`, `Frame`, and `Continuation`.\n\n`UnitOfCompute` is not introduced as a public aggregate by this requirement. A\nfuture stable carrier with that name requires explicit design authority and may\nnot widen the product compute boundary without product reprice.\n"
+        }
+      ],
+      "label": "Invocation-local assurance boundary",
+      "definition": "Assurance is invocation-local truth within the existing GTL edge traversal, projected over GraphCall, Frame and Continuation. UnitOfCompute is not a newly public aggregate.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "assurance_row_status",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 41,
+          "end_line": 61,
+          "quote": "**REQ-R-ABG3-ASSURANCE-006**: Assurance row status shall include at minimum `fulfilled`, `partial`, `missing`, `stale_input`, `authority_missing`, `orphan_evidence`, `contradictory_authority`, `contradictory_evidence`, `deferred`, and `event_ledger_invalid`.\n\n**REQ-R-ABG3-ASSURANCE-007**: `fulfilled` shall mean current evidence is bound to current authority and input digest, satisfies the required proof shape, and is admitted inside the scoped runtime boundary.\n\n**REQ-R-ABG3-ASSURANCE-008**: `partial` shall mean evidence exists but is trace-only, planned, shallow, incomplete, unbound to required proof shape, or otherwise insufficient for closure.\n\n**REQ-R-ABG3-ASSURANCE-009**: `missing` shall mean required authority-bound evidence is absent from the admitted event/evidence projection.\n\n**REQ-R-ABG3-ASSURANCE-010**: `stale_input` shall mean current authority or input digest differs from the digest a prior closure projection was computed against. Stale input shall invalidate the prior closure projection without erasing event history.\n\n**REQ-R-ABG3-ASSURANCE-011**: `authority_missing` shall mean the scoped runtime boundary is closure-capable or release-capable but lacks current authority sufficient to decide fulfillment.\n\n**REQ-R-ABG3-ASSURANCE-012**: `orphan_evidence` shall mean evidence exists without matching current authority or without lawful binding to the scoped runtime boundary. Orphan evidence shall not satisfy authority by default.\n\n**REQ-R-ABG3-ASSURANCE-013**: `contradictory_authority` shall mean current authority conflicts with itself in a way that prevents deterministic assurance classification.\n\n**REQ-R-ABG3-ASSURANCE-014**: `contradictory_evidence` shall mean admitted evidence conflicts with current authority or with other admitted evidence in a way that prevents closure.\n\n**REQ-R-ABG3-ASSURANCE-015**: `deferred` shall mean deferral is explicitly admitted as runtime truth and the resolved closure/release policy permits qualified deferral for the scoped boundary.\n\n**REQ-R-ABG3-ASSURANCE-016**: `event_ledger_invalid` shall mean the admitted event ledger is unreadable, inadmissible, non-deterministic, or otherwise insufficient for replay-derived assurance projection.\n"
+        }
+      ],
+      "label": "Assurance row status domain",
+      "definition": "At minimum: fulfilled=current authority/input-bound admitted evidence satisfying proof shape; partial=trace-only/planned/shallow/incomplete/unbound or otherwise insufficient evidence; missing=absent required authority-bound admitted evidence; stale_input=changed authority/input digest; authority_missing=closure/release-capable scope lacks deciding authority; orphan_evidence=evidence lacks current authority or lawful scoped binding; contradictory_authority=conflict prevents deterministic classification; contradictory_evidence=conflict with authority/evidence prevents closure; deferred=explicitly admitted runtime deferral permitted by resolved closure/release policy; event_ledger_invalid=unreadable/inadmissible/non-deterministic or insufficient replay ledger.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "assurance_closure_decision",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 63,
+          "end_line": 65,
+          "quote": "**REQ-R-ABG3-ASSURANCE-017**: ABG shall fold assurance rows into exactly one lawful closure decision: `close`, `retry`, `reprice`, `block`, or `qualified_defer`.\n\n**REQ-R-ABG3-ASSURANCE-018**: ABG may emit `close` only when every required assurance row is `fulfilled` or release-lawfully `deferred`.\n"
+        }
+      ],
+      "label": "Assurance closure result domain",
+      "definition": "Exactly one lawful result is folded from assurance rows: close, retry, reprice, block or qualified_defer.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "assurance_plugin_and_domain_roles",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 71,
+          "end_line": 75,
+          "quote": "**REQ-R-ABG3-ASSURANCE-021**: Plugins may provide authority snapshots, evidence adapters, ambiguity classifiers, closure policy providers, and gain-function adapters through typed contracts, but plugins shall not emit authoritative runtime events, select next graph vectors, or close assurance scopes.\n\n**REQ-R-ABG3-ASSURANCE-022**: Downstream products own domain gain functions, evidence semantics, and product release interpretation. ABG owns whether the declared authority and admitted evidence are totally projected and not prematurely closed.\n\n**REQ-R-ABG3-ASSURANCE-023**: A bad or incomplete downstream gain function remains downstream or method responsibility. ABG shall surface the resulting declared ambiguity but shall not silently repair domain meaning.\n"
+        }
+      ],
+      "label": "Assurance extension and domain roles",
+      "definition": "Typed plugins may supply authority snapshots, evidence adapters, ambiguity classifiers, closure-policy providers and gain adapters. Downstream owns domain gain functions, evidence semantics and release interpretation; ABG owns total projection and prevention of premature closure.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "edge_assurance_contract",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 85,
+          "end_line": 89,
+          "quote": "**REQ-R-ABG3-ASSURANCE-028**: ABG shall resolve a declared edge assurance contract before automated probabilistic closure is lawful. Resolution shall preserve source precedence, selected contract refs, and config identity as replay-visible truth.\n\n**REQ-R-ABG3-ASSURANCE-029**: If no edge assurance contract is declared, ABG shall project an F_H-required absentia disposition. In absentia mode a human may declare closure, continuation, reprice, block, defer, or directly transform the mutable worksite, but ABG shall still admit the scoped judgment or observed state change before projection or routing.\n\n**REQ-R-ABG3-ASSURANCE-030**: F_P evaluate output under an edge assurance contract shall enter assurance only as an admitted finding attached to a recorded hook action. ABG shall reject evaluation findings that contain runtime events, ledger writes, projections, selected vector choices, transitions, or closure authority.\n"
+        }
+      ],
+      "label": "Declared edge assurance contract",
+      "definition": "A declared contract resolves before lawful automated probabilistic closure, retaining source precedence, selected refs and config identity as replay-visible truth; F_P evaluation enters only as admitted findings attached to recorded hook actions.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "binding_requirement",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization",
+          "start_line": 1,
+          "end_line": 7,
+          "quote": "# REQ-R-ABG3-BINDING — Worker / Role / Call Realization\n\n**Status**: Active\n**Lineage**: T-283 Product basis; T-284 bounded owner repair\n**Category**: Capability\n**Date**: 2026-04-07\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Worker Role Call Realization requirement",
+      "definition": "Active capability dated 2026-04-07 with T-283 Product basis and T-284 bounded repair lineage, declaring method/intent/product derivations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "lawful_runtime_binding",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FPurpose",
+          "start_line": 13,
+          "end_line": 15,
+          "quote": "Define lawful binding between an admitted GTL program, its published callable\nwork, stable workspace authority, concrete workers, and ABG runtime execution\naggregates.\n"
+        }
+      ],
+      "label": "Lawful runtime binding",
+      "definition": "Binding connects an admitted GTL program and published callable work to stable workspace authority, concrete workers and ABG execution aggregates; this purpose states the lawful association without supplying the detailed binding criteria.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "assurance_scoped_to_runtime",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FScope",
+          "start_line": 21,
+          "end_line": 23,
+          "quote": "Assurance scope is invocation-local runtime truth inside the existing GTL edge\ntraversal boundary. It is projected over existing ABG aggregates such as\n`GraphCall`, `Frame`, and `Continuation`.\n"
+        }
+      ],
+      "source_key": "assurance_projection",
+      "target_key": "assurance_runtime_boundary",
+      "kind": "scoped_by",
+      "meaning": "The assurance projection operates inside the existing invocation-local edge runtime boundary.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "rows_fold_to_decision",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 63,
+          "end_line": 65,
+          "quote": "**REQ-R-ABG3-ASSURANCE-017**: ABG shall fold assurance rows into exactly one lawful closure decision: `close`, `retry`, `reprice`, `block`, or `qualified_defer`.\n\n**REQ-R-ABG3-ASSURANCE-018**: ABG may emit `close` only when every required assurance row is `fulfilled` or release-lawfully `deferred`.\n"
+        }
+      ],
+      "source_key": "assurance_row_status",
+      "target_key": "assurance_closure_decision",
+      "kind": "folds_to",
+      "meaning": "ABG folds assurance rows into exactly one lawful decision under closure law.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "governance_no_new_runtime",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FFramed%20Governance",
+          "start_line": 128,
+          "end_line": 129,
+          "quote": "These decompose one Product definition, not a new planner, frame runtime or\nrequirement family. Work state and current acceptance belong to T-287.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "framed_governance_ownership"
+      ],
+      "statement": "The decomposition does not introduce a planner, frame runtime or requirement family.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "selected_obligations_remain",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FSelected%20Lifecycle%20Witness%20And%20Testing",
+          "start_line": 133,
+          "end_line": 138,
+          "quote": "F17/S06 binds a prospectively selected meaningful real-specification contract\nunder Product Release Boundaries. Every selected outcome, its prerequisites,\nconsequential correction and admitted evidence remain mandatory. Original and\nexcluded source obligations remain visible; full original Data Mapper delivery\nstays open downstream and is not an ABI release gate. Proof carry-through and\ngeneric runtime requirements remain applicable to every selected obligation.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "selected_lifecycle_contract"
+      ],
+      "statement": "Every selected outcome, prerequisite, consequential correction and admitted evidence remains mandatory; original and excluded obligations stay visible; proof carry-through and generic runtime laws apply to every selected obligation.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Full original Data Mapper delivery remains open downstream and is not an ABI release gate."
+      ]
+    },
+    {
+      "key": "assurance_sequence_and_deferral",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FSelected%20Lifecycle%20Witness%20And%20Testing",
+          "start_line": 140,
+          "end_line": 145,
+          "quote": "`REQ-P-QUAL-071` owns the derived evidence sequencing: focused structural checks\nduring construction, early installed integration/UAT at usable steel threads,\nand broad applicable assurance at integrated qualification. A deferred scenario\ncannot remove a retained generic graph, admission, authority or replay law.\nOptional published capabilities still obey their declared contracts and cannot\nclaim unexecuted dedicated qualification.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "selected_lifecycle_contract"
+      ],
+      "statement": "Use focused construction structural checks, early installed integration/UAT on usable steel threads, then broad applicable integrated qualification assurance. Scenario deferral cannot remove retained graph, admission, authority or replay law. Optional published capabilities obey their contracts and cannot claim dedicated qualification that was not executed.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "tuner_applicability",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/README.md#ABG%203%20Requirement%20Families%2FScope",
+          "start_line": 36,
+          "end_line": 38,
+          "quote": "- planned 5.1 reflective tuner law: declaration-draft-only optimisation,\n  ratification states, annealing equivalence contracts, crystallization\n  (rails/emergence) track changes; this family is not applicable to 5.0\n"
+        }
+      ],
+      "applies_to_keys": [
+        "abg_runtime_scope"
+      ],
+      "statement": "Reflective tuning is planned for 5.1 and non-applicable to 5.0; its scope is declaration-draft-only optimization, ratification, annealing equivalence and crystallization rails/emergence changes.",
+      "uncertainty": "",
+      "conditions": [
+        "The planned reflective tuner family is selected."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "success_is_insufficient_closure",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FPurpose",
+          "start_line": 15,
+          "end_line": 17,
+          "quote": "This requirement prevents premature closure. A bounded compute scope may not\nclose merely because a worker succeeded, tests passed, a report was written, an\narchive has the expected shape, or no closure-register row exists.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_projection"
+      ],
+      "statement": "Worker success, tests, a written report, expected archive shape or absent closure-register row alone cannot close a bounded compute scope.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "future_compute_carrier_authority",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FScope",
+          "start_line": 25,
+          "end_line": 27,
+          "quote": "`UnitOfCompute` is not introduced as a public aggregate by this requirement. A\nfuture stable carrier with that name requires explicit design authority and may\nnot widen the product compute boundary without product reprice.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_runtime_boundary"
+      ],
+      "statement": "Any future stable UnitOfCompute carrier requires explicit design authority and cannot widen the Product compute boundary without Product reprice.",
+      "uncertainty": "",
+      "conditions": [
+        "A future stable carrier named UnitOfCompute is proposed."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "assurance_total_replay_inputs",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 31,
+          "end_line": 39,
+          "quote": "**REQ-R-ABG3-ASSURANCE-001**: ABG shall provide a total assurance projection for closure-capable bounded compute inside the existing GTL edge-traversal runtime boundary.\n\n**REQ-R-ABG3-ASSURANCE-002**: Assurance scope shall be derived from replay-visible runtime truth over `GraphCall`, `Frame`, `Continuation`, and their causal event identities rather than hidden controller memory.\n\n**REQ-R-ABG3-ASSURANCE-003**: Assurance shall be computed from the current authority/input snapshot and the admitted event ledger for the scoped runtime boundary.\n\n**REQ-R-ABG3-ASSURANCE-004**: The authority/input snapshot used for assurance shall have a deterministic digest or equivalent identity sufficient to compare current authority with the authority a prior closure projection was computed against.\n\n**REQ-R-ABG3-ASSURANCE-005**: The assurance projection shall emit explicit rows for every relevant authority/evidence state. Unknown, absent, unreadable, or unclassified state shall not be treated as success.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_projection",
+        "assurance_runtime_boundary"
+      ],
+      "statement": "For every closure-capable bounded compute scope, derive scope from replay-visible GraphCall/Frame/Continuation and causal event identities, never hidden controller memory. Compute from current authority/input snapshot and admitted scoped ledger; give the snapshot a deterministic comparable identity; emit every relevant authority/evidence state explicitly. Unknown, absent, unreadable and unclassified never count as success.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "stale_and_orphan_nonfulfillment",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 49,
+          "end_line": 53,
+          "quote": "**REQ-R-ABG3-ASSURANCE-010**: `stale_input` shall mean current authority or input digest differs from the digest a prior closure projection was computed against. Stale input shall invalidate the prior closure projection without erasing event history.\n\n**REQ-R-ABG3-ASSURANCE-011**: `authority_missing` shall mean the scoped runtime boundary is closure-capable or release-capable but lacks current authority sufficient to decide fulfillment.\n\n**REQ-R-ABG3-ASSURANCE-012**: `orphan_evidence` shall mean evidence exists without matching current authority or without lawful binding to the scoped runtime boundary. Orphan evidence shall not satisfy authority by default.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_row_status"
+      ],
+      "statement": "Stale input invalidates a prior closure projection without erasing event history; orphan evidence does not satisfy authority by default.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "close_requires_all_rows",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 65,
+          "end_line": 69,
+          "quote": "**REQ-R-ABG3-ASSURANCE-018**: ABG may emit `close` only when every required assurance row is `fulfilled` or release-lawfully `deferred`.\n\n**REQ-R-ABG3-ASSURANCE-019**: ABG shall not infer closure from worker success, transport success, passing tests, generated report shape, archive presence, prompt-side self-assessment, or absence of a closure-register entry.\n\n**REQ-R-ABG3-ASSURANCE-020**: ABG shall derive assurance projections deterministically from current authority and admitted event truth. Reports, dashboards, closure ledgers, and release summaries are read models over that projection, not rival truth stores.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_closure_decision",
+        "assurance_projection"
+      ],
+      "statement": "Close is allowed only if every required row is fulfilled or release-lawfully deferred. Worker/transport success, tests, report shape, archive presence, prompt self-assessment or absent register entry cannot imply closure. Projections are deterministic from current authority and admitted truth; reports, dashboards, closure ledgers and release summaries are read models, not rival truth stores.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "ambiguity_reprojection_and_provenance",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 75,
+          "end_line": 81,
+          "quote": "**REQ-R-ABG3-ASSURANCE-023**: A bad or incomplete downstream gain function remains downstream or method responsibility. ABG shall surface the resulting declared ambiguity but shall not silently repair domain meaning.\n\n**REQ-R-ABG3-ASSURANCE-024**: Same-edge retry, correction, reopen, or authority/input change shall preserve prior events as evidence while requiring a fresh assurance projection over the current authority/input snapshot.\n\n**REQ-R-ABG3-ASSURANCE-025**: Assurance rows and closure decisions shall preserve enough provenance to explain which authority, event facts, plugin outputs, and policy refs produced the decision.\n\n**REQ-R-ABG3-ASSURANCE-026**: Subordinate work, including bounded leaf tasks, shall either project assurance within the parent runtime boundary or publish a declared subordinate assurance boundary that remains causally bound to the parent.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_projection"
+      ],
+      "statement": "ABG surfaces declared downstream ambiguity. Retry, correction, reopen and authority/input changes preserve prior events but require fresh projection on current snapshot. Rows and decisions preserve explaining authority, event facts, plugin outputs and policy refs. Subordinate work including leaf tasks either projects in the parent boundary or declares a subordinate assurance boundary causally bound to the parent.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "modulated_attempt_evidence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 83,
+          "end_line": 83,
+          "quote": "**REQ-R-ABG3-ASSURANCE-027**: For a modulated traversal attempt, assurance shall consume `TraversalAttemptEnvelope`, admitted `TraversalAttemptProgressRow` rows, `TraversalForcedReviewGate` truth, and existing foldback/non-progress/reentry projections. File presence, worker narrative, elapsed time, or unstated worker intent shall not satisfy closure or continuation evidence.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_projection"
+      ],
+      "statement": "For a modulated traversal, consume TraversalAttemptEnvelope, admitted progress rows, forced-review truth and existing foldback/non-progress/reentry projections; files, worker narrative, elapsed time and unstated intent do not satisfy closure or continuation evidence.",
+      "uncertainty": "",
+      "conditions": [
+        "A traversal attempt is modulated."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "assurance_contract_absentia",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 85,
+          "end_line": 89,
+          "quote": "**REQ-R-ABG3-ASSURANCE-028**: ABG shall resolve a declared edge assurance contract before automated probabilistic closure is lawful. Resolution shall preserve source precedence, selected contract refs, and config identity as replay-visible truth.\n\n**REQ-R-ABG3-ASSURANCE-029**: If no edge assurance contract is declared, ABG shall project an F_H-required absentia disposition. In absentia mode a human may declare closure, continuation, reprice, block, defer, or directly transform the mutable worksite, but ABG shall still admit the scoped judgment or observed state change before projection or routing.\n\n**REQ-R-ABG3-ASSURANCE-030**: F_P evaluate output under an edge assurance contract shall enter assurance only as an admitted finding attached to a recorded hook action. ABG shall reject evaluation findings that contain runtime events, ledger writes, projections, selected vector choices, transitions, or closure authority.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "edge_assurance_contract",
+        "assurance_projection"
+      ],
+      "statement": "Without a declared contract, project an F_H-required absentia disposition. A human may then declare closure/continuation/reprice/block/defer or directly transform mutable worksite, but ABG admits the judgment or observed change before projection/routing. Reject F_P findings carrying runtime events, ledger writes, projections, vector choice, transitions or closure authority.",
+      "uncertainty": "",
+      "conditions": [
+        "Automated probabilistic closure or F_P evaluate output is involved."
+      ],
+      "exceptions": [
+        "In absentia mode humans may perform the stated judgments or worksite changes, subject to admission."
+      ]
+    },
+    {
+      "key": "composition_identity_binding",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 91,
+          "end_line": 93,
+          "quote": "**REQ-R-ABG3-ASSURANCE-031**: When an assurance scope is governed by an `abg.fn_composition` contract, ABG assurance projection and closure fold shall preserve the selected composition ref and digest. Assurance evidence shall not close a scope when it was admitted under a different, missing, stale, or malformed composition identity.\n\n**REQ-R-ABG3-ASSURANCE-032**: Edge assurance contracts may contribute gain, residual pressure, continuation, and proposed close disposition only under the selected composition identity. The actual close/retry/reprice/block/defer decision remains the ABG assurance fold over admitted evidence and deterministic closure law.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_projection",
+        "edge_assurance_contract"
+      ],
+      "statement": "A composition-governed scope preserves selected composition ref and digest in projection/fold. Evidence from different, absent, stale or malformed composition identity cannot close. Contracts contribute gain, residual pressure, continuation or proposed close only under that identity; actual close/retry/reprice/block/defer remains ABG fold over admitted evidence and deterministic law.",
+      "uncertainty": "",
+      "conditions": [
+        "The scope is governed by abg.fn_composition."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "external_human_admission",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 95,
+          "end_line": 95,
+          "quote": "**REQ-R-ABG3-ASSURANCE-033**: Human-required assurance states shall be represented as external `F_H` callout boundaries. A human-facing system may perform and return the work, but ABG shall only consume an admitted response event or carrier; no external human response directly mutates assurance projection, traversal transition, replay truth, or closure.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_projection"
+      ],
+      "statement": "Represent human-required states as external F_H callout boundaries. A human-facing system may perform and return work, but ABG consumes only admitted response event/carrier; the response itself cannot directly mutate projection, transition, replay truth or closure.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "scoped_evaluation_total_fold",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 97,
+          "end_line": 101,
+          "quote": "**REQ-R-ABG3-ASSURANCE-034**: For composition-governed evaluation, ABG assurance fold shall consume the admitted evaluation-set projection. Raw plugin returns, unadmitted rule outcomes, missing required rule results, and rule outcomes admitted under stale or mismatched composition identity shall not close a traversal boundary.\n\n**REQ-R-ABG3-ASSURANCE-035**: Composition-governed evaluation findings may carry an admitted evaluation scope ref for edge, segment, dimension-cell, fold, or relation scope inside the current graph-vector boundary. Assurance projection shall preserve that scope on derived rows without making the scoped finding close, emit runtime truth, select traversal, or write ledgers.\n\n**REQ-R-ABG3-ASSURANCE-036**: Assurance over scoped evaluation shall fold the full current scoped row set. One fulfilled scoped row shall not close the whole boundary while another required current scoped row is partial, missing, stale, orphan-bound, contradictory, blocked, or non-lawfully deferred. One failed scoped row shall not invalidate sibling scoped rows unless admitted authority, input, correction, or lineage truth requires that invalidation.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_projection",
+        "assurance_row_status"
+      ],
+      "statement": "Consume admitted evaluation-set projection. Raw returns, unadmitted outcomes, absent required results or stale/mismatched composition findings cannot close. Preserve admitted edge/segment/dimension-cell/fold/relation scope refs inside current vector boundary without granting runtime/ledger/traversal/closure authority. Fold the full current scoped row set: one fulfilled row cannot close while another required current row is partial, missing, stale, orphan-bound, contradictory, blocked or unlawfully deferred. One failed row does not invalidate siblings unless admitted authority/input/correction/lineage truth requires it.",
+      "uncertainty": "",
+      "conditions": [
+        "Evaluation is composition-governed or scoped."
+      ],
+      "exceptions": [
+        "Sibling invalidation is allowed when required by admitted authority, input, correction or lineage truth."
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "assurance_extension_limits",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 71,
+          "end_line": 75,
+          "quote": "**REQ-R-ABG3-ASSURANCE-021**: Plugins may provide authority snapshots, evidence adapters, ambiguity classifiers, closure policy providers, and gain-function adapters through typed contracts, but plugins shall not emit authoritative runtime events, select next graph vectors, or close assurance scopes.\n\n**REQ-R-ABG3-ASSURANCE-022**: Downstream products own domain gain functions, evidence semantics, and product release interpretation. ABG owns whether the declared authority and admitted evidence are totally projected and not prematurely closed.\n\n**REQ-R-ABG3-ASSURANCE-023**: A bad or incomplete downstream gain function remains downstream or method responsibility. ABG shall surface the resulting declared ambiguity but shall not silently repair domain meaning.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "assurance_plugin_and_domain_roles"
+      ],
+      "allowed": [
+        "Supply the named typed plugin contributions."
+      ],
+      "forbidden": [
+        "Plugins emit authoritative runtime events, select next graph vectors, or close scopes.",
+        "ABG silently repairs bad or incomplete downstream gain-function meaning."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "governance_external_owners",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FFramed%20Governance",
+          "start_line": 121,
+          "end_line": 129,
+          "quote": "INT-008 and the Product Execution And Context Calculus own the selected\ngovernance meaning. `REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-015B` owns its\ncomposition vocabulary; CONTEXT-009..012 own frame bindings and observation\nuse; SELECTION-BOUNDARY-016..019 own evaluated preregistered selection and its\ndeclared-purpose boundary; MAPPING-007 owns\nrepresentation conservation; SCENARIOS-018 owns the bounded discriminator;\nQUAL-072 owns correspondence with actual execution and affected qualification.\nThese decompose one Product definition, not a new planner, frame runtime or\nrequirement family. Work state and current acceptance belong to T-287.\n"
+        }
+      ],
+      "subject_key": "framed_governance_ownership",
+      "uncertainty": "The named owner definitions and current T-287 acceptance evidence are outside this supplied section.",
+      "consequence": "Record owner references without inventing their full law or treating the references as current acceptance."
+    },
+    {
+      "key": "catalog_is_not_family_semantics",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/README.md#ABG%203%20Requirement%20Families%2FFamilies",
+          "start_line": 44,
+          "end_line": 77,
+          "quote": "- `REQ-R-ABG3-EVENTS.md`\n- `REQ-R-ABG3-PROJECTION.md`\n- `REQ-R-ABG3-ITERATION.md`\n- `REQ-R-ABG3-SAGA-FRONTIER.md`\n- `REQ-R-ABG3-BINDING.md`\n- `REQ-R-ABG3-HANDLERS.md`\n- `REQ-R-ABG3-WORKER.md`\n- `REQ-R-ABG3-JOB-WORKER.md`\n- `REQ-R-ABG3-LINEAGE.md`\n- `REQ-R-ABG3-RUN.md`\n- `REQ-R-ABG3-GRAPHCALL.md`\n- `REQ-R-ABG3-CCALL.md`\n- `REQ-R-ABG3-FRAME.md`\n- `REQ-R-ABG3-CONTINUATION.md`\n- `REQ-R-ABG3-CONVERGENCE.md`\n- `REQ-R-ABG3-ASSURANCE.md`\n- `REQ-R-ABG3-FP-CONSCIOUSNESS.md`\n- `REQ-R-ABG3-FN-COMPOSITION.md`\n- `REQ-R-ABG3-PAYLOAD.md`\n- `REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md`\n- `REQ-R-ABG3-REQUIREMENT-PROOF-CARRY-THROUGH.md`\n- `REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md`\n- `REQ-R-ABG3-POLICY.md`\n- `REQ-R-ABG3-SELECTION-APPLICATION.md`\n- `REQ-R-ABG3-LEAFTASK.md`\n- `REQ-R-ABG3-PROVENANCE.md`\n- `REQ-R-ABG3-CORRECTION.md`\n- `REQ-R-ABG3-RETRY.md`\n- `REQ-R-ABG3-TRANSPORT.md`\n- `REQ-R-ABG3-INTERPRET.md`\n- `REQ-R-ABG3-SELFHOSTING.md`\n- `REQ-R-ABG3-SUPERVISOR-WITNESS.md`\n- `REQ-R-ABG3-TUNER.md` - planned 5.1; non-operative for 5.0\n- `REQ-R-ABG3-PLUGIN-SEAMS.md`\n"
+        }
+      ],
+      "subject_key": "abg_family_catalog",
+      "uncertainty": "Listed documents are references; this catalog does not supply their detailed obligations or cross-chunk identities.",
+      "consequence": "Only the catalog membership and explicit tuner applicability are asserted here."
+    },
+    {
+      "key": "assurance_derivation_scope",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-EVENTS.md](REQ-R-ABG3-EVENTS.md), [REQ-R-ABG3-PROJECTION.md](REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-CONVERGENCE.md](REQ-R-ABG3-CONVERGENCE.md), [REQ-R-ABG3-CORRECTION.md](REQ-R-ABG3-CORRECTION.md)\n"
+        }
+      ],
+      "subject_key": "assurance_requirement",
+      "uncertainty": "Derivation includes v2.5.0-rc.6 method links; referenced contents and authority reconciliation with the selected Product method are not supplied in this section.",
+      "consequence": "Preserve these as subject provenance, not another method admission or resolved governing edges."
+    },
+    {
+      "key": "assurance_operational_references",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+          "start_line": 81,
+          "end_line": 101,
+          "quote": "**REQ-R-ABG3-ASSURANCE-026**: Subordinate work, including bounded leaf tasks, shall either project assurance within the parent runtime boundary or publish a declared subordinate assurance boundary that remains causally bound to the parent.\n\n**REQ-R-ABG3-ASSURANCE-027**: For a modulated traversal attempt, assurance shall consume `TraversalAttemptEnvelope`, admitted `TraversalAttemptProgressRow` rows, `TraversalForcedReviewGate` truth, and existing foldback/non-progress/reentry projections. File presence, worker narrative, elapsed time, or unstated worker intent shall not satisfy closure or continuation evidence.\n\n**REQ-R-ABG3-ASSURANCE-028**: ABG shall resolve a declared edge assurance contract before automated probabilistic closure is lawful. Resolution shall preserve source precedence, selected contract refs, and config identity as replay-visible truth.\n\n**REQ-R-ABG3-ASSURANCE-029**: If no edge assurance contract is declared, ABG shall project an F_H-required absentia disposition. In absentia mode a human may declare closure, continuation, reprice, block, defer, or directly transform the mutable worksite, but ABG shall still admit the scoped judgment or observed state change before projection or routing.\n\n**REQ-R-ABG3-ASSURANCE-030**: F_P evaluate output under an edge assurance contract shall enter assurance only as an admitted finding attached to a recorded hook action. ABG shall reject evaluation findings that contain runtime events, ledger writes, projections, selected vector choices, transitions, or closure authority.\n\n**REQ-R-ABG3-ASSURANCE-031**: When an assurance scope is governed by an `abg.fn_composition` contract, ABG assurance projection and closure fold shall preserve the selected composition ref and digest. Assurance evidence shall not close a scope when it was admitted under a different, missing, stale, or malformed composition identity.\n\n**REQ-R-ABG3-ASSURANCE-032**: Edge assurance contracts may contribute gain, residual pressure, continuation, and proposed close disposition only under the selected composition identity. The actual close/retry/reprice/block/defer decision remains the ABG assurance fold over admitted evidence and deterministic closure law.\n\n**REQ-R-ABG3-ASSURANCE-033**: Human-required assurance states shall be represented as external `F_H` callout boundaries. A human-facing system may perform and return the work, but ABG shall only consume an admitted response event or carrier; no external human response directly mutates assurance projection, traversal transition, replay truth, or closure.\n\n**REQ-R-ABG3-ASSURANCE-034**: For composition-governed evaluation, ABG assurance fold shall consume the admitted evaluation-set projection. Raw plugin returns, unadmitted rule outcomes, missing required rule results, and rule outcomes admitted under stale or mismatched composition identity shall not close a traversal boundary.\n\n**REQ-R-ABG3-ASSURANCE-035**: Composition-governed evaluation findings may carry an admitted evaluation scope ref for edge, segment, dimension-cell, fold, or relation scope inside the current graph-vector boundary. Assurance projection shall preserve that scope on derived rows without making the scoped finding close, emit runtime truth, select traversal, or write ledgers.\n\n**REQ-R-ABG3-ASSURANCE-036**: Assurance over scoped evaluation shall fold the full current scoped row set. One fulfilled scoped row shall not close the whole boundary while another required current scoped row is partial, missing, stale, orphan-bound, contradictory, blocked, or non-lawfully deferred. One failed scoped row shall not invalidate sibling scoped rows unless admitted authority, input, correction, or lineage truth requires that invalidation.\n"
+        }
+      ],
+      "subject_key": "assurance_projection",
+      "uncertainty": "Detailed aggregate, traversal-envelope, composition, hook and evaluation-set definitions are referenced but not fully supplied here; this schema does not execute replay or folds.",
+      "consequence": "Preserve the required inputs, admission and refusal boundaries without inventing operational transitions or cross-chunk identity."
+    },
+    {
+      "key": "binding_basis_references",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization",
+          "start_line": 4,
+          "end_line": 7,
+          "quote": "**Lineage**: T-283 Product basis; T-284 bounded owner repair\n**Category**: Capability\n**Date**: 2026-04-07\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "binding_requirement",
+      "uncertainty": "The referenced lineage and v2.5.0-rc.6 derivations are not supplied as deciding contents.",
+      "consequence": "No current authority or acceptance is inferred from metadata links."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FFramed%20Governance",
+      "decision": "residual",
+      "keys": [
+        "framed_governance_ownership",
+        "governance_no_new_runtime",
+        "governance_external_owners"
+      ],
+      "reason": "Owner allocation is retained; referenced owner meanings and current work acceptance are unresolved here."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FSelected%20Lifecycle%20Witness%20And%20Testing",
+      "decision": "retained",
+      "keys": [
+        "selected_lifecycle_contract",
+        "selected_obligations_remain",
+        "assurance_sequence_and_deferral"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FActive%20Requirement%20Domains",
+      "decision": "retained",
+      "keys": [
+        "requirement_domains"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/README.md#ABG%203%20Requirement%20Families",
+      "decision": "retained",
+      "keys": [
+        "abg_runtime_law"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/README.md#ABG%203%20Requirement%20Families%2FScope",
+      "decision": "retained",
+      "keys": [
+        "abg_runtime_scope",
+        "tuner_applicability"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/README.md#ABG%203%20Requirement%20Families%2FFamilies",
+      "decision": "residual",
+      "keys": [
+        "abg_family_catalog",
+        "catalog_is_not_family_semantics"
+      ],
+      "reason": "Catalog meaning retained; linked family semantics remain unresolved unless supplied elsewhere in this chunk."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection",
+      "decision": "residual",
+      "keys": [
+        "assurance_requirement",
+        "assurance_derivation_scope"
+      ],
+      "reason": "Metadata retained as subject provenance; linked derivation is not resolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "assurance_projection",
+        "success_is_insufficient_closure"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FScope",
+      "decision": "retained",
+      "keys": [
+        "assurance_runtime_boundary",
+        "assurance_scoped_to_runtime",
+        "future_compute_carrier_authority"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ASSURANCE.md#REQ-R-ABG3-ASSURANCE%20%E2%80%94%20Total%20Assurance%20Projection%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "assurance_row_status",
+        "assurance_closure_decision",
+        "assurance_plugin_and_domain_roles",
+        "edge_assurance_contract",
+        "rows_fold_to_decision",
+        "assurance_total_replay_inputs",
+        "stale_and_orphan_nonfulfillment",
+        "close_requires_all_rows",
+        "ambiguity_reprojection_and_provenance",
+        "modulated_attempt_evidence",
+        "assurance_contract_absentia",
+        "composition_identity_binding",
+        "external_human_admission",
+        "scoped_evaluation_total_fold",
+        "assurance_extension_limits",
+        "assurance_operational_references"
+      ],
+      "reason": "Material assurance laws retained; referred operational contracts and execution remain unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization",
+      "decision": "residual",
+      "keys": [
+        "binding_requirement",
+        "binding_basis_references"
+      ],
+      "reason": "Binding metadata retained with unresolved derivation references."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "lawful_runtime_binding"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    }
+  ],
+  "limitations": [
+    "The ABG family catalog is retained as navigation rather than invented detailed requirements. Legacy method links in requirement metadata are represented as subject data.",
+    "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+  ]
+}

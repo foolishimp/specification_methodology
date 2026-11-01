@@ -1,0 +1,410 @@
+{
+  "concepts": [
+    {
+      "key": "fn_composition_contract",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 34,
+          "end_line": 48,
+          "quote": "**REQ-R-ABG3-FN-COMP-001**: ABG shall recognize an `abg.fn_composition` contract as the replay-stable runtime grammar for how `F_D`, `F_P`, and `F_H` participate in one graph function, graph vector, evaluator, rule, or operator boundary when that boundary affects traversal selection, evidence admission, optimization, or closure.\n\n**REQ-R-ABG3-FN-COMP-002**: An `abg.fn_composition` contract shall carry at minimum a stable `contract_ref`, normalized `contract_digest`, host binding, ordered regime bindings, standards context, policy context, carrier context, assurance context, deterministic closure contract, and optional optimization contract.\n\n**REQ-R-ABG3-FN-COMP-003**: The host binding shall identify the owning GTL surface and shall fail closed when a vector-local, evaluator-local, rule-local, hook-local, or operator-local declaration does not match the host's graph-function ref, graph-vector ref, source node ref, target node ref, target schema ref, or owning declaration ref.\n\n**REQ-R-ABG3-FN-COMP-004**: Every regime binding shall declare regime kind, role, order, authority, input carrier refs, output carrier refs, and evidence refs when applicable. `F_D` may own closure authority. `F_P` may construct, diagnose, repair, rank, or supply evidence. `F_H` may be present, deferred, or absentia. Non-`F_D` regimes shall not claim closure authority.\n\n**REQ-R-ABG3-FN-COMP-005**: Standards and policy context used for construction, admission, closure, replay, fallback, escalation, and observability shall be explicit composition inputs. Replay against a different standards or policy identity shall be non-equivalent unless a declared migration or supersession policy admits the change.\n\n**REQ-R-ABG3-FN-COMP-006**: Carrier context shall preserve selected source and target carrier refs, selected target carrier contract ref and digest where applicable, payload-ledger projection refs, and closure-precondition refs. Target satisfaction shall be evaluated under the selected carrier identity, not under file presence, worker prose, or generic payload existence.\n\n**REQ-R-ABG3-FN-COMP-007**: Assurance context shall preserve selected edge assurance contract ref and digest where applicable, required evidence refs, closure-gate refs, and assurance projection refs. Edge assurance findings shall be interpreted under the selected composition identity and shall not become closure law by themselves.\n\n**REQ-R-ABG3-FN-COMP-008**: The closure contract shall name an `F_D` closure function or closure predicate ref, required evidence refs, rejection evidence refs, replay projection ref, and closure event kind or event ref. ABG shall not infer closure from worker success, prompt-side self-assessment, passing tests, report shape, gap absence, or transport success.\n"
+        }
+      ],
+      "label": "Fn composition contract",
+      "definition": "abg.fn_composition is replay-stable grammar for F_D/F_P/F_H participation at function/vector/evaluator/rule/operator boundaries affecting selection, admission, optimization or closure. It contains stable ref, normalized digest, host, ordered regimes, standards/policy/carrier/assurance contexts, deterministic closure and optional optimization.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "composition_optimization",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 50,
+          "quote": "**REQ-R-ABG3-FN-COMP-009**: Optimizing an `F_P`-backed or mixed-regime path into a deterministic path shall require source composition ref and digest, deterministic replacement ref, positive equivalence case refs, negative equivalence case refs, equivalence projection ref, and invalidation policy ref.\n"
+        }
+      ],
+      "label": "Declared deterministic optimization",
+      "definition": "Replacing a probabilistic/mixed path with deterministic path requires source composition ref/digest, replacement ref, positive and negative equivalence cases, equivalence projection and invalidation policy.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "declared_stage_set",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 64,
+          "end_line": 74,
+          "quote": "**REQ-R-ABG3-FN-COMP-014**: ABG shall preserve the ontology/epistemology split for composition-governed boundaries. GTL and product declarations identify lawful hosts, hooks, policy refs, and product read-model intent; ABG admits candidate/evaluation payloads, emits events, derives payload ledgers, derives assurance and traversal projections, folds closure, and records replay truth.\n\n**REQ-R-ABG3-FN-COMP-015**: HoG shall traverse the exact ordered stages of the\nadmitted C program. For each authored stage, ABG shall admit or resume the\nowning graph call and frame, admit the selected regime and implementation\nbinding, record task invocation and results, and expose replay-derived stage\ntruth to HoG for the next declared bind. After the result-bearing stage and\nrequired downstream binds are satisfied, ABG may admit assurance, disposition,\ncontinuation, or closure truth. Neither HoG nor ABG shall synthesize a missing\nstage, force a canonical three-stage chain, rename a domain role, or count\nruntime admission transitions as authored program membership.\n"
+        }
+      ],
+      "label": "Declared ordered C stage set",
+      "definition": "GTL/Product identify lawful hosts/hooks/policies/read-model intent; ABG admits candidates/evaluations, events, ledgers, assurance/traversal, closure and replay. HoG traverses exact admitted stage order; ABG admits/resumes each stage call/frame, regime/implementation, invocation/result and exposes replay truth for next bind.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "declared_evaluation_set",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 82,
+          "end_line": 100,
+          "quote": "**REQ-R-ABG3-FN-COMP-019**: The admitted GTL composition shall declare\nevaluation-set membership, dependencies, and stable ordered or parallel rule\nbatches, and HoG shall traverse that declared evaluation structure. ABG shall\nadmit rule invocations and outcomes and derive evaluation ledgers, replay\norder, assurance fold, and evaluation-set projections from admitted events.\nABG shall not plan or schedule evaluation work, synthesize an evaluation loop,\nor reorder declared GTL. Product plugins may compute rule outcomes inside\nselected composition boundaries, but they shall not write ledgers, select\ntraversal, transition, or close the boundary.\n\n**REQ-R-ABG3-FN-COMP-020**: Required evaluation rules shall fail closed when absent, stale, malformed, contradictory, rejected, or admitted under a mismatched selected composition ref/digest or selected regime-binding contribution ref.\n\n**REQ-R-ABG3-FN-COMP-021**: Every authored C stage shall use one stage-set law:\nHoG preserves declared identity and order; selected implementations perform\nthe declared tasks; ABG admits task results and derives applicable ledgers and\nprojections; HoG consumes only admitted output at the next declared bind.\n`transform.C`, `evaluate.C`, and `consequence.C` use this law when present;\nscalar hooks are one-task reductions. Runtime-owned transitions shall not\nsatisfy authored-stage cardinality or conservation.\n"
+        }
+      ],
+      "label": "Declared evaluation set and stage law",
+      "definition": "GTL declares evaluation membership/dependencies and stable sequential/parallel batches; HoG traverses these; implementations perform tasks; ABG admits results and derives ledgers/order/assurance/set projections. Every authored C stage follows this law, including transform/evaluate/consequence when present; scalar hooks reduce to one task.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "traversal_unit",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 102,
+          "end_line": 109,
+          "quote": "**REQ-R-ABG3-FN-COMP-022**: `TraversalUnit<A, B>` is the monadic traversal atom\nadvanced by HoG under one admitted GTL program, selected GraphFunction,\nworkspace binding, and compute basis. ABG admits each unit's result and the\nnext disposition: next unit, same-unit retry, graph-span or public re-entry,\nreprice, yielded continuation, block, gap stop, non-admit, or terminal\nprojection. Neither the unit nor callable substitutes for the owning program.\n\n**REQ-R-ABG3-FN-COMP-023**: ABG shall conserve admitted-program identity, selected action or current-intent identity, immutable workspace-binding identity, execution-basis identity, and intent-lineage across the event-sourced bind chain. A bind from `TraversalUnit<A, B>` to any next disposition shall carry or account for admitted intent refs, lineage refs, carried obligation refs, target-carrier refs, materialization/output-allocation refs, residual pressure refs, staged-authority refs, admission-strength refs, and downstream terminal pressure. Unit close may clear a pressure or obligation ref only through admitted realization evidence, refinement, named downstream deferral, block, re-entry, reprice, no-close preservation, or terminal projection; scalar unit close shall not erase an obligation vector. A materializing unit is non-conformant when staged pressure and materialization authority are exposed through divergent or undeclared admission predicates.\n"
+        }
+      ],
+      "label": "TraversalUnit",
+      "definition": "Monadic traversal atom under one admitted program, selected function, workspace binding and compute basis. ABG admits its result and next-unit/same-unit retry/graph-span or public re-entry/reprice/yield/block/gap-stop/non-admit/terminal disposition; neither unit nor callable replaces program.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "sufficient_construction_intent",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 111,
+          "end_line": 111,
+          "quote": "**REQ-R-ABG3-FN-COMP-024**: When a newly selected action requires traversal, product, or artifact materialization, ABG shall admit or validate one sufficient `ConstructionIntent` from the admitted `NextActionProjection` and lineage before dispatch. The intent shall bind the owning program, selected action, published GraphFunction membership, target obligations, immutable workspace binding, invocation authority, and execution basis. The materialization basis is insufficient when required target-carrier rows, declared file or output targets, role requirements, allowed write roots, source authority, execution/test proof expectations, or downstream pressure refs are absent or structurally mismatched while the carried lineage requires them. Insufficient construction intent fails closed before worker, tool, or plugin dispatch.\n"
+        }
+      ],
+      "label": "Sufficient ConstructionIntent",
+      "definition": "Before dispatch for newly selected traversal/product/artifact materialization, admit or validate one sufficient intent from admitted NextActionProjection and lineage, binding program/action/published membership/target obligations/workspace/invocation authority/basis.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "consciousness_requirement_provenance",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-FP-CONSCIOUSNESS - Generic F_P Construction Consciousness Loop\n\n**Status**: Active\n**Category**: Capability / Constraint\n**Date**: 2026-05-07\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-PROJECTION.md](./REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-RETRY.md](./REQ-R-ABG3-RETRY.md), [REQ-R-ABG3-SAGA-FRONTIER.md](./REQ-R-ABG3-SAGA-FRONTIER.md), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md), [T-127](../../../.ai-workspace/tickets/completed/T-127-define-generic-fp-consciousness-loop-with-gtl-plugin-overrides.md), [T-217](../../../.ai-workspace/tickets/completed/T-217-consciousness-wave-higher-order-regulation.md) (FPC-018/-019 observer-tier refinement)\n"
+        }
+      ],
+      "label": "Construction consciousness provenance",
+      "definition": "Active capability/constraint dated 2026-05-07 with method/intent/product/projection/retry/saga/hooks and T-127/T-217 derivations, the latter named for FPC-018/019 observer-tier refinement.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "one_surface_construction_episode",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FPurpose",
+          "start_line": 12,
+          "end_line": 17,
+          "quote": "Define the ABG substrate law for the admitted GTL One Surface construction\ncomposition: an event-sourced tail-recursive episode that keeps product-model\nsynthesis, gap evaluation, next-action evaluation, and action-result evaluation\nas distinct authorities while ABG admits intent, invokes published\nGraphFunctions, admits evidence and action-evaluation results, continues, and\nprojects.\n"
+        }
+      ],
+      "label": "One Surface construction episode",
+      "definition": "An event-sourced tail-recursive admitted GTL composition keeps model synthesis, gap evaluation, next-action evaluation and action-result evaluation distinct, while ABG admits intent, invokes published functions, admits evidence/evaluation, continues and projects.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "intent_binds_unit_materialization",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 109,
+          "end_line": 111,
+          "quote": "**REQ-R-ABG3-FN-COMP-023**: ABG shall conserve admitted-program identity, selected action or current-intent identity, immutable workspace-binding identity, execution-basis identity, and intent-lineage across the event-sourced bind chain. A bind from `TraversalUnit<A, B>` to any next disposition shall carry or account for admitted intent refs, lineage refs, carried obligation refs, target-carrier refs, materialization/output-allocation refs, residual pressure refs, staged-authority refs, admission-strength refs, and downstream terminal pressure. Unit close may clear a pressure or obligation ref only through admitted realization evidence, refinement, named downstream deferral, block, re-entry, reprice, no-close preservation, or terminal projection; scalar unit close shall not erase an obligation vector. A materializing unit is non-conformant when staged pressure and materialization authority are exposed through divergent or undeclared admission predicates.\n\n**REQ-R-ABG3-FN-COMP-024**: When a newly selected action requires traversal, product, or artifact materialization, ABG shall admit or validate one sufficient `ConstructionIntent` from the admitted `NextActionProjection` and lineage before dispatch. The intent shall bind the owning program, selected action, published GraphFunction membership, target obligations, immutable workspace binding, invocation authority, and execution basis. The materialization basis is insufficient when required target-carrier rows, declared file or output targets, role requirements, allowed write roots, source authority, execution/test proof expectations, or downstream pressure refs are absent or structurally mismatched while the carried lineage requires them. Insufficient construction intent fails closed before worker, tool, or plugin dispatch.\n"
+        }
+      ],
+      "source_key": "sufficient_construction_intent",
+      "target_key": "traversal_unit",
+      "kind": "governs",
+      "meaning": "Admitted sufficient intent and conserved lineage/obligation bindings govern materializing traversal.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "composition_host_and_regime_validation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 38,
+          "end_line": 42,
+          "quote": "**REQ-R-ABG3-FN-COMP-003**: The host binding shall identify the owning GTL surface and shall fail closed when a vector-local, evaluator-local, rule-local, hook-local, or operator-local declaration does not match the host's graph-function ref, graph-vector ref, source node ref, target node ref, target schema ref, or owning declaration ref.\n\n**REQ-R-ABG3-FN-COMP-004**: Every regime binding shall declare regime kind, role, order, authority, input carrier refs, output carrier refs, and evidence refs when applicable. `F_D` may own closure authority. `F_P` may construct, diagnose, repair, rank, or supply evidence. `F_H` may be present, deferred, or absentia. Non-`F_D` regimes shall not claim closure authority.\n\n**REQ-R-ABG3-FN-COMP-005**: Standards and policy context used for construction, admission, closure, replay, fallback, escalation, and observability shall be explicit composition inputs. Replay against a different standards or policy identity shall be non-equivalent unless a declared migration or supersession policy admits the change.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "fn_composition_contract"
+      ],
+      "statement": "Fail closed if local vector/evaluator/rule/hook/operator host differs in function/vector/source/target/schema/owning declaration refs. Every regime declares kind, role, order, authority, input/output carriers and applicable evidence. F_D may own closure; F_P may construct/diagnose/repair/rank/evidence; F_H may be present/deferred/absentia. Non-F_D cannot claim closure. Explicit standards/policy inputs govern construction/admission/closure/replay/fallback/escalation/observability; differing identity is non-equivalent unless declared migration/supersession admits it.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Declared migration or supersession policy may admit standards/policy identity change."
+      ]
+    },
+    {
+      "key": "carrier_assurance_closure_context",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 44,
+          "end_line": 48,
+          "quote": "**REQ-R-ABG3-FN-COMP-006**: Carrier context shall preserve selected source and target carrier refs, selected target carrier contract ref and digest where applicable, payload-ledger projection refs, and closure-precondition refs. Target satisfaction shall be evaluated under the selected carrier identity, not under file presence, worker prose, or generic payload existence.\n\n**REQ-R-ABG3-FN-COMP-007**: Assurance context shall preserve selected edge assurance contract ref and digest where applicable, required evidence refs, closure-gate refs, and assurance projection refs. Edge assurance findings shall be interpreted under the selected composition identity and shall not become closure law by themselves.\n\n**REQ-R-ABG3-FN-COMP-008**: The closure contract shall name an `F_D` closure function or closure predicate ref, required evidence refs, rejection evidence refs, replay projection ref, and closure event kind or event ref. ABG shall not infer closure from worker success, prompt-side self-assessment, passing tests, report shape, gap absence, or transport success.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "fn_composition_contract"
+      ],
+      "statement": "Preserve selected source/target carriers, applicable target contract ref/digest, payload projections and closure preconditions; evaluate target under carrier identity, not files/prose/generic payload. Preserve applicable edge assurance ref/digest, required evidence, gates and projections; findings under composition identity are not closure law. Closure names F_D function/predicate, required/rejection evidence, replay projection and closure event. Success/self-assessment/tests/report shape/gap absence/transport never imply closure.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "composition_public_carriers",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 52,
+          "end_line": 62,
+          "quote": "**REQ-R-ABG3-FN-COMP-010**: Composition templates or defaults shall be visible configuration or published GTL assets. They shall not be hidden hardcoded objects, null contracts, prompt conventions, parser fallbacks, or lazy filesystem reads from the replay path.\n\n**REQ-R-ABG3-FN-COMP-011**: Runtime events, payload ledgers, assurance projections, traversal envelopes, construction observations, and construction pressure packages that consume composition truth shall carry the selected composition ref and digest or a causally linked selection ref. Replaying the same admitted events shall project the same selected composition identity.\n\n**REQ-R-ABG3-FN-COMP-012**: Implementation shall preserve the composition grammar as an Irreducible Architectural Carrier Set with a structural carrier diagram before design-method closure. Parser, admission, projection, and typed export surfaces shall derive from that carrier set rather than from helper layout or prompt shape.\n\n**REQ-R-ABG3-FN-COMP-013**: GTL compute notation such as `fn<A, B>.C`,\n`transform.C`, `evaluate.C`, and `consequence.C` shall remain declaration\ntruth over selected `abg.fn_composition`. The validator checks it, HoG\ntraverses it, and ABG admits its runtime facts. The notation shall not create a\nnew execution target, closure path, ledger writer, or controller surface.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "fn_composition_contract"
+      ],
+      "statement": "Templates/defaults are visible config or published GTL, never hidden hardcode/null contracts/prompts/parser fallback/lazy replay reads. Consuming events, ledgers, assurance, envelopes, observations and pressure packages carry selected ref/digest or causal selection ref; same events replay same identity. Before design-method closure preserve an Irreducible Architectural Carrier Set and structural diagram; parser/admission/projection/exports derive from it, not helpers/prompts. fn<A,B>.C and stage.C notation remains validated/traversed/admitted declaration truth, not a new target/closure/ledger/controller.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "stages_before_disposition",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 66,
+          "end_line": 74,
+          "quote": "**REQ-R-ABG3-FN-COMP-015**: HoG shall traverse the exact ordered stages of the\nadmitted C program. For each authored stage, ABG shall admit or resume the\nowning graph call and frame, admit the selected regime and implementation\nbinding, record task invocation and results, and expose replay-derived stage\ntruth to HoG for the next declared bind. After the result-bearing stage and\nrequired downstream binds are satisfied, ABG may admit assurance, disposition,\ncontinuation, or closure truth. Neither HoG nor ABG shall synthesize a missing\nstage, force a canonical three-stage chain, rename a domain role, or count\nruntime admission transitions as authored program membership.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "declared_stage_set"
+      ],
+      "statement": "Assurance/disposition/continuation/closure may be admitted only after result-bearing stage and required downstream binds. HoG/ABG cannot synthesize absent stages, force three-stage chain, rename domain role or count runtime admission as authored membership.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "plugin_categories_and_human_boundary",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 76,
+          "end_line": 80,
+          "quote": "**REQ-R-ABG3-FN-COMP-016**: Engine plugin contracts that participate in composition-governed compute shall carry explicit compute-stage category, compute means, purpose, selected composition identity at invocation, and authority-denial flags. The current ABG runtime categories are transform/candidate construction, evaluate/candidate evaluation, consequence/projection, and external human callout.\n\n**REQ-R-ABG3-FN-COMP-017**: ABG shall treat `F_H` as an external callout regime. ABG may emit or admit callout/request/response boundary events and carriers, but the human work surface itself is outside ABG; no human callout may directly write runtime events, ledgers, traversal transitions, replay truth, or closure.\n\n**REQ-R-ABG3-FN-COMP-018**: The plugin traversal observer and hook/action category surfaces shall use `evaluate` for the evaluation stage. ABG shall reject malformed or legacy stage-category names on the admitted category surfaces rather than silently mapping them to current authority.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "fn_composition_contract",
+        "declared_stage_set"
+      ],
+      "statement": "Participating plugins declare compute-stage category/means/purpose, selected composition at invocation and authority-denial flags. Current categories are transform/candidate construction, evaluate/candidate evaluation, consequence/projection and external human callout. F_H work surface is external; ABG may emit/admit boundary events/carriers but callouts cannot directly write events/ledgers/transitions/replay/closure. Observer/hooks use evaluate; reject malformed/legacy category names instead of mapping them to authority.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "evaluation_fail_closed_and_no_planner",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 82,
+          "end_line": 100,
+          "quote": "**REQ-R-ABG3-FN-COMP-019**: The admitted GTL composition shall declare\nevaluation-set membership, dependencies, and stable ordered or parallel rule\nbatches, and HoG shall traverse that declared evaluation structure. ABG shall\nadmit rule invocations and outcomes and derive evaluation ledgers, replay\norder, assurance fold, and evaluation-set projections from admitted events.\nABG shall not plan or schedule evaluation work, synthesize an evaluation loop,\nor reorder declared GTL. Product plugins may compute rule outcomes inside\nselected composition boundaries, but they shall not write ledgers, select\ntraversal, transition, or close the boundary.\n\n**REQ-R-ABG3-FN-COMP-020**: Required evaluation rules shall fail closed when absent, stale, malformed, contradictory, rejected, or admitted under a mismatched selected composition ref/digest or selected regime-binding contribution ref.\n\n**REQ-R-ABG3-FN-COMP-021**: Every authored C stage shall use one stage-set law:\nHoG preserves declared identity and order; selected implementations perform\nthe declared tasks; ABG admits task results and derives applicable ledgers and\nprojections; HoG consumes only admitted output at the next declared bind.\n`transform.C`, `evaluate.C`, and `consequence.C` use this law when present;\nscalar hooks are one-task reductions. Runtime-owned transitions shall not\nsatisfy authored-stage cardinality or conservation.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "declared_evaluation_set"
+      ],
+      "statement": "ABG cannot plan/schedule evaluation, synthesize a loop or reorder GTL. Plugins may compute outcomes within selected boundaries but cannot write ledgers, choose traversal, transition or close. Required rules fail closed if absent/stale/malformed/contradictory/rejected or mismatched composition/digest/regime contribution. HoG consumes only admitted output at next declared bind; runtime transitions cannot satisfy authored cardinality/conservation.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "bind_chain_obligation_conservation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 109,
+          "end_line": 109,
+          "quote": "**REQ-R-ABG3-FN-COMP-023**: ABG shall conserve admitted-program identity, selected action or current-intent identity, immutable workspace-binding identity, execution-basis identity, and intent-lineage across the event-sourced bind chain. A bind from `TraversalUnit<A, B>` to any next disposition shall carry or account for admitted intent refs, lineage refs, carried obligation refs, target-carrier refs, materialization/output-allocation refs, residual pressure refs, staged-authority refs, admission-strength refs, and downstream terminal pressure. Unit close may clear a pressure or obligation ref only through admitted realization evidence, refinement, named downstream deferral, block, re-entry, reprice, no-close preservation, or terminal projection; scalar unit close shall not erase an obligation vector. A materializing unit is non-conformant when staged pressure and materialization authority are exposed through divergent or undeclared admission predicates.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "traversal_unit"
+      ],
+      "statement": "Conserve program, selected-action/current-intent, immutable workspace, basis and lineage. Every bind carries/accounts for intent,lineage,obligations,target-carriers,materialization/output,pressure,staged-authority,admission-strength and downstream terminal pressure. Unit close clears refs only through admitted realization, refinement, named downstream deferral, block,re-entry,reprice,no-close preservation or terminal projection; scalar close cannot erase obligation vector. Divergent/undeclared predicates for staged pressure vs materialization authority make materializing unit nonconformant.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "materialization_intent_fail_closed",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 111,
+          "end_line": 111,
+          "quote": "**REQ-R-ABG3-FN-COMP-024**: When a newly selected action requires traversal, product, or artifact materialization, ABG shall admit or validate one sufficient `ConstructionIntent` from the admitted `NextActionProjection` and lineage before dispatch. The intent shall bind the owning program, selected action, published GraphFunction membership, target obligations, immutable workspace binding, invocation authority, and execution basis. The materialization basis is insufficient when required target-carrier rows, declared file or output targets, role requirements, allowed write roots, source authority, execution/test proof expectations, or downstream pressure refs are absent or structurally mismatched while the carried lineage requires them. Insufficient construction intent fails closed before worker, tool, or plugin dispatch.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "sufficient_construction_intent"
+      ],
+      "statement": "If required target carriers, file/output targets, roles, write roots, source authority, execution/test proof expectations or downstream pressure are absent/mismatched while lineage requires them, fail closed before worker/tool/plugin dispatch.",
+      "uncertainty": "",
+      "conditions": [
+        "A newly selected action requires materialization."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "observer_authority_boundary",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 113,
+          "end_line": 119,
+          "quote": "**REQ-R-ABG3-FN-COMP-025**: The ABG executive observer shall participate as an\n`evaluate.C`/F_P pressure-evaluation role over a declared target workspace and\ntarget work. Its findings may diagnose pressure, attenuation, non-attenuation,\nlocal repair, nonlocal re-entry, reprice, block, or close-candidate state, but\nthey shall remain admitted findings and projection inputs. They shall not\nbecome `consequence.C`, a graph mutation authority, a closure fold authority,\nor a second continuation controller.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "fn_composition_contract"
+      ],
+      "statement": "Executive observer participates as evaluate.C/F_P pressure evaluation over declared workspace/work. Diagnosis may cover pressure, attenuation/non-attenuation, local repair, nonlocal re-entry,reprice,block,close-candidate but remains admitted findings/projection input, never consequence.C, graph mutation, closure fold or second continuation controller.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "one_surface_authority_and_recursion",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 121,
+          "end_line": 128,
+          "quote": "**REQ-R-ABG3-FN-COMP-026**: The GTL `C` algebra may compose the One Surface\nfunctions, but neither composition nor an executor or runtime helper may merge,\nsubstitute, or transfer authority among `synthesizeModel`, `evalGap`,\n`evaluateNext`, intent admission, GraphFunction invocation, `evaluateAction`,\nand continuation. Public ingress may ignite the admitted composition but shall\nnot own its order, retry, recursion, selection, or closure.\n\n**REQ-R-ABG3-FN-COMP-027**: A published inner refinement shall recurse through the same declared One Surface composition and preserve program, workspace-binding, execution-basis, lineage, and outer-contract truth. Opaque worker-internal decomposition remains inside one bounded action and shall not be promoted to a hidden workflow composition or controller.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "declared_stage_set"
+      ],
+      "statement": "Composition/executor/helpers cannot merge/substitute/transfer synthesizeModel,evalGap,evaluateNext,intent admission,function invocation,evaluateAction or continuation authority. Public ingress only ignites admitted composition, never owns order/retry/recursion/selection/closure. Published inner refinement recurses through same declared composition conserving program/workspace/basis/lineage/outer contract; opaque worker decomposition stays one bounded action, not hidden composition/controller.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [],
+  "residuals": [
+    {
+      "key": "composition_external_operational_meaning",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+          "start_line": 34,
+          "end_line": 128,
+          "quote": "**REQ-R-ABG3-FN-COMP-001**: ABG shall recognize an `abg.fn_composition` contract as the replay-stable runtime grammar for how `F_D`, `F_P`, and `F_H` participate in one graph function, graph vector, evaluator, rule, or operator boundary when that boundary affects traversal selection, evidence admission, optimization, or closure.\n\n**REQ-R-ABG3-FN-COMP-002**: An `abg.fn_composition` contract shall carry at minimum a stable `contract_ref`, normalized `contract_digest`, host binding, ordered regime bindings, standards context, policy context, carrier context, assurance context, deterministic closure contract, and optional optimization contract.\n\n**REQ-R-ABG3-FN-COMP-003**: The host binding shall identify the owning GTL surface and shall fail closed when a vector-local, evaluator-local, rule-local, hook-local, or operator-local declaration does not match the host's graph-function ref, graph-vector ref, source node ref, target node ref, target schema ref, or owning declaration ref.\n\n**REQ-R-ABG3-FN-COMP-004**: Every regime binding shall declare regime kind, role, order, authority, input carrier refs, output carrier refs, and evidence refs when applicable. `F_D` may own closure authority. `F_P` may construct, diagnose, repair, rank, or supply evidence. `F_H` may be present, deferred, or absentia. Non-`F_D` regimes shall not claim closure authority.\n\n**REQ-R-ABG3-FN-COMP-005**: Standards and policy context used for construction, admission, closure, replay, fallback, escalation, and observability shall be explicit composition inputs. Replay against a different standards or policy identity shall be non-equivalent unless a declared migration or supersession policy admits the change.\n\n**REQ-R-ABG3-FN-COMP-006**: Carrier context shall preserve selected source and target carrier refs, selected target carrier contract ref and digest where applicable, payload-ledger projection refs, and closure-precondition refs. Target satisfaction shall be evaluated under the selected carrier identity, not under file presence, worker prose, or generic payload existence.\n\n**REQ-R-ABG3-FN-COMP-007**: Assurance context shall preserve selected edge assurance contract ref and digest where applicable, required evidence refs, closure-gate refs, and assurance projection refs. Edge assurance findings shall be interpreted under the selected composition identity and shall not become closure law by themselves.\n\n**REQ-R-ABG3-FN-COMP-008**: The closure contract shall name an `F_D` closure function or closure predicate ref, required evidence refs, rejection evidence refs, replay projection ref, and closure event kind or event ref. ABG shall not infer closure from worker success, prompt-side self-assessment, passing tests, report shape, gap absence, or transport success.\n\n**REQ-R-ABG3-FN-COMP-009**: Optimizing an `F_P`-backed or mixed-regime path into a deterministic path shall require source composition ref and digest, deterministic replacement ref, positive equivalence case refs, negative equivalence case refs, equivalence projection ref, and invalidation policy ref.\n\n**REQ-R-ABG3-FN-COMP-010**: Composition templates or defaults shall be visible configuration or published GTL assets. They shall not be hidden hardcoded objects, null contracts, prompt conventions, parser fallbacks, or lazy filesystem reads from the replay path.\n\n**REQ-R-ABG3-FN-COMP-011**: Runtime events, payload ledgers, assurance projections, traversal envelopes, construction observations, and construction pressure packages that consume composition truth shall carry the selected composition ref and digest or a causally linked selection ref. Replaying the same admitted events shall project the same selected composition identity.\n\n**REQ-R-ABG3-FN-COMP-012**: Implementation shall preserve the composition grammar as an Irreducible Architectural Carrier Set with a structural carrier diagram before design-method closure. Parser, admission, projection, and typed export surfaces shall derive from that carrier set rather than from helper layout or prompt shape.\n\n**REQ-R-ABG3-FN-COMP-013**: GTL compute notation such as `fn<A, B>.C`,\n`transform.C`, `evaluate.C`, and `consequence.C` shall remain declaration\ntruth over selected `abg.fn_composition`. The validator checks it, HoG\ntraverses it, and ABG admits its runtime facts. The notation shall not create a\nnew execution target, closure path, ledger writer, or controller surface.\n\n**REQ-R-ABG3-FN-COMP-014**: ABG shall preserve the ontology/epistemology split for composition-governed boundaries. GTL and product declarations identify lawful hosts, hooks, policy refs, and product read-model intent; ABG admits candidate/evaluation payloads, emits events, derives payload ledgers, derives assurance and traversal projections, folds closure, and records replay truth.\n\n**REQ-R-ABG3-FN-COMP-015**: HoG shall traverse the exact ordered stages of the\nadmitted C program. For each authored stage, ABG shall admit or resume the\nowning graph call and frame, admit the selected regime and implementation\nbinding, record task invocation and results, and expose replay-derived stage\ntruth to HoG for the next declared bind. After the result-bearing stage and\nrequired downstream binds are satisfied, ABG may admit assurance, disposition,\ncontinuation, or closure truth. Neither HoG nor ABG shall synthesize a missing\nstage, force a canonical three-stage chain, rename a domain role, or count\nruntime admission transitions as authored program membership.\n\n**REQ-R-ABG3-FN-COMP-016**: Engine plugin contracts that participate in composition-governed compute shall carry explicit compute-stage category, compute means, purpose, selected composition identity at invocation, and authority-denial flags. The current ABG runtime categories are transform/candidate construction, evaluate/candidate evaluation, consequence/projection, and external human callout.\n\n**REQ-R-ABG3-FN-COMP-017**: ABG shall treat `F_H` as an external callout regime. ABG may emit or admit callout/request/response boundary events and carriers, but the human work surface itself is outside ABG; no human callout may directly write runtime events, ledgers, traversal transitions, replay truth, or closure.\n\n**REQ-R-ABG3-FN-COMP-018**: The plugin traversal observer and hook/action category surfaces shall use `evaluate` for the evaluation stage. ABG shall reject malformed or legacy stage-category names on the admitted category surfaces rather than silently mapping them to current authority.\n\n**REQ-R-ABG3-FN-COMP-019**: The admitted GTL composition shall declare\nevaluation-set membership, dependencies, and stable ordered or parallel rule\nbatches, and HoG shall traverse that declared evaluation structure. ABG shall\nadmit rule invocations and outcomes and derive evaluation ledgers, replay\norder, assurance fold, and evaluation-set projections from admitted events.\nABG shall not plan or schedule evaluation work, synthesize an evaluation loop,\nor reorder declared GTL. Product plugins may compute rule outcomes inside\nselected composition boundaries, but they shall not write ledgers, select\ntraversal, transition, or close the boundary.\n\n**REQ-R-ABG3-FN-COMP-020**: Required evaluation rules shall fail closed when absent, stale, malformed, contradictory, rejected, or admitted under a mismatched selected composition ref/digest or selected regime-binding contribution ref.\n\n**REQ-R-ABG3-FN-COMP-021**: Every authored C stage shall use one stage-set law:\nHoG preserves declared identity and order; selected implementations perform\nthe declared tasks; ABG admits task results and derives applicable ledgers and\nprojections; HoG consumes only admitted output at the next declared bind.\n`transform.C`, `evaluate.C`, and `consequence.C` use this law when present;\nscalar hooks are one-task reductions. Runtime-owned transitions shall not\nsatisfy authored-stage cardinality or conservation.\n\n**REQ-R-ABG3-FN-COMP-022**: `TraversalUnit<A, B>` is the monadic traversal atom\nadvanced by HoG under one admitted GTL program, selected GraphFunction,\nworkspace binding, and compute basis. ABG admits each unit's result and the\nnext disposition: next unit, same-unit retry, graph-span or public re-entry,\nreprice, yielded continuation, block, gap stop, non-admit, or terminal\nprojection. Neither the unit nor callable substitutes for the owning program.\n\n**REQ-R-ABG3-FN-COMP-023**: ABG shall conserve admitted-program identity, selected action or current-intent identity, immutable workspace-binding identity, execution-basis identity, and intent-lineage across the event-sourced bind chain. A bind from `TraversalUnit<A, B>` to any next disposition shall carry or account for admitted intent refs, lineage refs, carried obligation refs, target-carrier refs, materialization/output-allocation refs, residual pressure refs, staged-authority refs, admission-strength refs, and downstream terminal pressure. Unit close may clear a pressure or obligation ref only through admitted realization evidence, refinement, named downstream deferral, block, re-entry, reprice, no-close preservation, or terminal projection; scalar unit close shall not erase an obligation vector. A materializing unit is non-conformant when staged pressure and materialization authority are exposed through divergent or undeclared admission predicates.\n\n**REQ-R-ABG3-FN-COMP-024**: When a newly selected action requires traversal, product, or artifact materialization, ABG shall admit or validate one sufficient `ConstructionIntent` from the admitted `NextActionProjection` and lineage before dispatch. The intent shall bind the owning program, selected action, published GraphFunction membership, target obligations, immutable workspace binding, invocation authority, and execution basis. The materialization basis is insufficient when required target-carrier rows, declared file or output targets, role requirements, allowed write roots, source authority, execution/test proof expectations, or downstream pressure refs are absent or structurally mismatched while the carried lineage requires them. Insufficient construction intent fails closed before worker, tool, or plugin dispatch.\n\n**REQ-R-ABG3-FN-COMP-025**: The ABG executive observer shall participate as an\n`evaluate.C`/F_P pressure-evaluation role over a declared target workspace and\ntarget work. Its findings may diagnose pressure, attenuation, non-attenuation,\nlocal repair, nonlocal re-entry, reprice, block, or close-candidate state, but\nthey shall remain admitted findings and projection inputs. They shall not\nbecome `consequence.C`, a graph mutation authority, a closure fold authority,\nor a second continuation controller.\n\n**REQ-R-ABG3-FN-COMP-026**: The GTL `C` algebra may compose the One Surface\nfunctions, but neither composition nor an executor or runtime helper may merge,\nsubstitute, or transfer authority among `synthesizeModel`, `evalGap`,\n`evaluateNext`, intent admission, GraphFunction invocation, `evaluateAction`,\nand continuation. Public ingress may ignite the admitted composition but shall\nnot own its order, retry, recursion, selection, or closure.\n\n**REQ-R-ABG3-FN-COMP-027**: A published inner refinement shall recurse through the same declared One Surface composition and preserve program, workspace-binding, execution-basis, lineage, and outer-contract truth. Opaque worker-internal decomposition remains inside one bounded action and shall not be promoted to a hidden workflow composition or controller.\n"
+        }
+      ],
+      "subject_key": "fn_composition_contract",
+      "uncertainty": "The supplied criteria reference carriers, GTL declarations, policy/migration, proof cases and runtime effects whose exact definitions/evidence are not supplied here.",
+      "consequence": "Record contracts and refusal boundaries without asserting cross-chunk identity, executed equivalence, runtime realization or closure."
+    },
+    {
+      "key": "consciousness_derivation_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-PROJECTION.md](./REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-RETRY.md](./REQ-R-ABG3-RETRY.md), [REQ-R-ABG3-SAGA-FRONTIER.md](./REQ-R-ABG3-SAGA-FRONTIER.md), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md), [T-127](../../../.ai-workspace/tickets/completed/T-127-define-generic-fp-consciousness-loop-with-gtl-plugin-overrides.md), [T-217](../../../.ai-workspace/tickets/completed/T-217-consciousness-wave-higher-order-regulation.md) (FPC-018/-019 observer-tier refinement)\n"
+        }
+      ],
+      "subject_key": "consciousness_requirement_provenance",
+      "uncertainty": "Linked documents and ticket evidence are not supplied.",
+      "consequence": "Derivation labels do not resolve identity or establish current acceptance."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "fn_composition_contract",
+        "composition_optimization",
+        "declared_stage_set",
+        "declared_evaluation_set",
+        "traversal_unit",
+        "sufficient_construction_intent",
+        "intent_binds_unit_materialization",
+        "composition_host_and_regime_validation",
+        "carrier_assurance_closure_context",
+        "composition_public_carriers",
+        "stages_before_disposition",
+        "plugin_categories_and_human_boundary",
+        "evaluation_fail_closed_and_no_planner",
+        "bind_chain_obligation_conservation",
+        "materialization_intent_fail_closed",
+        "observer_authority_boundary",
+        "one_surface_authority_and_recursion",
+        "composition_external_operational_meaning"
+      ],
+      "reason": "Composition obligations retained; referenced operational contracts and realization remain unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop",
+      "decision": "residual",
+      "keys": [
+        "consciousness_requirement_provenance",
+        "consciousness_derivation_unresolved"
+      ],
+      "reason": "Provenance retained with unresolved references."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "one_surface_construction_episode"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    }
+  ],
+  "limitations": [
+    "F_D closure authority, external F_H work, plugin findings and executive-observer pressure remain distinct from admitted runtime decisions.",
+    "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+  ]
+}

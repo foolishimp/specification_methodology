@@ -1,0 +1,433 @@
+{
+  "concepts": [
+    {
+      "key": "requirements_algebra",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FPurpose",
+          "start_line": 12,
+          "end_line": 20,
+          "quote": "Define the ABG-owned requirements algebra as the replay-derived substrate that\npreserves WHAT pressure through finite GTL graph-function traversal, evidence\nbinding, assurance fold projection, residual pressure, attenuation, and query.\n\nThis requirement prevents downstream products from rebuilding obligation,\nmaterialization, evidence, fold, residual, or re-entry ledgers as peer closure\ntruth. Such ledgers may remain as compatibility inputs or read models only when\nthey are projected from admitted requirement events and existing ABG runtime\ntruth.\n"
+        }
+      ],
+      "label": "Replay-derived requirements algebra",
+      "definition": "ABG preserves WHAT pressure through finite function traversal,evidence,assurance,residual,attenuation,query. Downstream obligation/materialization/evidence/fold/residual/reentry ledgers are only compatible inputs or read models from admitted events/runtime, never peer closure truth.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "requirements_first_slice",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FScope",
+          "start_line": 24,
+          "end_line": 42,
+          "quote": "The first slice covers generic ABG/GTL carrier and projection law:\n\n- requirement event payloads,\n- replay-derived `RequirementLedger` read models,\n- stable requirement identity and typed relations,\n- staged authority context fragments,\n- traversal spans over existing graph-function and graph-vector identity,\n- edge requirement environments,\n- obligation/materialization/execution/evidence projections,\n- requirement evidence binding,\n- requirement fold and residual projections over existing assurance and\n  continuation truth,\n- deterministic completeness gates,\n- query/read models,\n- retained-compatibility wrappers for existing obligation and residual refs.\n\nThis requirement does not implement `odd_glc`, downstream product ledger\nmigration, KAOS/ReqIF/GSN/GRL import/export, editor workflows, or product-owned\nsemantic judgment.\n"
+        }
+      ],
+      "label": "Generic requirements first slice",
+      "definition": "Includes event payloads,RequirementLedger,stable identities/typed relations,staged authority,existing-topology spans,edge environments,obligation/materialization/execution/evidence,binding,fold/residual over assurance/continuation,completeness,queries,compatibility wrappers. Excludes odd_glc,downstream migration,KAOS/ReqIF/GSN/GRL exchange,editors and Product semantic judgment.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "requirement_term_and_context",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 46,
+          "end_line": 64,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-001**: ABG shall admit requirement event payloads as the only write-side truth for generic requirement-algebra state.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-002**: `RequirementLedger` shall be a replay-derived projection over admitted requirement events. It shall not be an independent writable ledger, a second event store, or a rival closure truth surface.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-003**: A requirement term shall preserve stable identity, source refs, source digest, relation refs, traversal span refs, context refs, evidence policy refs, and projection refs sufficient for replay-derived query.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-004**: Requirement relation kinds shall be typed. Unknown relation kinds shall fail admission before deterministic projection.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-005**: Authority context fragments shall preserve origin stage, constraint scope, digest, promotion policy, applies-to refs, and routing outcome without automatically becoming closeable requirement terms.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-006**: Destination topology shall be represented as a HOW constraint framework. It shall not be collapsed into WHAT requirement meaning or reduced to a build-tenant-only convention.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-007**: Traversal spans shall bind to existing graph-function and graph-vector identity. A span shall not become a public execution target or topology anchor.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-008**: Traversal span identity shall remain stable across graph function, graph vector, recursive frame, zoom, foldback, and alias boundaries through explicit lineage refs.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-009**: ABG shall build edge requirement environments from staged context, active requirement spans, prior fold projections, carried residuals, and compatible obligation refs.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-010**: Active requirement projection for an edge shall be deterministic over the replay-derived ledger and admitted edge identity.\n"
+        }
+      ],
+      "label": "Requirement term and staged context",
+      "definition": "Requirement events are sole writes; ledger replays them. Terms retain stable id,source/digest,relations,spans,context,evidence policy,projection. Relations are typed; unknown kinds reject before projection. Authority fragments retain origin,scope,digest,promotion,applies-to,routing without automatically becoming closeable terms. Destination topology is HOW constraint framework, not WHAT or tenant-only convention.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "requirement_evidence_binding",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 72,
+          "end_line": 80,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-014**: Evidence binding shall distinguish subject-artifact projection, verifier-artifact projection, verifier-execution projection, and semantic interpretation projection. Current compatibility spellings such as `asset`, `test_source`, and `test_execution` name these generic proof-evidence roles; they shall not define software-test policy. One evidence kind shall not close another by path shape, tool name, or pass status alone.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-015**: Current admitted evidence for a requirement projection shall supersede empty or stale predecessor replay for the same projection without erasing event history.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-016**: Declared build byproducts shall bind as non-closing evidence unless explicitly admitted under the active requirement projection.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-017**: A materialized file under a declared verifier-artifact root shall classify as verifier-artifact evidence only when an active requirement proof relation admits that root and projection role. Filesystem path shape shall not let ABI infer product test meaning.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-018**: Verifier-execution discoverability shall not be required before admitted verifier-artifact materialization can be represented as partial non-closing evidence.\n"
+        }
+      ],
+      "label": "Generic proof evidence binding",
+      "definition": "Distinguish subject-artifact,verifier-artifact,verifier-execution,semantic interpretation. Compatibility names asset/test_source/test_execution denote generic roles, not software policy. Path/tool/pass cannot substitute roles. Current admitted evidence supersedes empty/stale predecessor without erasing history; byproducts nonclosing unless explicitly admitted. A verifier-root file is verifier evidence only under active admitted proof relation for root/role; artifact may be partial nonclosing before execution discoverability.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "fold_residual_attenuation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 82,
+          "end_line": 90,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-019**: Requirement fold projection states shall be mapped over existing ABG assurance fold, continuation, and evaluate-next truth. Requirement folds shall not introduce a second closure decision family.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-020**: Requirement residual projection shall preserve remaining span, pressure class, owner surface, evidence refs, and source fold refs. Residuals shall not become a second retry, continuation, or re-entry controller.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-021**: Requirement attenuation shall classify residual movement as unchanged, narrowed, transformed, moved-to-prerequisite, escalated, or cleared.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-022**: Requirement assurance-case read models shall project claim, context, evidence, fold, and residual refs from admitted requirement and assurance truth. They shall not write assurance truth.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-023**: F_D over the requirements algebra shall be total over admitted states and shall return typed outcomes for valid, malformed, unknown-state-rejected, incomplete, stale/superseded, contradictory, semantic-assessment-required, semantic-residual-preserved, human-decision-required, and non-closing states.\n"
+        }
+      ],
+      "label": "Requirement fold, residual and attenuation",
+      "definition": "Folds map existing assurance/continuation/evaluate-next, no second decisions. Residual preserves remaining span,pressure,owner,evidence,source fold, no retry/continuation/reentry controller. Movement classes: unchanged,narrowed,transformed,moved-to-prerequisite,escalated,cleared. Assurance-case read model projects claim/context/evidence/fold/residual, no writes.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "requirements_public_route",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 106,
+          "end_line": 122,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-031**: The downstream requirements route shall preserve a visibility split. Downstream-public surfaces may declare GTL requirement inputs and query replay-derived ABG requirement truth. Admission commands and projection commands that emit requirement event, fold, residual, or disposition truth shall remain ABG-runtime-internal.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-032**: Public requirements route facades shall reconcile one-to-one with existing requirements-algebra symbols or with explicitly ratified route gaps. A facade shall not rename or redeclare existing carriers as a second function catalog, carrier catalog, ledger, or closure surface.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-033**: Admitted requirement refs, evidence refs, fold refs, residual refs, disposition refs, and runtime scope refs shall be nominal route inputs that downstream callers cannot structurally forge. ABG command boundaries shall resolve each admitted ref against replay-visible event or projection truth and recompute the payload digest before use.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-034**: Ref resolution shall fail closed with typed rejection for unknown refs, dangling refs, stale or superseded refs, and digest mismatches. Carried `ref`, `sourceEventRef`, or `digest` fields shall not confer admission unless replay resolution verifies them.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-035**: Requirement evidence binding shall consume admitted runtime evidence event refs and explicit requirement projection refs. It shall reject boolean-only admission, filesystem path-shape evidence authority, pass/fail status as semantic closure, and arbitrary source truth strings.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-036**: Requirement fold projection shall consume admitted requirement evidence binding refs and admitted ABG assurance closure decision refs. It shall not accept manually supplied truth refs, local strings, downstream closure decisions, or query-produced semantic closure as fold authority.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-037**: Requirement fold, residual, and disposition truth shall be emitted by ABG runtime/admission/projection code on the real traversal path, including edge-close handling where applicable. Query surfaces may replay and join those facts; they shall not be the first place that fold, residual, or disposition truth is invented.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-038**: Requirement lifecycle disposition shall be a named read-only projection over admitted requirement residual/fold truth and existing ABG continuation or graph re-entry truth. It shall not be a writable carrier, closure enum, next-action controller, retry loop, or re-entry authority.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-039**: Disposition-affecting policy inputs shall be admitted runtime-policy refs or admitted F_H decision refs. Free string policy refs may appear only as inert labels in diagnostics or read models and shall not influence disposition.\n"
+        }
+      ],
+      "label": "Pure public requirements route",
+      "definition": "Downstream declares GTL inputs and queries admitted truth; admission/projection commands emitting requirement/fold/residual/disposition stay runtime-internal. Facades reconcile one-to-one with existing symbols or ratified gaps, not another function/carrier catalog,ledger or closure surface.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "retry_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RETRY.md#REQ-R-ABG3-RETRY%20%E2%80%94%20Generic%20Retry%20And%20Repair%20Governance",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-RETRY — Generic Retry And Repair Governance\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-12\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Retry requirement provenance",
+      "definition": "Active Constraint/Guarantee dated 2026-04-12 with legacy method/intent/Product derivations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "generic_retry",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RETRY.md#REQ-R-ABG3-RETRY%20%E2%80%94%20Generic%20Retry%20And%20Repair%20Governance%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define generic retry law for bounded ABG edge repair without hard-coding\ndomain-specific retry logic into the substrate.\n"
+        }
+      ],
+      "label": "Generic bounded retry",
+      "definition": "Substrate law for bounded edge repair without hardcoded domain retry logic.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "run_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-RUN — Run Governance\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Run requirement provenance",
+      "definition": "Active Constraint/Guarantee dated 2026-04-05 with legacy method/intent/Product derivations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "execution_run",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "Define `Run` as one engine-owned execution attempt over GTL semantic work.\n"
+        }
+      ],
+      "label": "Run",
+      "definition": "One engine-owned execution attempt over GTL semantic work.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "evidence_feeds_admitted_fold",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 114,
+          "end_line": 116,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-035**: Requirement evidence binding shall consume admitted runtime evidence event refs and explicit requirement projection refs. It shall reject boolean-only admission, filesystem path-shape evidence authority, pass/fail status as semantic closure, and arbitrary source truth strings.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-036**: Requirement fold projection shall consume admitted requirement evidence binding refs and admitted ABG assurance closure decision refs. It shall not accept manually supplied truth refs, local strings, downstream closure decisions, or query-produced semantic closure as fold authority.\n"
+        }
+      ],
+      "source_key": "requirement_evidence_binding",
+      "target_key": "fold_residual_attenuation",
+      "kind": "input_to",
+      "meaning": "Requirement fold consumes admitted evidence-binding refs and admitted assurance decisions.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "span_and_edge_projection",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 58,
+          "end_line": 70,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-007**: Traversal spans shall bind to existing graph-function and graph-vector identity. A span shall not become a public execution target or topology anchor.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-008**: Traversal span identity shall remain stable across graph function, graph vector, recursive frame, zoom, foldback, and alias boundaries through explicit lineage refs.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-009**: ABG shall build edge requirement environments from staged context, active requirement spans, prior fold projections, carried residuals, and compatible obligation refs.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-010**: Active requirement projection for an edge shall be deterministic over the replay-derived ledger and admitted edge identity.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-011**: Obligation, materialization-target, execution-schedule, and evidence-expectation projections shall be read models over admitted requirement events and edge environments.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-012**: Materialization target projection shall preserve declared authority role precedence. A stronger active role policy shall supersede a matching weaker design materialization target for the same projection and target path.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-013**: Execution schedule projection shall prefer admitted schedule commands over fallback commands when both address the same requirement projection.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "requirement_term_and_context"
+      ],
+      "statement": "Spans bind existing function/vector and retain lineage across function/vector/frame/zoom/foldback/alias, never new public target/topology. Edge environments derive staged context,active spans,prior folds,residuals,compatible obligations. Active edge projection deterministic on ledger/admitted edge. Obligation/materialization/schedule/evidence expectations are read models. Stronger active role policy supersedes matching weaker design target at same projection/path; admitted schedule commands take precedence over fallback for same projection.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "deterministic_requirement_limits",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 90,
+          "end_line": 104,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-023**: F_D over the requirements algebra shall be total over admitted states and shall return typed outcomes for valid, malformed, unknown-state-rejected, incomplete, stale/superseded, contradictory, semantic-assessment-required, semantic-residual-preserved, human-decision-required, and non-closing states.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-024**: Unknown or unclassified state shall not be admitted into F_D. It shall be rejected, structurally classified, or routed to typed F_P/F_H pressure before deterministic evaluation.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-025**: Deterministic completeness gates shall fail closed for missing span coverage, evidence-policy coverage, context routing, destination-topology coverage, proof-relation coverage, or fold-attenuation coverage.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-026**: Obstacle and conflict gates shall check only structural resolution of already-admitted obstacles and conflicts. F_P owns ambiguous obstacle or conflict plausibility and admission.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-027**: Retained compatibility wrappers may wrap existing obligation refs and residual-pressure refs as requirement projections, but those wrapped refs shall not own closure, retry, continuation, or re-entry truth.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-028**: Query/read models shall expose active requirements, obligations, materialization targets, execution schedules, evidence bindings, fold projections, residual projections, attenuation, and assurance claims without downstream archive parsing.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-029**: Product-specific meaning shall enter through product-authored requirement terms, context fragments, graph-function refs, evidence refs, F_P findings, F_H decisions, or plugins. ABG shall not parse unknown product syntax to infer semantic satisfaction.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-030**: The first-slice realization shall be proven by a worked trace from GTL requirement declaration through edge environment, obligation projection, evidence binding, fold projection, residual/attenuation, and query.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "requirements_algebra"
+      ],
+      "statement": "F_D total admitted-state outcomes include valid,malformed,unknown-state-rejected,incomplete,stale/superseded,contradictory,semantic-assessment-required,semantic-residual-preserved,human-decision-required,nonclosing. Unknown/unclassified rejects,classifies or routes typed F_P/F_H before evaluation. Fail closed missing span,evidence-policy,context routing,destination,proof relation,fold-attenuation coverage. Obstacle/conflict gates check only admitted structural resolution; F_P owns ambiguous plausibility/admission. Compatibility obligation/residual wrappers cannot own closure/retry/continuation/reentry. Queries expose requirements/obligations/targets/schedules/evidence/folds/residual/attenuation/claims without archive parsing. Product meaning comes through authored terms/context/functions/evidence/F_P/F_H/plugins, never unknown-syntax inference. First slice needs worked trace declaration→edge→obligation→evidence→fold→residual/attenuation→query.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "nominal_refs_and_real_path_admission",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 110,
+          "end_line": 122,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-033**: Admitted requirement refs, evidence refs, fold refs, residual refs, disposition refs, and runtime scope refs shall be nominal route inputs that downstream callers cannot structurally forge. ABG command boundaries shall resolve each admitted ref against replay-visible event or projection truth and recompute the payload digest before use.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-034**: Ref resolution shall fail closed with typed rejection for unknown refs, dangling refs, stale or superseded refs, and digest mismatches. Carried `ref`, `sourceEventRef`, or `digest` fields shall not confer admission unless replay resolution verifies them.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-035**: Requirement evidence binding shall consume admitted runtime evidence event refs and explicit requirement projection refs. It shall reject boolean-only admission, filesystem path-shape evidence authority, pass/fail status as semantic closure, and arbitrary source truth strings.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-036**: Requirement fold projection shall consume admitted requirement evidence binding refs and admitted ABG assurance closure decision refs. It shall not accept manually supplied truth refs, local strings, downstream closure decisions, or query-produced semantic closure as fold authority.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-037**: Requirement fold, residual, and disposition truth shall be emitted by ABG runtime/admission/projection code on the real traversal path, including edge-close handling where applicable. Query surfaces may replay and join those facts; they shall not be the first place that fold, residual, or disposition truth is invented.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-038**: Requirement lifecycle disposition shall be a named read-only projection over admitted requirement residual/fold truth and existing ABG continuation or graph re-entry truth. It shall not be a writable carrier, closure enum, next-action controller, retry loop, or re-entry authority.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-039**: Disposition-affecting policy inputs shall be admitted runtime-policy refs or admitted F_H decision refs. Free string policy refs may appear only as inert labels in diagnostics or read models and shall not influence disposition.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "requirements_public_route",
+        "requirement_evidence_binding"
+      ],
+      "statement": "Requirement/evidence/fold/residual/disposition/scope refs are nominal unforgeable inputs; command boundaries resolve replay truth and recompute digest. Unknown/dangling/stale/superseded/mismatched reject; supplied ref/sourceEventRef/digest alone is not admission. Bind evidence with admitted runtime event and requirement projection refs; reject booleans,path shape,pass/fail closure,arbitrary truth strings. Fold consumes admitted binding and assurance decision refs, never manual/downstream/query closure. Runtime real traversal including applicable edge-close emits fold/residual/disposition; query cannot invent lazily. Lifecycle disposition is read-only over admitted residual/fold/continuation/reentry, not writer/enum/controller. Policy affecting it must be admitted runtime-policy/F_H refs; free strings inert labels only.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "semantic_authority_and_case_distinctions",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 124,
+          "end_line": 132,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-040**: F_D route code shall validate, admit, reject, project, replay, join, and guard over admitted carriers. F_D shall not author requirement meaning, infer missing requirements, infer semantic satisfaction, infer residual acceptability, select semantic next action, or treat command success as requirement closure.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-041**: F_P semantic findings and F_H decisions shall enter the requirements route only as admitted refs with provenance and digest truth. ABG F_D projections may consume those admitted refs but shall not replace their semantic authority with deterministic reconstruction.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-042**: Requirement assurance-case projection shall distinguish an empty fold set as `no_evidence`. It shall not collapse no-evidence, blocked, partial, satisfied, deferred, repriced, and no-close-preserved states into one blocked status.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-043**: The joined lifecycle-state query shall be read-only and replay-derived. It may return edge environment, obligations, materialization targets, execution schedules, evidence bindings, folds, assurance claims, residuals, attenuation, dispositions, and source refs, but it shall not emit admission or projection events.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-044**: Negative proof shall cover downstream attempts to emit fold, residual, or disposition truth; structurally forged admitted refs; digest mismatches; boolean evidence admission; manual assurance truth refs; query-lazy fold/residual/disposition; and F_D semantic inference.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "requirements_algebra",
+        "requirements_public_route"
+      ],
+      "statement": "F_D may validate/admit/reject/project/replay/join/guard, not author/infer meaning,missing requirements,satisfaction,residual acceptability,semantic action or command-success closure. F_P/F_H arrive as admitted provenance/digest refs, never deterministic reconstruction of their authority. Empty assurance fold is no_evidence, distinct from blocked,partial,satisfied,deferred,repriced,no-close-preserved. Joined lifecycle query returns environment/obligation/targets/schedules/evidence/folds/claims/residual/attenuation/disposition/sources without events. Negative proof covers downstream emission,forged refs,digest mismatch,boolean admission,manual assurance,query-lazy truth,F_D semantic inference.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "requirement_graph_parent_and_span_read_models",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 134,
+          "end_line": 142,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-045**: ABG requirement graph projection shall reuse admitted `RequirementTerm` and `RequirementRelation` truth. Any graph view shall be replay-derived over those carriers and shall not mint a second KAOS, goal, decomposition, obstacle, requirement-graph kernel, or writable refinement ledger.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-046**: Edge requirement environments shall preserve active parent/child relation pressure for the edge by projecting active relations alongside active terms and spans. This relation pressure is query input and shall not become traversal selection, continuation, or re-entry authority.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-047**: Aggregate parent requirement fold and residual state shall be read-only projection over admitted child or leaf requirement folds and residuals. ABG shall not emit a second parent fold or parent residual writer merely because child requirements have been counted or because a command succeeded.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-048**: Multi-requirement public queries shall expose replay-derived graph structure, active parent/child pressure, leaf fold state, aggregate parent state, residual refs, and source refs without exposing admission, evidence-binding, fold, residual, disposition, or event-emission commands to downstream consumers.\n\n**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-049**: ABG requirement span-lineage projection shall reuse admitted `TraversalSpan` truth and expose span id, graph-function ref, graph-vector refs, vector indexes, source/target node refs, frame refs, zoom refs, foldback refs, alias refs, and active status as a replay-derived read model. It shall not infer span identity from vector index alone, query-time string matching, prompt text, product-local maps, or downstream naming convention.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "requirements_algebra",
+        "requirements_public_route"
+      ],
+      "statement": "Graph reuses admitted RequirementTerm/Relation, never second KAOS/goal/decomposition/obstacle/graph kernel or writable refinement. Edge environments project active parent-child relation pressure with terms/spans as query input, not selection/continuation/reentry. Parent fold/residual is read-only aggregation of admitted children/leaves; counting or command success cannot mint parent writer. Multi-requirement reads expose graph,relations,leaf/parent state,residual/sources without internal commands. Span-lineage reuses TraversalSpan and exposes id,function,vectors/indexes,nodes,frames,zoom,foldback,aliases,active status; no identity inference from index,string matching,prompt,Product maps/names.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "retry_freshness_and_progress",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RETRY.md#REQ-R-ABG3-RETRY%20%E2%80%94%20Generic%20Retry%20And%20Repair%20Governance%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 27,
+          "quote": "**REQ-R-ABG3-RETRY-001**: A retryable same-edge repair attempt shall mint fresh runtime attempt identity. At minimum that means a fresh `run_id`, fresh `call_id`, and fresh manifest identity for the new attempt.\n\n**REQ-R-ABG3-RETRY-002**: Retry prompt and manifest truth shall be regenerated from current workspace and runtime state. A prior manifest may remain replay-visible evidence, but it shall not be redispatched as if it were current truth.\n\n**REQ-R-ABG3-RETRY-003**: Retry prompts shall instruct the probabilistic actor to inspect the current target asset, determine what is already realized, identify the remaining unresolved gap, and continue construction from present state before assessment.\n\n**REQ-R-ABG3-RETRY-004**: Generic retry control is substrate-owned. ABG shall define the default retryable-attempt law, bounded-attempt law, and stationary-failure stop or escalation law rather than leaving those semantics to hidden domain-local runtime behavior.\n\n**REQ-R-ABG3-RETRY-005**: Domain products may override retry behavior only through declared GTL or policy surfaces. Domains may refine retry budget, retryability, escalation target, or progress criteria, but they shall not replace substrate-owned retry execution truth with a shadow runtime.\n\n**REQ-R-ABG3-RETRY-006**: Retryable same-edge repair may continue while the configured policy still permits continuation and new signal is being produced. When configured retry budget is exhausted or successive attempts produce no new signal, ABG shall stop or escalate through authoritative runtime fact emission.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "generic_retry"
+      ],
+      "statement": "Retryable same-edge repair mints new run,call,manifest at minimum. Rebuild prompts/manifests from current workspace/runtime; old manifests remain evidence, never current redispatch. Prompt requires inspect present target,identify already realized and remaining gap,continue construction before assessment. ABG owns default retryability,bounds,stationary stop/escalation. Domain may refine budget,retryability,escalation,progress via declared GTL/policy only, no shadow runtime. Continue only while policy permits and new signal exists; exhausted budget or no new signal authoritatively stops/escalates.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "retry_taxonomy_liveness",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RETRY.md#REQ-R-ABG3-RETRY%20%E2%80%94%20Generic%20Retry%20And%20Repair%20Governance%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 33,
+          "quote": "**REQ-R-ABG3-RETRY-007**: Traversal non-progress retry eligibility shall be projected by ABG from replay-derived runtime truth, retry policy, and the retryable runtime failure class allowlist. A downstream product shall not compute retry eligibility from a product-local dossier, shard summary, or private loop state.\n\n**REQ-R-ABG3-RETRY-008**: Traversal non-progress timeout classes shall map into the existing retry failure taxonomy before retry projection. `inactivity_timeout` maps to `no_output`; `hard_timeout` and `transport_exit` map to `transport_failure`; payload or report contract defects map to `contract_failure` only after deterministic artifact/report admission rejects them.\n\n**REQ-R-ABG3-RETRY-009**: Retry budget exhaustion shall be evaluated against runtime liveness observer disposition before another expensive worker call is launched. If the observer projection reports inactivity with no retry budget remaining, ABG shall block, yield, escalate, or reprice through typed runtime truth rather than dispatch another attempt.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "generic_retry"
+      ],
+      "statement": "ABG derives eligibility from replay,policy and failure allowlist, never dossier/shard/private loop. Map inactivity_timeout→no_output; hard_timeout/transport_exit→transport_failure; payload/report defects→contract_failure only after deterministic admission rejects. Before costly dispatch evaluate budget against liveness disposition; inactivity with no budget produces typed block/yield/escalate/reprice, not another attempt.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [],
+  "residuals": [
+    {
+      "key": "requirements_trace_unperformed",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+          "start_line": 104,
+          "end_line": 104,
+          "quote": "**REQ-R-ABG3-REQUIREMENTS-ALGEBRA-030**: The first-slice realization shall be proven by a worked trace from GTL requirement declaration through edge environment, obligation projection, evidence binding, fold projection, residual/attenuation, and query.\n"
+        }
+      ],
+      "subject_key": "requirements_algebra",
+      "uncertainty": "The required end-to-end worked trace and actual negative proofs are not provided by this criteria text; referenced algebras and contract identities remain outside this local interpretation.",
+      "consequence": "No first-slice implementation proof, completeness or current closure is asserted."
+    },
+    {
+      "key": "retry_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RETRY.md#REQ-R-ABG3-RETRY%20%E2%80%94%20Generic%20Retry%20And%20Repair%20Governance",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "retry_metadata",
+      "uncertainty": "Referenced sources absent.",
+      "consequence": "No source authority identity resolved."
+    },
+    {
+      "key": "run_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "run_metadata",
+      "uncertainty": "Referenced sources absent.",
+      "consequence": "No linked authority is resolved."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "requirements_algebra"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FScope",
+      "decision": "retained",
+      "keys": [
+        "requirements_first_slice"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md#REQ-R-ABG3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirements%20Algebra%20Substrate%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "requirement_term_and_context",
+        "requirement_evidence_binding",
+        "fold_residual_attenuation",
+        "requirements_public_route",
+        "evidence_feeds_admitted_fold",
+        "span_and_edge_projection",
+        "deterministic_requirement_limits",
+        "nominal_refs_and_real_path_admission",
+        "semantic_authority_and_case_distinctions",
+        "requirement_graph_parent_and_span_read_models",
+        "requirements_trace_unperformed"
+      ],
+      "reason": "Requirements law retained; concrete trace and proof evidence remain unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RETRY.md#REQ-R-ABG3-RETRY%20%E2%80%94%20Generic%20Retry%20And%20Repair%20Governance",
+      "decision": "residual",
+      "keys": [
+        "retry_metadata",
+        "retry_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved references."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RETRY.md#REQ-R-ABG3-RETRY%20%E2%80%94%20Generic%20Retry%20And%20Repair%20Governance%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "generic_retry"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RETRY.md#REQ-R-ABG3-RETRY%20%E2%80%94%20Generic%20Retry%20And%20Repair%20Governance%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "retry_freshness_and_progress",
+        "retry_taxonomy_liveness"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance",
+      "decision": "residual",
+      "keys": [
+        "run_metadata",
+        "run_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved links."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "execution_run"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    }
+  ],
+  "limitations": [
+    "WHAT requirement meaning remains separate from HOW destination topology. Public queries cannot manufacture admitted requirement fold, residual or disposition truth.",
+    "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+  ]
+}

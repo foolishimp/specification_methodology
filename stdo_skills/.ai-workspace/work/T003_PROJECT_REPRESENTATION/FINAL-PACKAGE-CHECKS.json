@@ -1,0 +1,64 @@
+{
+  "checks": [
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "codex-package",
+        "command": "python3 -B stdo_skills/build_tenants/codex/tests/verify_package.py stdo_skills/build_tenants/codex",
+        "chunk_id": "ec2f31",
+        "wall_time_seconds": 0.000007041,
+        "exit_code": 0,
+        "original_token_count": 75,
+        "output": "{\"destination_checked\": false, \"files\": 13, \"installed_checked\": false, \"inventory_sha256\": \"ad05f908d9b845e381009e832cf85b38fd23e087bc75344709989c44fecd34e8\", \"limits\": \"finite bytes/metadata/resources/custody only; no semantic or actual-host qualification\", \"local_links\": 21, \"status\": \"passed\"}\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "claude-package",
+        "command": "python3 -B stdo_skills/build_tenants/claude/tests/check_package.py",
+        "chunk_id": "a78dc3",
+        "wall_time_seconds": 0.000006334,
+        "exit_code": 0,
+        "original_token_count": 10,
+        "output": "{\n  \"status\": \"ok\",\n  \"errors\": []\n}\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "codex-skill",
+        "command": "python3 -B /Users/jim/.codex/skills/.system/skill-creator/scripts/quick_validate.py stdo_skills/build_tenants/codex/skills/stdo-work",
+        "chunk_id": "10544b",
+        "wall_time_seconds": 0.0000055,
+        "exit_code": 0,
+        "original_token_count": 4,
+        "output": "Skill is valid!\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "claude-tool-skill",
+        "command": "python3 -B /Users/jim/.codex/skills/.system/skill-creator/scripts/quick_validate.py stdo_skills/build_tenants/claude/skills/stdo-tool-operations",
+        "chunk_id": "0510c6",
+        "wall_time_seconds": 0.000006875,
+        "exit_code": 0,
+        "original_token_count": 4,
+        "output": "Skill is valid!\n"
+      }
+    },
+    {
+      "status": "fulfilled",
+      "value": {
+        "name": "claude-entry-skill",
+        "command": "python3 -B /Users/jim/.codex/skills/.system/skill-creator/scripts/quick_validate.py stdo_skills/build_tenants/claude/skills/stdo-workspace-change",
+        "chunk_id": "ec8320",
+        "wall_time_seconds": 0.000005875,
+        "exit_code": 0,
+        "original_token_count": 4,
+        "output": "Skill is valid!\n"
+      }
+    }
+  ]
+}

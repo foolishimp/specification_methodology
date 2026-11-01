@@ -1,0 +1,18 @@
+{
+  "command": [
+    "a_c/.venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "a_c/build_tenants/graphify/test_env",
+    "-p",
+    "test_ac_explore.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 0.646004666108638,
+  "stdout": "",
+  "stderr": "test_all_exact_records_and_external_resolutions_survive (test_ac_explore.ConstraintExplorerTests.test_all_exact_records_and_external_resolutions_survive) ... ok\ntest_embedded_data_cannot_break_out_of_script_or_reenter_template (test_ac_explore.ConstraintExplorerTests.test_embedded_data_cannot_break_out_of_script_or_reenter_template) ... ok\ntest_layered_and_force_exports_embed_the_exact_same_representation (test_ac_explore.ConstraintExplorerTests.test_layered_and_force_exports_embed_the_exact_same_representation) ... ok\ntest_layered_public_cli_and_carrier_do_not_need_force_vendor (test_ac_explore.ConstraintExplorerTests.test_layered_public_cli_and_carrier_do_not_need_force_vendor) ... ok\ntest_native_and_actual_carrier_have_identical_view (test_ac_explore.ConstraintExplorerTests.test_native_and_actual_carrier_have_identical_view) ... ok\ntest_output_refuses_existing_input_without_changing_it (test_ac_explore.ConstraintExplorerTests.test_output_refuses_existing_input_without_changing_it) ... ok\ntest_parallel_self_relations_and_typed_occurrences_are_not_collapsed (test_ac_explore.ConstraintExplorerTests.test_parallel_self_relations_and_typed_occurrences_are_not_collapsed) ... ok\ntest_source_embedding_refuses_escape_and_missing_source (test_ac_explore.ConstraintExplorerTests.test_source_embedding_refuses_escape_and_missing_source) ... ok\ntest_visible_dependency_graph_agrees_with_public_projection_for_every_seed (test_ac_explore.ConstraintExplorerTests.test_visible_dependency_graph_agrees_with_public_projection_for_every_seed) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.575s\n\nOK\n"
+}

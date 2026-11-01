@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "a_c/build_tenants/graphify/test_env/test_layered.cjs",
+    "/Users/jim/src/apps/specification_methodology/a_c/applications/abiogenesis-constraint-explorer/layered.html"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 1.4408499579876661,
+  "stdout": "{\n  \"status\": \"passed\",\n  \"checks\": [\n    \"directed ranks retain isolated nodes, parallel edges and self-relations without mutation\",\n    \"cycle condensation preserves reciprocal links and stable placement under input reordering\",\n    \"deep chains use iterative traversal and empty input stays finite\",\n    \"standalone DOM renders every visible node/edge, labels, zoom and keyboard navigation\",\n    \"untrusted card and edge labels remain literal text\",\n    \"actual ABI export operates from file URL with all network and WebGL entry points forbidden\"\n  ],\n  \"limits\": \"Finite geometry and offline DOM checks; no browser visual-layout qualification.\"\n}\n",
+  "stderr": ""
+}

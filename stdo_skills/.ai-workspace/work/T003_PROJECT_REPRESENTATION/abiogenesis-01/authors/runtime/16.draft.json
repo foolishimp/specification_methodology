@@ -1,0 +1,510 @@
+{
+  "concepts": [
+    {
+      "key": "payload_envelope",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+          "start_line": 32,
+          "end_line": 46,
+          "quote": "**REQ-R-ABG3-PAYLOAD-001**: ABG shall treat runtime-relevant payload ledger state as event-sourced truth. The event stream is the write side, and payload ledgers are replay-derived read models.\n\n**REQ-R-ABG3-PAYLOAD-002**: A payload that participates in traversal, authority, evidence, ambiguity, closure, provenance, retry, correction, or downstream register projection shall have an ABG-admitted payload envelope.\n\n**REQ-R-ABG3-PAYLOAD-003**: A payload envelope shall preserve at minimum payload reference, payload class, schema or contract reference, digest or equivalent identity, producer reference, source runtime event when present, aggregate scope, actor invocation when present, authority binding when present, input digest when present, and applicable policy references.\n\n**REQ-R-ABG3-PAYLOAD-004**: ABG may store payload bodies outside the event stream, but the external body shall be referenced by envelope identity and digest. External body storage shall not become runtime truth without ABG admission.\n\n**REQ-R-ABG3-PAYLOAD-005**: Payload observation, payload validation, payload rejection, authority snapshot admission, evidence admission, ambiguity observation, and closure-input publication shall be represented as ABG runtime source facts or deterministic projections over source facts.\n\n**REQ-R-ABG3-PAYLOAD-006**: Payload validation shall classify missing, empty, malformed, unreadable, schema-invalid, contract-invalid, stale, orphaned, contradictory, and accepted payload states without parsing worker internals as domain truth.\n\n**REQ-R-ABG3-PAYLOAD-007**: Authority snapshots used by assurance shall enter ABG as admitted payload or authority facts with deterministic authority/input identity sufficient for stale-input detection.\n\n**REQ-R-ABG3-PAYLOAD-008**: Evidence used by assurance shall enter ABG as admitted evidence facts bound to scope, authority, input digest, payload identity, provenance, and proof-shape metadata sufficient to distinguish fulfilled, partial, missing, stale, orphan, contradictory, deferred, and invalid-ledger states.\n"
+        }
+      ],
+      "label": "Admitted runtime payload envelope",
+      "definition": "Payload ledger is event-sourced read model; every traversal/authority/evidence/ambiguity/closure/provenance/retry/correction/register payload needs admitted envelope with ref,class,schema/contract,digest,producer,aggregate scope, applicable policy and available event,actor,authority,input digest.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "composition_payload_admission",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+          "start_line": 64,
+          "end_line": 78,
+          "quote": "**REQ-R-ABG3-PAYLOAD-017**: Hook action records and hook finding admissions shall be ABG-owned payload/event inputs when plugin output participates in traversal, assurance, projection, intent, ledger, or closure truth. The plugin-returned payload is not owning truth until ABG admits it under the hook contract.\n\n**REQ-R-ABG3-PAYLOAD-018**: Edge assurance evaluation findings shall preserve refs for the selected edge assurance contract, hook action, gain report, metrics, close disposition, residual pressure, continuation, evidence, authority, and composition contribution. Payload admission shall reject side-door engine authority fields.\n\n**REQ-R-ABG3-PAYLOAD-019**: Payload ledger projections for graph-vector output payloads shall carry the selected GTL target carrier contract ref and digest. Target carrier satisfaction requires an admitted payload under that selected contract. Rejected, missing, wrong-contract, or malformed target carriers shall remain non-closing pressure and shall not be treated as edge completion by file presence, worker prose, or arbitrary payload existence.\n\n**REQ-R-ABG3-PAYLOAD-020**: Payload and evidence facts that participate in an `abg.fn_composition`-governed traversal shall carry the selected composition ref and digest, or a causally linked composition selection ref. Payloads admitted under a different composition identity shall be projected as wrong-contract evidence, not as closure satisfaction.\n\n**REQ-R-ABG3-PAYLOAD-021**: Payloads produced by `plugin.transform.C`, `plugin.evaluate.C`, `plugin.consequence.C`, or an external `F_H` response shall remain proposed payloads until ABG admits them. The admitted payload envelope shall preserve compute-stage category or causally linked category selection when that payload can affect ledgers, assurance, traversal, replay, or downstream read-model consequence.\n\n**REQ-R-ABG3-PAYLOAD-022**: Evaluation rule outcomes shall enter payload/ledger truth only through ABG admission. Their admitted payload envelope shall preserve rule ref, rule role, compute means, selected composition ref/digest, selected composition selection ref, selected regime binding ref, contribution ref, produced register/finding/evidence refs, residual pressure refs, continuation refs, diagnostics, and rejection reason when present.\n\n**REQ-R-ABG3-PAYLOAD-023**: Evaluation rule outcomes shall reject side-door runtime authority fields including event emission, ledger writes, graph call/frame mutation, vector selection, traversal transition, continuation replay, and closure authority.\n\n**REQ-R-ABG3-PAYLOAD-024**: Payloads produced by transform, evaluate, or consequence stages shall participate in `TraversalUnit<A, B>` truth only after ABG admission under the selected plugin result interface, target carrier, selected composition, and runtime basis. Raw plugin result files, archive layouts, worker prose, or product-local parser aliases shall not advance, close, bind, or project a traversal unit.\n"
+        }
+      ],
+      "label": "Composition and stage payload admission",
+      "definition": "Hook action/finding becomes owning truth only through ABG admission. Transform/evaluate/consequence/F_H outputs remain proposals until admitted, preserving stage category or causal selection. Composition payload/evidence carries selected ref/digest or linked selection; wrong composition is wrong-contract evidence, not satisfaction.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "artifact_declared_schema",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+          "start_line": 91,
+          "end_line": 91,
+          "quote": "**REQ-R-ABG3-PAYLOAD-028**: A worker-authored file artifact MAY carry exactly one declared output schema. Where a schema is declared, it is rendered into the worker instruction and enforced at result ingress before domain admission: a violating artifact is a typed corrective rejection (`payload_rejected` carrying the schema ref and structured issues), and the violating section is withheld from domain truth. A declared schema is the sole shape authority for its artifact and is covered by the instruction plan digest; prompt prose, parser tolerance, worker self-assessment, and product-local convention shall not widen, replace, or add a second shape authority.\n"
+        }
+      ],
+      "label": "Declared artifact schema",
+      "definition": "A worker-authored file artifact MAY carry exactly one declared output schema. If declared, instruction renders it, plan digest covers it and ingress enforces before domain admission; violations are corrective payload_rejected with schema/structured issues and violating section withheld. It is sole artifact shape authority, not widened/replaced/duplicated by prose,parser,self-assessment or convention.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "plugin_seams_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-PLUGIN-SEAMS — Kernel Plugin Adoption Surface\n\n**Status**: Active\n**Category**: Capability / Constraint\n**Date**: 2026-07-11\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md) (hook and plugin boundary declarations), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md), [REQ-R-ABG3-PAYLOAD.md](./REQ-R-ABG3-PAYLOAD.md), [REQ-R-ABG3-HANDLERS.md](./REQ-R-ABG3-HANDLERS.md), [T-217](../../../.ai-workspace/tickets/completed/T-217-consciousness-wave-higher-order-regulation.md)\n"
+        }
+      ],
+      "label": "Plugin seam provenance",
+      "definition": "Active capability/constraint dated 2026-07-11 with legacy method,Product hook boundary,hook/payload/handler and T-217 derivations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "governed_plugin_adoption",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FPurpose",
+          "start_line": 12,
+          "end_line": 17,
+          "quote": "Define the kernel plugin adoption surface: how a tenant, product, or operator\nadopts substrate behavior at the engine's effect seams by declared selection of\ngoverned plugins, never by forking the kernel. Selection is declaration truth\nresolved fail-closed against a governed catalog; live capabilities are\noperator-injected system-level ingress under F_H approval, not a second\ndeclaration path and not kernel replacement.\n"
+        }
+      ],
+      "label": "Governed plugin adoption",
+      "definition": "Tenants/Products/operators adopt effect-seam behavior by declared governed catalog selection, fail-closed, never kernel fork. Live capabilities are operator-injected system ingress under F_H approval, not another declaration path or kernel replacement.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "bootstrap_scalar_seams",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 27,
+          "quote": "**REQ-R-ABG3-PLUGIN-SEAMS-001**: The declaration-selectable bootstrap effect seams shall be exactly five named scalar seams: `fdEvaluator`, `fpEvaluator`, `fpDispatch`, `fhAdmission`, and `consequenceProjection`. Substrate effect behavior at these seams is adopted by binding governed plugins through declared selection; kernel forks are not an adoption surface.\n\n**REQ-R-ABG3-PLUGIN-SEAMS-001a** (boundary): The five scalar seams are not the whole plugin surface. The census-bound HANDLERS registry, CCALL fibres, provider plugins (policy, assurance, identity, resolver families), event ingress, runtime event sinks, and the composed task/rule plugin stages (transform tasks, evaluation rules, consequence tasks) are separate lawful plugin surfaces governed by their own requirements (at minimum REQ-R-ABG3-HANDLERS, REQ-R-ABG3-CCALL, REQ-R-ABG3-PAYLOAD, REQ-R-ABG3-ASSURANCE, and the published `EnginePluginKind` contract). This requirement governs only the five scalar declaration-selectable bootstrap seams and claims no exhaustiveness beyond them.\n\n**REQ-R-ABG3-PLUGIN-SEAMS-002**: The substrate shall publish a standard plugin catalog mapping governed plugin refs to the default plugin for each seam. Every catalog row's ref shall be the plugin's own declared contract ref, so selection can never bind a plugin to a seam its contract does not claim.\n\n**REQ-R-ABG3-PLUGIN-SEAMS-003**: Plugin selection shall be declared through the declaration key `abg.plugin_selection`: an object whose keys are the five seam names and whose values are catalog refs. The sole realized attachment point is `GraphFunction.declarations`, where the selection is encoded as one tagged `json_blob` declaration. Resolution against the catalog shall fail closed: unknown seam keys, non-string refs, unknown refs, and a ref admitted for a different seam are typed rejections before any interior runs; a duplicate `abg.plugin_selection` declaration and a duplicate seam key inside the tagged object are likewise typed rejections — duplicate selection authorities fail closed.\n"
+        }
+      ],
+      "label": "Five scalar bootstrap seams",
+      "definition": "Exactly fdEvaluator,fpEvaluator,fpDispatch,fhAdmission,consequenceProjection are declaration-selectable scalar bootstrap seams. This is not exhaustive plugin surface: handler registry,C fibres,providers,event ingress/sinks,composed tasks/rules have separate governing requirements. Catalog defaults map each seam to plugin own declared contract ref, never another seam.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "capability_authority_and_steering",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FAcceptance%20Criteria",
+          "start_line": 33,
+          "end_line": 35,
+          "quote": "**REQ-R-ABG3-PLUGIN-SEAMS-005**: Plugin availability, actor authority, and transport steering shall remain separate. `CapabilityDefinition` rows derive from the accepted capability-definition graph and public catalog and describe what may be supported. An effect-bearing invocation shall carry exact per-basis `CapabilityGrant` rows plus actor attribution in its admitted `InvocationAuthority`; availability or class-level F_H ratification does not grant execution. Agent selection, budget, environment binding, and other `TransportSteering` values are subordinate ingress with recorded provenance and may choose transport behavior only after admission; they shall not create a capability, widen a grant, extend the plugin catalog, select a declaration, or fork the kernel. Declared plugin selection still resolves against the one governed catalog under the same fail-closed law.\n\nGap: per-instance approval attribution is not fully realized across all plugin routes — any route lacking exact actor identity, capability-grant ref, approval/policy ref, scope, and basis shall remain typed non-admitted rather than infer authority from steering, environment, package presence, or class-level ratification. Owner: T-244 routing; implementation requires a singular realization leaf.\n"
+        }
+      ],
+      "label": "Capability definition, grant and steering",
+      "definition": "Availability derives accepted capability-definition graph/catalog; each effect invocation needs exact per-basis grants and actor attribution in InvocationAuthority. Availability or class-level F_H ratification does not grant execution. Agent/budget/environment steering is subordinate admitted provenance-bearing ingress, not capability/grant/catalog/declaration/kernel authority.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "live_fp_corroboration",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FAcceptance%20Criteria",
+          "start_line": 37,
+          "end_line": 39,
+          "quote": "**REQ-R-ABG3-PLUGIN-SEAMS-006**: A live `F_P` evaluator shall corroborate its acceptance claims mechanically: the engine derives the expected assessment identities internally from the declared vector evaluators and matches them against the worker result. When expected assessment identities derive, close eligibility requires every one attested in the review, an explicit `accepted: true`, and an explicit or defaulted close disposition of `close`; any missing attestation forces retry. An unparsable review blocks as a typed contract failure rather than resolving to acceptance.\n\nGap: expected assessment identities are not rendered into the PromptManifest — corroboration is engine-internal and the worker attests identities it never sees declared. The review is still extracted by a private free-text JSON-object parser rather than admitted through a declared schema; its admission is closed-key (unknown fields, malformed dispositions, duplicate or unexpected `assessmentIds` are typed rejections), but `closeDisposition` is defaulted from `accepted` when absent and an absent `assessmentIds` is tolerated as empty, so when no expected assessment identities derive a bare `{accepted: true}` review remains close-eligible with no attestation at all. Owner: T-244 routing; implementation requires a singular realization leaf.\n"
+        }
+      ],
+      "label": "Live F_P acceptance corroboration",
+      "definition": "Engine derives expected assessment identities from declared vector evaluators. Where identities derive, all must be attested with accepted:true and explicit/default close disposition close; missing attestation retries and unparsable review blocks contract failure.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "policy_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-POLICY.md#REQ-R-ABG3-POLICY%20%E2%80%94%20Hook%20Resolution%20And%20Default%20Bundles",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-POLICY — Hook Resolution And Default Bundles\n\n**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Policy provenance",
+      "definition": "Constraint/Guarantee dated 2026-04-05, source-labelled active/T-283 accepted and legacy method/intent/Product derivation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "runtime_policy",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-POLICY.md#REQ-R-ABG3-POLICY%20%E2%80%94%20Hook%20Resolution%20And%20Default%20Bundles%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define the ABG side of hook resolution, runtime admissibility, and configured\ndefault bundles.\n"
+        }
+      ],
+      "label": "Runtime hook policy",
+      "definition": "ABG-side hook resolution, runtime admissibility and configured defaults.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "projection_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PROJECTION.md#REQ-R-ABG3-PROJECTION%20%E2%80%94%20Replay%20And%20Projection",
+          "start_line": 1,
+          "end_line": 7,
+          "quote": "# REQ-R-ABG3-PROJECTION — Replay And Projection\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Product behavior**: [Execution And Context Calculus](../../PRODUCT.md#execution-and-context-calculus); T-287 owner-directed Product/requirement re-entry.\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Replay projection provenance",
+      "definition": "Active Constraint/Guarantee dated 2026-04-05 with Product calculus/T-287 re-entry and v2.5.1-rc.2 method/intent/Product derivation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "replay_current_state",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PROJECTION.md#REQ-R-ABG3-PROJECTION%20%E2%80%94%20Replay%20And%20Projection%2FPurpose",
+          "start_line": 13,
+          "end_line": 14,
+          "quote": "Define replay-derived fluents and projections as the sole lawful current-state\nsurface over ABG runtime truth.\n"
+        }
+      ],
+      "label": "Replay-derived current state",
+      "definition": "Fluents and projections derived from replay are the sole lawful current-state surface over ABG runtime truth.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "stage_payloads_require_envelope",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+          "start_line": 72,
+          "end_line": 78,
+          "quote": "**REQ-R-ABG3-PAYLOAD-021**: Payloads produced by `plugin.transform.C`, `plugin.evaluate.C`, `plugin.consequence.C`, or an external `F_H` response shall remain proposed payloads until ABG admits them. The admitted payload envelope shall preserve compute-stage category or causally linked category selection when that payload can affect ledgers, assurance, traversal, replay, or downstream read-model consequence.\n\n**REQ-R-ABG3-PAYLOAD-022**: Evaluation rule outcomes shall enter payload/ledger truth only through ABG admission. Their admitted payload envelope shall preserve rule ref, rule role, compute means, selected composition ref/digest, selected composition selection ref, selected regime binding ref, contribution ref, produced register/finding/evidence refs, residual pressure refs, continuation refs, diagnostics, and rejection reason when present.\n\n**REQ-R-ABG3-PAYLOAD-023**: Evaluation rule outcomes shall reject side-door runtime authority fields including event emission, ledger writes, graph call/frame mutation, vector selection, traversal transition, continuation replay, and closure authority.\n\n**REQ-R-ABG3-PAYLOAD-024**: Payloads produced by transform, evaluate, or consequence stages shall participate in `TraversalUnit<A, B>` truth only after ABG admission under the selected plugin result interface, target carrier, selected composition, and runtime basis. Raw plugin result files, archive layouts, worker prose, or product-local parser aliases shall not advance, close, bind, or project a traversal unit.\n"
+        }
+      ],
+      "source_key": "composition_payload_admission",
+      "target_key": "payload_envelope",
+      "kind": "requires",
+      "meaning": "Stage results become runtime payload truth only under ABG envelope admission.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "payload_admission_and_classification",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+          "start_line": 38,
+          "end_line": 46,
+          "quote": "**REQ-R-ABG3-PAYLOAD-004**: ABG may store payload bodies outside the event stream, but the external body shall be referenced by envelope identity and digest. External body storage shall not become runtime truth without ABG admission.\n\n**REQ-R-ABG3-PAYLOAD-005**: Payload observation, payload validation, payload rejection, authority snapshot admission, evidence admission, ambiguity observation, and closure-input publication shall be represented as ABG runtime source facts or deterministic projections over source facts.\n\n**REQ-R-ABG3-PAYLOAD-006**: Payload validation shall classify missing, empty, malformed, unreadable, schema-invalid, contract-invalid, stale, orphaned, contradictory, and accepted payload states without parsing worker internals as domain truth.\n\n**REQ-R-ABG3-PAYLOAD-007**: Authority snapshots used by assurance shall enter ABG as admitted payload or authority facts with deterministic authority/input identity sufficient for stale-input detection.\n\n**REQ-R-ABG3-PAYLOAD-008**: Evidence used by assurance shall enter ABG as admitted evidence facts bound to scope, authority, input digest, payload identity, provenance, and proof-shape metadata sufficient to distinguish fulfilled, partial, missing, stale, orphan, contradictory, deferred, and invalid-ledger states.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "payload_envelope"
+      ],
+      "statement": "External bodies require envelope identity/digest and admission. Observation/validation/rejection/authority/evidence/ambiguity/closure-input facts are runtime sources or deterministic projections. Classify missing,empty,malformed,unreadable,schema/contract-invalid,stale,orphaned,contradictory,accepted without worker-internal parsing. Assurance authority has deterministic authority/input id; assurance evidence binds scope,authority,input,payload,provenance,proof-shape distinguishing fulfilled/partial/missing/stale/orphan/contradictory/deferred/invalid-ledger.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "payload_authority_limits_and_refresh",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+          "start_line": 48,
+          "end_line": 62,
+          "quote": "**REQ-R-ABG3-PAYLOAD-009**: A report, dashboard, archive, release summary, lifecycle register, or product-specific ledger shall be a read model over ABG payload, authority, evidence, assurance, and closure projections. It shall not write rival payload truth.\n\n**REQ-R-ABG3-PAYLOAD-010**: Plugins may provide payload codecs, authority providers, evidence adapters, ambiguity classifiers, closure policy providers, and gain-function adapters, but ABG shall own admission, event emission, projection, and closure relevance.\n\n**REQ-R-ABG3-PAYLOAD-011**: GTL graph functions and graph vectors shall be able to declare payload contracts, evidence obligations, authority surfaces, and hook references needed for ABG payload admission without hidden side-door runtime configuration.\n\n**REQ-R-ABG3-PAYLOAD-012**: Worker success, transport success, prompt-side self-assessment, `unresolvedReasons: []`, passing tests, and archive shape shall not become payload, evidence, or closure truth until represented through admitted ABG payload and evidence facts.\n\n**REQ-R-ABG3-PAYLOAD-013**: Private chain-of-thought, hidden worker decomposition, and worker-internal tactic traces shall not be admitted as constitutional runtime truth. If such material appears in a payload channel, ABG shall treat it as payload-contract risk or exclude it from closure relevance.\n\n**REQ-R-ABG3-PAYLOAD-014**: Projection result events, checkpoints, or snapshots may be emitted as audit or replay aids, but they shall not outrank replay from source payload, authority, evidence, ambiguity, and closure-input facts.\n\n**REQ-R-ABG3-PAYLOAD-015**: Same-edge retry, correction, reopen, or authority/input change shall preserve prior payload facts while requiring fresh projection over current admitted authority/input truth.\n\n**REQ-R-ABG3-PAYLOAD-016**: Downstream products may project domain-specific lifecycle registers from ABG payload facts, but missing domain semantics, bad gain functions, or adapter gaps shall surface as explicit ambiguity or gap rows rather than silent closure.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "payload_envelope"
+      ],
+      "statement": "Reports/dashboards/archives/releases/registers/Product ledgers are read models, not rival writers. Plugins may supply codecs/authority/evidence/ambiguity/closure-policy/gain adapters but ABG owns admission/emission/projection/closure relevance. GTL functions/vectors declare contracts,evidence,authority,hooks without side config. Success,self-assessment,empty unresolvedReasons,tests,archive shape require admitted payload/evidence first. Private reasoning/decomposition/tactics are not constitutional truth; treat as contract risk or exclude closure. Snapshots/audit events do not outrank source replay. Retry/correction/reopen/authority-input change preserves facts and requires fresh current projection. Domain semantic/gain/adapter gaps surface ambiguity/gaps, never silent closure.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "selected_carrier_and_evaluation_contracts",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+          "start_line": 66,
+          "end_line": 78,
+          "quote": "**REQ-R-ABG3-PAYLOAD-018**: Edge assurance evaluation findings shall preserve refs for the selected edge assurance contract, hook action, gain report, metrics, close disposition, residual pressure, continuation, evidence, authority, and composition contribution. Payload admission shall reject side-door engine authority fields.\n\n**REQ-R-ABG3-PAYLOAD-019**: Payload ledger projections for graph-vector output payloads shall carry the selected GTL target carrier contract ref and digest. Target carrier satisfaction requires an admitted payload under that selected contract. Rejected, missing, wrong-contract, or malformed target carriers shall remain non-closing pressure and shall not be treated as edge completion by file presence, worker prose, or arbitrary payload existence.\n\n**REQ-R-ABG3-PAYLOAD-020**: Payload and evidence facts that participate in an `abg.fn_composition`-governed traversal shall carry the selected composition ref and digest, or a causally linked composition selection ref. Payloads admitted under a different composition identity shall be projected as wrong-contract evidence, not as closure satisfaction.\n\n**REQ-R-ABG3-PAYLOAD-021**: Payloads produced by `plugin.transform.C`, `plugin.evaluate.C`, `plugin.consequence.C`, or an external `F_H` response shall remain proposed payloads until ABG admits them. The admitted payload envelope shall preserve compute-stage category or causally linked category selection when that payload can affect ledgers, assurance, traversal, replay, or downstream read-model consequence.\n\n**REQ-R-ABG3-PAYLOAD-022**: Evaluation rule outcomes shall enter payload/ledger truth only through ABG admission. Their admitted payload envelope shall preserve rule ref, rule role, compute means, selected composition ref/digest, selected composition selection ref, selected regime binding ref, contribution ref, produced register/finding/evidence refs, residual pressure refs, continuation refs, diagnostics, and rejection reason when present.\n\n**REQ-R-ABG3-PAYLOAD-023**: Evaluation rule outcomes shall reject side-door runtime authority fields including event emission, ledger writes, graph call/frame mutation, vector selection, traversal transition, continuation replay, and closure authority.\n\n**REQ-R-ABG3-PAYLOAD-024**: Payloads produced by transform, evaluate, or consequence stages shall participate in `TraversalUnit<A, B>` truth only after ABG admission under the selected plugin result interface, target carrier, selected composition, and runtime basis. Raw plugin result files, archive layouts, worker prose, or product-local parser aliases shall not advance, close, bind, or project a traversal unit.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "composition_payload_admission"
+      ],
+      "statement": "Edge findings retain assurance/hook/gain/metrics/close/residual/continuation/evidence/authority/contribution refs and reject side authority. Vector outputs retain target contract ref/digest; only admitted selected-contract payload satisfies. Rejected/missing/wrong/malformed carriers remain nonclosing, never files/prose/arbitrary payload completion. Rule envelopes preserve rule/role/means,composition ref/digest/selection,regime/contribution,register/finding/evidence,pressure/continuation,diagnostics/rejection. Reject event/ledger/call-frame/vector/transition/continuation/closure authority. Traversal stages advance/bind/project only after selected result-interface/target/composition/basis admission, never raw files/archive/parser aliases.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "payload_obligation_and_materialization_conservation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+          "start_line": 80,
+          "end_line": 89,
+          "quote": "**REQ-R-ABG3-PAYLOAD-025**: Payload admission for traversal-unit stages shall preserve intent-lineage and obligation-delta refs when the payload can affect closure, bind, materialization, replay, or downstream read-model truth. Admission shall reject or classify as non-closing any payload that drops carried obligation refs, target-carrier refs, materialization/output-allocation refs, residual pressure refs, staged-authority refs, or downstream terminal pressure without an admitted obligation-delta disposition.\n\n**REQ-R-ABG3-PAYLOAD-026**: A materialization-required payload or dispatch basis whose declared target set is empty, role policy cannot be satisfied, or write roots cannot reach the declared target carrier shall not be normalized into a worker prompt or closure attempt when admitted lineage requires product or artifact materialization. ABG shall surface the insufficiency as typed traversal-unit non-conformance or runtime block before the materializing worker is invoked.\n\n**REQ-R-ABG3-PAYLOAD-027**: Executive-observer findings that participate in\npressure preservation shall enter ABG as admitted `evaluate.C` payload/finding\ntruth under the selected composition identity. Admission or projection shall\nreject side-door runtime-authority fields, including event emission, ledger\nwrites, graph/frame mutation, traversal transition selection, continuation\ndecision, and closure authority.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "composition_payload_admission"
+      ],
+      "statement": "Closure/bind/materialization/replay/downstream-affecting stage payloads retain intent-lineage and obligation-delta refs. Dropped obligations,target-carriers,materialization/output,pressure,staged authority/downstream terminal pressure without admitted delta is rejected or nonclosing. Materialization-required empty targets,unsatisfied role policy or unreachable write roots cannot become prompt/closure attempt when lineage requires materialization; type nonconformance/block before worker. Executive-observer pressure findings enter admitted evaluate.C under selected composition and cannot carry event/ledger/graph-frame/transition/continuation/closure authority.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "plugin_selection_single_authority",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FAcceptance%20Criteria",
+          "start_line": 27,
+          "end_line": 31,
+          "quote": "**REQ-R-ABG3-PLUGIN-SEAMS-003**: Plugin selection shall be declared through the declaration key `abg.plugin_selection`: an object whose keys are the five seam names and whose values are catalog refs. The sole realized attachment point is `GraphFunction.declarations`, where the selection is encoded as one tagged `json_blob` declaration. Resolution against the catalog shall fail closed: unknown seam keys, non-string refs, unknown refs, and a ref admitted for a different seam are typed rejections before any interior runs; a duplicate `abg.plugin_selection` declaration and a duplicate seam key inside the tagged object are likewise typed rejections — duplicate selection authorities fail closed.\n\nGap: REQ-L-GTL3-HOOKS-001 permits additional lawful attachment scopes (`GraphVector.declarations`, `Job.policy_hooks`, `Role.policy_hooks`, `Module.policy_hooks`, `CandidateFamily.policy_hints`) that the engine does not currently consume for plugin selection; `GraphFunction.declarations` is the only consumed scope. Owner: T-244 routing; implementation requires a singular realization leaf.\n\n**REQ-R-ABG3-PLUGIN-SEAMS-004**: A declared seam selection and a caller-supplied plugin for the same seam shall be two authorities, and the engine entry shall fail closed rather than choose between them. Selection selects among governed substrate plugins only; it is not a path for product code to inject plugin bodies.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "bootstrap_scalar_seams"
+      ],
+      "statement": "abg.plugin_selection maps seam names to catalog string refs as one tagged json_blob on GraphFunction.declarations, the sole realized scope. Unknown seam/nonstring/unknown/wrong-seam ref, duplicate declaration or seam key reject before effect. Declared plus caller-supplied same-seam plugin are competing authorities and fail closed. Selection cannot inject Product plugin bodies.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "runtime_hook_and_default_law",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-POLICY.md#REQ-R-ABG3-POLICY%20%E2%80%94%20Hook%20Resolution%20And%20Default%20Bundles%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 31,
+          "quote": "**REQ-R-ABG3-POLICY-001**: GTL shall declare hook attachment points, stable hook references, and opaque configuration. HoG shall reach those hooks through the admitted program; implementation binding resolves the interior behavior, and ABG admits its result and effects.\n\n**REQ-R-ABG3-POLICY-002**: ABG shall govern admissible regimes, fallback law, proof, closure, and observability boundaries. It shall not define or own internal strategy for probabilistic workers.\n\n**REQ-R-ABG3-POLICY-003**: ABG shall ship broad reference default bundles as ordinary configuration plus executable hook implementations, not hidden hardcoded law tables.\n\n**REQ-R-ABG3-POLICY-004**: Domain users shall be able to copy, edit, and reference default bundles from their own GTL/ABG surfaces.\n\n**REQ-R-ABG3-POLICY-005**: ABG shall fail closed on unresolved hook references, malformed config, or illegal resolved policy bundles.\n\n**REQ-R-ABG3-POLICY-006**: ABG shall publish supervised probabilistic dispatch as a first-class runtime capability. It remains automated runtime truth, not disguised human review.\n\n**REQ-R-ABG3-POLICY-007**: ABIogenesis may publish a root-level supervision policy selected by an admitted system GTL program for run-wide observation and recovery. The policy shall not create an imperative control plane around repeated `start`, and it shall remain distinct from per-edge dispatch capability and the traversal request grammar.\n\n**REQ-R-ABG3-POLICY-008**: ABG.Fn composition defaults, templates, fallback policy, standards context, and optimization policy shall resolve from visible configuration or published GTL assets. Hidden code constants, null contracts, prompt prose, parser convention, current process cwd, and replay-time filesystem discovery shall not satisfy composition policy authority.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "runtime_policy"
+      ],
+      "statement": "GTL declares attachment/stable refs/opaque config, HoG reaches, implementation realizes, ABG admits. ABG governs regimes/fallback/proof/closure/observability, not worker internal strategy. Ship broad defaults as ordinary config plus executable hooks; users may copy/edit/reference. Unresolved refs,malformed config,illegal bundles fail closed. Supervised probabilistic dispatch is automated capability, not human review. Optional root supervision selected by admitted system GTL may observe/recover run-wide but cannot wrap repeated start as imperative control and stays distinct from per-edge dispatch/grammar. Composition defaults/templates/fallback/standards/optimization require visible config/published GTL, not code constants,null,prompt/parser,cwd or replay file discovery.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [],
+  "residuals": [
+    {
+      "key": "artifact_schema_modality_and_gap",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+          "start_line": 91,
+          "end_line": 93,
+          "quote": "**REQ-R-ABG3-PAYLOAD-028**: A worker-authored file artifact MAY carry exactly one declared output schema. Where a schema is declared, it is rendered into the worker instruction and enforced at result ingress before domain admission: a violating artifact is a typed corrective rejection (`payload_rejected` carrying the schema ref and structured issues), and the violating section is withheld from domain truth. A declared schema is the sole shape authority for its artifact and is covered by the instruction plan digest; prompt prose, parser tolerance, worker self-assessment, and product-local convention shall not widen, replace, or add a second shape authority.\n\nGap: the universal obligation — EVERY worker-authored file artifact carries a declared schema — is not realized: instruction-plan artifact schemas are an optional input, and ingress checks only the declared schemas whose sections appear in the attached result artifact. Undeclared artifacts pass ingress with no shape authority. Owner: T-244 routing; implementation requires a singular realization leaf. Post-5.0 downstream adoption is separately routed.\n"
+        }
+      ],
+      "subject_key": "artifact_declared_schema",
+      "uncertainty": "Clause 028 permits an optional schema, while the following gap calls universal schema coverage an unrealized obligation. It reports optional instruction schemas, checks only declared sections present in attached result, and untyped undeclared artifacts; T-244 owns routing and post-5.0 adoption is separate.",
+      "consequence": "Preserve the MAY/universal tension explicitly; do not strengthen clause 028 to EVERY, erase the reported gap, or claim universal shape enforcement."
+    },
+    {
+      "key": "plugin_seams_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md) (hook and plugin boundary declarations), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md), [REQ-R-ABG3-PAYLOAD.md](./REQ-R-ABG3-PAYLOAD.md), [REQ-R-ABG3-HANDLERS.md](./REQ-R-ABG3-HANDLERS.md), [T-217](../../../.ai-workspace/tickets/completed/T-217-consciousness-wave-higher-order-regulation.md)\n"
+        }
+      ],
+      "subject_key": "plugin_seams_metadata",
+      "uncertainty": "Referenced source contents absent.",
+      "consequence": "Metadata does not resolve cross-chunk authority."
+    },
+    {
+      "key": "plugin_attachment_scope_gap",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 29,
+          "quote": "Gap: REQ-L-GTL3-HOOKS-001 permits additional lawful attachment scopes (`GraphVector.declarations`, `Job.policy_hooks`, `Role.policy_hooks`, `Module.policy_hooks`, `CandidateFamily.policy_hints`) that the engine does not currently consume for plugin selection; `GraphFunction.declarations` is the only consumed scope. Owner: T-244 routing; implementation requires a singular realization leaf.\n"
+        }
+      ],
+      "subject_key": "bootstrap_scalar_seams",
+      "uncertainty": "HOOKS-001 permits vector/job/role/module/candidate-family scopes not currently consumed; only GraphFunction declaration is consumed. T-244 routing requires singular leaf.",
+      "consequence": "Do not claim full permitted-scope realization or infer live selection at other scopes."
+    },
+    {
+      "key": "per_instance_grant_gap",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FAcceptance%20Criteria",
+          "start_line": 35,
+          "end_line": 35,
+          "quote": "Gap: per-instance approval attribution is not fully realized across all plugin routes — any route lacking exact actor identity, capability-grant ref, approval/policy ref, scope, and basis shall remain typed non-admitted rather than infer authority from steering, environment, package presence, or class-level ratification. Owner: T-244 routing; implementation requires a singular realization leaf.\n"
+        }
+      ],
+      "subject_key": "capability_authority_and_steering",
+      "uncertainty": "Per-instance approval attribution is not realized on all routes. Missing actor,grant,approval-policy,scope,basis must remain typed non-admitted rather than inferred from steering/env/package/class ratification; T-244 routing remains.",
+      "consequence": "Retain stated non-admission boundary and reported incomplete realization."
+    },
+    {
+      "key": "fp_review_attestation_gap",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FAcceptance%20Criteria",
+          "start_line": 39,
+          "end_line": 39,
+          "quote": "Gap: expected assessment identities are not rendered into the PromptManifest — corroboration is engine-internal and the worker attests identities it never sees declared. The review is still extracted by a private free-text JSON-object parser rather than admitted through a declared schema; its admission is closed-key (unknown fields, malformed dispositions, duplicate or unexpected `assessmentIds` are typed rejections), but `closeDisposition` is defaulted from `accepted` when absent and an absent `assessmentIds` is tolerated as empty, so when no expected assessment identities derive a bare `{accepted: true}` review remains close-eligible with no attestation at all. Owner: T-244 routing; implementation requires a singular realization leaf.\n"
+        }
+      ],
+      "subject_key": "live_fp_corroboration",
+      "uncertainty": "Expected ids are not in PromptManifest; review still uses private free-text JSON parser rather than declared schema. Closed-key admission rejects unknown fields, malformed disposition, duplicate/unexpected ids, but defaults disposition from accepted and missing ids to empty. If no expected ids derive, bare accepted:true remains close-eligible without attestation. T-244 routing requires one leaf.",
+      "consequence": "Do not state universal attested or schema-admitted review acceptance; preserve the exact empty-expectation exception and parser gap."
+    },
+    {
+      "key": "policy_provenance_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-POLICY.md#REQ-R-ABG3-POLICY%20%E2%80%94%20Hook%20Resolution%20And%20Default%20Bundles",
+          "start_line": 3,
+          "end_line": 6,
+          "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "policy_metadata",
+      "uncertainty": "Acceptance and linked sources absent.",
+      "consequence": "Source status is not verified current acceptance."
+    },
+    {
+      "key": "projection_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PROJECTION.md#REQ-R-ABG3-PROJECTION%20%E2%80%94%20Replay%20And%20Projection",
+          "start_line": 5,
+          "end_line": 7,
+          "quote": "**Product behavior**: [Execution And Context Calculus](../../PRODUCT.md#execution-and-context-calculus); T-287 owner-directed Product/requirement re-entry.\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "projection_metadata",
+      "uncertainty": "Referenced sources absent.",
+      "consequence": "No cross-document authority resolution is asserted."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PAYLOAD.md#REQ-R-ABG3-PAYLOAD%20%E2%80%94%20Event-Sourced%20Payload%20Ledger%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "payload_envelope",
+        "composition_payload_admission",
+        "artifact_declared_schema",
+        "stage_payloads_require_envelope",
+        "payload_admission_and_classification",
+        "payload_authority_limits_and_refresh",
+        "selected_carrier_and_evaluation_contracts",
+        "payload_obligation_and_materialization_conservation",
+        "artifact_schema_modality_and_gap"
+      ],
+      "reason": "Payload laws retained with explicit schema-modality tension and reported enforcement gap."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface",
+      "decision": "residual",
+      "keys": [
+        "plugin_seams_metadata",
+        "plugin_seams_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved references."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "governed_plugin_adoption"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PLUGIN-SEAMS.md#REQ-R-ABG3-PLUGIN-SEAMS%20%E2%80%94%20Kernel%20Plugin%20Adoption%20Surface%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "bootstrap_scalar_seams",
+        "capability_authority_and_steering",
+        "live_fp_corroboration",
+        "plugin_selection_single_authority",
+        "plugin_attachment_scope_gap",
+        "per_instance_grant_gap",
+        "fp_review_attestation_gap"
+      ],
+      "reason": "Plugin laws retained with all three reported realization gaps and their refusal boundaries."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-POLICY.md#REQ-R-ABG3-POLICY%20%E2%80%94%20Hook%20Resolution%20And%20Default%20Bundles",
+      "decision": "residual",
+      "keys": [
+        "policy_metadata",
+        "policy_provenance_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved evidence."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-POLICY.md#REQ-R-ABG3-POLICY%20%E2%80%94%20Hook%20Resolution%20And%20Default%20Bundles%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "runtime_policy"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-POLICY.md#REQ-R-ABG3-POLICY%20%E2%80%94%20Hook%20Resolution%20And%20Default%20Bundles%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "runtime_hook_and_default_law"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PROJECTION.md#REQ-R-ABG3-PROJECTION%20%E2%80%94%20Replay%20And%20Projection",
+      "decision": "residual",
+      "keys": [
+        "projection_metadata",
+        "projection_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved links."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-PROJECTION.md#REQ-R-ABG3-PROJECTION%20%E2%80%94%20Replay%20And%20Projection%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "replay_current_state"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    }
+  ],
+  "limitations": [
+    "The payload schema MAY versus following universal-gap language is retained as an unresolved source tension. Plugin scope, grant attribution and review-attestation implementation gaps remain explicit.",
+    "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+  ]
+}

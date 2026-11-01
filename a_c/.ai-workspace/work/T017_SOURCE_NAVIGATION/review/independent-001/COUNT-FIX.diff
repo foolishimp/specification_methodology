@@ -1,0 +1,10 @@
+--- reviewed-candidate-02
++++ final-count-successor
+@@ -193,6 +193,7 @@
+     scope.hidden = origin.hidden = !activeFile;
+     scope.replaceChildren(); origin.replaceChildren();
+     $('library-title').textContent = activeFile ? 'Records in this file' : 'Find a constraint';
++    $('total').textContent = activeFile ? sourceFiles.get(activeFile).size : data.nodes.filter(n => n.family === 'constraints').length;
+     if (!activeFile) return;
+     const count = sourceFiles.get(activeFile).size;
+     scope.append(el('p', activeFile, 'file-path'), el('p', count + ' grounded records across all families', 'muted'));

@@ -1,0 +1,944 @@
+{
+  "concepts": [
+    {
+      "key": "requirement_declaration",
+      "label": "GTL requirement declaration",
+      "definition": "Requirement identity, relationship, span, context, topology and proof declarations attached through existing Module, GraphFunction, GraphVector, Context, Job, Role, hook or asset surfaces.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 23,
+          "end_line": 33,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-001**: Requirement declarations shall live under existing GTL publication and attachment surfaces such as `Module`, `GraphFunction`, `GraphVector`, `Context`, `Job`, `Role`, hook refs, and asset surfaces.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-002**: Requirement declarations shall preserve stable ids, aliases, source refs, source digests, relation refs, span refs, context refs, evidence policy refs, and projection refs.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-003**: Traversal-span declarations shall reference existing graph-function and graph-vector identity. They shall not introduce a new topology anchor, public start family, or graph-vector rival.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-004**: Authority context fragments shall remain GTL `Context`-bound or wrapper-bound constraints unless a promotion policy lawfully admits a closeable requirement term.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-005**: Destination topology declarations shall describe HOW constraint frameworks such as tenant, technology, runtime, package, deployment, proof, or regulatory topology without becoming WHAT requirement meaning.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-006**: Requirement proof-evidence relations shall keep subject-artifact projection, verifier-artifact projection, verifier-execution projection, and semantic interpretation projection distinct. Compatibility names such as test relation, test-source, or test-execution are generic proof-role spellings only; GTL shall not define product test policy.\n"
+        }
+      ]
+    },
+    {
+      "key": "requirement_route",
+      "label": "Requirement lifecycle route declaration",
+      "definition": "Published route/contract references, symbolic bindings and source digests describing lifecycle composition; inert GTL data until HoG reaches the reference and ABG resolves admitted route/publication authority.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 43,
+          "end_line": 45,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-011**: A GTL requirements lifecycle composition declaration shall carry published route refs, contract refs, symbolic bindings, and source digests. It shall not import, instantiate, or depend on ABG runtime implementation modules.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-012**: GTL requirement route refs shall be inert declaration truth until HoG reaches them and ABG resolves them against admitted route/publication authority. A GTL route ref shall not become runtime authority merely because it names an ABG route.\n"
+        }
+      ]
+    },
+    {
+      "key": "role",
+      "label": "Role",
+      "definition": "First-class language-owned semantic capability class for performing, supervising or approving Jobs/graph contracts, with at least name, tags and policy_hooks; distinct from concrete engine-owned Worker identity.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ROLE.md#REQ-L-GTL3-ROLE%20%E2%80%94%20Semantic%20Capability%20Roles%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define `Role` as the semantic capability class required to perform, supervise,\nor approve GTL work.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ROLE.md#REQ-L-GTL3-ROLE%20%E2%80%94%20Semantic%20Capability%20Roles%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 21,
+          "quote": "**REQ-L-GTL3-ROLE-001**: `Role` shall be a first-class GTL declaration type with at minimum: `name`, `tags`, and `policy_hooks`.\n\n**REQ-L-GTL3-ROLE-002**: A role shall express a semantic capability class required to perform, supervise, or approve a GTL job or graph contract.\n\n**REQ-L-GTL3-ROLE-003**: `Role` is distinct from `Worker`. Role is language-owned semantic capability; Worker is engine-owned concrete identity.\n"
+        }
+      ]
+    },
+    {
+      "key": "rule",
+      "label": "Rule",
+      "definition": "Frozen immutable passive constraint with at least name, kind, config and tags describing what must hold at a contract boundary, rather than how to enforce it.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RULE.md#REQ-L-GTL3-RULE%20%E2%80%94%20Declarative%20Constraints%20And%20Gates%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define rules as passive GTL declarations of what must hold at a contract\nboundary.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RULE.md#REQ-L-GTL3-RULE%20%E2%80%94%20Declarative%20Constraints%20And%20Gates%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 21,
+          "quote": "**REQ-L-GTL3-RULE-001**: `Rule` shall be a frozen, immutable declaration type with at minimum: `name`, `kind`, `config`, and `tags`.\n\n**REQ-L-GTL3-RULE-002**: Rules are passive declarations. They describe what must hold, not how enforcement is performed.\n\n**REQ-L-GTL3-RULE-003**: The constitutional split shall remain: `Rule` = what must hold, `Evaluator` = what checks or attests convergence, `gate(...)` = the graph combinator that blocks or allows continuation.\n"
+        }
+      ]
+    },
+    {
+      "key": "selection_boundary",
+      "label": "Structural selection boundary",
+      "definition": "GTL-exposed lawful candidate/contract/policy boundary without hidden workflow choice, business priority or engine strategy; selection itself is declared evaluation work above the interpreter.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FPurpose",
+          "start_line": 13,
+          "end_line": 13,
+          "quote": "Define lawful structural selection boundaries in GTL 3 without hidden choice.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-001**: GTL may expose candidate families, interface equivalence, tags, and policy hints at a structural selection boundary.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-002**: GTL shall not embed hidden workflow choice, business priority, or engine strategy.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-003**: Selection belongs to deterministic rule execution, probabilistic contextual analysis, human judgment, or higher intent/business logic above the interpreter.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-004**: The interpreter may enumerate lawful candidates. It shall not silently choose the best one.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-005**: Candidate families shall preserve one explicit outer contract across all lawful candidates.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-006**: `policy_hints` are visible to external evaluators and consumers. They are not executable selection semantics.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 31,
+          "end_line": 36,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-016**: Governance applicability, evaluation and\nselection shall be declared graph computations traversed by HoG. Candidate\nfindings or graph choices shall cross ABG admission before declared consequence\nand advancement. An overlay, plugin, SDK or downstream controller shall not\nimplement a rival selection/continuation loop. Policy remains explicit work\nabove the interpreter, not hidden interpreter strategy.\n"
+        }
+      ]
+    },
+    {
+      "key": "registered_governance_selection",
+      "label": "Selected 5.0 governance choice",
+      "definition": "Selection restricted to preregistered GraphFunctions in the exact admitted catalog view and permitted by the Program at the boundary.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 63,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-019**: The selected 5.0 governance shall choose\nonly preregistered GraphFunctions in the exact admitted catalog view and\npermitted by the Program at that boundary. Each registered graph shall declare\nits functional purpose and conditions for use, linked to its input, result and\neffect contracts. Selection shall identify that published declaration, inputs,\nreason and supporting evidence; declared purpose or catalog presence alone shall\nnot establish applicability, permission or successful completion. Missing\nsuitable capability or unresolved required support shall remain an explicit gap.\nChanged evidence may change the registered choice or justify compatible result\nreuse while preserving the original outcome, unaffected valid work and remaining\nobligations. It shall not author/recompose graph definitions, silently rewrite\nthe running Program or expand its callable scope. Existing registered-template\nmaterialization and recursive invocation remain lawful. Future graph-building\nwork is outside this increment under Product Release Boundaries.\n"
+        }
+      ]
+    },
+    {
+      "key": "substitution",
+      "label": "Graph substitution",
+      "definition": "Local refinement replacing a specific coarse GraphVector boundary in an outer graph with an interface-conformant inner graph while preserving callers' outer contract.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBSTITUTE.md#REQ-L-GTL3-SUBSTITUTE%20%E2%80%94%20Lawful%20Substitution%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define lawful local refinement by substitution of one graph boundary with\nanother.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBSTITUTE.md#REQ-L-GTL3-SUBSTITUTE%20%E2%80%94%20Lawful%20Substitution%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 23,
+          "quote": "**REQ-L-GTL3-SUBSTITUTE-001**: `substitute(outer_graph, contract_vector, inner_graph)` shall replace a coarse contract vector with an interface-conformant inner graph.\n\n**REQ-L-GTL3-SUBSTITUTE-002**: Substitution shall preserve the declared outer contract. Internal refinement may change structure but shall not alter the outer boundary observed by callers.\n\n**REQ-L-GTL3-SUBSTITUTE-003**: The refined internal structure shall remain visible in the resulting graph value.\n\n**REQ-L-GTL3-SUBSTITUTE-004**: Substitution shall target a specific `GraphVector` by `.id`.\n"
+        }
+      ]
+    },
+    {
+      "key": "bounded_subwork",
+      "label": "Bounded sub-work declaration",
+      "definition": "Language capability for graph-vector or GraphFunction sub-work dispatch with declared topology, traversal scope, boundedness and schema validity.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBWORK.md#REQ-L-GTL3-SUBWORK%20%E2%80%94%20Bounded%20Sub-Work%2FPurpose",
+          "start_line": 13,
+          "end_line": 13,
+          "quote": "Define bounded sub-work as a lawful GTL 3 declaration capability.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBWORK.md#REQ-L-GTL3-SUBWORK%20%E2%80%94%20Bounded%20Sub-Work%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 21,
+          "quote": "**REQ-L-GTL3-SUBWORK-001**: GTL shall be able to express that a graph vector or graph function supports bounded sub-work dispatch.\n\n**REQ-L-GTL3-SUBWORK-002**: The sub-work declaration is a language capability. The GTL validator checks its static relations, HoG traverses the admitted declaration, a selected implementation binding realizes its leaf effect, and ABG admits and replays its runtime facts.\n\n**REQ-L-GTL3-SUBWORK-003**: The sub-work declaration shall express topology, traversal scope, boundedness, and schema validity. GTL owns that declared scope, the validator checks it, HoG traverses it, the selected implementation binding owns native leaf-effect realization, and ABG owns lifecycle, transport-contract admission, and replay truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "deferred_synthesis",
+      "label": "Deferred synthesis/refinement boundary",
+      "definition": "Declaration of an explicit outer interface and contract that any generated Graph or GraphFunction must satisfy and can enter only through lawful boundary-preserving substitution/refinement.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "Define deferred synthesis and refinement as lawful GTL 3 declaration surfaces.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 20,
+          "quote": "**REQ-L-GTL3-SYNTHESIS-001**: GTL shall provide a declarative surface for deferred synthesis or refinement with an explicit outer contract boundary.\n\n**REQ-L-GTL3-SYNTHESIS-002**: A synthesis or refinement declaration shall specify the interface and contract obligations that any produced graph or graph function must satisfy.\n\n**REQ-L-GTL3-SYNTHESIS-003**: A graph or graph function produced through deferred synthesis shall be applicable only through lawful substitution or refinement that preserves the declared outer contract.\n"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "declaration_references_inert_route",
+      "kind": "may_reference",
+      "source_key": "requirement_declaration",
+      "target_key": "requirement_route",
+      "meaning": "Requirement structure may name published routes but such references remain declarations until runtime traversal and admitted resolution.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 45,
+          "end_line": 53,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-012**: GTL requirement route refs shall be inert declaration truth until HoG reaches them and ABG resolves them against admitted route/publication authority. A GTL route ref shall not become runtime authority merely because it names an ABG route.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-013**: GTL conformance for requirement route declarations shall fail closed for unknown route refs, missing contract refs, malformed source digests, duplicate lifecycle composition refs, and any field that attempts to smuggle ABG runtime state or event authority into GTL.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-014**: GTL requirement graph declarations shall express parent/child, refinement, dependency, obstruction, mitigation, satisfaction, evidence, assurance, and proof-evidence structure through existing `RequirementTerm` declarations and typed requirement relation declarations. They shall not introduce a second KAOS, goal, decomposition, obstacle, or requirement-graph carrier kernel, and they shall not turn proof-role labels into product test policy.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-015**: GTL requirement graph conformance shall fail closed for duplicate requirement ids, duplicate relation ids, duplicate traversal span ids, dangling term relation refs, dangling term span refs, dangling relation endpoints, dangling proof-relation requirement ids, and unknown relation kinds.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-016**: GTL requirement graph declarations shall remain declaration-only. Parent/child or refinement structure may name published ABG route refs, but it shall not import ABG runtime modules, mint admitted refs, emit runtime events, project folds, residualize pressure, select continuation, or route re-entry.\n"
+        }
+      ]
+    },
+    {
+      "key": "synthesis_enters_via_substitution",
+      "kind": "applies_through",
+      "source_key": "deferred_synthesis",
+      "target_key": "substitution",
+      "meaning": "A synthesized result can be applied only through lawful boundary-preserving substitution or refinement.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement%2FAcceptance%20Criteria",
+          "start_line": 20,
+          "end_line": 20,
+          "quote": "**REQ-L-GTL3-SYNTHESIS-003**: A graph or graph function produced through deferred synthesis shall be applicable only through lawful substitution or refinement that preserves the declared outer contract.\n"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "key": "requirement_identity_preservation",
+      "applies_to_keys": [
+        "requirement_declaration"
+      ],
+      "statement": "Preserve stable ids, aliases, source refs/digests, relation/span/context/evidence-policy/projection references. Traversal spans reference existing callable/vector identity, not new topology, start family or vector rival. Existing frame, zoom, foldback and alias refs may be inert lineage over that identity, never rival topology/vector/frame/zoom/foldback/continuation/re-entry carriers.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 23,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-001**: Requirement declarations shall live under existing GTL publication and attachment surfaces such as `Module`, `GraphFunction`, `GraphVector`, `Context`, `Job`, `Role`, hook refs, and asset surfaces.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-002**: Requirement declarations shall preserve stable ids, aliases, source refs, source digests, relation refs, span refs, context refs, evidence policy refs, and projection refs.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-003**: Traversal-span declarations shall reference existing graph-function and graph-vector identity. They shall not introduce a new topology anchor, public start family, or graph-vector rival.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 55,
+          "end_line": 55,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-017**: GTL traversal-span declarations used by requirements algebra shall be able to declare existing frame refs, zoom refs, foldback refs, and alias refs as inert lineage refs over graph-function and graph-vector identity. They shall not introduce a rival graph topology anchor, graph-vector carrier, frame carrier, zoom carrier, foldback carrier, continuation carrier, or re-entry carrier.\n"
+        }
+      ]
+    },
+    {
+      "key": "requirement_authority_and_topology",
+      "applies_to_keys": [
+        "requirement_declaration"
+      ],
+      "statement": "Authority fragments remain Context/wrapper-bound constraints unless a promotion policy lawfully admits a closeable requirement term. Destination topology describes HOW frameworks such as tenant, technology, runtime, package, deployment, proof or regulatory topology and cannot become WHAT requirement meaning.",
+      "conditions": [],
+      "exceptions": [
+        "Lawful promotion policy may admit an authority fragment as a closeable requirement term."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 31,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-004**: Authority context fragments shall remain GTL `Context`-bound or wrapper-bound constraints unless a promotion policy lawfully admits a closeable requirement term.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-005**: Destination topology declarations shall describe HOW constraint frameworks such as tenant, technology, runtime, package, deployment, proof, or regulatory topology without becoming WHAT requirement meaning.\n"
+        }
+      ]
+    },
+    {
+      "key": "proof_projection_separation",
+      "applies_to_keys": [
+        "requirement_declaration"
+      ],
+      "statement": "Keep subject-artifact, verifier-artifact, verifier-execution and semantic-interpretation projections distinct. Test-relation, test-source and test-execution are compatibility spellings for generic proof roles, never GTL Product test policy.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 33,
+          "end_line": 33,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-006**: Requirement proof-evidence relations shall keep subject-artifact projection, verifier-artifact projection, verifier-execution projection, and semantic interpretation projection distinct. Compatibility names such as test relation, test-source, or test-execution are generic proof-role spellings only; GTL shall not define product test policy.\n"
+        }
+      ]
+    },
+    {
+      "key": "requirement_conformance_rejections",
+      "applies_to_keys": [
+        "requirement_declaration"
+      ],
+      "statement": "Fail closed for malformed declarations, duplicate stable requirement/relation/span ids, dangling references, term relation/span refs, relation endpoints and proof-relation requirement ids, invalid spans, unresolved callable/vector refs, unknown relation kinds, open payloads and authority-smuggling fields.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 35,
+          "end_line": 35,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-007**: GTL conformance gates shall fail closed for malformed requirement declarations, duplicate stable ids, dangling refs, invalid spans, unresolved graph-function/vector refs, unknown relation kinds, open payloads, and authority-smuggling fields.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 51,
+          "end_line": 51,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-015**: GTL requirement graph conformance shall fail closed for duplicate requirement ids, duplicate relation ids, duplicate traversal span ids, dangling term relation refs, dangling term span refs, dangling relation endpoints, dangling proof-relation requirement ids, and unknown relation kinds.\n"
+        }
+      ]
+    },
+    {
+      "key": "external_requirement_candidates",
+      "applies_to_keys": [
+        "requirement_declaration"
+      ],
+      "statement": "DOT, diagrams, editor exports, imported goal models, ReqIF, GSN, SACM, GRL and natural-language extraction remain candidates/read models until represented through GTL declaration law and ABG admission.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 37,
+          "end_line": 37,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-008**: DOT, diagrams, editor exports, imported goal models, ReqIF, GSN, SACM, GRL, and natural-language extraction outputs shall be read models or candidates until represented through GTL declaration law and ABG admission.\n"
+        }
+      ]
+    },
+    {
+      "key": "requirement_facade_non_authority",
+      "applies_to_keys": [
+        "requirement_declaration"
+      ],
+      "statement": "Declarations may reference requirement algebra hooks/projections but cannot emit events, write ledgers, choose traversal, close assurance or own continuation/re-entry. Facades expose carriers/constructors only and cannot admit events, project runtime truth, bind evidence, fold assurance, residualize pressure, select continuation or route re-entry.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 39,
+          "end_line": 41,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-009**: GTL declarations may reference ABG requirement algebra hooks or projection refs, but they shall not emit runtime events, write ledgers, select traversal, close assurance scopes, or own continuation/re-entry.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-010**: A GTL requirements facade shall expose declaration carriers and constructor surfaces only. It shall not admit events, write ledgers, project runtime truth, bind evidence, fold assurance, residualize pressure, select continuation, or route re-entry.\n"
+        }
+      ]
+    },
+    {
+      "key": "lifecycle_routes_inert",
+      "applies_to_keys": [
+        "requirement_route"
+      ],
+      "statement": "Lifecycle composition carries route/contract refs, symbolic bindings and digests without importing, instantiating or depending on ABG runtime modules. Named ABG route reference does not confer authority; resolution occurs only when HoG reaches it and ABG checks admitted route/publication authority. Reject unknown routes, missing contracts, malformed digests, duplicate composition refs and runtime-state/event-authority smuggling.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 43,
+          "end_line": 47,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-011**: A GTL requirements lifecycle composition declaration shall carry published route refs, contract refs, symbolic bindings, and source digests. It shall not import, instantiate, or depend on ABG runtime implementation modules.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-012**: GTL requirement route refs shall be inert declaration truth until HoG reaches them and ABG resolves them against admitted route/publication authority. A GTL route ref shall not become runtime authority merely because it names an ABG route.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-013**: GTL conformance for requirement route declarations shall fail closed for unknown route refs, missing contract refs, malformed source digests, duplicate lifecycle composition refs, and any field that attempts to smuggle ABG runtime state or event authority into GTL.\n"
+        }
+      ]
+    },
+    {
+      "key": "existing_requirement_graph_kernel",
+      "applies_to_keys": [
+        "requirement_declaration",
+        "requirement_route"
+      ],
+      "statement": "Express parent/child, refinement, dependency, obstruction, mitigation, satisfaction, evidence, assurance and proof-evidence structure through existing RequirementTerm and typed relations. No second KAOS/goal/decomposition/obstacle/requirement-graph kernel or Product test policy from proof-role labels. Parent/child/refinement may name routes but cannot import runtime modules, mint admitted refs, emit events/project folds/residualize/select continuation/route re-entry.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 49,
+          "end_line": 53,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-014**: GTL requirement graph declarations shall express parent/child, refinement, dependency, obstruction, mitigation, satisfaction, evidence, assurance, and proof-evidence structure through existing `RequirementTerm` declarations and typed requirement relation declarations. They shall not introduce a second KAOS, goal, decomposition, obstacle, or requirement-graph carrier kernel, and they shall not turn proof-role labels into product test policy.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-015**: GTL requirement graph conformance shall fail closed for duplicate requirement ids, duplicate relation ids, duplicate traversal span ids, dangling term relation refs, dangling term span refs, dangling relation endpoints, dangling proof-relation requirement ids, and unknown relation kinds.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-016**: GTL requirement graph declarations shall remain declaration-only. Parent/child or refinement structure may name published ABG route refs, but it shall not import ABG runtime modules, mint admitted refs, emit runtime events, project folds, residualize pressure, select continuation, or route re-entry.\n"
+        }
+      ]
+    },
+    {
+      "key": "role_external_authority",
+      "applies_to_keys": [
+        "role"
+      ],
+      "statement": "Role remains language-owned capability, Worker engine-owned identity. GTL does not implement authentication or authority resolution; ABG-conformant engines or other external systems resolve those concerns.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ROLE.md#REQ-L-GTL3-ROLE%20%E2%80%94%20Semantic%20Capability%20Roles%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-ROLE-003**: `Role` is distinct from `Worker`. Role is language-owned semantic capability; Worker is engine-owned concrete identity.\n\n**REQ-L-GTL3-ROLE-004**: GTL shall allow roles to be attached to semantic jobs and, where lawful, to graph contracts such as `GraphVector` or `GraphFunction`.\n\n**REQ-L-GTL3-ROLE-005**: `Role.policy_hooks` may carry opaque hook references and opaque configuration for authority, approval, assignment, or related external policy concerns.\n\n**REQ-L-GTL3-ROLE-006**: GTL shall not implement authentication or authority resolution. Those remain external concerns resolved by ABG-conformant engines or other external systems.\n"
+        }
+      ]
+    },
+    {
+      "key": "rule_evaluator_gate_split",
+      "applies_to_keys": [
+        "rule"
+      ],
+      "statement": "Rule states required truth, Evaluator checks/attests convergence, and gate blocks/allows continuation. Engines may enforce declared protocol, while business, merge, ranking and approval semantics stay outside interpreter unless supplied by declarations and resolved implementations.",
+      "conditions": [],
+      "exceptions": [
+        "Explicit declarations plus resolved implementations may supply underlying domain semantics."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RULE.md#REQ-L-GTL3-RULE%20%E2%80%94%20Declarative%20Constraints%20And%20Gates%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 25,
+          "quote": "**REQ-L-GTL3-RULE-002**: Rules are passive declarations. They describe what must hold, not how enforcement is performed.\n\n**REQ-L-GTL3-RULE-003**: The constitutional split shall remain: `Rule` = what must hold, `Evaluator` = what checks or attests convergence, `gate(...)` = the graph combinator that blocks or allows continuation.\n\n**REQ-L-GTL3-RULE-004**: Rule configuration may carry opaque, policy-visible parameters for gate protocol, aggregation, ordering, or threshold concerns without turning GTL into a policy semantic language.\n\n**REQ-L-GTL3-RULE-005**: Engines may enforce declared rule protocol, but the underlying business, merge, ranking, or approval semantics remain outside the interpreter unless explicitly supplied through declarations and resolved implementations.\n"
+        }
+      ]
+    },
+    {
+      "key": "rule_closure_enforcement",
+      "applies_to_keys": [
+        "rule"
+      ],
+      "statement": "ABG resolves closure enforcement through admitted evaluator, closure and policy bindings; the Rule itself remains declarative.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RULE.md#REQ-L-GTL3-RULE%20%E2%80%94%20Declarative%20Constraints%20And%20Gates%2FAcceptance%20Criteria",
+          "start_line": 27,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-RULE-006**: A rule may reference or participate in an `abg.fn_composition` closure predicate only as declarative constraint truth. The rule shall not become executable closure strategy, prompt strategy, or hidden policy law; ABG shall resolve enforcement through admitted evaluator, closure, and policy bindings.\n"
+        }
+      ]
+    },
+    {
+      "key": "selection_structural_nonchoice",
+      "applies_to_keys": [
+        "selection_boundary"
+      ],
+      "statement": "The interpreter may enumerate lawful candidates but cannot silently choose the best. Candidate families preserve one explicit outer contract for every lawful candidate. Policy hints are visible to evaluators/consumers, not executable semantics. A published GraphFunction bound by Job is callable work, not an implicit candidate-family alternative.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 29,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-003**: Selection belongs to deterministic rule execution, probabilistic contextual analysis, human judgment, or higher intent/business logic above the interpreter.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-004**: The interpreter may enumerate lawful candidates. It shall not silently choose the best one.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-005**: Candidate families shall preserve one explicit outer contract across all lawful candidates.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-006**: `policy_hints` are visible to external evaluators and consumers. They are not executable selection semantics.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-007**: A published `GraphFunction` bound by a semantic `Job` is a public callable carrier, not an implicit candidate-family alternative.\n"
+        }
+      ]
+    },
+    {
+      "key": "selection_declared_execution",
+      "applies_to_keys": [
+        "selection_boundary"
+      ],
+      "statement": "Applicability, evaluation and selection are declared graph computations traversed by HoG. Findings/choices cross ABG admission before consequence/advancement. Overlays, plugins, SDKs and downstream controllers cannot implement rival selection/continuation loops. Policy remains explicit work above the interpreter.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 31,
+          "end_line": 36,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-016**: Governance applicability, evaluation and\nselection shall be declared graph computations traversed by HoG. Candidate\nfindings or graph choices shall cross ABG admission before declared consequence\nand advancement. An overlay, plugin, SDK or downstream controller shall not\nimplement a rival selection/continuation loop. Policy remains explicit work\nabove the interpreter, not hidden interpreter strategy.\n"
+        }
+      ]
+    },
+    {
+      "key": "selection_policy_contract",
+      "applies_to_keys": [
+        "selection_boundary"
+      ],
+      "statement": "Executable policy binds evaluator, required frame/input contracts, criteria and consequence relation. Weights/thresholds prioritize only permitted choices and cannot waive mandatory constraints, required independent evaluation or reserved owner rulings. Hints alone are insufficient.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 38,
+          "end_line": 42,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-017**: Executable selection policy shall bind\nits evaluator, required frame/input contracts, criteria and consequence relation.\nWeights and thresholds may prioritize permitted choices but shall not waive a\nmandatory constraint, required independent evaluation or reserved owner ruling.\nPolicy hints alone shall not supply this executable contract.\n"
+        }
+      ]
+    },
+    {
+      "key": "selection_regime_law",
+      "applies_to_keys": [
+        "selection_boundary"
+      ],
+      "statement": "Every evaluator declares its regime. Supplied F_D implements an explicit total rule on a closed declared domain; where no such rule exists F_P owns contextual judgment. Both preserve evidence/result contracts and admission boundary; deterministic implementation itself conveys no semantic authority.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 44,
+          "end_line": 48,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-018**: Each evaluator shall declare its compute\nregime. A supplied F_D checker shall implement an explicit total rule over a\nclosed declared domain; F_P shall own contextual judgment where no such rule\nexists. Both shall preserve their result/evidence contracts and admission\nboundary. Deterministic implementation shall not confer semantic authority.\n"
+        }
+      ]
+    },
+    {
+      "key": "registered_choice_support",
+      "applies_to_keys": [
+        "registered_governance_selection"
+      ],
+      "statement": "In selected 5.0 governance choose only Program-permitted preregistered callables from the exact admitted catalog view. Each graph declares functional purpose/use conditions linked to input/result/effect contracts. Selection identifies that declaration, inputs, reason and evidence. Purpose or catalog presence alone proves neither applicability, permission nor completion. Missing suitable capability or unresolved required support stays an explicit gap.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 57,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-019**: The selected 5.0 governance shall choose\nonly preregistered GraphFunctions in the exact admitted catalog view and\npermitted by the Program at that boundary. Each registered graph shall declare\nits functional purpose and conditions for use, linked to its input, result and\neffect contracts. Selection shall identify that published declaration, inputs,\nreason and supporting evidence; declared purpose or catalog presence alone shall\nnot establish applicability, permission or successful completion. Missing\nsuitable capability or unresolved required support shall remain an explicit gap.\n"
+        }
+      ]
+    },
+    {
+      "key": "registered_choice_change_boundary",
+      "applies_to_keys": [
+        "registered_governance_selection"
+      ],
+      "statement": "Changed evidence may change a registered choice or justify compatible result reuse while conserving original outcome, unaffected valid work and remaining obligations. It cannot author/recompose definitions, silently rewrite running Program or expand callable scope. Existing registered-template materialization and recursion remain lawful. Future graph-building is outside this increment under Product Release Boundaries.",
+      "conditions": [],
+      "exceptions": [
+        "Existing registered-template materialization and recursive invocation remain lawful."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 58,
+          "end_line": 63,
+          "quote": "Changed evidence may change the registered choice or justify compatible result\nreuse while preserving the original outcome, unaffected valid work and remaining\nobligations. It shall not author/recompose graph definitions, silently rewrite\nthe running Program or expand its callable scope. Existing registered-template\nmaterialization and recursive invocation remain lawful. Future graph-building\nwork is outside this increment under Product Release Boundaries.\n"
+        }
+      ]
+    },
+    {
+      "key": "substitution_contract_and_provenance",
+      "applies_to_keys": [
+        "substitution"
+      ],
+      "statement": "Target exact GraphVector id; retain outer interface, expose refined internal structure in the resulting graph and enough structural truth for replayable provenance naming refined contract and applied inner graph.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBSTITUTE.md#REQ-L-GTL3-SUBSTITUTE%20%E2%80%94%20Lawful%20Substitution%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 25,
+          "quote": "**REQ-L-GTL3-SUBSTITUTE-001**: `substitute(outer_graph, contract_vector, inner_graph)` shall replace a coarse contract vector with an interface-conformant inner graph.\n\n**REQ-L-GTL3-SUBSTITUTE-002**: Substitution shall preserve the declared outer contract. Internal refinement may change structure but shall not alter the outer boundary observed by callers.\n\n**REQ-L-GTL3-SUBSTITUTE-003**: The refined internal structure shall remain visible in the resulting graph value.\n\n**REQ-L-GTL3-SUBSTITUTE-004**: Substitution shall target a specific `GraphVector` by `.id`.\n\n**REQ-L-GTL3-SUBSTITUTE-005**: Substitution shall expose enough structural truth for an engine to record replayable provenance for which contract was refined and by which inner graph.\n"
+        }
+      ]
+    },
+    {
+      "key": "subwork_ownership_chain",
+      "applies_to_keys": [
+        "bounded_subwork"
+      ],
+      "statement": "GTL owns declared topology/scope/bounds/schema; validator checks static relations; HoG traverses admitted declaration; selected implementation realizes native leaf effect; ABG owns lifecycle, transport-contract admission, runtime facts and replay. Bounded work requires no Product-local shadow runtime logic in GTL.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBWORK.md#REQ-L-GTL3-SUBWORK%20%E2%80%94%20Bounded%20Sub-Work%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 23,
+          "quote": "**REQ-L-GTL3-SUBWORK-001**: GTL shall be able to express that a graph vector or graph function supports bounded sub-work dispatch.\n\n**REQ-L-GTL3-SUBWORK-002**: The sub-work declaration is a language capability. The GTL validator checks its static relations, HoG traverses the admitted declaration, a selected implementation binding realizes its leaf effect, and ABG admits and replays its runtime facts.\n\n**REQ-L-GTL3-SUBWORK-003**: The sub-work declaration shall express topology, traversal scope, boundedness, and schema validity. GTL owns that declared scope, the validator checks it, HoG traverses it, the selected implementation binding owns native leaf-effect realization, and ABG owns lifecycle, transport-contract admission, and replay truth.\n\n**REQ-L-GTL3-SUBWORK-004**: Bounded sub-work declaration shall not require product-local shadow runtime logic as part of the GTL language.\n"
+        }
+      ]
+    },
+    {
+      "key": "synthesis_contract_conservation",
+      "applies_to_keys": [
+        "deferred_synthesis"
+      ],
+      "statement": "Every produced Graph/callable satisfies declared interface/obligations and enters only through lawful outer-contract-preserving substitution/refinement. Preserve structural provenance identifying refined boundary and applied graph/callable. Materializing a callable or companion bundle preserves published callable identity and declared materialization truth.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 20,
+          "quote": "**REQ-L-GTL3-SYNTHESIS-001**: GTL shall provide a declarative surface for deferred synthesis or refinement with an explicit outer contract boundary.\n\n**REQ-L-GTL3-SYNTHESIS-002**: A synthesis or refinement declaration shall specify the interface and contract obligations that any produced graph or graph function must satisfy.\n\n**REQ-L-GTL3-SYNTHESIS-003**: A graph or graph function produced through deferred synthesis shall be applicable only through lawful substitution or refinement that preserves the declared outer contract.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement%2FAcceptance%20Criteria",
+          "start_line": 26,
+          "end_line": 30,
+          "quote": "**REQ-L-GTL3-SYNTHESIS-006**: Deferred synthesis or refinement shall carry enough structural truth that an engine can record replayable provenance for which boundary was refined and what graph or graph function was applied.\n\n**REQ-L-GTL3-SYNTHESIS-007**: Trigger visibility for synthesis or refinement may be declared through evaluator and hook surfaces. Engines execute the protocol and shall not invent trigger semantics.\n\n**REQ-L-GTL3-SYNTHESIS-008**: When a synthesis or refinement boundary materializes a graph function or graph-derived companion bundle, the published graph-function identity and declared materialization truth shall be preserved.\n"
+        }
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "role_attachment",
+      "applies_to_keys": [
+        "role"
+      ],
+      "allowed": [
+        "Attach Roles to semantic Jobs and, where lawful, GraphVector/GraphFunction contracts.",
+        "Carry opaque policy-hook references/config for authority, approval, assignment and related external policy."
+      ],
+      "forbidden": [
+        "Treating a role declaration as concrete Worker identity or GTL authentication."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ROLE.md#REQ-L-GTL3-ROLE%20%E2%80%94%20Semantic%20Capability%20Roles%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-ROLE-003**: `Role` is distinct from `Worker`. Role is language-owned semantic capability; Worker is engine-owned concrete identity.\n\n**REQ-L-GTL3-ROLE-004**: GTL shall allow roles to be attached to semantic jobs and, where lawful, to graph contracts such as `GraphVector` or `GraphFunction`.\n\n**REQ-L-GTL3-ROLE-005**: `Role.policy_hooks` may carry opaque hook references and opaque configuration for authority, approval, assignment, or related external policy concerns.\n\n**REQ-L-GTL3-ROLE-006**: GTL shall not implement authentication or authority resolution. Those remain external concerns resolved by ABG-conformant engines or other external systems.\n"
+        }
+      ]
+    },
+    {
+      "key": "rule_configuration",
+      "applies_to_keys": [
+        "rule"
+      ],
+      "allowed": [
+        "Carry opaque policy-visible gate protocol, aggregation, order or threshold parameters.",
+        "Reference/participate in abg.fn_composition closure predicates as declarative constraints only."
+      ],
+      "forbidden": [
+        "Becoming a policy semantic DSL, executable closure strategy, prompt strategy or hidden policy."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RULE.md#REQ-L-GTL3-RULE%20%E2%80%94%20Declarative%20Constraints%20And%20Gates%2FAcceptance%20Criteria",
+          "start_line": 23,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-RULE-004**: Rule configuration may carry opaque, policy-visible parameters for gate protocol, aggregation, ordering, or threshold concerns without turning GTL into a policy semantic language.\n\n**REQ-L-GTL3-RULE-005**: Engines may enforce declared rule protocol, but the underlying business, merge, ranking, or approval semantics remain outside the interpreter unless explicitly supplied through declarations and resolved implementations.\n\n**REQ-L-GTL3-RULE-006**: A rule may reference or participate in an `abg.fn_composition` closure predicate only as declarative constraint truth. The rule shall not become executable closure strategy, prompt strategy, or hidden policy law; ABG shall resolve enforcement through admitted evaluator, closure, and policy bindings.\n"
+        }
+      ]
+    },
+    {
+      "key": "selection_exposure",
+      "applies_to_keys": [
+        "selection_boundary"
+      ],
+      "allowed": [
+        "Expose candidate families, interface equivalence, tags and policy hints.",
+        "Use deterministic rule execution, probabilistic contextual analysis, human judgment or higher intent/business logic to make declared selection."
+      ],
+      "forbidden": [
+        "Hidden workflow choice, business-priority or engine strategy in GTL."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-001**: GTL may expose candidate families, interface equivalence, tags, and policy hints at a structural selection boundary.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-002**: GTL shall not embed hidden workflow choice, business priority, or engine strategy.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-003**: Selection belongs to deterministic rule execution, probabilistic contextual analysis, human judgment, or higher intent/business logic above the interpreter.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-004**: The interpreter may enumerate lawful candidates. It shall not silently choose the best one.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-005**: Candidate families shall preserve one explicit outer contract across all lawful candidates.\n\n**REQ-L-GTL3-SELECTION-BOUNDARY-006**: `policy_hints` are visible to external evaluators and consumers. They are not executable selection semantics.\n"
+        }
+      ]
+    },
+    {
+      "key": "substitution_source_and_visibility",
+      "applies_to_keys": [
+        "substitution"
+      ],
+      "allowed": [
+        "Use pre-authored or synthesized inner graph if outer contract is preserved.",
+        "Keep refined internals frame-local unless separate publication/export explicitly republishes them."
+      ],
+      "forbidden": [
+        "Changing callers' outer boundary during internal refinement."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBSTITUTE.md#REQ-L-GTL3-SUBSTITUTE%20%E2%80%94%20Lawful%20Substitution%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 29,
+          "quote": "**REQ-L-GTL3-SUBSTITUTE-002**: Substitution shall preserve the declared outer contract. Internal refinement may change structure but shall not alter the outer boundary observed by callers.\n\n**REQ-L-GTL3-SUBSTITUTE-003**: The refined internal structure shall remain visible in the resulting graph value.\n\n**REQ-L-GTL3-SUBSTITUTE-004**: Substitution shall target a specific `GraphVector` by `.id`.\n\n**REQ-L-GTL3-SUBSTITUTE-005**: Substitution shall expose enough structural truth for an engine to record replayable provenance for which contract was refined and by which inner graph.\n\n**REQ-L-GTL3-SUBSTITUTE-006**: Substitution may apply a pre-authored or synthesized inner graph provided the outer contract remains preserved.\n\n**REQ-L-GTL3-SUBSTITUTE-007**: Runtime engines may keep refined inner structure frame-local unless a separate publication or export surface explicitly republishes it.\n"
+        }
+      ]
+    },
+    {
+      "key": "synthesis_declaration_latitude",
+      "applies_to_keys": [
+        "deferred_synthesis"
+      ],
+      "allowed": [
+        "Expose tags, hints, governance hooks, opaque config and capability requirements without hidden strategy.",
+        "Expose multiple lawful candidates or one lawful boundary without deciding a choice.",
+        "Declare trigger visibility through evaluators/hooks; engines execute declared protocol."
+      ],
+      "forbidden": [
+        "Engine invention of trigger semantics.",
+        "Treating declared candidates as automatically chosen."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement%2FAcceptance%20Criteria",
+          "start_line": 22,
+          "end_line": 28,
+          "quote": "**REQ-L-GTL3-SYNTHESIS-004**: A synthesis or refinement boundary may expose tags, hints, governance hook references, opaque configuration, or capability requirements without embedding hidden strategic choice.\n\n**REQ-L-GTL3-SYNTHESIS-005**: GTL shall be able to expose multiple lawful synthesis candidates or one lawful synthesis boundary without deciding which candidate is chosen.\n\n**REQ-L-GTL3-SYNTHESIS-006**: Deferred synthesis or refinement shall carry enough structural truth that an engine can record replayable provenance for which boundary was refined and what graph or graph function was applied.\n\n**REQ-L-GTL3-SYNTHESIS-007**: Trigger visibility for synthesis or refinement may be declared through evaluator and hook surfaces. Engines execute the protocol and shall not invent trigger semantics.\n"
+        }
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "general_synthesis_release_scope",
+      "subject_key": "registered_choice_change_boundary",
+      "uncertainty": "This chunk declares general GTL synthesis/substitution capability but explicitly excludes future graph-building from selected 5.0 governance. Concrete Product Release Boundaries are referenced, not reproduced.",
+      "consequence": "Do not promote general language expressibility into current runtime permission; preserve the restricted registered-choice mode and seek exact release boundary for other increments.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 63,
+          "quote": "**REQ-L-GTL3-SELECTION-BOUNDARY-019**: The selected 5.0 governance shall choose\nonly preregistered GraphFunctions in the exact admitted catalog view and\npermitted by the Program at that boundary. Each registered graph shall declare\nits functional purpose and conditions for use, linked to its input, result and\neffect contracts. Selection shall identify that published declaration, inputs,\nreason and supporting evidence; declared purpose or catalog presence alone shall\nnot establish applicability, permission or successful completion. Missing\nsuitable capability or unresolved required support shall remain an explicit gap.\nChanged evidence may change the registered choice or justify compatible result\nreuse while preserving the original outcome, unaffected valid work and remaining\nobligations. It shall not author/recompose graph definitions, silently rewrite\nthe running Program or expand its callable scope. Existing registered-template\nmaterialization and recursive invocation remain lawful. Future graph-building\nwork is outside this increment under Product Release Boundaries.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBSTITUTE.md#REQ-L-GTL3-SUBSTITUTE%20%E2%80%94%20Lawful%20Substitution%2FAcceptance%20Criteria",
+          "start_line": 27,
+          "end_line": 29,
+          "quote": "**REQ-L-GTL3-SUBSTITUTE-006**: Substitution may apply a pre-authored or synthesized inner graph provided the outer contract remains preserved.\n\n**REQ-L-GTL3-SUBSTITUTE-007**: Runtime engines may keep refined inner structure frame-local unless a separate publication or export surface explicitly republishes it.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement%2FAcceptance%20Criteria",
+          "start_line": 16,
+          "end_line": 30,
+          "quote": "**REQ-L-GTL3-SYNTHESIS-001**: GTL shall provide a declarative surface for deferred synthesis or refinement with an explicit outer contract boundary.\n\n**REQ-L-GTL3-SYNTHESIS-002**: A synthesis or refinement declaration shall specify the interface and contract obligations that any produced graph or graph function must satisfy.\n\n**REQ-L-GTL3-SYNTHESIS-003**: A graph or graph function produced through deferred synthesis shall be applicable only through lawful substitution or refinement that preserves the declared outer contract.\n\n**REQ-L-GTL3-SYNTHESIS-004**: A synthesis or refinement boundary may expose tags, hints, governance hook references, opaque configuration, or capability requirements without embedding hidden strategic choice.\n\n**REQ-L-GTL3-SYNTHESIS-005**: GTL shall be able to expose multiple lawful synthesis candidates or one lawful synthesis boundary without deciding which candidate is chosen.\n\n**REQ-L-GTL3-SYNTHESIS-006**: Deferred synthesis or refinement shall carry enough structural truth that an engine can record replayable provenance for which boundary was refined and what graph or graph function was applied.\n\n**REQ-L-GTL3-SYNTHESIS-007**: Trigger visibility for synthesis or refinement may be declared through evaluator and hook surfaces. Engines execute the protocol and shall not invent trigger semantics.\n\n**REQ-L-GTL3-SYNTHESIS-008**: When a synthesis or refinement boundary materializes a graph function or graph-derived companion bundle, the published graph-function identity and declared materialization truth shall be preserved.\n"
+        }
+      ]
+    },
+    {
+      "key": "route_and_relation_authority",
+      "subject_key": "requirement_route",
+      "uncertainty": "Concrete allowed route/relation sets, promotion policies and runtime publication/admission authority are not instantiated here.",
+      "consequence": "Refuse to infer admitted runtime references or semantic authority from named routes or extracted requirement graphs.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 29,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-004**: Authority context fragments shall remain GTL `Context`-bound or wrapper-bound constraints unless a promotion policy lawfully admits a closeable requirement term.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+          "start_line": 43,
+          "end_line": 55,
+          "quote": "**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-011**: A GTL requirements lifecycle composition declaration shall carry published route refs, contract refs, symbolic bindings, and source digests. It shall not import, instantiate, or depend on ABG runtime implementation modules.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-012**: GTL requirement route refs shall be inert declaration truth until HoG reaches them and ABG resolves them against admitted route/publication authority. A GTL route ref shall not become runtime authority merely because it names an ABG route.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-013**: GTL conformance for requirement route declarations shall fail closed for unknown route refs, missing contract refs, malformed source digests, duplicate lifecycle composition refs, and any field that attempts to smuggle ABG runtime state or event authority into GTL.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-014**: GTL requirement graph declarations shall express parent/child, refinement, dependency, obstruction, mitigation, satisfaction, evidence, assurance, and proof-evidence structure through existing `RequirementTerm` declarations and typed requirement relation declarations. They shall not introduce a second KAOS, goal, decomposition, obstacle, or requirement-graph carrier kernel, and they shall not turn proof-role labels into product test policy.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-015**: GTL requirement graph conformance shall fail closed for duplicate requirement ids, duplicate relation ids, duplicate traversal span ids, dangling term relation refs, dangling term span refs, dangling relation endpoints, dangling proof-relation requirement ids, and unknown relation kinds.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-016**: GTL requirement graph declarations shall remain declaration-only. Parent/child or refinement structure may name published ABG route refs, but it shall not import ABG runtime modules, mint admitted refs, emit runtime events, project folds, residualize pressure, select continuation, or route re-entry.\n\n**REQ-L-GTL3-REQUIREMENTS-ALGEBRA-017**: GTL traversal-span declarations used by requirements algebra shall be able to declare existing frame refs, zoom refs, foldback refs, and alias refs as inert lineage refs over graph-function and graph-vector identity. They shall not introduce a rival graph topology anchor, graph-vector carrier, frame carrier, zoom carrier, foldback carrier, continuation carrier, or re-entry carrier.\n"
+        }
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ROLE.md#REQ-L-GTL3-ROLE%20%E2%80%94%20Semantic%20Capability%20Roles",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header status/date/category/lineage and derivation links are source metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RULE.md#REQ-L-GTL3-RULE%20%E2%80%94%20Declarative%20Constraints%20And%20Gates",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header status/date/category/lineage and derivation links are source metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header status/date/category/lineage and derivation links are source metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBSTITUTE.md#REQ-L-GTL3-SUBSTITUTE%20%E2%80%94%20Lawful%20Substitution",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header status/date/category/lineage and derivation links are source metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBWORK.md#REQ-L-GTL3-SUBWORK%20%E2%80%94%20Bounded%20Sub-Work",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header status/date/category/lineage and derivation links are source metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header status/date/category/lineage and derivation links are source metadata, not imported current domain authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md#REQ-L-GTL3-REQUIREMENTS-ALGEBRA%20%E2%80%94%20Requirement%20Declaration%20Wrappers%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "requirement_declaration",
+        "requirement_route",
+        "declaration_references_inert_route",
+        "requirement_identity_preservation",
+        "requirement_authority_and_topology",
+        "proof_projection_separation",
+        "requirement_conformance_rejections",
+        "external_requirement_candidates",
+        "requirement_facade_non_authority",
+        "lifecycle_routes_inert",
+        "existing_requirement_graph_kernel",
+        "route_and_relation_authority"
+      ],
+      "reason": "Retains all obligations and source-specific selection limits with exact unresolved route or release-scope dependencies."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "selection_boundary",
+        "registered_governance_selection",
+        "selection_structural_nonchoice",
+        "selection_declared_execution",
+        "selection_policy_contract",
+        "selection_regime_law",
+        "registered_choice_support",
+        "registered_choice_change_boundary",
+        "selection_exposure",
+        "general_synthesis_release_scope"
+      ],
+      "reason": "Retains all obligations and source-specific selection limits with exact unresolved route or release-scope dependencies."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ROLE.md#REQ-L-GTL3-ROLE%20%E2%80%94%20Semantic%20Capability%20Roles%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "role"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ROLE.md#REQ-L-GTL3-ROLE%20%E2%80%94%20Semantic%20Capability%20Roles%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "role",
+        "role_external_authority",
+        "role_attachment"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RULE.md#REQ-L-GTL3-RULE%20%E2%80%94%20Declarative%20Constraints%20And%20Gates%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "rule"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-RULE.md#REQ-L-GTL3-RULE%20%E2%80%94%20Declarative%20Constraints%20And%20Gates%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "rule",
+        "rule_evaluator_gate_split",
+        "rule_closure_enforcement",
+        "rule_configuration"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SELECTION-BOUNDARY.md#REQ-L-GTL3-SELECTION-BOUNDARY%20%E2%80%94%20Structural%20Selection%20Boundary%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "selection_boundary"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBSTITUTE.md#REQ-L-GTL3-SUBSTITUTE%20%E2%80%94%20Lawful%20Substitution%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "substitution"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBSTITUTE.md#REQ-L-GTL3-SUBSTITUTE%20%E2%80%94%20Lawful%20Substitution%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "substitution",
+        "substitution_contract_and_provenance",
+        "substitution_source_and_visibility",
+        "general_synthesis_release_scope"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBWORK.md#REQ-L-GTL3-SUBWORK%20%E2%80%94%20Bounded%20Sub-Work%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "bounded_subwork"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SUBWORK.md#REQ-L-GTL3-SUBWORK%20%E2%80%94%20Bounded%20Sub-Work%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "bounded_subwork",
+        "subwork_ownership_chain"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "deferred_synthesis"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-SYNTHESIS.md#REQ-L-GTL3-SYNTHESIS%20%E2%80%94%20Deferred%20Synthesis%20And%20Lawful%20Refinement%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "deferred_synthesis",
+        "synthesis_enters_via_substitution",
+        "synthesis_contract_conservation",
+        "synthesis_declaration_latitude",
+        "general_synthesis_release_scope"
+      ],
+      "reason": "Retains meanings, bounded permissions, refusal conditions and owner separation expressed by this section."
+    }
+  ],
+  "limitations": [
+    "General synthesis capability and selected 5.0 preregistered-only governance have distinct applicability; neither is silently erased.",
+    "No route resolution, requirement admission, policy execution, graph synthesis, substitution or sub-work dispatch is performed.",
+    "Concrete release/route/relation/promotion authority remains source-dependent; no cross-chunk identity is inferred.",
+    "Header metadata and historical links are omitted as operative truth."
+  ]
+}

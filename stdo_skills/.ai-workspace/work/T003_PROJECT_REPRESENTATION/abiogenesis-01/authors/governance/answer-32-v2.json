@@ -1,0 +1,962 @@
+{
+  "concepts": [
+    {
+      "key": "mapping_provenance",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROVENANCE.md#REQ-M-GTL3-PROVENANCE%20%E2%80%94%20Mapping%20Provenance",
+          "start_line": 3,
+          "end_line": 7,
+          "quote": "**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: INT-006\n**Wave**: 3"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROVENANCE.md#REQ-M-GTL3-PROVENANCE%20%E2%80%94%20Mapping%20Provenance%2FPurpose",
+          "start_line": 13,
+          "end_line": 13,
+          "quote": "When GTL programs are mapped onto an engine, provenance records which engine, version, and capability profile was used."
+        }
+      ],
+      "label": "Mapping provenance",
+      "definition": "Engine mapping provenance preserves the engine surface and materialization basis from which runtime truth derives.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "product_contract_domain",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/README.md#Product%20Requirement%20Families",
+          "start_line": 3,
+          "end_line": 6,
+          "quote": "This domain owns catalog-product, installation, public operator policy,\nproduct self-conformance, qualification, and scenario obligations.\n\nUse these families for the observable product contract that sits above pure language and engine law."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/README.md#Product%20Requirement%20Families%2FScope",
+          "start_line": 10,
+          "end_line": 17,
+          "quote": "- policy and operational governance\n- addressable public contract, schema, vocabulary, corpus, operation, and capability catalogs\n- catalog-product descriptors, contributions, dependencies, and public reads\n- the SYSTEM-owned agent-invocable Consensus GraphFunction\n- installed substrate contracts\n- ABIogenesis product self-conformance\n- qualification and evidence expectations\n- end-to-end scenario obligations"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/README.md#Product%20Requirement%20Families%2FFamilies",
+          "start_line": 26,
+          "end_line": 33,
+          "quote": "- `REQ-P-POLICY.md`\n- `REQ-P-PUBLIC-CONTRACTS.md`\n- `REQ-P-CATALOG.md`\n- `REQ-P-CONSENSUS.md`\n- `REQ-P-INSTALL.md`\n- `REQ-P-SELF-CONFORMANCE.md`\n- `REQ-P-QUAL.md`\n- `REQ-P-SCENARIOS.md`"
+        }
+      ],
+      "label": "Product contract domain",
+      "definition": "Observable obligations above pure language and engine law cover policy, public addressable catalogs, catalog products/dependencies/reads, SYSTEM Consensus, installed substrate, self-conformance, qualification and end-to-end scenarios.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "catalog_product",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract",
+          "start_line": 3,
+          "end_line": 7,
+          "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability\n**Date**: 2026-07-11\n**Derives from**: [PRODUCT.md](../../PRODUCT.md), [REQ-P-INSTALL.md](REQ-P-INSTALL.md), [REQ-P-POLICY.md](REQ-P-POLICY.md)\n**Wave**: ABG 5.0 target admission"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FPurpose",
+          "start_line": 13,
+          "end_line": 25,
+          "quote": "Abiogenesis constructs one immutable Product-owned catalog from an explicit\nreadiness basis.\nPublishing a catalog product supplies declarations and policy; it does not give\nthe publisher runtime, traversal, event, continuation, or closure authority.\n\nThis family defines the product descriptor, contribution, dependency, lock,\nprovenance, conflict, visibility, callability, and session-allowlist contract\nrequired by the ABG 5.0 product line.\n\n**Authority boundary**: Product owns pure, eventless readiness validation,\ncatalog construction, narrowing, and declaration application. ABG owns the\nruntime invocation and workspace-transformation facts that consume those\nvalues, plus Event Calculus, replay, continuation, and closure truth."
+        }
+      ],
+      "label": "Catalog product",
+      "definition": "Publisher-authored immutable product declarations and policy feed a Product-owned catalog; this active family records T-283 F_H acceptance, without granting runtime authority to publishers.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "product_readiness",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FPurpose",
+          "start_line": 22,
+          "end_line": 25,
+          "quote": "**Authority boundary**: Product owns pure, eventless readiness validation,\ncatalog construction, narrowing, and declaration application. ABG owns the\nruntime invocation and workspace-transformation facts that consume those\nvalues, plus Event Calculus, replay, continuation, and closure truth."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FBounded%205.0%20Distribution%20Scope",
+          "start_line": 213,
+          "end_line": 220,
+          "quote": "**REQ-P-CATALOG-029**: Public catalog readiness construction shall consume one exact\nworkspace binding, resolved lock, verified product descriptors, and verified\ncontribution manifests and shall produce one immutable catalog identity plus a\ntyped disposition for every submitted row. Binding shall not imply admission,\nand catalog construction shall not imply runtime admission, session visibility,\neligibility, callability, or invocation. This is the pure, eventless\n`abg.operation.catalog.admit` definition; no catalog\nstore method or adapter path may publish a second admission operation identity."
+        }
+      ],
+      "label": "Product readiness construction",
+      "definition": "Pure eventless validation, catalog construction, narrowing and declaration application owned by Product.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "abg_runtime",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FPurpose",
+          "start_line": 22,
+          "end_line": 25,
+          "quote": "**Authority boundary**: Product owns pure, eventless readiness validation,\ncatalog construction, narrowing, and declaration application. ABG owns the\nruntime invocation and workspace-transformation facts that consume those\nvalues, plus Event Calculus, replay, continuation, and closure truth."
+        }
+      ],
+      "label": "ABG runtime authority",
+      "definition": "Owner of runtime invocation, workspace transformation, Event Calculus, replay, continuation and closure truth.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "contribution_manifest",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FContribution%20Manifest",
+          "start_line": 53,
+          "end_line": 57,
+          "quote": "**REQ-P-CATALOG-005**: Every catalog product shall publish one immutable\ncontribution manifest bound to its descriptor and artifact digest. Every\ncontribution row shall identify a canonical handle, contribution kind,\ndeclaration or contract reference, owning product identity, compatibility\nrequirements, provenance, and any readiness prerequisites."
+        }
+      ],
+      "label": "Contribution manifest",
+      "definition": "Immutable descriptor- and artifact-bound publication with each row naming canonical handle, kind, declaration/contract, owning product, compatibility requirements, provenance and readiness prerequisites.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "graph_function",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FContribution%20Manifest",
+          "start_line": 59,
+          "end_line": 72,
+          "quote": "**REQ-P-CATALOG-006**: The public ABG 5.0 catalog kinds shall include:\n\n- `graph_function`\n- `node_type`\n- `overlay`\n\nThe product may retain additional internal kinds, but an internal kind shall\nnot become public merely because an implementation stores it in the same\nregistry.\n\n**REQ-P-CATALOG-007**: `GraphFunction` shall be the sole public named callable\ncatalog kind. A node type, overlay, policy, interface, plugin, public start,\ncandidate family, role, job, or other declaration shall not be invoked as if it\nwere a GraphFunction."
+        }
+      ],
+      "label": "GraphFunction catalog kind",
+      "definition": "The sole public named callable kind; node types and overlays are public but non-callable.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "declaration_application",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FContribution%20Manifest",
+          "start_line": 74,
+          "end_line": 84,
+          "quote": "**REQ-P-CATALOG-008**: Public presence of `node_type` and `overlay` rows shall\nprovide list and describe semantics. Presence alone shall not authorize\napplication, traversal, worker dispatch, event emission, continuation, or\nclosure. A non-callable application contract shall be a complete canonical\ndeterministic construction from an admitted immutable install, deterministic\ncatalog view, exact declaration, and explicit durable-prefix coordinate. Equal\nindependently reconstructed inputs shall produce an acceptable equal carrier.\nConstruction shall not admit an event, change runtime truth, or depend on an\noriginating object, store, context, constructor brand, ambient capability, or\nactor identity. The invoking owner shall revalidate the carrier and its inputs\nagainst ABG truth and record its exact use in the owning invocation event."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FBounded%205.0%20Distribution%20Scope",
+          "start_line": 226,
+          "end_line": 240,
+          "quote": "**REQ-P-CATALOG-030**: ABIogenesis 5.0 shall publish typed non-callable\napplication contracts for admitted `node_type` and `overlay` rows. Node-type\napplication shall bind a published reusable type to admitted node or program\ntruth. Overlay application shall bind a published program composition over\nadmitted GraphFunctions, vectors, node types, starts, roles, policies, proof\nobligations, and contracts. Product shall own application as the total\ndeterministic construction defined by REQ-P-CATALOG-008; it is not an\nadmission boundary. ABG shall remain the sole owner of runtime Product-catalog\nadmission and runtime truth. Neither kind shall invoke a worker, open a\nGraphCall, emit a runtime event, or control traversal merely by being present\nor applied. `run.invoke` shall revalidate the exact application against its\nadmitted inputs and durable prefix, and the owning invocation event shall\nrecord the application ref and digest used. Both behaviors shall be closed\nvariants of `abg.operation.catalog.apply`; neither shall receive a separate\noperation identity."
+        }
+      ],
+      "label": "Non-callable declaration application",
+      "definition": "Canonical deterministic construction for a node_type or overlay using admitted immutable install, deterministic catalog view, exact declaration and explicit durable prefix; invocation separately revalidates and records use.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "resolved_lock",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FDependencies%20And%20Resolved%20Locks",
+          "start_line": 102,
+          "end_line": 116,
+          "quote": "**REQ-P-CATALOG-010**: Product dependencies shall be declared in the product\ndescriptor. Each dependency shall identify the required product, an admitted\nversion or compatibility constraint, and any required public contract or\ncontribution capability.\n\n**REQ-P-CATALOG-011**: Dependency resolution shall produce one immutable\nresolved lock before installation or binding. The lock shall identify the exact\nselected product versions, descriptor identities, artifact content digests,\ncontribution-manifest identities, compatibility results, and dependency edges.\n\n**REQ-P-CATALOG-012**: The resolved lock shall be complete for the products\nselected into one workspace binding. An unresolved dependency, incompatible\nversion, missing required contract, dependency cycle, or ambiguous selection\nshall produce a typed refusal and shall not be silently satisfied from a source\ncheckout, ambient package, prior workspace, or mutable local path."
+        }
+      ],
+      "label": "Resolved dependency lock",
+      "definition": "Immutable complete exact selection for one workspace binding, produced before installation or binding from descriptor-declared dependencies.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "catalog_public_read",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FPublic%20Read%20Contract",
+          "start_line": 152,
+          "end_line": 155,
+          "quote": "**REQ-P-CATALOG-019**: The public SDK and operator contract shall provide\nsource-blind catalog-list and catalog-describe variants of\n`abg.operation.project.read` for the retained public kinds. The variants shall\nbe read-only projections over admitted catalog and workspace-binding truth."
+        }
+      ],
+      "label": "Catalog public read",
+      "definition": "Read-only source-blind list/describe variants of abg.operation.project.read over admitted catalog and workspace binding.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "session_catalog_view",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FSession%20Allowlist",
+          "start_line": 173,
+          "end_line": 176,
+          "quote": "**REQ-P-CATALOG-023**: A start or invocation session may declare an allowlist\nover admitted catalog identities. The effective session view shall be the\nintersection of the workspace-authorized catalog and the declared allowlist and\nshall be derived through `abg.operation.catalog.view`."
+        }
+      ],
+      "label": "Session catalog view",
+      "definition": "The catalog.view-derived intersection of workspace-authorized catalog and an optional start/invocation allowlist.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_function",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FIdentity%20And%20Ownership",
+          "start_line": 37,
+          "end_line": 42,
+          "quote": "**REQ-P-CONSENSUS-001**: When Consensus is published, ABIogenesis exposes exactly one canonical\nConsensus GraphFunction under handle\n`gtl://abg/consensus/submitter-reviewer-rounds`, graph-function ref\n`graph-function://abg/consensus/submitter-reviewer-rounds`, and SYSTEM owner\n`owner://abg/substrate`. It shall be an admitted callable `graph_function` row in\nthe ABIogenesis product catalog."
+        }
+      ],
+      "label": "Canonical Consensus GraphFunction",
+      "definition": "When published, exactly one SYSTEM-owned callable function uses handle gtl://abg/consensus/submitter-reviewer-rounds, ref graph-function://abg/consensus/submitter-reviewer-rounds and owner owner://abg/substrate, admitted in ABIogenesis catalog.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "readiness_consumed_by_runtime",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FPurpose",
+          "start_line": 22,
+          "end_line": 25,
+          "quote": "**Authority boundary**: Product owns pure, eventless readiness validation,\ncatalog construction, narrowing, and declaration application. ABG owns the\nruntime invocation and workspace-transformation facts that consume those\nvalues, plus Event Calculus, replay, continuation, and closure truth."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FBounded%205.0%20Distribution%20Scope",
+          "start_line": 213,
+          "end_line": 224,
+          "quote": "**REQ-P-CATALOG-029**: Public catalog readiness construction shall consume one exact\nworkspace binding, resolved lock, verified product descriptors, and verified\ncontribution manifests and shall produce one immutable catalog identity plus a\ntyped disposition for every submitted row. Binding shall not imply admission,\nand catalog construction shall not imply runtime admission, session visibility,\neligibility, callability, or invocation. This is the pure, eventless\n`abg.operation.catalog.admit` definition; no catalog\nstore method or adapter path may publish a second admission operation identity.\nAt runtime, a readiness basis shall not substitute for ABG-admitted\n`ProductInstall` or `WorkspaceBinding` truth. `run.invoke` shall consume one\nexplicit validated durable prefix coordinate and resolve its declared install\nand workspace-binding invocation refs from that prefix before runtime effects."
+        }
+      ],
+      "kind": "consumed_by",
+      "source_key": "product_readiness",
+      "target_key": "abg_runtime",
+      "meaning": "ABG runtime facts consume Product values; their construction conveys no runtime admission or authority.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "product_publishes_contributions",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FContribution%20Manifest",
+          "start_line": 53,
+          "end_line": 57,
+          "quote": "**REQ-P-CATALOG-005**: Every catalog product shall publish one immutable\ncontribution manifest bound to its descriptor and artifact digest. Every\ncontribution row shall identify a canonical handle, contribution kind,\ndeclaration or contract reference, owning product identity, compatibility\nrequirements, provenance, and any readiness prerequisites."
+        }
+      ],
+      "kind": "publishes",
+      "source_key": "catalog_product",
+      "target_key": "contribution_manifest",
+      "meaning": "Each catalog product must publish the immutable contribution manifest bound to its descriptor and artifact digest.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "lock_prerequisite_to_readiness",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FAdmission%2C%20Provenance%2C%20And%20Conflicts",
+          "start_line": 126,
+          "end_line": 129,
+          "quote": "**REQ-P-CATALOG-014**: Pure catalog readiness validation shall verify coherence among the\nworkspace lock, installed artifact identity, product descriptor, contribution\nmanifest, declared dependencies, and compatibility results before any\ncontribution becomes ready or callable."
+        }
+      ],
+      "kind": "prerequisite_to",
+      "source_key": "resolved_lock",
+      "target_key": "product_readiness",
+      "meaning": "Readiness verifies coherence of workspace lock, installed artifact, descriptor, contributions, dependencies and compatibility before ready/callable contributions.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_is_graph_function",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FIdentity%20And%20Ownership",
+          "start_line": 37,
+          "end_line": 42,
+          "quote": "**REQ-P-CONSENSUS-001**: When Consensus is published, ABIogenesis exposes exactly one canonical\nConsensus GraphFunction under handle\n`gtl://abg/consensus/submitter-reviewer-rounds`, graph-function ref\n`graph-function://abg/consensus/submitter-reviewer-rounds`, and SYSTEM owner\n`owner://abg/substrate`. It shall be an admitted callable `graph_function` row in\nthe ABIogenesis product catalog."
+        }
+      ],
+      "kind": "is_kind",
+      "source_key": "consensus_function",
+      "target_key": "graph_function",
+      "meaning": "Published Consensus is an admitted callable graph_function row under its unique SYSTEM identity.",
+      "governing": false,
+      "conditions": [
+        "When Consensus is published."
+      ],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "mapping_provenance_content",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROVENANCE.md#REQ-M-GTL3-PROVENANCE%20%E2%80%94%20Mapping%20Provenance%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 27,
+          "quote": "**REQ-M-GTL3-PROVENANCE-001**: Engine mapping provenance shall record: engine identity, engine version, capability profile used, any capability gaps.\n\n**REQ-M-GTL3-PROVENANCE-002**: Events emitted under a mapping shall carry engine provenance so replay can determine which engine surface produced which truth.\n\n**REQ-M-GTL3-PROVENANCE-003**: When a published graph function is materialized for engine execution, mapping provenance shall record the graph-function identity plus the declared inputs, profiles, or capability-visible parameters used for that materialization.\n\n**REQ-M-GTL3-PROVENANCE-004**: When a graph-derived companion bundle such as a selected subgraph or evaluator bundle is produced for engine execution, mapping provenance shall preserve its derivation back to the graph-function materialization that produced it.\n\n**REQ-M-GTL3-PROVENANCE-005**: When GTL node declarations include `asset_surface`, mapping provenance shall preserve the declared target and carried asset-surface contracts surfaced into bind-time manifests or runtime execution packets so downstream replay can determine which typed asset contract governed production.\n\n**REQ-M-GTL3-PROVENANCE-006**: When ABG merges vector-source required bindings with target `asset_surface.required_contexts` to form the effective executable boundary for one invocation, mapping provenance shall preserve that merge as invocation-local runtime truth, including enough distinction to tell which required bindings came from the vector source and which came from the asset-surface declaration."
+        }
+      ],
+      "applies_to_keys": [
+        "mapping_provenance"
+      ],
+      "statement": "Record engine identity/version, capability profile and gaps; mapped events carry this provenance. For graph-function materialization retain function identity and declared inputs/profiles/capability-visible parameters; companion bundles retain derivation to that materialization. For asset_surface declarations preserve target and carried contracts surfaced into bind-time manifests/runtime packets. For ABG invocation-local merging of vector required bindings with target required_contexts retain the merge and each binding source.",
+      "uncertainty": "",
+      "conditions": [
+        "Engine mapping always records engine/profile/gaps and event provenance.",
+        "Graph-function/materialization and companion-bundle requirements apply when those are produced for engine execution.",
+        "Asset contract preservation applies when asset_surface is declared.",
+        "Binding-source distinction applies when ABG merges vector-source and required_contexts for one invocation."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "product_release_scope",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/README.md#Product%20Requirement%20Families%2FScope",
+          "start_line": 19,
+          "end_line": 22,
+          "quote": "ABIogenesis 5.0 retains self-conformance and qualification but excludes the\nplanned 5.1 observer/tuner Product (`A5-F12`, `ABG5-S04`) and its public\noperation variants. Exact release applicability is defined by\n[`../README.md`](../README.md)."
+        }
+      ],
+      "applies_to_keys": [
+        "product_contract_domain"
+      ],
+      "statement": "5.0 retains self-conformance and qualification; planned 5.1 observer/tuner A5-F12/ABG5-S04 and its public operation variants are excluded.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "catalog_identity_integrity",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FCatalog%20Product%20Identity",
+          "start_line": 29,
+          "end_line": 44,
+          "quote": "**REQ-P-CATALOG-001**: Every catalog product shall publish one immutable,\nversioned product descriptor. The descriptor shall identify its schema version,\npublisher namespace, product identity, product version, compatibility\npredicates, contribution-manifest identity, declared dependencies, artifact\ncontent digest, provenance reference, and declared capability or effect\nsummary.\n\n**REQ-P-CATALOG-002**: A product descriptor shall identify one exact immutable\nartifact. Reusing the same publisher, product, and version identity for\ndifferent descriptor, contribution, or artifact content shall be a typed\nidentity conflict.\n\n**REQ-P-CATALOG-003**: The descriptor and contribution manifest shall be\npublisher-authored product truth. Catalog admission may verify, reject, and\nproject that truth, but shall not infer missing contribution declarations from\nfiles, runtime observations, adapter metadata, or prior installations."
+        }
+      ],
+      "applies_to_keys": [
+        "catalog_product"
+      ],
+      "statement": "Every product publishes one immutable versioned descriptor identifying schema version, publisher namespace, product identity/version, compatibility predicates, contribution manifest, dependencies, artifact digest, provenance and capability/effect summary. The descriptor identifies exactly one immutable artifact. Reused publisher/product/version with changed descriptor, contribution or artifact is a typed identity conflict; admission verifies/rejects/projects publisher truth and never infers missing declarations from files, observations, metadata or prior installs.",
+      "uncertainty": "",
+      "conditions": [
+        "For every catalog product and its descriptor.",
+        "Identity conflict arises when publisher/product/version is reused with different descriptor, contribution or artifact bytes."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "catalog_state_distinctions",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FCatalog%20Product%20Identity",
+          "start_line": 46,
+          "end_line": 49,
+          "quote": "**REQ-P-CATALOG-004**: A catalog product shall not acquire authority merely by\nbeing installed, bound, present in a registry, or visible in a catalog.\nInstallation, workspace binding, catalog admission, readiness, session\nvisibility, authorization, and invocation are distinct product states."
+        }
+      ],
+      "applies_to_keys": [
+        "catalog_product"
+      ],
+      "statement": "Installation, binding, admission, readiness, session visibility, authorization and invocation remain distinct; installation, binding, registry presence or visibility grants no authority.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "application_determinism_and_boundary",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FContribution%20Manifest",
+          "start_line": 74,
+          "end_line": 84,
+          "quote": "**REQ-P-CATALOG-008**: Public presence of `node_type` and `overlay` rows shall\nprovide list and describe semantics. Presence alone shall not authorize\napplication, traversal, worker dispatch, event emission, continuation, or\nclosure. A non-callable application contract shall be a complete canonical\ndeterministic construction from an admitted immutable install, deterministic\ncatalog view, exact declaration, and explicit durable-prefix coordinate. Equal\nindependently reconstructed inputs shall produce an acceptable equal carrier.\nConstruction shall not admit an event, change runtime truth, or depend on an\noriginating object, store, context, constructor brand, ambient capability, or\nactor identity. The invoking owner shall revalidate the carrier and its inputs\nagainst ABG truth and record its exact use in the owning invocation event."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FBounded%205.0%20Distribution%20Scope",
+          "start_line": 226,
+          "end_line": 240,
+          "quote": "**REQ-P-CATALOG-030**: ABIogenesis 5.0 shall publish typed non-callable\napplication contracts for admitted `node_type` and `overlay` rows. Node-type\napplication shall bind a published reusable type to admitted node or program\ntruth. Overlay application shall bind a published program composition over\nadmitted GraphFunctions, vectors, node types, starts, roles, policies, proof\nobligations, and contracts. Product shall own application as the total\ndeterministic construction defined by REQ-P-CATALOG-008; it is not an\nadmission boundary. ABG shall remain the sole owner of runtime Product-catalog\nadmission and runtime truth. Neither kind shall invoke a worker, open a\nGraphCall, emit a runtime event, or control traversal merely by being present\nor applied. `run.invoke` shall revalidate the exact application against its\nadmitted inputs and durable prefix, and the owning invocation event shall\nrecord the application ref and digest used. Both behaviors shall be closed\nvariants of `abg.operation.catalog.apply`; neither shall receive a separate\noperation identity."
+        }
+      ],
+      "applies_to_keys": [
+        "declaration_application"
+      ],
+      "statement": "Equal independently reconstructed inputs must yield acceptable equal carriers. Construction admits no event and changes no runtime truth; it cannot depend on originating objects/stores/contexts, constructor brands, ambient capability or actor identity. Node application binds a reusable type to admitted node/program truth; overlay application binds composition over admitted graph functions, vectors, node types, starts, roles, policies, proof obligations and contracts. Neither presence nor application dispatches workers, opens GraphCalls, emits events or controls traversal. Both are closed catalog.apply variants, with no separate operation identity; run.invoke revalidates exact inputs/durable prefix and records application ref/digest.",
+      "uncertainty": "",
+      "conditions": [
+        "For public node_type and overlay application.",
+        "Invoking owner revalidates the constructed carrier against admitted inputs and durable prefix before runtime use."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "catalog_ownership_partition",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FContribution%20Manifest",
+          "start_line": 86,
+          "end_line": 98,
+          "quote": "**REQ-P-CATALOG-009**: A contribution manifest shall not republish generic ABG\ncatalog truth as product-owned content. A publisher may publish its own domain\nvocabulary, overlays, policy, schemas, and specialization-owned GraphFunctions;\nHoG owns direct traversal. Product owns catalog readiness and construction.\nABG owns invocation selection facts, GraphCall, workspace transformation,\nreplay, and closure.\n\n**REQ-P-CATALOG-009A**: The ABIogenesis product may publish SYSTEM-owned reusable\nGraphFunctions in its own native catalog when PRODUCT names them as product\ncapabilities. The canonical Consensus function is such a row. Downstream\nproducts may bind declared reviewer profiles, subject contracts, policies, and\noverlays to that function, but shall not republish or shadow its canonical\nhandle, graph body, outer contracts, or SYSTEM ownership."
+        }
+      ],
+      "applies_to_keys": [
+        "catalog_product",
+        "graph_function"
+      ],
+      "statement": "Publishers may not republish generic ABG catalog truth. HoG owns direct traversal; Product owns readiness/construction; ABG owns invocation selection, GraphCall, workspace transformation, replay and closure. SYSTEM reusable functions are publishable natively when PRODUCT names the capability; downstream bindings must not republish or shadow Consensus canonical handle, graph body, outer contracts or SYSTEM ownership.",
+      "uncertainty": "",
+      "conditions": [
+        "SYSTEM reusable function publication requires PRODUCT naming the capability."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "dependency_resolution_refusal",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FDependencies%20And%20Resolved%20Locks",
+          "start_line": 102,
+          "end_line": 122,
+          "quote": "**REQ-P-CATALOG-010**: Product dependencies shall be declared in the product\ndescriptor. Each dependency shall identify the required product, an admitted\nversion or compatibility constraint, and any required public contract or\ncontribution capability.\n\n**REQ-P-CATALOG-011**: Dependency resolution shall produce one immutable\nresolved lock before installation or binding. The lock shall identify the exact\nselected product versions, descriptor identities, artifact content digests,\ncontribution-manifest identities, compatibility results, and dependency edges.\n\n**REQ-P-CATALOG-012**: The resolved lock shall be complete for the products\nselected into one workspace binding. An unresolved dependency, incompatible\nversion, missing required contract, dependency cycle, or ambiguous selection\nshall produce a typed refusal and shall not be silently satisfied from a source\ncheckout, ambient package, prior workspace, or mutable local path.\n\n**REQ-P-CATALOG-013**: A resolved lock shall not change through automatic\nupgrade or ambient re-resolution. Selecting different product bytes requires\nan explicit new resolution and a new lock identity. ABG 5.0 does not thereby\nclaim update, disable, unbind, uninstall, retirement, revocation, or\nsupersession lifecycle behavior."
+        }
+      ],
+      "applies_to_keys": [
+        "resolved_lock"
+      ],
+      "statement": "Each dependency names required product, admitted version/compatibility constraint and needed public contract/contribution capability. Lock retains exact versions, descriptors, artifact digests, contribution manifests, compatibility and edges. Unresolved/incompatible/missing-contract/cyclic/ambiguous selections refuse typed; source checkouts, ambient packages, prior workspaces or mutable paths cannot satisfy them. No auto upgrade/re-resolution: changed bytes need explicit resolution and new lock; this claims no update/disable/unbind/uninstall/retirement/revocation/supersession lifecycle.",
+      "uncertainty": "",
+      "conditions": [
+        "Resolve all dependencies for the selected workspace binding before install/bind.",
+        "Different selected bytes require new explicit resolution/lock."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "catalog_provenance_conflict",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FAdmission%2C%20Provenance%2C%20And%20Conflicts",
+          "start_line": 131,
+          "end_line": 148,
+          "quote": "**REQ-P-CATALOG-015**: Every admitted catalog row shall preserve publisher,\nproduct, version, descriptor, contribution-manifest, declaration, artifact\ndigest, dependency-lock, and admission provenance sufficient for a public\nconsumer to identify the source product without inspecting its source tree.\n\n**REQ-P-CATALOG-016**: Two rows claiming the same canonical catalog identity\nwith different owning product, declaration, contract, or content identity shall\nfail as a typed conflict. Catalog order, install order, adapter preference, or\nunqualified metadata shall not silently shadow an admitted canonical identity.\n\n**REQ-P-CATALOG-017**: Re-admission of the same canonical row is idempotent only\nwhen its owning product, descriptor, contribution, declaration, contract, and\ncontent identities agree exactly.\n\n**REQ-P-CATALOG-018**: Catalog metadata may describe already admitted rows, but\nmetadata shall not create authority, compatibility, readiness, eligibility,\ncallability, ranking, or closure truth. Storefront and recommendation ranking\nmetadata are outside the ABG 5.0 catalog contract."
+        }
+      ],
+      "applies_to_keys": [
+        "catalog_product"
+      ],
+      "statement": "Every admitted row preserves publisher, product/version, descriptor, manifest, declaration, artifact digest, lock and admission provenance for source-blind identification. Same canonical identity with different owner/declaration/contract/content is typed conflict, never shadowed by catalog/install order, adapter preference or metadata. Re-admission is idempotent only with exact owner/descriptor/contribution/declaration/contract/content agreement. Metadata may describe rows but creates no authority, compatibility, readiness, eligibility, callability, ranking or closure; storefront/recommendation ranking is outside 5.0.",
+      "uncertainty": "",
+      "conditions": [
+        "For every admitted catalog row.",
+        "Idempotence requires exact owning-product, descriptor, contribution, declaration, contract and content equality."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "catalog_read_payload",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FPublic%20Read%20Contract",
+          "start_line": 157,
+          "end_line": 169,
+          "quote": "**REQ-P-CATALOG-020**: A public list row shall expose at least the canonical\nhandle, kind, owning product and version, readiness, eligibility, callability,\nsession visibility, compatibility disposition, and provenance references.\n\n**REQ-P-CATALOG-021**: Public describe shall expose the selected row's declared\ncontract or schema identity, dependency and compatibility disposition,\nreadiness blockers, owning product and artifact identity, and provenance. It\nshall not expose a private runtime object as the public contract.\n\n**REQ-P-CATALOG-022**: Unknown, ambiguous, incompatible, unbound, inadmissible,\nor not-ready catalog identities shall remain distinguishable typed outcomes.\nList or describe shall not collapse them into absence when the product can\ntruthfully report the reason."
+        }
+      ],
+      "applies_to_keys": [
+        "catalog_public_read"
+      ],
+      "statement": "List exposes at least canonical handle, kind, owner product/version, readiness, eligibility, callability, visibility, compatibility and provenance. Describe exposes contract/schema, dependency/compatibility disposition, blockers, product/artifact and provenance, never a private runtime object. Unknown, ambiguous, incompatible, unbound, inadmissible and not-ready remain distinct typed outcomes rather than absence when the reason can be truthfully reported.",
+      "uncertainty": "",
+      "conditions": [
+        "For retained public list/describe variants."
+      ],
+      "exceptions": [
+        "Typed failure reason need not be reported where the Product cannot truthfully report it."
+      ]
+    },
+    {
+      "key": "allowlist_validation_and_binding",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FSession%20Allowlist",
+          "start_line": 183,
+          "end_line": 192,
+          "quote": "**REQ-P-CATALOG-025**: Unknown, duplicate, ambiguous, or unauthorized allowlist\nentries shall fail with typed reasons before invocation. An empty effective\ncallable view shall remain a lawful explicit result and shall not activate an\nunrestricted fallback.\n\n**REQ-P-CATALOG-026**: Catalog list, describe, lawful-action, invocation, and\nreplay projections shall identify the effective session view when session\nnarrowing affects the result. Read behavior shall bind\n`abg.operation.project.read`; invocation shall bind\n`abg.operation.run.invoke`. Neither may rederive or widen the view."
+        }
+      ],
+      "applies_to_keys": [
+        "session_catalog_view",
+        "catalog_public_read"
+      ],
+      "statement": "Unknown, duplicate, ambiguous or unauthorized allowlist entries fail typed before invocation. List, describe, lawful-action, invocation and replay identify the effective narrowed view when it affects results. Reads bind project.read and invocations run.invoke; neither rederives or widens that view.",
+      "uncertainty": "",
+      "conditions": [
+        "If session narrowing affects list/describe/lawful-action/invocation/replay result, identify that effective view."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "catalog_initial_operation_contract",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FBounded%205.0%20Distribution%20Scope",
+          "start_line": 202,
+          "end_line": 211,
+          "quote": "**REQ-P-CATALOG-028**: The ABG 5.0 catalog contract covers initial resolution,\nverification, installation, binding, admission, inspection, session narrowing,\ntyped declaration application, and GraphFunction invocation. These behaviors\nbind respectively to `abg.operation.product.resolve`,\n`abg.operation.product.verify`, `abg.operation.product.install`,\n`abg.operation.workspace.bind`, `abg.operation.catalog.admit`,\n`abg.operation.project.read`, `abg.operation.catalog.view`,\n`abg.operation.catalog.apply`, and `abg.operation.run.invoke`. Product\nlifecycle mutation and registry-entry lifecycle are outside this family until\nseparately admitted."
+        }
+      ],
+      "applies_to_keys": [
+        "catalog_product"
+      ],
+      "statement": "5.0 covers initial resolve/verify/install/bind/admit/read/view/apply/invoke through the respective abg.operation.product.resolve, product.verify, product.install, workspace.bind, catalog.admit, project.read, catalog.view, catalog.apply and run.invoke identities. Product mutation and registry-entry lifecycle require separate admission.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "readiness_runtime_separation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FBounded%205.0%20Distribution%20Scope",
+          "start_line": 213,
+          "end_line": 224,
+          "quote": "**REQ-P-CATALOG-029**: Public catalog readiness construction shall consume one exact\nworkspace binding, resolved lock, verified product descriptors, and verified\ncontribution manifests and shall produce one immutable catalog identity plus a\ntyped disposition for every submitted row. Binding shall not imply admission,\nand catalog construction shall not imply runtime admission, session visibility,\neligibility, callability, or invocation. This is the pure, eventless\n`abg.operation.catalog.admit` definition; no catalog\nstore method or adapter path may publish a second admission operation identity.\nAt runtime, a readiness basis shall not substitute for ABG-admitted\n`ProductInstall` or `WorkspaceBinding` truth. `run.invoke` shall consume one\nexplicit validated durable prefix coordinate and resolve its declared install\nand workspace-binding invocation refs from that prefix before runtime effects."
+        }
+      ],
+      "applies_to_keys": [
+        "product_readiness",
+        "abg_runtime"
+      ],
+      "statement": "catalog.admit consumes exact binding/lock and verified descriptors/manifests, produces one immutable catalog plus a typed disposition for every row, and has no second admission identity in stores/adapters. Binding does not imply admission, nor catalog construction runtime admission/visibility/eligibility/callability/invocation. Runtime readiness basis cannot substitute for ABG-admitted ProductInstall or WorkspaceBinding. Before effects run.invoke consumes a validated durable-prefix coordinate and resolves its install/binding refs there.",
+      "uncertainty": "",
+      "conditions": [
+        "Runtime invocation resolves install/binding refs from an explicit validated durable prefix before effects."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "catalog_acceptance_obligation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FAcceptance",
+          "start_line": 244,
+          "end_line": 257,
+          "quote": "The catalog product contract is satisfied only when a source-blind consumer can\nbind exact product artifacts, inspect retained public contribution kinds\nthrough `project.read`, narrow one session through `catalog.view`, apply a\nnode type or overlay through `catalog.apply`, and invoke a program-owned\nadmitted GraphFunction through `run.invoke` while:\n\n- descriptor, contribution, dependency, lock, and provenance identities agree;\n- incompatible, missing, ambiguous, duplicate, and shadowing cases fail typed;\n- node types and overlays remain visible but non-callable;\n- every execution-scoped invocation names the admitted GTL program that\n  publishes the selected GraphFunction;\n- catalog presence does not become runtime authority; and\n- no hosted service, source checkout, private import, legacy operation facade,\n  or second controller is required."
+        }
+      ],
+      "applies_to_keys": [
+        "catalog_product"
+      ],
+      "statement": "Satisfaction requires a source-blind consumer to bind exact artifacts, inspect via project.read, narrow via catalog.view, apply node type/overlay via catalog.apply and invoke admitted program-owned GraphFunction via run.invoke. All descriptor/contribution/dependency/lock/provenance identities agree; incompatible/missing/ambiguous/duplicate/shadowing fail typed; node types/overlays stay non-callable; every execution invocation names its publishing admitted GTL program; presence confers no runtime authority; no hosted service/source checkout/private import/legacy facade/second controller is required.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_release_boundary",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction",
+          "start_line": 3,
+          "end_line": 16,
+          "quote": "**Status**: Retained capability contract; dedicated F08/S05 qualification reserved for 5.1\n**Category**: Capability / Constraint / Verification\n**Date**: 2026-07-12\n**Repriced**: 2026-09-13\n**Derives from**: [PRODUCT.md](../../PRODUCT.md),\n[REQ-L-GTL3-GRAPHFUNCTION.md](../gtl/REQ-L-GTL3-GRAPHFUNCTION.md),\n[REQ-L-GTL3-HOF.md](../gtl/REQ-L-GTL3-HOF.md),\n[REQ-L-GTL3-RECURSE.md](../gtl/REQ-L-GTL3-RECURSE.md),\n[REQ-L-GTL3-C-ALGEBRA.md](../gtl/REQ-L-GTL3-C-ALGEBRA.md),\n[REQ-P-PUBLIC-CONTRACTS.md](REQ-P-PUBLIC-CONTRACTS.md),\n[REQ-P-CATALOG.md](REQ-P-CATALOG.md),\n[REQ-P-INSTALL.md](REQ-P-INSTALL.md),\n[TICKET_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/TICKET_METHOD.md)\n**Wave**: ABIogenesis 5.1 dedicated qualification"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPurpose",
+          "start_line": 22,
+          "end_line": 27,
+          "quote": "Release applicability follows [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries).\nThis family preserves the Consensus capability contract and future dedicated\nqualification; it does not mandate its publication or S05 acceptance for 5.0.\nAny retained published Consensus function obeys its declared contract and the\ngeneric catalog/GTL/HoG/ABG laws. Existing implementation and evidence retain\ntheir exact scope without an unexecuted release-complete claim."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_function"
+      ],
+      "statement": "Consensus retains its capability contract with dedicated F08/S05 qualification reserved for 5.1. Publication and S05 acceptance are not mandated for 5.0. Any retained publication obeys its contract and generic catalog/GTL/HoG/ABG laws; evidence keeps its exact scope without an unexecuted release-complete claim.",
+      "uncertainty": "",
+      "conditions": [
+        "Dedicated F08/S05 qualification is reserved for 5.1.",
+        "Any Consensus actually retained/published in 5.0 obeys its declared and generic contracts."
+      ],
+      "exceptions": [
+        "5.0 does not mandate Consensus publication or S05 acceptance."
+      ]
+    },
+    {
+      "key": "consensus_graph_carrier",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPurpose",
+          "start_line": 29,
+          "end_line": 33,
+          "quote": "Publish one bounded, agent-invocable Consensus capability as a SYSTEM-owned GTL\nfree construction. A calling agent invokes the function through `abg.cli`,\nHoG traverses its declared reviewer fan-out, exact attributed submitter\nresponse, reduction, bounded verification rounds, result admission, and replay\nwithout a feature-specific engine service, plugin controller, or shell loop."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FIdentity%20And%20Ownership",
+          "start_line": 44,
+          "end_line": 48,
+          "quote": "**REQ-P-CONSENSUS-002**: The canonical Consensus function shall have one\npublished executable GTL graph body admitted through raw GTL admission and GTL\nvalidation. A catalog declaration, contract nameplate, engine plugin,\nimperative service method, host-language reviewer loop, or adapter interception\nwithout that executable graph body shall not satisfy this requirement."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_function"
+      ],
+      "statement": "Consensus must have one executable GTL graph body admitted by raw GTL admission and validation. CLI invokes it; HoG traverses declared reviewer fan-out, attributed submitter response, reduction, bounded verification, result admission and replay. A nameplate, catalog declaration, plugin, imperative service, host reviewer loop, adapter interception or shell controller without that body is insufficient.",
+      "uncertainty": "",
+      "conditions": [
+        "When canonical Consensus is published."
+      ],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "publication_latitude",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FContribution%20Manifest",
+          "start_line": 59,
+          "end_line": 72,
+          "quote": "**REQ-P-CATALOG-006**: The public ABG 5.0 catalog kinds shall include:\n\n- `graph_function`\n- `node_type`\n- `overlay`\n\nThe product may retain additional internal kinds, but an internal kind shall\nnot become public merely because an implementation stores it in the same\nregistry.\n\n**REQ-P-CATALOG-007**: `GraphFunction` shall be the sole public named callable\ncatalog kind. A node type, overlay, policy, interface, plugin, public start,\ncandidate family, role, job, or other declaration shall not be invoked as if it\nwere a GraphFunction."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FContribution%20Manifest",
+          "start_line": 86,
+          "end_line": 98,
+          "quote": "**REQ-P-CATALOG-009**: A contribution manifest shall not republish generic ABG\ncatalog truth as product-owned content. A publisher may publish its own domain\nvocabulary, overlays, policy, schemas, and specialization-owned GraphFunctions;\nHoG owns direct traversal. Product owns catalog readiness and construction.\nABG owns invocation selection facts, GraphCall, workspace transformation,\nreplay, and closure.\n\n**REQ-P-CATALOG-009A**: The ABIogenesis product may publish SYSTEM-owned reusable\nGraphFunctions in its own native catalog when PRODUCT names them as product\ncapabilities. The canonical Consensus function is such a row. Downstream\nproducts may bind declared reviewer profiles, subject contracts, policies, and\noverlays to that function, but shall not republish or shadow its canonical\nhandle, graph body, outer contracts, or SYSTEM ownership."
+        }
+      ],
+      "applies_to_keys": [
+        "catalog_product",
+        "graph_function"
+      ],
+      "allowed": [
+        "Publish own domain vocabulary, overlays, policy, schemas and specialization-owned GraphFunctions.",
+        "Retain additional internal kinds."
+      ],
+      "forbidden": [
+        "Treat an internal kind as public because it shares registry storage.",
+        "Invoke node type, overlay, policy, interface, plugin, public start, candidate family, role, job or another declaration as a GraphFunction."
+      ]
+    },
+    {
+      "key": "allowlist_narrowing",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FSession%20Allowlist",
+          "start_line": 173,
+          "end_line": 186,
+          "quote": "**REQ-P-CATALOG-023**: A start or invocation session may declare an allowlist\nover admitted catalog identities. The effective session view shall be the\nintersection of the workspace-authorized catalog and the declared allowlist and\nshall be derived through `abg.operation.catalog.view`.\n\n**REQ-P-CATALOG-024**: An allowlist shall be narrowing-only. It shall not admit\nan unbound product, make an inadmissible or not-ready row eligible, change a\ncanonical identity, authorize a non-callable kind, or widen the workspace\ncatalog.\n\n**REQ-P-CATALOG-025**: Unknown, duplicate, ambiguous, or unauthorized allowlist\nentries shall fail with typed reasons before invocation. An empty effective\ncallable view shall remain a lawful explicit result and shall not activate an\nunrestricted fallback."
+        }
+      ],
+      "applies_to_keys": [
+        "session_catalog_view"
+      ],
+      "allowed": [
+        "Declare an allowlist over admitted identities.",
+        "Return an explicitly empty effective callable view."
+      ],
+      "forbidden": [
+        "Admit unbound products, enable inadmissible/not-ready rows, change canonical identities, authorize non-callable kinds or widen the workspace catalog.",
+        "Use an unrestricted fallback when the view is empty."
+      ]
+    },
+    {
+      "key": "distribution_latitude",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FBounded%205.0%20Distribution%20Scope",
+          "start_line": 196,
+          "end_line": 200,
+          "quote": "**REQ-P-CATALOG-027**: Conformance to this family shall not require a hosted\nregistry, storefront, ranking service, billing service, organization RBAC,\nsigning service, or multi-user catalog administration. Immutable repository or\nGit release artifacts with exact content identity are sufficient distribution\ninputs for ABG 5.0."
+        }
+      ],
+      "applies_to_keys": [
+        "catalog_product"
+      ],
+      "allowed": [
+        "Use immutable repository or Git release artifacts with exact content identity as sufficient distribution inputs."
+      ],
+      "forbidden": [
+        "Require hosted registry, storefront, ranking, billing, organization RBAC, signing or multi-user catalog administration for this family."
+      ]
+    },
+    {
+      "key": "consensus_extension_latitude",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FIdentity%20And%20Ownership",
+          "start_line": 50,
+          "end_line": 54,
+          "quote": "**REQ-P-CONSENSUS-003**: ABIogenesis owns the reusable function, its outer\ncontracts, and its closed result vocabularies. Downstream products and hosts may\ncontribute reviewer profiles, subject bindings, policies, and overlays through\ndeclared catalog surfaces. They shall not replace the graph body, execute a\nsecond panel loop, emit ABG truth, or decide Consensus closure."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_function"
+      ],
+      "allowed": [
+        "Downstream products/hosts contribute reviewer profiles, subject bindings, policies and overlays through declared catalog surfaces."
+      ],
+      "forbidden": [
+        "Replace ABIogenesis graph body, outer contracts, closed result vocabularies or SYSTEM ownership.",
+        "Execute a second panel loop, emit ABG truth or decide Consensus closure."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "mapping_intent_reference",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROVENANCE.md#REQ-M-GTL3-PROVENANCE%20%E2%80%94%20Mapping%20Provenance",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: INT-006"
+        }
+      ],
+      "subject_key": "mapping_provenance",
+      "uncertainty": "INT-006 is named as derivation but is not supplied here.",
+      "consequence": "Its exact intent meaning and cross-chunk identity require source re-entry."
+    },
+    {
+      "key": "product_scope_reference",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/README.md#Product%20Requirement%20Families%2FScope",
+          "start_line": 19,
+          "end_line": 22,
+          "quote": "ABIogenesis 5.0 retains self-conformance and qualification but excludes the\nplanned 5.1 observer/tuner Product (`A5-F12`, `ABG5-S04`) and its public\noperation variants. Exact release applicability is defined by\n[`../README.md`](../README.md)."
+        }
+      ],
+      "subject_key": "product_contract_domain",
+      "uncertainty": "The parent requirements README controls exact release applicability but is outside this chunk.",
+      "consequence": "The retained scope statement does not resolve all release applicability."
+    },
+    {
+      "key": "consensus_external_basis",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction",
+          "start_line": 7,
+          "end_line": 15,
+          "quote": "**Derives from**: [PRODUCT.md](../../PRODUCT.md),\n[REQ-L-GTL3-GRAPHFUNCTION.md](../gtl/REQ-L-GTL3-GRAPHFUNCTION.md),\n[REQ-L-GTL3-HOF.md](../gtl/REQ-L-GTL3-HOF.md),\n[REQ-L-GTL3-RECURSE.md](../gtl/REQ-L-GTL3-RECURSE.md),\n[REQ-L-GTL3-C-ALGEBRA.md](../gtl/REQ-L-GTL3-C-ALGEBRA.md),\n[REQ-P-PUBLIC-CONTRACTS.md](REQ-P-PUBLIC-CONTRACTS.md),\n[REQ-P-CATALOG.md](REQ-P-CATALOG.md),\n[REQ-P-INSTALL.md](REQ-P-INSTALL.md),\n[TICKET_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/TICKET_METHOD.md)"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPurpose",
+          "start_line": 22,
+          "end_line": 27,
+          "quote": "Release applicability follows [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries).\nThis family preserves the Consensus capability contract and future dedicated\nqualification; it does not mandate its publication or S05 acceptance for 5.0.\nAny retained published Consensus function obeys its declared contract and the\ngeneric catalog/GTL/HoG/ABG laws. Existing implementation and evidence retain\ntheir exact scope without an unexecuted release-complete claim."
+        }
+      ],
+      "subject_key": "consensus_function",
+      "uncertainty": "The referenced PRODUCT release boundary, generic GTL/HoG/ABG laws and historical TICKET_METHOD v2.5.0-rc.6 citation are not supplied here.",
+      "consequence": "References are retained as unresolved source routes, not resolved governing endpoints or adoption of that older method."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROVENANCE.md#REQ-M-GTL3-PROVENANCE%20%E2%80%94%20Mapping%20Provenance",
+      "decision": "residual",
+      "keys": [
+        "mapping_provenance",
+        "mapping_intent_reference"
+      ],
+      "reason": "Retain active mapping provenance identity and unresolved intent derivation."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROVENANCE.md#REQ-M-GTL3-PROVENANCE%20%E2%80%94%20Mapping%20Provenance%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "mapping_provenance"
+      ],
+      "reason": "Retain engine-mapping purpose."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROVENANCE.md#REQ-M-GTL3-PROVENANCE%20%E2%80%94%20Mapping%20Provenance%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "mapping_provenance_content"
+      ],
+      "reason": "Retain all six provenance obligations and their applicability."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/README.md#Product%20Requirement%20Families",
+      "decision": "retained",
+      "keys": [
+        "product_contract_domain"
+      ],
+      "reason": "Retain product-domain meaning."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/README.md#Product%20Requirement%20Families%2FScope",
+      "decision": "residual",
+      "keys": [
+        "product_contract_domain",
+        "product_release_scope",
+        "product_scope_reference"
+      ],
+      "reason": "Retain named scope and exclusion; parent release applicability remains external."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/README.md#Product%20Requirement%20Families%2FFamilies",
+      "decision": "retained",
+      "keys": [
+        "product_contract_domain"
+      ],
+      "reason": "Retain family membership in the product-domain definition."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract",
+      "decision": "retained",
+      "keys": [
+        "catalog_product"
+      ],
+      "reason": "Retain declared catalog status and wave as source data."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "catalog_product",
+        "product_readiness",
+        "abg_runtime",
+        "readiness_consumed_by_runtime"
+      ],
+      "reason": "Retain Product/ABG authority partition."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FCatalog%20Product%20Identity",
+      "decision": "retained",
+      "keys": [
+        "catalog_identity_integrity",
+        "catalog_state_distinctions"
+      ],
+      "reason": "Retain immutable identity, authorship and distinct states."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FContribution%20Manifest",
+      "decision": "retained",
+      "keys": [
+        "contribution_manifest",
+        "graph_function",
+        "declaration_application",
+        "product_publishes_contributions",
+        "application_determinism_and_boundary",
+        "catalog_ownership_partition",
+        "publication_latitude"
+      ],
+      "reason": "Retain contribution schema, kind/callability boundary and deterministic application law."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FDependencies%20And%20Resolved%20Locks",
+      "decision": "retained",
+      "keys": [
+        "resolved_lock",
+        "dependency_resolution_refusal"
+      ],
+      "reason": "Retain lock dependency prerequisite, refusals and lifecycle limitation."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FAdmission%2C%20Provenance%2C%20And%20Conflicts",
+      "decision": "retained",
+      "keys": [
+        "lock_prerequisite_to_readiness",
+        "catalog_provenance_conflict"
+      ],
+      "reason": "Retain readiness coherence, source-blind provenance, conflicts and metadata limits."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FPublic%20Read%20Contract",
+      "decision": "retained",
+      "keys": [
+        "catalog_public_read",
+        "catalog_read_payload"
+      ],
+      "reason": "Retain read variants, fields and distinct typed outcomes."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FSession%20Allowlist",
+      "decision": "retained",
+      "keys": [
+        "session_catalog_view",
+        "allowlist_validation_and_binding",
+        "allowlist_narrowing"
+      ],
+      "reason": "Retain optional narrowing, typed invalid entries and view binding."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FBounded%205.0%20Distribution%20Scope",
+      "decision": "retained",
+      "keys": [
+        "product_readiness",
+        "declaration_application",
+        "readiness_consumed_by_runtime",
+        "application_determinism_and_boundary",
+        "catalog_initial_operation_contract",
+        "readiness_runtime_separation",
+        "distribution_latitude"
+      ],
+      "reason": "Retain distribution latitude, operation identities and runtime revalidation boundary."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CATALOG.md#REQ-P-CATALOG%20-%20Catalog%20Product%20And%20Public%20Catalog%20Contract%2FAcceptance",
+      "decision": "retained",
+      "keys": [
+        "catalog_acceptance_obligation"
+      ],
+      "reason": "Retain conjunctive source-blind acceptance conditions without claiming execution."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction",
+      "decision": "residual",
+      "keys": [
+        "consensus_release_boundary",
+        "consensus_external_basis"
+      ],
+      "reason": "Retain deferred dedicated qualification and unresolved cited bases."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPurpose",
+      "decision": "residual",
+      "keys": [
+        "consensus_release_boundary",
+        "consensus_graph_carrier",
+        "consensus_external_basis"
+      ],
+      "reason": "Retain optional 5.0 publication and graph construction; external release applicability remains unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FIdentity%20And%20Ownership",
+      "decision": "retained",
+      "keys": [
+        "consensus_function",
+        "consensus_is_graph_function",
+        "consensus_graph_carrier",
+        "consensus_extension_latitude"
+      ],
+      "reason": "Retain conditional canonical identity, executable carrier and extension limits."
+    }
+  ],
+  "limitations": [
+    "This interpretation represents declared requirements, not runtime execution, acceptance or qualification.",
+    "Cross-chunk identities and referenced PRODUCT, intent, generic laws and method documents are unresolved locally.",
+    "The finite schema represents workflow semantics as concepts/constraints; no judgments, traversals or transformations are instantiated."
+  ]
+}

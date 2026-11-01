@@ -1,0 +1,778 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "fn<A,B>.C is notation over a published GraphFunction bound by Job, optionally a realized GraphVector context, and a selected abg.fn_composition identity. C denotes selected composition, not a new callable or runtime entity.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 98,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-002**: `fn<A, B>.C` shall be interpreted only as notation over a published `GraphFunction` bound by `Job`, optional realized `GraphVector` context, and selected `abg.fn_composition` identity.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-003**: `C` shall mean selected composition notation. It shall not introduce `ComputeUnit`, `ReliableCompute`, a topology anchor, a public callable carrier, an ABG runtime carrier, or an execution target.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-004**: Selected composition notation shall preserve the ABG composition contract ref, digest, host binding, declaration source, ordered regime bindings, standards context, policy context, carrier context, assurance context, deterministic closure contract, and optimization contract when present.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 94
+          }
+        ],
+        "key": "selected_compute_notation",
+        "label": "Selected compute notation"
+      },
+      {
+        "conditions": [],
+        "definition": "Candidate and evidence production under a selected composition, including plugin.transform.C computation.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 100,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-005**: `transform.C` shall denote candidate and evidence production under the selected composition. It shall not emit runtime events, write ledgers, select traversal, or close a boundary.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 100
+          },
+          {
+            "end_line": 122,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-016**: `plugin.transform.C` shall denote candidate/evidence computation, `plugin.evaluate.C` shall denote evaluation-rule computation inside the evaluation-set phase, and `plugin.consequence.C` shall denote consequence/read-model projection computation. These category names shall be used on public runtime observer and hook/action surfaces instead of the ambiguous `eval` stage name.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 122
+          }
+        ],
+        "key": "transform_phase",
+        "label": "transform.C"
+      },
+      {
+        "conditions": [],
+        "definition": "Evaluation-set phase whose rules produce proposed deterministic registers, semantic findings, gain, metrics, close dispositions, residual pressure, continuation/evidence/authority references and diagnostics.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 102,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-006**: `evaluate.C` shall denote an evaluation-set phase under the selected composition. Evaluation rules may produce deterministic registers, semantic findings, gain, metrics, close disposition proposals, residual pressure, continuation refs, evidence refs, authority refs, and diagnostics, but they shall not directly close, write, select, transition, or emit runtime truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 102
+          }
+        ],
+        "key": "evaluation_phase",
+        "label": "evaluate.C"
+      },
+      {
+        "conditions": [],
+        "definition": "The epistemic boundary at which candidate/evaluation data becomes runtime fact; ABG owns payload and event admission and the associated runtime truth surfaces.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 104,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-007**: ABG admission shall be the epistemic boundary where candidate/evaluation payloads become runtime facts. Before ABG admission, plugin and evaluator returns are proposed evidence, not event truth, ledger truth, projection truth, traversal truth, or closure truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 104
+          },
+          {
+            "end_line": 114,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-012**: HoG shall remain the owner of direct GTL traversal mechanics. ABG shall remain the owner of event emission, payload admission, ledger projection, assurance fold, admitted transition, continuation, closure, correction, and replay truth. GTL compute notation may point at those surfaces but shall not write them.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 114
+          }
+        ],
+        "key": "abg_admission",
+        "label": "ABG admission"
+      },
+      {
+        "conditions": [],
+        "definition": "Projection over ABG-admitted state, assurance decisions, traversal transitions and downstream read models, computed as plugin.consequence.C without independent runtime mutation authority.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 106,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-008**: `consequence.C` shall denote a projection reference over ABG-admitted state, assurance decision refs, traversal transition refs, and downstream read-model refs. It shall not be an independent action stage with authority to mutate runtime truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 106
+          },
+          {
+            "end_line": 122,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-016**: `plugin.transform.C` shall denote candidate/evidence computation, `plugin.evaluate.C` shall denote evaluation-rule computation inside the evaluation-set phase, and `plugin.consequence.C` shall denote consequence/read-model projection computation. These category names shall be used on public runtime observer and hook/action surfaces instead of the ambiguous `eval` stage name.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 122
+          }
+        ],
+        "key": "consequence_projection",
+        "label": "consequence.C"
+      },
+      {
+        "conditions": [],
+        "definition": "Notation for one closeable traversal atom under selected GraphFunction execution, internal GraphVector, composition, admitted attempt envelope and stage outputs, assurance fold, consequence, transition and replay; not a new topology, public call, callback, overlay, registry, command or controller.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 144,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-025**: `TraversalUnit<A, B>` shall be the GTL/ABG notation for one closeable traversal atom under selected graph-function execution, internal graph-vector boundary, selected composition, admitted attempt envelope, admitted stage outputs, assurance fold, consequence projection, traversal transition, and replay disposition. It shall not introduce a new GTL topology object, public callable carrier, plugin callback, overlay, registry, CLI command, or runtime controller.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 144
+          }
+        ],
+        "key": "traversal_unit",
+        "label": "TraversalUnit<A,B>"
+      },
+      {
+        "conditions": [],
+        "definition": "First-class language-owned declaration of an externally located snapshot-bound constraint dimension carried by graph structure, binding at least name, locator and digest.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 14,
+            "quote": "Define `Context` as the language-owned, snapshot-bound constraint surface of\nGTL 3.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FPurpose",
+            "start_line": 13
+          },
+          {
+            "end_line": 24,
+            "quote": "**REQ-L-GTL3-CONTEXT-001**: `Context` shall be a first-class GTL declaration type.\n\n**REQ-L-GTL3-CONTEXT-002**: A context shall bind at minimum `name`, `locator`, and `digest`.\n\n**REQ-L-GTL3-CONTEXT-003**: `Context` shall represent an externally located, snapshot-bound constraint dimension carried by graph structure.\n\n**REQ-L-GTL3-CONTEXT-004**: `Context` remains language-owned declaration truth, not an engine-owned event or runtime fact.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 18
+          }
+        ],
+        "key": "context",
+        "label": "Context"
+      },
+      {
+        "conditions": [],
+        "definition": "Existing Context, contract and policy declarations selected by a graph composition that bind owning frame definition, exact subject/basis, observations, criteria, authority, evidence, result relation and invalidators.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 60,
+            "quote": "**REQ-L-GTL3-CONTEXT-009**: A framed call shall explicitly bind a reusable\nevaluation/work contract through existing Context, contract and policy\ndeclarations selected by its graph composition. The binding shall preserve the\nowning frame definition, exact subject/basis, required observations, criteria,\nauthority, evidence, result relation and invalidation conditions. A rendered\nprompt shall remain a projection of that binding. A role name, overlay row or\nruntime Frame identity alone shall not establish it.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 54
+          }
+        ],
+        "key": "frame_work_contract",
+        "label": "Reusable frame work/evaluation contract"
+      },
+      {
+        "conditions": [],
+        "definition": "Navigation surface for exact boundaries among GTL, validator, HoG, ABG, implementation seams and downstream Products; it indexes and does not replace detailed requirements or complete Product definition.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 15,
+            "quote": "Provide one fast reload surface for GTL contract law and its exact boundary with\nthe GTL validator, HoG, ABG, implementation seams, and downstream products.\nThis file indexes detailed requirement families; it does not replace them or\nthe complete Product definition.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "contract_law_reload",
+        "label": "GTL contract-law reload surface"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "selected_compute_notation"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 96,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-001**: GTL compute epistemology shall preserve the ratified ontology names. It shall not rename `Graph`, `Node`, `GraphVector`, `Context`, `Operator`, `Evaluator`, `Rule`, `GraphFunction`, `RefinementBoundary`, `CandidateFamily`, `ContractRef`, `Role`, `Job`, `Module`, or `abg.fn_composition`.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-002**: `fn<A, B>.C` shall be interpreted only as notation over a published `GraphFunction` bound by `Job`, optional realized `GraphVector` context, and selected `abg.fn_composition` identity.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-003**: `C` shall mean selected composition notation. It shall not introduce `ComputeUnit`, `ReliableCompute`, a topology anchor, a public callable carrier, an ABG runtime carrier, or an execution target.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 92
+          }
+        ],
+        "key": "ontology_names_preserved",
+        "statement": "Preserve Graph, Node, GraphVector, Context, Operator, Evaluator, Rule, GraphFunction, RefinementBoundary, CandidateFamily, ContractRef, Role, Job, Module and abg.fn_composition names. Do not introduce ComputeUnit, ReliableCompute, topology anchor, public callable, runtime carrier or execution target through notation.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "selected_compute_notation"
+        ],
+        "conditions": [
+          "Optimization contract is preserved when present.",
+          "Participation in an abg.fn_composition boundary requires selection provenance."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 98,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-004**: Selected composition notation shall preserve the ABG composition contract ref, digest, host binding, declaration source, ordered regime bindings, standards context, policy context, carrier context, assurance context, deterministic closure contract, and optimization contract when present.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 98
+          },
+          {
+            "end_line": 108,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-009**: Regime-binding notation shall distinguish selected composition host from declaration source. Hook declarations, policy hooks, visible defaults, and templates may be sources of selected composition truth, but they shall not appear as owning composition hosts.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 108
+          },
+          {
+            "end_line": 112,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-011**: Evaluation, admitted-state, and consequence notation shall carry selected composition ref and digest, or a causally linked composition selection ref, whenever the stage participates in an `abg.fn_composition` governed boundary.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 112
+          }
+        ],
+        "key": "selected_composition_binding",
+        "statement": "Preserve composition contract reference, digest, host binding, declaration source, ordered regime bindings, standards/policy/carrier/assurance context, deterministic closure contract and optimization contract when present. Distinguish owning selected host from source; hooks, visible defaults, policy hooks and templates may source a selection but cannot appear as owning hosts. Evaluation, admitted-state and consequence notation participating in a governed boundary must carry selected ref/digest or a causally linked selection reference.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "transform_phase",
+          "evaluation_phase",
+          "consequence_projection"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 106,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-005**: `transform.C` shall denote candidate and evidence production under the selected composition. It shall not emit runtime events, write ledgers, select traversal, or close a boundary.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-006**: `evaluate.C` shall denote an evaluation-set phase under the selected composition. Evaluation rules may produce deterministic registers, semantic findings, gain, metrics, close disposition proposals, residual pressure, continuation refs, evidence refs, authority refs, and diagnostics, but they shall not directly close, write, select, transition, or emit runtime truth.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-007**: ABG admission shall be the epistemic boundary where candidate/evaluation payloads become runtime facts. Before ABG admission, plugin and evaluator returns are proposed evidence, not event truth, ledger truth, projection truth, traversal truth, or closure truth.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-008**: `consequence.C` shall denote a projection reference over ABG-admitted state, assurance decision refs, traversal transition refs, and downstream read-model refs. It shall not be an independent action stage with authority to mutate runtime truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 100
+          }
+        ],
+        "key": "compute_non_authority",
+        "statement": "Transform produces candidate/evidence only, with no event, ledger, traversal or closure authority. Evaluation produces proposed findings and values only, with no direct close, write, selection, transition or emission of runtime truth. Consequence is projection, not an independent action stage mutating runtime truth. Plugin/evaluator returns before admission are proposed evidence and not event, ledger, projection, traversal or closure truth.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "selected_compute_notation"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 110,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-010**: Regime-binding notation shall make non-`F_D` closure authority unrepresentable. `F_P` and `F_H` may construct, diagnose, repair, rank, supply evidence, judge, escalate, or stand absentia under ABG law, but they shall not claim closure authority.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 110
+          }
+        ],
+        "key": "closure_fibre_boundary",
+        "statement": "Regime notation makes non-F_D closure authority unrepresentable. F_P/F_H may construct, diagnose, repair, rank, provide evidence, judge, escalate or stand absentia under ABG law, but may not claim closure authority.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "selected_compute_notation",
+          "abg_admission"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 114,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-012**: HoG shall remain the owner of direct GTL traversal mechanics. ABG shall remain the owner of event emission, payload admission, ledger projection, assurance fold, admitted transition, continuation, closure, correction, and replay truth. GTL compute notation may point at those surfaces but shall not write them.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 114
+          },
+          {
+            "end_line": 130,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-018**: ABG.system side effects shall appear\nbetween plugin compute categories. A product plugin may compute and return\ntyped values or refs, but only ABG.system may admit them, write events, derive\nledgers, fold assurance, admit traversal transitions, replay continuation, or\nclose. HoG alone advances the admitted GTL traversal topology.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 126
+          }
+        ],
+        "key": "runtime_owner_partition",
+        "statement": "HoG owns direct GTL traversal mechanics. ABG owns events, payload admission, ledger projection, assurance fold, admitted transitions, continuation, closure, correction and replay. Compute notation may reference but cannot write these. ABG.system effects occur between plugin compute categories: only ABG.system admits values, writes events, derives ledgers, folds assurance, admits transitions, replays continuation or closes; HoG alone advances admitted topology.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "consequence_projection"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 118,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-013**: Product-specific pressure, gain meaning, and read-model interpretation shall remain product-owned projections over ABG-admitted facts. GTL compute notation shall not standardize downstream product strategy semantics.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-014**: Documentation, examples, and published tenant contracts that use the notation shall state that `Composition(...)` is display shorthand for selected `abg.fn_composition`, not a separate source of truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 116
+          }
+        ],
+        "key": "product_projection_meaning",
+        "statement": "Product-specific pressure, gain semantics and read-model interpretation remain Product-owned projections over ABG-admitted facts. GTL notation does not standardize downstream strategy. Documentation, examples and tenant contracts must describe Composition(...) as display shorthand for selected abg.fn_composition, never separate truth.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "transform_phase",
+          "evaluation_phase",
+          "consequence_projection"
+        ],
+        "conditions": [
+          "Preserve a regime-binding reference when present."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 122,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-015**: GTL compute notation shall expose compute plugin categories for `transform.C`, `evaluate.C`, and `consequence.C`. Each category shall preserve selected composition ref, digest, selection ref, regime binding ref when present, input carrier refs, output carrier refs, evidence refs, and non-authority flags proving the plugin cannot write ledgers, emit runtime events, select traversal, or close the boundary.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-016**: `plugin.transform.C` shall denote candidate/evidence computation, `plugin.evaluate.C` shall denote evaluation-rule computation inside the evaluation-set phase, and `plugin.consequence.C` shall denote consequence/read-model projection computation. These category names shall be used on public runtime observer and hook/action surfaces instead of the ambiguous `eval` stage name.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 120
+          }
+        ],
+        "key": "plugin_category_contract",
+        "statement": "Expose transform/evaluate/consequence plugin categories preserving composition reference/digest/selection reference, regime-binding reference when present, input/output carrier and evidence references, and non-authority flags for ledger/event/traversal/closure prohibition. Public observer and hook/action surfaces use plugin.transform.C, plugin.evaluate.C and plugin.consequence.C with their specific candidate, rule-computation and projection meanings instead of ambiguous eval.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "selected_compute_notation",
+          "abg_admission"
+        ],
+        "conditions": [
+          "F_H participates in composition."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 124,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-017**: `F_H` shall be represented as an external human-callout compute category when it participates in composition. The category shall require `F_H`, shall state that human work is external to ABG, and shall require response admission before any human result can affect runtime truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 124
+          }
+        ],
+        "key": "human_external_response",
+        "statement": "An F_H composition participant is an external human-callout compute category that requires F_H, states that human work is outside ABG and requires response admission before any human result affects runtime truth.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "selected_compute_notation",
+          "evaluation_phase"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 132,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-019**: The deterministic event-sourced case shall be represented as a lawful reduction of the same composition notation. A fully `F_D` graph remains a program graph over ABG admission/events/replay, not a separate API or shortcut around selected composition identity.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 132
+          },
+          {
+            "end_line": 142,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-023**: A scalar `FpEvaluationOutcome` shall be treated as a lawful one-rule reduction of `evaluate.C`, not as a second public evaluation carrier or a product-local runtime loop.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-024**: Any composed `.C` stage shall be representable as a stage-set phase under selected composition. Scalar `transform.C`, `evaluate.C`, and `consequence.C` plugin calls shall be one-task reductions of the stage-set law, not privileged alternate execution paths.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 140
+          }
+        ],
+        "key": "same_law_reductions",
+        "statement": "A fully F_D graph is a lawful deterministic event-sourced reduction of the same composition identity and ABG admission/events/replay, with no separate API or shortcut. Scalar FpEvaluationOutcome is a one-rule evaluate.C reduction, not another carrier or Product loop. Every composed C stage is representable as a stage-set phase; scalar transform/evaluate/consequence calls are one-task reductions, never privileged alternate paths.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "evaluation_phase",
+          "abg_admission"
+        ],
+        "conditions": [
+          "Deterministic register rules must be declared by the selection.",
+          "F_P semantic judgment applies when ambiguity remains."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 138,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-020**: `evaluate.C.F_D.register_rule[*]` shall be first-class evaluation work when declared by selected composition. Deterministic register rules may derive read-only shape, lineage, coverage, target-carrier, observed-state, and domain register facts, but their outputs remain proposed values until ABG admission.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-021**: `evaluate.C.F_P.semantic_judgment_rule[*]` shall evaluate over admitted transform truth plus admitted evaluation registers when ambiguity remains. F_P semantic judgment may propose disposition and residual pressure, but closure remains ABG-owned assurance fold truth.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-022**: Evaluation-set notation shall allow ordered and parallel rule batches only over read-only admitted facts. Replay identity shall derive from the selected composition identity, declared rule refs, batch/dependency refs, and admitted outcomes, not from wall-clock completion order.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 134
+          }
+        ],
+        "key": "evaluation_rule_admission_order",
+        "statement": "When declared, evaluate.C.F_D.register_rule[*] is first-class work deriving read-only shape, lineage, coverage, target-carrier, observed-state and domain registers whose results await ABG admission. When ambiguity remains, F_P semantic rules evaluate admitted transform truth plus admitted registers and may propose disposition/residual pressure; closure remains ABG assurance fold. Ordered or parallel rule batches operate only on read-only admitted facts. Replay identity comes from composition, declared rule references, batch/dependency references and admitted outcomes, never wall-clock completion order.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "consequence_projection",
+          "traversal_unit"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 146,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-026**: Consequence bind shall mean `plugin.consequence.C` plus ABG consequence admission, traversal transition, and replay continuation. `plugin.consequence.C` alone shall not be described as owning bind, traversal transition, replay, closure, or next-unit selection.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 146
+          }
+        ],
+        "key": "consequence_bind_ownership",
+        "statement": "Consequence bind consists of plugin.consequence.C plus ABG consequence admission, traversal transition and replay continuation. The plugin alone owns neither bind, transition, replay, closure nor next-unit selection.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "traversal_unit"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 148,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-027**: A traversal unit shall be interpretable as a function over admitted intent-lineage truth: `traverse<A, B>(intent_lineage, context, A) -> (B, obligation_delta)`. The notation is a law over existing GTL/ABG carriers, not a new callable API. `intent_lineage` includes admitted intent refs, lineage refs, source and target carrier refs, materialization or output-allocation refs, carried obligation refs, residual pressure refs, and lawful basis refs. `obligation_delta` records how each carried obligation is realized, refined, deferred to a named downstream unit, blocked, repriced, preserved as no-close pressure, or discharged by terminal truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 148
+          }
+        ],
+        "key": "intent_lineage_function_law",
+        "statement": "The traversal atom can be interpreted as traverse<A,B>(intent_lineage, context, A) -> (B, obligation_delta), a law over existing carriers, not a callable API. Intent lineage includes admitted intent/lineage, source/target carrier, materialization/output-allocation, carried obligation, residual pressure and lawful basis references. Each carried obligation receives an explicit delta: realized, refined, deferred to a named downstream unit, blocked, repriced, preserved as no-close pressure or discharged by terminal truth.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "traversal_unit",
+          "consequence_projection"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 150,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-028**: Consequence bind shall preserve intent-lineage and obligation conservation across traversal-unit composition. A close or next-unit selection is non-conformant when any carried obligation, target-carrier binding, materialization target, role requirement, staged-authority ref, or downstream terminal pressure disappears without admitted realization evidence, refinement, downstream deferral, block, re-entry, reprice, no-close preservation, or terminal projection.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 150
+          }
+        ],
+        "key": "consequence_obligation_conservation",
+        "statement": "Preserve lineage and obligations across unit composition. Close/next-unit selection is nonconforming if a carried obligation, target binding, materialization target, role requirement, staged authority reference or downstream terminal pressure disappears without admitted realization evidence, refinement, downstream deferral, block, re-entry, reprice, no-close preservation or terminal projection.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "context"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 28,
+            "quote": "**REQ-L-GTL3-CONTEXT-001**: `Context` shall be a first-class GTL declaration type.\n\n**REQ-L-GTL3-CONTEXT-002**: A context shall bind at minimum `name`, `locator`, and `digest`.\n\n**REQ-L-GTL3-CONTEXT-003**: `Context` shall represent an externally located, snapshot-bound constraint dimension carried by graph structure.\n\n**REQ-L-GTL3-CONTEXT-004**: `Context` remains language-owned declaration truth, not an engine-owned event or runtime fact.\n\n**REQ-L-GTL3-CONTEXT-005**: GTL publication and interpretation surfaces shall preserve context locator and digest truth without semantic loss.\n\n**REQ-L-GTL3-CONTEXT-006**: Engines may load, validate, or project declared contexts, but they shall not invent or mutate the declared context contract.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 18
+          }
+        ],
+        "key": "context_identity_and_preservation",
+        "statement": "Context is language declaration truth, not an engine event/runtime fact. Publication and interpretation preserve locator/digest without semantic loss. Engines may load, validate or project but cannot invent or mutate the contract.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "context"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 35,
+            "quote": "**REQ-L-GTL3-CONTEXT-007**: Workspace evidence consumed by a governance graph\nshall identify its declared workspace subject and immutable observation basis.\nContext locator/digest truth binds the observed material, not a claim that the\nmutable workspace is immutable. An admitted historical observation shall not\nestablish current workspace state without applicable support. A prompt-only\nlocator or private workspace handle shall not replace the declared relation.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 30
+          }
+        ],
+        "key": "workspace_observation_currentness",
+        "statement": "Governance-graph workspace evidence identifies declared workspace subject and immutable observation basis. The locator/digest pins observed material, not the mutable workspace itself. Historical admitted observations do not prove current state without applicable support. Prompt-only locators and private workspace handles cannot replace the declared relation.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "context"
+        ],
+        "conditions": [
+          "Program adopts the STDO-governed environment.",
+          "A supplement becomes required only when explicitly selected."
+        ],
+        "exceptions": [
+          "Programs not adopting the environment acquire no implicit STDO requirement."
+        ],
+        "grounding": [
+          {
+            "end_line": 52,
+            "quote": "**REQ-L-GTL3-CONTEXT-008**: An STDO-governed Program shall explicitly select a\nreusable GTL-declared environment and its snapshot-bound Context data. The\ndeclaration shall identify the exact immutable STDO release and content basis,\nrequired native source material, permitted acquisition and required access\nevidence, and role-specific frame and instruction-policy references. A\nsupplementary representation, index or corpus-access implementation shall be\nrequired only when explicitly selected by that environment; each selected\nsupplement shall preserve its exact released identity, source relationship,\naccess contract and required evidence. Publication, raw admission and\ninterpretation shall preserve these relations. A mutable selector, ambient\ninstall, available tool, source-development composition or instruction text\nshall not substitute for the declaration. Programs that do not adopt this\nenvironment shall not acquire an STDO requirement implicitly. Environment\ndeclaration truth grants neither access permission nor runtime admission;\noptional selection shall not make required declared content or access evidence\noptional.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 37
+          }
+        ],
+        "key": "explicit_stdo_environment",
+        "statement": "An STDO-governed Program explicitly selects reusable GTL environment and snapshot Context with exact immutable release/content basis, native material, acquisition permission and required access evidence, and role-specific frame/instruction policy references. Supplements are required only if explicitly selected and must preserve exact released identity, source relationship, access contract and required evidence. Publication/raw admission/interpretation conserve those relations. Mutable selectors, ambient installs, available tools, source-development composition and instruction prose do not substitute. Declaration grants neither access nor runtime admission; optional environment selection does not make its required contents/evidence optional.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "frame_work_contract",
+          "context"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 60,
+            "quote": "**REQ-L-GTL3-CONTEXT-009**: A framed call shall explicitly bind a reusable\nevaluation/work contract through existing Context, contract and policy\ndeclarations selected by its graph composition. The binding shall preserve the\nowning frame definition, exact subject/basis, required observations, criteria,\nauthority, evidence, result relation and invalidation conditions. A rendered\nprompt shall remain a projection of that binding. A role name, overlay row or\nruntime Frame identity alone shall not establish it.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 54
+          }
+        ],
+        "key": "explicit_frame_binding",
+        "statement": "A framed call binds its reusable contract explicitly through graph-selected Context/contract/policy declarations and preserves every listed element. Rendered prompt is projection only; role name, overlay row or runtime Frame identity alone is insufficient.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "frame_work_contract"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 67,
+            "quote": "**REQ-L-GTL3-CONTEXT-010**: Frame selection shall be declared or follow a prior\nadmitted selection under Program policy. Acquisition of missing observations\nshall be declared work. Unknown applicability, missing required evidence,\nout-of-frame material and invalid basis shall remain explicit dispositions;\ncontext assembly shall not infer an evaluation pass or silently omit an\napplicable required evaluation.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 62
+          }
+        ],
+        "key": "frame_selection_and_missing_evidence",
+        "statement": "Frame selection is declared or follows prior admitted selection under Program policy. Missing-observation acquisition is declared work. Unknown applicability, missing required evidence, out-of-frame material and invalid basis remain explicit dispositions; assembly cannot infer pass or silently omit an applicable required evaluation.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "frame_work_contract"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 78,
+            "quote": "**REQ-L-GTL3-CONTEXT-011**: Multiple frames shall preserve their separate\ndefinitions, evidence and authority. Any relied-upon refinement, translation,\nconjunction or dependency shall be explicit. Graph nesting shall not establish\nframe hierarchy, authority precedence or evaluation sufficiency by itself.\n\n**REQ-L-GTL3-CONTEXT-012**: A material frame, subject or observation change\nshall invalidate dependent evaluation support before reuse while preserving\nunaffected support. Selection shall use sufficient bounded material and current\nadmitted projections under the Product reuse law; a role handoff alone shall\nnot require full-history reconstruction or full-workspace scanning.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 69
+          }
+        ],
+        "key": "multiple_frames_and_reuse",
+        "statement": "Separate frames keep separate definitions, evidence and authority. Relied-on refinement, translation, conjunction and dependency are explicit; graph nesting alone gives no hierarchy, precedence or sufficiency. Material frame/subject/observation changes invalidate dependent support before reuse while preserving unaffected support. Select sufficient bounded material and current admitted projections under Product reuse law; a role handoff alone does not require full-history reconstruction or workspace scans.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "contract_law_reload"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 26,
+            "quote": "Provide one fast reload surface for GTL contract law and its exact boundary with\nthe GTL validator, HoG, ABG, implementation seams, and downstream products.\nThis file indexes detailed requirement families; it does not replace them or\nthe complete Product definition.\n\nThe governing chain is:\n\n```text\nGTL.TypeScript declaration\n  -> native type checking and raw admission\n  -> non-lowering GTL validation\n  -> module and catalog admission\n  -> direct HoG traversal\n  -> declared F_D | F_P | F_H implementation seam\n  -> ABG admission, events, replay, continuation, and closure\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "reload_governing_chain",
+        "statement": "The declared governing chain is GTL.TypeScript -> native type/raw admission -> non-lowering GTL validation -> module/catalog admission -> direct HoG traversal -> declared F_D/F_P/F_H seam -> ABG admission/events/replay/continuation/closure. The summary does not replace detailed requirement families or Product law.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "omitted",
+        "keys": [],
+        "reason": "Header status, dates, categories and derivation links are retained in source but omitted as modeled domain truth; they are not treated as current method admission.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions"
+      },
+      {
+        "decision": "omitted",
+        "keys": [],
+        "reason": "Header status, dates, categories and derivation links are retained in source but omitted as modeled domain truth; they are not treated as current method admission.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "selected_compute_notation",
+          "transform_phase",
+          "evaluation_phase",
+          "abg_admission",
+          "consequence_projection",
+          "traversal_unit",
+          "transform_proposes_for_admission",
+          "evaluation_proposes_for_admission",
+          "consequence_reads_admitted_truth",
+          "ontology_names_preserved",
+          "selected_composition_binding",
+          "compute_non_authority",
+          "closure_fibre_boundary",
+          "runtime_owner_partition",
+          "product_projection_meaning",
+          "plugin_category_contract",
+          "human_external_response",
+          "same_law_reductions",
+          "evaluation_rule_admission_order",
+          "consequence_bind_ownership",
+          "intent_lineage_function_law",
+          "consequence_obligation_conservation"
+        ],
+        "reason": "Retains the substantive meanings and authority-preserving obligations expressed by the section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "context"
+        ],
+        "reason": "Retains the substantive meanings and authority-preserving obligations expressed by the section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "contract_law_reload",
+          "reload_governing_chain"
+        ],
+        "reason": "Retains the substantive meanings and authority-preserving obligations expressed by the section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FPurpose"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "context",
+          "frame_work_contract",
+          "frame_contract_uses_context",
+          "context_identity_and_preservation",
+          "workspace_observation_currentness",
+          "explicit_stdo_environment",
+          "explicit_frame_binding",
+          "frame_selection_and_missing_evidence",
+          "multiple_frames_and_reuse",
+          "frame_policy_dependency"
+        ],
+        "reason": "Retains Context/frame obligations and explicit source-owned policies that still require exact bindings.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "indexed_law_dependency"
+        ],
+        "reason": "Preserves the index as a bounded dependency lead without importing absent detailed law.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FIndexed%20Requirement%20Families"
+      }
+    ],
+    "latitude": [],
+    "limitations": [
+      "Notation and functional equations are interpreted data, not executed traversal or closure proof.",
+      "Required frame/environment policies and indexed detailed laws remain source-reentry dependencies. No cross-chunk identity merge is inferred.",
+      "Historical header metadata is omitted from the domain model; the activation remains the exact STDO 3.0.2 subject binding."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 104,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-005**: `transform.C` shall denote candidate and evidence production under the selected composition. It shall not emit runtime events, write ledgers, select traversal, or close a boundary.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-006**: `evaluate.C` shall denote an evaluation-set phase under the selected composition. Evaluation rules may produce deterministic registers, semantic findings, gain, metrics, close disposition proposals, residual pressure, continuation refs, evidence refs, authority refs, and diagnostics, but they shall not directly close, write, select, transition, or emit runtime truth.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-007**: ABG admission shall be the epistemic boundary where candidate/evaluation payloads become runtime facts. Before ABG admission, plugin and evaluator returns are proposed evidence, not event truth, ledger truth, projection truth, traversal truth, or closure truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 100
+          }
+        ],
+        "key": "transform_proposes_for_admission",
+        "kind": "proposes_evidence_to",
+        "meaning": "Candidate and evidence production reaches runtime truth only through ABG admission.",
+        "source_key": "transform_phase",
+        "target_key": "abg_admission"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 104,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-006**: `evaluate.C` shall denote an evaluation-set phase under the selected composition. Evaluation rules may produce deterministic registers, semantic findings, gain, metrics, close disposition proposals, residual pressure, continuation refs, evidence refs, authority refs, and diagnostics, but they shall not directly close, write, select, transition, or emit runtime truth.\n\n**REQ-L-GTL3-COMPUTE-NOTATION-007**: ABG admission shall be the epistemic boundary where candidate/evaluation payloads become runtime facts. Before ABG admission, plugin and evaluator returns are proposed evidence, not event truth, ledger truth, projection truth, traversal truth, or closure truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 102
+          }
+        ],
+        "key": "evaluation_proposes_for_admission",
+        "kind": "proposes_findings_to",
+        "meaning": "Evaluation returns remain proposals until admitted; the phase does not directly close or mutate truth.",
+        "source_key": "evaluation_phase",
+        "target_key": "abg_admission"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": false,
+        "grounding": [
+          {
+            "end_line": 106,
+            "quote": "**REQ-L-GTL3-COMPUTE-NOTATION-008**: `consequence.C` shall denote a projection reference over ABG-admitted state, assurance decision refs, traversal transition refs, and downstream read-model refs. It shall not be an independent action stage with authority to mutate runtime truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-COMPUTE-NOTATION.md#REQ-L-GTL3-COMPUTE-NOTATION%20-%20Epistemology%20Over%20Ratified%20Ontology%2FAcceptance%20Criteria",
+            "start_line": 106
+          }
+        ],
+        "key": "consequence_reads_admitted_truth",
+        "kind": "projects_from",
+        "meaning": "Consequence projects only ABG-admitted state and linked assurance/transition truth.",
+        "source_key": "consequence_projection",
+        "target_key": "abg_admission"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 60,
+            "quote": "**REQ-L-GTL3-CONTEXT-009**: A framed call shall explicitly bind a reusable\nevaluation/work contract through existing Context, contract and policy\ndeclarations selected by its graph composition. The binding shall preserve the\nowning frame definition, exact subject/basis, required observations, criteria,\nauthority, evidence, result relation and invalidation conditions. A rendered\nprompt shall remain a projection of that binding. A role name, overlay row or\nruntime Frame identity alone shall not establish it.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 54
+          }
+        ],
+        "key": "frame_contract_uses_context",
+        "kind": "binds_through",
+        "meaning": "Existing selected Context declarations participate in the explicit reusable frame contract binding.",
+        "source_key": "frame_work_contract",
+        "target_key": "context"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Follow those exact sources for detailed meaning and do not infer dependencies or identity from shared labels.",
+        "grounding": [
+          {
+            "end_line": 46,
+            "quote": "The reload surface covers:\n\n- language and identity: `REQ-L-GTL3-LANGUAGE`, `ATTRS`, `CONTEXT`,\n  `IDENTITY`, and `LAWS`;\n- program structure: `GRAPH`, `NODE`, `GRAPHVECTOR`, `INTERFACE`,\n  `GRAPHFUNCTION`, `MODULE`, `JOB`, and `ROLE`;\n- graph algebra: `COMPOSE`, `SUBSTITUTE`, `RECURSE`, `HOF`, and\n  `C-ALGEBRA`;\n- declaration boundaries: `OPERATOR`, `EVALUATOR`, `RULE`, `HOOKS`,\n  `COMPUTE-NOTATION`, `ASSET-SURFACE`, `SELECTION-BOUNDARY`,\n  `SYNTHESIS`, and `SUBWORK`;\n- traversal mapping: `REQ-M-GTL3-PROGRAM-TRAVERSAL`;\n- runtime truth: `REQ-R-ABG3-INTERPRET`, `FN-COMPOSITION`, `BINDING`,\n  `RUN`, `GRAPHCALL`, `FRAME`, `CONTINUATION`, `EVENTS`,\n  `PAYLOAD`, `ASSURANCE`, `PROJECTION`, `PROVENANCE`, and\n  `LINEAGE`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FIndexed%20Requirement%20Families",
+            "start_line": 31
+          }
+        ],
+        "key": "indexed_law_dependency",
+        "subject_key": "contract_law_reload",
+        "uncertainty": "The index names language/identity, program structure, graph/C algebra, declaration boundaries, traversal mapping and ABG runtime families whose complete laws are not contained here."
+      },
+      {
+        "consequence": "No current frame evaluation, permission, sufficiency or reuse verdict follows merely from this representation.",
+        "grounding": [
+          {
+            "end_line": 78,
+            "quote": "**REQ-L-GTL3-CONTEXT-008**: An STDO-governed Program shall explicitly select a\nreusable GTL-declared environment and its snapshot-bound Context data. The\ndeclaration shall identify the exact immutable STDO release and content basis,\nrequired native source material, permitted acquisition and required access\nevidence, and role-specific frame and instruction-policy references. A\nsupplementary representation, index or corpus-access implementation shall be\nrequired only when explicitly selected by that environment; each selected\nsupplement shall preserve its exact released identity, source relationship,\naccess contract and required evidence. Publication, raw admission and\ninterpretation shall preserve these relations. A mutable selector, ambient\ninstall, available tool, source-development composition or instruction text\nshall not substitute for the declaration. Programs that do not adopt this\nenvironment shall not acquire an STDO requirement implicitly. Environment\ndeclaration truth grants neither access permission nor runtime admission;\noptional selection shall not make required declared content or access evidence\noptional.\n\n**REQ-L-GTL3-CONTEXT-009**: A framed call shall explicitly bind a reusable\nevaluation/work contract through existing Context, contract and policy\ndeclarations selected by its graph composition. The binding shall preserve the\nowning frame definition, exact subject/basis, required observations, criteria,\nauthority, evidence, result relation and invalidation conditions. A rendered\nprompt shall remain a projection of that binding. A role name, overlay row or\nruntime Frame identity alone shall not establish it.\n\n**REQ-L-GTL3-CONTEXT-010**: Frame selection shall be declared or follow a prior\nadmitted selection under Program policy. Acquisition of missing observations\nshall be declared work. Unknown applicability, missing required evidence,\nout-of-frame material and invalid basis shall remain explicit dispositions;\ncontext assembly shall not infer an evaluation pass or silently omit an\napplicable required evaluation.\n\n**REQ-L-GTL3-CONTEXT-011**: Multiple frames shall preserve their separate\ndefinitions, evidence and authority. Any relied-upon refinement, translation,\nconjunction or dependency shall be explicit. Graph nesting shall not establish\nframe hierarchy, authority precedence or evaluation sufficiency by itself.\n\n**REQ-L-GTL3-CONTEXT-012**: A material frame, subject or observation change\nshall invalidate dependent evaluation support before reuse while preserving\nunaffected support. Selection shall use sufficient bounded material and current\nadmitted projections under the Product reuse law; a role handoff alone shall\nnot require full-history reconstruction or full-workspace scanning.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTEXT.md#REQ-L-GTL3-CONTEXT%20%E2%80%94%20Externally%20Located%20Constraint%20Dimensions%2FAcceptance%20Criteria",
+            "start_line": 37
+          }
+        ],
+        "key": "frame_policy_dependency",
+        "subject_key": "frame_work_contract",
+        "uncertainty": "Owning frame definitions, admitted selection, Product reuse law and environment-specific evidence/access policies are referenced but not instantiated by these generic declarations."
+      }
+    ]
+  },
+  "answer_sha256": "808f85e8864c169d1d6fd5884972168671dc4f11e40fd1e93b95088cb7a9bb20",
+  "author": "codex-gtl-frame",
+  "chunk": "chunk-38dfa55c7349346bc691",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "b41f12d9bcd88af53d4629115742741f2cda72d3c56dcb9dea462c6df9f7a7d4"
+}

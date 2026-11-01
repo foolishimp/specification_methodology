@@ -1,0 +1,662 @@
+{
+  "concepts": [
+    {
+      "key": "scenario_release_order",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 247,
+          "end_line": 262,
+          "quote": "**REQ-P-SCENARIOS-015**: `ABG5-S01` establishes the continuous delivery\ngovernor. `ABG5-S02`, `ABG5-S03`, and `ABG5-S06` may establish\ntheir behavior before the selected STDO release is installed. Pre-RC\nqualification and `ABG5-S07` require the exact tapped and installed STDO\nlaw basis selected by `stdo_abiogenesis.json`. STDO adoption shall not weaken or replace the root\ngovernor.\n\n**REQ-P-SCENARIOS-016**: One exact `pre_rc_candidate` shall pass\n`ABG5-S01`, `ABG5-S02`, `ABG5-S03`, and `ABG5-S06` before RC\neligibility. `ABG5-S07` then owns the release lifecycle across its distinct\nsubjects. The complete S06 lifecycle witness is required pre-RC evidence;\nbounded intermediate threads shall not substitute for it. `ABG5-S04`, `ABG5-S05`, a\nseparately scoped post-5.0 odd_glc maturation campaign, 5.0.1 self-use campaign,\nfixed-point proof, operation count, atom count, ticket roster, or\nimplementation census is successor or derived evidence, not an additional\n5.0 scenario."
+        }
+      ],
+      "label": "Scenario ordering and RC eligibility",
+      "definition": "S01 is continuous-delivery governor; S02/S03/S06 may establish behavior before selected STDO install, while pre-RC qualification/S07 require exact tapped installed Definition-selected law basis without weakening root.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "default_library_discriminator",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 270,
+          "end_line": 290,
+          "quote": "**REQ-P-SCENARIOS-018**: The selected default-library governance proof shall\nexercise Product's minimal installed sandbox discriminator within S02/S03/S06.\nThe original scenario and expected outcomes shall be bound independently of\nimplementation and result inspection. Its finite cases shall establish:\n\n| Case | Required distinction |\n|---|---|\n| Fresh task | Real native F_P work produces the required files, executed checks, selected UAT, admitted evidence and fresh Public result through the installed default library. |\n| Valid prior result | The declared selection reuses applicable admitted work without repeating it or treating unassessed work as accepted. |\n| Material counterevidence | A prospectively bound case warrants a different preregistered GraphFunction choice permitted by the admitted Program. Its catalogue/purpose basis, selection reason and actual admitted execution demonstrate that change; artifact-only repair on a universal unchanged route is insufficient. Dependent support is invalidated; unrelated valid work and original completion obligations survive. Unchanged selection remains lawful where justified in other cases. |\n| Frame/policy change | A prospective criterion or observation-scope difference changes the required context or permitted decision where its contract requires it. Explicit F_D policy and F_P judgment retain their separate contracts and admitted consequences. |\n| Missing or invalid support | Unknown required applicability/evidence, no suitable registered capability, an invalid basis or an unadmitted proposal cannot acquire an authorized next action or completion by omission. An unregistered or Program-excluded choice is refused; a capability gap does not trigger graph generation. |\n| Recursive investigation | A selected child returns through admitted foldback; its success alone does not discharge remaining parent obligations or expand authority. |\n\nCases may share one installed steel thread and reuse valid evidence. Deterministic\nrelations use focused mechanical checks; claimed native judgment has real LLM\nevidence. Scenario scaffolding owns the task/oracle and supplies no solution or\nruntime bypass. Copy/install, pre-actor runtime, LLM, deterministic and readback\nwork are distinguished. This is no new scenario family, mandatory role roster\nor claim of stochastic repeatability. The complete selected F17 outcome remains\nrequired; case definition alone supplies no qualification evidence."
+        }
+      ],
+      "label": "Installed default-library governance discriminator",
+      "definition": "Finite prospectively bound original scenario/expectations independently of implementation/results exercises minimal installed sandbox within S02/S03/S06, not a new scenario family.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "self_conformance",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance",
+          "start_line": 3,
+          "end_line": 10,
+          "quote": "**Status**: Active - T-283 base; exact Definition-selected STDO qualification basis\n**Category**: Constraint / Verification\n**Date**: 2026-07-25\n**Derives from**: [INTENT.md](../../INTENT.md) INT-001,\n[PRODUCT.md](../../PRODUCT.md),\n[REQ-M-GTL3-CAPABILITY.md](../mapping/REQ-M-GTL3-CAPABILITY.md),\n[REQ-P-QUAL.md](REQ-P-QUAL.md)\n**Wave**: ABG 5.0"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FPurpose",
+          "start_line": 16,
+          "end_line": 21,
+          "quote": "Define the product law by which ABIogenesis applies its published method,\ncontract, conformance, proof, and release rules to its own frozen source and\ncandidate-product subject through the same `ExactCandidateQualification<K>`\nfamily used by release qualification. The product has no exemption and no\nticket, reviewer, release adapter, or snapshot may become a second conformance\nauthority."
+        }
+      ],
+      "label": "ABIogenesis self-conformance",
+      "definition": "Active exact-Definition-method constraint/verification applies published method/contracts/conformance/proof/release rules to own frozen source/candidate through release ExactCandidateQualification<K>, with no Product exemption or second ticket/reviewer/adapter/snapshot authority.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "exact_subject_law",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FSubject%20And%20Basis",
+          "start_line": 25,
+          "end_line": 35,
+          "quote": "**REQ-P-SELF-CONFORMANCE-001**: Each self-conformance run shall bind one exact\n`ExactCandidateQualification<basis>` projection and its subordinate\n`QualificationLawBasis`. The subject shall identify its closed qualification\nkind, exact source and artifact content, toolchain manifest, installed-product\nand workspace-binding truth when applicable, tenant-conformance manifest, and\nsource-grounded behavioral coverage catalog. The law basis shall identify the specification-method\nversion, applicable rule-catalog version, exact source references, and content\ndigests used to decide the run. ABIogenesis 5.0 release qualification shall\nbind the exact tapped and installed STDO release identity selected by\n`stdo_abiogenesis.json`,\ninstalled-manifest digest, and standards member-set digest."
+        }
+      ],
+      "label": "Exact qualification subject and law",
+      "definition": "Self-conformance binds one exact basis plus subordinate QualificationLawBasis: subject kind/source/artifact/toolchain/applicable install+binding/tenant manifest/source-grounded coverage and exact method/rule/source digests; 5.0 selects tapped installed STDO via stdo_abiogenesis.json with manifest/member-set digests.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "frozen_subject_inventory",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FSubject%20And%20Basis",
+          "start_line": 42,
+          "end_line": 53,
+          "quote": "**REQ-P-SELF-CONFORMANCE-002**: The frozen subject inventory shall include every\nABIogenesis constitutional, design, realization, proof, ticket/execution-\ncontract, public-seam or exported-contract, product/installer manifest,\nqualification, and release-claim surface applicable to the candidate. An\nunclassified or unreadable required surface shall be a typed incomplete result,\nnot an implicit pass.\n\n**REQ-P-SELF-CONFORMANCE-003**: Applicability shall derive from the published\nmethod, requirement families, tenant-conformance manifest, module ownership,\nand declared public contract identities. File extension, source-tenant path,\nticket status, test name, or reviewer preference shall not create or remove a\nrule obligation."
+        }
+      ],
+      "label": "Frozen self-conformance inventory",
+      "definition": "Every applicable constitutional/design/realization/proof/ticket-execution/public-seam-exported-contract/product-installer-manifest/qualification/release-claim surface is included.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "self_conformance_result",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FEvaluation%20And%20Results",
+          "start_line": 57,
+          "end_line": 88,
+          "quote": "**REQ-P-SELF-CONFORMANCE-004**: Self-conformance shall use the existing\nconformance evaluator atom, `AF-22`, under its qualification-bound\n`self_conformance` kind and the published GTL-validator and rule-catalog\npath. It is not another public operation. It shall not create a second method\nchecker, repair engine, release checker, runtime, or hidden manual audit as a\nco-equal source of truth.\n\n**REQ-P-SELF-CONFORMANCE-005**: The result shall carry the exact qualification\nsubject-basis and `QualificationLawBasis` identities and digests, inventory\ndigest, rule applications, typed diagnostics, affected surface refs, evidence\nrefs, and one disposition for each finding and for the whole run. At minimum,\ndispositions shall distinguish passed, failed, inapplicable-with-reason,\nblocked/incomplete, and accepted re-entry work.\n\n**REQ-P-SELF-CONFORMANCE-006**: A waiver, exclusion, or inapplicable\ndisposition shall name the governing authority and reason. Product identity,\nrelease pressure, ticket closure, prior review, or historical acceptance shall\nnot waive an applicable rule.\n\n**REQ-P-SELF-CONFORMANCE-007**: Findings shall remain diagnostics and admitted\nwork pressure. The self-conformance evaluator shall not silently edit\nconstitutional, design, code, proof, ticket, public-contract, or release\nsurfaces. Repair re-enters through the owning change class and ticket or\nexecution contract.\n\n**REQ-P-SELF-CONFORMANCE-007A**: The admitted complete self-conformance result\nshall conserve exact qualification subject/law, source-grounded behavioral\ncoverage, actual execution evidence and independent applicability/sufficiency\njudgment. It is the assessment input to the sole AF22 verdict; it shall not\nemit or reinterpret release qualification itself. Shared evidence is permitted\nwithout a distinct Result per behavior, but missing required coverage remains\nblocked."
+        }
+      ],
+      "label": "Admitted complete self-conformance assessment",
+      "definition": "Existing AF-22 under qualification-bound self_conformance kind and published GTL-validator/rule-catalog path produces exact subject/law/inventory/rule-application/diagnostic/surface/evidence and per-finding/whole-run dispositions; it is assessment input to sole AF22 verdict.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "seeded_negative_matrix",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FProof%20And%20Exact-Cut%20Gate",
+          "start_line": 101,
+          "end_line": 105,
+          "quote": "**REQ-P-SELF-CONFORMANCE-009**: A seeded-negative matrix shall introduce\nrepresentative missing authority, broken traceability, unowned public contract,\ndesign/code drift, malformed proof claim, ticket/closure mismatch, and\nrelease-identity mismatch defects. Each seed shall produce its expected stable\ndiagnostic and non-green disposition."
+        }
+      ],
+      "label": "Self-conformance seeded negatives",
+      "definition": "Representative missing authority, broken traceability, unowned public contract, design-code drift, malformed proof claim, ticket-closure mismatch and release-identity mismatch seeds must produce expected stable diagnostics and non-green.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "discriminator_within_scenarios",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 270,
+          "end_line": 273,
+          "quote": "**REQ-P-SCENARIOS-018**: The selected default-library governance proof shall\nexercise Product's minimal installed sandbox discriminator within S02/S03/S06.\nThe original scenario and expected outcomes shall be bound independently of\nimplementation and result inspection. Its finite cases shall establish:"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 284,
+          "end_line": 290,
+          "quote": "Cases may share one installed steel thread and reuse valid evidence. Deterministic\nrelations use focused mechanical checks; claimed native judgment has real LLM\nevidence. Scenario scaffolding owns the task/oracle and supplies no solution or\nruntime bypass. Copy/install, pre-actor runtime, LLM, deterministic and readback\nwork are distinguished. This is no new scenario family, mandatory role roster\nor claim of stochastic repeatability. The complete selected F17 outcome remains\nrequired; case definition alone supplies no qualification evidence."
+        }
+      ],
+      "kind": "bounded_by",
+      "source_key": "default_library_discriminator",
+      "target_key": "scenario_release_order",
+      "meaning": "Selected default-library proof is within S02/S03/S06 and does not add a scenario or relax complete selected F17 outcome.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "subject_law_binds_assessment",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FEvaluation%20And%20Results",
+          "start_line": 64,
+          "end_line": 69,
+          "quote": "**REQ-P-SELF-CONFORMANCE-005**: The result shall carry the exact qualification\nsubject-basis and `QualificationLawBasis` identities and digests, inventory\ndigest, rule applications, typed diagnostics, affected surface refs, evidence\nrefs, and one disposition for each finding and for the whole run. At minimum,\ndispositions shall distinguish passed, failed, inapplicable-with-reason,\nblocked/incomplete, and accepted re-entry work."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FEvaluation%20And%20Results",
+          "start_line": 82,
+          "end_line": 88,
+          "quote": "**REQ-P-SELF-CONFORMANCE-007A**: The admitted complete self-conformance result\nshall conserve exact qualification subject/law, source-grounded behavioral\ncoverage, actual execution evidence and independent applicability/sufficiency\njudgment. It is the assessment input to the sole AF22 verdict; it shall not\nemit or reinterpret release qualification itself. Shared evidence is permitted\nwithout a distinct Result per behavior, but missing required coverage remains\nblocked."
+        }
+      ],
+      "kind": "governs",
+      "source_key": "exact_subject_law",
+      "target_key": "self_conformance_result",
+      "meaning": "Result carries exact subject/law identities and digests and conserves them into sole-verdict assessment input.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "inventory_binds_assessment",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FEvaluation%20And%20Results",
+          "start_line": 64,
+          "end_line": 69,
+          "quote": "**REQ-P-SELF-CONFORMANCE-005**: The result shall carry the exact qualification\nsubject-basis and `QualificationLawBasis` identities and digests, inventory\ndigest, rule applications, typed diagnostics, affected surface refs, evidence\nrefs, and one disposition for each finding and for the whole run. At minimum,\ndispositions shall distinguish passed, failed, inapplicable-with-reason,\nblocked/incomplete, and accepted re-entry work."
+        }
+      ],
+      "kind": "input_to",
+      "source_key": "frozen_subject_inventory",
+      "target_key": "self_conformance_result",
+      "meaning": "Assessment carries inventory digest, rule applications, typed diagnostics and each required finding disposition.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "scenario_eligibility_and_identity",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 254,
+          "end_line": 268,
+          "quote": "**REQ-P-SCENARIOS-016**: One exact `pre_rc_candidate` shall pass\n`ABG5-S01`, `ABG5-S02`, `ABG5-S03`, and `ABG5-S06` before RC\neligibility. `ABG5-S07` then owns the release lifecycle across its distinct\nsubjects. The complete S06 lifecycle witness is required pre-RC evidence;\nbounded intermediate threads shall not substitute for it. `ABG5-S04`, `ABG5-S05`, a\nseparately scoped post-5.0 odd_glc maturation campaign, 5.0.1 self-use campaign,\nfixed-point proof, operation count, atom count, ticket roster, or\nimplementation census is successor or derived evidence, not an additional\n5.0 scenario.\n\n**REQ-P-SCENARIOS-017**: Changing a scenario identity, exact subject, root\nbinding, supported public path, outcome predicate, nearest weaker excluded\nproperty, terminal condition, or non-closure boundary requires lawful Product\nre-entry. Requirements and tests may decompose these stable identities but\nshall not silently weaken or replace them."
+        }
+      ],
+      "applies_to_keys": [
+        "scenario_release_order"
+      ],
+      "statement": "One exact pre_rc_candidate passes S01/S02/S03/S06 before RC eligibility; complete S06 cannot be replaced by intermediate threads, and S07 owns distinct-subject release lifecycle. S04/S05, separate odd_glc maturation, 5.0.1 self-use, fixed-point proof and counts/rosters/censuses are successor/derived evidence, not extra 5.0 scenarios. Changing scenario identity/subject/root/public path/outcome/nearest-weaker-excluded property/terminal/nonclosure needs lawful Product re-entry; requirements/tests may decompose but not weaken/replace.",
+      "uncertainty": "",
+      "conditions": [
+        "One exact pre_rc_candidate passes S01/S02/S03/S06 before RC eligibility.",
+        "Material scenario identity/path/outcome/terminal/nonclosure change requires Product re-entry."
+      ],
+      "exceptions": [
+        "S02/S03/S06 may establish behavior before selected STDO installation; pre-RC/S07 may not omit exact installed law."
+      ]
+    },
+    {
+      "key": "discriminator_fresh_task",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 277,
+          "end_line": 277,
+          "quote": "| Fresh task | Real native F_P work produces the required files, executed checks, selected UAT, admitted evidence and fresh Public result through the installed default library. |"
+        }
+      ],
+      "applies_to_keys": [
+        "default_library_discriminator"
+      ],
+      "statement": "Fresh task requires real native F_P work to produce required files, executed checks, selected UAT, admitted evidence and fresh Public result through installed default library.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "discriminator_valid_prior",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 278,
+          "end_line": 278,
+          "quote": "| Valid prior result | The declared selection reuses applicable admitted work without repeating it or treating unassessed work as accepted. |"
+        }
+      ],
+      "applies_to_keys": [
+        "default_library_discriminator"
+      ],
+      "statement": "Valid prior result case selects applicable admitted work for reuse without repetition or treating unassessed work as accepted.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "discriminator_counterevidence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 279,
+          "end_line": 279,
+          "quote": "| Material counterevidence | A prospectively bound case warrants a different preregistered GraphFunction choice permitted by the admitted Program. Its catalogue/purpose basis, selection reason and actual admitted execution demonstrate that change; artifact-only repair on a universal unchanged route is insufficient. Dependent support is invalidated; unrelated valid work and original completion obligations survive. Unchanged selection remains lawful where justified in other cases. |"
+        }
+      ],
+      "applies_to_keys": [
+        "default_library_discriminator"
+      ],
+      "statement": "Prospective material-counterevidence case warrants a different preregistered GraphFunction allowed by admitted Program; catalogue/purpose basis, selection reason and actual admitted execution prove change, not artifact-only repair on universal unchanged route. Invalidate dependent support while preserving unrelated valid work and original completion obligations; unchanged selection remains lawful when justified in other cases.",
+      "uncertainty": "",
+      "conditions": [
+        "The prospectively bound material-counterevidence case warrants different preregistered Program-permitted GraphFunction."
+      ],
+      "exceptions": [
+        "Unchanged selection remains lawful where justified in other cases."
+      ]
+    },
+    {
+      "key": "discriminator_frame_policy",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 280,
+          "end_line": 280,
+          "quote": "| Frame/policy change | A prospective criterion or observation-scope difference changes the required context or permitted decision where its contract requires it. Explicit F_D policy and F_P judgment retain their separate contracts and admitted consequences. |"
+        }
+      ],
+      "applies_to_keys": [
+        "default_library_discriminator"
+      ],
+      "statement": "Prospective criterion/observation-scope change must change required context or permitted decision where contract requires; explicit F_D policy and F_P judgment retain separate contracts and admitted consequences.",
+      "uncertainty": "",
+      "conditions": [
+        "Criterion or observation-scope difference requires changed context/permitted decision under its contract."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "discriminator_invalid_support",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 281,
+          "end_line": 281,
+          "quote": "| Missing or invalid support | Unknown required applicability/evidence, no suitable registered capability, an invalid basis or an unadmitted proposal cannot acquire an authorized next action or completion by omission. An unregistered or Program-excluded choice is refused; a capability gap does not trigger graph generation. |"
+        }
+      ],
+      "applies_to_keys": [
+        "default_library_discriminator"
+      ],
+      "statement": "Unknown required applicability/evidence, absent registered capability, invalid basis or unadmitted proposal cannot gain authorized next action/completion by omission. Refuse unregistered/Program-excluded choice; capability gap does not trigger graph generation.",
+      "uncertainty": "",
+      "conditions": [
+        "Required applicability/evidence/capability/basis/proposal is unknown, absent, invalid or unadmitted."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "discriminator_recursive_child",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 282,
+          "end_line": 282,
+          "quote": "| Recursive investigation | A selected child returns through admitted foldback; its success alone does not discharge remaining parent obligations or expand authority. |"
+        }
+      ],
+      "applies_to_keys": [
+        "default_library_discriminator"
+      ],
+      "statement": "Selected child returns via admitted foldback; child success alone neither discharges outstanding parent obligations nor expands authority.",
+      "uncertainty": "",
+      "conditions": [
+        "A selected recursive child returns through admitted foldback."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "self_conformance_basis_failures",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FSubject%20And%20Basis",
+          "start_line": 37,
+          "end_line": 40,
+          "quote": "**REQ-P-SELF-CONFORMANCE-001A**: Missing, stale, conflicting, unreadable, or\ncross-subject basis truth shall produce a typed non-green result. A release cut,\nrelease snapshot, ticket, prior verdict, or mutable source-tree label shall not\nsubstitute for the exact qualification subject or law basis."
+        }
+      ],
+      "applies_to_keys": [
+        "exact_subject_law"
+      ],
+      "statement": "Missing/stale/conflicting/unreadable/cross-subject basis yields typed non-green. Release cut/snapshot/ticket/prior verdict/mutable source label cannot substitute for exact subject or law.",
+      "uncertainty": "",
+      "conditions": [
+        "Basis truth is missing, stale, conflicting, unreadable or cross-subject."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "inventory_and_applicability",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FSubject%20And%20Basis",
+          "start_line": 42,
+          "end_line": 53,
+          "quote": "**REQ-P-SELF-CONFORMANCE-002**: The frozen subject inventory shall include every\nABIogenesis constitutional, design, realization, proof, ticket/execution-\ncontract, public-seam or exported-contract, product/installer manifest,\nqualification, and release-claim surface applicable to the candidate. An\nunclassified or unreadable required surface shall be a typed incomplete result,\nnot an implicit pass.\n\n**REQ-P-SELF-CONFORMANCE-003**: Applicability shall derive from the published\nmethod, requirement families, tenant-conformance manifest, module ownership,\nand declared public contract identities. File extension, source-tenant path,\nticket status, test name, or reviewer preference shall not create or remove a\nrule obligation."
+        }
+      ],
+      "applies_to_keys": [
+        "frozen_subject_inventory"
+      ],
+      "statement": "Unclassified/unreadable required surface is typed incomplete, never pass. Applicability comes from published method, requirement families, tenant manifest, module ownership and declared public identities, never file extension, tenant path, ticket status, test name or reviewer preference.",
+      "uncertainty": "",
+      "conditions": [
+        "Every required surface applicable to exact candidate."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "evaluator_and_result_boundaries",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FEvaluation%20And%20Results",
+          "start_line": 57,
+          "end_line": 74,
+          "quote": "**REQ-P-SELF-CONFORMANCE-004**: Self-conformance shall use the existing\nconformance evaluator atom, `AF-22`, under its qualification-bound\n`self_conformance` kind and the published GTL-validator and rule-catalog\npath. It is not another public operation. It shall not create a second method\nchecker, repair engine, release checker, runtime, or hidden manual audit as a\nco-equal source of truth.\n\n**REQ-P-SELF-CONFORMANCE-005**: The result shall carry the exact qualification\nsubject-basis and `QualificationLawBasis` identities and digests, inventory\ndigest, rule applications, typed diagnostics, affected surface refs, evidence\nrefs, and one disposition for each finding and for the whole run. At minimum,\ndispositions shall distinguish passed, failed, inapplicable-with-reason,\nblocked/incomplete, and accepted re-entry work.\n\n**REQ-P-SELF-CONFORMANCE-006**: A waiver, exclusion, or inapplicable\ndisposition shall name the governing authority and reason. Product identity,\nrelease pressure, ticket closure, prior review, or historical acceptance shall\nnot waive an applicable rule."
+        }
+      ],
+      "applies_to_keys": [
+        "self_conformance_result"
+      ],
+      "statement": "No new public operation, second method/repair/release checker/runtime or hidden manual audit as coequal truth. At minimum distinguish passed, failed, inapplicable-with-reason, blocked/incomplete and accepted re-entry work. Every waiver/exclusion/inapplicability names governing authority/reason; Product identity, release pressure, ticket closure, prior review/history cannot waive applicable law.",
+      "uncertainty": "",
+      "conditions": [
+        "Self-conformance uses existing AF-22 qualification-bound kind and published validator/rule path.",
+        "Any waiver, exclusion or inapplicability must name authority and reason."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "diagnostic_repair_reentry",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FEvaluation%20And%20Results",
+          "start_line": 76,
+          "end_line": 80,
+          "quote": "**REQ-P-SELF-CONFORMANCE-007**: Findings shall remain diagnostics and admitted\nwork pressure. The self-conformance evaluator shall not silently edit\nconstitutional, design, code, proof, ticket, public-contract, or release\nsurfaces. Repair re-enters through the owning change class and ticket or\nexecution contract."
+        }
+      ],
+      "applies_to_keys": [
+        "self_conformance_result"
+      ],
+      "statement": "Findings remain diagnostics and admitted work pressure. Evaluator silently edits no constitutional/design/code/proof/ticket/public/release surfaces; repair re-enters owning change class and ticket/execution contract.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "assessment_verdict_separation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FEvaluation%20And%20Results",
+          "start_line": 82,
+          "end_line": 88,
+          "quote": "**REQ-P-SELF-CONFORMANCE-007A**: The admitted complete self-conformance result\nshall conserve exact qualification subject/law, source-grounded behavioral\ncoverage, actual execution evidence and independent applicability/sufficiency\njudgment. It is the assessment input to the sole AF22 verdict; it shall not\nemit or reinterpret release qualification itself. Shared evidence is permitted\nwithout a distinct Result per behavior, but missing required coverage remains\nblocked."
+        }
+      ],
+      "applies_to_keys": [
+        "self_conformance_result"
+      ],
+      "statement": "Admitted complete result conserves exact subject/law, source-grounded coverage, actual execution and independent applicability/sufficiency judgment; it neither emits nor reinterprets release qualification. Shared evidence needs no Result per behavior, but missing required coverage stays blocked.",
+      "uncertainty": "",
+      "conditions": [
+        "Admitted complete self-conformance assessment input to sole AF22 verdict."
+      ],
+      "exceptions": [
+        "Shared evidence is permitted without distinct per-behavior Result, but missing required coverage remains blocked."
+      ]
+    },
+    {
+      "key": "self_conformance_exact_cut",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FProof%20And%20Exact-Cut%20Gate",
+          "start_line": 92,
+          "end_line": 99,
+          "quote": "**REQ-P-SELF-CONFORMANCE-008**: Qualification of a `pre_rc_candidate` shall run\nthe self-conformance contract against the real complete ABIogenesis candidate\ntree bound by its exact `ExactCandidateQualification<basis>` projection.\nQualification of an `installed_rc` shall rerun every self-conformance gate made\napplicable by that exact installed subject. A qualifying Product or\nrelease-claim byte change requires a higher RC and its applicable gates, not a\nthird qualification subject at acceptance. A run is green only when every\napplicable required surface and rule has a typed terminal disposition."
+        }
+      ],
+      "applies_to_keys": [
+        "self_conformance"
+      ],
+      "statement": "pre_rc_candidate gate runs real complete tree bound by exact basis; installed_rc reruns every gate applicable to exact installed subject. Qualifying Product/release-claim change needs higher RC/applicable gates, not third acceptance subject. Green requires typed terminal disposition for every required applicable surface/rule.",
+      "uncertainty": "",
+      "conditions": [
+        "pre_rc_candidate evaluates real complete exact tree; installed_rc reruns all gates applicable to exact installed subject.",
+        "Qualifying Product/release-claim byte change requires higher RC."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "release_grade_self_conformance_refusal",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FProof%20And%20Exact-Cut%20Gate",
+          "start_line": 107,
+          "end_line": 112,
+          "quote": "**REQ-P-SELF-CONFORMANCE-010**: The release-grade self-conformance result shall\nbind the exact ABIogenesis 5.0 qualification subject, its tenant-conformance\nmanifest, frozen subject inventory, and exact method/rule/source basis. A result\nover different bytes or a different law basis, an incomplete inventory, an\nunresolvable basis, or a seeded defect that passes shall refuse complete self-conformance\nand therefore qualification."
+        }
+      ],
+      "applies_to_keys": [
+        "self_conformance",
+        "seeded_negative_matrix"
+      ],
+      "statement": "Release-grade result binds exact ABI 5.0 subject/tenant manifest/frozen inventory/method-rule-source basis. Different bytes/law, incomplete inventory, unresolvable basis or passing seeded defect refuse complete self-conformance and therefore qualification.",
+      "uncertainty": "",
+      "conditions": [
+        "Different bytes/law, incomplete inventory, unresolvable basis or seeded defect that passes."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "self_conformance_bounded_scope",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FBounded%20Scope",
+          "start_line": 122,
+          "end_line": 126,
+          "quote": "**REQ-P-SELF-CONFORMANCE-012**: ABIogenesis 5.0 self-conformance is a bounded\nexact-product gate. It does not claim a universal autonomous specification\nrepair product, hosted policy service, general repository auditor, new\nconstitutional ontology, or substitute for ordinary F_H decisions and lawful\nrepricing."
+        }
+      ],
+      "applies_to_keys": [
+        "self_conformance"
+      ],
+      "statement": "5.0 is bounded exact-Product gate, not universal autonomous spec repair, hosted policy, general repo auditor, new constitutional ontology or substitute for ordinary F_H and lawful repricing.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "discriminator_evidence_latitude",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 284,
+          "end_line": 290,
+          "quote": "Cases may share one installed steel thread and reuse valid evidence. Deterministic\nrelations use focused mechanical checks; claimed native judgment has real LLM\nevidence. Scenario scaffolding owns the task/oracle and supplies no solution or\nruntime bypass. Copy/install, pre-actor runtime, LLM, deterministic and readback\nwork are distinguished. This is no new scenario family, mandatory role roster\nor claim of stochastic repeatability. The complete selected F17 outcome remains\nrequired; case definition alone supplies no qualification evidence."
+        }
+      ],
+      "applies_to_keys": [
+        "default_library_discriminator"
+      ],
+      "allowed": [
+        "Share one installed steel thread and reuse valid evidence.",
+        "Use focused mechanical checks for deterministic relations and real LLM evidence for native judgment claims."
+      ],
+      "forbidden": [
+        "Let task/oracle scaffolding supply solution or runtime bypass.",
+        "Collapse copy/install, pre-actor runtime, LLM, deterministic and readback work.",
+        "Treat case definition as qualification, impose mandatory role roster or infer stochastic repeatability.",
+        "Omit complete selected F17 outcome."
+      ]
+    },
+    {
+      "key": "snapshot_citation_only",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FProof%20And%20Exact-Cut%20Gate",
+          "start_line": 114,
+          "end_line": 118,
+          "quote": "**REQ-P-SELF-CONFORMANCE-011**: The bounded A5-R1 release snapshot manifest may\ncite the exact self-conformance result and the qualification verdict that\nauthorized its cut. The snapshot is output evidence only. It shall not qualify\nits own input, reinterpret findings, replace their dispositions, or turn a red,\nblocked, incomplete, stale, cross-basis, or bypassed result green."
+        }
+      ],
+      "applies_to_keys": [
+        "self_conformance_result"
+      ],
+      "allowed": [
+        "A5-R1 snapshot may cite exact self-conformance result and authorizing qualification verdict as output evidence."
+      ],
+      "forbidden": [
+        "Snapshot qualifies its input, reinterprets findings, replaces dispositions or turns red/blocked/incomplete/stale/cross-basis/bypassed green."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "external_scenario_and_method_owners",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 247,
+          "end_line": 262,
+          "quote": "**REQ-P-SCENARIOS-015**: `ABG5-S01` establishes the continuous delivery\ngovernor. `ABG5-S02`, `ABG5-S03`, and `ABG5-S06` may establish\ntheir behavior before the selected STDO release is installed. Pre-RC\nqualification and `ABG5-S07` require the exact tapped and installed STDO\nlaw basis selected by `stdo_abiogenesis.json`. STDO adoption shall not weaken or replace the root\ngovernor.\n\n**REQ-P-SCENARIOS-016**: One exact `pre_rc_candidate` shall pass\n`ABG5-S01`, `ABG5-S02`, `ABG5-S03`, and `ABG5-S06` before RC\neligibility. `ABG5-S07` then owns the release lifecycle across its distinct\nsubjects. The complete S06 lifecycle witness is required pre-RC evidence;\nbounded intermediate threads shall not substitute for it. `ABG5-S04`, `ABG5-S05`, a\nseparately scoped post-5.0 odd_glc maturation campaign, 5.0.1 self-use campaign,\nfixed-point proof, operation count, atom count, ticket roster, or\nimplementation census is successor or derived evidence, not an additional\n5.0 scenario."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+          "start_line": 270,
+          "end_line": 290,
+          "quote": "**REQ-P-SCENARIOS-018**: The selected default-library governance proof shall\nexercise Product's minimal installed sandbox discriminator within S02/S03/S06.\nThe original scenario and expected outcomes shall be bound independently of\nimplementation and result inspection. Its finite cases shall establish:\n\n| Case | Required distinction |\n|---|---|\n| Fresh task | Real native F_P work produces the required files, executed checks, selected UAT, admitted evidence and fresh Public result through the installed default library. |\n| Valid prior result | The declared selection reuses applicable admitted work without repeating it or treating unassessed work as accepted. |\n| Material counterevidence | A prospectively bound case warrants a different preregistered GraphFunction choice permitted by the admitted Program. Its catalogue/purpose basis, selection reason and actual admitted execution demonstrate that change; artifact-only repair on a universal unchanged route is insufficient. Dependent support is invalidated; unrelated valid work and original completion obligations survive. Unchanged selection remains lawful where justified in other cases. |\n| Frame/policy change | A prospective criterion or observation-scope difference changes the required context or permitted decision where its contract requires it. Explicit F_D policy and F_P judgment retain their separate contracts and admitted consequences. |\n| Missing or invalid support | Unknown required applicability/evidence, no suitable registered capability, an invalid basis or an unadmitted proposal cannot acquire an authorized next action or completion by omission. An unregistered or Program-excluded choice is refused; a capability gap does not trigger graph generation. |\n| Recursive investigation | A selected child returns through admitted foldback; its success alone does not discharge remaining parent obligations or expand authority. |\n\nCases may share one installed steel thread and reuse valid evidence. Deterministic\nrelations use focused mechanical checks; claimed native judgment has real LLM\nevidence. Scenario scaffolding owns the task/oracle and supplies no solution or\nruntime bypass. Copy/install, pre-actor runtime, LLM, deterministic and readback\nwork are distinguished. This is no new scenario family, mandatory role roster\nor claim of stochastic repeatability. The complete selected F17 outcome remains\nrequired; case definition alone supplies no qualification evidence."
+        }
+      ],
+      "subject_key": "scenario_release_order",
+      "uncertainty": "Full S01/S02/S03/S06/S07 definitions, Product minimal discriminator, F17 outcomes and exact installed STDO law are referenced without complete definitions in this chunk.",
+      "consequence": "Maintain explicit dependencies and no operational/qualification claim; external identity/meaning must be reacquired rather than matched by labels."
+    },
+    {
+      "key": "self_conformance_external_owner_basis",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance",
+          "start_line": 6,
+          "end_line": 10,
+          "quote": "**Derives from**: [INTENT.md](../../INTENT.md) INT-001,\n[PRODUCT.md](../../PRODUCT.md),\n[REQ-M-GTL3-CAPABILITY.md](../mapping/REQ-M-GTL3-CAPABILITY.md),\n[REQ-P-QUAL.md](REQ-P-QUAL.md)\n**Wave**: ABG 5.0"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FPurpose",
+          "start_line": 16,
+          "end_line": 21,
+          "quote": "Define the product law by which ABIogenesis applies its published method,\ncontract, conformance, proof, and release rules to its own frozen source and\ncandidate-product subject through the same `ExactCandidateQualification<K>`\nfamily used by release qualification. The product has no exemption and no\nticket, reviewer, release adapter, or snapshot may become a second conformance\nauthority."
+        }
+      ],
+      "subject_key": "self_conformance",
+      "uncertainty": "INT-001, PRODUCT, mapping capability and qualification sources are referenced but not supplied as full owner definitions here.",
+      "consequence": "No second authority or exact current qualification result is inferred from these links or source-declared active status."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SCENARIOS.md#REQ-P-SCENARIOS%20-%20ABIogenesis%205.0%20Product%20Scenarios%2FOrdering%20And%20Closure",
+      "decision": "residual",
+      "keys": [
+        "scenario_release_order",
+        "default_library_discriminator",
+        "discriminator_within_scenarios",
+        "scenario_eligibility_and_identity",
+        "discriminator_fresh_task",
+        "discriminator_valid_prior",
+        "discriminator_counterevidence",
+        "discriminator_frame_policy",
+        "discriminator_invalid_support",
+        "discriminator_recursive_child",
+        "discriminator_evidence_latitude",
+        "external_scenario_and_method_owners"
+      ],
+      "reason": "Retain scenario ordering, exact eligibility, stable identities and every discriminator case; full external scenario/method owners remain unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance",
+      "decision": "residual",
+      "keys": [
+        "self_conformance",
+        "self_conformance_external_owner_basis"
+      ],
+      "reason": "Retain active constraint identity with unresolved derivation references."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "self_conformance",
+        "self_conformance_external_owner_basis"
+      ],
+      "reason": "Retain self-application through one qualification family and prohibition of coequal authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FSubject%20And%20Basis",
+      "decision": "retained",
+      "keys": [
+        "exact_subject_law",
+        "frozen_subject_inventory",
+        "self_conformance_basis_failures",
+        "inventory_and_applicability"
+      ],
+      "reason": "Retain exact basis, non-green failures, full inventory and source-derived applicability."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FEvaluation%20And%20Results",
+      "decision": "retained",
+      "keys": [
+        "self_conformance_result",
+        "subject_law_binds_assessment",
+        "inventory_binds_assessment",
+        "evaluator_and_result_boundaries",
+        "diagnostic_repair_reentry",
+        "assessment_verdict_separation"
+      ],
+      "reason": "Retain evaluator identity, result dispositions, authority-qualified exclusions, lawful repair and assessment/verdict separation."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FProof%20And%20Exact-Cut%20Gate",
+      "decision": "retained",
+      "keys": [
+        "seeded_negative_matrix",
+        "self_conformance_exact_cut",
+        "release_grade_self_conformance_refusal",
+        "snapshot_citation_only"
+      ],
+      "reason": "Retain exact subject gates, seeded negatives, refusal causes and output-only snapshot citations."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-SELF-CONFORMANCE.md#REQ-P-SELF-CONFORMANCE%20-%20ABIogenesis%20Product%20Self-Conformance%2FBounded%20Scope",
+      "decision": "retained",
+      "keys": [
+        "self_conformance_bounded_scope"
+      ],
+      "reason": "Retain bounded scope and no replacement of F_H/repricing."
+    }
+  ],
+  "limitations": [
+    "All self-conformance and scenario laws are represented as subject data; no execution, qualification, acceptance or repair occurred.",
+    "Full referenced scenario, Product, intent, mapping, qualification and installed method definitions are unresolved locally.",
+    "Shared-evidence permission is retained without treating structural grounding as independent semantic sufficiency."
+  ]
+}

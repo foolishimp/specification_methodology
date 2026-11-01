@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@@TITLE@@</title><link rel="icon" href="data:,"><style>@@CSS@@</style></head>
+<body>
+<header><div><span class="eyebrow">AXIOMATIC CALCULUS / READING ROOM</span><h1>@@TITLE@@</h1><p id="subject-basis" class="muted"></p></div>
+<button id="about-button">About this model</button></header>
+<main>
+  <aside class="library" aria-label="Find constraints">
+    <div class="section-heading"><h2>Find a constraint</h2><span id="total"></span></div>
+    <label for="query">Search full record text</label><input id="query" type="search" placeholder="Try “evaluation” or “authority”…" autocomplete="off">
+    <label for="family">Record family</label><select id="family"><option value="constraints">Constraints</option><option value="">All records</option></select>
+    <div id="matches" class="muted" aria-live="polite"></div><nav id="results" aria-label="Search results"></nav>
+    <button id="more" class="secondary">Show more results</button>
+  </aside>
+  <section class="map-pane" aria-label="Constraint map">
+    <div class="toolbar"><div class="segmented" aria-label="Dimensions"><button id="mode3" aria-pressed="true">3D</button><button id="mode2" aria-pressed="false">2D</button></div>
+    <button id="focus">Focus</button><button id="expand">Expand one hop</button><button id="overview">Overview</button><button id="fit">Fit</button></div>
+    <div class="layers"><label><input id="required-layer" type="checkbox" checked> Retention dependencies</label><label><input id="relation-layer" type="checkbox" checked> Authored relations</label><label><input id="reference-layer" type="checkbox"> Other references</label></div>
+    <div id="graph"><p id="graph-fallback">Loading the map. All records are available in the reader.</p></div><div id="node-labels" aria-hidden="true"></div>
+    <div class="map-foot"><p id="map-count" aria-live="polite"></p><p class="muted">Drag to orbit · scroll to zoom · click a node to read<br>Arrows follow the selected link type; they do not assert a proved inference.</p><div id="legend"></div></div>
+  </section>
+  <section class="reading-pane" aria-label="Read and follow constraints">
+    <div class="reader-nav"><div class="trail-heading"><h2>Reading trail</h2><button id="back" disabled>Back</button></div>
+    <nav id="trail" aria-label="Reading trail"></nav></div>
+    <article id="details" aria-live="polite"></article>
+  </section>
+</main>
+<dialog id="source-dialog"><div class="dialog-toolbar"><h2 id="source-title">Source</h2><button id="source-close">Close</button></div><p id="source-digest" class="muted"></p><pre id="source-text"></pre></dialog>
+<dialog id="about-dialog"><div class="dialog-toolbar"><h2>About this representation</h2><button id="about-close">Close</button></div>
+<p>This reader displays the authored constraints, relations and caveats in one exact a_c model. Retention links explain what the acquisition contract requires together. Authored relations retain their own meaning and qualifications.</p>
+<p>Neither a link nor its layout establishes a logical implication. The Lean work checks declared closure and record preservation; it does not prove the prose of these constraints. No per-constraint proof verdict is assigned here.</p>
+<pre id="model-info"></pre><details><summary>Renderer license · 3d-force-graph 1.80.1</summary><pre>@@LICENSE@@</pre></details></dialog>
+<script id="explorer-data" type="application/json">@@DATA@@</script>
+<script>@@VENDOR@@</script><script>@@APP@@</script>
+</body></html>

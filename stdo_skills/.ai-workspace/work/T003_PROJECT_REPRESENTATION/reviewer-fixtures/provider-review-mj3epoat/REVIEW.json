@@ -1,0 +1,73 @@
+{
+  "kind": "independent-bounded-provider-review",
+  "candidate_machinery": {
+    "ac_explore.py": "1b0c709841c51a4a1bbcad8d28f2d6c461b910a3bc64f8b8241ea5e4c43e4cf1",
+    "ac_formal_gate.py": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8",
+    "ac_generate.py": "00d32296746265881aafd336e73797fca1fc431f6098ec3e9ee8bbbcdd92d16c",
+    "ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "ac_project.py": "9f34da22c7f9ffb6f7dc2ddfda71e516da08a7c7c9d6148d11ec2e0d670b13a0",
+    "generation/author.schema.json": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+    "generation/author.txt": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc",
+    "generation/extraction.schema.json": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd",
+    "generation/isolation.txt": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1",
+    "generation/requirements.txt": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2",
+    "viewer/explorer.css": "aafdb56b57cb3452f9f8f92ceb6b56c71833b708af40be6f5828c9f19173ebd9",
+    "viewer/explorer.html": "a24661934a09592ab08397e9a303a5e371d662a74ff961714849d6183bda2dca",
+    "viewer/explorer.js": "393d716f9fde12de93f296006eed339816e5464769837efe06a191cb18fcd32c",
+    "viewer/vendor/3d-force-graph-1.80.1.min.js": "13088340aad408156064fd120c3bc3a47c93a3cc45b8f132d6284b20e2223be9",
+    "viewer/vendor/3d-force-graph-LICENSE": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded",
+    "viewer/vendor/THIRD_PARTY_NOTICES.txt": "5550725cb2e36431fc64242442a5e0fb94be7a2d93749c3f55cc99f2f68fee22",
+    "viewer/vendor/manifest.json": "c8d258151ce83b7864d6579fd27d2f4ac79049cab7966a0db0e8eca3a6bc883f"
+  },
+  "basis": {
+    "provider": "stdo://releases/v2.5.1-rc.2/",
+    "skills": "stdo://releases/v3.0.1-rc.1/",
+    "both_live_manager_verified": true
+  },
+  "controlled_tests": "test_ac_project.py: 10 passed; manager mocked in suite",
+  "independent_cli": "Actual stdo verification plus prepare/task/submit/build/status with controlled authored JSON; no native actor",
+  "findings": [
+    {
+      "severity": "S2",
+      "title": "Default directory locators with trailing slash refuse",
+      "route": "ac_project.py contained:39-40 -> ac_generate.safe_relative",
+      "reproduction": "python3 -B a_c/build_tenants/graphify/code/ac_project.py prepare --project stdo_skills --definition stdo_skills.json --out FRESH_RUN",
+      "observed": "exit 2: source path escapes corpus",
+      "basis": "Installed Product Definition template and actual Skills definition use ./specification/requirements/"
+    },
+    {
+      "severity": "S2",
+      "title": "Default WHAT locators resolve from wrong root",
+      "route": "ac_project.py prepare:104-110 -> sources(project, chosen)",
+      "reproduction": "nested-definition-project/governance/stdo_invoice.json has source_project ../ and WHAT ./specification/RULES.md",
+      "expected": "nested-definition-project/governance/specification/RULES.md",
+      "observed": "nested-definition-project/specification/RULES.md was frozen; status prepared",
+      "evidence": [
+        "nested-manager-result.json",
+        "nested-prepare-result.json",
+        "nested-run/generation/corpus/specification/RULES.md"
+      ],
+      "basis": "Installed 3.0.1 PRODUCT_DEFINITION.md lines 73-77: relative URI references resolve against definition retrieval URI"
+    },
+    {
+      "severity": "S2",
+      "title": "Completion metadata can misstate verified method and formal execution",
+      "route": "ac_project.py result_readback:233-254 -> status/build reuse",
+      "reproduction": "Edit only BUILD.json method, source_manifest_sha256 and formal_gate after direct build; leave artifacts, pins, submissions and PROJECT unchanged",
+      "observed": "status built and build reused return invented method and verified formal gate although no gate selected/performed",
+      "evidence": [
+        "receipt-tamper-status.json",
+        "receipt-tamper-build.json",
+        "receipt-run/BUILD.original.json"
+      ],
+      "basis": "PU-01/04/06 and SK-09/14 exact subject and truthful performed-check reporting"
+    }
+  ],
+  "limits": [
+    "No source/Git edits",
+    "No native actor calls",
+    "No Graphify or Lean execution",
+    "Controlled JSON is not semantic-quality or host-discovery qualification",
+    "No acceptance/publication/whole-STDO-model claim"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "command": [
+    "node",
+    "a_c/build_tenants/graphify/test_env/test_explorer_modes.cjs",
+    "a_c/applications/abiogenesis-constraint-explorer/index.html"
+  ],
+  "exit_code": 1,
+  "seconds": 1.518243667203933,
+  "stdout": "",
+  "stderr": "node:assert:150\n  throw new AssertionError(obj);\n  ^\n\nAssertionError [ERR_ASSERTION]: one label loop only for a visible force view\n\n3 !== 1\n\n    at roundtrip (/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_explorer_modes.cjs:65:10)\n    at /Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_explorer_modes.cjs:91:112\n    at check (/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_explorer_modes.cjs:72:41)\n    at Object.<anonymous> (/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_explorer_modes.cjs:89:20)\n    at Module._compile (node:internal/modules/cjs/loader:1738:14)\n    at Object..js (node:internal/modules/cjs/loader:1871:10)\n    at Module.load (node:internal/modules/cjs/loader:1470:32)\n    at Module._load (node:internal/modules/cjs/loader:1290:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24) {\n  generatedMessage: false,\n  code: 'ERR_ASSERTION',\n  actual: 3,\n  expected: 1,\n  operator: 'strictEqual',\n  diff: 'simple'\n}\n\nNode.js v24.7.0\n"
+}

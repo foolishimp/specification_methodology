@@ -2,11 +2,23 @@
 
 This tenant packages one progressive skill, stdo-work. It targets the host mechanics documented for codex-cli 0.164.0 and the exact STDO v3.0.1-rc.1 basis. It is a construction candidate, not an accepted release or qualified host installation.
 
-Start at [SKILL.md](skills/stdo-work/SKILL.md). The [design](design/DESIGN.md) maps SK-01 through SK-13 to the algorithm, host and required proof. [Qualification](skills/stdo-work/references/qualification.md) retains every Q01–Q12 obligation. Explicit invocation is `$stdo-work`; ordinary relevant tasks use host automatic discovery. Success in one lane does not establish the other.
+Start at [SKILL.md](skills/stdo-work/SKILL.md). The [design](design/DESIGN.md) maps SK-01 through SK-14 to the algorithm, host and required proof. [Qualification](skills/stdo-work/references/qualification.md) retains every Q01–Q12 obligation. Explicit invocation is `$stdo-work`; ordinary relevant tasks use host automatic discovery. Success in one lane does not establish the other.
 
 The T-002 composition increment adds conditional dependency verification and
 trusted a_c context routing. It retains the installed 3.0.1 basis and earlier
 qualification limits; the current package inventory selects the new source cut.
+
+The T-003 [representation route](skills/stdo-work/references/representation.md)
+accepts a nominated project and runs the public a_c prepare → task → submit → build
+workflow. Codex authors each task's real JSON in its current session and returns
+the model, carrier, coverage and offline explorer. The provider is selected by
+the operator/activation/declared relation or explicit `AC_PROJECT_TOOL`; no sibling
+layout or global install is assumed. `direct` works without upstream Graphify;
+`graphify-ac` requires the selected pinned upstream. Required composition
+boundaries still apply. The target's exact method is represented subject data,
+not an extension of this package's lifecycle support. Ask, for example,
+`$stdo-work Build an a_c representation of /path/to/project using its selected Product Definition`.
+Representation host discovery and behavior need their own observed evidence.
 
 ## Read-only package check
 
@@ -14,7 +26,7 @@ qualification limits; the current package inventory selects the new source cut.
 python3 -B /absolute/path/to/codex/tests/verify_package.py /absolute/path/to/codex
 ```
 
-The inventory binds every ordinary regular file under this tenant except inventory.json itself; retain that manifest's digest separately. Checks cover exact inventory, skill metadata, contained resolvable local resources and declared source hashes. No host/model invocation or semantic verdict follows.
+The inventory binds every ordinary regular file under this tenant except inventory.json itself; retain that manifest's digest separately. Checks cover exact inventory, skill metadata, contained resolvable local resources and source-hash syntax. They do not acquire external sources to verify their contents. No host/model invocation or semantic verdict follows.
 
 ## Repository-local installation
 

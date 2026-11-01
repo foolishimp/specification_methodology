@@ -41,6 +41,24 @@ new failure or material change.
 
 ## Assessment record
 
+### Representation increment (T-003)
+
+These cases extend the same protocol for SK-14; they do not retrospectively
+qualify changed code using Q01–Q12's historical observations.
+
+| Case | Required observation and falsifier |
+|---|---|
+| RQ01 — nominated leaf | An explicitly invoked installed skill builds a representation of an independent STDO project through prepare, task, real host-session authoring, submit, build and status. The exact nominated source appears in model, recoverable carrier, coverage and offline reader. Check actual constraints and unresolved facts against source; prepared prompts alone fail. Test natural discovery separately. |
+| RQ02 — interrupted work | Resume the retained run after an interrupted authoring or completion acknowledgment. Current status decides pending authoring versus checked reuse; accepted submissions and built artifacts are not overwritten. Preserve the original interrupted observation. |
+| RQ03 — stale or invalid inputs | Invalid grounding, missing chunks, selected-source changes, source escape, overlapping outputs and changed completion evidence withhold completion or current reuse. The failure identifies supported re-entry; no substitute source, mode or invented proof result is admitted. |
+
+RQ01/RQ02 need actual host evidence. RQ03's mechanical discriminators can use
+controlled public-provider cases; that evidence does not establish general host
+handling of every refusal. Graphify and formal verification are separately selected
+treatments. A direct build with no required checker must report it unperformed.
+
+### Record fields
+
 Each record binds case, lane, tenant/package and host/model identities, inputs and
 authority, expected predicates, actual result and tool path, effect evidence,
 verdict per predicate, unresolved claims, measured/unknown costs and invalidators.

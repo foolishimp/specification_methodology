@@ -73,3 +73,49 @@ This increment uses the explicitly delegated filesystem Writer mechanism while
 the provider is constructed and later exercises the frozen public read/inspect
 path. New package/scenario evidence is kept outside the tenant; actual host
 qualification and the earlier limits are not promoted by these checks.
+
+## Nominated-project representation increment — T-003
+
+SK-14 extends the same progressive `stdo-work` entry. Its discoverable description
+and `references/representation.md` route accept an ordinary request to build an
+a_c representation of a nominated project. This route runs before the general
+lifecycle workflow: the nominated Product Definition and exact method are subject
+inputs, distinct from Skills' installed 3.0.1 RC1 construction basis and the a_c
+provider's 2.5.1 RC2 builder/calculus. Source interpretation supplies no lifecycle
+admission under a different method profile.
+
+The selected public contract is a_c's `build_tenants/graphify/design/project-build.md`
+and `code/ac_project.py`. The active operator, activation, declared provider
+relation or explicit `AC_PROJECT_TOOL` supplies its location and exact selection;
+the package assumes neither a sibling checkout nor a global installation. T-003
+selects this additional composition relation; its common provider manifest owns
+the exact implementation cut independently of T-002's retained provenance.
+
+The algorithm binds the nominated root, definition, selected local UTF-8 source,
+authorized absent output and explicit `direct` or `graphify-ac` mode. Before
+acquisition it applies any required composition route. The local-file provider
+cannot replace a required mediated boundary; absent eligible input/support
+withholds that build branch. Default WHAT selection and explicit overrides stay
+visible, and no recursive provider source is acquired by implication.
+
+`prepare` freezes the run. For each `task` response, the current Codex session
+reads the supplied source, interprets its meaning and writes real author JSON
+against that response's schema, with exact grounding, section dispositions and
+residuals. `submit` validates and retains the answer. The session repeats until
+`ready_to_build`, calls `build`, and verifies `status` before returning actual
+model, carrier, coverage and offline explorer paths and their identities. It
+does not launch the isolated Codex batch runner or require Claude. The author
+label is caller-declared provenance, not authenticated or isolated actor evidence.
+
+Resume begins at `status`, preserves accepted submissions and complete artifacts,
+and requests only pending tasks. Invalid answers are repaired from the actual
+diagnostic and supplied source; missing chunks, source/provider drift and partial
+outputs withhold completion. A replacement run retains its predecessor. The
+generated model remains a proposal: processing and structural checks do not
+establish semantic completeness, acceptance or release. Lean is reported only
+when explicitly selected and the actual formal-gate result supports the claim.
+
+The package verifier and skill-creator quick validator cover resource custody and
+metadata. T-003 public-workflow fixture evidence, actual Codex host discovery and
+semantic behavior are separate observations; package checks qualify none of
+those claims and do not change historical Q01–Q12 standing.

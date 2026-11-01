@@ -1,0 +1,142 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [
+          "Evidence is complete."
+        ],
+        "definition": "An action requiring complete evidence.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 2,
+            "quote": "A may proceed only when evidence is complete.",
+            "section_id": "urn:a-c:project:dfd4ce0b1720f9d60cb30778c8a98ae2f33f5e23d2b773a82dd4b3f552586f2f/source/specification/RULES.md#Rules",
+            "start_line": 2
+          }
+        ],
+        "key": "proceed",
+        "label": "Proceed"
+      },
+      {
+        "conditions": [],
+        "definition": "The evidence required before proceeding.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 2,
+            "quote": "A may proceed only when evidence is complete.",
+            "section_id": "urn:a-c:project:dfd4ce0b1720f9d60cb30778c8a98ae2f33f5e23d2b773a82dd4b3f552586f2f/source/specification/RULES.md#Rules",
+            "start_line": 2
+          }
+        ],
+        "key": "evidence",
+        "label": "Evidence"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "proceed"
+        ],
+        "conditions": [
+          "A request to proceed is considered."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 2,
+            "quote": "A may proceed only when evidence is complete.",
+            "section_id": "urn:a-c:project:dfd4ce0b1720f9d60cb30778c8a98ae2f33f5e23d2b773a82dd4b3f552586f2f/source/specification/RULES.md#Rules",
+            "start_line": 2
+          }
+        ],
+        "key": "complete_evidence",
+        "statement": "Proceed only with complete evidence; otherwise refuse.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "residual",
+        "keys": [
+          "proceed",
+          "evidence",
+          "proceed_requires_evidence",
+          "complete_evidence",
+          "wording",
+          "external_policy"
+        ],
+        "reason": "Retains prerequisite, refusal, wording latitude and unresolved external meaning.",
+        "section_id": "urn:a-c:project:dfd4ce0b1720f9d60cb30778c8a98ae2f33f5e23d2b773a82dd4b3f552586f2f/source/specification/RULES.md#Rules"
+      }
+    ],
+    "latitude": [
+      {
+        "allowed": [
+          "Wording may vary."
+        ],
+        "applies_to_keys": [
+          "proceed"
+        ],
+        "forbidden": [
+          "Removing the prerequisite."
+        ],
+        "grounding": [
+          {
+            "end_line": 3,
+            "quote": "wording may vary but prerequisites cannot.",
+            "section_id": "urn:a-c:project:dfd4ce0b1720f9d60cb30778c8a98ae2f33f5e23d2b773a82dd4b3f552586f2f/source/specification/RULES.md#Rules",
+            "start_line": 3
+          }
+        ],
+        "key": "wording"
+      }
+    ],
+    "limitations": [
+      "No external-policy meaning or semantic acceptance established."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 2,
+            "quote": "A may proceed only when evidence is complete.",
+            "section_id": "urn:a-c:project:dfd4ce0b1720f9d60cb30778c8a98ae2f33f5e23d2b773a82dd4b3f552586f2f/source/specification/RULES.md#Rules",
+            "start_line": 2
+          }
+        ],
+        "key": "proceed_requires_evidence",
+        "kind": "requires",
+        "meaning": "Proceeding requires complete evidence.",
+        "source_key": "proceed",
+        "target_key": "evidence"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Re-enter exact policy before relying on it.",
+        "grounding": [
+          {
+            "end_line": 4,
+            "quote": "Meaning of external policy remains unresolved.",
+            "section_id": "urn:a-c:project:dfd4ce0b1720f9d60cb30778c8a98ae2f33f5e23d2b773a82dd4b3f552586f2f/source/specification/RULES.md#Rules",
+            "start_line": 4
+          }
+        ],
+        "key": "external_policy",
+        "subject_key": "proceed",
+        "uncertainty": "External policy meaning is unresolved."
+      }
+    ]
+  },
+  "answer_sha256": "17f6e5305306d80a128a1d5e5fbd6e0df930d4d367284205b78889998bc214e7",
+  "author": "reviewer-controlled-fixture",
+  "chunk": "chunk-16cfd35d28616ddfb593",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "60639d4b864efe94f2eee379a5b10bf9e56d759bbf07a9026043551354330f4d",
+  "task_sha256": "145ce25020154e9f19c9c651ca7e58cc0c7f2f53c1e42b7898f92d5887f6e5fd"
+}

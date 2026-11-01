@@ -1,0 +1,1 @@
+/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/outside.md

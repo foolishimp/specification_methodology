@@ -1,0 +1,40 @@
+{
+  "profile": "a_c.project-browser-observation/1",
+  "observed_at": "2026-11-01T04:28:10.861335+00:00",
+  "browser": "Chrome",
+  "input": "run/generation/proposal/explorer.html",
+  "input_sha256": "f9d881a5723f2edcaa089644e3e24bc7ff18f923f57fefe69f34fa2c57112c30",
+  "serving": "Local loopback HTTP server bound to 127.0.0.1:8775 for this check only",
+  "actions": [
+    {
+      "action": "open actual generated explorer",
+      "observed": "ABIogenesis \u00b7 Product and constraints; 607 constraints; 1373 records"
+    },
+    {
+      "action": "search R10; choose All records",
+      "observed": "13 matches including ABI5-ROOT-001 and R10 Replay and CLI agree on typed terminal outcome"
+    },
+    {
+      "action": "select R10",
+      "observed": "Authored requires relation to R9, inverse requires from ABI5-ROOT-001, separate retention dependency, exact PRODUCT.md:1542 quotation; 11 nodes and 20 links"
+    },
+    {
+      "action": "follow Authored requires to R9",
+      "observed": "R9 detail, next dependency R8, reading trail preserves R10 then R9 and the exact relation identity; 9 visible nodes and 16 links"
+    },
+    {
+      "action": "open PRODUCT.md:1541 source",
+      "observed": "Source dialog shows full embedded file SHA 7c8493ed9c025b408737c2bf95ea69af980f3bf1db37cd095b09421af6618d85; screenshot shows highlighted R9 row and R1-R10 table with same-candidate/causal-episode qualification paragraph"
+    },
+    {
+      "action": "close source dialog",
+      "observed": "3D canvas renders labeled R7-R10, ABI5-ROOT-001 and relation nodes; same reading trail remains"
+    }
+  ],
+  "verdict": "pass for the observed search, selected dependency navigation, reading trail, source display and 3D rendering",
+  "limits": [
+    "No exhaustive interaction or layout/performance test",
+    "No inference or Lean proof is established by displayed links",
+    "No persisted screenshot file; visual observations are in the session tool transcript"
+  ]
+}

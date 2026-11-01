@@ -1,0 +1,477 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "An append-only event stream written only by emit(), sufficient with declared GTL for replay. Its canonical envelope has immutable engine event_id/system event_time and aggregate, causal/correlation and runtime identities. Canonical aggregate types include run, graph_call, frame and continuation; vector facts attach to the nearest aggregate, never a vector aggregate.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 36,
+            "quote": "**REQ-R-ABG3-EVENTS-001**: `emit()` shall remain the only lawful write path. The event stream shall be append-only.\n\n**REQ-R-ABG3-EVENTS-002**: Event truth shall be rich enough that runtime truth is reconstructable by replay from events plus declared GTL surfaces alone.\n\n**REQ-R-ABG3-EVENTS-003**: The canonical event envelope shall carry immutable engine-assigned `event_id`, immutable system-assigned `event_time`, aggregate identity, causal/correlation identity, and explicit runtime references sufficient for replay.\n\n**REQ-R-ABG3-EVENTS-004**: Canonical aggregate types shall include at minimum `run`, `graph_call`, `frame`, and `continuation`.\n\n**REQ-R-ABG3-EVENTS-005**: Vector-local traversal facts shall attach to the nearest enclosing runtime aggregate. Vector shall never be its own runtime aggregate.\n\n**REQ-R-ABG3-EVENTS-006**: Lifecycle open/close/fail/rebound events shall remain authoritative truth. Snapshot or checkpoint events may assist replay but shall not replace authoritative lifecycle facts.\n\n**REQ-R-ABG3-EVENTS-007**: ABG shall observe process-boundary runtime facts only. It shall not constitutionalize internal chain-of-thought, hidden tactic steps, or private decomposition inside probabilistic workers.\n\n**REQ-R-ABG3-EVENTS-008**: When ABG yields on unresolved non-blocking post-transform observer truth, the yielded handoff and its causing observer facts shall be emitted as authoritative event truth rather than inferred from absence of terminal failure.\n\n**REQ-R-ABG3-EVENTS-009**: Long-running supervised dispatch shall emit enough progress, artifact-observation, stall, salvage, and terminal facts that operator-grade live status can be replay-projected without hidden controller memory.\n\n**REQ-R-ABG3-EVENTS-010**: The canonical event envelope shall preserve at minimum event identity, event time, event type, aggregate type, aggregate identity, parent aggregate identity when present, causation identity, correlation identity, workflow version, work key, run identity, semantic job identity, graph-function identity, materialization identity, frame attempt identity, frame lineage identity, vector identity when present, and closed event data.\n\n**REQ-R-ABG3-EVENTS-011**: Authoritative event truth shall cover at minimum run lifecycle, graph-call lifecycle, frame lifecycle, vector-local traversal and dispatch facts, proof and closure facts, continuation lifecycle, correction, and supersession.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 16
+          }
+        ],
+        "key": "runtime_event_truth",
+        "label": "Canonical runtime event truth"
+      },
+      {
+        "conditions": [],
+        "definition": "Supervised dispatch exposes progress/artifacts/stall/salvage/terminal truth for replay-projected live status. Crossing a local or external process boundary requires authoritative actor/process events rather than transcripts, logs or controller memory.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 44,
+            "quote": "**REQ-R-ABG3-EVENTS-009**: Long-running supervised dispatch shall emit enough progress, artifact-observation, stall, salvage, and terminal facts that operator-grade live status can be replay-projected without hidden controller memory.\n\n**REQ-R-ABG3-EVENTS-010**: The canonical event envelope shall preserve at minimum event identity, event time, event type, aggregate type, aggregate identity, parent aggregate identity when present, causation identity, correlation identity, workflow version, work key, run identity, semantic job identity, graph-function identity, materialization identity, frame attempt identity, frame lineage identity, vector identity when present, and closed event data.\n\n**REQ-R-ABG3-EVENTS-011**: Authoritative event truth shall cover at minimum run lifecycle, graph-call lifecycle, frame lifecycle, vector-local traversal and dispatch facts, proof and closure facts, continuation lifecycle, correction, and supersession.\n\n**REQ-R-ABG3-EVENTS-012**: Actor/process supervision facts shall be authoritative ABG event truth when a traversal dispatch crosses a local or external process boundary. Product-local transcripts, terminal logs, or controller memory shall not replace these events.\n\n**REQ-R-ABG3-EVENTS-013**: The actor/process event family shall preserve enough source facts to replay at minimum actor invocation start, process start or spawn failure, stdout chunk observation, stderr chunk observation, heartbeat or liveness observation, timeout observation, termination signal request, process exit, result-artifact observation, and actor invocation closure or failure.\n\n**REQ-R-ABG3-EVENTS-014**: Spawn failure, unavailable command, path drift, sandbox/runtime denial, timeout, signal termination, and nonzero exit shall be emitted as typed runtime facts. Such failures shall not crash admission, disappear into stderr text, or be represented only as absent result artifacts.\n\n**REQ-R-ABG3-EVENTS-015**: Actor/process events shall carry the run, graph function, graph call, frame, vector, actor invocation, worker binding, causation, and correlation identities needed to connect process evidence back to the active traversal boundary by replay.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 32
+          }
+        ],
+        "key": "actor_process_evidence",
+        "label": "Actor/process event evidence"
+      },
+      {
+        "conditions": [],
+        "definition": "payload_rejected retains structured issue rows with closed issue kind, offending path and schema/contract refs; pending realization, comma-joined issueKind:path reason grammar is a declared lossy contract consumers may rely on, superseded by structured rows.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 66,
+            "quote": "**REQ-R-ABG3-EVENTS-026**: Typed rejection events shall carry their issues as structured rows, not prose alone. `payload_rejected` shall preserve, per issue, the issue kind (closed vocabulary) and the offending path, alongside the schema/contract refs it already carries. Until the structured rows land, the interim reason-string grammar (comma-joined `issueKind:path` pairs) is the declared lossy contract and consumers may rely on it; the structured rows supersede it on this requirement's realization.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 66
+          }
+        ],
+        "key": "typed_payload_rejection",
+        "label": "Typed payload rejection"
+      },
+      {
+        "conditions": [],
+        "definition": "Canonical envelopes carry store-assigned ordinal; all latest/current replay folds use its total order, not array/file/caller order. Live stamping authority belongs to the store; replay contexts preserve admitted order forward-only without restamping, reordering or rewind.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 74,
+            "quote": "**REQ-R-ABG3-EVENTS-027**: The canonical event envelope shall carry a store-assigned admission ordinal. Any fold over replayed events that selects latest or current truth shall be decided by admission ordinal, never by array order, file order, or caller order. Ordinal collisions among candidate events, and candidate sets that admission ordinal cannot totally order, shall fail closed at ingest rather than resolve by incidental order.\n\nGap: latest-selecting folds still decide by array/caller order rather than admission ordinal — at minimum `deriveConstructionPressureProjection` (latest package ref taken in event-array order) and the runner's `latestSelectedGraphFunctionEvent` (reverse array scan). Collision/unorderable-candidate fail-closed ingest is likewise not realized in those folds. Owner: T-244 routing; implementation requires a singular realization leaf.\n\n**REQ-R-ABG3-EVENTS-028**: Admission ordinal shall be per-store emitter-context state. A live emitter context shall reject an externally pre-stamped canonical envelope as inadmissible: canonical stamping authority belongs to the admitting store alone, and accepting a foreign stamp is envelope forgery. A replay-tolerant emitter context shall admit previously admitted canonical truth forward-only: already-stamped events re-enter in admission-ordinal order, and the context shall not restamp, reorder, or rewind them.\n\nGap: the default emitter context is a module-level replay-tolerant singleton, not per-store state; emission paths that do not adopt a seeded live context inherit it, so live-forgery rejection is realized only where a live context is explicitly adopted (the persisted-store append path), not universally. Owner: T-244 routing; implementation requires a singular realization leaf.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 68
+          }
+        ],
+        "key": "admission_ordinal",
+        "label": "Store admission ordinal"
+      },
+      {
+        "conditions": [],
+        "definition": "Every effectful public operation uses exactly one route: semantic owner emits admitted events with declared effects, or produces an immutable authoritative artifact admitted through one public_operation_artifact_admitted event before runtime use.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 89,
+            "quote": "**REQ-R-ABG3-EVENTS-032**: Every effectful public operation shall cross into ABG runtime truth by exactly one of two routes: its semantic owner emits admitted runtime events whose Event Calculus effects are declared, or its semantic owner produces an immutable authoritative artifact and ABG admits one `public_operation_artifact_admitted` boundary event before any runtime consumer uses that artifact. The generic boundary event shall preserve the operation identity, structural definition key and definition digest, stable authority-scope ref and canonical scope digest, invocation ref and digest, owner-admitted disposition, immutable artifact ref and digest, causation refs, and correlation id. Its definition-key operation identity shall equal the event operation identity. It shall initiate only the replay-derived `public_operation_artifact_available` fluent, keyed by the stable authority-scope ref rather than the invocation ref. Shared-store artifact projections shall admit one exact scope ref and digest and shall fail closed when the same scope ref appears under another digest. It shall not own or infer result meaning, assessment, closure, retry, continuation, next action, or ticket mutation. Per-operation boundary event kinds and runner-local artifact truth are forbidden.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 89
+          }
+        ],
+        "key": "public_artifact_admission",
+        "label": "Public operation artifact boundary"
+      },
+      {
+        "conditions": [],
+        "definition": "Published roster owns complete set; listed examples map lifecycle/basis, advancement/regime, actor/process, instructions, witness/proof, C spine, retry/continuation, leaf/saga, payload, F_H assessment, overlay/output/zoom, modulation, foldback/reentry, timer, construction, registry/projection and public-operation families. Tuner drafted/ratified/rejected kinds are reserved planned 5.1 and excluded from selected 5.0 census.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 118,
+            "quote": "The runtime event union decomposes into these families. Example kinds are\nillustrative members drawn from the published `RuntimeEvent` contract; the\npublished `RUNTIME_EVENT_KIND_VALUES` roster owns the complete set.\n\n- lifecycle/basis: `basis_admitted`, `run_segment_opened`, `graph_call_opened`, `frame_opened`\n- advancement/regime: `fd_advance_ready`, `fp_dispatch_requested`, `lever_resolution_admitted`\n- actor/process: `actor_invocation_started`, `actor_process_started`, `actor_process_exited`\n- instruction assembly: `instruction_prompt_manifest_projected`, `instruction_response_contract_admitted`, `instruction_causal_context_bound`\n- witness/attestation/proof: `declaration_reprice_admitted`, `replay_log_attested`, `workspace_hygiene_stamped`\n- c-call spine: `c_call_opened`, `c_call_evidenced`, `c_call_judged`\n- retry/continuation: `retry_attempt_opened`, `retry_progress_recorded`, `continuation_reopened`\n- leaf-task/branch saga: `leaf_task_opened`, `branch_lease_acquired`, `branch_fan_in_projected`\n- payload ledger: `payload_observed`, `payload_rejected`, `evidence_admitted`\n- F_H assessment: `approved`, `revoked`, `assessed`\n- overlay/output/zoom: `overlay_frame_declared`, `output_instance_allocated`, `zoom_frame_opened`\n- traversal modulation: `traversal_modulation_resolved`, `traversal_attempt_dispatched`, `traversal_modulation_exhausted`\n- graph-span foldback/reentry: `graph_span_assessed`, `graph_span_foldback_evaluated`, `graph_reentry_planned`\n- timer: `timer_intent_admitted`, `deadline_breach_admitted`, `scheduled_continuation_reopened`\n- construction: `construction_episode_started`, `construction_intent_selected`, `construction_delta_observed`\n- registry/projection: `registry_entry_admitted`, `graph_function_selected`, `node_type_satisfaction_projected`\n- public-operation attribution: `public_operation_admitted`, `public_operation_artifact_admitted`\n\nThe tuner event family\n(`tuner_draft_admitted`, `tuner_draft_ratified`, and\n`tuner_draft_rejected`) is reserved for the planned 5.1 observer/tuner\nProduct. It is not part of the selected 5.0 runtime event-kind census.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FCanonical%20Runtime%20Event-Kind%20Census",
+            "start_line": 93
+          }
+        ],
+        "key": "runtime_event_families",
+        "label": "Runtime event census map"
+      },
+      {
+        "conditions": [],
+        "definition": "Constraint/Guarantee dated 2026-05-16, source-labelled active and accepted by T-283 F_H closure; derivations name legacy method/design, intent/product, GTL graph/evaluator/hooks, assurance/payload/policy and T-134.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "# REQ-R-ABG3-FN-COMPOSITION — ABG.Fn Composition Grammar\n\n**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-05-16\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [DESIGN_MODULE_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/DESIGN_MODULE_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-L-GTL3-GRAPHVECTOR.md](../gtl/REQ-L-GTL3-GRAPHVECTOR.md), [REQ-L-GTL3-EVALUATOR.md](../gtl/REQ-L-GTL3-EVALUATOR.md), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md), [REQ-R-ABG3-ASSURANCE.md](REQ-R-ABG3-ASSURANCE.md), [REQ-R-ABG3-PAYLOAD.md](REQ-R-ABG3-PAYLOAD.md), [REQ-R-ABG3-POLICY.md](REQ-R-ABG3-POLICY.md), [T-134](../../../.ai-workspace/tickets/completed/T-134-define-abg-fn-composition-grammar.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar",
+            "start_line": 1
+          }
+        ],
+        "key": "fn_composition_metadata",
+        "label": "Fn composition provenance"
+      },
+      {
+        "conditions": [],
+        "definition": "One function/edge contract binds deterministic, probabilistic and human/held-out regimes, keeping regime authority, closure, assurance, carrier admission, policy, standards context and traversal optimization together rather than scattered through prompts/controllers/ledgers/local assurance.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 18,
+            "quote": "Define the ABG.Fn composition grammar that binds deterministic, probabilistic,\nand human/held-out regimes to one replay-stable function or edge identity.\n\nThe grammar exists to keep regime authority, closure, assurance, carrier\nadmission, policy, standards context, and traversal optimization on one\ncontract surface instead of scattered across prompts, controller behavior,\npayload ledgers, or local assurance code.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "fn_composition",
+        "label": "Replay-stable Fn composition"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "runtime_event_truth"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 36,
+            "quote": "**REQ-R-ABG3-EVENTS-003**: The canonical event envelope shall carry immutable engine-assigned `event_id`, immutable system-assigned `event_time`, aggregate identity, causal/correlation identity, and explicit runtime references sufficient for replay.\n\n**REQ-R-ABG3-EVENTS-004**: Canonical aggregate types shall include at minimum `run`, `graph_call`, `frame`, and `continuation`.\n\n**REQ-R-ABG3-EVENTS-005**: Vector-local traversal facts shall attach to the nearest enclosing runtime aggregate. Vector shall never be its own runtime aggregate.\n\n**REQ-R-ABG3-EVENTS-006**: Lifecycle open/close/fail/rebound events shall remain authoritative truth. Snapshot or checkpoint events may assist replay but shall not replace authoritative lifecycle facts.\n\n**REQ-R-ABG3-EVENTS-007**: ABG shall observe process-boundary runtime facts only. It shall not constitutionalize internal chain-of-thought, hidden tactic steps, or private decomposition inside probabilistic workers.\n\n**REQ-R-ABG3-EVENTS-008**: When ABG yields on unresolved non-blocking post-transform observer truth, the yielded handoff and its causing observer facts shall be emitted as authoritative event truth rather than inferred from absence of terminal failure.\n\n**REQ-R-ABG3-EVENTS-009**: Long-running supervised dispatch shall emit enough progress, artifact-observation, stall, salvage, and terminal facts that operator-grade live status can be replay-projected without hidden controller memory.\n\n**REQ-R-ABG3-EVENTS-010**: The canonical event envelope shall preserve at minimum event identity, event time, event type, aggregate type, aggregate identity, parent aggregate identity when present, causation identity, correlation identity, workflow version, work key, run identity, semantic job identity, graph-function identity, materialization identity, frame attempt identity, frame lineage identity, vector identity when present, and closed event data.\n\n**REQ-R-ABG3-EVENTS-011**: Authoritative event truth shall cover at minimum run lifecycle, graph-call lifecycle, frame lifecycle, vector-local traversal and dispatch facts, proof and closure facts, continuation lifecycle, correction, and supersession.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 20
+          }
+        ],
+        "key": "event_envelope_and_lifecycle",
+        "statement": "Preserve event/time/type, aggregate type/id and parent when present, causation/correlation, workflow version, work key/run/job/function/materialization/frame-attempt/frame-lineage/vector when present, and closed data. Authoritative coverage includes run/call/frame lifecycle, vector traversal/dispatch, proof/closure, continuation, correction/supersession. Open/close/fail/rebound facts remain authoritative; snapshots/checkpoints only assist. Observe worker process boundaries, not internal chain-of-thought, tactic steps or private decomposition. Emit yielded handoff and causing nonblocking observer facts, never infer handoff from no terminal failure.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "actor_process_evidence"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 44,
+            "quote": "**REQ-R-ABG3-EVENTS-012**: Actor/process supervision facts shall be authoritative ABG event truth when a traversal dispatch crosses a local or external process boundary. Product-local transcripts, terminal logs, or controller memory shall not replace these events.\n\n**REQ-R-ABG3-EVENTS-013**: The actor/process event family shall preserve enough source facts to replay at minimum actor invocation start, process start or spawn failure, stdout chunk observation, stderr chunk observation, heartbeat or liveness observation, timeout observation, termination signal request, process exit, result-artifact observation, and actor invocation closure or failure.\n\n**REQ-R-ABG3-EVENTS-014**: Spawn failure, unavailable command, path drift, sandbox/runtime denial, timeout, signal termination, and nonzero exit shall be emitted as typed runtime facts. Such failures shall not crash admission, disappear into stderr text, or be represented only as absent result artifacts.\n\n**REQ-R-ABG3-EVENTS-015**: Actor/process events shall carry the run, graph function, graph call, frame, vector, actor invocation, worker binding, causation, and correlation identities needed to connect process evidence back to the active traversal boundary by replay.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 38
+          }
+        ],
+        "key": "actor_failure_and_causal_capture",
+        "statement": "Capture invocation start, process start/spawn failure, stdout/stderr chunks, heartbeat/liveness, timeout, signal request, exit, result-artifact observation and closure/failure. Type spawn/unavailable command/path drift/sandbox denial/timeout/signal/nonzero failures; they cannot crash admission, disappear into stderr or be only absent artifacts. Bind run/function/call/frame/vector/invocation/worker/causation/correlation to replay the active boundary.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "runtime_event_truth"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 54,
+            "quote": "**REQ-R-ABG3-EVENTS-016**: Traversal modulation runtime truth shall be admitted as replay-visible event truth. The minimum event family shall include modulation resolution, attempt-envelope derivation, attempt dispatch, progress observation, non-progress classification, forced-review projection, same-edge continuation planning, and modulation exhaustion.\n\n**REQ-R-ABG3-EVENTS-017**: Traversal modulation events shall preserve basis, graph function, run, work key, graph call, frame, frame lineage, vector, edge, causation refs, and correlation id sufficient to replay the modulation projection without runner-local state.\n\n**REQ-R-ABG3-EVENTS-018**: ABG event kinds that change runtime fluent truth shall have declared Event Calculus effects. The declaration shall identify the fluents initiated, terminated, clipped, and declipped by the admitted event kind.\n\n**REQ-R-ABG3-EVENTS-019**: Temporal provider effects shall become ABG runtime truth only through admitted temporal events. Timer intent, timer outcome, deadline-breach, and scheduled-continuation events shall preserve basis, graph function, graph call, frame, vector, edge, policy, provider, causation, and correlation identity. Deadline-breach events shall also preserve the deadline ref and policy-selected breach action.\n\n**REQ-R-ABG3-EVENTS-020**: Traversal strategy selection shall use one canonical GTL declaration surface: `GraphVector.declarations[\"abg.traversal_strategy\"]`, `GraphFunction.declarations[\"abg.default_traversal_strategy\"]`, and `Role.policy_hooks[\"abg.traversal_strategy\"]`. Legacy or alternate traversal-modulation key spellings shall not be admitted as live authority surfaces.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 46
+          }
+        ],
+        "key": "modulation_temporal_event_law",
+        "statement": "Admit modulation resolution/envelope/dispatch/progress/non-progress/forced-review/same-edge planning/exhaustion with basis/function/run/work/call/frame/lineage/vector/edge/causation/correlation. Fluent-changing kinds declare Event Calculus initiated/terminated/clipped/declipped effects. Temporal provider truth enters only through admitted intent/outcome/breach/scheduled-continuation events with basis/function/call/frame/vector/edge/policy/provider/causation/correlation; breaches also retain deadline ref/action. Only canonical GraphVector abg.traversal_strategy, GraphFunction abg.default_traversal_strategy and Role.policy_hooks abg.traversal_strategy keys are live strategy authority.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "runtime_event_truth"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 56,
+            "quote": "**REQ-R-ABG3-EVENTS-021**: The existing construction event family shall preserve the admitted One Surface authority boundaries without inventing another event roster. Construction-episode start shall bind the admitted program, workspace binding, execution basis, and lineage; observation events shall bind the exact `ObservationSnapshot`; owning invocation/result events shall identify whether they belong to `synthesizeModel`, `evalGap`, `evaluateNext`, or `evaluateAction` and bind the owning input/output refs; action-catalog events shall record only the admitted-program projection basis; intent selection and graph-action invocation shall bind the admitted `NextActionProjection` and `ConstructionIntent`; evidence and delta events shall bind action-evaluation inputs. These existing primary events may carry authority only when their published kind declares the applicable Event Calculus effects. Model, gap, target-binding, priority, next-action, ledger, decision, progress, stagnation, public terminal status, and summary read models shall derive from owning admitted truth and `RuntimeDerivedFluentRule` law unless a requirement explicitly grants primary event authority. This clause does not authorize an event kind absent from the published runtime event-kind census.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 56
+          }
+        ],
+        "key": "one_surface_event_ownership",
+        "statement": "Reuse the published construction census: episode binds program/workspace/basis/lineage; observations bind exact snapshot; synthesizeModel/evalGap/evaluateNext/evaluateAction owning invocation/results bind own I/O; catalog records program-projection basis; intent/invocation binds NextActionProjection and ConstructionIntent; evidence/delta binds evaluation inputs. Primary authority requires declared Event Calculus effects. Model/gap/target-binding/priority/next-action/ledger/decision/progress/stagnation/public-terminal/summary are derived read models under RuntimeDerivedFluentRule unless explicitly granted primary authority. No absent event kind is authorized.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "actor_process_evidence",
+          "runtime_event_truth"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 60,
+            "quote": "**REQ-R-ABG3-EVENTS-022**: Runtime probe activity and external interruption shall be admitted as typed ABG events when they affect liveness, watchdog, retry, or public runtime status. At minimum ABG shall admit `runtime_activity_probe_observed` and `runtime_external_interruption_observed` events that preserve basis, graph function, run, work key, graph call, frame, vector, edge, actor invocation when present, worker/backend identity when present, probe/source identity, system or runtime-asset ref, evidence refs, causation refs, correlation id, and elapsed observation time. Event log, ledger, manifest, PTY capture, stream capture, result artifact, projection/report, archive, heartbeat, and structured stream observations shall normalize through the same event family when they are used as liveness evidence.\n\n**REQ-R-ABG3-EVENTS-023**: Runtime probe event kinds that change liveness fluent truth shall have declared Event Calculus effects. Activity observation shall initiate activity-recent and invocation-active truth. External safety interruption shall terminate active truth and initiate externally-interrupted and invocation-blocked truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 58
+          }
+        ],
+        "key": "probe_event_truth",
+        "statement": "Liveness/watchdog/retry/status-affecting probes or interruption require runtime_activity_probe_observed/runtime_external_interruption_observed with basis/function/run/work/call/frame/vector/edge, optional actor/worker/backend, probe/source, system/runtime-asset, evidence, causation/correlation and elapsed time. Logs, ledgers, manifests, PTY/streams/artifacts/reports/archives/heartbeats/structured streams normalize through this family when liveness evidence. Fluent-changing probes declare effects: activity initiates recent/active; external safety interruption terminates active and initiates interrupted/blocked.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "runtime_event_truth"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 64,
+            "quote": "**REQ-R-ABG3-EVENTS-024**: When ABG emits a runtime event on an installed or public runtime path with a configured replay event log, durable replay-log append shall occur as part of event-sink acceptance before the next effectful runtime step observes downstream state. A terminal-only batch flush shall not satisfy append-only event truth. Command-local buffers, product transcripts, PTY/process traces, and archives may assist operator output or evidence, but they shall not replace the replay log as the durable event truth surface.\n\n**REQ-R-ABG3-EVENTS-025**: Every runtime event kind shall either carry run/basis scope (basisId, and runId/workKey where meaningful) or be DECLARED run-independent with a named scope class. Run-independent kinds (at minimum the registry publication family, graph-function selection, node-type satisfaction, and workspace installation) are workspace-scoped truth: basis-scoped filters shall pass them by declaration, and read models folding them across a shared store shall state that scope in their input contract. An event kind that is neither scoped nor declared run-independent is a carrier defect.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 62
+          }
+        ],
+        "key": "durability_and_event_scope",
+        "statement": "On installed/public paths configured with replay log, durable append is part of sink acceptance before the next effect observes downstream state; terminal-only flush is insufficient and buffers/transcripts/traces/archives cannot replace log truth. Every kind carries basis and meaningful run/work or is declared run-independent with a named scope class. At least registry publication/function selection/node satisfaction/workspace installation are workspace-scoped, pass basis filters by declaration, and shared-store folds state that scope. Neither scoped nor declared-independent is carrier defect.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "admission_ordinal"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 72,
+            "quote": "**REQ-R-ABG3-EVENTS-027**: The canonical event envelope shall carry a store-assigned admission ordinal. Any fold over replayed events that selects latest or current truth shall be decided by admission ordinal, never by array order, file order, or caller order. Ordinal collisions among candidate events, and candidate sets that admission ordinal cannot totally order, shall fail closed at ingest rather than resolve by incidental order.\n\nGap: latest-selecting folds still decide by array/caller order rather than admission ordinal — at minimum `deriveConstructionPressureProjection` (latest package ref taken in event-array order) and the runner's `latestSelectedGraphFunctionEvent` (reverse array scan). Collision/unorderable-candidate fail-closed ingest is likewise not realized in those folds. Owner: T-244 routing; implementation requires a singular realization leaf.\n\n**REQ-R-ABG3-EVENTS-028**: Admission ordinal shall be per-store emitter-context state. A live emitter context shall reject an externally pre-stamped canonical envelope as inadmissible: canonical stamping authority belongs to the admitting store alone, and accepting a foreign stamp is envelope forgery. A replay-tolerant emitter context shall admit previously admitted canonical truth forward-only: already-stamped events re-enter in admission-ordinal order, and the context shall not restamp, reorder, or rewind them.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 68
+          }
+        ],
+        "key": "ordinal_fail_closed_and_forgery",
+        "statement": "Reject ordinal collisions and candidate sets not totally ordered at ingest. Ordinal state is per-store emitter context; live contexts reject externally prestamped canonical envelopes as forgery. Replay-tolerant contexts admit prior canonical truth only in ordinal order.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "runtime_event_truth"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 83,
+            "quote": "**REQ-R-ABG3-EVENTS-029**: The complete runtime event-kind union shall be a\npublished, versioned conformance contract of the substrate. A conformant tenant\nshall produce exactly the census kinds under the canonical envelope: no missing\nkinds, no undeclared extra kinds, and no rival envelope. The authoritative\nmachine-readable roster is the named `RUNTIME_EVENT_KIND_VALUES` symbol and the\n`RuntimeEvent`/`CanonicalRuntimeEvent` type symbols located by contract group\n`abg.contract.abg.m03` in the exact product's public contract catalog. The\nfamily enumeration below is a normative map into that roster, not a substitute.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 76
+          }
+        ],
+        "key": "event_census_conformance",
+        "statement": "The complete published/versioned event union is a conformance contract: tenants produce exactly its census kinds under canonical envelope, no missing/extra kinds or rival envelope. Exact Product catalog group abg.contract.abg.m03 locates authoritative RUNTIME_EVENT_KIND_VALUES and RuntimeEvent/CanonicalRuntimeEvent; the family list is only its normative map.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "runtime_event_truth"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 87,
+            "quote": "**REQ-R-ABG3-EVENTS-030**: One Surface events shall preserve stable workspace authority separately from mutable observation. Workspace-binding and execution-basis refs shall remain unchanged across ordinary re-observation, while each admitted observation carries its own snapshot identity and digest. No observation, projection, file change, replay advance, or worksite digest shall emit or imply a new workspace binding or basis-fork event.\n\n**REQ-R-ABG3-EVENTS-031**: Public-operation admission events shall attest typed ingress, actor attribution, operation variant, invocation authority, and exact binding requirement only. They shall not record public ingress as the owner of model synthesis, gap evaluation, next-action evaluation, action evaluation, program ordering, retry, continuation, or closure; those authorities remain with the admitted GTL program and ABG runtime boundaries.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 85
+          }
+        ],
+        "key": "observation_and_ingress_boundaries",
+        "statement": "Ordinary re-observation preserves workspace-binding and execution-basis refs; each observation has own snapshot id/digest. Observation/projection/file/replay/worksite change cannot imply binding or basis fork. Public-operation admission attests typed ingress, actor, variant, invocation authority and binding requirement only; model/gap/next-action/action evaluation, ordering, retry, continuation and closure remain admitted GTL/ABG ownership.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "public_artifact_admission"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 89,
+            "quote": "**REQ-R-ABG3-EVENTS-032**: Every effectful public operation shall cross into ABG runtime truth by exactly one of two routes: its semantic owner emits admitted runtime events whose Event Calculus effects are declared, or its semantic owner produces an immutable authoritative artifact and ABG admits one `public_operation_artifact_admitted` boundary event before any runtime consumer uses that artifact. The generic boundary event shall preserve the operation identity, structural definition key and definition digest, stable authority-scope ref and canonical scope digest, invocation ref and digest, owner-admitted disposition, immutable artifact ref and digest, causation refs, and correlation id. Its definition-key operation identity shall equal the event operation identity. It shall initiate only the replay-derived `public_operation_artifact_available` fluent, keyed by the stable authority-scope ref rather than the invocation ref. Shared-store artifact projections shall admit one exact scope ref and digest and shall fail closed when the same scope ref appears under another digest. It shall not own or infer result meaning, assessment, closure, retry, continuation, next action, or ticket mutation. Per-operation boundary event kinds and runner-local artifact truth are forbidden.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 89
+          }
+        ],
+        "key": "public_artifact_boundary_contract",
+        "statement": "Preserve operation identity matching definition-key identity, definition key/digest, stable authority-scope ref/canonical digest, invocation ref/digest, owner disposition, artifact ref/digest and causation/correlation. Initiate only public_operation_artifact_available keyed by stable scope, not invocation. Shared-store projections accept one exact scope/digest and reject same ref with different digest. Boundary cannot own/infer result meaning, assessment, closure/retry/continuation/next action/ticket mutation; per-operation kinds and runner-local artifact truth are forbidden.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "fn_composition"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 30,
+            "quote": "ABG.Fn composition is runtime-governance law over declared GTL hosts. It is not\na product-specific schema engine, prompt strategy language, or replacement for a\nGTL graph function.\n\nGTL declares where composition attaches. The GTL validator checks the closed\ncomposition relations. HoG consumes the selected composition during direct\ntraversal. ABG admits its identity and runtime facts, records evidence under\nit, derives replay projections, and refuses closure when composition identity\nis absent, stale, malformed, or mismatched.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FScope",
+            "start_line": 22
+          }
+        ],
+        "key": "composition_host_ownership",
+        "statement": "Composition is runtime governance over GTL hosts, not a domain schema engine, prompt strategy language or graph-function replacement. GTL declares attachment; GTL validator checks closed relations; HoG consumes during direct traversal; ABG admits identity/facts/evidence, derives replay and refuses closure for absent/stale/malformed/mismatched composition identity.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "residual",
+        "keys": [
+          "runtime_event_truth",
+          "actor_process_evidence",
+          "typed_payload_rejection",
+          "admission_ordinal",
+          "public_artifact_admission",
+          "artifact_availability_admitted_to_events",
+          "event_envelope_and_lifecycle",
+          "actor_failure_and_causal_capture",
+          "modulation_temporal_event_law",
+          "one_surface_event_ownership",
+          "probe_event_truth",
+          "durability_and_event_scope",
+          "ordinal_fail_closed_and_forgery",
+          "event_census_conformance",
+          "observation_and_ingress_boundaries",
+          "public_artifact_boundary_contract",
+          "ordinal_latest_selection_gap",
+          "ordinal_context_gap"
+        ],
+        "reason": "Event law retained with both explicitly documented implementation gaps; no implementation conformance is claimed.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "runtime_event_families",
+          "external_machine_event_roster"
+        ],
+        "reason": "Family map and tuner exclusion retained; authoritative full roster remains external.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FCanonical%20Runtime%20Event-Kind%20Census"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "fn_composition_metadata",
+          "fn_composition_provenance_unresolved"
+        ],
+        "reason": "Metadata retained with unresolved historical acceptance and derivations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "fn_composition"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "composition_host_ownership"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar%2FScope"
+      }
+    ],
+    "latitude": [],
+    "limitations": [
+      "The source explicitly reports two admission-ordinal implementation gaps, preserved as residuals rather than erased by normative requirement statements.",
+      "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 89,
+            "quote": "**REQ-R-ABG3-EVENTS-032**: Every effectful public operation shall cross into ABG runtime truth by exactly one of two routes: its semantic owner emits admitted runtime events whose Event Calculus effects are declared, or its semantic owner produces an immutable authoritative artifact and ABG admits one `public_operation_artifact_admitted` boundary event before any runtime consumer uses that artifact. The generic boundary event shall preserve the operation identity, structural definition key and definition digest, stable authority-scope ref and canonical scope digest, invocation ref and digest, owner-admitted disposition, immutable artifact ref and digest, causation refs, and correlation id. Its definition-key operation identity shall equal the event operation identity. It shall initiate only the replay-derived `public_operation_artifact_available` fluent, keyed by the stable authority-scope ref rather than the invocation ref. Shared-store artifact projections shall admit one exact scope ref and digest and shall fail closed when the same scope ref appears under another digest. It shall not own or infer result meaning, assessment, closure, retry, continuation, next action, or ticket mutation. Per-operation boundary event kinds and runner-local artifact truth are forbidden.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 89
+          }
+        ],
+        "key": "artifact_availability_admitted_to_events",
+        "kind": "admitted_through",
+        "meaning": "An immutable owner artifact becomes available to runtime only after the generic ABG boundary admission.",
+        "source_key": "public_artifact_admission",
+        "target_key": "runtime_event_truth"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Normative latest-selection and ingest guarantees are requirements with explicitly reported unrealized folds, not current verified capability.",
+        "grounding": [
+          {
+            "end_line": 70,
+            "quote": "Gap: latest-selecting folds still decide by array/caller order rather than admission ordinal — at minimum `deriveConstructionPressureProjection` (latest package ref taken in event-array order) and the runner's `latestSelectedGraphFunctionEvent` (reverse array scan). Collision/unorderable-candidate fail-closed ingest is likewise not realized in those folds. Owner: T-244 routing; implementation requires a singular realization leaf.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 70
+          }
+        ],
+        "key": "ordinal_latest_selection_gap",
+        "subject_key": "admission_ordinal",
+        "uncertainty": "Source reports deriveConstructionPressureProjection and latestSelectedGraphFunctionEvent still select by array/caller order, without collision/unorderable fail-closed ingest; T-244 routing requires one realization leaf."
+      },
+      {
+        "consequence": "Do not claim universal per-store stamping/forgery rejection from the stated law.",
+        "grounding": [
+          {
+            "end_line": 74,
+            "quote": "Gap: the default emitter context is a module-level replay-tolerant singleton, not per-store state; emission paths that do not adopt a seeded live context inherit it, so live-forgery rejection is realized only where a live context is explicitly adopted (the persisted-store append path), not universally. Owner: T-244 routing; implementation requires a singular realization leaf.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FAcceptance%20Criteria",
+            "start_line": 74
+          }
+        ],
+        "key": "ordinal_context_gap",
+        "subject_key": "admission_ordinal",
+        "uncertainty": "Source reports a module-level replay-tolerant singleton remains default; live forgery rejection exists only on explicitly seeded live paths such as persisted append, not universally; T-244 routing needs one realization leaf."
+      },
+      {
+        "consequence": "Examples cannot establish complete event union or conformance.",
+        "grounding": [
+          {
+            "end_line": 95,
+            "quote": "The runtime event union decomposes into these families. Example kinds are\nillustrative members drawn from the published `RuntimeEvent` contract; the\npublished `RUNTIME_EVENT_KIND_VALUES` roster owns the complete set.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FCanonical%20Runtime%20Event-Kind%20Census",
+            "start_line": 93
+          }
+        ],
+        "key": "external_machine_event_roster",
+        "subject_key": "runtime_event_families",
+        "uncertainty": "Complete RUNTIME_EVENT_KIND_VALUES roster is referenced, not supplied."
+      },
+      {
+        "consequence": "Record claimed provenance without independently establishing acceptance or linked authority.",
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-05-16\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [DESIGN_MODULE_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/DESIGN_MODULE_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-L-GTL3-GRAPHVECTOR.md](../gtl/REQ-L-GTL3-GRAPHVECTOR.md), [REQ-L-GTL3-EVALUATOR.md](../gtl/REQ-L-GTL3-EVALUATOR.md), [REQ-L-GTL3-HOOKS.md](../gtl/REQ-L-GTL3-HOOKS.md), [REQ-R-ABG3-ASSURANCE.md](REQ-R-ABG3-ASSURANCE.md), [REQ-R-ABG3-PAYLOAD.md](REQ-R-ABG3-PAYLOAD.md), [REQ-R-ABG3-POLICY.md](REQ-R-ABG3-POLICY.md), [T-134](../../../.ai-workspace/tickets/completed/T-134-define-abg-fn-composition-grammar.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FN-COMPOSITION.md#REQ-R-ABG3-FN-COMPOSITION%20%E2%80%94%20ABG.Fn%20Composition%20Grammar",
+            "start_line": 3
+          }
+        ],
+        "key": "fn_composition_provenance_unresolved",
+        "subject_key": "fn_composition_metadata",
+        "uncertainty": "Referenced acceptance evidence and derivation contents are absent."
+      }
+    ]
+  },
+  "answer_sha256": "e12559f08ae2674c6a2f3fb0c6f0efdbc6c1703de0323e112205ef7d4de8804c",
+  "author": "codex-runtime-frame",
+  "chunk": "chunk-55f497054a43b69cc9b3",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "ead79b1d45b05bdca0bc7f4546f8f566e048451e5ca4571762d0b503f6bd6c02"
+}

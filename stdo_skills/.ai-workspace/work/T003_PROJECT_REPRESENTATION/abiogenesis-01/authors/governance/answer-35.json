@@ -1,0 +1,821 @@
+{
+  "concepts": [
+    {
+      "key": "product_policy",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 33,
+          "quote": "**REQ-P-POLICY-001**: Product policy (feature closing, visibility rules, human proxy mode, CLI behavior) shall be expressed as product-layer requirements, not GTL language law, HoG traversal law, or ABG admission law.\n\n**REQ-P-POLICY-002**: Policy may consume GTL tags, evaluator results, and convergence state, but policy logic shall not be embedded in GTL validation or the HoG traversal kernel.\n\n**REQ-P-POLICY-003**: CLI and control-plane summaries shall be product-layer projections over canonical ABG run truth. They shall not define independent boolean lifecycle truth that can contradict the canonical run/event model."
+        }
+      ],
+      "label": "Product-layer policy",
+      "definition": "Feature closing, visibility, human proxy and CLI behavior are product requirements above language, HoG traversal and ABG admission law.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "proof_hold",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 37,
+          "end_line": 43,
+          "quote": "**REQ-P-POLICY-005**: Repeated proof failure on one current work identity shall project to product-layer control-plane hold truth. That hold truth shall be replay-derived from canonical `proof_failed`, `proof_passed`, and scoped `reset` events rather than hidden controller memory or a rival mutable run-state store.\n\n**REQ-P-POLICY-006**: Product-layer proof-hold behavior shall resolve through one consumed hold-policy surface. That resolved surface shall govern whether hold is enabled and the failure threshold. Any runtime specialization shall resolve into that one product-consumed policy surface rather than becoming CLI-local truth.\n\n**REQ-P-POLICY-007**: The proof-hold identity shall be keyed by `edge`, `work_key`, `spec_hash`, and `workflow_version`. Hold projection shall survive process restart and shall clear only by lawful replay-visible causes: proof success on the same identity, identity supersession by new `spec_hash` or `workflow_version`, or an explicit scoped `reset` over the held boundary.\n\n**REQ-P-POLICY-008**: Product-layer advancement and observation surfaces shall consume the same proof-hold projection. `start`, `gaps`, and live run status may report hold, but they shall not redefine ABG run lifecycle truth in order to do so."
+        }
+      ],
+      "label": "Replay-derived proof hold",
+      "definition": "Repeated proof failures on current identity become control-plane hold from canonical proof_failed/proof_passed/scoped reset events, governed by one consumed enabled/threshold policy.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "traversal_request",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 45,
+          "end_line": 52,
+          "quote": "**REQ-P-POLICY-009**: `start` traversal request truth shall be expressed as `scope + target + until`. Supervision, F_H proxying, and similar recovery behavior shall be modeled as orthogonal product-policy control modes outside that traversal request grammar.\n\n**REQ-P-POLICY-010**: When product policy publishes `asset:<published_handle>` as a `start` target family, that family shall resolve only through one published operator asset registry and ownership surface. Each published asset handle shall resolve to one governing traversal boundary, and unresolved, unowned, unsupported, or ambiguously owned asset handles shall fail closed.\n\n**REQ-P-POLICY-011**: The current public `start` control-mode families shall be:\n- `fh_mode`\n- `root_mode`\nThose mode families are product-policy truth above the adapter. Literal flags or service parameters are bindings of those same mode families, not the source of truth for them."
+        }
+      ],
+      "label": "Public traversal request",
+      "definition": "start request grammar is scope + public target + until; supervision and F_H proxying are orthogonal Product control modes.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "root_mode",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 59,
+          "end_line": 67,
+          "quote": "**REQ-P-POLICY-013**: The current public `root_mode` values shall be:\n- `direct`\n- `supervised`\n`supervised` is the default. It selects the admitted system program and session\npolicy that own convergence inside GTL/HoG/ABG; it does not authorize a CLI,\nSDK, service, or installer loop around repeated starts. `direct` selects one\nadmitted entry traversal without that Product policy overlay. `root_mode` shall\nremain outside `scope + target + until` and shall be lawful only when\n`until = converged`."
+        }
+      ],
+      "label": "root_mode control",
+      "definition": "direct or supervised, with supervised default; lawful only for until=converged and outside traversal grammar. Supervised selects admitted system program/session policy owning convergence; direct selects one entry traversal without that overlay.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "fh_mode",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 54,
+          "end_line": 57,
+          "quote": "**REQ-P-POLICY-012**: Reserved for 5.1 native human interaction. Its `fh_mode` values are:\n- `direct`\n- `human-proxy`\n`direct` is the default. `human-proxy` is a public operator option that may proxy F_H review under product policy. `fh_mode` shall remain outside `scope + target + until` and shall be lawful only when `until = converged`."
+        }
+      ],
+      "label": "fh_mode control",
+      "definition": "Reserved 5.1 native-human-interaction family with direct default or optional human-proxy review; lawful only until=converged outside traversal grammar.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "one_surface_workflow",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 69,
+          "end_line": 76,
+          "quote": "**REQ-P-POLICY-014**: The primary operator workflow shall be an interactive\nOne Surface loop declared by an admitted GTL program, traversed by HoG, and\nadmitted as runtime truth by ABG. An\noperator shall be able to define or refine current assets, invoke or start\nadmitted work, receive one truthful stop, hold, or gap signal, remove one\nambiguity or roadblock through the interactive agentic coder surface, inspect\nthe current projection, and continue the same lawful workflow without\ninventing a second runtime or controller model."
+        }
+      ],
+      "label": "Interactive One Surface workflow",
+      "definition": "Admitted GTL declares the primary loop, HoG traverses and ABG admits its truth: refine assets, start admitted work, receive truthful stop/hold/gap, resolve roadblock in agentic coder, inspect and continue lawfully.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "public_function_family",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPublic%20Operation%20Contract",
+          "start_line": 109,
+          "end_line": 116,
+          "quote": "**REQ-P-POLICY-019**: Abiogenesis shall publish one versioned public operation\ncontract shared by its SDK and command-line adapter. One closed\n`PublicFunctionDefinition<K>` family shall own every operation identity,\nvariant, request/result/refusal contract, authority and effect class,\noperation-indexed workspace-binding requirement, capability ref, and adapter\ncoordinate. The contract shall be source-blind and shall classify every\nfunction as public read, public runtime mutation or attestation,\ninstall/configuration operation, release operation, or internal-only behavior."
+        }
+      ],
+      "label": "PublicFunctionDefinition<K>",
+      "definition": "One versioned closed family shared by SDK/CLI owns operation identities/variants, request/result/refusal, authority/effect class, operation-indexed binding, capabilities and adapter coordinates; source-blind classification separates public read, runtime mutation/attestation, install/config, release and internal-only.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "run_invocation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FTraversal%20And%20Run%20Operations",
+          "start_line": 163,
+          "end_line": 174,
+          "quote": "**REQ-P-POLICY-023**: The `start` variant of\n`abg.operation.run.invoke` shall accept one admitted traversal request with\n`scope`, public `target`, and `until`, plus declared session policy and\ncapability inputs such as control modes and catalog view. It shall resolve only\npublic target identities inside one admitted GTL program and shall return a\ntyped run and GraphCall identity, current disposition, stop or terminal\nclassification, and relevant result, gap, interaction, evidence, and replay\nreferences. Public ingress admits and transports the request. GTL owns the\nselected program's topology and available routes, the validator checks its\nstatic relations, HoG traverses it, selected implementation bindings realize\ndeclared leaf effects, and ABG admits target selection, invocation, result,\nevidence, continuation, and closure truth."
+        }
+      ],
+      "label": "run.invoke start",
+      "definition": "Admitted scope/target/until plus session policy/capabilities/view selects only public identities inside one admitted GTL program and returns Run/GraphCall identity, disposition, stop/terminal and result/gap/interaction/evidence/replay refs.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "run_continuation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FTraversal%20And%20Run%20Operations",
+          "start_line": 185,
+          "end_line": 190,
+          "quote": "**REQ-P-POLICY-024**: `abg.operation.run.continue` shall identify an existing\nadmitted run or continuation boundary, the acting operator, and any declared\ncontinuation input. ABG shall validate substrate, admitted-program, binding, and\ndeclaration compatibility and resolve the lawful frontier. The caller shall not\nconstruct, select, or mutate private frame, frontier, continuation, traversal,\nretry, intent, or action-selection state."
+        }
+      ],
+      "label": "run.continue",
+      "definition": "Existing admitted Run/continuation plus operator/declared input is validated by ABG for substrate, program, binding and declaration compatibility before lawful frontier resolution.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "project_read",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FTraversal%20And%20Run%20Operations",
+          "start_line": 198,
+          "end_line": 216,
+          "quote": "**REQ-P-POLICY-026**: The runtime-status variant of\n`abg.operation.project.read` shall be a read-only projection for an admitted run\nor GraphCall identity. It shall report the canonical current disposition, stop\nor terminal classification, active or pending interaction, relevant result,\ngap, evidence, and replay references, and substrate identity without redefining\nlifecycle truth.\n\n**REQ-P-POLICY-027**: The result variant of\n`abg.operation.project.read` shall be a read-only projection of an admitted\nGraphCall or result identity. It shall preserve the declared result contract,\ndisposition, closure eligibility, residuals, evidence, artifact, assessment,\nprovenance, and replay references applicable to that result.\n\n**REQ-P-POLICY-028**: The replay variant of\n`abg.operation.project.read` shall be a read-only query over admitted event and\nprojection truth for a workspace, run, GraphCall, or supported subordinate\nidentity. Its ordering, cursor or range, event identities, source identities,\nand projection basis shall be explicit. It shall not re-execute probabilistic\nwork or mutate runtime truth."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FGap%2C%20Action%2C%20And%20Human%20Interaction%20Operations",
+          "start_line": 220,
+          "end_line": 232,
+          "quote": "**REQ-P-POLICY-029**: The gaps variant of\n`abg.operation.project.read` shall be a read-only replay-derived projection. It\nshall expose typed stop, hold, gap, missing-capability, unresolved-observation,\nand pending-human-interaction truth with implicated asset, GraphFunction,\nreason, evidence, and replay references sufficient for the operator to choose a\nlawful next interaction. Reading gaps shall not run `evalGap` or `evaluateNext`.\n\n**REQ-P-POLICY-030**: The lawful-actions variant of\n`abg.operation.project.read` shall project the current replay-derived\n`NextActionProjection` at an admitted frontier. Each row shall identify its\naction kind, public target or pending-interaction identity, eligibility or\nblocker, required input or capability, provenance, and replay basis. Querying\nactions shall not run `evaluateNext`, select, admit, or execute one."
+        }
+      ],
+      "label": "project.read projections",
+      "definition": "Read-only views of canonical admitted runtime/event/projection truth, including status, results, replay, gaps and lawful actions.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "human_interaction_response",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FGap%2C%20Action%2C%20And%20Human%20Interaction%20Operations",
+          "start_line": 234,
+          "end_line": 245,
+          "quote": "**REQ-P-POLICY-031**: Reserved for 5.1 native human interaction. The closed `select | approve | reject | assess |\nanswer_escalation` variants of `abg.operation.interaction.respond` shall support\nan existing escalation or pending human interaction. Every request shall\nidentify the pending interaction, actor, declared decision or response contract,\nsupplied value or choice, evidence references, and capability provenance\nrequired by that interaction.\n\n**REQ-P-POLICY-032**: Reserved for 5.1 native human response admission. An F_H request that does not match one pending interaction,\ndeclared choice or response contract, actor capability, or current basis shall\nfail as a typed refusal. A human response shall be admitted as actor-attributed\ntruth; it shall not directly select private traversal, emit arbitrary runtime\nevents, or decide closure outside ABG projection law."
+        }
+      ],
+      "label": "5.1 interaction.respond",
+      "definition": "Reserved native select/approve/reject/assess/answer_escalation variants support an existing pending interaction and identify interaction, actor, declared response contract, value/choice, evidence and capability provenance.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "runtime_attestation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRetained%20Public%20Behavior%20Variants",
+          "start_line": 263,
+          "end_line": 273,
+          "quote": "**REQ-P-POLICY-034**: `abg.operation.result.assess` shall admit assessed F_P result truth only\nfor the expected result, assessment, actor or capability, contract, evidence,\nand current basis identities. Its output shall distinguish admitted, rejected,\nblocked, and retry-eligible non-close truth. Assessing prose alone shall not\nbecome runtime or closure truth.\n\n**REQ-P-POLICY-035**: `abg.operation.witness.admit` shall retain the public acts `reprice`,\n`attest`, `hygiene-stamp`, `intake`, `run-resumed`, and `run-stopped`. A witness\nrequest shall identify its actor, subject, typed reason or payload, evidence,\nand applicable run, segment, workspace, or basis. Each accepted witness act\nshall be an actor-attributed admitted event."
+        }
+      ],
+      "label": "Runtime assessment and witnessed acts",
+      "definition": "result.assess admits expected F_P result/assessment/actor-capability/contract/evidence/current-basis truth; witness.admit covers reprice, attest, hygiene-stamp, intake, run-resumed and run-stopped.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "conformance_evaluation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRetained%20Public%20Behavior%20Variants",
+          "start_line": 286,
+          "end_line": 291,
+          "quote": "**REQ-P-POLICY-038**: The public `gtl_program` variant of\n`abg.operation.conformance.evaluate` shall accept a submitted GTL program and\nreturn a typed conformance result with program or inventory\nidentity, passed or failed disposition, stable diagnostics, violated law or\ncontract references, evidence, and admissible repair affordances. It shall not\nsilently repair or execute an inadmissible program."
+        }
+      ],
+      "label": "gtl_program conformance.evaluate",
+      "definition": "Submitted GTL program receives typed program/inventory identity, pass/fail, stable diagnostics, violated law/contracts, evidence and admissible repair affordances.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "release_snapshot",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRetained%20Public%20Behavior%20Variants",
+          "start_line": 293,
+          "end_line": 303,
+          "quote": "**REQ-P-POLICY-039**: `abg.operation.product.materialize` variants,\n`abg.operation.product.install`, and `abg.operation.release.snapshot` shall each\npublish exact request, result, refusal, provenance, and exit contracts. Their\noutputs shall identify the affected workspace, product, configuration, or\nrelease identities and the manifests or evidence that carry the operation\nresult.\n\n**REQ-P-POLICY-040**: `abg.operation.release.snapshot` shall refuse a release\nsubject unless its exact same-subject and same-law-basis qualification verdict\nis green with an empty bypass set. A snapshot or release cut shall be output\nonly; it shall not qualify itself or serve as candidate-freeze input."
+        }
+      ],
+      "label": "Release snapshot",
+      "definition": "product.materialize, product.install and release.snapshot each publish exact request/result/refusal/provenance/exit contracts and affected workspace/product/configuration/release identities plus manifests/evidence.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "traversal_request_to_invocation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FTraversal%20And%20Run%20Operations",
+          "start_line": 163,
+          "end_line": 170,
+          "quote": "**REQ-P-POLICY-023**: The `start` variant of\n`abg.operation.run.invoke` shall accept one admitted traversal request with\n`scope`, public `target`, and `until`, plus declared session policy and\ncapability inputs such as control modes and catalog view. It shall resolve only\npublic target identities inside one admitted GTL program and shall return a\ntyped run and GraphCall identity, current disposition, stop or terminal\nclassification, and relevant result, gap, interaction, evidence, and replay\nreferences. Public ingress admits and transports the request. GTL owns the"
+        }
+      ],
+      "kind": "input_to",
+      "source_key": "traversal_request",
+      "target_key": "run_invocation",
+      "meaning": "start consumes an admitted traversal request and declared session-policy/capability inputs.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "proof_hold_identity_and_clearing",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 37,
+          "end_line": 43,
+          "quote": "**REQ-P-POLICY-005**: Repeated proof failure on one current work identity shall project to product-layer control-plane hold truth. That hold truth shall be replay-derived from canonical `proof_failed`, `proof_passed`, and scoped `reset` events rather than hidden controller memory or a rival mutable run-state store.\n\n**REQ-P-POLICY-006**: Product-layer proof-hold behavior shall resolve through one consumed hold-policy surface. That resolved surface shall govern whether hold is enabled and the failure threshold. Any runtime specialization shall resolve into that one product-consumed policy surface rather than becoming CLI-local truth.\n\n**REQ-P-POLICY-007**: The proof-hold identity shall be keyed by `edge`, `work_key`, `spec_hash`, and `workflow_version`. Hold projection shall survive process restart and shall clear only by lawful replay-visible causes: proof success on the same identity, identity supersession by new `spec_hash` or `workflow_version`, or an explicit scoped `reset` over the held boundary.\n\n**REQ-P-POLICY-008**: Product-layer advancement and observation surfaces shall consume the same proof-hold projection. `start`, `gaps`, and live run status may report hold, but they shall not redefine ABG run lifecycle truth in order to do so."
+        }
+      ],
+      "applies_to_keys": [
+        "proof_hold"
+      ],
+      "statement": "Key hold by edge, work_key, spec_hash and workflow_version; survive process restart; clear only same-identity proof success, superseding spec_hash/workflow_version or explicit scoped reset. Runtime specialization resolves into the same consumed policy; start/gaps/status and advancement consume one projection without rival state or lifecycle redefinition.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "published_asset_resolution",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 47,
+          "end_line": 47,
+          "quote": "**REQ-P-POLICY-010**: When product policy publishes `asset:<published_handle>` as a `start` target family, that family shall resolve only through one published operator asset registry and ownership surface. Each published asset handle shall resolve to one governing traversal boundary, and unresolved, unowned, unsupported, or ambiguously owned asset handles shall fail closed."
+        }
+      ],
+      "applies_to_keys": [
+        "traversal_request"
+      ],
+      "statement": "When asset:<published_handle> is published as a target, one operator registry/ownership surface maps each handle to one governing traversal boundary; unresolved, unowned, unsupported or ambiguous ownership fails closed.",
+      "uncertainty": "",
+      "conditions": [
+        "Product policy publishes asset:<published_handle> target family."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "control_mode_ownership",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 49,
+          "end_line": 67,
+          "quote": "**REQ-P-POLICY-011**: The current public `start` control-mode families shall be:\n- `fh_mode`\n- `root_mode`\nThose mode families are product-policy truth above the adapter. Literal flags or service parameters are bindings of those same mode families, not the source of truth for them.\n\n**REQ-P-POLICY-012**: Reserved for 5.1 native human interaction. Its `fh_mode` values are:\n- `direct`\n- `human-proxy`\n`direct` is the default. `human-proxy` is a public operator option that may proxy F_H review under product policy. `fh_mode` shall remain outside `scope + target + until` and shall be lawful only when `until = converged`.\n\n**REQ-P-POLICY-013**: The current public `root_mode` values shall be:\n- `direct`\n- `supervised`\n`supervised` is the default. It selects the admitted system program and session\npolicy that own convergence inside GTL/HoG/ABG; it does not authorize a CLI,\nSDK, service, or installer loop around repeated starts. `direct` selects one\nadmitted entry traversal without that Product policy overlay. `root_mode` shall\nremain outside `scope + target + until` and shall be lawful only when\n`until = converged`."
+        }
+      ],
+      "applies_to_keys": [
+        "root_mode",
+        "fh_mode"
+      ],
+      "statement": "fh_mode/root_mode are Product truth; literal flags/service parameters only bind them. Supervised mode grants no CLI/SDK/service/installer loop over repeated starts.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "handoff_and_operator_reporting",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 35,
+          "end_line": 35,
+          "quote": "**REQ-P-POLICY-004**: Product-layer `start` control modes shall treat yielded ABG handoff truth as a lawful control seam. They shall not flatten yielded handoff into terminal success and shall not blindly redispatch the same constructive lane without first honoring the yielded observer or routing handoff."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 84,
+          "end_line": 89,
+          "quote": "**REQ-P-POLICY-016**: Product-layer stop, hold, and gap reporting for the\ninteractive operator workflow shall be explicit enough that an operator can\ndecide the next lawful action: continue by restarting `start`, inspect\nwith `gaps`, remove an ambiguity, satisfy a missing capability, or supply\nhuman decision. Downstream wrappers shall not need to reconstruct that next\nstep from hidden controller-local state."
+        }
+      ],
+      "applies_to_keys": [
+        "one_surface_workflow"
+      ],
+      "statement": "Yielded ABG handoff is a lawful seam, never terminal success or blind redispatch before honoring observer/routing handoff. Stop/hold/gap reports must let operators choose start continuation, gaps inspection, ambiguity removal, missing capability or human decision without hidden controller state.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "gap_triage_ownership",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 100,
+          "end_line": 105,
+          "quote": "**REQ-P-POLICY-018**: Gap triage shall be downstream product policy expressed\nthrough published graph-function-addressable work. ABG may expose replay-derived\ngap, hold, stop, continuation, and unresolved-observation truth, but it shall\nnot own ticket priority, ticket closure, backlog state, or process mechanics.\nWhen a downstream product creates or changes a ticket from gap truth, that\nbehavior shall be governed by the downstream product and `TICKET_METHOD.md`."
+        }
+      ],
+      "applies_to_keys": [
+        "product_policy"
+      ],
+      "statement": "Gap triage is downstream policy expressed as published graph-function-addressable work. ABG exposes replay-derived gap/hold/stop/continuation/unresolved observations but owns no ticket priority/closure/backlog/process; downstream ticket changes follow its Product and TICKET_METHOD.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "public_contract_completeness",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPublic%20Operation%20Contract",
+          "start_line": 118,
+          "end_line": 126,
+          "quote": "**REQ-P-POLICY-020**: Each public operation contract row shall define its stable\noperation identity, required and optional inputs, defaults, admitted value\ndomains, capability requirements, input and output contract identities,\nsuccessful and non-success dispositions, typed errors or refusals, exit\nsemantics, replay or provenance effects, whether it reads or changes truth, and\nthe operation-and-variant-indexed workspace-binding requirement\n`forbidden | exactly_one`. No concrete variant shall carry a freely optional\nbinding, and no public adapter shall supply missing contract meaning from local\nconvention."
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_family"
+      ],
+      "statement": "Each row defines stable identity, required/optional inputs, defaults, value domains, capabilities, input/output contracts, success/non-success, errors/refusals, exits, replay/provenance and read/change effects. Workspace binding is per operation/variant forbidden or exactly_one, never freely optional; adapters supply no omitted meaning by convention.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "public_operation_behavior_closure",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPublic%20Operation%20Contract",
+          "start_line": 128,
+          "end_line": 154,
+          "quote": "**REQ-P-POLICY-021**: The public operation set shall be the complete\nProduct-derived family in `REQ-P-PUBLIC-CONTRACTS-008`. Its derived count is\nnot Product authority. The closed variants shall retain\nall of the following product behavior:\n\n- workspace create, open, and immutable product binding;\n- product verification, resolution, installation, context bootstrap, and\n  configuration materialization;\n- catalog admission, narrowing view derivation, list and describe projection,\n  non-callable node-type and overlay application, and GraphFunction invocation;\n- start and invoke through one run-invocation function, plus replay-derived\n  continuation through one run-continuation function;\n- status, result, evidence, replay, gap, and lawful-action reads through one\n  typed projection function;\n- F_H selection, approval, rejection, assessment, and escalation response;\n- result assessment and witnessed-act admission;\n- GTL-program conformance evaluation; and\n- qualified RC and tapped-release snapshot materialization.\n\nTenant or host bindings may express a variant through ergonomic subcommands or\ntyped SDK methods, but shall bind one of those exact identities and shall not\nretain a legacy identity, compatibility facade, parallel register, default, or\nfallback. This is the STDO hard break.\n\nObserver-report, observer-drafts, tuning-report, and tuning-transition\nvariants are planned 5.1 Product contracts. They are not members of the 5.0\npublic operation family."
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_family"
+      ],
+      "statement": "Complete Product-derived family retains workspace create/open/bind; product verify/resolve/install/bootstrap/configure; catalog admit/view/list/describe/noncallable apply/GraphFunction invoke; shared run invoke(start/invoke) and continue; one projection family status/result/evidence/replay/gap/actions; human selection/approval/rejection/assessment/escalation; result assessment/witness acts; GTL conformance; qualified RC/tapped snapshots. Count is derived, not authority. Host ergonomic commands/methods bind exact identities with no legacy identity/facade/register/default/fallback (hard break). Observer-report/drafts and tuning-report/transition are planned 5.1, outside 5.0.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "sdk_cli_semantic_parity",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPublic%20Operation%20Contract",
+          "start_line": 156,
+          "end_line": 159,
+          "quote": "**REQ-P-POLICY-022**: The public SDK and CLI shall expose equivalent operation\nsemantics. Given the same admitted inputs and bound product identities, they\nshall preserve the same operation identity, validation, defaults, disposition,\ntyped result or refusal, event or provenance effects, and exit classification."
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_family"
+      ],
+      "statement": "Same admitted inputs and bound identities yield same SDK/CLI operation, validation, defaults, dispositions, result/refusal, event/provenance and exit classification.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "invocation_authority_partition",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FTraversal%20And%20Run%20Operations",
+          "start_line": 170,
+          "end_line": 183,
+          "quote": "references. Public ingress admits and transports the request. GTL owns the\nselected program's topology and available routes, the validator checks its\nstatic relations, HoG traverses it, selected implementation bindings realize\ndeclared leaf effects, and ABG admits target selection, invocation, result,\nevidence, continuation, and closure truth.\n\nWhen `root_mode = direct`, `start` selects one admitted entry traversal without\nrequiring One Surface, `evaluateNext`, or a `ConstructionIntent`. When\n`root_mode = supervised`, it selects the admitted standard system program and\nthat program owns One Surface semantic ordering and action topology;\nProduct-owned GraphFunctions own the four synthesis and evaluation contracts,\nand ABG separately admits selected-action and construction-intent truth. Neither\nthe program nor HoG may mint runtime truth, and ABG shall not reorder semantic\nauthorities, select traversal topology, or become a scheduler."
+        }
+      ],
+      "applies_to_keys": [
+        "run_invocation",
+        "root_mode"
+      ],
+      "statement": "Ingress admits/transports; GTL owns topology/routes; validator static relations; HoG traversal; implementation bindings leaf effects; ABG target/invocation/result/evidence/continuation/closure facts. direct requires neither One Surface, evaluateNext nor ConstructionIntent. supervised selects standard admitted system program owning semantic ordering/action topology, with Product GraphFunctions owning four synthesis/evaluation contracts and ABG separately admitting action/intent. Program/HoG mint no runtime truth; ABG neither reorders semantic authorities nor selects topology/schedules.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "continuation_state_ownership",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FTraversal%20And%20Run%20Operations",
+          "start_line": 185,
+          "end_line": 196,
+          "quote": "**REQ-P-POLICY-024**: `abg.operation.run.continue` shall identify an existing\nadmitted run or continuation boundary, the acting operator, and any declared\ncontinuation input. ABG shall validate substrate, admitted-program, binding, and\ndeclaration compatibility and resolve the lawful frontier. The caller shall not\nconstruct, select, or mutate private frame, frontier, continuation, traversal,\nretry, intent, or action-selection state.\n\n**REQ-P-POLICY-025**: Repeated use of the `start` variant over the same admitted\nprogram, immutable workspace binding, and public target may continue the primary\noperator workflow only through current replay and admitted state. It shall not\ncreate a caller-local continuation model or silently discard prior stop, hold,\ngap, F_H, result, or provenance truth."
+        }
+      ],
+      "applies_to_keys": [
+        "run_continuation",
+        "run_invocation"
+      ],
+      "statement": "Caller cannot construct/select/mutate private frame/frontier/continuation/traversal/retry/intent/action state. Repeated start over same program/binding/target may continue only from current replay/admitted state, never caller-local continuation or loss of prior stops/holds/gaps/F_H/results/provenance.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "read_variants_content",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FTraversal%20And%20Run%20Operations",
+          "start_line": 198,
+          "end_line": 216,
+          "quote": "**REQ-P-POLICY-026**: The runtime-status variant of\n`abg.operation.project.read` shall be a read-only projection for an admitted run\nor GraphCall identity. It shall report the canonical current disposition, stop\nor terminal classification, active or pending interaction, relevant result,\ngap, evidence, and replay references, and substrate identity without redefining\nlifecycle truth.\n\n**REQ-P-POLICY-027**: The result variant of\n`abg.operation.project.read` shall be a read-only projection of an admitted\nGraphCall or result identity. It shall preserve the declared result contract,\ndisposition, closure eligibility, residuals, evidence, artifact, assessment,\nprovenance, and replay references applicable to that result.\n\n**REQ-P-POLICY-028**: The replay variant of\n`abg.operation.project.read` shall be a read-only query over admitted event and\nprojection truth for a workspace, run, GraphCall, or supported subordinate\nidentity. Its ordering, cursor or range, event identities, source identities,\nand projection basis shall be explicit. It shall not re-execute probabilistic\nwork or mutate runtime truth."
+        }
+      ],
+      "applies_to_keys": [
+        "project_read"
+      ],
+      "statement": "Status binds admitted Run/GraphCall and reports canonical disposition/stop/terminal, pending interaction, result/gap/evidence/replay and substrate. Result binds admitted GraphCall/result and preserves contract/disposition/closure eligibility/residuals/evidence/artifact/assessment/provenance/replay. Replay binds workspace/Run/GraphCall/supported subordinate identity with explicit order/cursor/range/event/source/projection basis and never re-executes F_P or mutates truth.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "gap_and_action_reads",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FGap%2C%20Action%2C%20And%20Human%20Interaction%20Operations",
+          "start_line": 220,
+          "end_line": 232,
+          "quote": "**REQ-P-POLICY-029**: The gaps variant of\n`abg.operation.project.read` shall be a read-only replay-derived projection. It\nshall expose typed stop, hold, gap, missing-capability, unresolved-observation,\nand pending-human-interaction truth with implicated asset, GraphFunction,\nreason, evidence, and replay references sufficient for the operator to choose a\nlawful next interaction. Reading gaps shall not run `evalGap` or `evaluateNext`.\n\n**REQ-P-POLICY-030**: The lawful-actions variant of\n`abg.operation.project.read` shall project the current replay-derived\n`NextActionProjection` at an admitted frontier. Each row shall identify its\naction kind, public target or pending-interaction identity, eligibility or\nblocker, required input or capability, provenance, and replay basis. Querying\nactions shall not run `evaluateNext`, select, admit, or execute one."
+        }
+      ],
+      "applies_to_keys": [
+        "project_read"
+      ],
+      "statement": "Gaps expose typed stop/hold/gap/missing capability/unresolved observation/pending human truth with asset/GraphFunction/reason/evidence/replay sufficient for lawful operator choice; reads execute neither evalGap nor evaluateNext. Actions project replay-derived NextActionProjection at admitted frontier, retaining kind, public target/pending interaction, eligibility/blocker, input/capability/provenance/replay; querying cannot run evaluateNext, select, admit or execute.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "human_response_admission",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FGap%2C%20Action%2C%20And%20Human%20Interaction%20Operations",
+          "start_line": 241,
+          "end_line": 245,
+          "quote": "**REQ-P-POLICY-032**: Reserved for 5.1 native human response admission. An F_H request that does not match one pending interaction,\ndeclared choice or response contract, actor capability, or current basis shall\nfail as a typed refusal. A human response shall be admitted as actor-attributed\ntruth; it shall not directly select private traversal, emit arbitrary runtime\nevents, or decide closure outside ABG projection law."
+        }
+      ],
+      "applies_to_keys": [
+        "human_interaction_response"
+      ],
+      "statement": "Mismatched pending interaction, declared choice/contract, actor capability or current basis refuses typed. Admitted actor-attributed response cannot select private traversal, emit arbitrary events or decide closure outside ABG law.",
+      "uncertainty": "",
+      "conditions": [
+        "Reserved 5.1 native-human-response scope."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "five_zero_progression_and_handoff",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FGap%2C%20Action%2C%20And%20Human%20Interaction%20Operations",
+          "start_line": 247,
+          "end_line": 259,
+          "quote": "**REQ-P-POLICY-033**: The 5.0 public workflow uses the shared contract:\n`run.invoke(start)` reaches automatic progression, a truthful stop/hold/gap or\nterminal result, and `project.read` exposes the admitted frontier. Consequence\nmay propose useful declared work while carrying unresolved obligations only\nwhen that work's prerequisites, constraints and authority remain valid. If no\nlawful next step exists within declared limits, the result is a typed block\nand human-readable handoff. Routine work under established specification does\nnot require a human approval stage. Automatic current-intent continuation and\nnew-action admission remain distinct; neither belongs to an adapter.\n\nNative `interaction.respond` and response-driven same-run resumption are 5.1\nscope. A human clarification that changes the basis requires evaluation of\naffected work and lawful re-entry; it does not resume stale assumptions."
+        }
+      ],
+      "applies_to_keys": [
+        "one_surface_workflow"
+      ],
+      "statement": "5.0 run.invoke(start) progresses automatically to truthful stop/hold/gap/terminal and project.read exposes frontier. Consequence may propose declared work with unresolved obligations only if its prerequisites, constraints and authority stay valid; no lawful step within limits yields typed block plus readable handoff. Routine established-spec work needs no human approval stage. Automatic current-intent continuation and new-action admission remain distinct and adapter-external. Native response-driven same-Run resumption is 5.1; human clarification changing basis requires affected-work evaluation and lawful re-entry, not stale resumption.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "assessment_witness_requirements",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRetained%20Public%20Behavior%20Variants",
+          "start_line": 263,
+          "end_line": 273,
+          "quote": "**REQ-P-POLICY-034**: `abg.operation.result.assess` shall admit assessed F_P result truth only\nfor the expected result, assessment, actor or capability, contract, evidence,\nand current basis identities. Its output shall distinguish admitted, rejected,\nblocked, and retry-eligible non-close truth. Assessing prose alone shall not\nbecome runtime or closure truth.\n\n**REQ-P-POLICY-035**: `abg.operation.witness.admit` shall retain the public acts `reprice`,\n`attest`, `hygiene-stamp`, `intake`, `run-resumed`, and `run-stopped`. A witness\nrequest shall identify its actor, subject, typed reason or payload, evidence,\nand applicable run, segment, workspace, or basis. Each accepted witness act\nshall be an actor-attributed admitted event."
+        }
+      ],
+      "applies_to_keys": [
+        "runtime_attestation"
+      ],
+      "statement": "Assessment distinguishes admitted, rejected, blocked and retry-eligible non-close; prose alone is not runtime/closure truth. Witness request binds actor, subject, typed reason/payload, evidence and applicable Run/segment/workspace/basis; accepted act yields actor-attributed admitted event.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "future_observer_tuning_variants",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRetained%20Public%20Behavior%20Variants",
+          "start_line": 275,
+          "end_line": 284,
+          "quote": "**REQ-P-POLICY-036**: Reserved for ABIogenesis 5.1. When selected, the\nobserver-report and observer-drafts variants of `abg.operation.project.read`\nshall remain read-only replay-derived projections. They are not 5.0 public\noperation variants.\n\n**REQ-P-POLICY-037**: Reserved for ABIogenesis 5.1. When selected, the\ntuning-report variant of `abg.operation.project.read` shall remain read-only,\nand `abg.operation.tuning.transition` shall preserve admitted proposal,\nratification, and rejection authority. Neither identity is part of the 5.0\npublic operation family."
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_family"
+      ],
+      "statement": "Observer-report/drafts and tuning-report are reserved 5.1 read-only replay projections; tuning.transition preserves admitted proposal/ratification/rejection authority. They are not 5.0 family members.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "no_silent_conformance_repair",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRetained%20Public%20Behavior%20Variants",
+          "start_line": 286,
+          "end_line": 291,
+          "quote": "**REQ-P-POLICY-038**: The public `gtl_program` variant of\n`abg.operation.conformance.evaluate` shall accept a submitted GTL program and\nreturn a typed conformance result with program or inventory\nidentity, passed or failed disposition, stable diagnostics, violated law or\ncontract references, evidence, and admissible repair affordances. It shall not\nsilently repair or execute an inadmissible program."
+        }
+      ],
+      "applies_to_keys": [
+        "conformance_evaluation"
+      ],
+      "statement": "Conformance evaluation neither silently repairs nor executes an inadmissible program.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "snapshot_qualification_gate",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRetained%20Public%20Behavior%20Variants",
+          "start_line": 300,
+          "end_line": 303,
+          "quote": "**REQ-P-POLICY-040**: `abg.operation.release.snapshot` shall refuse a release\nsubject unless its exact same-subject and same-law-basis qualification verdict\nis green with an empty bypass set. A snapshot or release cut shall be output\nonly; it shall not qualify itself or serve as candidate-freeze input."
+        }
+      ],
+      "applies_to_keys": [
+        "release_snapshot"
+      ],
+      "statement": "Refuse a release subject unless exact same-subject/same-law-basis qualification verdict is green with empty bypass set. Snapshot/release cut is output only, neither self-qualifying nor candidate-freeze input.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "read_effect_prohibition",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRead%2C%20Mutation%2C%20And%20Adapter%20Boundaries",
+          "start_line": 307,
+          "end_line": 311,
+          "quote": "**REQ-P-POLICY-041**: Every 5.0 catalog, runtime, evidence, replay, gap, and\nlawful-action variant of\n`abg.operation.project.read` shall be a pure public read. A read shall admit no\nruntime mutation event and shall not change installed, bound, catalog, run,\ncontinuation, draft, assessment, intent, selection, or closure truth."
+        }
+      ],
+      "applies_to_keys": [
+        "project_read"
+      ],
+      "statement": "Every 5.0 catalog/runtime/evidence/replay/gap/actions read is pure: no runtime mutation event or change of installed, bound, catalog, Run, continuation, draft, assessment, intent, selection or closure truth.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "public_effect_admission",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRead%2C%20Mutation%2C%20And%20Adapter%20Boundaries",
+          "start_line": 313,
+          "end_line": 323,
+          "quote": "**REQ-P-POLICY-042**: `run.invoke`, `run.continue`,\n`interaction.respond`, `result.assess`, and `witness.admit` shall route through\none typed public-invocation admission boundary. Every accepted variant that\nchanges or attests runtime truth shall produce actor-attributed admitted event\ntruth. Admission shall not make ingress the owner of One Surface\norchestration.\n\n**REQ-P-POLICY-043**: Install, configuration, and release operations shall\nproduce typed manifest or provenance truth appropriate to their product\nboundary. They shall not be represented as ordinary traversal events merely to\nshare a transport adapter."
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_family",
+        "runtime_attestation"
+      ],
+      "statement": "run.invoke/continue, interaction.respond, result.assess and witness.admit route through one typed public-invocation boundary; accepted runtime mutation/attestation creates attributed admitted event, without ingress owning One Surface. Install/config/release produce appropriate manifests/provenance and are not forced into traversal events for adapter sharing.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "preflight_versus_fp_retry",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRead%2C%20Mutation%2C%20And%20Adapter%20Boundaries",
+          "start_line": 337,
+          "end_line": 342,
+          "quote": "**REQ-P-POLICY-046**: Deterministic configuration, product binding, catalog,\nallowlist, input-contract, and capability failures shall be typed preflight or\nadmission results and shall not consume an F_P retry budget. Malformed,\nincomplete, or contradictory F_P output after successful dispatch shall remain\ntyped retry, rejection, or blocked non-close truth under its declared response\ncontract."
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_family"
+      ],
+      "statement": "Deterministic config/binding/catalog/allowlist/input-contract/capability failure is typed preflight/admission and consumes no F_P retry budget. Malformed/incomplete/contradictory F_P output after successful dispatch is typed retry/rejection/blocked non-close under declared response contract.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "policy_consumption",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 33,
+          "quote": "**REQ-P-POLICY-001**: Product policy (feature closing, visibility rules, human proxy mode, CLI behavior) shall be expressed as product-layer requirements, not GTL language law, HoG traversal law, or ABG admission law.\n\n**REQ-P-POLICY-002**: Policy may consume GTL tags, evaluator results, and convergence state, but policy logic shall not be embedded in GTL validation or the HoG traversal kernel.\n\n**REQ-P-POLICY-003**: CLI and control-plane summaries shall be product-layer projections over canonical ABG run truth. They shall not define independent boolean lifecycle truth that can contradict the canonical run/event model."
+        }
+      ],
+      "applies_to_keys": [
+        "product_policy"
+      ],
+      "allowed": [
+        "Consume GTL tags, evaluator results and convergence state."
+      ],
+      "forbidden": [
+        "Embed policy logic in GTL validation or HoG kernel.",
+        "Create independent boolean lifecycle truth in CLI/control projections."
+      ]
+    },
+    {
+      "key": "operator_delivery_latitude",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 78,
+          "end_line": 98,
+          "quote": "**REQ-P-POLICY-015**: Website, service, or installer shells may bind the\npublic operator contract, but they shall remain delivery bindings. The primary\nflexible operator surface shall remain interactive work with an agentic coder\ninterface over substrate truth. Concrete transports such as `claude`, `codex`,\nor `gemini` are bindings of that same product law, not rival control models.\n\n**REQ-P-POLICY-016**: Product-layer stop, hold, and gap reporting for the\ninteractive operator workflow shall be explicit enough that an operator can\ndecide the next lawful action: continue by restarting `start`, inspect\nwith `gaps`, remove an ambiguity, satisfy a missing capability, or supply\nhuman decision. Downstream wrappers shall not need to reconstruct that next\nstep from hidden controller-local state.\n\n**REQ-P-POLICY-017**: Public command-line grammar shall be tenant-invariant\nfor supported GTL/ABG operator commands. Python, TypeScript, or any other\ntenant may use different executable prefixes, installation mechanics, or\npackage bindings, but the command suffix after the binary shall preserve the\nsame subcommands, public flags, target grammar, control-mode grammar, output\ncontract, and stop classification. A tenant-specific binary shall bind the\nshared product command grammar; it shall not define a rival operator command\nlanguage."
+        }
+      ],
+      "applies_to_keys": [
+        "one_surface_workflow"
+      ],
+      "allowed": [
+        "Website/service/installer shells bind the public contract.",
+        "Claude/Codex/Gemini transports bind the same interactive agentic-coder Product law.",
+        "Tenants vary executable prefix, install mechanics and package bindings."
+      ],
+      "forbidden": [
+        "Create rival control models or tenant-specific operator language; command suffix subcommands, flags, target/control grammar, output and stop classification must agree."
+      ]
+    },
+    {
+      "key": "adapter_authority_limits",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRead%2C%20Mutation%2C%20And%20Adapter%20Boundaries",
+          "start_line": 325,
+          "end_line": 335,
+          "quote": "**REQ-P-POLICY-044**: A public CLI shall be a thin adapter over the public SDK\nand operation contracts. It may parse, validate, invoke, and render those\ncontracts; it shall not import private runtime authority, call workers directly,\nemit runtime events directly, construct continuations, retry traversal, rank\nprivate actions, widen catalog or allowlist views, or decide closure.\n\n**REQ-P-POLICY-045**: A Codex, Claude, service, website, manager, or other host\nadapter shall delegate to the same public SDK or CLI operation contract. It\nshall not copy GraphFunction logic, own a catalog or truth store, call workers\ndirectly, select private traversal, emit ABG events, manage continuation or\nretry, or become required for native ABG operation."
+        }
+      ],
+      "applies_to_keys": [
+        "public_function_family"
+      ],
+      "allowed": [
+        "CLI parses, validates, invokes and renders public SDK/contracts.",
+        "Hosts delegate to same public SDK or CLI."
+      ],
+      "forbidden": [
+        "CLI imports private runtime authority, calls workers/emits events, constructs continuation, retries traversal, ranks private actions, widens catalog/allowlist or decides closure.",
+        "Host copies GraphFunction logic, owns catalog/truth store, calls workers, selects private traversal, emits events, manages continuation/retry or becomes required for native operation."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "public_family_external_basis",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPublic%20Operation%20Contract",
+          "start_line": 128,
+          "end_line": 145,
+          "quote": "**REQ-P-POLICY-021**: The public operation set shall be the complete\nProduct-derived family in `REQ-P-PUBLIC-CONTRACTS-008`. Its derived count is\nnot Product authority. The closed variants shall retain\nall of the following product behavior:\n\n- workspace create, open, and immutable product binding;\n- product verification, resolution, installation, context bootstrap, and\n  configuration materialization;\n- catalog admission, narrowing view derivation, list and describe projection,\n  non-callable node-type and overlay application, and GraphFunction invocation;\n- start and invoke through one run-invocation function, plus replay-derived\n  continuation through one run-continuation function;\n- status, result, evidence, replay, gap, and lawful-action reads through one\n  typed projection function;\n- F_H selection, approval, rejection, assessment, and escalation response;\n- result assessment and witnessed-act admission;\n- GTL-program conformance evaluation; and\n- qualified RC and tapped-release snapshot materialization."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FTraversal%20And%20Run%20Operations",
+          "start_line": 176,
+          "end_line": 183,
+          "quote": "When `root_mode = direct`, `start` selects one admitted entry traversal without\nrequiring One Surface, `evaluateNext`, or a `ConstructionIntent`. When\n`root_mode = supervised`, it selects the admitted standard system program and\nthat program owns One Surface semantic ordering and action topology;\nProduct-owned GraphFunctions own the four synthesis and evaluation contracts,\nand ABG separately admits selected-action and construction-intent truth. Neither\nthe program nor HoG may mint runtime truth, and ABG shall not reorder semantic\nauthorities, select traversal topology, or become a scheduler."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+          "start_line": 100,
+          "end_line": 105,
+          "quote": "**REQ-P-POLICY-018**: Gap triage shall be downstream product policy expressed\nthrough published graph-function-addressable work. ABG may expose replay-derived\ngap, hold, stop, continuation, and unresolved-observation truth, but it shall\nnot own ticket priority, ticket closure, backlog state, or process mechanics.\nWhen a downstream product creates or changes a ticket from gap truth, that\nbehavior shall be governed by the downstream product and `TICKET_METHOD.md`."
+        }
+      ],
+      "subject_key": "public_function_family",
+      "uncertainty": "REQ-P-PUBLIC-CONTRACTS-008 supplies the complete operation family outside this chunk; four Product synthesis/evaluation contracts and TICKET_METHOD are referenced without full definitions.",
+      "consequence": "Local concepts do not resolve cross-chunk endpoints or infer current availability/qualification of reserved human variants."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "product_policy",
+        "proof_hold",
+        "traversal_request",
+        "root_mode",
+        "fh_mode",
+        "one_surface_workflow",
+        "proof_hold_identity_and_clearing",
+        "published_asset_resolution",
+        "control_mode_ownership",
+        "handoff_and_operator_reporting",
+        "gap_triage_ownership",
+        "policy_consumption",
+        "operator_delivery_latitude",
+        "public_family_external_basis"
+      ],
+      "reason": "Retain Product policy, replay hold, modes, handoff, operator and tenant boundaries."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPublic%20Operation%20Contract",
+      "decision": "residual",
+      "keys": [
+        "public_function_family",
+        "public_contract_completeness",
+        "public_operation_behavior_closure",
+        "sdk_cli_semantic_parity",
+        "public_family_external_basis"
+      ],
+      "reason": "Retain closed public-family meaning and parity; referenced complete family remains external."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FTraversal%20And%20Run%20Operations",
+      "decision": "residual",
+      "keys": [
+        "run_invocation",
+        "run_continuation",
+        "project_read",
+        "traversal_request_to_invocation",
+        "invocation_authority_partition",
+        "continuation_state_ownership",
+        "read_variants_content",
+        "public_family_external_basis"
+      ],
+      "reason": "Retain direct/supervised authority distinction, public Run paths and reads; referenced contracts remain external."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FGap%2C%20Action%2C%20And%20Human%20Interaction%20Operations",
+      "decision": "retained",
+      "keys": [
+        "project_read",
+        "human_interaction_response",
+        "gap_and_action_reads",
+        "human_response_admission",
+        "five_zero_progression_and_handoff"
+      ],
+      "reason": "Retain pure gap/action reads, deferred native human response, automatic 5.0 work and lawful re-entry."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRetained%20Public%20Behavior%20Variants",
+      "decision": "retained",
+      "keys": [
+        "runtime_attestation",
+        "conformance_evaluation",
+        "release_snapshot",
+        "assessment_witness_requirements",
+        "future_observer_tuning_variants",
+        "no_silent_conformance_repair",
+        "snapshot_qualification_gate"
+      ],
+      "reason": "Retain assessment/witness domains, reserved variants, conformance and exact snapshot gate."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FRead%2C%20Mutation%2C%20And%20Adapter%20Boundaries",
+      "decision": "retained",
+      "keys": [
+        "read_effect_prohibition",
+        "public_effect_admission",
+        "preflight_versus_fp_retry",
+        "adapter_authority_limits"
+      ],
+      "reason": "Retain read/mutation/manifest separation, thin adapters and deterministic versus F_P failure classes."
+    }
+  ],
+  "limitations": [
+    "Requirements and future-scope contracts are source data, not assertions of availability, execution or acceptance.",
+    "Referenced complete operation catalog, Product synthesis/evaluation contracts and TICKET_METHOD require source re-entry.",
+    "The model retains sequencing and authority as descriptive records rather than operational judgments or transformations."
+  ]
+}

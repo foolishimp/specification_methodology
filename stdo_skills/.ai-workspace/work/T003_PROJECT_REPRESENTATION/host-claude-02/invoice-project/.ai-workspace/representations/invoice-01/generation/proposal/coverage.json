@@ -1,0 +1,133 @@
+{
+  "chunks_authored": 1,
+  "chunks_missing": [],
+  "chunks_total": 1,
+  "family_counts": {
+    "constraints": 6,
+    "judgments": 0,
+    "latitude": 2,
+    "objects": 14,
+    "relations": 6,
+    "residuals": 5,
+    "transformations": 0,
+    "traversals": 0
+  },
+  "interpretation_contract": {
+    "author_schema_sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "limits": [
+      "Proposal only; no semantic acceptance or full coverage claim.",
+      "Source supplies meaning; graph supplies fallible discovery data.",
+      "References are chunk-local; cross-chunk identity/conservation requires independent review.",
+      "Conditions, exceptions and uncertainty are inert source-linked statements, not executed predicates."
+    ],
+    "meaning": "F_P-authored source interpretation. Five declared active record families; traversals/transformations/judgments unimplemented and explicitly empty. Source documents and templates are interpreted as documents; prescribed operations are not executed or accepted.",
+    "mode": "direct",
+    "profile": "ac.generation.contract/1",
+    "semantic_extraction_profile": "a_c.direct.source-authoring/1"
+  },
+  "mode": "direct",
+  "processing_complete": true,
+  "profile": "ac.generation.coverage/1",
+  "section_dispositions": [
+    {
+      "chunk": "chunk-b1400522f235f48bac67",
+      "dispositions": [
+        {
+          "decision": "retained",
+          "keys": [
+            "qualification_project",
+            "source_linked_proposal_representation",
+            "goal_build_representation",
+            "goal_scope_unstated"
+          ],
+          "reason": "The single goal sentence is retained as a goal-level directive with its two named entities. Its undefined acceptance and scope are recorded as a residual rather than filled in.",
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "invoice_export",
+            "reproducibility",
+            "exact_supplied_decimal_amounts",
+            "intent_reproducible_export_preserving_amounts",
+            "reproducibility_criterion_unstated",
+            "intent_product_amount_correspondence"
+          ],
+          "reason": "The intent sentence is retained as one constraint over invoice export, but its key term 'reproducible' has no stated criterion and its amount-preservation clause is linked to the product rule only by reading, so the section carries explicit residuals.",
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent"
+        },
+        {
+          "decision": "retained",
+          "keys": [
+            "invoice_export",
+            "invoice_row",
+            "csv_output",
+            "csv_columns",
+            "amount",
+            "supplied_decimal_digit",
+            "binary_floating_point_conversion",
+            "csv_header",
+            "zero_rows",
+            "export_emits_csv_output",
+            "export_consumes_rows",
+            "csv_output_ordered_columns",
+            "amount_member_of_columns",
+            "zero_rows_yields_header_alone",
+            "export_format_csv_column_order",
+            "preserve_every_supplied_decimal_digit",
+            "zero_rows_header_only",
+            "amount_representation_latitude",
+            "csv_format_underdetermined",
+            "intent_product_amount_correspondence"
+          ],
+          "reason": "All three product sentences are retained: the CSV column order, the digit-preservation obligation with the floating-point prohibition as forbidden latitude, and the zero-row header rule with its condition. Unstated CSV format details are recorded as a residual, not invented. The blank lines carry no content.",
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "rounding_policy",
+            "rounding_policy_scoped_to_export",
+            "rounding_not_specified_retain_unresolved",
+            "rounding_rule_latitude",
+            "rounding_unresolved"
+          ],
+          "reason": "The source itself declares rounding unresolved and forbids inventing a rule. The section is retained as an unresolved policy scoped to invoice export, with the prohibition as forbidden latitude and the unresolved state as an explicit residual.",
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy"
+        }
+      ],
+      "limitations": [
+        "The corpus is one chunk of four sections from GOALS.md, INTENT.md and PRODUCT.md. Every section received a disposition; this processing coverage is not semantic completeness.",
+        "Direct mode: no Graphify discovery was supplied. All concept identities are local to this chunk and were not matched against any external graph.",
+        "The apparent correspondence between the intent's amount-preservation clause and the product's digit-preservation rule is retained as a residual, not resolved by label match.",
+        "Judgments, traversals and transformations are empty populations. Nothing here executes the export or instantiates the represented product.",
+        "No requirements, scenarios, design or code surfaces were in the selected scope, so the representation says nothing about how the export is realized or tested."
+      ]
+    }
+  ],
+  "semantic_acceptance": "not requested or issued",
+  "semantic_completeness": "unassessed",
+  "source_sections": 4,
+  "unqualified": [
+    "cross-chunk consolidation",
+    "normative interpretation fidelity",
+    "complete calculus conformance",
+    "accepted-result cost"
+  ],
+  "unresolved_boundaries": [
+    {
+      "author_declared_limitations": [
+        "The corpus is one chunk of four sections from GOALS.md, INTENT.md and PRODUCT.md. Every section received a disposition; this processing coverage is not semantic completeness.",
+        "Direct mode: no Graphify discovery was supplied. All concept identities are local to this chunk and were not matched against any external graph.",
+        "The apparent correspondence between the intent's amount-preservation clause and the product's digit-preservation rule is retained as a residual, not resolved by label match.",
+        "Judgments, traversals and transformations are empty populations. Nothing here executes the export or instantiates the represented product.",
+        "No requirements, scenarios, design or code surfaces were in the selected scope, so the representation says nothing about how the export is realized or tested."
+      ],
+      "chunk": "chunk-b1400522f235f48bac67"
+    }
+  ]
+}

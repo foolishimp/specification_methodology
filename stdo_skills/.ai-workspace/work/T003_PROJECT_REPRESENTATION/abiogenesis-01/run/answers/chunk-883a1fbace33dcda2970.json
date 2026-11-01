@@ -1,0 +1,882 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "Constitutional typed contract law for graph-native programs, with inspectable and traceable authoring validity, diagnostics, repair affordances, declarations-as-data and conformance corpus truth.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 53,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-001**: GTL shall be the constitutional typed\ncontract-law API for graph-native programs. Authoring validity, diagnostics,\nrepair affordances, declarations-as-data, and conformance corpus truth shall be\ninspectable and traceable.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 50
+          }
+        ],
+        "key": "contract_law_api",
+        "label": "GTL contract-law API"
+      },
+      {
+        "conditions": [],
+        "definition": "Declaration owner of topology, starts, GraphFunction membership, compute composition, policy, effects, results and proof obligations; neither runtime plan nor callable function.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 62,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-003**: A GTL program shall own topology, starts,\nGraphFunction membership, compute composition, policy, effects, results, and\nproof obligations. A program is not a runtime plan or callable function.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 60
+          }
+        ],
+        "key": "gtl_program",
+        "label": "GTL program"
+      },
+      {
+        "conditions": [],
+        "definition": "Sole public named callable work contract and primary reusable workflow-library compute abstraction: a typed outer interface plus replayable GTL template materializing a graph.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 67,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-004**: GraphFunction shall be the sole public\nnamed callable work contract. It shall publish a typed outer interface and\nreplayable GTL template that materializes a graph. An implementation binding\nshall not replace that constructive body.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 64
+          },
+          {
+            "end_line": 13,
+            "quote": "Define `GraphFunction` as the primary reusable GTL workflow-library compute\nabstraction and contract boundary for lawful workflow reuse.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "graph_function",
+        "label": "GraphFunction"
+      },
+      {
+        "conditions": [],
+        "definition": "Language-owned immutable structural topology/materialization value composed of nodes, vectors, contexts, rules, effects and boundary nodes; structure alone is not a callable workflow or semantic job target.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 18,
+            "quote": "Define `Graph` as the first-class structural topology and materialization surface\nof GTL 3.\n\n`Graph` is the language-owned structure made of nodes, graph vectors, contexts,\nrules, effects, and boundary nodes. It is not the public callable workflow\ncarrier by itself. Public work entry and semantic jobs bind through published\n`GraphFunction` carriers that materialize graph structure.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md#REQ-L-GTL3-GRAPH%20%E2%80%94%20Graph%20Primacy%2FPurpose",
+            "start_line": 12
+          },
+          {
+            "end_line": 22,
+            "quote": "**REQ-L-GTL3-GRAPH-001**: `Graph` shall be a frozen, immutable value type with at minimum: `id`, `name`, `inputs`, `outputs`, `nodes`, `vectors`, `contexts`, `rules`, `effects`, and `tags`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md#REQ-L-GTL3-GRAPH%20%E2%80%94%20Graph%20Primacy%2FAcceptance%20Criteria",
+            "start_line": 22
+          }
+        ],
+        "key": "graph",
+        "label": "Graph"
+      },
+      {
+        "conditions": [],
+        "definition": "First-class immutable GTL convergence, attestation and gate-assessment declaration with at least name, regime, description, binding and tags; asks whether contracts, outputs or gates satisfy their declared criteria.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 13,
+            "quote": "Define evaluators as first-class GTL declarations for convergence, attestation,\nand gate-visible assessment.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FPurpose",
+            "start_line": 12
+          },
+          {
+            "end_line": 19,
+            "quote": "**REQ-L-GTL3-EVALUATOR-001**: `Evaluator` shall be a frozen, immutable declaration type with at minimum: `name`, `regime`, `description`, `binding`, and `tags`.\n\n**REQ-L-GTL3-EVALUATOR-002**: Evaluators answer convergence questions such as whether a contract is satisfied, an output has converged, or a gate has passed.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 17
+          }
+        ],
+        "key": "evaluator",
+        "label": "Evaluator"
+      },
+      {
+        "conditions": [],
+        "definition": "Planned substitution of one admitted refinement GraphFunction into one exact GraphVector of an admitted parent, selected by declared refinement, candidate-family or published traversal-target authority.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 15,
+            "quote": "Define the published GraphFunction refinement declarations that close the\nlanguage boundary for zoom, recursive foldback, and typed composition. These\nare GTL program laws. HoG traverses their admitted structure and ABG admits\ntheir runtime consequences; neither invents their structural meaning.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FPurpose",
+            "start_line": 12
+          },
+          {
+            "end_line": 25,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-001**: GraphFunction zoom shall be a\nplanned substitution of one admitted refinement GraphFunction into one exact\nGraphVector of an admitted parent GraphFunction. The selected vector shall be\ngrounded by at least one declared `RefinementBoundary`, `CandidateFamily`, or\npublished traversal-target reference. Zero or multiple matches shall fail\nadmission or construction; names, ordinals, or ambient runtime state shall not\nselect the target.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 19
+          }
+        ],
+        "key": "zoom_plan",
+        "label": "GraphFunction zoom plan"
+      },
+      {
+        "conditions": [],
+        "definition": "Declared rebind of child completion into a parent with one nonempty binding and mandatory parent re-evaluation; child completion is input, never parent certification.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 38,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-003**: Recursive GraphFunction foldback\nshall declare `rebind` mode, one non-empty binding, and mandatory parent\nre-evaluation. Child completion supplies rebind input; it shall not certify the\nparent or bypass its evaluator. Additional foldback attributes are inert\ndeclaration data unless admitted by an owning requirement.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 34
+          }
+        ],
+        "key": "recursive_foldback",
+        "label": "Recursive foldback declaration"
+      },
+      {
+        "conditions": [],
+        "definition": "Explicit left provided/carry node to right required node wiring under one published node-type declaration reference, preserving schema, Markov and asset-surface obligations.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 45,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-004**: Typed GraphFunction composition\nshall name a left provided/carry node, a right required node, and one published\nnode-type declaration reference for every wiring. Both nodes shall satisfy that\nsame node type without weakening schema, Markov, or asset-surface law. Missing\nnodes, unknown or non-node-type declaration references, incompatible\ncontracts, or an empty wiring set shall fail before composition.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 40
+          }
+        ],
+        "key": "typed_wiring",
+        "label": "GraphFunction type wiring"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "contract_law_api"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 58,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-002**: Core graph algebra shall remain\n`edge`, `compose`, `substitute`, `recurse`, `fan_out`, `fan_in`,\n`gate`, `promote`, `identity`, and `same_object`. Host spellings may\nvary only when carrier identity and law are preserved.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 55
+          },
+          {
+            "end_line": 71,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-005**: The seven C constructors and selected\n`F_D`, `F_P`, and `F_H` composition shall be typed, inspectable GTL\ndeclaration truth. Compute regimes shall not exchange authority.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 69
+          }
+        ],
+        "key": "core_algebra_and_regime_law",
+        "statement": "Core graph algebra remains edge, compose, substitute, recurse, fan_out, fan_in, gate, promote, identity and same_object. The seven C constructors and F_D/F_P/F_H selection remain typed inspectable declaration truth with no authority exchange between regimes.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "graph_function"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 76,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-004**: GraphFunction shall be the sole public\nnamed callable work contract. It shall publish a typed outer interface and\nreplayable GTL template that materializes a graph. An implementation binding\nshall not replace that constructive body.\n\n**REQ-L-GTL3-CONTRACT-LAW-API-005**: The seven C constructors and selected\n`F_D`, `F_P`, and `F_H` composition shall be typed, inspectable GTL\ndeclaration truth. Compute regimes shall not exchange authority.\n\n**REQ-L-GTL3-CONTRACT-LAW-API-006**: Recursive GraphFunctions shall declare\nthe callable relation, termination, foldback, lineage, and bounds. HoG shall\ntraverse the declared relation; ABG shall admit child and parent runtime truth.\nNo hidden recursive controller is permitted.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 64
+          }
+        ],
+        "key": "constructive_callable_body",
+        "statement": "Publish the typed outer interface and replayable graph-materializing GTL template; implementation bindings may not replace the constructive body. Recursive functions declare callable relation, termination, foldback, lineage and bounds; HoG traverses that relation and ABG admits child/parent runtime truth, with no hidden recursion controller.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "gtl_program"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 82,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-007**: Plugin, worker, handler, tool, and native\nfunction bindings shall identify only declared implementation seams, input and\noutput contracts, compute means, capability requirements, and authority\ndenials. They shall not own topology, traversal, events, continuation, or\nclosure.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 78
+          }
+        ],
+        "key": "implementation_seam_denials",
+        "statement": "Plugin, Worker, handler, tool and native bindings identify only declared seams, I/O contracts, compute means, capability requirements and authority denials. They never own topology, traversal, events, continuation or closure.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "contract_law_api"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 87,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-008**: Prompt construction and other typed assets\nshall be declared through GTL asset contracts with constructor, renderer,\ndigest, authority slot, output contract, proof, node, and evidence relations.\nRendered text is not authority.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 84
+          }
+        ],
+        "key": "typed_asset_authority",
+        "statement": "Prompt construction and other typed assets use GTL contracts with constructor, renderer, digest, authority-slot, output-contract, proof, node and evidence relations. Rendered text is not authority.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "contract_law_api",
+          "gtl_program"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 93,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-009**: One deterministic GTL validator shall\napply native-equivalent law to serialized programs and shall report typed\nvalidity, invalidity, or unresolved semantics. It may produce canonical\nserialization and subordinate indexes but shall not produce an executable\nprogram or runtime truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 89
+          },
+          {
+            "end_line": 127,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-016**: The GTL validator shall project declared\nentry, internal vector, start-to-entry, program-membership, implementation-seam,\noutput-admission, consequence, and catalog-bind relations without executing\nthem. Missing, ambiguous, illegal, or incomplete relations shall remain typed\nnon-conformance.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 123
+          }
+        ],
+        "key": "nonlowering_validator",
+        "statement": "One deterministic GTL validator applies native-equivalent law to serialized programs and reports typed validity, invalidity or unresolved semantics. Canonical serialization and subordinate indexes are allowed, executable programs and runtime truth are not. It projects declared entry, vector, start-entry, membership, seam, output-admission, consequence and catalog-bind relations without executing them; missing, ambiguous, illegal or incomplete relations remain typed nonconformance.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "gtl_program",
+          "graph_function"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 103,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-010**: HoG shall traverse the original admitted\nGTL program and materialized GraphFunction graphs directly. A generated HoG\nprogram, CompiledCProgramPlan, compiled execution declaration, ladder, or\nruntime-program catalog shall fail as executable authority.\n\n**REQ-L-GTL3-CONTRACT-LAW-API-011**: ABG shall own admission, graph-call and\nframe identity, effects and result truth, events, replay, evidence, correction,\ncontinuation, and closure around HoG traversal. ABG shall not redefine GTL\nprogram meaning.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 95
+          }
+        ],
+        "key": "direct_traversal_and_runtime_owner",
+        "statement": "HoG directly traverses original admitted GTL and materialized GraphFunction graphs. Generated HoG programs, CompiledCProgramPlan, compiled execution declarations, ladders and runtime-program catalogs fail as executable authority. ABG owns admission, graph-call/frame identity, effects/result truth, events, replay, evidence, correction, continuation and closure around traversal, without redefining GTL meaning.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "contract_law_api"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 112,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-012**: Downstream products shall not create\nsecond contract-law, validator, executor, event, replay, continuation, or\nclosure surfaces in parsers, prompt prose, adapters, plugins, fixtures, or\ngenerated read models.\n\n**REQ-L-GTL3-CONTRACT-LAW-API-013**: Every concrete authoring or serialized\ncarrier accepted by a build tenant shall trace to a GTL declaration, GTL\nvalidator rule, or ABG runtime-admission contract.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 105
+          }
+        ],
+        "key": "no_downstream_rival_law",
+        "statement": "Downstream parsers, prompt prose, adapters, plugins, fixtures and generated read models may not create second contract-law, validator, executor, event, replay, continuation or closure surfaces. Every accepted concrete authored/serialized carrier traces to a GTL declaration, GTL validator rule or ABG runtime-admission contract.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "contract_law_api"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 133,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-015**: `PRODUCT.md`,\n`requirements/gtl/README.md`, and installed context projections shall\nidentify this file as the fast reload surface and shall bind enough identity to\ndetect stale versions.\n\n**REQ-L-GTL3-CONTRACT-LAW-API-016**: The GTL validator shall project declared\nentry, internal vector, start-to-entry, program-membership, implementation-seam,\noutput-admission, consequence, and catalog-bind relations without executing\nthem. Missing, ambiguous, illegal, or incomplete relations shall remain typed\nnon-conformance.\n\n**REQ-L-GTL3-CONTRACT-LAW-API-017**: Validation shall expose the declared\nconservation basis for every traversal bind, including intent lineage, target\ncarriers, materialization authority, carried obligations, residual pressure,\nallowed dispositions, admission strength, and obligation delta. Missing\nconservation law blocks traversal admission.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 118
+          }
+        ],
+        "key": "reload_identity_and_conservation",
+        "statement": "PRODUCT.md, GTL README and installed context projections identify this fast reload file with identity sufficient to detect staleness. Validation exposes conservation basis for every traversal bind: intent lineage, target carriers, materialization authority, obligations, residual pressure, dispositions, admission strength and obligation delta. Missing conservation law blocks traversal admission.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "contract_law_api"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 138,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-018**: Requirement, traversal-span, context,\ndestination-topology, test-relation, and evidence-policy declarations shall use\nexisting GTL publication and attachment law. They feed ABG admission and replay\nbut shall not emit events, write ledgers, select traversal, or close work.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 135
+          }
+        ],
+        "key": "subordinate_declaration_publication",
+        "statement": "Requirement, traversal-span, context, destination-topology, test-relation and evidence-policy declarations use existing publication/attachment law. They feed admission/replay but cannot emit events, write ledgers, select traversal or close work.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "contract_law_api"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 151,
+            "quote": "| Question | Declaration owner | Validation | Execution and truth |\n|---|---|---|---|\n| program topology and starts | GTL program | GTL validator | HoG traverses; ABG admits |\n| named callable work | GraphFunction template and contracts | GTL validator | HoG traverses materialized graph |\n| local transition | GraphVector | GTL validator | HoG advances locus; ABG records |\n| compute interior | C plus F_D/F_P/F_H declaration | GTL validator | implementation performs; ABG admits |\n| recursion and refinement | GTL GraphFunction relation | GTL validator | HoG child frame; ABG foldback truth |\n| runtime effects and results | declared implementation seam | admission contract | implementation acts; ABG admits |\n| continuation and closure | GTL policy and result contracts | validator plus admission | ABG replay-derived state |\n| downstream domain meaning | downstream Product and Module | common contract law | common HoG and ABG path |\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FCapability%20Router",
+            "start_line": 142
+          }
+        ],
+        "key": "capability_owner_matrix",
+        "statement": "The declared router assigns topology/starts to GTL Program, callable work to GraphFunction templates/contracts, local transitions to GraphVector, compute interiors to C/regimes, recursion/refinement to GraphFunction relations, effects/results to seams, continuation/closure to GTL policy/result contracts, and domain meaning to downstream Product/Module. GTL validates structure and common law; admission validates effects/results and joins continuation/closure checks. HoG traverses/advances admitted structures, implementations act within interiors, and ABG admits runtime truth, records loci, admits foldback and supplies replay-derived continuation/closure. All downstream work uses the common HoG/ABG path.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "contract_law_api"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 158,
+            "quote": "Types, lints, validator reports, package manifests, operation counts, catalog\nrows, event co-presence, and generated documentation are necessary evidence\nwhere applicable. None substitutes for the installed causal path or for the\ncomplete Product scenarios.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FNon-Substitution%20Rule",
+            "start_line": 155
+          }
+        ],
+        "key": "evidence_non_substitution",
+        "statement": "Types, lint, reports, package manifests, counts, catalog rows, event co-presence and generated documentation are necessary where applicable, but none substitutes for the installed causal path or complete Product scenarios.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "evaluator"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 27,
+            "quote": "**REQ-L-GTL3-EVALUATOR-004**: Evaluator `binding` shall be a declared implementation reference resolved by an engine or plugin. GTL declares the evaluator; engines provide executable realization and provenance.\n\n**REQ-L-GTL3-EVALUATOR-005**: Evaluator multiplicity and ordering may be declared at a contract boundary without embedding domain closure semantics in the interpreter.\n\n**REQ-L-GTL3-EVALUATOR-006**: Domain-specific gap, closure, ranking, or attestation semantics belong to evaluator declarations and their resolved implementations, not to the interpreter.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 23
+          }
+        ],
+        "key": "evaluator_declaration_realization",
+        "statement": "Binding is a declared implementation reference resolved by engine/plugin: GTL owns declaration and engines supply executable realization and provenance. Domain gap, closure, ranking and attestation semantics belong to the declaration and resolved implementation, never the interpreter.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "evaluator"
+        ],
+        "conditions": [
+          "Probabilistic evaluator participates in a declared edge assurance contract."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 29,
+            "quote": "**REQ-L-GTL3-EVALUATOR-007**: Probabilistic evaluator output for a declared edge assurance contract shall be a constrained finding over gain, close disposition, residual pressure, continuation, evidence, authority, and composition refs. Such output shall not directly close the edge, write a ledger, select a vector, or emit runtime events. If F_P proposes human involvement, that proposed close disposition shall be distinct from ABG's F_H-by-absentia disposition for a missing edge assurance contract.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 29
+          }
+        ],
+        "key": "probabilistic_finding_not_closure",
+        "statement": "F_P output under an edge assurance contract is a constrained finding over gain, close disposition, residual pressure, continuation, evidence, authority and composition references. It cannot directly close, write ledgers, select vectors or emit events. Proposed human involvement is a distinct close disposition from ABG F_H-by-absentia for a missing edge assurance contract.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "evaluator"
+        ],
+        "conditions": [
+          "Evaluator participates in abg.fn_composition."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 31,
+            "quote": "**REQ-L-GTL3-EVALUATOR-008**: Evaluator declarations that participate in an `abg.fn_composition` contract shall preserve the evaluator regime, role, authority, consumed field refs, input carrier refs, output carrier refs, and evidence refs needed by ABG admission. A probabilistic or human evaluator may emit evidence or judgment state under the selected composition identity, but it shall not claim deterministic closure authority.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 31
+          }
+        ],
+        "key": "evaluator_composition_provenance",
+        "statement": "Composition-participating evaluators preserve regime, role, authority, consumed fields, input/output carrier and evidence references needed by ABG admission. F_P/F_H may emit evidence or judgment under selected composition identity, never deterministic closure authority.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "evaluator"
+        ],
+        "conditions": [
+          "Authority placement depends on consumed output fields."
+        ],
+        "exceptions": [
+          "Empty consumedFieldRefs is lawful only without such field-local consumption."
+        ],
+        "grounding": [
+          {
+            "end_line": 33,
+            "quote": "**REQ-L-GTL3-EVALUATOR-009**: Evaluator declarations shall expose `consumedFieldRefs` as an admitted carrier field when deterministic authority placement depends on which output fields downstream routing, execution construction, pressure projection, or closure predicates read. An empty consumed-field set is lawful only when the evaluator does not consume field-local payload truth for those decisions.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 33
+          }
+        ],
+        "key": "consumed_field_declarations",
+        "statement": "When deterministic authority placement depends on output fields read by routing, execution construction, pressure projection or closure predicates, expose consumedFieldRefs as an admitted carrier field. An empty set is lawful only if no field-local payload truth is consumed for those decisions.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "graph"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 28,
+            "quote": "**REQ-L-GTL3-GRAPH-001**: `Graph` shall be a frozen, immutable value type with at minimum: `id`, `name`, `inputs`, `outputs`, `nodes`, `vectors`, `contexts`, `rules`, `effects`, and `tags`.\n\n**REQ-L-GTL3-GRAPH-002**: A primitive graph step shall be representable as a minimal `Graph`. GTL shall not require a rival structural ontology for single-step workflows.\n\n**REQ-L-GTL3-GRAPH-003**: A multi-step workflow, refined workflow, composed workflow, recursive workflow, and higher-order workflow shall all be expressible as `Graph`.\n\n**REQ-L-GTL3-GRAPH-004**: `Graph` shall declare its boundary interface through designated input and output nodes.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md#REQ-L-GTL3-GRAPH%20%E2%80%94%20Graph%20Primacy%2FAcceptance%20Criteria",
+            "start_line": 22
+          },
+          {
+            "end_line": 32,
+            "quote": "**REQ-L-GTL3-GRAPH-006**: `Graph` shall carry local constraints and declared or derived execution-regime visibility through `rules` and `effects`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md#REQ-L-GTL3-GRAPH%20%E2%80%94%20Graph%20Primacy%2FAcceptance%20Criteria",
+            "start_line": 32
+          }
+        ],
+        "key": "graph_shape_and_expression",
+        "statement": "Graph is frozen/immutable with at least id, name, inputs, outputs, nodes, vectors, contexts, rules, effects and tags. Minimal single-step, multistep, refined, composed, recursive and higher-order workflows are all Graph-expressible without a rival single-step ontology. Inputs/outputs are designated boundary nodes; rules/effects carry constraints and declared/derived regime visibility.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "graph",
+          "graph_function"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 38,
+            "quote": "**REQ-L-GTL3-GRAPH-005**: `Graph` shall be the unit of substitution and composition at the structural level. This structural composition role shall not make `Graph` a public callable workflow carrier or semantic job target.\n\n**REQ-L-GTL3-GRAPH-006**: `Graph` shall carry local constraints and declared or derived execution-regime visibility through `rules` and `effects`.\n\n**REQ-L-GTL3-GRAPH-007**: A `Graph` may be materialized by a published `GraphFunction`, but the `GraphFunction` shall remain the reusable workflow-library function and public callable carrier.\n\n**REQ-L-GTL3-GRAPH-008**: Public execution shall follow the current GTL/ABG chain: `Job` -> `GraphFunction` -> ABG `GraphCall` -> materialized `Graph` -> internal `GraphVector` traversal. `Graph` shall not be targeted as a bare public execution entrypoint.\n\n**REQ-L-GTL3-GRAPH-009**: Product-local terms such as graph overlay, workflow lane, app surface, or lifecycle graph may be used only when they bind back to `Graph`, `GraphFunction`, `Job`, or another first-class GTL declaration surface before declaring GTL or ABG behavior.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md#REQ-L-GTL3-GRAPH%20%E2%80%94%20Graph%20Primacy%2FAcceptance%20Criteria",
+            "start_line": 30
+          }
+        ],
+        "key": "graph_structural_not_callable",
+        "statement": "Graph is structural substitution/composition unit, not callable work or semantic Job target. Published GraphFunction may materialize it and remains the reusable callable. Public chain is Job -> GraphFunction -> ABG GraphCall -> materialized Graph -> internal GraphVector traversal, never bare Graph execution. Product terms such as overlay/lane/app surface/lifecycle graph must bind back to first-class GTL carriers before claiming GTL/ABG behavior.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "zoom_plan"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 25,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-001**: GraphFunction zoom shall be a\nplanned substitution of one admitted refinement GraphFunction into one exact\nGraphVector of an admitted parent GraphFunction. The selected vector shall be\ngrounded by at least one declared `RefinementBoundary`, `CandidateFamily`, or\npublished traversal-target reference. Zero or multiple matches shall fail\nadmission or construction; names, ordinals, or ambient runtime state shall not\nselect the target.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 19
+          }
+        ],
+        "key": "zoom_exact_selection",
+        "statement": "Select exactly one parent vector by at least one declared RefinementBoundary, CandidateFamily or published traversal-target reference. Zero or multiple matches fail admission/construction; names, ordinals and ambient runtime state cannot select targets.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "zoom_plan",
+          "graph_function"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 32,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-002**: A zoom plan shall bind the parent\nGraphFunction and graph identities, target GraphVector identity and interface,\nrefinement GraphFunction and graph identities, substituted graph identity, and\nall selecting authority references. Application shall reject drift in any\nbound identity. The resulting GraphFunction shall preserve the parent's\ndeclared input and output interface and publish the plan as declaration data.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 27
+          }
+        ],
+        "key": "zoom_identity_conservation",
+        "statement": "Bind parent function/graph, vector identity/interface, refinement function/graph, substituted graph identity and all selecting authority references. Reject drift in any bound identity. Preserve parent input/output interface and publish the plan as declaration data.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "recursive_foldback"
+        ],
+        "conditions": [],
+        "exceptions": [
+          "An owning requirement may admit semantics for extra foldback attributes."
+        ],
+        "grounding": [
+          {
+            "end_line": 38,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-003**: Recursive GraphFunction foldback\nshall declare `rebind` mode, one non-empty binding, and mandatory parent\nre-evaluation. Child completion supplies rebind input; it shall not certify the\nparent or bypass its evaluator. Additional foldback attributes are inert\ndeclaration data unless admitted by an owning requirement.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 34
+          }
+        ],
+        "key": "foldback_parent_reassessment",
+        "statement": "Declare rebind mode, exactly one nonempty binding and mandatory parent re-evaluation. Child completion supplies rebind input, not certification or evaluator bypass. Extra attributes are inert unless an owning requirement admits their semantics.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "typed_wiring"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 45,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-004**: Typed GraphFunction composition\nshall name a left provided/carry node, a right required node, and one published\nnode-type declaration reference for every wiring. Both nodes shall satisfy that\nsame node type without weakening schema, Markov, or asset-surface law. Missing\nnodes, unknown or non-node-type declaration references, incompatible\ncontracts, or an empty wiring set shall fail before composition.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 40
+          }
+        ],
+        "key": "typed_wiring_admission",
+        "statement": "Each wiring names the left carried/provided node, right required node and one published node-type reference. Both satisfy the same type without weakening schema, Markov or AssetSurface law. Missing nodes, unknown/non-node-type references, incompatibility and empty wiring fail before composition.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "typed_wiring",
+          "graph_function"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 51,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-005**: Successful typed wiring shall\nproduce ordinary GraphFunction composition after replacing only the declared\nright-side requirement with the satisfying left-side carried node. It shall\nnot introduce implicit coercion, a rival edge, a runtime router, or a second\ntype system.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 47
+          }
+        ],
+        "key": "typed_wiring_pure_result",
+        "statement": "Success yields ordinary GraphFunction composition after replacing only the declared right requirement with its satisfying left carried node. It adds no coercion, rival edge, runtime router or second type system.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "zoom_plan",
+          "recursive_foldback",
+          "typed_wiring"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 58,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-006**: Published host tenants shall expose\ntyped interfaces for zoom plans, foldback declarations, and type wiring, plus\nraw admission and semantic diagnostics for serialized declarations. Native\ntype matching shall carry all constraints it can express; malformed or\nunresolved serialized GTL shall fail at admission or GTL validation before\nHoG traversal.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 53
+          },
+          {
+            "end_line": 66,
+            "quote": "GTL owns the structural declarations and pure construction result. HoG owns\ndirect traversal of the admitted GTL structure. ABG owns runtime frames,\nlineage, foldback and parent-result admission, events, replay, and closure.\nProduct-local dispatch or vector classification is not part of this\ncapability.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FBoundary",
+            "start_line": 62
+          }
+        ],
+        "key": "refinement_native_and_raw_admission",
+        "statement": "Published tenants expose typed zoom/foldback/wiring interfaces plus raw admission and semantic diagnostics. Native types enforce everything expressible; malformed or unresolved serialized GTL fails admission/validation before HoG traversal. GTL owns declaration/pure construction, HoG direct traversal, ABG runtime frames/lineage/foldback/parent results/events/replay/closure. Product-local dispatch/vector classification is outside this capability.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "omitted",
+        "keys": [],
+        "reason": "Header status/date/category and derivation-link metadata are not domain semantics and are not imported as current authority.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces"
+      },
+      {
+        "decision": "omitted",
+        "keys": [],
+        "reason": "Header status/date/category and derivation-link metadata are not domain semantics and are not imported as current authority.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md#REQ-L-GTL3-GRAPH%20%E2%80%94%20Graph%20Primacy"
+      },
+      {
+        "decision": "omitted",
+        "keys": [],
+        "reason": "Header status/date/category and derivation-link metadata are not domain semantics and are not imported as current authority.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring"
+      },
+      {
+        "decision": "omitted",
+        "keys": [],
+        "reason": "Header status/date/category and derivation-link metadata are not domain semantics and are not imported as current authority.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "contract_law_api",
+          "gtl_program",
+          "graph_function",
+          "graph_function_materializes_graph",
+          "core_algebra_and_regime_law",
+          "constructive_callable_body",
+          "implementation_seam_denials",
+          "typed_asset_authority",
+          "nonlowering_validator",
+          "direct_traversal_and_runtime_owner",
+          "no_downstream_rival_law",
+          "reload_identity_and_conservation",
+          "subordinate_declaration_publication",
+          "host_spelling_variation"
+        ],
+        "reason": "Retains the section-specific meanings, ownership boundaries and applicable obligations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "capability_owner_matrix"
+        ],
+        "reason": "Retains the section-specific meanings, ownership boundaries and applicable obligations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FCapability%20Router"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "evaluator"
+        ],
+        "reason": "Retains the section-specific meanings, ownership boundaries and applicable obligations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "evaluator",
+          "evaluator_declaration_realization",
+          "probabilistic_finding_not_closure",
+          "evaluator_composition_provenance",
+          "consumed_field_declarations",
+          "evaluator_variation"
+        ],
+        "reason": "Retains the section-specific meanings, ownership boundaries and applicable obligations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "graph"
+        ],
+        "reason": "Retains the section-specific meanings, ownership boundaries and applicable obligations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md#REQ-L-GTL3-GRAPH%20%E2%80%94%20Graph%20Primacy%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "graph",
+          "graph_function_materializes_graph",
+          "graph_shape_and_expression",
+          "graph_structural_not_callable"
+        ],
+        "reason": "Retains the section-specific meanings, ownership boundaries and applicable obligations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md#REQ-L-GTL3-GRAPH%20%E2%80%94%20Graph%20Primacy%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "zoom_plan"
+        ],
+        "reason": "Retains the section-specific meanings, ownership boundaries and applicable obligations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "refinement_native_and_raw_admission"
+        ],
+        "reason": "Retains the section-specific meanings, ownership boundaries and applicable obligations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FBoundary"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "graph_function"
+        ],
+        "reason": "Retains the section-specific meanings, ownership boundaries and applicable obligations.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md#REQ-L-GTL3-GRAPHFUNCTION%20%E2%80%94%20Reusable%20Workflow%20Library%20Functions%2FPurpose"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "evidence_non_substitution",
+          "installed_path_not_established"
+        ],
+        "reason": "Retains the rule and explicitly keeps the missing installed proof or exact declared-type/target dependency.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FNon-Substitution%20Rule"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "zoom_plan",
+          "recursive_foldback",
+          "typed_wiring",
+          "zoom_exact_selection",
+          "zoom_identity_conservation",
+          "foldback_parent_reassessment",
+          "typed_wiring_admission",
+          "typed_wiring_pure_result",
+          "refinement_native_and_raw_admission",
+          "node_type_definition_dependency"
+        ],
+        "reason": "Retains the rule and explicitly keeps the missing installed proof or exact declared-type/target dependency.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria"
+      }
+    ],
+    "latitude": [
+      {
+        "allowed": [
+          "Host spellings may vary only while preserving carrier identity and law.",
+          "External tools may realize declared implementation seams."
+        ],
+        "applies_to_keys": [
+          "contract_law_api"
+        ],
+        "forbidden": [
+          "Treating tool metadata, transport configuration or output presence as GTL or ABG authority."
+        ],
+        "grounding": [
+          {
+            "end_line": 58,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-002**: Core graph algebra shall remain\n`edge`, `compose`, `substitute`, `recurse`, `fan_out`, `fan_in`,\n`gate`, `promote`, `identity`, and `same_object`. Host spellings may\nvary only when carrier identity and law are preserved.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 55
+          },
+          {
+            "end_line": 116,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-014**: External tool surfaces may realize\ndeclared implementation seams. Tool metadata, transport configuration, and\ntool output shall not become GTL or ABG authority by presence.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 114
+          }
+        ],
+        "key": "host_spelling_variation"
+      },
+      {
+        "allowed": [
+          "Use deterministic, probabilistic or human regimes.",
+          "Declare evaluator multiplicity and order at a contract boundary without embedding domain closure meaning in the interpreter.",
+          "For a declared sub-scope within one vector, output carriers may include an evaluation scope reference for edge, segment, dimension-cell, fold or relation."
+        ],
+        "applies_to_keys": [
+          "evaluator"
+        ],
+        "forbidden": [
+          "Treating scope identity/provenance as event, ledger, traversal-selection or closure authority."
+        ],
+        "grounding": [
+          {
+            "end_line": 25,
+            "quote": "**REQ-L-GTL3-EVALUATOR-003**: Evaluators may operate in deterministic, probabilistic, or human regimes.\n\n**REQ-L-GTL3-EVALUATOR-004**: Evaluator `binding` shall be a declared implementation reference resolved by an engine or plugin. GTL declares the evaluator; engines provide executable realization and provenance.\n\n**REQ-L-GTL3-EVALUATOR-005**: Evaluator multiplicity and ordering may be declared at a contract boundary without embedding domain closure semantics in the interpreter.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 21
+          },
+          {
+            "end_line": 35,
+            "quote": "**REQ-L-GTL3-EVALUATOR-010**: Evaluator output carriers may include a generic evaluation scope ref for edge, segment, dimension-cell, fold, or relation scope when the evaluator is judging a declared sub-scope inside one graph-vector boundary. The scope ref shall be carrier identity and provenance for ABG admission and projection; it shall not give the evaluator runtime-event authority, ledger-write authority, traversal-selection authority, or closure authority.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-EVALUATOR.md#REQ-L-GTL3-EVALUATOR%20%E2%80%94%20Evaluators%20As%20First-Class%20Convergence%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 35
+          }
+        ],
+        "key": "evaluator_variation"
+      }
+    ],
+    "limitations": [
+      "No callable execution, refinement application, evaluator result admission or installed scenario proof is performed.",
+      "Exact node-type and refinement bindings remain dependencies; this draft does not coalesce identity with other chunks.",
+      "Document headers and historical derivation links are omitted from modeled truth."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 67,
+            "quote": "**REQ-L-GTL3-CONTRACT-LAW-API-004**: GraphFunction shall be the sole public\nnamed callable work contract. It shall publish a typed outer interface and\nreplayable GTL template that materializes a graph. An implementation binding\nshall not replace that constructive body.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FAcceptance%20Criteria",
+            "start_line": 64
+          },
+          {
+            "end_line": 36,
+            "quote": "**REQ-L-GTL3-GRAPH-007**: A `Graph` may be materialized by a published `GraphFunction`, but the `GraphFunction` shall remain the reusable workflow-library function and public callable carrier.\n\n**REQ-L-GTL3-GRAPH-008**: Public execution shall follow the current GTL/ABG chain: `Job` -> `GraphFunction` -> ABG `GraphCall` -> materialized `Graph` -> internal `GraphVector` traversal. `Graph` shall not be targeted as a bare public execution entrypoint.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPH.md#REQ-L-GTL3-GRAPH%20%E2%80%94%20Graph%20Primacy%2FAcceptance%20Criteria",
+            "start_line": 34
+          }
+        ],
+        "key": "graph_function_materializes_graph",
+        "kind": "materializes",
+        "meaning": "The callable publishes a replayable template which constructs structural Graph; bare Graph does not replace callable identity.",
+        "source_key": "graph_function",
+        "target_key": "graph"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Do not infer operational parity, closure or semantic acceptance from valid draft structure.",
+        "grounding": [
+          {
+            "end_line": 158,
+            "quote": "Types, lints, validator reports, package manifests, operation counts, catalog\nrows, event co-presence, and generated documentation are necessary evidence\nwhere applicable. None substitutes for the installed causal path or for the\ncomplete Product scenarios.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md#REQ-L-GTL3-CONTRACT-LAW-API%20-%20Contract-Law%20Reload%20Surface%2FNon-Substitution%20Rule",
+            "start_line": 155
+          }
+        ],
+        "key": "installed_path_not_established",
+        "subject_key": "evidence_non_substitution",
+        "uncertainty": "This bounded source interpretation supplies declarations and obligations but no installed causal-path evidence or complete Product scenario results."
+      },
+      {
+        "consequence": "Retain exact-reference obligations and refuse to infer satisfying wiring or target matches from labels.",
+        "grounding": [
+          {
+            "end_line": 25,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-001**: GraphFunction zoom shall be a\nplanned substitution of one admitted refinement GraphFunction into one exact\nGraphVector of an admitted parent GraphFunction. The selected vector shall be\ngrounded by at least one declared `RefinementBoundary`, `CandidateFamily`, or\npublished traversal-target reference. Zero or multiple matches shall fail\nadmission or construction; names, ordinals, or ambient runtime state shall not\nselect the target.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 19
+          },
+          {
+            "end_line": 45,
+            "quote": "**REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT-004**: Typed GraphFunction composition\nshall name a left provided/carry node, a right required node, and one published\nnode-type declaration reference for every wiring. Both nodes shall satisfy that\nsame node type without weakening schema, Markov, or asset-surface law. Missing\nnodes, unknown or non-node-type declaration references, incompatible\ncontracts, or an empty wiring set shall fail before composition.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md#REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT%20-%20Zoom%2C%20Foldback%2C%20And%20Type%20Wiring%2FAcceptance%20Criteria",
+            "start_line": 40
+          }
+        ],
+        "key": "node_type_definition_dependency",
+        "subject_key": "typed_wiring",
+        "uncertainty": "Specific published node-type definitions and admissible refinement target identities are not supplied as instantiated declarations here."
+      }
+    ]
+  },
+  "answer_sha256": "0391e280948550db56763a84349b7d6aa6cc1f861876a12c551e34be1acb363b",
+  "author": "codex-gtl-frame",
+  "chunk": "chunk-883a1fbace33dcda2970",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "c2021e28ed0219be8e046587b63a3ed23c5465800c97b2195ab9a2efd4ca1a7b"
+}

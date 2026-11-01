@@ -1,0 +1,461 @@
+{
+  "concepts": [
+    {
+      "key": "continuation_obligation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 39,
+          "quote": "**REQ-R-ABG3-CONTINUATION-001**: `Continuation` shall represent an open governance obligation or unresolved runtime condition derived from event truth, not constitutional intent or hidden task-queue strategy.\n\n**REQ-R-ABG3-CONTINUATION-002**: Continuation identity shall preserve at minimum `continuation_id`, `continuation_kind`, `caused_by_event_id`, and `run_id`.\n\n**REQ-R-ABG3-CONTINUATION-003**: Continuation shall be strictly run-local. It shall not survive into a replacement run as the same aggregate.\n\n**REQ-R-ABG3-CONTINUATION-004**: If unresolved work remains relevant after retry, correction, or supersession, ABG shall terminate the old continuation by authoritative event truth and open a new continuation in the new run with explicit causal linkage.\n\n**REQ-R-ABG3-CONTINUATION-005**: Authoritative continuation lifecycle shall include at minimum open, resolved, superseded, and abandoned termination truth.\n\n**REQ-R-ABG3-CONTINUATION-006**: Yielded post-dispatch handoff may open continuation truth for observer, routing, or approval-bearing next action, but that continuation shall remain runtime-open obligation truth rather than constitutional intent.\n"
+        }
+      ],
+      "label": "Run-local continuation obligation",
+      "definition": "An event-derived open governance obligation or unresolved runtime condition, not constitutional intent or hidden queue strategy; identity includes continuation_id, continuation_kind, caused_by_event_id and run_id. Lifecycle contains open, resolved, superseded and abandoned truth.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "current_intent_continuation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 53,
+          "end_line": 55,
+          "quote": "**REQ-R-ABG3-CONTINUATION-011**: An admitted F_H response, post-yield input, or other lawful input for the current construction intent shall continue only that intent through `continueExecution` over the exact replay-derived continuation and execution basis. The response shall not create a next-action basis, select another GraphFunction, or admit a new construction intent.\n\n**REQ-R-ABG3-CONTINUATION-012**: When fresh post-disposition truth selects a new action, the path shall be `evaluateNext -> admitConstructionIntent -> invokeGraphFunction`. It shall not be relabeled as continuation of the prior intent or opened directly by public ingress, a projector, an adapter, or a worker result.\n"
+        }
+      ],
+      "label": "Current-intent continuation route",
+      "definition": "Lawful current-intent inputs use continueExecution over exact replay-derived continuation and execution basis. New post-disposition selected action instead uses evaluateNext → admitConstructionIntent → invokeGraphFunction.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "convergence_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONVERGENCE.md#REQ-R-ABG3-CONVERGENCE%20%E2%80%94%20Evaluation%2C%20Proof%2C%20Closure%2C%20And%20Fallback",
+          "start_line": 1,
+          "end_line": 7,
+          "quote": "# REQ-R-ABG3-CONVERGENCE — Evaluation, Proof, Closure, And Fallback\n\n**Status**: Active\n**Lineage**: T-283 Product basis; T-284 bounded owner repair\n**Category**: Capability\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Convergence requirement provenance",
+      "definition": "Active capability dated 2026-04-05, lineage T-283 Product basis and T-284 owner repair, with method/intent/product derivations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "convergence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONVERGENCE.md#REQ-R-ABG3-CONVERGENCE%20%E2%80%94%20Evaluation%2C%20Proof%2C%20Closure%2C%20And%20Fallback%2FPurpose",
+          "start_line": 13,
+          "end_line": 14,
+          "quote": "Define declared deterministic evaluation and proof plus ABG-owned result\nadmission, closure, escalation, and fallback truth.\n"
+        }
+      ],
+      "label": "Declared convergence",
+      "definition": "Deterministic evaluation and proof are declared; ABG owns admission, closure, escalation and fallback runtime truth.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "correction_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CORRECTION.md#REQ-R-ABG3-CORRECTION%20%E2%80%94%20Correction%2C%20Supersession%2C%20And%20Shadowing",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-CORRECTION — Correction, Supersession, And Shadowing\n\n**Status**: Active\n**Category**: Capability\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Correction requirement provenance",
+      "definition": "Active capability dated 2026-04-05 declaring method/intent/product derivation for correction, supersession and shadowing.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "lawful_correction",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CORRECTION.md#REQ-R-ABG3-CORRECTION%20%E2%80%94%20Correction%2C%20Supersession%2C%20And%20Shadowing%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define lawful correction and supersession without destroying replayable\nstructure.\n"
+        }
+      ],
+      "label": "Lawful correction",
+      "definition": "Correction and supersession preserve replayable structure.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "events_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-EVENTS — Event Truth And Emission\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-07-11\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Event Truth and Emission provenance",
+      "definition": "Active Constraint/Guarantee dated 2026-07-11 with declared method/intent/product derivations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "event_runtime_truth",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "Define the ABG 3 event substrate as the only written runtime truth surface.\n"
+        }
+      ],
+      "label": "Sole written runtime truth",
+      "definition": "The ABG 3 event substrate is the only written runtime truth surface.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "continuation_uses_obligation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 53,
+          "end_line": 53,
+          "quote": "**REQ-R-ABG3-CONTINUATION-011**: An admitted F_H response, post-yield input, or other lawful input for the current construction intent shall continue only that intent through `continueExecution` over the exact replay-derived continuation and execution basis. The response shall not create a next-action basis, select another GraphFunction, or admit a new construction intent.\n"
+        }
+      ],
+      "source_key": "current_intent_continuation",
+      "target_key": "continuation_obligation",
+      "kind": "requires",
+      "meaning": "Continuation runs over the exact replay-derived run-local obligation and execution basis.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "continuation_release_scope",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 27,
+          "quote": "Release applicability follows [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries)\nand the [requirement allocation](../README.md#human-response-and-whole-run-oversight).\nThe dedicated observer/tuner variants of CONTINUATION-010 are 5.1 scope;\nordinary selected governance preserves its shared admission/pressure boundary.\nOnly the native F_H\nresponse/resume portion of CONTINUATION-011 is deferred; automatic\ncurrent-intent continuation, newly selected actions, local correction and\nCONTINUATION-009 runtime liveness remain 5.0. Deferred response contracts do\nnot authorize direct invocation to impersonate response or bypass admission.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "continuation_obligation"
+      ],
+      "statement": "Dedicated observer/tuner variants of CONTINUATION-010 are 5.1; ordinary selected governance retains their shared admission/pressure boundary. Only native F_H response/resume in -011 is deferred. Automatic current-intent continuation, new actions, local correction and -009 liveness remain 5.0. Deferral does not permit direct invocation impersonating a response or bypassing admission.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "continuation_replacement_identity",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 31,
+          "end_line": 39,
+          "quote": "**REQ-R-ABG3-CONTINUATION-002**: Continuation identity shall preserve at minimum `continuation_id`, `continuation_kind`, `caused_by_event_id`, and `run_id`.\n\n**REQ-R-ABG3-CONTINUATION-003**: Continuation shall be strictly run-local. It shall not survive into a replacement run as the same aggregate.\n\n**REQ-R-ABG3-CONTINUATION-004**: If unresolved work remains relevant after retry, correction, or supersession, ABG shall terminate the old continuation by authoritative event truth and open a new continuation in the new run with explicit causal linkage.\n\n**REQ-R-ABG3-CONTINUATION-005**: Authoritative continuation lifecycle shall include at minimum open, resolved, superseded, and abandoned termination truth.\n\n**REQ-R-ABG3-CONTINUATION-006**: Yielded post-dispatch handoff may open continuation truth for observer, routing, or approval-bearing next action, but that continuation shall remain runtime-open obligation truth rather than constitutional intent.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "continuation_obligation"
+      ],
+      "statement": "Continuation is strictly run-local and cannot survive a replacement run as the same aggregate. If unresolved work remains relevant after retry/correction/supersession, authoritatively terminate the old continuation and open a new one in the new run with causal linkage. Yielded post-dispatch handoff may open observer/routing/approval-bearing next-action obligation, never constitutional intent.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "continuation_admitted_pressure",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 41,
+          "end_line": 51,
+          "quote": "**REQ-R-ABG3-CONTINUATION-007**: A modulated same-edge continuation shall be derived from the traversal attempt envelope, admitted progress rows, typed remaining schedule refs, and existing retry/non-progress projection truth. ABG shall not infer remaining work from worker prose, file presence, elapsed time, or unstated worker intent.\n\n**REQ-R-ABG3-CONTINUATION-008**: Retry exhaustion, blocked modulation, and forced review for a modulated attempt shall be replay-visible runtime truth. They shall not be implemented as a private loop inside a downstream product, runner adapter, or worker prompt.\n\n**REQ-R-ABG3-CONTINUATION-009**: Liveness-yield, retry, block, or escalation for supervised runtime work shall consume ABG runtime liveness observer disposition. Continuation projection shall not derive a separate stop or retry action from elapsed time, process state, or transcript text.\n\n**REQ-R-ABG3-CONTINUATION-010**: Recursive executive-observer pressure may feed\ncontinuation, retry, re-entry, reprice, block, or close-candidate projection\nonly after ABG admits the observer's `evaluate.C` findings and projects typed\npressure facts. Worker prose, product plugin tuning, or downstream lifecycle\nread models shall not directly select continuation action.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "continuation_obligation"
+      ],
+      "statement": "Modulated same-edge continuation derives from attempt envelope, admitted progress, typed remaining schedules and retry/non-progress truth, never prose/files/time/unstated intent. Retry exhaustion, blocked modulation and forced review are replay-visible, not private downstream/adapter/prompt loops. Supervised liveness yield/retry/block/escalation consumes ABG observer disposition, not separately inferred time/process/transcript action. Executive-observer pressure feeds continuation/retry/re-entry/reprice/block/close-candidate only after evaluate.C admission and typed pressure projection; prose/plugin tuning/read models cannot select action.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "continuation_action_separation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 53,
+          "end_line": 55,
+          "quote": "**REQ-R-ABG3-CONTINUATION-011**: An admitted F_H response, post-yield input, or other lawful input for the current construction intent shall continue only that intent through `continueExecution` over the exact replay-derived continuation and execution basis. The response shall not create a next-action basis, select another GraphFunction, or admit a new construction intent.\n\n**REQ-R-ABG3-CONTINUATION-012**: When fresh post-disposition truth selects a new action, the path shall be `evaluateNext -> admitConstructionIntent -> invokeGraphFunction`. It shall not be relabeled as continuation of the prior intent or opened directly by public ingress, a projector, an adapter, or a worker result.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "current_intent_continuation"
+      ],
+      "statement": "Admitted F_H response, post-yield or other lawful current-intent input cannot create next-action basis, choose another GraphFunction or admit new intent. Fresh new-action truth cannot be relabeled prior continuation or opened directly by ingress/projector/adapter/worker result.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "freshness_and_authority_crossing",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 57,
+          "end_line": 59,
+          "quote": "**REQ-R-ABG3-CONTINUATION-013**: A newer `ObservationSnapshot` under the same immutable workspace binding and `ExecutionBasis` may stale prior model, gap, target-binding, priority, or next-action projections and shall rerun the affected `synthesizeModel`, `evalGap`, and `evaluateNext` functions. Observation freshness alone shall not create a basis fork or require a new workspace binding.\n\n**REQ-R-ABG3-CONTINUATION-014**: A changed workspace authority basis, workspace binding, product/install/catalog authority, declared root, or other execution authority on a continued spine shall require a separately admitted binding when applicable and an exact covering declaration reprice naming the crossed basis pair. Without that reprice, continuation shall fail closed as typed `basis_fork_detected` before traversal, materialization, or closure.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "current_intent_continuation"
+      ],
+      "statement": "New ObservationSnapshot on unchanged binding/basis may stale model/gap/target-binding/priority/next-action and must rerun affected synthesizeModel/evalGap/evaluateNext; freshness alone is not basis fork or new binding. Changed workspace authority/binding/product/install/catalog/root/other execution authority requires separately admitted binding when applicable plus exact covering reprice naming crossed basis pair. Without reprice fail typed basis_fork_detected before traversal/materialization/closure.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "recovery_preserves_progress",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 61,
+          "end_line": 73,
+          "quote": "**REQ-R-ABG3-CONTINUATION-015**: Recovery shall restore the actual pending\ntraversal position and current input through the admitted causal producer,\nconserving completed work, assessment status and unresolved obligations. A\nconsumer-preparation failure shall not require a successful producer to rerun\nsolely to recreate its output, substitute graph-entry input for progressed\ninput, or invent consumer assessment. -003/-004 govern replacement-Run identity;\n-014 governs any changed authority basis.\n\n**REQ-R-ABG3-CONTINUATION-016**: Reuse shall depend on the retained result's\nadmission, dependency validity and applicability to the current use. Recovery\nshall reacquire required mutable observations and refresh affected support on\nmaterial invalidation, preserving unaffected completed work and separately\nrequired independent judgment. Unknown affectedness shall remain explicit.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "current_intent_continuation",
+        "continuation_obligation"
+      ],
+      "statement": "Recovery restores actual pending traversal and current input through admitted causal producer, conserving completed work, assessment and unresolved obligations. Consumer-preparation failure cannot force a successful producer rerun solely to recreate output, substitute graph-entry input or invent consumer assessment. Replacement-run and authority-crossing laws remain. Reuse depends on result admission, dependency validity and current applicability. Reacquire required mutable observations and refresh affected support on material invalidation while retaining unaffected completion and separately required independent judgment; unknown affectedness remains explicit.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "deterministic_convergence_order",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONVERGENCE.md#REQ-R-ABG3-CONVERGENCE%20%E2%80%94%20Evaluation%2C%20Proof%2C%20Closure%2C%20And%20Fallback%2FAcceptance%20Criteria",
+          "start_line": 18,
+          "end_line": 28,
+          "quote": "**REQ-R-ABG3-CONVERGENCE-001**: HoG shall traverse declared evaluator, proof,\nand closure GraphFunctions against the active boundary. ABG shall admit their\nresults and record replayable outcome truth.\n\n**REQ-R-ABG3-CONVERGENCE-002**: Convergence and closure determination shall be driven by declared GTL surfaces and resolved ABG policy, not by hidden HoG-, adapter-, or implementation-local strategy.\n\n**REQ-R-ABG3-CONVERGENCE-003**: The broad default shall run declared deterministic evaluation/proof first, then generic deterministic checks when available, then fall forward to governed `F_P` only when deterministic handling is absent or remains open.\n\n**REQ-R-ABG3-CONVERGENCE-004**: Deterministic paths that are invalid, contradictory, malformed, or engine-erroring shall fail closed rather than silently falling forward to `F_P`.\n\n**REQ-R-ABG3-CONVERGENCE-005**: After constructive `F_P` work returns, HoG shall traverse the declared post-transform proof and blocker-class closure GraphFunctions. ABG shall admit their results before terminal success or further escalation.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "convergence"
+      ],
+      "statement": "HoG traverses declared evaluator/proof/closure GraphFunctions against active boundary; ABG admits results as replayable outcome truth. GTL and resolved policy, never hidden HoG/adapter/implementation strategy, drive closure. Broad default is declared deterministic evaluation/proof, then available generic deterministic checks, then governed F_P only if deterministic handling is absent or open. Invalid/contradictory/malformed/engine-erroring deterministic paths fail closed. After constructive F_P, traverse declared post-transform proof and blocker-class closure and admit results before terminal success or escalation.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "observer_findings_and_outcome_distinctions",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONVERGENCE.md#REQ-R-ABG3-CONVERGENCE%20%E2%80%94%20Evaluation%2C%20Proof%2C%20Closure%2C%20And%20Fallback%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 36,
+          "quote": "**REQ-R-ABG3-CONVERGENCE-006**: Unresolved deterministic observer findings after constructive work shall be emitted as runtime fact truth and shall not by default regain traversal-stopping authority; they shall feed downstream gap, continuation, intent, or other declared observation surfaces.\n\n**REQ-R-ABG3-CONVERGENCE-007**: ABG shall preserve lawful declared pre-dispatch deterministic hard-stop policy when resolved transition law explicitly removes constructive continuation.\n\n**REQ-R-ABG3-CONVERGENCE-008**: ABG shall distinguish at minimum runtime defect, policy/config defect, probabilistic non-convergence, proof failure after constructive work, post-transform observer incompleteness, and superseded or abandoned work.\n\n**REQ-R-ABG3-CONVERGENCE-009**: When constructive work has materially advanced the boundary but non-blocking post-transform observer truth remains unresolved, ABG shall surface that outcome as yielded handoff truth rather than flattening it into terminal success or blocker-class failure.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "convergence"
+      ],
+      "statement": "Unresolved post-construction deterministic observer findings become runtime facts feeding declared gap/continuation/intent/observation, without default renewed stopping authority. Preserve explicitly resolved lawful pre-dispatch hard-stop policy removing constructive continuation. Distinguish runtime defect, policy/config defect, probabilistic non-convergence, post-construction proof failure, observer incompleteness and superseded/abandoned work. Material progress with unresolved nonblocking observer truth is yielded handoff, not terminal success or blocker failure.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Declared pre-dispatch deterministic hard-stop policy remains when resolved law explicitly removes constructive continuation."
+      ]
+    },
+    {
+      "key": "correction_shadow_and_invalidate",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CORRECTION.md#REQ-R-ABG3-CORRECTION%20%E2%80%94%20Correction%2C%20Supersession%2C%20And%20Shadowing%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 23,
+          "quote": "**REQ-R-ABG3-CORRECTION-001**: Correction shall shadow prior runtime truth within a lawful boundary without erasing event history.\n\n**REQ-R-ABG3-CORRECTION-002**: Correction or reset over recursive execution shall invalidate stale frame progress, foldback result, parent rebind result, and resumable checkpoints contained by the corrected boundary.\n\n**REQ-R-ABG3-CORRECTION-003**: Supersession or abandonment shall produce authoritative continuation and run termination truth rather than hidden controller cleanup.\n\n**REQ-R-ABG3-CORRECTION-004**: Reopened execution after correction shall mint fresh attempt identity where required and shall not alias stale runtime success.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "lawful_correction"
+      ],
+      "statement": "Correction shadows within lawful boundary without erasing history. Recursive correction/reset invalidates stale frame progress, foldback, parent rebind and resumable checkpoints contained by that boundary. Supersession/abandonment authoritatively terminates continuation/run rather than hidden cleanup. Reopen mints fresh attempt identity where required and cannot alias stale success.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [],
+  "residuals": [
+    {
+      "key": "continuation_referenced_contracts",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 27,
+          "quote": "Release applicability follows [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries)\nand the [requirement allocation](../README.md#human-response-and-whole-run-oversight).\nThe dedicated observer/tuner variants of CONTINUATION-010 are 5.1 scope;\nordinary selected governance preserves its shared admission/pressure boundary.\nOnly the native F_H\nresponse/resume portion of CONTINUATION-011 is deferred; automatic\ncurrent-intent continuation, newly selected actions, local correction and\nCONTINUATION-009 runtime liveness remain 5.0. Deferred response contracts do\nnot authorize direct invocation to impersonate response or bypass admission.\n"
+        }
+      ],
+      "subject_key": "continuation_obligation",
+      "uncertainty": "Release boundaries/allocation and the full functions, liveness and traversal contracts are not supplied here.",
+      "consequence": "Applicability statements and dependencies are retained, without resolving external contract identities or actual continuation state."
+    },
+    {
+      "key": "convergence_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONVERGENCE.md#REQ-R-ABG3-CONVERGENCE%20%E2%80%94%20Evaluation%2C%20Proof%2C%20Closure%2C%20And%20Fallback",
+          "start_line": 4,
+          "end_line": 7,
+          "quote": "**Lineage**: T-283 Product basis; T-284 bounded owner repair\n**Category**: Capability\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "convergence_metadata",
+      "uncertainty": "Referenced legacy method and lineage contents are absent.",
+      "consequence": "Metadata does not establish current approval or resolved authority."
+    },
+    {
+      "key": "correction_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CORRECTION.md#REQ-R-ABG3-CORRECTION%20%E2%80%94%20Correction%2C%20Supersession%2C%20And%20Shadowing",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "correction_metadata",
+      "uncertainty": "Referenced method/intent/product contents are absent.",
+      "consequence": "No resolved cross-chunk identity or current authority is inferred."
+    },
+    {
+      "key": "events_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "events_metadata",
+      "uncertainty": "Linked legacy method, intent and Product sources are not supplied in this section.",
+      "consequence": "Derivation links remain provenance references, not resolved authority."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "continuation_obligation",
+        "current_intent_continuation",
+        "continuation_uses_obligation",
+        "continuation_release_scope",
+        "continuation_replacement_identity",
+        "continuation_admitted_pressure",
+        "continuation_action_separation",
+        "freshness_and_authority_crossing",
+        "recovery_preserves_progress",
+        "continuation_referenced_contracts"
+      ],
+      "reason": "Continuation behavior and release distinctions retained with unresolved referenced contracts."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONVERGENCE.md#REQ-R-ABG3-CONVERGENCE%20%E2%80%94%20Evaluation%2C%20Proof%2C%20Closure%2C%20And%20Fallback",
+      "decision": "residual",
+      "keys": [
+        "convergence_metadata",
+        "convergence_basis_unresolved"
+      ],
+      "reason": "Metadata retained without resolving external provenance."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONVERGENCE.md#REQ-R-ABG3-CONVERGENCE%20%E2%80%94%20Evaluation%2C%20Proof%2C%20Closure%2C%20And%20Fallback%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "convergence"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONVERGENCE.md#REQ-R-ABG3-CONVERGENCE%20%E2%80%94%20Evaluation%2C%20Proof%2C%20Closure%2C%20And%20Fallback%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "deterministic_convergence_order",
+        "observer_findings_and_outcome_distinctions"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CORRECTION.md#REQ-R-ABG3-CORRECTION%20%E2%80%94%20Correction%2C%20Supersession%2C%20And%20Shadowing",
+      "decision": "residual",
+      "keys": [
+        "correction_metadata",
+        "correction_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved derivations."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CORRECTION.md#REQ-R-ABG3-CORRECTION%20%E2%80%94%20Correction%2C%20Supersession%2C%20And%20Shadowing%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "lawful_correction"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CORRECTION.md#REQ-R-ABG3-CORRECTION%20%E2%80%94%20Correction%2C%20Supersession%2C%20And%20Shadowing%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "correction_shadow_and_invalidate"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission",
+      "decision": "residual",
+      "keys": [
+        "events_metadata",
+        "events_basis_unresolved"
+      ],
+      "reason": "Event metadata retained without resolving referenced basis."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-EVENTS.md#REQ-R-ABG3-EVENTS%20%E2%80%94%20Event%20Truth%20And%20Emission%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "event_runtime_truth"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    }
+  ],
+  "limitations": [
+    "Release deferral is limited to the stated observer/tuner and native F_H response portions; automatic 5.0 continuation and admission laws are preserved.",
+    "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+  ]
+}

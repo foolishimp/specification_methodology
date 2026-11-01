@@ -1,0 +1,573 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "Binding joins concrete Worker to required GTL Role before realization and records admitted program/digest, immutable WorkspaceBinding/digest, published GraphFunction membership, optional durable Job, run, worker, role, execution basis and invocation authority.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 29,
+            "quote": "**REQ-R-ABG3-BINDING-001**: ABG shall bind concrete `Worker` identity to GTL `Role` requirements before lawful realization of work that requires that role.\n\n**REQ-R-ABG3-BINDING-002**: Public semantic work shall enter ABG through one admitted graph overlay or GTL program composition and one `GraphFunction` callable published by that program, with a GTL `Job` contract when the work declares durable semantic job identity. A graph function, job, overlay row, or bare vector shall not be relabeled as the whole program or used without program membership.\n\n**REQ-R-ABG3-BINDING-003**: Execution-scoped binding surfaces shall preserve at minimum admitted program identity and digest, one immutable `WorkspaceBinding` identity and digest, selected graph-function identity and program-membership evidence, semantic job identity when present, runtime run identity, worker identity, role identity, execution basis, and invocation-authority reference.\n\n**REQ-R-ABG3-BINDING-004**: When HoG traverses a published GraphFunction and a selected implementation binding realizes its declared leaf effects, ABG binding truth shall preserve the admitted-program identity, exact selected action or current-intent basis, GraphFunction identity and program-membership evidence, workspace binding, graph-call identity, execution basis, implementation-binding identity, and materialization identity associated with execution.\n\n**REQ-R-ABG3-BINDING-005**: Binding conformance shall be validated against the admitted GTL program, exact workspace binding, published graph-function membership, resolved runtime policy, and exact invocation authority before execution or approval.\n\n**REQ-R-ABG3-BINDING-006**: Authentication and authority resolution remain external. ABG consumes and records resolved identity/authority inputs; it does not implement those systems.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 19
+          }
+        ],
+        "key": "execution_binding",
+        "label": "Execution-scoped binding"
+      },
+      {
+        "conditions": [],
+        "definition": "Each executable boundary resolves a snapshot from live vector contract and any published function environment, distinguishing external entry from internally produced carried bindings.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 45,
+            "quote": "**REQ-R-ABG3-BINDING-009**: ABG binding shall resolve a runtime environment snapshot for each executable traversal boundary from the live vector contract plus the published graph-function environment when present.\n\n**REQ-R-ABG3-BINDING-010**: Binding shall preserve the distinction between external entry bindings and internally produced carried bindings so downstream realization can read cumulative upstream truth without inventing hidden ambient state.\n\n**REQ-R-ABG3-BINDING-011**: ABG shall fail closed on structurally conflicting carried binding contracts and shall not dispatch proof/production work when required internally produced bindings are absent from the resolved runtime environment.\n\n**REQ-R-ABG3-BINDING-012**: When a target node declares `asset_surface.required_contexts`, ABG binding shall treat those named carried bindings as part of the executable runtime boundary for that traversal and shall fail closed when they are absent from the published carrier environment.\n\n**REQ-R-ABG3-BINDING-013**: ABG bind-time prompt and manifest surfaces shall preserve declared target and environment `asset_surface` truth so proof/production work can specialize against asset kind, required carried contexts, and declared standards or output-contract references.\n\n**REQ-R-ABG3-BINDING-014**: When ABG widens one live vector boundary with target `asset_surface.required_contexts`, that merge shall be explicit and invocation-local. It shall not rewrite published GTL module topology, and bind-time prompt, manifest, and runtime event surfaces shall preserve the vector-source required bindings, the asset-surface-required bindings, and the effective merged required boundary distinctly enough for replay and post-mortem audit.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 35
+          }
+        ],
+        "key": "runtime_environment",
+        "label": "Traversal runtime environment"
+      },
+      {
+        "conditions": [],
+        "definition": "WorkspaceAuthorityBasis contains only stable identity, canonical root, authority mode and authority-bearing manifest/config truth; immutable WorkspaceBinding adds exact installed product set, resolved lock and declared roots. Mutable observations, readiness, projection, replay cursors and root content are not authority identity.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 61,
+            "quote": "**REQ-R-ABG3-BINDING-015**: When a graph-function start declares distinct input and output workspace authority, ABG binding shall admit both stable workspace authority bases and immutable workspace bindings explicitly, derive output asset identity and materialization roots under the declared output workspace, and preserve input-workspace lineage plus output-workspace lineage in plugin handoff, runtime event, and projection truth. A newer observation of either workspace does not create another authority or binding.\n\n**REQ-R-ABG3-BINDING-016**: `WorkspaceAuthorityBasis` shall contain only stable workspace identity, canonical root locator, authority mode, and authority-bearing manifest or configuration truth. `WorkspaceBinding` shall immutably join that basis to the exact installed product set, resolved lock, and declared roots. Readiness, runtime projection, replay cursor, worksite observations, and mutable-root content shall not enter either authority identity.\n\n**REQ-R-ABG3-BINDING-017**: Every re-observation of file, process, runtime, replay, readiness, or mutable worksite truth shall create or admit a new `ObservationSnapshot` bound to the same workspace binding when authority is unchanged. A newer observation may stale dependent model, gap, or next-action projections; it shall not mutate the workspace binding or constitute `basis_fork_detected`.\n\n**REQ-R-ABG3-BINDING-018**: A changed workspace authority basis, installed\nproduct set, resolved lock, or declared root shall require a separately admitted\nimmutable workspace binding. A changed catalog or catalog view may require a\nnew execution basis and covering declaration reprice, but it shall not create a\nnew workspace binding unless a workspace-binding constituent also changed.\nCrossing from one execution basis or binding to another on an existing causal\nspine shall require an exact covering declaration reprice naming the crossed\nidentity pair; otherwise admission shall return typed `basis_fork_detected`\nbefore execution.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 47
+          }
+        ],
+        "key": "workspace_authority_binding",
+        "label": "Stable workspace authority and immutable binding"
+      },
+      {
+        "conditions": [],
+        "definition": "C means compute: one instantiation of a tuple over F_D, F_P, F_H at one program stage. The admitted GTL C declaration supplies the structure; the declared shape is data and the handler realizes compute. Fibre is data inside one uniform truth envelope, not surrounding structure.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 18,
+            "quote": "ONTOLOGY: C is COMPUTE. Traversal A→B carries compute C as a tuple over\nfibres {F_D, F_P, F_H}; a \"C call\" is a COMPUTE CALL — one instantiation\nof the tuple at one program stage. Descriptive language elsewhere\n(e.g. the T-205 \"category vs functor\" plugin factoring) never redefines\nC: the declared shape of compute is data, the handler realizes compute,\nand C names the compute itself.\nEach HoG traversal runs the C structure declared by the admitted GTL program\n(-014). The envelope below is the one\ntruth shape for every C call; the fibre is data inside it, never\nstructure around it.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope",
+            "start_line": 9
+          }
+        ],
+        "key": "c_call_envelope",
+        "label": "Uniform compute call envelope"
+      },
+      {
+        "conditions": [],
+        "definition": "Every invoking stage-task has exactly one ordered opened → fibre_selected → evidenced(0..n) → result_admitted → judged spine, with no arm/fibre/role/plugin exemption; a composed batch is a grouping ref, not the counted call. Opened records locus only. Fibre dispatch/invocation/payload/response/execution/escalation events exist only within an open spine through evidenced references.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 58,
+            "quote": "- **-001 Uniformity.** Every C call emits exactly one spine:\n  `c_call_opened` → `c_call_fibre_selected` → `c_call_evidenced`(0..n) →\n  `c_call_result_admitted` → `c_call_judged`. No arm, fibre, stage role,\n  or plugin path is exempt.\n- **-002 Locus-only spine.** `c_call_opened` carries call-locus identity\n  only: cCallRef, basisId, graphFunctionId, graphCallId, frameId, edge,\n  vectorIndex, stageRole, taskOrdinal|null, attempt. No spine event\n  carries a fibre name OR fibre-dependent material (instruction\n  manifests are fibre evidence, not locus identity); fibre-freedom is\n  structural. A call reached in an admitted open GTL C program also carries\n  `programLocusRef` and the complete `retryPath`, represented as a possibly\n  empty sequence of positive integers. Those fields identify the authored\n  structural locus and nested attempt path; they carry no fibre or handler\n  truth. Every 5.0 standard-path call carries both fields; no flat\n  compatibility path is release-authoritative.\n- **-003 Fibre selection is admitted truth.** `c_call_fibre_selected`\n  {cCallRef, regime, armId, compositionRef|null} is the first interior\n  row. The (stageRole × fibre) arm census derives from the admitted GTL\n  declaration and implementation bindings at the one resolution seam.\n- **-004 Full replay identity.** cCallRef is a STABLE DIGEST over the\n  typed identity tuple {basisId, graphCallId, frameId, vectorIndex,\n  stageRole, taskOrdinal, attempt} — `c-call:sha256:<hex>` — injective\n  by construction (delimiter encodings collide across \":\"-bearing\n  fields); the READABLE locus is retained on `c_call_opened` itself.\n  Recursive frames, repeated graph calls, and composed tasks shall not\n  collide. For an admitted open GTL C program, the typed tuple additionally\n  includes {programLocusRef, retryPath}; serial same-role loci and nested\n  attempts therefore cannot collapse onto the flat compatibility identity.\n  The two fields appear together or not at all. (Absorbs the T-198\n  frame-identity successor.)\n- **-005 Spine per invoking task.** Any stage-task that can invoke a\n  worker or plugin gets its own spine; a composed batch is a parent\n  grouping ref (batchRef), never the counted call.\n- **-006 Enclosure.** Fibre evidence events (dispatch, invocation,\n  payload, response-contract, execution, escalation rows) are lawful\n  only inside an open spine, referenced from `c_call_evidenced`.\n  Free-floating fibre events are drift.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 22
+          }
+        ],
+        "key": "c_call_spine",
+        "label": "Compute call event spine"
+      },
+      {
+        "conditions": [],
+        "definition": "Judgment is advance/retry/pending/blocked/escalated/no_declared_check. pending is fibre-independent external waiting, projected publicly as dispatch_required. One retryable-failure allowlist governs outcomes across arms; selection-row single-event guards anchor dispatch temporal properties, non-vacuous on every executed arm.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 84,
+            "quote": "- **-008 Judgment vocabulary.** `c_call_judged.judgment` ∈ {advance,\n  retry, pending, blocked, escalated, no_declared_check}.\n  `no_declared_check` is never gate-satisfying and never satisfies an\n  edge that declares required checks; it advances only where nothing\n  demanded the check. `pending` is the fibre-independent\n  awaiting-external-actor state; public dispatch_required is its m04\n  projection.\n- **-009 One retry law.** The retryable-failure allowlist judges spine\n  outcomes; no per-arm classification detours.\n- **-010 Antecedent law.** Dispatch-point temporal properties bind to\n  `c_call_fibre_selected` with single-event where-guards (e.g.\n  regime=F_P) — the selection row IS the antecedent; the temporal\n  algebra needs no cross-event join. Gates are non-vacuous on every arm\n  that ran.\n- **-011 Replay compatibility.** Pre-envelope ledgers project a derived\n  spine at read time (projection adapter); synthetic events never enter\n  truth.\n- **-012 Audit equality.** For every completed run: external work\n  sessions in archives equal EXTERNAL-WORK-BEARING spine invocations in\n  replay, per arm (F_P and external F_H). F_D C calls require\n  deterministic evidence artifacts in place of sessions. The standing\n  gate measures both.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 63
+          }
+        ],
+        "key": "c_call_judgment",
+        "label": "Compute call judgment"
+      },
+      {
+        "conditions": [],
+        "definition": "A call may resolve as child traversal with sub_traversal evidence and child basis/run refs. Atomic session versus transparent sub-traversal is declared per call; the same spine law holds recursively and each boundary reconciles its own archives/invocations using collision-free graphCall/frame identity.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 94,
+            "quote": "- **-013 Recursive enclosure.** A C call may resolve as a CHILD\n  traversal: the fibre interior carries `evidenceClass:\n  \"sub_traversal\"` with the child basis/run refs, and the child is the\n  same monad at its own boundary — spines all the way down. The monad\n  boundary (atomic session vs transparent sub-traversal) is a DECLARED\n  placement per call, not architecture. Audit equality (-012) composes:\n  each level's archives reconcile against its own spine invocations;\n  cCallRef identity (-004: graphCallId + frameId) makes recursion\n  collision-free.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 86
+          }
+        ],
+        "key": "declared_child_traversal",
+        "label": "Declared child traversal placement"
+      },
+      {
+        "conditions": [],
+        "definition": "Active Constraint/Guarantee dated 2026-04-05 associates runtime open-obligation truth with Product Execution And Context Calculus and T-287 re-entry; it declares v2.5.1-rc.2 method/intent/product derivations.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 7,
+            "quote": "# REQ-R-ABG3-CONTINUATION — Runtime Open Obligation Truth\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Product behavior**: [Execution And Context Calculus](../../PRODUCT.md#execution-and-context-calculus); T-287 owner-directed Product/requirement re-entry.\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth",
+            "start_line": 1
+          }
+        ],
+        "key": "continuation_requirement",
+        "label": "Continuation requirement metadata"
+      },
+      {
+        "conditions": [],
+        "definition": "Continuation is run-local obligation truth derived from prior events, distinguishing continuation of current admitted intent from admission of a newly selected action.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 15,
+            "quote": "Define `Continuation` as run-local runtime obligation truth derived from prior\nevents, preserving the distinction between continuation of the current admitted\nintent and admission of a newly selected action.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FPurpose",
+            "start_line": 13
+          }
+        ],
+        "key": "runtime_continuation",
+        "label": "Runtime continuation"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "execution_binding"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 33,
+            "quote": "**REQ-R-ABG3-BINDING-001**: ABG shall bind concrete `Worker` identity to GTL `Role` requirements before lawful realization of work that requires that role.\n\n**REQ-R-ABG3-BINDING-002**: Public semantic work shall enter ABG through one admitted graph overlay or GTL program composition and one `GraphFunction` callable published by that program, with a GTL `Job` contract when the work declares durable semantic job identity. A graph function, job, overlay row, or bare vector shall not be relabeled as the whole program or used without program membership.\n\n**REQ-R-ABG3-BINDING-003**: Execution-scoped binding surfaces shall preserve at minimum admitted program identity and digest, one immutable `WorkspaceBinding` identity and digest, selected graph-function identity and program-membership evidence, semantic job identity when present, runtime run identity, worker identity, role identity, execution basis, and invocation-authority reference.\n\n**REQ-R-ABG3-BINDING-004**: When HoG traverses a published GraphFunction and a selected implementation binding realizes its declared leaf effects, ABG binding truth shall preserve the admitted-program identity, exact selected action or current-intent basis, GraphFunction identity and program-membership evidence, workspace binding, graph-call identity, execution basis, implementation-binding identity, and materialization identity associated with execution.\n\n**REQ-R-ABG3-BINDING-005**: Binding conformance shall be validated against the admitted GTL program, exact workspace binding, published graph-function membership, resolved runtime policy, and exact invocation authority before execution or approval.\n\n**REQ-R-ABG3-BINDING-006**: Authentication and authority resolution remain external. ABG consumes and records resolved identity/authority inputs; it does not implement those systems.\n\n**REQ-R-ABG3-BINDING-007**: Before HoG traverses a public GraphFunction carrier, Module publication shall expose the live internal vectors of that carrier through `Module.graphs` so the GTL validator can check publication and membership, ABG can admit selection and binding truth, and HoG can resolve the declared traversal lawfully.\n\n**REQ-R-ABG3-BINDING-008**: Every live internal vector reachable from a public graph-function carrier shall publish a lawful traversal target through an explicit `RefinementBoundary` or `CandidateFamily`. Missing traversal publication shall fail closed.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 19
+          }
+        ],
+        "key": "program_binding_admission",
+        "statement": "Public semantic work enters through one admitted overlay/program composition and one published member GraphFunction, with Job when durable semantic identity is declared. Job/function/overlay row/bare vector cannot replace the whole program or be used outside membership. Validate against exact program, workspace, function membership, resolved policy and invocation authority before execution/approval. Module.graphs exposes all live internal vectors before public carrier traversal; every reachable live vector publishes a lawful RefinementBoundary or CandidateFamily, otherwise fail closed.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "execution_binding"
+        ],
+        "conditions": [
+          "Published GraphFunction traversal realizes declared leaf effects."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 29,
+            "quote": "**REQ-R-ABG3-BINDING-004**: When HoG traverses a published GraphFunction and a selected implementation binding realizes its declared leaf effects, ABG binding truth shall preserve the admitted-program identity, exact selected action or current-intent basis, GraphFunction identity and program-membership evidence, workspace binding, graph-call identity, execution basis, implementation-binding identity, and materialization identity associated with execution.\n\n**REQ-R-ABG3-BINDING-005**: Binding conformance shall be validated against the admitted GTL program, exact workspace binding, published graph-function membership, resolved runtime policy, and exact invocation authority before execution or approval.\n\n**REQ-R-ABG3-BINDING-006**: Authentication and authority resolution remain external. ABG consumes and records resolved identity/authority inputs; it does not implement those systems.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 25
+          }
+        ],
+        "key": "leaf_realization_binding",
+        "statement": "When HoG traverses a published GraphFunction with an implementation realizing leaf effects, preserve program, exact selected-action/current-intent basis, function/membership, workspace, graph-call, execution-basis, implementation and materialization identities. Authentication/authority resolution remain external; ABG records their resolved inputs.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "runtime_environment",
+          "execution_binding"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 45,
+            "quote": "**REQ-R-ABG3-BINDING-010**: Binding shall preserve the distinction between external entry bindings and internally produced carried bindings so downstream realization can read cumulative upstream truth without inventing hidden ambient state.\n\n**REQ-R-ABG3-BINDING-011**: ABG shall fail closed on structurally conflicting carried binding contracts and shall not dispatch proof/production work when required internally produced bindings are absent from the resolved runtime environment.\n\n**REQ-R-ABG3-BINDING-012**: When a target node declares `asset_surface.required_contexts`, ABG binding shall treat those named carried bindings as part of the executable runtime boundary for that traversal and shall fail closed when they are absent from the published carrier environment.\n\n**REQ-R-ABG3-BINDING-013**: ABG bind-time prompt and manifest surfaces shall preserve declared target and environment `asset_surface` truth so proof/production work can specialize against asset kind, required carried contexts, and declared standards or output-contract references.\n\n**REQ-R-ABG3-BINDING-014**: When ABG widens one live vector boundary with target `asset_surface.required_contexts`, that merge shall be explicit and invocation-local. It shall not rewrite published GTL module topology, and bind-time prompt, manifest, and runtime event surfaces shall preserve the vector-source required bindings, the asset-surface-required bindings, and the effective merged required boundary distinctly enough for replay and post-mortem audit.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 37
+          }
+        ],
+        "key": "required_carried_boundary",
+        "statement": "Fail closed on conflicting carried contracts and do not dispatch proof/production without required internally produced bindings. Target asset_surface.required_contexts belongs to the executable boundary and must exist in the published carrier environment. Preserve target/environment asset kind, required contexts and standards/output refs in prompts/manifests. Any merge widening a live vector is explicit and invocation-local, never rewrites module topology; separately retain vector-source, asset-required and effective required bindings in prompts, manifests and events.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "workspace_authority_binding"
+        ],
+        "conditions": [
+          "Distinct workspaces are declared or mutable truth is re-observed."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 51,
+            "quote": "**REQ-R-ABG3-BINDING-015**: When a graph-function start declares distinct input and output workspace authority, ABG binding shall admit both stable workspace authority bases and immutable workspace bindings explicitly, derive output asset identity and materialization roots under the declared output workspace, and preserve input-workspace lineage plus output-workspace lineage in plugin handoff, runtime event, and projection truth. A newer observation of either workspace does not create another authority or binding.\n\n**REQ-R-ABG3-BINDING-016**: `WorkspaceAuthorityBasis` shall contain only stable workspace identity, canonical root locator, authority mode, and authority-bearing manifest or configuration truth. `WorkspaceBinding` shall immutably join that basis to the exact installed product set, resolved lock, and declared roots. Readiness, runtime projection, replay cursor, worksite observations, and mutable-root content shall not enter either authority identity.\n\n**REQ-R-ABG3-BINDING-017**: Every re-observation of file, process, runtime, replay, readiness, or mutable worksite truth shall create or admit a new `ObservationSnapshot` bound to the same workspace binding when authority is unchanged. A newer observation may stale dependent model, gap, or next-action projections; it shall not mutate the workspace binding or constitute `basis_fork_detected`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 47
+          }
+        ],
+        "key": "distinct_workspaces_and_observation",
+        "statement": "Distinct input/output workspace authority must be admitted with both stable bases and immutable bindings; derive output assets/materialization under output root and preserve both lineages in handoff/events/projection. Every re-observation of file/process/runtime/replay/readiness/worksite truth creates or admits a new ObservationSnapshot on the same binding if authority is unchanged; it may stale dependent model/gap/next-action projections but neither mutates binding nor causes basis_fork_detected.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "workspace_authority_binding",
+          "execution_binding"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 61,
+            "quote": "**REQ-R-ABG3-BINDING-018**: A changed workspace authority basis, installed\nproduct set, resolved lock, or declared root shall require a separately admitted\nimmutable workspace binding. A changed catalog or catalog view may require a\nnew execution basis and covering declaration reprice, but it shall not create a\nnew workspace binding unless a workspace-binding constituent also changed.\nCrossing from one execution basis or binding to another on an existing causal\nspine shall require an exact covering declaration reprice naming the crossed\nidentity pair; otherwise admission shall return typed `basis_fork_detected`\nbefore execution.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 53
+          }
+        ],
+        "key": "binding_basis_crossing",
+        "statement": "Changed authority, installed products, lock or root requires separate admitted immutable binding. Catalog/view change may require a new execution basis and declaration reprice but not a new binding unless a constituent changed. Crossing an execution basis or binding on an existing causal spine needs exact covering declaration reprice naming the crossed pair; absent this return typed basis_fork_detected before execution.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "execution_binding"
+        ],
+        "conditions": [
+          "The Program declares an STDO environment."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 77,
+            "quote": "**REQ-R-ABG3-BINDING-019**: For a Program that declares an STDO environment,\nABG shall validate and admit its exact released native-source binding, required\nmaterial and permitted acquisition, together with every supplementary\nrepresentation, index or corpus-access implementation explicitly selected by\nthat environment and its source relationship. All required context/access\nevidence and declared access permissions shall be established before dependent\nwork. Native-source access shall not acquire an unselected companion\nrequirement; it shall not bypass required declared content, permission,\nidentity, completeness or access checks. Physical locators are resource\nassertions, not authority or proof of exact release identity. Missing,\nambiguous, mismatched, inaccessible or unpermitted required inputs shall\nproduce a typed refusal or block before dependent dispatch. Neither\ncaller-supplied retrieval results nor successful tool exit alone shall\nestablish this binding. Mechanical access checks do not apply STDO meaning,\nselect work or accept semantic results.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 63
+          }
+        ],
+        "key": "stdo_environment_admission",
+        "statement": "For a Program declaring an STDO environment, validate/admit exact released native-source binding, required material, permitted acquisition and each explicitly selected supplementary representation/index/corpus implementation with source relationship. Establish all required context/access evidence and permission before dependent work. Native access neither adds unselected companions nor bypasses declared content, permission, identity, completeness or access checks. Locators are resource assertions, not authority/release proof; missing/ambiguous/mismatched/inaccessible/unpermitted required inputs produce typed refusal/block before dispatch. Caller retrieval and successful tool exit alone do not establish binding; access checks neither apply STDO meaning, choose work nor accept semantics.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "c_call_spine"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 51,
+            "quote": "- **-002 Locus-only spine.** `c_call_opened` carries call-locus identity\n  only: cCallRef, basisId, graphFunctionId, graphCallId, frameId, edge,\n  vectorIndex, stageRole, taskOrdinal|null, attempt. No spine event\n  carries a fibre name OR fibre-dependent material (instruction\n  manifests are fibre evidence, not locus identity); fibre-freedom is\n  structural. A call reached in an admitted open GTL C program also carries\n  `programLocusRef` and the complete `retryPath`, represented as a possibly\n  empty sequence of positive integers. Those fields identify the authored\n  structural locus and nested attempt path; they carry no fibre or handler\n  truth. Every 5.0 standard-path call carries both fields; no flat\n  compatibility path is release-authoritative.\n- **-003 Fibre selection is admitted truth.** `c_call_fibre_selected`\n  {cCallRef, regime, armId, compositionRef|null} is the first interior\n  row. The (stageRole × fibre) arm census derives from the admitted GTL\n  declaration and implementation bindings at the one resolution seam.\n- **-004 Full replay identity.** cCallRef is a STABLE DIGEST over the\n  typed identity tuple {basisId, graphCallId, frameId, vectorIndex,\n  stageRole, taskOrdinal, attempt} — `c-call:sha256:<hex>` — injective\n  by construction (delimiter encodings collide across \":\"-bearing\n  fields); the READABLE locus is retained on `c_call_opened` itself.\n  Recursive frames, repeated graph calls, and composed tasks shall not\n  collide. For an admitted open GTL C program, the typed tuple additionally\n  includes {programLocusRef, retryPath}; serial same-role loci and nested\n  attempts therefore cannot collapse onto the flat compatibility identity.\n  The two fields appear together or not at all. (Absorbs the T-198\n  frame-identity successor.)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 26
+          }
+        ],
+        "key": "spine_identity_and_selection",
+        "statement": "Opened locus includes cCallRef,basisId,graphFunctionId,graphCallId,frameId,edge,vectorIndex,stageRole,taskOrdinal|null,attempt. Spine locus carries neither fibre nor fibre-dependent instruction material. fibre_selected is the first interior row, with cCallRef/regime/armId/compositionRef|null resolved from admitted role×fibre and implementations at one seam. cCallRef is an injective stable typed-tuple digest, never collision-prone delimiter joining. Open-program calls also include programLocusRef and possibly empty positive-integer retryPath together in locus and digest; recursive frames, repeated calls, tasks, serial same-role loci and nested attempts cannot collapse. All 5.0 standard calls carry both; flat compatibility is not release-authoritative.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "c_call_judgment",
+          "c_call_spine"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 84,
+            "quote": "- **-008 Judgment vocabulary.** `c_call_judged.judgment` ∈ {advance,\n  retry, pending, blocked, escalated, no_declared_check}.\n  `no_declared_check` is never gate-satisfying and never satisfies an\n  edge that declares required checks; it advances only where nothing\n  demanded the check. `pending` is the fibre-independent\n  awaiting-external-actor state; public dispatch_required is its m04\n  projection.\n- **-009 One retry law.** The retryable-failure allowlist judges spine\n  outcomes; no per-arm classification detours.\n- **-010 Antecedent law.** Dispatch-point temporal properties bind to\n  `c_call_fibre_selected` with single-event where-guards (e.g.\n  regime=F_P) — the selection row IS the antecedent; the temporal\n  algebra needs no cross-event join. Gates are non-vacuous on every arm\n  that ran.\n- **-011 Replay compatibility.** Pre-envelope ledgers project a derived\n  spine at read time (projection adapter); synthetic events never enter\n  truth.\n- **-012 Audit equality.** For every completed run: external work\n  sessions in archives equal EXTERNAL-WORK-BEARING spine invocations in\n  replay, per arm (F_P and external F_H). F_D C calls require\n  deterministic evidence artifacts in place of sessions. The standing\n  gate measures both.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 63
+          }
+        ],
+        "key": "no_check_and_replay_audit",
+        "statement": "no_declared_check never satisfies a gate or declared required check; it advances only when no check is demanded. Pre-envelope replay derives a spine at read time without synthetic truth events. For every completed run, archived external work sessions equal external-work-bearing replay spine invocations per F_P/external F_H arm; F_D supplies deterministic evidence artifacts instead. The standing gate measures both.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "c_call_envelope",
+          "c_call_spine"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 109,
+            "quote": "- **-014 Open edge programs.** The edge program is a DECLARED\n  composition in the C algebra, not a fixed triple: stage roles are\n  admitted program data (the census becomes (declared role × fibre)). A\n  standard-library program may explicitly declare [transform, evaluate,\n  consequence], but that shape is not a hidden runtime default.\n  Every declared program names its RESULT-BEARING role (whose admitted\n  payload feeds closure/carry law) and runs under the same judgment\n  router and retry law. Spine admission accepts any non-empty role;\n  program MEMBERSHIP is enforced at validation and runtime admission where the\n  declared program is in scope — a role outside the admitted program is\n  drift. ABG may project separate call-preparation, result-admission, and\n  materialization bind rows around those stages. Such rows are runtime\n  admission mechanics, not C stages: they never satisfy declared stage cardinality,\n  result-bearing-role, program-order, or fibre-substitution law.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 96
+          }
+        ],
+        "key": "open_program_role_authority",
+        "statement": "The C algebra is an admitted open composition, not a fixed triple. A library may declare transform/evaluate/consequence but there is no hidden default. Every program names its result-bearing role whose admitted payload feeds closure/carry and uses the same router/retry law. Spine accepts nonempty roles; validation/admission enforces program membership and out-of-program roles are drift. Preparation, result-admission and materialization bind rows are mechanics, never stages or satisfaction of stage count, result-bearing role, order or substitution law.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "c_call_envelope"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 132,
+            "quote": "- **-016 Named GTL authority.** Programs and GraphFunctions are named admitted\n  GTL declarations published through Module and catalog authority. HoG\n  traverses those declarations directly. There is no `abg.hog_program`,\n  `abg.hog_program_catalog`, `abg.hog_program_ref`, generated handler program,\n  or interpreter-local configuration that can replace or select the GTL\n  program.\n\n- **-017 Declared adaptive traversal.** Retry, escalation, branching, and\n  alternative compute paths shall be expressed in admitted GTL graph and C\n  structure with explicit predicates, policy references, bounds, and terminal\n  cases. HoG evaluates that declared structure against ABG-admitted replay\n  facts. ABG records the selected locus, regime, implementation, judgment, and\n  continuation as runtime truth. A private runtime ladder, adapter selector,\n  hidden fallback, or generated program is prohibited.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 119
+          }
+        ],
+        "key": "named_program_and_adaptation",
+        "statement": "Programs and functions are named GTL declarations published through Module/catalog and traversed directly by HoG. abg.hog_program/catalog/ref, generated handler programs and interpreter-local config cannot replace/select them. Retry/escalation/branching/alternative compute requires admitted graph/C structure with explicit predicates, policies, bounds and terminal cases; HoG evaluates it against admitted replay facts and ABG records selected locus/regime/implementation/judgment/continuation. Private ladders, adapter selectors, hidden fallback and generated programs are prohibited.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "c_call_envelope"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 142,
+            "quote": "- **-018 Current-input conservation.** Each call shall consume the current\n  input selected by its actual traversal position. Sequential composition\n  preserves the admitted producer-to-consumer transfer, including any declared\n  transformation, under the existing execution basis. Admission and recovery\n  shall not substitute that basis's graph-entry input for a progressed value\n  or establish provenance by payload equality alone. Nested entry and foldback\n  retain their separately declared causal relations. Proof fixtures shall\n  exercise those actual relationships, including a successor value different\n  from entry, rather than invent a new basis to make the comparison pass.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 134
+          }
+        ],
+        "key": "current_input_conservation",
+        "statement": "Each call consumes input at its actual traversal position. Sequential composition preserves admitted producer-consumer transfer and declared transformation under existing basis. Admission/recovery cannot replace progressed value with graph-entry input or infer provenance from payload equality. Nested entry/foldback preserve declared causal relations. Proof fixtures must exercise actual relationships with successor different from entry, not invent a new basis.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "c_call_spine",
+          "c_call_judgment"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 149,
+            "quote": "Weakened tests; any fibre name in spine code; any tool name in\nsubstrate; free-floating fibre events on real replay; a\nno_declared_check judgment satisfying a declared check; archives ≠\nreplay on any arm.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FNon-closure",
+            "start_line": 146
+          }
+        ],
+        "key": "c_call_nonclosure_conditions",
+        "statement": "Weakened tests, fibre names in spine code, tool names in substrate, free-floating fibre events on real replay, no_declared_check satisfying a declared check, or archive/replay inequality on any arm are non-closure conditions.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "residual",
+        "keys": [
+          "execution_binding",
+          "runtime_environment",
+          "workspace_authority_binding",
+          "program_binding_admission",
+          "leaf_realization_binding",
+          "required_carried_boundary",
+          "distinct_workspaces_and_observation",
+          "binding_basis_crossing",
+          "stdo_environment_admission",
+          "binding_external_contracts"
+        ],
+        "reason": "Binding laws retained; referenced contracts remain local names without cross-chunk resolution.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "c_call_envelope",
+          "c_call_metadata_authority"
+        ],
+        "reason": "Compute ontology retained; claimed historical acceptance and referenced derivation are not independently verified.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "c_call_spine",
+          "c_call_judgment",
+          "declared_child_traversal",
+          "recursive_call_enclosure",
+          "spine_identity_and_selection",
+          "no_check_and_replay_audit",
+          "open_program_role_authority",
+          "named_program_and_adaptation",
+          "current_input_conservation",
+          "fibre_substitution_invariance",
+          "cognitive_compression",
+          "c_call_operational_projection_limit"
+        ],
+        "reason": "Uniform spine, identity, authority, compression and current-input laws retained without claiming operational realization.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "c_call_nonclosure_conditions"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FNon-closure"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "continuation_requirement",
+          "continuation_external_basis"
+        ],
+        "reason": "Metadata retained with unresolved source references.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "runtime_continuation"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth%2FPurpose"
+      }
+    ],
+    "latitude": [
+      {
+        "allowed": [
+          "Substitute fibre selection payload and evidence class; all-F_D realizes workflow and all-F_H a human process."
+        ],
+        "applies_to_keys": [
+          "c_call_spine"
+        ],
+        "forbidden": [
+          "Change spine kinds, order, count or replay shape with fibre choice."
+        ],
+        "grounding": [
+          {
+            "end_line": 62,
+            "quote": "- **-007 Shape preservation.** Fibre substitution changes the\n  fibre-selection payload and evidence class only — never spine kinds,\n  order, or count. All-F_D degenerates to a workflow engine, all-F_H to\n  a human process, with identical spine replay.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 59
+          }
+        ],
+        "key": "fibre_substitution_invariance"
+      },
+      {
+        "allowed": [
+          "By declaration and replay-assessed worker capability, make plan/critique/repair-guidance explicit stages or inline instruction categories."
+        ],
+        "applies_to_keys": [
+          "c_call_envelope"
+        ],
+        "forbidden": [
+          "Inline verification: F_D admission, deterministic execution and evaluate judgment remain explicit trust-boundary stages.",
+          "Use self-declared capability instead of replay assessment."
+        ],
+        "grounding": [
+          {
+            "end_line": 117,
+            "quote": "- **-015 Gate invariance under compression.** A cognitive stage (plan,\n  critique, repair guidance) is reifiable as an explicit program stage\n  OR inlinable as an instruction category, by declaration, calibrated\n  to worker capability. Verification is NEVER inlinable: F_D admission,\n  deterministic execution, and evaluate judgment are trust boundaries\n  that remain explicit stages under every compression level. Capability\n  is assessed from replay, never self-declared.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 111
+          }
+        ],
+        "key": "cognitive_compression"
+      }
+    ],
+    "limitations": [
+      "Stable workspace authority is separated from mutable observation; changed catalog truth does not alone imply a new workspace binding.",
+      "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 94,
+            "quote": "- **-013 Recursive enclosure.** A C call may resolve as a CHILD\n  traversal: the fibre interior carries `evidenceClass:\n  \"sub_traversal\"` with the child basis/run refs, and the child is the\n  same monad at its own boundary — spines all the way down. The monad\n  boundary (atomic session vs transparent sub-traversal) is a DECLARED\n  placement per call, not architecture. Audit equality (-012) composes:\n  each level's archives reconcile against its own spine invocations;\n  cCallRef identity (-004: graphCallId + frameId) makes recursion\n  collision-free.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 86
+          }
+        ],
+        "key": "recursive_call_enclosure",
+        "kind": "obeys",
+        "meaning": "A declared child traversal retains the uniform spine and audit equality at its own boundary.",
+        "source_key": "declared_child_traversal",
+        "target_key": "c_call_spine"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "The binding obligations and fail-closed boundaries are retained without constructing those external identities.",
+        "grounding": [
+          {
+            "end_line": 77,
+            "quote": "**REQ-R-ABG3-BINDING-019**: For a Program that declares an STDO environment,\nABG shall validate and admit its exact released native-source binding, required\nmaterial and permitted acquisition, together with every supplementary\nrepresentation, index or corpus-access implementation explicitly selected by\nthat environment and its source relationship. All required context/access\nevidence and declared access permissions shall be established before dependent\nwork. Native-source access shall not acquire an unselected companion\nrequirement; it shall not bypass required declared content, permission,\nidentity, completeness or access checks. Physical locators are resource\nassertions, not authority or proof of exact release identity. Missing,\nambiguous, mismatched, inaccessible or unpermitted required inputs shall\nproduce a typed refusal or block before dependent dispatch. Neither\ncaller-supplied retrieval results nor successful tool exit alone shall\nestablish this binding. Mechanical access checks do not apply STDO meaning,\nselect work or accept semantic results.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-BINDING.md#REQ-R-ABG3-BINDING%20%E2%80%94%20Worker%20%2F%20Role%20%2F%20Call%20Realization%2FAcceptance%20Criteria",
+            "start_line": 63
+          }
+        ],
+        "key": "binding_external_contracts",
+        "subject_key": "execution_binding",
+        "uncertainty": "This criteria section references GTL, workspace, environment and reprice contracts whose full definitions and cross-chunk identities are not supplied."
+      },
+      {
+        "consequence": "Treat accepted status and lineage as source metadata, not independently established current acceptance.",
+        "grounding": [
+          {
+            "end_line": 7,
+            "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability / Constraint / Guarantee\n**Product behavior**: [Execution And Context Calculus](../../PRODUCT.md#execution-and-context-calculus); T-287 owner-directed Product/requirement re-entry.\n**Realizes**: T-200 (design §2 as amended §8)\n**Derives from**: REQ-R-ABG3-* dispatch census (T-190), REQ-L-GTL3-TEMPORAL-PROPERTIES (T-192), REQ-R-ABG3-REQUIREMENT-PROOF-CARRY-THROUGH (T-188), T-195 C3/C4 adjudications, T-030 emergence boundary law.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope",
+            "start_line": 3
+          }
+        ],
+        "key": "c_call_metadata_authority",
+        "subject_key": "c_call_envelope",
+        "uncertainty": "The source labels T-283 F_H closure and cites T-200, T-287 and other derivations; their evidence is not supplied."
+      },
+      {
+        "consequence": "Implementation conformity and operational verification remain unresolved.",
+        "grounding": [
+          {
+            "end_line": 142,
+            "quote": "- **-001 Uniformity.** Every C call emits exactly one spine:\n  `c_call_opened` → `c_call_fibre_selected` → `c_call_evidenced`(0..n) →\n  `c_call_result_admitted` → `c_call_judged`. No arm, fibre, stage role,\n  or plugin path is exempt.\n- **-002 Locus-only spine.** `c_call_opened` carries call-locus identity\n  only: cCallRef, basisId, graphFunctionId, graphCallId, frameId, edge,\n  vectorIndex, stageRole, taskOrdinal|null, attempt. No spine event\n  carries a fibre name OR fibre-dependent material (instruction\n  manifests are fibre evidence, not locus identity); fibre-freedom is\n  structural. A call reached in an admitted open GTL C program also carries\n  `programLocusRef` and the complete `retryPath`, represented as a possibly\n  empty sequence of positive integers. Those fields identify the authored\n  structural locus and nested attempt path; they carry no fibre or handler\n  truth. Every 5.0 standard-path call carries both fields; no flat\n  compatibility path is release-authoritative.\n- **-003 Fibre selection is admitted truth.** `c_call_fibre_selected`\n  {cCallRef, regime, armId, compositionRef|null} is the first interior\n  row. The (stageRole × fibre) arm census derives from the admitted GTL\n  declaration and implementation bindings at the one resolution seam.\n- **-004 Full replay identity.** cCallRef is a STABLE DIGEST over the\n  typed identity tuple {basisId, graphCallId, frameId, vectorIndex,\n  stageRole, taskOrdinal, attempt} — `c-call:sha256:<hex>` — injective\n  by construction (delimiter encodings collide across \":\"-bearing\n  fields); the READABLE locus is retained on `c_call_opened` itself.\n  Recursive frames, repeated graph calls, and composed tasks shall not\n  collide. For an admitted open GTL C program, the typed tuple additionally\n  includes {programLocusRef, retryPath}; serial same-role loci and nested\n  attempts therefore cannot collapse onto the flat compatibility identity.\n  The two fields appear together or not at all. (Absorbs the T-198\n  frame-identity successor.)\n- **-005 Spine per invoking task.** Any stage-task that can invoke a\n  worker or plugin gets its own spine; a composed batch is a parent\n  grouping ref (batchRef), never the counted call.\n- **-006 Enclosure.** Fibre evidence events (dispatch, invocation,\n  payload, response-contract, execution, escalation rows) are lawful\n  only inside an open spine, referenced from `c_call_evidenced`.\n  Free-floating fibre events are drift.\n- **-007 Shape preservation.** Fibre substitution changes the\n  fibre-selection payload and evidence class only — never spine kinds,\n  order, or count. All-F_D degenerates to a workflow engine, all-F_H to\n  a human process, with identical spine replay.\n- **-008 Judgment vocabulary.** `c_call_judged.judgment` ∈ {advance,\n  retry, pending, blocked, escalated, no_declared_check}.\n  `no_declared_check` is never gate-satisfying and never satisfies an\n  edge that declares required checks; it advances only where nothing\n  demanded the check. `pending` is the fibre-independent\n  awaiting-external-actor state; public dispatch_required is its m04\n  projection.\n- **-009 One retry law.** The retryable-failure allowlist judges spine\n  outcomes; no per-arm classification detours.\n- **-010 Antecedent law.** Dispatch-point temporal properties bind to\n  `c_call_fibre_selected` with single-event where-guards (e.g.\n  regime=F_P) — the selection row IS the antecedent; the temporal\n  algebra needs no cross-event join. Gates are non-vacuous on every arm\n  that ran.\n- **-011 Replay compatibility.** Pre-envelope ledgers project a derived\n  spine at read time (projection adapter); synthetic events never enter\n  truth.\n- **-012 Audit equality.** For every completed run: external work\n  sessions in archives equal EXTERNAL-WORK-BEARING spine invocations in\n  replay, per arm (F_P and external F_H). F_D C calls require\n  deterministic evidence artifacts in place of sessions. The standing\n  gate measures both.\n\n- **-013 Recursive enclosure.** A C call may resolve as a CHILD\n  traversal: the fibre interior carries `evidenceClass:\n  \"sub_traversal\"` with the child basis/run refs, and the child is the\n  same monad at its own boundary — spines all the way down. The monad\n  boundary (atomic session vs transparent sub-traversal) is a DECLARED\n  placement per call, not architecture. Audit equality (-012) composes:\n  each level's archives reconcile against its own spine invocations;\n  cCallRef identity (-004: graphCallId + frameId) makes recursion\n  collision-free.\n\n- **-014 Open edge programs.** The edge program is a DECLARED\n  composition in the C algebra, not a fixed triple: stage roles are\n  admitted program data (the census becomes (declared role × fibre)). A\n  standard-library program may explicitly declare [transform, evaluate,\n  consequence], but that shape is not a hidden runtime default.\n  Every declared program names its RESULT-BEARING role (whose admitted\n  payload feeds closure/carry law) and runs under the same judgment\n  router and retry law. Spine admission accepts any non-empty role;\n  program MEMBERSHIP is enforced at validation and runtime admission where the\n  declared program is in scope — a role outside the admitted program is\n  drift. ABG may project separate call-preparation, result-admission, and\n  materialization bind rows around those stages. Such rows are runtime\n  admission mechanics, not C stages: they never satisfy declared stage cardinality,\n  result-bearing-role, program-order, or fibre-substitution law.\n\n- **-015 Gate invariance under compression.** A cognitive stage (plan,\n  critique, repair guidance) is reifiable as an explicit program stage\n  OR inlinable as an instruction category, by declaration, calibrated\n  to worker capability. Verification is NEVER inlinable: F_D admission,\n  deterministic execution, and evaluate judgment are trust boundaries\n  that remain explicit stages under every compression level. Capability\n  is assessed from replay, never self-declared.\n\n- **-016 Named GTL authority.** Programs and GraphFunctions are named admitted\n  GTL declarations published through Module and catalog authority. HoG\n  traverses those declarations directly. There is no `abg.hog_program`,\n  `abg.hog_program_catalog`, `abg.hog_program_ref`, generated handler program,\n  or interpreter-local configuration that can replace or select the GTL\n  program.\n\n- **-017 Declared adaptive traversal.** Retry, escalation, branching, and\n  alternative compute paths shall be expressed in admitted GTL graph and C\n  structure with explicit predicates, policy references, bounds, and terminal\n  cases. HoG evaluates that declared structure against ABG-admitted replay\n  facts. ABG records the selected locus, regime, implementation, judgment, and\n  continuation as runtime truth. A private runtime ladder, adapter selector,\n  hidden fallback, or generated program is prohibited.\n\n- **-018 Current-input conservation.** Each call shall consume the current\n  input selected by its actual traversal position. Sequential composition\n  preserves the admitted producer-to-consumer transfer, including any declared\n  transformation, under the existing execution basis. Admission and recovery\n  shall not substitute that basis's graph-entry input for a progressed value\n  or establish provenance by payload equality alone. Nested entry and foldback\n  retain their separately declared causal relations. Proof fixtures shall\n  exercise those actual relationships, including a successor value different\n  from entry, rather than invent a new basis to make the comparison pass.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CCALL.md#REQ-R-ABG3-CCALL%20%E2%80%94%20The%20Uniform%20C-Call%20Envelope%2FClauses",
+            "start_line": 22
+          }
+        ],
+        "key": "c_call_operational_projection_limit",
+        "subject_key": "c_call_spine",
+        "uncertainty": "Event ordering, digest injectivity, replay audits and temporal laws are specified obligations; no execution or proof is performed by this representation."
+      },
+      {
+        "consequence": "No authority or cross-document identity is inferred from the links.",
+        "grounding": [
+          {
+            "end_line": 7,
+            "quote": "**Product behavior**: [Execution And Context Calculus](../../PRODUCT.md#execution-and-context-calculus); T-287 owner-directed Product/requirement re-entry.\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-CONTINUATION.md#REQ-R-ABG3-CONTINUATION%20%E2%80%94%20Runtime%20Open%20Obligation%20Truth",
+            "start_line": 5
+          }
+        ],
+        "key": "continuation_external_basis",
+        "subject_key": "continuation_requirement",
+        "uncertainty": "Referenced calculus and derivation contents are not supplied here."
+      }
+    ]
+  },
+  "answer_sha256": "b8fc05266cb55882e3125a66c0c2185762f2a94a3b9dbff2da5345e0ecd3b5f6",
+  "author": "codex-runtime-frame",
+  "chunk": "chunk-9992d7973d07196915eb",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "6f54eb1fcf1c4d4338b81b60a38a4e93980f30b2707566c8e4ef32541afe5d3e"
+}

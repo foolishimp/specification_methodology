@@ -11,6 +11,15 @@ into host discovery directories. The pinned STDO installation, the governed
 Product's deciding sources and the a_c public tool are explicit external inputs,
 not resources supplied by this skill bundle.
 
+For nominated-project representation builds, the tool skill's
+`references/representation.md` is included in the bundle. Bind the actual
+`ac_project.py` provider path from the activation, operator configuration,
+declared relation or `AC_PROJECT_TOOL`, together with its Python runtime. The
+provider and target's verified method remain external dependencies; copying the
+skills does not install them or adopt a new method cut. Direct mode needs no
+Graphify upstream; selected `graphify-ac` requires the pinned upstream. Required
+formal-checker configuration and composition controls remain explicit inputs.
+
 ## Verify
 
 Run `python3 -I -B <package>/tests/check_package.py`. It checks the complete roster,
@@ -35,6 +44,10 @@ refusal before mutation. Unrelated skill siblings remain unchanged. On success,
 retain the returned SHA256 of `.claude/stdo-skills-claude.receipt.json`; that
 receipt identifies the source inventory and every installed file/directory.
 Confirm real host discovery and an explicit invocation separately.
+For T-003, exercise both a natural nominated-project representation request and
+`/stdo-tool-operations` against a fresh authorized project fixture. Observe actual
+Claude-authored submissions and returned artifact links, plus resume and refusal
+behavior; successful bundle copying alone does not qualify those outcomes.
 
 ## Update and remove
 

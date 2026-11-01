@@ -1,0 +1,665 @@
+{
+  "concepts": [
+    {
+      "key": "qualification_project",
+      "label": "Qualification project",
+      "definition": "The project named by the goal as the subject for which a representation is built. The source gives no further identity for it.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "this qualification project"
+        }
+      ]
+    },
+    {
+      "key": "source_linked_proposal_representation",
+      "label": "Source-linked proposal representation",
+      "definition": "The deliverable the goal names: a representation of the qualification project that is linked to its source and has the standing of a proposal.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "source-linked proposal representation"
+        }
+      ]
+    },
+    {
+      "key": "invoice_export",
+      "label": "Invoice export",
+      "definition": "The operation that exports supplied invoice rows as CSV. It is the subject of the intent and the product definition.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "invoice export"
+        },
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 1,
+          "end_line": 1,
+          "quote": "Invoice export"
+        },
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Export rows as CSV"
+        }
+      ]
+    },
+    {
+      "key": "reproducibility",
+      "label": "Reproducibility of invoice export",
+      "definition": "The property the intent requires invoice export to have. The source names it and states no criterion for it.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "reproducible"
+        }
+      ]
+    },
+    {
+      "key": "exact_supplied_decimal_amounts",
+      "label": "Exact supplied decimal amounts",
+      "definition": "The amounts as supplied to the export, in decimal form, which the intent requires to be preserved exactly.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "exact supplied decimal amounts"
+        }
+      ]
+    },
+    {
+      "key": "invoice_row",
+      "label": "Invoice row",
+      "definition": "A supplied row that the export emits as a CSV row. The source states no row content beyond the three named columns and no origin for the rows.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Export rows"
+        }
+      ]
+    },
+    {
+      "key": "csv_output",
+      "label": "CSV output",
+      "definition": "The document the export produces, in CSV form.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "as CSV"
+        }
+      ]
+    },
+    {
+      "key": "csv_columns",
+      "label": "CSV columns id, amount, currency",
+      "definition": "The ordered column set of the CSV output: id first, amount second, currency third.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "columns id, amount, currency in that order"
+        }
+      ]
+    },
+    {
+      "key": "amount",
+      "label": "Amount column",
+      "definition": "The CSV column that carries a supplied decimal amount. It is the column the digit-preservation rule and the floating-point prohibition address.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "in amount"
+        }
+      ]
+    },
+    {
+      "key": "supplied_decimal_digit",
+      "label": "Supplied decimal digit",
+      "definition": "Each decimal digit present in a supplied amount. The preservation rule quantifies over every such digit.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "every supplied decimal digit in amount"
+        }
+      ]
+    },
+    {
+      "key": "binary_floating_point_conversion",
+      "label": "Binary floating-point conversion",
+      "definition": "Conversion of an amount into a binary floating-point representation. The source names it only to forbid it.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "binary floating-point conversion"
+        }
+      ]
+    },
+    {
+      "key": "csv_header",
+      "label": "CSV header",
+      "definition": "The header line of the CSV output. The source refers to it as a known part of the output and does not define its content separately; this interpretation reads it as the column names in order.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "the header"
+        }
+      ]
+    },
+    {
+      "key": "zero_rows",
+      "label": "Zero-row case",
+      "definition": "The export case in which no rows are supplied.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "zero rows"
+        }
+      ]
+    },
+    {
+      "key": "rounding_policy",
+      "label": "Rounding policy",
+      "definition": "The rule that would govern rounding within invoice export. The source declares it not yet specified and unresolved.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "Unresolved rounding policy"
+        },
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "Rounding is not yet specified."
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "export_emits_csv_output",
+      "kind": "produces",
+      "source_key": "invoice_export",
+      "target_key": "csv_output",
+      "meaning": "Invoice export produces the CSV output.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Export rows as CSV"
+        }
+      ]
+    },
+    {
+      "key": "export_consumes_rows",
+      "kind": "exports",
+      "source_key": "invoice_export",
+      "target_key": "invoice_row",
+      "meaning": "Invoice export takes supplied rows as its input and emits each as a CSV row.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Export rows"
+        }
+      ]
+    },
+    {
+      "key": "csv_output_ordered_columns",
+      "kind": "has_columns",
+      "source_key": "csv_output",
+      "target_key": "csv_columns",
+      "meaning": "The CSV output carries the columns id, amount, currency in that order.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "with columns id, amount, currency in that order"
+        }
+      ]
+    },
+    {
+      "key": "amount_member_of_columns",
+      "kind": "member_of",
+      "source_key": "amount",
+      "target_key": "csv_columns",
+      "meaning": "Amount is the second of the three ordered columns.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "id, amount, currency"
+        }
+      ]
+    },
+    {
+      "key": "zero_rows_yields_header_alone",
+      "kind": "yields",
+      "source_key": "zero_rows",
+      "target_key": "csv_header",
+      "meaning": "In the zero-row case the output consists of the header and nothing else.",
+      "governing": false,
+      "conditions": [
+        "zero rows are supplied to the export"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "For zero rows, emit the header alone."
+        }
+      ]
+    },
+    {
+      "key": "rounding_policy_scoped_to_export",
+      "kind": "subsection_of",
+      "source_key": "rounding_policy",
+      "target_key": "invoice_export",
+      "meaning": "The unresolved rounding policy is a subsection of the invoice export definition, so it is scoped to invoice export. The source does not say which values rounding would apply to.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "## Unresolved rounding policy"
+        },
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 1,
+          "end_line": 1,
+          "quote": "# Invoice export"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "key": "goal_build_representation",
+      "applies_to_keys": [
+        "source_linked_proposal_representation",
+        "qualification_project"
+      ],
+      "statement": "The goal is to build a source-linked proposal representation for this qualification project.",
+      "uncertainty": "Goal-level directive. The source states no acceptance criterion, owner or scope for the representation, and does not say what counts as source-linked.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "Build a source-linked proposal representation for this qualification project."
+        }
+      ]
+    },
+    {
+      "key": "intent_reproducible_export_preserving_amounts",
+      "applies_to_keys": [
+        "invoice_export",
+        "reproducibility",
+        "exact_supplied_decimal_amounts"
+      ],
+      "statement": "Invoice export is to be made reproducible, and exact supplied decimal amounts are to be preserved while that is done. Reproducibility does not license altering the supplied amounts.",
+      "uncertainty": "Intent statement. 'Reproducible' has no stated criterion in the source.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "Make invoice export reproducible while preserving exact supplied decimal amounts."
+        }
+      ]
+    },
+    {
+      "key": "export_format_csv_column_order",
+      "applies_to_keys": [
+        "invoice_export",
+        "csv_output",
+        "csv_columns"
+      ],
+      "statement": "Rows are exported as CSV with exactly the columns id, amount, currency, in that order.",
+      "uncertainty": "The CSV dialect, header emission when rows exist, and row ordering are not stated.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Export rows as CSV with columns id, amount, currency in that order."
+        }
+      ]
+    },
+    {
+      "key": "preserve_every_supplied_decimal_digit",
+      "applies_to_keys": [
+        "amount",
+        "supplied_decimal_digit"
+      ],
+      "statement": "Every supplied decimal digit in amount is preserved in the export; no supplied digit may be dropped, added or altered.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "Preserve every supplied decimal digit in amount"
+        }
+      ]
+    },
+    {
+      "key": "zero_rows_header_only",
+      "applies_to_keys": [
+        "csv_output",
+        "zero_rows",
+        "csv_header"
+      ],
+      "statement": "When zero rows are supplied, the export emits the header alone.",
+      "uncertainty": "",
+      "conditions": [
+        "zero rows are supplied to the export"
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "For zero rows, emit the header alone."
+        }
+      ]
+    },
+    {
+      "key": "rounding_not_specified_retain_unresolved",
+      "applies_to_keys": [
+        "rounding_policy"
+      ],
+      "statement": "Rounding is not yet specified, and this state is to be retained as unresolved.",
+      "uncertainty": "Unresolved by source declaration. Unresolved is not false and is not resolved by this interpretation.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "Rounding is not yet specified. Retain this as unresolved;"
+        }
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "amount_representation_latitude",
+      "applies_to_keys": [
+        "amount",
+        "binary_floating_point_conversion"
+      ],
+      "allowed": [],
+      "forbidden": [
+        "Converting amount to a binary floating-point representation"
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "binary floating-point conversion is forbidden"
+        }
+      ]
+    },
+    {
+      "key": "rounding_rule_latitude",
+      "applies_to_keys": [
+        "rounding_policy"
+      ],
+      "allowed": [],
+      "forbidden": [
+        "Inventing a rounding rule"
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "do not invent a rounding rule"
+        }
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "rounding_unresolved",
+      "subject_key": "rounding_policy",
+      "uncertainty": "Rounding is not specified: the source gives no rule, no trigger, and no statement of which values rounding would apply to.",
+      "consequence": "No rounding behaviour can be derived. Any export case that would need rounding has no specified result in this representation, and the representation adds none.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "Rounding is not yet specified. Retain this as unresolved; do not invent a rounding rule."
+        }
+      ]
+    },
+    {
+      "key": "reproducibility_criterion_unstated",
+      "subject_key": "reproducibility",
+      "uncertainty": "The source does not define 'reproducible', for example identical output for identical input across runs or hosts.",
+      "consequence": "No testable reproducibility condition can be derived from the source.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "reproducible"
+        }
+      ]
+    },
+    {
+      "key": "intent_product_amount_correspondence",
+      "subject_key": "exact_supplied_decimal_amounts",
+      "uncertainty": "The intent's 'exact supplied decimal amounts' and the product's 'every supplied decimal digit in amount' read as one obligation, but the source states no explicit link between them. The identity is not resolved here by label match.",
+      "consequence": "The intent record and the product record stay separate. A reviewer must confirm the correspondence before treating them as one requirement.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "preserving exact supplied decimal amounts"
+        },
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "Preserve every supplied decimal digit in amount"
+        }
+      ]
+    },
+    {
+      "key": "csv_format_underdetermined",
+      "subject_key": "csv_output",
+      "uncertainty": "The CSV dialect (delimiter, quoting, line endings, encoding), header emission when rows exist, row ordering, and the formats of id and currency are not stated. The header content is read as the column names in order; the source does not define it.",
+      "consequence": "The export format is determined only by the column order, the amount rules and the zero-row case. Other format choices are not constrained by this source.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Export rows as CSV with columns id, amount, currency in that order."
+        },
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "emit the header alone"
+        }
+      ]
+    },
+    {
+      "key": "goal_scope_unstated",
+      "subject_key": "source_linked_proposal_representation",
+      "uncertainty": "The goal names the deliverable and 'this qualification project' without defining acceptance, owner, scope, or what makes the representation source-linked.",
+      "consequence": "Completion of the goal cannot be judged from the source alone.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "Build a source-linked proposal representation for this qualification project."
+        }
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/GOALS.md#Goals",
+      "decision": "retained",
+      "keys": [
+        "qualification_project",
+        "source_linked_proposal_representation",
+        "goal_build_representation",
+        "goal_scope_unstated"
+      ],
+      "reason": "The single goal sentence is retained as a goal-level directive with its two named entities. Its undefined acceptance and scope are recorded as a residual rather than filled in."
+    },
+    {
+      "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/INTENT.md#Intent",
+      "decision": "residual",
+      "keys": [
+        "invoice_export",
+        "reproducibility",
+        "exact_supplied_decimal_amounts",
+        "intent_reproducible_export_preserving_amounts",
+        "reproducibility_criterion_unstated",
+        "intent_product_amount_correspondence"
+      ],
+      "reason": "The intent sentence is retained as one constraint over invoice export, but its key term 'reproducible' has no stated criterion and its amount-preservation clause is linked to the product rule only by reading, so the section carries explicit residuals."
+    },
+    {
+      "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export",
+      "decision": "retained",
+      "keys": [
+        "invoice_export",
+        "invoice_row",
+        "csv_output",
+        "csv_columns",
+        "amount",
+        "supplied_decimal_digit",
+        "binary_floating_point_conversion",
+        "csv_header",
+        "zero_rows",
+        "export_emits_csv_output",
+        "export_consumes_rows",
+        "csv_output_ordered_columns",
+        "amount_member_of_columns",
+        "zero_rows_yields_header_alone",
+        "export_format_csv_column_order",
+        "preserve_every_supplied_decimal_digit",
+        "zero_rows_header_only",
+        "amount_representation_latitude",
+        "csv_format_underdetermined",
+        "intent_product_amount_correspondence"
+      ],
+      "reason": "All three product sentences are retained: the CSV column order, the digit-preservation obligation with the floating-point prohibition as forbidden latitude, and the zero-row header rule with its condition. Unstated CSV format details are recorded as a residual, not invented. The blank lines carry no content."
+    },
+    {
+      "section_id": "urn:a-c:project:f8869da0b5ca38fc106475f81b2a09748e7daa417a966ab011d778bccee788e8/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy",
+      "decision": "residual",
+      "keys": [
+        "rounding_policy",
+        "rounding_policy_scoped_to_export",
+        "rounding_not_specified_retain_unresolved",
+        "rounding_rule_latitude",
+        "rounding_unresolved"
+      ],
+      "reason": "The source itself declares rounding unresolved and forbids inventing a rule. The section is retained as an unresolved policy scoped to invoice export, with the prohibition as forbidden latitude and the unresolved state as an explicit residual."
+    }
+  ],
+  "limitations": [
+    "The corpus is one chunk of four sections from GOALS.md, INTENT.md and PRODUCT.md. Every section received a disposition; this processing coverage is not semantic completeness.",
+    "Direct mode: no Graphify discovery was supplied. All concept identities are local to this chunk and were not matched against any external graph.",
+    "The apparent correspondence between the intent's amount-preservation clause and the product's digit-preservation rule is retained as a residual, not resolved by label match.",
+    "Judgments, traversals and transformations are empty populations. Nothing here executes the export or instantiates the represented product.",
+    "No requirements, scenarios, design or code surfaces were in the selected scope, so the representation says nothing about how the export is realized or tested."
+  ]
+}

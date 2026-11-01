@@ -1,5 +1,41 @@
 # Goals
 
+[T-018](../.ai-workspace/tickets/active/T-018-static-layered-renderer.md) supplies
+one offline reader with a 3D / 2D / Layered middle-panel switch. All renderers
+consume one unchanged representation and preserve selection and navigation state.
+Implementation, finite checks and independent repair review are complete;
+browser visual qualification remains open. The work remains local.
+
+[T-017](../.ai-workspace/tickets/active/T-017-source-navigation.md) adds source
+folder/file navigation to the portable reader under PU-03, with transitions
+between source documents and logical traversals. The existing ABIogenesis model
+is the unchanged demonstration subject; prior run and review evidence remain frozen.
+
+[T-016](../.ai-workspace/tickets/active/T-016-project-build-entry.md) implements
+the first T-015 public workflow slice: a nominated-project CLI consumed by both
+Skills tenants. It binds the project's exact definition and source scope, accepts
+honestly identified host-session authoring, reuses common representation checks
+and produces model/carrier/coverage/reader artifacts. This does not close the
+broader composed-project/Worker-delivery qualification in T-015. Its
+[delivery record](../.ai-workspace/work/T016_PROJECT_BUILD/DELIVERY.md) links the
+reviewed implementation and separate native consumer evidence.
+
+The next Product increment is
+[T-015](../.ai-workspace/tickets/active/T-015-user-project-product.md): make the
+existing representation, documentation, verification and actor-support
+capabilities usable on a user's own STDO project. The common
+[PU-01–09 requirements](requirements/project-use.md) and
+[ordered delivery plan](../.ai-workspace/work/T015_USER_PROJECT_PRODUCT/PLAN.md)
+are recorded. The integrated user workflow and installed qualification remain
+open. First demonstrate one non-STDO leaf through public interfaces, then its
+composition with an independently owned provider. Existing component evidence
+below retains its original scope.
+
+The [T-014 explorer](../applications/stdo-constraint-explorer/README.md) is locally
+implemented and independently reviewed. STDO 3.0.3 documentation integration is
+a separately selected distribution of that exact artifact; it does not change
+the represented historical source or complete T-015.
+
 The completed bounded practical-gate increment is
 [T-013](../.ai-workspace/tickets/active/T-013-practical-formal-gate.md), a
 `goal_reprice` and `design_reframe` under unchanged FR-001–FR-014. Cold verification

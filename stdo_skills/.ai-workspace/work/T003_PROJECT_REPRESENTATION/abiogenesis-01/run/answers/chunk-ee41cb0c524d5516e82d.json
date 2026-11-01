@@ -1,0 +1,869 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "One generic family has closed pre_rc_candidate|installed_rc subjects, each with immutable content-addressed basis and typed verdict. No separately authored subject models or third final-cut subject/delta at acceptance.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 240,
+            "quote": "**REQ-P-QUAL-057**: ABIogenesis 5.0 qualification shall use one generic\n`ExactCandidateQualification<K>` contract family whose closed subject kinds are\n`pre_rc_candidate | installed_rc`. The family shall\npublish one immutable, content-addressed `basis` projection and one typed\n`verdict` projection for each exact subject. It shall not create separately\nauthored qualification models for those subjects. Acceptance of the qualified\nunchanged RC shall not introduce a third subject kind or final-cut delta.\n\n**REQ-P-QUAL-057A**: Every `ExactCandidateQualification<basis>` projection shall\nbind its exact subject kind, source and artifact content, toolchain manifest,\ninstalled-product and workspace-binding truth when applicable,\ntenant-conformance manifest, source-grounded coverage catalog, and one subordinate\n`QualificationLawBasis`.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 228
+          }
+        ],
+        "key": "exact_qualification_family",
+        "label": "ExactCandidateQualification<K>"
+      },
+      {
+        "conditions": [],
+        "definition": "Subordinate law binds exact tapped/installed STDO identity selected by stdo_abiogenesis.json, installed-manifest and standards-member-set digests, method/rule versions and exact source refs/digests.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 249,
+            "quote": "**REQ-P-QUAL-057B**: `QualificationLawBasis` shall bind the exact tapped and\ninstalled STDO release identity selected by `stdo_abiogenesis.json`, installed-manifest digest,\nstandards member-set digest, method version, rule-catalog version, source refs,\nand content digests used by the owning gates.\nIts identity and digest shall be preserved unchanged through every admitted\nauthenticated assessment result, the coverage catalog, the declared\n`C.of(AF-22)` argument, and the resulting\n`ExactCandidateQualification<verdict>` projection.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 242
+          }
+        ],
+        "key": "qualification_law_basis",
+        "label": "QualificationLawBasis"
+      },
+      {
+        "conditions": [],
+        "definition": "Prospective published-RC identity/version, exact installed candidate/content/install-artifact/product-manifest/workspace-binding/tenant-manifest identity and digests are bound before qualification; candidate bytes already carry prospective RC identity.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 265,
+            "quote": "**REQ-P-QUAL-057C**: The `ExactCandidateQualification<basis>` projection for an\nABIogenesis 5.0 `pre_rc_candidate` shall bind the prospective published-RC\nidentity and version, the exact installed candidate identity, content and\ninstall-artifact digests, product-manifest digest, workspace binding, and\ntenant-conformance manifest identity and digest. The exact candidate artifact\nbytes shall already carry that prospective published-RC identity.\nSource-tree execution or evidence from different candidate content shall not\nsatisfy the `pre_rc_candidate` gate. Its prospective RC namespace, declared\nprofile, Project Subtree, version line and positive ordinal, exact Product\ninventory and release-claim bytes shall be fixed before qualification. Actual\ntag-object and publication-receipt identities are outputs of publication, not\nfabricated prequalification inputs. Acceptance shall not assign a new version\nor change those qualified bytes.\nAn odd_glc candidate or successor dogfood workspace shall not be part of this\n5.0 candidate identity.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 251
+          }
+        ],
+        "key": "pre_rc_basis",
+        "label": "Pre-RC candidate basis"
+      },
+      {
+        "conditions": [],
+        "definition": "Ordered R1–R10 obligations through installed abg.cli share exact product/workspace/catalog/program/GraphFunction/contracts/execution/causal ABG/replay basis, with independent minimal program outside ABG package.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 284,
+            "quote": "**REQ-P-QUAL-058**: The exact installed ABIogenesis 5.0 candidate shall satisfy\n`ABI5-ROOT-001` through installed `abg.cli`: all ordered obligations `R1`\nthrough `R10` shall bind the same exact product, workspace, catalog, program,\nGraphFunction, contracts, execution basis, causal ABG episode, and replay\nbasis. The independently authored minimal test program owns its declarations,\ncontracts, ordinary leaf binding and expected output outside the ABG package.\nThe candidate shall contain no test-program-specific contract, publication,\nimplementation, admission, validation, dispatch or proof branch. Two fresh reads\nshall derive the same admitted typed terminal result and closed state. A\ncomponent, package, catalog, event-co-presence or fixture-authored substitute\nshall not satisfy the root. Evidence from a package containing the removed\nbuilt-in test code does not qualify the successor that removes it; affected\ninstalled-path obligations require proof on that exact successor.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 272
+          }
+        ],
+        "key": "root_integration_gate",
+        "label": "ABI5-ROOT-001 installed gate"
+      },
+      {
+        "conditions": [],
+        "definition": "One admitted program directly traversed by HoG owns synthesizeModel -> evalGap -> evaluateNext -> evaluateAction semantic order; ABG intent/invocation-or-continuation/evidence admission remain distinct, ingress only admits/transports.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 298,
+            "quote": "**REQ-P-QUAL-059**: The exact installed ABIogenesis 5.0 candidate shall complete\nthe primary public operator loop through one admitted GTL One Surface program\ntraversed directly by HoG. That program shall own the order of the four\nsemantic authorities `synthesizeModel`, `evalGap`, `evaluateNext`, and\n`evaluateAction`. Intent admission, invocation or continuation, and evidence\nadmission shall remain distinct ABG boundaries around those authorities;\npublic ingress shall admit and transport the invocation only. The loop shall\nstart, expose replay-derived frontier and lawful actions, exercise bounded\ncorrection and automatic progression under established authority, refresh\nmodel, gap and next-action truth after admitted evidence, and converge without\na second controller or private import. A no-lawful-next-step case reports a\ntruthful block and human-readable handoff, not false completion. Native human\nresponse/resume is not part of this 5.0 gate.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 286
+          }
+        ],
+        "key": "one_surface_qualification",
+        "label": "Installed One Surface qualification"
+      },
+      {
+        "conditions": [],
+        "definition": "Exact candidate frozen constitutional/design/realization/proof/ticket-execution/public-seam/manifest/qualification/release inventory is assessed under exact method/rule/source law, with real-tree and seeded negatives, typed findings/dispositions and no Product exemption.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 306,
+            "quote": "**REQ-P-QUAL-060**: The exact installed ABIogenesis 5.0 candidate shall satisfy\n`REQ-P-SELF-CONFORMANCE` over its complete frozen constitutional, design,\nrealization, proof, ticket/execution-contract, public-seam, manifest,\nqualification, and release-claim inventory under the exact declared\nmethod/rule/source basis. The real-tree and seeded-negative gates shall pass,\nfindings and dispositions shall be typed, and the product shall receive no\nconformance exemption.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 300
+          },
+          {
+            "end_line": 377,
+            "quote": "**REQ-P-QUAL-064A**: Existing F11 shall bind complete coverage to the exact\nqualification subject and law. Actual native results retain their producing\ninput, declaration, C/J, occurrence and evidence authority. An execution may\nsupport several claims once, but independent judgment shall establish each\nclaim's applicability, positive/nearest-negative scope and sufficiency against\nits source. Neither a shared citation, a green computable assessment, a label,\na test count nor catalog membership supplies that judgment. Missing,\nambiguous, stale, foreign or unexercised required coverage is non-green.\n\n**REQ-P-QUAL-064B**: The declared native `C.of(AF-22)` shall consume the\nadmitted complete F11 assessment and emit the sole\n`ExactCandidateQualification<verdict>`. There is no separate per-behavior\nowning-result vector, adapter requirement or replacement reducer/controller.\nF11 retains its findings and is not itself the release verdict.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 364
+          }
+        ],
+        "key": "self_conformance_assessment",
+        "label": "Complete F11 self-conformance assessment"
+      },
+      {
+        "conditions": [],
+        "definition": "Declared C.of(AF-22) consumes admitted complete F11 assessment and emits sole ExactCandidateQualification<verdict>; F11 findings remain assessment, not release verdict.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 383,
+            "quote": "**REQ-P-QUAL-064B**: The declared native `C.of(AF-22)` shall consume the\nadmitted complete F11 assessment and emit the sole\n`ExactCandidateQualification<verdict>`. There is no separate per-behavior\nowning-result vector, adapter requirement or replacement reducer/controller.\nF11 retains its findings and is not itself the release verdict.\n\n**REQ-P-QUAL-064C**: The verdict shall conserve exact subject/law/coverage and\nauthenticated F11 result citations, explicit green/red/blocked disposition and\nall unresolved re-entry/bypass references. Only a complete same-subject green\nverdict with no bypass can admit AF25 or exact installed-RC acceptance.\nDevelopment, incomplete and unknown bases remain blocked, not qualified.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 373
+          }
+        ],
+        "key": "native_qualification_verdict",
+        "label": "Sole native AF-22 qualification verdict"
+      },
+      {
+        "conditions": [],
+        "definition": "Exact installed 5.0 candidate must satisfy prospectively selected lifecycle contract over complete original source, proving every mandatory selected outcome, obligation conservation, admitted semantic/executable evidence and targeted revision.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 343,
+            "quote": "**REQ-P-QUAL-062**: The real specification-driven lifecycle witness defined by\nProduct F17/S06 and `REQ-P-SCENARIOS-013` shall be required ABIogenesis 5.0\nqualification evidence on the exact installed candidate. It binds the\ncomplete original source and prospectively selected witness contract under\nProduct Release Boundaries, then proves every mandatory selected application\noutcome, obligation conservation, admitted semantic and executable evidence and\ntargeted revision. Intermediate thread/correction evidence, post-result scope\nreduction, residual lists or construction/test counts do not substitute for\ncomplete selected S06 acceptance. Full original Data Mapper is a separately\nowned upper-bound evaluation under Product Release Boundaries. A truthful\nbounded failed or blocked outcome may conclude that evaluation with its actual\nassumptions, design choices, iterations, progress, unresolved obligations and\nstop cause recorded. It does not satisfy unmet application requirements, waive\ngeneric Product defects, qualify a missing successful S06 witness or compel\nanother attempt. Publication or maturation of the separate odd_glc\nProduct, installed 5.0 authoring the distinct 5.0.1 successor, and the planned\n5.1 observer/tuner Product shall retain their own exact Product identities,\nrequirements, design, qualification and release gates; none is required to\nmake the ABIogenesis 5.0 candidate or final release green.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 325
+          }
+        ],
+        "key": "selected_lifecycle_witness",
+        "label": "Complete selected F17/S06 witness"
+      },
+      {
+        "conditions": [],
+        "definition": "5.1 observer/tuner and dedicated Consensus/host parity, separate odd_glc and 5.0.1 dogfood retain distinct scope/authority rather than prerequisites to 5.0 green.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 323,
+            "quote": "**REQ-P-QUAL-060A**: Reserved for ABIogenesis 5.1. The observer/tuner\nqualification described by this clause is not applicable to the ABIogenesis\n5.0 candidate, qualification basis, gate inventory, RC, or release. Deferral\ndoes not affect the real-tree and seeded-negative self-conformance required by\n`REQ-P-QUAL-060`.\n\n**REQ-P-QUAL-061**: Dedicated Consensus qualification is reserved for 5.1.\nIt satisfies `REQ-P-CONSENSUS` by invoking the selected installed candidate's\npublished SYSTEM-owned\nConsensus GraphFunction through `abg.cli` over one real ticket and at least two\ndifferently attributed reviewer profiles. It proves agreement closure, dispute\nrecursion, and round-limit or unresolved-dispute typed block/handoff to F_H\nwithout requiring native response/resume, exercises the\nexisting, alternate and temporary workspace applications, and exposes the typed\nresult and replay without source import, feature-specific engine code, or\nshell-owned orchestration.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 308
+          },
+          {
+            "end_line": 351,
+            "quote": "another attempt. Publication or maturation of the separate odd_glc\nProduct, installed 5.0 authoring the distinct 5.0.1 successor, and the planned\n5.1 observer/tuner Product shall retain their own exact Product identities,\nrequirements, design, qualification and release gates; none is required to\nmake the ABIogenesis 5.0 candidate or final release green.\n\n**REQ-P-QUAL-063**: The exact installed ABIogenesis 5.0 candidate completes its\nnative public path without Claude, Codex or another marketplace host. Additional\nhost work and mandatory native/Codex parity qualification are reserved for 5.1.\nAny retained compatibility projection uses the same public contract without\ndirect worker invocation, ABG event authorship, continuation construction,\ntraversal control or closure decisions. Native LLM worker transport remains a\n5.0 dependency; host-projection deferral does not remove it.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 339
+          },
+          {
+            "end_line": 447,
+            "quote": "**REQ-P-QUAL-069**: Downstream beta evaluation, an odd_glc release, a 5.0.1\ndogfood campaign or a planned 5.1 observer/tuner realization shall retain its\nown Product authority and explicitly selected exact installed development\nProduct. Its admission and release are independent of ABIogenesis RC\nacceptance; they are neither waived nor made prerequisites or terminal addenda\nfor the ABIogenesis 5.0 release. Its failure shall block its own claim and may\nre-enter ABIogenesis when it exposes a retained 5.0 Product defect. This\nindependence does not defer or weaken the complete selected F17/S06 lifecycle witness\nrequired before RC authorization by `REQ-P-QUAL-062`.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 439
+          }
+        ],
+        "key": "deferred_independent_products",
+        "label": "Deferred and independent qualification scopes"
+      },
+      {
+        "conditions": [],
+        "definition": "After native same-subject/same-law green non-bypassed pre-RC verdict, AF-25 may verify prospective identity equality and publish unchanged qualified bytes as one immutable RC cut/authoritative snapshot.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 426,
+            "quote": "**REQ-P-QUAL-068**: The ABG 5.0 release process shall open a mutable RC window.\nAfter one exact `ExactCandidateQualification<basis>` projection for\n`pre_rc_candidate` receives its same-subject and same-law-basis green\nnon-bypassed `ExactCandidateQualification<verdict>` projection, `AF-25` may\nverify equality with the basis-bound prospective published-RC identity and\nmaterialize the exact qualified artifact bytes unchanged as one immutable\nversioned RC cut and its authoritative snapshot. The RC record shall bind its\nassigned Project Release Namespace and declared profile, source lineage,\nannotated tag object, peeled commit, repository tree, Project Subtree and tree,\nexact Product inventory and release-claim bytes, package, snapshot, checksums,\nnotes, predecessor disposition and exact authorizing basis and verdict.\nPublication-produced tag, receipt and snapshot identities are outputs from this\ntransition; frozen release-claim and package bytes remain qualifying inputs.\nFor the assigned `abiogenesis` single-project unqualified profile and subtree\n`.`, the immutable cut is `v5.0.0-rc.<n>` and the mutable `v5.0.0` selector shall\nidentify the greatest published RC ordinal. Exact local and remote refs and\nordinal eligibility shall be revalidated before publication. Selector advance\nbelongs to publication, not qualification, acceptance or consumer adoption.\nAny qualifying Product or release-claim byte change requires a higher RC; no\npublished RC shall be retagged or renamed to a final-version cut.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 407
+          }
+        ],
+        "key": "published_rc_cut",
+        "label": "Published immutable RC cut"
+      },
+      {
+        "conditions": [],
+        "definition": "Fresh-installed selected published RC is a second exact subject in the same family before human acceptance, binding exact cut bytes/install identity and preserving basis/law through complete coverage and verdict.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 437,
+            "quote": "**REQ-P-QUAL-068A**: Before human acceptance, the selected published RC shall\nbe fresh-installed and qualified as an exact `installed_rc`\nsubject through the same `ExactCandidateQualification<K>` family. Its\n`ExactCandidateQualification<basis>` projection shall bind the exact RC cut\nbytes and installed identity; its complete coverage assessment and verdict shall preserve\nthat basis and law basis. A `pre_rc_candidate` verdict shall not be relabeled as\nan `installed_rc` verdict. Its same-basis green non-bypassed verdict is required\nevidence for actual human acceptance of that same unchanged RC; it shall not\nmaterialize another cut or snapshot. Acceptance is not a prerequisite to this\ninstalled-RC qualification.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 428
+          }
+        ],
+        "key": "installed_rc_basis",
+        "label": "Installed-RC qualification basis"
+      },
+      {
+        "conditions": [],
+        "definition": "Human Product authority accepts/withholds exact published unchanged RC after installed-RC qualification, independent reviews and operator assessment.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 458,
+            "quote": "**REQ-P-QUAL-070**: Actual human Product authority shall accept or withhold one\nexact published RC after its required installed-RC qualification, independent\nreviews and operator assessment. The decision shall bind the complete\nimmutable RC identity, exact `installed_rc` basis, same-basis green\nnon-bypassed verdict and law basis, required evidence, and actual accepting\nactor and authority. A caller assertion, generated summary or qualification\nverdict alone is not human acceptance. The acceptance record is an addendum\noutside the immutable Product and release-claim bytes. `tapped_release` shall\nreport this same-RC decision; it shall not create a cut, assign a final version,\nrename a package or move the selector.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 449
+          }
+        ],
+        "key": "human_rc_acceptance",
+        "label": "Actual human Product acceptance"
+      },
+      {
+        "conditions": [],
+        "definition": "Release closure fresh-installs verified immutable remote RC, exact descriptor/manifest/version/digest/tenant identity and passes bounded installed catalog/invocation/replay without rebuild/source imports; terminal A5-R1 addendum leaves tag/package/Product/claim bytes unchanged.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 405,
+            "quote": "**REQ-P-QUAL-067**: Release closure shall fresh-install the published\nABIogenesis 5.0 RC artifact by its verified immutable remote identity, bind its\nexact released descriptor, manifest, RC version, digest and tenant-conformance identity,\nand pass the bounded installed catalog, public invocation and replay\nproof without rebuilding or importing mutable source. This post-publication\nresult shall be a terminal addendum to the A5-R1 release read model. It shall not\nbe required to make an earlier `ExactCandidateQualification<verdict>` projection\nfor `pre_rc_candidate` or `installed_rc` green and shall not reinterpret any\nearlier verdict. This proof and acceptance addenda shall leave the RC tag,\npackage, Product inventory and release-claim bytes unchanged.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 396
+          },
+          {
+            "end_line": 477,
+            "quote": "**REQ-P-QUAL-070B**: The release lifecycle shall be acyclic:\n`ExactCandidateQualification<basis>` for `pre_rc_candidate` -> matching\n`ExactCandidateQualification<verdict>` -> RC cut and snapshot ->\n`ExactCandidateQualification<basis>` for `installed_rc` -> matching\n`ExactCandidateQualification<verdict>` -> actual human acceptance of the same\nunchanged RC -> external acceptance/evidence addenda and terminal\npost-publication install proof. Publication advances the latest-RC selector;\nacceptance and adoption do not. There is no second final-cut subject or\nsnapshot. No cut or snapshot may qualify the input that creates it, and no\npost-publication proof may retroactively authorize an earlier transition.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 468
+          }
+        ],
+        "key": "post_publication_addenda",
+        "label": "External acceptance and terminal install-proof addenda"
+      },
+      {
+        "conditions": [],
+        "definition": "Focused build/type/module-law/structural checks during construction, early installed integration/end-to-end discriminator and user-outcome assessment for each usable increment, then broad applicable negatives/conservation/interactions/repeatability at integrated qualification.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 501,
+            "quote": "**REQ-P-QUAL-071**: Construction uses focused build/type, changed module-law and\nstructural-boundary checks. Authority, identity, admission, effect integrity and\nconstructability failures on the selected path require resolution before its\ndependent effects. Existing valid evidence remains reusable on its exact basis.\n\nEach usable increment receives an early installed integration/end-to-end\ndiscriminator and focused user-outcome assessment. Substantial clean-room UAT\nuses the original specification, selected input contract, public documentation\nand installed Product with independent expected outcomes. Source hints, private\nimports or fixture-owned traversal, retry, admission or event truth cannot\nsubstitute for the public user experience. Observable application behavior and\nfresh public result/replay reads support distinct, explicitly bounded claims.\n\nBroad applicable negative matrices, conservation population, interactions and\nrepeatability are scheduled at integrated qualification. Deferral changes\nevidence order, not retained obligations. Material structural/authority failure\nor a broken selected sunny-day path returns immediately for lawful re-entry.\nOne execution may support integration, end-to-end and UAT with separate oracles;\ntest counts, fixed repetition quotas or redundant campaigns supply no closure.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FSteel-Thread%20Evidence%20Sequencing",
+            "start_line": 483
+          }
+        ],
+        "key": "steel_thread_sequencing",
+        "label": "Steel-thread evidence sequencing"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "exact_qualification_family",
+          "qualification_law_basis"
+        ],
+        "conditions": [
+          "Every exact qualification subject and each admitted authenticated assessment/coverage/AF22/verdict."
+        ],
+        "exceptions": [
+          "Installed-product/workspace-binding truth is included where applicable."
+        ],
+        "grounding": [
+          {
+            "end_line": 249,
+            "quote": "**REQ-P-QUAL-057A**: Every `ExactCandidateQualification<basis>` projection shall\nbind its exact subject kind, source and artifact content, toolchain manifest,\ninstalled-product and workspace-binding truth when applicable,\ntenant-conformance manifest, source-grounded coverage catalog, and one subordinate\n`QualificationLawBasis`.\n\n**REQ-P-QUAL-057B**: `QualificationLawBasis` shall bind the exact tapped and\ninstalled STDO release identity selected by `stdo_abiogenesis.json`, installed-manifest digest,\nstandards member-set digest, method version, rule-catalog version, source refs,\nand content digests used by the owning gates.\nIts identity and digest shall be preserved unchanged through every admitted\nauthenticated assessment result, the coverage catalog, the declared\n`C.of(AF-22)` argument, and the resulting\n`ExactCandidateQualification<verdict>` projection.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 236
+          },
+          {
+            "end_line": 270,
+            "quote": "**REQ-P-QUAL-057D**: A missing, stale, conflicting, incomplete, cross-subject, or\ncross-law-basis qualification input shall refuse before verdict admission. A\n`ReleaseSnapshotManifest` is output evidence from `AF-25`; it shall never be a\nqualification-basis input or supply green truth for the cut that created it.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 267
+          }
+        ],
+        "key": "qualification_basis_conservation",
+        "statement": "Every basis binds subject kind, source/artifact content, toolchain manifest, applicable installs/binding, tenant manifest, source-grounded coverage and law. Preserve identical law identity/digest through admitted authenticated assessments, coverage, declared C.of(AF-22) argument and verdict. Missing/stale/conflicting/incomplete/cross-subject/cross-law inputs refuse before verdict. ReleaseSnapshotManifest is AF-25 output, never qualification input or self-authorizing green.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "pre_rc_basis"
+        ],
+        "conditions": [
+          "Before qualification of the pre_rc_candidate."
+        ],
+        "exceptions": [
+          "Actual tag-object and publication-receipt identities are publication outputs."
+        ],
+        "grounding": [
+          {
+            "end_line": 265,
+            "quote": "**REQ-P-QUAL-057C**: The `ExactCandidateQualification<basis>` projection for an\nABIogenesis 5.0 `pre_rc_candidate` shall bind the prospective published-RC\nidentity and version, the exact installed candidate identity, content and\ninstall-artifact digests, product-manifest digest, workspace binding, and\ntenant-conformance manifest identity and digest. The exact candidate artifact\nbytes shall already carry that prospective published-RC identity.\nSource-tree execution or evidence from different candidate content shall not\nsatisfy the `pre_rc_candidate` gate. Its prospective RC namespace, declared\nprofile, Project Subtree, version line and positive ordinal, exact Product\ninventory and release-claim bytes shall be fixed before qualification. Actual\ntag-object and publication-receipt identities are outputs of publication, not\nfabricated prequalification inputs. Acceptance shall not assign a new version\nor change those qualified bytes.\nAn odd_glc candidate or successor dogfood workspace shall not be part of this\n5.0 candidate identity.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 251
+          }
+        ],
+        "key": "prospective_candidate_freeze",
+        "statement": "Fix prospective namespace/profile/Project Subtree/version line/positive ordinal, exact Product inventory and release-claim bytes before qualification. Source execution or different-content evidence cannot satisfy. Tag objects/publication receipts are outputs, not invented prerequisites. Acceptance changes neither version nor bytes. odd_glc candidate/successor dogfood workspace is outside 5.0 candidate identity.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "root_integration_gate"
+        ],
+        "conditions": [
+          "For exact installed root gate, including successor package after removal of built-in test code."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 284,
+            "quote": "**REQ-P-QUAL-058**: The exact installed ABIogenesis 5.0 candidate shall satisfy\n`ABI5-ROOT-001` through installed `abg.cli`: all ordered obligations `R1`\nthrough `R10` shall bind the same exact product, workspace, catalog, program,\nGraphFunction, contracts, execution basis, causal ABG episode, and replay\nbasis. The independently authored minimal test program owns its declarations,\ncontracts, ordinary leaf binding and expected output outside the ABG package.\nThe candidate shall contain no test-program-specific contract, publication,\nimplementation, admission, validation, dispatch or proof branch. Two fresh reads\nshall derive the same admitted typed terminal result and closed state. A\ncomponent, package, catalog, event-co-presence or fixture-authored substitute\nshall not satisfy the root. Evidence from a package containing the removed\nbuilt-in test code does not qualify the successor that removes it; affected\ninstalled-path obligations require proof on that exact successor.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 272
+          }
+        ],
+        "key": "root_program_independence",
+        "statement": "Independent test owns declarations/contracts/ordinary leaf binding/expected output. Candidate has no test-specific contract/publication/implementation/admission/validation/dispatch/proof branch. Two fresh reads yield same admitted typed terminal result/closed state. Component/package/catalog/event-co-presence/fixture substitutes fail; removing built-in test code requires affected installed-path proof on exact successor, not old package evidence.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "one_surface_qualification"
+        ],
+        "conditions": [
+          "On exact installed 5.0 candidate."
+        ],
+        "exceptions": [
+          "Native human response/resume is not part of this 5.0 gate."
+        ],
+        "grounding": [
+          {
+            "end_line": 298,
+            "quote": "**REQ-P-QUAL-059**: The exact installed ABIogenesis 5.0 candidate shall complete\nthe primary public operator loop through one admitted GTL One Surface program\ntraversed directly by HoG. That program shall own the order of the four\nsemantic authorities `synthesizeModel`, `evalGap`, `evaluateNext`, and\n`evaluateAction`. Intent admission, invocation or continuation, and evidence\nadmission shall remain distinct ABG boundaries around those authorities;\npublic ingress shall admit and transport the invocation only. The loop shall\nstart, expose replay-derived frontier and lawful actions, exercise bounded\ncorrection and automatic progression under established authority, refresh\nmodel, gap and next-action truth after admitted evidence, and converge without\na second controller or private import. A no-lawful-next-step case reports a\ntruthful block and human-readable handoff, not false completion. Native human\nresponse/resume is not part of this 5.0 gate.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 286
+          }
+        ],
+        "key": "one_surface_gate_outcomes",
+        "statement": "Exact installed candidate starts, exposes replay frontier/actions, exercises bounded correction/automatic progression under authority, refreshes model/gap/next-action after evidence and converges without second controller/private import. No lawful next step yields truthful block/readable handoff. Native human response/resume is outside 5.0 gate.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "self_conformance_assessment"
+        ],
+        "conditions": [
+          "For every retained behavior applicable to exact candidate."
+        ],
+        "exceptions": [
+          "Deferred portions require scoped governing reason and retained-boundary evidence, not qualification of the deferred capability."
+        ],
+        "grounding": [
+          {
+            "end_line": 362,
+            "quote": "**REQ-P-QUAL-064**: Exact-candidate qualification shall conserve every retained\nbehavior of the fifteen-family Product: ABI5-ROOT-001; compute, structural,\nconsequence, runtime-disposition and public-control behavior; shape-preserving\nfibre substitution; complete C algebra; malformed GTL and F_P refusal;\nOne Surface; whole-subject F11; native Public projection; and complete selected\nS01/S02/S03/S06 outcomes. The source-linked coverage catalog declares these\nobligations without an executable slot, ordinal or owning-result requirement\nper behavior. Deferred portions require a scoped governing reason and evidence\nof retained boundaries; deferral does not qualify the reserved capability or\nshrink the selected S06 contract.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 353
+          }
+        ],
+        "key": "retained_coverage_obligations",
+        "statement": "Conserve fifteen-family retained behavior: root integration; compute/structural/consequence/runtime-disposition/public-control; fibre shape substitution; full C; malformed GTL/F_P refusal; One Surface; whole-subject F11; native Public projection; complete selected S01/S02/S03/S06. Source-linked coverage needs no executable slot/ordinal/owning result per behavior. Deferred portions need scoped governing reason and retained-boundary evidence; they neither qualify reserved capability nor shrink S06.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "self_conformance_assessment"
+        ],
+        "conditions": [
+          "Each supported claim requires independent applicability, positive/nearest-negative scope and sufficiency judgment."
+        ],
+        "exceptions": [
+          "One exact execution may support multiple claims without per-behavior result allocation."
+        ],
+        "grounding": [
+          {
+            "end_line": 371,
+            "quote": "**REQ-P-QUAL-064A**: Existing F11 shall bind complete coverage to the exact\nqualification subject and law. Actual native results retain their producing\ninput, declaration, C/J, occurrence and evidence authority. An execution may\nsupport several claims once, but independent judgment shall establish each\nclaim's applicability, positive/nearest-negative scope and sufficiency against\nits source. Neither a shared citation, a green computable assessment, a label,\na test count nor catalog membership supplies that judgment. Missing,\nambiguous, stale, foreign or unexercised required coverage is non-green.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 364
+          }
+        ],
+        "key": "independent_evidence_sufficiency",
+        "statement": "F11 binds complete coverage to exact subject/law. Native results preserve producing input/declaration/C-J/occurrence/evidence authority. One execution may support multiple claims, but independent judgment establishes each source-based applicability, positive/nearest-negative scope and sufficiency. Shared citations, computable green, labels/counts/catalog membership do not supply judgment. Missing/ambiguous/stale/foreign/unexercised required coverage is non-green.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "native_qualification_verdict"
+        ],
+        "conditions": [
+          "Only complete same-subject green with no bypass authorizes AF25 or installed-RC acceptance."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 383,
+            "quote": "**REQ-P-QUAL-064C**: The verdict shall conserve exact subject/law/coverage and\nauthenticated F11 result citations, explicit green/red/blocked disposition and\nall unresolved re-entry/bypass references. Only a complete same-subject green\nverdict with no bypass can admit AF25 or exact installed-RC acceptance.\nDevelopment, incomplete and unknown bases remain blocked, not qualified.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 379
+          }
+        ],
+        "key": "verdict_green_gate",
+        "statement": "Verdict conserves exact subject/law/coverage, authenticated F11 citations, explicit green/red/blocked, unresolved re-entry and bypass refs. Only complete same-subject green with no bypass admits AF25 or installed-RC acceptance; development/incomplete/unknown bases remain blocked.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "selected_lifecycle_witness"
+        ],
+        "conditions": [
+          "Complete prospective selected S06 remains required before RC authorization."
+        ],
+        "exceptions": [
+          "Separate full original Data Mapper upper-bound evaluation may conclude truthfully failed/blocked without satisfying selected S06 or compelling another attempt."
+        ],
+        "grounding": [
+          {
+            "end_line": 339,
+            "quote": "**REQ-P-QUAL-062**: The real specification-driven lifecycle witness defined by\nProduct F17/S06 and `REQ-P-SCENARIOS-013` shall be required ABIogenesis 5.0\nqualification evidence on the exact installed candidate. It binds the\ncomplete original source and prospectively selected witness contract under\nProduct Release Boundaries, then proves every mandatory selected application\noutcome, obligation conservation, admitted semantic and executable evidence and\ntargeted revision. Intermediate thread/correction evidence, post-result scope\nreduction, residual lists or construction/test counts do not substitute for\ncomplete selected S06 acceptance. Full original Data Mapper is a separately\nowned upper-bound evaluation under Product Release Boundaries. A truthful\nbounded failed or blocked outcome may conclude that evaluation with its actual\nassumptions, design choices, iterations, progress, unresolved obligations and\nstop cause recorded. It does not satisfy unmet application requirements, waive\ngeneric Product defects, qualify a missing successful S06 witness or compel\nanother attempt. Publication or maturation of the separate odd_glc",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 325
+          }
+        ],
+        "key": "s06_and_upper_bound_distinction",
+        "statement": "Intermediate thread/correction, post-result scope reduction, residual lists or counts cannot replace full selected S06 acceptance. Full original Data Mapper is separately owned upper-bound evaluation: truthful bounded failure/block may conclude it with assumptions/design/iterations/progress/unresolved obligations/stop cause, but satisfies no unmet requirement, waives no generic defect, qualifies no missing successful S06 and compels no retry.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "deferred_independent_products"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 323,
+            "quote": "**REQ-P-QUAL-060A**: Reserved for ABIogenesis 5.1. The observer/tuner\nqualification described by this clause is not applicable to the ABIogenesis\n5.0 candidate, qualification basis, gate inventory, RC, or release. Deferral\ndoes not affect the real-tree and seeded-negative self-conformance required by\n`REQ-P-QUAL-060`.\n\n**REQ-P-QUAL-061**: Dedicated Consensus qualification is reserved for 5.1.\nIt satisfies `REQ-P-CONSENSUS` by invoking the selected installed candidate's\npublished SYSTEM-owned\nConsensus GraphFunction through `abg.cli` over one real ticket and at least two\ndifferently attributed reviewer profiles. It proves agreement closure, dispute\nrecursion, and round-limit or unresolved-dispute typed block/handoff to F_H\nwithout requiring native response/resume, exercises the\nexisting, alternate and temporary workspace applications, and exposes the typed\nresult and replay without source import, feature-specific engine code, or\nshell-owned orchestration.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 308
+          },
+          {
+            "end_line": 351,
+            "quote": "**REQ-P-QUAL-063**: The exact installed ABIogenesis 5.0 candidate completes its\nnative public path without Claude, Codex or another marketplace host. Additional\nhost work and mandatory native/Codex parity qualification are reserved for 5.1.\nAny retained compatibility projection uses the same public contract without\ndirect worker invocation, ABG event authorship, continuation construction,\ntraversal control or closure decisions. Native LLM worker transport remains a\n5.0 dependency; host-projection deferral does not remove it.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 345
+          }
+        ],
+        "key": "deferral_boundaries",
+        "statement": "Observer/tuner is excluded from 5.0 subject/basis/gates/RC/release without waiving real-tree/seeded self-conformance. Dedicated 5.1 Consensus uses installed SYSTEM function via CLI, real ticket, >=2 attributed reviewers, agreement/dispute recursion/round-limit or unresolved F_H block without native response/resume, all existing/alternate/temp workspaces and typed result/replay without source/feature-engine/shell orchestration. Native 5.0 path completes without marketplace hosts, but native LLM transport remains required; retained compatibility uses public contract with no worker/event/continuation/traversal/closure authority.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "deferred_independent_products"
+        ],
+        "conditions": [
+          "Mandatory Codex parity is reserved for 5.1; comparison method follows declared fixed/live/projection test claim."
+        ],
+        "exceptions": [
+          "Textual equality is not required unless public contract declares it.",
+          "Explicit transport-independent projection test may use identical recorded admitted result on both paths."
+        ],
+        "grounding": [
+          {
+            "end_line": 394,
+            "quote": "**REQ-P-QUAL-066**: Mandatory Codex projection qualification is reserved for 5.1.\nIts parity assessment compares the native and\nadapter paths over the same versioned public operation contract. A fixed-result\nlane shall compare the declared result digest. A live F_P lane shall compare\nthe declared response/result schemas and replay-significant invariants, or both\npaths may consume one identical recorded admitted result when the gate is\nexplicitly a transport-independent projection test. Textual output equality is\nnot required unless the public contract declares it.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 387
+          }
+        ],
+        "key": "host_parity_claim_scope",
+        "statement": "Mandatory Codex parity is 5.1; fixed-result lanes compare declared digest; live F_P compares response/result schemas and replay-significant invariants, or explicit transport-independent projection tests consume identical recorded admitted result on both paths. Textual equality is required only if public contract declares it.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "deferred_independent_products",
+          "selected_lifecycle_witness"
+        ],
+        "conditions": [
+          "Separate downstream Product claims keep their own authority and exact installed development Product."
+        ],
+        "exceptions": [
+          "A downstream failure exposing a retained 5.0 defect may re-enter ABIogenesis; mandatory S06 is unaffected by independence."
+        ],
+        "grounding": [
+          {
+            "end_line": 343,
+            "quote": "another attempt. Publication or maturation of the separate odd_glc\nProduct, installed 5.0 authoring the distinct 5.0.1 successor, and the planned\n5.1 observer/tuner Product shall retain their own exact Product identities,\nrequirements, design, qualification and release gates; none is required to\nmake the ABIogenesis 5.0 candidate or final release green.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 339
+          },
+          {
+            "end_line": 447,
+            "quote": "**REQ-P-QUAL-069**: Downstream beta evaluation, an odd_glc release, a 5.0.1\ndogfood campaign or a planned 5.1 observer/tuner realization shall retain its\nown Product authority and explicitly selected exact installed development\nProduct. Its admission and release are independent of ABIogenesis RC\nacceptance; they are neither waived nor made prerequisites or terminal addenda\nfor the ABIogenesis 5.0 release. Its failure shall block its own claim and may\nre-enter ABIogenesis when it exposes a retained 5.0 Product defect. This\nindependence does not defer or weaken the complete selected F17/S06 lifecycle witness\nrequired before RC authorization by `REQ-P-QUAL-062`.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 439
+          }
+        ],
+        "key": "downstream_independence",
+        "statement": "Downstream beta, odd_glc release, 5.0.1 dogfood and 5.1 observer/tuner keep own Product identities/requirements/design/qualification/release and selected exact installed development Product. Their admission/release neither depend on nor waive ABI RC acceptance and are not prerequisites/terminal addenda; failure blocks own claim and may re-enter retained ABI defects. This does not weaken mandatory complete S06 before RC authorization.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "published_rc_cut"
+        ],
+        "conditions": [
+          "Assigned abiogenesis single-project unqualified release profile and subtree .; exact local/remote refs and ordinal eligibility validated before publication."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 426,
+            "quote": "versioned RC cut and its authoritative snapshot. The RC record shall bind its\nassigned Project Release Namespace and declared profile, source lineage,\nannotated tag object, peeled commit, repository tree, Project Subtree and tree,\nexact Product inventory and release-claim bytes, package, snapshot, checksums,\nnotes, predecessor disposition and exact authorizing basis and verdict.\nPublication-produced tag, receipt and snapshot identities are outputs from this\ntransition; frozen release-claim and package bytes remain qualifying inputs.\nFor the assigned `abiogenesis` single-project unqualified profile and subtree\n`.`, the immutable cut is `v5.0.0-rc.<n>` and the mutable `v5.0.0` selector shall\nidentify the greatest published RC ordinal. Exact local and remote refs and\nordinal eligibility shall be revalidated before publication. Selector advance\nbelongs to publication, not qualification, acceptance or consumer adoption.\nAny qualifying Product or release-claim byte change requires a higher RC; no\npublished RC shall be retagged or renamed to a final-version cut.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 413
+          }
+        ],
+        "key": "rc_identity_and_selector",
+        "statement": "RC record binds assigned namespace/profile/source lineage/annotated tag/peeled commit/repository+Project Subtree trees/exact Product and release-claim bytes/package/snapshot/checksums/notes/predecessor/authorizing basis-verdict. Publication tag/receipt/snapshot are outputs; frozen package/claim bytes inputs. Assigned abiogenesis single-project unqualified profile subtree . uses v5.0.0-rc.<n>; mutable v5.0.0 points greatest published ordinal. Revalidate exact local/remote refs and ordinal eligibility before publication. Only publication advances selector. Qualifying bytes changing require higher RC; never retag/rename published RC as final.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "installed_rc_basis"
+        ],
+        "conditions": [
+          "Before actual human acceptance, selected published RC must be fresh-installed and separately qualified."
+        ],
+        "exceptions": [
+          "Acceptance is not prerequisite to installed_rc qualification."
+        ],
+        "grounding": [
+          {
+            "end_line": 437,
+            "quote": "**REQ-P-QUAL-068A**: Before human acceptance, the selected published RC shall\nbe fresh-installed and qualified as an exact `installed_rc`\nsubject through the same `ExactCandidateQualification<K>` family. Its\n`ExactCandidateQualification<basis>` projection shall bind the exact RC cut\nbytes and installed identity; its complete coverage assessment and verdict shall preserve\nthat basis and law basis. A `pre_rc_candidate` verdict shall not be relabeled as\nan `installed_rc` verdict. Its same-basis green non-bypassed verdict is required\nevidence for actual human acceptance of that same unchanged RC; it shall not\nmaterialize another cut or snapshot. Acceptance is not a prerequisite to this\ninstalled-RC qualification.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 428
+          }
+        ],
+        "key": "installed_rc_qualification_boundary",
+        "statement": "Same-basis green non-bypassed installed_rc verdict is required for actual acceptance of unchanged RC; qualification creates no new cut/snapshot and acceptance is not its prerequisite.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "human_rc_acceptance"
+        ],
+        "conditions": [
+          "After required installed qualification, independent reviews and operator assessment."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 458,
+            "quote": "**REQ-P-QUAL-070**: Actual human Product authority shall accept or withhold one\nexact published RC after its required installed-RC qualification, independent\nreviews and operator assessment. The decision shall bind the complete\nimmutable RC identity, exact `installed_rc` basis, same-basis green\nnon-bypassed verdict and law basis, required evidence, and actual accepting\nactor and authority. A caller assertion, generated summary or qualification\nverdict alone is not human acceptance. The acceptance record is an addendum\noutside the immutable Product and release-claim bytes. `tapped_release` shall\nreport this same-RC decision; it shall not create a cut, assign a final version,\nrename a package or move the selector.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 449
+          }
+        ],
+        "key": "human_acceptance_not_flags",
+        "statement": "Caller assertion, generated summary or verdict alone is not acceptance. Record is external addendum, and tapped_release only reports same-RC decision; no cut/final version/package rename/selector movement.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "post_publication_addenda"
+        ],
+        "conditions": [
+          "Terminal remote-installed post-publication proof."
+        ],
+        "exceptions": [
+          "This proof is not required to make earlier pre_rc_candidate or installed_rc verdict green."
+        ],
+        "grounding": [
+          {
+            "end_line": 405,
+            "quote": "**REQ-P-QUAL-067**: Release closure shall fresh-install the published\nABIogenesis 5.0 RC artifact by its verified immutable remote identity, bind its\nexact released descriptor, manifest, RC version, digest and tenant-conformance identity,\nand pass the bounded installed catalog, public invocation and replay\nproof without rebuilding or importing mutable source. This post-publication\nresult shall be a terminal addendum to the A5-R1 release read model. It shall not\nbe required to make an earlier `ExactCandidateQualification<verdict>` projection\nfor `pre_rc_candidate` or `installed_rc` green and shall not reinterpret any\nearlier verdict. This proof and acceptance addenda shall leave the RC tag,\npackage, Product inventory and release-claim bytes unchanged.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 396
+          },
+          {
+            "end_line": 477,
+            "quote": "**REQ-P-QUAL-070B**: The release lifecycle shall be acyclic:\n`ExactCandidateQualification<basis>` for `pre_rc_candidate` -> matching\n`ExactCandidateQualification<verdict>` -> RC cut and snapshot ->\n`ExactCandidateQualification<basis>` for `installed_rc` -> matching\n`ExactCandidateQualification<verdict>` -> actual human acceptance of the same\nunchanged RC -> external acceptance/evidence addenda and terminal\npost-publication install proof. Publication advances the latest-RC selector;\nacceptance and adoption do not. There is no second final-cut subject or\nsnapshot. No cut or snapshot may qualify the input that creates it, and no\npost-publication proof may retroactively authorize an earlier transition.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 468
+          }
+        ],
+        "key": "no_retroactive_publication_proof",
+        "statement": "Post-publication proof is not prerequisite to earlier pre_rc_candidate or installed_rc green and cannot reinterpret either verdict or retroauthorize earlier transition.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "published_rc_cut",
+          "native_qualification_verdict"
+        ],
+        "conditions": [
+          "Qualifying Product or release-claim bytes change."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 477,
+            "quote": "**REQ-P-QUAL-070A**: A change to qualifying Product or release-claim bytes shall\nreopen the mutable RC window and require a higher immutable RC. Every affected\nowning assessment shall rerun against that new exact subject. Its complete required\ncoverage and authenticated F11 result shall enter the sole declared `C.of(AF-22)` evaluator; only the resulting\nsame-subject and same-law-basis green non-bypassed verdict may authorize its\npublication. Evidence or acceptance addenda shall not waive gates, alter the\npublished cut, substitute a changed subject or retroauthorize an earlier effect.\n\n**REQ-P-QUAL-070B**: The release lifecycle shall be acyclic:\n`ExactCandidateQualification<basis>` for `pre_rc_candidate` -> matching\n`ExactCandidateQualification<verdict>` -> RC cut and snapshot ->\n`ExactCandidateQualification<basis>` for `installed_rc` -> matching\n`ExactCandidateQualification<verdict>` -> actual human acceptance of the same\nunchanged RC -> external acceptance/evidence addenda and terminal\npost-publication install proof. Publication advances the latest-RC selector;\nacceptance and adoption do not. There is no second final-cut subject or\nsnapshot. No cut or snapshot may qualify the input that creates it, and no\npost-publication proof may retroactively authorize an earlier transition.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 460
+          }
+        ],
+        "key": "higher_rc_on_change",
+        "statement": "Changed qualifying Product/release-claim bytes reopen RC window and require higher immutable RC; rerun every affected owning assessment, feed complete coverage/authenticated F11 to sole C.of(AF-22), and require resulting same-subject/law green non-bypassed verdict for publication. Addenda cannot waive gates, alter cut, substitute subject or retroauthorize effects. No second final-cut subject/snapshot or self-qualifying cut is permitted.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "steel_thread_sequencing"
+        ],
+        "conditions": [
+          "Selected-path authority/identity/admission/effect/constructability failures must be resolved before dependent effects."
+        ],
+        "exceptions": [
+          "Existing exact valid evidence is reusable; one execution may serve multiple assessments with separate oracles."
+        ],
+        "grounding": [
+          {
+            "end_line": 501,
+            "quote": "**REQ-P-QUAL-071**: Construction uses focused build/type, changed module-law and\nstructural-boundary checks. Authority, identity, admission, effect integrity and\nconstructability failures on the selected path require resolution before its\ndependent effects. Existing valid evidence remains reusable on its exact basis.\n\nEach usable increment receives an early installed integration/end-to-end\ndiscriminator and focused user-outcome assessment. Substantial clean-room UAT\nuses the original specification, selected input contract, public documentation\nand installed Product with independent expected outcomes. Source hints, private\nimports or fixture-owned traversal, retry, admission or event truth cannot\nsubstitute for the public user experience. Observable application behavior and\nfresh public result/replay reads support distinct, explicitly bounded claims.\n\nBroad applicable negative matrices, conservation population, interactions and\nrepeatability are scheduled at integrated qualification. Deferral changes\nevidence order, not retained obligations. Material structural/authority failure\nor a broken selected sunny-day path returns immediately for lawful re-entry.\nOne execution may support integration, end-to-end and UAT with separate oracles;\ntest counts, fixed repetition quotas or redundant campaigns supply no closure.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FSteel-Thread%20Evidence%20Sequencing",
+            "start_line": 483
+          }
+        ],
+        "key": "evidence_sequence_and_stop",
+        "statement": "Resolve authority/identity/admission/effect-integrity/constructability failures before dependent effects; exact valid evidence reusable. Clean-room UAT uses original spec, selected input contract, public docs, installed Product and independent expectations; source hints/private imports/fixture traversal-retry-admission-event truth cannot replace user path. Observable application and fresh result/replay support distinct bounded claims. Deferred ordering retains obligations; material structural/authority failure or broken selected sunny-day route requires immediate lawful re-entry. One execution may serve integration/end-to-end/UAT with separate oracles; counts/quotas/redundant campaigns confer no closure.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "steel_thread_sequencing"
+        ],
+        "conditions": [
+          "Affected dependency closure of the exercised route."
+        ],
+        "exceptions": [
+          "Pure catalog/readiness functions may remain eventless."
+        ],
+        "grounding": [
+          {
+            "end_line": 508,
+            "quote": "End-to-end success demonstrates an exercised route, not the absence of another\nreachable route. A bounded review of public bindings, exports/loaders, owner\nselection, effect paths, HoG traversal and ABG truth checks alternative-path\nrisk on the affected dependency closure. Pure catalog/readiness functions may\nremain eventless. Required independent assessment and proportionate\nmodule-derived unit evidence remain distinct under the selected STDO frames.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FSteel-Thread%20Evidence%20Sequencing",
+            "start_line": 503
+          }
+        ],
+        "key": "alternative_path_assessment",
+        "statement": "End-to-end success shows exercised route, not absence of alternatives. Bounded review of bindings, exports/loaders, owner selection, effects, HoG and ABG truth examines affected dependency closure. Pure catalog/readiness may stay eventless; required independent assessment and proportionate module-derived unit evidence remain distinct under selected STDO frames.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "residual",
+        "keys": [
+          "exact_qualification_family",
+          "qualification_law_basis",
+          "pre_rc_basis",
+          "root_integration_gate",
+          "one_surface_qualification",
+          "self_conformance_assessment",
+          "native_qualification_verdict",
+          "selected_lifecycle_witness",
+          "deferred_independent_products",
+          "published_rc_cut",
+          "installed_rc_basis",
+          "human_rc_acceptance",
+          "post_publication_addenda",
+          "f11_consumed_by_af22",
+          "pre_rc_verdict_authorizes_cut",
+          "published_cut_to_installed_basis",
+          "installed_qualification_before_acceptance",
+          "acceptance_to_external_addenda",
+          "qualification_basis_conservation",
+          "prospective_candidate_freeze",
+          "root_program_independence",
+          "one_surface_gate_outcomes",
+          "retained_coverage_obligations",
+          "independent_evidence_sufficiency",
+          "verdict_green_gate",
+          "s06_and_upper_bound_distinction",
+          "deferral_boundaries",
+          "host_parity_claim_scope",
+          "downstream_independence",
+          "rc_identity_and_selector",
+          "installed_rc_qualification_boundary",
+          "human_acceptance_not_flags",
+          "no_retroactive_publication_proof",
+          "higher_rc_on_change",
+          "trusted_desktop_qualification_boundary",
+          "exact_gate_external_dependencies"
+        ],
+        "reason": "Retain exact family/law/basis/verdict, complete retained gates, deferred/independent scopes, native evidence judgment and acyclic immutable RC lifecycle; referenced owner details require re-entry.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "steel_thread_sequencing",
+          "evidence_sequence_and_stop",
+          "alternative_path_assessment"
+        ],
+        "reason": "Retain phased evidence, immediate failure re-entry, independent UAT and alternative-path review without substituting counts for closure.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FSteel-Thread%20Evidence%20Sequencing"
+      }
+    ],
+    "latitude": [
+      {
+        "allowed": [
+          "Qualify within supported trusted-developer-desktop boundary."
+        ],
+        "applies_to_keys": [
+          "exact_qualification_family"
+        ],
+        "forbidden": [
+          "Omit defense against malformed GTL/F_P, unresolved/incompatible contracts/capabilities, wrong identity/binding, source/private-import dependence or false convergence/release.",
+          "Require hostile-local tamper resistance, signing, remote attestation, hosted marketplace or repeated adversarial campaigns."
+        ],
+        "grounding": [
+          {
+            "end_line": 385,
+            "quote": "**REQ-P-QUAL-065**: Qualification on the supported trusted-developer-desktop boundary shall defend malformed GTL and F_P results, unresolved or incompatible contracts and capabilities, incorrect product identity or binding, source/private-import dependence, and false convergence or release claims. It shall not require hostile-local tamper resistance, a signing service, remote attestation, a hosted marketplace, or repeated adversarial campaigns.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 385
+          }
+        ],
+        "key": "trusted_desktop_qualification_boundary"
+      }
+    ],
+    "limitations": [
+      "Qualification, publication, installed-RC acceptance and remote install proof are distinct declared obligations; none is claimed performed.",
+      "External root/scenario/Product/method contracts remain unresolved locally.",
+      "Explicit lifecycle relations encode source order as data, not actual transitions; all operating populations remain uninstantiated."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 377,
+            "quote": "**REQ-P-QUAL-064B**: The declared native `C.of(AF-22)` shall consume the\nadmitted complete F11 assessment and emit the sole\n`ExactCandidateQualification<verdict>`. There is no separate per-behavior\nowning-result vector, adapter requirement or replacement reducer/controller.\nF11 retains its findings and is not itself the release verdict.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 373
+          }
+        ],
+        "key": "f11_consumed_by_af22",
+        "kind": "input_to",
+        "meaning": "Only declared native C.of(AF-22) consumes complete admitted F11 to emit qualification verdict, without per-behavior result vector, replacement adapter/reducer/controller.",
+        "source_key": "self_conformance_assessment",
+        "target_key": "native_qualification_verdict"
+      },
+      {
+        "conditions": [
+          "Verdict subject is pre_rc_candidate."
+        ],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 419,
+            "quote": "**REQ-P-QUAL-068**: The ABG 5.0 release process shall open a mutable RC window.\nAfter one exact `ExactCandidateQualification<basis>` projection for\n`pre_rc_candidate` receives its same-subject and same-law-basis green\nnon-bypassed `ExactCandidateQualification<verdict>` projection, `AF-25` may\nverify equality with the basis-bound prospective published-RC identity and\nmaterialize the exact qualified artifact bytes unchanged as one immutable\nversioned RC cut and its authoritative snapshot. The RC record shall bind its\nassigned Project Release Namespace and declared profile, source lineage,\nannotated tag object, peeled commit, repository tree, Project Subtree and tree,\nexact Product inventory and release-claim bytes, package, snapshot, checksums,\nnotes, predecessor disposition and exact authorizing basis and verdict.\nPublication-produced tag, receipt and snapshot identities are outputs from this\ntransition; frozen release-claim and package bytes remain qualifying inputs.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 407
+          }
+        ],
+        "key": "pre_rc_verdict_authorizes_cut",
+        "kind": "authorizes",
+        "meaning": "AF-25 publication is permitted only after matching pre_rc_candidate green non-bypassed verdict and exact prospective identity equality.",
+        "source_key": "native_qualification_verdict",
+        "target_key": "published_rc_cut"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 437,
+            "quote": "**REQ-P-QUAL-068A**: Before human acceptance, the selected published RC shall\nbe fresh-installed and qualified as an exact `installed_rc`\nsubject through the same `ExactCandidateQualification<K>` family. Its\n`ExactCandidateQualification<basis>` projection shall bind the exact RC cut\nbytes and installed identity; its complete coverage assessment and verdict shall preserve\nthat basis and law basis. A `pre_rc_candidate` verdict shall not be relabeled as\nan `installed_rc` verdict. Its same-basis green non-bypassed verdict is required\nevidence for actual human acceptance of that same unchanged RC; it shall not\nmaterialize another cut or snapshot. Acceptance is not a prerequisite to this\ninstalled-RC qualification.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 428
+          }
+        ],
+        "key": "published_cut_to_installed_basis",
+        "kind": "precedes",
+        "meaning": "Published RC must be fresh-installed and separately qualified as installed_rc; pre-RC verdict cannot be relabeled.",
+        "source_key": "published_rc_cut",
+        "target_key": "installed_rc_basis"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 458,
+            "quote": "**REQ-P-QUAL-070**: Actual human Product authority shall accept or withhold one\nexact published RC after its required installed-RC qualification, independent\nreviews and operator assessment. The decision shall bind the complete\nimmutable RC identity, exact `installed_rc` basis, same-basis green\nnon-bypassed verdict and law basis, required evidence, and actual accepting\nactor and authority. A caller assertion, generated summary or qualification\nverdict alone is not human acceptance. The acceptance record is an addendum\noutside the immutable Product and release-claim bytes. `tapped_release` shall\nreport this same-RC decision; it shall not create a cut, assign a final version,\nrename a package or move the selector.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 449
+          }
+        ],
+        "key": "installed_qualification_before_acceptance",
+        "kind": "required_before",
+        "meaning": "Acceptance binds complete immutable RC, exact installed basis/same-basis green non-bypassed verdict/law/evidence and actual accepting actor/authority.",
+        "source_key": "installed_rc_basis",
+        "target_key": "human_rc_acceptance"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 477,
+            "quote": "**REQ-P-QUAL-070B**: The release lifecycle shall be acyclic:\n`ExactCandidateQualification<basis>` for `pre_rc_candidate` -> matching\n`ExactCandidateQualification<verdict>` -> RC cut and snapshot ->\n`ExactCandidateQualification<basis>` for `installed_rc` -> matching\n`ExactCandidateQualification<verdict>` -> actual human acceptance of the same\nunchanged RC -> external acceptance/evidence addenda and terminal\npost-publication install proof. Publication advances the latest-RC selector;\nacceptance and adoption do not. There is no second final-cut subject or\nsnapshot. No cut or snapshot may qualify the input that creates it, and no\npost-publication proof may retroactively authorize an earlier transition.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 468
+          }
+        ],
+        "key": "acceptance_to_external_addenda",
+        "kind": "precedes",
+        "meaning": "Acyclic lifecycle ends with external acceptance/evidence addenda and terminal remote-install proof of unchanged RC.",
+        "source_key": "human_rc_acceptance",
+        "target_key": "post_publication_addenda"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Local source preserves required gates and claim limits without fabricating detailed external obligations, execution evidence, subject resolution or acceptance.",
+        "grounding": [
+          {
+            "end_line": 249,
+            "quote": "**REQ-P-QUAL-057B**: `QualificationLawBasis` shall bind the exact tapped and\ninstalled STDO release identity selected by `stdo_abiogenesis.json`, installed-manifest digest,\nstandards member-set digest, method version, rule-catalog version, source refs,\nand content digests used by the owning gates.\nIts identity and digest shall be preserved unchanged through every admitted\nauthenticated assessment result, the coverage catalog, the declared\n`C.of(AF-22)` argument, and the resulting\n`ExactCandidateQualification<verdict>` projection.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 242
+          },
+          {
+            "end_line": 284,
+            "quote": "**REQ-P-QUAL-058**: The exact installed ABIogenesis 5.0 candidate shall satisfy\n`ABI5-ROOT-001` through installed `abg.cli`: all ordered obligations `R1`\nthrough `R10` shall bind the same exact product, workspace, catalog, program,\nGraphFunction, contracts, execution basis, causal ABG episode, and replay\nbasis. The independently authored minimal test program owns its declarations,\ncontracts, ordinary leaf binding and expected output outside the ABG package.\nThe candidate shall contain no test-program-specific contract, publication,\nimplementation, admission, validation, dispatch or proof branch. Two fresh reads\nshall derive the same admitted typed terminal result and closed state. A\ncomponent, package, catalog, event-co-presence or fixture-authored substitute\nshall not satisfy the root. Evidence from a package containing the removed\nbuilt-in test code does not qualify the successor that removes it; affected\ninstalled-path obligations require proof on that exact successor.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 272
+          },
+          {
+            "end_line": 343,
+            "quote": "**REQ-P-QUAL-062**: The real specification-driven lifecycle witness defined by\nProduct F17/S06 and `REQ-P-SCENARIOS-013` shall be required ABIogenesis 5.0\nqualification evidence on the exact installed candidate. It binds the\ncomplete original source and prospectively selected witness contract under\nProduct Release Boundaries, then proves every mandatory selected application\noutcome, obligation conservation, admitted semantic and executable evidence and\ntargeted revision. Intermediate thread/correction evidence, post-result scope\nreduction, residual lists or construction/test counts do not substitute for\ncomplete selected S06 acceptance. Full original Data Mapper is a separately\nowned upper-bound evaluation under Product Release Boundaries. A truthful\nbounded failed or blocked outcome may conclude that evaluation with its actual\nassumptions, design choices, iterations, progress, unresolved obligations and\nstop cause recorded. It does not satisfy unmet application requirements, waive\ngeneric Product defects, qualify a missing successful S06 witness or compel\nanother attempt. Publication or maturation of the separate odd_glc\nProduct, installed 5.0 authoring the distinct 5.0.1 successor, and the planned\n5.1 observer/tuner Product shall retain their own exact Product identities,\nrequirements, design, qualification and release gates; none is required to\nmake the ABIogenesis 5.0 candidate or final release green.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 325
+          },
+          {
+            "end_line": 362,
+            "quote": "**REQ-P-QUAL-064**: Exact-candidate qualification shall conserve every retained\nbehavior of the fifteen-family Product: ABI5-ROOT-001; compute, structural,\nconsequence, runtime-disposition and public-control behavior; shape-preserving\nfibre substitution; complete C algebra; malformed GTL and F_P refusal;\nOne Surface; whole-subject F11; native Public projection; and complete selected\nS01/S02/S03/S06 outcomes. The source-linked coverage catalog declares these\nobligations without an executable slot, ordinal or owning-result requirement\nper behavior. Deferred portions require a scoped governing reason and evidence\nof retained boundaries; deferral does not qualify the reserved capability or\nshrink the selected S06 contract.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FABIogenesis%205.0%20Exact-Cut%20Qualification",
+            "start_line": 353
+          }
+        ],
+        "key": "exact_gate_external_dependencies",
+        "subject_key": "exact_qualification_family",
+        "uncertainty": "ABI5-ROOT-001 R1–R10, full fifteen-family semantics, Product release boundaries, selected S06 witness and exact installed method/rule catalogs are referenced but not supplied in this chunk."
+      }
+    ]
+  },
+  "answer_sha256": "09530a8d5856e22c334d50e28d2062d4cce32891dc2094043cb879ead89795cc",
+  "author": "codex-governance-frame",
+  "chunk": "chunk-ee41cb0c524d5516e82d",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "f1dfe310d55ac7a39ad4606fb708ec37badc56ecacec61cd314872e51b8afb06"
+}

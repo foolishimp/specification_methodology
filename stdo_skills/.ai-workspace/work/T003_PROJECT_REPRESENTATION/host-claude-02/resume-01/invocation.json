@@ -1,0 +1,25 @@
+{
+  "host": "claude",
+  "command": [
+    "claude",
+    "-p",
+    "--output-format",
+    "stream-json",
+    "--verbose",
+    "--permission-mode",
+    "acceptEdits",
+    "--allowedTools",
+    "Read,Write,Edit,Bash,Skill",
+    "--tools",
+    "Read,Write,Edit,Bash,Skill",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "{\"mcpServers\":{}}",
+    "--no-session-persistence"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/host-claude-02/invoice-project",
+  "timeout_seconds": 600,
+  "provider_sha256": "c6463bfed3e2e895bcfc8439bc6d3974206e2917b9ecf0fe1a96479bfbd7dec1",
+  "prompt_sha256": "fbaf1f2cf001196cfba4aafbd6aba773346bb086b4f667514ddb306b0d3eb74e",
+  "resumes": "../REPORT.json"
+}

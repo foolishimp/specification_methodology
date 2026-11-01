@@ -1,0 +1,718 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "Product public operation meanings are exact and source-blind; 5.0 does not imply broad product/registry lifecycle services.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 354,
+            "quote": "**REQ-P-POLICY-047**: Conformance to the ABG 5.0 public operation contract shall\nnot require a hosted registry or storefront, billing, ranking, organization\nRBAC, multi-user approval administration, signing service, external scheduler,\nautomatic wake controller, or more than one host-adapter qualification.\n\n**REQ-P-POLICY-048**: The public operation contract shall not imply product\nupdate, disable, unbind, uninstall, registry retirement, revocation, or\nsupersession lifecycle behavior. Those capabilities require separately admitted\nproduct requirements.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FBounded%205.0%20Scope",
+            "start_line": 346
+          }
+        ],
+        "key": "public_operations",
+        "label": "Bounded public operation contract"
+      },
+      {
+        "conditions": [],
+        "definition": "packed_artifact verifies supplied product/descriptor/contribution/artifact/content, declared dependency/compatibility, locally decidable native-contract truth and source-contract-indexed pending external selectors before resolution. installed_artifact verifies same truth with exactly one resolved lock, installed identity and install manifest.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 375,
+            "quote": "**REQ-P-POLICY-049**: `abg.operation.product.verify` shall accept one closed\ntarget sum:\n\n- `packed_artifact` shall validate the supplied Product, descriptor,\n  contribution manifest, artifact and content identities, declared dependency\n  and compatibility inputs, locally decidable native-contract truth, and\n  source-contract-indexed pending external selectors before dependency\n  resolution. A resolved lock, installed-Product identity, and install manifest\n  shall be forbidden for this member.\n- `installed_artifact` shall validate the same supplied Product truth together\n  with exactly one already resolved lock, installed-Product identity, and\n  install manifest. Those three fields shall be required for this member.\n\nVerification shall not construct a dependency lock, install, bind, admit,\ninvoke, or treat unresolved external meaning as linked truth. Its result shall\npreserve the selected target member and identify every checked identity, the\nlocal or installed verification disposition, typed pending external evidence\nfor the packed member, residuals or refusals, and provenance.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 358
+          }
+        ],
+        "key": "artifact_verification",
+        "label": "product.verify closed target sum"
+      },
+      {
+        "conditions": [],
+        "definition": "Only operation admitting linked cross-Product meaning and constructing one exact lock from declared product/compatibility requirements, or typed unresolved/incompatible/ambiguous/cyclic disposition.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 382,
+            "quote": "`abg.operation.product.resolve` alone shall admit linked cross-Product meaning\nand construct the resolved lock.\n\n**REQ-P-POLICY-050**: `abg.operation.product.resolve` shall accept declared product and\ncompatibility requirements and return one exact resolved-lock result or a typed\nunresolved, incompatible, ambiguous, or cyclic disposition. Producing a lock\nshall not install a product or alter a workspace binding.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 376
+          }
+        ],
+        "key": "product_resolution",
+        "label": "product.resolve"
+      },
+      {
+        "conditions": [],
+        "definition": "workspace.bind consumes admitted workspace, exact verified product set and resolved lock and returns immutable binding/manifest or typed refusal.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 395,
+            "quote": "**REQ-P-POLICY-051**: `abg.operation.workspace.bind` shall accept one admitted workspace and one\nexact verified product set and resolved lock. It shall return the resulting\nimmutable workspace-binding identity and manifest or a typed refusal. Binding shall not\nsilently install missing products, admit contributions, start traversal, or\nbroaden the selected set. A different product set, lock, authority basis, or\ndeclared root set shall create a separately admitted immutable binding identity;\nit shall not mutate an earlier binding or a global current-binding pointer.\nEvery workspace- or execution-scoped invocation shall select exactly one such\nbinding. Introducing a different binding onto a continued execution spine shall\nrequire the explicit new binding plus its exact covering reprice. Ordinary\nobservation, replay, process, file, or artifact change shall not mutate or\ninvalidate a binding.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 384
+          }
+        ],
+        "key": "workspace_binding",
+        "label": "Exact immutable workspace binding"
+      },
+      {
+        "conditions": [],
+        "definition": "catalog.admit consumes exact binding/lock/verified descriptors+manifests; list/describe are project.read projections; catalog.view constructs narrowing-only view from admitted catalog and allowlist.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 414,
+            "quote": "**REQ-P-POLICY-051A**: `abg.operation.catalog.admit` shall accept one exact workspace binding,\nits resolved lock, and the bound products' verified descriptors and\ncontribution manifests. It shall return one admitted catalog identity plus\ntyped admitted, rejected, incompatible, conflicting, unready, or unresolved\nrow dispositions. Admission shall not invoke a GraphFunction, widen a session,\nemit traversal events, or change the workspace binding.\n\n**REQ-P-POLICY-052**: The catalog-list and catalog-describe variants of\n`abg.operation.project.read` shall operate over admitted workspace catalog\ntruth. They shall preserve kind, canonical\nhandle, owning product, readiness, eligibility, callability, compatibility,\nsession visibility, contract, and provenance truth as applicable to the result.\n\n**REQ-P-POLICY-053**: `abg.operation.catalog.view` shall validate and construct one\nnarrowing-only session catalog view from an admitted workspace catalog and\ndeclared allowlist. It shall return the effective view identity and typed\nunknown, duplicate, ambiguous, unauthorized, inadmissible, or not-ready\nresiduals without widening or changing workspace catalog truth.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 397
+          }
+        ],
+        "key": "catalog_operations",
+        "label": "Catalog admit, read and view"
+      },
+      {
+        "conditions": [],
+        "definition": "Direct invocation selects explicit canonical admitted GraphFunction handle published by one admitted GTL program with declared input, exact immutable binding and session policy/capability inputs.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 429,
+            "quote": "**REQ-P-POLICY-054**: The `invoke` variant of\n`abg.operation.run.invoke` shall accept one admitted GTL program, one canonical\nadmitted GraphFunction handle published by that program, its declared input,\none immutable workspace binding, and declared session policy and capability\ninputs. The explicit function handle is the invocation target; ABG shall\nconsume a typed non-lowering GTL-validator result that validates the handle's\ndeclared program membership and GraphFunction contract relations. ABG shall\nthen admit the concrete input against those declared contracts, current catalog\neligibility, immutable workspace binding, session policy and capability, and\ninvocation authority before beginning one GraphCall. ABG shall not reinterpret\nor recompute the validator's static GTL judgment. The `invoke` variant shall\nneither accept nor require `root_mode`, `until`, or any other `start`-only\ntraversal grammar. That direct path does not require or synthesize\n`evaluateNext`, One Surface, or a `ConstructionIntent`.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 416
+          }
+        ],
+        "key": "graph_function_invocation",
+        "label": "run.invoke invoke variant"
+      },
+      {
+        "conditions": [],
+        "definition": "project.read evidence is read-only for supported Run, GraphCall, result, assessment, witness, install or release identities, retaining evidence identity/kind/subject/content-or-artifact/producer/basis/published digest/provenance/replay.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 444,
+            "quote": "**REQ-P-POLICY-055**: The evidence variant of\n`abg.operation.project.read` shall be a read-only projection for a supported\nrun, GraphCall, result, assessment, witness, install, or release identity. It\nshall preserve evidence identity, kind, subject, content or artifact reference,\nproducer, basis, digest when published, provenance, and replay references\nwithout manufacturing evidence from adapter-local observations.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 439
+          }
+        ],
+        "key": "evidence_projection",
+        "label": "Evidence projection"
+      },
+      {
+        "conditions": [],
+        "definition": "context_bootstrap, configuration and product.install are typed public operations with explicit admitted inputs and manifests/provenance.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 465,
+            "quote": "**REQ-P-POLICY-056**: The `context_bootstrap` variant of\n`abg.operation.product.materialize` shall accept one admitted target workspace\nand exact selected product binding and shall return a typed bootstrap\nmanifest identifying the context surfaces created, refreshed, preserved, or\nrefused. It shall not replace project-owned authority or select a mutable source\nproject as installed product truth.\n\n**REQ-P-POLICY-057**: `abg.operation.product.install` shall accept exact supplied artifact and product\ncontract identities and shall return typed verification, materialization,\ninstalled-product, and provenance dispositions. A failed\nverification shall not produce installed, bound, admitted, or callable truth.\nWorkspace binding and catalog admission remain the explicit\n`abg.operation.workspace.bind` and `abg.operation.catalog.admit` functions.\n\n**REQ-P-POLICY-058**: The `configuration` variant of\n`abg.operation.product.materialize` shall accept one admitted configuration\ncontract, selected product binding, and declared inputs and shall return exact\nconfiguration content identity, validation disposition, provenance, and typed\nresiduals. It shall not silently read mutable source defaults or change runtime\ntruth merely by producing configuration.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 446
+          }
+        ],
+        "key": "product_materialization",
+        "label": "Product materialization and install"
+      },
+      {
+        "conditions": [],
+        "definition": "published_rc or tapped_release consumes exact qualification/law basis and authenticated native same-basis green non-bypassed verdict, preserving native qualification/acceptance authority.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 485,
+            "quote": "**REQ-P-POLICY-059**: `abg.operation.release.snapshot` shall accept one exact\nqualification basis, the matching qualification-law basis, authenticated native\nsame-basis green non-bypassed verdict evidence, and the requested\n`published_rc | tapped_release` identity. The `published_rc` variant shall accept only a `pre_rc_candidate`\nbasis, require the requested identity to equal its basis-bound prospective RC\nidentity, and publish the exact qualified artifact bytes unchanged. The\n`tapped_release` variant shall accept only the exact `installed_rc` basis and\nits native same-basis green non-bypassed verdict, complete immutable RC lineage\nand actual human Product-authority acceptance of that same unchanged RC. It\nshall report the existing cut, artifacts and snapshot and write only an\nexternal acceptance/evidence addendum; it shall not create a second cut,\nsnapshot or package, rename a version or move the selector. Both variants\nshall preserve native qualification and acceptance owners rather than treating\ncaller green or accepted flags as authority. The operation shall return the\nexact immutable cut, artifact and snapshot identities, digests, qualification\nand acceptance disposition where applicable, residuals and provenance, or a\ntyped refusal. Any partial publication or addendum effect shall retain its\nactual effect receipt and unresolved state for exact reacquisition; it shall\nnot be represented as either complete release success or an effect-free refusal.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 467
+          }
+        ],
+        "key": "release_snapshot",
+        "label": "release.snapshot variants"
+      },
+      {
+        "conditions": [],
+        "definition": "Create accepts admitted target and explicit clean/imported authority mode; open reads existing target workspace/product truth with stable authority and current binding/config state.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 499,
+            "quote": "**REQ-P-POLICY-060**: Workspace `create` shall accept an admitted target\nlocation and explicit clean/imported authority mode and shall return one typed\nworkspace identity and creation/bootstrap eligibility result. It shall not\ninstall a product, bind a product set, admit a catalog, scaffold project-owned\nauthority by omission, or create runtime events merely by creating the\nworkspace boundary.\n\n**REQ-P-POLICY-061**: Workspace `open` shall accept an existing target location,\nadmit its workspace identity, stable workspace-authority basis, and current\nbinding/configuration state, and\nreturn typed missing, malformed, stale, incompatible, or ready dispositions.\nOpening shall be a read of existing workspace/product truth and shall not\nsilently install, rebind, re-resolve, admit, widen, or start work.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 487
+          }
+        ],
+        "key": "workspace_create_open",
+        "label": "Workspace create/open"
+      },
+      {
+        "conditions": [],
+        "definition": "Versioned host-neutral descriptor and result/refusal/nonterminal family for every public operation carry schema/definition identity/version/digest, operation+variant, exact InvocationAuthority and indexed required/forbidden workspace/binding/lock/view/program/function/input/payload/policy/capability/actor/transport truth; run.invoke adds applicable interface or public start and scope+target+until.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 511,
+            "quote": "**REQ-P-POLICY-062**: ABIogenesis shall publish one versioned host-neutral\n`PublicInvocation<K>` descriptor family and one corresponding\n`PublicOutcome<K>` result/refusal/non-terminal family for all public\noperations. The invocation shall carry at minimum its schema and public-function-definition\nidentity/version/digest, operation identity and variant, exact\n`InvocationAuthority<K>`, and the operation-indexed required or forbidden\nworkspace, product-binding, dependency-lock, catalog-view, admitted-program,\nGraphFunction, input-contract, payload, session-policy, capability-grant,\nactor-attribution, and transport-steering truth. The `run.invoke` variants shall\nadd the canonical GraphFunction interface or public start target and\n`scope + target + until` where applicable.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 501
+          }
+        ],
+        "key": "public_invocation_outcome",
+        "label": "PublicInvocation<K> and PublicOutcome<K>"
+      },
+      {
+        "conditions": [],
+        "definition": "Active 5.0 family names a static versioned installed-manifest section locating native exports, serialization schemas, closed vocabularies, conformance corpora, operations and capabilities without source/ticket/history/implementation inference; not hosted service or second checker.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 7,
+            "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability / Constraint\n**Date**: 2026-07-11\n**Derives from**: [PRODUCT.md](../../PRODUCT.md), [REQ-P-INSTALL.md](REQ-P-INSTALL.md), [REQ-P-POLICY.md](REQ-P-POLICY.md), [REQ-M-GTL3-CAPABILITY.md](../mapping/REQ-M-GTL3-CAPABILITY.md)\n**Wave**: ABG 5.0",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog",
+            "start_line": 3
+          },
+          {
+            "end_line": 19,
+            "quote": "Make every normative released contract addressable without source, ticket,\ndesign-history, or implementation inference. The public contract catalog is a\nversioned section of the installed product manifest. It is the bootstrap\nlocator for native typed exports, canonical serialization schemas, closed\nvocabularies, conformance corpora, public operations, and capability identities.\n\nIt is a static product artifact, not a hosted schema service or second checker.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPurpose",
+            "start_line": 13
+          }
+        ],
+        "key": "public_contract_catalog",
+        "label": "Addressable public contract catalog"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "artifact_verification"
+        ],
+        "conditions": [
+          "packed_artifact forbids lock/install identity/install manifest; installed_artifact requires exactly one of each."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 375,
+            "quote": "**REQ-P-POLICY-049**: `abg.operation.product.verify` shall accept one closed\ntarget sum:\n\n- `packed_artifact` shall validate the supplied Product, descriptor,\n  contribution manifest, artifact and content identities, declared dependency\n  and compatibility inputs, locally decidable native-contract truth, and\n  source-contract-indexed pending external selectors before dependency\n  resolution. A resolved lock, installed-Product identity, and install manifest\n  shall be forbidden for this member.\n- `installed_artifact` shall validate the same supplied Product truth together\n  with exactly one already resolved lock, installed-Product identity, and\n  install manifest. Those three fields shall be required for this member.\n\nVerification shall not construct a dependency lock, install, bind, admit,\ninvoke, or treat unresolved external meaning as linked truth. Its result shall\npreserve the selected target member and identify every checked identity, the\nlocal or installed verification disposition, typed pending external evidence\nfor the packed member, residuals or refusals, and provenance.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 358
+          }
+        ],
+        "key": "verification_phase_separation",
+        "statement": "Packed target forbids resolved lock, installed identity and install manifest; installed target requires all three. Verification neither constructs lock nor installs/binds/admits/invokes or treats unresolved external meaning as linked truth. Result retains target member, checked identities, local/installed disposition, packed pending external evidence, residual/refusal and provenance.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "product_resolution"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 382,
+            "quote": "**REQ-P-POLICY-050**: `abg.operation.product.resolve` shall accept declared product and\ncompatibility requirements and return one exact resolved-lock result or a typed\nunresolved, incompatible, ambiguous, or cyclic disposition. Producing a lock\nshall not install a product or alter a workspace binding.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 379
+          }
+        ],
+        "key": "resolution_effect_limit",
+        "statement": "Producing a lock neither installs a product nor alters workspace binding.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "workspace_binding"
+        ],
+        "conditions": [
+          "Each workspace/execution-scoped invocation selects exactly one immutable binding.",
+          "Changed binding on continued spine requires explicit new identity plus covering reprice."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 395,
+            "quote": "**REQ-P-POLICY-051**: `abg.operation.workspace.bind` shall accept one admitted workspace and one\nexact verified product set and resolved lock. It shall return the resulting\nimmutable workspace-binding identity and manifest or a typed refusal. Binding shall not\nsilently install missing products, admit contributions, start traversal, or\nbroaden the selected set. A different product set, lock, authority basis, or\ndeclared root set shall create a separately admitted immutable binding identity;\nit shall not mutate an earlier binding or a global current-binding pointer.\nEvery workspace- or execution-scoped invocation shall select exactly one such\nbinding. Introducing a different binding onto a continued execution spine shall\nrequire the explicit new binding plus its exact covering reprice. Ordinary\nobservation, replay, process, file, or artifact change shall not mutate or\ninvalidate a binding.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 384
+          }
+        ],
+        "key": "binding_immutability",
+        "statement": "Binding cannot install missing products, admit contributions, start traversal or broaden selection. Changed products/lock/authority/root set requires separately admitted identity, never earlier mutation/global current pointer. Each workspace/execution invocation selects exactly one binding; continued spine change also needs exact covering reprice. Ordinary observation/replay/process/file/artifact changes do not mutate or invalidate it.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "catalog_operations"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 414,
+            "quote": "**REQ-P-POLICY-051A**: `abg.operation.catalog.admit` shall accept one exact workspace binding,\nits resolved lock, and the bound products' verified descriptors and\ncontribution manifests. It shall return one admitted catalog identity plus\ntyped admitted, rejected, incompatible, conflicting, unready, or unresolved\nrow dispositions. Admission shall not invoke a GraphFunction, widen a session,\nemit traversal events, or change the workspace binding.\n\n**REQ-P-POLICY-052**: The catalog-list and catalog-describe variants of\n`abg.operation.project.read` shall operate over admitted workspace catalog\ntruth. They shall preserve kind, canonical\nhandle, owning product, readiness, eligibility, callability, compatibility,\nsession visibility, contract, and provenance truth as applicable to the result.\n\n**REQ-P-POLICY-053**: `abg.operation.catalog.view` shall validate and construct one\nnarrowing-only session catalog view from an admitted workspace catalog and\ndeclared allowlist. It shall return the effective view identity and typed\nunknown, duplicate, ambiguous, unauthorized, inadmissible, or not-ready\nresiduals without widening or changing workspace catalog truth.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 397
+          }
+        ],
+        "key": "catalog_disposition_and_effects",
+        "statement": "Admission returns catalog identity and typed admitted/rejected/incompatible/conflicting/unready/unresolved row results without invocation, session widening, traversal events or binding change. Reads preserve kind/handle/owner/readiness/eligibility/callability/compatibility/session visibility/contract/provenance as applicable. View returns identity and typed unknown/duplicate/ambiguous/unauthorized/inadmissible/not-ready residuals without widening/changing workspace catalog.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "graph_function_invocation"
+        ],
+        "conditions": [
+          "Direct invoke validates declared membership/contracts then admits concrete inputs before one GraphCall.",
+          "One Surface selected-action path additionally narrows ActionCatalog and binds admitted intent."
+        ],
+        "exceptions": [
+          "Direct invoke requires neither start grammar nor evaluateNext/One Surface/ConstructionIntent."
+        ],
+        "grounding": [
+          {
+            "end_line": 437,
+            "quote": "**REQ-P-POLICY-054**: The `invoke` variant of\n`abg.operation.run.invoke` shall accept one admitted GTL program, one canonical\nadmitted GraphFunction handle published by that program, its declared input,\none immutable workspace binding, and declared session policy and capability\ninputs. The explicit function handle is the invocation target; ABG shall\nconsume a typed non-lowering GTL-validator result that validates the handle's\ndeclared program membership and GraphFunction contract relations. ABG shall\nthen admit the concrete input against those declared contracts, current catalog\neligibility, immutable workspace binding, session policy and capability, and\ninvocation authority before beginning one GraphCall. ABG shall not reinterpret\nor recompute the validator's static GTL judgment. The `invoke` variant shall\nneither accept nor require `root_mode`, `until`, or any other `start`-only\ntraversal grammar. That direct path does not require or synthesize\n`evaluateNext`, One Surface, or a `ConstructionIntent`.\n\nWhen the invocation instead realizes an action selected by `evaluateNext`\ninside the admitted One Surface program, the exact function shall narrow the\nprogram-published `ActionCatalog` and bind the admitted selected construction\nintent. That governed path shall not bypass `evaluateNext`. Both paths shall\nreturn the call, run, result or stop, evidence, and replay references required\nby the GraphFunction contract, shall not treat the function as the whole\nprogram, and shall not invoke any non-GraphFunction catalog kind.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 416
+          }
+        ],
+        "key": "invoke_static_runtime_partition",
+        "statement": "ABG consumes typed non-lowering validator membership/contract judgment without reinterpreting or recomputing it, then admits concrete input against contracts/catalog eligibility/binding/policy/capability/authority before one GraphCall. Direct invoke accepts/requires no root_mode/until/start grammar and does not require or synthesize evaluateNext, One Surface or ConstructionIntent. When realizing evaluateNext-selected One Surface action, exact function narrows published ActionCatalog and binds admitted selected intent without bypassing evaluateNext. Both paths return contract-required call/Run/result-or-stop/evidence/replay refs, never equate function with program or call non-GraphFunction kinds.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "evidence_projection"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 444,
+            "quote": "**REQ-P-POLICY-055**: The evidence variant of\n`abg.operation.project.read` shall be a read-only projection for a supported\nrun, GraphCall, result, assessment, witness, install, or release identity. It\nshall preserve evidence identity, kind, subject, content or artifact reference,\nproducer, basis, digest when published, provenance, and replay references\nwithout manufacturing evidence from adapter-local observations.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 439
+          }
+        ],
+        "key": "no_adapter_evidence_manufacture",
+        "statement": "Adapter-local observations cannot manufacture evidence.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "product_materialization"
+        ],
+        "conditions": [
+          "Bootstrap/configuration consume their exact admitted target/contract and selected binding.",
+          "Failed artifact verification prevents installed/bound/admitted/callable truth."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 465,
+            "quote": "**REQ-P-POLICY-056**: The `context_bootstrap` variant of\n`abg.operation.product.materialize` shall accept one admitted target workspace\nand exact selected product binding and shall return a typed bootstrap\nmanifest identifying the context surfaces created, refreshed, preserved, or\nrefused. It shall not replace project-owned authority or select a mutable source\nproject as installed product truth.\n\n**REQ-P-POLICY-057**: `abg.operation.product.install` shall accept exact supplied artifact and product\ncontract identities and shall return typed verification, materialization,\ninstalled-product, and provenance dispositions. A failed\nverification shall not produce installed, bound, admitted, or callable truth.\nWorkspace binding and catalog admission remain the explicit\n`abg.operation.workspace.bind` and `abg.operation.catalog.admit` functions.\n\n**REQ-P-POLICY-058**: The `configuration` variant of\n`abg.operation.product.materialize` shall accept one admitted configuration\ncontract, selected product binding, and declared inputs and shall return exact\nconfiguration content identity, validation disposition, provenance, and typed\nresiduals. It shall not silently read mutable source defaults or change runtime\ntruth merely by producing configuration.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 446
+          }
+        ],
+        "key": "materialization_effect_boundaries",
+        "statement": "Bootstrap accepts admitted target and exact binding, reports created/refreshed/preserved/refused surfaces, neither replaces project authority nor selects mutable source as installed truth. Install accepts exact artifact/contracts and reports verification/materialization/installed/provenance; failed verification yields no installed/bound/admitted/callable truth and bind/admit remain separate. Configuration accepts admitted contract, binding and inputs, returns exact content/validation/provenance/residuals; no mutable source defaults or runtime truth change merely from construction.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "release_snapshot"
+        ],
+        "conditions": [
+          "published_rc accepts only pre_rc_candidate and exact prospective identity.",
+          "tapped_release accepts only exact installed_rc plus native same-basis green non-bypassed verdict, complete lineage and actual same-unchanged-RC human acceptance."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 483,
+            "quote": "**REQ-P-POLICY-059**: `abg.operation.release.snapshot` shall accept one exact\nqualification basis, the matching qualification-law basis, authenticated native\nsame-basis green non-bypassed verdict evidence, and the requested\n`published_rc | tapped_release` identity. The `published_rc` variant shall accept only a `pre_rc_candidate`\nbasis, require the requested identity to equal its basis-bound prospective RC\nidentity, and publish the exact qualified artifact bytes unchanged. The\n`tapped_release` variant shall accept only the exact `installed_rc` basis and\nits native same-basis green non-bypassed verdict, complete immutable RC lineage\nand actual human Product-authority acceptance of that same unchanged RC. It\nshall report the existing cut, artifacts and snapshot and write only an\nexternal acceptance/evidence addendum; it shall not create a second cut,\nsnapshot or package, rename a version or move the selector. Both variants\nshall preserve native qualification and acceptance owners rather than treating\ncaller green or accepted flags as authority. The operation shall return the\nexact immutable cut, artifact and snapshot identities, digests, qualification\nand acceptance disposition where applicable, residuals and provenance, or a\ntyped refusal. Any partial publication or addendum effect shall retain its",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 467
+          }
+        ],
+        "key": "rc_publication_and_tap",
+        "statement": "published_rc only accepts pre_rc_candidate and basis-bound prospective RC identity, publishing exact qualified bytes unchanged. tapped_release only accepts exact installed_rc, matching native green verdict, complete immutable RC lineage and actual human Product-authority acceptance of unchanged RC; report existing cut/artifact/snapshot and write only external acceptance/evidence addendum. No second cut/snapshot/package, rename or selector move. Caller green/accepted flags confer no authority. Return exact immutable identities/digests, qualification/applicable acceptance disposition, residuals/provenance or typed refusal.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "release_snapshot"
+        ],
+        "conditions": [
+          "Any partial publication or addendum effect occurred."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 485,
+            "quote": "typed refusal. Any partial publication or addendum effect shall retain its\nactual effect receipt and unresolved state for exact reacquisition; it shall\nnot be represented as either complete release success or an effect-free refusal.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 483
+          }
+        ],
+        "key": "partial_release_effect_receipt",
+        "statement": "Any partial publication/addendum retains actual effect receipt and unresolved state for exact reacquisition; neither complete release success nor effect-free refusal may be claimed.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "workspace_create_open"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 499,
+            "quote": "**REQ-P-POLICY-060**: Workspace `create` shall accept an admitted target\nlocation and explicit clean/imported authority mode and shall return one typed\nworkspace identity and creation/bootstrap eligibility result. It shall not\ninstall a product, bind a product set, admit a catalog, scaffold project-owned\nauthority by omission, or create runtime events merely by creating the\nworkspace boundary.\n\n**REQ-P-POLICY-061**: Workspace `open` shall accept an existing target location,\nadmit its workspace identity, stable workspace-authority basis, and current\nbinding/configuration state, and\nreturn typed missing, malformed, stale, incompatible, or ready dispositions.\nOpening shall be a read of existing workspace/product truth and shall not\nsilently install, rebind, re-resolve, admit, widen, or start work.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 487
+          }
+        ],
+        "key": "workspace_operation_boundaries",
+        "statement": "Create returns identity and creation/bootstrap eligibility without install/bind/catalog admission, omitted project-authority scaffold or runtime events. Open returns typed missing/malformed/stale/incompatible/ready without silent install/rebind/re-resolution/admission/widening/start.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "public_operations",
+          "public_invocation_outcome"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 529,
+            "quote": "**REQ-P-POLICY-064**: Every operation in the complete public contract shall use\nthe exact `abg.operation.*` identity and addressable request/result/error/\ninvocation schemas defined by `REQ-P-PUBLIC-CONTRACTS`. The operation's\n`PublicFunctionDefinition<K>` row owns its defaults, closed variants and value domains, actor and\nmutation class, typed refusals, disposition, and adapter exit classification.\nCLI flags, SDK overloads, and host projections bind those rows; they do not\ncomplete or reinterpret an absent row. Legacy operation identities and a\nparallel compatibility register shall fail publication and conformance.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 522
+          }
+        ],
+        "key": "public_definition_authority",
+        "statement": "All operations use exact abg.operation.* and addressable request/result/error/invocation schemas. Definition row owns defaults, closed variants/value domains, actor/mutation class, refusals/disposition/exits. Flags/overloads/projections only bind rows and cannot complete absent meanings. Legacy operation identities or parallel compatibility register fail publication/conformance.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "public_operations"
+        ],
+        "conditions": [
+          "Apply each checklist behavior only within its governing Product release scope."
+        ],
+        "exceptions": [
+          "Native response and response-driven same-Run resumption remain reserved for 5.1; their checklist presence does not make them mandatory 5.0 behavior."
+        ],
+        "grounding": [
+          {
+            "end_line": 553,
+            "quote": "The public operation contract is not complete until a source-blind installed\nconsumer can use the SDK and CLI to:\n\n- create or open a source-blind workspace;\n- resolve and verify exact supplied products, install them, bind one\n  multi-product workspace, and admit its catalog without source access;\n- inspect the bound catalog through `project.read` and narrow a session through\n  `catalog.view`;\n- apply admitted node-type or overlay declarations through `catalog.apply`\n  without making them callable;\n- invoke or start an admitted GTL program and program-owned GraphFunction\n  through `run.invoke`, then inspect status, result, evidence, and replay through\n  `project.read`;\n- inspect gaps and lawful actions;\n- submit an `interaction.respond` variant against a pending interaction;\n- continue or restart the same lawful operator workflow to convergence;\n- use result assessment, witness, conformance, install, materialization, and\n  release variants through their exact definitions; and\n- obtain equivalent typed dispositions from the SDK and CLI without either\n  adapter owning runtime truth or orchestration, and without any legacy\n  operation identity or parallel contract register.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPublic%20Operation%20Acceptance",
+            "start_line": 533
+          }
+        ],
+        "key": "public_operation_acceptance",
+        "statement": "Within the owning Product release allocation, completion requires installed source-blind SDK/CLI consumer to create/open; resolve/verify/install/bind products/admit catalog; inspect/narrow; noncallable apply; program-owned function invoke/start; read status/result/evidence/replay/gaps/actions; pending-interaction response; lawful continue/restart to convergence; assessment/witness/conformance/install/materialization/release via exact definitions; equivalent typed dispositions with no adapter runtime/orchestration ownership or legacy/parallel register.",
+        "uncertainty": "The checklist includes interaction.respond, while adjacent release-scoped purpose reserves native response and response-driven same-Run resumption for 5.1. Checklist wording does not override that allocation."
+      },
+      {
+        "applies_to_keys": [
+          "public_contract_catalog"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 25,
+            "quote": "The release-scoped family follows [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries).\nHuman hold/block, attribution and typed refusal remain 5.0 contracts. Native\nhuman response admission and response-driven same-run resumption are reserved\nfor 5.1. Published capability claims distinguish retained behavior from\nreserved definitions; schema or binding presence alone does not claim support.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPurpose",
+            "start_line": 21
+          }
+        ],
+        "key": "capability_release_claims",
+        "statement": "Human hold/block, attribution and typed refusal remain 5.0; native response and response-driven same-Run resume are 5.1. Capability claims distinguish retained versus reserved definitions; schema/binding presence alone claims no support.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "public_contract_catalog"
+        ],
+        "conditions": [
+          "Product root claims ABIogenesis 5.0-or-later public-contract conformance."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 41,
+            "quote": "**REQ-P-PUBLIC-CONTRACTS-001**: Each product root that claims conformance to the\nABIogenesis 5.0-or-later public-contract family shall contain\n`product-toolchain-manifest.json`. Its bootstrap fields shall include `kind`\nequal to `abg_product_toolchain_manifest`, `schemaVersion`, `productId`,\n`packageName`, `packageVersion`, `productContentDigest`, and one\n`publicContractCatalog` object. A missing, malformed, duplicate, or\ndigest-incoherent bootstrap field shall fail product verification.\n\n**REQ-P-PUBLIC-CONTRACTS-002**: `publicContractCatalog` shall carry\n`schemaVersion`, `catalogId`, `catalogVersion`, `catalogDigest`,\n`catalogSchemaPath`, `catalogSchemaDigest`, and `rows`. Paths shall be relative\nto the product root containing `product-toolchain-manifest.json` and shall not\ncontain an absolute path, `..`, or symlink-dependent source locator.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FBootstrap%20Location%20And%20Identity",
+            "start_line": 29
+          }
+        ],
+        "key": "manifest_bootstrap_fields",
+        "statement": "Each conforming 5.0+ product root contains product-toolchain-manifest.json with kind=abg_product_toolchain_manifest, schemaVersion, productId, packageName, packageVersion, productContentDigest and one publicContractCatalog; missing/malformed/duplicate/digest-incoherent fields fail verification. Catalog carries schemaVersion, catalogId/version/digest, catalogSchemaPath/digest and rows; paths are product-root-relative, never absolute, parent traversal or symlink-dependent source locators.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "public_contract_catalog"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 58,
+            "quote": "**REQ-P-PUBLIC-CONTRACTS-002A**: Every digest in this family shall use\n`sha256:<64 lowercase hexadecimal characters>`. JSON identity shall use RFC\n8785 JSON Canonicalization Scheme UTF-8 bytes. `productContentDigest` shall hash\nthe lexicographically sorted `(product-relative path, file sha256)` inventory\nof immutable product payload files, excluding `product-toolchain-manifest.json`\nitself and mutable install/runtime state. `catalogDigest` shall hash the\ncanonical `publicContractCatalog` object with only its `catalogDigest` field\nomitted. `catalogSchemaDigest` and each asset digest shall hash exact file\nbytes. A serialized/schema/vocabulary/corpus row's `contractDigest` shall equal\nthe digest of its canonical located asset. A native typed group row's\n`contractDigest` shall hash a published canonical inventory of\n`(package export path, declaration-file relative path, declaration-file\nsha256)` tuples; it shall not depend on loader order or source paths. The\ncomplete manifest digest is computed over the final canonical\nmanifest and is stored by the workspace binding/install record, not inside the\nmanifest it digests. No digest includes its own field.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FBootstrap%20Location%20And%20Identity",
+            "start_line": 43
+          }
+        ],
+        "key": "canonical_digest_law",
+        "statement": "Digests are sha256: plus 64 lowercase hex; JSON identity uses RFC8785 JCS UTF-8. Product digest hashes sorted relative-path/file-sha256 inventory excluding manifest and mutable state. Catalog digest hashes canonical catalog minus own field. Schema/asset hashes use exact bytes. Serialized/schema/vocabulary/corpus contractDigest equals canonical asset digest; native typed groups hash published canonical export-path/declaration-relative-path/declaration-sha256 inventory, not loader order/source paths. Final canonical manifest digest is stored in binding/install record outside the manifest; no self-digest field.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "public_contract_catalog"
+        ],
+        "conditions": [
+          "Every serialized public contract record requires a canonical asset/schema locator."
+        ],
+        "exceptions": [
+          "Native type exports may add stronger host constraints only without contradicting canonical serialization."
+        ],
+        "grounding": [
+          {
+            "end_line": 77,
+            "quote": "**REQ-P-PUBLIC-CONTRACTS-003**: Each catalog row shall carry one stable\n`contractId`, contract version, contract digest, contract kind, owning product,\nrequirement authority refs, capability identities, and exactly one or both of:\n\n- a native typed locator: package name, package export path, and named symbol;\n- a canonical asset locator: product-root-relative path, media/schema kind, schema\n  version, and content digest.\n\nEvery serialized public request, result, event, manifest, descriptor,\ncontribution, lock, replay record, or conformance record shall have a canonical\nasset/schema locator. Native type exports may additionally carry stronger\nhost-language constraints; they shall not contradict canonical serialization.\n\n**REQ-P-PUBLIC-CONTRACTS-004**: Contract and capability identities are exact\nversioned product truth. The same identity shall not resolve to different\nschema, symbol, semantics, or digest. Removal or semantic change requires a new\nversion or explicit supersession; ambient package resolution and source paths\nshall not select a contract.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FBootstrap%20Location%20And%20Identity",
+            "start_line": 60
+          }
+        ],
+        "key": "contract_row_identity_and_locator",
+        "statement": "Rows carry stable contractId/version/digest/kind/owner/requirement authority/capability identities and native package-export-symbol locator, canonical relative asset/media-schema/version/digest locator, or both. Every serialized public request/result/event/manifest/descriptor/contribution/lock/replay/conformance needs asset/schema locator; stronger native constraints cannot contradict serialization. Exact contract/capability identity cannot resolve to different schema/symbol/semantics/digest; removal/semantic change needs new version or explicit supersession; ambient package/source paths cannot select it.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "retained",
+        "keys": [
+          "public_operations",
+          "bounded_operation_scope"
+        ],
+        "reason": "Retain bounded infrastructure and lifecycle exclusions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FBounded%205.0%20Scope"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "artifact_verification",
+          "product_resolution",
+          "workspace_binding",
+          "catalog_operations",
+          "graph_function_invocation",
+          "evidence_projection",
+          "product_materialization",
+          "release_snapshot",
+          "workspace_create_open",
+          "public_invocation_outcome",
+          "verification_to_resolution",
+          "verification_phase_separation",
+          "resolution_effect_limit",
+          "binding_immutability",
+          "catalog_disposition_and_effects",
+          "invoke_static_runtime_partition",
+          "no_adapter_evidence_manufacture",
+          "materialization_effect_boundaries",
+          "rc_publication_and_tap",
+          "partial_release_effect_receipt",
+          "workspace_operation_boundaries",
+          "public_definition_authority",
+          "public_descriptor_transport"
+        ],
+        "reason": "Retain each public operation input/result/effect boundary, direct/governed invocation, exact snapshot variants and partial-effect truth.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "public_operation_acceptance",
+          "operation_acceptance_release_scope"
+        ],
+        "reason": "Retain acceptance checklist within governing release scope and explicitly preserve deferred native-response wording as a local source-link residual.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPublic%20Operation%20Acceptance"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "public_contract_catalog",
+          "catalog_external_authorities"
+        ],
+        "reason": "Retain catalog status and unresolved derivation routes.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "public_contract_catalog",
+          "capability_release_claims",
+          "operation_acceptance_release_scope",
+          "catalog_external_authorities"
+        ],
+        "reason": "Retain static locator purpose and release claim boundary; controlling release reference stays unresolved.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "manifest_bootstrap_fields",
+          "canonical_digest_law",
+          "contract_row_identity_and_locator",
+          "catalog_external_authorities"
+        ],
+        "reason": "Retain bootstrap, canonical digest, locator and versioned-identity requirements.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FBootstrap%20Location%20And%20Identity"
+      }
+    ],
+    "latitude": [
+      {
+        "allowed": [
+          "Qualify with one host adapter and without hosted infrastructure."
+        ],
+        "applies_to_keys": [
+          "public_operations"
+        ],
+        "forbidden": [
+          "Require hosted registry/storefront/billing/ranking/RBAC/multi-user approvals/signing/external scheduler/automatic wake or more than one host-adapter qualification.",
+          "Infer update/disable/unbind/uninstall/retirement/revocation/supersession without separately admitted requirements."
+        ],
+        "grounding": [
+          {
+            "end_line": 354,
+            "quote": "**REQ-P-POLICY-047**: Conformance to the ABG 5.0 public operation contract shall\nnot require a hosted registry or storefront, billing, ranking, organization\nRBAC, multi-user approval administration, signing service, external scheduler,\nautomatic wake controller, or more than one host-adapter qualification.\n\n**REQ-P-POLICY-048**: The public operation contract shall not imply product\nupdate, disable, unbind, uninstall, registry retirement, revocation, or\nsupersession lifecycle behavior. Those capabilities require separately admitted\nproduct requirements.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FBounded%205.0%20Scope",
+            "start_line": 346
+          }
+        ],
+        "key": "bounded_operation_scope"
+      },
+      {
+        "allowed": [
+          "Native caller/CLI/host constructs or transports same admitted descriptor and transports corresponding outcome.",
+          "Wrap host metadata without changing public meaning."
+        ],
+        "applies_to_keys": [
+          "public_invocation_outcome"
+        ],
+        "forbidden": [
+          "Include worker invocation, private frame/frontier/continuation, adapter graph logic, event authority, retry, selection, evaluation or closure decisions.",
+          "Let ingress or adapter construct outcome instead of owning semantic function."
+        ],
+        "grounding": [
+          {
+            "end_line": 520,
+            "quote": "**REQ-P-POLICY-063**: A native caller, `abg.cli`, or host adapter may construct\nor transport the same admitted `PublicInvocation<K>` and may transport the\ncorresponding `PublicOutcome<K>`. The descriptor shall not\ncontain a worker invocation, private frame/frontier/continuation state,\nadapter-local graph logic, event payload authority, retry loop, selection,\nevaluation, or closure decision. Host-specific metadata may wrap the descriptor\nbut shall not change its public operation meaning. The owning semantic function,\nnot ingress or an adapter, shall construct the outcome.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 513
+          }
+        ],
+        "key": "public_descriptor_transport"
+      }
+    ],
+    "limitations": [
+      "This is contract interpretation, not evidence that public operations ran or releases are supported.",
+      "Native-response checklist wording remains subordinate to the governing release allocation; schema/checklist presence is not support or unresolved authority.",
+      "External sources and cross-chunk identities remain unresolved locally."
+    ],
+    "relations": [
+      {
+        "conditions": [
+          "packed_artifact target."
+        ],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 377,
+            "quote": "- `packed_artifact` shall validate the supplied Product, descriptor,\n  contribution manifest, artifact and content identities, declared dependency\n  and compatibility inputs, locally decidable native-contract truth, and\n  source-contract-indexed pending external selectors before dependency\n  resolution. A resolved lock, installed-Product identity, and install manifest\n  shall be forbidden for this member.\n- `installed_artifact` shall validate the same supplied Product truth together\n  with exactly one already resolved lock, installed-Product identity, and\n  install manifest. Those three fields shall be required for this member.\n\nVerification shall not construct a dependency lock, install, bind, admit,\ninvoke, or treat unresolved external meaning as linked truth. Its result shall\npreserve the selected target member and identify every checked identity, the\nlocal or installed verification disposition, typed pending external evidence\nfor the packed member, residuals or refusals, and provenance.\n`abg.operation.product.resolve` alone shall admit linked cross-Product meaning\nand construct the resolved lock.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FCatalog%2C%20Invocation%2C%20And%20Install-Time%20Operations",
+            "start_line": 361
+          }
+        ],
+        "key": "verification_to_resolution",
+        "kind": "precedes",
+        "meaning": "Packed verification precedes dependency resolution while preserving pending external selectors; resolution alone admits linked cross-Product meaning.",
+        "source_key": "artifact_verification",
+        "target_key": "product_resolution"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Retain this as a local source-link and wording residual. Governing Product scope controls; do not restore native response as a 5.0 obligation or ask for an already-settled release decision.",
+        "grounding": [
+          {
+            "end_line": 553,
+            "quote": "- submit an `interaction.respond` variant against a pending interaction;\n- continue or restart the same lawful operator workflow to convergence;\n- use result assessment, witness, conformance, install, materialization, and\n  release variants through their exact definitions; and\n- obtain equivalent typed dispositions from the SDK and CLI without either\n  adapter owning runtime truth or orchestration, and without any legacy\n  operation identity or parallel contract register.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-POLICY.md#REQ-P-POLICY%20%E2%80%94%20Product%20and%20Runtime%20Policy%2FPublic%20Operation%20Acceptance",
+            "start_line": 547
+          },
+          {
+            "end_line": 25,
+            "quote": "The release-scoped family follows [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries).\nHuman hold/block, attribution and typed refusal remain 5.0 contracts. Native\nhuman response admission and response-driven same-run resumption are reserved\nfor 5.1. Published capability claims distinguish retained behavior from\nreserved definitions; schema or binding presence alone does not claim support.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPurpose",
+            "start_line": 21
+          }
+        ],
+        "key": "operation_acceptance_release_scope",
+        "subject_key": "public_operation_acceptance",
+        "uncertainty": "This checklist includes native response/continuation while adjacent public-contract purpose reserves those behaviors for 5.1. The full Product release-owner reference is outside this local chunk; its authority is not unsettled by this lower-level wording."
+      },
+      {
+        "consequence": "Retain declared references and exact digest rule without fabricating cross-document endpoints or demonstrating implementation conformance.",
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "**Derives from**: [PRODUCT.md](../../PRODUCT.md), [REQ-P-INSTALL.md](REQ-P-INSTALL.md), [REQ-P-POLICY.md](REQ-P-POLICY.md), [REQ-M-GTL3-CAPABILITY.md](../mapping/REQ-M-GTL3-CAPABILITY.md)",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog",
+            "start_line": 6
+          },
+          {
+            "end_line": 25,
+            "quote": "The release-scoped family follows [Product Release Boundaries](../../PRODUCT.md#50-and-51-release-boundaries).\nHuman hold/block, attribution and typed refusal remain 5.0 contracts. Native\nhuman response admission and response-driven same-run resumption are reserved\nfor 5.1. Published capability claims distinguish retained behavior from\nreserved definitions; schema or binding presence alone does not claim support.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FPurpose",
+            "start_line": 21
+          },
+          {
+            "end_line": 58,
+            "quote": "**REQ-P-PUBLIC-CONTRACTS-002A**: Every digest in this family shall use\n`sha256:<64 lowercase hexadecimal characters>`. JSON identity shall use RFC\n8785 JSON Canonicalization Scheme UTF-8 bytes. `productContentDigest` shall hash\nthe lexicographically sorted `(product-relative path, file sha256)` inventory\nof immutable product payload files, excluding `product-toolchain-manifest.json`\nitself and mutable install/runtime state. `catalogDigest` shall hash the\ncanonical `publicContractCatalog` object with only its `catalogDigest` field\nomitted. `catalogSchemaDigest` and each asset digest shall hash exact file\nbytes. A serialized/schema/vocabulary/corpus row's `contractDigest` shall equal\nthe digest of its canonical located asset. A native typed group row's\n`contractDigest` shall hash a published canonical inventory of\n`(package export path, declaration-file relative path, declaration-file\nsha256)` tuples; it shall not depend on loader order or source paths. The\ncomplete manifest digest is computed over the final canonical\nmanifest and is stored by the workspace binding/install record, not inside the\nmanifest it digests. No digest includes its own field.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-PUBLIC-CONTRACTS.md#REQ-P-PUBLIC-CONTRACTS%20-%20Addressable%20Public%20Contract%20Catalog%2FBootstrap%20Location%20And%20Identity",
+            "start_line": 43
+          }
+        ],
+        "key": "catalog_external_authorities",
+        "subject_key": "public_contract_catalog",
+        "uncertainty": "Referenced PRODUCT release boundaries, PUBLIC-CONTRACTS definitions, install/policy/mapping derivations and external RFC8785 are not supplied as complete definitions here."
+      }
+    ]
+  },
+  "answer_sha256": "e9500a75e9f468e3b32fa59ce21d4ffe2ff2a0887e782530a109c3813d8218db",
+  "author": "codex-governance-frame",
+  "chunk": "chunk-a3ac3491377f1a4c28a6",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "83ddc535ccf2282eec032a0c17afaa62a73457780e92a1e3dea2af9298a52f9b"
+}

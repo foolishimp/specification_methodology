@@ -1,0 +1,758 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "Stable hook reference and opaque implementation configuration attached to GraphFunction.declarations, GraphVector.declarations, Job.policy_hooks, Role.policy_hooks, Module.policy_hooks or CandidateFamily.policy_hints, covering at least dispatch, evaluation, escalation, deterministic proof, closure and assurance.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 21,
+            "quote": "**REQ-L-GTL3-HOOKS-001**: GTL shall expose governance hook attachment points on `GraphFunction.declarations`, `GraphVector.declarations`, `Job.policy_hooks`, `Role.policy_hooks`, `Module.policy_hooks`, and `CandidateFamily.policy_hints`.\n\n**REQ-L-GTL3-HOOKS-002**: Governance hook concerns shall include at minimum dispatch, evaluation, escalation, deterministic proof, closure, and assurance.\n\n**REQ-L-GTL3-HOOKS-003**: A hook attachment may declare a stable hook reference and opaque configuration for the resolved implementation.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 17
+          }
+        ],
+        "key": "governance_hook",
+        "label": "Governance hook declaration"
+      },
+      {
+        "conditions": [],
+        "definition": "Lawful declaration targeting through opaque .id, distinct from human-readable .name and from structural comparison.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 13,
+            "quote": "Define opaque identity as the lawful targeting surface for first-class GTL\ndeclarations.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-IDENTITY.md#REQ-L-GTL3-IDENTITY%20%E2%80%94%20Categorical%20Identity%20For%20First-Class%20Types%2FPurpose",
+            "start_line": 12
+          },
+          {
+            "end_line": 25,
+            "quote": "**REQ-L-GTL3-IDENTITY-001**: Every first-class GTL declaration type that is identity-bearing shall carry an opaque `.id` distinct from its human-readable `.name`.\n\n**REQ-L-GTL3-IDENTITY-002**: Identity-bearing GTL declaration types shall include at minimum `Graph`, `GraphVector`, `Node`, `GraphFunction`, `RefinementBoundary`, `CandidateFamily`, `Role`, and `Job`.\n\n**REQ-L-GTL3-IDENTITY-003**: Identity shall be automatically minted by default. Authors may supply an explicit id when lawful to do so.\n\n**REQ-L-GTL3-IDENTITY-004**: `.name` is a human-readable label with no targeting semantics. Operations that target, replace, or reference specific declarations shall use `.id`, not `.name`.\n\n**REQ-L-GTL3-IDENTITY-005**: Structural comparison and object identity shall remain distinct concerns.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-IDENTITY.md#REQ-L-GTL3-IDENTITY%20%E2%80%94%20Categorical%20Identity%20For%20First-Class%20Types%2FAcceptance%20Criteria",
+            "start_line": 17
+          }
+        ],
+        "key": "opaque_identity",
+        "label": "Opaque GTL identity"
+      },
+      {
+        "conditions": [],
+        "definition": "Lawful relation among graphs, vectors and GraphFunctions that preserves node schema and Markov conditions and the declared outer contract.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 13,
+            "quote": "Define lawful interface satisfaction for graphs, graph vectors, and graph\nfunctions.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-INTERFACE.md#REQ-L-GTL3-INTERFACE%20%E2%80%94%20Interface%20Law%2FPurpose",
+            "start_line": 12
+          },
+          {
+            "end_line": 27,
+            "quote": "**REQ-L-GTL3-INTERFACE-002**: Composition shall be lawful only when the outputs of the first boundary satisfy the inputs of the second boundary.\n\n**REQ-L-GTL3-INTERFACE-003**: Substitution shall be lawful only when the refined inner graph preserves the declared outer contract boundary.\n\n**REQ-L-GTL3-INTERFACE-004**: Interface satisfaction shall preserve declared node contract truth, including schema and markov conditions.\n\n**REQ-L-GTL3-INTERFACE-005**: Interface-equivalent graph functions shall be interchangeable at the contract boundary.\n\n**REQ-L-GTL3-INTERFACE-006**: When a graph function materializes an inline graph, that realized graph shall preserve the graph function's declared outer interface exactly.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-INTERFACE.md#REQ-L-GTL3-INTERFACE%20%E2%80%94%20Interface%20Law%2FAcceptance%20Criteria",
+            "start_line": 19
+          }
+        ],
+        "key": "interface_satisfaction",
+        "label": "Interface satisfaction"
+      },
+      {
+        "conditions": [],
+        "definition": "First-class durable semantic work declaration with stable identity and meaning independent of an execution attempt.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 12,
+            "quote": "Define `Job` as the durable semantic work contract of GTL 3.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FPurpose",
+            "start_line": 12
+          },
+          {
+            "end_line": 18,
+            "quote": "**REQ-L-GTL3-JOB-001**: `Job` shall be a first-class GTL declaration type.\n\n**REQ-L-GTL3-JOB-002**: A job shall express durable semantic work with stable identity and meaning independent of any one execution attempt.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FAcceptance%20Criteria",
+            "start_line": 16
+          }
+        ],
+        "key": "job",
+        "label": "Job"
+      },
+      {
+        "conditions": [],
+        "definition": "Job-to-GTL-contract indirection with at least kind and target_id; the currently lawful semantic-work kind is graph_function.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 24,
+            "quote": "**REQ-L-GTL3-JOB-003**: `ContractRef` shall be the indirection from a job to the GTL contract it binds, with at minimum `kind` and `target_id`.\n\n**REQ-L-GTL3-JOB-004**: A job shall reference one or more published `GraphFunction` work contracts through `ContractRef`.\n\n**REQ-L-GTL3-JOB-005**: The current lawful `ContractRef.kind` value for GTL 3 semantic work contracts shall be `graph_function`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FAcceptance%20Criteria",
+            "start_line": 20
+          }
+        ],
+        "key": "contract_ref",
+        "label": "ContractRef"
+      },
+      {
+        "conditions": [],
+        "definition": "Language-agnostic WHAT for the complete language-level declaration, constraint, publication, composition, validation and HoG/ABG exposure set. It derives from the Product graph/frame calculus and INT-008; concrete APIs/modules/events/tests/proof artifacts are HOW bindings, not permission to redefine language.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 8,
+            "quote": "**Governing relation**: [Product graph/frame calculus](../../PRODUCT.md#graph-composition-and-reference-frames), deriving from INT-008.\n**Derives from**: `REQ-L-GTL3-LANGUAGE`, `REQ-L-GTL3-CONTRACT-LAW-API`, `REQ-M-GTL3-MAPPING`, `REQ-M-GTL3-PROVENANCE`, `REQ-R-ABG3-INTERPRET`, `REQ-R-ABG3-PROJECTION`, `REQ-R-ABG3-FN-COMPOSITION`\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model",
+            "start_line": 7
+          },
+          {
+            "end_line": 27,
+            "quote": "Define the GTL language capability model: the complete language-level set of\nthings GTL can declare, constrain, publish, compose, validate, and expose for\ndirect HoG traversal and ABG runtime admission.\n\nThis family is the language-agnostic WHAT surface. It gives HOW design enough\nsignal to bind the language to concrete carriers, modules, APIs, events,\ntests, and proof artifacts without letting implementation choices redefine\nthe language.\n\nCatalog, registry, ledger, library, inventory, projection, overlay, and\nselection terms are subordinate vocabulary inside this model. They clarify how\nGTL capability surfaces relate to ABG runtime realization; they are not the\nmain subject.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FPurpose",
+            "start_line": 15
+          }
+        ],
+        "key": "capability_model",
+        "label": "GTL language capability model"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 31,
+            "quote": "**REQ-L-GTL3-HOOKS-005**: GTL shall not define the internal semantic vocabulary of policy evaluation as a specialized in-language DSL.\n\n**REQ-L-GTL3-HOOKS-006**: Governance hook references and opaque configuration shall remain inspectable and replayable through publication, serialization, and interpretation surfaces.\n\n**REQ-L-GTL3-HOOKS-007**: Engines may resolve declared hook references to\nhost-language executable implementations, but raw injected callables shall not\nbe the constitutional GTL surface.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 25
+          }
+        ],
+        "key": "hooks_not_semantic_dsl",
+        "statement": "GTL does not define a specialized policy-evaluation semantic DSL. References and opaque config remain inspectable/replayable through publication, serialization and interpretation. Engines may resolve references to host executables, but raw injected callables are not constitutional GTL surfaces.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 39,
+            "quote": "**REQ-L-GTL3-HOOKS-009**: An authored `GraphFunction` or `GraphVector` shall be able to declare its assurance hook refs and boundary intent through GTL declarations without requiring hidden side-door runtime configuration to complete the published graph-function contract.\n\n**REQ-L-GTL3-HOOKS-010**: Traversal modulation shall be declared as governance hook/config truth, not as hidden runtime configuration or prompt prose. `GraphVector.declarations` is the primary edge-traversal qualifier surface; `GraphFunction.declarations` and `Role.policy_hooks` may provide defaults by explicit precedence.\n\n**REQ-L-GTL3-HOOKS-011**: Traversal modulation hook configuration may carry strategy owner refs, descriptive strategy labels, scheduling primitive refs, obligation schedule refs, ordering constraints, phase gates, bounded batch parameters, and bounded same-edge continuation parameters, but GTL shall not define downstream product strategy semantics such as steel-thread or waterfall as language law.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 35
+          }
+        ],
+        "key": "published_assurance_completeness",
+        "statement": "Authored GraphFunctions and vectors must declare assurance hook references and boundary intent through GTL without hidden runtime side doors completing the published contract. Traversal modulation is hook/config truth, never hidden config or prompt prose; vectors are primary edge qualifiers, callable/Role defaults follow explicit precedence.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 41,
+            "quote": "**REQ-L-GTL3-HOOKS-012**: A published GTL surface may declare `abg.fp_consciousness` hook/config truth for generic `F_P` construction evaluation. The hook may declare refs and opaque config for observation adaptation, action-catalog adaptation, observation-to-action binding, construction priority scheme, affect priority policy, construction-intent admissibility, value scoring, progress classification, escalation, and intent rendering, while ABG remains the runtime admission and projection owner. Affect priority adjustments are ABG-derived projection rows, not GTL-emitted authority.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 41
+          }
+        ],
+        "key": "construction_consciousness_hook",
+        "statement": "Published abg.fp_consciousness may carry observation adaptation, action-catalog adaptation, observation-action binding, construction priority, affect priority, intent admissibility, value scoring, progress classification, escalation and intent-rendering references/opaque config. ABG remains admission/projection owner; affect adjustments are ABG-derived projection rows, never GTL-emitted authority.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [
+          "Selection of a construction action."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 43,
+            "quote": "**REQ-L-GTL3-HOOKS-013**: `abg.fp_consciousness` hook precedence shall be declared and replayable. The default precedence for a selected construction action is `GraphVector.declarations` > `GraphFunction.declarations` > `Job.policy_hooks` > `Role.policy_hooks` > `Module.policy_hooks` > visible installed fallback. Malformed present declarations fail closed; absent declarations use the visible default.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 43
+          }
+        ],
+        "key": "construction_hook_precedence",
+        "statement": "For a selected construction action, abg.fp_consciousness precedence is declared/replayable and defaults to vector > GraphFunction > Job > Role > Module > visible installed fallback. Malformed present declarations fail closed; absence uses visible default.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 45,
+            "quote": "**REQ-L-GTL3-HOOKS-014**: `abg.edge_assurance_contract` hook precedence shall be declared and replayable. The default precedence for an edge assurance contract is `GraphVector.declarations` > `GraphFunction.declarations` > `Job.policy_hooks` > `Role.policy_hooks` > `Module.policy_hooks` > visible installed fallback. Malformed present declarations fail closed; absent declarations resolve to F_H assurance by absentia rather than automated closure.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 45
+          }
+        ],
+        "key": "assurance_hook_precedence",
+        "statement": "abg.edge_assurance_contract precedence is declared/replayable and defaults to vector > GraphFunction > Job > Role > Module > visible installed fallback. Malformed present declarations fail closed. Absence resolves to F_H by absentia, not automated closure.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 47,
+            "quote": "**REQ-L-GTL3-HOOKS-015**: Consequential `F_P` hook returns shall be finding carriers, not engine authority. GTL hook declarations may constrain finding shape and policy refs, but ABG shall record the hook action and admit or reject findings before any ledger, projection, traversal, intent, event, or closure truth is derived.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 47
+          }
+        ],
+        "key": "finding_admission_boundary",
+        "statement": "Consequential F_P hook returns are findings, not engine authority. GTL may constrain shape/policy refs, but ABG records hook action and admits or rejects findings before deriving any ledger, projection, traversal, intent, event or closure truth.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [],
+        "exceptions": [
+          "Local absence is lawful with a visible generic output template."
+        ],
+        "grounding": [
+          {
+            "end_line": 49,
+            "quote": "**REQ-L-GTL3-HOOKS-016**: `gtl.target_carrier_contract` hook/config truth shall be mandatory as an effective graph-vector output binding. The default precedence is `GraphVector.declarations[\"gtl.target_carrier_contract\"]` > visible GTL defaults config bundle. Absence of the vector-local declaration is lawful only when the visible config bundle supplies the generic output template. Missing defaults, null bindings, and malformed declarations fail closed.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 49
+          }
+        ],
+        "key": "effective_target_hook",
+        "statement": "Every vector output has mandatory effective gtl.target_carrier_contract: vector-local declaration > visible GTL defaults config bundle. Local absence is lawful only if the visible bundle supplies a generic output template. Missing defaults, null binding or malformed declaration fails closed.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [
+          "The boundary is closure-capable, mixed-regime, optimized or construction-substrate."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 51,
+            "quote": "**REQ-L-GTL3-HOOKS-017**: `abg.fn_composition` hook/config truth shall be declared and replayable for closure-capable, mixed-regime, optimized, or construction-substrate traversal boundaries. The default precedence is `GraphVector.declarations[\"abg.fn_composition\"]` > `GraphFunction.declarations[\"abg.fn_composition\"]` > `Job.policy_hooks[\"abg.fn_composition\"]` > `Role.policy_hooks[\"abg.fn_composition\"]` > `Module.policy_hooks[\"abg.fn_composition\"]` > visible defaults config or published template. Malformed present declarations fail closed.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 51
+          }
+        ],
+        "key": "composition_hook_precedence",
+        "statement": "Closure-capable, mixed-regime, optimized and construction-substrate boundaries declare replayable abg.fn_composition. Default precedence is vector > GraphFunction > Job > Role > Module > visible config defaults or published template. Malformed present declarations fail closed.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 59,
+            "quote": "**REQ-L-GTL3-HOOKS-018**: An `abg.fn_composition` hook/config declaration may\ncarry refs and opaque config for host binding, ordered regime bindings,\nstandards context, policy context, carrier context, assurance context,\ndeterministic closure, and optimization. GTL shall not define product-specific\nstrategy semantics inside the hook config. The GTL validator shall validate\nthe selected contract, HoG shall traverse its admitted composition, and ABG\nshall admit the resulting runtime facts under `REQ-R-ABG3-FN-COMPOSITION`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 53
+          }
+        ],
+        "key": "composition_hook_owner_split",
+        "statement": "Composition config may carry host, ordered regimes, standards/policy/carrier/assurance contexts, deterministic closure and optimization references/config, but no Product strategy semantics. GTL validator checks the selected contract, HoG traverses admitted composition and ABG admits runtime facts under FN-COMPOSITION.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "conditions": [],
+        "exceptions": [
+          "A later Product and requirement reprice may prove a specific expressiveness gap."
+        ],
+        "grounding": [
+          {
+            "end_line": 66,
+            "quote": "**REQ-L-GTL3-HOOKS-019**: Executive-observer tuning shall reuse existing\n`abg.fp_consciousness`, `abg.fn_composition`, `evaluate.C`, policy-hook, and\nresult-interface surfaces unless a later product and requirement reprice proves\na specific expressiveness gap. A product-specific executive-observer hook may\nprovide policy or prompt refs only; it shall not provide replay truth, event\nauthorship, continuation authority, closure authority, or a product-local loop.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 61
+          }
+        ],
+        "key": "observer_reuses_existing_hooks",
+        "statement": "Executive-observer tuning reuses fp_consciousness, fn_composition, evaluate.C, policy hooks and result interfaces unless a later Product/requirement reprice proves a specific expressiveness gap. A Product observer hook supplies only policy/prompt references, never replay truth, events, continuation, closure or a Product-local loop.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "opaque_identity"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 19,
+            "quote": "**REQ-L-GTL3-IDENTITY-001**: Every first-class GTL declaration type that is identity-bearing shall carry an opaque `.id` distinct from its human-readable `.name`.\n\n**REQ-L-GTL3-IDENTITY-002**: Identity-bearing GTL declaration types shall include at minimum `Graph`, `GraphVector`, `Node`, `GraphFunction`, `RefinementBoundary`, `CandidateFamily`, `Role`, and `Job`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-IDENTITY.md#REQ-L-GTL3-IDENTITY%20%E2%80%94%20Categorical%20Identity%20For%20First-Class%20Types%2FAcceptance%20Criteria",
+            "start_line": 17
+          },
+          {
+            "end_line": 29,
+            "quote": "**REQ-L-GTL3-IDENTITY-004**: `.name` is a human-readable label with no targeting semantics. Operations that target, replace, or reference specific declarations shall use `.id`, not `.name`.\n\n**REQ-L-GTL3-IDENTITY-005**: Structural comparison and object identity shall remain distinct concerns.\n\n**REQ-L-GTL3-IDENTITY-006**: Substitution shall target a specific `GraphVector` by `.id`, not by `.name`.\n\n**REQ-L-GTL3-IDENTITY-007**: Publication, materialization, candidate, and boundary references shall preserve enough identity surface for replayable targeting without relying on labels alone.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-IDENTITY.md#REQ-L-GTL3-IDENTITY%20%E2%80%94%20Categorical%20Identity%20For%20First-Class%20Types%2FAcceptance%20Criteria",
+            "start_line": 23
+          }
+        ],
+        "key": "identity_bearing_types",
+        "statement": "Every identity-bearing first-class declaration has opaque id distinct from name; at minimum Graph, GraphVector, Node, GraphFunction, RefinementBoundary, CandidateFamily, Role and Job are identity-bearing. Name supplies no targeting semantics. Targeting/replacement/referencing uses id, including substitution of a specific vector. Preserve identity across publication, materialization, candidate and boundary references for replayable targeting.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "interface_satisfaction"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 27,
+            "quote": "**REQ-L-GTL3-INTERFACE-001**: Graph interface shall be expressed through designated input and output nodes. Inputs and outputs are graph roles over nodes, not a rival structural type.\n\n**REQ-L-GTL3-INTERFACE-002**: Composition shall be lawful only when the outputs of the first boundary satisfy the inputs of the second boundary.\n\n**REQ-L-GTL3-INTERFACE-003**: Substitution shall be lawful only when the refined inner graph preserves the declared outer contract boundary.\n\n**REQ-L-GTL3-INTERFACE-004**: Interface satisfaction shall preserve declared node contract truth, including schema and markov conditions.\n\n**REQ-L-GTL3-INTERFACE-005**: Interface-equivalent graph functions shall be interchangeable at the contract boundary.\n\n**REQ-L-GTL3-INTERFACE-006**: When a graph function materializes an inline graph, that realized graph shall preserve the graph function's declared outer interface exactly.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-INTERFACE.md#REQ-L-GTL3-INTERFACE%20%E2%80%94%20Interface%20Law%2FAcceptance%20Criteria",
+            "start_line": 17
+          }
+        ],
+        "key": "interface_law",
+        "statement": "Inputs and outputs are designated node roles, not another structural type. Composition requires first outputs to satisfy second inputs. Substitution requires inner refinement to preserve outer contract. Satisfaction preserves node schema and Markov truth; interface-equivalent functions are interchangeable at the boundary, and inline materialization preserves the callable outer interface exactly.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "job",
+          "contract_ref"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 24,
+            "quote": "**REQ-L-GTL3-JOB-003**: `ContractRef` shall be the indirection from a job to the GTL contract it binds, with at minimum `kind` and `target_id`.\n\n**REQ-L-GTL3-JOB-004**: A job shall reference one or more published `GraphFunction` work contracts through `ContractRef`.\n\n**REQ-L-GTL3-JOB-005**: The current lawful `ContractRef.kind` value for GTL 3 semantic work contracts shall be `graph_function`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FAcceptance%20Criteria",
+            "start_line": 20
+          },
+          {
+            "end_line": 34,
+            "quote": "**REQ-L-GTL3-JOB-010**: A semantic job shall not target a bare `GraphVector`. Internal graph-vector boundaries are traversed only as realized structure beneath the bound graph function.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FAcceptance%20Criteria",
+            "start_line": 34
+          }
+        ],
+        "key": "job_callable_binding",
+        "statement": "Every Job references one or more published GraphFunction contracts through ContractRef(kind,target_id), currently kind=graph_function. No semantic Job targets bare vectors: those are internal structure under its bound callable.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "job"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 30,
+            "quote": "**REQ-L-GTL3-JOB-007**: A job is distinct from `Run`. A job persists across time; a run is one engine-owned realization of that job.\n\n**REQ-L-GTL3-JOB-008**: A job is distinct from `Worker`. A job declares required semantic work; a worker is a concrete actor identity owned by an engine.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FAcceptance%20Criteria",
+            "start_line": 28
+          }
+        ],
+        "key": "job_runtime_distinctions",
+        "statement": "Job persists across time; Run is one engine-owned realization and Worker is concrete engine-owned actor identity. Neither is interchangeable with durable semantic work.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "capability_model"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 41,
+            "quote": "This family defines:\n\n- GTL language capability groups;\n- capability ownership and authority boundaries;\n- capability publication and validation expectations;\n- subordinate vocabulary for catalog, registry, ledger, library, inventory,\n  projection, overlay, and selection surfaces;\n- the minimum WHAT-to-HOW signal a capability requirement shall provide.\n\nThis family does not implement a live runtime lookup registry. Runtime lookup\nand traversal-affecting candidate selection are successor ABG design work.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FScope",
+            "start_line": 31
+          }
+        ],
+        "key": "capability_scope_boundary",
+        "statement": "This family defines capability groups, owner boundaries, publication/validation expectations, subordinate catalog/registry/ledger/library/inventory/projection/overlay/selection vocabulary, and minimum WHAT-to-HOW signal. It does not implement a live lookup registry; runtime lookup and traversal-affecting candidate selection remain successor ABG design work.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "capability_model"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 58,
+            "quote": "**declaration syntax**: GTL shall provide a declarative surface for typed\nprogram law. Concrete host syntax is a HOW binding; the language capability is\nthe declared contract, not a parser shape.\n\n**typed attributes and context**: GTL shall declare inspectable attributes,\nschema refs, hook refs, context refs, and authority context needed by graph\nprograms.\n\n**graph topology**: GTL shall declare graphs, nodes, graph vectors,\ninterfaces, graph-function boundaries, and stable graph identity.\n\n**graph algebra**: GTL shall declare algebraic graph construction and\ncomposition capability including edge, identity, compose, substitute, recurse,\nfan-out, fan-in, gate, promote, and same-object identity.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FGTL%20Language%20Capability%20Groups",
+            "start_line": 45
+          }
+        ],
+        "key": "language_structure_capabilities",
+        "statement": "Provide declarative typed program law independently of host parser shape; inspectable attributes, schema/hook/context/authority references; Graph/Node/vector/interface/callable boundaries and stable identity; and edge, identity, compose, substitute, recurse, fan-out, fan-in, gate, promote, same-object algebra.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "capability_model"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 74,
+            "quote": "**graph functions**: GTL shall publish graph functions as reusable workflow\nlibrary functions and callable work contracts. A graph function shall expose an\nouter interface and shall be materializable or referenceable without becoming a\nwhole program, graph overlay, workspace shell, or runtime controller.\n\n**reusable node types**: GTL shall publish reusable node-type declarations for\nnode contract reuse, type refs, composed types, and type-sensitive graph\ncomposition. Node types are language/conformance truth, not runtime work.\n\n**publication and work surfaces**: GTL shall declare modules, jobs, roles,\ncontract refs, public starts, candidate families, refinement boundaries, and\nlibrary membership.\n\n**selection and refinement surfaces**: GTL shall declare candidate and\nrefinement boundaries without selecting traversal by itself.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FGTL%20Language%20Capability%20Groups",
+            "start_line": 60
+          }
+        ],
+        "key": "language_callable_and_publication_capabilities",
+        "statement": "Publish GraphFunctions as reusable callable work with outer interfaces and materializable/referenceable structure, not whole Programs, overlays, workspace shells or controllers. Publish node types for contract/type-reference/composed-type/type-sensitive composition reuse as language conformance, not runtime work. Declare Modules, Jobs, Roles, ContractRefs, public starts, candidate/refinement boundaries and membership; selection/refinement declarations do not themselves select traversal.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "capability_model"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 90,
+            "quote": "**asset and prompt surfaces**: GTL shall declare typed asset surfaces,\nconstructors, renderers, output contracts, authority slots, proof obligations,\nand prompt construction surfaces.\n\n**hook and plugin boundaries**: GTL shall declare hook, plugin, and result\ninterface boundaries while preserving ABG authority over admission, event\ntruth, ledgers, fold, transition, and replay.\n\n**compute notation**: GTL shall declare selected compute composition,\nincluding deterministic, probabilistic, and human regimes, without letting\nprobabilistic or human judgment own closure or runtime selection authority.\n\n**requirement declarations**: GTL shall declare requirement terms, relations,\nbundles, traversal spans, lifecycle compositions, and proof-role declarations\nas authoring surfaces for ABG requirements algebra.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FGTL%20Language%20Capability%20Groups",
+            "start_line": 76
+          }
+        ],
+        "key": "language_assets_compute_requirements",
+        "statement": "Declare typed asset/prompt constructors, renderers, output contracts, authority slots and proof obligations; declare hook/plugin/result boundaries preserving ABG admission/events/ledgers/fold/transition/replay ownership. Declare F_D/F_P/F_H composition without F_P/F_H closure or runtime-selection authority, and requirement terms/relations/bundles/spans/lifecycle compositions/proof roles as authoring surfaces for ABG requirements algebra.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "capability_model"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 100,
+            "quote": "**program validation**: GTL shall be validated by the non-lowering GTL\nvalidator before runtime admission. The validator shall report typed\nconformance, traversal-unit shape, capability coverage, publication inventory,\nand proof/readiness issues without producing an executable plan.\n\n**mapping to runtime**: GTL shall provide enough language signal for HoG to\ntraverse admitted graph programs directly and for ABG to admit, project, and\nreplay the resulting runtime facts while preserving the GTL/HoG/ABG owner\nsplit.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FGTL%20Language%20Capability%20Groups",
+            "start_line": 92
+          }
+        ],
+        "key": "language_validation_runtime_mapping",
+        "statement": "Non-lowering GTL validation precedes runtime admission and reports typed conformance, traversal-unit shape, capability coverage, publication inventory and proof/readiness issues without executable plans. Language signal must suffice for direct HoG traversal and ABG admission/projection/replay while preserving the ownership split.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "omitted",
+        "keys": [],
+        "reason": "Header status/date/category and derivation-link metadata are omitted as domain assertions and not promoted to current authority.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-IDENTITY.md#REQ-L-GTL3-IDENTITY%20%E2%80%94%20Categorical%20Identity%20For%20First-Class%20Types"
+      },
+      {
+        "decision": "omitted",
+        "keys": [],
+        "reason": "Header status/date/category and derivation-link metadata are omitted as domain assertions and not promoted to current authority.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-INTERFACE.md#REQ-L-GTL3-INTERFACE%20%E2%80%94%20Interface%20Law"
+      },
+      {
+        "decision": "omitted",
+        "keys": [],
+        "reason": "Header status/date/category and derivation-link metadata are omitted as domain assertions and not promoted to current authority.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "governance_hook",
+          "hooks_not_semantic_dsl",
+          "published_assurance_completeness",
+          "construction_consciousness_hook",
+          "construction_hook_precedence",
+          "assurance_hook_precedence",
+          "finding_admission_boundary",
+          "effective_target_hook",
+          "composition_hook_precedence",
+          "composition_hook_owner_split",
+          "observer_reuses_existing_hooks",
+          "hook_declaration_latitude",
+          "hook_policy_definitions"
+        ],
+        "reason": "Retains substantive hook or governing-source relations while keeping unresolved external binding explicit.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "capability_model",
+          "capability_governing_calculus"
+        ],
+        "reason": "Retains substantive hook or governing-source relations while keeping unresolved external binding explicit.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "opaque_identity"
+        ],
+        "reason": "Retains specific definitions, invariants, latitude and owner distinctions from this section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-IDENTITY.md#REQ-L-GTL3-IDENTITY%20%E2%80%94%20Categorical%20Identity%20For%20First-Class%20Types%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "opaque_identity",
+          "identity_bearing_types",
+          "identity_creation"
+        ],
+        "reason": "Retains specific definitions, invariants, latitude and owner distinctions from this section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-IDENTITY.md#REQ-L-GTL3-IDENTITY%20%E2%80%94%20Categorical%20Identity%20For%20First-Class%20Types%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "interface_satisfaction"
+        ],
+        "reason": "Retains specific definitions, invariants, latitude and owner distinctions from this section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-INTERFACE.md#REQ-L-GTL3-INTERFACE%20%E2%80%94%20Interface%20Law%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "interface_satisfaction",
+          "interface_law"
+        ],
+        "reason": "Retains specific definitions, invariants, latitude and owner distinctions from this section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-INTERFACE.md#REQ-L-GTL3-INTERFACE%20%E2%80%94%20Interface%20Law%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "job"
+        ],
+        "reason": "Retains specific definitions, invariants, latitude and owner distinctions from this section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "job",
+          "contract_ref",
+          "job_binds_via_contract_ref",
+          "job_callable_binding",
+          "job_runtime_distinctions",
+          "job_declaration_extensions"
+        ],
+        "reason": "Retains specific definitions, invariants, latitude and owner distinctions from this section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "capability_model"
+        ],
+        "reason": "Retains specific definitions, invariants, latitude and owner distinctions from this section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "capability_scope_boundary"
+        ],
+        "reason": "Retains specific definitions, invariants, latitude and owner distinctions from this section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FScope"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "language_structure_capabilities",
+          "language_callable_and_publication_capabilities",
+          "language_assets_compute_requirements",
+          "language_validation_runtime_mapping"
+        ],
+        "reason": "Retains specific definitions, invariants, latitude and owner distinctions from this section.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FGTL%20Language%20Capability%20Groups"
+      }
+    ],
+    "latitude": [
+      {
+        "allowed": [
+          "Declare stable references and opaque config, with declared scope/precedence across callable, vector, Job, Role, Module and candidate-family surfaces.",
+          "Assurance hooks may carry authority snapshot, evidence adaptation, ambiguity classification, closure policy and gain adaptation while assurance meaning stays engine-owned.",
+          "Traversal modulation config may carry strategy owners/labels, scheduling primitives, obligation schedules, order, phase gates, bounded batches and bounded same-edge continuation."
+        ],
+        "applies_to_keys": [
+          "governance_hook"
+        ],
+        "forbidden": [
+          "Defining downstream strategy meanings such as steel-thread or waterfall as GTL law."
+        ],
+        "grounding": [
+          {
+            "end_line": 23,
+            "quote": "**REQ-L-GTL3-HOOKS-003**: A hook attachment may declare a stable hook reference and opaque configuration for the resolved implementation.\n\n**REQ-L-GTL3-HOOKS-004**: GTL may declare hook scope and precedence across graph-function, graph-vector, job, role, module, and candidate-family surfaces.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 21
+          },
+          {
+            "end_line": 39,
+            "quote": "**REQ-L-GTL3-HOOKS-008**: Assurance hook attachments may declare stable hook references and opaque configuration for authority snapshot, evidence adaptation, ambiguity classification, closure policy, and gain-function adaptation, while assurance semantics remain engine-owned.\n\n**REQ-L-GTL3-HOOKS-009**: An authored `GraphFunction` or `GraphVector` shall be able to declare its assurance hook refs and boundary intent through GTL declarations without requiring hidden side-door runtime configuration to complete the published graph-function contract.\n\n**REQ-L-GTL3-HOOKS-010**: Traversal modulation shall be declared as governance hook/config truth, not as hidden runtime configuration or prompt prose. `GraphVector.declarations` is the primary edge-traversal qualifier surface; `GraphFunction.declarations` and `Role.policy_hooks` may provide defaults by explicit precedence.\n\n**REQ-L-GTL3-HOOKS-011**: Traversal modulation hook configuration may carry strategy owner refs, descriptive strategy labels, scheduling primitive refs, obligation schedule refs, ordering constraints, phase gates, bounded batch parameters, and bounded same-edge continuation parameters, but GTL shall not define downstream product strategy semantics such as steel-thread or waterfall as language law.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 33
+          }
+        ],
+        "key": "hook_declaration_latitude"
+      },
+      {
+        "allowed": [
+          "Automatically mint identity by default.",
+          "Authors may supply an explicit id where lawful."
+        ],
+        "applies_to_keys": [
+          "opaque_identity"
+        ],
+        "forbidden": [
+          "Equating structural comparison to object identity.",
+          "Using human-readable names as declaration targets."
+        ],
+        "grounding": [
+          {
+            "end_line": 27,
+            "quote": "**REQ-L-GTL3-IDENTITY-003**: Identity shall be automatically minted by default. Authors may supply an explicit id when lawful to do so.\n\n**REQ-L-GTL3-IDENTITY-004**: `.name` is a human-readable label with no targeting semantics. Operations that target, replace, or reference specific declarations shall use `.id`, not `.name`.\n\n**REQ-L-GTL3-IDENTITY-005**: Structural comparison and object identity shall remain distinct concerns.\n\n**REQ-L-GTL3-IDENTITY-006**: Substitution shall target a specific `GraphVector` by `.id`, not by `.name`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-IDENTITY.md#REQ-L-GTL3-IDENTITY%20%E2%80%94%20Categorical%20Identity%20For%20First-Class%20Types%2FAcceptance%20Criteria",
+            "start_line": 21
+          }
+        ],
+        "key": "identity_creation"
+      },
+      {
+        "allowed": [
+          "Declare one or more required roles.",
+          "Layer scheduling, triggers, KPIs or orchestration later without their absence negating Job semantics.",
+          "Declare policy_hooks as replayable work-contract default config."
+        ],
+        "applies_to_keys": [
+          "job"
+        ],
+        "forbidden": [
+          "Executing hidden orchestration authority from Job hooks."
+        ],
+        "grounding": [
+          {
+            "end_line": 26,
+            "quote": "**REQ-L-GTL3-JOB-006**: A job may declare one or more required roles.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FAcceptance%20Criteria",
+            "start_line": 26
+          },
+          {
+            "end_line": 36,
+            "quote": "**REQ-L-GTL3-JOB-009**: Scheduling, triggers, KPIs, and similar orchestration concerns may be layered onto jobs later, but the absence of those declarations does not negate job semantics.\n\n**REQ-L-GTL3-JOB-010**: A semantic job shall not target a bare `GraphVector`. Internal graph-vector boundaries are traversed only as realized structure beneath the bound graph function.\n\n**REQ-L-GTL3-JOB-011**: A job may declare `policy_hooks` as work-contract default hook/config truth. Job-level policy hooks shall remain replayable declarations and shall not execute hidden orchestration authority.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FAcceptance%20Criteria",
+            "start_line": 32
+          }
+        ],
+        "key": "job_declaration_extensions"
+      }
+    ],
+    "limitations": [
+      "No hook invocation, effective fallback selection, candidate selection, live registry or runtime admission is performed.",
+      "Capability header governing relation is retained as a source reference; other header metadata is deliberately omitted.",
+      "Opaque policies and exact governing calculus require source re-entry; similarly named concepts in other chunks are not unified."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 24,
+            "quote": "**REQ-L-GTL3-JOB-003**: `ContractRef` shall be the indirection from a job to the GTL contract it binds, with at minimum `kind` and `target_id`.\n\n**REQ-L-GTL3-JOB-004**: A job shall reference one or more published `GraphFunction` work contracts through `ContractRef`.\n\n**REQ-L-GTL3-JOB-005**: The current lawful `ContractRef.kind` value for GTL 3 semantic work contracts shall be `graph_function`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-JOB.md#REQ-L-GTL3-JOB%20%E2%80%94%20Durable%20Semantic%20Work%20Contracts%2FAcceptance%20Criteria",
+            "start_line": 20
+          }
+        ],
+        "key": "job_binds_via_contract_ref",
+        "kind": "references_through",
+        "meaning": "One or more published callable work contracts are bound through typed ContractRef indirection.",
+        "source_key": "job",
+        "target_key": "contract_ref"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Retain named source authority as a reference, not inferred complete law, conformance result or imported cross-chunk identity.",
+        "grounding": [
+          {
+            "end_line": 8,
+            "quote": "**Governing relation**: [Product graph/frame calculus](../../PRODUCT.md#graph-composition-and-reference-frames), deriving from INT-008.\n**Derives from**: `REQ-L-GTL3-LANGUAGE`, `REQ-L-GTL3-CONTRACT-LAW-API`, `REQ-M-GTL3-MAPPING`, `REQ-M-GTL3-PROVENANCE`, `REQ-R-ABG3-INTERPRET`, `REQ-R-ABG3-PROJECTION`, `REQ-R-ABG3-FN-COMPOSITION`\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model",
+            "start_line": 7
+          }
+        ],
+        "key": "capability_governing_calculus",
+        "subject_key": "capability_model",
+        "uncertainty": "The governing Product graph/frame calculus and cited supporting families are external to this supplied capability-model section."
+      },
+      {
+        "consequence": "Precedence and fail-closed obligations do not prove an effective lawful selection or runtime admission.",
+        "grounding": [
+          {
+            "end_line": 59,
+            "quote": "**REQ-L-GTL3-HOOKS-013**: `abg.fp_consciousness` hook precedence shall be declared and replayable. The default precedence for a selected construction action is `GraphVector.declarations` > `GraphFunction.declarations` > `Job.policy_hooks` > `Role.policy_hooks` > `Module.policy_hooks` > visible installed fallback. Malformed present declarations fail closed; absent declarations use the visible default.\n\n**REQ-L-GTL3-HOOKS-014**: `abg.edge_assurance_contract` hook precedence shall be declared and replayable. The default precedence for an edge assurance contract is `GraphVector.declarations` > `GraphFunction.declarations` > `Job.policy_hooks` > `Role.policy_hooks` > `Module.policy_hooks` > visible installed fallback. Malformed present declarations fail closed; absent declarations resolve to F_H assurance by absentia rather than automated closure.\n\n**REQ-L-GTL3-HOOKS-015**: Consequential `F_P` hook returns shall be finding carriers, not engine authority. GTL hook declarations may constrain finding shape and policy refs, but ABG shall record the hook action and admit or reject findings before any ledger, projection, traversal, intent, event, or closure truth is derived.\n\n**REQ-L-GTL3-HOOKS-016**: `gtl.target_carrier_contract` hook/config truth shall be mandatory as an effective graph-vector output binding. The default precedence is `GraphVector.declarations[\"gtl.target_carrier_contract\"]` > visible GTL defaults config bundle. Absence of the vector-local declaration is lawful only when the visible config bundle supplies the generic output template. Missing defaults, null bindings, and malformed declarations fail closed.\n\n**REQ-L-GTL3-HOOKS-017**: `abg.fn_composition` hook/config truth shall be declared and replayable for closure-capable, mixed-regime, optimized, or construction-substrate traversal boundaries. The default precedence is `GraphVector.declarations[\"abg.fn_composition\"]` > `GraphFunction.declarations[\"abg.fn_composition\"]` > `Job.policy_hooks[\"abg.fn_composition\"]` > `Role.policy_hooks[\"abg.fn_composition\"]` > `Module.policy_hooks[\"abg.fn_composition\"]` > visible defaults config or published template. Malformed present declarations fail closed.\n\n**REQ-L-GTL3-HOOKS-018**: An `abg.fn_composition` hook/config declaration may\ncarry refs and opaque config for host binding, ordered regime bindings,\nstandards context, policy context, carrier context, assurance context,\ndeterministic closure, and optimization. GTL shall not define product-specific\nstrategy semantics inside the hook config. The GTL validator shall validate\nthe selected contract, HoG shall traverse its admitted composition, and ABG\nshall admit the resulting runtime facts under `REQ-R-ABG3-FN-COMPOSITION`.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-HOOKS.md#REQ-L-GTL3-HOOKS%20%E2%80%94%20Governance%20Hook%20Surfaces%2FAcceptance%20Criteria",
+            "start_line": 43
+          }
+        ],
+        "key": "hook_policy_definitions",
+        "subject_key": "governance_hook",
+        "uncertainty": "Opaque config, selected policy implementations, visible fallback bundles and FN-COMPOSITION runtime requirements are referenced but not concretely resolved here."
+      }
+    ]
+  },
+  "answer_sha256": "9b942ac9fd1179685716ebf9ca4d38c2614640c04813856419eaaf7921613d4d",
+  "author": "codex-gtl-frame",
+  "chunk": "chunk-c85821556e92407d429b",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "a9ba339be4a50c931ed2a2dad2d1406dba8f01ad353e0dbbcd722ced7178ab11"
+}

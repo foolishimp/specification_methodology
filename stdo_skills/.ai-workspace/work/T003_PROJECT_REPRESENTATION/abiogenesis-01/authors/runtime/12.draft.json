@@ -1,0 +1,485 @@
+{
+  "concepts": [
+    {
+      "key": "construction_episode",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 31,
+          "quote": "**REQ-R-ABG3-FPC-001**: An admitted GTL program shall declare the One Surface\nconstruction episode as tail recursion over `synthesizeModel -> evalGap ->\nevaluateNext -> admitConstructionIntent -> invokeGraphFunction |\ncontinueExecution -> emit candidate evidence -> admit evidence ->\nevaluateAction -> admit action evaluation and closure result -> exact next\nbasis -> refresh model -> fresh evalGap -> evaluateNext -> projection`. HoG shall\ntraverse that admitted composition and ABG shall admit its runtime facts;\npublic ingress, an adapter, a plugin, or an ABG helper shall not own or reorder\nit.\n\n**REQ-R-ABG3-FPC-002**: The construction episode shall preserve one program-bound GraphFunction or internal graph-vector traversal invocation as the bounded runtime unit of probabilistic compute. The higher-order GTL composition composes lawful invocations; it does not make one unbounded hidden runtime call into the ABG primitive or turn a GraphFunction into the whole program.\n"
+        }
+      ],
+      "label": "Tail-recursive construction episode",
+      "definition": "Admitted GTL declares model → gap → next-action → intent → invoke or continue → candidate evidence → evidence admission → action evaluation → action/closure admission → exact next basis → refreshed model/gap/selection → projection. HoG traverses and ABG admits; ingress/adapters/plugins/helpers cannot own or reorder. Each probabilistic unit stays one program-bound function or internal vector invocation, never an unbounded hidden call or function relabeled program.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "model_synthesis",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 33,
+          "end_line": 33,
+          "quote": "**REQ-R-ABG3-FPC-002A**: `synthesizeModel` shall consume admitted intent lineage, the prior `ProductAssetModel` when present, and admitted product truth and shall emit one versioned `ProductAssetModel`. Model synthesis owns desired and known typed product-asset truth; it shall not observe mutable worksite state, evaluate gaps, rank actions, admit intent, invoke work, or decide closure.\n"
+        }
+      ],
+      "label": "Product model synthesis",
+      "definition": "synthesizeModel consumes admitted intent lineage, optional prior model and admitted product truth, emitting one versioned ProductAssetModel of desired and known typed assets; it cannot observe mutable worksite, evaluate gaps, rank, admit/invoke or close.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "gap_evaluation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 35,
+          "end_line": 35,
+          "quote": "**REQ-R-ABG3-FPC-003**: `evalGap` shall consume one ABG-admitted typed `ObservationSnapshot` over an immutable `WorkspaceBinding`, current `ProductAssetModel`, replay-derived runtime aggregates and cursor, linked worksite and asset observations, obligation ledgers, retry/reentry projections, evaluator results, F_H input, and prior construction intents. Mutable observation digests and refs belong to the snapshot, never the workspace authority basis or binding; a new observation under unchanged authority shall not create a basis fork.\n"
+        }
+      ],
+      "label": "Gap evaluation",
+      "definition": "evalGap consumes one admitted typed ObservationSnapshot on immutable WorkspaceBinding plus current model, replay aggregates/cursor, worksite/assets, obligation ledgers, retry/reentry, evaluator results, F_H input and prior intents. Mutable refs/digests belong to snapshot, never authority/binding; unchanged authority observation is not a fork.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "action_catalog",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 37,
+          "end_line": 47,
+          "quote": "**REQ-R-ABG3-FPC-004**: `ActionCatalog` shall be a read-only exact-basis projection of actions published by the admitted GTL program and narrowed catalog view, derived from module, job, role, graph-function, graph-vector, hook, and policy truth. It shall contain no current eligibility, ranking, or selected-action decision; those belong exclusively to `evaluateNext`. It shall not be prompt prose or CLI/harness-local configuration.\n\n**REQ-R-ABG3-FPC-004A**: Construction action catalog rows that target internal traversal boundaries shall preserve the lawful published traversal target authority required by binding law. At minimum that means the admitted program ref, a graph-function ref published by that program, the resolved graph-vector ref and its `RefinementBoundary` or `CandidateFamily` publication ref, or an explicit proof that the action targets only an already-published public graph-function callable in that program.\n\n**REQ-R-ABG3-FPC-004B**: `evalGap` shall emit candidate typed pressure rows from the exact observation snapshot, and `evaluateNext` shall emit candidate bindings of those rows to exact target obligations and lawful action-catalog rows before ranking. ABG shall admit or reject those evaluator results before they become runtime truth. `TargetObligationBinding` shall preserve typed match and missing-binding reasons. Affect-only rows shall not bind to constructive graph actions; they may only adjust existing lawful bindings or bind to declared review, F_H, escalation, or terminal-route rows under visible affect policy.\n\n**REQ-R-ABG3-FPC-004C**: Public gap and lawful-action reads shall be pure projections of ABG-admitted `ObservationSnapshot`, gap-pressure, target-binding, priority, and `NextActionProjection` truth proposed by `evalGap` and `evaluateNext`. A read may render typed asset gaps, blocking obligations, missing proof/input/output truth, candidate completion actions, current ranking, and reasons; it shall not evaluate gaps, rank or select actions, append events, admit evaluator output or intent, dispatch work, continue execution, evaluate action results, or own retry.\n\n**REQ-R-ABG3-FPC-004D**: Typed asset gaps shall bind to lawful graph/action catalog rows that can complete or induce the missing typed asset truth. The binding shall preserve asset ref, asset kind, required-by ref, missing truth refs, blocking reason refs, eligible action refs, best graph/action refs, admission blockers, priority rank, and ranking reason refs when available.\n\n**REQ-R-ABG3-FPC-004E**: Bootstrap shall enter the same construction episode law from sparse replay state. When typed asset inventory or publication truth is missing, asset induction may rank as the highest-value or blocking next action, but it shall reference a published GraphFunction or an action-catalog row in the admitted program. ABG shall separately admit or reject the resulting evaluator output and construction intent; a CLI or setup script shall not create a special case.\n"
+        }
+      ],
+      "label": "Published action catalog",
+      "definition": "Read-only exact-basis program/narrowed-view projection from module/job/role/function/vector/hook/policy truth; no eligibility, rank or selection, which belong to evaluateNext. Internal targets retain program/function/vector and RefinementBoundary/CandidateFamily publication or explicit public-callable-only proof.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "next_action_evaluation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 49,
+          "end_line": 59,
+          "quote": "**REQ-R-ABG3-FPC-005**: `evaluateNext` shall consume one exact next-action basis, fresh gap truth, target obligations, the admitted program's action catalog, runtime frontier, and declared policy. It shall emit candidate `TargetObligationBinding` rows, one deterministic candidate `PriorityProjection`, and one total candidate `NextActionProjection` containing either the proposed lawful action or typed no-action disposition. ABG shall admit or reject that evaluator result before it becomes current selection truth. The projection shall preserve target outcome, action kind, program and graph-function or reentry target, input/output asset refs, implicated gap/progress refs, value, lawful basis, expected delta, progress and stop conditions, and rejected-alternative rationale when available.\n\n**REQ-R-ABG3-FPC-005A**: `evaluateNext` ranking shall consume a visible `ConstructionPriorityScheme`. The scheme may encode configured strategy priorities such as steel-thread, full-breadth, gap-repair, danger-first, operator-requested, deadline-sensitive, release-blocking pressure, or workspace-risk pressure, but those labels are product-owned policy metadata. ABG shall admit and project the evaluator result without turning the scheme into interpreter-owned selection policy.\n\n**REQ-R-ABG3-FPC-005B**: Affect priority policy shall be visible declared configuration, not emitted adjustment truth. `AffectPriorityPolicy` may define how admitted affect signals such as concern, urgency, danger, fear, operator distress, risk, or confidence are interpreted for boost, attenuation, forced review, F_H input, or escalation pressure.\n\n**REQ-R-ABG3-FPC-005C**: `AffectPriorityAdjustment` shall be an ABG replay-derived projection row over admitted affect signal, visible `AffectPriorityPolicy`, current observation pressure, and lawful action bindings. Affect shall not make an otherwise inadmissible graph action admissible, shall not bypass graph-call/frame/continuation law, and shall remain replay-visible. Affect-only pressure shall not bind directly to constructive graph actions; `evaluateNext` may consume it under declared policy to adjust existing lawful bindings or select review, F_H, escalation, or terminal-route pressure.\n\n**REQ-R-ABG3-FPC-005D**: `evaluateNext` shall produce deterministic candidate priority and next-action projections with stable rank ordinals and tie-break keys. Terminal affect dispositions such as forced review, F_H input, or escalation shall block graph invocation only after ABG admits the corresponding evaluator result under declared policy. A projector shall render, never recompute, admitted decisions.\n\n**REQ-R-ABG3-FPC-005E**: Construction evaluator selection may declare a steel-thread plan or dependency fan-out plan when the product owns that dependency meaning. The declared plan shall preserve admitted module/test dependency maps, declared source/test/build/output targets, write territory or output allocation, evidence expectations, fan-in expectations, and product-owned dependency meaning. ABG shall consume that declaration as dependency-frontier input under `REQ-R-ABG3-SAGA-FRONTIER`; it shall not treat the declaration as a mandatory concurrent-dispatch command. System parallelism shall keep immutable semantic carriers and replay-derived projections at the center while treating shared workspace mutation as an effect edge governed by observed-state and publication truth.\n"
+        }
+      ],
+      "label": "Next-action evaluation",
+      "definition": "Consumes exact next-action basis, fresh gap, obligations, admitted catalog, frontier and policy; proposes target bindings, one deterministic PriorityProjection and one total NextActionProjection of lawful action or typed no-action. Preserve outcome, kind, program/callable or reentry, assets, gap/progress, value, lawful basis, delta, progress/stop conditions and available rejected-alternative rationale.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "construction_intent",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 61,
+          "end_line": 65,
+          "quote": "**REQ-R-ABG3-FPC-006**: ABG shall admit one `ConstructionIntent` from the selected `NextActionProjection` before invocation. Admission shall bind exact lineage, admitted program, selected action, target obligations, immutable workspace binding, invocation authority, and program membership, and shall reject malformed lineage, unavailable graph/action refs, contradictory authority, hidden plugin config, missing target outcome, missing source asset authority, or attempts to bypass GTL/ABG graph invocation.\n\n**REQ-R-ABG3-FPC-007**: `evaluateNext` shall select at most one lawful action; ABG shall admit at most one corresponding new construction intent. If no action or intent is admitted, the total next-action result shall be typed block, F_H input request, ticket/reprice proposal, escalation, or another declared no-action disposition rather than silent same-edge retry.\n\n**REQ-R-ABG3-FPC-008**: A new admitted construction intent shall invoke work only through ABG admission of GTL-declared program membership and ABG-owned graph-call, frame, event, lineage, and execution mechanics. Continuation of the current intent shall instead consume its replay-derived `Continuation` through `continueExecution`. CLI surfaces, harnesses, downstream adapters, worker prompts, and projectors shall not own either path or the construction composition.\n"
+        }
+      ],
+      "label": "Admitted construction intent",
+      "definition": "ABG admits one intent from selected next-action before invocation, binding exact lineage/program/action/obligations/workspace/invocation authority/membership. evaluateNext selects at most one action and ABG at most one new intent; current intent instead continues using replay-derived Continuation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "fd_authority_placement",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 71,
+          "end_line": 79,
+          "quote": "**REQ-R-ABG3-FPC-011**: F_D evidence shall remain mechanical or domain-owned optimization truth. When source authority does not disambiguate product meaning, F_D shall not force canonical semantic output or fail the construction episode. It shall emit candidate ambiguity evidence for ABG admission. Only ABG-admitted ambiguity evidence may enter the observation snapshot that `evalGap` projects as candidate pressure and `evaluateNext` consumes after its own result admission; F_D shall not admit evidence, select, or close an action directly.\n\n**REQ-R-ABG3-FPC-011A**: Candidate F_D outcomes shall carry a proposed authority-placement severity when they do not accept. The closed severity classes are `protocol_invalid`, `construction_context_invalid`, `diagnostic_shape_invalid`, and `content_unproven`. ABG shall admit or reject the candidate outcome and severity before either becomes routing input or runtime truth.\n\n**REQ-R-ABG3-FPC-011B**: ABG shall derive F_D pressure routing from admitted severity plus evaluator-declared `consumedFieldRefs`. `protocol_invalid` and `construction_context_invalid` block. `diagnostic_shape_invalid` blocks only when the malformed field is consumed by downstream routing, execution construction, pressure projection, or closure; otherwise it preserves pressure and allows lawful construction to continue. `content_unproven` routes to F_P/content pressure rather than deterministic closure.\n\n**REQ-R-ABG3-FPC-011C**: ABG-admitted F_D severity and ABG-derived authority-placement routing shall be replay-visible runtime truth. The event spine shall preserve status, severity class, routing decision, affected field refs, consumed field refs, pressure refs, diagnostics, and evidence refs sufficient to replay the runner's block, continue, pressure-preserve, or F_P-route behavior.\n\n**REQ-R-ABG3-FPC-011D**: Plugins may report deterministic evidence and affected fields, but they shall not own pressure-routing authority. If a plugin supplies a routing decision, ABG shall admit it only when it matches the routing derived from admitted severity and consumed-field truth.\n"
+        }
+      ],
+      "label": "Deterministic evidence severity and pressure",
+      "definition": "F_D evidence remains mechanical/domain optimization. Undisambiguated product meaning produces candidate ambiguity, not forced canonical output or episode failure. Only admitted evidence enters snapshot/gap/selection. Non-accepting candidates propose protocol_invalid,construction_context_invalid,diagnostic_shape_invalid or content_unproven severity; ABG admits outcome/severity before routing.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "complete_action_evaluation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 81,
+          "end_line": 81,
+          "quote": "**REQ-R-ABG3-FPC-011E**: `evaluateAction` shall consume one admitted construction intent, that action's complete admitted evidence set, the immutable workspace binding, and declared closure policy and shall emit one immutable candidate `EdgeFulfillmentLedger` plus one candidate `EdgeClosureDecision`. ABG shall admit or reject those evaluator outputs against the admitted intent, complete evidence set, binding, declared GTL result and closure contracts, and closure policy before either becomes runtime or closure truth. Only an ABG-admitted result of this complete governed F_D fold may establish `close | yield | retry | repair | re-enter | reprice | block` action truth. `evaluateAction`, F_P output, F_H response, process success, liveness, or any single evidence row shall not close work directly.\n"
+        }
+      ],
+      "label": "Complete governed action evaluation",
+      "definition": "evaluateAction consumes admitted intent, complete admitted action evidence, immutable binding and closure policy, yielding immutable candidate fulfillment ledger and closure decision. ABG validates/admit-rejects against intent/full evidence/binding/GTL result and closure contracts/policy.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "observer_episode",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 95,
+          "end_line": 97,
+          "quote": "**REQ-R-ABG3-FPC-018**: When a construction episode is instantiated as the observer tier (the same episode law pointed at the system's own telemetry), the FPC-003 observation snapshot shall be over the declared observer observable set: replay event streams, gap_stop and halt-diagnosis projections, fold and terminal outcomes, retry and reentry histories, progress/stagnation ledgers, per-configuration cost rows, witness truth (reprice admissions, operator lifecycle events, hygiene stamps, the citability predicate), and constitutional-versus-projected drift facts. The observer's internal model is the constitutional surface itself.\n\n**REQ-R-ABG3-FPC-019**: The observer tier's action catalog shall contain no constructive actions. Its lawful outcomes are the FPC-007 non-constructive set — typed block, F_H input, ticket or reprice proposal (triaged ticket drafts behind F_H ratification), escalation — plus lawful drill: view restriction to a narrower scope through published refinement boundaries. Recursion terminates at the human F_H seat reading the top layer's replay; the tier holds no downward control path. Observer and tuner shall remain separate judgment programs: an observer episode diagnoses and drafts tickets and shall not emit optimisation terms; diagnosis and policy rewrite never share one judgment.\n"
+        }
+      ],
+      "label": "Observer-tier construction episode",
+      "definition": "Same law aimed at own telemetry; declared snapshot covers replay,gap_stop/halt,fold/terminal,retry/reentry,progress/stagnation,cost per config,witness reprice/operator/hygiene/citability,constitutional-vs-projected drift. Internal model is constitutional surface.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "frame_provenance",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FRAME.md#REQ-R-ABG3-FRAME%20%E2%80%94%20Recursive%20Invocation%20Aggregate",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-FRAME — Recursive Invocation Aggregate\n\n**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "Frame requirement provenance",
+      "definition": "Constraint/Guarantee dated 2026-04-05 source-labelled active/accepted T-283 F_H closure with legacy method/intent/product derivations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "recursive_frame",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FRAME.md#REQ-R-ABG3-FRAME%20%E2%80%94%20Recursive%20Invocation%20Aggregate%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define `Frame` as the recursive invocation aggregate over graph-function\nexecution.\n"
+        }
+      ],
+      "label": "Recursive invocation Frame",
+      "definition": "Frame is the recursive invocation aggregate over graph-function execution.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "selection_requires_intent_admission",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 61,
+          "end_line": 63,
+          "quote": "**REQ-R-ABG3-FPC-006**: ABG shall admit one `ConstructionIntent` from the selected `NextActionProjection` before invocation. Admission shall bind exact lineage, admitted program, selected action, target obligations, immutable workspace binding, invocation authority, and program membership, and shall reject malformed lineage, unavailable graph/action refs, contradictory authority, hidden plugin config, missing target outcome, missing source asset authority, or attempts to bypass GTL/ABG graph invocation.\n\n**REQ-R-ABG3-FPC-007**: `evaluateNext` shall select at most one lawful action; ABG shall admit at most one corresponding new construction intent. If no action or intent is admitted, the total next-action result shall be typed block, F_H input request, ticket/reprice proposal, escalation, or another declared no-action disposition rather than silent same-edge retry.\n"
+        }
+      ],
+      "source_key": "next_action_evaluation",
+      "target_key": "construction_intent",
+      "kind": "proposes_for_admission",
+      "meaning": "Selected next-action is the basis of at most one new intent, admitted by ABG before invocation.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "pressure_target_binding_and_pure_reads",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 41,
+          "end_line": 47,
+          "quote": "**REQ-R-ABG3-FPC-004B**: `evalGap` shall emit candidate typed pressure rows from the exact observation snapshot, and `evaluateNext` shall emit candidate bindings of those rows to exact target obligations and lawful action-catalog rows before ranking. ABG shall admit or reject those evaluator results before they become runtime truth. `TargetObligationBinding` shall preserve typed match and missing-binding reasons. Affect-only rows shall not bind to constructive graph actions; they may only adjust existing lawful bindings or bind to declared review, F_H, escalation, or terminal-route rows under visible affect policy.\n\n**REQ-R-ABG3-FPC-004C**: Public gap and lawful-action reads shall be pure projections of ABG-admitted `ObservationSnapshot`, gap-pressure, target-binding, priority, and `NextActionProjection` truth proposed by `evalGap` and `evaluateNext`. A read may render typed asset gaps, blocking obligations, missing proof/input/output truth, candidate completion actions, current ranking, and reasons; it shall not evaluate gaps, rank or select actions, append events, admit evaluator output or intent, dispatch work, continue execution, evaluate action results, or own retry.\n\n**REQ-R-ABG3-FPC-004D**: Typed asset gaps shall bind to lawful graph/action catalog rows that can complete or induce the missing typed asset truth. The binding shall preserve asset ref, asset kind, required-by ref, missing truth refs, blocking reason refs, eligible action refs, best graph/action refs, admission blockers, priority rank, and ranking reason refs when available.\n\n**REQ-R-ABG3-FPC-004E**: Bootstrap shall enter the same construction episode law from sparse replay state. When typed asset inventory or publication truth is missing, asset induction may rank as the highest-value or blocking next action, but it shall reference a published GraphFunction or an action-catalog row in the admitted program. ABG shall separately admit or reject the resulting evaluator output and construction intent; a CLI or setup script shall not create a special case.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "gap_evaluation",
+        "action_catalog"
+      ],
+      "statement": "evalGap proposes typed pressure from exact snapshot; evaluateNext binds exact obligations and lawful catalog rows before ranking; ABG admits/rejects outputs with typed match/missing reasons. Asset gaps bind completion/induction actions preserving asset/kind/required-by/missing/blocking/eligible/best/admission-blocker/rank/reasons when available. Public gap/action reads render admitted snapshots/pressure/bindings/priority/next-action only: no evaluation/ranking/selection/events/admission/intent/dispatch/continuation/action evaluation/retry. Sparse bootstrap uses same episode; missing inventory/publication may make induction highest/blocking action only via published program callable/catalog, with separate evaluator and intent admission, never CLI/setup special case.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "priority_and_affect_law",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 51,
+          "end_line": 57,
+          "quote": "**REQ-R-ABG3-FPC-005A**: `evaluateNext` ranking shall consume a visible `ConstructionPriorityScheme`. The scheme may encode configured strategy priorities such as steel-thread, full-breadth, gap-repair, danger-first, operator-requested, deadline-sensitive, release-blocking pressure, or workspace-risk pressure, but those labels are product-owned policy metadata. ABG shall admit and project the evaluator result without turning the scheme into interpreter-owned selection policy.\n\n**REQ-R-ABG3-FPC-005B**: Affect priority policy shall be visible declared configuration, not emitted adjustment truth. `AffectPriorityPolicy` may define how admitted affect signals such as concern, urgency, danger, fear, operator distress, risk, or confidence are interpreted for boost, attenuation, forced review, F_H input, or escalation pressure.\n\n**REQ-R-ABG3-FPC-005C**: `AffectPriorityAdjustment` shall be an ABG replay-derived projection row over admitted affect signal, visible `AffectPriorityPolicy`, current observation pressure, and lawful action bindings. Affect shall not make an otherwise inadmissible graph action admissible, shall not bypass graph-call/frame/continuation law, and shall remain replay-visible. Affect-only pressure shall not bind directly to constructive graph actions; `evaluateNext` may consume it under declared policy to adjust existing lawful bindings or select review, F_H, escalation, or terminal-route pressure.\n\n**REQ-R-ABG3-FPC-005D**: `evaluateNext` shall produce deterministic candidate priority and next-action projections with stable rank ordinals and tie-break keys. Terminal affect dispositions such as forced review, F_H input, or escalation shall block graph invocation only after ABG admits the corresponding evaluator result under declared policy. A projector shall render, never recompute, admitted decisions.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "next_action_evaluation"
+      ],
+      "statement": "Visible ConstructionPriorityScheme may encode steel-thread/breadth/repair/danger/operator/deadline/release/workspace-risk policy owned by product, never interpreter policy. AffectPriorityPolicy is declared config, not adjustment truth; replay derives adjustments from admitted signal, policy, pressure and lawful bindings. Affect cannot legalize action or bypass call/frame/continuation; affect-only rows adjust lawful bindings or route review/F_H/escalation/terminal pressure, never constructive binding. Candidate rankings use stable ordinals/tie-breaks; terminal affect blocks invocation only after policy-governed admission. Projectors render, never recompute.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "intent_admission_and_no_action",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 61,
+          "end_line": 65,
+          "quote": "**REQ-R-ABG3-FPC-006**: ABG shall admit one `ConstructionIntent` from the selected `NextActionProjection` before invocation. Admission shall bind exact lineage, admitted program, selected action, target obligations, immutable workspace binding, invocation authority, and program membership, and shall reject malformed lineage, unavailable graph/action refs, contradictory authority, hidden plugin config, missing target outcome, missing source asset authority, or attempts to bypass GTL/ABG graph invocation.\n\n**REQ-R-ABG3-FPC-007**: `evaluateNext` shall select at most one lawful action; ABG shall admit at most one corresponding new construction intent. If no action or intent is admitted, the total next-action result shall be typed block, F_H input request, ticket/reprice proposal, escalation, or another declared no-action disposition rather than silent same-edge retry.\n\n**REQ-R-ABG3-FPC-008**: A new admitted construction intent shall invoke work only through ABG admission of GTL-declared program membership and ABG-owned graph-call, frame, event, lineage, and execution mechanics. Continuation of the current intent shall instead consume its replay-derived `Continuation` through `continueExecution`. CLI surfaces, harnesses, downstream adapters, worker prompts, and projectors shall not own either path or the construction composition.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "construction_intent",
+        "next_action_evaluation"
+      ],
+      "statement": "Reject malformed lineage, unavailable graph/action, conflicting authority, hidden plugin config, absent target/source authority and invocation bypass. Without admitted action/intent return typed block,F_H request,ticket/reprice proposal,escalation or declared no-action, never silent same-edge retry. New intent invokes only through admitted GTL membership and ABG call/frame/event/lineage/execution; CLI/harness/adapters/prompts/projectors own neither new-action nor continuation route.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "iteration_replay_and_progress",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 67,
+          "end_line": 69,
+          "quote": "**REQ-R-ABG3-FPC-009**: Every construction iteration shall append or derive replay-visible truth sufficient to reconstruct the exact admitted program and workspace binding, model synthesis, observation snapshot and gap evaluation, action-catalog basis, target binding, next-action evaluation, intent admission or current-intent continuation, selected graph invocation, evidence admission, candidate action evaluation, action-evaluation and closure admission, output delta, exact next-action basis, refreshed model/gap/selection, progress classification, and terminal projection without private mutable controller state.\n\n**REQ-R-ABG3-FPC-010**: ABG shall derive a `ConstructionProgressLedger` that distinguishes progress from stagnation. A new artifact digest, newly admitted progress row, narrowed blocker, fulfilled obligation row, accepted F_H decision, or lawful reentry movement may count as progress. The same blocker with the same material artifact digest shall not count as progress. The ledger is admitted evidence and gap/selection input; it shall not select or close an action by itself.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "construction_episode"
+      ],
+      "statement": "Every iteration reconstructs program/workspace, synthesis, snapshot/gap, catalog, binding/next-action, intent or continuation, invocation, evidence, candidate/action/closure admission, delta, exact next basis, refreshed model/gap/selection, progress and terminal truth without private controller state. Progress ledger distinguishes progress from stagnation: new artifact digest/progress row/narrowed blocker/fulfilled obligation/accepted F_H/reentry movement may count; same blocker with same material digest cannot. Ledger is evidence/input, not selection/closure authority.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "fd_severity_routing",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 73,
+          "end_line": 79,
+          "quote": "**REQ-R-ABG3-FPC-011A**: Candidate F_D outcomes shall carry a proposed authority-placement severity when they do not accept. The closed severity classes are `protocol_invalid`, `construction_context_invalid`, `diagnostic_shape_invalid`, and `content_unproven`. ABG shall admit or reject the candidate outcome and severity before either becomes routing input or runtime truth.\n\n**REQ-R-ABG3-FPC-011B**: ABG shall derive F_D pressure routing from admitted severity plus evaluator-declared `consumedFieldRefs`. `protocol_invalid` and `construction_context_invalid` block. `diagnostic_shape_invalid` blocks only when the malformed field is consumed by downstream routing, execution construction, pressure projection, or closure; otherwise it preserves pressure and allows lawful construction to continue. `content_unproven` routes to F_P/content pressure rather than deterministic closure.\n\n**REQ-R-ABG3-FPC-011C**: ABG-admitted F_D severity and ABG-derived authority-placement routing shall be replay-visible runtime truth. The event spine shall preserve status, severity class, routing decision, affected field refs, consumed field refs, pressure refs, diagnostics, and evidence refs sufficient to replay the runner's block, continue, pressure-preserve, or F_P-route behavior.\n\n**REQ-R-ABG3-FPC-011D**: Plugins may report deterministic evidence and affected fields, but they shall not own pressure-routing authority. If a plugin supplies a routing decision, ABG shall admit it only when it matches the routing derived from admitted severity and consumed-field truth.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "fd_authority_placement"
+      ],
+      "statement": "ABG derives routing from admitted severity and evaluator consumedFieldRefs: protocol/context invalid block; diagnostic shape blocks only if malformed field is consumed in routing/construction/pressure/closure, otherwise preserve pressure and lawful continuation; content_unproven routes F_P/content pressure, never deterministic closure. Replay retains status/severity/routing/affected and consumed fields/pressure/diagnostics/evidence. Plugins report evidence/fields but do not route; supplied routing can be admitted only if it matches ABG-derived routing.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Unconsumed diagnostic-shape defects preserve pressure and permit lawful construction."
+      ]
+    },
+    {
+      "key": "action_truth_only_after_fold_admission",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 81,
+          "end_line": 83,
+          "quote": "**REQ-R-ABG3-FPC-011E**: `evaluateAction` shall consume one admitted construction intent, that action's complete admitted evidence set, the immutable workspace binding, and declared closure policy and shall emit one immutable candidate `EdgeFulfillmentLedger` plus one candidate `EdgeClosureDecision`. ABG shall admit or reject those evaluator outputs against the admitted intent, complete evidence set, binding, declared GTL result and closure contracts, and closure policy before either becomes runtime or closure truth. Only an ABG-admitted result of this complete governed F_D fold may establish `close | yield | retry | repair | re-enter | reprice | block` action truth. `evaluateAction`, F_P output, F_H response, process success, liveness, or any single evidence row shall not close work directly.\n\n**REQ-R-ABG3-FPC-012**: The public construction read shall expose the one admitted `NextActionProjection` and terminal/action-evaluation truth without recomputation. Minimum rendered states are `construction_closed`, `construction_progressing_yield`, `construction_blocked`, `construction_stalled`, `construction_review_required`, `construction_escalated`, `fh_input_required`, `ticket_created`, and `reprice_required`.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "complete_action_evaluation",
+        "construction_episode"
+      ],
+      "statement": "Only ABG-admitted complete governed F_D fold establishes close/yield/retry/repair/re-enter/reprice/block. Evaluator,F_P,F_H,process success,liveness or single row cannot close directly. Public read renders one admitted next-action and terminal/evaluation truth without recomputation; minimum states: construction_closed,construction_progressing_yield,construction_blocked,construction_stalled,construction_review_required,construction_escalated,fh_input_required,ticket_created,reprice_required.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "declared_authority_recursion_and_consumers",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 85,
+          "end_line": 89,
+          "quote": "**REQ-R-ABG3-FPC-013**: GTL/product bindings for `synthesizeModel`, `evalGap`, `evaluateNext`, `evaluateAction`, action-catalog publication, progress, escalation, and rendering shall resolve from the admitted program's declared graph-function, hook, and policy surfaces with visible fallback behavior. Hidden runtime config shall not satisfy override authority, and a shared helper shall not merge the four semantic authorities.\n\n**REQ-R-ABG3-FPC-014**: One Surface shall compose with graph-span foldback, lawful reentry, and published refinement. `evaluateNext` may select same-edge repair, graph-span reentry, earlier/later graph-function invocation, F_H gate, ticket creation, or constitutional reprice only through a typed next-action result and existing reentry/change-class law. Every published inner refinement shall receive the same visible `synthesizeModel -> evalGap -> evaluateNext -> invoke|continue -> evaluateAction` chain; opaque worker-internal decomposition remains inside one bounded action.\n\n**REQ-R-ABG3-FPC-015**: Downstream products shall consume construction progress, gaps, and next action through pure public projection or event replay. They shall not implement private model/gap/selection/evaluation, retry, continuation, or reentry loops to compensate for missing One Surface semantics.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "construction_episode"
+      ],
+      "statement": "Model/gap/next/action evaluation,catalog,progress,escalation,rendering resolve from declared program function/hooks/policy with visible fallback; hidden config is no override authority and helper cannot merge four semantic owners. Foldback/reentry/refinement compose through typed selection and existing change-class law; choices may be repair,span reentry,earlier/later function,F_H,ticket,reprice. Every published inner refinement gets same model→gap→next→invoke|continue→evaluate chain; private worker decomposition stays bounded. Downstream reads pure projection/replay and cannot invent missing model/gap/selection/evaluation/retry/continuation/reentry loops.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "construction_proof_and_fluent_effects",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 91,
+          "end_line": 93,
+          "quote": "**REQ-R-ABG3-FPC-016**: Deterministic tests shall cover distinct model/gap/next/action-evaluation authority, stable workspace binding across newer observations, public reads rendering admitted gap and ranking truth without evaluation, typed-asset-to-action binding, highest-value or blocking-asset ranking, bootstrap induction through published program rows, configured priority and tie-break law, affect review/F_H/escalation behavior, F_D ambiguity pressure, intent admission/rejection, current-intent continuation versus new-action admission, hook precedence, same-edge progress, published-refinement recursion, lawful reentry, stagnation, summary agreement, no-mutation reads, and adapter non-authority before runtime/live closure can be claimed.\n\n**REQ-R-ABG3-FPC-017**: Construction event kinds that initiate, terminate, clip, or declip runtime fluent truth shall declare Event Calculus effects before implementation closure. Progress, stall, and summary states that are derivable from admitted events, material deltas, and policy shall be modeled as `RuntimeDerivedFluentRule` truth rather than primary event authority.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "construction_episode"
+      ],
+      "statement": "Before live/runtime closure deterministic tests must cover separate four owners, stable binding/new observation, pure admitted reads, asset/action and bootstrap/ranking/priority/ties, affect/F_H/escalation, ambiguity, intent admission/rejection, continuation vs new action, hook precedence, progress, published recursion/reentry, stagnation, summary consistency, no-mutation reads and adapter non-authority. Fluent-changing kinds declare Event Calculus effects before implementation closure; derivable progress/stall/summary use RuntimeDerivedFluentRule rather than primary events.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "typed_adapter_and_label_admission",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 99,
+          "end_line": 101,
+          "quote": "**REQ-R-ABG3-FPC-020**: Type-mismatch glue shall be a declared carrier: a typed projection or a published graph function. When composition types fail to unify, the joint is a TYPED ADAPTER GAP that binds to catalog rows able to complete it per FPC-004D; undeclared inline coercion inside a worker turn, handler, or harness is inadmissible. Admission shall reject ill-typed composition plans before execution — the joint stays in the algebra or it does not exist.\n\n**REQ-R-ABG3-FPC-021**: Narrative labels — ambiguity, confidence, entropy, adequacy, drift, danger, and their kin — shall bear on admission, selection authority, ratification, mode promotion or demotion, or closure only after resolving to admitted rows or typed gaps carried by ref. Unresolved labels are at most affect-class pressure under FPC-005B/-005C: they may adjust existing lawful bindings, never authorize. A tier decision citing a label without admitted-truth refs is inadmissible.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "construction_episode",
+        "next_action_evaluation"
+      ],
+      "statement": "Type-mismatch glue is declared typed projection or published function. Ununified joint is typed adapter gap bound to completing catalog rows; inline coercion in worker/handler/harness is inadmissible and ill-typed plan is rejected before execution. Narrative ambiguity/confidence/entropy/adequacy/drift/danger labels affect admission/selection/ratification/mode/closure only after resolution to admitted refs or typed gaps. Otherwise at most affect pressure adjusting lawful bindings, never authorization; label-only tier decisions are inadmissible.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "declared_dependency_plans",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 59,
+          "end_line": 59,
+          "quote": "**REQ-R-ABG3-FPC-005E**: Construction evaluator selection may declare a steel-thread plan or dependency fan-out plan when the product owns that dependency meaning. The declared plan shall preserve admitted module/test dependency maps, declared source/test/build/output targets, write territory or output allocation, evidence expectations, fan-in expectations, and product-owned dependency meaning. ABG shall consume that declaration as dependency-frontier input under `REQ-R-ABG3-SAGA-FRONTIER`; it shall not treat the declaration as a mandatory concurrent-dispatch command. System parallelism shall keep immutable semantic carriers and replay-derived projections at the center while treating shared workspace mutation as an effect edge governed by observed-state and publication truth.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "next_action_evaluation"
+      ],
+      "allowed": [
+        "Declare product-owned steel-thread or dependency fan-out plans preserving admitted module/test maps, source/test/build/output targets, write/output territory, evidence/fan-in and dependency semantics."
+      ],
+      "forbidden": [
+        "Treat plan as mandatory concurrent dispatch command.",
+        "Let shared workspace mutation bypass observed-state and publication governance; semantic carriers stay immutable and projections replay-derived."
+      ]
+    },
+    {
+      "key": "observer_outcomes_and_judgment_separation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 97,
+          "end_line": 97,
+          "quote": "**REQ-R-ABG3-FPC-019**: The observer tier's action catalog shall contain no constructive actions. Its lawful outcomes are the FPC-007 non-constructive set — typed block, F_H input, ticket or reprice proposal (triaged ticket drafts behind F_H ratification), escalation — plus lawful drill: view restriction to a narrower scope through published refinement boundaries. Recursion terminates at the human F_H seat reading the top layer's replay; the tier holds no downward control path. Observer and tuner shall remain separate judgment programs: an observer episode diagnoses and drafts tickets and shall not emit optimisation terms; diagnosis and policy rewrite never share one judgment.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "observer_episode"
+      ],
+      "allowed": [
+        "Nonconstructive block,F_H,ticket/reprice drafts behind F_H ratification,escalation and lawful scope-restricted drill through published refinement."
+      ],
+      "forbidden": [
+        "Constructive catalog actions or downward control; recursion ends at human F_H reading top replay.",
+        "Observer optimization terms or one judgment combining diagnosis with policy rewrite; observer and tuner remain separate programs."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "episode_external_contracts_and_proof",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 101,
+          "quote": "**REQ-R-ABG3-FPC-001**: An admitted GTL program shall declare the One Surface\nconstruction episode as tail recursion over `synthesizeModel -> evalGap ->\nevaluateNext -> admitConstructionIntent -> invokeGraphFunction |\ncontinueExecution -> emit candidate evidence -> admit evidence ->\nevaluateAction -> admit action evaluation and closure result -> exact next\nbasis -> refresh model -> fresh evalGap -> evaluateNext -> projection`. HoG shall\ntraverse that admitted composition and ABG shall admit its runtime facts;\npublic ingress, an adapter, a plugin, or an ABG helper shall not own or reorder\nit.\n\n**REQ-R-ABG3-FPC-002**: The construction episode shall preserve one program-bound GraphFunction or internal graph-vector traversal invocation as the bounded runtime unit of probabilistic compute. The higher-order GTL composition composes lawful invocations; it does not make one unbounded hidden runtime call into the ABG primitive or turn a GraphFunction into the whole program.\n\n**REQ-R-ABG3-FPC-002A**: `synthesizeModel` shall consume admitted intent lineage, the prior `ProductAssetModel` when present, and admitted product truth and shall emit one versioned `ProductAssetModel`. Model synthesis owns desired and known typed product-asset truth; it shall not observe mutable worksite state, evaluate gaps, rank actions, admit intent, invoke work, or decide closure.\n\n**REQ-R-ABG3-FPC-003**: `evalGap` shall consume one ABG-admitted typed `ObservationSnapshot` over an immutable `WorkspaceBinding`, current `ProductAssetModel`, replay-derived runtime aggregates and cursor, linked worksite and asset observations, obligation ledgers, retry/reentry projections, evaluator results, F_H input, and prior construction intents. Mutable observation digests and refs belong to the snapshot, never the workspace authority basis or binding; a new observation under unchanged authority shall not create a basis fork.\n\n**REQ-R-ABG3-FPC-004**: `ActionCatalog` shall be a read-only exact-basis projection of actions published by the admitted GTL program and narrowed catalog view, derived from module, job, role, graph-function, graph-vector, hook, and policy truth. It shall contain no current eligibility, ranking, or selected-action decision; those belong exclusively to `evaluateNext`. It shall not be prompt prose or CLI/harness-local configuration.\n\n**REQ-R-ABG3-FPC-004A**: Construction action catalog rows that target internal traversal boundaries shall preserve the lawful published traversal target authority required by binding law. At minimum that means the admitted program ref, a graph-function ref published by that program, the resolved graph-vector ref and its `RefinementBoundary` or `CandidateFamily` publication ref, or an explicit proof that the action targets only an already-published public graph-function callable in that program.\n\n**REQ-R-ABG3-FPC-004B**: `evalGap` shall emit candidate typed pressure rows from the exact observation snapshot, and `evaluateNext` shall emit candidate bindings of those rows to exact target obligations and lawful action-catalog rows before ranking. ABG shall admit or reject those evaluator results before they become runtime truth. `TargetObligationBinding` shall preserve typed match and missing-binding reasons. Affect-only rows shall not bind to constructive graph actions; they may only adjust existing lawful bindings or bind to declared review, F_H, escalation, or terminal-route rows under visible affect policy.\n\n**REQ-R-ABG3-FPC-004C**: Public gap and lawful-action reads shall be pure projections of ABG-admitted `ObservationSnapshot`, gap-pressure, target-binding, priority, and `NextActionProjection` truth proposed by `evalGap` and `evaluateNext`. A read may render typed asset gaps, blocking obligations, missing proof/input/output truth, candidate completion actions, current ranking, and reasons; it shall not evaluate gaps, rank or select actions, append events, admit evaluator output or intent, dispatch work, continue execution, evaluate action results, or own retry.\n\n**REQ-R-ABG3-FPC-004D**: Typed asset gaps shall bind to lawful graph/action catalog rows that can complete or induce the missing typed asset truth. The binding shall preserve asset ref, asset kind, required-by ref, missing truth refs, blocking reason refs, eligible action refs, best graph/action refs, admission blockers, priority rank, and ranking reason refs when available.\n\n**REQ-R-ABG3-FPC-004E**: Bootstrap shall enter the same construction episode law from sparse replay state. When typed asset inventory or publication truth is missing, asset induction may rank as the highest-value or blocking next action, but it shall reference a published GraphFunction or an action-catalog row in the admitted program. ABG shall separately admit or reject the resulting evaluator output and construction intent; a CLI or setup script shall not create a special case.\n\n**REQ-R-ABG3-FPC-005**: `evaluateNext` shall consume one exact next-action basis, fresh gap truth, target obligations, the admitted program's action catalog, runtime frontier, and declared policy. It shall emit candidate `TargetObligationBinding` rows, one deterministic candidate `PriorityProjection`, and one total candidate `NextActionProjection` containing either the proposed lawful action or typed no-action disposition. ABG shall admit or reject that evaluator result before it becomes current selection truth. The projection shall preserve target outcome, action kind, program and graph-function or reentry target, input/output asset refs, implicated gap/progress refs, value, lawful basis, expected delta, progress and stop conditions, and rejected-alternative rationale when available.\n\n**REQ-R-ABG3-FPC-005A**: `evaluateNext` ranking shall consume a visible `ConstructionPriorityScheme`. The scheme may encode configured strategy priorities such as steel-thread, full-breadth, gap-repair, danger-first, operator-requested, deadline-sensitive, release-blocking pressure, or workspace-risk pressure, but those labels are product-owned policy metadata. ABG shall admit and project the evaluator result without turning the scheme into interpreter-owned selection policy.\n\n**REQ-R-ABG3-FPC-005B**: Affect priority policy shall be visible declared configuration, not emitted adjustment truth. `AffectPriorityPolicy` may define how admitted affect signals such as concern, urgency, danger, fear, operator distress, risk, or confidence are interpreted for boost, attenuation, forced review, F_H input, or escalation pressure.\n\n**REQ-R-ABG3-FPC-005C**: `AffectPriorityAdjustment` shall be an ABG replay-derived projection row over admitted affect signal, visible `AffectPriorityPolicy`, current observation pressure, and lawful action bindings. Affect shall not make an otherwise inadmissible graph action admissible, shall not bypass graph-call/frame/continuation law, and shall remain replay-visible. Affect-only pressure shall not bind directly to constructive graph actions; `evaluateNext` may consume it under declared policy to adjust existing lawful bindings or select review, F_H, escalation, or terminal-route pressure.\n\n**REQ-R-ABG3-FPC-005D**: `evaluateNext` shall produce deterministic candidate priority and next-action projections with stable rank ordinals and tie-break keys. Terminal affect dispositions such as forced review, F_H input, or escalation shall block graph invocation only after ABG admits the corresponding evaluator result under declared policy. A projector shall render, never recompute, admitted decisions.\n\n**REQ-R-ABG3-FPC-005E**: Construction evaluator selection may declare a steel-thread plan or dependency fan-out plan when the product owns that dependency meaning. The declared plan shall preserve admitted module/test dependency maps, declared source/test/build/output targets, write territory or output allocation, evidence expectations, fan-in expectations, and product-owned dependency meaning. ABG shall consume that declaration as dependency-frontier input under `REQ-R-ABG3-SAGA-FRONTIER`; it shall not treat the declaration as a mandatory concurrent-dispatch command. System parallelism shall keep immutable semantic carriers and replay-derived projections at the center while treating shared workspace mutation as an effect edge governed by observed-state and publication truth.\n\n**REQ-R-ABG3-FPC-006**: ABG shall admit one `ConstructionIntent` from the selected `NextActionProjection` before invocation. Admission shall bind exact lineage, admitted program, selected action, target obligations, immutable workspace binding, invocation authority, and program membership, and shall reject malformed lineage, unavailable graph/action refs, contradictory authority, hidden plugin config, missing target outcome, missing source asset authority, or attempts to bypass GTL/ABG graph invocation.\n\n**REQ-R-ABG3-FPC-007**: `evaluateNext` shall select at most one lawful action; ABG shall admit at most one corresponding new construction intent. If no action or intent is admitted, the total next-action result shall be typed block, F_H input request, ticket/reprice proposal, escalation, or another declared no-action disposition rather than silent same-edge retry.\n\n**REQ-R-ABG3-FPC-008**: A new admitted construction intent shall invoke work only through ABG admission of GTL-declared program membership and ABG-owned graph-call, frame, event, lineage, and execution mechanics. Continuation of the current intent shall instead consume its replay-derived `Continuation` through `continueExecution`. CLI surfaces, harnesses, downstream adapters, worker prompts, and projectors shall not own either path or the construction composition.\n\n**REQ-R-ABG3-FPC-009**: Every construction iteration shall append or derive replay-visible truth sufficient to reconstruct the exact admitted program and workspace binding, model synthesis, observation snapshot and gap evaluation, action-catalog basis, target binding, next-action evaluation, intent admission or current-intent continuation, selected graph invocation, evidence admission, candidate action evaluation, action-evaluation and closure admission, output delta, exact next-action basis, refreshed model/gap/selection, progress classification, and terminal projection without private mutable controller state.\n\n**REQ-R-ABG3-FPC-010**: ABG shall derive a `ConstructionProgressLedger` that distinguishes progress from stagnation. A new artifact digest, newly admitted progress row, narrowed blocker, fulfilled obligation row, accepted F_H decision, or lawful reentry movement may count as progress. The same blocker with the same material artifact digest shall not count as progress. The ledger is admitted evidence and gap/selection input; it shall not select or close an action by itself.\n\n**REQ-R-ABG3-FPC-011**: F_D evidence shall remain mechanical or domain-owned optimization truth. When source authority does not disambiguate product meaning, F_D shall not force canonical semantic output or fail the construction episode. It shall emit candidate ambiguity evidence for ABG admission. Only ABG-admitted ambiguity evidence may enter the observation snapshot that `evalGap` projects as candidate pressure and `evaluateNext` consumes after its own result admission; F_D shall not admit evidence, select, or close an action directly.\n\n**REQ-R-ABG3-FPC-011A**: Candidate F_D outcomes shall carry a proposed authority-placement severity when they do not accept. The closed severity classes are `protocol_invalid`, `construction_context_invalid`, `diagnostic_shape_invalid`, and `content_unproven`. ABG shall admit or reject the candidate outcome and severity before either becomes routing input or runtime truth.\n\n**REQ-R-ABG3-FPC-011B**: ABG shall derive F_D pressure routing from admitted severity plus evaluator-declared `consumedFieldRefs`. `protocol_invalid` and `construction_context_invalid` block. `diagnostic_shape_invalid` blocks only when the malformed field is consumed by downstream routing, execution construction, pressure projection, or closure; otherwise it preserves pressure and allows lawful construction to continue. `content_unproven` routes to F_P/content pressure rather than deterministic closure.\n\n**REQ-R-ABG3-FPC-011C**: ABG-admitted F_D severity and ABG-derived authority-placement routing shall be replay-visible runtime truth. The event spine shall preserve status, severity class, routing decision, affected field refs, consumed field refs, pressure refs, diagnostics, and evidence refs sufficient to replay the runner's block, continue, pressure-preserve, or F_P-route behavior.\n\n**REQ-R-ABG3-FPC-011D**: Plugins may report deterministic evidence and affected fields, but they shall not own pressure-routing authority. If a plugin supplies a routing decision, ABG shall admit it only when it matches the routing derived from admitted severity and consumed-field truth.\n\n**REQ-R-ABG3-FPC-011E**: `evaluateAction` shall consume one admitted construction intent, that action's complete admitted evidence set, the immutable workspace binding, and declared closure policy and shall emit one immutable candidate `EdgeFulfillmentLedger` plus one candidate `EdgeClosureDecision`. ABG shall admit or reject those evaluator outputs against the admitted intent, complete evidence set, binding, declared GTL result and closure contracts, and closure policy before either becomes runtime or closure truth. Only an ABG-admitted result of this complete governed F_D fold may establish `close | yield | retry | repair | re-enter | reprice | block` action truth. `evaluateAction`, F_P output, F_H response, process success, liveness, or any single evidence row shall not close work directly.\n\n**REQ-R-ABG3-FPC-012**: The public construction read shall expose the one admitted `NextActionProjection` and terminal/action-evaluation truth without recomputation. Minimum rendered states are `construction_closed`, `construction_progressing_yield`, `construction_blocked`, `construction_stalled`, `construction_review_required`, `construction_escalated`, `fh_input_required`, `ticket_created`, and `reprice_required`.\n\n**REQ-R-ABG3-FPC-013**: GTL/product bindings for `synthesizeModel`, `evalGap`, `evaluateNext`, `evaluateAction`, action-catalog publication, progress, escalation, and rendering shall resolve from the admitted program's declared graph-function, hook, and policy surfaces with visible fallback behavior. Hidden runtime config shall not satisfy override authority, and a shared helper shall not merge the four semantic authorities.\n\n**REQ-R-ABG3-FPC-014**: One Surface shall compose with graph-span foldback, lawful reentry, and published refinement. `evaluateNext` may select same-edge repair, graph-span reentry, earlier/later graph-function invocation, F_H gate, ticket creation, or constitutional reprice only through a typed next-action result and existing reentry/change-class law. Every published inner refinement shall receive the same visible `synthesizeModel -> evalGap -> evaluateNext -> invoke|continue -> evaluateAction` chain; opaque worker-internal decomposition remains inside one bounded action.\n\n**REQ-R-ABG3-FPC-015**: Downstream products shall consume construction progress, gaps, and next action through pure public projection or event replay. They shall not implement private model/gap/selection/evaluation, retry, continuation, or reentry loops to compensate for missing One Surface semantics.\n\n**REQ-R-ABG3-FPC-016**: Deterministic tests shall cover distinct model/gap/next/action-evaluation authority, stable workspace binding across newer observations, public reads rendering admitted gap and ranking truth without evaluation, typed-asset-to-action binding, highest-value or blocking-asset ranking, bootstrap induction through published program rows, configured priority and tie-break law, affect review/F_H/escalation behavior, F_D ambiguity pressure, intent admission/rejection, current-intent continuation versus new-action admission, hook precedence, same-edge progress, published-refinement recursion, lawful reentry, stagnation, summary agreement, no-mutation reads, and adapter non-authority before runtime/live closure can be claimed.\n\n**REQ-R-ABG3-FPC-017**: Construction event kinds that initiate, terminate, clip, or declip runtime fluent truth shall declare Event Calculus effects before implementation closure. Progress, stall, and summary states that are derivable from admitted events, material deltas, and policy shall be modeled as `RuntimeDerivedFluentRule` truth rather than primary event authority.\n\n**REQ-R-ABG3-FPC-018**: When a construction episode is instantiated as the observer tier (the same episode law pointed at the system's own telemetry), the FPC-003 observation snapshot shall be over the declared observer observable set: replay event streams, gap_stop and halt-diagnosis projections, fold and terminal outcomes, retry and reentry histories, progress/stagnation ledgers, per-configuration cost rows, witness truth (reprice admissions, operator lifecycle events, hygiene stamps, the citability predicate), and constitutional-versus-projected drift facts. The observer's internal model is the constitutional surface itself.\n\n**REQ-R-ABG3-FPC-019**: The observer tier's action catalog shall contain no constructive actions. Its lawful outcomes are the FPC-007 non-constructive set — typed block, F_H input, ticket or reprice proposal (triaged ticket drafts behind F_H ratification), escalation — plus lawful drill: view restriction to a narrower scope through published refinement boundaries. Recursion terminates at the human F_H seat reading the top layer's replay; the tier holds no downward control path. Observer and tuner shall remain separate judgment programs: an observer episode diagnoses and drafts tickets and shall not emit optimisation terms; diagnosis and policy rewrite never share one judgment.\n\n**REQ-R-ABG3-FPC-020**: Type-mismatch glue shall be a declared carrier: a typed projection or a published graph function. When composition types fail to unify, the joint is a TYPED ADAPTER GAP that binds to catalog rows able to complete it per FPC-004D; undeclared inline coercion inside a worker turn, handler, or harness is inadmissible. Admission shall reject ill-typed composition plans before execution — the joint stays in the algebra or it does not exist.\n\n**REQ-R-ABG3-FPC-021**: Narrative labels — ambiguity, confidence, entropy, adequacy, drift, danger, and their kin — shall bear on admission, selection authority, ratification, mode promotion or demotion, or closure only after resolving to admitted rows or typed gaps carried by ref. Unresolved labels are at most affect-class pressure under FPC-005B/-005C: they may adjust existing lawful bindings, never authorize. A tier decision citing a label without admitted-truth refs is inadmissible.\n"
+        }
+      ],
+      "subject_key": "construction_episode",
+      "uncertainty": "This criteria section does not supply all referenced carrier schemas, policies, source identities or actual test/closure evidence.",
+      "consequence": "The representation retains specified authority separations and prerequisites without asserting operational completion or resolving cross-chunk identities."
+    },
+    {
+      "key": "frame_acceptance_unverified",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FRAME.md#REQ-R-ABG3-FRAME%20%E2%80%94%20Recursive%20Invocation%20Aggregate",
+          "start_line": 3,
+          "end_line": 6,
+          "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "frame_provenance",
+      "uncertainty": "Referenced acceptance and derivation evidence is absent.",
+      "consequence": "Retain provenance as source claim, not verified current acceptance."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FP-CONSCIOUSNESS.md#REQ-R-ABG3-FP-CONSCIOUSNESS%20-%20Generic%20F_P%20Construction%20Consciousness%20Loop%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "construction_episode",
+        "model_synthesis",
+        "gap_evaluation",
+        "action_catalog",
+        "next_action_evaluation",
+        "construction_intent",
+        "fd_authority_placement",
+        "complete_action_evaluation",
+        "observer_episode",
+        "selection_requires_intent_admission",
+        "pressure_target_binding_and_pure_reads",
+        "priority_and_affect_law",
+        "intent_admission_and_no_action",
+        "iteration_replay_and_progress",
+        "fd_severity_routing",
+        "action_truth_only_after_fold_admission",
+        "declared_authority_recursion_and_consumers",
+        "construction_proof_and_fluent_effects",
+        "typed_adapter_and_label_admission",
+        "declared_dependency_plans",
+        "observer_outcomes_and_judgment_separation",
+        "episode_external_contracts_and_proof"
+      ],
+      "reason": "Construction laws retained; external contracts, realization and proof remain unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FRAME.md#REQ-R-ABG3-FRAME%20%E2%80%94%20Recursive%20Invocation%20Aggregate",
+      "decision": "residual",
+      "keys": [
+        "frame_provenance",
+        "frame_acceptance_unverified"
+      ],
+      "reason": "Metadata retained with unresolved evidence."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FRAME.md#REQ-R-ABG3-FRAME%20%E2%80%94%20Recursive%20Invocation%20Aggregate%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "recursive_frame"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    }
+  ],
+  "limitations": [
+    "The observer-tier catalog is nonconstructive and has no downward control path; narrative pressure labels alone never confer authority.",
+    "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+  ]
+}

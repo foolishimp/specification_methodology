@@ -1,0 +1,798 @@
+{
+  "concepts": [
+    {
+      "key": "reflective_tuner",
+      "label": "Reflective tuner",
+      "definition": "Published gtl://abg/tuner/* product content carrying a default tuning loop on the same engine and workspace, visible in the spine and audited by its consumed projections; it owns constitutional annealing and declaration-draft curation.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 29,
+          "quote": "**REQ-R-ABG3-TUNER-001**: The tuner shall ship as declared product content: a published `gtl://abg/tuner/*` catalog module carrying the default tuning loop, overridable through declared hook/policy surfaces. It runs on the same engine in the same workspace, spine-visible and audited by the projections it consumes; it adds no runner mechanics and no kernel particle classes.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 46,
+          "end_line": 46,
+          "quote": "**REQ-R-ABG3-TUNER-006**: The tuner shall be the constitutional annealing authority. An F_D-specific interior replacing a typed F_P generic shall exist only through an admitted annealing proposal carrying an admitted equivalence contract. Hand-tuned F_D interiors are unlawful; local-loop tightening arrives as tuner output derived from telemetry.\n"
+        }
+      ]
+    },
+    {
+      "key": "tuning_draft",
+      "label": "Tuning declaration draft",
+      "definition": "Typed proposed declaration change with at least draft, ratified and rejected states, proposer, telemetry basis references, affected declaration references, before/after digests, and ratifying actor or policy.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 44,
+          "end_line": 44,
+          "quote": "**REQ-R-ABG3-TUNER-005**: Draft ratification shall be a typed carrier with visible states (at minimum draft, ratified, rejected) preserving proposer, telemetry basis refs, affected declaration refs, before/after digests, and the ratifying actor or policy. F_H ratification is the default; auto-ratification is lawful only under declared visible policy, never by omission.\n"
+        }
+      ]
+    },
+    {
+      "key": "tuner_observations",
+      "label": "Tuner replay observations",
+      "definition": "Replay-derived event streams, per-configuration costs, closure-point and temporal verdicts, witness truth including halt diagnosis, reprice admissions, hygiene stamps and citability, and progress/stagnation ledgers.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 31,
+          "end_line": 31,
+          "quote": "**REQ-R-ABG3-TUNER-002**: The tuner's read surface shall be replay-derived read models only: replay event streams, per-configuration cost projection, closure-point/temporal verdicts, witness truth (halt-diagnosis, reprice admissions, hygiene stamps, citability), and progress/stagnation ledgers. The tuner shall not own a second truth store and shall not consume unattributed telemetry.\n"
+        }
+      ]
+    },
+    {
+      "key": "worker",
+      "label": "Worker",
+      "definition": "Externally resolved concrete actor identity preserved by ABG for execution, supervision or approval; distinct from Role, Job, Run, GraphCall, Frame and Continuation.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-WORKER.md#REQ-R-ABG3-WORKER%20%E2%80%94%20Worker%20Identity%20And%20External%20Authority%20Hooks%2FPurpose",
+          "start_line": 13,
+          "end_line": 14,
+          "quote": "Define `Worker` as the externally resolved concrete actor identity preserved by\nABG for execution, supervision, or approval.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-WORKER.md#REQ-R-ABG3-WORKER%20%E2%80%94%20Worker%20Identity%20And%20External%20Authority%20Hooks%2FAcceptance%20Criteria",
+          "start_line": 18,
+          "end_line": 18,
+          "quote": "**REQ-R-ABG3-WORKER-001**: `Worker` shall remain distinct from GTL `Role`, GTL `Job`, ABG `Run`, `GraphCall`, `Frame`, and `Continuation`.\n"
+        }
+      ]
+    },
+    {
+      "key": "asset_surface",
+      "label": "AssetSurface",
+      "definition": "GTL-owned typed asset-interface declaration hosted by existing topology carriers, declaring asset shape, authority, constructor, renderer, policy and proof contracts for a node locus or published GTL boundary.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FPurpose",
+          "start_line": 12,
+          "end_line": 15,
+          "quote": "Define `AssetSurface` as the GTL-owned typed asset interface subordinate to\nexisting topology carriers. `AssetSurface` declares asset shape, authority,\nconstructor, renderer, policy, and proof contracts for a node locus or other\npublished GTL boundary without becoming a new public work carrier.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 19,
+          "quote": "**REQ-L-GTL3-ASSET-SURFACE-001**: `AssetSurface` shall remain subordinate GTL declaration truth hosted by existing carriers such as `Node`. It shall not become a new topology object, public execution target, or rival `GraphFunction`/`Job` carrier.\n"
+        }
+      ]
+    },
+    {
+      "key": "attrs",
+      "label": "Attr and Attrs",
+      "definition": "First-class immutable metadata carriers; Attrs is the canonical structured declaration-data and policy-visible configuration shape, not a specialized policy semantic language.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ATTRS.md#REQ-L-GTL3-ATTRS%20%E2%80%94%20Immutable%20Metadata%20Carriers%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define `Attr` and `Attrs` as first-class immutable metadata carriers for GTL 3\ndeclaration surfaces.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ATTRS.md#REQ-L-GTL3-ATTRS%20%E2%80%94%20Immutable%20Metadata%20Carriers%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 19,
+          "quote": "**REQ-L-GTL3-ATTRS-001**: `Attr` and `Attrs` shall be first-class GTL declaration types for immutable metadata carriage.\n\n**REQ-L-GTL3-ATTRS-002**: `Attrs` shall be the canonical shape for structured declaration data and policy-visible configuration in GTL 3.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ATTRS.md#REQ-L-GTL3-ATTRS%20%E2%80%94%20Immutable%20Metadata%20Carriers%2FAcceptance%20Criteria",
+          "start_line": 27,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-ATTRS-006**: `Attrs` is a metadata carrier, not a specialized policy semantic language.\n"
+        }
+      ]
+    },
+    {
+      "key": "compute_algebra",
+      "label": "Typed compute C algebra",
+      "definition": "Language validation boundary intended to keep LLM-authored canonical declaration data within GTL/HoG/ABG structure through published APIs and typed repair, without reliance on remembered prose distinctions.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FPurpose",
+          "start_line": 12,
+          "end_line": 19,
+          "quote": "Define the typed algebra carried by compute `C` and the validation boundary\nused to keep an LLM-authored GTL program inside the GTL/HoG/ABG structure.\n\nGTL is LLM-first. A model is expected to author canonical declaration data\nthrough published language APIs and then repair typed validation gaps. Correctness\nshall not depend on the model remembering prose distinctions between graph\nfunctions, graph vectors, programs, C stages, fibres, plugins, handlers,\nworkspaces, traversal units, or runtime controllers.\n"
+        }
+      ]
+    },
+    {
+      "key": "gtl_requirement_domain",
+      "label": "GTL language-law domain",
+      "definition": "GTL 3 constitutional language and graph-law domain for an LLM-first, graph-first algebraic governance control language with implementation-independent canonical declaration data and native typed APIs in each conforming tenant.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/README.md#GTL%20Requirement%20Families",
+          "start_line": 3,
+          "end_line": 7,
+          "quote": "This domain owns the constitutional language and graph law for GTL 3.\n\nGTL is an LLM-first, graph-first, algebraic governance control language with\nimplementation-independent canonical declaration data and native typed\nauthoring APIs in each conforming build tenant.\n"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "tuner_consumes_replay",
+      "kind": "reads_only",
+      "source_key": "reflective_tuner",
+      "target_key": "tuner_observations",
+      "meaning": "The tuner receives its entire read basis from replay-derived read models.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 31,
+          "end_line": 31,
+          "quote": "**REQ-R-ABG3-TUNER-002**: The tuner's read surface shall be replay-derived read models only: replay event streams, per-configuration cost projection, closure-point/temporal verdicts, witness truth (halt-diagnosis, reprice admissions, hygiene stamps, citability), and progress/stagnation ledgers. The tuner shall not own a second truth store and shall not consume unattributed telemetry.\n"
+        }
+      ]
+    },
+    {
+      "key": "tuner_produces_drafts",
+      "kind": "writes_only",
+      "source_key": "reflective_tuner",
+      "target_key": "tuning_draft",
+      "meaning": "The only tuner write product is a declaration draft which must pass ratification and ordinary work admission before effects.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 42,
+          "end_line": 44,
+          "quote": "**REQ-R-ABG3-TUNER-004**: The tuner shall write declaration drafts ONLY. It shall not mutate live declarations, code, workspace assets, or runtime state. A ratified draft re-enters the system as ordinary admitted work through the owning ticket and change class. Solve and optimize shall remain separated: solve loops write candidates, optimize loops write terms, and no program does both in one judgment. The tuner shall not perform defect diagnosis or triage within an optimisation judgment; observer and tuner exchange truth only through admitted records (intake records, telemetry read models), never inside one judgment.\n\n**REQ-R-ABG3-TUNER-005**: Draft ratification shall be a typed carrier with visible states (at minimum draft, ratified, rejected) preserving proposer, telemetry basis refs, affected declaration refs, before/after digests, and the ratifying actor or policy. F_H ratification is the default; auto-ratification is lawful only under declared visible policy, never by omission.\n"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "key": "tuner_read_boundary",
+      "applies_to_keys": [
+        "reflective_tuner",
+        "tuner_observations"
+      ],
+      "statement": "The tuner reads only the listed replay-derived models; it must neither maintain a second truth store nor consume unattributed telemetry.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 31,
+          "end_line": 31,
+          "quote": "**REQ-R-ABG3-TUNER-002**: The tuner's read surface shall be replay-derived read models only: replay event streams, per-configuration cost projection, closure-point/temporal verdicts, witness truth (halt-diagnosis, reprice admissions, hygiene stamps, citability), and progress/stagnation ledgers. The tuner shall not own a second truth store and shall not consume unattributed telemetry.\n"
+        }
+      ]
+    },
+    {
+      "key": "tuner_public_relations",
+      "applies_to_keys": [
+        "reflective_tuner"
+      ],
+      "statement": "All tuner acts project through exactly two accepted public relation identities. tune report binds pure abg.operation.project.read and emits no event or mutation; tune propose, ratify and reject are variants of abg.operation.tuning.transition entering ordinary admitted actor or policy truth. Command spellings are not operation identities.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 33,
+          "end_line": 40,
+          "quote": "**REQ-R-ABG3-TUNER-003**: The public tuner surface shall project through two\naccepted public function identities. `tune report` is an ergonomic CLI binding\nto the pure `abg.operation.project.read` tuning-report relation and shall emit no\nevent or mutation. `tune propose`, `tune ratify`, and `tune reject` are ergonomic\nvariant bindings to `abg.operation.tuning.transition` and shall enter through\nordinary admitted actor or policy truth. The literal command spellings are not\noperation identities, and no tuner act exists outside those two public\nrelations.\n"
+        }
+      ]
+    },
+    {
+      "key": "tuner_write_and_judgment_separation",
+      "applies_to_keys": [
+        "reflective_tuner",
+        "tuning_draft"
+      ],
+      "statement": "Tuner output is declaration drafts only, never live declarations, code, workspace assets or runtime state. Ratified drafts re-enter ordinary admitted work via the owning ticket and change class. Solve writes candidates, optimize writes terms; no program performs both in one judgment. Optimization may not diagnose or triage defects; observer/tuner truth exchange occurs only via admitted intake or telemetry records, never within one judgment.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 42,
+          "end_line": 42,
+          "quote": "**REQ-R-ABG3-TUNER-004**: The tuner shall write declaration drafts ONLY. It shall not mutate live declarations, code, workspace assets, or runtime state. A ratified draft re-enters the system as ordinary admitted work through the owning ticket and change class. Solve and optimize shall remain separated: solve loops write candidates, optimize loops write terms, and no program does both in one judgment. The tuner shall not perform defect diagnosis or triage within an optimisation judgment; observer and tuner exchange truth only through admitted records (intake records, telemetry read models), never inside one judgment.\n"
+        }
+      ]
+    },
+    {
+      "key": "draft_ratification_gate",
+      "applies_to_keys": [
+        "tuning_draft"
+      ],
+      "statement": "Preserve all typed draft-state and provenance fields. Human F_H ratification is the default; auto-ratification is lawful only under declared visible policy, never by omission.",
+      "conditions": [],
+      "exceptions": [
+        "Declared visible policy may authorize automatic ratification."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 44,
+          "end_line": 44,
+          "quote": "**REQ-R-ABG3-TUNER-005**: Draft ratification shall be a typed carrier with visible states (at minimum draft, ratified, rejected) preserving proposer, telemetry basis refs, affected declaration refs, before/after digests, and the ratifying actor or policy. F_H ratification is the default; auto-ratification is lawful only under declared visible policy, never by omission.\n"
+        }
+      ]
+    },
+    {
+      "key": "annealing_equivalence",
+      "applies_to_keys": [
+        "reflective_tuner",
+        "tuning_draft"
+      ],
+      "statement": "An F_D-specific interior may replace a typed F_P generic only through an admitted annealing proposal carrying an admitted equivalence contract. Hand-tuned F_D interiors are unlawful; telemetry-derived tuner output supplies local-loop tightening. Equivalence preserves outer identity, declared obligations, evidence classes and replay comparability. Post-ratification divergence becomes a typed defect routed to intake and reprice, including lawful demotion to the F_P generic.",
+      "conditions": [
+        "Replacement of an F_P generic by an F_D-specific interior."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 46,
+          "end_line": 48,
+          "quote": "**REQ-R-ABG3-TUNER-006**: The tuner shall be the constitutional annealing authority. An F_D-specific interior replacing a typed F_P generic shall exist only through an admitted annealing proposal carrying an admitted equivalence contract. Hand-tuned F_D interiors are unlawful; local-loop tightening arrives as tuner output derived from telemetry.\n\n**REQ-R-ABG3-TUNER-007**: An equivalence contract shall preserve outer contract identity, the declared obligation set, evidence classes, and replay comparability between the generic and annealed interiors. Post-ratification divergence between them shall be a typed defect routing to intake and reprice, including lawful demotion back to the F_P generic.\n"
+        }
+      ]
+    },
+    {
+      "key": "tuner_calibration_and_crystallization",
+      "applies_to_keys": [
+        "reflective_tuner",
+        "tuning_draft"
+      ],
+      "statement": "Evaluator calibration concerning retry burn, contract-shape variance, ambiguity pressure or prompt/instruction categories derives from telemetry and follows draft/ratify. Tuner crystallization includes lay-rail publication when per-contract composition entropy is near zero, pull-up retirement of non-discriminating edges, and abstraction naming of proven compositions as catalog graph functions. Catalog visibility curation also follows the same draft ratification gate.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 52,
+          "quote": "**REQ-R-ABG3-TUNER-008**: Evaluator calibration proposals (retry burn, contract shape variance, ambiguity pressure, prompt/instruction-category adjustments) shall derive from telemetry and travel the same draft/ratify path as every other tuner write.\n\n**REQ-R-ABG3-TUNER-009**: Crystallization shall be tuner authority: lay-rail proposals (publish overlay extensions where per-contract composition entropy is near zero), pull-up proposals (retire non-discriminating declared edges), and abstraction proposals (name a proven composition as a new graph function entering the catalog) are declaration drafts behind the same ratification gate. Structure crystallizes where accountability pays for itself and dissolves where it does not.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 58,
+          "end_line": 58,
+          "quote": "**REQ-R-ABG3-TUNER-012**: Catalog visibility (what-is-visible-from-where per view, as abstraction grows the vocabulary) shall be a tuner curation surface: visibility changes are declaration drafts on the same ratification path.\n"
+        }
+      ]
+    },
+    {
+      "key": "tuner_typed_signals",
+      "applies_to_keys": [
+        "reflective_tuner",
+        "tuner_observations"
+      ],
+      "statement": "Mode/track observables are typed and replay-derived and include at minimum route variance/composition entropy, retry density, repeated path shape, per-contract cost, closure rate, adapter-gap counts and defect recurrence. A declared path halting on ambiguity projects a rail-break mode-selection signal before same-edge retry burn. Promotion/demotion drafts cite admitted signal rows by reference; F_P interpretation is a proposal, and narrative labels supply no authority.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 54,
+          "end_line": 54,
+          "quote": "**REQ-R-ABG3-TUNER-010**: Mode and track signals shall be typed replay-derived observables, at minimum: per-contract route variance (composition entropy), retry density, repeated path shape, per-contract cost, closure rate, adapter-gap counts, and defect recurrence; plus the rail-break signal — a declared path halting on ambiguity projects a mode-selection signal before same-edge retry burn. Promotion and demotion proposals shall cite admitted signal rows by ref; F_P may propose interpretation, but narrative labels carry no authority (FPC-021).\n"
+        }
+      ]
+    },
+    {
+      "key": "candidate_family_mode_choice",
+      "applies_to_keys": [
+        "reflective_tuner",
+        "tuning_draft"
+      ],
+      "statement": "Declared and emergent interiors are two CandidateFamily alternatives over one outer contract under visible policy. Tuner promotion/demotion drafts move contracts between modes, while actual selection remains lawful selection of published alternatives.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 56,
+          "end_line": 56,
+          "quote": "**REQ-R-ABG3-TUNER-011**: Mode interchangeability shall be a `CandidateFamily` choice: a declared interior and an emergent interior are two candidates over one outer contract, selected under visible policy. Tuner promote/demote drafts move contracts between modes; selection itself remains lawful published-alternative selection.\n"
+        }
+      ]
+    },
+    {
+      "key": "tuner_closure_proof",
+      "applies_to_keys": [
+        "reflective_tuner"
+      ],
+      "statement": "Before claiming runtime/live closure, deterministic tests must cover report non-append, draft admission and ratified/rejected states, human versus policy auto-ratification, rejection of annealing without equivalence, divergence intake/demotion, lay-rail/pull-up/abstraction shapes on entropy fixtures, rail-break projection, rejection without admitted signal references, rejection of triage output from tuning judgments, and prohibition of every live-surface mutation path. Event kinds initiating, terminating, clipping or declipping runtime fluents require declared Event Calculus effects before implementation closure. Draft states and entropy projections remain replay-derived, not primary event authority.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 60,
+          "end_line": 62,
+          "quote": "**REQ-R-ABG3-TUNER-013**: Deterministic tests shall cover read-only `tune report` behavior (no event append), draft admission and ratified/rejected state transitions, F_H versus declared auto-ratify paths, annealing-proposal rejection without an equivalence contract, post-ratification divergence intake and demotion, lay-rail/pull-up/abstraction draft shapes over composition-entropy fixtures, rail-break mode-signal projection, rejection of promotion/demotion proposals lacking cited admitted signal rows, judgment separation (a tune episode emitting triage output is rejected), and the write-boundary law (no live-surface mutation by any tuner path) before runtime/live closure can be claimed.\n\n**REQ-R-ABG3-TUNER-014**: Tuner event kinds that initiate, terminate, clip, or declip runtime fluent truth shall declare Event Calculus effects before implementation closure. Draft state and entropy projections are replay-derived truth, never primary event authority.\n"
+        }
+      ]
+    },
+    {
+      "key": "worker_binding_admission",
+      "applies_to_keys": [
+        "worker"
+      ],
+      "statement": "GTL declares role requirements; Product or implementation-binding resolution may propose a match, and ABG must admit or reject it before HoG traversal and realization of selected leaf effects. ABG consumes externally resolved identity and does not implement authentication; when provided it preserves external authority references or equivalent hooks. build/build_id reporting metadata cannot substitute for identity.",
+      "conditions": [
+        "Preserve external authority references or hooks when provided."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-WORKER.md#REQ-R-ABG3-WORKER%20%E2%80%94%20Worker%20Identity%20And%20External%20Authority%20Hooks%2FAcceptance%20Criteria",
+          "start_line": 20,
+          "end_line": 26,
+          "quote": "**REQ-R-ABG3-WORKER-002**: GTL shall declare role requirements. Product or implementation-binding resolution may propose a matching worker; ABG shall admit or reject that binding before HoG traverses the declared work and the selected implementation binding realizes its leaf effects.\n\n**REQ-R-ABG3-WORKER-003**: ABG shall accept worker identity as externally resolved input. ABG does not implement authentication.\n\n**REQ-R-ABG3-WORKER-004**: ABG shall accept and preserve external authority references or equivalent authority hooks when provided.\n\n**REQ-R-ABG3-WORKER-005**: Reporting metadata such as `build` or `build_id` shall not be treated as a substitute for worker identity.\n"
+        }
+      ]
+    },
+    {
+      "key": "worker_concurrency_boundary",
+      "applies_to_keys": [
+        "worker"
+      ],
+      "statement": "Worker capability exposes write territory sufficiently for declared policy to propose concurrency, ABG to admit/reject the safety basis, HoG to apply only admitted disposition, and implementation bindings to realize only those leaf effects. Parallel GTL worker/job branches require an ABG-admitted proof of disjoint write territories. Overlapping writes produce a serial policy proposal subject to the same admission/traversal/effect chain; read overlap alone is not a conflict.",
+      "conditions": [
+        "Parallel traversal requires admitted proof of disjoint writes."
+      ],
+      "exceptions": [
+        "Read overlap alone does not prohibit parallelism."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-WORKER.md#REQ-R-ABG3-WORKER%20%E2%80%94%20Worker%20Identity%20And%20External%20Authority%20Hooks%2FAcceptance%20Criteria",
+          "start_line": 28,
+          "end_line": 32,
+          "quote": "**REQ-R-ABG3-WORKER-006**: Worker execution capability shall expose write territory explicitly enough for the declared policy relation to produce a concurrency proposal, for ABG to admit or reject its safety basis, for HoG to apply an admitted traversal disposition, and for the selected implementation binding to realize its leaf effects.\n\n**REQ-R-ABG3-WORKER-007**: HoG may traverse GTL-declared branches targeting workers or executable jobs in parallel only after ABG admits a safety basis proving their write territories disjoint. The selected implementation bindings may realize only those admitted leaf effects.\n\n**REQ-R-ABG3-WORKER-008**: Overlapping write territories shall produce a serial proposal under declared policy. ABG shall admit or reject that proposal, HoG shall apply only an admitted disposition, and selected implementation bindings shall realize only the resulting leaf effects. Read overlap alone shall not be treated as a parallelism conflict.\n"
+        }
+      ]
+    },
+    {
+      "key": "asset_surface_subordination",
+      "applies_to_keys": [
+        "asset_surface"
+      ],
+      "statement": "AssetSurface remains subordinate declaration truth, not a new topology object, public execution target or GraphFunction/Job rival. Preserve kind, requiredContexts, standardsRefs and outputContractRefs, and preserve the full interface without semantic loss across constructor, admission, serialization, module publication and graph-function chain composition.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 21,
+          "quote": "**REQ-L-GTL3-ASSET-SURFACE-001**: `AssetSurface` shall remain subordinate GTL declaration truth hosted by existing carriers such as `Node`. It shall not become a new topology object, public execution target, or rival `GraphFunction`/`Job` carrier.\n\n**REQ-L-GTL3-ASSET-SURFACE-002**: `AssetSurface` shall preserve the existing fields `kind`, `requiredContexts`, `standardsRefs`, and `outputContractRefs`.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FAcceptance%20Criteria",
+          "start_line": 39,
+          "end_line": 39,
+          "quote": "**REQ-L-GTL3-ASSET-SURFACE-011**: GTL publication and interpretation surfaces shall preserve the full `AssetSurface` interface without semantic loss across constructor, admission, serialization, module publication, and graph-function chain composition.\n"
+        }
+      ]
+    },
+    {
+      "key": "asset_authority_slot_law",
+      "applies_to_keys": [
+        "asset_surface"
+      ],
+      "statement": "Each declared authority slot carries an opaque authority-kind reference and exactly a normal, bounded_fallback or forbidden_routine disposition. GTL owns slot shape/labels; downstream Products own authority vocabulary and assignment policy. Every bounded_fallback slot requires at least one precondition reference checked by GTL admission. ABG/downstream assurance determines lawful concrete runtime use. forbidden_routine slots survive publication, admission and serialization for deterministic policy enforcement without text inference.",
+      "conditions": [
+        "A slot is declared.",
+        "At least one fallback precondition reference is required for each bounded_fallback slot."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FAcceptance%20Criteria",
+          "start_line": 27,
+          "end_line": 31,
+          "quote": "**REQ-L-GTL3-ASSET-SURFACE-005**: A prompt-like or renderer-backed asset surface may declare generic authority slots. Each slot shall carry an opaque authority-kind ref and a disposition label of `normal`, `bounded_fallback`, or `forbidden_routine`. GTL owns the slot shape and disposition labels; downstream products own the specific authority-kind vocabulary and assignment policy.\n\n**REQ-L-GTL3-ASSET-SURFACE-006**: Any `bounded_fallback` authority slot declared by an `AssetSurface` shall have at least one fallback precondition ref. GTL admission shall validate that shape. Runtime enforcement of whether a concrete authority packet lawfully uses the fallback slot belongs to ABG/downstream assurance policy.\n\n**REQ-L-GTL3-ASSET-SURFACE-007**: `forbidden_routine` authority slots declared by an `AssetSurface` shall be preserved through publication, admission, and serialization so deterministic consumers can enforce declared policy without inferring semantics from rendered text.\n"
+        }
+      ]
+    },
+    {
+      "key": "asset_admission_and_view_boundary",
+      "applies_to_keys": [
+        "asset_surface"
+      ],
+      "statement": "Declaration admission validates metadata shape only: references, dispositions, fallback presence, constructor/renderer and proof references; it cannot decide Product vocabulary, accepted prompt content or runtime-packet legality. Derived rendered text, markdown, terminal output and UI views never outrank typed declarations, constructors, authority slots or proofs.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FAcceptance%20Criteria",
+          "start_line": 33,
+          "end_line": 35,
+          "quote": "**REQ-L-GTL3-ASSET-SURFACE-008**: `AssetSurface` declaration admission shall validate metadata shape only: refs, slot dispositions, fallback precondition presence, constructor/renderer refs, and proof obligation refs. It shall not decide product-specific authority vocabulary, accepted prompt content, or runtime packet legality.\n\n**REQ-L-GTL3-ASSET-SURFACE-009**: Rendered text, markdown, terminal output, or UI presentation derived from an `AssetSurface` is a view. It shall not outrank the typed asset-surface declaration, constructor refs, authority slots, or proof obligations.\n"
+        }
+      ]
+    },
+    {
+      "key": "observer_asset_context",
+      "applies_to_keys": [
+        "asset_surface"
+      ],
+      "statement": "Executive-observer asset surfaces bind target-workspace availability through existing requiredContexts and proof-obligation references. They create neither an observer asset ontology nor authoritative rendered workspace summaries over typed context, payload, evidence, span-lineage and projection references.",
+      "conditions": [
+        "The asset surface is used by the ABG executive observer."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FAcceptance%20Criteria",
+          "start_line": 41,
+          "end_line": 45,
+          "quote": "**REQ-L-GTL3-ASSET-SURFACE-012**: Asset surfaces used by the ABG executive\nobserver shall bind target workspace availability through existing\n`requiredContexts` and proof-obligation refs. They shall not create a separate\nobserver asset ontology or make rendered workspace summaries authoritative\nover typed context, payload, evidence, span-lineage, and projection refs.\n"
+        }
+      ]
+    },
+    {
+      "key": "attrs_carriage",
+      "applies_to_keys": [
+        "attrs"
+      ],
+      "statement": "Attrs preserves stable ordered key/value truth and fails closed on duplicates. It must be usable at minimum on Rule.config, GraphFunction.declarations, GraphVector.declarations, RefinementBoundary.hints, CandidateFamily.policy_hints, Job.policy_hooks, Role.policy_hooks, Module.policy_hooks and Module.metadata; it remains inspectable, serializable and replayable across publication/interpretation.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ATTRS.md#REQ-L-GTL3-ATTRS%20%E2%80%94%20Immutable%20Metadata%20Carriers%2FAcceptance%20Criteria",
+          "start_line": 21,
+          "end_line": 25,
+          "quote": "**REQ-L-GTL3-ATTRS-003**: `Attrs` shall preserve stable ordered key/value truth and fail closed on duplicate keys.\n\n**REQ-L-GTL3-ATTRS-004**: `Attrs` shall be usable at minimum on `Rule.config`, `GraphFunction.declarations`, `GraphVector.declarations`, `RefinementBoundary.hints`, `CandidateFamily.policy_hints`, `Job.policy_hooks`, `Role.policy_hooks`, `Module.policy_hooks`, and `Module.metadata`.\n\n**REQ-L-GTL3-ATTRS-005**: `Attrs` shall remain inspectable, serializable, and replayable across publication and interpretation surfaces.\n"
+        }
+      ]
+    },
+    {
+      "key": "compute_sort_chain",
+      "applies_to_keys": [
+        "compute_algebra"
+      ],
+      "statement": "The declared chain is Module/catalog to GraphFunction<A,B>, GraphFunction to internal GraphVector<A,B>, the pair to declared C<A,B>, C to CStage<Role,Fibre,X,Y>, and CStage to admitted implementation of the same role/fibre/type boundary. GraphFunction, GraphVector, program/overlay, workspace, C, stage, fibre, implementation binding, TraversalUnit and runtime state stay distinct sorts. Only a named constructor creates a conversion; structural resemblance, observed behavior, execution count and downstream terminology never coerce sorts.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FSorts%20And%20Judgments",
+          "start_line": 23,
+          "end_line": 37,
+          "quote": "The constitutional sort chain is:\n\n```text\nModule/catalog |- GraphFunction<A,B>\nGraphFunction<A,B> |- internal GraphVector<A,B>\n(GraphFunction, GraphVector) |- declared C<A,B>\nC<A,B> |- CStage<Role,Fibre,X,Y>\nCStage<Role,Fibre,X,Y> |- admitted implementation<Role,Fibre,X,Y>\n```\n\n`GraphFunction`, `GraphVector`, GTL program/overlay, workspace, `C`, C stage,\nfibre, implementation binding, `TraversalUnit`, and ABG runtime state are\ndistinct sorts. A conversion exists only where a named constructor declares\none. Structural similarity, observed behavior, execution count, or downstream\nterminology never creates a coercion.\n"
+        }
+      ]
+    },
+    {
+      "key": "gtl_domain_scope",
+      "applies_to_keys": [
+        "gtl_requirement_domain"
+      ],
+      "statement": "The language domain covers declaration and engine boundaries, typed graph structures and identities, asset interfaces, operators/evaluators/rules/hooks, graph functions/selection/synthesis/subwork, composition/substitution/recursion/higher order operations, semantic work/module publication and requirement wrappers. Epistemic notation distinguishes candidates, findings, admission, runtime/projection ledgers and consequences without new topology/runtime carriers. Product-visible graph programs are validated as GTL, traversed by HoG and admitted by ABG.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/README.md#GTL%20Requirement%20Families%2FScope",
+          "start_line": 25,
+          "end_line": 42,
+          "quote": "- language identity, declarative form, attrs, contexts, and engine boundary\n- contract-law API identity, reload boundary, and ownership split across GTL,\n  ABG, and downstream products\n- complete GTL language configuration for product-visible graph-program\n  elements validated as GTL, traversed by HoG, and admitted as runtime truth\n  by ABG\n- graph structure, typed loci, interfaces, graph vectors, and identities\n- typed asset-surface interfaces, including renderer-backed asset contracts\n- operators, evaluators, rules, and governance hook surfaces\n- graph functions, selection boundaries, synthesis, and bounded sub-work\n- algebraic composition, substitution, recursion, and higher-order graph\n  operations\n- epistemic notation that distinguishes transform candidates, evaluator\n  findings, ABG admission, runtime ledgers/projections, and consequence\n  projections without adding new topology objects or runtime carriers\n- semantic work declarations and module publication boundaries\n- requirement declaration wrappers over GTL publication, graph-function,\n  graph-vector, context, hook, and asset-surface law\n"
+        }
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "tuner_extension_latitude",
+      "applies_to_keys": [
+        "reflective_tuner"
+      ],
+      "allowed": [
+        "Override the default tuning loop through declared hook/policy surfaces.",
+        "F_P may propose interpretation of admitted typed signals."
+      ],
+      "forbidden": [
+        "Adding runner mechanics or kernel particle classes.",
+        "Treating narrative mode labels as authority."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 29,
+          "quote": "**REQ-R-ABG3-TUNER-001**: The tuner shall ship as declared product content: a published `gtl://abg/tuner/*` catalog module carrying the default tuning loop, overridable through declared hook/policy surfaces. It runs on the same engine in the same workspace, spine-visible and audited by the projections it consumes; it adds no runner mechanics and no kernel particle classes.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 54,
+          "end_line": 54,
+          "quote": "**REQ-R-ABG3-TUNER-010**: Mode and track signals shall be typed replay-derived observables, at minimum: per-contract route variance (composition entropy), retry density, repeated path shape, per-contract cost, closure rate, adapter-gap counts, and defect recurrence; plus the rail-break signal — a declared path halting on ambiguity projects a mode-selection signal before same-edge retry burn. Promotion and demotion proposals shall cite admitted signal rows by ref; F_P may propose interpretation, but narrative labels carry no authority (FPC-021).\n"
+        }
+      ]
+    },
+    {
+      "key": "asset_surface_optional_interfaces",
+      "applies_to_keys": [
+        "asset_surface"
+      ],
+      "allowed": [
+        "Declare typed constructor references and input asset kinds, renderer references, view-digest policy and proof-obligation references.",
+        "Renderer-backed surfaces may declare section/clause kinds only as rendered-view metadata.",
+        "Prompt-like or renderer-backed surfaces may declare generic authority slots.",
+        "Deterministic consumers may check declared metadata, schemas, references, digest policy, authority-slot and fallback-policy shape."
+      ],
+      "forbidden": [
+        "Creating a new language ontology from section/clause kinds.",
+        "Inferring prompt-clause, asset-obligation or behavior semantics from rendered text."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FAcceptance%20Criteria",
+          "start_line": 23,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-ASSET-SURFACE-003**: `AssetSurface` may declare typed constructor references, constructor input asset kinds, renderer references, rendered-view digest policy, and proof obligation refs for an asset kind.\n\n**REQ-L-GTL3-ASSET-SURFACE-004**: A renderer-backed asset surface may declare section kinds and clause kinds as subordinate rendered-view structure. Section and clause kinds are asset-interface metadata, not a new language ontology.\n\n**REQ-L-GTL3-ASSET-SURFACE-005**: A prompt-like or renderer-backed asset surface may declare generic authority slots. Each slot shall carry an opaque authority-kind ref and a disposition label of `normal`, `bounded_fallback`, or `forbidden_routine`. GTL owns the slot shape and disposition labels; downstream products own the specific authority-kind vocabulary and assignment policy.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FAcceptance%20Criteria",
+          "start_line": 37,
+          "end_line": 37,
+          "quote": "**REQ-L-GTL3-ASSET-SURFACE-010**: Deterministic interpreters may validate declared asset-surface metadata, schema, refs, digest policy, authority-slot shape, and fallback-policy shape. They shall not infer semantic meaning from rendered text to classify prompt clauses, asset obligations, or product behavior.\n"
+        }
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "tuner_policy_details",
+      "subject_key": "tuner_calibration_and_crystallization",
+      "uncertainty": "The supplied criteria name near-zero entropy, accountability, equivalence and admission policies but do not define thresholds or a full executable evaluation relation.",
+      "consequence": "Retain these as required policy/proof references; no annealing, promotion or runtime closure is established by this representation.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+          "start_line": 46,
+          "end_line": 56,
+          "quote": "**REQ-R-ABG3-TUNER-006**: The tuner shall be the constitutional annealing authority. An F_D-specific interior replacing a typed F_P generic shall exist only through an admitted annealing proposal carrying an admitted equivalence contract. Hand-tuned F_D interiors are unlawful; local-loop tightening arrives as tuner output derived from telemetry.\n\n**REQ-R-ABG3-TUNER-007**: An equivalence contract shall preserve outer contract identity, the declared obligation set, evidence classes, and replay comparability between the generic and annealed interiors. Post-ratification divergence between them shall be a typed defect routing to intake and reprice, including lawful demotion back to the F_P generic.\n\n**REQ-R-ABG3-TUNER-008**: Evaluator calibration proposals (retry burn, contract shape variance, ambiguity pressure, prompt/instruction-category adjustments) shall derive from telemetry and travel the same draft/ratify path as every other tuner write.\n\n**REQ-R-ABG3-TUNER-009**: Crystallization shall be tuner authority: lay-rail proposals (publish overlay extensions where per-contract composition entropy is near zero), pull-up proposals (retire non-discriminating declared edges), and abstraction proposals (name a proven composition as a new graph function entering the catalog) are declaration drafts behind the same ratification gate. Structure crystallizes where accountability pays for itself and dissolves where it does not.\n\n**REQ-R-ABG3-TUNER-010**: Mode and track signals shall be typed replay-derived observables, at minimum: per-contract route variance (composition entropy), retry density, repeated path shape, per-contract cost, closure rate, adapter-gap counts, and defect recurrence; plus the rail-break signal — a declared path halting on ambiguity projects a mode-selection signal before same-edge retry burn. Promotion and demotion proposals shall cite admitted signal rows by ref; F_P may propose interpretation, but narrative labels carry no authority (FPC-021).\n\n**REQ-R-ABG3-TUNER-011**: Mode interchangeability shall be a `CandidateFamily` choice: a declared interior and an emergent interior are two candidates over one outer contract, selected under visible policy. Tuner promote/demote drafts move contracts between modes; selection itself remains lawful published-alternative selection.\n"
+        }
+      ]
+    },
+    {
+      "key": "gtl_reload_dependencies",
+      "subject_key": "gtl_requirement_domain",
+      "uncertainty": "The reload anchor and family index point to detailed families whose complete bodies are not all in this chunk.",
+      "consequence": "The local domain summary is not an import or identity merge of those documents; re-enter their selected chunks for full law.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/README.md#GTL%20Requirement%20Families",
+          "start_line": 9,
+          "end_line": 21,
+          "quote": "Fast reload anchor:\n\n- `REQ-L-GTL3-CONTRACT-LAW-API.md` states GTL as the constitutional\n  contract-law API and graph algebra, then indexes the detailed requirement\n  families below. Load it first when reviewing GTL capability, ABG program\n  admission, downstream graph-asset conformance, target-carrier law, prompt\n  asset law, hook/plugin boundaries, `F_D`/`F_P`/`F_H` composition, recursive\n  graph functions, ABG runtime-operation configuration, or external tool gates.\n\nUse these families for semantic truth about language identity, attrs, contexts,\ngraphs, graph vectors, graph functions, hook surfaces, semantic work\ndeclarations, algebra, publication boundaries, epistemic notation over the\nratified ontology, and the GTL/ABG boundary.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/README.md#GTL%20Requirement%20Families%2FFamilies",
+          "start_line": 46,
+          "end_line": 77,
+          "quote": "- `REQ-L-GTL3-CONTRACT-LAW-API.md`\n- `REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md`\n- `REQ-L-GTL3-REQUIREMENTS-ALGEBRA.md`\n- `REQ-L-GTL3-LANGUAGE.md`\n- `REQ-L-GTL3-ATTRS.md`\n- `REQ-L-GTL3-CONTEXT.md`\n- `REQ-L-GTL3-GRAPH.md`\n- `REQ-L-GTL3-NODE.md`\n- `REQ-L-GTL3-ASSET-SURFACE.md`\n- `REQ-L-GTL3-GRAPHVECTOR.md`\n- `REQ-L-GTL3-INTERFACE.md`\n- `REQ-L-GTL3-OPERATOR.md`\n- `REQ-L-GTL3-EVALUATOR.md`\n- `REQ-L-GTL3-RULE.md`\n- `REQ-L-GTL3-GRAPHFUNCTION.md`\n- `REQ-L-GTL3-GRAPHFUNCTION-REFINEMENT.md`\n- `REQ-L-GTL3-HOOKS.md`\n- `REQ-L-GTL3-COMPUTE-NOTATION.md`\n- `REQ-L-GTL3-ROLE.md`\n- `REQ-L-GTL3-JOB.md`\n- `REQ-L-GTL3-IDENTITY.md`\n- `REQ-L-GTL3-COMPOSE.md`\n- `REQ-L-GTL3-C-ALGEBRA.md`\n- `REQ-L-GTL3-SUBSTITUTE.md`\n- `REQ-L-GTL3-RECURSE.md`\n- `REQ-L-GTL3-HOF.md`\n- `REQ-L-GTL3-LAWS.md`\n- `REQ-L-GTL3-TEMPORAL-PROPERTIES.md`\n- `REQ-L-GTL3-MODULE.md`\n- `REQ-L-GTL3-SELECTION-BOUNDARY.md`\n- `REQ-L-GTL3-SUBWORK.md`\n- `REQ-L-GTL3-SYNTHESIS.md`\n"
+        }
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-WORKER.md#REQ-R-ABG3-WORKER%20%E2%80%94%20Worker%20Identity%20And%20External%20Authority%20Hooks",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document title, status/date/category and derivation-link metadata are omitted from the domain interpretation; their historical method links and acceptance labels are not resolved or promoted into current authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document title, status/date/category and derivation-link metadata are omitted from the domain interpretation; their historical method links and acceptance labels are not resolved or promoted into current authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ATTRS.md#REQ-L-GTL3-ATTRS%20%E2%80%94%20Immutable%20Metadata%20Carriers",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document title, status/date/category and derivation-link metadata are omitted from the domain interpretation; their historical method links and acceptance labels are not resolved or promoted into current authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document title, status/date/category and derivation-link metadata are omitted from the domain interpretation; their historical method links and acceptance labels are not resolved or promoted into current authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-TUNER.md#REQ-R-ABG3-TUNER%20%E2%80%94%20Reflective%20Tuner%20And%20Annealing%20Authority%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "reflective_tuner",
+        "tuning_draft",
+        "tuner_observations",
+        "tuner_consumes_replay",
+        "tuner_produces_drafts",
+        "tuner_read_boundary",
+        "tuner_public_relations",
+        "tuner_write_and_judgment_separation",
+        "draft_ratification_gate",
+        "annealing_equivalence",
+        "tuner_calibration_and_crystallization",
+        "tuner_typed_signals",
+        "candidate_family_mode_choice",
+        "tuner_closure_proof",
+        "tuner_extension_latitude",
+        "tuner_policy_details"
+      ],
+      "reason": "Retains the interpreted law or navigation role and explicitly keeps its unresolved policy or cross-section dependencies."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/README.md#GTL%20Requirement%20Families",
+      "decision": "residual",
+      "keys": [
+        "gtl_requirement_domain",
+        "gtl_reload_dependencies"
+      ],
+      "reason": "Retains the interpreted law or navigation role and explicitly keeps its unresolved policy or cross-section dependencies."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/README.md#GTL%20Requirement%20Families%2FFamilies",
+      "decision": "residual",
+      "keys": [
+        "gtl_reload_dependencies"
+      ],
+      "reason": "Retains the interpreted law or navigation role and explicitly keeps its unresolved policy or cross-section dependencies."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-WORKER.md#REQ-R-ABG3-WORKER%20%E2%80%94%20Worker%20Identity%20And%20External%20Authority%20Hooks%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "worker"
+      ],
+      "reason": "Retains the substantive identity, boundary, conditions and obligations expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-WORKER.md#REQ-R-ABG3-WORKER%20%E2%80%94%20Worker%20Identity%20And%20External%20Authority%20Hooks%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "worker",
+        "worker_binding_admission",
+        "worker_concurrency_boundary"
+      ],
+      "reason": "Retains the substantive identity, boundary, conditions and obligations expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/README.md#GTL%20Requirement%20Families%2FScope",
+      "decision": "retained",
+      "keys": [
+        "gtl_domain_scope"
+      ],
+      "reason": "Retains the substantive identity, boundary, conditions and obligations expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "asset_surface"
+      ],
+      "reason": "Retains the substantive identity, boundary, conditions and obligations expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ASSET-SURFACE.md#REQ-L-GTL3-ASSET-SURFACE%20%E2%80%94%20Typed%20Asset%20Interface%20Law%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "asset_surface",
+        "asset_surface_subordination",
+        "asset_authority_slot_law",
+        "asset_admission_and_view_boundary",
+        "observer_asset_context",
+        "asset_surface_optional_interfaces"
+      ],
+      "reason": "Retains the substantive identity, boundary, conditions and obligations expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ATTRS.md#REQ-L-GTL3-ATTRS%20%E2%80%94%20Immutable%20Metadata%20Carriers%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "attrs"
+      ],
+      "reason": "Retains the substantive identity, boundary, conditions and obligations expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-ATTRS.md#REQ-L-GTL3-ATTRS%20%E2%80%94%20Immutable%20Metadata%20Carriers%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "attrs",
+        "attrs_carriage"
+      ],
+      "reason": "Retains the substantive identity, boundary, conditions and obligations expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "compute_algebra"
+      ],
+      "reason": "Retains the substantive identity, boundary, conditions and obligations expressed by this section."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-C-ALGEBRA.md#REQ-L-GTL3-C-ALGEBRA%20-%20Typed%20Compute%20Algebra%20And%20LLM%20Authoring%20Boundary%2FSorts%20And%20Judgments",
+      "decision": "retained",
+      "keys": [
+        "compute_sort_chain"
+      ],
+      "reason": "Retains the substantive identity, boundary, conditions and obligations expressed by this section."
+    }
+  ],
+  "limitations": [
+    "This is source-data interpretation only, with no tuner execution, Worker admission, GTL compilation, runtime closure or acceptance claim.",
+    "Header dates/status and historical derivation-link metadata are deliberately not modeled as current method authority.",
+    "The tuner threshold/equivalence details and full indexed GTL families require source re-entry. Local identities are not equated with similarly named concepts from other chunks."
+  ]
+}

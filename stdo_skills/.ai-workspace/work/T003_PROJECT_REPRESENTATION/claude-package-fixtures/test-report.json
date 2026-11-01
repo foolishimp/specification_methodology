@@ -1,0 +1,471 @@
+{
+  "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6",
+  "fixtures": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures",
+  "cases": [
+    {
+      "case": "unchanged full package",
+      "passed": true
+    },
+    {
+      "case": "missing local reference with refreshed inventory",
+      "passed": true
+    },
+    {
+      "case": "nested traversal to existing outside file",
+      "passed": true
+    },
+    {
+      "case": "encoded traversal to existing outside file",
+      "passed": true
+    },
+    {
+      "case": "explicit sibling dependency resolves within declared bundle",
+      "passed": true
+    },
+    {
+      "case": "existing escaping symlink with refreshed inventory",
+      "passed": true
+    },
+    {
+      "case": "clean install compatible update and installed-helper removal",
+      "passed": true
+    },
+    {
+      "case": "foreign same-name install is preserved",
+      "passed": true
+    },
+    {
+      "case": "hidden local addition preserved on removal",
+      "passed": true
+    },
+    {
+      "case": "empty local directory preserved on update",
+      "passed": true
+    },
+    {
+      "case": "modified installed file preserved on update",
+      "passed": true
+    },
+    {
+      "case": "missing installed file refuses removal",
+      "passed": true
+    },
+    {
+      "case": "wrong selected receipt preserves installation",
+      "passed": true
+    },
+    {
+      "case": "installed symlink preserved by refusal",
+      "passed": true
+    },
+    {
+      "case": "invalid source refuses update without target mutation",
+      "passed": true
+    },
+    {
+      "case": "malformed ownership receipt refused",
+      "passed": true
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/clean/workspace"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "install",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/clean/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d",
+        "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/new-compatible/package/skills/stdo-release-install/scripts/manage_install.py",
+        "update",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/new-compatible/package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/clean/workspace",
+        "--receipt-sha256",
+        "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "update",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/clean/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "3fdebd6e27f759f04bda14a8ee275c741f34a85c6159bd5144d348e3617690b9",
+        "source_inventory_sha256": "2e07c57937f5ebdb7144864c4ff008ca21208ff21762b5cb8759bce9331777ba"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/clean/workspace/.claude/skills/stdo-release-install/scripts/manage_install.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/clean/workspace",
+        "--receipt-sha256",
+        "3fdebd6e27f759f04bda14a8ee275c741f34a85c6159bd5144d348e3617690b9"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "remove",
+        "removed_receipt_sha256": "3fdebd6e27f759f04bda14a8ee275c741f34a85c6159bd5144d348e3617690b9"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/foreign/workspace"
+      ],
+      "exit": 1,
+      "result": {
+        "status": "refused",
+        "reason": "Installation collision; no receipt or same-name directory may be replaced"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/extra/workspace"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "install",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/extra/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d",
+        "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/extra/workspace",
+        "--receipt-sha256",
+        "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d"
+      ],
+      "exit": 1,
+      "result": {
+        "status": "refused",
+        "reason": "Installed file/directory set or content changed; preserve and reconcile"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/extra-dir/workspace"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "install",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/extra-dir/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d",
+        "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "update",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/extra-dir/workspace",
+        "--receipt-sha256",
+        "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d"
+      ],
+      "exit": 1,
+      "result": {
+        "status": "refused",
+        "reason": "Installed file/directory set or content changed; preserve and reconcile"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/modified/workspace"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "install",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/modified/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d",
+        "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "update",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/modified/workspace",
+        "--receipt-sha256",
+        "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d"
+      ],
+      "exit": 1,
+      "result": {
+        "status": "refused",
+        "reason": "Installed file/directory set or content changed; preserve and reconcile"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/missing-installed/workspace"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "install",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/missing-installed/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d",
+        "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/missing-installed/workspace",
+        "--receipt-sha256",
+        "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d"
+      ],
+      "exit": 1,
+      "result": {
+        "status": "refused",
+        "reason": "Installed file/directory set or content changed; preserve and reconcile"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/wrong-receipt/workspace"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "install",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/wrong-receipt/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d",
+        "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/wrong-receipt/workspace",
+        "--receipt-sha256",
+        "0000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "exit": 1,
+      "result": {
+        "status": "refused",
+        "reason": "Selected ownership receipt is absent or changed"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/installed-link/workspace"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "install",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/installed-link/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d",
+        "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/installed-link/workspace",
+        "--receipt-sha256",
+        "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d"
+      ],
+      "exit": 1,
+      "result": {
+        "status": "refused",
+        "reason": "Symlink is not a bundle resource: /Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/installed-link/workspace/.claude/skills/stdo-continuation/extra"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/corrupt-update/workspace"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "install",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/corrupt-update/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d",
+        "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/corrupt-source/package/skills/stdo-release-install/scripts/manage_install.py",
+        "update",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/corrupt-source/package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/corrupt-update/workspace",
+        "--receipt-sha256",
+        "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d"
+      ],
+      "exit": 1,
+      "result": {
+        "status": "refused",
+        "reason": "Package refused: Exact inventory population or digest mismatch; Invalid name/description frontmatter: stdo-continuation"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/malformed-receipt/workspace"
+      ],
+      "exit": 0,
+      "result": {
+        "status": "ok",
+        "action": "install",
+        "receipt": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/malformed-receipt/workspace/.claude/stdo-skills-claude.receipt.json",
+        "receipt_sha256": "81b6095c91bfbad1706a312836667fc384f25bb238e4704447224f6ad8eacf2d",
+        "source_inventory_sha256": "7ebc72ee3bf6e00573314c2e934d4a274ab57c0d51b55ae2e6ec641ee0652fd6"
+      }
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/claude-package-fixtures/malformed-receipt/workspace",
+        "--receipt-sha256",
+        "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      ],
+      "exit": 1,
+      "result": {
+        "status": "refused",
+        "reason": "Receipt does not identify this complete owned bundle"
+      }
+    }
+  ]
+}

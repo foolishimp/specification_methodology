@@ -4,6 +4,12 @@ Provide concrete implementations of the STDO axiomatic calculus that preserve
 source-owned identities, constraints, permitted variation and unresolved meaning
 while making declared symbolic models easier to inspect and acquire.
 
+Make those capabilities usable on a user's own STDO project: document and
+inspect its axiomatic program, check declared properties, and supply selected
+context to LLM construction and review. Preserve independently owned leaf
+projects and explicit composition edges. STDO is an application of the tools;
+the tools' usefulness must extend to other project subjects.
+
 Provide source-linked formal definitions and checked proofs for declared
 calculus fragments, with executable applications that preserve the exact model
 and expose the boundary between formal propositions and semantic interpretation.

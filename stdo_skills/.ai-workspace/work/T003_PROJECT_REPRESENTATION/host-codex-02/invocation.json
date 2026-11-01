@@ -1,0 +1,29 @@
+{
+  "host": "codex",
+  "command": [
+    "codex",
+    "exec",
+    "--json",
+    "--ephemeral",
+    "--sandbox",
+    "workspace-write",
+    "--skip-git-repo-check",
+    "--cd",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/host-codex-02/invoice-project",
+    "--output-last-message",
+    "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/host-codex-02/last-message.txt",
+    "-c",
+    "features.multi_agent=false",
+    "-c",
+    "features.apps=false",
+    "-c",
+    "features.memories=false",
+    "-c",
+    "web_search=\"disabled\"",
+    "-"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/host-codex-02/invoice-project",
+  "timeout_seconds": 240,
+  "provider_sha256": "c6463bfed3e2e895bcfc8439bc6d3974206e2917b9ecf0fe1a96479bfbd7dec1",
+  "prompt_sha256": "16452de48ee62ad136c93bdb24b161348f53cbb3fb7c403115082370ec3efc7b"
+}

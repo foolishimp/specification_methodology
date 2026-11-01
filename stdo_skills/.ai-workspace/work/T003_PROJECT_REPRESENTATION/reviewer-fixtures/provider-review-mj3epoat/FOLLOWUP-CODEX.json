@@ -1,0 +1,85 @@
+{
+  "kind": "bounded-independent-source-fidelity-readback",
+  "composition": {
+    "status": "matched",
+    "manifest_sha256": "d3fdbea6ce097f12fd4c952fb892b73495cbcfcecb3acfb3cb5147202e1b4c06",
+    "members_verified": 20,
+    "entry": "a_c/build_tenants/graphify/code/ac_project.py",
+    "callable_contract": "CLI help exposes prepare/task/submit/build/status, direct/graphify-ac and explicit optional formal arguments",
+    "relation_binding": "stdo_skills.json selects A_C_REPRESENTATION.md and this manifest; T-002 relation remains separate"
+  },
+  "codex": {
+    "run": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/host-codex-02/invoice-project/.ai-workspace/representations/invoice-01",
+    "model": {
+      "id": "urn:a-c:generation:743c496275bceb2f5526809d:model:ed7601a01e033e480cb2e864",
+      "sha256": "d9c25cdf8cf5e6823c7a168425058540de2f8dd83da3561bb1a81a4e5ef1f3e3"
+    },
+    "model_file_sha256": "5bc7830c7d62dfadf1f90420558b32ed452b621a647f3e29a84d78ab03b2035e",
+    "source_manifest_sha256": "450bd2567487e48dbcf018591e72c7c0b5ee43904e0b9c9b6d135b657349e0d6",
+    "source_files": [
+      {
+        "bytes": 86,
+        "path": "specification/GOALS.md",
+        "sha256": "5da329090378c94d00d2f61e3127119c6e1bbdb8b068d32536f3d4df85f05369"
+      },
+      {
+        "bytes": 91,
+        "path": "specification/INTENT.md",
+        "sha256": "b4535439ab59d42915940e5150eea1bd6cc74fa6a71e49a4262b54741057704c"
+      },
+      {
+        "bytes": 341,
+        "path": "specification/PRODUCT.md",
+        "sha256": "beb49c0804c3c3546597b61397144567b56ea157184ec64873ca8d9c61eb865e"
+      }
+    ],
+    "source_unchanged_and_frozen_bytes_match": true,
+    "artifact_pins_and_carrier_match": true,
+    "source_derived_expectations": [
+      {
+        "criterion": "Preserve every supplied decimal digit",
+        "source": "specification/PRODUCT.md:4",
+        "outcome": "retained without weakening",
+        "records": [
+          "urn:a-c:generation:743c496275bceb2f5526809d:record:9451db9faf9b15dbc1fc97f4a6e3fdcd"
+        ]
+      },
+      {
+        "criterion": "Forbid binary floating-point conversion",
+        "source": "specification/PRODUCT.md:4",
+        "outcome": "retained as forbidden latitude with no invented allowed alternative",
+        "records": [
+          "urn:a-c:generation:743c496275bceb2f5526809d:record:48f24b950bb335fde1433e29fa12fa43"
+        ]
+      },
+      {
+        "criterion": "For zero rows emit header alone",
+        "source": "specification/PRODUCT.md:5",
+        "outcome": "retained with exact zero-row condition and stated column order",
+        "records": [
+          "urn:a-c:generation:743c496275bceb2f5526809d:record:da5cd867d457a3af1e68bd7a0e0a26b4"
+        ]
+      },
+      {
+        "criterion": "Rounding remains unresolved; invent no rule",
+        "source": "specification/PRODUCT.md:9",
+        "outcome": "retained as constraint, forbidden latitude and residual; no mode, scale, trigger or decimal-preservation exception selected",
+        "records": [
+          "urn:a-c:generation:743c496275bceb2f5526809d:record:20256bec462eae80316cb649b1d67b96",
+          "urn:a-c:generation:743c496275bceb2f5526809d:record:71e8fcbb68020fc179e9118d5c8cafae",
+          "urn:a-c:generation:743c496275bceb2f5526809d:record:9c3008a68ff4b13eb45bd0a3d3969c34"
+        ]
+      }
+    ],
+    "additional_observation": "CSV column order is retained. Extra reproducibility residual identifies a missing operational criterion and grants no extra formatting rule.",
+    "verdict": "No material fidelity defect found for the requested four distinctions in the complete model.",
+    "limits": [
+      "No selected-context closure or full T-015 qualification claim.",
+      "No native host invocation or build performed by reviewer.",
+      "Timed-out native run retains a built artifact; complete user-facing return is a separate host observation.",
+      "No Lean execution claimed; retained gate says not_performed."
+    ]
+  },
+  "claude_at_observation": "Initial retained status is authoring_required with one pending chunk; resume trial in progress.",
+  "effects": "Only this observation file is written in reviewer-owned fixture subtree."
+}

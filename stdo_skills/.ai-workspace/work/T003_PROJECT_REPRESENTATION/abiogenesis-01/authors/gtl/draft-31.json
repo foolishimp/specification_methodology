@@ -1,0 +1,1017 @@
+{
+  "concepts": [
+    {
+      "key": "temporal_property",
+      "label": "Temporal property Rule",
+      "definition": "GTL Rule(kind=temporal_property) with formula, consequence class, gate point and identity as Rule.config data; dynamic authoring-loop enforcement over ABG replay, not a new structural type, rule surface or property carrier.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 6,
+          "end_line": 16,
+          "quote": "GTL declares temporal-logic properties over the ABG event trace as a Rule\nkind. ABG checks them as total deterministic functions over finite replay\ntraces with three-valued verdicts. This family is the dynamic enforcement\nhalf of the authoring-loop law (`REQ-L-GTL3-LAWS`); the static half owns\nauthoring diagnostics.\n\n**REQ-L-GTL3-TEMPORAL-PROPERTIES-001**: A temporal property is a GTL `Rule`\nwith `kind: \"temporal_property\"`. The property formula, consequence class,\ngate point, and identity travel as data in `Rule.config`. The property layer\nintroduces no rival GTL ontology: no new first-class structural type, no\nsecond rule surface, and no property carrier outside `Rule`.\n"
+        }
+      ]
+    },
+    {
+      "key": "temporal_verdict",
+      "label": "Temporal property verdict",
+      "definition": "Typed replay-visible result over a finite trace with satisfied/violated/undetermined status and separately carried vacuity, antecedent witness count, implicated event refs, formula digest, property ref, evaluation point and replay identity.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 35,
+          "end_line": 46,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-004**: Verdicts are three-valued over the\nfinite trace: `satisfied`, `violated`, `undetermined`. Past-time formulas\nevaluate stepwise and are decidable at every step. Future-time obligations\nthat the finite trace has not yet decided are `undetermined`, never\nimplicitly satisfied and never implicitly violated. Satisfied-by-default at\nend of trace is masquerade.\n\n**REQ-L-GTL3-TEMPORAL-PROPERTIES-005**: Vacuity is first-class. For an\nimplication-shaped property the checker counts antecedent witnesses; a\nverdict with zero witnesses is `vacuous`, and a vacuous verdict shall not\ncount as `satisfied` for any gate, closure, release, or downstream\ninterpretation. Witness counts are carried on the verdict.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 63,
+          "end_line": 69,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-008**: Property verdicts are typed,\nreplay-visible carriers emitted through the canonical event path: a verdict\nevent preserves property ref, formula digest, verdict status, vacuity,\nwitness count, implicated event refs, evaluation point, and replay identity.\nVerdicts are projections over admitted events; they shall not re-derive or\nwrite residual, continuation, coverage, or closure truth — they read those\nsurfaces and report against them.\n"
+        }
+      ]
+    },
+    {
+      "key": "mapping_domain",
+      "label": "GTL-to-runtime bridge law",
+      "definition": "Requirement domain for capability translation, GTL/runtime mapping and bridge provenance between constitutional declarations and ABG realization.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/README.md#Mapping%20Requirement%20Families",
+          "start_line": 3,
+          "end_line": 5,
+          "quote": "This domain owns the bridge law between GTL constitutional declarations and ABG runtime realization.\n\nUse these families where the project needs explicit mapping, capability, or provenance rules that sit between language law and engine behavior.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/README.md#Mapping%20Requirement%20Families%2FScope",
+          "start_line": 9,
+          "end_line": 11,
+          "quote": "- capability translation\n- GTL-to-runtime mapping surfaces\n- bridge provenance requirements\n"
+        }
+      ]
+    },
+    {
+      "key": "tenant_manifest",
+      "label": "Tenant conformance manifest",
+      "definition": "Versioned engine/build-tenant declaration of validated/traversed GTL constructs and realized public capability contracts, bound to exact public contract/capability identities.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FPurpose",
+          "start_line": 14,
+          "end_line": 16,
+          "quote": "Engines and build tenants publish a versioned conformance manifest so GTL\nprograms and installed consumers can determine mapping fidelity against exact\npublic contract and capability identities.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 20,
+          "end_line": 28,
+          "quote": "**REQ-M-GTL3-CAPABILITY-001**: An ABIogenesis-conformant engine or build tenant shall publish a versioned tenant-conformance manifest declaring which GTL constructs it validates and traverses and which public capability contracts it realizes.\n\n**REQ-M-GTL3-CAPABILITY-002**: Tenant-conformance manifests shall align with the active GTL, ABG, and mapping requirement families and shall cite exact published public contract and capability identities projected from one accepted capability-definition graph rather than implementation-language, source-path, private design identities, or a tenant-authored capability vocabulary.\n\n**REQ-M-GTL3-CAPABILITY-003**: GraphFunction effects declarations shall be matchable against engine capability profiles for dispatch validation.\n\n**REQ-M-GTL3-CAPABILITY-004**: An ABG tenant-conformance manifest shall declare its schema version, manifest identity, manifest version, digest, engine identity, engine version, the exact accepted capability-definition graph identity and digest, and the exact public contract and capability identities against which the tenant claims realized conformance.\n\n**REQ-M-GTL3-CAPABILITY-005**: The manifest shall identify the supported GTL program, declaration, and GraphFunction publication contracts, ABG runtime event/result/replay contracts, catalog and installed-product contracts, derived public function contracts, and worker effect/result capability contracts needed by the tenant. These realized-support rows shall project the accepted capability-definition graph and exact public catalog; they shall not redefine either.\n"
+        }
+      ]
+    },
+    {
+      "key": "engine_mapping",
+      "label": "Engine mapping contract",
+      "definition": "Language-preserving mapping of GTL Programs to canonical ABG engine surfaces with permissible alternate engine mappings.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-MAPPING.md#REQ-M-GTL3-MAPPING%20%E2%80%94%20Engine%20Mapping%20Contract%2FPurpose",
+          "start_line": 14,
+          "end_line": 14,
+          "quote": "Define how GTL programs map onto engine surfaces. ABG is canonical; other engines are alternate targets.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-MAPPING.md#REQ-M-GTL3-MAPPING%20%E2%80%94%20Engine%20Mapping%20Contract%2FAcceptance%20Criteria",
+          "start_line": 18,
+          "end_line": 22,
+          "quote": "**REQ-M-GTL3-MAPPING-001**: GTL programs shall be mappable onto ABG as the canonical target engine surface.\n\n**REQ-M-GTL3-MAPPING-002**: Other engines (Temporal, Prefect, Step Functions) may serve as alternate mapping targets with full, partial, or capability-profile mappings.\n\n**REQ-M-GTL3-MAPPING-003**: The mapping layer shall preserve GTL semantics — engine-specific behavior shall not alter language-level truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "authority_mapping",
+      "label": "GTL HoG ABG authority mapping",
+      "definition": "Lossless path from authored GTL through non-lowering validation and direct HoG traversal to ABG runtime truth; workspace, adapters, compiler projections, bindings and helpers cannot become rival Programs/executors.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FPurpose",
+          "start_line": 12,
+          "end_line": 15,
+          "quote": "Define the lossless authority mapping from authored GTL through non-lowering\nvalidation, direct HoG traversal, and ABG runtime truth. This family prevents a\nworkspace, adapter, compiler projection, implementation binding, or runtime\nhelper from becoming a rival program or executor.\n"
+        }
+      ]
+    },
+    {
+      "key": "gtl_program",
+      "label": "GTL program",
+      "definition": "Graph composition owning topology, starts, callable membership, Roles, compute, policies, effects/results, proofs and publication metadata; distinct from GraphFunction, materialized Graph, workspace, HoG invocation and runtime episode.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 28,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-001**: GTL program, GraphFunction, materialized\nGraph, workspace, HoG invocation, and ABG runtime episode shall remain distinct.\nA GTL graph composition is the program. GraphFunction is its sole named\ncallable work contract. A workspace supplies mutable instance state. HoG\ntraverses. ABG admits runtime truth.\n\n**REQ-M-GTL3-PROGRAM-TRAVERSAL-002**: A GTL program shall own topology,\nprogram starts, callable membership, roles, compute composition, policy refs,\neffect and result contracts, proof obligations, and publication metadata. It\nshall not emit runtime events or acquire truth merely by being authored.\n"
+        }
+      ]
+    },
+    {
+      "key": "workspace",
+      "label": "Workspace",
+      "definition": "Mutable instance surface for files, data, config, observations, generated artifacts and archives, without Program, callable-selection, traversal-state, closure or controller authority.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 23,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-001**: GTL program, GraphFunction, materialized\nGraph, workspace, HoG invocation, and ABG runtime episode shall remain distinct.\nA GTL graph composition is the program. GraphFunction is its sole named\ncallable work contract. A workspace supplies mutable instance state. HoG\ntraverses. ABG admits runtime truth.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 33,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-003**: A workspace shall provide files, data,\nconfiguration, observations, generated artifacts, and run archives. It shall\nnot become program authority, callable-selection truth, traversal state,\nclosure truth, or a controller.\n"
+        }
+      ]
+    },
+    {
+      "key": "graph_function",
+      "label": "GraphFunction",
+      "definition": "Sole named callable work contract within admitted Program/catalog membership, reusable/bindable/composable/substitutable/refinable, not the whole Product Program.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 23,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-001**: GTL program, GraphFunction, materialized\nGraph, workspace, HoG invocation, and ABG runtime episode shall remain distinct.\nA GTL graph composition is the program. GraphFunction is its sole named\ncallable work contract. A workspace supplies mutable instance state. HoG\ntraverses. ABG admits runtime truth.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 62,
+          "end_line": 65,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-009**: A GraphFunction shall not be relabeled as\nthe whole product program. It remains reusable, bindable, composable,\nsubstitutable, refinable, and callable only through admitted program and catalog\nmembership.\n"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "property_yields_verdict",
+      "kind": "checked_as",
+      "source_key": "temporal_property",
+      "target_key": "temporal_verdict",
+      "meaning": "A declared property is deterministically evaluated over finite replay into a typed, provenance-preserving verdict without acquiring runtime authority.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 6,
+          "end_line": 8,
+          "quote": "GTL declares temporal-logic properties over the ABG event trace as a Rule\nkind. ABG checks them as total deterministic functions over finite replay\ntraces with three-valued verdicts. This family is the dynamic enforcement\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 63,
+          "end_line": 69,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-008**: Property verdicts are typed,\nreplay-visible carriers emitted through the canonical event path: a verdict\nevent preserves property ref, formula digest, verdict status, vacuity,\nwitness count, implicated event refs, evaluation point, and replay identity.\nVerdicts are projections over admitted events; they shall not re-derive or\nwrite residual, continuation, coverage, or closure truth — they read those\nsurfaces and report against them.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 88,
+          "end_line": 92,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-011**: The property checker is a total\ndeterministic function over the finite replay trace and the declared\nproperty set. It consumes the one event-calculus projection for fluent\natoms. Checker outcomes are typed; a checker error is a blocked evaluation\nwith a typed reason, never a silent skip.\n"
+        }
+      ]
+    },
+    {
+      "key": "callable_member_of_program",
+      "kind": "requires_membership_in",
+      "source_key": "graph_function",
+      "target_key": "gtl_program",
+      "meaning": "Callable reuse and execution require admitted Program and catalog membership; callable is not relabeled as the whole Program.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 62,
+          "end_line": 65,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-009**: A GraphFunction shall not be relabeled as\nthe whole product program. It remains reusable, bindable, composable,\nsubstitutable, refinable, and callable only through admitted program and catalog\nmembership.\n"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "key": "temporal_replay_atom_domain",
+      "applies_to_keys": [
+        "temporal_property"
+      ],
+      "statement": "Atoms quantify only over admitted replay: event occurrence by admitted kind with optional field-equality guards, or fluent hold from RUNTIME_FLUENT_NAME_VALUES via the single runtime Event Calculus. No node/workspace state, Worker shape or nonreplay surface quantification. New propositions extend the one fluent vocabulary with Event Calculus axioms, never a second vocabulary.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 18,
+          "end_line": 26,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-002**: Property atoms quantify over the\nreplay trace only. An atom is either an event-occurrence atom (an admitted\nruntime event kind, optionally guarded by field-equality pairs) or a\nfluent-hold atom naming a fluent from the one runtime event-calculus\nvocabulary (`RUNTIME_FLUENT_NAME_VALUES`). Properties shall not quantify\nover node state, workspace state, worker output shape, or any surface not\nderived from admitted replay events. New propositions enter by extending the\none fluent vocabulary with axioms in the one event calculus, never by a\nsecond vocabulary.\n"
+        }
+      ]
+    },
+    {
+      "key": "temporal_closed_grammar",
+      "applies_to_keys": [
+        "temporal_property"
+      ],
+      "statement": "Allowed operators are not/and/or/implies, yesterday/once/historically/since, and next/eventually/globally/until. Unknown operators/atoms or malformed formula fail admission closed with a typed issue, never vacuous satisfaction.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 28,
+          "end_line": 33,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-003**: The formula grammar is a closed\noperator set: boolean `not`, `and`, `or`, `implies`; past-time `yesterday`,\n`once`, `historically`, `since`; future-time `next`, `eventually`,\n`globally`, `until`. An unknown operator, malformed formula, or unknown atom\nfails admission closed with a typed issue; it shall not degrade to a\nvacuously satisfied property.\n"
+        }
+      ]
+    },
+    {
+      "key": "finite_trace_three_valued_law",
+      "applies_to_keys": [
+        "temporal_verdict"
+      ],
+      "statement": "Past-time formulas are stepwise decidable at every step. Undecided future obligations on finite traces are undetermined, neither satisfied nor violated; end-of-trace default satisfaction is forbidden. Implication properties count antecedent witnesses; zero witnesses marks vacuity and cannot count as satisfied for gate, closure, release or downstream interpretation.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 35,
+          "end_line": 46,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-004**: Verdicts are three-valued over the\nfinite trace: `satisfied`, `violated`, `undetermined`. Past-time formulas\nevaluate stepwise and are decidable at every step. Future-time obligations\nthat the finite trace has not yet decided are `undetermined`, never\nimplicitly satisfied and never implicitly violated. Satisfied-by-default at\nend of trace is masquerade.\n\n**REQ-L-GTL3-TEMPORAL-PROPERTIES-005**: Vacuity is first-class. For an\nimplication-shaped property the checker counts antecedent witnesses; a\nverdict with zero witnesses is `vacuous`, and a vacuous verdict shall not\ncount as `satisfied` for any gate, closure, release, or downstream\ninterpretation. Witness counts are carried on the verdict.\n"
+        }
+      ]
+    },
+    {
+      "key": "temporal_consequence_classes",
+      "applies_to_keys": [
+        "temporal_property",
+        "temporal_verdict"
+      ],
+      "statement": "Every property declares consequence class. safety_gate is past-time decidable and may block online at its declared point; a violated safety may not silently pass. liveness_residual never blocks; violated and undetermined results become pressure through existing residual carriers. A blocking liveness verdict is unlawful.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 48,
+          "end_line": 54,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-006**: Every property declares a\nconsequence class. `safety_gate` properties must be past-time decidable and\nmay block online at their declared gate point. `liveness_residual`\nproperties never block: `violated` and `undetermined` verdicts route to\nresidual pressure through the existing residual carriers. A liveness verdict\nthat blocks traversal, or a safety verdict that silently passes on\nviolation, is unlawful.\n"
+        }
+      ]
+    },
+    {
+      "key": "temporal_gate_points",
+      "applies_to_keys": [
+        "temporal_property"
+      ],
+      "statement": "Closed gate vocabulary is dispatch and closure. Dispatch evaluates prefix before the F_P arm and a violated safety property blocks with typed reason. Closure evaluates at edge close and violation contributes no-close pressure. Blocking is replay-visible and names property and implicated refs.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 56,
+          "end_line": 61,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-007**: Gate points are declared, closed\nvocabulary: `dispatch` (evaluated against the trace prefix before an F_P\ndispatch arm fires; a violated safety property blocks that dispatch with a\ntyped reason) and `closure` (evaluated at edge close; a violated safety\nproperty contributes no-close pressure). Blocking is replay-visible; a\nproperty-blocked step names the property and the implicated refs.\n"
+        }
+      ]
+    },
+    {
+      "key": "temporal_verdict_nonauthority",
+      "applies_to_keys": [
+        "temporal_verdict"
+      ],
+      "statement": "Emit canonical-path verdict events with property/formula/status/vacuity/witness/implicated-event/evaluation/replay fields. Verdicts are projections over admitted events that read/report residual, continuation, coverage and closure surfaces; they cannot re-derive or write that truth.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 63,
+          "end_line": 69,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-008**: Property verdicts are typed,\nreplay-visible carriers emitted through the canonical event path: a verdict\nevent preserves property ref, formula digest, verdict status, vacuity,\nwitness count, implicated event refs, evaluation point, and replay identity.\nVerdicts are projections over admitted events; they shall not re-derive or\nwrite residual, continuation, coverage, or closure truth — they read those\nsurfaces and report against them.\n"
+        }
+      ]
+    },
+    {
+      "key": "temporal_ingress_transition",
+      "applies_to_keys": [
+        "temporal_property"
+      ],
+      "statement": "Author properties in GTL Module.rules. Current ingress is one engine-start passthrough authority forwarded by every public seam until execution-basis-carried Module rules become the named successor. No second side door. Startup property-set admission fails closed on malformed grammar/atoms.",
+      "conditions": [
+        "Engine-start passthrough remains ingress until the named basis-carried successor."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 71,
+          "end_line": 76,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-009**: The GTL module `rules` list is the\nauthoring home for temporal properties. Runtime ingress is the engine-start\npassthrough family (one authority; every public seam forwards it) until the\nexecution basis carries module rules directly — basis-carried rules are the\nnamed successor, and a second ingress side-door is unlawful. Startup\nadmission of a property set is fail-closed per `-003`.\n"
+        }
+      ]
+    },
+    {
+      "key": "temporal_proof_before_enforcement",
+      "applies_to_keys": [
+        "temporal_property"
+      ],
+      "statement": "Standing first properties cover dispatch-manifest lineage, closure-coverage on declared carry-through edges, no Worker call without startup, no coverage from rejected payloads and selection-authority. Gate enforcement follows mutation differential (trace edit flips satisfied to violated) and vacuity differential (witness removal is vacuous, not satisfied); liveness_residual additionally requires an undetermined-routing differential with no block and residual pressure.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 78,
+          "end_line": 86,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-010**: The standing audit gates are the\nfirst declared property set: dispatch-requires-manifest lineage,\nclosure-requires-coverage on declared carry-through edges, no worker\ninvocation without admitted startup, rejected payloads mint no coverage\ntruth, and selection-requires-authority. Enforcement follows proof: a\nproperty gates only after it carries a mutation differential (trace edit\nflips `satisfied` to `violated`), a vacuity differential (witness removal\nyields `vacuous`, not `satisfied`), and — for `liveness_residual` — an\nundetermined-routing differential (no block, residual pressure present).\n"
+        }
+      ]
+    },
+    {
+      "key": "temporal_total_checker",
+      "applies_to_keys": [
+        "temporal_property",
+        "temporal_verdict"
+      ],
+      "statement": "Checker is total deterministic over finite replay trace plus declared properties, consuming the one Event Calculus projection for fluents. Checker error becomes blocked evaluation with typed reason, never silent skip. Temporal properties read no clocks and preserve T-119 scheduling typed-exempt disposition pending timer-provider seam.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 88,
+          "end_line": 97,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-011**: The property checker is a total\ndeterministic function over the finite replay trace and the declared\nproperty set. It consumes the one event-calculus projection for fluent\natoms. Checker outcomes are typed; a checker error is a blocked evaluation\nwith a typed reason, never a silent skip.\n\n**REQ-L-GTL3-TEMPORAL-PROPERTIES-012**: This family leaves the T-119\nscheduling-law census disposition unchanged: scheduling enforcement remains\ntyped-exempt pending the timer-provider seam. Temporal properties quantify\nover traces, not clocks, and introduce no wall-clock reads.\n"
+        }
+      ]
+    },
+    {
+      "key": "uniform_envelope_temporal_amendment",
+      "applies_to_keys": [
+        "temporal_property"
+      ],
+      "statement": "Dispatch gate on the uniform C-call envelope binds c_call_fibre_selected with single-event where guards under CCALL-010, requiring/implying no cross-event join. fp_dispatch_requested antecedent remains lawful only for pre-envelope replay through the CCALL-011 projection adapter.",
+      "conditions": [
+        "Use c_call_fibre_selected for the uniform C-call envelope."
+      ],
+      "exceptions": [
+        "Pre-envelope replay may use fp_dispatch_requested through the named adapter."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law%2FAmendment%20%28T-200%20P0%29",
+          "start_line": 101,
+          "end_line": 104,
+          "quote": "-007 gate points: on the uniform C-call envelope, the dispatch gate\npoint binds to `c_call_fibre_selected` with single-event where-guards\n(REQ-R-ABG3-CCALL-010); no cross-event join is required or implied. The fp_dispatch_requested antecedent remains\nlawful for pre-envelope replay via the CCALL-011 projection adapter.\n"
+        }
+      ]
+    },
+    {
+      "key": "manifest_exact_basis",
+      "applies_to_keys": [
+        "tenant_manifest"
+      ],
+      "statement": "Align with active GTL/ABG/mapping requirements and exact public identities projected from one accepted capability-definition graph, never source path, language, private design identity or tenant capability vocabulary. Manifest carries schema version, identity/version/digest, engine identity/version, exact accepted graph identity/digest and realized public capability/contract identities.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 20,
+          "end_line": 26,
+          "quote": "**REQ-M-GTL3-CAPABILITY-001**: An ABIogenesis-conformant engine or build tenant shall publish a versioned tenant-conformance manifest declaring which GTL constructs it validates and traverses and which public capability contracts it realizes.\n\n**REQ-M-GTL3-CAPABILITY-002**: Tenant-conformance manifests shall align with the active GTL, ABG, and mapping requirement families and shall cite exact published public contract and capability identities projected from one accepted capability-definition graph rather than implementation-language, source-path, private design identities, or a tenant-authored capability vocabulary.\n\n**REQ-M-GTL3-CAPABILITY-003**: GraphFunction effects declarations shall be matchable against engine capability profiles for dispatch validation.\n\n**REQ-M-GTL3-CAPABILITY-004**: An ABG tenant-conformance manifest shall declare its schema version, manifest identity, manifest version, digest, engine identity, engine version, the exact accepted capability-definition graph identity and digest, and the exact public contract and capability identities against which the tenant claims realized conformance.\n"
+        }
+      ]
+    },
+    {
+      "key": "manifest_support_contracts",
+      "applies_to_keys": [
+        "tenant_manifest"
+      ],
+      "statement": "Identify supported GTL Program/declaration/GraphFunction publication, ABG event/result/replay, catalog/installed-Product, derived public functions and Worker effect/result capability contracts. Support rows project accepted definition graph/public catalog and redefine neither. Each row names stable capability identity, owning graph row, owning public contract identity/version/digest, supported disposition and required dependency identities. Derive rows from accepted graph/catalog without source/design history.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 28,
+          "end_line": 28,
+          "quote": "**REQ-M-GTL3-CAPABILITY-005**: The manifest shall identify the supported GTL program, declaration, and GraphFunction publication contracts, ABG runtime event/result/replay contracts, catalog and installed-product contracts, derived public function contracts, and worker effect/result capability contracts needed by the tenant. These realized-support rows shall project the accepted capability-definition graph and exact public catalog; they shall not redefine either.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 62,
+          "end_line": 77,
+          "quote": "**REQ-M-GTL3-CAPABILITY-014**: The exact public contract and capability\nidentities claimed by a tenant shall be projections of one accepted capability-\ndefinition graph and shall resolve through the installed product's\n`publicContractCatalog` governed by `REQ-P-PUBLIC-CONTRACTS`. The tenant\nmanifest shall bind both authorities by identity, version, and digest.\nRequirement names, feature prose, package presence, test names, private export\nscans, and separately maintained capability enums shall not substitute for\nthose rows.\n\n**REQ-M-GTL3-CAPABILITY-015**: Each claimed capability row shall identify its\nstable capability identity, owning definition-graph row, owning public contract\nidentity/version/digest, supported disposition, and any required dependent\ncapability identities. A tenant builder shall derive these rows from the\naccepted capability-definition graph and public contract catalog without\nconsulting source or design history. The tenant-conformance manifest publishes\nrealized support evidence; it is not a second capability-definition authority.\n"
+        }
+      ]
+    },
+    {
+      "key": "conformance_claim_scope",
+      "applies_to_keys": [
+        "tenant_manifest"
+      ],
+      "statement": "Bind every claim to exact manifest identity/version/digest and exact graph/public-catalog basis, both authorities bound by identity/version/digest and resolved through installed publicContractCatalog under PUBLIC-CONTRACTS. Claim only listed realized identities. Package presence, unversioned feature names, unrelated tests, duplicate local definitions, requirement prose, private export scans or separate capability enums prove no conformance.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 30,
+          "quote": "**REQ-M-GTL3-CAPABILITY-006**: A conformance claim shall bind to one exact manifest identity, version, and digest and to the exact accepted capability-definition graph and public-contract-catalog basis from which its rows derive. It shall claim only the listed realized contract and capability identities; package presence, an unversioned feature name, an unrelated test pass, or a duplicate tenant-local definition shall not imply conformance.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 62,
+          "end_line": 77,
+          "quote": "**REQ-M-GTL3-CAPABILITY-014**: The exact public contract and capability\nidentities claimed by a tenant shall be projections of one accepted capability-\ndefinition graph and shall resolve through the installed product's\n`publicContractCatalog` governed by `REQ-P-PUBLIC-CONTRACTS`. The tenant\nmanifest shall bind both authorities by identity, version, and digest.\nRequirement names, feature prose, package presence, test names, private export\nscans, and separately maintained capability enums shall not substitute for\nthose rows.\n\n**REQ-M-GTL3-CAPABILITY-015**: Each claimed capability row shall identify its\nstable capability identity, owning definition-graph row, owning public contract\nidentity/version/digest, supported disposition, and any required dependent\ncapability identities. A tenant builder shall derive these rows from the\naccepted capability-definition graph and public contract catalog without\nconsulting source or design history. The tenant-conformance manifest publishes\nrealized support evidence; it is not a second capability-definition authority.\n"
+        }
+      ]
+    },
+    {
+      "key": "conformance_failure_and_evolution",
+      "applies_to_keys": [
+        "tenant_manifest"
+      ],
+      "statement": "Match callable effects against engine profiles for dispatch. Incompatible/unresolved contract, capability, manifest dependency or declared effect is an explicit conformance gap and fails closed before affected execution admission. Changed published meaning requires a new versioned manifest claim; replay/qualification preserves exact execution manifest identity/digest.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 24,
+          "end_line": 24,
+          "quote": "**REQ-M-GTL3-CAPABILITY-003**: GraphFunction effects declarations shall be matchable against engine capability profiles for dispatch validation.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 32,
+          "end_line": 34,
+          "quote": "**REQ-M-GTL3-CAPABILITY-007**: An incompatible or unresolved contract identity, capability identity, manifest dependency, or declared GraphFunction effect shall produce an explicit conformance gap and shall fail closed before the affected execution is admitted.\n\n**REQ-M-GTL3-CAPABILITY-008**: A change to the meaning of a published contract or capability identity shall require a new versioned manifest claim. Replay and qualification evidence shall preserve the exact manifest identity and digest under which the work executed.\n"
+        }
+      ]
+    },
+    {
+      "key": "manifest_non_control_plane",
+      "applies_to_keys": [
+        "tenant_manifest"
+      ],
+      "statement": "Manifest is declaration/read-model evidence consumable by conformance/admission/runtime/qualification. It creates no second validator, HoG traversal authority, ABG truth authority, release checker, tenant control plane or capability-definition authority.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 36,
+          "end_line": 36,
+          "quote": "**REQ-M-GTL3-CAPABILITY-009**: The tenant-conformance manifest is declaration and read-model truth. Conformance, admission, runtime, and qualification surfaces may consume it, but it shall not create a second GTL validator, HoG traversal authority, ABG runtime authority, release checker, or tenant-local control plane.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 74,
+          "end_line": 77,
+          "quote": "capability identities. A tenant builder shall derive these rows from the\naccepted capability-definition graph and public contract catalog without\nconsulting source or design history. The tenant-conformance manifest publishes\nrealized support evidence; it is not a second capability-definition authority.\n"
+        }
+      ]
+    },
+    {
+      "key": "carrier_class_predecessor_law",
+      "applies_to_keys": [
+        "tenant_manifest"
+      ],
+      "statement": "Published enforcement contract classifies carriers as root/declaration, causal, derived, transition or closure-bearing before predecessor/behavior checks, never from filenames/tests. For the latter classes, when their declared contract requires an admitted causal predecessor, absence, incompatibility or nontraceable identity fails conformance. Root/declaration carriers are not rejected merely for lawfully starting a chain.",
+      "conditions": [
+        "Predecessor enforcement applies where the carrier contract requires one."
+      ],
+      "exceptions": [
+        "Lawful root/declaration starts do not require a fictitious predecessor."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 38,
+          "end_line": 48,
+          "quote": "**REQ-M-GTL3-CAPABILITY-010**: A conformance-enforcement profile shall classify\nsubmitted carriers as root/declaration, causal, derived, transition, or\nclosure-bearing before applying predecessor and behavioral-effect rules. The\nclassification and applicable rule identities shall be published contract\ntruth, not inferred from filenames or test inventories.\n\n**REQ-M-GTL3-CAPABILITY-011**: A causal, derived, transition, or closure-bearing\ncarrier whose declared contract requires an admitted causal predecessor shall\nfail conformance when that predecessor is absent, incompatible, or not\ntraceable through admitted identity. A root or declaration carrier shall not\nbe rejected merely because it lawfully begins a causal chain.\n"
+        }
+      ]
+    },
+    {
+      "key": "behavioral_determinism_boundary",
+      "applies_to_keys": [
+        "tenant_manifest"
+      ],
+      "statement": "Reject F_D implementation behavior doing semantic quality, intent satisfaction, acceptance, open-domain or other nontotal judgment instead of HANDLERS-permitted mechanical total finite-state predicates. Merely declaring an F_D contract in a root declaration is not behavioral execution and is not rejected on that ground.",
+      "conditions": [],
+      "exceptions": [
+        "A root declaration describing F_D is not behavioral F_D execution."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 55,
+          "quote": "**REQ-M-GTL3-CAPABILITY-012**: Conformance shall reject behavioral F_D leakage:\nan implementation declared F_D that performs semantic quality, intent\nsatisfaction, acceptance, open-domain judgment, or other non-total behavior in\nplace of the mechanical total finite-state predicates allowed by\n`REQ-R-ABG3-HANDLERS`. A root declaration describing an F_D contract shall not\nbe rejected as behavioral execution merely for declaring that contract.\n"
+        }
+      ]
+    },
+    {
+      "key": "bounded_enforcement_proof",
+      "applies_to_keys": [
+        "tenant_manifest"
+      ],
+      "statement": "Proof includes positive root/declaration fixtures and negative missing-predecessor and behavioral-F_D fixtures. Exact-candidate release manifest cites the owning proof rather than duplicating rules in a release-local checker.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 57,
+          "end_line": 60,
+          "quote": "**REQ-M-GTL3-CAPABILITY-013**: The bounded enforcement proof shall include\npositive root/declaration fixtures and negative missing-predecessor and\nbehavioral-F_D fixtures. The exact-candidate release manifest shall cite that\nowning proof; it shall not reproduce the enforcement rules in a release-local checker.\n"
+        }
+      ]
+    },
+    {
+      "key": "mapping_materialization_and_proof",
+      "applies_to_keys": [
+        "engine_mapping"
+      ],
+      "statement": "When Programs publish GraphFunctions, canonical mapping specifies their executable-graph materialization before execution/evaluation binding. When a refined/realized callable declares deterministic proof surfaces, derive the evaluator bundle from the same materialization/refinement truth.",
+      "conditions": [
+        "GraphFunctions are published by the Program.",
+        "Evaluator derivation applies where the boundary declares deterministic proof surfaces."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-MAPPING.md#REQ-M-GTL3-MAPPING%20%E2%80%94%20Engine%20Mapping%20Contract%2FAcceptance%20Criteria",
+          "start_line": 24,
+          "end_line": 28,
+          "quote": "**REQ-M-GTL3-MAPPING-004**: When GTL programs publish graph functions, canonical engine mapping shall define how those graph functions are materialized into executable graph surfaces before execution or evaluation binding.\n\n**REQ-M-GTL3-MAPPING-005**: The mapping layer may expose graph-derived companion bundles, such as selected subgraphs or evaluator bundles, so long as those bundles remain traceable to the published graph-function and do not replace graph as language-level truth.\n\n**REQ-M-GTL3-MAPPING-006**: When a refined or realized graph-function boundary declares deterministic proof surfaces, canonical engine mapping shall support derivation of the corresponding evaluator bundle from the same materialization/refinement truth used to realize that boundary.\n"
+        }
+      ]
+    },
+    {
+      "key": "graph_frame_semantic_conservation",
+      "applies_to_keys": [
+        "engine_mapping"
+      ],
+      "statement": "Authoring/publication/serialization/execution conserve Product graph/frame calculus. For identical bound observations and admitted evaluator outputs, conserve permitted choices, effects, refusals and completion conditions, including nested calls/parent obligations. Structure alone establishes neither semantic adequacy nor identical repeated F_P judgments. Frame meaning stays with its owner; encoding adds no controller or deterministic undeclared semantic-policy interpretation.",
+      "conditions": [
+        "Comparison uses the same bound observations and admitted evaluator outputs."
+      ],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-MAPPING.md#REQ-M-GTL3-MAPPING%20%E2%80%94%20Engine%20Mapping%20Contract%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 37,
+          "quote": "**REQ-M-GTL3-MAPPING-007**: Authoring, publication, serialization and execution\nbindings shall preserve the Product graph/frame calculus. For the same bound\nobservations and admitted evaluator outputs, they shall conserve permitted\ngraph choices, effects, refusals and completion conditions, including nested\ncalls and parent obligations. Structural validity shall not establish semantic\nadequacy or identical repeated F_P judgments. Reference-frame meaning shall\nremain with its owning definition; encoding shall not add a runtime controller\nor deterministic interpretation of undeclared semantic policy.\n"
+        }
+      ]
+    },
+    {
+      "key": "program_workspace_nonruntime_truth",
+      "applies_to_keys": [
+        "gtl_program",
+        "workspace",
+        "graph_function"
+      ],
+      "statement": "Keep Program, callable, materialized Graph, workspace, HoG invocation and ABG episode distinct. Program owns declared topology/start/membership/Role/compute/policy/effect/result/proof/publication; authoring emits no events or runtime truth. Workspace supplies mutable instance state and never Program authority, callable-selection/traversal/closure truth or control.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 33,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-001**: GTL program, GraphFunction, materialized\nGraph, workspace, HoG invocation, and ABG runtime episode shall remain distinct.\nA GTL graph composition is the program. GraphFunction is its sole named\ncallable work contract. A workspace supplies mutable instance state. HoG\ntraverses. ABG admits runtime truth.\n\n**REQ-M-GTL3-PROGRAM-TRAVERSAL-002**: A GTL program shall own topology,\nprogram starts, callable membership, roles, compute composition, policy refs,\neffect and result contracts, proof obligations, and publication metadata. It\nshall not emit runtime events or acquire truth merely by being authored.\n\n**REQ-M-GTL3-PROGRAM-TRAVERSAL-003**: A workspace shall provide files, data,\nconfiguration, observations, generated artifacts, and run archives. It shall\nnot become program authority, callable-selection truth, traversal state,\nclosure truth, or a controller.\n"
+        }
+      ]
+    },
+    {
+      "key": "public_invocation_exact_binding",
+      "applies_to_keys": [
+        "authority_mapping",
+        "graph_function"
+      ],
+      "statement": "Before entry bind exact Product, install, workspace, catalog view, admitted Program, callable membership, contracts and invocation authority. Public starts/calls enter installed public admission. CLI/SDK/workspace/fixture/plugin/direct-vector paths cannot select private Programs, Workers, topology or execution basis.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 35,
+          "end_line": 37,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-004**: Public execution shall bind exact Product,\ninstall, workspace, catalog view, admitted program, GraphFunction membership,\ncontracts, and invocation authority before HoG enters the selected graph.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 72,
+          "end_line": 75,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-011**: A public start or GraphFunction call shall\nenter through the installed public admission path. A CLI, SDK, workspace file,\nfixture, plugin, or direct vector call shall not select a private program,\nworker, topology, or execution basis.\n"
+        }
+      ]
+    },
+    {
+      "key": "nonlowering_traversal_path",
+      "applies_to_keys": [
+        "authority_mapping"
+      ],
+      "statement": "TypeScript and validator judge local/whole-Program law before effects. Canonical serialization, diagnostics, normalized indexes and unresolved pressure are subordinate outputs, never traversal input independent of admitted GTL. HoG directly traverses original GTL/materialized graphs with no generated HoG Program, CompiledCProgramPlan, compiled declaration, runtime catalog or executable IR.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 39,
+          "end_line": 49,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-005**: TypeScript and the GTL validator shall\njudge local and whole-program law before effect. Their outputs may include\ncanonical serialization, typed diagnostics, normalized indexes, and unresolved\nsemantic pressure. They shall not be executable traversal input independent of\nthe admitted GTL value.\n\n**REQ-M-GTL3-PROGRAM-TRAVERSAL-006**: HoG shall traverse the original admitted\nGTL program and materialized GraphFunction graphs directly. It shall not\nrequire a generated HoG program, CompiledCProgramPlan, compiled execution\ndeclaration, runtime-program catalog, or other executable intermediate\nrepresentation.\n"
+        }
+      ]
+    },
+    {
+      "key": "effect_boundary_and_runtime_custody",
+      "applies_to_keys": [
+        "authority_mapping"
+      ],
+      "statement": "F_D/F_P/F_H/Worker/tool/process execution remains inside declared boundaries; effect code owns no topology, traversal bind, admission, continuation or closure. ABG preserves at least exact Program, callable, materialized Graph, graph call, locus, frame/span lineage, workspace, compute regime, effect invocation, result/evidence admission, consequence, judgment, continuation and replay projection.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 51,
+          "end_line": 60,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-007**: Deterministic, probabilistic, human,\nworker, tool, and process execution shall occur inside declared traversal\nboundaries. An effect implementation shall not own topology, traversal bind,\nruntime admission, continuation, or closure.\n\n**REQ-M-GTL3-PROGRAM-TRAVERSAL-008**: ABG runtime truth shall preserve at least\nthe exact program, callable, materialized graph, graph call, traversal locus,\nframe and span lineage, workspace binding, selected compute regime, effect\ninvocation, result and evidence admission, consequence, judgment, continuation,\nand replay projection.\n"
+        }
+      ]
+    },
+    {
+      "key": "projection_and_extension_limits",
+      "applies_to_keys": [
+        "authority_mapping"
+      ],
+      "statement": "Slot/lifecycle maps, catalogs, dashboards, parity matrices, validator indexes and caches are derived unless independently admitted by their owning authority; they select no traversal or Program state. Downstream may publish Modules/Programs/callables/types/contracts/bindings through common catalog law, never a parallel executor, registry, event writer, continuation model or closure ledger.",
+      "conditions": [],
+      "exceptions": [
+        "Independent admission by the owning authority may give a projection a separate standing; mere presence does not."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 67,
+          "end_line": 70,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-010**: Slot maps, lifecycle maps, catalogs,\ndashboards, parity matrices, validation indexes, and runtime caches shall be\nderived projections unless independently admitted by their owning authority.\nThey shall not select traversal or become program state.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 77,
+          "end_line": 80,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-012**: Downstream products may publish modules,\nprograms, GraphFunctions, types, contracts, and implementation bindings through\nthe common catalog law. They shall not publish a parallel executor, registry,\nevent writer, continuation model, or closure ledger.\n"
+        }
+      ]
+    },
+    {
+      "key": "owned_joins_and_execution_proof",
+      "applies_to_keys": [
+        "authority_mapping"
+      ],
+      "statement": "Design/realization identify owners and truth sources at declaration, validation, admission, traversal, effect, event admission, replay, continuation and projection joins; an unowned join is a typed design gap. Execution proof enters an admitted Program start/callable and cites ABG replay for every traversal-affecting result. Direct vectors/plugins/Workers/fixtures are not parity proof.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 82,
+          "end_line": 90,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-013**: Design and realization shall identify the\nowner and source of truth for declaration, validation, admission, traversal,\neffect execution, event admission, replay, continuation, and projection. Any\nunowned join is a typed design gap.\n\n**REQ-M-GTL3-PROGRAM-TRAVERSAL-014**: An execution proof shall enter through an\nadmitted program start or GraphFunction call and shall cite ABG replay for every\ntraversal-affecting result. Direct calls to vectors, plugins, workers, or\nfixtures are not parity proof.\n"
+        }
+      ]
+    },
+    {
+      "key": "installed_context_drift_checks",
+      "applies_to_keys": [
+        "authority_mapping"
+      ],
+      "statement": "Installed context/bootloader projections bind selected Product/method identities and check stale assignments of Program/traversal/closure authority to callables, workspaces, adapters or ABG-as-executor. Validator/context checks report/reject drift only; they cannot write instructions, mutate binding, install Products, select Program, emit events or replace Product materialization.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+          "start_line": 92,
+          "end_line": 100,
+          "quote": "**REQ-M-GTL3-PROGRAM-TRAVERSAL-015**: Installed context and bootloader\nprojections shall bind their selected Product and method identities and shall\nbe checked for stale wording that assigns program, traversal, or closure\nauthority to GraphFunctions, workspaces, adapters, or ABG as executor.\n\n**REQ-M-GTL3-PROGRAM-TRAVERSAL-016**: The GTL validator and context-conformance\nchecks shall report or reject drift. They shall not write instruction files,\nmutate workspace binding, install Products, select a program, emit runtime\nevents, or replace the Product-owned materialization function.\n"
+        }
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "engine_target_variation",
+      "applies_to_keys": [
+        "engine_mapping"
+      ],
+      "allowed": [
+        "Map alternate engines such as Temporal, Prefect or Step Functions fully, partially or by capability profile.",
+        "Expose selected-subgraph/evaluator companion bundles if traceable to the published callable and Graph stays primary language truth."
+      ],
+      "forbidden": [
+        "Letting engine-specific behavior change GTL semantics.",
+        "Replacing Graph truth with companion bundles."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-MAPPING.md#REQ-M-GTL3-MAPPING%20%E2%80%94%20Engine%20Mapping%20Contract%2FAcceptance%20Criteria",
+          "start_line": 18,
+          "end_line": 26,
+          "quote": "**REQ-M-GTL3-MAPPING-001**: GTL programs shall be mappable onto ABG as the canonical target engine surface.\n\n**REQ-M-GTL3-MAPPING-002**: Other engines (Temporal, Prefect, Step Functions) may serve as alternate mapping targets with full, partial, or capability-profile mappings.\n\n**REQ-M-GTL3-MAPPING-003**: The mapping layer shall preserve GTL semantics — engine-specific behavior shall not alter language-level truth.\n\n**REQ-M-GTL3-MAPPING-004**: When GTL programs publish graph functions, canonical engine mapping shall define how those graph functions are materialized into executable graph surfaces before execution or evaluation binding.\n\n**REQ-M-GTL3-MAPPING-005**: The mapping layer may expose graph-derived companion bundles, such as selected subgraphs or evaluator bundles, so long as those bundles remain traceable to the published graph-function and do not replace graph as language-level truth.\n"
+        }
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "temporal_vocabulary_and_timer_dependency",
+      "subject_key": "temporal_property",
+      "uncertainty": "Exact event/fluent vocabularies, CCALL adapter law and timer-provider realization are referenced rather than instantiated. Scheduling remains explicitly typed-exempt pending its seam.",
+      "consequence": "No temporal gate activation, clock enforcement or adapter correctness is established by these represented rules.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 18,
+          "end_line": 26,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-002**: Property atoms quantify over the\nreplay trace only. An atom is either an event-occurrence atom (an admitted\nruntime event kind, optionally guarded by field-equality pairs) or a\nfluent-hold atom naming a fluent from the one runtime event-calculus\nvocabulary (`RUNTIME_FLUENT_NAME_VALUES`). Properties shall not quantify\nover node state, workspace state, worker output shape, or any surface not\nderived from admitted replay events. New propositions enter by extending the\none fluent vocabulary with axioms in the one event calculus, never by a\nsecond vocabulary.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+          "start_line": 94,
+          "end_line": 97,
+          "quote": "**REQ-L-GTL3-TEMPORAL-PROPERTIES-012**: This family leaves the T-119\nscheduling-law census disposition unchanged: scheduling enforcement remains\ntyped-exempt pending the timer-provider seam. Temporal properties quantify\nover traces, not clocks, and introduce no wall-clock reads.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law%2FAmendment%20%28T-200%20P0%29",
+          "start_line": 101,
+          "end_line": 104,
+          "quote": "-007 gate points: on the uniform C-call envelope, the dispatch gate\npoint binds to `c_call_fibre_selected` with single-event where-guards\n(REQ-R-ABG3-CCALL-010); no cross-event join is required or implied. The fp_dispatch_requested antecedent remains\nlawful for pre-envelope replay via the CCALL-011 projection adapter.\n"
+        }
+      ]
+    },
+    {
+      "key": "capability_authority_and_proof_dependency",
+      "subject_key": "tenant_manifest",
+      "uncertainty": "Concrete accepted capability-definition graph, installed public catalog, exact tenant manifest, HANDLERS domain and owning enforcement proof are not supplied here.",
+      "consequence": "Do not turn declared support, package presence or this structural representation into realized conformance or release proof.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+          "start_line": 50,
+          "end_line": 77,
+          "quote": "**REQ-M-GTL3-CAPABILITY-012**: Conformance shall reject behavioral F_D leakage:\nan implementation declared F_D that performs semantic quality, intent\nsatisfaction, acceptance, open-domain judgment, or other non-total behavior in\nplace of the mechanical total finite-state predicates allowed by\n`REQ-R-ABG3-HANDLERS`. A root declaration describing an F_D contract shall not\nbe rejected as behavioral execution merely for declaring that contract.\n\n**REQ-M-GTL3-CAPABILITY-013**: The bounded enforcement proof shall include\npositive root/declaration fixtures and negative missing-predecessor and\nbehavioral-F_D fixtures. The exact-candidate release manifest shall cite that\nowning proof; it shall not reproduce the enforcement rules in a release-local checker.\n\n**REQ-M-GTL3-CAPABILITY-014**: The exact public contract and capability\nidentities claimed by a tenant shall be projections of one accepted capability-\ndefinition graph and shall resolve through the installed product's\n`publicContractCatalog` governed by `REQ-P-PUBLIC-CONTRACTS`. The tenant\nmanifest shall bind both authorities by identity, version, and digest.\nRequirement names, feature prose, package presence, test names, private export\nscans, and separately maintained capability enums shall not substitute for\nthose rows.\n\n**REQ-M-GTL3-CAPABILITY-015**: Each claimed capability row shall identify its\nstable capability identity, owning definition-graph row, owning public contract\nidentity/version/digest, supported disposition, and any required dependent\ncapability identities. A tenant builder shall derive these rows from the\naccepted capability-definition graph and public contract catalog without\nconsulting source or design history. The tenant-conformance manifest publishes\nrealized support evidence; it is not a second capability-definition authority.\n"
+        }
+      ]
+    },
+    {
+      "key": "mapping_index_provenance_source",
+      "subject_key": "mapping_domain",
+      "uncertainty": "The mapping index also names REQ-M-GTL3-PROVENANCE, whose body is not part of this chunk.",
+      "consequence": "Bridge-provenance obligations beyond those supplied require source re-entry; the index does not import complete law.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/README.md#Mapping%20Requirement%20Families%2FFamilies",
+          "start_line": 15,
+          "end_line": 18,
+          "quote": "- `REQ-M-GTL3-MAPPING.md`\n- `REQ-M-GTL3-PROGRAM-TRAVERSAL.md`\n- `REQ-M-GTL3-PROVENANCE.md`\n- `REQ-M-GTL3-CAPABILITY.md`\n"
+        }
+      ]
+    },
+    {
+      "key": "graph_frame_owner_definition",
+      "subject_key": "graph_frame_semantic_conservation",
+      "uncertainty": "The exact owning Product graph/frame calculus and reference-frame definitions are referenced but not reconstructed in this chunk.",
+      "consequence": "Conservation remains an obligation over bound observations/results, not a claim of semantic equivalence or deterministic repeated F_P outcomes.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-MAPPING.md#REQ-M-GTL3-MAPPING%20%E2%80%94%20Engine%20Mapping%20Contract%2FAcceptance%20Criteria",
+          "start_line": 30,
+          "end_line": 37,
+          "quote": "**REQ-M-GTL3-MAPPING-007**: Authoring, publication, serialization and execution\nbindings shall preserve the Product graph/frame calculus. For the same bound\nobservations and admitted evaluator outputs, they shall conserve permitted\ngraph choices, effects, refusals and completion conditions, including nested\ncalls and parent obligations. Structural validity shall not establish semantic\nadequacy or identical repeated F_P judgments. Reference-frame meaning shall\nremain with its owning definition; encoding shall not add a runtime controller\nor deterministic interpretation of undeclared semantic policy.\n"
+        }
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header dates/status/category/wave and derivation-link metadata are not modeled as operative or current authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-MAPPING.md#REQ-M-GTL3-MAPPING%20%E2%80%94%20Engine%20Mapping%20Contract",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header dates/status/category/wave and derivation-link metadata are not modeled as operative or current authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Header dates/status/category/wave and derivation-link metadata are not modeled as operative or current authority."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law",
+      "decision": "residual",
+      "keys": [
+        "temporal_property",
+        "temporal_verdict",
+        "property_yields_verdict",
+        "temporal_replay_atom_domain",
+        "temporal_closed_grammar",
+        "finite_trace_three_valued_law",
+        "temporal_consequence_classes",
+        "temporal_gate_points",
+        "temporal_verdict_nonauthority",
+        "temporal_ingress_transition",
+        "temporal_proof_before_enforcement",
+        "temporal_total_checker",
+        "temporal_vocabulary_and_timer_dependency"
+      ],
+      "reason": "Retains substantive semantics and named failure conditions while making external vocabulary, proof or owning-definition dependencies explicit."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-TEMPORAL-PROPERTIES.md#REQ-L-GTL3-TEMPORAL-PROPERTIES%20%E2%80%94%20GTL%20Temporal%20Property%20Law%2FAmendment%20%28T-200%20P0%29",
+      "decision": "residual",
+      "keys": [
+        "uniform_envelope_temporal_amendment",
+        "temporal_vocabulary_and_timer_dependency"
+      ],
+      "reason": "Retains substantive semantics and named failure conditions while making external vocabulary, proof or owning-definition dependencies explicit."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/README.md#Mapping%20Requirement%20Families%2FFamilies",
+      "decision": "residual",
+      "keys": [
+        "mapping_index_provenance_source"
+      ],
+      "reason": "Retains substantive semantics and named failure conditions while making external vocabulary, proof or owning-definition dependencies explicit."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "tenant_manifest",
+        "manifest_exact_basis",
+        "manifest_support_contracts",
+        "conformance_claim_scope",
+        "conformance_failure_and_evolution",
+        "manifest_non_control_plane",
+        "carrier_class_predecessor_law",
+        "behavioral_determinism_boundary",
+        "bounded_enforcement_proof",
+        "capability_authority_and_proof_dependency"
+      ],
+      "reason": "Retains substantive semantics and named failure conditions while making external vocabulary, proof or owning-definition dependencies explicit."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-MAPPING.md#REQ-M-GTL3-MAPPING%20%E2%80%94%20Engine%20Mapping%20Contract%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "engine_mapping",
+        "mapping_materialization_and_proof",
+        "graph_frame_semantic_conservation",
+        "engine_target_variation",
+        "graph_frame_owner_definition"
+      ],
+      "reason": "Retains substantive semantics and named failure conditions while making external vocabulary, proof or owning-definition dependencies explicit."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/README.md#Mapping%20Requirement%20Families",
+      "decision": "retained",
+      "keys": [
+        "mapping_domain"
+      ],
+      "reason": "Retains the bridge purpose, exact-binding requirements and authority-preserving execution path."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/README.md#Mapping%20Requirement%20Families%2FScope",
+      "decision": "retained",
+      "keys": [
+        "mapping_domain"
+      ],
+      "reason": "Retains the bridge purpose, exact-binding requirements and authority-preserving execution path."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-CAPABILITY.md#REQ-M-GTL3-CAPABILITY%20%E2%80%94%20Engine%20Capability%20Profiles%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "tenant_manifest"
+      ],
+      "reason": "Retains the bridge purpose, exact-binding requirements and authority-preserving execution path."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-MAPPING.md#REQ-M-GTL3-MAPPING%20%E2%80%94%20Engine%20Mapping%20Contract%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "engine_mapping"
+      ],
+      "reason": "Retains the bridge purpose, exact-binding requirements and authority-preserving execution path."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "authority_mapping"
+      ],
+      "reason": "Retains the bridge purpose, exact-binding requirements and authority-preserving execution path."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md#REQ-M-GTL3-PROGRAM-TRAVERSAL%20-%20GTL%2C%20HoG%2C%20And%20ABG%20Mapping%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "gtl_program",
+        "workspace",
+        "graph_function",
+        "callable_member_of_program",
+        "program_workspace_nonruntime_truth",
+        "public_invocation_exact_binding",
+        "nonlowering_traversal_path",
+        "effect_boundary_and_runtime_custody",
+        "projection_and_extension_limits",
+        "owned_joins_and_execution_proof",
+        "installed_context_drift_checks"
+      ],
+      "reason": "Retains the bridge purpose, exact-binding requirements and authority-preserving execution path."
+    }
+  ],
+  "limitations": [
+    "Temporal properties, conformance manifests and mapping rules are represented as subject data only: no runtime effects, property checks, conformance admission or proof execution.",
+    "Three-valued temporal status is kept distinct from vacuity and checker-error blocked evaluation; finite unresolved liveness is not silently failed or satisfied.",
+    "The accepted capability graph/catalog, temporal vocabularies/adapters, provenance family and frame definitions require exact source re-entry.",
+    "Headers are omitted as authority assertions; identities are local and not inferred equal across chunks."
+  ]
+}

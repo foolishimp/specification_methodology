@@ -1,0 +1,54 @@
+{
+  "artifact": "/Users/jim/src/apps/specification_methodology/a_c/applications/abiogenesis-constraint-explorer/index.html",
+  "sha256": "de4c528e8331968cec6e758b6ad16ff1811d6aa2fd437f7b89416be496684dba",
+  "checks": [
+    {
+      "name": "same basenames retain exact path and all families; duplicate grounding only deduplicates discovery",
+      "status": "passed",
+      "detail": "Eight file entries, two unique source files, four exact raw grounding occurrences and three distinct displayed quotations retained."
+    },
+    {
+      "name": "file discovery adds no relation, retains parallel/self link identity and outside-file logical trail",
+      "status": "passed",
+      "detail": "Only the three supplied logical links appear; file scope does not clamp reader or clear trail."
+    },
+    {
+      "name": "revealing a second grounding opens then scrolls, expands ancestry and retains logical focus/trail",
+      "status": "passed",
+      "detail": "DOM order establishes reveal visibility before scroll; this is not a visual scroll-position assertion."
+    },
+    {
+      "name": "empty source and unavailable source remain distinct; source content is inert text",
+      "status": "passed",
+      "detail": "Zero-record embedded source readable; unavailable source remains discoverable with quotation."
+    },
+    {
+      "name": "actual ABI GraphFunction is reachable through both exact files and reveals each without losing trail",
+      "status": "passed",
+      "detail": [
+        "specification/requirements/gtl/REQ-L-GTL3-CONTRACT-LAW-API.md",
+        "specification/requirements/gtl/REQ-L-GTL3-GRAPHFUNCTION.md"
+      ]
+    },
+    {
+      "name": "actual ABI five README paths stay distinct and scoped counts remain complete",
+      "status": "passed",
+      "detail": {
+        "specification/requirements/README.md": 15,
+        "specification/requirements/abg/README.md": 5,
+        "specification/requirements/gtl/README.md": 3,
+        "specification/requirements/mapping/README.md": 2,
+        "specification/requirements/product/README.md": 3
+      }
+    }
+  ],
+  "limits": "Finite JSDOM tests, not a browser; no network resource loading, renderer execution, CSS/layout, WebGL, accessibility, full semantic review or ABI execution qualification.",
+  "command": [
+    "node",
+    "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T017_SOURCE_NAVIGATION/review/independent-001/navigation-probes.cjs",
+    "/Users/jim/src/apps/specification_methodology/a_c/applications/abiogenesis-constraint-explorer/index.html"
+  ],
+  "exit_code": 0,
+  "stderr": "",
+  "observed_at_utc": "2026-11-01T07:39:12.474031+00:00"
+}

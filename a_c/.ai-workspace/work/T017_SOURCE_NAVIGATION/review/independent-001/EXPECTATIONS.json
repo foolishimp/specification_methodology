@@ -1,0 +1,92 @@
+{
+  "recorded_at_utc": "2026-11-01T07:31:28.703909+00:00",
+  "stage": "Expectations before implementation/candidate inspection; waiting for candidate-ready message",
+  "role": "Independent Reviewer; no repair/acceptance",
+  "write_territory": "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T017_SOURCE_NAVIGATION/review/independent-001",
+  "source_pins": {
+    "stdo_a_c.json": "e9a1187647fe4d4adedf45a155d91552b0cf6560f75dbdca2860b20bae364353",
+    ".ai-workspace/tickets/active/T-017-source-navigation.md": "a569e0d162f7484e7e6736f772f74a1cc6806cacd24abf6f2438606af9528cd9",
+    "specification/INTENT.md": "ec0412c12d9fe702c75409eb18cca22633cf14f549294c2ad160dc0c869f9357",
+    "specification/PRODUCT.md": "f5d6a106cbd8fb9f2c56f2a139173327619ea702695995dc448fe1e586628e0d",
+    "specification/requirements/README.md": "610289239057767182a09e31653590fc3a63e74924f325f3acf1b32cf6370ed2",
+    "specification/requirements/project-use.md": "365aaa555fff7b269e9cfd1e269a2da736b96d416824c1bfa84f4572211f5754",
+    "build_tenants/graphify/design/constraint-explorer.md": "8b9bf56c2f6dc856acae3e47323e4ce496fe3ca368dbf4b5f911cb6b16ec9aeb"
+  },
+  "builder": {
+    "uri": "stdo://releases/v2.5.1-rc.2/",
+    "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+  },
+  "expectations": [
+    {
+      "id": "E1",
+      "expectation": "Map exact source paths to every locally grounded record across all eight families. Keep multi-file records reachable from each grounding path; deduplicate only a repeated file-to-record discovery entry, retaining every grounding occurrence and exact quote. Same basename, folder or source position supplies no semantic identity.",
+      "basis": [
+        "PU-03",
+        "AC-R-003",
+        "AC-R-004",
+        "AC-R-005",
+        "design Source navigation"
+      ]
+    },
+    {
+      "id": "E2",
+      "expectation": "Physical tree exposes exported embedded-source paths and grounded paths whose source is missing. Embedded zero-record files remain browseable with an honest empty result. Missing source retains record discovery and an explicit unavailable state; browser neither scans workspace nor retrieves replacement bytes.",
+      "basis": [
+        "PU-03",
+        "AC-R-009",
+        "ticket deciding checks",
+        "design Source navigation"
+      ]
+    },
+    {
+      "id": "E3",
+      "expectation": "Selecting a file has an explicit separate discovery scope and initially permits all record families. Logical traversal can leave that scope without replacing focus or inventing file dependencies. File origin remains directly returnable; revealing a grounding expands/selects its exact path without clearing logical trail. Opening/closing flyout preserves both views. Search/filter scope and match counts remain truthful.",
+      "basis": [
+        "PU-03",
+        "AC-R-008",
+        "AC-R-009",
+        "AC-R-010",
+        "ticket deciding checks",
+        "design Source navigation"
+      ]
+    },
+    {
+      "id": "E4",
+      "expectation": "Reader preserves complete records, conditions/exceptions/residuals, relation identity/kind/direction/qualifications and exact source locations. Return/reveal supports all grounding files; recorded quotations remain distinct from embedded text and its selected line span. No source navigation implies accepted semantics, proof, coverage or authority.",
+      "basis": [
+        "PU-03",
+        "AC-R-003",
+        "AC-R-005",
+        "AC-R-007",
+        "AC-R-010",
+        "design"
+      ]
+    },
+    {
+      "id": "E5",
+      "expectation": "File/folder index is read-only derived UI data. Fresh ABI viewer retains original frozen model/corpus identities; previous model, answers, view and review stay unchanged. Logical dependencies/semantic edges remain exactly codec/authored model outputs; file membership introduces no new graph semantics.",
+      "basis": [
+        "AC-R-004",
+        "AC-R-005",
+        "AC-R-006",
+        "AC-R-008",
+        "ticket activation"
+      ]
+    },
+    {
+      "id": "E6",
+      "expectation": "Export remains standalone and portable, with locally embedded renderer/assets/source and text-only rendering of file labels, paths, record and source data. No network, authoring tool or original workspace is needed just to read it.",
+      "basis": [
+        "PU-03",
+        "design Source navigation",
+        "ticket deciding checks"
+      ]
+    }
+  ],
+  "limits": [
+    "Only viewer source/navigation mapping and frozen ABI application are selected.",
+    "No provider/source/Git mutation or ABI changes.",
+    "No fresh model authoring, source interpretation acceptance, Graphify/Lean execution or release claim.",
+    "Final inspection starts only after Executive candidate-ready message."
+  ]
+}

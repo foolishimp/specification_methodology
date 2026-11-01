@@ -143,3 +143,21 @@ isolation, optimized context selector, accepted provider release or new outcome
 algebra. [T-002](../../.ai-workspace/tickets/active/T-002-composition-support.md)
 records the affected implementation/evidence; prior Q01–Q12 evidence stays on its
 original subjects and does not automatically cover this increment.
+
+## SK-14: Nominated-project representation build
+
+Both tenants must discover and execute a user's representation-build request
+against the nominated project's exact Product Definition and selected source.
+Use the supported a_c public workflow to obtain actual model, recoverable
+carrier, coverage and readable documentation artifacts. Bind source and method
+identity, retain uncertainties and report the checks actually performed. Preparing
+prompts or explaining commands alone does not complete a build. Required-chunk
+failure, stale input or unsupported selected tooling withholds completion; an
+existing valid run resumes without silently overwriting prior results.
+
+The agent may author through its current host session under the declared provider
+contract. It must not fabricate isolated actor evidence or require the other
+coding host merely to perform semantic authoring. Method-owned authority and
+selected composition restrictions continue to govern acquisition and effects.
+Only the nominated source scope is included; recursive provider acquisition and
+publication require their own existing authorization.

@@ -1,0 +1,526 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "run_id identifies one GTL-job execution attempt in one work_key; at most one live run per work scope. Central lifecycle replay owns run truth, distinct from convergence. Different run id is different attempt even with same function/materialized graph; same admitted function/policy/run/work/frame basis replays same instance truth.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 36,
+            "quote": "**REQ-R-ABG3-RUN-001**: `run_id` shall identify one execution attempt over one GTL job within one `work_key` scope.\n\n**REQ-R-ABG3-RUN-002**: At most one live run shall exist per work scope at any time.\n\n**REQ-R-ABG3-RUN-003**: ABG shall support run supersession by authoritative event truth. Supersession shall not silently preserve open continuations from the old run.\n\n**REQ-R-ABG3-RUN-004**: Canonical run truth shall be projected centrally from lifecycle events. Consumers may read run projection, but they shall not define rival lifecycle summaries that contradict the central run algebra.\n\n**REQ-R-ABG3-RUN-005**: Run truth shall remain distinct from convergence truth. A run may terminate independently of whether a particular boundary converged.\n\n**REQ-R-ABG3-RUN-006**: Run terminalization shall remain replay-visible through authoritative lifecycle events rather than hidden controller memory.\n\n**REQ-R-ABG3-RUN-007**: If a constructive turn closes its callable boundary but must hand off unresolved non-blocking observer truth to the next lawful observer or routing layer, ABG shall project that run as yielded rather than completed.\n\n**REQ-R-ABG3-RUN-008**: If a fresh re-entry encounters a valid, current, already-attested preserved `F_P` result for the active boundary, ABG shall deterministically validate and ingest that preserved attestation rather than redispatching the same probabilistic turn.\n\n**REQ-R-ABG3-RUN-009**: Run idempotency means the same admitted graph-function\nidentity, runtime policy, run identity, work key, and frame basis replay to the\nsame runtime instance truth. A different run identity is a different execution\nattempt even when the reusable graph function and materialized graph are\nunchanged.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance%2FAcceptance%20Criteria",
+            "start_line": 16
+          }
+        ],
+        "key": "run_attempt",
+        "label": "Run execution attempt"
+      },
+      {
+        "conditions": [],
+        "definition": "Active Constraint/Guarantee dated 2026-07-11 with T-283/T-284 lineage and legacy method/design,GOAL-035,Product/runtime family derivations.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 7,
+            "quote": "# REQ-R-ABG3-SAGA-FRONTIER — Event-Sourced Saga Frontier And Runtime Realization Transparency\n\n**Status**: Active\n**Lineage**: T-283 Product basis; T-284 bounded owner repair\n**Category**: Constraint / Guarantee\n**Date**: 2026-07-11\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [DESIGN_MODULE_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/DESIGN_MODULE_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [GOALS.md](../../GOALS.md) GOAL-035, [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-EVENTS.md](./REQ-R-ABG3-EVENTS.md), [REQ-R-ABG3-PROJECTION.md](./REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-WORKER.md](./REQ-R-ABG3-WORKER.md), [REQ-R-ABG3-POLICY.md](./REQ-R-ABG3-POLICY.md), [REQ-R-ABG3-FP-CONSCIOUSNESS.md](./REQ-R-ABG3-FP-CONSCIOUSNESS.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SAGA-FRONTIER.md#REQ-R-ABG3-SAGA-FRONTIER%20%E2%80%94%20Event-Sourced%20Saga%20Frontier%20And%20Runtime%20Realization%20Transparency",
+            "start_line": 1
+          }
+        ],
+        "key": "saga_metadata",
+        "label": "Saga frontier provenance"
+      },
+      {
+        "conditions": [],
+        "definition": "Serial,bounded parallel,paused,retried,blocked,compensated or escalated realizations of the same declared work preserve Product meaning.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 15,
+            "quote": "Define the ABG law for dependency-ready branch frontier realization without\nchanging product meaning when the same declared work runs serially, bounded\nparallel, paused, retried, blocked, compensated, or escalated.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SAGA-FRONTIER.md#REQ-R-ABG3-SAGA-FRONTIER%20%E2%80%94%20Event-Sourced%20Saga%20Frontier%20And%20Runtime%20Realization%20Transparency%2FPurpose",
+            "start_line": 13
+          }
+        ],
+        "key": "dependency_frontier",
+        "label": "Dependency-ready branch frontier"
+      },
+      {
+        "conditions": [],
+        "definition": "Active capability dated 2026-04-05 with legacy method/intent/Product derivations.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "# REQ-R-ABG3-SELECTION-APPLICATION — Selection Application\n\n**Status**: Active\n**Category**: Capability\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELECTION-APPLICATION.md#REQ-R-ABG3-SELECTION-APPLICATION%20%E2%80%94%20Selection%20Application",
+            "start_line": 1
+          }
+        ],
+        "key": "selection_metadata",
+        "label": "Selection provenance"
+      },
+      {
+        "conditions": [],
+        "definition": "ABG lawfully admits selected callable identity; HoG applies it without making ABG a strategy engine.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 13,
+            "quote": "Define lawful admission of selected callable identity and HoG application of\nthat identity without turning ABG into a strategy engine.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELECTION-APPLICATION.md#REQ-R-ABG3-SELECTION-APPLICATION%20%E2%80%94%20Selection%20Application%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "selection_application",
+        "label": "Selection admission and application"
+      },
+      {
+        "conditions": [],
+        "definition": "Constraint/Guarantee dated 2026-04-05 source-labelled active/T-283 accepted, deriving legacy method/intent/Product.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "# REQ-R-ABG3-SELFHOSTING — Successor Use And Derived-Artifact Governance\n\n**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance",
+            "start_line": 1
+          }
+        ],
+        "key": "successor_metadata",
+        "label": "Successor-use provenance"
+      },
+      {
+        "conditions": [],
+        "definition": "Ordinary graph/runtime law governs derived artifacts and post-release use. 5.0 is the specified stable installed baseline; using it to author/build distinct 5.0.1 is successor activity, not 5.0 release gate.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 15,
+            "quote": "Apply ordinary graph-function and runtime discipline to derived artifacts and\nto post-release successor use. ABIogenesis 5.0 is the stable installed baseline;\nusing that released product to author or build 5.0.1 is a distinct successor\nactivity and is not a gate on the 5.0 release.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "successor_use",
+        "label": "Distinct successor use"
+      },
+      {
+        "conditions": [],
+        "definition": "Active Constraint/Guarantee dated 2026-07-11 deriving method/ticket/intent/Product reflective boundary,event/projection/provenance/consciousness and T-217 absorbing T-215.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "# REQ-R-ABG3-SUPERVISOR-WITNESS — Supervisor As Admitted Actor\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-07-11\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [TICKET_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/TICKET_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md) (the reflective boundary), [REQ-R-ABG3-EVENTS.md](./REQ-R-ABG3-EVENTS.md), [REQ-R-ABG3-PROJECTION.md](./REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-PROVENANCE.md](./REQ-R-ABG3-PROVENANCE.md), [REQ-R-ABG3-FP-CONSCIOUSNESS.md](./REQ-R-ABG3-FP-CONSCIOUSNESS.md), [T-217](../../../.ai-workspace/tickets/completed/T-217-consciousness-wave-higher-order-regulation.md) (absorbing [T-215](../../../.ai-workspace/tickets/completed/T-215-supervisor-as-admitted-actor.md))\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor",
+            "start_line": 1
+          }
+        ],
+        "key": "supervisor_metadata",
+        "label": "Supervisor witness provenance"
+      },
+      {
+        "conditions": [],
+        "definition": "Every supervisor/operator run act is typed,actor-attributed,replay-visible admitted event. Halt diagnosis,triage,mid-run law amendment,lifecycle,evidence leave truth; citability is mechanical replay predicate. Witness registers existing closed events/read models, no new store or supervisor node kind.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 18,
+            "quote": "Every supervisor or operator act over a run is a typed, actor-attributed,\nreplay-visible, admitted event. The monitor seat is a framework actor:\nhalt diagnosis, defect triage, mid-run law amendment, run lifecycle, and\nevidence handling leave replay truth, and run citability is a mechanical\nreplay predicate rather than judgment. Witness truth is registrations\ninto the existing closed event universe plus replay-derived read models;\nit introduces no new runtime store and no supervisor node kind.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "admitted_supervisor",
+        "label": "Supervisor as admitted actor"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "run_attempt"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 30,
+            "quote": "**REQ-R-ABG3-RUN-003**: ABG shall support run supersession by authoritative event truth. Supersession shall not silently preserve open continuations from the old run.\n\n**REQ-R-ABG3-RUN-004**: Canonical run truth shall be projected centrally from lifecycle events. Consumers may read run projection, but they shall not define rival lifecycle summaries that contradict the central run algebra.\n\n**REQ-R-ABG3-RUN-005**: Run truth shall remain distinct from convergence truth. A run may terminate independently of whether a particular boundary converged.\n\n**REQ-R-ABG3-RUN-006**: Run terminalization shall remain replay-visible through authoritative lifecycle events rather than hidden controller memory.\n\n**REQ-R-ABG3-RUN-007**: If a constructive turn closes its callable boundary but must hand off unresolved non-blocking observer truth to the next lawful observer or routing layer, ABG shall project that run as yielded rather than completed.\n\n**REQ-R-ABG3-RUN-008**: If a fresh re-entry encounters a valid, current, already-attested preserved `F_P` result for the active boundary, ABG shall deterministically validate and ingest that preserved attestation rather than redispatching the same probabilistic turn.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance%2FAcceptance%20Criteria",
+            "start_line": 20
+          }
+        ],
+        "key": "run_lifecycle_and_preserved_result",
+        "statement": "Supersede and terminalize via authoritative events; do not silently retain old open continuations or rival summaries. Run may terminate without convergence. A closed callable with unresolved nonblocking observer handoff is yielded, not completed. Fresh reentry with valid/current/already-attested preserved F_P result must validate and ingest it, not redispatch same turn.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "run_attempt"
+        ],
+        "conditions": [
+          "Run is STDO-governed."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 48,
+            "quote": "**REQ-R-ABG3-RUN-010**: An STDO-governed Run shall retain its admitted\nenvironment declaration and immutable dependency identities, permitted access\nbasis, actual required native-source and selected supplementary access evidence,\nand the context/policy supplied to dependent calls through the existing ABG\nevent history. Fresh replay shall reconstruct those exact relations and\ndistinguish access evidence from\nsemantic assessment without relying on an ambient installation, performing a\nnew retrieval or fabricating missing evidence. A material governing-environment\nchange requires its declared re-entry; it shall not silently upgrade the Run.\nOrdinary worksite changes retain the existing successor-observation and\nunchanged-workspace-authority law.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance%2FAcceptance%20Criteria",
+            "start_line": 38
+          }
+        ],
+        "key": "stdo_run_environment_replay",
+        "statement": "STDO-governed run retains admitted environment,immutable dependencies,permitted access,actual native/selected supplementary access evidence and supplied call context/policy in event history. Fresh replay reconstructs exact relations and separates access from semantic assessment without ambient install,new retrieval or invented evidence. Material environment change requires declared reentry, no silent upgrade. Ordinary worksite changes follow successor-observation/unchanged authority law.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "dependency_frontier"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 25,
+            "quote": "**REQ-R-ABG3-SAGA-FRONTIER-001**: Product and GTL declarations shall identify lawful work, dependency meaning, steel-thread choice, fan-out opportunities, declared source/test/build/output targets, write territory or output allocation, evidence expectations, and fan-in meaning. The validator shall check those static relations, HoG shall traverse that declared topology, selected implementation bindings shall realize declared leaf effects, and ABG shall admit and replay the resulting runtime facts. ABG shall not own a scheduler or substitute an execution plan for the GTL topology.\n\n**REQ-R-ABG3-SAGA-FRONTIER-002**: A product-declared dependency fan-out shall be an admitted traversal opportunity, not a command that forces concurrent dispatch. Serial execution of the same admitted fan-out shall preserve product meaning when closure expectations, dependency declarations, and evidence expectations are unchanged.\n\n**REQ-R-ABG3-SAGA-FRONTIER-003**: A selected implementation binding may propose concurrent realization of GTL-declared branches only when replay-derived frontier truth, observed-state freshness, idempotency identity, branch lease truth, write-territory disjointness, and admitted runtime policy prove the batch safe. ABG shall admit or reject that proposal and its safety basis; HoG shall apply only the admitted traversal disposition, and selected implementation bindings shall realize only its leaf effects. Neither ABG nor an implementation selects undeclared branches or owns scheduling topology.\n\n**REQ-R-ABG3-SAGA-FRONTIER-004**: If dependency isolation, observed-state freshness, idempotency, branch lease, write territory, fan-in, or policy truth is missing or underdeclared, ABG shall reject a concurrent-transition proposal. A selected implementation binding may return only a typed serialize, yield, block, or escalation proposal declared by GTL and policy; ABG shall admit or reject it, HoG shall apply only an admitted disposition, and selected implementation bindings shall realize only the resulting leaf effects. ABG and implementations shall not choose a route by applicability or infer product topology from filenames, prompt text, worker prose, wall-clock completion order, or local promise state.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SAGA-FRONTIER.md#REQ-R-ABG3-SAGA-FRONTIER%20%E2%80%94%20Event-Sourced%20Saga%20Frontier%20And%20Runtime%20Realization%20Transparency%2FAcceptance%20Criteria",
+            "start_line": 19
+          }
+        ],
+        "key": "saga_topology_and_concurrency_admission",
+        "statement": "Product/GTL owns work,dependencies,steel-thread/fanout,source/test/build/output targets,territory/allocation,evidence/fanin; validator checks,HoG traverses,implementation realizes leaves,ABG admits/replays, no ABG scheduler or replacement plan. Fanout is opportunity, not forced concurrency; serial preserves meaning if closure/dependency/evidence expectations unchanged. Concurrent proposal needs replay frontier,fresh observations,idempotency,leases,disjoint write territory and admitted policy proving safe; ABG admit/rejects safety,HoG applies admitted disposition,implementation effects only. Missing dependency/freshness/idempotency/lease/territory/fanin/policy rejects concurrency; only declared typed serialize/yield/block/escalate proposals may proceed through admission, never inferred routes/topology from filenames/prompts/prose/time/promise state.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "dependency_frontier"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 35,
+            "quote": "**REQ-R-ABG3-SAGA-FRONTIER-005**: Branch identity shall distinguish stable logical branch identity from attempt identity. Retry, cancellation, lease expiry, or compensation shall open or supersede attempts without creating a new logical branch unless admitted correction or re-entry truth changes the logical work.\n\n**REQ-R-ABG3-SAGA-FRONTIER-006**: Branch command and result admission shall be idempotent. Duplicate delivery of the same idempotency key and same payload digest shall not create a second logical fact. The same idempotency key with a different payload digest shall fail closed as an idempotency conflict. A new attempt for the same logical branch may admit a different payload under retry or supersession law.\n\n**REQ-R-ABG3-SAGA-FRONTIER-007**: Dependency-frontier, branch-liveness, write-territory conflict, fan-in, and public progress surfaces shall be replay-derived projections over admitted runtime truth and existing ABG Event Calculus law. They shall not introduce a rival saga calculus, scheduler calculus, or runner-local state authority.\n\n**REQ-R-ABG3-SAGA-FRONTIER-008**: A selected implementation binding shall realize branch effects with its native asynchronous primitives. The law is observational equivalence between serial and parallel realization of the same admitted frontier, not an implementation-owned topology or scheduling choice; the semantic runtime model shall not require a new orchestration framework.\n\n**REQ-R-ABG3-SAGA-FRONTIER-009**: Runtime concurrency caps, transport limits, worker limits, resource caps, queueing behavior, timeout policy, cancellation policy, lease policy, and retry behavior shall be resolved from visible system-level configuration, runtime policy/default surfaces, liveness/watchdog policy, and admitted ABG runtime truth. The declared transition relation consumes that policy when producing a proposal; ABG admits or rejects the proposal, HoG applies an admitted traversal disposition, and selected implementation bindings realize its leaf effects. Hidden constants, product-local knobs, new config authorities, and an ABG-owned queue or scheduler shall not govern branch parallelism.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SAGA-FRONTIER.md#REQ-R-ABG3-SAGA-FRONTIER%20%E2%80%94%20Event-Sourced%20Saga%20Frontier%20And%20Runtime%20Realization%20Transparency%2FAcceptance%20Criteria",
+            "start_line": 27
+          }
+        ],
+        "key": "saga_attempt_idempotency_and_policy",
+        "statement": "Logical branch differs from attempt: retry/cancel/lease expiry/compensation changes attempts, not logical branch unless correction/reentry changes work. Same idempotency key+digest creates no duplicate fact; same key different digest fails conflict; new lawful attempt may differ. Frontier,liveness,conflict,fanin,progress project admitted events/Event Calculus, no rival calculus/controller. Native async realizes effects under serial/parallel observational equivalence, no new orchestration requirement or implementation topology. Concurrency/transport/worker/resource/queue/timeout/cancel/lease/retry comes visible config/policy/default/liveness/admitted truth; declared transitions propose,ABG admits,HoG applies,implementation executes. Hidden constants/Product knobs/new authorities/ABG queue-scheduler cannot govern.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "dependency_frontier"
+        ],
+        "conditions": [],
+        "exceptions": [
+          "Declared ordering law may explicitly make completion order meaningful."
+        ],
+        "grounding": [
+          {
+            "end_line": 45,
+            "quote": "**REQ-R-ABG3-SAGA-FRONTIER-010**: Fan-in projection shall be deterministic and independent of branch wall-clock completion order unless a declared ordering law explicitly makes completion order meaningful.\n\n**REQ-R-ABG3-SAGA-FRONTIER-011**: Branch output shall become visible to downstream branches only after admitted publication or merge under declared output allocation. Partial staging writes from cancelled, failed, or superseded attempts shall not become downstream input without admitted evidence and publication truth.\n\n**REQ-R-ABG3-SAGA-FRONTIER-012**: Public construction progress shall be a read-only projection over admitted frontier, lease, dispatch, liveness, retry, compensation, closure, block, escalation, and fan-in truth. It shall not become a controller.\n\n**REQ-R-ABG3-SAGA-FRONTIER-013**: System-level parallelism shall satisfy `DESIGN_MODULE_METHOD.md` Prime Law and functional-realization review. Frontier selection, fan-in, progress, and runner semantic state shall be immutable carriers/projections returned as new values. Native async tasks may operate over the shared mutable workspace only as explicit effect edges guarded by observed-state freshness, write territory or output allocation, staging/publication, idempotent admission, and replay truth. Shared mutable workspace state shall not become scheduler truth.\n\n**REQ-R-ABG3-SAGA-FRONTIER-014**: GTL owns declared branch topology, traversal scope, dependency order, available consequence routes, and fan-in relations. The validator owns static checks over those declarations. HoG owns traversal and applies only ABG-admitted transition proposals. Selected implementation bindings own native leaf-effect realization. ABG owns admission of transition, branch, evidence, result, continuation, and replay truth. No one of those owners shall collapse the others into a rival scheduler, compiled plan, private queue authority, or controller-local state machine.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SAGA-FRONTIER.md#REQ-R-ABG3-SAGA-FRONTIER%20%E2%80%94%20Event-Sourced%20Saga%20Frontier%20And%20Runtime%20Realization%20Transparency%2FAcceptance%20Criteria",
+            "start_line": 37
+          }
+        ],
+        "key": "fanin_publication_and_functional_realization",
+        "statement": "Fanin is deterministic independent of wall-clock completion except explicit ordering law. Downstream sees branch output only after admitted publication/merge under allocation; failed/cancelled/superseded partial writes need evidence/publication before use. Public progress purely projects admitted frontier/lease/dispatch/liveness/retry/compensation/closure/block/escalation/fanin. Satisfy design Prime Law/functional review: semantic frontier/fanin/progress/runner state are immutable returned carriers; shared mutation is guarded effect edge with freshness,territory,staging/publication,idempotency,replay, never scheduler truth. Conserve GTL topology,validator checks,HoG traversal,implementation leaves and ABG admission separately; none collapses others into scheduler/compiled plan/private queue/state machine.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "selection_application"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 43,
+            "quote": "**REQ-R-ABG3-SELECTION-APPLICATION-001**: The admitted catalog and ABG replay\nprojection shall enumerate interface-conformant program or GraphFunction\ncandidates for a contract boundary without making strategic choice.\n\n**REQ-R-ABG3-SELECTION-APPLICATION-002**: ABG shall validate and admit a\nselection proposed through declared GTL `F_D`, `F_P`, `F_H`, or\ndomain/business policy. HoG shall apply the admitted selected identity through\nthe original GTL program; ABG shall not select or traverse it.\n\n**REQ-R-ABG3-SELECTION-APPLICATION-003**: Selection provenance shall preserve candidate identity, selecting mechanism, and rationale when supplied.\n\n**REQ-R-ABG3-SELECTION-APPLICATION-004**: Runtime application of a selected\nGraphFunction shall cause HoG to materialize and traverse its published GTL\ntemplate while ABG opens graph-call and frame-local runtime truth. Neither\nstep shall rewrite published GTL carriers.\n\n**REQ-R-ABG3-SELECTION-APPLICATION-005**: Hidden structural alternatives or ambiguous declared alternatives shall fail closed.\n\n**REQ-R-ABG3-SELECTION-APPLICATION-006**: Selection admission shall treat\nadmitted catalog entries as the candidate universe. A traversal vector or edge\nmay constrain allowable candidates by candidate identity, interface, source\ncontract, target contract, context, authority, overlay, namespace, version,\nprovenance, readiness, proof, or policy refs. An absent vector or edge\nconstraint shall mean that field is unconstrained; ABG shall not fill an\nabsent constraint from the already-selected candidate. The selected candidate\nshall be eligible against the admitted universe after all declared constraints\nare applied.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELECTION-APPLICATION.md#REQ-R-ABG3-SELECTION-APPLICATION%20%E2%80%94%20Selection%20Application%2FAcceptance%20Criteria",
+            "start_line": 17
+          }
+        ],
+        "key": "selection_eligibility_and_authority",
+        "statement": "Catalog/replay enumerates interface-conformant program/function candidates without choice. Declared GTL F_D/F_P/F_H/domain-policy proposes; ABG validates/admits; HoG applies original GTL, ABG neither chooses nor traverses. Preserve candidate/mechanism/available rationale. HoG materializes/traverses published template, ABG opens call/frame, neither rewrites GTL. Hidden or ambiguous alternatives fail closed. Catalog is candidate universe; declared vector/edge constraints may bind identity/interface/source/target/context/authority/overlay/namespace/version/provenance/readiness/proof/policy. Absent constraint means unconstrained, never backfilled from selected candidate; selected candidate must be eligible after all declared constraints.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "successor_use"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 31,
+            "quote": "**REQ-R-ABG3-SELFHOSTING-001**: Derived artifacts such as bootloader documents, constraint surfaces, and qualification summaries shall be governed by the same event, replay, provenance, and correction discipline as other runtime work.\n\n**REQ-R-ABG3-SELFHOSTING-002**: Drift between source-of-truth runtime/design surfaces and derived artifacts shall be detectable through deterministic consistency checks.\n\n**REQ-R-ABG3-SELFHOSTING-003**: Derived artifact governance is ordinary graph-function application and runtime truth, not special bootstrap magic.\n\n**REQ-R-ABG3-SELFHOSTING-004**: ABIogenesis 5.0 shall be authored under manual\nSTDO governance through accepted design gates, GTL admission, GTL validation,\ndirect HoG traversal, and ordinary in-tree implementation. It shall close through\nits specification-method, public-contract, qualification, RC, and release\ngates. A predecessor-builds-candidate bootstrap, candidate fixed point, or\ndownstream catalog-product campaign shall not be required to qualify or release\n5.0.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance%2FAcceptance%20Criteria",
+            "start_line": 19
+          }
+        ],
+        "key": "derived_artifact_and_baseline_gates",
+        "statement": "Bootloaders,constraints,qualification summaries follow event/replay/provenance/correction; deterministic checks detect source/derived drift, no bootstrap magic. 5.0 manual STDO authorship uses accepted design,GTL admission/validation,direct HoG,in-tree implementation and specification/public-contract/qualification/RC/release gates. Predecessor bootstrap,fixed point or downstream catalog campaign is not required for 5.0 release.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "successor_use"
+        ],
+        "conditions": [
+          "Post-release successor development is invoked."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 61,
+            "quote": "**REQ-R-ABG3-SELFHOSTING-005**: After stable 5.0 and a compatible independently\nreleased odd_glc 1.0 are available, exact installs of those products may act\ntogether as the development product used to author or build the distinct 5.0.1\nsource project. The installed builder products and the mutable successor source\nproject shall retain separate product, source, workspace, authority, and\nprovenance identities.\n\n**REQ-R-ABG3-SELFHOSTING-006**: Successor work performed through installed 5.0\nshall enter through published GTL modules and graph functions plus the ordinary\ninstalled catalog, SDK, CLI, runtime, result, and replay contracts. It shall not\nintroduce a bootstrap-specific controller, private traversal loop, hidden build\nservice, or mutable-source import into the installed product.\n\n**REQ-R-ABG3-SELFHOSTING-007**: A successor-use invocation shall bind the exact\ninstalled builder identity, exact successor source/input identity, selected\nGraphFunction and declaration identities, workspace authority, result contract,\nand replay basis. Package presence, an ambient source path, or an adapter hint\nshall not supply missing binding truth.\n\n**REQ-R-ABG3-SELFHOSTING-008**: Material produced by successor use shall remain\nordinary typed output with lineage to the installed builder, source/input,\nGraphCall, worker, result, and replay identities. Successor output shall not\nsilently replace either the installed builder product or the mutable source\nproject that was used as input.\n\n**REQ-R-ABG3-SELFHOSTING-009**: Successor use is a composition over the public\nGTL and ABG atom set. ABIogenesis 5.0 shall not publish a special self-host\noperation, engine capability, event authority, or closure path whose semantics\nduplicate ordinary graph-function execution.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance%2FAcceptance%20Criteria",
+            "start_line": 33
+          }
+        ],
+        "key": "successor_exact_binding_and_isolation",
+        "statement": "Only after stable 5.0 and compatible independently released odd_glc 1.0 exist may exact installs jointly develop distinct 5.0.1. Builders and mutable successor retain separate Product/source/workspace/authority/provenance. Use ordinary published GTL/catalog/SDK/CLI/runtime/result/replay, no special controller/loop/build service/mutable source import. Bind exact builder/source-input/function/declarations/workspace/result/replay; packages,ambient path or hints cannot supply missing truth. Output is typed with builder/input/call/worker/result/replay lineage and cannot silently replace builder or input source. No special self-host operation/capability/event/closure duplicate ordinary execution.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "successor_use"
+        ],
+        "conditions": [],
+        "exceptions": [
+          "A successor defect also blocks stable release only if independently falsifying a retained 5.0 claim."
+        ],
+        "grounding": [
+          {
+            "end_line": 83,
+            "quote": "**REQ-R-ABG3-SELFHOSTING-010**: Evidence from installed 5.0 authoring or building\n5.0.1 may qualify the 5.0.1 successor and the installed-product development\nworkflow. It shall not retroactively become release evidence required for the\nalready qualified stable 5.0 product.\n\n**REQ-R-ABG3-SELFHOSTING-011**: Missing or incompatible builder identity,\nworkspace binding, declaration, input, result, replay, source-isolation, or\nprovenance truth shall block the successor-use claim. It shall not block the\nstable 5.0 release unless the same defect independently falsifies a retained 5.0\nproduct claim.\n\n**REQ-R-ABG3-SELFHOSTING-012**: A successor workspace may bind an independently\nreleased compatible catalog product, including odd_glc, through the ordinary\nmulti-product workspace contract. That catalog product remains distinct from\nthe ABG builder and contributes no runtime, traversal, event, continuation,\nretry, or closure authority. Its release or campaign is not a 5.0 release gate.\n\n**REQ-R-ABG3-SELFHOSTING-013**: Any later fixed-point, reproducibility, or\nequivalence claim over successor builds shall declare its compared subjects,\ninputs, deterministic and nondeterministic fields, equivalence relation, and\nproof surface before execution. Stable 5.0 makes no such claim by implication.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance%2FAcceptance%20Criteria",
+            "start_line": 63
+          }
+        ],
+        "key": "successor_qualification_and_future_claims",
+        "statement": "Successor evidence may qualify 5.0.1/workflow, never retroactive required stable-5.0 evidence. Missing/incompatible builder/workspace/declaration/input/result/replay/isolation/provenance blocks successor claim, not 5.0 unless defect independently falsifies retained 5.0 claim. Compatible catalog Product may bind multi-product workspace but stays distinct and gives no runtime/traversal/event/continuation/retry/closure authority; its release/campaign is not 5.0 gate. Later fixed-point/reproducibility/equivalence claim must declare compared subjects,inputs,deterministic/nondeterministic fields,relation and proof before execution; 5.0 implies none.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "residual",
+        "keys": [
+          "run_attempt",
+          "run_lifecycle_and_preserved_result",
+          "stdo_run_environment_replay",
+          "run_stdo_contract_references"
+        ],
+        "reason": "Run laws retained with unresolved exact environment and runtime evidence.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "saga_metadata",
+          "saga_basis_unresolved"
+        ],
+        "reason": "Metadata retained with unresolved references.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SAGA-FRONTIER.md#REQ-R-ABG3-SAGA-FRONTIER%20%E2%80%94%20Event-Sourced%20Saga%20Frontier%20And%20Runtime%20Realization%20Transparency"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "dependency_frontier"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SAGA-FRONTIER.md#REQ-R-ABG3-SAGA-FRONTIER%20%E2%80%94%20Event-Sourced%20Saga%20Frontier%20And%20Runtime%20Realization%20Transparency%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "saga_topology_and_concurrency_admission",
+          "saga_attempt_idempotency_and_policy",
+          "fanin_publication_and_functional_realization"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SAGA-FRONTIER.md#REQ-R-ABG3-SAGA-FRONTIER%20%E2%80%94%20Event-Sourced%20Saga%20Frontier%20And%20Runtime%20Realization%20Transparency%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "selection_metadata",
+          "selection_basis_unresolved"
+        ],
+        "reason": "Metadata retained with unresolved links.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELECTION-APPLICATION.md#REQ-R-ABG3-SELECTION-APPLICATION%20%E2%80%94%20Selection%20Application"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "selection_application"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELECTION-APPLICATION.md#REQ-R-ABG3-SELECTION-APPLICATION%20%E2%80%94%20Selection%20Application%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "selection_eligibility_and_authority"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELECTION-APPLICATION.md#REQ-R-ABG3-SELECTION-APPLICATION%20%E2%80%94%20Selection%20Application%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "successor_metadata",
+          "successor_metadata_not_release_evidence"
+        ],
+        "reason": "Metadata retained with unresolved historical acceptance.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "successor_use"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance%2FPurpose"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "successor_uses_ordinary_run",
+          "derived_artifact_and_baseline_gates",
+          "successor_exact_binding_and_isolation",
+          "successor_qualification_and_future_claims"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "supervisor_metadata",
+          "supervisor_basis_unresolved"
+        ],
+        "reason": "Metadata retained with unresolved links.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "admitted_supervisor"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor%2FPurpose"
+      }
+    ],
+    "latitude": [],
+    "limitations": [
+      "Successor use and hypothetical fixed-point claims are distinct from the baseline release gates; source statements do not verify current 5.0 or odd_glc release availability.",
+      "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": false,
+        "grounding": [
+          {
+            "end_line": 50,
+            "quote": "**REQ-R-ABG3-SELFHOSTING-006**: Successor work performed through installed 5.0\nshall enter through published GTL modules and graph functions plus the ordinary\ninstalled catalog, SDK, CLI, runtime, result, and replay contracts. It shall not\nintroduce a bootstrap-specific controller, private traversal loop, hidden build\nservice, or mutable-source import into the installed product.\n\n**REQ-R-ABG3-SELFHOSTING-007**: A successor-use invocation shall bind the exact\ninstalled builder identity, exact successor source/input identity, selected\nGraphFunction and declaration identities, workspace authority, result contract,\nand replay basis. Package presence, an ambient source path, or an adapter hint\nshall not supply missing binding truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance%2FAcceptance%20Criteria",
+            "start_line": 40
+          }
+        ],
+        "key": "successor_uses_ordinary_run",
+        "kind": "uses",
+        "meaning": "Installed successor invocation uses ordinary runtime contracts with exact binding and replay basis.",
+        "source_key": "successor_use",
+        "target_key": "run_attempt"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "The specified conservation/replay obligations do not establish any actual admitted STDO run or semantic assessment.",
+        "grounding": [
+          {
+            "end_line": 48,
+            "quote": "**REQ-R-ABG3-RUN-010**: An STDO-governed Run shall retain its admitted\nenvironment declaration and immutable dependency identities, permitted access\nbasis, actual required native-source and selected supplementary access evidence,\nand the context/policy supplied to dependent calls through the existing ABG\nevent history. Fresh replay shall reconstruct those exact relations and\ndistinguish access evidence from\nsemantic assessment without relying on an ambient installation, performing a\nnew retrieval or fabricating missing evidence. A material governing-environment\nchange requires its declared re-entry; it shall not silently upgrade the Run.\nOrdinary worksite changes retain the existing successor-observation and\nunchanged-workspace-authority law.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-RUN.md#REQ-R-ABG3-RUN%20%E2%80%94%20Run%20Governance%2FAcceptance%20Criteria",
+            "start_line": 38
+          }
+        ],
+        "key": "run_stdo_contract_references",
+        "subject_key": "run_attempt",
+        "uncertainty": "Exact environment/access contracts and admitted run evidence are not supplied."
+      },
+      {
+        "consequence": "No resolved authority or current acceptance inferred.",
+        "grounding": [
+          {
+            "end_line": 7,
+            "quote": "**Lineage**: T-283 Product basis; T-284 bounded owner repair\n**Category**: Constraint / Guarantee\n**Date**: 2026-07-11\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [DESIGN_MODULE_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/DESIGN_MODULE_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [GOALS.md](../../GOALS.md) GOAL-035, [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-EVENTS.md](./REQ-R-ABG3-EVENTS.md), [REQ-R-ABG3-PROJECTION.md](./REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-WORKER.md](./REQ-R-ABG3-WORKER.md), [REQ-R-ABG3-POLICY.md](./REQ-R-ABG3-POLICY.md), [REQ-R-ABG3-FP-CONSCIOUSNESS.md](./REQ-R-ABG3-FP-CONSCIOUSNESS.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SAGA-FRONTIER.md#REQ-R-ABG3-SAGA-FRONTIER%20%E2%80%94%20Event-Sourced%20Saga%20Frontier%20And%20Runtime%20Realization%20Transparency",
+            "start_line": 4
+          }
+        ],
+        "key": "saga_basis_unresolved",
+        "subject_key": "saga_metadata",
+        "uncertainty": "Referenced lineage/method/goal/family evidence absent."
+      },
+      {
+        "consequence": "No cross-chunk identity resolution.",
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELECTION-APPLICATION.md#REQ-R-ABG3-SELECTION-APPLICATION%20%E2%80%94%20Selection%20Application",
+            "start_line": 6
+          }
+        ],
+        "key": "selection_basis_unresolved",
+        "subject_key": "selection_metadata",
+        "uncertainty": "Referenced sources absent."
+      },
+      {
+        "consequence": "Metadata does not verify current release/install status.",
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SELFHOSTING.md#REQ-R-ABG3-SELFHOSTING%20%E2%80%94%20Successor%20Use%20And%20Derived-Artifact%20Governance",
+            "start_line": 3
+          }
+        ],
+        "key": "successor_metadata_not_release_evidence",
+        "subject_key": "successor_metadata",
+        "uncertainty": "Referenced acceptance evidence absent."
+      },
+      {
+        "consequence": "No current authority or acceptance inferred.",
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [TICKET_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/TICKET_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md) (the reflective boundary), [REQ-R-ABG3-EVENTS.md](./REQ-R-ABG3-EVENTS.md), [REQ-R-ABG3-PROJECTION.md](./REQ-R-ABG3-PROJECTION.md), [REQ-R-ABG3-PROVENANCE.md](./REQ-R-ABG3-PROVENANCE.md), [REQ-R-ABG3-FP-CONSCIOUSNESS.md](./REQ-R-ABG3-FP-CONSCIOUSNESS.md), [T-217](../../../.ai-workspace/tickets/completed/T-217-consciousness-wave-higher-order-regulation.md) (absorbing [T-215](../../../.ai-workspace/tickets/completed/T-215-supervisor-as-admitted-actor.md))\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-SUPERVISOR-WITNESS.md#REQ-R-ABG3-SUPERVISOR-WITNESS%20%E2%80%94%20Supervisor%20As%20Admitted%20Actor",
+            "start_line": 6
+          }
+        ],
+        "key": "supervisor_basis_unresolved",
+        "subject_key": "supervisor_metadata",
+        "uncertainty": "Referenced owners and ticket contents absent."
+      }
+    ]
+  },
+  "answer_sha256": "742487306cbafd7dde221606a22c562e1cf9eb9c0f85510c701b3599b6d466f7",
+  "author": "codex-runtime-frame",
+  "chunk": "chunk-5180c1498043c7afc3c6",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "82aff35f8821cf7d5e9e4d970ccb0593f45a8c7e98668d76d9264e6b359125c4"
+}

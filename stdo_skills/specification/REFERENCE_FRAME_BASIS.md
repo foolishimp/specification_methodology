@@ -26,6 +26,13 @@ interpretation and subsequent admission obligation remain explicit there.
 
 ## Frames and coordinates
 
+T-003 selects a bounded cross-Product construction using the a_c project-build
+contract and local filesystem Writer mechanism. Its ticket binds the exact
+territory and source-as-data operation. Target-method source identity does not
+change the Skills builder or issue another profile's lifecycle admission.
+Independent review assesses the public command-to-artifact path and native
+host observations, retaining prior qualification gaps separately.
+
 | Frame | Evaluation and material attention | Authority, evidence and return |
 |---|---|---|
 | Executive `skills.executive/1` | Exact Product outcome, dependency-ready frontier, current candidate identities, closed returns, tool compatibility and remaining claims | Select only authorized bounded actions; no mutation in this frame; consumes source-bound returns and records decisions through a granted Writer |

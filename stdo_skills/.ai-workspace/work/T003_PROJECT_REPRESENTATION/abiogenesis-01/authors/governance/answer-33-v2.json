@@ -1,0 +1,712 @@
+{
+  "concepts": [
+    {
+      "key": "consensus_contract_family",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 58,
+          "end_line": 71,
+          "quote": "**REQ-P-CONSENSUS-004**: The public contract catalog shall locate canonical\nschemas for `abg.schema.consensus-subject`,\n`abg.schema.consensus-panel`, `abg.schema.consensus-reviewer-profile`,\n`abg.schema.consensus-submitter-profile`,\n`abg.schema.consensus-submitter-response`,\n`abg.schema.consensus-escalation-decision`,\n`abg.schema.review-findings`, `abg.schema.review-rulings`,\n`abg.schema.consensus-round-policy`, `abg.schema.consensus-round-outcome`,\n`abg.schema.consensus-result`, and\n`abg.schema.ticket-consensus-projection`. Their native and serialized forms\nshall have the same field and value-domain meaning. The public contract catalog\nshall also publish the closed F_H decision roster\n`accept_with_dissent | reject` as\n`abg.vocabulary.consensus-fh-decision`."
+        }
+      ],
+      "label": "Consensus contract family",
+      "definition": "Canonical schemas cover consensus subject, panel, reviewer and submitter profiles, submitter response, escalation decision, review findings/rulings, round policy/outcome/result and ticket-consensus projection. Native and serialized forms share field/value-domain meaning.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_subject",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 73,
+          "end_line": 77,
+          "quote": "**REQ-P-CONSENSUS-005**: A Consensus subject shall bind an exact subject\ncontract, subject ref and digest, submitting actor, selected reviewer-panel ref,\nround-policy ref, and explicit invocation workspace identity. A ticket subject\nshall bind the ticket ref and digest; path presence or mutable prose alone shall\nnot identify the reviewed subject."
+        }
+      ],
+      "label": "Consensus subject",
+      "definition": "Exact subject contract/ref/digest, submitting actor, selected reviewer panel, round policy and explicit invocation workspace; ticket subjects additionally bind ticket ref/digest rather than path or mutable prose.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "reviewer_occurrence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 79,
+          "end_line": 90,
+          "quote": "**REQ-P-CONSENSUS-006**: Each reviewer profile shall carry a stable profile\nidentity, role or worker-selection contract, configuration digest, instruction\nand result-contract refs, and declared capability requirements. Each admitted\nfinding set shall carry the profile identity and configuration digest,\ninvocation ref, source round ref and ordinal, panel ref and position, exact\nreviewer-task ref and digest, C-call attempt ref, output digest, evidence refs,\ntyped findings, and typed residuals or refusal. Those fields form one reviewer\nresult-occurrence identity and shall equal the expected admitted task occurrence\nbefore vector assembly. Reviewer attribution shall not be inferred from\ncompletion order or adapter position. A panel shall resolve to an explicit\nnon-empty reviewer vector; duplicate profile identities shall fail admission,\nand the product shall not hard-code one panel cardinality."
+        }
+      ],
+      "label": "Attributed reviewer result occurrence",
+      "definition": "A profile has stable identity, selection contract, configuration digest, instruction/result refs and capability requirements. Its finding set occurrence binds profile/configuration, invocation, source round/ordinal, panel/position, exact task/digest, C-call attempt, output digest, evidence, findings and residuals/refusal.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "submitter_response",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 92,
+          "end_line": 103,
+          "quote": "**REQ-P-CONSENSUS-006A**: ABIogenesis shall publish one canonical attributed\nsubmitter GraphFunction and submitter-response contract for Consensus. Each\ninvocation shall bind exactly one submitter profile whose actor is the\nsubject's submitting actor. The profile shall bind its stable profile identity,\nrole or worker-selection contract, configuration digest, instruction and\nresult-contract refs, and declared capabilities. The response shall bind the\nexact invocation, source round identity and ordinal, complete admitted reviewer\nfindings-vector digest, submitter profile and actor, response identity and\ndigest, disposition, addressed and residual finding refs, evidence refs, and\nthe Product-declared response schema. Submitter instruction and task carriers\nshall remain subordinate contracts inside this one Product-owned family; they\nshall not become another public operation, runtime authority, or loop owner."
+        }
+      ],
+      "label": "Canonical attributed submitter response",
+      "definition": "One canonical Product-owned submitter GraphFunction/response family binds exactly one profile whose actor is the subject submitter. Profile identity/selection/configuration/instruction/result/capabilities and response invocation/source round/ordinal/complete findings-vector digest/profile/actor/identity/digest/disposition/addressed and residual findings/evidence/schema are exact.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "round_decision",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 111,
+          "end_line": 134,
+          "quote": "**REQ-P-CONSENSUS-008**: Consensus round policy shall declare a positive round\nbudget, convergence rule, disagreement rule, escalation rule, and foldback\ncontract. Each admitted round shall bind its complete admitted reviewer\nfindings vector and exact admitted submitter response before returning exactly\none outcome from `closed_done | recurse_next_round | escalate_fh`, published as\n`abg.vocabulary.consensus-round-outcome`. Exhaustion shall produce typed\n`escalate_fh`; it shall not silently accept or start another round. The Product\nround decision shall be total over the exact policy, source round, complete\nfindings vector, and admitted submitter response:\n\n- a refusal-bearing complete vector produces `closed_done` with typed\n  `contract_failure`;\n- exact agreement produces `closed_done` with\n  `unanimous_agreement`;\n- material disagreement with remaining budget produces\n  `recurse_next_round` and one response-bearing successor-round basis; and\n- material disagreement without remaining budget, or an admitted escalation\n  rule, produces `escalate_fh` with one same-Run F_H hold basis and provisional\n  `unresolved_disagreement`.\n\nThe same relation shall construct the closed ruling vector from the admitted\nfinding occurrences and submitter response using only the roster in\nREQ-P-CONSENSUS-007. No other outcome, classification, ruling kind, successor,\nor hold is lawful."
+        }
+      ],
+      "label": "Total Consensus round decision",
+      "definition": "A positive-budget policy declares convergence, disagreement, escalation and foldback rules. Complete admitted reviewer findings and the exact admitted response precede exactly one closed_done, recurse_next_round or escalate_fh outcome.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_final_result",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 136,
+          "end_line": 145,
+          "quote": "**REQ-P-CONSENSUS-008A**: The final Consensus result shall bind the subject,\npanel, policy, round identities, admitted finding sets, ruling rows, consensus\nand dissent classification, terminal round outcome, evidence and lineage refs,\nand result and replay refs. It shall distinguish unanimous agreement, partial\nagreement with dissent, unresolved disagreement, and typed contract failure\nwithout collapsing those states into one accepted boolean. One admitted\nConsensus Run shall expose at most one final result. An `escalate_fh` round\ndecision is provisional hold basis, not a second final result: the same Run\nfinalizes to partial agreement when F_H chooses `accept_with_dissent`, or to\nunresolved disagreement when F_H chooses `reject`."
+        }
+      ],
+      "label": "Consensus final result",
+      "definition": "Binds subject, panel, policy, rounds, findings, rulings, consensus/dissent classification, terminal outcome, evidence/lineage and result/replay refs; unanimous agreement, partial agreement with dissent, unresolved disagreement and contract failure remain distinct.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_workspace",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FWorkspace%20And%20Public%20Invocation",
+          "start_line": 199,
+          "end_line": 206,
+          "quote": "**REQ-P-CONSENSUS-013**: Consensus shall use one public workspace contract. The\nsame contract shall support an existing explicitly selected workspace, another\nindependently bound explicitly selected workspace root, and a caller-created\ntemporary workspace root. These are three applications of one contract, not\nthree runtime modes. A temporary root still requires admitted workspace,\nstable workspace-authority basis, immutable binding, catalog, event, result,\nreplay, and proof identities. Ordinary observation changes shall create new\nobservation snapshots without changing the workspace authority or binding."
+        }
+      ],
+      "label": "Consensus workspace application",
+      "definition": "One public workspace contract applies to existing, independently bound alternate and caller-created temporary roots. Temporary roots still require admitted workspace, stable authority basis, immutable binding, catalog, event/result/replay/proof identities; observations create snapshots without changing authority/binding.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "installed_substrate",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract",
+          "start_line": 3,
+          "end_line": 7,
+          "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability\n**Date**: 2026-04-27\n**Derives from**: [PRODUCT.md](../../PRODUCT.md), [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md)\n**Wave**: Shared product toolchain install-resolution reprice; ABG 5.0 product binding"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FPurpose",
+          "start_line": 13,
+          "end_line": 18,
+          "quote": "The ABG installer is product behavior. It creates the installed substrate that\ndownstream products use as a development product.\n\nThis requirement family defines what an installed ABG substrate must contain so\nbuild tenants do not infer installer behavior from Python precedent, local\nscripts, source-tree imports, or ticket commentary."
+        }
+      ],
+      "label": "Installed ABG substrate",
+      "definition": "Installer is Product behavior creating downstream development-product substrate, with declared active T-283 closure status. Local scripts, Python precedent, source imports and commentary do not define it.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "workspace_binding",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FShared%20Toolchain%20Binding",
+          "start_line": 63,
+          "end_line": 73,
+          "quote": "**REQ-P-INSTALL-008**: A `WorkspaceAuthorityBasis` shall bind the stable\nworkspace identity, canonical root locator, authority mode, and\nauthority-bearing manifest and configuration refs and digests. One immutable\n`WorkspaceBinding` shall bind that authority basis to one exact verified\ninstalled-product set, resolved lock, selected toolchain root, product and\npackage roots, and declared observer/control, executor, event-log,\nruntime-state, projection, and archive root locations. It shall record public\ncommand or contract refs, product-manifest paths, and manifest digests. Mutable\nfile, process, runtime, replay, artifact, and observed-root content shall belong\nto an `ObservationSnapshot`, not the authority basis or binding. A new\nobservation shall not mutate, replace, or invalidate either stable identity."
+        }
+      ],
+      "label": "Immutable workspace binding",
+      "definition": "Binds stable workspace identity/root/mode and authority manifests/configuration to verified installed product set, lock, selected toolchain/package roots, declared mutable roots and public command/manifest refs/digests.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "shared_toolchain",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FShared%20Toolchain%20Binding",
+          "start_line": 46,
+          "end_line": 54,
+          "quote": "**REQ-P-INSTALL-005**: Abiogenesis shall publish one shared product toolchain\nbinding contract that separates immutable released product payloads from target\nworkspace mutable runtime state.\n\n**REQ-P-INSTALL-006**: A target workspace `.abiogenesis/` root shall act as the\nbinding, provenance, runtime binding, and configuration root for a selected\nshared product toolchain. Package libraries, command binaries, reference docs,\nand standards shall resolve through the selected versioned product manifest\nunder the toolchain root, not through a target-local product package copy."
+        }
+      ],
+      "label": "Shared product toolchain",
+      "definition": "Immutable versioned released payloads resolve separately from target workspace mutable state; target .abiogenesis is binding/provenance/runtime binding/configuration root.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "response_precedes_successor",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FConstructive%20And%20Runtime%20Law",
+          "start_line": 149,
+          "end_line": 160,
+          "quote": "**REQ-P-CONSENSUS-009**: The GTL body shall express the declared reviewer vector\nthrough lawful higher-order fan-out, collect attributed results through an\nexplicit vector boundary, invoke the canonical attributed submitter F_P\nfunction over that exact admitted vector, carry the submitter response through\nordinary ABG result and judgment admission, reduce the admitted findings and\nresponse through declared evaluation and rule surfaces, and express another\nverification round through declared bounded recursion and foldback. The next\nreviewer round, including round two, shall be impossible to construct, bind,\nopen, or execute before ABG admits the exact source-round submitter response.\nPrompts, reviewer or submitter selection, merge policy, round control, and\nclosure classification shall be declarations or referenced contracts, not\nhost-language orchestration."
+        }
+      ],
+      "kind": "required_before",
+      "source_key": "submitter_response",
+      "target_key": "round_decision",
+      "meaning": "The exact source-round submitter response must be ABG-admitted before any successor can be constructed, bound, opened or executed.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "install_before_workspace_binding",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FProduct%20Boundary",
+          "start_line": 27,
+          "end_line": 32,
+          "quote": "**REQ-P-INSTALL-002**: The installed-substrate composition shall first install\none or more immutable released product payloads, including the selected ABG\nproduct, and then admit a target workspace binding through\n`abg.operation.workspace.bind`, without treating a mutable source project or\nthe target workspace as an installed product. Installation alone shall not\ncreate or change a binding."
+        }
+      ],
+      "kind": "precedes",
+      "source_key": "installed_substrate",
+      "target_key": "workspace_binding",
+      "meaning": "Composition installs one or more immutable released payloads including ABG before explicit workspace.bind; installation alone never creates/changes binding.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "reviewer_vector_admission",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 79,
+          "end_line": 90,
+          "quote": "**REQ-P-CONSENSUS-006**: Each reviewer profile shall carry a stable profile\nidentity, role or worker-selection contract, configuration digest, instruction\nand result-contract refs, and declared capability requirements. Each admitted\nfinding set shall carry the profile identity and configuration digest,\ninvocation ref, source round ref and ordinal, panel ref and position, exact\nreviewer-task ref and digest, C-call attempt ref, output digest, evidence refs,\ntyped findings, and typed residuals or refusal. Those fields form one reviewer\nresult-occurrence identity and shall equal the expected admitted task occurrence\nbefore vector assembly. Reviewer attribution shall not be inferred from\ncompletion order or adapter position. A panel shall resolve to an explicit\nnon-empty reviewer vector; duplicate profile identities shall fail admission,\nand the product shall not hard-code one panel cardinality."
+        }
+      ],
+      "applies_to_keys": [
+        "reviewer_occurrence"
+      ],
+      "statement": "Every result-occurrence field must equal the expected admitted task before vector assembly; attribution never comes from completion order or adapter position. Panels resolve to explicit nonempty reviewer vectors; duplicate profile identities fail admission and cardinality is not hard-coded.",
+      "uncertainty": "",
+      "conditions": [
+        "Before findings vector assembly."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "submitter_subordination",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 101,
+          "end_line": 103,
+          "quote": "the Product-declared response schema. Submitter instruction and task carriers\nshall remain subordinate contracts inside this one Product-owned family; they\nshall not become another public operation, runtime authority, or loop owner."
+        }
+      ],
+      "applies_to_keys": [
+        "submitter_response"
+      ],
+      "statement": "Submitter instructions and tasks remain subordinate contracts in the one Product family; neither becomes a new public operation, runtime authority or loop owner.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "round_outcome_partition",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 105,
+          "end_line": 134,
+          "quote": "**REQ-P-CONSENSUS-007**: Review reduction shall emit only the closed ruling\nkinds `decision_row`, `draft_ticket`, `split_ticket`, `deferment`, and\n`rejected_finding`. A ruling is result data for the caller and never owns ticket\nstatus. The public contract catalog shall publish this roster as\n`abg.vocabulary.review-ruling-kind`.\n\n**REQ-P-CONSENSUS-008**: Consensus round policy shall declare a positive round\nbudget, convergence rule, disagreement rule, escalation rule, and foldback\ncontract. Each admitted round shall bind its complete admitted reviewer\nfindings vector and exact admitted submitter response before returning exactly\none outcome from `closed_done | recurse_next_round | escalate_fh`, published as\n`abg.vocabulary.consensus-round-outcome`. Exhaustion shall produce typed\n`escalate_fh`; it shall not silently accept or start another round. The Product\nround decision shall be total over the exact policy, source round, complete\nfindings vector, and admitted submitter response:\n\n- a refusal-bearing complete vector produces `closed_done` with typed\n  `contract_failure`;\n- exact agreement produces `closed_done` with\n  `unanimous_agreement`;\n- material disagreement with remaining budget produces\n  `recurse_next_round` and one response-bearing successor-round basis; and\n- material disagreement without remaining budget, or an admitted escalation\n  rule, produces `escalate_fh` with one same-Run F_H hold basis and provisional\n  `unresolved_disagreement`.\n\nThe same relation shall construct the closed ruling vector from the admitted\nfinding occurrences and submitter response using only the roster in\nREQ-P-CONSENSUS-007. No other outcome, classification, ruling kind, successor,\nor hold is lawful."
+        }
+      ],
+      "applies_to_keys": [
+        "round_decision"
+      ],
+      "statement": "The total relation over exact policy/source round/vector/response maps refusal-bearing complete vector to closed_done/contract_failure; exact agreement to closed_done/unanimous_agreement; material disagreement with budget to recurse_next_round plus one response-bearing successor basis; disagreement without budget or admitted escalation rule to escalate_fh plus one same-Run hold and provisional unresolved_disagreement. Exhaustion cannot accept or create another round. Only decision_row, draft_ticket, split_ticket, deferment and rejected_finding rulings may be constructed from admitted occurrences/response; no other outcome, classification, ruling, successor or hold is lawful.",
+      "uncertainty": "",
+      "conditions": [
+        "Decision consumes exact policy, source round, complete admitted vector and admitted submitter response.",
+        "Recurse requires material disagreement and remaining budget.",
+        "Escalate requires disagreement without budget or admitted escalation rule."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "single_result_and_fh",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 69,
+          "end_line": 71,
+          "quote": "shall also publish the closed F_H decision roster\n`accept_with_dissent | reject` as\n`abg.vocabulary.consensus-fh-decision`."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 136,
+          "end_line": 145,
+          "quote": "**REQ-P-CONSENSUS-008A**: The final Consensus result shall bind the subject,\npanel, policy, round identities, admitted finding sets, ruling rows, consensus\nand dissent classification, terminal round outcome, evidence and lineage refs,\nand result and replay refs. It shall distinguish unanimous agreement, partial\nagreement with dissent, unresolved disagreement, and typed contract failure\nwithout collapsing those states into one accepted boolean. One admitted\nConsensus Run shall expose at most one final result. An `escalate_fh` round\ndecision is provisional hold basis, not a second final result: the same Run\nfinalizes to partial agreement when F_H chooses `accept_with_dissent`, or to\nunresolved disagreement when F_H chooses `reject`."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_final_result",
+        "round_decision"
+      ],
+      "statement": "One admitted Run exposes at most one final result. escalate_fh is provisional hold basis: the same Run finalizes to partial agreement for accept_with_dissent or unresolved disagreement for reject. These two choices form the closed consensus-fh-decision vocabulary, never an accepted boolean.",
+      "uncertainty": "",
+      "conditions": [
+        "Per admitted Consensus Run.",
+        "Final partial or unresolved classification follows the corresponding admitted F_H decision on the provisional hold."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_graph_execution",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FConstructive%20And%20Runtime%20Law",
+          "start_line": 149,
+          "end_line": 169,
+          "quote": "**REQ-P-CONSENSUS-009**: The GTL body shall express the declared reviewer vector\nthrough lawful higher-order fan-out, collect attributed results through an\nexplicit vector boundary, invoke the canonical attributed submitter F_P\nfunction over that exact admitted vector, carry the submitter response through\nordinary ABG result and judgment admission, reduce the admitted findings and\nresponse through declared evaluation and rule surfaces, and express another\nverification round through declared bounded recursion and foldback. The next\nreviewer round, including round two, shall be impossible to construct, bind,\nopen, or execute before ABG admits the exact source-round submitter response.\nPrompts, reviewer or submitter selection, merge policy, round control, and\nclosure classification shall be declarations or referenced contracts, not\nhost-language orchestration.\n\n**REQ-P-CONSENSUS-010**: HoG shall traverse Consensus through ordinary catalog\nselection inside one admitted GTL program and One Surface intent admission.\nABG shall admit its\nGraphCall, frame, C-call, worker, result-admission, event, replay, continuation,\nretry, and F_H boundaries. The selected Consensus GraphFunction shall be\npublished by that program and shall not be treated as the whole program or as a\nbypass around `evaluateNext`. Consensus shall introduce no new runtime truth\nwriter, scheduler, automatic wake mechanism, retry loop, or closure authority."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_contract_family"
+      ],
+      "statement": "GTL declares higher-order reviewer fan-out, explicit attributed vector boundary, canonical submitter F_P over that vector, ordinary ABG result/judgment admission, declared reduction, bounded recursion/foldback. Prompts, selection, merge policy, control and classification remain declarations/contracts. HoG selects inside an admitted program through One Surface; ABG admits GraphCall/frame/C-call/worker/results/events/replay/continuation/retry/F_H. The function is published by, not equal to, that program, cannot bypass evaluateNext and adds no scheduler, writer, wake, retry or closure authority.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_judgment_partition",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FConstructive%20And%20Runtime%20Law",
+          "start_line": 171,
+          "end_line": 179,
+          "quote": "**REQ-P-CONSENSUS-011**: Deterministic admission owns schema, digest,\nattribution, panel membership, budget, exact-agreement classification, and\nenvelope checks. Deterministic reduction shall use declared panel ordinal and\nprofile identity rather than worker completion order. F_P owns reviewer\nfindings, disputed semantic judgment, and the exact attributed submitter\nresponse. ABG owns admission of each reviewer result and submitter response and\nthe causal source-round binding consumed by foldback. Unresolved judgment routes\nto F_H. F_D shall not manufacture semantic agreement, and F_P shall not waive a\nfailed deterministic envelope."
+        }
+      ],
+      "applies_to_keys": [
+        "round_decision",
+        "reviewer_occurrence",
+        "submitter_response"
+      ],
+      "statement": "Deterministic admission owns schemas, digests, attribution, membership, budget, exact agreement and envelopes; reduction uses panel ordinal/profile rather than completion order. F_P owns findings, disputed semantic judgment and attributed response; ABG admits each and binds source-round causality. Unresolved judgment routes F_H. F_D cannot manufacture semantic agreement; F_P cannot waive failed deterministic envelopes.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "next_round_refusal",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FConstructive%20And%20Runtime%20Law",
+          "start_line": 181,
+          "end_line": 189,
+          "quote": "**REQ-P-CONSENSUS-011A**: Before any next-round state, reviewer task, GraphCall,\nFrame, or C-call is admitted, the Product-validation and ABG-admission gate\nshall refuse a missing submitter response; a response attributed to the wrong\nsubmitter actor, profile, or configuration; a response bound to another\ninvocation or to a round other than the exact source round whose findings it\nconsumes; a forged response identity, digest, or evidence basis; and a response\nnot bound to the complete admitted reviewer findings vector for that source\nround. Each refusal shall remain typed non-close truth, append no next-round\nruntime fact, and leave the source-round evidence replayable."
+        }
+      ],
+      "applies_to_keys": [
+        "submitter_response",
+        "round_decision"
+      ],
+      "statement": "Product validation and ABG admission refuse missing response; wrong actor/profile/configuration; another invocation or nonexact source round; forged identity/digest/evidence; or no complete admitted findings-vector binding before any next-round state/task/GraphCall/Frame/C-call. Refusals remain typed non-close truth, append no next-round fact and keep source-round evidence replayable.",
+      "uncertainty": "",
+      "conditions": [
+        "Before any next-round state/task/GraphCall/Frame/C-call admission."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "ticket_consensus_data_boundary",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+          "start_line": 105,
+          "end_line": 109,
+          "quote": "**REQ-P-CONSENSUS-007**: Review reduction shall emit only the closed ruling\nkinds `decision_row`, `draft_ticket`, `split_ticket`, `deferment`, and\n`rejected_finding`. A ruling is result data for the caller and never owns ticket\nstatus. The public contract catalog shall publish this roster as\n`abg.vocabulary.review-ruling-kind`."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FConstructive%20And%20Runtime%20Law",
+          "start_line": 191,
+          "end_line": 195,
+          "quote": "**REQ-P-CONSENSUS-012**: For a ticket subject, `ticket.consensus` shall be the\nordinary typed Consensus result bound to the ticket ref and digest. The function\nshall not change ticket status, write or split a ticket, invoke triage\nautomatically, or admit its own ruling as governance truth. The caller or F_H\nmay take a returned ruling through ordinary TICKET_METHOD triage and mutation."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_final_result"
+      ],
+      "statement": "ticket.consensus is ordinary typed result bound to ticket ref/digest; rulings never own status. Consensus cannot change/write/split tickets, invoke triage automatically or admit its ruling as governance truth. Caller/F_H may carry a ruling through ordinary TICKET_METHOD triage and mutation.",
+      "uncertainty": "",
+      "conditions": [
+        "When the subject is a ticket."
+      ],
+      "exceptions": [
+        "Caller or F_H may take returned rulings through ordinary authorized ticket triage and mutation."
+      ]
+    },
+    {
+      "key": "consensus_public_path",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FWorkspace%20And%20Public%20Invocation",
+          "start_line": 213,
+          "end_line": 225,
+          "quote": "**REQ-P-CONSENSUS-015**: `abg.cli` shall invoke the canonical Consensus root\nthrough the existing `start` variant of `abg.operation.run.invoke`, the\nsupervised One Surface Program's declared start identity, and\n`until=converged`. It shall read the result and replay through the corresponding\nvariants of `abg.operation.project.read`. An `escalate_fh` outcome shall open a\ntyped hold inside that same admitted Run. `interaction.respond` shall admit the\nexact actor, capability, hold, provisional unresolved result, and one decision\nfrom `accept_with_dissent | reject`; `run.continue` shall resume the same Run,\nadmit exactly one final result, and close through the ordinary ABG path.\nConsensus shall not add a direct support invocation, feature-specific CLI verb,\noperation identity, or host-owned orchestration path.\n`abg.operation.catalog.view` may narrow the admitted catalog to the Consensus\nfunction and its declared dependencies; it shall not widen catalog authority."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_contract_family",
+        "consensus_final_result"
+      ],
+      "statement": "CLI starts canonical Consensus through run.invoke start, supervised One Surface Program start and until=converged; project.read supplies results/replay. Escalation opens a hold in that Run; interaction.respond admits exact actor/capability/hold/provisional result and one accept_with_dissent|reject; run.continue resumes same Run, admits exactly one final result and closes ordinarily. No direct support call, feature CLI verb, new operation or host orchestration. catalog.view may narrow to function/dependencies but cannot widen authority.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_human_topology_affirmation",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FWorkspace%20And%20Public%20Invocation",
+          "start_line": 227,
+          "end_line": 233,
+          "quote": "**REQ-P-CONSENSUS-015A**: S05 closure requires direct human affirmation that\nthe repaired F_H topology preserves Product law: One Surface remains the sole\npublic entry, escalation remains a hold and continuation inside the same\nadmitted Run and causal ABG episode, and no direct support invocation or rival\nselection, result, continuation, or closure authority exists. Prior\nimplementation, tests, review, or delegated acceptance shall not silently\nsupply that affirmation."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_contract_family"
+      ],
+      "statement": "S05 closure requires direct human affirmation of sole One Surface entry, same-Run causal ABG hold/continuation and absence of rival selection/result/continuation/closure authority. Implementation, tests, review or delegated acceptance cannot supply it implicitly.",
+      "uncertainty": "",
+      "conditions": [
+        "For S05 closure."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "consensus_qualification_evidence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FQualification",
+          "start_line": 237,
+          "end_line": 267,
+          "quote": "**REQ-P-CONSENSUS-016**: The 5.0 release gate shall invoke the packed and\ninstalled candidate's published Consensus function over one real ticket subject\nusing at least two differently attributed reviewer profiles and one exact\nattributed submitter profile. The proof shall enter through the admitted\nprogram and `run.invoke`, read the typed result and replay through\n`project.read`, and run through the existing, alternate, and temporary\nworkspace applications without source imports or shell-owned panel, submitter,\nor One Surface orchestration.\n\n**REQ-P-CONSENSUS-017**: Qualification shall include three controlled fixture\nfamilies: agreement reaches `closed_done`; a material dispute reaches\n`recurse_next_round` only after the exact attributed submitter response is\nadmitted and rebinds the next round through declared foldback; and round\nexhaustion or an unresolved dispute reaches `escalate_fh`. Qualification shall\nprove that round two cannot open for missing response, wrong submitter, wrong\nprior round, forged response, or response unbound from the admitted findings\nvector. Malformed subjects, profiles, findings, submitter responses, rulings,\npolicies, and round outcomes shall remain typed non-close truth.\n\n**REQ-P-CONSENSUS-018**: Consensus is not release-complete until the executable\nGTL body, GTL validation, installed catalog row, addressable public\nschemas and vocabularies including the submitter profile and response\nschemas, all three fixture families, all three workspace applications,\nreviewer and submitter actor attribution, exact findings-to-response-to-ABG\nadmission-to-next-round causality, result, and replay evidence pass over the\nexact 5.0 candidate. A declaration-only entry or imperative implementation\nshall fail the gate. The proof shall use only the complete Product-derived\npublic function family; a legacy operation identity or parallel adapter\nregister shall fail it. The unresolved fixture shall prove that\n`interaction.respond` and `run.continue` retain the exact original Run identity,\nconsume one hold once, and produce one final result before ordinary closure."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_contract_family"
+      ],
+      "statement": "The supplied qualification wording requires packed/installed exact 5.0 candidate invocation of published Consensus over one real ticket, at least two distinct reviewer profiles and one exact submitter through admitted program/run.invoke; project.read result/replay; all three workspace applications; no source imports or shell panel/submitter/One Surface control. Controlled agreement, response-gated recurse, and exhausted/unresolved escalation fixtures are required, including round-two negatives for missing/wrong/forged/unbound responses and typed non-close malformed subjects/profiles/findings/responses/rulings/policies/outcomes. Release completeness requires executable GTL validation, installed row, addressable schemas/vocabularies, all fixtures/workspaces, attribution/causality/result/replay. Declaration-only, imperative, legacy-operation or parallel-adapter paths fail; unresolved fixture retains exact Run, consumes one hold once and emits one final result before closure.",
+      "uncertainty": "The qualification subsection says 5.0; the enclosing release applicability declaration is not supplied in this chunk and must be reconciled before applying this gate.",
+      "conditions": [
+        "Applies only after release-applicability reconciliation; the supplied subsection literally names a 5.0 candidate."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "installer_public_boundary",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FProduct%20Boundary",
+          "start_line": 22,
+          "end_line": 42,
+          "quote": "**REQ-P-INSTALL-001**: Abiogenesis shall publish a public installer surface for\neach released build tenant that claims installed substrate behavior. The public\nsurface shall bind `abg.operation.product.install`; package helpers and CLI\npaths shall not publish another installation operation identity.\n\n**REQ-P-INSTALL-002**: The installed-substrate composition shall first install\none or more immutable released product payloads, including the selected ABG\nproduct, and then admit a target workspace binding through\n`abg.operation.workspace.bind`, without treating a mutable source project or\nthe target workspace as an installed product. Installation alone shall not\ncreate or change a binding.\n\n**REQ-P-INSTALL-003**: The installed substrate root shall be `.abiogenesis/`.\nDownstream products may install product-owned payload beneath\n`.abiogenesis/<product>/<build_tenant>/`, but they shall not redefine the ABG\nsubstrate root.\n\n**REQ-P-INSTALL-004**: The installer shall not encode downstream domain HOW.\nDownstream products own domain meaning, catalog contribution content, policy\noverlays, acceptance interpretation, and product-specific instruction sections.\nABG owns shared catalog admission and runtime authority."
+        }
+      ],
+      "applies_to_keys": [
+        "installed_substrate"
+      ],
+      "statement": "Every released tenant claiming installed substrate publishes product.install, with no helper/CLI second identity. Root is .abiogenesis; downstream payload can live beneath .abiogenesis/<product>/<build_tenant> without redefining root. No mutable source/target workspace is an installed product. Installer cannot encode domain HOW; downstream owns meaning/contributions/policy/acceptance/instructions, ABG shared admission and runtime authority.",
+      "uncertainty": "",
+      "conditions": [
+        "For each released tenant claiming installed substrate behavior."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "toolchain_selection_precedence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FShared%20Toolchain%20Binding",
+          "start_line": 50,
+          "end_line": 61,
+          "quote": "**REQ-P-INSTALL-006**: A target workspace `.abiogenesis/` root shall act as the\nbinding, provenance, runtime binding, and configuration root for a selected\nshared product toolchain. Package libraries, command binaries, reference docs,\nand standards shall resolve through the selected versioned product manifest\nunder the toolchain root, not through a target-local product package copy.\n\n**REQ-P-INSTALL-007**: The shared product toolchain resolver shall make\nproduct/version selection inspectable. Explicit command input outranks\nworkspace binding truth, and workspace binding truth outranks\n`ABG_TOOLCHAIN_ROOT` environment selection. If none of those selectors is\npresent and valid, resolution shall fail closed. No configured default,\ntarget-root fallback, or legacy environment alias is a lawful selector."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FShared%20Toolchain%20Binding",
+          "start_line": 90,
+          "end_line": 103,
+          "quote": "**REQ-P-INSTALL-009A**: `ABG_TOOLCHAIN_ROOT` is the only lawful environment\nselector for shared product toolchain resolution. `ABIOGENESIS_HOME`,\n`ODD_SDLC_HOME`, and product-specific home aliases shall fail to select ABG\ntoolchain payloads.\n\n**REQ-P-INSTALL-009B**: A selected product payload shall be versioned under the\ntoolchain root and shall resolve below\n`<toolchainRoot>/products/<product>/<packageVersion>/`. Reference-tenant\nexample: the released TypeScript tenant's ABG product payload resolves below\n`<toolchainRoot>/products/abiogenesis/<packageVersion>/`.\n\n**REQ-P-INSTALL-009C**: The toolchain root shall not publish top-level command\nshims. Command paths are product-version-scoped payload paths recorded in the\nworkspace binding and product manifest."
+        }
+      ],
+      "applies_to_keys": [
+        "shared_toolchain"
+      ],
+      "statement": "Inspectable explicit command product/version selection outranks workspace binding, which outranks ABG_TOOLCHAIN_ROOT. Without a present valid selector fail closed; configured defaults, target-root fallback, legacy environment aliases, ABIOGENESIS_HOME, ODD_SDLC_HOME and product homes cannot select payloads. Libraries/binaries/docs/standards resolve from selected versioned manifest under toolchain, not local package copies. Payloads resolve below <toolchainRoot>/products/<product>/<packageVersion>; no top-level command shims, only manifest/binding-recorded version-scoped command paths.",
+      "uncertainty": "",
+      "conditions": [
+        "Only present valid explicit input, workspace binding or ABG_TOOLCHAIN_ROOT are lawful selectors, in that precedence."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "binding_stability_and_contract_catalog",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FShared%20Toolchain%20Binding",
+          "start_line": 63,
+          "end_line": 81,
+          "quote": "**REQ-P-INSTALL-008**: A `WorkspaceAuthorityBasis` shall bind the stable\nworkspace identity, canonical root locator, authority mode, and\nauthority-bearing manifest and configuration refs and digests. One immutable\n`WorkspaceBinding` shall bind that authority basis to one exact verified\ninstalled-product set, resolved lock, selected toolchain root, product and\npackage roots, and declared observer/control, executor, event-log,\nruntime-state, projection, and archive root locations. It shall record public\ncommand or contract refs, product-manifest paths, and manifest digests. Mutable\nfile, process, runtime, replay, artifact, and observed-root content shall belong\nto an `ObservationSnapshot`, not the authority basis or binding. A new\nobservation shall not mutate, replace, or invalidate either stable identity.\n\n**REQ-P-INSTALL-008A**: A selected ABG product manifest that claims ABIogenesis\n5.0-or-later conformance shall contain the bootstrap and\n`publicContractCatalog` fields required by\n`REQ-P-PUBLIC-CONTRACTS`. Installation and binding shall preserve the catalog\nidentity/version/digest and its product-relative schema/asset locators. A\nproduct manifest without an admissible contract catalog shall not become a\nbound or catalog-admissible 5.0 ABG product."
+        }
+      ],
+      "applies_to_keys": [
+        "workspace_binding"
+      ],
+      "statement": "AuthorityBasis includes stable identity, canonical root, mode and authority-bearing refs/digests. Immutable binding records exact verified installs/lock/toolchain/package and observer/control/executor/event/runtime/projection/archive roots, command refs and manifest paths/digests. Mutable file/process/runtime/replay/artifact/observed-root contents belong to ObservationSnapshot; new observations do not mutate/replace/invalidate stable identities. 5.0-or-later manifests need bootstrap/publicContractCatalog per referenced law; install/bind preserve catalog identity/version/digest and relative asset/schema locators; inadmissible catalog forbids bound/catalog-admissible ABG status.",
+      "uncertainty": "",
+      "conditions": [
+        "Bootstrap/catalog field requirement applies to selected manifests claiming ABIogenesis 5.0-or-later conformance."
+      ],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "consensus_workspace_latitude",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FWorkspace%20And%20Public%20Invocation",
+          "start_line": 199,
+          "end_line": 211,
+          "quote": "**REQ-P-CONSENSUS-013**: Consensus shall use one public workspace contract. The\nsame contract shall support an existing explicitly selected workspace, another\nindependently bound explicitly selected workspace root, and a caller-created\ntemporary workspace root. These are three applications of one contract, not\nthree runtime modes. A temporary root still requires admitted workspace,\nstable workspace-authority basis, immutable binding, catalog, event, result,\nreplay, and proof identities. Ordinary observation changes shall create new\nobservation snapshots without changing the workspace authority or binding.\n\n**REQ-P-CONSENSUS-014**: Per-reviewer workspace isolation and a distinct output\nworkspace are not implied. If a later Consensus contract requires either, it\nshall declare the authority through the ordinary input/output-workspace binding\nlaw before realization."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_workspace"
+      ],
+      "allowed": [
+        "Use any of the three explicit workspace applications of one contract.",
+        "Later contracts may require reviewer isolation or distinct output workspace after declaring ordinary input/output binding authority."
+      ],
+      "forbidden": [
+        "Infer per-reviewer isolation, separate output workspace or three runtime modes from these applications."
+      ]
+    },
+    {
+      "key": "consensus_bounded_feature",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FBounded%20Scope",
+          "start_line": 271,
+          "end_line": 274,
+          "quote": "**REQ-P-CONSENSUS-019**: The bounded feature may compose reviewer assessment and\nreduction inside Consensus. It does not publish a generic standalone\nReview-to-ticket product, scheduler, watcher, recurrence service, automatic\nticket mutation, generic portfolio consensus service, or new engine law."
+        }
+      ],
+      "applies_to_keys": [
+        "consensus_contract_family"
+      ],
+      "allowed": [
+        "Compose reviewer assessment and reduction inside bounded Consensus."
+      ],
+      "forbidden": [
+        "Publish generic standalone Review-to-ticket, scheduler, watcher, recurrence, automatic ticket mutation, portfolio consensus service or new engine law under this bounded feature."
+      ]
+    },
+    {
+      "key": "mutable_root_placement",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FShared%20Toolchain%20Binding",
+          "start_line": 83,
+          "end_line": 88,
+          "quote": "**REQ-P-INSTALL-009**: The shared toolchain root shall not become the mutable\nevent/projection/archive owner for a target workspace run unless explicitly\nbound as such. A workspace may bind mutable roots under\n`<workspace>/.ai-workspace`, but that placement is recorded binding truth, not\nan implicit product-payload fallback. Observer/control state and executor state\nmust be separable from the observed workspace."
+        }
+      ],
+      "applies_to_keys": [
+        "workspace_binding",
+        "shared_toolchain"
+      ],
+      "allowed": [
+        "Bind mutable roots under workspace .ai-workspace as recorded binding truth.",
+        "Explicitly bind shared toolchain as event/projection/archive owner if intended."
+      ],
+      "forbidden": [
+        "Treat toolchain as mutable run owner by default or placement as implicit payload fallback.",
+        "Make observer/control and executor state inseparable from observed workspace."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "consensus_qualification_applicability",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FQualification",
+          "start_line": 237,
+          "end_line": 244,
+          "quote": "**REQ-P-CONSENSUS-016**: The 5.0 release gate shall invoke the packed and\ninstalled candidate's published Consensus function over one real ticket subject\nusing at least two differently attributed reviewer profiles and one exact\nattributed submitter profile. The proof shall enter through the admitted\nprogram and `run.invoke`, read the typed result and replay through\n`project.read`, and run through the existing, alternate, and temporary\nworkspace applications without source imports or shell-owned panel, submitter,\nor One Surface orchestration."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FQualification",
+          "start_line": 256,
+          "end_line": 267,
+          "quote": "**REQ-P-CONSENSUS-018**: Consensus is not release-complete until the executable\nGTL body, GTL validation, installed catalog row, addressable public\nschemas and vocabularies including the submitter profile and response\nschemas, all three fixture families, all three workspace applications,\nreviewer and submitter actor attribution, exact findings-to-response-to-ABG\nadmission-to-next-round causality, result, and replay evidence pass over the\nexact 5.0 candidate. A declaration-only entry or imperative implementation\nshall fail the gate. The proof shall use only the complete Product-derived\npublic function family; a legacy operation identity or parallel adapter\nregister shall fail it. The unresolved fixture shall prove that\n`interaction.respond` and `run.continue` retain the exact original Run identity,\nconsume one hold once, and produce one final result before ordinary closure."
+        }
+      ],
+      "subject_key": "consensus_qualification_evidence",
+      "uncertainty": "This subsection names a 5.0 release gate/candidate, while its controlling release applicability and family opening are outside this chunk. Other supplied task material retains dedicated Consensus qualification for 5.1.",
+      "consequence": "Preserve both source wordings; do not silently turn this subsection into an operative 5.0 gate or claim release completeness without owner/source re-entry."
+    },
+    {
+      "key": "installation_external_law",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [PRODUCT.md](../../PRODUCT.md), [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md)"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FShared%20Toolchain%20Binding",
+          "start_line": 75,
+          "end_line": 81,
+          "quote": "**REQ-P-INSTALL-008A**: A selected ABG product manifest that claims ABIogenesis\n5.0-or-later conformance shall contain the bootstrap and\n`publicContractCatalog` fields required by\n`REQ-P-PUBLIC-CONTRACTS`. Installation and binding shall preserve the catalog\nidentity/version/digest and its product-relative schema/asset locators. A\nproduct manifest without an admissible contract catalog shall not become a\nbound or catalog-admissible 5.0 ABG product."
+        }
+      ],
+      "subject_key": "installed_substrate",
+      "uncertainty": "PRODUCT, SPEC_METHOD/ODD_METHOD v2.5.0-rc.6 references and the PUBLIC-CONTRACTS bootstrap requirements are not defined in this chunk.",
+      "consequence": "Do not adopt historical cited method or infer omitted contract fields; exact external source re-entry remains necessary."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FPublic%20Contracts",
+      "decision": "retained",
+      "keys": [
+        "consensus_contract_family",
+        "consensus_subject",
+        "reviewer_occurrence",
+        "submitter_response",
+        "round_decision",
+        "consensus_final_result",
+        "reviewer_vector_admission",
+        "submitter_subordination",
+        "round_outcome_partition",
+        "single_result_and_fh",
+        "ticket_consensus_data_boundary"
+      ],
+      "reason": "Retain canonical contracts, exact attribution, total outcomes, ruling roster and single-result law."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FConstructive%20And%20Runtime%20Law",
+      "decision": "retained",
+      "keys": [
+        "response_precedes_successor",
+        "consensus_graph_execution",
+        "consensus_judgment_partition",
+        "next_round_refusal",
+        "ticket_consensus_data_boundary"
+      ],
+      "reason": "Retain constructive sequencing, judgment ownership and refusal boundaries."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FWorkspace%20And%20Public%20Invocation",
+      "decision": "retained",
+      "keys": [
+        "consensus_workspace",
+        "consensus_public_path",
+        "consensus_human_topology_affirmation",
+        "consensus_workspace_latitude"
+      ],
+      "reason": "Retain workspace alternatives, same-Run public topology and direct human closure condition."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FQualification",
+      "decision": "residual",
+      "keys": [
+        "consensus_qualification_evidence",
+        "consensus_qualification_applicability"
+      ],
+      "reason": "Retain all evidence conditions and expose conflicting release-applicability wording for reconciliation."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-CONSENSUS.md#REQ-P-CONSENSUS%20-%20Agent-Invocable%20Consensus%20GraphFunction%2FBounded%20Scope",
+      "decision": "retained",
+      "keys": [
+        "consensus_bounded_feature"
+      ],
+      "reason": "Retain bounded composition permission and excluded products/services."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract",
+      "decision": "residual",
+      "keys": [
+        "installed_substrate",
+        "installation_external_law"
+      ],
+      "reason": "Retain declared installer status; external historical method references stay unresolved."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "installed_substrate"
+      ],
+      "reason": "Retain installer product meaning and source-precedent exclusion."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FProduct%20Boundary",
+      "decision": "retained",
+      "keys": [
+        "install_before_workspace_binding",
+        "installer_public_boundary"
+      ],
+      "reason": "Retain public operation, install-before-bind, root and domain ownership."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-INSTALL.md#REQ-P-INSTALL%20%E2%80%94%20Installed%20Substrate%20Contract%2FShared%20Toolchain%20Binding",
+      "decision": "residual",
+      "keys": [
+        "workspace_binding",
+        "shared_toolchain",
+        "toolchain_selection_precedence",
+        "binding_stability_and_contract_catalog",
+        "mutable_root_placement",
+        "installation_external_law"
+      ],
+      "reason": "Retain resolver/binding/root/catalog obligations and unresolved public-contract reference."
+    }
+  ],
+  "limitations": [
+    "Consensus qualification subsection explicitly says 5.0 but requires reconciliation with release applicability outside this chunk; no gate execution is claimed.",
+    "Exact external schema bodies, TICKET_METHOD mutation law, PRODUCT and PUBLIC-CONTRACTS are unresolved locally.",
+    "Operational sequencing and judgment classes are represented as source data, not executed or accepted."
+  ]
+}

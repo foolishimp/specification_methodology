@@ -1,0 +1,98 @@
+{
+  "profile": "a_c.project-test-report/1",
+  "recorded_at": "2026-11-01T04:30:34.862267+00:00",
+  "verdict": "successful bounded representation test; complete semantic acceptance unqualified",
+  "subject_project": "/Users/jim/src/apps/abiogenesis",
+  "method": {
+    "manifest_sha256": "f7f3f824ee1ac3e048d1b1ea86ce3aae84866e2e9d5010fe5eda2e38e12f4477",
+    "uri": "stdo://releases/v3.0.2/"
+  },
+  "mode": "direct",
+  "source_manifest_sha256": "c8f9e1f8a187cded5d919f319659add7e04330c37ad0a11856486276a0cf173f",
+  "definition_sha256": "6d4caf2b6c6dd4c6e6386aba751e0967749103f2d19d96dfba36eaa68f8f7d28",
+  "source_files": 86,
+  "source_bytes": 714081,
+  "chunks_authored": 42,
+  "chunks_total": 42,
+  "source_sections": 421,
+  "section_dispositions": {
+    "omitted": 39,
+    "residual": 112,
+    "retained": 270
+  },
+  "family_counts": {
+    "constraints": 607,
+    "judgments": 0,
+    "latitude": 62,
+    "objects": 479,
+    "relations": 122,
+    "residuals": 103,
+    "transformations": 0,
+    "traversals": 0
+  },
+  "record_count": 1373,
+  "model": {
+    "id": "urn:a-c:generation:025cfe79dad60a1311fe20e1:model:276d9400d1d07ce054782c69",
+    "sha256": "6ad4fa0ef54a8fc705562acf695fce0a0855b0a0d68d6fc99dcf026e98a8b38a"
+  },
+  "artifacts": {
+    "generation/proposal/carrier.json": {
+      "sha256": "a4568267e2a52ae69570dd9b5b07ac04fb62ca18fe5a91b82483052f647cab4a",
+      "bytes": 28986752
+    },
+    "generation/proposal/coverage.json": {
+      "sha256": "ef287f21dcca782efbb1abf1d016e8d19e7acf5df3c611fdf3397fb078a7a809",
+      "bytes": 296378
+    },
+    "generation/proposal/explorer.html": {
+      "sha256": "f9d881a5723f2edcaa089644e3e24bc7ff18f923f57fefe69f34fa2c57112c30",
+      "bytes": 12570378
+    },
+    "generation/proposal/model.json": {
+      "sha256": "19d435c8b96a24025c5b2204e62041d764bbbb4e91ac5b8f99fedee93d082859",
+      "bytes": 5719271
+    },
+    "generation/proposal/result.json": {
+      "sha256": "d716cf4c703303816bf544748f068092c6ad9fffe79c6df2be1dcd89f519242b",
+      "bytes": 948
+    }
+  },
+  "checks": {
+    "public_build": "built",
+    "public_status": "built",
+    "public_reuse": "reused",
+    "independent_artifact_checks": 19,
+    "independent_artifact_failures": [],
+    "unique_grounding_quotes": 1180,
+    "grounding_occurrences": 1636,
+    "quote_failures": [],
+    "independent_semantic_samples": 6,
+    "independent_semantic_verdict": "no actionable defect or material omission found within selected samples",
+    "browser": "observed search, family selection, authored dependency navigation, reading trail, source dialog and 3D rendering passed"
+  },
+  "timing_seconds": {
+    "assembly": 6.258542916271836,
+    "status": 4.467606916092336,
+    "reuse": 5.335992875043303
+  },
+  "formal_gate": {
+    "status": "not_performed"
+  },
+  "upstream_trial": null,
+  "limits": [
+    "Direct host-session Codex workflow, not a fresh native host comparison",
+    "WHAT source selection; implementation and design excluded",
+    "Cross-chunk semantic identity and complete dependency coverage unqualified",
+    "No full semantic acceptance, implementation qualification, Lean or cost benefit established"
+  ],
+  "evidence": {
+    "review": "review/independent-001/REVIEW.md",
+    "browser": "browser-observations.json",
+    "activation": "ACTIVATION.json",
+    "build": "build.json",
+    "status": "final-status.json",
+    "reuse": "reuse-build.json"
+  },
+  "source_edits": false,
+  "git_operations": false
+}

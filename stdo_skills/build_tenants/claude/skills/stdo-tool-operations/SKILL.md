@@ -1,12 +1,24 @@
 ---
 name: stdo-tool-operations
-description: Use when governed STDO work in this repository needs a supported tool operation — acquiring deciding sources, observing the workspace, or writing an effect through the a_c public CLI — and when a tool returns an unsupported method or an execution error. Covers bounded context acquisition. Not for unrelated tasks.
+description: Build a representation, constraint model, recoverable carrier, coverage, and readable documentation for a user's nominated project through the a_c public workflow. Also use for governed STDO source acquisition, workspace observation, scoped writes, bounded context, and unsupported-tool or execution failures. Not for unrelated tasks.
 ---
 
 # STDO tool operations — supported use and bounded context
 
 Use this skill to bind each required operation to an exact, supported tool
 contract, and to acquire only the context the task needs.
+
+## Nominated-project representation build (SK-14)
+
+For a natural request such as “build a representation of my project”, or an
+explicit `/stdo-tool-operations` request for that result, read
+[representation](references/representation.md) and execute its public workflow.
+Claude authors the returned frozen-source tasks in this host session, submits
+the actual JSON and builds the artifacts. Return the actual artifact links;
+instructions or prepared prompts alone are incomplete. This operation has its
+own provider contract and exact target-source basis. Take this branch before the
+general lifecycle transport below, without treating it as target-method adoption
+or general compatibility with another lifecycle profile.
 
 ## Transport and operations (SK-04)
 

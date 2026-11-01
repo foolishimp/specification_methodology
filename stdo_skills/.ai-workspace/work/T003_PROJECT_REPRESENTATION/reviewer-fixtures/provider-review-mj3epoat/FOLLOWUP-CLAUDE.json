@@ -1,0 +1,139 @@
+{
+  "kind": "bounded-independent-claude-readback",
+  "verdict": "No material fidelity or actual-path defect found for the selected four source distinctions and explicit resume.",
+  "run": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/host-claude-02/invoice-project/.ai-workspace/representations/invoice-01",
+  "model": {
+    "id": "urn:a-c:generation:416505f487e4cd6be98a8679:model:bf6dbe20e49de47afdf96ea3",
+    "sha256": "b19a07af84b6a1c495b4753a6435d93783f0205385b478fc06b72c0a5e1d813c"
+  },
+  "model_file_sha256": "13575da57847274bc7ed87c9a617d0f3ed1123606a90b73a3adac1337ec4b76f",
+  "source_manifest_sha256": "27238a64d50c2630905bd0edb966c9a2a14d154b50ccf4be604556678f5f4f2f",
+  "source_unchanged_and_frozen_bytes_match": true,
+  "artifact_pins_carrier_and_viewer_match": true,
+  "criteria": [
+    {
+      "criterion": "Every supplied decimal digit is preserved",
+      "source": "specification/PRODUCT.md:4",
+      "records": [
+        "urn:a-c:generation:416505f487e4cd6be98a8679:record:4f20a5e4f0550350961d7dd3c7bc69e1"
+      ],
+      "outcome": "retained"
+    },
+    {
+      "criterion": "Binary floating-point conversion is forbidden",
+      "source": "specification/PRODUCT.md:4",
+      "records": [
+        "urn:a-c:generation:416505f487e4cd6be98a8679:record:ab6329b0468413314c30624046ff72ac"
+      ],
+      "outcome": "retained as forbidden latitude"
+    },
+    {
+      "criterion": "Zero rows emit the header alone",
+      "source": "specification/PRODUCT.md:5",
+      "records": [
+        "urn:a-c:generation:416505f487e4cd6be98a8679:record:45c648e2c60bb8064a1a371ada610264"
+      ],
+      "outcome": "retained with zero-row condition"
+    },
+    {
+      "criterion": "Rounding remains unresolved; no rule is invented",
+      "source": "specification/PRODUCT.md:9",
+      "records": [
+        "urn:a-c:generation:416505f487e4cd6be98a8679:record:90e86c90f5a71a06d2c9d90914924857",
+        "urn:a-c:generation:416505f487e4cd6be98a8679:record:f1ff0cbb3904551cbf98f29d09cfc91e",
+        "urn:a-c:generation:416505f487e4cd6be98a8679:record:ccd8492747b2c4a5925fc57bf62f0ba3"
+      ],
+      "outcome": "retained as constraint, forbidden latitude and residual"
+    }
+  ],
+  "coverage": {
+    "processing_complete": true,
+    "chunks_authored": 1,
+    "source_sections": 4,
+    "family_counts": {
+      "constraints": 6,
+      "judgments": 0,
+      "latitude": 2,
+      "objects": 14,
+      "relations": 6,
+      "residuals": 5,
+      "transformations": 0,
+      "traversals": 0
+    }
+  },
+  "observed_route": [
+    {
+      "operation": "status",
+      "tool_use_id": "toolu_01RqbFy9rNAMfZWSCi2UPChc",
+      "observed_statuses": [
+        "authoring_required"
+      ],
+      "is_error": false
+    },
+    {
+      "operation": "task",
+      "tool_use_id": "toolu_01CtfyneQx8uxkVu4H2RkyQo",
+      "observed_statuses": [
+        "authoring_required"
+      ],
+      "is_error": false
+    },
+    {
+      "operation": "submit",
+      "tool_use_id": "toolu_013qgc6DZf9LgQNzCepkFRuU",
+      "observed_statuses": [
+        "submitted"
+      ],
+      "is_error": false
+    },
+    {
+      "operation": "task",
+      "tool_use_id": "toolu_019Z832zenCb4FyqtDx3Avfd",
+      "observed_statuses": [
+        "ready_to_build"
+      ],
+      "is_error": false
+    },
+    {
+      "operation": "build",
+      "tool_use_id": "toolu_0154e3SkCBs4ZG5HRerh2f8m",
+      "observed_statuses": [
+        "built",
+        "not_performed"
+      ],
+      "is_error": false
+    },
+    {
+      "operation": "status",
+      "tool_use_id": "toolu_01M7WjGE2KvbEfDRf2cBwTEK",
+      "observed_statuses": [
+        "built"
+      ],
+      "is_error": false
+    }
+  ],
+  "host_answer_write": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/host-claude-02/invoice-project/.ai-workspace/representations/invoice-01/host-authoring/chunk-b1400522f235f48bac67.json",
+  "native_report": {
+    "host": "claude",
+    "exit_code": 0,
+    "timed_out": false,
+    "elapsed_seconds": 380.335,
+    "build_exists": true,
+    "status_exit": 0,
+    "status": "built",
+    "source_unchanged": true,
+    "scope": "one explicit native resume; retains original timeout; no reliability or acceptance claim"
+  },
+  "final_response_sha256": "472667cd04dbb80d3a1f67f9f7b4c3236c30fd2b9ab757154f5667065e61b04e",
+  "final_artifact_links_match": true,
+  "formal_gate": {
+    "status": "not_performed"
+  },
+  "limits": [
+    "Original 240s timeout retained.",
+    "One explicit invocation/resume does not demonstrate automatic discovery, general reliability or efficiency.",
+    "Full-model fidelity of selected distinctions; no selected-context closure or complete T-015 qualification claim.",
+    "Browser interaction not performed.",
+    "No acceptance, release, public publication or earlier Claude Q05 closure."
+  ]
+}

@@ -1,0 +1,493 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "ABG runtime capability with narrow rules for function/vector refs,sections,relevance,compression/proportionality and runtime-slot classes. It reuses existing node/asset/response/authority/proof/renderer/regime/ledger/registry/transport authority and derives their truth before dispatch, never redeclares parallel carriers.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 32,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-001**: ABG instruction assembly shall be an ABG runtime capability over admitted GTL/ABG carrier truth. It shall not define a second GTL graph, node, asset-surface, response-contract, authority-slot, proof-obligation, renderer, regime, payload-ledger, registry, or transport authority surface.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-002**: An instruction assembly rule shall be narrow. It may bind graph-function refs, graph-vector refs, section rules, relevance rules, compression policy refs, proportionality policy refs, and runtime binding slot classes. It shall not redeclare source node types, target node types, response contracts, proof obligations, authority slots, renderer refs, active regime, or required carrier classes.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-003**: The instruction validator shall derive source and target node-type truth, response-contract truth, proof-obligation truth, authority-slot truth, renderer truth, active-regime truth, and required carrier classes from existing admitted GTL/ABG carriers before runtime dispatch.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-004**: The instruction validator shall be F_D-owned for source trace, type coverage, response-contract derivation, proof/authority/renderer derivation, declared dependency selection, exact compression relations, declared proportionality predicates, runtime-slot bindability, non-duplication, and declared non-tautology predicates. These predicates shall satisfy -004A. Semantic relevance, adequacy of the selected criteria and contextual sufficiency remain judgments of their declared F_P or F_H owner. Proposals and judgments enter through admission; mechanical validation of their shape and basis shall not be represented as proof of their semantic correctness.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-004A**: Any instruction-assembly decision claimed as F_D shall be a total function over a known algebra and admitted inputs. The known algebra shall declare carrier types, operators, predicates, ordering, output domain, and typed rejection or gap cases before execution. The total function shall map every valid input state to exactly one valid output or one typed rejection or gap, without implicit fallback, runtime invention, or F_P judgment.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-005**: An F_P dispatch shall not occur without an admitted prompt materialization plan, an immutable runtime-bound instruction envelope, and a replayable prompt manifest or equivalent projection that preserves the materialization-plan ref, bound runtime refs, renderer identity, response contract, and rendered prompt digest.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-006**: Assembly shall compute dependency selection and exact compression over the selected graph function, selected vector, node types, asset surfaces, selected composition, payload/evidence ledgers, requirement/residual/continuation truth when present, and declared policy refs. This establishes compliance with the declared selection policy, not semantic completeness of that policy. The dispatched worker shall not silently replace its own governing selection; a proposal to change that selection follows the declared policy owner and admission path.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 20
+          }
+        ],
+        "key": "instruction_assembly",
+        "label": "Instruction assembly over admitted carriers"
+      },
+      {
+        "conditions": [],
+        "definition": "Every F_P dispatch needs admitted materialization plan, immutable bound envelope and replayable manifest/equivalent preserving plan ref,runtime refs,renderer,response contract,prompt digest. Selection/compression uses chosen function/vector,nodes/assets,composition,ledgers,available requirement/residual/continuation and policy.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 40,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-005**: An F_P dispatch shall not occur without an admitted prompt materialization plan, an immutable runtime-bound instruction envelope, and a replayable prompt manifest or equivalent projection that preserves the materialization-plan ref, bound runtime refs, renderer identity, response contract, and rendered prompt digest.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-006**: Assembly shall compute dependency selection and exact compression over the selected graph function, selected vector, node types, asset surfaces, selected composition, payload/evidence ledgers, requirement/residual/continuation truth when present, and declared policy refs. This establishes compliance with the declared selection policy, not semantic completeness of that policy. The dispatched worker shall not silently replace its own governing selection; a proposal to change that selection follows the declared policy owner and admission path.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-007**: Proportionality shall affect dispatch. A P0 deterministic edge that can be discharged through admitted F_D truth shall not render an F_P prompt, emit `fp_dispatch_requested`, or invoke an F_P worker.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-008**: Runtime binding shall accept only admitted or replay-derived refs. Unknown, stale, forged, digest-mismatched, unadmitted, or out-of-scope payload/evidence/artifact/runtime refs shall fail closed before weakened F_P dispatch.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-009**: Renderer execution shall be ABG-owned or delegated only to a governed authority-denied renderer over an immutable instruction envelope. Product templates, grammar, rubrics, and style policy may be admitted data; they shall not execute final prompt rendering, bind runtime refs, add hidden instructions, omit required sections, select graph functions, admit responses, or close traversal.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-010**: Prompt manifests shall be replayable. Replaying admitted declarations, admitted prompt materialization plans, renderer identity, and ABG runtime events shall reproduce the included/omitted carrier decisions and rendered prompt digest or shall emit a typed replay defect.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 30
+          }
+        ],
+        "key": "prompt_dispatch_carriers",
+        "label": "Prompt dispatch carriers"
+      },
+      {
+        "conditions": [],
+        "definition": "Active capability dated 2026-07-20, historical REQ-R-ABG3-INTERPRET identity, source-labelled T-283 F_H acceptance, with intent/Product/mapping derivations.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 7,
+            "quote": "# REQ-R-ABG3-INTERPRET - HoG Traversal And ABG Runtime Admission\n\n**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability\n**Date**: 2026-07-20\n**Historical family identity**: `REQ-R-ABG3-INTERPRET`\n**Derives from**: [INTENT.md](../../INTENT.md), [PRODUCT.md](../../PRODUCT.md), [REQ-M-GTL3-PROGRAM-TRAVERSAL.md](../mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission",
+            "start_line": 1
+          }
+        ],
+        "key": "interpret_metadata",
+        "label": "Interpret family provenance"
+      },
+      {
+        "conditions": [],
+        "definition": "HoG executes admitted GTL directly; ABG surrounds it with admission,event,replay,continuation and closure law. Historical INTERPRET name does not make ABG interpreter/executor.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 15,
+            "quote": "Define direct HoG execution of admitted GTL and the ABG admission, event,\nreplay, continuation, and closure law surrounding that execution. The retained\nfamily identity does not make ABG the program interpreter or executor.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FPurpose",
+            "start_line": 13
+          }
+        ],
+        "key": "direct_hog_execution",
+        "label": "Direct HoG execution and ABG admission"
+      },
+      {
+        "conditions": [],
+        "definition": "One deterministic validator callable before runtime has equivalent native/CLI typed outputs. Evidence keys graph/function/vector/interface/contracts by opaque identity, with display names only metadata; report binds exact normalized audited inventory/digest and is evidence, not program/plan/runtime fact/release verdict.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 140,
+            "quote": "**REQ-R-ABG3-INTERPRET-020**: The Product shall publish one deterministic GTL\nvalidator callable before runtime. Native and CLI entry points shall project\nthe same validator function and typed result family.\n\n**REQ-R-ABG3-INTERPRET-021**: Whole-program validation shall fail closed for\nempty, partial, or caller-selected inventory that omits required programs,\nGraphFunctions, graphs, vectors, interfaces, starts, contracts, implementation\nbindings, or source identities.\n\n**REQ-R-ABG3-INTERPRET-022**: Validation shall derive graph outputs from\ndeclared inputs through graph-vector source and target contracts and shall\nreject undeclared loci, unsatisfied dependencies, unreachable vectors,\nnon-derivable outputs, and ambiguous duplicate identities.\n\n**REQ-R-ABG3-INTERPRET-023**: Validation evidence shall key graph, function,\nvector, interface, and contract truth by opaque identity. Display names are\npresentation metadata.\n\n**REQ-R-ABG3-INTERPRET-024**: Every materialized vector shall have exactly one\napplicable target-carrier relation and one closure relation or a typed\nunresolved-semantic result.\n\n**REQ-R-ABG3-INTERPRET-025**: A declared prompt asset shall preserve its\nrenderer, constructor, digest policy, output contract, authority slot, proof\nobligation, node, and fold relations. Prompt text or caller files are not\ncontract truth.\n\n**REQ-R-ABG3-INTERPRET-026**: Plugin contracts and implementation bindings shall\nenter through the same typed constructors and admission law used by runtime.\nUnknown or prohibited authority fields shall be rejected, not stripped.\n\n**REQ-R-ABG3-INTERPRET-027**: A validation report shall bind the exact\nnormalized audited GTL inventory and its digest. The report is evidence, not a\nprogram, execution plan, runtime fact, or release verdict.\n\n**REQ-R-ABG3-INTERPRET-028**: Validation shall project or reject public starts,\nGraphFunction entries, internal vector boundaries, program membership,\nimplementation seams, output admission, allowed consequences, and catalog bind\noptions without executing them.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FAcceptance%20Criteria",
+            "start_line": 102
+          }
+        ],
+        "key": "whole_program_validation",
+        "label": "Whole-program GTL validation"
+      },
+      {
+        "conditions": [],
+        "definition": "Constraint/Guarantee dated 2026-07-11, source-labelled active and T-283 accepted, with legacy method/intent/Product derivation.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "# REQ-R-ABG3-ITERATION — Iteration Outcome Algebra\n\n**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-07-11\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra",
+            "start_line": 1
+          }
+        ],
+        "key": "iteration_provenance",
+        "label": "Iteration requirement provenance"
+      },
+      {
+        "conditions": [],
+        "definition": "One ABG replay-derived active-boundary truth surface chooses terminate,redispatch or suspend. Semantic satisfaction,runtime,authority/evidence and attempt lineage stay orthogonal through requirement/design/realization until total fold selects outcome.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 19,
+            "quote": "Define one ABG-owned replay-derived outcome algebra for an active iteration\nboundary.\n\nThe iteration outcome algebra is the single runtime truth surface that chooses\nwhether the active boundary terminates, redispatches, or suspends. Requirement,\ndesign, and realization must keep semantic satisfaction facts, runtime facts,\nauthority/evidence facts, and attempt lineage orthogonal until the total fold\nselects the outcome.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FPurpose",
+            "start_line": 12
+          }
+        ],
+        "key": "iteration_outcome_algebra",
+        "label": "Iteration outcome algebra"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "instruction_assembly"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 28,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-004**: The instruction validator shall be F_D-owned for source trace, type coverage, response-contract derivation, proof/authority/renderer derivation, declared dependency selection, exact compression relations, declared proportionality predicates, runtime-slot bindability, non-duplication, and declared non-tautology predicates. These predicates shall satisfy -004A. Semantic relevance, adequacy of the selected criteria and contextual sufficiency remain judgments of their declared F_P or F_H owner. Proposals and judgments enter through admission; mechanical validation of their shape and basis shall not be represented as proof of their semantic correctness.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-004A**: Any instruction-assembly decision claimed as F_D shall be a total function over a known algebra and admitted inputs. The known algebra shall declare carrier types, operators, predicates, ordering, output domain, and typed rejection or gap cases before execution. The total function shall map every valid input state to exactly one valid output or one typed rejection or gap, without implicit fallback, runtime invention, or F_P judgment.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 26
+          }
+        ],
+        "key": "instruction_fd_semantic_boundary",
+        "statement": "F_D validates trace,types,response/proof/authority/renderer derivation,declared dependencies,exact compression,proportionality,slot binding,nonduplication and nontautology only as total known-algebra functions. Declare types/operators/predicates/order/output/rejection/gaps before execution and map every valid input to exactly one valid output or typed rejection/gap without implicit fallback/invention/F_P judgment. Semantic relevance,criteria adequacy and contextual sufficiency remain declared F_P/F_H judgment through admission; shape/basis checks do not prove semantic correctness.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "prompt_dispatch_carriers"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 42,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-006**: Assembly shall compute dependency selection and exact compression over the selected graph function, selected vector, node types, asset surfaces, selected composition, payload/evidence ledgers, requirement/residual/continuation truth when present, and declared policy refs. This establishes compliance with the declared selection policy, not semantic completeness of that policy. The dispatched worker shall not silently replace its own governing selection; a proposal to change that selection follows the declared policy owner and admission path.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-007**: Proportionality shall affect dispatch. A P0 deterministic edge that can be discharged through admitted F_D truth shall not render an F_P prompt, emit `fp_dispatch_requested`, or invoke an F_P worker.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-008**: Runtime binding shall accept only admitted or replay-derived refs. Unknown, stale, forged, digest-mismatched, unadmitted, or out-of-scope payload/evidence/artifact/runtime refs shall fail closed before weakened F_P dispatch.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-009**: Renderer execution shall be ABG-owned or delegated only to a governed authority-denied renderer over an immutable instruction envelope. Product templates, grammar, rubrics, and style policy may be admitted data; they shall not execute final prompt rendering, bind runtime refs, add hidden instructions, omit required sections, select graph functions, admit responses, or close traversal.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-010**: Prompt manifests shall be replayable. Replaying admitted declarations, admitted prompt materialization plans, renderer identity, and ABG runtime events shall reproduce the included/omitted carrier decisions and rendered prompt digest or shall emit a typed replay defect.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-011**: Non-tautology shall be a dispatch-assurance obligation. A prompt materialization plan or envelope that carries the expected answer, selected classifier, close disposition marker, or equivalent answer-shaped instruction shall be rejected or shall fail differential proof.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 32
+          }
+        ],
+        "key": "instruction_dispatch_rejection",
+        "statement": "Selection compliance does not prove policy completeness; worker cannot silently replace governing selection and proposals follow owner/admission. P0 edge dischargeable by admitted F_D must not render prompt,emit fp_dispatch_requested or invoke F_P. Bind only admitted/replay refs and fail before weakened dispatch for unknown/stale/forged/mismatched/unadmitted/out-of-scope refs. Replay declared plans/renderer/events reproduces inclusion/omission and digest or typed defect. Expected answer,classifier,close marker or answer-shaped instruction is rejected or fails differential proof.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "instruction_assembly",
+          "prompt_dispatch_carriers"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 54,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-012**: Instruction assembly declarations, prompt materialization plans, renderer bindings, and runtime binding policies that affect dispatch shall enter through the canonical ABG startup and registry/admission path used for product GTL declarations, product libraries, graph overlays, node types, graph functions, and policy overlays. They shall not use a parallel file scan, product-local shell, prompt-loader, local registry, or duplicate selection path.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-013**: Registry lookup or selection used to choose instruction assembly, renderer, policy, or plan surfaces shall be replay-derived from admitted registry/startup truth. Query-only lookup shall not create dispatch authority, and product advice shall not become selection truth until ABG admits and validates it.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-014**: Worker transport success, worker self-report, prompt shape, or parseable response shape shall not become closure truth. ABG shall admit or reject worker responses against the response contract derived from the selected target carrier and asset surface before any assurance, continuation, residual, or closure projection consumes the response.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-015**: When the instruction validator uses an F_P review traversal over a candidate prompt materialization plan, the result shall enter as attributed judgment evidence. It shall not directly approve dispatch, bind runtime truth, select traversal, render final prompts or admit responses. Subsequent F_D validation shall establish the declared structural, identity, dependency and admission predicates; the review's semantic judgment retains its own basis and uncertainty and does not become a deterministic theorem.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-016**: The instruction validator shall reject F_P dispatch for build, test, proof, release, deployment, or target artifact work when required dependency sufficiency for the selected target is unknown. F_D shall establish declared prerequisite closure over admitted dependency graph projection, obligation lineage, proof policy and typed prerequisite gaps; any required semantic sufficiency judgment shall be separately supplied by its declared owner. A dependency-disambiguation traversal may dispatch before sufficiency is known only when explicitly scoped to produce candidate dependency nodes, candidate dependency edges or typed prerequisite gaps; it shall not claim target artifact, proof, release or closure satisfaction.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-017**: Every F_P dispatch is governed by instruction assembly law. Absent, unresolved, unadmitted, or non-matching instruction-assembly startup at an F_P boundary shall resolve to blocked before worker invocation, plugin invocation, evaluator invocation, response admission, assurance projection, continuation projection, residual projection, or closure projection.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 44
+          }
+        ],
+        "key": "instruction_startup_and_response_admission",
+        "statement": "Dispatch-affecting assembly/plans/renderers/binding policies use canonical startup/registry admission, never scans/shell/loaders/local registry/duplicate selection. Selection derives admitted startup replay; query-only lookup gives no authority and advice needs admission/validation. Responses need admission against selected target/asset response contract before assurance/continuation/residual/closure; transport,self-report,prompt/parse shape never closure. Every F_P boundary with absent/unresolved/unadmitted/nonmatching startup blocks before worker/plugin/evaluator invocation or response/assurance/continuation/residual/closure consumption.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "instruction_assembly"
+        ],
+        "conditions": [],
+        "exceptions": [
+          "Explicitly scoped dependency-disambiguation may dispatch with unknown sufficiency to produce candidate dependencies or typed gaps only."
+        ],
+        "grounding": [
+          {
+            "end_line": 52,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-015**: When the instruction validator uses an F_P review traversal over a candidate prompt materialization plan, the result shall enter as attributed judgment evidence. It shall not directly approve dispatch, bind runtime truth, select traversal, render final prompts or admit responses. Subsequent F_D validation shall establish the declared structural, identity, dependency and admission predicates; the review's semantic judgment retains its own basis and uncertainty and does not become a deterministic theorem.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-016**: The instruction validator shall reject F_P dispatch for build, test, proof, release, deployment, or target artifact work when required dependency sufficiency for the selected target is unknown. F_D shall establish declared prerequisite closure over admitted dependency graph projection, obligation lineage, proof policy and typed prerequisite gaps; any required semantic sufficiency judgment shall be separately supplied by its declared owner. A dependency-disambiguation traversal may dispatch before sufficiency is known only when explicitly scoped to produce candidate dependency nodes, candidate dependency edges or typed prerequisite gaps; it shall not claim target artifact, proof, release or closure satisfaction.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 50
+          }
+        ],
+        "key": "review_and_dependency_sufficiency",
+        "statement": "F_P plan review is attributed judgment evidence, not dispatch approval,binding,selection,rendering or response admission; later F_D checks structural/identity/dependency/admission predicates while judgment retains basis/uncertainty. Reject build/test/proof/release/deploy/target-artifact F_P dispatch if required dependency sufficiency unknown. F_D establishes declared prerequisite closure from admitted graph,lineage,proof policy,typed gaps; separately require owner semantic sufficiency. Explicit dependency-disambiguation traversal may precede sufficiency only to propose dependency nodes/edges/gaps, never claim artifact/proof/release/closure.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "prompt_dispatch_carriers"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 74,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-018**: A prompt materialization plan is a\nsubordinate dispatch projection. It is not a GTL program, traversal plan,\nGraphFunction, HoG program, or runtime authority. It may bind and render the\ninstruction for an F_P call already selected by the admitted GTL program and\nHoG traversal; it shall not select work, reorder traversal, authorize effects,\nor substitute for ABG admission.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-019**: At an STDO-governed dependent call,\ninstruction assembly shall derive the selected role's frame, identified\ninstruction policy, required native-source content and any explicitly selected\nsupplementary corpus content from its admitted GTL environment and exact access\nevidence. An unselected representation, index or tool shall supply neither a\nrequirement nor permission to omit required native material. The immutable\nenvelope and replayable manifest shall preserve those identities, the supplied\ncontent and its included/omitted disposition. Required content shall not be replaced by an\ninaccessible locator or a claim that the worker used the corpus. Missing or\ninvalid required access evidence shall block before dependent F_P dispatch.\nValid access evidence may be reused only within its declared immutable basis\nand scope; retrieval proves access, not correct semantic application.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 56
+          }
+        ],
+        "key": "plan_subordination_and_stdo_access",
+        "statement": "Plan is subordinate dispatch projection for an already-selected F_P call, not program/plan/function/HoG/runtime authority; it cannot select,reorder,authorize effects or replace admission. STDO-dependent assembly derives role frame,instruction policy,required native and explicitly selected supplementary content from admitted environment/exact access evidence. Unselected tools/indexes neither add requirements nor excuse omitted native material. Envelope/manifest retain identities,actual supplied content and dispositions; inaccessible locator or use claim cannot replace content. Missing/invalid access blocks; reuse only within immutable basis/scope; retrieval is access, not semantic correctness.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "instruction_assembly"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 100,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-020**: STDO role instructions and context\npolicy shall remain declared, identified data consumed through the existing\ninstruction-assembly and admission owners. Their tuning shall preserve each\nprior invocation's exact supplied policy and context and shall not implicitly\nchange authority, requirements, acceptance conditions, graph topology or the\nexisting Worker, Evaluator and Consequence ownership. Semantic interpretation\nand assessment remain with their declared actors; a corpus-access tool or\nmechanical validator shall not assume those judgments.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-021**: The supplied instructions, current\ninput, question, rubric and output contract shall agree on the selected role.\nAn independently assessing role shall receive the exact candidate and shall\nnot be assigned replacement authorship by shared instruction text.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-022**: Exact shared presentation shall\nresolve to the selected typed material with its ordering, source, version,\nqualifications, dependencies and assessment disposition preserved. Required\nbodies shall be accessible through the actor's admitted context/access.\nRepeated complete bodies require a declared presentation need; an enclosing\nhistory or runtime carrier is not itself a reason to render its whole body.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-023**: Context correspondence, presentation\nfidelity and semantic sufficiency shall remain distinct qualification claims.\nSchema, identity and size checks shall not close semantic sufficiency or prove\nthat a stochastic evaluator gives the same judgment after a presentation change.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 76
+          }
+        ],
+        "key": "policy_role_and_presentation_conservation",
+        "statement": "Role/context policy remains identified data through owners. Tuning preserves prior exact supplied policy/context and cannot implicitly alter authority,requirements,acceptance,topology or Worker/Evaluator/Consequence ownership. Tools/validators do not assume semantic judgment. Instructions/input/question/rubric/output agree on role; independent assessor receives exact candidate and is not reassigned authorship. Shared material preserves order,source,version,qualifications,dependencies,assessment disposition and accessible required bodies; repetition needs declared presentation need, not enclosing carrier/history alone. Context correspondence,presentation fidelity,semantic sufficiency are distinct qualification claims; schema/identity/size cannot prove sufficiency or same stochastic judgment after presentation changes.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "direct_hog_execution"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 51,
+            "quote": "**REQ-R-ABG3-INTERPRET-001**: The runtime shall load admitted GTL declarations\nwithout collapsing them into a flatter language or executable program\nrepresentation.\n\n**REQ-R-ABG3-INTERPRET-002**: Public execution shall bind one exact Product,\nworkspace when required, catalog view, GTL program, callable GraphFunction\nmembership, input and output contracts, and invocation authority. None may be\ninferred from display names, package presence, or caller-local defaults.\n\n**REQ-R-ABG3-INTERPRET-003**: A GraphFunction call shall materialize its\nreplayable GTL template into one graph under declared inputs and structural\nparameters. The published template and resulting graph, not an\nimplementation-only callable, are HoG traversal authority.\n\n**REQ-R-ABG3-INTERPRET-004**: TypeScript and GTL validation shall complete\nbefore HoG enters the graph. Invalid or unresolved program law shall fail or\nremain typed pressure before prohibited effects.\n\n**REQ-R-ABG3-INTERPRET-005**: HoG shall traverse the original admitted GTL\nprogram and materialized graph directly through declared graph and C relations.\n\n**REQ-R-ABG3-INTERPRET-006**: Runtime execution shall reject a generated HoG\nprogram, CompiledCProgramPlan, compiled execution declaration, runtime-program\ncatalog, or other executable intermediate representation as program authority.\n\n**REQ-R-ABG3-INTERPRET-007**: GraphVector shall remain an internal typed\nboundary between graph loci. It shall not be a public callable, whole program,\nor independent runtime plan.\n\n**REQ-R-ABG3-INTERPRET-008**: Recursion and child traversal shall use declared\nGraphFunction relations plus invocation-local GraphCall and Frame truth.\nController callbacks, private queues, or worker decomposition shall not invent\nrecursion topology.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FAcceptance%20Criteria",
+            "start_line": 19
+          }
+        ],
+        "key": "direct_program_authority",
+        "statement": "Load admitted GTL without flattened executable representation. Public execution binds exact Product,required workspace,catalog view,program,callable membership,I/O contracts,invocation authority, not names/package presence/defaults. GraphFunction materializes replayable template under declared inputs/structural parameters; template and graph authorize direct HoG graph/C traversal, not implementation-only callable. Complete TS/GTL validation before entry; invalid/unresolved law fails or remains typed pressure before prohibited effects. Reject generated HoG programs,CompiledCProgramPlan,compiled declarations/runtime catalogs/other executable IR as authority. Vectors stay internal typed boundaries, not callable/program/plan. Recursion uses declared function relations and invocation-local call/frame, not callbacks/queues/worker topology.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "direct_hog_execution"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 79,
+            "quote": "**REQ-R-ABG3-INTERPRET-009**: ABG shall own post-entry runtime admission,\nincluding worker invocation facts, result and evidence admission, failure\nclassification, consequence, judgment, correction, continuation, and closure.\n\n**REQ-R-ABG3-INTERPRET-010**: Runtime admission shall fail closed on undeclared\nprogram or GraphFunction identity, missing membership, malformed parameters,\ncontract mismatch, unavailable implementation seam, invalid compute basis, or\nunresolved runtime law.\n\n**REQ-R-ABG3-INTERPRET-011**: Public ingress shall validate and admit one typed\ninvocation, then ignite or continue the admitted GTL program. It shall not\norder One Surface, choose private traversal state, retry, construct\ncontinuation, or decide closure.\n\n**REQ-R-ABG3-INTERPRET-012**: HoG next-locus selection shall derive from the\nadmitted GTL program and ABG replay-derived current state. It shall not derive\nfrom public fields, controller memory, package-local counters, handler order,\nor a fixed first-vector shortcut.\n\n**REQ-R-ABG3-INTERPRET-013**: A proof shall not claim program execution when it\nonly materializes a GraphFunction, dispatches one vector, calls an\nimplementation, or observes event co-presence. It shall prove exact admission,\nHoG progression, effects, ABG admission, and replay-derived outcome.\n\n**REQ-R-ABG3-INTERPRET-014**: An invocation with no declared or admitted\ncompute basis shall produce `no_compute_basis`. It shall not become an\nidentity, no-op, deterministic, probabilistic, or human fallback.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FAcceptance%20Criteria",
+            "start_line": 53
+          }
+        ],
+        "key": "runtime_and_ingress_authority",
+        "statement": "ABG owns post-entry invocation/result/evidence/failure/consequence/judgment/correction/continuation/closure admission. Fail closed on undeclared program/function,missing membership,malformed parameters,contract mismatch,missing seam,invalid basis or unresolved law. Ingress admits typed invocation then ignites/continues, never orders One Surface/private state/retry/continuation/closure. Next locus derives GTL and replay state, not fields/memory/counters/handler order/first-vector shortcut. Execution proof must show exact admission,HoG progression,effects,ABG admission,replay outcome, not just materialization/vector dispatch/implementation/event co-presence. Missing compute basis yields no_compute_basis, never no-op/identity/F_D/F_P/F_H fallback.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "direct_hog_execution"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 100,
+            "quote": "**REQ-R-ABG3-INTERPRET-015**: Every runtime surface that can affect liveness\nshall publish an admitted activity probe when required. Probe facts observe\nactivity and evidence only.\n\n**REQ-R-ABG3-INTERPRET-016**: ABG shall derive liveness through one replay\nprojection over admitted probe and interruption events. CLI timers, harness\nstate, and product summaries are not rival liveness truth.\n\n**REQ-R-ABG3-INTERPRET-017**: Watchdog and evaluator dispositions shall consume\nthat liveness projection before selecting continue, controlled inactivity,\ninterruption block, safety-cap block, retry exhaustion, or artifact-salvage\nadmission.\n\n**REQ-R-ABG3-INTERPRET-018**: Unless an admitted disposition selects another\nlawful route, HoG shall continue declared graph progress. Caller-local timeout\npolicy is not default traversal law.\n\n**REQ-R-ABG3-INTERPRET-019**: Runtime attention or zoom frames shall remain ABG\nframe contracts anchored to admitted GTL identities. They shall not create\nrival topology or controller loops.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FAcceptance%20Criteria",
+            "start_line": 81
+          }
+        ],
+        "key": "liveness_and_zoom_boundaries",
+        "statement": "Every liveness-affecting surface publishes admitted activity probe when required, observing activity/evidence only. One replay projection of admitted probes/interruption supplies liveness, not CLI timers/harness/summaries. Watchdog/evaluator consumes it for continue,inactivity,interruption/safety-cap block,retry exhaustion,salvage admission. Unless admitted lawful alternative, HoG continues graph; caller timeout is not default law. Attention/zoom uses ABG frames anchored to GTL, no rival topology/loops.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "whole_program_validation"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 127,
+            "quote": "**REQ-R-ABG3-INTERPRET-021**: Whole-program validation shall fail closed for\nempty, partial, or caller-selected inventory that omits required programs,\nGraphFunctions, graphs, vectors, interfaces, starts, contracts, implementation\nbindings, or source identities.\n\n**REQ-R-ABG3-INTERPRET-022**: Validation shall derive graph outputs from\ndeclared inputs through graph-vector source and target contracts and shall\nreject undeclared loci, unsatisfied dependencies, unreachable vectors,\nnon-derivable outputs, and ambiguous duplicate identities.\n\n**REQ-R-ABG3-INTERPRET-023**: Validation evidence shall key graph, function,\nvector, interface, and contract truth by opaque identity. Display names are\npresentation metadata.\n\n**REQ-R-ABG3-INTERPRET-024**: Every materialized vector shall have exactly one\napplicable target-carrier relation and one closure relation or a typed\nunresolved-semantic result.\n\n**REQ-R-ABG3-INTERPRET-025**: A declared prompt asset shall preserve its\nrenderer, constructor, digest policy, output contract, authority slot, proof\nobligation, node, and fold relations. Prompt text or caller files are not\ncontract truth.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FAcceptance%20Criteria",
+            "start_line": 106
+          }
+        ],
+        "key": "validation_total_inventory_and_derivation",
+        "statement": "Fail closed for empty/partial/caller-selected inventory missing required programs,functions,graphs,vectors,interfaces,starts,contracts,implementations,source identities. Derive graph outputs through declared input/vector contracts; reject undeclared loci,unsatisfied dependencies,unreachable vectors,non-derivable outputs,ambiguous duplicate ids. Every materialized vector gets exactly one target-carrier and one closure relation or typed unresolved-semantic result. Prompt assets retain renderer,constructor,digest policy,output,authority,proof,node,fold relations; text/files alone are not contract truth.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "whole_program_validation",
+          "direct_hog_execution"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 151,
+            "quote": "**REQ-R-ABG3-INTERPRET-026**: Plugin contracts and implementation bindings shall\nenter through the same typed constructors and admission law used by runtime.\nUnknown or prohibited authority fields shall be rejected, not stripped.\n\n**REQ-R-ABG3-INTERPRET-027**: A validation report shall bind the exact\nnormalized audited GTL inventory and its digest. The report is evidence, not a\nprogram, execution plan, runtime fact, or release verdict.\n\n**REQ-R-ABG3-INTERPRET-028**: Validation shall project or reject public starts,\nGraphFunction entries, internal vector boundaries, program membership,\nimplementation seams, output admission, allowed consequences, and catalog bind\noptions without executing them.\n\n**REQ-R-ABG3-INTERPRET-029**: Validation and runtime admission shall reject bare\nvectors as public authority, overlays as execution shortcuts, schedule data as\ntopology, plugin files as result law, unavailable consequences, adapter route\nselection as bind law, and ambiguous entry candidates.\n\n**REQ-R-ABG3-INTERPRET-030**: The admitted GTL program shall own the One Surface\norder and every published recursive refinement. HoG shall traverse that order.\nABG shall preserve the four semantic authorities and distinct intent,\ninvocation, evidence, action-result, and continuation admission boundaries.\nNo helper, worker, SDK, CLI, or fixture may become a second controller.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FAcceptance%20Criteria",
+            "start_line": 129
+          }
+        ],
+        "key": "validation_no_hidden_authority",
+        "statement": "Plugins/bindings use runtime typed constructors/admission; reject unknown/prohibited authority fields, do not strip. Validation projects/rejects starts,entries,vectors,membership,seams,output admission,consequences,catalog options without executing. Reject bare vectors as public authority,overlay shortcuts,schedule topology,plugin-file result law,unavailable consequences,adapter-route bind law,ambiguous entry. GTL owns One Surface order and published recursion; HoG traverses; ABG conserves four semantic owners and distinct intent/invocation/evidence/action-result/continuation boundaries. No helper/worker/SDK/CLI/fixture second controller.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "residual",
+        "keys": [
+          "instruction_assembly",
+          "prompt_dispatch_carriers",
+          "instruction_fd_semantic_boundary",
+          "instruction_dispatch_rejection",
+          "instruction_startup_and_response_admission",
+          "review_and_dependency_sufficiency",
+          "plan_subordination_and_stdo_access",
+          "policy_role_and_presentation_conservation",
+          "renderer_delegation",
+          "instruction_operational_and_semantic_limits"
+        ],
+        "reason": "Assembly obligations retained with explicit mechanical-versus-semantic limits and unresolved referenced evidence.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "interpret_metadata",
+          "interpret_provenance_unresolved"
+        ],
+        "reason": "Provenance retained without resolving evidence.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "direct_hog_execution"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FPurpose"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "whole_program_validation",
+          "validation_precedes_hog",
+          "direct_program_authority",
+          "runtime_and_ingress_authority",
+          "liveness_and_zoom_boundaries",
+          "validation_total_inventory_and_derivation",
+          "validation_no_hidden_authority",
+          "execution_proof_not_supplied"
+        ],
+        "reason": "Runtime/validator law retained without claiming execution evidence.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FAcceptance%20Criteria"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "iteration_provenance",
+          "iteration_basis_unresolved"
+        ],
+        "reason": "Metadata retained with unresolved provenance.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "iteration_outcome_algebra"
+        ],
+        "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra%2FPurpose"
+      }
+    ],
+    "latitude": [
+      {
+        "allowed": [
+          "ABG rendering or governed authority-denied renderer over immutable envelope; admitted Product templates/grammar/rubrics/style as data."
+        ],
+        "applies_to_keys": [
+          "prompt_dispatch_carriers"
+        ],
+        "forbidden": [
+          "Product data executes final render,binds runtime,adds hidden instructions,omits required sections,selects functions,admits responses or closes."
+        ],
+        "grounding": [
+          {
+            "end_line": 38,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-009**: Renderer execution shall be ABG-owned or delegated only to a governed authority-denied renderer over an immutable instruction envelope. Product templates, grammar, rubrics, and style policy may be admitted data; they shall not execute final prompt rendering, bind runtime refs, add hidden instructions, omit required sections, select graph functions, admit responses, or close traversal.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 38
+          }
+        ],
+        "key": "renderer_delegation"
+      }
+    ],
+    "limitations": [
+      "Instruction access, context correspondence, presentation fidelity and semantic sufficiency are retained as separate claims.",
+      "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 35,
+            "quote": "**REQ-R-ABG3-INTERPRET-004**: TypeScript and GTL validation shall complete\nbefore HoG enters the graph. Invalid or unresolved program law shall fail or\nremain typed pressure before prohibited effects.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FAcceptance%20Criteria",
+            "start_line": 33
+          }
+        ],
+        "key": "validation_precedes_hog",
+        "kind": "prerequisite_for",
+        "meaning": "TypeScript and GTL validation completes before graph entry.",
+        "source_key": "whole_program_validation",
+        "target_key": "direct_hog_execution"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Declared mechanical checks and access obligations are preserved without claiming semantic sufficiency or implementation realization.",
+        "grounding": [
+          {
+            "end_line": 100,
+            "quote": "**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-004**: The instruction validator shall be F_D-owned for source trace, type coverage, response-contract derivation, proof/authority/renderer derivation, declared dependency selection, exact compression relations, declared proportionality predicates, runtime-slot bindability, non-duplication, and declared non-tautology predicates. These predicates shall satisfy -004A. Semantic relevance, adequacy of the selected criteria and contextual sufficiency remain judgments of their declared F_P or F_H owner. Proposals and judgments enter through admission; mechanical validation of their shape and basis shall not be represented as proof of their semantic correctness.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-004A**: Any instruction-assembly decision claimed as F_D shall be a total function over a known algebra and admitted inputs. The known algebra shall declare carrier types, operators, predicates, ordering, output domain, and typed rejection or gap cases before execution. The total function shall map every valid input state to exactly one valid output or one typed rejection or gap, without implicit fallback, runtime invention, or F_P judgment.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-005**: An F_P dispatch shall not occur without an admitted prompt materialization plan, an immutable runtime-bound instruction envelope, and a replayable prompt manifest or equivalent projection that preserves the materialization-plan ref, bound runtime refs, renderer identity, response contract, and rendered prompt digest.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-006**: Assembly shall compute dependency selection and exact compression over the selected graph function, selected vector, node types, asset surfaces, selected composition, payload/evidence ledgers, requirement/residual/continuation truth when present, and declared policy refs. This establishes compliance with the declared selection policy, not semantic completeness of that policy. The dispatched worker shall not silently replace its own governing selection; a proposal to change that selection follows the declared policy owner and admission path.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-007**: Proportionality shall affect dispatch. A P0 deterministic edge that can be discharged through admitted F_D truth shall not render an F_P prompt, emit `fp_dispatch_requested`, or invoke an F_P worker.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-008**: Runtime binding shall accept only admitted or replay-derived refs. Unknown, stale, forged, digest-mismatched, unadmitted, or out-of-scope payload/evidence/artifact/runtime refs shall fail closed before weakened F_P dispatch.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-009**: Renderer execution shall be ABG-owned or delegated only to a governed authority-denied renderer over an immutable instruction envelope. Product templates, grammar, rubrics, and style policy may be admitted data; they shall not execute final prompt rendering, bind runtime refs, add hidden instructions, omit required sections, select graph functions, admit responses, or close traversal.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-010**: Prompt manifests shall be replayable. Replaying admitted declarations, admitted prompt materialization plans, renderer identity, and ABG runtime events shall reproduce the included/omitted carrier decisions and rendered prompt digest or shall emit a typed replay defect.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-011**: Non-tautology shall be a dispatch-assurance obligation. A prompt materialization plan or envelope that carries the expected answer, selected classifier, close disposition marker, or equivalent answer-shaped instruction shall be rejected or shall fail differential proof.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-012**: Instruction assembly declarations, prompt materialization plans, renderer bindings, and runtime binding policies that affect dispatch shall enter through the canonical ABG startup and registry/admission path used for product GTL declarations, product libraries, graph overlays, node types, graph functions, and policy overlays. They shall not use a parallel file scan, product-local shell, prompt-loader, local registry, or duplicate selection path.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-013**: Registry lookup or selection used to choose instruction assembly, renderer, policy, or plan surfaces shall be replay-derived from admitted registry/startup truth. Query-only lookup shall not create dispatch authority, and product advice shall not become selection truth until ABG admits and validates it.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-014**: Worker transport success, worker self-report, prompt shape, or parseable response shape shall not become closure truth. ABG shall admit or reject worker responses against the response contract derived from the selected target carrier and asset surface before any assurance, continuation, residual, or closure projection consumes the response.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-015**: When the instruction validator uses an F_P review traversal over a candidate prompt materialization plan, the result shall enter as attributed judgment evidence. It shall not directly approve dispatch, bind runtime truth, select traversal, render final prompts or admit responses. Subsequent F_D validation shall establish the declared structural, identity, dependency and admission predicates; the review's semantic judgment retains its own basis and uncertainty and does not become a deterministic theorem.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-016**: The instruction validator shall reject F_P dispatch for build, test, proof, release, deployment, or target artifact work when required dependency sufficiency for the selected target is unknown. F_D shall establish declared prerequisite closure over admitted dependency graph projection, obligation lineage, proof policy and typed prerequisite gaps; any required semantic sufficiency judgment shall be separately supplied by its declared owner. A dependency-disambiguation traversal may dispatch before sufficiency is known only when explicitly scoped to produce candidate dependency nodes, candidate dependency edges or typed prerequisite gaps; it shall not claim target artifact, proof, release or closure satisfaction.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-017**: Every F_P dispatch is governed by instruction assembly law. Absent, unresolved, unadmitted, or non-matching instruction-assembly startup at an F_P boundary shall resolve to blocked before worker invocation, plugin invocation, evaluator invocation, response admission, assurance projection, continuation projection, residual projection, or closure projection.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-018**: A prompt materialization plan is a\nsubordinate dispatch projection. It is not a GTL program, traversal plan,\nGraphFunction, HoG program, or runtime authority. It may bind and render the\ninstruction for an F_P call already selected by the admitted GTL program and\nHoG traversal; it shall not select work, reorder traversal, authorize effects,\nor substitute for ABG admission.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-019**: At an STDO-governed dependent call,\ninstruction assembly shall derive the selected role's frame, identified\ninstruction policy, required native-source content and any explicitly selected\nsupplementary corpus content from its admitted GTL environment and exact access\nevidence. An unselected representation, index or tool shall supply neither a\nrequirement nor permission to omit required native material. The immutable\nenvelope and replayable manifest shall preserve those identities, the supplied\ncontent and its included/omitted disposition. Required content shall not be replaced by an\ninaccessible locator or a claim that the worker used the corpus. Missing or\ninvalid required access evidence shall block before dependent F_P dispatch.\nValid access evidence may be reused only within its declared immutable basis\nand scope; retrieval proves access, not correct semantic application.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-020**: STDO role instructions and context\npolicy shall remain declared, identified data consumed through the existing\ninstruction-assembly and admission owners. Their tuning shall preserve each\nprior invocation's exact supplied policy and context and shall not implicitly\nchange authority, requirements, acceptance conditions, graph topology or the\nexisting Worker, Evaluator and Consequence ownership. Semantic interpretation\nand assessment remain with their declared actors; a corpus-access tool or\nmechanical validator shall not assume those judgments.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-021**: The supplied instructions, current\ninput, question, rubric and output contract shall agree on the selected role.\nAn independently assessing role shall receive the exact candidate and shall\nnot be assigned replacement authorship by shared instruction text.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-022**: Exact shared presentation shall\nresolve to the selected typed material with its ordering, source, version,\nqualifications, dependencies and assessment disposition preserved. Required\nbodies shall be accessible through the actor's admitted context/access.\nRepeated complete bodies require a declared presentation need; an enclosing\nhistory or runtime carrier is not itself a reason to render its whole body.\n\n**REQ-R-ABG3-INSTRUCTION-ASSEMBLY-023**: Context correspondence, presentation\nfidelity and semantic sufficiency shall remain distinct qualification claims.\nSchema, identity and size checks shall not close semantic sufficiency or prove\nthat a stochastic evaluator gives the same judgment after a presentation change.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FAcceptance%20Criteria",
+            "start_line": 26
+          }
+        ],
+        "key": "instruction_operational_and_semantic_limits",
+        "subject_key": "instruction_assembly",
+        "uncertainty": "Selected policies, carrier schemas, semantic judgments and actual differential/replay/qualification evidence are not supplied."
+      },
+      {
+        "consequence": "Historical label and status do not independently establish current authority.",
+        "grounding": [
+          {
+            "end_line": 7,
+            "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability\n**Date**: 2026-07-20\n**Historical family identity**: `REQ-R-ABG3-INTERPRET`\n**Derives from**: [INTENT.md](../../INTENT.md), [PRODUCT.md](../../PRODUCT.md), [REQ-M-GTL3-PROGRAM-TRAVERSAL.md](../mapping/REQ-M-GTL3-PROGRAM-TRAVERSAL.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission",
+            "start_line": 3
+          }
+        ],
+        "key": "interpret_provenance_unresolved",
+        "subject_key": "interpret_metadata",
+        "uncertainty": "Acceptance evidence and linked deciding sources are absent."
+      },
+      {
+        "consequence": "Do not assert actual HoG traversal or accepted program execution from a source representation.",
+        "grounding": [
+          {
+            "end_line": 75,
+            "quote": "**REQ-R-ABG3-INTERPRET-013**: A proof shall not claim program execution when it\nonly materializes a GraphFunction, dispatches one vector, calls an\nimplementation, or observes event co-presence. It shall prove exact admission,\nHoG progression, effects, ABG admission, and replay-derived outcome.\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INTERPRET.md#REQ-R-ABG3-INTERPRET%20-%20HoG%20Traversal%20And%20ABG%20Runtime%20Admission%2FAcceptance%20Criteria",
+            "start_line": 72
+          }
+        ],
+        "key": "execution_proof_not_supplied",
+        "subject_key": "direct_hog_execution",
+        "uncertainty": "This requirement specifies the execution-proof path but supplies no runtime trace or proof witness."
+      },
+      {
+        "consequence": "Preserve metadata as source claim.",
+        "grounding": [
+          {
+            "end_line": 6,
+            "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Constraint / Guarantee\n**Date**: 2026-07-11\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-ITERATION.md#REQ-R-ABG3-ITERATION%20%E2%80%94%20Iteration%20Outcome%20Algebra",
+            "start_line": 3
+          }
+        ],
+        "key": "iteration_basis_unresolved",
+        "subject_key": "iteration_provenance",
+        "uncertainty": "Referenced acceptance and derivation contents are absent."
+      }
+    ]
+  },
+  "answer_sha256": "4ad28714b2e40f8603fa3d5fe4b5687a5924afb8555841c5cbd9f90a294e7243",
+  "author": "codex-runtime-frame",
+  "chunk": "chunk-3e16743d1162cba88e99",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "344146a41d41d680a05bd223f5f014bd1a1149510ab0ca48aba8379e4f18d3b4"
+}

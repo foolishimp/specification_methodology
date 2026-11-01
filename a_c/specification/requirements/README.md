@@ -28,6 +28,13 @@ Interpretation fidelity, representation preservation, actual use, semantic
 acceptance and release are separate deciding questions. Their evidence and
 residuals remain explicit even when a mechanical check succeeds.
 
+## User-project delivery
+
+The additional [project-use requirements PU-01–09](project-use.md) join these
+capabilities into a supported workflow for users' own STDO projects. They are
+active required outcomes; complete installed user delivery is not yet established.
+They reuse AC-R, FR, FD and FC contracts rather than owning another lifecycle.
+
 ## Formalisation
 
 [FR-001–FR-007](formalisation.md) govern tenants declaring formal definitions

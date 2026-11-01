@@ -1,0 +1,855 @@
+{
+  "answer": {
+    "concepts": [
+      {
+        "conditions": [],
+        "definition": "Installed language/runtime proof of S01 on one exact candidate and prospectively fixed external test case; not a built-in application or runtime governor.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1554,
+            "quote": "## Root Product Outcome\n\n`ABI5-ROOT-001` names the installed language/runtime proof in `ABG5-S01`.\nIt is a proof obligation, not a built-in application or runtime governor.\nThe exact candidate and prospectively fixed external test case bind this path:\n\n```text\npack exact pre_rc_candidate\n  -> clean source-blind install\n  -> verify and bind the Product\n  -> publish the external test program through ordinary GTL\n  -> admit catalog and narrow the view\n  -> resolve the test-owned Program, GraphFunction, contracts and leaf binding\n  -> materialize and validate its GTL graph\n  -> invoke through installed abg.cli\n  -> HoG traverses admitted GTL directly and calls the declared ordinary leaf\n  -> ABG admits invocation, C-call, evidence, result, judgment and closure\n  -> replay and CLI agree on the admitted typed outcome\n```\n\nThe test case owns its declaration and implementation identities, input and\nexpected output. A Hello World program is a minimal test of the language's\nmechanics. It is never an ABIogenesis Product, feature, default callable,\ncontract family or shipped implementation. Its source and any leaf binding stay\nin consumer/test territory outside production source and outside the ABG\npackage. No production admission, validation, dispatch or proof branch may know\nthat test's identity or meaning.\n\nThe root obligation graph is finite and acyclic:\n\n| Obligation | Depends on | Remaining rank after satisfaction |\n|---|---|---:|\n| `R1 exact artifacts verified` | none | 9 |\n| `R2 clean install complete` | `R1` | 8 |\n| `R3 workspace bound to exact product set` | `R2` | 7 |\n| `R4 supplied publication catalog constructed and narrowed` | `R3` | 6 |\n| `R5 test-owned Program selected and admitted` | `R4` | 5 |\n| `R6 test-owned GraphFunction, contracts and leaf binding resolved` | `R5` | 4 |\n| `R7 materialized GTL graph validated` | `R6` | 3 |\n| `R8 HoG execution entered through public invocation` | `R7` | 2 |\n| `R9 ABG admitted causal result and closure events` | `R8` | 1 |\n| `R10 replay and CLI agree on typed terminal outcome` | `R9` | 0 |\n\nAll ten obligations must bind the same exact candidate, test case and causal\nepisode. Two fresh reads must derive the same admitted result and closed state.\nPackage or symbol presence, a catalog row, component success, co-present events,\nor a fixture-authored result without this causal path cannot satisfy the root.\nTransport errors, continuation, hold, gap, block, non-admission, missing events,\nABG source/private imports, wrong contracts and replay disagreement leave it open.\nContinuation remains behavior proved by `ABG5-S03`.\n\nA changed qualifying candidate or test contract requires affected reproof;\nunchanged historical evidence keeps its original scope. Root success does not\nclose the other scenarios, conformance, qualification or release gates.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1501
+          }
+        ],
+        "key": "root_proof",
+        "label": "ABI5-ROOT-001"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: Exact artifacts verified. Remaining rank after satisfaction is 9; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1533,
+            "quote": "| `R1 exact artifacts verified` | none | 9 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1533
+          }
+        ],
+        "key": "exact_artifacts_verified",
+        "label": "R1 Exact artifacts verified"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: Clean install complete. Remaining rank after satisfaction is 8; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1534,
+            "quote": "| `R2 clean install complete` | `R1` | 8 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1534
+          }
+        ],
+        "key": "clean_install_complete",
+        "label": "R2 Clean install complete"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: Workspace bound to exact Product set. Remaining rank after satisfaction is 7; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1535,
+            "quote": "| `R3 workspace bound to exact product set` | `R2` | 7 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1535
+          }
+        ],
+        "key": "workspace_bound",
+        "label": "R3 Workspace bound to exact Product set"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: Supplied publication catalog constructed and narrowed. Remaining rank after satisfaction is 6; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1536,
+            "quote": "| `R4 supplied publication catalog constructed and narrowed` | `R3` | 6 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1536
+          }
+        ],
+        "key": "publication_catalog_ready",
+        "label": "R4 Supplied publication catalog constructed and narrowed"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: Test-owned Program selected and admitted. Remaining rank after satisfaction is 5; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1537,
+            "quote": "| `R5 test-owned Program selected and admitted` | `R4` | 5 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1537
+          }
+        ],
+        "key": "external_program_admitted",
+        "label": "R5 Test-owned Program selected and admitted"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: Test-owned GraphFunction, contracts and leaf binding resolved. Remaining rank after satisfaction is 4; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1538,
+            "quote": "| `R6 test-owned GraphFunction, contracts and leaf binding resolved` | `R5` | 4 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1538
+          }
+        ],
+        "key": "external_callable_resolved",
+        "label": "R6 Test-owned GraphFunction, contracts and leaf binding resolved"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: Materialized GTL graph validated. Remaining rank after satisfaction is 3; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1539,
+            "quote": "| `R7 materialized GTL graph validated` | `R6` | 3 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1539
+          }
+        ],
+        "key": "materialized_graph_validated",
+        "label": "R7 Materialized GTL graph validated"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: HoG execution entered through Public invocation. Remaining rank after satisfaction is 2; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1540,
+            "quote": "| `R8 HoG execution entered through public invocation` | `R7` | 2 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1540
+          }
+        ],
+        "key": "public_hog_execution",
+        "label": "R8 HoG execution entered through Public invocation"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: ABG admitted causal result and closure events. Remaining rank after satisfaction is 1; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1541,
+            "quote": "| `R9 ABG admitted causal result and closure events` | `R8` | 1 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1541
+          }
+        ],
+        "key": "causal_result_closed",
+        "label": "R9 ABG admitted causal result and closure events"
+      },
+      {
+        "conditions": [],
+        "definition": "Named root proof obligation: Replay and CLI agree on typed terminal outcome. Remaining rank after satisfaction is 0; this record does not assert satisfaction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1542,
+            "quote": "| `R10 replay and CLI agree on typed terminal outcome` | `R9` | 0 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1542
+          }
+        ],
+        "key": "replay_cli_agree",
+        "label": "R10 Replay and CLI agree on typed terminal outcome"
+      },
+      {
+        "conditions": [],
+        "definition": "Capabilities excluded by Product, including reserved future portions and prohibited rival authorities; not accidental implementation omissions.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1594,
+            "quote": "## Explicit Non-Features\n\nABIogenesis 5.0 does not include:\n\n- a built-in Hello World application, test-program-specific API, contract,\n  publication, implementation, admission or proof branch;\n\n- native human response admission or response-driven same-run resumption;\n- the dedicated F12/S04 observer/tuner Product or autonomous upstream/out-of-traversal\n  A.0 routing, as distinct from selected graph-based Executive governance;\n- standalone Consensus qualification or mandatory host-adapter parity;\n- full original Data Mapper completion as an ABIogenesis release prerequisite;\n- a new GTL source language, parser, compiler pipeline, bytecode, or executable\n  intermediate representation;\n- a reference-frame subsystem, alternate evaluator, or second realization\n  path distinct from the joined Product function;\n- a generated HoG program, compiled execution plan, or runtime-program catalog\n  distinct from admitted GTL;\n- hidden default programs, selectors, stages, instructions, or topology;\n- controller authority in an SDK, CLI, installer, fixture, worker, plugin,\n  Consensus, or One Surface surface;\n- a second event stream, result ledger, retry loop, continuation model, or\n  closure authority;\n- a recursive-LLM-specific runtime or compute regime;\n- self-hosting or ABIogenesis-builds-ABIogenesis as a 5.0 release gate;\n- publication or maturation of odd_glc or another GLC Product as a 5.0 build\n  or release dependency;\n- automatic ticket mutation, automatic wake, or an ABG-owned scheduler;\n- hosted registry, marketplace, billing, IAM, RBAC, multi-user service, or\n  distributed orchestration;\n- hostile-workstation resistance, publisher authenticity, remote attestation,\n  or signing on the trusted-desktop boundary; or\n- installed-product update, disable, unbind, uninstall, revocation, retirement,\n  or supersession lifecycle beyond exact initial installation and binding.\n\nInstalled stable 5.0 may become the development product for 5.0.1. Self-use and\ndownstream Product maturation begin there and cannot retroactively qualify\n5.0. The required F17/S06 lifecycle witness qualifies the installed 5.0\ncandidate before RC authorization.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExplicit%20Non-Features",
+            "start_line": 1556
+          }
+        ],
+        "key": "nonfeatures",
+        "label": "Explicit 5.0 non-features"
+      },
+      {
+        "conditions": [],
+        "definition": "stdo_abiogenesis.json constitution.stdo.basis owns exact immutable installed methodology; explicit composition alone selects additional Development Products. Source, qualification and release bind that same exact basis.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1665,
+            "quote": "## Governance And Release Boundary\n\nThere is one lawful STDO identity. ABIogenesis 5.0 development is governed by\nthe immutable installed release selected by\n[`stdo_abiogenesis.json`](../stdo_abiogenesis.json),\n`constitution.stdo.basis`. That Definition is the sole exact method selection;\nits composition selects any additional Development Products. The direct\nProduct-owner ruling selects the published standalone V3 method and supplied\nplugin payload recorded in the linked adoption evidence for resumed source\nwork. Its exact identity is owned by the Definition, not independently selected\nby this document. The published cut retains its prerelease qualification scope.\nSelf-conformance, qualification, and release must bind that same exact basis.\nAnother STDO version cannot substitute without lawful Product re-entry and an\nF_H disposition. Mutable methodology source and candidate work are authoring\ninputs for a future release, not operative ABIogenesis law.\n\nSource development consumes the exact native method documents through the STDO\ntoolchain manager. The standalone V3 selection has no matched Axiom Indexer or\nSTDO Representation dependency; the Definition's composition is empty. Older\ncompanion installs and their maps remain historical evidence. A supplemental\n`a_c` artifact is not selected implicitly by its publication beside the method.\nA source-linked map may route attention only after explicit selection and\nverification of its exact source basis and selected source bytes through its\ndeclared tools. A map or native skill does not\nby its existence become ABI behavior, constitutional authority, GTL, an ABG\nevent, runtime truth or qualification evidence. The\n[STDO-Governed Run Environment](#stdo-governed-run-environment) explicitly declares\nruntime consumption of those released Products; their installation for source\ndevelopment does not supply that Run binding.\n\nFor the exact T-287 increment selected by Goals, Product adopts the optional\nSTDO executive profile through the Project-owned\n`repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md#abiogenesis-project-reference-frame-basis`.\nThat basis governs only the named T-287 activation. It adds one local\nmutable-worksite-causality evaluation frame, imports the existing ABI frame\natlas, and grants no implementation, mutation, admission, or release\nauthority.\n\nThe TypeScript realization applies the selected release's\n[software-design profile](stdo://releases/v3.0.2/standards/DESIGN_MODULE.md)\nand [build-tenant binding law](stdo://releases/v3.0.2/standards/SPEC_METHOD.md#11-build-tenant-binding).\nThe [STDO 3 computational binding](../build_tenants/abiogenesis/typescript/design/ABI5_STDO3_COMPUTATIONAL_BINDING.md)\nrecords their application to the existing Product and requirement owners.\nAlgorithmic description, informational interpretation and computational\nrealization remain distinct linked accounts. Design supplies their concrete\ncomposition and effect relations without creating another Product definition,\nruntime calculus or execution authority. Design completeness, implementation\nconformance, integrated behavior and release acceptance remain separate claims.\n\nSource development applies the selected released STDO disciplines:\n\n- one product definition rather than competing target surfaces;\n- one immutable 4.6 origin baseline with semantic successor conservation;\n- one executable root outcome throughout delivery;\n- transactional replacement and retirement at hard breaks;\n- proportional proof ordered by the declared trusted-desktop risk model;\n- distinct authority, evidence, and projection bases; and\n- direct or lawfully proxied F_H closure.\n\nThe selected method owns direct Writer entry when sufficient, coordination and\nindependent review by applicability, explicit Executive-to-Writer mutation\nseparation, valid evidence and ruling reuse, condition-based closure, and\nsteel-thread evidence ordering. The local frame basis instantiates those\nrules; it is not a competing local candidate method. Release applicability is\nowned by this Product; method adoption supplies no feature or implementation\nacceptance. Exact historical evidence retains its original scope and identity.\n\nProduct-definition closure does not accept the current implementation, approve\na migration, or claim release readiness. It fixes the destination against which\nthose later decisions are made.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FGovernance%20And%20Release%20Boundary",
+            "start_line": 1596
+          }
+        ],
+        "key": "method_definition",
+        "label": "Sole development method selection"
+      },
+      {
+        "conditions": [],
+        "definition": "Optional attention-routing view only after selection and verification of exact source basis and every selected source byte through declared tools; publication beside methodology does not select it.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1665,
+            "quote": "## Governance And Release Boundary\n\nThere is one lawful STDO identity. ABIogenesis 5.0 development is governed by\nthe immutable installed release selected by\n[`stdo_abiogenesis.json`](../stdo_abiogenesis.json),\n`constitution.stdo.basis`. That Definition is the sole exact method selection;\nits composition selects any additional Development Products. The direct\nProduct-owner ruling selects the published standalone V3 method and supplied\nplugin payload recorded in the linked adoption evidence for resumed source\nwork. Its exact identity is owned by the Definition, not independently selected\nby this document. The published cut retains its prerelease qualification scope.\nSelf-conformance, qualification, and release must bind that same exact basis.\nAnother STDO version cannot substitute without lawful Product re-entry and an\nF_H disposition. Mutable methodology source and candidate work are authoring\ninputs for a future release, not operative ABIogenesis law.\n\nSource development consumes the exact native method documents through the STDO\ntoolchain manager. The standalone V3 selection has no matched Axiom Indexer or\nSTDO Representation dependency; the Definition's composition is empty. Older\ncompanion installs and their maps remain historical evidence. A supplemental\n`a_c` artifact is not selected implicitly by its publication beside the method.\nA source-linked map may route attention only after explicit selection and\nverification of its exact source basis and selected source bytes through its\ndeclared tools. A map or native skill does not\nby its existence become ABI behavior, constitutional authority, GTL, an ABG\nevent, runtime truth or qualification evidence. The\n[STDO-Governed Run Environment](#stdo-governed-run-environment) explicitly declares\nruntime consumption of those released Products; their installation for source\ndevelopment does not supply that Run binding.\n\nFor the exact T-287 increment selected by Goals, Product adopts the optional\nSTDO executive profile through the Project-owned\n`repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md#abiogenesis-project-reference-frame-basis`.\nThat basis governs only the named T-287 activation. It adds one local\nmutable-worksite-causality evaluation frame, imports the existing ABI frame\natlas, and grants no implementation, mutation, admission, or release\nauthority.\n\nThe TypeScript realization applies the selected release's\n[software-design profile](stdo://releases/v3.0.2/standards/DESIGN_MODULE.md)\nand [build-tenant binding law](stdo://releases/v3.0.2/standards/SPEC_METHOD.md#11-build-tenant-binding).\nThe [STDO 3 computational binding](../build_tenants/abiogenesis/typescript/design/ABI5_STDO3_COMPUTATIONAL_BINDING.md)\nrecords their application to the existing Product and requirement owners.\nAlgorithmic description, informational interpretation and computational\nrealization remain distinct linked accounts. Design supplies their concrete\ncomposition and effect relations without creating another Product definition,\nruntime calculus or execution authority. Design completeness, implementation\nconformance, integrated behavior and release acceptance remain separate claims.\n\nSource development applies the selected released STDO disciplines:\n\n- one product definition rather than competing target surfaces;\n- one immutable 4.6 origin baseline with semantic successor conservation;\n- one executable root outcome throughout delivery;\n- transactional replacement and retirement at hard breaks;\n- proportional proof ordered by the declared trusted-desktop risk model;\n- distinct authority, evidence, and projection bases; and\n- direct or lawfully proxied F_H closure.\n\nThe selected method owns direct Writer entry when sufficient, coordination and\nindependent review by applicability, explicit Executive-to-Writer mutation\nseparation, valid evidence and ruling reuse, condition-based closure, and\nsteel-thread evidence ordering. The local frame basis instantiates those\nrules; it is not a competing local candidate method. Release applicability is\nowned by this Product; method adoption supplies no feature or implementation\nacceptance. Exact historical evidence retains its original scope and identity.\n\nProduct-definition closure does not accept the current implementation, approve\na migration, or claim release readiness. It fixes the destination against which\nthose later decisions are made.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FGovernance%20And%20Release%20Boundary",
+            "start_line": 1596
+          }
+        ],
+        "key": "selected_map",
+        "label": "Explicit source-linked map"
+      },
+      {
+        "conditions": [],
+        "definition": "Optional STDO Executive profile instantiated only for exact Goals-selected T-287 activation, importing ABI frame atlas and mutable-worksite-causality frame without granting implementation/mutation/admission/release authority.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1665,
+            "quote": "## Governance And Release Boundary\n\nThere is one lawful STDO identity. ABIogenesis 5.0 development is governed by\nthe immutable installed release selected by\n[`stdo_abiogenesis.json`](../stdo_abiogenesis.json),\n`constitution.stdo.basis`. That Definition is the sole exact method selection;\nits composition selects any additional Development Products. The direct\nProduct-owner ruling selects the published standalone V3 method and supplied\nplugin payload recorded in the linked adoption evidence for resumed source\nwork. Its exact identity is owned by the Definition, not independently selected\nby this document. The published cut retains its prerelease qualification scope.\nSelf-conformance, qualification, and release must bind that same exact basis.\nAnother STDO version cannot substitute without lawful Product re-entry and an\nF_H disposition. Mutable methodology source and candidate work are authoring\ninputs for a future release, not operative ABIogenesis law.\n\nSource development consumes the exact native method documents through the STDO\ntoolchain manager. The standalone V3 selection has no matched Axiom Indexer or\nSTDO Representation dependency; the Definition's composition is empty. Older\ncompanion installs and their maps remain historical evidence. A supplemental\n`a_c` artifact is not selected implicitly by its publication beside the method.\nA source-linked map may route attention only after explicit selection and\nverification of its exact source basis and selected source bytes through its\ndeclared tools. A map or native skill does not\nby its existence become ABI behavior, constitutional authority, GTL, an ABG\nevent, runtime truth or qualification evidence. The\n[STDO-Governed Run Environment](#stdo-governed-run-environment) explicitly declares\nruntime consumption of those released Products; their installation for source\ndevelopment does not supply that Run binding.\n\nFor the exact T-287 increment selected by Goals, Product adopts the optional\nSTDO executive profile through the Project-owned\n`repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md#abiogenesis-project-reference-frame-basis`.\nThat basis governs only the named T-287 activation. It adds one local\nmutable-worksite-causality evaluation frame, imports the existing ABI frame\natlas, and grants no implementation, mutation, admission, or release\nauthority.\n\nThe TypeScript realization applies the selected release's\n[software-design profile](stdo://releases/v3.0.2/standards/DESIGN_MODULE.md)\nand [build-tenant binding law](stdo://releases/v3.0.2/standards/SPEC_METHOD.md#11-build-tenant-binding).\nThe [STDO 3 computational binding](../build_tenants/abiogenesis/typescript/design/ABI5_STDO3_COMPUTATIONAL_BINDING.md)\nrecords their application to the existing Product and requirement owners.\nAlgorithmic description, informational interpretation and computational\nrealization remain distinct linked accounts. Design supplies their concrete\ncomposition and effect relations without creating another Product definition,\nruntime calculus or execution authority. Design completeness, implementation\nconformance, integrated behavior and release acceptance remain separate claims.\n\nSource development applies the selected released STDO disciplines:\n\n- one product definition rather than competing target surfaces;\n- one immutable 4.6 origin baseline with semantic successor conservation;\n- one executable root outcome throughout delivery;\n- transactional replacement and retirement at hard breaks;\n- proportional proof ordered by the declared trusted-desktop risk model;\n- distinct authority, evidence, and projection bases; and\n- direct or lawfully proxied F_H closure.\n\nThe selected method owns direct Writer entry when sufficient, coordination and\nindependent review by applicability, explicit Executive-to-Writer mutation\nseparation, valid evidence and ruling reuse, condition-based closure, and\nsteel-thread evidence ordering. The local frame basis instantiates those\nrules; it is not a competing local candidate method. Release applicability is\nowned by this Product; method adoption supplies no feature or implementation\nacceptance. Exact historical evidence retains its original scope and identity.\n\nProduct-definition closure does not accept the current implementation, approve\na migration, or claim release readiness. It fixes the destination against which\nthose later decisions are made.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FGovernance%20And%20Release%20Boundary",
+            "start_line": 1596
+          }
+        ],
+        "key": "project_frame_basis",
+        "label": "T-287 Project frame basis"
+      },
+      {
+        "conditions": [],
+        "definition": "All fourteen Product conditions must hold on one exact acyclic release lineage; partial/component evidence cannot replace their conjunction.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1718,
+            "quote": "## Product Completion Predicate\n\nABIogenesis 5.0 is complete only when one exact acyclic release lineage\nsatisfies all of the following:\n\n1. Every semantic claim, repair, and explicit exclusion in the exact 4.6 origin\n   baseline has a terminal `conserved`, `superseded`,\n   `intentionally_removed`, or `not_applicable` disposition with behavioral\n   evidence.\n2. GTL programs are authored as TypeScript values and validated without\n   translation into a rival source language or executable program.\n3. One small HoG algebra and Effect fold directly evaluate every retained graph\n   relation and C constructor through exact owner ports; no superseded\n   imperative coordinator or prototype wrapper remains reachable.\n4. Every row of the 4.6 traversal conservation contract has explicit release\n   applicability. Its retained 5.0 behavior has a declared expression, installed\n   execution witness, replay evidence, public outcome and real mutation-negative\n   proof. Reserved portions have the scoped disposition and truthful boundary\n   evidence defined in [Conservation Proof](#conservation-proof), not a pass\n   for unimplemented 5.1 behavior.\n5. `F_D`, `F_P`, and `F_H` obey their declared type and authority boundaries.\n6. The catalog publishes exact programs, callable GraphFunctions, contracts,\n   implementations, compatibility, versions, and provenance.\n7. The SDK and CLI are thin projections over that catalog and ABG runtime.\n8. One ABG path owns admission, events, replay, correction, continuation, and\n   closure around HoG traversal.\n9. All 15 selected 5.0 feature families are realized. `ABG5-S01`,\n   `ABG5-S02`, `ABG5-S03`, and `ABG5-S06` pass on one exact\n   installed `pre_rc_candidate`; `ABG5-S07` preserves the distinct pre-RC, RC,\n   installed-RC, same-RC acceptance and post-publication evidence boundaries\n   while using the same product contracts. `A5-F08`/`ABG5-S05`, `A5-F12`/`ABG5-S04`\n   and the host and human-response portions named in [Release Boundaries](#50-and-51-release-boundaries)\n   remain excluded planned 5.1 work.\n10. Malformed GTL, malformed probabilistic output, invalid authority, basis\n   conflict, and rival-path mutations fail at their owning boundaries before\n   prohibited effects.\n11. No rival compiler, executable program representation, controller, registry,\n    event stream, or closure path remains public or reachable.\n12. Every qualification subject passes self-conformance and its owning gates\n    under the exact selected and installed STDO basis in the Product Definition\n    with no mixed subject or substituted property.\n13. The published RC's Product and release-claim bytes remain immutable.\n    Any change requires a higher RC with its applicable qualification gates;\n    acceptance and evidence addenda cannot amend or retroauthorize the cut.\n14. Actual human Product authority accepts the exact qualified, unchanged\n    installed RC, and that Product passes a fresh source-blind post-publication\n    installation. No second final cut, retag or package-version rename occurs;\n    `v5.0.0` remains the publication-driven latest-RC selector.\n\nComponent tests, type checks, schema counts, operation counts, published names,\nevent co-presence, generated manifests, or a feature-specific installed fixture\ncannot substitute for this predicate.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FProduct%20Completion%20Predicate",
+            "start_line": 1667
+          }
+        ],
+        "key": "product_completion",
+        "label": "Exact acyclic 5.0 completion predicate"
+      },
+      {
+        "conditions": [],
+        "definition": "Routes the live requirement surface into gtl, abg, mapping and product constitutional domains.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 10,
+            "quote": "# Requirement Surface Index\n\nAbiogenesis requirement families live under:\n\n- `specification/requirements/gtl/`\n- `specification/requirements/abg/`\n- `specification/requirements/mapping/`\n- `specification/requirements/product/`\n\nUse this index as the top-level entry point for the live requirement surface.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/00-starter.md#Requirement%20Surface%20Index",
+            "start_line": 1
+          }
+        ],
+        "key": "requirements_index",
+        "label": "Requirement surface index"
+      },
+      {
+        "conditions": [],
+        "definition": "Existing live GTL3 language/graph, ABG engine/runtime, mapping/provenance and Product policy/qualification/scenario families; derivation provenance differs from current method selection.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 30,
+            "quote": "# Project Requirements\n\nThis directory already contains the live abiogenesis requirement surface.\n\nThe active requirement families are grouped by constitutional domain:\n\n- `gtl/` — GTL 3 language and graph law\n- `abg/` — Abiogenesis engine/runtime law\n- `mapping/` — GTL-to-runtime mapping and provenance law\n- `product/` — product policy, qualification, and scenario law\n\nUse SPEC_METHOD.md from the immutable STDO basis selected by the\n[Product Definition](../../stdo_abiogenesis.json) when revising these files.\nEarlier exact method links in requirement derivation fields preserve their\noriginal provenance. They do not select the governing method for new work.\nThe current source-development adoption is recorded in\n[STDO 3.0.2 adoption](../../.ai-workspace/comments/claude/20261027T224556Z_STDO_302_ADOPTION/README.md);\nthe earlier [STDO 3.0.1 adoption](../../.ai-workspace/comments/claude/20261025T022614Z_STDO_301_ADOPTION/README.md)\nand [STDO 3.0.0 RC1 adoption](../../.ai-workspace/comments/codex/20261021_STDO_300_RC1_ADOPTION/README.md)\nremain as history, and historical runtime and qualification evidence retains\nits original basis.\n\nThe [STDO 3 computational binding](../../build_tenants/abiogenesis/typescript/design/ABI5_STDO3_COMPUTATIONAL_BINDING.md)\nprojects the existing Product and requirement owners into the TypeScript\nrealization. It supplies no new Product outcome or runtime authority.\n[Product's STDO-governed environment](../PRODUCT.md#stdo-governed-run-environment)\nbinds exact native source material and only explicitly selected supplementary\nrepresentations, indexes or access tools. Every required declared dependency\nand access check remains mandatory. Source adoption does not upgrade an\nexisting Run or establish implementation or qualification conformance.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements",
+            "start_line": 1
+          }
+        ],
+        "key": "requirements",
+        "label": "Project requirements"
+      },
+      {
+        "conditions": [],
+        "definition": "Only Product Release Boundaries allocates scope, including mixed retained/deferred clauses. Selected families/scenarios stay F01–07/F09–11/F13–17 and S01/S02/S03/S06 with S07 release; F08/S05 and F12/S04 are reserved 5.1.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 89,
+            "quote": "## Release Applicability\n\nThe sole release allocation is [Product Release Boundaries](../PRODUCT.md#50-and-51-release-boundaries).\nEvery family below inherits that allocation, including mixed clauses that\ndescribe both retained traversal and deferred response or supervision.\n\nABIogenesis 5.0 selects `A5-F01` through `A5-F07`, `A5-F09` through `A5-F11`, and `A5-F13` through\n`A5-F17`. It selects pre-RC scenarios `ABG5-S01`, `ABG5-S02`, `ABG5-S03`,\nand `ABG5-S06`; `ABG5-S07` owns release.\n\n`A5-F08`/`ABG5-S05` and `A5-F12`/`ABG5-S04` are planned ABIogenesis 5.1 identities. Their frozen\ndesign and requirement text are preserved as future input. Their dedicated\nrelease-completeness obligations are not mandatory 5.0 realization,\nself-conformance, qualification, release, public-contract or no-silence gates.\nAn optional published claim still obeys its current declared contract and\ngeneric Product law.\n\nThe exact deferred relation set is below. References to shared declaration,\nevaluation, recursion and context laws defer only their dedicated F12/S04\nobserver/tuner variants. The selected ordinary Executive/default-library\ncomposition inherits those shared laws under Product Release Boundaries.\n\n- dedicated `REQ-P-CONSENSUS` qualification, `REQ-P-SCENARIOS-012`,\n  `REQ-P-QUAL-061` and `REQ-P-QUAL-066`, host parity in\n  `REQ-P-SCENARIOS-013`/`REQ-P-QUAL-063`, and their former mandatory\n  Consensus/host portions in `REQ-P-QUAL-064/067`;\n- mandatory Consensus capability publication in `REQ-P-PUBLIC-CONTRACTS-011`;\n- `REQ-P-SCENARIOS-011` and `REQ-P-QUAL-060A`;\n- `REQ-P-POLICY-036`, `REQ-P-POLICY-037`, and only the observer/tuning\n  variants named by `REQ-P-POLICY-021`, `REQ-P-POLICY-041`, and\n  `REQ-P-POLICY-042`;\n- the `abg.contract.abg.executive`, observer/tuning `project.read`, and\n  `abg.operation.tuning.transition` rows formerly selected by\n  `REQ-P-PUBLIC-CONTRACTS-005` and `REQ-P-PUBLIC-CONTRACTS-008`;\n- `REQ-R-ABG3-TUNER-001` through `REQ-R-ABG3-TUNER-014`;\n- `REQ-R-ABG3-FPC-018`, `REQ-R-ABG3-FPC-019`,\n  `REQ-R-ABG3-FN-COMP-025`, `REQ-R-ABG3-PAYLOAD-027`,\n  `REQ-R-ABG3-ITERATION-019`, and `REQ-R-ABG3-CONTINUATION-010`;\n- only the executive observer/tuning variants in\n  `REQ-R-ABG3-PROJECTION-023`, `REQ-R-ABG3-WITNESS-009`, and the tuner row of\n  the runtime event-kind census; and\n- `REQ-L-GTL3-CONTEXT-007`, `REQ-L-GTL3-ASSET-SURFACE-012`,\n  `REQ-L-GTL3-GRAPHFUNCTION-020`, and `REQ-L-GTL3-HOOKS-019`.\n\nRuntime liveness observation, ordinary replay/projection, One Surface\nevaluation, yielded handoff, retry, convergence, generic `evaluate.C`, and\n5.0 self-conformance remain applicable. The word `observer` alone does not\ndefer a requirement.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability",
+            "start_line": 42
+          }
+        ],
+        "key": "release_applicability",
+        "label": "Inherited requirement release applicability"
+      }
+    ],
+    "constraints": [
+      {
+        "applies_to_keys": [
+          "root_proof"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1554,
+            "quote": "## Root Product Outcome\n\n`ABI5-ROOT-001` names the installed language/runtime proof in `ABG5-S01`.\nIt is a proof obligation, not a built-in application or runtime governor.\nThe exact candidate and prospectively fixed external test case bind this path:\n\n```text\npack exact pre_rc_candidate\n  -> clean source-blind install\n  -> verify and bind the Product\n  -> publish the external test program through ordinary GTL\n  -> admit catalog and narrow the view\n  -> resolve the test-owned Program, GraphFunction, contracts and leaf binding\n  -> materialize and validate its GTL graph\n  -> invoke through installed abg.cli\n  -> HoG traverses admitted GTL directly and calls the declared ordinary leaf\n  -> ABG admits invocation, C-call, evidence, result, judgment and closure\n  -> replay and CLI agree on the admitted typed outcome\n```\n\nThe test case owns its declaration and implementation identities, input and\nexpected output. A Hello World program is a minimal test of the language's\nmechanics. It is never an ABIogenesis Product, feature, default callable,\ncontract family or shipped implementation. Its source and any leaf binding stay\nin consumer/test territory outside production source and outside the ABG\npackage. No production admission, validation, dispatch or proof branch may know\nthat test's identity or meaning.\n\nThe root obligation graph is finite and acyclic:\n\n| Obligation | Depends on | Remaining rank after satisfaction |\n|---|---|---:|\n| `R1 exact artifacts verified` | none | 9 |\n| `R2 clean install complete` | `R1` | 8 |\n| `R3 workspace bound to exact product set` | `R2` | 7 |\n| `R4 supplied publication catalog constructed and narrowed` | `R3` | 6 |\n| `R5 test-owned Program selected and admitted` | `R4` | 5 |\n| `R6 test-owned GraphFunction, contracts and leaf binding resolved` | `R5` | 4 |\n| `R7 materialized GTL graph validated` | `R6` | 3 |\n| `R8 HoG execution entered through public invocation` | `R7` | 2 |\n| `R9 ABG admitted causal result and closure events` | `R8` | 1 |\n| `R10 replay and CLI agree on typed terminal outcome` | `R9` | 0 |\n\nAll ten obligations must bind the same exact candidate, test case and causal\nepisode. Two fresh reads must derive the same admitted result and closed state.\nPackage or symbol presence, a catalog row, component success, co-present events,\nor a fixture-authored result without this causal path cannot satisfy the root.\nTransport errors, continuation, hold, gap, block, non-admission, missing events,\nABG source/private imports, wrong contracts and replay disagreement leave it open.\nContinuation remains behavior proved by `ABG5-S03`.\n\nA changed qualifying candidate or test contract requires affected reproof;\nunchanged historical evidence keeps its original scope. Root success does not\nclose the other scenarios, conformance, qualification or release gates.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1501
+          }
+        ],
+        "key": "external_program_not_product",
+        "statement": "The consumer/test owns declarations, leaf implementation, input and oracle outside production source/package. Even Hello is only a minimal language test, never an ABI feature/default callable/contract/shipped implementation; no production admission/validation/dispatch/proof branch may know its identity or meaning.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "root_proof"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1554,
+            "quote": "## Root Product Outcome\n\n`ABI5-ROOT-001` names the installed language/runtime proof in `ABG5-S01`.\nIt is a proof obligation, not a built-in application or runtime governor.\nThe exact candidate and prospectively fixed external test case bind this path:\n\n```text\npack exact pre_rc_candidate\n  -> clean source-blind install\n  -> verify and bind the Product\n  -> publish the external test program through ordinary GTL\n  -> admit catalog and narrow the view\n  -> resolve the test-owned Program, GraphFunction, contracts and leaf binding\n  -> materialize and validate its GTL graph\n  -> invoke through installed abg.cli\n  -> HoG traverses admitted GTL directly and calls the declared ordinary leaf\n  -> ABG admits invocation, C-call, evidence, result, judgment and closure\n  -> replay and CLI agree on the admitted typed outcome\n```\n\nThe test case owns its declaration and implementation identities, input and\nexpected output. A Hello World program is a minimal test of the language's\nmechanics. It is never an ABIogenesis Product, feature, default callable,\ncontract family or shipped implementation. Its source and any leaf binding stay\nin consumer/test territory outside production source and outside the ABG\npackage. No production admission, validation, dispatch or proof branch may know\nthat test's identity or meaning.\n\nThe root obligation graph is finite and acyclic:\n\n| Obligation | Depends on | Remaining rank after satisfaction |\n|---|---|---:|\n| `R1 exact artifacts verified` | none | 9 |\n| `R2 clean install complete` | `R1` | 8 |\n| `R3 workspace bound to exact product set` | `R2` | 7 |\n| `R4 supplied publication catalog constructed and narrowed` | `R3` | 6 |\n| `R5 test-owned Program selected and admitted` | `R4` | 5 |\n| `R6 test-owned GraphFunction, contracts and leaf binding resolved` | `R5` | 4 |\n| `R7 materialized GTL graph validated` | `R6` | 3 |\n| `R8 HoG execution entered through public invocation` | `R7` | 2 |\n| `R9 ABG admitted causal result and closure events` | `R8` | 1 |\n| `R10 replay and CLI agree on typed terminal outcome` | `R9` | 0 |\n\nAll ten obligations must bind the same exact candidate, test case and causal\nepisode. Two fresh reads must derive the same admitted result and closed state.\nPackage or symbol presence, a catalog row, component success, co-present events,\nor a fixture-authored result without this causal path cannot satisfy the root.\nTransport errors, continuation, hold, gap, block, non-admission, missing events,\nABG source/private imports, wrong contracts and replay disagreement leave it open.\nContinuation remains behavior proved by `ABG5-S03`.\n\nA changed qualifying candidate or test contract requires affected reproof;\nunchanged historical evidence keeps its original scope. Root success does not\nclose the other scenarios, conformance, qualification or release gates.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1501
+          }
+        ],
+        "key": "root_same_causal_episode",
+        "statement": "All ten obligations bind the same exact candidate, external test and causal episode: pack/install/verify/bind/publish/catalog/select/resolve/materialize/validate/installed CLI/direct HoG leaf/ABG invocation-C-call-evidence-result-judgment-closure/replay. Two fresh reads derive identical admitted result and closed state. Symbols/packages/catalog rows/component successes/co-present events/fixture-authored results cannot substitute. Transport error, continuation, hold/gap/block/non-admission, missing events, source/private imports, wrong contracts or replay disagreement leave root open. Changed qualifying candidate/test needs affected reproof; history keeps original scope. S03 separately proves continuation; root success does not close other scenarios/conformance/qualification/release.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "method_definition",
+          "selected_map",
+          "project_frame_basis"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1665,
+            "quote": "## Governance And Release Boundary\n\nThere is one lawful STDO identity. ABIogenesis 5.0 development is governed by\nthe immutable installed release selected by\n[`stdo_abiogenesis.json`](../stdo_abiogenesis.json),\n`constitution.stdo.basis`. That Definition is the sole exact method selection;\nits composition selects any additional Development Products. The direct\nProduct-owner ruling selects the published standalone V3 method and supplied\nplugin payload recorded in the linked adoption evidence for resumed source\nwork. Its exact identity is owned by the Definition, not independently selected\nby this document. The published cut retains its prerelease qualification scope.\nSelf-conformance, qualification, and release must bind that same exact basis.\nAnother STDO version cannot substitute without lawful Product re-entry and an\nF_H disposition. Mutable methodology source and candidate work are authoring\ninputs for a future release, not operative ABIogenesis law.\n\nSource development consumes the exact native method documents through the STDO\ntoolchain manager. The standalone V3 selection has no matched Axiom Indexer or\nSTDO Representation dependency; the Definition's composition is empty. Older\ncompanion installs and their maps remain historical evidence. A supplemental\n`a_c` artifact is not selected implicitly by its publication beside the method.\nA source-linked map may route attention only after explicit selection and\nverification of its exact source basis and selected source bytes through its\ndeclared tools. A map or native skill does not\nby its existence become ABI behavior, constitutional authority, GTL, an ABG\nevent, runtime truth or qualification evidence. The\n[STDO-Governed Run Environment](#stdo-governed-run-environment) explicitly declares\nruntime consumption of those released Products; their installation for source\ndevelopment does not supply that Run binding.\n\nFor the exact T-287 increment selected by Goals, Product adopts the optional\nSTDO executive profile through the Project-owned\n`repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md#abiogenesis-project-reference-frame-basis`.\nThat basis governs only the named T-287 activation. It adds one local\nmutable-worksite-causality evaluation frame, imports the existing ABI frame\natlas, and grants no implementation, mutation, admission, or release\nauthority.\n\nThe TypeScript realization applies the selected release's\n[software-design profile](stdo://releases/v3.0.2/standards/DESIGN_MODULE.md)\nand [build-tenant binding law](stdo://releases/v3.0.2/standards/SPEC_METHOD.md#11-build-tenant-binding).\nThe [STDO 3 computational binding](../build_tenants/abiogenesis/typescript/design/ABI5_STDO3_COMPUTATIONAL_BINDING.md)\nrecords their application to the existing Product and requirement owners.\nAlgorithmic description, informational interpretation and computational\nrealization remain distinct linked accounts. Design supplies their concrete\ncomposition and effect relations without creating another Product definition,\nruntime calculus or execution authority. Design completeness, implementation\nconformance, integrated behavior and release acceptance remain separate claims.\n\nSource development applies the selected released STDO disciplines:\n\n- one product definition rather than competing target surfaces;\n- one immutable 4.6 origin baseline with semantic successor conservation;\n- one executable root outcome throughout delivery;\n- transactional replacement and retirement at hard breaks;\n- proportional proof ordered by the declared trusted-desktop risk model;\n- distinct authority, evidence, and projection bases; and\n- direct or lawfully proxied F_H closure.\n\nThe selected method owns direct Writer entry when sufficient, coordination and\nindependent review by applicability, explicit Executive-to-Writer mutation\nseparation, valid evidence and ruling reuse, condition-based closure, and\nsteel-thread evidence ordering. The local frame basis instantiates those\nrules; it is not a competing local candidate method. Release applicability is\nowned by this Product; method adoption supplies no feature or implementation\nacceptance. Exact historical evidence retains its original scope and identity.\n\nProduct-definition closure does not accept the current implementation, approve\na migration, or claim release readiness. It fixes the destination against which\nthose later decisions are made.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FGovernance%20And%20Release%20Boundary",
+            "start_line": 1596
+          }
+        ],
+        "key": "method_and_product_authority",
+        "statement": "Other versions require lawful Product re-entry/F_H disposition; mutable methodology/candidates are future authoring inputs, not operative law. Development acquires native method through manager; standalone V3 has no implicit Axiom Indexer/STDO Representation dependency and composition is empty. Older installs/maps are historical. A map/skill is not ABI behavior, constitution, GTL, event, runtime truth or qualification by existence; development installation supplies no Program runtime binding. Design applies selected software-design/build-tenant law and computational binding without new Product/runtime authority; algorithm/information/computation are distinct linked accounts, and design completeness/conformance/integrated behavior/release acceptance remain separate. Preserve one Product, immutable4.6 origin/conservation, one root, transactional hard-break replacement/retirement, proportionate trusted-desktop proof, distinct authorities/evidence/projections and attributed F_H closure. Method owns sufficient direct Writer entry, applicable coordination/review, Executive/Writer separation, valid reuse, conditional closure and steel-thread ordering; local frame is not competing methodology. Method adoption supplies no feature/implementation acceptance, and Product closure fixes destination without accepting code/migration/release readiness.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "product_completion"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1718,
+            "quote": "## Product Completion Predicate\n\nABIogenesis 5.0 is complete only when one exact acyclic release lineage\nsatisfies all of the following:\n\n1. Every semantic claim, repair, and explicit exclusion in the exact 4.6 origin\n   baseline has a terminal `conserved`, `superseded`,\n   `intentionally_removed`, or `not_applicable` disposition with behavioral\n   evidence.\n2. GTL programs are authored as TypeScript values and validated without\n   translation into a rival source language or executable program.\n3. One small HoG algebra and Effect fold directly evaluate every retained graph\n   relation and C constructor through exact owner ports; no superseded\n   imperative coordinator or prototype wrapper remains reachable.\n4. Every row of the 4.6 traversal conservation contract has explicit release\n   applicability. Its retained 5.0 behavior has a declared expression, installed\n   execution witness, replay evidence, public outcome and real mutation-negative\n   proof. Reserved portions have the scoped disposition and truthful boundary\n   evidence defined in [Conservation Proof](#conservation-proof), not a pass\n   for unimplemented 5.1 behavior.\n5. `F_D`, `F_P`, and `F_H` obey their declared type and authority boundaries.\n6. The catalog publishes exact programs, callable GraphFunctions, contracts,\n   implementations, compatibility, versions, and provenance.\n7. The SDK and CLI are thin projections over that catalog and ABG runtime.\n8. One ABG path owns admission, events, replay, correction, continuation, and\n   closure around HoG traversal.\n9. All 15 selected 5.0 feature families are realized. `ABG5-S01`,\n   `ABG5-S02`, `ABG5-S03`, and `ABG5-S06` pass on one exact\n   installed `pre_rc_candidate`; `ABG5-S07` preserves the distinct pre-RC, RC,\n   installed-RC, same-RC acceptance and post-publication evidence boundaries\n   while using the same product contracts. `A5-F08`/`ABG5-S05`, `A5-F12`/`ABG5-S04`\n   and the host and human-response portions named in [Release Boundaries](#50-and-51-release-boundaries)\n   remain excluded planned 5.1 work.\n10. Malformed GTL, malformed probabilistic output, invalid authority, basis\n   conflict, and rival-path mutations fail at their owning boundaries before\n   prohibited effects.\n11. No rival compiler, executable program representation, controller, registry,\n    event stream, or closure path remains public or reachable.\n12. Every qualification subject passes self-conformance and its owning gates\n    under the exact selected and installed STDO basis in the Product Definition\n    with no mixed subject or substituted property.\n13. The published RC's Product and release-claim bytes remain immutable.\n    Any change requires a higher RC with its applicable qualification gates;\n    acceptance and evidence addenda cannot amend or retroauthorize the cut.\n14. Actual human Product authority accepts the exact qualified, unchanged\n    installed RC, and that Product passes a fresh source-blind post-publication\n    installation. No second final cut, retag or package-version rename occurs;\n    `v5.0.0` remains the publication-driven latest-RC selector.\n\nComponent tests, type checks, schema counts, operation counts, published names,\nevent co-presence, generated manifests, or a feature-specific installed fixture\ncannot substitute for this predicate.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FProduct%20Completion%20Predicate",
+            "start_line": 1667
+          }
+        ],
+        "key": "complete_product_conjunction",
+        "statement": "Require: terminal evidenced disposition for every4.6 origin claim/repair/exclusion; TypeScript GTL without rival translation; one small HoG algebra/Effect fold over all retained graph/C constructors with exact owners and no reachable superseded coordinator/wrapper; every conservation row with release allocation, installed witness/replay/public outcome/real negative mutation or correctly scoped future deferral; regime boundaries; exact catalog Programs/functions/contracts/implementations/compatibility/version/provenance; thin SDK/CLI; one ABG admission/event/replay/correction/continuation/closure path; all fifteen selected families and S01/S02/S03/S06 on one installed pre-RC plus S07 distinct subjects, keeping F08/S05/F12/S04 and allocated host/human future portions excluded; invalid GTL/probabilistic output/authority/basis/rival-path mutations refused before effects; no reachable rival compiler/program/controller/registry/event/closure; every qualification subject self-conforming under exact installed Definition basis without mixed subject/substituted property; immutable published Product/release-claim bytes with higher RC for change and no retroauthorization by addenda; actual human acceptance of same qualified unchanged installed RC plus fresh source-blind postpublication installation, without second final cut/retag/version rename. v5.0.0 remains publication-driven latest-RC selector. Components, types, schemas/counts/names/events/manifests or feature-specific fixture cannot establish this predicate.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "requirements",
+          "method_definition"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 30,
+            "quote": "# Project Requirements\n\nThis directory already contains the live abiogenesis requirement surface.\n\nThe active requirement families are grouped by constitutional domain:\n\n- `gtl/` — GTL 3 language and graph law\n- `abg/` — Abiogenesis engine/runtime law\n- `mapping/` — GTL-to-runtime mapping and provenance law\n- `product/` — product policy, qualification, and scenario law\n\nUse SPEC_METHOD.md from the immutable STDO basis selected by the\n[Product Definition](../../stdo_abiogenesis.json) when revising these files.\nEarlier exact method links in requirement derivation fields preserve their\noriginal provenance. They do not select the governing method for new work.\nThe current source-development adoption is recorded in\n[STDO 3.0.2 adoption](../../.ai-workspace/comments/claude/20261027T224556Z_STDO_302_ADOPTION/README.md);\nthe earlier [STDO 3.0.1 adoption](../../.ai-workspace/comments/claude/20261025T022614Z_STDO_301_ADOPTION/README.md)\nand [STDO 3.0.0 RC1 adoption](../../.ai-workspace/comments/codex/20261021_STDO_300_RC1_ADOPTION/README.md)\nremain as history, and historical runtime and qualification evidence retains\nits original basis.\n\nThe [STDO 3 computational binding](../../build_tenants/abiogenesis/typescript/design/ABI5_STDO3_COMPUTATIONAL_BINDING.md)\nprojects the existing Product and requirement owners into the TypeScript\nrealization. It supplies no new Product outcome or runtime authority.\n[Product's STDO-governed environment](../PRODUCT.md#stdo-governed-run-environment)\nbinds exact native source material and only explicitly selected supplementary\nrepresentations, indexes or access tools. Every required declared dependency\nand access check remains mandatory. Source adoption does not upgrade an\nexisting Run or establish implementation or qualification conformance.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements",
+            "start_line": 1
+          }
+        ],
+        "key": "requirement_basis_and_runtime_separation",
+        "statement": "Revisions use SPEC_METHOD from exact Definition basis; earlier method derivation links and historic runtime/qualification retain original provenance, not governing selection for new work. Computational binding projects existing owners into TypeScript without new outcomes/runtime authority. Product runtime environment binds native source and only selected supplements; all declared dependencies/access remain mandatory. Source adoption neither upgrades Run nor establishes code/qualification conformance.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "requirements"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 40,
+            "quote": "## Rules\n\n- Keep live requirement families as separate `*.md` files under the appropriate domain folder.\n- Use deterministic REQ headers inside each family file.\n- Preserve the split between constitutional truth in `specification/` and realization detail in `build_tenants/`.\n- Treat `build_tenants/abiogenesis/typescript/` as the primary release\n  realization, `build_tenants/abiogenesis/python/` as a withdrawn released\n  reference line, and `build_tenants/abiogenesis/codex/` as a paused partial\n  alternate realization unless explicitly repriced.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRules",
+            "start_line": 32
+          }
+        ],
+        "key": "requirement_realization_boundaries",
+        "statement": "Keep separate live *.md domain families and deterministic REQ headers; constitutional truth stays in specification, realization in build_tenants. TypeScript is primary release realization, Python a withdrawn released reference, Codex a paused partial alternate unless explicitly repriced.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "release_applicability",
+          "requirements"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 89,
+            "quote": "## Release Applicability\n\nThe sole release allocation is [Product Release Boundaries](../PRODUCT.md#50-and-51-release-boundaries).\nEvery family below inherits that allocation, including mixed clauses that\ndescribe both retained traversal and deferred response or supervision.\n\nABIogenesis 5.0 selects `A5-F01` through `A5-F07`, `A5-F09` through `A5-F11`, and `A5-F13` through\n`A5-F17`. It selects pre-RC scenarios `ABG5-S01`, `ABG5-S02`, `ABG5-S03`,\nand `ABG5-S06`; `ABG5-S07` owns release.\n\n`A5-F08`/`ABG5-S05` and `A5-F12`/`ABG5-S04` are planned ABIogenesis 5.1 identities. Their frozen\ndesign and requirement text are preserved as future input. Their dedicated\nrelease-completeness obligations are not mandatory 5.0 realization,\nself-conformance, qualification, release, public-contract or no-silence gates.\nAn optional published claim still obeys its current declared contract and\ngeneric Product law.\n\nThe exact deferred relation set is below. References to shared declaration,\nevaluation, recursion and context laws defer only their dedicated F12/S04\nobserver/tuner variants. The selected ordinary Executive/default-library\ncomposition inherits those shared laws under Product Release Boundaries.\n\n- dedicated `REQ-P-CONSENSUS` qualification, `REQ-P-SCENARIOS-012`,\n  `REQ-P-QUAL-061` and `REQ-P-QUAL-066`, host parity in\n  `REQ-P-SCENARIOS-013`/`REQ-P-QUAL-063`, and their former mandatory\n  Consensus/host portions in `REQ-P-QUAL-064/067`;\n- mandatory Consensus capability publication in `REQ-P-PUBLIC-CONTRACTS-011`;\n- `REQ-P-SCENARIOS-011` and `REQ-P-QUAL-060A`;\n- `REQ-P-POLICY-036`, `REQ-P-POLICY-037`, and only the observer/tuning\n  variants named by `REQ-P-POLICY-021`, `REQ-P-POLICY-041`, and\n  `REQ-P-POLICY-042`;\n- the `abg.contract.abg.executive`, observer/tuning `project.read`, and\n  `abg.operation.tuning.transition` rows formerly selected by\n  `REQ-P-PUBLIC-CONTRACTS-005` and `REQ-P-PUBLIC-CONTRACTS-008`;\n- `REQ-R-ABG3-TUNER-001` through `REQ-R-ABG3-TUNER-014`;\n- `REQ-R-ABG3-FPC-018`, `REQ-R-ABG3-FPC-019`,\n  `REQ-R-ABG3-FN-COMP-025`, `REQ-R-ABG3-PAYLOAD-027`,\n  `REQ-R-ABG3-ITERATION-019`, and `REQ-R-ABG3-CONTINUATION-010`;\n- only the executive observer/tuning variants in\n  `REQ-R-ABG3-PROJECTION-023`, `REQ-R-ABG3-WITNESS-009`, and the tuner row of\n  the runtime event-kind census; and\n- `REQ-L-GTL3-CONTEXT-007`, `REQ-L-GTL3-ASSET-SURFACE-012`,\n  `REQ-L-GTL3-GRAPHFUNCTION-020`, and `REQ-L-GTL3-HOOKS-019`.\n\nRuntime liveness observation, ordinary replay/projection, One Surface\nevaluation, yielded handoff, retry, convergence, generic `evaluate.C`, and\n5.0 self-conformance remain applicable. The word `observer` alone does not\ndefer a requirement.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability",
+            "start_line": 42
+          }
+        ],
+        "key": "explicit_deferred_requirement_set",
+        "statement": "Reserved dedicated outcomes are not mandatory5.0 realization/self-conformance/qualification/release/Public/no-silence gates, but optional published claims obey current contract and generic law. Defer dedicated CONSENSUS qualification, SCENARIOS-012, QUAL-061/066, parity SCENARIOS-013/QUAL-063 and former Consensus/host portions QUAL-064/067; mandatory Consensus publication PUBLIC-CONTRACTS-011; SCENARIOS-011/QUAL-060A; POLICY-036/037 and only observer/tuning variants021/041/042; executive contract, observer/tuning project.read and tuning.transition rows formerly PUBLIC-CONTRACTS-005/008; TUNER-001..014; FPC-018/019, FN-COMP-025, PAYLOAD-027, ITERATION-019, CONTINUATION-010; only observer/tuning PROJECTION-023/WITNESS-009 and tuner event row; CONTEXT-007, ASSET-SURFACE-012, GRAPHFUNCTION-020, HOOKS-019. Shared declaration/evaluation/recursion/context law remains for selected ordinary Executive/default library. Liveness, ordinary replay/projection, One Surface evaluation, yielded handoff, retry/convergence, generic evaluate.C and self-conformance remain applicable; vocabulary observer alone is no deferral.",
+        "uncertainty": ""
+      },
+      {
+        "applies_to_keys": [
+          "release_applicability",
+          "requirements"
+        ],
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 117,
+            "quote": "### Human Response And Whole-Run Oversight\n\nThe native human-response portions of F03/F06/F07/F10 are reserved for 5.1.\n`abg.operation.interaction.respond` and its five variants are outside the\nrequired 5.0 public operation family. Only response-driven human resumption\nand human-proxy interaction portions of `run.continue` are deferred; automatic\ncurrent-intent continuation and new-action admission remain 5.0 obligations.\n\nThis scoped exclusion applies to POLICY-012 and POLICY-031/032, the human\nresponse portions of POLICY-014/016/021/033, CONTINUATION-011, and every\nresponse/resume proof derived from them. In particular, SCENARIOS-007/009/010,\nQUAL-059/064 and the forty-row conservation inventory use the Product's\nretained-behavior versus deferred-portion distinction. F_H hold/block,\nescalation reporting, reserved owner rulings and actual human RC acceptance\nare not deferred. Shared schema, identity, authority and refusal requirements\nstill apply to every retained or actually claimed operation.\n\nThe selected recursive Executive/default-library composition, including\ndeclared cross-branch evaluation within admitted authority, is 5.0 scope under\nProduct Release Boundaries. The separate observer/tuner Product and autonomous\nupstream/out-of-traversal A.0 routing remain 5.1. Ordinary recursive\nGraphFunctions, declared local graph-span re-entry, bounded retry/repair,\nparent foldback/re-evaluation and basic runtime liveness remain 5.0.\nA requirement containing `recursive`,\n`supervised`, `continuation` or `re-entry` is not wholly deferred by that word.\nExisting frozen future designs/tests remain reusable input, not current 5.0\nqualification demands or evidence of implemented 5.1 capability.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FHuman%20Response%20And%20Whole-Run%20Oversight",
+            "start_line": 91
+          }
+        ],
+        "key": "scoped_human_and_oversight_deferral",
+        "statement": "Native response portions F03/F06/F07/F10, interaction.respond with five variants, and only response-driven/human-proxy run.continue are5.1; automatic current-intent continuation/new-action admission stay5.0. Apply exclusion to POLICY-012/031/032, response parts014/016/021/033, CONTINUATION-011 and derived proof; SCENARIOS-007/009/010, QUAL-059/064 and forty-row inventory preserve retained-versus-deferred distinction. F_H hold/block, escalation reporting, owner rulings and human RC acceptance remain required; shared schema/identity/authority/refusal law governs retained/claimed operations. Selected recursive Executive/default-library/cross-branch evaluation within authority stays5.0; dedicated observer/tuner/autonomous A.0 stays5.1. Ordinary recursion/local span re-entry/retry/repair/foldback/re-evaluation/liveness remain. Words recursive/supervised/continuation/re-entry cannot defer whole requirements; frozen future designs/tests are inputs, not current gates or implementation evidence.",
+        "uncertainty": ""
+      }
+    ],
+    "dispositions": [
+      {
+        "decision": "retained",
+        "keys": [
+          "root_proof",
+          "exact_artifacts_verified",
+          "clean_install_complete",
+          "workspace_bound",
+          "publication_catalog_ready",
+          "external_program_admitted",
+          "external_callable_resolved",
+          "materialized_graph_validated",
+          "public_hog_execution",
+          "causal_result_closed",
+          "replay_cli_agree",
+          "external_program_not_product",
+          "root_same_causal_episode",
+          "clean_install_complete_requires_exact_artifacts_verified",
+          "workspace_bound_requires_clean_install_complete",
+          "publication_catalog_ready_requires_workspace_bound",
+          "external_program_admitted_requires_publication_catalog_ready",
+          "external_callable_resolved_requires_external_program_admitted",
+          "materialized_graph_validated_requires_external_callable_resolved",
+          "public_hog_execution_requires_materialized_graph_validated",
+          "causal_result_closed_requires_public_hog_execution",
+          "replay_cli_agree_requires_causal_result_closed",
+          "root_requires_terminal_agreement",
+          "completion_requires_root"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "nonfeatures",
+          "excluded_product_capabilities"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExplicit%20Non-Features"
+      },
+      {
+        "decision": "residual",
+        "keys": [
+          "method_definition",
+          "selected_map",
+          "project_frame_basis",
+          "method_and_product_authority",
+          "requirements_follow_exact_method",
+          "method_release_scope_wording"
+        ],
+        "reason": "Authored meanings and constraints retain this supplied section; unresolved meanings remain explicit.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FGovernance%20And%20Release%20Boundary"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "product_completion",
+          "complete_product_conjunction",
+          "completion_requires_root"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FProduct%20Completion%20Predicate"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "requirements_index"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/00-starter.md#Requirement%20Surface%20Index"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "requirements",
+          "requirement_basis_and_runtime_separation",
+          "requirements_follow_exact_method"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "requirement_realization_boundaries"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRules"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "release_applicability",
+          "explicit_deferred_requirement_set",
+          "requirements_inherit_allocation"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability"
+      },
+      {
+        "decision": "retained",
+        "keys": [
+          "scoped_human_and_oversight_deferral"
+        ],
+        "reason": "Authored records retain the supplied source meaning and its conditions.",
+        "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability%2FHuman%20Response%20And%20Whole-Run%20Oversight"
+      }
+    ],
+    "latitude": [
+      {
+        "allowed": [
+          "Installed stable 5.0 may build 5.0.1; prospective F17/S06 witness still qualifies the installed candidate before RC authorization."
+        ],
+        "applies_to_keys": [
+          "nonfeatures"
+        ],
+        "forbidden": [
+          "Built-in Hello/test-specific API, contract, publication, implementation, admission or proof branch.",
+          "Native human response/same-run response resume; dedicated F12/S04 observer/tuner; autonomous upstream A.0; standalone Consensus qualification; mandatory host parity; full original Data Mapper as release prerequisite.",
+          "New GTL source language/parser/compiler pipeline/bytecode/executable IR; separate frame subsystem/evaluator/realization path; generated HoG Program/compiled plan/runtime-program catalog; hidden defaults/selectors/stages/instructions/topology.",
+          "Controller authority in SDK/CLI/installer/fixture/worker/plugin/Consensus/One Surface; second events/result ledger/retry/continuation/closure; recursive-LLM-specific runtime or regime.",
+          "Self-hosting as 5.0 gate; GLC publication/maturation as build/release dependency; automatic ticket mutation/wake or ABG scheduler.",
+          "Hosted registry/marketplace/billing/IAM/RBAC/multi-user/distributed orchestration; hostile-workstation/publisher-authenticity/attestation/signing defenses.",
+          "Installed update/disable/unbind/uninstall/revocation/retirement/supersession lifecycle beyond exact initial install and binding.",
+          "Using later self-use/downstream maturation to retroactively qualify 5.0."
+        ],
+        "grounding": [
+          {
+            "end_line": 1594,
+            "quote": "## Explicit Non-Features\n\nABIogenesis 5.0 does not include:\n\n- a built-in Hello World application, test-program-specific API, contract,\n  publication, implementation, admission or proof branch;\n\n- native human response admission or response-driven same-run resumption;\n- the dedicated F12/S04 observer/tuner Product or autonomous upstream/out-of-traversal\n  A.0 routing, as distinct from selected graph-based Executive governance;\n- standalone Consensus qualification or mandatory host-adapter parity;\n- full original Data Mapper completion as an ABIogenesis release prerequisite;\n- a new GTL source language, parser, compiler pipeline, bytecode, or executable\n  intermediate representation;\n- a reference-frame subsystem, alternate evaluator, or second realization\n  path distinct from the joined Product function;\n- a generated HoG program, compiled execution plan, or runtime-program catalog\n  distinct from admitted GTL;\n- hidden default programs, selectors, stages, instructions, or topology;\n- controller authority in an SDK, CLI, installer, fixture, worker, plugin,\n  Consensus, or One Surface surface;\n- a second event stream, result ledger, retry loop, continuation model, or\n  closure authority;\n- a recursive-LLM-specific runtime or compute regime;\n- self-hosting or ABIogenesis-builds-ABIogenesis as a 5.0 release gate;\n- publication or maturation of odd_glc or another GLC Product as a 5.0 build\n  or release dependency;\n- automatic ticket mutation, automatic wake, or an ABG-owned scheduler;\n- hosted registry, marketplace, billing, IAM, RBAC, multi-user service, or\n  distributed orchestration;\n- hostile-workstation resistance, publisher authenticity, remote attestation,\n  or signing on the trusted-desktop boundary; or\n- installed-product update, disable, unbind, uninstall, revocation, retirement,\n  or supersession lifecycle beyond exact initial installation and binding.\n\nInstalled stable 5.0 may become the development product for 5.0.1. Self-use and\ndownstream Product maturation begin there and cannot retroactively qualify\n5.0. The required F17/S06 lifecycle witness qualifies the installed 5.0\ncandidate before RC authorization.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FExplicit%20Non-Features",
+            "start_line": 1556
+          }
+        ],
+        "key": "excluded_product_capabilities"
+      }
+    ],
+    "limitations": [
+      "Root dependencies are explicit source-declared proof obligations and ranks, not a Lean proof or witnessed ABI execution.",
+      "Requirement identifiers outside this chunk are retained as exact named scopes; no cross-chunk identity resolution is fabricated.",
+      "Earlier method/version references remain provenance; actual methodology selection is the separately verified subject Definition."
+    ],
+    "relations": [
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1534,
+            "quote": "| `R2 clean install complete` | `R1` | 8 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1534
+          }
+        ],
+        "key": "clean_install_complete_requires_exact_artifacts_verified",
+        "kind": "requires",
+        "meaning": "The source root-obligation graph explicitly requires the predecessor before this obligation.",
+        "source_key": "clean_install_complete",
+        "target_key": "exact_artifacts_verified"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1535,
+            "quote": "| `R3 workspace bound to exact product set` | `R2` | 7 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1535
+          }
+        ],
+        "key": "workspace_bound_requires_clean_install_complete",
+        "kind": "requires",
+        "meaning": "The source root-obligation graph explicitly requires the predecessor before this obligation.",
+        "source_key": "workspace_bound",
+        "target_key": "clean_install_complete"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1536,
+            "quote": "| `R4 supplied publication catalog constructed and narrowed` | `R3` | 6 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1536
+          }
+        ],
+        "key": "publication_catalog_ready_requires_workspace_bound",
+        "kind": "requires",
+        "meaning": "The source root-obligation graph explicitly requires the predecessor before this obligation.",
+        "source_key": "publication_catalog_ready",
+        "target_key": "workspace_bound"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1537,
+            "quote": "| `R5 test-owned Program selected and admitted` | `R4` | 5 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1537
+          }
+        ],
+        "key": "external_program_admitted_requires_publication_catalog_ready",
+        "kind": "requires",
+        "meaning": "The source root-obligation graph explicitly requires the predecessor before this obligation.",
+        "source_key": "external_program_admitted",
+        "target_key": "publication_catalog_ready"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1538,
+            "quote": "| `R6 test-owned GraphFunction, contracts and leaf binding resolved` | `R5` | 4 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1538
+          }
+        ],
+        "key": "external_callable_resolved_requires_external_program_admitted",
+        "kind": "requires",
+        "meaning": "The source root-obligation graph explicitly requires the predecessor before this obligation.",
+        "source_key": "external_callable_resolved",
+        "target_key": "external_program_admitted"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1539,
+            "quote": "| `R7 materialized GTL graph validated` | `R6` | 3 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1539
+          }
+        ],
+        "key": "materialized_graph_validated_requires_external_callable_resolved",
+        "kind": "requires",
+        "meaning": "The source root-obligation graph explicitly requires the predecessor before this obligation.",
+        "source_key": "materialized_graph_validated",
+        "target_key": "external_callable_resolved"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1540,
+            "quote": "| `R8 HoG execution entered through public invocation` | `R7` | 2 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1540
+          }
+        ],
+        "key": "public_hog_execution_requires_materialized_graph_validated",
+        "kind": "requires",
+        "meaning": "The source root-obligation graph explicitly requires the predecessor before this obligation.",
+        "source_key": "public_hog_execution",
+        "target_key": "materialized_graph_validated"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1541,
+            "quote": "| `R9 ABG admitted causal result and closure events` | `R8` | 1 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1541
+          }
+        ],
+        "key": "causal_result_closed_requires_public_hog_execution",
+        "kind": "requires",
+        "meaning": "The source root-obligation graph explicitly requires the predecessor before this obligation.",
+        "source_key": "causal_result_closed",
+        "target_key": "public_hog_execution"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1542,
+            "quote": "| `R10 replay and CLI agree on typed terminal outcome` | `R9` | 0 |",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1542
+          }
+        ],
+        "key": "replay_cli_agree_requires_causal_result_closed",
+        "kind": "requires",
+        "meaning": "The source root-obligation graph explicitly requires the predecessor before this obligation.",
+        "source_key": "replay_cli_agree",
+        "target_key": "causal_result_closed"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1554,
+            "quote": "## Root Product Outcome\n\n`ABI5-ROOT-001` names the installed language/runtime proof in `ABG5-S01`.\nIt is a proof obligation, not a built-in application or runtime governor.\nThe exact candidate and prospectively fixed external test case bind this path:\n\n```text\npack exact pre_rc_candidate\n  -> clean source-blind install\n  -> verify and bind the Product\n  -> publish the external test program through ordinary GTL\n  -> admit catalog and narrow the view\n  -> resolve the test-owned Program, GraphFunction, contracts and leaf binding\n  -> materialize and validate its GTL graph\n  -> invoke through installed abg.cli\n  -> HoG traverses admitted GTL directly and calls the declared ordinary leaf\n  -> ABG admits invocation, C-call, evidence, result, judgment and closure\n  -> replay and CLI agree on the admitted typed outcome\n```\n\nThe test case owns its declaration and implementation identities, input and\nexpected output. A Hello World program is a minimal test of the language's\nmechanics. It is never an ABIogenesis Product, feature, default callable,\ncontract family or shipped implementation. Its source and any leaf binding stay\nin consumer/test territory outside production source and outside the ABG\npackage. No production admission, validation, dispatch or proof branch may know\nthat test's identity or meaning.\n\nThe root obligation graph is finite and acyclic:\n\n| Obligation | Depends on | Remaining rank after satisfaction |\n|---|---|---:|\n| `R1 exact artifacts verified` | none | 9 |\n| `R2 clean install complete` | `R1` | 8 |\n| `R3 workspace bound to exact product set` | `R2` | 7 |\n| `R4 supplied publication catalog constructed and narrowed` | `R3` | 6 |\n| `R5 test-owned Program selected and admitted` | `R4` | 5 |\n| `R6 test-owned GraphFunction, contracts and leaf binding resolved` | `R5` | 4 |\n| `R7 materialized GTL graph validated` | `R6` | 3 |\n| `R8 HoG execution entered through public invocation` | `R7` | 2 |\n| `R9 ABG admitted causal result and closure events` | `R8` | 1 |\n| `R10 replay and CLI agree on typed terminal outcome` | `R9` | 0 |\n\nAll ten obligations must bind the same exact candidate, test case and causal\nepisode. Two fresh reads must derive the same admitted result and closed state.\nPackage or symbol presence, a catalog row, component success, co-present events,\nor a fixture-authored result without this causal path cannot satisfy the root.\nTransport errors, continuation, hold, gap, block, non-admission, missing events,\nABG source/private imports, wrong contracts and replay disagreement leave it open.\nContinuation remains behavior proved by `ABG5-S03`.\n\nA changed qualifying candidate or test contract requires affected reproof;\nunchanged historical evidence keeps its original scope. Root success does not\nclose the other scenarios, conformance, qualification or release gates.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1501
+          }
+        ],
+        "key": "root_requires_terminal_agreement",
+        "kind": "requires",
+        "meaning": "All ten named obligations must close in one exact causal episode; the final obligation depends on its entire explicit predecessor chain.",
+        "source_key": "root_proof",
+        "target_key": "replay_cli_agree"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 89,
+            "quote": "## Release Applicability\n\nThe sole release allocation is [Product Release Boundaries](../PRODUCT.md#50-and-51-release-boundaries).\nEvery family below inherits that allocation, including mixed clauses that\ndescribe both retained traversal and deferred response or supervision.\n\nABIogenesis 5.0 selects `A5-F01` through `A5-F07`, `A5-F09` through `A5-F11`, and `A5-F13` through\n`A5-F17`. It selects pre-RC scenarios `ABG5-S01`, `ABG5-S02`, `ABG5-S03`,\nand `ABG5-S06`; `ABG5-S07` owns release.\n\n`A5-F08`/`ABG5-S05` and `A5-F12`/`ABG5-S04` are planned ABIogenesis 5.1 identities. Their frozen\ndesign and requirement text are preserved as future input. Their dedicated\nrelease-completeness obligations are not mandatory 5.0 realization,\nself-conformance, qualification, release, public-contract or no-silence gates.\nAn optional published claim still obeys its current declared contract and\ngeneric Product law.\n\nThe exact deferred relation set is below. References to shared declaration,\nevaluation, recursion and context laws defer only their dedicated F12/S04\nobserver/tuner variants. The selected ordinary Executive/default-library\ncomposition inherits those shared laws under Product Release Boundaries.\n\n- dedicated `REQ-P-CONSENSUS` qualification, `REQ-P-SCENARIOS-012`,\n  `REQ-P-QUAL-061` and `REQ-P-QUAL-066`, host parity in\n  `REQ-P-SCENARIOS-013`/`REQ-P-QUAL-063`, and their former mandatory\n  Consensus/host portions in `REQ-P-QUAL-064/067`;\n- mandatory Consensus capability publication in `REQ-P-PUBLIC-CONTRACTS-011`;\n- `REQ-P-SCENARIOS-011` and `REQ-P-QUAL-060A`;\n- `REQ-P-POLICY-036`, `REQ-P-POLICY-037`, and only the observer/tuning\n  variants named by `REQ-P-POLICY-021`, `REQ-P-POLICY-041`, and\n  `REQ-P-POLICY-042`;\n- the `abg.contract.abg.executive`, observer/tuning `project.read`, and\n  `abg.operation.tuning.transition` rows formerly selected by\n  `REQ-P-PUBLIC-CONTRACTS-005` and `REQ-P-PUBLIC-CONTRACTS-008`;\n- `REQ-R-ABG3-TUNER-001` through `REQ-R-ABG3-TUNER-014`;\n- `REQ-R-ABG3-FPC-018`, `REQ-R-ABG3-FPC-019`,\n  `REQ-R-ABG3-FN-COMP-025`, `REQ-R-ABG3-PAYLOAD-027`,\n  `REQ-R-ABG3-ITERATION-019`, and `REQ-R-ABG3-CONTINUATION-010`;\n- only the executive observer/tuning variants in\n  `REQ-R-ABG3-PROJECTION-023`, `REQ-R-ABG3-WITNESS-009`, and the tuner row of\n  the runtime event-kind census; and\n- `REQ-L-GTL3-CONTEXT-007`, `REQ-L-GTL3-ASSET-SURFACE-012`,\n  `REQ-L-GTL3-GRAPHFUNCTION-020`, and `REQ-L-GTL3-HOOKS-019`.\n\nRuntime liveness observation, ordinary replay/projection, One Surface\nevaluation, yielded handoff, retry, convergence, generic `evaluate.C`, and\n5.0 self-conformance remain applicable. The word `observer` alone does not\ndefer a requirement.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements%2FRelease%20Applicability",
+            "start_line": 42
+          }
+        ],
+        "key": "requirements_inherit_allocation",
+        "kind": "governed_by",
+        "meaning": "Each family inherits the owning Product release allocation including mixed retained and deferred portions.",
+        "source_key": "requirements",
+        "target_key": "release_applicability"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1665,
+            "quote": "## Governance And Release Boundary\n\nThere is one lawful STDO identity. ABIogenesis 5.0 development is governed by\nthe immutable installed release selected by\n[`stdo_abiogenesis.json`](../stdo_abiogenesis.json),\n`constitution.stdo.basis`. That Definition is the sole exact method selection;\nits composition selects any additional Development Products. The direct\nProduct-owner ruling selects the published standalone V3 method and supplied\nplugin payload recorded in the linked adoption evidence for resumed source\nwork. Its exact identity is owned by the Definition, not independently selected\nby this document. The published cut retains its prerelease qualification scope.\nSelf-conformance, qualification, and release must bind that same exact basis.\nAnother STDO version cannot substitute without lawful Product re-entry and an\nF_H disposition. Mutable methodology source and candidate work are authoring\ninputs for a future release, not operative ABIogenesis law.\n\nSource development consumes the exact native method documents through the STDO\ntoolchain manager. The standalone V3 selection has no matched Axiom Indexer or\nSTDO Representation dependency; the Definition's composition is empty. Older\ncompanion installs and their maps remain historical evidence. A supplemental\n`a_c` artifact is not selected implicitly by its publication beside the method.\nA source-linked map may route attention only after explicit selection and\nverification of its exact source basis and selected source bytes through its\ndeclared tools. A map or native skill does not\nby its existence become ABI behavior, constitutional authority, GTL, an ABG\nevent, runtime truth or qualification evidence. The\n[STDO-Governed Run Environment](#stdo-governed-run-environment) explicitly declares\nruntime consumption of those released Products; their installation for source\ndevelopment does not supply that Run binding.\n\nFor the exact T-287 increment selected by Goals, Product adopts the optional\nSTDO executive profile through the Project-owned\n`repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md#abiogenesis-project-reference-frame-basis`.\nThat basis governs only the named T-287 activation. It adds one local\nmutable-worksite-causality evaluation frame, imports the existing ABI frame\natlas, and grants no implementation, mutation, admission, or release\nauthority.\n\nThe TypeScript realization applies the selected release's\n[software-design profile](stdo://releases/v3.0.2/standards/DESIGN_MODULE.md)\nand [build-tenant binding law](stdo://releases/v3.0.2/standards/SPEC_METHOD.md#11-build-tenant-binding).\nThe [STDO 3 computational binding](../build_tenants/abiogenesis/typescript/design/ABI5_STDO3_COMPUTATIONAL_BINDING.md)\nrecords their application to the existing Product and requirement owners.\nAlgorithmic description, informational interpretation and computational\nrealization remain distinct linked accounts. Design supplies their concrete\ncomposition and effect relations without creating another Product definition,\nruntime calculus or execution authority. Design completeness, implementation\nconformance, integrated behavior and release acceptance remain separate claims.\n\nSource development applies the selected released STDO disciplines:\n\n- one product definition rather than competing target surfaces;\n- one immutable 4.6 origin baseline with semantic successor conservation;\n- one executable root outcome throughout delivery;\n- transactional replacement and retirement at hard breaks;\n- proportional proof ordered by the declared trusted-desktop risk model;\n- distinct authority, evidence, and projection bases; and\n- direct or lawfully proxied F_H closure.\n\nThe selected method owns direct Writer entry when sufficient, coordination and\nindependent review by applicability, explicit Executive-to-Writer mutation\nseparation, valid evidence and ruling reuse, condition-based closure, and\nsteel-thread evidence ordering. The local frame basis instantiates those\nrules; it is not a competing local candidate method. Release applicability is\nowned by this Product; method adoption supplies no feature or implementation\nacceptance. Exact historical evidence retains its original scope and identity.\n\nProduct-definition closure does not accept the current implementation, approve\na migration, or claim release readiness. It fixes the destination against which\nthose later decisions are made.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FGovernance%20And%20Release%20Boundary",
+            "start_line": 1596
+          },
+          {
+            "end_line": 30,
+            "quote": "# Project Requirements\n\nThis directory already contains the live abiogenesis requirement surface.\n\nThe active requirement families are grouped by constitutional domain:\n\n- `gtl/` — GTL 3 language and graph law\n- `abg/` — Abiogenesis engine/runtime law\n- `mapping/` — GTL-to-runtime mapping and provenance law\n- `product/` — product policy, qualification, and scenario law\n\nUse SPEC_METHOD.md from the immutable STDO basis selected by the\n[Product Definition](../../stdo_abiogenesis.json) when revising these files.\nEarlier exact method links in requirement derivation fields preserve their\noriginal provenance. They do not select the governing method for new work.\nThe current source-development adoption is recorded in\n[STDO 3.0.2 adoption](../../.ai-workspace/comments/claude/20261027T224556Z_STDO_302_ADOPTION/README.md);\nthe earlier [STDO 3.0.1 adoption](../../.ai-workspace/comments/claude/20261025T022614Z_STDO_301_ADOPTION/README.md)\nand [STDO 3.0.0 RC1 adoption](../../.ai-workspace/comments/codex/20261021_STDO_300_RC1_ADOPTION/README.md)\nremain as history, and historical runtime and qualification evidence retains\nits original basis.\n\nThe [STDO 3 computational binding](../../build_tenants/abiogenesis/typescript/design/ABI5_STDO3_COMPUTATIONAL_BINDING.md)\nprojects the existing Product and requirement owners into the TypeScript\nrealization. It supplies no new Product outcome or runtime authority.\n[Product's STDO-governed environment](../PRODUCT.md#stdo-governed-run-environment)\nbinds exact native source material and only explicitly selected supplementary\nrepresentations, indexes or access tools. Every required declared dependency\nand access check remains mandatory. Source adoption does not upgrade an\nexisting Run or establish implementation or qualification conformance.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/README.md#Project%20Requirements",
+            "start_line": 1
+          }
+        ],
+        "key": "requirements_follow_exact_method",
+        "kind": "requires",
+        "meaning": "Historical derivation labels cannot replace exact current method selection.",
+        "source_key": "requirements",
+        "target_key": "method_definition"
+      },
+      {
+        "conditions": [],
+        "exceptions": [],
+        "governing": true,
+        "grounding": [
+          {
+            "end_line": 1554,
+            "quote": "## Root Product Outcome\n\n`ABI5-ROOT-001` names the installed language/runtime proof in `ABG5-S01`.\nIt is a proof obligation, not a built-in application or runtime governor.\nThe exact candidate and prospectively fixed external test case bind this path:\n\n```text\npack exact pre_rc_candidate\n  -> clean source-blind install\n  -> verify and bind the Product\n  -> publish the external test program through ordinary GTL\n  -> admit catalog and narrow the view\n  -> resolve the test-owned Program, GraphFunction, contracts and leaf binding\n  -> materialize and validate its GTL graph\n  -> invoke through installed abg.cli\n  -> HoG traverses admitted GTL directly and calls the declared ordinary leaf\n  -> ABG admits invocation, C-call, evidence, result, judgment and closure\n  -> replay and CLI agree on the admitted typed outcome\n```\n\nThe test case owns its declaration and implementation identities, input and\nexpected output. A Hello World program is a minimal test of the language's\nmechanics. It is never an ABIogenesis Product, feature, default callable,\ncontract family or shipped implementation. Its source and any leaf binding stay\nin consumer/test territory outside production source and outside the ABG\npackage. No production admission, validation, dispatch or proof branch may know\nthat test's identity or meaning.\n\nThe root obligation graph is finite and acyclic:\n\n| Obligation | Depends on | Remaining rank after satisfaction |\n|---|---|---:|\n| `R1 exact artifacts verified` | none | 9 |\n| `R2 clean install complete` | `R1` | 8 |\n| `R3 workspace bound to exact product set` | `R2` | 7 |\n| `R4 supplied publication catalog constructed and narrowed` | `R3` | 6 |\n| `R5 test-owned Program selected and admitted` | `R4` | 5 |\n| `R6 test-owned GraphFunction, contracts and leaf binding resolved` | `R5` | 4 |\n| `R7 materialized GTL graph validated` | `R6` | 3 |\n| `R8 HoG execution entered through public invocation` | `R7` | 2 |\n| `R9 ABG admitted causal result and closure events` | `R8` | 1 |\n| `R10 replay and CLI agree on typed terminal outcome` | `R9` | 0 |\n\nAll ten obligations must bind the same exact candidate, test case and causal\nepisode. Two fresh reads must derive the same admitted result and closed state.\nPackage or symbol presence, a catalog row, component success, co-present events,\nor a fixture-authored result without this causal path cannot satisfy the root.\nTransport errors, continuation, hold, gap, block, non-admission, missing events,\nABG source/private imports, wrong contracts and replay disagreement leave it open.\nContinuation remains behavior proved by `ABG5-S03`.\n\nA changed qualifying candidate or test contract requires affected reproof;\nunchanged historical evidence keeps its original scope. Root success does not\nclose the other scenarios, conformance, qualification or release gates.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FRoot%20Product%20Outcome",
+            "start_line": 1501
+          },
+          {
+            "end_line": 1718,
+            "quote": "## Product Completion Predicate\n\nABIogenesis 5.0 is complete only when one exact acyclic release lineage\nsatisfies all of the following:\n\n1. Every semantic claim, repair, and explicit exclusion in the exact 4.6 origin\n   baseline has a terminal `conserved`, `superseded`,\n   `intentionally_removed`, or `not_applicable` disposition with behavioral\n   evidence.\n2. GTL programs are authored as TypeScript values and validated without\n   translation into a rival source language or executable program.\n3. One small HoG algebra and Effect fold directly evaluate every retained graph\n   relation and C constructor through exact owner ports; no superseded\n   imperative coordinator or prototype wrapper remains reachable.\n4. Every row of the 4.6 traversal conservation contract has explicit release\n   applicability. Its retained 5.0 behavior has a declared expression, installed\n   execution witness, replay evidence, public outcome and real mutation-negative\n   proof. Reserved portions have the scoped disposition and truthful boundary\n   evidence defined in [Conservation Proof](#conservation-proof), not a pass\n   for unimplemented 5.1 behavior.\n5. `F_D`, `F_P`, and `F_H` obey their declared type and authority boundaries.\n6. The catalog publishes exact programs, callable GraphFunctions, contracts,\n   implementations, compatibility, versions, and provenance.\n7. The SDK and CLI are thin projections over that catalog and ABG runtime.\n8. One ABG path owns admission, events, replay, correction, continuation, and\n   closure around HoG traversal.\n9. All 15 selected 5.0 feature families are realized. `ABG5-S01`,\n   `ABG5-S02`, `ABG5-S03`, and `ABG5-S06` pass on one exact\n   installed `pre_rc_candidate`; `ABG5-S07` preserves the distinct pre-RC, RC,\n   installed-RC, same-RC acceptance and post-publication evidence boundaries\n   while using the same product contracts. `A5-F08`/`ABG5-S05`, `A5-F12`/`ABG5-S04`\n   and the host and human-response portions named in [Release Boundaries](#50-and-51-release-boundaries)\n   remain excluded planned 5.1 work.\n10. Malformed GTL, malformed probabilistic output, invalid authority, basis\n   conflict, and rival-path mutations fail at their owning boundaries before\n   prohibited effects.\n11. No rival compiler, executable program representation, controller, registry,\n    event stream, or closure path remains public or reachable.\n12. Every qualification subject passes self-conformance and its owning gates\n    under the exact selected and installed STDO basis in the Product Definition\n    with no mixed subject or substituted property.\n13. The published RC's Product and release-claim bytes remain immutable.\n    Any change requires a higher RC with its applicable qualification gates;\n    acceptance and evidence addenda cannot amend or retroauthorize the cut.\n14. Actual human Product authority accepts the exact qualified, unchanged\n    installed RC, and that Product passes a fresh source-blind post-publication\n    installation. No second final cut, retag or package-version rename occurs;\n    `v5.0.0` remains the publication-driven latest-RC selector.\n\nComponent tests, type checks, schema counts, operation counts, published names,\nevent co-presence, generated manifests, or a feature-specific installed fixture\ncannot substitute for this predicate.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FProduct%20Completion%20Predicate",
+            "start_line": 1667
+          }
+        ],
+        "key": "completion_requires_root",
+        "kind": "requires",
+        "meaning": "Root causal proof is mandatory but does not by itself satisfy the complete Product conjunction.",
+        "source_key": "product_completion",
+        "target_key": "root_proof"
+      }
+    ],
+    "residuals": [
+      {
+        "consequence": "Preserve this wording as source data; resolve actual release identity and claim scope through the selected Definition/immutable installation, never infer another cut from prose.",
+        "grounding": [
+          {
+            "end_line": 1665,
+            "quote": "## Governance And Release Boundary\n\nThere is one lawful STDO identity. ABIogenesis 5.0 development is governed by\nthe immutable installed release selected by\n[`stdo_abiogenesis.json`](../stdo_abiogenesis.json),\n`constitution.stdo.basis`. That Definition is the sole exact method selection;\nits composition selects any additional Development Products. The direct\nProduct-owner ruling selects the published standalone V3 method and supplied\nplugin payload recorded in the linked adoption evidence for resumed source\nwork. Its exact identity is owned by the Definition, not independently selected\nby this document. The published cut retains its prerelease qualification scope.\nSelf-conformance, qualification, and release must bind that same exact basis.\nAnother STDO version cannot substitute without lawful Product re-entry and an\nF_H disposition. Mutable methodology source and candidate work are authoring\ninputs for a future release, not operative ABIogenesis law.\n\nSource development consumes the exact native method documents through the STDO\ntoolchain manager. The standalone V3 selection has no matched Axiom Indexer or\nSTDO Representation dependency; the Definition's composition is empty. Older\ncompanion installs and their maps remain historical evidence. A supplemental\n`a_c` artifact is not selected implicitly by its publication beside the method.\nA source-linked map may route attention only after explicit selection and\nverification of its exact source basis and selected source bytes through its\ndeclared tools. A map or native skill does not\nby its existence become ABI behavior, constitutional authority, GTL, an ABG\nevent, runtime truth or qualification evidence. The\n[STDO-Governed Run Environment](#stdo-governed-run-environment) explicitly declares\nruntime consumption of those released Products; their installation for source\ndevelopment does not supply that Run binding.\n\nFor the exact T-287 increment selected by Goals, Product adopts the optional\nSTDO executive profile through the Project-owned\n`repo://abiogenesis/build_tenants/abiogenesis/typescript/design/ABI5_PROJECT_REFERENCE_FRAME_BASIS.md#abiogenesis-project-reference-frame-basis`.\nThat basis governs only the named T-287 activation. It adds one local\nmutable-worksite-causality evaluation frame, imports the existing ABI frame\natlas, and grants no implementation, mutation, admission, or release\nauthority.\n\nThe TypeScript realization applies the selected release's\n[software-design profile](stdo://releases/v3.0.2/standards/DESIGN_MODULE.md)\nand [build-tenant binding law](stdo://releases/v3.0.2/standards/SPEC_METHOD.md#11-build-tenant-binding).\nThe [STDO 3 computational binding](../build_tenants/abiogenesis/typescript/design/ABI5_STDO3_COMPUTATIONAL_BINDING.md)\nrecords their application to the existing Product and requirement owners.\nAlgorithmic description, informational interpretation and computational\nrealization remain distinct linked accounts. Design supplies their concrete\ncomposition and effect relations without creating another Product definition,\nruntime calculus or execution authority. Design completeness, implementation\nconformance, integrated behavior and release acceptance remain separate claims.\n\nSource development applies the selected released STDO disciplines:\n\n- one product definition rather than competing target surfaces;\n- one immutable 4.6 origin baseline with semantic successor conservation;\n- one executable root outcome throughout delivery;\n- transactional replacement and retirement at hard breaks;\n- proportional proof ordered by the declared trusted-desktop risk model;\n- distinct authority, evidence, and projection bases; and\n- direct or lawfully proxied F_H closure.\n\nThe selected method owns direct Writer entry when sufficient, coordination and\nindependent review by applicability, explicit Executive-to-Writer mutation\nseparation, valid evidence and ruling reuse, condition-based closure, and\nsteel-thread evidence ordering. The local frame basis instantiates those\nrules; it is not a competing local candidate method. Release applicability is\nowned by this Product; method adoption supplies no feature or implementation\nacceptance. Exact historical evidence retains its original scope and identity.\n\nProduct-definition closure does not accept the current implementation, approve\na migration, or claim release readiness. It fixes the destination against which\nthose later decisions are made.",
+            "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/PRODUCT.md#ABIogenesis%205.0%20-%20Product%2FGovernance%20And%20Release%20Boundary",
+            "start_line": 1596
+          }
+        ],
+        "key": "method_release_scope_wording",
+        "subject_key": "method_definition",
+        "uncertainty": "This Product paragraph describes the selected published cut as retaining prerelease qualification scope, while the actual exact edition selection lives in the Product Definition and adoption evidence outside this supplied section."
+      }
+    ]
+  },
+  "answer_sha256": "326bc72659b40d593c46c0456132623a6291ad12922c7f5382d2422ce36902ce",
+  "author": "codex-product-frame",
+  "chunk": "chunk-9ae93fbcac715e6c5662",
+  "profile": "a_c.project-submission/1",
+  "project_sha256": "83e2acec9a54e474317b63c4182efdc978908d852dcb03115afeb726191355a9",
+  "task_sha256": "63dcdfb39b5d0f2fcdf67d4437faaf26b6f5e4903f619b001cb545b87f075072"
+}

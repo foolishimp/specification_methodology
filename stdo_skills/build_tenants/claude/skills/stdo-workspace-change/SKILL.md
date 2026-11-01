@@ -1,20 +1,21 @@
 ---
 name: stdo-workspace-change
-description: Use for governed STDO / specification-methodology development work in this repository — intake and re-entry, verifying the pinned Product Definition and installed method, and making spec, design, or code changes under the selected STDO 3.0.1 method. Routes to the other stdo-* skills. Do not use for unrelated or general factual questions.
+description: Use for governed STDO development work, or when a user asks to build a representation, constraint model, or readable representation documentation of their nominated project. Routes project builds to stdo-tool-operations; governs intake, basis verification, and spec/design/code changes under the selected STDO 3.0.1 method. Do not use for unrelated factual questions.
 ---
 
 # STDO workspace change — entry, basis, intake
 
 This skill is the entry point when someone asks you to do governed
-specification-methodology work in this repository: change a requirement, design,
-or code owner; re-enter at the right layer; or set up and verify the method.
+specification-methodology work: change a requirement, design, or code owner;
+re-enter at the right layer; set up and verify the method; or build a
+representation of their own nominated project.
 
 ## When this applies
 
 Apply when the request concerns a workspace that selects an STDO Product
-Definition (for example `stdo_skills.json`) and asks you to change, review, or
-set up governed artifacts under that method. Automatic selection comes from this
-skill's `description`; a user may also invoke it explicitly with
+Definition and asks you to change, review, or set up governed artifacts under
+that method, or asks to build that project's representation. Automatic selection
+comes from this skill's `description`; a user may also invoke it explicitly with
 `/stdo-workspace-change`.
 
 ## When this does not apply (SK-01 discriminator, Q02)
@@ -23,6 +24,17 @@ If the request is an unrelated factual question or a non-governed task, do not
 force an STDO setup, do not create a work carrier, and do not run any tool
 sequence. Answer the actual question or hand off. Presence of this skill is not a
 reason to STDO-ify unrelated work.
+
+## Build a nominated project's representation (SK-14)
+
+For “build a representation of my project”, “generate its constraint model”, or
+equivalent requests, load [stdo-tool-operations](../stdo-tool-operations/SKILL.md)
+and its representation reference, then execute the build. Bind the user's project,
+not the repository containing these skills. Follow this route before the general
+lifecycle sections below: the target's exact method is verified subject data,
+separate from the Skills builder's fixed 3.0.1 basis. Do not reject a target 3.x
+source merely because it is a different cut, or infer lifecycle compatibility.
+Preparation or command advice alone does not complete a requested build.
 
 ## Verify the basis first (SK-02, Q03)
 

@@ -43,6 +43,29 @@ a separate judgment over unchanged carrier bytes; creating bytes or passing a
 partial check does not itself issue that judgment. Its declared assessment may
 be mechanical, as in `F_D[v_carrier_admission]`.
 
+## Use on a user's project
+
+The Product outcome includes a reusable workflow for users building their own
+STDO projects. Their exact selected STDO 3.0.x method defines and organises the
+project as an axiomatic program; a_c supplies its source-linked representation,
+readable documentation, supported checks and selected context for LLM builders
+and reviewers. STDO itself is one application of that capability.
+
+The [project-use requirements](requirements/project-use.md) connect the existing
+capabilities without replacing their owners. Users can introduce a new subject
+without editing tenant source, retain independently owned leaf projects, compose
+them through explicit edges, and refresh representations and evidence after
+change. Reading a graph does not confer the authority to acquire a provider's
+source. The same recipient route applies to direct and retained content.
+
+The initial user-facing UI is the portable constraint reader. The broader user
+workflow also needs supported public operation and installation paths; its
+integrated delivery is selected by
+[T-015](../.ai-workspace/tickets/active/T-015-user-project-product.md) and remains
+open. Existing component proofs and the STDO documentation example do not alone
+establish that delivery. The a_c builder and each consumer's selected method
+remain separately identified; a 3.0.x label is not a compatibility assertion.
+
 ## Formalisation capability
 
 A formalisation tenant supplies an explicit mathematical interpretation of a
@@ -180,6 +203,11 @@ STDO release-matched cohort. Any later consumer adoption is separately selected.
 Upstream software used by a tenant is part of that tenant's HOW.
 
 ## Product disposition authority
+
+The [T-015 instruction](../.ai-workspace/tickets/active/T-015-user-project-product.md#owner-instruction)
+selects the reusable user-project outcome and its common contract. The concrete
+delivery plan separates current component evidence from the remaining integrated
+implementation, installed qualification and Product acceptance.
 
 Jim, the Product owner, retains scope, meaning, acceptance and release decisions.
 T-001 authorizes its bounded implementation/verification work. The completed

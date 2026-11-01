@@ -1,0 +1,449 @@
+{
+  "concepts": [
+    {
+      "key": "frame_aggregate",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FRAME.md#REQ-R-ABG3-FRAME%20%E2%80%94%20Recursive%20Invocation%20Aggregate%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 27,
+          "quote": "**REQ-R-ABG3-FRAME-001**: ABG shall represent recursive invocation through explicit `Frame` aggregates rather than hidden controller stack state.\n\n**REQ-R-ABG3-FRAME-002**: Frame identity shall preserve `frame_attempt_id`, `frame_lineage_id`, and `call_id`.\n\n**REQ-R-ABG3-FRAME-003**: Frame reopen or retry shall mint a fresh `frame_attempt_id` while preserving lawful `frame_lineage_id`.\n\n**REQ-R-ABG3-FRAME-004**: Recursive HoG traversal shall progress as tail-loop execution over explicit ABG frame truth sufficient for suspend/resume, foldback, replay, and bounded control-state growth.\n\n**REQ-R-ABG3-FRAME-005**: Checkpoints or snapshots may aid recovery, but authoritative recursive truth shall remain the event/history plus declared contracts.\n\n**REQ-R-ABG3-FRAME-006**: In-memory frame objects may exist as caches or projections over event truth, but they shall not become rival control state.\n"
+        }
+      ],
+      "label": "Recursive Frame aggregate",
+      "definition": "Explicit event-derived Frame replaces hidden controller stack; identity includes frame_attempt_id, frame_lineage_id and call_id. Recursive HoG runs a tail loop supporting suspension/resume, foldback, replay and bounded control-state growth.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "graph_call_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-GRAPHCALL.md#REQ-R-ABG3-GRAPHCALL%20%E2%80%94%20Callable%20Runtime%20Aggregate",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-GRAPHCALL — Callable Runtime Aggregate\n\n**Status**: Active\n**Category**: Constraint / Guarantee\n**Date**: 2026-04-05\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "label": "GraphCall provenance",
+      "definition": "Active Constraint/Guarantee dated 2026-04-05, deriving from legacy method and intent/product references.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "graph_call",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-GRAPHCALL.md#REQ-R-ABG3-GRAPHCALL%20%E2%80%94%20Callable%20Runtime%20Aggregate%2FPurpose",
+          "start_line": 12,
+          "end_line": 13,
+          "quote": "Define `GraphCall` as the runtime aggregate corresponding to one public\ngraph-function execution boundary.\n"
+        }
+      ],
+      "label": "GraphCall aggregate",
+      "definition": "Runtime aggregate for one public graph-function execution boundary.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "handler_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding",
+          "start_line": 1,
+          "end_line": 6,
+          "quote": "# REQ-R-ABG3-HANDLERS - Effect Handlers And Execution Binding\n\n**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability / Constraint\n**Date**: 2026-07-20\n**Derives from**: [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-CCALL.md](REQ-R-ABG3-CCALL.md), [REQ-R-ABG3-INTERPRET.md](REQ-R-ABG3-INTERPRET.md)\n"
+        }
+      ],
+      "label": "Handler requirement provenance",
+      "definition": "Active Capability/Constraint dated 2026-07-20, source-labelled accepted T-283 F_H closure and deriving from Product,C-call and interpret references.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "effect_handler",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FPurpose",
+          "start_line": 12,
+          "end_line": 26,
+          "quote": "Define the effect-handler boundary for compute encountered while HoG traverses\nan admitted GTL program. GTL declares the category and implementation binding;\nHoG reaches and invokes the declared seam; the handler performs only the\ninterior effect; ABG owns C-call frames, evidence and result admission, events,\njudgment, replay, continuation, and closure truth.\n\nA handler binding is admitted configuration data:\n\n```text\nprogramRef + graphFunctionRef + cLocusRef + regime\n  + implementationRef + handlerClass + handlerConfigRef\n```\n\nThe binding is not a program, selector, traversal plan, event source, or\ncontroller.\n"
+        }
+      ],
+      "label": "Interior effect handler",
+      "definition": "GTL declares category/implementation; HoG invokes seam; handler performs interior effect only. ABG owns call frames,evidence/result admission,events,judgment,replay,continuation,closure. Admitted binding is programRef+graphFunctionRef+cLocusRef+regime+implementationRef+handlerClass+handlerConfigRef, not program/selector/plan/event source/controller.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "handler_classes",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FHandler%20Classes",
+          "start_line": 70,
+          "end_line": 86,
+          "quote": "**REQ-R-ABG3-HANDLERS-009**: ABIogenesis may ship generic pipeline handlers for\ndeclared `F_D`, `F_P`, and external `F_H` seams. Products configure those\nhandlers through GTL and catalog declarations; a product shall not implement a\nstandard-path worker loop.\n\nAn `F_D` handler is lawful only for a total function over a finite declared\ndomain or a finite-state process with a total transition function and explicit\ntyped output for every admitted input. Mechanical envelope facts such as\nexecuted, blocked, identity, digest, path, and write-root may be `F_D`.\nSemantic quality, intent satisfaction, acceptance, ranking, diagnosis, or\nopen-domain judgment remains `F_P` even when implemented deterministically.\n\n**REQ-R-ABG3-HANDLERS-010**: A capability handler may delegate one declared\ninterior effect to a local or external capability whose exact contract and\ncompute regime are admitted. The outcall shall preserve input, output,\nevidence, actor, and capability identity and shall not become a second\ntraversal or runtime.\n"
+        }
+      ],
+      "label": "Handler regimes and capability outcall",
+      "definition": "Generic pipeline handlers may serve declared F_D,F_P and external F_H seams configured by Product GTL/catalog. F_D is lawful only total over finite domain or finite-state total transitions with typed output for every admitted input; mechanical execution/identity/digest/path/write-root facts may be F_D. Semantic quality,intent,acceptance,ranking,diagnosis/open judgment remains F_P even deterministic implementation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "instruction_metadata",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance",
+          "start_line": 1,
+          "end_line": 7,
+          "quote": "# REQ-R-ABG3-INSTRUCTION-ASSEMBLY — Instruction Assembly And Dispatch Assurance\n\n**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability\n**Product behavior**: [Execution And Context Calculus](../../PRODUCT.md#execution-and-context-calculus); T-287 owner-directed Product/requirement re-entry.\n**Date**: 2026-07-01\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-L-GTL3-CONTRACT-LAW-API.md](../gtl/REQ-L-GTL3-CONTRACT-LAW-API.md), [REQ-L-GTL3-NODE.md](../gtl/REQ-L-GTL3-NODE.md), [REQ-L-GTL3-ASSET-SURFACE.md](../gtl/REQ-L-GTL3-ASSET-SURFACE.md), [REQ-L-GTL3-COMPUTE-NOTATION.md](../gtl/REQ-L-GTL3-COMPUTE-NOTATION.md), [REQ-R-ABG3-BINDING.md](REQ-R-ABG3-BINDING.md), [REQ-R-ABG3-TRANSPORT.md](REQ-R-ABG3-TRANSPORT.md), [REQ-R-ABG3-PAYLOAD.md](REQ-R-ABG3-PAYLOAD.md), [REQ-R-ABG3-FN-COMPOSITION.md](REQ-R-ABG3-FN-COMPOSITION.md), [REQ-R-ABG3-INTERPRET.md](REQ-R-ABG3-INTERPRET.md), [REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md](REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md), [REQ-R-ABG3-SAGA-FRONTIER.md](REQ-R-ABG3-SAGA-FRONTIER.md)\n"
+        }
+      ],
+      "label": "Instruction assembly provenance",
+      "definition": "Active capability dated 2026-07-01, source-labelled T-283 accepted and T-287 re-entry under Execution And Context Calculus, deriving from v2.5.1-rc.2 methods and named GTL/ABG owners.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "instruction_dispatch_assurance",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FPurpose",
+          "start_line": 13,
+          "end_line": 16,
+          "quote": "Define ABG instruction assembly as deterministic dispatch-assurance law over\nknown GTL/ABG carrier algebras, so F_P worker instructions are materialized,\nrelevant, compressed, proportional, replayable, and non-tautological without\ncreating a product-local prompt shell or duplicate prompt carrier.\n"
+        }
+      ],
+      "label": "Instruction dispatch assurance",
+      "definition": "Deterministic assurance over known GTL/ABG carrier algebras materializes relevant,compressed,proportional,replayable,non-tautological F_P instructions, without a Product-local prompt shell or duplicate prompt carrier.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "handler_class_limits_effect",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FHandler%20Classes",
+          "start_line": 75,
+          "end_line": 86,
+          "quote": "An `F_D` handler is lawful only for a total function over a finite declared\ndomain or a finite-state process with a total transition function and explicit\ntyped output for every admitted input. Mechanical envelope facts such as\nexecuted, blocked, identity, digest, path, and write-root may be `F_D`.\nSemantic quality, intent satisfaction, acceptance, ranking, diagnosis, or\nopen-domain judgment remains `F_P` even when implemented deterministically.\n\n**REQ-R-ABG3-HANDLERS-010**: A capability handler may delegate one declared\ninterior effect to a local or external capability whose exact contract and\ncompute regime are admitted. The outcall shall preserve input, output,\nevidence, actor, and capability identity and shall not become a second\ntraversal or runtime.\n"
+        }
+      ],
+      "source_key": "handler_classes",
+      "target_key": "effect_handler",
+      "kind": "constrains",
+      "meaning": "Regime totality and exact capability contracts bound which interior effects a handler may realize.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "frame_attempt_and_cache_law",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FRAME.md#REQ-R-ABG3-FRAME%20%E2%80%94%20Recursive%20Invocation%20Aggregate%2FAcceptance%20Criteria",
+          "start_line": 19,
+          "end_line": 27,
+          "quote": "**REQ-R-ABG3-FRAME-002**: Frame identity shall preserve `frame_attempt_id`, `frame_lineage_id`, and `call_id`.\n\n**REQ-R-ABG3-FRAME-003**: Frame reopen or retry shall mint a fresh `frame_attempt_id` while preserving lawful `frame_lineage_id`.\n\n**REQ-R-ABG3-FRAME-004**: Recursive HoG traversal shall progress as tail-loop execution over explicit ABG frame truth sufficient for suspend/resume, foldback, replay, and bounded control-state growth.\n\n**REQ-R-ABG3-FRAME-005**: Checkpoints or snapshots may aid recovery, but authoritative recursive truth shall remain the event/history plus declared contracts.\n\n**REQ-R-ABG3-FRAME-006**: In-memory frame objects may exist as caches or projections over event truth, but they shall not become rival control state.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "frame_aggregate"
+      ],
+      "statement": "Reopen/retry mints fresh frame_attempt_id preserving lawful lineage. Snapshots/checkpoints aid recovery only; events/history plus contracts remain authority. In-memory frames may cache/project truth, never rival control state.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "graph_call_identity",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-GRAPHCALL.md#REQ-R-ABG3-GRAPHCALL%20%E2%80%94%20Callable%20Runtime%20Aggregate%2FAcceptance%20Criteria",
+          "start_line": 17,
+          "end_line": 31,
+          "quote": "**REQ-R-ABG3-GRAPHCALL-001**: ABG shall open `GraphCall` truth for one realized execution of one published `GraphFunction`.\n\n**REQ-R-ABG3-GRAPHCALL-002**: `GraphCall` identity shall preserve at minimum `call_id`, `run_id`, `graph_function_id`, and `materialization_id`.\n\n**REQ-R-ABG3-GRAPHCALL-003**: Each retry, reopen, or replacement callable attempt shall mint a fresh `call_id`.\n\n**REQ-R-ABG3-GRAPHCALL-004**: Cross-call relation shall be represented by event causation/correlation identity rather than hidden mutable controller state.\n\n**REQ-R-ABG3-GRAPHCALL-005**: In-memory call objects may exist as caches or projections over event truth, but they shall not become rival control state.\n\n**REQ-R-ABG3-GRAPHCALL-006**: Repeated execution of the same published\n`GraphFunction` may create multiple graph-call instances over the same\nmaterialized graph. Instance identity shall be scoped by replay-visible run,\nwork-key, frame, materialization, and causation truth rather than by mutable\nworkspace paths or hidden controller state.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "graph_call"
+      ],
+      "statement": "Open one GraphCall per realized execution of one published function; retain at least call_id,run_id,graph_function_id,materialization_id. Retry/reopen/replacement mints fresh call_id. Relations use event causation/correlation, not mutable controller state. Caches are not rival control. Repeated function executions may share materialized graph but instance identity is replay-scoped by run/work/frame/materialization/causation, not workspace paths.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "handler_exact_effect_and_evidence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FHandler%20Obligations",
+          "start_line": 30,
+          "end_line": 48,
+          "quote": "**REQ-R-ABG3-HANDLERS-001**: A handler shall realize exactly the admitted C\nlocus, regime, and implementation binding it receives. It shall not infer a\nstage, arm, function, or program from a label, filename, prompt, adapter route,\nor ambient state.\n\n**REQ-R-ABG3-HANDLERS-002**: A handler shall return an interior result and\nevidence only. It shall not mint C-call spine events, ABG result truth,\njudgment, continuation, retry, or closure. Those facts enter only through the\nowning ABG admission boundaries.\n\n**REQ-R-ABG3-HANDLERS-003**: Outcome status and evidence references shall\ncorrespond to real effects. External sessions, tool calls, files, and process\nresults shall reconcile against admitted C-call evidence. Asserted but\nunevidenced effects are drift.\n\n**REQ-R-ABG3-HANDLERS-004**: Tool knowledge, including commands, models, paths,\nand environment variables, shall enter through declared implementation and\ntransport configuration. Tool identity embedded as hidden handler strategy is\nprohibited.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "effect_handler"
+      ],
+      "statement": "Realize exactly admitted locus/regime/implementation, never infer stage/arm/function/program from labels/files/prompts/routes/ambient state. Return only interior result/evidence; ABG admission alone creates spine/result/judgment/continuation/retry/closure truth. Status/evidence must match real external sessions/tools/files/process effects and reconcile to C-call; unevidenced assertions are drift. Commands/models/paths/environment enter declared implementation/transport, not hidden tool strategy.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "handler_admitted_inputs_failure_envelope",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FHandler%20Obligations",
+          "start_line": 50,
+          "end_line": 66,
+          "quote": "**REQ-R-ABG3-HANDLERS-005**: Handler inputs shall come from admitted GTL,\ncatalog, workspace, execution-basis, and implementation-binding truth. Globals,\nundeclared environment, filesystem discovery, current working directory,\nhidden defaults, and adapter-local configuration are not authority.\n\n**REQ-R-ABG3-HANDLERS-006**: A handler throw, transport failure, timeout, or\nmalformed interior result shall become a typed blocked or non-admitted outcome\nat the ABG boundary. It shall not kill the run, become success, or bypass the\ndeclared retry and continuation law.\n\n**REQ-R-ABG3-HANDLERS-007**: Evidence archives shall key on the exact C-call and\nattempt identities. Re-execution, replay, or resume shall not duplicate,\nrelabel, or orphan evidence.\n\n**REQ-R-ABG3-HANDLERS-008**: A handler shall honor the admitted timeout,\nattempt, capability, write-root, and effect envelope. Overrun or unsupported\neffect is typed non-success, never an unbounded wait or silent fallback.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "effect_handler"
+      ],
+      "statement": "Inputs come from admitted GTL/catalog/workspace/basis/implementation; globals,undeclared env,filesystem discovery,cwd/defaults/adapter-local config lack authority. Throws,transport errors,timeouts,malformed results become typed blocked/non-admitted ABG outcomes, never kill run, succeed or bypass retry/continuation. Archive exact call/attempt, no duplication/relabel/orphan on replay/resume/reexecution. Honor admitted time/attempt/capability/write-root/effect limits; unsupported or overrun is typed non-success, not unbounded wait/fallback.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "single_effect_resolution",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FOne%20Effect-Resolution%20Seam",
+          "start_line": 90,
+          "end_line": 107,
+          "quote": "**REQ-R-ABG3-HANDLERS-011**: HoG shall resolve an encountered executable GTL C\nlocus through exactly one implementation-binding seam. Product-local prompt\nshells, handler scanners, file loaders, private registries, SDK/CLI routers,\nfixtures, and feature services are not lawful effect-resolution seams.\n\n**REQ-R-ABG3-HANDLERS-012**: An admitted but unresolvable implementation\nbinding, unknown capability, incompatible regime, or missing handler shall\nblock the C call with a typed reason before any interior effect runs.\n\n**REQ-R-ABG3-HANDLERS-013**: Retry, escalation, branch, and alternative\nimplementation choice shall derive from admitted GTL structure, policy, ABG\nreplay facts, and the current execution basis. A handler or adapter shall not\nwalk a private configuration ladder or choose another program.\n\n**REQ-R-ABG3-HANDLERS-014**: Resume shall continue HoG traversal from the\nreplay-derived ABG frontier. Closed C calls remain closed. A fresh attempt is\nopened only when the admitted retry or resume policy permits it; no caller may\nhand-edit frontier or attempt truth.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "effect_handler"
+      ],
+      "statement": "HoG resolves executable C locus through exactly one implementation seam; prompt shells/scanners/loaders/private registries/SDK-CLI routers/fixtures/services are not seams. Unresolvable binding,unknown capability,incompatible regime or missing handler blocks typed before effect. Retry/escalation/branch/alternative implementation derive admitted GTL/policy/replay/basis, never private ladder/program choice. Resume uses replay frontier; closed calls stay closed; fresh attempts require admitted policy and no caller edits frontier/attempt truth.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "configuration_and_standard_program_limits",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FOne%20Effect-Resolution%20Seam",
+          "start_line": 109,
+          "end_line": 119,
+          "quote": "**REQ-R-ABG3-HANDLERS-015**: Handler configuration shall carry system and\nenvironment bindings only: implementation identity, commands, paths,\nenvironment, timeouts, model or tool binding, and archive roots. Domain\ncontent, workflow shape, prompts, contracts, policies, retry structure, and\nclosure law belong in GTL or referenced product declarations.\n\n**REQ-R-ABG3-HANDLERS-016**: Standard behavior shall be published as named GTL\nprograms and GraphFunctions in the installed catalog. A Product may select a\ndeclared standard program through an explicit admitted binding. There is no\nbaked bootstrap triple, hidden default program, generated HoG program catalog,\nor interpreter-local fallback.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "effect_handler"
+      ],
+      "statement": "Handler config only system/environment: implementation,commands,paths,env,timeouts,model/tool,archives. Domain content,workflow,prompts,contracts,policies,retry/closure live in GTL/referenced Product declarations. Publish standard behavior as named installed-catalog GTL programs/functions selected by explicit admitted binding; no baked triple,hidden default,generated HoG catalog or local fallback.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "handler_nonclosure",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FNon-Closure",
+          "start_line": 123,
+          "end_line": 126,
+          "quote": "This family is not satisfied by a handler that mints truth, a second execution\nseam, hidden configuration, an unevidenced outcall, a product-local worker\nloop, a private program selector, an error that terminates the process, or\nevidence that does not reconcile with ABG replay.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "effect_handler"
+      ],
+      "statement": "Truth-minting handlers, second seams, hidden config, unevidenced outcalls, Product worker loops, private selectors, process-terminating errors or unreconciled replay evidence do not satisfy this family.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "handler_delegation_latitude",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FHandler%20Classes",
+          "start_line": 70,
+          "end_line": 86,
+          "quote": "**REQ-R-ABG3-HANDLERS-009**: ABIogenesis may ship generic pipeline handlers for\ndeclared `F_D`, `F_P`, and external `F_H` seams. Products configure those\nhandlers through GTL and catalog declarations; a product shall not implement a\nstandard-path worker loop.\n\nAn `F_D` handler is lawful only for a total function over a finite declared\ndomain or a finite-state process with a total transition function and explicit\ntyped output for every admitted input. Mechanical envelope facts such as\nexecuted, blocked, identity, digest, path, and write-root may be `F_D`.\nSemantic quality, intent satisfaction, acceptance, ranking, diagnosis, or\nopen-domain judgment remains `F_P` even when implemented deterministically.\n\n**REQ-R-ABG3-HANDLERS-010**: A capability handler may delegate one declared\ninterior effect to a local or external capability whose exact contract and\ncompute regime are admitted. The outcall shall preserve input, output,\nevidence, actor, and capability identity and shall not become a second\ntraversal or runtime.\n"
+        }
+      ],
+      "applies_to_keys": [
+        "handler_classes"
+      ],
+      "allowed": [
+        "Delegate one declared interior effect to a local/external capability with admitted exact contract and regime, preserving input/output/evidence/actor/capability identities."
+      ],
+      "forbidden": [
+        "Product standard-path worker loop.",
+        "Capability outcall becomes a second traversal/runtime."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "graph_call_basis_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-GRAPHCALL.md#REQ-R-ABG3-GRAPHCALL%20%E2%80%94%20Callable%20Runtime%20Aggregate",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.0-rc.6/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md)\n"
+        }
+      ],
+      "subject_key": "graph_call_metadata",
+      "uncertainty": "Referenced deciding contents are absent.",
+      "consequence": "No resolved authority or cross-chunk identity is inferred from links."
+    },
+    {
+      "key": "handler_acceptance_reference",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding",
+          "start_line": 3,
+          "end_line": 6,
+          "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability / Constraint\n**Date**: 2026-07-20\n**Derives from**: [PRODUCT.md](../../PRODUCT.md), [REQ-R-ABG3-CCALL.md](REQ-R-ABG3-CCALL.md), [REQ-R-ABG3-INTERPRET.md](REQ-R-ABG3-INTERPRET.md)\n"
+        }
+      ],
+      "subject_key": "handler_metadata",
+      "uncertainty": "Acceptance evidence and referenced owners are not supplied.",
+      "consequence": "Record historical claim, not verified present acceptance."
+    },
+    {
+      "key": "instruction_derivation_unresolved",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance",
+          "start_line": 3,
+          "end_line": 7,
+          "quote": "**Status**: Active - accepted by T-283 F_H closure\n**Category**: Capability\n**Product behavior**: [Execution And Context Calculus](../../PRODUCT.md#execution-and-context-calculus); T-287 owner-directed Product/requirement re-entry.\n**Date**: 2026-07-01\n**Derives from**: [SPEC_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md), [ODD_METHOD.md](stdo://releases/v2.5.1-rc.2/standards/ODD_METHOD.md), [INTENT.md](../../INTENT.md) INT-001, [PRODUCT.md](../../PRODUCT.md), [REQ-L-GTL3-CONTRACT-LAW-API.md](../gtl/REQ-L-GTL3-CONTRACT-LAW-API.md), [REQ-L-GTL3-NODE.md](../gtl/REQ-L-GTL3-NODE.md), [REQ-L-GTL3-ASSET-SURFACE.md](../gtl/REQ-L-GTL3-ASSET-SURFACE.md), [REQ-L-GTL3-COMPUTE-NOTATION.md](../gtl/REQ-L-GTL3-COMPUTE-NOTATION.md), [REQ-R-ABG3-BINDING.md](REQ-R-ABG3-BINDING.md), [REQ-R-ABG3-TRANSPORT.md](REQ-R-ABG3-TRANSPORT.md), [REQ-R-ABG3-PAYLOAD.md](REQ-R-ABG3-PAYLOAD.md), [REQ-R-ABG3-FN-COMPOSITION.md](REQ-R-ABG3-FN-COMPOSITION.md), [REQ-R-ABG3-INTERPRET.md](REQ-R-ABG3-INTERPRET.md), [REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md](REQ-R-ABG3-REQUIREMENTS-ALGEBRA.md), [REQ-R-ABG3-SAGA-FRONTIER.md](REQ-R-ABG3-SAGA-FRONTIER.md)\n"
+        }
+      ],
+      "subject_key": "instruction_metadata",
+      "uncertainty": "Referenced closure, Product calculus and method/family source contents are absent.",
+      "consequence": "Do not infer current acceptance, cross-chunk identities or granted authority from metadata."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-FRAME.md#REQ-R-ABG3-FRAME%20%E2%80%94%20Recursive%20Invocation%20Aggregate%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "frame_aggregate",
+        "frame_attempt_and_cache_law"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-GRAPHCALL.md#REQ-R-ABG3-GRAPHCALL%20%E2%80%94%20Callable%20Runtime%20Aggregate",
+      "decision": "residual",
+      "keys": [
+        "graph_call_metadata",
+        "graph_call_basis_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved sources."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-GRAPHCALL.md#REQ-R-ABG3-GRAPHCALL%20%E2%80%94%20Callable%20Runtime%20Aggregate%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "graph_call"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-GRAPHCALL.md#REQ-R-ABG3-GRAPHCALL%20%E2%80%94%20Callable%20Runtime%20Aggregate%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "graph_call_identity"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding",
+      "decision": "residual",
+      "keys": [
+        "handler_metadata",
+        "handler_acceptance_reference"
+      ],
+      "reason": "Metadata retained without resolving evidence."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "effect_handler"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FHandler%20Obligations",
+      "decision": "retained",
+      "keys": [
+        "handler_exact_effect_and_evidence",
+        "handler_admitted_inputs_failure_envelope"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FHandler%20Classes",
+      "decision": "retained",
+      "keys": [
+        "handler_classes",
+        "handler_class_limits_effect",
+        "handler_delegation_latitude"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FOne%20Effect-Resolution%20Seam",
+      "decision": "retained",
+      "keys": [
+        "single_effect_resolution",
+        "configuration_and_standard_program_limits"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-HANDLERS.md#REQ-R-ABG3-HANDLERS%20-%20Effect%20Handlers%20And%20Execution%20Binding%2FNon-Closure",
+      "decision": "retained",
+      "keys": [
+        "handler_nonclosure"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance",
+      "decision": "residual",
+      "keys": [
+        "instruction_metadata",
+        "instruction_derivation_unresolved"
+      ],
+      "reason": "Metadata retained with unresolved references."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/abg/REQ-R-ABG3-INSTRUCTION-ASSEMBLY.md#REQ-R-ABG3-INSTRUCTION-ASSEMBLY%20%E2%80%94%20Instruction%20Assembly%20And%20Dispatch%20Assurance%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "instruction_dispatch_assurance"
+      ],
+      "reason": "The selected local records retain the material meaning of this supplied section; this disposition is not a completeness claim."
+    }
+  ],
+  "limitations": [
+    "The source classifies open-domain semantic judgment as F_P even if implemented deterministically; handler implementation determinism is not F_D authority.",
+    "This local source interpretation does not resolve identities across chunks or execute the represented runtime. Section processing and exact grounding do not prove semantic completeness, implementation conformity, acceptance, qualification, or release."
+  ]
+}

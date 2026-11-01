@@ -51,6 +51,9 @@ The user works in a governed workspace using Codex or Claude. Skills support:
 - source-first independent review where required;
 - continuation, recovery, currentness and truthful status;
 - release preparation and separately authorized release operations.
+- representation builds over a nominated project's exact source, including
+  actual host-session authoring, checked model/carrier creation, coverage and
+  offline documentation through the [a_c project provider](composition/A_C_REPRESENTATION.md).
 
 The shared requirements state outcomes and discriminators. They do not prescribe
 skill count, names, prompt identity, invocation syntax or host-specific mechanism.
@@ -93,6 +96,11 @@ The present work constructs candidates and performs bounded qualification; it
 does not publish a release or install skills into unrelated user environments.
 
 ## Construction authority
+
+The [T-003 instruction](../.ai-workspace/tickets/active/T-003-project-representation.md#owner-instruction)
+selects representation-build triggering and execution in both tenants. It adds
+the explicit project-build provider relation while preserving the fixed builder,
+earlier support profile and outstanding qualification obligations.
 
 Jim owns Product scope, common meaning, acceptance and release. His recorded
 [T-001 instruction](../.ai-workspace/tickets/active/T-001-skills-dogfood.md#owner-instruction)

@@ -1,0 +1,114 @@
+{
+  "chunks_authored": 1,
+  "chunks_missing": [],
+  "chunks_total": 1,
+  "family_counts": {
+    "constraints": 6,
+    "judgments": 0,
+    "latitude": 2,
+    "objects": 6,
+    "relations": 2,
+    "residuals": 2,
+    "transformations": 0,
+    "traversals": 0
+  },
+  "interpretation_contract": {
+    "author_schema_sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "limits": [
+      "Proposal only; no semantic acceptance or full coverage claim.",
+      "Source supplies meaning; graph supplies fallible discovery data.",
+      "References are chunk-local; cross-chunk identity/conservation requires independent review.",
+      "Conditions, exceptions and uncertainty are inert source-linked statements, not executed predicates."
+    ],
+    "meaning": "F_P-authored source interpretation. Five declared active record families; traversals/transformations/judgments unimplemented and explicitly empty. Source documents and templates are interpreted as documents; prescribed operations are not executed or accepted.",
+    "mode": "direct",
+    "profile": "ac.generation.contract/1",
+    "semantic_extraction_profile": "a_c.direct.source-authoring/1"
+  },
+  "mode": "direct",
+  "processing_complete": true,
+  "profile": "ac.generation.coverage/1",
+  "section_dispositions": [
+    {
+      "chunk": "chunk-3e283b33de26d5dd144c",
+      "dispositions": [
+        {
+          "decision": "retained",
+          "keys": [
+            "proposal_representation",
+            "proposal_must_be_source_linked"
+          ],
+          "reason": "Retains the requested source-linked proposal goal without asserting that proposal construction constitutes acceptance.",
+          "section_id": "urn:a-c:project:dd949dc54cb8e1119c6e3e2a7c4b50209120d34bdc64ca07ec76011beb4021fa/source/specification/GOALS.md#Goals"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "invoice_export_intent",
+            "reproducibility_and_exact_amount_intent",
+            "reproducibility_criterion_unspecified"
+          ],
+          "reason": "Retains both parts of the intent and explicitly records the absence of an operational reproducibility criterion; this source meaning is kept separate from Product's operation identity.",
+          "section_id": "urn:a-c:project:dd949dc54cb8e1119c6e3e2a7c4b50209120d34bdc64ca07ec76011beb4021fa/source/specification/INTENT.md#Intent"
+        },
+        {
+          "decision": "retained",
+          "keys": [
+            "invoice_export",
+            "csv_output",
+            "amount_column",
+            "invoice_export_emits_csv",
+            "csv_output_has_amount_column",
+            "csv_format_and_column_order",
+            "preserve_every_supplied_decimal_digit",
+            "header_only_for_zero_rows",
+            "amount_conversion_boundary"
+          ],
+          "reason": "Retains CSV output, directed output/column relations, the ordered column names, every-digit preservation, the binary-conversion prohibition and the conditional header-only case. No supplied exception is stated.",
+          "section_id": "urn:a-c:project:dd949dc54cb8e1119c6e3e2a7c4b50209120d34bdc64ca07ec76011beb4021fa/source/specification/PRODUCT.md#Invoice%20export"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "rounding_policy",
+            "retain_rounding_as_unresolved",
+            "rounding_rule_invention_boundary",
+            "rounding_policy_unresolved"
+          ],
+          "reason": "Retains both explicit uncertainty and the prohibition on inventing a rounding rule, with an explicit residual rather than a fabricated policy.",
+          "section_id": "urn:a-c:project:dd949dc54cb8e1119c6e3e2a7c4b50209120d34bdc64ca07ec76011beb4021fa/source/specification/PRODUCT.md#Invoice%20export%2FUnresolved%20rounding%20policy"
+        }
+      ],
+      "limitations": [
+        "This interpretation covers only the four supplied sections in the default WHAT corpus: specification/GOALS.md, specification/INTENT.md and specification/PRODUCT.md. HOW, executable implementation, other project surfaces and external Products are outside the authored corpus.",
+        "The Intent concept and Product operation are kept distinct; no cross-document governing or identity-equivalence relation is inferred merely from similar wording.",
+        "Rounding is explicitly unresolved. Reproducibility has a stated intent but no supplied operational comparison criterion. Empty allowed-latitude arrays assert no permission for unspecified implementation choices.",
+        "This is current-session source interpretation. Grounded records and section dispositions do not establish semantic completeness, independent review, execution, acceptance or release; judgments, traversals and transformations are not instantiated."
+      ]
+    }
+  ],
+  "semantic_acceptance": "not requested or issued",
+  "semantic_completeness": "unassessed",
+  "source_sections": 4,
+  "unqualified": [
+    "cross-chunk consolidation",
+    "normative interpretation fidelity",
+    "complete calculus conformance",
+    "accepted-result cost"
+  ],
+  "unresolved_boundaries": [
+    {
+      "author_declared_limitations": [
+        "This interpretation covers only the four supplied sections in the default WHAT corpus: specification/GOALS.md, specification/INTENT.md and specification/PRODUCT.md. HOW, executable implementation, other project surfaces and external Products are outside the authored corpus.",
+        "The Intent concept and Product operation are kept distinct; no cross-document governing or identity-equivalence relation is inferred merely from similar wording.",
+        "Rounding is explicitly unresolved. Reproducibility has a stated intent but no supplied operational comparison criterion. Empty allowed-latitude arrays assert no permission for unspecified implementation choices.",
+        "This is current-session source interpretation. Grounded records and section dispositions do not establish semantic completeness, independent review, execution, acceptance or release; judgments, traversals and transformations are not instantiated."
+      ],
+      "chunk": "chunk-3e283b33de26d5dd144c"
+    }
+  ]
+}

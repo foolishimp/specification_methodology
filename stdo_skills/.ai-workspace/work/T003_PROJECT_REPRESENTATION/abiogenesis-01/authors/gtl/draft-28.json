@@ -1,0 +1,987 @@
+{
+  "concepts": [
+    {
+      "key": "gtl_language",
+      "label": "GTL language",
+      "definition": "LLM-first, graph-first algebraic governance control language with native typed declarative syntax, explicit validator/HoG/ABG boundaries and strong typed contract-law anti-drift judgments.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FPurpose",
+          "start_line": 12,
+          "end_line": 14,
+          "quote": "Define GTL 3 as an LLM-first, graph-first, algebraic governance control\nlanguage with host-language-native typed declarative syntax and explicit\nGTL-validator-HoG-ABG boundaries.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 18,
+          "end_line": 25,
+          "quote": "**REQ-L-GTL3-LANGUAGE-001**: GTL shall be an LLM-first, graph-first,\nalgebraic governance control language with host-language-native typed\ndeclarative syntax.\n\n**REQ-L-GTL3-LANGUAGE-002**: Each conformant build tenant shall publish GTL as\nan embedded typed declaration surface in its host language plus an equivalent\nserialized admission carrier. GTL shall not require a separate free-form\nprogramming syntax or parser family beyond those published contracts.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 44,
+          "end_line": 49,
+          "quote": "**REQ-L-GTL3-LANGUAGE-009**: GTL shall use strong typed axioms and\nvalidator-visible contract law as its anti-drift mechanism for LLM-authored\nprograms. Graph, program, start, implementation, result-interface, catalog,\ncarrier, traversal, and bind declarations shall produce typed validity, typed\ninvalidity, or typed unresolved semantics without lowering into an executable\nintermediate program.\n"
+        }
+      ]
+    },
+    {
+      "key": "capability_catalog",
+      "label": "Language capability catalog",
+      "definition": "Qualified index of GTL capabilities and requirement traces used for review/validation, not runtime lookup or traversal selection.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 104,
+          "end_line": 111,
+          "quote": "**language capability catalog**: A qualified index of GTL language\ncapabilities and their requirement traces. It is a review and validation aid.\nIt is not a runtime lookup registry and not traversal selection truth.\n\n**catalog**: A qualified index surface. The word catalog shall not stand alone\nas authority. A catalog reference shall state whether it is a language\ncapability catalog, publication inventory, library index, conformance catalog,\nconsequence catalog, runtime registry query, or another named catalog family.\n"
+        }
+      ]
+    },
+    {
+      "key": "publication_inventory",
+      "label": "Publication inventory",
+      "definition": "Static declaration/admission inventory demonstrating claimed Module, Program or bundle publication scope, usable for conformance but not live lookup or selection.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 113,
+          "end_line": 116,
+          "quote": "**publication inventory**: A static GTL declaration or admission inventory that\nproves a module, program, or bundle publishes the surfaces it claims. A\npublication inventory may support conformance checks. It is not a live lookup\nregistry and not traversal selection truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "runtime_registry",
+      "label": "Runtime registry",
+      "definition": "ABG-owned admitted lookup concept over registered eligible surfaces; querying registered entries does not select traversal.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 118,
+          "end_line": 121,
+          "quote": "**runtime registry**: An ABG-owned admitted lookup concept over registered\nruntime-eligible surfaces. A runtime registry may expose query results, but any\ncandidate choice that affects traversal shall become ABG-emitted selection\ntruth before it has runtime authority.\n"
+        }
+      ]
+    },
+    {
+      "key": "library",
+      "label": "Library",
+      "definition": "Reusable publication set of callables, overlays, candidate families, starts, policies or companions. It may be system/upstream or Product/downstream owned and is not registry truth before ABG admission/projection.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 123,
+          "end_line": 128,
+          "quote": "**library**: A reusable publication set of declared graph functions, overlays,\ncandidate families, public starts, policies, or companion surfaces. A graph\nfunction in a library is a reusable workflow function, not the whole product\nprogram. A library may be upstream/system-owned or downstream/product-owned. A\nlibrary is not a runtime registry until ABG admits and projects its entries\ninto registry truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "system_library",
+      "label": "System library",
+      "definition": "GTL/ABG-owned generic callables and companions needed identically by multiple ODD domains and admitted through common authority.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 130,
+          "end_line": 133,
+          "quote": "**system library**: A GTL/ABG-owned library of generic graph functions and\nrelated surfaces needed identically across multiple ODD domains. System\nlibrary entries shall be admitted through GTL/ABG authority and shall not be\nreimplemented by downstream products as parallel system truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "product_library",
+      "label": "Product library",
+      "definition": "Downstream-owned specialized GTL callables, overlays, policies or candidate families, lawful only through GTL declaration and ABG admission subordinate to runtime authority.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 135,
+          "end_line": 138,
+          "quote": "**product library**: A downstream-owned GTL library of specialized graph\nfunctions, overlays, policies, or candidate families. Product library entries\nare lawful only when declared through GTL, admitted by ABG, and kept subordinate\nto ABG runtime authority.\n"
+        }
+      ]
+    },
+    {
+      "key": "ledger",
+      "label": "ABG ledger",
+      "definition": "ABG truth surface derived from emitted events, admitted payloads or replay projection, never a rival mutable Product store/controller memory.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 140,
+          "end_line": 143,
+          "quote": "**ledger**: An ABG-owned truth surface derived from emitted events, admitted\npayloads, or replay-derived projection. A ledger shall not mean a product-local\nmutable store, controller memory, or second authority over fold, residual,\nadmission, continuation, re-entry, or selection truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "event_stream",
+      "label": "ABG event stream",
+      "definition": "Append-only recording path for admitted runtime facts whose traversal, closure, selection, continuation and re-entry truth cannot be replaced by local computation/memory.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 145,
+          "end_line": 148,
+          "quote": "**event stream**: The append-only runtime truth path used by ABG to record\nadmitted runtime facts. Runtime truth that affects traversal, closure,\nselection, continuation, or re-entry shall not be replaced by query-local\ncalculation or product-local memory.\n"
+        }
+      ]
+    },
+    {
+      "key": "projection",
+      "label": "Projection",
+      "definition": "Replay-derived view that may join, render, classify or summarize admitted facts without inventing truth absent from its governing source.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 150,
+          "end_line": 153,
+          "quote": "**projection**: A replay-derived view over admitted truth. A projection may\njoin, render, classify, or summarize admitted facts. A projection shall not\ninvent runtime truth that was not admitted or emitted by its governing source\nsurface.\n"
+        }
+      ]
+    },
+    {
+      "key": "read_model",
+      "label": "Read model",
+      "definition": "Consumer query/interpretation over admitted truth or projections that may label domain meaning but cannot mutate runtime authority.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 155,
+          "end_line": 158,
+          "quote": "**read model**: A consumer-facing query or interpretation surface over admitted\ntruth or projections. A read model may label domain meaning. It shall not\nadmit evidence, emit events, fold assurance, select traversal, close, continue,\nor re-enter.\n"
+        }
+      ]
+    },
+    {
+      "key": "overlay_row",
+      "label": "Overlay row",
+      "definition": "GTL/conformance declaration or index of Program composition over callables, vectors, node types, starts, roles, security, policy, proofs, plugin/result contracts and related metadata, not traversal control.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 160,
+          "end_line": 163,
+          "quote": "**overlay row**: A GTL or conformance declaration row that declares or indexes\na program composition over graph functions, graph vectors, node types, starts,\nroles, security, policy, proof obligations, plugin/result contracts, and\nrelated metadata. An overlay row is not a traversal controller.\n"
+        }
+      ]
+    },
+    {
+      "key": "overlay_frame",
+      "label": "Overlay frame",
+      "definition": "ABG runtime observation, pressure or foldback contract scoped to admitted state, distinct from GTL overlay rows.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 165,
+          "end_line": 167,
+          "quote": "**overlay frame**: An ABG runtime observation, pressure, or foldback contract\nscoped to admitted runtime state. An overlay frame belongs to ABG runtime law\nand is distinct from an overlay row.\n"
+        }
+      ]
+    },
+    {
+      "key": "candidate_family",
+      "label": "Candidate family",
+      "definition": "GTL-declared graph-function alternatives preserving one explicit outer contract; membership itself selects no candidate.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 173,
+          "end_line": 175,
+          "quote": "**candidate family**: A GTL-declared family of graph-function candidates that\nshare an explicit outer contract. Candidate-family membership does not select\na candidate for traversal.\n"
+        }
+      ]
+    },
+    {
+      "key": "selection_event",
+      "label": "Selection event",
+      "definition": "ABG-emitted/admitted runtime truth recording a traversal-affecting candidate choice after any queries, filters or ranking.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 169,
+          "end_line": 171,
+          "quote": "**selection event**: ABG-emitted truth recording a traversal-affecting\ncandidate choice. Selection may be preceded by queries, eligibility filters,\nor ranking, but the runtime effect belongs to the emitted selection event.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 310,
+          "end_line": 314,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-021**: A selection event shall be\nABG-admitted truth whenever candidate choice affects traversal. `F_D`, `F_P`,\nor `F_H` ranking may propose selection only through the declared GTL boundary;\nABG validates and admits the resulting identity and HoG applies it. Neither ABG\nnor the proposing implementation owns a hidden selection policy.\n"
+        }
+      ]
+    },
+    {
+      "key": "runtime_lookup",
+      "label": "Runtime lookup",
+      "definition": "Query of admitted registry truth returning candidates or rejection diagnostics for a named situation; it may inform, but does not constitute, traversal selection.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 181,
+          "end_line": 183,
+          "quote": "**runtime lookup**: A query over admitted registry truth that returns lawful or\nrejected candidates for a named situation. Runtime lookup may inform selection.\nIt does not become selection authority until ABG emits selection truth.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 299,
+          "end_line": 303,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-019**: Runtime lookup shall return\ncandidates or rejection diagnostics over admitted registry truth. Runtime\nlookup shall not become traversal authority. A declared GTL selector or\nattributed external decision proposes the selected identity, ABG admits that\nidentity as runtime truth, and HoG follows the admitted program relation.\n"
+        }
+      ]
+    },
+    {
+      "key": "eligibility_filter",
+      "label": "Eligibility filter",
+      "definition": "Deterministic ABG-owned check of candidate identity, interface, source/target contracts, context, authority, overlay, namespace, version, provenance, readiness, proof and policy.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 185,
+          "end_line": 187,
+          "quote": "**eligibility filter**: A deterministic ABG-owned filter over candidate\nidentity, interface, source and target contracts, context, authority, overlay,\nnamespace, version, provenance, readiness, proof, and policy constraints.\n"
+        }
+      ]
+    },
+    {
+      "key": "public_start",
+      "label": "Public start",
+      "definition": "Product-visible entry handle bound to a published GraphFunction, not a bare vector or owner of execution truth.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 177,
+          "end_line": 179,
+          "quote": "**public start**: A product-visible entry handle bound to a published graph\nfunction. A public start is not a bare graph vector and does not own runtime\nexecution truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "node_type",
+      "label": "Reusable node type",
+      "definition": "Named node contract with typed identity, published noncallably through the GTL library path as registry kind node_type for references, type composition, satisfaction and type-sensitive GraphFunction composition.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 338,
+          "end_line": 351,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-026**: GTL shall provide one reusable\nnode-type capability for declaring named node contracts, binding nodes to\ntype refs, composing node types, checking type satisfaction, and composing\ngraph functions by endpoint type satisfaction.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-027**: A node type shall be published\nthrough the GTL library path as a non-callable node-type declaration with its\nown typed identity and the `node_type` registry kind. It shall not mint or use\na `GraphFunction` identity, and no parallel type publication path is lawful.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-028**: A `node_type` library entry may\nbe admitted, projected, imported, queried, and used by validator/conformance\nsurfaces. It shall not become runtime traversal work, public-start authority,\ngraph-call authority, or `graph_function_selected` truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "language_laws",
+      "label": "GTL governing language laws",
+      "definition": "Requirement-family role of stating governing GTL 3 language laws; the supplied excerpt contains its purpose only.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "State the governing language laws of GTL 3.\n"
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "lookup_queries_registry",
+      "kind": "queries",
+      "source_key": "runtime_lookup",
+      "target_key": "runtime_registry",
+      "meaning": "Lookup returns candidates/rejections from admitted registry truth while withholding traversal authority.",
+      "governing": false,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 181,
+          "end_line": 183,
+          "quote": "**runtime lookup**: A query over admitted registry truth that returns lawful or\nrejected candidates for a named situation. Runtime lookup may inform selection.\nIt does not become selection authority until ABG emits selection truth.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 299,
+          "end_line": 303,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-019**: Runtime lookup shall return\ncandidates or rejection diagnostics over admitted registry truth. Runtime\nlookup shall not become traversal authority. A declared GTL selector or\nattributed external decision proposes the selected identity, ABG admits that\nidentity as runtime truth, and HoG follows the admitted program relation.\n"
+        }
+      ]
+    },
+    {
+      "key": "selection_follows_eligible_proposal",
+      "kind": "requires_eligibility",
+      "source_key": "selection_event",
+      "target_key": "eligibility_filter",
+      "meaning": "Candidate selection accounts for all eligibility dimensions before admitted identity may affect traversal.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 305,
+          "end_line": 314,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-020**: An eligibility filter shall\naccount for candidate identity, interface, source contracts, target contracts,\ncontext, authority, overlay scope, namespace, version, provenance, readiness,\nproof state, and policy refs before a candidate can be selected.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-021**: A selection event shall be\nABG-admitted truth whenever candidate choice affects traversal. `F_D`, `F_P`,\nor `F_H` ranking may propose selection only through the declared GTL boundary;\nABG validates and admits the resulting identity and HoG applies it. Neither ABG\nnor the proposing implementation owns a hidden selection policy.\n"
+        }
+      ]
+    },
+    {
+      "key": "library_requires_registry_admission",
+      "kind": "requires_admission_into",
+      "source_key": "library",
+      "target_key": "runtime_registry",
+      "meaning": "A publication set becomes registry truth only when ABG admits and projects its entries.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 123,
+          "end_line": 128,
+          "quote": "**library**: A reusable publication set of declared graph functions, overlays,\ncandidate families, public starts, policies, or companion surfaces. A graph\nfunction in a library is a reusable workflow function, not the whole product\nprogram. A library may be upstream/system-owned or downstream/product-owned. A\nlibrary is not a runtime registry until ABG admits and projects its entries\ninto registry truth.\n"
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "key": "capability_model_obligations",
+      "applies_to_keys": [
+        "gtl_language"
+      ],
+      "statement": "Publish one complete language-level capability model accessible without implementation source or downstream convention. Every capability states purpose, owner, authority boundary, source truth, admitted inputs, emitted truth if any, projection/query outputs, rejection taxonomy, readiness gates, proof obligations, invariants, forbidden authority and downstream interpretation boundary.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 191,
+          "end_line": 205,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-001**: GTL shall publish one language\ncapability model that lets reviewers identify every language-level capability\nwithout reading implementation source or downstream product conventions.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-002**: The language capability model\nshall distinguish GTL declaration capability from ABG runtime realization.\nGTL may declare, constrain, compose, publish, and validate program law; ABG\nowns admission, event truth, runtime ledgers, projection, fold, continuation,\nre-entry, and traversal-affecting selection.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-003**: Each GTL capability shall state\npurpose, owner, authority boundary, source truth, admitted inputs, emitted\ntruth if any, projection outputs, query outputs, rejection taxonomy, readiness\ngates, proof obligations, invariants, forbidden authority, and downstream\ninterpretation boundary.\n"
+        }
+      ]
+    },
+    {
+      "key": "what_how_owner_conservation",
+      "applies_to_keys": [
+        "gtl_language"
+      ],
+      "statement": "GTL declares, constrains, composes, publishes and validates law; ABG owns admission/events/ledgers/projection/fold/continuation/re-entry/traversal selection. HOW carrier names, modules, APIs, events, structures, tests and proof artifacts bind WHAT without changing owners, authority, invariants or meaning.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 195,
+          "end_line": 211,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-002**: The language capability model\nshall distinguish GTL declaration capability from ABG runtime realization.\nGTL may declare, constrain, compose, publish, and validate program law; ABG\nowns admission, event truth, runtime ledgers, projection, fold, continuation,\nre-entry, and traversal-affecting selection.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-003**: Each GTL capability shall state\npurpose, owner, authority boundary, source truth, admitted inputs, emitted\ntruth if any, projection outputs, query outputs, rejection taxonomy, readiness\ngates, proof obligations, invariants, forbidden authority, and downstream\ninterpretation boundary.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-004**: HOW design shall treat carrier\nnames, module boundaries, API spellings, event names, data structures, tests,\nand proof artifacts as implementation bindings to WHAT. HOW design shall not\nchange ownership, authority, invariants, or semantic boundaries declared by\nWHAT.\n"
+        }
+      ]
+    },
+    {
+      "key": "catalogs_are_qualified_indexes",
+      "applies_to_keys": [
+        "capability_catalog",
+        "publication_inventory"
+      ],
+      "statement": "Catalog never supplies authority by its bare name; qualify references as capability catalog, publication inventory, library index, conformance catalog, consequence catalog, runtime registry query or another named family. Capability catalog and static publication inventory do not constitute a runtime registry, lookup result or selection event; inventory proves publication scope only.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 108,
+          "end_line": 116,
+          "quote": "**catalog**: A qualified index surface. The word catalog shall not stand alone\nas authority. A catalog reference shall state whether it is a language\ncapability catalog, publication inventory, library index, conformance catalog,\nconsequence catalog, runtime registry query, or another named catalog family.\n\n**publication inventory**: A static GTL declaration or admission inventory that\nproves a module, program, or bundle publishes the surfaces it claims. A\npublication inventory may support conformance checks. It is not a live lookup\nregistry and not traversal selection truth.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 213,
+          "end_line": 220,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-005**: A language capability catalog\nshall be a qualified index of GTL capabilities and requirement traces. It\nshall not be treated as a runtime registry, runtime lookup result, or\nselection event.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-006**: A publication inventory shall\nprove declared publication scope only. It shall not be treated as a runtime\nregistry, runtime lookup result, or selection event.\n"
+        }
+      ]
+    },
+    {
+      "key": "registry_requires_admitted_entries",
+      "applies_to_keys": [
+        "runtime_registry"
+      ],
+      "statement": "Registry truth derives from declared/admitted entries, not Product lists, prose, manual scanning or controller memory. A design based solely on static inventory, local configuration, prompt-only context, manual discovery or query-local selection without admitted registry truth is nonconforming.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 222,
+          "end_line": 225,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-007**: A runtime registry shall be an\nABG-owned admitted lookup concept. Runtime registry truth shall be derived from\ndeclared and admitted entries, not from product-local lists, prompt prose,\nmanual scans, or controller memory.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 321,
+          "end_line": 324,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-023**: A runtime registry design shall\nbe non-conformant if it is built from static publication inventory alone,\nproduct-local configuration, prompt-only context, manual discovery, or\nquery-local candidate selection without admitted registry truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "library_authority",
+      "applies_to_keys": [
+        "library",
+        "system_library",
+        "product_library"
+      ],
+      "statement": "A library callable remains a reusable function, not a whole Program. System entries are common-authority admissions and may not be republished as downstream parallel truth. Product entries must pass declaration, admission, provenance, proof, readiness and ownership checks; they may shadow/replace/override system entries only under explicit refinement/override/specialization law accepted by ABG eligibility proof.",
+      "conditions": [],
+      "exceptions": [
+        "Explicit declared refinement, override or specialization law plus accepted ABG eligibility proof permits a Product entry to override a system entry."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+          "start_line": 123,
+          "end_line": 138,
+          "quote": "**library**: A reusable publication set of declared graph functions, overlays,\ncandidate families, public starts, policies, or companion surfaces. A graph\nfunction in a library is a reusable workflow function, not the whole product\nprogram. A library may be upstream/system-owned or downstream/product-owned. A\nlibrary is not a runtime registry until ABG admits and projects its entries\ninto registry truth.\n\n**system library**: A GTL/ABG-owned library of generic graph functions and\nrelated surfaces needed identically across multiple ODD domains. System\nlibrary entries shall be admitted through GTL/ABG authority and shall not be\nreimplemented by downstream products as parallel system truth.\n\n**product library**: A downstream-owned GTL library of specialized graph\nfunctions, overlays, policies, or candidate families. Product library entries\nare lawful only when declared through GTL, admitted by ABG, and kept subordinate\nto ABG runtime authority.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 227,
+          "end_line": 241,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-008**: A system library shall contain\ngeneric GTL/ABG-owned graph functions or companion surfaces that multiple ODD\ndomains need identically. Downstream products shall not republish a system\nlibrary function as parallel authority.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-009**: A product library shall be\nlawful when it declares product-specialized graph functions or companion\nsurfaces through GTL and ABG admits those entries. Product libraries shall not\nbypass declaration, admission, provenance, proof, readiness, or ownership\nchecks.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-010**: A product library shall not\nshadow, replace, or override a system library entry unless explicit\nrefinement, override, or specialization law is declared and ABG eligibility\nproof accepts it.\n"
+        }
+      ]
+    },
+    {
+      "key": "ledger_and_event_primacy",
+      "applies_to_keys": [
+        "ledger",
+        "event_stream"
+      ],
+      "statement": "Product-local mutable stores must not masquerade as ledgers competing with ABG admission/events/fold/residual/continuation/re-entry/registry/selection. The append-only event path cannot be replaced for traversal-affecting truth by query-local calculations, side-array returns, local files or controller memory.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 243,
+          "end_line": 251,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-011**: A ledger shall be an ABG-owned\nevent or projection truth surface. A product-local mutable store shall not be\ncalled a ledger when it would compete with ABG admission, event, fold,\nresidual, continuation, re-entry, registry, or selection truth.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-012**: An event stream shall remain\nthe append-only truth path for runtime facts. Query-local calculation,\nside-array return values, product-local files, or controller memory shall not\nreplace the event stream for traversal-affecting truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "projection_cannot_invent",
+      "applies_to_keys": [
+        "projection"
+      ],
+      "statement": "Projection stays replay-derived from admitted source and creates no fold, residual, registry, selection, continuation or re-entry truth not admitted/emitted by that source.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 253,
+          "end_line": 256,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-013**: A projection shall be\nreplay-derived from admitted source truth. A projection shall not create fold,\nresidual, registry, selection, continuation, or re-entry truth that its source\ntruth did not admit or emit.\n"
+        }
+      ]
+    },
+    {
+      "key": "read_model_read_only",
+      "applies_to_keys": [
+        "read_model"
+      ],
+      "statement": "Consumer interpretation and labels are allowed, but no event emission, evidence admission, assurance fold, traversal selection, close, continue or re-entry.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 258,
+          "end_line": 261,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-014**: A read model shall be\nread-only. It may interpret or label admitted truth for a consumer, but it\nshall not emit events, admit evidence, fold assurance, select traversal, close,\ncontinue, or re-enter.\n"
+        }
+      ]
+    },
+    {
+      "key": "overlay_row_frame_separation",
+      "applies_to_keys": [
+        "overlay_row",
+        "overlay_frame"
+      ],
+      "statement": "Rows declare/index Program metadata and never own observation, pressure, foldback, continuation or selection. Frames are ABG contracts over observed state/pressure/foldback, never inventory rows or Product controllers.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 263,
+          "end_line": 267,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-015**: An overlay row shall be program\ncomposition, catalog, publication, public-start, graph-function, graph-vector,\nnode-type, role, security, policy, proof-obligation, plugin/result-contract, or\nrelated metadata. An overlay row shall not own runtime observation, pressure,\nfoldback, continuation, or selection authority.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 286,
+          "end_line": 289,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-016**: An overlay frame shall be ABG\nruntime contract truth over observed state, pressure, or foldback. An overlay\nframe shall not be treated as a GTL publication inventory row or downstream\nproduct controller.\n"
+        }
+      ]
+    },
+    {
+      "key": "library_program_workspace_split",
+      "applies_to_keys": [
+        "library",
+        "overlay_row"
+      ],
+      "statement": "GraphFunctions are reusable callable/library contracts; overlays/Program compositions bind them as the Program. Workspaces are mutable bootstrap/config/files/data/observation/artifact/archive instance surfaces. HoG executes against admitted Program/workspace binding; ABG admits facts. Overlays bind graphs; graphs compose nested calls and declared computation under one HoG law.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 269,
+          "end_line": 279,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-015A**: GTL shall distinguish the\nlibrary/program/workspace abstraction boundary. Graph functions are reusable\nlibrary functions or callable work contracts. Graph overlays or GTL program\ncompositions are the program surfaces that bind those functions. Workspaces are\nmutable instance surfaces that supply bootstrap config, files, data, observed\nstate, generated artifacts, and run archives. HoG traversal is the execution\nbind over admitted program and workspace truth; ABG admits its runtime facts.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-015B**: Overlays shall bind compositions\nover graphs; graphs shall compose nested graph calls and declared computations\nunder the same HoG execution law. Reference-frame evaluation contracts shall\n"
+        }
+      ]
+    },
+    {
+      "key": "reference_frame_composition",
+      "applies_to_keys": [
+        "overlay_row",
+        "overlay_frame"
+      ],
+      "statement": "Reusable evaluation-frame contracts use existing composition, Context, contract and policy declarations under CONTEXT-009..012. First-class frame use adds no topology kind, callable kind, registry or interpreter. Keep frame-contract meaning, overlay composition and ABG runtime Frame distinct.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 277,
+          "end_line": 284,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-015B**: Overlays shall bind compositions\nover graphs; graphs shall compose nested graph calls and declared computations\nunder the same HoG execution law. Reference-frame evaluation contracts shall\nbe reusable through existing composition, Context, contract and policy\ndeclarations under `REQ-L-GTL3-CONTEXT-009..012`. First-class frame use shall not\nintroduce a separate topology object, callable kind, registry or interpreter.\nThe frame contract, overlay composition and ABG runtime Frame shall retain\ntheir distinct meanings.\n"
+        }
+      ]
+    },
+    {
+      "key": "candidate_and_start_boundaries",
+      "applies_to_keys": [
+        "candidate_family",
+        "public_start"
+      ],
+      "statement": "Every candidate shares one explicit outer contract and membership selects none. Public starts bind published callables and cannot expose bare vectors as Product-visible runtime authority.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 291,
+          "end_line": 297,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-017**: A candidate family shall\npreserve one explicit outer contract across its candidates. Candidate-family\nmembership shall not select a candidate for traversal.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-018**: A public start shall bind to a\npublished graph function. A public start shall not expose a bare graph vector\nas product-visible runtime authority.\n"
+        }
+      ]
+    },
+    {
+      "key": "selection_authority_chain",
+      "applies_to_keys": [
+        "runtime_lookup",
+        "selection_event"
+      ],
+      "statement": "A declared GTL selector or attributed external decision proposes identity; ABG validates/admit-emits its runtime selection truth and HoG follows the admitted Program relation. F_D/F_P/F_H ranking can propose only through declared GTL boundaries. Neither ABG nor the proposing implementation may own hidden selection policy; lookup is not traversal authority.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 299,
+          "end_line": 314,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-019**: Runtime lookup shall return\ncandidates or rejection diagnostics over admitted registry truth. Runtime\nlookup shall not become traversal authority. A declared GTL selector or\nattributed external decision proposes the selected identity, ABG admits that\nidentity as runtime truth, and HoG follows the admitted program relation.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-020**: An eligibility filter shall\naccount for candidate identity, interface, source contracts, target contracts,\ncontext, authority, overlay scope, namespace, version, provenance, readiness,\nproof state, and policy refs before a candidate can be selected.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-021**: A selection event shall be\nABG-admitted truth whenever candidate choice affects traversal. `F_D`, `F_P`,\nor `F_H` ranking may propose selection only through the declared GTL boundary;\nABG validates and admits the resulting identity and HoG applies it. Neither ABG\nnor the proposing implementation owns a hidden selection policy.\n"
+        }
+      ]
+    },
+    {
+      "key": "eligibility_dimensions",
+      "applies_to_keys": [
+        "eligibility_filter"
+      ],
+      "statement": "Before selection account for identity, interface, source/target contracts, context, authority, overlay scope, namespace, version, provenance, readiness, proof state and policy references.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 305,
+          "end_line": 308,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-020**: An eligibility filter shall\naccount for candidate identity, interface, source contracts, target contracts,\ncontext, authority, overlay scope, namespace, version, provenance, readiness,\nproof state, and policy refs before a candidate can be selected.\n"
+        }
+      ]
+    },
+    {
+      "key": "what_document_scope",
+      "applies_to_keys": [
+        "gtl_language"
+      ],
+      "statement": "Keep HOW accounts, validator capability maps and spec/implementation gap tables in design/commentary read models, outside this requirement family. Gap analysis classifies terminology, requirement, design, implementation, proof, documentation or deferred runtime-registry gaps and never replaces live WHAT.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 316,
+          "end_line": 319,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-022**: Implementation-specific HOW\naccounts, GTL-validator capability maps, and spec-vs-implementation gap\ntables shall not be written into this requirement family. They are design or\ncommentary read models over the live requirement surface.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 332,
+          "end_line": 336,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-025**: Gap analysis shall classify\ndifferences between WHAT and implementation as terminology gaps,\nrequirement gaps, design gaps, implementation gaps, proof gaps,\ndocumentation gaps, or deferred runtime-registry gaps. Gap analysis shall not\nreplace live requirement truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "downstream_domain_semantics",
+      "applies_to_keys": [
+        "system_library",
+        "product_library"
+      ],
+      "statement": "Software test/build/release, toolchain, service protocol and Product lifecycle policies remain downstream library/plugin/read-model meanings rather than system-library law unless proven generic across ODD domains.",
+      "conditions": [],
+      "exceptions": [
+        "Demonstrated genericity across ODD domains permits system-level treatment."
+      ],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 326,
+          "end_line": 330,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-024**: Downstream domain semantics such\nas software test, build, release, language toolchain, service protocol, or\nproduct lifecycle policy shall not be promoted into GTL/ABG system-library\nlaw. Such semantics belong in downstream product libraries, plugins, or read\nmodels unless proven generic across ODD domains.\n"
+        }
+      ]
+    },
+    {
+      "key": "node_type_single_publication",
+      "applies_to_keys": [
+        "node_type"
+      ],
+      "statement": "Use one reusable capability and the GTL library publication path with typed identity and node_type kind. No GraphFunction identity or parallel type publication path. Entries may be admitted, projected, imported, queried or used for validation/conformance, but never traversal work, public-start/graph-call authority or graph_function_selected truth.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 338,
+          "end_line": 351,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-026**: GTL shall provide one reusable\nnode-type capability for declaring named node contracts, binding nodes to\ntype refs, composing node types, checking type satisfaction, and composing\ngraph functions by endpoint type satisfaction.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-027**: A node type shall be published\nthrough the GTL library path as a non-callable node-type declaration with its\nown typed identity and the `node_type` registry kind. It shall not mint or use\na `GraphFunction` identity, and no parallel type publication path is lawful.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-028**: A `node_type` library entry may\nbe admitted, projected, imported, queried, and used by validator/conformance\nsurfaces. It shall not become runtime traversal work, public-start authority,\ngraph-call authority, or `graph_function_selected` truth.\n"
+        }
+      ]
+    },
+    {
+      "key": "node_type_conformance",
+      "applies_to_keys": [
+        "node_type"
+      ],
+      "statement": "Conformance is pure, deterministic, replayable and fail-closed. Reject unknown type references, digest drift or weakened schema, Markov, context, AssetSurface, authority, proof or output obligations rather than infer compatibility. Composed types preserve or strengthen every constituent obligation, including provenance.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 353,
+          "end_line": 361,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-029**: Type conformance shall be pure,\ndeterministic, replayable, and fail-closed. Unknown type refs, digest drift,\nweakened schema, markov, context, asset-surface, authority, proof, or output\nobligations shall reject rather than infer compatibility.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-030**: Composed node types shall\npreserve or strengthen every constituent node-type obligation. Composition\nshall not weaken required schema, markov, asset-surface, authority, proof,\noutput, context, or provenance obligations.\n"
+        }
+      ]
+    },
+    {
+      "key": "gtl_language_declaration_boundary",
+      "applies_to_keys": [
+        "gtl_language"
+      ],
+      "statement": "Each conformant tenant publishes embedded native typed declarations and equivalent serialized admission; no separate free-form syntax/parser family is required. GTL declares structure/contracts/hooks/work surfaces, never constructive tactics or hidden strategy. It stays graph-function-first, composition-first, recursive, higher-order, engine-agnostic and governance-visible, with opaque hook config rather than a policy semantic DSL.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 22,
+          "end_line": 27,
+          "quote": "**REQ-L-GTL3-LANGUAGE-002**: Each conformant build tenant shall publish GTL as\nan embedded typed declaration surface in its host language plus an equivalent\nserialized admission carrier. GTL shall not require a separate free-form\nprogramming syntax or parser family beyond those published contracts.\n\n**REQ-L-GTL3-LANGUAGE-003**: GTL shall be declarative. It shall declare lawful structure, contracts, hook attachment points, and semantic work surfaces rather than constructive tactics or hidden strategy.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 38,
+          "end_line": 40,
+          "quote": "**REQ-L-GTL3-LANGUAGE-006**: GTL shall not define a specialized in-language policy semantic language. It shall expose hook attachment points and opaque configuration only.\n\n**REQ-L-GTL3-LANGUAGE-007**: GTL shall remain graph-function-first, composition-first, recursion-capable, higher-order, engine-agnostic, and governance-visible without prescribing constructive tactics.\n"
+        }
+      ]
+    },
+    {
+      "key": "gtl_validator_hog_abg_split",
+      "applies_to_keys": [
+        "gtl_language"
+      ],
+      "statement": "GTL owns law/programs/graphs/contracts/algebra/seams; validator owns non-lowering whole-program judgment; HoG is direct executor; ABG is runtime-truth substrate owning admission/events/replay/lineage/provenance/correction/continuation/closure, neither a second language nor executor. Typed graph/Program/start/implementation/result-interface/catalog/carrier/traversal/bind judgments return validity, invalidity or unresolved semantics with no executable intermediate plan.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 29,
+          "end_line": 36,
+          "quote": "**REQ-L-GTL3-LANGUAGE-004**: GTL constructs shall be directly traversable by\nconformant executor frameworks. HoG is the ABIogenesis executor. ABG is the\nruntime-truth substrate around execution, not a second language or executor.\n\n**REQ-L-GTL3-LANGUAGE-005**: GTL owns language law, programs, graph structure,\ncontracts, algebra, and declared seams. The GTL validator owns non-lowering\nwhole-program judgment. HoG owns direct traversal. ABG owns runtime admission,\nevents, replay, lineage, provenance, correction, continuation, and closure.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 44,
+          "end_line": 49,
+          "quote": "**REQ-L-GTL3-LANGUAGE-009**: GTL shall use strong typed axioms and\nvalidator-visible contract law as its anti-drift mechanism for LLM-authored\nprograms. Graph, program, start, implementation, result-interface, catalog,\ncarrier, traversal, and bind declarations shall produce typed validity, typed\ninvalidity, or typed unresolved semantics without lowering into an executable\nintermediate program.\n"
+        }
+      ]
+    },
+    {
+      "key": "language_nonroles",
+      "applies_to_keys": [
+        "gtl_language"
+      ],
+      "statement": "GTL is not a planner, business-priority engine, hidden strategy selector, runtime-event model, concrete Worker store, backend-specific transport language or stepwise procedure for probabilistic Workers.",
+      "conditions": [],
+      "exceptions": [],
+      "uncertainty": "",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FAcceptance%20Criteria",
+          "start_line": 42,
+          "end_line": 42,
+          "quote": "**REQ-L-GTL3-LANGUAGE-008**: GTL shall not be a planner, business-priority engine, hidden strategy selector, runtime event model, concrete worker-identity store, backend-specific transport language, or step-by-step solution procedure for probabilistic workers.\n"
+        }
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "type_sensitive_port_wiring",
+      "applies_to_keys": [
+        "node_type"
+      ],
+      "allowed": [
+        "Connect differently named ports only through explicit wiring or ratified unambiguous auto-wiring proving provided endpoint type satisfies required type."
+      ],
+      "forbidden": [
+        "Conflating port identity with endpoint type contract.",
+        "Weakening any constituent type obligation in composition."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 358,
+          "end_line": 367,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-030**: Composed node types shall\npreserve or strengthen every constituent node-type obligation. Composition\nshall not weaken required schema, markov, asset-surface, authority, proof,\noutput, context, or provenance obligations.\n\n**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-031**: Type-sensitive graph-function\ncomposition shall distinguish port identity from endpoint type contract. It\nmay connect differently named ports only when an explicit wiring or ratified\nunambiguous auto-wiring proves the provided endpoint type satisfies the\nrequired endpoint type.\n"
+        }
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "referenced_frame_law",
+      "subject_key": "reference_frame_composition",
+      "uncertainty": "The complete Context frame-contract clauses 009..012 and concrete admitted frame definitions are outside this chunk.",
+      "consequence": "Preserve distinct carrier meanings and required references without inventing selection, sufficiency or precedence.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+          "start_line": 277,
+          "end_line": 284,
+          "quote": "**REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL-015B**: Overlays shall bind compositions\nover graphs; graphs shall compose nested graph calls and declared computations\nunder the same HoG execution law. Reference-frame evaluation contracts shall\nbe reusable through existing composition, Context, contract and policy\ndeclarations under `REQ-L-GTL3-CONTEXT-009..012`. First-class frame use shall not\nintroduce a separate topology object, callable kind, registry or interpreter.\nThe frame contract, overlay composition and ABG runtime Frame shall retain\ntheir distinct meanings.\n"
+        }
+      ]
+    },
+    {
+      "key": "language_laws_body_missing",
+      "subject_key": "language_laws",
+      "uncertainty": "Only the governing-law family purpose appears in this chunk; its substantive acceptance criteria occur elsewhere in the supplied run.",
+      "consequence": "No governing axiom is inferred from the heading or shared label; re-enter the exact law sections.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FPurpose",
+          "start_line": 12,
+          "end_line": 12,
+          "quote": "State the governing language laws of GTL 3.\n"
+        }
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document header metadata and historical authority links are not imported into the modeled domain."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Document header metadata and historical authority links are not imported into the modeled domain."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FSubordinate%20Vocabulary",
+      "decision": "retained",
+      "keys": [
+        "capability_catalog",
+        "publication_inventory",
+        "runtime_registry",
+        "library",
+        "system_library",
+        "product_library",
+        "ledger",
+        "event_stream",
+        "projection",
+        "read_model",
+        "overlay_row",
+        "overlay_frame",
+        "candidate_family",
+        "selection_event",
+        "runtime_lookup",
+        "eligibility_filter",
+        "public_start",
+        "lookup_queries_registry",
+        "library_requires_registry_admission",
+        "catalogs_are_qualified_indexes",
+        "library_authority"
+      ],
+      "reason": "Retains vocabulary and language identity with its material owner, condition and non-authority distinctions."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FPurpose",
+      "decision": "retained",
+      "keys": [
+        "gtl_language"
+      ],
+      "reason": "Retains vocabulary and language identity with its material owner, condition and non-authority distinctions."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE.md#REQ-L-GTL3-LANGUAGE%20%E2%80%94%20Language%20Identity%20And%20Boundary%2FAcceptance%20Criteria",
+      "decision": "retained",
+      "keys": [
+        "gtl_language",
+        "gtl_language_declaration_boundary",
+        "gtl_validator_hog_abg_split",
+        "language_nonroles"
+      ],
+      "reason": "Retains vocabulary and language identity with its material owner, condition and non-authority distinctions."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL.md#REQ-L-GTL3-LANGUAGE-CAPABILITY-MODEL%20-%20GTL%20Language%20Capability%20Model%2FAcceptance%20Criteria",
+      "decision": "residual",
+      "keys": [
+        "selection_event",
+        "runtime_lookup",
+        "node_type",
+        "lookup_queries_registry",
+        "selection_follows_eligible_proposal",
+        "capability_model_obligations",
+        "what_how_owner_conservation",
+        "catalogs_are_qualified_indexes",
+        "registry_requires_admitted_entries",
+        "library_authority",
+        "ledger_and_event_primacy",
+        "projection_cannot_invent",
+        "read_model_read_only",
+        "overlay_row_frame_separation",
+        "library_program_workspace_split",
+        "reference_frame_composition",
+        "candidate_and_start_boundaries",
+        "selection_authority_chain",
+        "eligibility_dimensions",
+        "what_document_scope",
+        "downstream_domain_semantics",
+        "node_type_single_publication",
+        "node_type_conformance",
+        "type_sensitive_port_wiring",
+        "referenced_frame_law"
+      ],
+      "reason": "Retains capability obligations and restrictions while identifying the externally specified frame-contract law."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/gtl/REQ-L-GTL3-LAWS.md#REQ-L-GTL3-LAWS%20%E2%80%94%20Language%20Laws%2FPurpose",
+      "decision": "residual",
+      "keys": [
+        "language_laws",
+        "language_laws_body_missing"
+      ],
+      "reason": "Retains the family purpose without inventing absent governing-law content."
+    }
+  ],
+  "limitations": [
+    "Vocabulary describes distinct declaration, query, event and projection roles; it does not instantiate a registry or emit selection.",
+    "Exact frame-contract law and the next law-family body are source-reentry dependencies. No cross-chunk identity unification is implied.",
+    "Static catalog/publication/conformance evidence is not represented as runtime authority.",
+    "Header metadata is deliberately omitted as operative truth."
+  ]
+}

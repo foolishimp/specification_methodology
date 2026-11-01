@@ -1,0 +1,446 @@
+{
+  "concepts": [
+    {
+      "key": "qualification_lanes",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FQualification%20Lanes",
+          "start_line": 78,
+          "end_line": 90,
+          "quote": "**REQ-P-QUAL-013**: Smoke tests and qualification tests shall be **structurally distinct test classes** with different assertion contracts:\n  - Smoke: asserts the protocol completed (response exists, judge ran). Does not assert artifact quality.\n  - Qualification: asserts the judge passed. This is the release gate.\n\n**REQ-P-QUAL-014**: A qualification question that claims statistical\nconfidence shall declare and parameterize its independent run count. The count\nshall be a named constant rather than a magic number, and the resulting claim\nshall state the population it supports. A bounded deterministic, installed, or\nlive steel-thread gate may require one declared run when it claims only that\nthe exact scenario completed; ABG 5.0 does not claim generic pass@k\ncharacterization.\n\n**REQ-P-QUAL-015**: Entropy campaign tests (sequential dispatches in a shared sandbox, delta trend over accumulated state) shall be a **separate lane** from fresh-sandbox qualification. Entropy campaigns require artifact integrity (REQ-P-QUAL-007) to be satisfied — no fallback masking."
+        }
+      ],
+      "label": "Qualification lanes",
+      "definition": "Smoke asserts protocol completion (response exists/judge ran), not artifact quality. Qualification asserts judge pass and serves as release gate; shared-state entropy campaigns are separate from fresh-sandbox qualification.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "persistent_run_archive",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FForensic%20Evidence",
+          "start_line": 96,
+          "end_line": 108,
+          "quote": "**REQ-P-QUAL-016**: Every live qualification run shall **archive** the following artifacts for postmortem:\n  - The manifest JSON (what was dispatched)\n  - The prompt text (what the agent received)\n  - The raw response (what the agent returned)\n  - The artifact content (what was judged)\n  - The judge verdict (pass/fail with per-criterion evidence)\n  - The model identifier and transport method\n\n**REQ-P-QUAL-017**: Archive artifacts shall be written **before** the test assertion fires. A failing test that destroys its own evidence is a forensic dead end.\n\n**REQ-P-QUAL-018**: The archive path shall encode **test identity** (scenario name, run ID, timestamp) so that postmortem can correlate a specific test failure to its evidence without grepping.\n\n**REQ-P-QUAL-018A**: Every sandbox-backed scenario or qualification run shall support a **persistent run archive** rooted under a stable, non-temporary test-run directory. Pytest temporary workspaces are execution scratch space; they are not sufficient as the postmortem record."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FForensic%20Evidence",
+          "start_line": 123,
+          "end_line": 127,
+          "quote": "**REQ-P-QUAL-018D**: Persistent run archives shall be **immutable and non-overwriting**. Each run receives a new path keyed by scenario/use-case identity plus sortable timestamp; a later run shall not destroy or mutate a prior archive.\n\n**REQ-P-QUAL-018E**: Archive materialization shall occur **before** sandbox cleanup or test fixture teardown. If execution uses temporary directories, the archive copy must be completed before those directories are eligible for deletion.\n\n**REQ-P-QUAL-018F**: The archive structure shall be **scenario-oriented**, not merely test-run-oriented. A postmortem operator shall be able to navigate by use case first, then timestamped run, without requiring pytest internals or temporary-directory names."
+        }
+      ],
+      "label": "Persistent scenario archive",
+      "definition": "Stable nontemporary immutable per-scenario/use-case and sortable-timestamp archive preserves live qualification material for postmortem, not merely execution scratch or test internals.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "installed_qualification",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FInstalled%20Sandbox%20Population",
+          "start_line": 133,
+          "end_line": 141,
+          "quote": "The installed substrate contract is governed by\n[REQ-P-INSTALL.md](./REQ-P-INSTALL.md). Qualification requirements here define\nthe proving obligations over that product contract.\n\n**REQ-P-QUAL-018G**: Any sandbox-backed downstream qualification that claims installed ABG substrate truth shall populate the sandbox through a public ABG installer surface. Source-tree imports, private test helpers, or harness-only package bindings are not sufficient closure evidence for installed runtime behavior.\n\n**REQ-P-QUAL-018H**: A public ABG installer shall write inspectable installed-runtime truth that includes package identity, installer manifest path, install manifest path, command binding paths, runtime identity, event/projection evidence roots, and the installed package root used by downstream execution.\n\n**REQ-P-QUAL-018I**: Installer qualification shall preserve a persistent archive/postmortem under the stable test-run archive root. The archive shall include install manifest evidence, installer manifest evidence, package identity, command binding evidence, runtime identity, event/projection evidence, and an operator-facing postmortem summary."
+        }
+      ],
+      "label": "Installed substrate qualification",
+      "definition": "Proving obligations over REQ-P-INSTALL require downstream sandboxes claiming installed truth to use public ABG installer, retaining inspectable package/manifest/command/runtime/root truth and persistent proof.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "diff_execution_witness",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FDiff-Execution%20Witness%20Gate",
+          "start_line": 147,
+          "end_line": 153,
+          "quote": "**REQ-P-QUAL-025**: Approval shall include attributable execution evidence for\nthe changed behavior and its affected owning boundaries, including meaningful\nnearest-negative cases. Select the proof level from the supported claim:\ncomponent checks do not establish installed outcomes, and export enumeration\nor blanket coverage of every never-committed file does not establish behavior.\nStill-valid exact-subject evidence may be reused with its scope and identity;\nunexercised material changes remain explicit limitations."
+        }
+      ],
+      "label": "Diff-execution witness",
+      "definition": "Approval includes attributable changed-behavior execution and affected owning boundaries, including meaningful nearest negatives, at proof level matching the claim.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "development_rc_preview",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 167,
+          "end_line": 174,
+          "quote": "Scope clarification under the Product owner's 2026-10-30 development RC1\npreview direction: the external owner/operator preview publication selected by\nProduct Release Boundaries is explicitly unqualified and is not an\n`AF-25`/`release.snapshot` output or a completed S07 qualification claim.\nIts source/artifact/install identity, declared claim, known gaps and actual\nmechanical checks are recorded without an invented green verdict. The native\ngreen-gated snapshot and final acceptance requirements below remain unchanged;\nthe preview supplies no credit toward missing qualification."
+        }
+      ],
+      "label": "Unqualified development RC1 preview",
+      "definition": "Owner/operator external preview under Product owner 2026-10-30 direction is explicitly unqualified, not AF-25/release.snapshot output or completed S07.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "release_snapshot_bundle",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 176,
+          "end_line": 186,
+          "quote": "Release snapshot bundles are release-process output artifacts. They record one\nalready-qualified published RC cut; later acceptance reports that same cut.\nThey do not make a version identifier live constitutional project truth or\nbecome an input to the qualification that authorized their creation.\n\n**REQ-P-QUAL-050**: `release.snapshot` / `AF-25` shall materialize each\npackage-first RC as one immutable, versioned cut and snapshot bundle only after\nadmission of the exact same-subject and same-law-basis green, non-bypassed\n`ExactCandidateQualification<verdict>` projection for its `pre_rc_candidate`.\nIts `tapped_release` member shall report qualification and actual human\nacceptance of that same unchanged RC, not materialize another cut or snapshot."
+        }
+      ],
+      "label": "Qualified immutable RC snapshot bundle",
+      "definition": "Release-process output records already-qualified published RC cut; later tap reports same unchanged cut, never live constitutional version truth or an input to its own qualification.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "installed_evidence_archived",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FInstalled%20Sandbox%20Population",
+          "start_line": 141,
+          "end_line": 141,
+          "quote": "**REQ-P-QUAL-018I**: Installer qualification shall preserve a persistent archive/postmortem under the stable test-run archive root. The archive shall include install manifest evidence, installer manifest evidence, package identity, command binding evidence, runtime identity, event/projection evidence, and an operator-facing postmortem summary."
+        }
+      ],
+      "kind": "requires",
+      "source_key": "installed_qualification",
+      "target_key": "persistent_run_archive",
+      "meaning": "Installer qualification preserves persistent postmortem under stable test-run archive root.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "constraints": [
+    {
+      "key": "qualification_run_count",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FQualification%20Lanes",
+          "start_line": 82,
+          "end_line": 90,
+          "quote": "**REQ-P-QUAL-014**: A qualification question that claims statistical\nconfidence shall declare and parameterize its independent run count. The count\nshall be a named constant rather than a magic number, and the resulting claim\nshall state the population it supports. A bounded deterministic, installed, or\nlive steel-thread gate may require one declared run when it claims only that\nthe exact scenario completed; ABG 5.0 does not claim generic pass@k\ncharacterization.\n\n**REQ-P-QUAL-015**: Entropy campaign tests (sequential dispatches in a shared sandbox, delta trend over accumulated state) shall be a **separate lane** from fresh-sandbox qualification. Entropy campaigns require artifact integrity (REQ-P-QUAL-007) to be satisfied — no fallback masking."
+        }
+      ],
+      "applies_to_keys": [
+        "qualification_lanes"
+      ],
+      "statement": "Statistical-confidence questions declare/parameterize independent run count as named constant and state supported population. A bounded deterministic/installed/live steel-thread gate may declare one run when only exact scenario completion is claimed; 5.0 does not claim generic pass@k. Entropy campaigns still require artifact integrity without fallback masking.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "archive_live_evidence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FForensic%20Evidence",
+          "start_line": 96,
+          "end_line": 116,
+          "quote": "**REQ-P-QUAL-016**: Every live qualification run shall **archive** the following artifacts for postmortem:\n  - The manifest JSON (what was dispatched)\n  - The prompt text (what the agent received)\n  - The raw response (what the agent returned)\n  - The artifact content (what was judged)\n  - The judge verdict (pass/fail with per-criterion evidence)\n  - The model identifier and transport method\n\n**REQ-P-QUAL-017**: Archive artifacts shall be written **before** the test assertion fires. A failing test that destroys its own evidence is a forensic dead end.\n\n**REQ-P-QUAL-018**: The archive path shall encode **test identity** (scenario name, run ID, timestamp) so that postmortem can correlate a specific test failure to its evidence without grepping.\n\n**REQ-P-QUAL-018A**: Every sandbox-backed scenario or qualification run shall support a **persistent run archive** rooted under a stable, non-temporary test-run directory. Pytest temporary workspaces are execution scratch space; they are not sufficient as the postmortem record.\n\n**REQ-P-QUAL-018B**: A persistent run archive shall preserve the sufficient,\nexact material for postmortem of its selected installed path: source/artifact\nidentities, actual requests and results, relevant worksite changes, native\nprocess/command observations, event resource identity and genuine readback or\nclose receipts where produced. Historical directory names and copying\nirrelevant build caches are not requirements; missing terminal evidence\nremains explicitly missing."
+        }
+      ],
+      "applies_to_keys": [
+        "persistent_run_archive"
+      ],
+      "statement": "Every live qualification archives dispatch manifest, actual prompt/raw response, judged artifact, per-criterion judge verdict, model and transport before assertions. Selected installed-path archive retains exact source/artifact identities, requests/results, relevant worksite changes, native process/command observations, event-resource identity and genuine readback/close receipts where produced; missing terminal evidence stays explicit, without requiring historical directory names or irrelevant caches.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "archive_metadata_and_lifetime",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FForensic%20Evidence",
+          "start_line": 106,
+          "end_line": 127,
+          "quote": "**REQ-P-QUAL-018**: The archive path shall encode **test identity** (scenario name, run ID, timestamp) so that postmortem can correlate a specific test failure to its evidence without grepping.\n\n**REQ-P-QUAL-018A**: Every sandbox-backed scenario or qualification run shall support a **persistent run archive** rooted under a stable, non-temporary test-run directory. Pytest temporary workspaces are execution scratch space; they are not sufficient as the postmortem record.\n\n**REQ-P-QUAL-018B**: A persistent run archive shall preserve the sufficient,\nexact material for postmortem of its selected installed path: source/artifact\nidentities, actual requests and results, relevant worksite changes, native\nprocess/command observations, event resource identity and genuine readback or\nclose receipts where produced. Historical directory names and copying\nirrelevant build caches are not requirements; missing terminal evidence\nremains explicitly missing.\n\n**REQ-P-QUAL-018C**: A persistent run archive shall also preserve **run metadata and operator-facing summaries**, including at minimum:\n  - a run metadata record (`run.json` or equivalent) containing timestamp, test identity, source commit, interpreter, and invoked commands\n  - a summarized postmortem view (`summary.json` or equivalent) containing convergence state, failing evaluators, and key artifact references\n  - captured subprocess stdout/stderr where subprocess transport or CLI orchestration is involved\n\n**REQ-P-QUAL-018D**: Persistent run archives shall be **immutable and non-overwriting**. Each run receives a new path keyed by scenario/use-case identity plus sortable timestamp; a later run shall not destroy or mutate a prior archive.\n\n**REQ-P-QUAL-018E**: Archive materialization shall occur **before** sandbox cleanup or test fixture teardown. If execution uses temporary directories, the archive copy must be completed before those directories are eligible for deletion.\n\n**REQ-P-QUAL-018F**: The archive structure shall be **scenario-oriented**, not merely test-run-oriented. A postmortem operator shall be able to navigate by use case first, then timestamped run, without requiring pytest internals or temporary-directory names."
+        }
+      ],
+      "applies_to_keys": [
+        "persistent_run_archive"
+      ],
+      "statement": "Path encodes test/scenario/Run/time, navigable use-case first then run. Metadata includes timestamp, test identity, source commit, interpreter and commands; summary includes convergence, failing evaluators and key artifacts; subprocess stdout/stderr captured when applicable. Each new immutable non-overwriting path preserves prior archives; materialization completes before cleanup/teardown or temporary-directory deletion.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "installer_proof_surface",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FInstalled%20Sandbox%20Population",
+          "start_line": 137,
+          "end_line": 141,
+          "quote": "**REQ-P-QUAL-018G**: Any sandbox-backed downstream qualification that claims installed ABG substrate truth shall populate the sandbox through a public ABG installer surface. Source-tree imports, private test helpers, or harness-only package bindings are not sufficient closure evidence for installed runtime behavior.\n\n**REQ-P-QUAL-018H**: A public ABG installer shall write inspectable installed-runtime truth that includes package identity, installer manifest path, install manifest path, command binding paths, runtime identity, event/projection evidence roots, and the installed package root used by downstream execution.\n\n**REQ-P-QUAL-018I**: Installer qualification shall preserve a persistent archive/postmortem under the stable test-run archive root. The archive shall include install manifest evidence, installer manifest evidence, package identity, command binding evidence, runtime identity, event/projection evidence, and an operator-facing postmortem summary."
+        }
+      ],
+      "applies_to_keys": [
+        "installed_qualification"
+      ],
+      "statement": "Source imports/private helpers/harness-only bindings are insufficient installed closure proof. Installer writes package identity, installer/install manifest paths, command paths, runtime identity, event/projection roots and execution package root. Persistent archive includes manifests/package/commands/runtime/event-projection evidence and operator postmortem.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "proof_claim_boundary",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FDiff-Execution%20Witness%20Gate",
+          "start_line": 147,
+          "end_line": 153,
+          "quote": "**REQ-P-QUAL-025**: Approval shall include attributable execution evidence for\nthe changed behavior and its affected owning boundaries, including meaningful\nnearest-negative cases. Select the proof level from the supported claim:\ncomponent checks do not establish installed outcomes, and export enumeration\nor blanket coverage of every never-committed file does not establish behavior.\nStill-valid exact-subject evidence may be reused with its scope and identity;\nunexercised material changes remain explicit limitations."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FInstalled%20Proof",
+          "start_line": 157,
+          "end_line": 161,
+          "quote": "**REQ-P-QUAL-026**: Any qualification claim of installed Product behavior shall\nexecute through the packed-and-installed ordinary surface. Source component\nchecks retain their narrower claims. Historical test-file exemption counts,\nprivate legacy APIs and a particular migration ticket do not define release\nqualification or excuse missing current installed evidence."
+        }
+      ],
+      "applies_to_keys": [
+        "diff_execution_witness",
+        "installed_qualification"
+      ],
+      "statement": "Component checks do not establish installed outcomes; exports or blanket coverage of never-committed files do not establish behavior. Installed Product qualification executes packed-and-installed ordinary surface; source checks stay narrower. Historical exemption counts, private legacy APIs and migration tickets neither define qualification nor excuse missing installed evidence.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "preview_no_qualification_credit",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 167,
+          "end_line": 174,
+          "quote": "Scope clarification under the Product owner's 2026-10-30 development RC1\npreview direction: the external owner/operator preview publication selected by\nProduct Release Boundaries is explicitly unqualified and is not an\n`AF-25`/`release.snapshot` output or a completed S07 qualification claim.\nIts source/artifact/install identity, declared claim, known gaps and actual\nmechanical checks are recorded without an invented green verdict. The native\ngreen-gated snapshot and final acceptance requirements below remain unchanged;\nthe preview supplies no credit toward missing qualification."
+        }
+      ],
+      "applies_to_keys": [
+        "development_rc_preview"
+      ],
+      "statement": "Record source/artifact/install identity, declared claim, known gaps and actual mechanical checks without invented green verdict. Native green snapshot/final acceptance law is unchanged; preview gives no credit for missing qualification.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "snapshot_gate_and_identity",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 181,
+          "end_line": 186,
+          "quote": "**REQ-P-QUAL-050**: `release.snapshot` / `AF-25` shall materialize each\npackage-first RC as one immutable, versioned cut and snapshot bundle only after\nadmission of the exact same-subject and same-law-basis green, non-bypassed\n`ExactCandidateQualification<verdict>` projection for its `pre_rc_candidate`.\nIts `tapped_release` member shall report qualification and actual human\nacceptance of that same unchanged RC, not materialize another cut or snapshot."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 199,
+          "end_line": 208,
+          "quote": "**REQ-P-QUAL-053**: Snapshot creation shall fail closed when the source tree is\ndirty, when the package identity does not match the requested release identity,\nor when the target versioned snapshot root already contains files.\n\n**REQ-P-QUAL-054**: Snapshot creation shall compute and record deterministic\nchecksums for the package tarball and generated release snapshot files.\n\n**REQ-P-QUAL-055**: Release snapshot tooling shall package an explicit source\nroot/ref and shall not silently reinterpret the mutable development checkout as\nan already tagged release cut."
+        }
+      ],
+      "applies_to_keys": [
+        "release_snapshot_bundle"
+      ],
+      "statement": "AF-25/release.snapshot creates one immutable versioned package-first RC cut/bundle only after exact same-subject/same-law green non-bypassed pre_rc_candidate verdict. tapped_release reports qualification and actual human acceptance of unchanged RC, not another cut/snapshot. Creation fails closed for dirty source, mismatched requested/package identity or populated target root; package explicit source root/ref, never reinterpret mutable checkout as tagged release.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "snapshot_artifact_evidence",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 188,
+          "end_line": 204,
+          "quote": "**REQ-P-QUAL-051**: The snapshot bundle shall include, at minimum, the package\ntarball, release snapshot manifest, checksum file, release note copy when one\nexists, package identity, source ref, source commit, build command, pack command,\nand verification facts.\n\n**REQ-P-QUAL-052**: The release snapshot manifest shall be the authoritative\nread model for the snapshot artifact set produced by its cut. Stray tenant-root\ntarballs, dry-run pack output, release-note prose, or the snapshot itself shall\nnot substitute for the qualification basis, authenticated assessment results, or verdict\nthat authorized the cut.\n\n**REQ-P-QUAL-053**: Snapshot creation shall fail closed when the source tree is\ndirty, when the package identity does not match the requested release identity,\nor when the target versioned snapshot root already contains files.\n\n**REQ-P-QUAL-054**: Snapshot creation shall compute and record deterministic\nchecksums for the package tarball and generated release snapshot files."
+        }
+      ],
+      "applies_to_keys": [
+        "release_snapshot_bundle"
+      ],
+      "statement": "Bundle includes at least tarball, manifest, checksum file, existing release-note copy, package identity, source ref/commit, build/pack commands and verification facts. Record deterministic tarball/generated-file checksums. Manifest is authoritative artifact-set read model; stray tarballs/dry-run pack/notes/snapshot cannot replace basis, authenticated assessments or authorizing verdict.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "snapshot_not_evaluator",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 210,
+          "end_line": 218,
+          "quote": "**REQ-P-QUAL-056**: The release snapshot shall be **self-certifying as a bounded\nread model**, not as a second evaluator. Snapshot creation embeds the exact\nqualification subject and law-basis refs, complete assessment and execution-evidence citations,\ngreen non-bypassed verdict, build/lint/test outcomes, and parsed test summary in\nthe release snapshot manifest. It shall not execute or reinterpret those gates.\nA red, incomplete, stale, cross-basis, or bypassed result refuses a\nRELEASE-GRADE cut. Declared bypass booleans may be honored only for an explicitly\nnon-release snapshot; a bypassed gate records null evidence and shall never be\nrepresented as green or promotable."
+        }
+      ],
+      "applies_to_keys": [
+        "release_snapshot_bundle"
+      ],
+      "statement": "Bounded self-certifying read model embeds exact subject/law refs, complete assessments/execution citations, green non-bypassed verdict, build/lint/test outcomes and parsed summary; never executes or reinterprets gates. Red/incomplete/stale/cross-basis/bypassed refuses release-grade cut. Explicit non-release snapshot may honor declared bypasses only with null evidence and never green/promotable representation.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "latitude": [
+    {
+      "key": "exact_evidence_reuse",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FDiff-Execution%20Witness%20Gate",
+          "start_line": 147,
+          "end_line": 153,
+          "quote": "**REQ-P-QUAL-025**: Approval shall include attributable execution evidence for\nthe changed behavior and its affected owning boundaries, including meaningful\nnearest-negative cases. Select the proof level from the supported claim:\ncomponent checks do not establish installed outcomes, and export enumeration\nor blanket coverage of every never-committed file does not establish behavior.\nStill-valid exact-subject evidence may be reused with its scope and identity;\nunexercised material changes remain explicit limitations."
+        }
+      ],
+      "applies_to_keys": [
+        "diff_execution_witness"
+      ],
+      "allowed": [
+        "Reuse still-valid exact-subject evidence with scope and identity."
+      ],
+      "forbidden": [
+        "Hide unexercised material changes; they remain explicit limitations."
+      ]
+    },
+    {
+      "key": "nonrelease_snapshot_bypass",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 210,
+          "end_line": 218,
+          "quote": "**REQ-P-QUAL-056**: The release snapshot shall be **self-certifying as a bounded\nread model**, not as a second evaluator. Snapshot creation embeds the exact\nqualification subject and law-basis refs, complete assessment and execution-evidence citations,\ngreen non-bypassed verdict, build/lint/test outcomes, and parsed test summary in\nthe release snapshot manifest. It shall not execute or reinterpret those gates.\nA red, incomplete, stale, cross-basis, or bypassed result refuses a\nRELEASE-GRADE cut. Declared bypass booleans may be honored only for an explicitly\nnon-release snapshot; a bypassed gate records null evidence and shall never be\nrepresented as green or promotable."
+        }
+      ],
+      "applies_to_keys": [
+        "release_snapshot_bundle"
+      ],
+      "allowed": [
+        "Honor declared bypass booleans only for explicitly non-release snapshot, recording null evidence."
+      ],
+      "forbidden": [
+        "Represent bypassed gates as green/promotable or admit release-grade bypasses."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "declared_snapshot_bypass_gap",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 220,
+          "end_line": 224,
+          "quote": "Gap: the current release-snapshot request still accepts build, lint, and test\nbypass booleans for a release-grade request. T-247 shall make release-grade\nadmission reject every mandatory-gate or exact-cut bypass and pin the red and\nbypassed differentials before the ABIogenesis 5.0 exact-candidate gate freezes\nits qualification input."
+        }
+      ],
+      "subject_key": "release_snapshot_bundle",
+      "uncertainty": "Source explicitly reports current request still accepts build/lint/test bypass booleans for release-grade requests and assigns T-247 repair/red-bypassed differentials before exact-candidate freeze. Implementation status is not supplied.",
+      "consequence": "Retain this as a declared unresolved gap, not a verified current defect or completed repair; source re-entry/evidence is needed before any gate-completeness claim."
+    },
+    {
+      "key": "external_release_and_install_basis",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FInstalled%20Sandbox%20Population",
+          "start_line": 133,
+          "end_line": 135,
+          "quote": "The installed substrate contract is governed by\n[REQ-P-INSTALL.md](./REQ-P-INSTALL.md). Qualification requirements here define\nthe proving obligations over that product contract."
+        },
+        {
+          "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+          "start_line": 167,
+          "end_line": 184,
+          "quote": "Scope clarification under the Product owner's 2026-10-30 development RC1\npreview direction: the external owner/operator preview publication selected by\nProduct Release Boundaries is explicitly unqualified and is not an\n`AF-25`/`release.snapshot` output or a completed S07 qualification claim.\nIts source/artifact/install identity, declared claim, known gaps and actual\nmechanical checks are recorded without an invented green verdict. The native\ngreen-gated snapshot and final acceptance requirements below remain unchanged;\nthe preview supplies no credit toward missing qualification.\n\nRelease snapshot bundles are release-process output artifacts. They record one\nalready-qualified published RC cut; later acceptance reports that same cut.\nThey do not make a version identifier live constitutional project truth or\nbecome an input to the qualification that authorized their creation.\n\n**REQ-P-QUAL-050**: `release.snapshot` / `AF-25` shall materialize each\npackage-first RC as one immutable, versioned cut and snapshot bundle only after\nadmission of the exact same-subject and same-law-basis green, non-bypassed\n`ExactCandidateQualification<verdict>` projection for its `pre_rc_candidate`."
+        }
+      ],
+      "subject_key": "installed_qualification",
+      "uncertainty": "REQ-P-INSTALL, Product Release Boundaries, exact verdict family and T-247 content are external to this chunk.",
+      "consequence": "Keep references unresolved; no installed evidence, qualification or release acceptance is inferred."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FQualification%20Lanes",
+      "decision": "retained",
+      "keys": [
+        "qualification_lanes",
+        "qualification_run_count"
+      ],
+      "reason": "Retain smoke/qualification/entropy distinctions and bounded-versus-statistical run claims."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FForensic%20Evidence",
+      "decision": "retained",
+      "keys": [
+        "persistent_run_archive",
+        "archive_live_evidence",
+        "archive_metadata_and_lifetime"
+      ],
+      "reason": "Retain exact archive contents, metadata, order, immutability and teardown prerequisites."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FInstalled%20Sandbox%20Population",
+      "decision": "residual",
+      "keys": [
+        "installed_qualification",
+        "installed_evidence_archived",
+        "installer_proof_surface",
+        "external_release_and_install_basis"
+      ],
+      "reason": "Retain public-installer proof and archive; installer owner contract remains external."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FDiff-Execution%20Witness%20Gate",
+      "decision": "retained",
+      "keys": [
+        "diff_execution_witness",
+        "proof_claim_boundary",
+        "exact_evidence_reuse"
+      ],
+      "reason": "Retain attributed change evidence, negatives, scoped reuse and limitations."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FInstalled%20Proof",
+      "decision": "retained",
+      "keys": [
+        "proof_claim_boundary"
+      ],
+      "reason": "Retain mandatory ordinary installed proof boundary."
+    },
+    {
+      "section_id": "urn:a-c:project:3267f8b99452db6ee9e5991cf3b117ab6b31b1323e90e18af7adc6546d9f0420/source/specification/requirements/product/REQ-P-QUAL.md#REQ-P-QUAL%20%E2%80%94%20Qualification%20Infrastructure%2FRelease%20Snapshot%20Bundles",
+      "decision": "residual",
+      "keys": [
+        "development_rc_preview",
+        "release_snapshot_bundle",
+        "preview_no_qualification_credit",
+        "snapshot_gate_and_identity",
+        "snapshot_artifact_evidence",
+        "snapshot_not_evaluator",
+        "nonrelease_snapshot_bypass",
+        "declared_snapshot_bypass_gap",
+        "external_release_and_install_basis"
+      ],
+      "reason": "Retain unqualified preview carveout, native green snapshot gate and explicit unresolved bypass gap."
+    }
+  ],
+  "limitations": [
+    "Declared preview and snapshot rules are not qualification or publication evidence.",
+    "The source states a bypass gap; no implementation inspection establishes its current status.",
+    "External installer/release/qualification/ticket references require source re-entry."
+  ]
+}
