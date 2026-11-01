@@ -7,21 +7,27 @@ Methodology product has two source projects side by side under its
 the toolchain manager; `v3/` owns STDO 3 source and standalone native releases
 of the same product. Select a child Product before working on its source.
 
-## STDO 3.0.2 release
+## STDO 3.0.3 release
 
-**STDO 3.0.2 is published as a normal standalone release and GitHub Latest**,
-without an RC suffix: [download the release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.2),
-immutable tag `specification_methodology/v3.0.2`. The
+**STDO 3.0.3 is published as a normal standalone release and GitHub Latest**,
+without an RC suffix: [download the release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.3),
+immutable tag `specification_methodology/v3.0.3`. The
 [installation instructions](specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md#new-project)
-acquire the distributed manager wheel and native manifest. All six assets were
-downloaded and verified, followed by a fresh isolated public installation and
-portable supplement verification. The [release record](specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/RELEASED.md)
+acquire the distributed manager wheel and native manifest. All four assets were
+downloaded and verified, followed by a fresh isolated public installation,
+documentation resolution and checked source-tool extraction. The
+[release record](specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/RELEASED.md)
 binds the exact identities, evidence and retained qualification limits.
 
-This standalone payload is the methodology and its `spec` plugin, with a separate
-bounded representation supplement. It does not select the older v2 matched cohort
-or migrate Skills from its installed 3.0.1 basis. Installing a release and adopting
-it for a Product remain separate operations.
+The payload includes the methodology and `spec` plugin, a shared offline
+[documentation home](specification_methodology/v3/build_tenants/common/standards/documentation/README.md)
+for Constraints, the reviewed ABI code example and Lean proofs, plus the pinned
+[a_c/Skills source tools](specification_methodology/v3/build_tenants/common/standards/tooling/README.md).
+No separate representation supplement is needed. It does not select the older
+v2 matched cohort or migrate a_c/Skills construction bases. Installing a release
+and adopting it for a Product remain separate operations. Published
+[STDO 3.0.2](specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/RELEASED.md)
+remains the immutable predecessor.
 
 This repository co-locates six peer source projects:
 
@@ -92,7 +98,7 @@ Product Definition selects its exact governing cut.
 
 ## Coordinated Release-Matched Cohort
 
-This older cohort relation is not selected for the standalone 3.0.2 release above.
+This older cohort relation is not selected for the standalone 3.0.3 release above.
 For the default scope of an owner instruction to release STDO, follow
 [`Meaning Of A Release Request`](STACK_RELEASE.md#meaning-of-a-release-request).
 

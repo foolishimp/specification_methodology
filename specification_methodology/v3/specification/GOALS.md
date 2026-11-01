@@ -4,7 +4,8 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
-**The STDO 3.0.3 native candidate now includes the selected tooling and offline readers**
+**STDO 3.0.3 is released as normal standalone GitHub Latest**, including the
+selected tooling and offline readers
 under [T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md).
 The [preparation return](../.ai-workspace/work/STDO303_DELIVERY/tooling-integration-001/README.md)
 binds 106 native payload files, the 191-file a_c/Skills source archive, explicit
@@ -19,11 +20,18 @@ is closed with no open actionable S0–S4 finding. The reviewed source is
 checkpointed at `b90789488237094ae2f29241c58ce71f12450a59`; the
 [immutable-source preparation](../.ai-workspace/work/STDO303_DELIVERY/PREPARED.md)
 binds the exact 106-file native payload and its four preparation records.
-The owner has authorized completion of the release after the required checks.
+The owner authorized completion of the release after the required checks.
 The [local native proof](../.ai-workspace/work/STDO303_DELIVERY/native-release/release-run-01/LOCAL_RETURN.md)
 now binds the native commit/tag, manifest, four assets and 107-file fresh
-installation. Atomic publication and published-install readback remain next;
-no public 3.0.3 release is asserted here.
+installation. Atomic publication, normal GitHub release/assets and fresh
+public installation/readback are complete. The
+[release record](../.ai-workspace/work/STDO303_DELIVERY/RELEASED.md) binds native
+`07bdb34a2d472a3b5e678f60584fd02b24a388f4`, immutable tag
+`specification_methodology/v3.0.3` and manifest
+`f07e6681355023e30ad8cc4c2ebecaa520ee4e75da6e140ef5a160b31082178d`.
+The [independent public review](../.ai-workspace/work/STDO303_DELIVERY/public-release-review-001/INDEPENDENT_REVIEW.md)
+is closed with no open S0–S4 release-integrity finding. All 107 installed files,
+nine public entry resolutions and the 191-file extracted source tree match.
 
 This is a distribution relation to independently owned a_c and Skills tooling;
 it migrates no Product authority or basis. Actual browser/WebGL, fresh-machine

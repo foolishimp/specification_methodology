@@ -2,6 +2,15 @@
 
 This source project constructs the next major release of Specification Methodology. One common specification governs the independent Codex and Claude realisations under `build_tenants/`. The installed STDO 2.5.1 RC2 release governs construction; the existing 2.* source and released products remain separate.
 
+**STDO 3.0.3 is published as a normal standalone release and GitHub Latest.**
+The [release record](.ai-workspace/work/STDO303_DELIVERY/RELEASED.md) binds the
+immutable native tag, manifest, public installation and closed independent
+review. The installed documentation home includes Constraints, the reviewed
+ABI code example, Lean proof source/results and the source-tooling guide.
+Resolve it with `stdo resolve stdo://releases/v3.0.3/standards/documentation/index.html`.
+Tool sources are bundled; optional runtime support requires explicit setup in
+a writable workspace. Publication changes no consumer's selected basis.
+
 ## Start
 
 1. Resolve [stdo_3.json](stdo_3.json), verify its exact installed basis and load its declared bootstrap entrypoint.

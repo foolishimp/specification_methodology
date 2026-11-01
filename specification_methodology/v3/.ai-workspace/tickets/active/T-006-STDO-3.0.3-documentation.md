@@ -1,11 +1,10 @@
 # T-006 Installed documentation for STDO 3.0.3
 
-Status: complete selected native candidate prepared with bundled a_c/Skills
-source tools, offline Constraints/Code/Lean readers and fresh installed/public
-command-path evidence. Independent review is closed with no open actionable
-S0–S4 finding; the reviewed source checkpoint and immutable-source preparation
-are complete. The owner has authorized completion after the required checks;
-prescribed native/public release operations remain to be performed.
+Status: **released** as normal standalone STDO 3.0.3 and GitHub Latest, with
+bundled a_c/Skills source tools, offline Constraints/Code/Lean readers and fresh
+public installed-path evidence. Independent preparation and release reviews
+are closed with no open actionable S0–S4 finding in their bounded scopes.
+Native/public publication and exact public reacquisition are complete.
 Actual browser/WebGL, fresh-machine Lean and new host qualification remain open.
 Owner: Jim. Re-entry: requirement refinement and distribution design.
 
@@ -126,3 +125,16 @@ manifest and four assets, fresh isolated 0.1.6 manager and all 107 installed
 files. Nine entry resolutions, the source materializer and proof-documentation
 check pass on that actual native installation. Public publication and exact
 public reacquisition remain the next gates.
+
+## Published release closure — 2026-11-02
+
+The [release record](../../work/STDO303_DELIVERY/RELEASED.md) binds the normal
+stable-v1 release, native `07bdb34a2d472a3b5e678f60584fd02b24a388f4`, annotated
+tag `specification_methodology/v3.0.3`, exact manifest, four public assets and
+GitHub Latest ID `430743607`. The source carrier and native refs were pushed
+atomically. Fresh anonymous downloads and a new downloaded-wheel manager
+verified all 107 installed files, nine entry paths and 191 extracted sources.
+The [independent public review](../../work/STDO303_DELIVERY/public-release-review-001/INDEPENDENT_REVIEW.md)
+is closed with no open S0–S4 release-integrity finding. Prior releases/refs,
+the frozen payload and consumer bases remain unchanged. Historical preparation
+and failed-attempt evidence retain their original subjects and bytes.
