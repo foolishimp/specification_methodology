@@ -15,10 +15,15 @@ source-bound historical proof evidence. The final installed path passes all
 thirty selected operations, including stronger Skills source-route checking
 and physical-alias refusal, while keeping the installation unchanged.
 The [independent review](../.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/INDEPENDENT_REVIEW.md)
-is closed with no open actionable S0–S4 finding; bounded package preparation
-is ready. No owner semantic acceptance or public 3.0.3 release is asserted. The next
-Git Writer/checkpoint and exact committed-source native preparation precede
-native tag/manifest/assets, atomic publication and published-install readback.
+is closed with no open actionable S0–S4 finding. The reviewed source is
+checkpointed at `b90789488237094ae2f29241c58ce71f12450a59`; the
+[immutable-source preparation](../.ai-workspace/work/STDO303_DELIVERY/PREPARED.md)
+binds the exact 106-file native payload and its four preparation records.
+The owner has authorized completion of the release after the required checks.
+The [local native proof](../.ai-workspace/work/STDO303_DELIVERY/native-release/release-run-01/LOCAL_RETURN.md)
+now binds the native commit/tag, manifest, four assets and 107-file fresh
+installation. Atomic publication and published-install readback remain next;
+no public 3.0.3 release is asserted here.
 
 This is a distribution relation to independently owned a_c and Skills tooling;
 it migrates no Product authority or basis. Actual browser/WebGL, fresh-machine

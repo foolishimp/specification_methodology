@@ -3,8 +3,9 @@
 Status: complete selected native candidate prepared with bundled a_c/Skills
 source tools, offline Constraints/Code/Lean readers and fresh installed/public
 command-path evidence. Independent review is closed with no open actionable
-S0–S4 finding; bounded package preparation is ready. Owner semantic acceptance
-and prescribed native/public release operations remain separate.
+S0–S4 finding; the reviewed source checkpoint and immutable-source preparation
+are complete. The owner has authorized completion after the required checks;
+prescribed native/public release operations remain to be performed.
 Actual browser/WebGL, fresh-machine Lean and new host qualification remain open.
 Owner: Jim. Re-entry: requirement refinement and distribution design.
 
@@ -107,3 +108,21 @@ The [final independent review](../../work/STDO303_DELIVERY/pre-release-review-00
 closes the scanner, current Skills route and physical-alias conditions on the
 final frozen payload and actual installed successor. No actionable S0–S4
 finding remains within this bounded preparation review.
+
+## Immutable-source checkpoint and preparation
+
+The separately activated Git Writer checkpointed the closed candidate on main
+at `b90789488237094ae2f29241c58ce71f12450a59`. The
+[preparation record](../../work/STDO303_DELIVERY/PREPARED.md) binds all four
+native preparation files, their exact source tree, 106 files / 43,056,988 bytes,
+the closed review and unchanged technical pins. No native commit, tag,
+publication or basis adoption was performed by this preparation step. The
+owner's later release authorization selects completion of the remaining
+prescribed native/public sequence; push awaits its complete publication plan.
+
+The subsequent [local native return](../../work/STDO303_DELIVERY/native-release/release-run-01/LOCAL_RETURN.md)
+records the exact native commit, create-only stable tag/release branch, sealed
+manifest and four assets, fresh isolated 0.1.6 manager and all 107 installed
+files. Nine entry resolutions, the source materializer and proof-documentation
+check pass on that actual native installation. Public publication and exact
+public reacquisition remain the next gates.
