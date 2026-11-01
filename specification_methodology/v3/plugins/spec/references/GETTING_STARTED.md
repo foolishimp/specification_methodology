@@ -19,7 +19,34 @@ governing sources.
 - [Start Code Development And Testing](#3-start-code-development-and-testing)
 - [Monitor And Help Triage](#4-monitor-and-help-triage)
 - [Common Stops](#common-stops)
+- [Read The Installed Documentation](#read-the-installed-documentation)
 - [Owning References](#owning-references)
+
+## Read The Installed Documentation
+
+STDO 3.0.3 installs its [documentation home](../../../standards/documentation/index.html)
+and [3D/2D/Layered constraint explorer](../../../standards/documentation/constraint-explorer/index.html)
+with the ordinary method payload. Resolve the installed entry:
+
+```sh
+stdo resolve stdo://releases/v3.0.3/standards/documentation/index.html
+```
+
+Open the returned `path` in a browser. Search constraints, read their complete
+statements and source passages, and follow labelled connections with a reading
+trail. Use Files to discover records by source path and switch the middle view
+without losing the selected information. Layered works without WebGL. No
+Graphify, Lean or Node installation is needed for this offline reader.
+The [reading guide](../../../standards/documentation/README.md) explains access
+and controls. Its represented common source is the historical 35fb4824 cut,
+not the complete current 3.0.3 corpus; use the owning installed standards for
+current method decisions.
+
+The same home offers the [ABI code example](../../../standards/documentation/code-explorer/index.html)
+and [Lean proof reader](../../../standards/documentation/proofs/index.html).
+To build your own representation, use the [bundled tooling guide](../../../standards/tooling/README.md).
+Its materializer creates an explicit writable workspace; installed release
+files remain immutable and optional execution dependencies are selected separately.
 
 ## The Operating Loop
 
@@ -128,7 +155,7 @@ selected method basis.
 
 ### New Project
 
-For the standalone STDO 3.0.2 release, acquire the separately distributed
+For the standalone STDO 3.0.3 release, acquire the separately distributed
 manager wheel and installed-manifest assets from that exact release. The native
 method tag contains the payload, not the manager's Python package. Python 3.11+
 and Git are prerequisites. The following installs the manager into an explicit
@@ -136,11 +163,11 @@ user-selected virtual environment; it does not replace a global manager:
 
 ```sh
 set -eu
-STDO_CUT='v3.0.2'
-STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.2'
+STDO_CUT='v3.0.3'
+STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.3'
 STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-0.1.6"
 STDO_DOWNLOAD_DIR="$(mktemp -d)"
-for asset in stdo_toolchain-0.1.6-py3-none-any.whl stdo-v3.0.2-manifest.json; do
+for asset in stdo_toolchain-0.1.6-py3-none-any.whl stdo-v3.0.3-manifest.json; do
   curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset" "$STDO_ASSETS/$asset"
   curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset.sha256" "$STDO_ASSETS/$asset.sha256"
 done
@@ -148,7 +175,7 @@ python3 - "$STDO_DOWNLOAD_DIR" <<'PYVERIFY'
 from pathlib import Path
 import hashlib, sys
 root = Path(sys.argv[1])
-for name in ('stdo_toolchain-0.1.6-py3-none-any.whl', 'stdo-v3.0.2-manifest.json'):
+for name in ('stdo_toolchain-0.1.6-py3-none-any.whl', 'stdo-v3.0.3-manifest.json'):
     fields = (root / (name + '.sha256')).read_text().split()
     if len(fields) != 2 or fields[1] != name or fields[0] != hashlib.sha256((root/name).read_bytes()).hexdigest():
         raise SystemExit('release asset checksum mismatch: ' + name)
@@ -157,7 +184,7 @@ python3 -m venv "$STDO_MANAGER_ENV"
 "$STDO_MANAGER_ENV/bin/python" -m pip install --force-reinstall "$STDO_DOWNLOAD_DIR/stdo_toolchain-0.1.6-py3-none-any.whl"
 stdo() { "$STDO_MANAGER_ENV/bin/stdo" "$@"; }
 stdo --version
-STDO_MANIFEST="$(python3 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.2-manifest.json")"
+STDO_MANIFEST="$(python3 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.3-manifest.json")"
 stdo install "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
 stdo verify "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
 ```
