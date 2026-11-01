@@ -1,7 +1,14 @@
 # STDO 3.0.3 documentation
 
-Open the [documentation home](index.html) or the
-[3D/2D/Layered constraint explorer](constraint-explorer/index.html) in a browser.
+Open the [documentation home](index.html), then choose:
+
+- [Constraints](constraint-explorer/index.html): STDO's historical common model.
+- [Code example](code-explorer/index.html): ABIogenesis requirements, selected
+  canonicalization code and test sources, with attributed proposed traces.
+- [Lean proofs](proofs/index.html): proof statements, source and retained results.
+- [Use the tools](../tooling/README.md): create a writable copy to build your own.
+
+All three readers open in a browser.
 These files are installed with STDO 3.0.3; no additional download or
 Graphify, Lean, a_c or Node installation is needed to read them.
 
@@ -34,6 +41,20 @@ No service is needed.
    to orbit in force views; scroll and use zoom controls in Layered.
 7. Use **Show in files** or **Back to file** to move between source discovery
    and logical connections. Folder order does not create a semantic relation.
+
+## Code and proof examples
+
+The ABI example is the reviewed T-019 artifact: a frozen representation of
+ABIogenesis and a four-file code/test selection. Its five proposed trace links
+cover part of canonical ordering and serialization. They do not establish the
+broader roundtrip/admission clauses, executed tests or semantic satisfaction.
+The reader names its source, author, parser and unresolved endpoints. Use the
+browser's Back button or open readers in separate tabs to return to this home.
+
+The Lean reader shows exact T-011 proof sources and its retained independent
+report. It explains finite closure and record-preserving projection, premises
+and limits. This historical report is not a new Lean run or a proof of the
+code overlay. The [proof catalog](proofs/PROOFS.json) binds its sources.
 
 ## Represented source and current method
 

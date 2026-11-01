@@ -1,10 +1,11 @@
 # T-006 Installed documentation for STDO 3.0.3
 
-Status: review repairs implemented; successor installed-byte and DOM/state
-checks pass. Independent successor review is closed with no actionable S0–S4
-finding. The reviewed repairs are checkpointed and pushed on `main` at
-`c034593eea08`. Actual browser/WebGL qualification of changed HTML, broader
-tooling delivery and public release remain open.
+Status: complete selected native candidate prepared with bundled a_c/Skills
+source tools, offline Constraints/Code/Lean readers and fresh installed/public
+command-path evidence. Independent review is closed with no open actionable
+S0–S4 finding; bounded package preparation is ready. Owner semantic acceptance
+and prescribed native/public release operations remain separate.
+Actual browser/WebGL, fresh-machine Lean and new host qualification remain open.
 Owner: Jim. Re-entry: requirement refinement and distribution design.
 
 ## Owner instruction
@@ -75,3 +76,34 @@ The [independent successor review](../../work/STDO303_DELIVERY/review-repairs-00
 closes all six repair conditions with no actionable S0–S4 finding. Actual
 browser/WebGL qualification and broader tooling/release work remain open.
 No publication, shared installation or consumer adoption was performed.
+
+## Complete selected tooling preparation — 2026-11-02
+
+The owner subsequently selects preparation of the full 3.0.3 release, including
+the existing tools, reviewed ABI code example and an offline Lean proof reader.
+The [installed-tooling contract](../../../specification/requirements/INSTALLED_TOOLING.md)
+owns this distribution extension; independent Products retain their contracts
+and exact operative bases. The [preparation return](../../work/STDO303_DELIVERY/tooling-integration-001/README.md)
+binds 106 native files, the 191-file exact source bundle and source freeze.
+The only work-record source member is the current public Skills T-003 ticket,
+required by the unchanged Codex source-route contract. No private/runtime cache
+or compiled support is included. Explicit materialization targets an absent
+external writable directory and checks physical ancestor identity.
+
+The actual installed successor passes thirty public operations, including
+representation/code builds and reuse, negative controls, both Skills package
+checks and pristine source/installed-tree verification. Eighteen preceding
+integration controls, eight affected materializer successor controls and 29
+existing package checker controls have distinct evidence subjects. The peer
+proof-reader tests/DOM evidence remain independently attributed. No new Lean
+proof, ABI execution or actual browser observation was performed.
+
+The new source/native preparation must follow a selected Git checkpoint; native
+commit/tag, public manifest/assets, atomic push and published acquisition remain
+separate release work. Earlier closed reports and attempts remain historical.
+This activation changed no main Git refs, shared installation or consumer basis.
+
+The [final independent review](../../work/STDO303_DELIVERY/pre-release-review-001/INDEPENDENT_REVIEW.md)
+closes the scanner, current Skills route and physical-alias conditions on the
+final frozen payload and actual installed successor. No actionable S0–S4
+finding remains within this bounded preparation review.

@@ -20,6 +20,10 @@ under [T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md)
 The constraint explorer is a required documentation asset. Packaging preserves
 its exact represented source and explanatory standing; it does not turn a
 historical graph into the current methodology or a proof of its prose.
+The owner-selected [installed tooling](requirements/INSTALLED_TOOLING.md) adds
+pinned a_c and Skills source distributions, safe explicit workspace materialization,
+the reviewed ABI code example and an offline Lean proof reader. Their existing
+Product ownership, execution contracts and bases remain unchanged.
 
 The preceding source increment is
 [recursive Product composition](requirements/PRODUCT_COMPOSITION.md), constructed

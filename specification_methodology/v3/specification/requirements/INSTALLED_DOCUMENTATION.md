@@ -18,3 +18,12 @@ historical explanatory documentation. It does not satisfy the still-open
 source-matched whole-method representation obligation. The installed current
 standards remain available through their own entry and are the source to use
 for present method decisions.
+
+## Selected 3.0.3 documentation extension
+
+DOC-01 through DOC-06 also cover the reviewed ABI code example and the offline
+Lean proof reader, with their own explicit subjects and evidence. The shared
+home links these readers and the [bundled tools](INSTALLED_TOOLING.md). The
+code viewer remains exact reviewed bytes; the proof reader displays retained
+source-bound evidence without claiming a fresh proof run. Actual browser/WebGL
+qualification remains distinct from static, DOM and installed-byte checks.

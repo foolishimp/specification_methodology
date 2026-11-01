@@ -1,0 +1,37 @@
+**STDO 3.0.3 pre-release bundle — independent expectations, 2026-11-02**
+
+Reviewer: `/root/review_repair_delta`, same-family nonauthor. Root activated read-only independent assessment and granted only this review directory for reviewer output. No candidate repair, Git effect, publication, shared installation or acceptance authority is held. This note precedes implementation exposure and the final source barrier; it is not a final candidate verdict.
+
+The acquired checkpoint is `9c9626ffd20ea88a75ac8143802c13f4f828ec1c` on main. Root verified the unchanged installed bases: v3/a_c use STDO 2.5.1 RC2 manifest `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`; Skills uses STDO 3.0.1 RC1 manifest `60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`. Native delivery selects stable-v1 STDO 3.0.3 with the exact 3.0.2 predecessor `23ca9c0929d7be8570edafaf30542e3daeb8dc1f`.
+
+**Authority and selected outcome**
+
+Read root/v3 AGENTS, Product Definition and reference-frame basis, current Product/Goals and T-006, `specification/requirements/INSTALLED_DOCUMENTATION.md`, the installed-documentation HOW, registered documentation/package/native-release implementation, and the relevant native release identity/installation boundary. DOC-01–DOC-06 already require normal installed inclusion, offline navigation, distinct source/distribution identities, exact required member custody, and actual ordinary-manager install/verify/resolve evidence.
+
+The owner now selects a bundle containing the standards/tooling source archive, verified materialization into an external workspace, both Skills source packages and the current a_c Graphify/Lean source closure, and an offline home leading to Constraints, the existing ABI code example, and Proofs. Root selects reuse of the existing ABI example, not another a_c self-representation. The proof reader is static readable source/evidence, not browser Lean execution. Separate external optional dependencies and selected Lean proof support need not be silently bundled or freshly qualified.
+
+The existing native assets gate requires a canonical manifest and manager wheel. The previous mandatory external supplemental download was deliberately removed. Requiring exact archive bytes *inside the installed payload* is distinct from requiring a separate public download. The reviewed successor must keep required payload members, optional public assets and their actual gates consistent with the selected delivery design.
+
+**Deciding checks on the future frozen candidate**
+
+| Boundary | Expected evidence and adverse control |
+| --- | --- |
+| Native payload | All new required archive, materializer, proof-reader and code-example members are covered by the same finite member/hash checks and native installed manifest. Missing, substituted or tampered members refuse; a self-consistent but incomplete inner manifest cannot silently narrow a required payload. |
+| Archive identity and completeness | Compare exact source member bytes/modes and declared membership with the selected source cut. Include runtime resources, templates, schemas, profiles and license/dependency notices needed by the packaged commands. Exclude ignored caches, local origin state, secrets, private toolchain and unselected source. No recursive inclusion of the output archive or run evidence. |
+| Extraction boundary | Verify an absent external destination, safe normalized member paths, no traversal/absolute paths, no duplicate or filesystem-aliasing members, no symlink/hardlink/special members, and no parent symlink, input/output or immutable-install overlap. Validate complete membership/digests before effects; partial outputs are not a successful workspace and must not be silently overwritten. |
+| Actual consumer independence | Use the installed materializer, then invoke the extracted public commands with the original repository unavailable as a code/resource dependency. A help check alone does not establish the useful extraction/build path. Declared Python/parser/upstream support may be supplied explicitly; it is not hidden source closure. No command is expected to mutate the immutable installation. |
+| Current Skills/provider closure | Both source packages remain distinct, with current provider bytes and source routes pinned. Their installed method bases and runtime grants remain separate. Historical routes/qualification remain historical. Archive package checks do not become a fresh Codex/Claude host trial. |
+| Proof reader source/evidence | Bind exact historical report and eight matched Lean module hashes, preserve readable source and source coordinates, and identify source/import/reference links as lexical unless kernel-derived evidence is actually supplied. Source matches do not establish that current changed importer/generator or the whole reusable gate is freshly qualified. |
+| Code example | Preserve the existing ABI HTML/model/mapping source identity and its four-file scope, five partial attributed mappings and unresolved entries. No code correctness, complete-requirement satisfaction, executed-test or overlay Lean claim follows. |
+| Installed path | Follow actual manifest → install → verify → resolve into a fresh disposable store. Compare installed bytes, invoke the installed materializer, and test the installed offline reader's content/navigation. Retain tamper rejection and immutable-install before/after inventory. No browser-policy workaround. |
+| Release standing | Keep source readiness, local package/installed qualification, native cut/manifest construction, remote publication, published exact-cut reacquisition and adoption separate. This review adds no speculative release conditions and performs no release effect. |
+
+**Proof evidence acquired before reader construction**
+
+Read the Lean tenant's README, `design/BOUNDARIES.md`, T-011 independent final review and `review/full-path-001/report.json`. The report SHA-256 is `8b002e3821e99cd88bae0ccf07794d2e99818ba4e5b38d919fc3e3b45c672061`. It records 46 actual projection outputs, 46 underbudget refusals, 204 audited theorem contracts, and allowed axioms `Classical.choice`, `Quot.sound`, `propext`, under the historical exact pins and kernel replay described by that review.
+
+Its eight Lean members are `AC.lean`, `AC/Audit.lean`, `AC/Closure.lean`, `AC/Fixture.lean`, `AC/Model.lean`, `AC/Projection.lean`, `AC/Run.lean`, and `AC/Toy.lean`. Root's current comparison confirms all eight still match. The report also pins bootstrap, check, importer and generator scripts; current importer/generator bytes have changed. Therefore the static reader can present the matched formal sources and the exact historical result, but cannot claim a fresh current complete proof/runtime path from that result alone.
+
+The source-owned dependency interpretation, Python bridge, opaque prose predicates, authority legitimacy, semantic sufficiency, whole-calculus validity and compiler/kernel trust remain the ledger's stated boundaries. The approximately 3.25 GB exact selected proof support is an external dependency; source packaging or ordinary bootstrap alone does not establish its identity or qualify a new host/platform. No heavy Lean run is selected for this review.
+
+No concrete early contract/design defect was found. These are source-derived deciding expectations, not a final assessment of implementation that is still being authored. Final findings will bind the writers' frozen source and actual produced/installed consumer artifacts. Prior closed reviews are preserved.

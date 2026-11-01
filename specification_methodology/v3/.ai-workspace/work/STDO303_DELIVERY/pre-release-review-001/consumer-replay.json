@@ -1,0 +1,573 @@
+{
+  "code_overlay": {
+    "artifacts": {
+      "explorer": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay/built/explorer.html",
+      "overlay": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay/built/overlay.json",
+      "view_data": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay/built/view-data.json"
+    },
+    "author": "synthetic packaging fixture",
+    "claim": {
+      "formal": "The overlay has not been Lean checked. Native model, dependency closure and proof scope are unchanged.",
+      "structure": "Fallible Graphify source observations; no source execution or semantic completeness claim.",
+      "trace": "Caller-attributed proposed correspondence; test source is not an executed test result."
+    },
+    "files": {
+      "explorer.html": "8f67bf930a0d405364b70c21202a9c73c76126fb6778b73bcfe61e67c41caf6c",
+      "mapping.json": "a23d2a9606e39eac98d5f4efea78b2dfd1ad53791c331216fc74402e6f18f3b3",
+      "overlay.json": "5bc6792f8797839d55d0bf418f5b501eced53f5c8e74b3c9421ff1ad4a0d679f",
+      "view-data.json": "39bc3e612ebd2685e83ebdef0e4549e923516899f1f3b77b38af1040ed28e932"
+    },
+    "mapping_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/mapping.json",
+    "mapping_sha256": "a23d2a9606e39eac98d5f4efea78b2dfd1ad53791c331216fc74402e6f18f3b3",
+    "overlay": {
+      "id": "urn:a-c:code-overlay:0eef4f60c78b8133aa7d6aa6b7932a64953b598807e08a3410c345d6c096f388",
+      "sha256": "22b8620086a154c2dcdb7149d6d27570193a985c44189cf2dff471f6505d53e7"
+    },
+    "prepare_sha256": "589ddc1a26774fef33c4f6a35bced315929737ba97e2450a5867a7835f7f4d6f",
+    "profile": "a_c.code-build/1",
+    "status": "built"
+  },
+  "installation_unchanged": true,
+  "kind": "stdo303.installed-tooling-qualification/1",
+  "limits": [
+    "Synthetic authoring data; no LLM quality or ABI execution claim.",
+    "Existing local pinned Graphify/parser environment, not a delivered installation.",
+    "No fresh Lean proof, Skills host, browser/WebGL or publication qualification."
+  ],
+  "manifest_sha256": "42111a0fc380bc7f4f4026db3d0e1b5e5e5078285addd699ce7075f6f532cc3e",
+  "operations": [
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store",
+        "resolve",
+        "stdo://releases/v3.0.3/standards/tooling/materialize.py"
+      ],
+      "operation": "resolve-tool",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5b107e21cc82698ad4117070ce7c865d140b3666fd692d59290c41322d18e5c6"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store",
+        "resolve",
+        "stdo://releases/v3.0.3/standards/documentation/code-explorer/index.html"
+      ],
+      "operation": "resolve-code",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7fd16f9a66265c302ce9604f0427e13ef79c19286f873c278cddc89ec3005c7f"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store",
+        "resolve",
+        "stdo://releases/v3.0.3/standards/documentation/proofs/index.html"
+      ],
+      "operation": "resolve-proofs",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "622de526fa3ba92e1229dca7412bb0202e0ab39d12d6d740337c52cc5342003b"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "check"
+      ],
+      "operation": "materialize.py:check",
+      "returncode": 0,
+      "status": "checked",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "19280cbe8d44dc30adfb9dcf59ccca5dcedc35f47572a2dee1c399b47d901cc0"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/V3.0.3/must-not-materialize"
+      ],
+      "operation": "materialize.py:materialize",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "57b9140237db10622e8d0a8df4afaee67622c8e78bf75f3c82309bb014151b53",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "--bundle",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/STANDARDS/tooling",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/must-not-materialize"
+      ],
+      "operation": "case-alias-bundle-refusal",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "24dccea7480ab6c65e61201d7ee784a98089df826a1a2ddb473b70198c7f5d3f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace"
+      ],
+      "operation": "materialize.py:materialize",
+      "returncode": 0,
+      "status": "materialized",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "0e6770d676f8c65528c00b005377980be60f913bb17f01d22e24c2f762b957d3"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "verify-tree",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace"
+      ],
+      "operation": "materialize.py:verify-tree",
+      "returncode": 0,
+      "status": "checked",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9c9f9fd1c90067955771f91ca86a6bda5c441062db0e88e2c65f8102b810a8ef"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace"
+      ],
+      "operation": "materialize.py:materialize",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "1d277196f3cc968c289e7f697575e8cab73f71785860f76a11e49e11dcc37bec",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/selected-stdo",
+        "status",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/synthetic-project/stdo_sample.json",
+        "--verify"
+      ],
+      "operation": "real-manager-project-basis",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fe169ba5db842cecfdfe24e3ae2928936dadc67ecac20dd22be3b893540e6b4c"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "prepare",
+        "--project",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/synthetic-project",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/synthetic-project/stdo_sample.json",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation",
+        "--stdo",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/selected-stdo"
+      ],
+      "operation": "ac_project.py:prepare",
+      "returncode": 0,
+      "status": "prepared",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d9c4ecb6fa9d5608b0e4b77888b98c0fb03acbe5eee9e58a16be2755c8717b64"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "task",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation"
+      ],
+      "operation": "ac_project.py:task",
+      "returncode": 0,
+      "status": "authoring_required",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "49162e5b1f07728bf0babc3598ce38390af8290de7cce62f37017382319b66ee"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "submit",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation",
+        "--chunk",
+        "chunk-13bb9e14ae91f3cf32e9",
+        "--answer",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/synthetic-answer.json",
+        "--author",
+        "synthetic packaging fixture; no LLM-quality claim"
+      ],
+      "operation": "ac_project.py:submit",
+      "returncode": 0,
+      "status": "submitted",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "45845807822d7d8a0b44334628ee2f814eff577a69e8d6b72bb67e9fa82518b8"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "build",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation"
+      ],
+      "operation": "ac_project.py:build",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "44b1636a1a4f4532813934032b10656f763a7e68d5c4cf95570f6f9074d9a4fa"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "status",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation"
+      ],
+      "operation": "ac_project.py:status",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4cc21be3103a786ec49d52cd4fde3b715d55c7c57149028f0775ea2b4c82c634"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "build",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation"
+      ],
+      "operation": "ac_project.py:build",
+      "returncode": 0,
+      "status": "reused",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "63a82c1d2c3f3aaebd7f416667db775dad12eba57e75ecc02b19f7cc256cc591"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "prepare",
+        "--project",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/synthetic-project",
+        "--model",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation/generation/proposal/model.json",
+        "--manifest",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation/source-manifest.json",
+        "--source-root",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation/generation/corpus",
+        "--code",
+        "src/evidence.ts",
+        "--test",
+        "tests/evidence.test.mjs",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay"
+      ],
+      "operation": "ac_code.py:prepare",
+      "returncode": 0,
+      "status": "prepared",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "66e168d8bc9573780d515780e5e3390c0961c828fc8aa12872400a354124c08a"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "task",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay"
+      ],
+      "operation": "ac_code.py:task",
+      "returncode": 0,
+      "status": "mapping_required",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9659f7ffc4488e21de316de8285aaf8ef2735cb6d9212d525795ed2d316962c6"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "build",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay",
+        "--mapping",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/mapping.json",
+        "--author",
+        "synthetic packaging fixture"
+      ],
+      "operation": "ac_code.py:build",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5acb0bc231a5e39c333815b9bf6060b11f8f23d824226fefbbc4c5dfb625aebe"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "14f2faae9d6414d499666d27b56a275a51951593212092cab507a2afa4ee2b88"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "build",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay",
+        "--mapping",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/mapping.json",
+        "--author",
+        "synthetic packaging fixture"
+      ],
+      "operation": "ac_code.py:build",
+      "returncode": 0,
+      "status": "reused",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "36f45a5a9dcfa81f928ed9ac94e7d7f6f7994688d80cbad356049195e742f5dc"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "status",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation"
+      ],
+      "operation": "ac_project.py:status",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "fe2d8072b4484b1d164d8634999f97b383c75d02a6d3abb841293266b5efdf88",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "2bdc2ab3d632b255d43c24c489621b45c7f48d1d8eb53885f95c13713b0673f9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "428791d3469c1bf1aaf2c018858cb809b7a962a52673c5d08b50e5a75ac4b4a1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "14f2faae9d6414d499666d27b56a275a51951593212092cab507a2afa4ee2b88"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/stdo_skills/build_tenants/codex/tests/verify_package.py",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/stdo_skills/build_tenants/codex",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace"
+      ],
+      "operation": "codex-package",
+      "returncode": 0,
+      "status": "passed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c3829bb4ef2fa2ad1bdae2cfc43ef0ff358d0a821393de1aedcf4d2ae3b9535c"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/stdo_skills/build_tenants/claude/tests/check_package.py"
+      ],
+      "operation": "claude-package",
+      "returncode": 0,
+      "status": "ok",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "25206e2e0651ab5fdd3e6d8075ef440230ba8df17190c4de5d3d9fba110d8af0"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace/a_c/build_tenants/lean/scripts/formal_gate.py",
+        "--help"
+      ],
+      "operation": "formal-help",
+      "returncode": 0,
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4be99c6c5874655482e3c16fec0b2117bbcfc26b2a10446b14dc7fe696f283df"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "verify-tree",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/tool-workspace"
+      ],
+      "operation": "materialize.py:verify-tree",
+      "returncode": 0,
+      "status": "checked",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9c9f9fd1c90067955771f91ca86a6bda5c441062db0e88e2c65f8102b810a8ef"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store",
+        "verify",
+        "v3.0.3",
+        "--manifest-sha256",
+        "42111a0fc380bc7f4f4026db3d0e1b5e5e5078285addd699ce7075f6f532cc3e"
+      ],
+      "operation": "final-manager-verification",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "857c2dc9ac55d25d79bd36694f0a3cb58246ad767912a2ace644876a03aa5134"
+    }
+  ],
+  "original_repository_runtime_dependency": false,
+  "parser_environment": "/private/tmp/ac-code-parsers-hhdpg6dt",
+  "public_release": false,
+  "python": "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+  "representation": {
+    "artifacts": {
+      "carrier": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation/generation/proposal/carrier.json",
+      "coverage": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation/generation/proposal/coverage.json",
+      "explorer": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation/generation/proposal/explorer.html",
+      "model": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/consumer-replay-n1j84f8i/public-run/representation/generation/proposal/model.json"
+    },
+    "claim": "Source-grounded proposal and checked carrier; source fidelity, semantic completeness and acceptance remain unassessed.",
+    "files": {
+      "generation/proposal/carrier.json": "8c6594579f79f43b1d419c80f5685b3e3bec668982eec0973c11a2837faa086f",
+      "generation/proposal/coverage.json": "a061fc12d417f5cfdd137a1ec9ef64ba79f93d1f1ec4b43cc1feb34ac2d3ffe3",
+      "generation/proposal/explorer.html": "c973c9d92aa89256e91521aaf79e5ec687de7c03480e44b1e24806b7e80db271",
+      "generation/proposal/model.json": "0aafcbb6147332eae65fa69c9c2c608073e3138b7e8882e005a7a248d643b90f",
+      "generation/proposal/result.json": "e8b46ee984ad3d47a3b6d5bba759273561fc4c385874471444651a57965d6f96"
+    },
+    "formal_gate": {
+      "status": "not_performed"
+    },
+    "method": {
+      "manifest_sha256": "42111a0fc380bc7f4f4026db3d0e1b5e5e5078285addd699ce7075f6f532cc3e",
+      "uri": "stdo://releases/v3.0.3/"
+    },
+    "mode": "direct",
+    "model": {
+      "id": "urn:a-c:generation:ef080347252d10c2b5ddfbff:model:4e00a5ed331b2d78459142ef",
+      "sha256": "f036e9ef6e441656b7524721fe13c836baddff23e8f0fffe8eb8a0ec8cae3343"
+    },
+    "profile": "a_c.project-build-result/1",
+    "project_sha256": "f029fdd7aded4e6c2e01dd0d7e7a147c66b44606cafd0dba6bb3871f7992280e",
+    "source_manifest_sha256": "0a9509281ba71856dd98a45141d88efc82830842a1cf666eaaf85de4af29345e",
+    "status": "built",
+    "subject_id": "urn:a-c:project:7ad3a0af6c1f64dd9d36bea0f46f2b34fcf3b2c680e4e6b232cb44d9b8ce259e",
+    "submissions_sha256": "2fb87f6f7817dc162c082aa35a8a1e99faded25795040256710cef886a50efe1",
+    "upstream_trial": null
+  },
+  "review_replay": {
+    "fixture_retained": false,
+    "harness": "independent invocation of source-inspected frozen qualification harness",
+    "harness_source": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/qualify_tooling.py",
+    "scope": "new external run; actual installed materializer and extracted CLIs; no original project-source runtime imports"
+  },
+  "source_tree_pristine_after_use": true,
+  "synthetic_local_tag": true,
+  "upstream": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout"
+}

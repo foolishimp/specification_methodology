@@ -1,0 +1,567 @@
+{
+  "code_overlay": {
+    "artifacts": {
+      "explorer": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay/built/explorer.html",
+      "overlay": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay/built/overlay.json",
+      "view_data": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay/built/view-data.json"
+    },
+    "author": "synthetic packaging fixture",
+    "claim": {
+      "formal": "The overlay has not been Lean checked. Native model, dependency closure and proof scope are unchanged.",
+      "structure": "Fallible Graphify source observations; no source execution or semantic completeness claim.",
+      "trace": "Caller-attributed proposed correspondence; test source is not an executed test result."
+    },
+    "files": {
+      "explorer.html": "e6e3ec543a98b3494a4ba12ec187ff812d35d5378c84a413a2c12d177e310804",
+      "mapping.json": "3eb7fcee5cac9e85fedb6644f77e7f98ff2f5c7caafe6e8a0a58f3fbad05a1c2",
+      "overlay.json": "6fc207686b8bea1dd601a04645cb62b416f2e447d00008f988e322b618b9a3e0",
+      "view-data.json": "fbdf91c319ade73292743df23b4de6332f730aac68ecd0118f8a0769a32ed0f3"
+    },
+    "mapping_path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/mapping.json",
+    "mapping_sha256": "3eb7fcee5cac9e85fedb6644f77e7f98ff2f5c7caafe6e8a0a58f3fbad05a1c2",
+    "overlay": {
+      "id": "urn:a-c:code-overlay:3cecf23466ee09458feba1c27841c839b9e88bc6f2285b539aa175cd7588597c",
+      "sha256": "f28c7a65ab115d588cb48eff802027cb01301cc4b8072e760b0107c80339eae8"
+    },
+    "prepare_sha256": "dc2d9d388b6f25b062dfdca137e9a5fbd96c2d4cce81c426973b76d1226973f9",
+    "profile": "a_c.code-build/1",
+    "status": "built"
+  },
+  "installation_unchanged": true,
+  "kind": "stdo303.installed-tooling-qualification/1",
+  "limits": [
+    "Synthetic authoring data; no LLM quality or ABI execution claim.",
+    "Existing local pinned Graphify/parser environment, not a delivered installation.",
+    "No fresh Lean proof, Skills host, browser/WebGL or publication qualification."
+  ],
+  "manifest_sha256": "42111a0fc380bc7f4f4026db3d0e1b5e5e5078285addd699ce7075f6f532cc3e",
+  "operations": [
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store",
+        "resolve",
+        "stdo://releases/v3.0.3/standards/tooling/materialize.py"
+      ],
+      "operation": "resolve-tool",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5b107e21cc82698ad4117070ce7c865d140b3666fd692d59290c41322d18e5c6"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store",
+        "resolve",
+        "stdo://releases/v3.0.3/standards/documentation/code-explorer/index.html"
+      ],
+      "operation": "resolve-code",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7fd16f9a66265c302ce9604f0427e13ef79c19286f873c278cddc89ec3005c7f"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store",
+        "resolve",
+        "stdo://releases/v3.0.3/standards/documentation/proofs/index.html"
+      ],
+      "operation": "resolve-proofs",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "622de526fa3ba92e1229dca7412bb0202e0ab39d12d6d740337c52cc5342003b"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "check"
+      ],
+      "operation": "materialize.py:check",
+      "returncode": 0,
+      "status": "checked",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "19280cbe8d44dc30adfb9dcf59ccca5dcedc35f47572a2dee1c399b47d901cc0"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/V3.0.3/must-not-materialize"
+      ],
+      "operation": "materialize.py:materialize",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "57b9140237db10622e8d0a8df4afaee67622c8e78bf75f3c82309bb014151b53",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "--bundle",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/STANDARDS/tooling",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/must-not-materialize"
+      ],
+      "operation": "case-alias-bundle-refusal",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "24dccea7480ab6c65e61201d7ee784a98089df826a1a2ddb473b70198c7f5d3f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace"
+      ],
+      "operation": "materialize.py:materialize",
+      "returncode": 0,
+      "status": "materialized",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "ee37b20f9d9baf4b12a131b9f725ff55a7efc2a63088a0122396299c7cf243e6"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "verify-tree",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace"
+      ],
+      "operation": "materialize.py:verify-tree",
+      "returncode": 0,
+      "status": "checked",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fbf85b383c1f88740ce11603749e03090819d0f0353134a2f25af8266653f0f1"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace"
+      ],
+      "operation": "materialize.py:materialize",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "1d277196f3cc968c289e7f697575e8cab73f71785860f76a11e49e11dcc37bec",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/selected-stdo",
+        "status",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/synthetic-project/stdo_sample.json",
+        "--verify"
+      ],
+      "operation": "real-manager-project-basis",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "725893db123d277c6299fd26dfc96f6e9bf1b3c1956e2d91bd5f469b201cbabf"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "prepare",
+        "--project",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/synthetic-project",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/synthetic-project/stdo_sample.json",
+        "--out",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/selected-stdo"
+      ],
+      "operation": "ac_project.py:prepare",
+      "returncode": 0,
+      "status": "prepared",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "c35ae30f43e58278e3dab0053204138247c23604d8a4580b9f8ac4a88d9a2736"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "task",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:task",
+      "returncode": 0,
+      "status": "authoring_required",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "360bb991aab1e5cbec65fed928fbee6036aa051aa3f9d944764da35761f09109"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "submit",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation",
+        "--chunk",
+        "chunk-13bb9e14ae91f3cf32e9",
+        "--answer",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/synthetic-answer.json",
+        "--author",
+        "synthetic packaging fixture; no LLM-quality claim"
+      ],
+      "operation": "ac_project.py:submit",
+      "returncode": 0,
+      "status": "submitted",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "45845807822d7d8a0b44334628ee2f814eff577a69e8d6b72bb67e9fa82518b8"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "build",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:build",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "dc10527f16e9dd44db3bdc649dbf7cacbf3ccd80eacdd4ded04db670ab29debe"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:status",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b0ba82b1618930573ca2f0709e3313ba1ddf0e58f714b79328aa038d0597e18c"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "build",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:build",
+      "returncode": 0,
+      "status": "reused",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b37ac551fc83d860f038d521094b8213faf60bc98aa8273630fb1af6b1f814f1"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "prepare",
+        "--project",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/synthetic-project",
+        "--model",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation/generation/proposal/model.json",
+        "--manifest",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation/source-manifest.json",
+        "--source-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation/generation/corpus",
+        "--code",
+        "src/evidence.ts",
+        "--test",
+        "tests/evidence.test.mjs",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "--out",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:prepare",
+      "returncode": 0,
+      "status": "prepared",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "298213e87efa6f068439f2b67cd2abcfaf5c9f65eb31cac4d1debef12e995664"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "task",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:task",
+      "returncode": 0,
+      "status": "mapping_required",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1f7dcd61c2f55e4b898bb1ea33afb9d92dc8e7efbcf32358fefb707eaac4b209"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "build",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay",
+        "--mapping",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/mapping.json",
+        "--author",
+        "synthetic packaging fixture"
+      ],
+      "operation": "ac_code.py:build",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3ea1c8199e7f90b753535533aa9658abdf9702d92ce27a5bb8630c0187dd9825"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e41332b2ad887bd193d567ccd11ee6c96259585d9adf4ff1ee65340b852b7b60"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "build",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay",
+        "--mapping",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/mapping.json",
+        "--author",
+        "synthetic packaging fixture"
+      ],
+      "operation": "ac_code.py:build",
+      "returncode": 0,
+      "status": "reused",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "0e7d5eac4061106a9903016a66eea7bca64649276df70a2782a206cc531b81c8"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:status",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "fe2d8072b4484b1d164d8634999f97b383c75d02a6d3abb841293266b5efdf88",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "2bdc2ab3d632b255d43c24c489621b45c7f48d1d8eb53885f95c13713b0673f9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "428791d3469c1bf1aaf2c018858cb809b7a962a52673c5d08b50e5a75ac4b4a1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e41332b2ad887bd193d567ccd11ee6c96259585d9adf4ff1ee65340b852b7b60"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/stdo_skills/build_tenants/codex/tests/verify_package.py",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/stdo_skills/build_tenants/codex",
+        "--repository",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace"
+      ],
+      "operation": "codex-package",
+      "returncode": 0,
+      "status": "passed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "1087360634187d1b7154d0afbe11f6d1af0d2d3d167005f31ac7f0b8e470a78a"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/stdo_skills/build_tenants/claude/tests/check_package.py"
+      ],
+      "operation": "claude-package",
+      "returncode": 0,
+      "status": "ok",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "25206e2e0651ab5fdd3e6d8075ef440230ba8df17190c4de5d3d9fba110d8af0"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace/a_c/build_tenants/lean/scripts/formal_gate.py",
+        "--help"
+      ],
+      "operation": "formal-help",
+      "returncode": 0,
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4be99c6c5874655482e3c16fec0b2117bbcfc26b2a10446b14dc7fe696f283df"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "verify-tree",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/tool-workspace"
+      ],
+      "operation": "materialize.py:verify-tree",
+      "returncode": 0,
+      "status": "checked",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fbf85b383c1f88740ce11603749e03090819d0f0353134a2f25af8266653f0f1"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/installation/store",
+        "verify",
+        "v3.0.3",
+        "--manifest-sha256",
+        "42111a0fc380bc7f4f4026db3d0e1b5e5e5078285addd699ce7075f6f532cc3e"
+      ],
+      "operation": "final-manager-verification",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "857c2dc9ac55d25d79bd36694f0a3cb58246ad767912a2ace644876a03aa5134"
+    }
+  ],
+  "original_repository_runtime_dependency": false,
+  "parser_environment": "/private/tmp/ac-code-parsers-hhdpg6dt",
+  "public_release": false,
+  "python": "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+  "representation": {
+    "artifacts": {
+      "carrier": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation/generation/proposal/carrier.json",
+      "coverage": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation/generation/proposal/coverage.json",
+      "explorer": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation/generation/proposal/explorer.html",
+      "model": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-successor-0e4dxdhg/public-tooling/representation/generation/proposal/model.json"
+    },
+    "claim": "Source-grounded proposal and checked carrier; source fidelity, semantic completeness and acceptance remain unassessed.",
+    "files": {
+      "generation/proposal/carrier.json": "5d6a24b6ba9c0233c7c7e4ec97cbed51cec6b3e9643f2c363a29e3bf00c15f24",
+      "generation/proposal/coverage.json": "a061fc12d417f5cfdd137a1ec9ef64ba79f93d1f1ec4b43cc1feb34ac2d3ffe3",
+      "generation/proposal/explorer.html": "60f8f5fb60882adff4964b30683d01fdcf232eb57694fc387b3c1fb0f210833f",
+      "generation/proposal/model.json": "60ea4aa3928dba7c37e2eabcb6f43b6c7a151ec4e8f6b6fe3b9bdc18e6aeafaa",
+      "generation/proposal/result.json": "16225052b8ddb6d1809083fad121cae0a6142f43ffe6313f1828b17809ceafce"
+    },
+    "formal_gate": {
+      "status": "not_performed"
+    },
+    "method": {
+      "manifest_sha256": "42111a0fc380bc7f4f4026db3d0e1b5e5e5078285addd699ce7075f6f532cc3e",
+      "uri": "stdo://releases/v3.0.3/"
+    },
+    "mode": "direct",
+    "model": {
+      "id": "urn:a-c:generation:ef080347252d10c2b5ddfbff:model:4e00a5ed331b2d78459142ef",
+      "sha256": "e0ad00c59a418b92ab29435ceda5ec1f3e3a624862815af35d488fdeaf1ceb68"
+    },
+    "profile": "a_c.project-build-result/1",
+    "project_sha256": "831725cab4f379b3358ddfd3a1b4f612cb723dd1cad5adf8ff092b669fbdf5ba",
+    "source_manifest_sha256": "0a9509281ba71856dd98a45141d88efc82830842a1cf666eaaf85de4af29345e",
+    "status": "built",
+    "subject_id": "urn:a-c:project:7ad3a0af6c1f64dd9d36bea0f46f2b34fcf3b2c680e4e6b232cb44d9b8ce259e",
+    "submissions_sha256": "94eff3acd5f0a6d9c19f18044b1253c3bb04da01d085edadafe7906bd9b66a77",
+    "upstream_trial": null
+  },
+  "source_tree_pristine_after_use": true,
+  "synthetic_local_tag": true,
+  "upstream": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout"
+}

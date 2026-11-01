@@ -1,0 +1,23 @@
+test_changed_viewer_and_source_metadata_refuse (test_documentation.DocumentationTests.test_changed_viewer_and_source_metadata_refuse) ... ok
+test_complete_current_payload_and_reviewed_source_identity (test_documentation.DocumentationTests.test_complete_current_payload_and_reviewed_source_identity) ... ok
+test_installed_entrypoints_are_required (test_documentation.DocumentationTests.test_installed_entrypoints_are_required) ... ok
+test_metadata_format_discriminator_is_required (test_documentation.DocumentationTests.test_metadata_format_discriminator_is_required) ... ok
+test_native_assets_require_manifest_and_wheel_without_supplement (test_documentation.DocumentationTests.test_native_assets_require_manifest_and_wheel_without_supplement) ... ok
+test_native_release_gate_cannot_omit_documentation (test_documentation.DocumentationTests.test_native_release_gate_cannot_omit_documentation) ... ok
+test_navigation_requires_links_and_current_resolve_command (test_documentation.DocumentationTests.test_navigation_requires_links_and_current_resolve_command) ... ok
+test_omission_and_extra_are_not_excused_by_refreshed_inventory (test_documentation.DocumentationTests.test_omission_and_extra_are_not_excused_by_refreshed_inventory) ... ok
+test_packaging_refuses_existing_output_and_import_overlap (test_documentation.DocumentationTests.test_packaging_refuses_existing_output_and_import_overlap) ... ERROR
+test_tools_work_without_work_records_and_missing_helper_refuses (test_documentation.DocumentationTests.test_tools_work_without_work_records_and_missing_helper_refuses) ... ok
+
+======================================================================
+ERROR: test_packaging_refuses_existing_output_and_import_overlap (test_documentation.DocumentationTests.test_packaging_refuses_existing_output_and_import_overlap)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/test_documentation.py", line 169, in test_packaging_refuses_existing_output_and_import_overlap
+    docs.bundle(source, root)
+TypeError: bundle() missing 2 required positional arguments: 'code_viewer' and 'proofs'
+
+----------------------------------------------------------------------
+Ran 10 tests in 5.659s
+
+FAILED (errors=1)

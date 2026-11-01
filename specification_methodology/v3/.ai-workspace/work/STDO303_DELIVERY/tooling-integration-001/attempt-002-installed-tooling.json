@@ -1,0 +1,533 @@
+{
+  "code_overlay": {
+    "artifacts": {
+      "explorer": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay/built/explorer.html",
+      "overlay": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay/built/overlay.json",
+      "view_data": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay/built/view-data.json"
+    },
+    "author": "synthetic packaging fixture",
+    "claim": {
+      "formal": "The overlay has not been Lean checked. Native model, dependency closure and proof scope are unchanged.",
+      "structure": "Fallible Graphify source observations; no source execution or semantic completeness claim.",
+      "trace": "Caller-attributed proposed correspondence; test source is not an executed test result."
+    },
+    "files": {
+      "explorer.html": "cc88d871b90f5135aa4fb40b7f4ca6cd1b755bcb31c3a4db10ada741c5891c55",
+      "mapping.json": "cb17e903c22d44e2587e8be63596fa2b4ac6effac855762e9dababa6f08dbb2c",
+      "overlay.json": "7140151eeb95eb184fa3abe530d53cf5ca3339e524221c506afe9a18c92f7fab",
+      "view-data.json": "cd131629830ab8e7a9821cd5d39dbc256c5b557cfb94ccd9b8e672936c28ac3b"
+    },
+    "mapping_path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/mapping.json",
+    "mapping_sha256": "cb17e903c22d44e2587e8be63596fa2b4ac6effac855762e9dababa6f08dbb2c",
+    "overlay": {
+      "id": "urn:a-c:code-overlay:88c57eddc26063206e9f6ef615b28463b89dc33128f990350345b51250b935fe",
+      "sha256": "8cf984fdeaadc77960b4891f756f0857c34dbfa4883b197290b1f3523a390f1f"
+    },
+    "prepare_sha256": "7428bf04102273827b1f7b91609f9b3d9f0feac80ce9ce2323298dc054fbcc96",
+    "profile": "a_c.code-build/1",
+    "status": "built"
+  },
+  "installation_unchanged": true,
+  "kind": "stdo303.installed-tooling-qualification/1",
+  "limits": [
+    "Synthetic authoring data; no LLM quality or ABI execution claim.",
+    "Existing local pinned Graphify/parser environment, not a delivered installation.",
+    "No fresh Lean proof, Skills host, browser/WebGL or publication qualification."
+  ],
+  "manifest_sha256": "823f8da4ed19d0834409f1c840c09f5f1a3a9e6d6309fa94537142b5e495c8b7",
+  "operations": [
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/installation/store",
+        "resolve",
+        "stdo://releases/v3.0.3/standards/tooling/materialize.py"
+      ],
+      "operation": "resolve-tool",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "df250cae916d54376dcdf399b7b2efd581a503fd9d764c966fa6e2294b422137"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/installation/store",
+        "resolve",
+        "stdo://releases/v3.0.3/standards/documentation/code-explorer/index.html"
+      ],
+      "operation": "resolve-code",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "b26265ad4e1b2ee47a0ea182260927e449fdd6b9325231cacfd04dcf6fe00506"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/installation/store",
+        "resolve",
+        "stdo://releases/v3.0.3/standards/documentation/proofs/index.html"
+      ],
+      "operation": "resolve-proofs",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "df54b29ba2b6c078f36a65617f85abaae341db012be5a4316673e2148d776b77"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "check"
+      ],
+      "operation": "materialize.py:check",
+      "returncode": 0,
+      "status": "checked",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "19280cbe8d44dc30adfb9dcf59ccca5dcedc35f47572a2dee1c399b47d901cc0"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace"
+      ],
+      "operation": "materialize.py:materialize",
+      "returncode": 0,
+      "status": "materialized",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "a1dd6252c8522fff4fddf9e9297be081fd3facc99b34b686588ed6ca29c088c2"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "verify-tree",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace"
+      ],
+      "operation": "materialize.py:verify-tree",
+      "returncode": 0,
+      "status": "checked",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d9dcb0def896d177f4b4ebfb3206b7512a3e94ad6b81b63c1c435e48d3f7f293"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace"
+      ],
+      "operation": "materialize.py:materialize",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "1d277196f3cc968c289e7f697575e8cab73f71785860f76a11e49e11dcc37bec",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/selected-stdo",
+        "status",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/synthetic-project/stdo_sample.json",
+        "--verify"
+      ],
+      "operation": "real-manager-project-basis",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "fab34a09ec70961695f9bcab8c5718d5397c75aae9615e63a64866efd74489d1"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "prepare",
+        "--project",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/synthetic-project",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/synthetic-project/stdo_sample.json",
+        "--out",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/selected-stdo"
+      ],
+      "operation": "ac_project.py:prepare",
+      "returncode": 0,
+      "status": "prepared",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9a335ee2f79df4f324bcf0f5dd0d6e378506b390e7b233bd7e4fe41b155bece7"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "task",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:task",
+      "returncode": 0,
+      "status": "authoring_required",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "42c075bc8c9bad30c701e859012cd83c3dcf98d31958f8ed1d77cde535cbdd7a"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "submit",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation",
+        "--chunk",
+        "chunk-f4682796364b109de50d",
+        "--answer",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/synthetic-answer.json",
+        "--author",
+        "synthetic packaging fixture; no LLM-quality claim"
+      ],
+      "operation": "ac_project.py:submit",
+      "returncode": 0,
+      "status": "submitted",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "259d2b1e5b1bab4167acea835b3de9613fda243eaa235c99c1eeee590c4bfdfe"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "build",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:build",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "201a287855d3b6037f970537fccf97956fbb985039e8b03df687b277c1e1ba55"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:status",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5b2b60381066b669e920eac702b1114779f886cf92ed1069844c0b33c1507a84"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "build",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:build",
+      "returncode": 0,
+      "status": "reused",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "8f0695f5794ef496977d88ef6ced5324bac9097bf2045c562da3034038677da4"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "prepare",
+        "--project",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/synthetic-project",
+        "--model",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation/generation/proposal/model.json",
+        "--manifest",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation/source-manifest.json",
+        "--source-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation/generation/corpus",
+        "--code",
+        "src/evidence.ts",
+        "--test",
+        "tests/evidence.test.mjs",
+        "--upstream",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout",
+        "--out",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:prepare",
+      "returncode": 0,
+      "status": "prepared",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7edf5f6b96fc2059af42e2f2e621b27447aab5edcbce2ae7f20fe558985850e1"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "task",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:task",
+      "returncode": 0,
+      "status": "mapping_required",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7ba7ccf8b0ff9f097775d2ffbbd9f9bceea890c317023c0dea9bb9c0e228369a"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "build",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay",
+        "--mapping",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/mapping.json",
+        "--author",
+        "synthetic packaging fixture"
+      ],
+      "operation": "ac_code.py:build",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "bb9aecd39bdd4ac849b7ee7798d9904fcff31434b75f5776f4c2ee2a9dfb6974"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "16ce9471b829f407c4b2e2b598936ff89dfb5ba6bdddf6940831325015f9abca"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "build",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay",
+        "--mapping",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/mapping.json",
+        "--author",
+        "synthetic packaging fixture"
+      ],
+      "operation": "ac_code.py:build",
+      "returncode": 0,
+      "status": "reused",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3de950ed96ee0d0ddcfe0a19d8cf8bc1f7d6d7d9ad2c2e9824fd3668a60a2769"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_project.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation"
+      ],
+      "operation": "ac_project.py:status",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "fe2d8072b4484b1d164d8634999f97b383c75d02a6d3abb841293266b5efdf88",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "2bdc2ab3d632b255d43c24c489621b45c7f48d1d8eb53885f95c13713b0673f9",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 2,
+      "status": "refused",
+      "stderr_sha256": "428791d3469c1bf1aaf2c018858cb809b7a962a52673c5d08b50e5a75ac4b4a1",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/graphify/code/ac_code.py",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/code-overlay"
+      ],
+      "operation": "ac_code.py:status",
+      "returncode": 0,
+      "status": "built",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "16ce9471b829f407c4b2e2b598936ff89dfb5ba6bdddf6940831325015f9abca"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/stdo_skills/build_tenants/codex/tests/verify_package.py",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/stdo_skills/build_tenants/codex",
+        "--repository",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace"
+      ],
+      "operation": "codex-package",
+      "returncode": 0,
+      "status": "passed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "5477a14654d80f967121ab1f098d7391e54a135ed6e3eb6f6ad1b9b98bf0c033"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/stdo_skills/build_tenants/claude/tests/check_package.py"
+      ],
+      "operation": "claude-package",
+      "returncode": 0,
+      "status": "ok",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "25206e2e0651ab5fdd3e6d8075ef440230ba8df17190c4de5d3d9fba110d8af0"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace/a_c/build_tenants/lean/scripts/formal_gate.py",
+        "--help"
+      ],
+      "operation": "formal-help",
+      "returncode": 0,
+      "status": "completed",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4be99c6c5874655482e3c16fec0b2117bbcfc26b2a10446b14dc7fe696f283df"
+    },
+    {
+      "argv": [
+        "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/installation/store/releases/v3.0.3/standards/tooling/materialize.py",
+        "verify-tree",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/tool-workspace"
+      ],
+      "operation": "materialize.py:verify-tree",
+      "returncode": 0,
+      "status": "checked",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "d9dcb0def896d177f4b4ebfb3206b7512a3e94ad6b81b63c1c435e48d3f7f293"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/stdo",
+        "--store",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/installation/store",
+        "verify",
+        "v3.0.3",
+        "--manifest-sha256",
+        "823f8da4ed19d0834409f1c840c09f5f1a3a9e6d6309fa94537142b5e495c8b7"
+      ],
+      "operation": "final-manager-verification",
+      "returncode": 0,
+      "status": null,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "4ecdb0c2d73205dff4497ac7f87059c3031d07c6ef9aacff58e0de31b68c3ab7"
+    }
+  ],
+  "original_repository_runtime_dependency": false,
+  "parser_environment": "/private/tmp/ac-code-parsers-hhdpg6dt",
+  "public_release": false,
+  "python": "/Users/jim/src/apps/specification_methodology/a_c/.venv/bin/python",
+  "representation": {
+    "artifacts": {
+      "carrier": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation/generation/proposal/carrier.json",
+      "coverage": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation/generation/proposal/coverage.json",
+      "explorer": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation/generation/proposal/explorer.html",
+      "model": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-final-cga2y2c0/public-tooling/representation/generation/proposal/model.json"
+    },
+    "claim": "Source-grounded proposal and checked carrier; source fidelity, semantic completeness and acceptance remain unassessed.",
+    "files": {
+      "generation/proposal/carrier.json": "6c2d3b5fefaf84ed20ca3bc85112b456e89d26785e963b0036560abfde034da0",
+      "generation/proposal/coverage.json": "56137e98240d4411408607abbefee5bf2e64dd11bb8d1bb792410985017ab244",
+      "generation/proposal/explorer.html": "3898affd5b7420c11701fb221bb11a60bc140542015d9e94cea3eadf0fabbf08",
+      "generation/proposal/model.json": "12266cf86d62b2fc6505a0113c5ee32053e90a1b566e144a2f19a7eabe16b7ff",
+      "generation/proposal/result.json": "d0a05a3c394153712c8b3f9d85f6e76ccf60211c3f442c3ce8cd56b4ab6c3f42"
+    },
+    "formal_gate": {
+      "status": "not_performed"
+    },
+    "method": {
+      "manifest_sha256": "823f8da4ed19d0834409f1c840c09f5f1a3a9e6d6309fa94537142b5e495c8b7",
+      "uri": "stdo://releases/v3.0.3/"
+    },
+    "mode": "direct",
+    "model": {
+      "id": "urn:a-c:generation:a26b2dfef0bd53dc54280957:model:3750021ffc52adda8ea24516",
+      "sha256": "241601b226cdf4e840da11fb3ea0cee5d3a14f6bea4f6ecaa8cf27f93969164f"
+    },
+    "profile": "a_c.project-build-result/1",
+    "project_sha256": "c79a442e446122954e21e41794633fec035bd7cb2ed1cb762ea53c0bf97d7cc3",
+    "source_manifest_sha256": "b6f6f7cf2402e01d6d29d765766261179d80cda30907fc704a7253797f4a18db",
+    "status": "built",
+    "subject_id": "urn:a-c:project:8c35391448ac57785bbaae2107c67397f3dad6027d43522f52344e56f02ce589",
+    "submissions_sha256": "bca4c526110060ba86d906d03313265583f75a672054ed992e1986e2ece1d60b",
+    "upstream_trial": null
+  },
+  "source_tree_pristine_after_use": true,
+  "synthetic_local_tag": true,
+  "upstream": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout"
+}

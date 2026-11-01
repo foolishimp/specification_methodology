@@ -306,10 +306,25 @@ def metadata_findings(name: str, text: str):
     visible = visible_markdown(text, strip_inline_code=False) if name.endswith(".md") else text
     findings = []
     for number, line in enumerate(visible.splitlines(), 1):
+        # These exact documentary namespaces record other Products' selected
+        # sources; they are not native-method authority routes. Native release
+        # checking separately binds their complete proof/tooling contracts.
+        # This changes metadata heuristics only: real links and JSON $refs are
+        # still checked below against the complete installed payload.
+        metadata_line = line
+        if name == "standards/documentation/proofs/PROOFS.json" and re.fullmatch(
+                r'\s*"(?:builder|calculus)": "stdo://releases/v2\.5\.1-rc\.2/(?:standards/AXIOMATIC_CALCULUS\.md)?",?\s*', line):
+            metadata_line = ""
+        elif name == "standards/tooling/TOOLING.json" and re.fullmatch(
+                r'\s*"archive_path": "stdo_skills/build_tenants/(?:codex|claude)/[\w./-]+",?\s*', line):
+            metadata_line = ""
+        elif name == "standards/tooling/README.md":
+            for member in ("stdo_skills/build_tenants/codex/README.md", "stdo_skills/build_tenants/claude/INSTALL.md"):
+                metadata_line = metadata_line.replace(member, "ARCHIVE_MEMBER")
         rules = []
-        if re.search(r"(?<![\w-])(?:\.ai-workspace/(?:comments/(?:claude|codex)/|common-build/)|build_tenants/(?:claude|codex)/|qualification/C3/|a_c/i\d+/|design/(?:CONSTRUCTION_BINDING|REDUCTION)\.md)", line):
+        if re.search(r"(?<![\w-])(?:\.ai-workspace/(?:comments/(?:claude|codex)/|common-build/)|build_tenants/(?:claude|codex)/|qualification/C3/|a_c/i\d+/|design/(?:CONSTRUCTION_BINDING|REDUCTION)\.md)", metadata_line):
             rules.append("construction-history route")
-        if re.search(r"(?:stdo://releases/v[012](?:\.|/)|releases/v[012]\.[^\s)]+|(?:^|[/\s(])v[12]/specification/)", line, re.I):
+        if re.search(r"(?:stdo://releases/v[012](?:\.|/)|releases/v[012]\.[^\s)]+|(?:^|[/\s(])v[12]/specification/)", metadata_line, re.I):
             rules.append("prior-version route")
         if not template and (re.match(r"^\s{0,3}#{1,6}\s", line) or re.match(r"^\s*(?:\*\*)?(?:Status|Version|Basis|Source|Revision|Candidate)(?:\*\*)?\s*:", line, re.I)):
             if re.search(r"\b(?:RC\s*\d+|under construction|C3[- ]I\d|iteration\s+\d|v[012]\.\d)", line, re.I):

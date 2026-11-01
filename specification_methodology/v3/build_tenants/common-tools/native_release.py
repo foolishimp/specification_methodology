@@ -17,8 +17,9 @@ HERE = Path(__file__).resolve().parent
 BASE = HERE.parents[1] / ".ai-workspace/work/STDO303_DELIVERY/native-release"
 
 
-def documentation_tools():
-    path = HERE / "documentation.py"
+def documentation_tools(name="documentation.py"):
+    """Acquire registered construction tools only; no work-record dependency."""
+    path = HERE / name
     try:
         spec = importlib.util.spec_from_file_location("stdo303_documentation", path)
         module = importlib.util.module_from_spec(spec)
@@ -130,6 +131,7 @@ def tree_rows(repo, treeish):
 def validate_payload(rows, data):
     require(rows, "empty payload")
     documentation_tools().check_payload(data)
+    documentation_tools("tooling.py").check_payload(data)
     seen = set()
     for row in rows:
         path = safe_member(row["path"])
@@ -167,7 +169,7 @@ def tag_message(selected):
             f"Frozen-Source-Path: {selected['package_path']}\n"
             f"Frozen-Source-Tree: {selected['package_tree']}\n"
             f"Predecessor-Native-Commit: {PREDECESSOR}\n"
-            "Scope: standalone methodology, plugin and installed offline documentation; historical representation remains explanatory.\n").encode()
+            "Scope: standalone methodology, plugin and installed offline documentation and a_c/Skills tool sources; historical representation remains explanatory.\n").encode()
 
 
 def prepare(args):

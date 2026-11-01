@@ -10,6 +10,7 @@ from unittest.mock import patch
 
 import documentation as docs
 import native_release as native
+import package_tools
 
 V3 = Path(__file__).resolve().parents[2]
 PACKAGE = V3 / "build_tenants/common"
@@ -27,6 +28,19 @@ class DocumentationTests(unittest.TestCase):
         data = docs.viewer_data(self.payload[docs.DOC_ROOT + 'constraint-explorer/index.html'])
         self.assertEqual(data['basis']['subject']['id'], docs.SOURCE_ID)
         self.assertEqual(len(data['sources']), 58)
+
+    def test_external_documentary_coordinates_do_not_hide_real_routes(self):
+        payload, directories = package_tools.snapshot(PACKAGE)
+        self.assertEqual(package_tools.surface_checks(payload, directories)['failures'], [])
+        candidate = dict(payload)
+        candidate['standards/README.md'] += b'\nOld basis stdo://releases/v2.5.1-rc.2/ and build_tenants/claude/private.md\n'
+        failures = package_tools.surface_checks(candidate, directories)['failures']
+        self.assertTrue(any(x['message'] == 'prior-version route' for x in failures))
+        self.assertTrue(any(x['message'] == 'construction-history route' for x in failures))
+        candidate = dict(payload)
+        candidate['standards/tooling/README.md'] += b'\n[broken real link](missing-guide.md)\n'
+        failures = package_tools.surface_checks(candidate, directories)['failures']
+        self.assertTrue(any(x['check'] == 'reference' and x['path'] == 'standards/tooling/README.md' for x in failures))
 
     def test_omission_and_extra_are_not_excused_by_refreshed_inventory(self):
         for removed in docs.MEMBERS:
@@ -132,7 +146,8 @@ class DocumentationTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory).resolve()
             tools = root / 'build_tenants/common-tools'; tools.mkdir(parents=True)
-            for name in ('documentation.py', 'package_tools.py', 'native_release.py'):
+            for name in ('documentation.py', 'package_tools.py', 'native_release.py', 'proof_reader.py',
+                         'tooling.py', 'tooling_materialize.py', 'tooling-selection.json', 'tooling-guide.md'):
                 shutil.copyfile(Path(__file__).with_name(name), tools / name)
             package = root / 'build_tenants/common'
             shutil.copytree(PACKAGE, package)
@@ -165,12 +180,12 @@ class DocumentationTests(unittest.TestCase):
             source.write_bytes(self.payload[docs.DOC_ROOT + 'constraint-explorer/index.html'])
             before = source.read_bytes()
             with self.assertRaises(ValueError):
-                docs.bundle(source, root)
-            result = docs.bundle(source, root / 'fresh')
-            self.assertEqual(result['members'], 4)
+                docs.bundle(source, root, PACKAGE / docs.DOC_ROOT / "code-explorer/index.html", PACKAGE / docs.DOC_ROOT / "proofs")
+            result = docs.bundle(source, root / 'fresh', PACKAGE / docs.DOC_ROOT / 'code-explorer/index.html', PACKAGE / docs.DOC_ROOT / 'proofs')
+            self.assertEqual(result['members'], 16)
             self.assertEqual(source.read_bytes(), before)
             with self.assertRaises(ValueError):
-                docs.bundle(source, root / 'fresh')
+                docs.bundle(source, root / 'fresh', PACKAGE / docs.DOC_ROOT / 'code-explorer/index.html', PACKAGE / docs.DOC_ROOT / 'proofs')
 
 
 if __name__ == '__main__':

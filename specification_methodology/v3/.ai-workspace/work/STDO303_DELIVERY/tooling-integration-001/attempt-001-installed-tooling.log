@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/qualify_tooling.py", line 166, in <module>
+    main()
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/qualify_tooling.py", line 142, in main
+    command("codex-package", [args.python, "-B", codex / "tests/verify_package.py", codex, "--repository", extracted])
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/qualify_tooling.py", line 35, in command
+    raise ValueError(label + ": " + value.stdout[-3000:] + value.stderr[-3000:])
+ValueError: codex-package: {"status": "failed", "error": "missing current source: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo303-installed-tools-4a1iyud7/public-tooling/tool-workspace/stdo_skills/.ai-workspace/tickets/active/T-003-project-representation.md"}
+

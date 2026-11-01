@@ -17,7 +17,22 @@ MODEL_SHA256 = "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf
 SOURCE_COMMIT = "35fb4824a064a84df5af214a0d0e2da597c18ac6"
 SOURCE_ID = "repo://stdo-v3-common/" + SOURCE_COMMIT
 MODEL_ID = "urn:a-c:generation:0657852b6fd1fa48457c3f7d:model:2e6f0d59737b5bca00691b60"
-MEMBERS = {"index.html", "README.md", "constraint-explorer/index.html", "DOCUMENTATION.json"}
+CODE_SHA256 = "26e8e1e93221781b7a25fc48ad457c7ea97275cd08dcadba91075cbf8b1be8c9"
+PROOF_MEMBERS = {"index.html", "PROOFS.json", "report.json", "sources/AC.lean", *{"sources/AC/" + n + ".lean" for n in ("Audit", "Closure", "Fixture", "Model", "Projection", "Run", "Toy")}}
+MEMBERS = {"index.html", "README.md", "constraint-explorer/index.html", "code-explorer/index.html", "DOCUMENTATION.json", *{"proofs/" + p for p in PROOF_MEMBERS}}
+
+
+def proof_checker():
+    path = Path(__file__).resolve().with_name("proof_reader.py")
+    try:
+        spec = importlib.util.spec_from_file_location("stdo_proof_reader", path)
+        module = importlib.util.module_from_spec(spec)
+        sys.modules[spec.name] = module
+        spec.loader.exec_module(module)
+        return module
+    except (OSError, ImportError) as exc:
+        raise ValueError("required proof reader checker unavailable: " + str(exc)) from exc
+
 
 def package_checker():
     """Use the registered package checker's route semantics, never work records."""
@@ -58,8 +73,15 @@ def viewer_data(raw):
 def guide():
     return f"""# STDO {VERSION} documentation
 
-Open the [documentation home](index.html) or the
-[3D/2D/Layered constraint explorer](constraint-explorer/index.html) in a browser.
+Open the [documentation home](index.html), then choose:
+
+- [Constraints](constraint-explorer/index.html): STDO's historical common model.
+- [Code example](code-explorer/index.html): ABIogenesis requirements, selected
+  canonicalization code and test sources, with attributed proposed traces.
+- [Lean proofs](proofs/index.html): proof statements, source and retained results.
+- [Use the tools](../tooling/README.md): create a writable copy to build your own.
+
+All three readers open in a browser.
 These files are installed with STDO {VERSION}; no additional download or
 Graphify, Lean, a_c or Node installation is needed to read them.
 
@@ -93,6 +115,20 @@ No service is needed.
 7. Use **Show in files** or **Back to file** to move between source discovery
    and logical connections. Folder order does not create a semantic relation.
 
+## Code and proof examples
+
+The ABI example is the reviewed T-019 artifact: a frozen representation of
+ABIogenesis and a four-file code/test selection. Its five proposed trace links
+cover part of canonical ordering and serialization. They do not establish the
+broader roundtrip/admission clauses, executed tests or semantic satisfaction.
+The reader names its source, author, parser and unresolved endpoints. Use the
+browser's Back button or open readers in separate tabs to return to this home.
+
+The Lean reader shows exact T-011 proof sources and its retained independent
+report. It explains finite closure and record-preserving projection, premises
+and limits. This historical report is not a new Lean run or a proof of the
+code overlay. The [proof catalog](proofs/PROOFS.json) binds its sources.
+
 ## Represented source and current method
 
 **Distributed with STDO {VERSION}; represented source: historical common cut
@@ -114,32 +150,22 @@ def landing():
     return f"""<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="icon" href="data:,"><title>STDO {VERSION} documentation</title>
-<style>body{{margin:0;background:#111b24;color:#e9eff2;font:16px/1.7 system-ui,sans-serif}}main{{max-width:820px;margin:8vh auto;padding:28px}}small{{color:#a9d5bf;letter-spacing:2px}}h1{{font-size:38px;letter-spacing:-1px;margin:12px 0}}h2{{font-size:21px}}a{{color:#a9d5bf}}.button{{display:inline-block;background:#b2d8c3;color:#14251d;padding:12px 20px;border-radius:7px;text-decoration:none;font-weight:600}}section{{border-top:1px solid #354654;margin-top:35px;padding-top:20px}}.scope{{color:#b7c5d1}}li{{margin:8px 0}}</style></head>
+<style>body{{margin:0;background:#111b24;color:#e9eff2;font:16px/1.7 system-ui,sans-serif}}main{{max-width:900px;margin:6vh auto;padding:28px}}small,a{{color:#a9d5bf}}h1{{font-size:38px;line-height:1.2}}h2{{font-size:22px;margin:0}}.cards{{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}}article{{border:1px solid #354654;border-radius:10px;padding:23px}}p{{max-width:76ch}}.scope{{color:#b7c5d1;font-size:14px}}footer{{margin-top:32px;border-top:1px solid #354654;padding-top:20px}}</style></head>
 <body><main><small>INSTALLED DOCUMENTATION · STDO {VERSION}</small>
-<h1>Read the constraints. Follow their connections.</h1>
-<p>Explore constraints, governing relationships, conditions, exceptions and caveats.
-Read full records and source passages alongside 3D, 2D or Layered views, keeping the same selected record and reading trail as you switch.</p>
-<p>Use Files to browse the represented source folders, then follow logical connections and return to the source.</p>
-<p><a class="button" href="constraint-explorer/index.html">Open the constraint explorer →</a></p>
-<p><a href="README.md">Reading guide and installed access</a></p>
-<section><h2>Which source am I reading?</h2>
-<p class="scope">This release includes the historical common <strong>{SOURCE_COMMIT[:8]}</strong>
-representation: 1,987 records, including 841 constraints. Its embedded source and
-graph describe that cut, rather than the current {VERSION} method.</p>
-<p>The <a href="../README.md">installed current standards</a> and
-<a href="../../plugins/spec/references/GETTING_STARTED.md">Getting Started guide</a>
-remain the routes for current method decisions.</p>
-<p>Dependencies and authored relationships retain their own meanings. A connection
-is not a verdict that a constraint's prose has been proved.</p></section>
-<section><h2>Available on this installation</h2><ul><li>The complete explorer and its 58 referenced source files are embedded locally.</li>
-<li>No account, network connection, Graphify or Lean installation is needed to read it.</li>
-<li>3D and 2D use WebGL. Layered, Files and the text reader remain available without it.</li></ul>
-<p><a href="DOCUMENTATION.json">Exact documentation inventory and source identity</a></p></section>
+<h1>Read the reasoning.<br>Follow it into source and proof.</h1>
+<p>These readers work offline. Explore the same selected information in 3D, 2D or Layered views, or follow the files and full text.</p>
+<div class="cards">
+<article><h2><a href="constraint-explorer/index.html">Constraints →</a></h2><p>Follow STDO constraints, conditions, caveats and source passages.</p><p class="scope">Historical common {SOURCE_COMMIT[:8]}: 1,987 records, including 841 constraints.</p></article>
+<article><h2><a href="code-explorer/index.html">Code example →</a></h2><p>Navigate ABIogenesis requirements into selected canonicalization code and test sources.</p><p class="scope">A reviewed four-file example. Proposed trace links retain their limits; test source is not a test result.</p></article>
+<article><h2><a href="proofs/index.html">Lean proofs →</a></h2><p>Read closure and projection theorems, their premises, exact Lean source and retained proof evidence.</p><p class="scope">Historical T-011 report; structural results do not prove English requirements or this code example.</p></article>
+<article><h2><a href="../tooling/README.md">Use the tools →</a></h2><p>Materialize the bundled a_c and Skills source into a writable workspace and build your own project's representation.</p><p class="scope">Reading needs no setup. Running optional Graphify or Lean paths requires their declared dependencies.</p></article>
+</div><footer><p><a href="README.md">Reading guide</a> · <a href="../README.md">Current standards</a> · <a href="../../plugins/spec/references/GETTING_STARTED.md">Getting Started</a> · <a href="DOCUMENTATION.json">Exact inventory</a></p>
+<p class="scope">Use current installed standards for current method decisions. Historical representations keep their own source identity. 3D and 2D use WebGL; Layered and text remain available without it. Open entries in separate tabs or use browser Back. No service is needed.</p></footer>
 </main></body></html>
 """.encode()
 
 
-def bundle(viewer, destination):
+def bundle(viewer, destination, code_viewer, proofs):
     viewer, destination = Path(viewer).resolve(), Path(destination)
     require(not destination.is_symlink(), "redirected destination")
     # Resolve platform aliases such as macOS /var -> /private/var before overlap
@@ -149,9 +175,17 @@ def bundle(viewer, destination):
     require(not viewer.is_relative_to(destination), "output overlaps imported viewer")
     raw = viewer.read_bytes()
     viewer_data(raw)
-    files = {"index.html": landing(), "README.md": guide(), "constraint-explorer/index.html": raw}
+    code_raw = Path(code_viewer).read_bytes()
+    require(sha(code_raw) == CODE_SHA256, "code viewer differs from reviewed artifact")
+    proof_paths = list(Path(proofs).rglob("*"))
+    require(not any(p.is_symlink() for p in proof_paths), "redirected proof payload")
+    proof_files = {p.relative_to(proofs).as_posix(): p.read_bytes() for p in proof_paths if p.is_file()}
+    proof_checker().check_payload(proof_files)
+    files = {"index.html": landing(), "README.md": guide(), "constraint-explorer/index.html": raw,
+             "code-explorer/index.html": code_raw, **{"proofs/" + p: b for p, b in proof_files.items()}}
     metadata = {"kind": "stdo.installed-documentation/1", "distribution_version": VERSION,
                 "role": "non-normative-documentation", "entrypoint": "index.html",
+                "code_example": {"subject": "ABIogenesis T-019 canonicalization", "viewer_sha256": CODE_SHA256},
                 "source": {"identity": SOURCE_ID, "commit": SOURCE_COMMIT,
                            "standing": "historical-common-proposal", "model_identity": MODEL_ID,
                            "model_sha256": MODEL_SHA256, "viewer_sha256": VIEWER_SHA256},
@@ -179,6 +213,10 @@ def check_files(files):
     expected = [{"path": p, "bytes": len(b), "sha256": sha(b)} for p, b in sorted(files.items()) if p != "DOCUMENTATION.json"]
     require(metadata["members"] == expected, "documentation member bytes differ")
     viewer_data(files["constraint-explorer/index.html"])
+    require(sha(files["code-explorer/index.html"]) == CODE_SHA256 and
+            metadata.get("code_example") == {"subject": "ABIogenesis T-019 canonicalization", "viewer_sha256": CODE_SHA256},
+            "code viewer differs from reviewed artifact")
+    proof_checker().check_payload({p[len("proofs/"):]: raw for p, raw in files.items() if p.startswith("proofs/")})
     # Navigation and historical/current-source distinctions are controlled content.
     require(files["index.html"] == landing() and files["README.md"] == guide(), "documentation entry or guide differs")
     return {"status": "checked", "version": VERSION, "members": len(files), "viewer_sha256": VIEWER_SHA256}
@@ -229,11 +267,13 @@ def main(argv=None):
     b = commands.add_parser("bundle")
     b.add_argument("--viewer", type=Path, required=True)
     b.add_argument("--destination", type=Path, required=True)
+    b.add_argument("--code-viewer", type=Path, required=True)
+    b.add_argument("--proofs", type=Path, required=True)
     c = commands.add_parser("check")
     c.add_argument("root", type=Path)
     args = parser.parse_args(argv)
     try:
-        result = bundle(args.viewer, args.destination) if args.command == "bundle" else check(args.root)
+        result = bundle(args.viewer, args.destination, args.code_viewer, args.proofs) if args.command == "bundle" else check(args.root)
         print(json.dumps(result, indent=2))
         return 0
     except (OSError, ValueError, KeyError, TypeError) as exc:

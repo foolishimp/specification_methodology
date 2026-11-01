@@ -14,6 +14,9 @@ The [installed documentation](documentation/index.html) includes an offline
 [reading guide](documentation/README.md). It is explanatory documentation of
 the historical source cut identified there. The current owning standards
 below decide method questions; bundling does not reclassify the older graph.
+It also includes the [ABI code example](documentation/code-explorer/index.html),
+[Lean proof reader](documentation/proofs/index.html), and
+[bundled tool setup](tooling/README.md) for an explicit writable workspace.
 
 | You want to | Read, in order |
 |---|---|

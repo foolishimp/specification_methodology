@@ -42,6 +42,12 @@ and controls. Its represented common source is the historical 35fb4824 cut,
 not the complete current 3.0.3 corpus; use the owning installed standards for
 current method decisions.
 
+The same home offers the [ABI code example](../../../standards/documentation/code-explorer/index.html)
+and [Lean proof reader](../../../standards/documentation/proofs/index.html).
+To build your own representation, use the [bundled tooling guide](../../../standards/tooling/README.md).
+Its materializer creates an explicit writable workspace; installed release
+files remain immutable and optional execution dependencies are selected separately.
+
 ## The Operating Loop
 
 Keep these distinct:

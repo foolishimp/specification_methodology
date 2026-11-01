@@ -4,20 +4,29 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
-**STDO 3.0.3 documentation review repairs are implemented and independently reviewed** under
-[T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md).
-The offline constraint explorer is a required installed documentation member,
-now using the unified reader with Files and 3D/2D/Layered views over unchanged
-historical representation data. The [repair return](../.ai-workspace/work/STDO303_DELIVERY/review-repairs-001/README.md)
-records fresh installed-manager acquisition, tamper rejection, DOM/state
-controls, release-asset correction and registered tool ownership. The
-[independent successor review](../.ai-workspace/work/STDO303_DELIVERY/review-repairs-001/INDEPENDENT_REVIEW.md)
-closes all six repair conditions with no actionable S0–S4 finding. Actual
-browser/WebGL qualification of the new HTML remains open; the earlier browser
-observation and review apply to the previous artifact. This is part of the
-owner's selected tooling/distribution increment. The reviewed repairs are
-checkpointed and pushed on `main` at `c034593eea08`. Other tooling bundling and
-3.0.3 release publication remain outstanding delivery work.
+**The STDO 3.0.3 native candidate now includes the selected tooling and offline readers**
+under [T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md).
+The [preparation return](../.ai-workspace/work/STDO303_DELIVERY/tooling-integration-001/README.md)
+binds 106 native payload files, the 191-file a_c/Skills source archive, explicit
+safe workspace materialization, a shared documentation home and fresh real
+installed-manager/public-tooling qualification. Constraints and the reviewed
+ABI code example retain their exact existing HTML; the Lean reader displays
+source-bound historical proof evidence. The final installed path passes all
+thirty selected operations, including stronger Skills source-route checking
+and physical-alias refusal, while keeping the installation unchanged.
+The [independent review](../.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/INDEPENDENT_REVIEW.md)
+is closed with no open actionable S0–S4 finding; bounded package preparation
+is ready. No owner semantic acceptance or public 3.0.3 release is asserted. The next
+Git Writer/checkpoint and exact committed-source native preparation precede
+native tag/manifest/assets, atomic publication and published-install readback.
+
+This is a distribution relation to independently owned a_c and Skills tooling;
+it migrates no Product authority or basis. Actual browser/WebGL, fresh-machine
+Lean execution, new Skills host use and semantic/whole-method qualification
+remain separate. The earlier documentation repairs are already checkpointed
+and pushed on main at `c034593eea08`; their
+[independent review](../.ai-workspace/work/STDO303_DELIVERY/review-repairs-001/INDEPENDENT_REVIEW.md)
+remains historical evidence. This successor's source input is `9c9626ffd20ea88`.
 
 ### Published predecessor
 

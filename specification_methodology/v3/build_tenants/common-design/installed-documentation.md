@@ -49,3 +49,17 @@ documentation. The release plan retains a separate exact published-install
 check. The local qualification selects the installed manager executable
 explicitly and uses disposable repositories and stores. Its observations name
 their actual subject; earlier browser evidence does not qualify changed HTML.
+
+## Tooling and proof-reader integration
+
+The shared home now offers Constraints, Code example, Lean proofs and Use the
+tools. `code-explorer/index.html` preserves the reviewed ABI T-019 HTML exactly.
+`proofs/` contains the separately checked 11-member [proof reader](proof-reader.md).
+The documentation gate requires both sets and delegates proof source/catalog
+checks to the sibling `proof_reader.py`; that checker reads no work records.
+`DOCUMENTATION.json` inventories every reader member and names the ABI example.
+The two existing explorers remain byte-identical, using browser Back or tabs
+for home navigation. The [tooling design](installed-tooling.md) owns source
+materialization and its separate dependency/setup boundary. Prior browser
+observations retain their earlier subjects; DOM/source/install checks do not
+claim a new actual browser or WebGL observation.

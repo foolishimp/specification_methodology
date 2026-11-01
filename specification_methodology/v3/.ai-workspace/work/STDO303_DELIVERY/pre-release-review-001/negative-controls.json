@@ -1,0 +1,68 @@
+{
+  "controls": [
+    {
+      "case": "complete native payload and generic surface gate",
+      "checked_references": 6057,
+      "members": 106,
+      "status": "passed"
+    },
+    {
+      "case": "native old basis",
+      "status": "refused"
+    },
+    {
+      "case": "native construction history",
+      "status": "refused"
+    },
+    {
+      "case": "tooling guide real link",
+      "status": "refused"
+    },
+    {
+      "case": "proof namespace JSON $ref still checked",
+      "status": "refused"
+    },
+    {
+      "case": "native omitted standards/tooling/",
+      "reason": "required tooling member set differs",
+      "status": "refused"
+    },
+    {
+      "case": "native omitted standards/documentation/proofs/",
+      "reason": "required documentation member set differs",
+      "status": "refused"
+    },
+    {
+      "case": "traversal",
+      "reason": "source member traversal",
+      "status": "refused_before_output"
+    },
+    {
+      "case": "symlink",
+      "reason": "nonregular or mismatched archive mode",
+      "status": "refused_before_output"
+    },
+    {
+      "case": "duplicate",
+      "reason": "extra or duplicate archive member",
+      "status": "refused_before_output"
+    },
+    {
+      "case": "changed-content",
+      "reason": "source member digest differs: a_c/AGENTS.md",
+      "status": "refused_before_output"
+    },
+    {
+      "case": "resealed-narrowing",
+      "reason": "source inventory commitment differs",
+      "status": "refused_before_output"
+    }
+  ],
+  "source_freeze_sha256": "1b65cf946b15d2c500080e3f39d4cd0f2a74f42f6c98997d56e74065690fc5c8",
+  "status": "passed",
+  "tool_sha256": {
+    "native_release.py": "4e1a8fb5d3120de38082fcc207bcf9a5eb508a26caf4b215397b10a236f6e091",
+    "package_tools.py": "c4efb97adeb071a9d2750ebd4bcb69240f8cd09c6ebed2373bf405f61c30a921",
+    "tooling_materialize.py": "1618537d414f195a08bbbe8cd0148b265158574e0fe31a985eb2799cfe21ad4e"
+  }
+}

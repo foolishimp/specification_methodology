@@ -3,10 +3,11 @@
 This directory is the common tenant's registered implementation territory.
 The tools require Python 3.11+ and the standard library. They are construction
 tools; the ordinary native method payload installs the generated documentation,
-not this directory or the a_c authoring/formal toolchain.
+plus an exact source-only a_c/Skills bundle; this construction directory itself
+is not a runtime dependency.
 
-- `documentation.py` bundles and checks the selected offline documentation. Its
-  only project-code dependency is sibling `package_tools.py`; no working record
+- `documentation.py` bundles and checks the selected offline documentation. It uses
+  sibling `package_tools.py` and `proof_reader.py`; no working record
   supplies executable code. Run `python3 -I -B documentation.py check PACKAGE`.
 - `package_tools.py` is the single standalone package checker and materializer.
   Use its `--help` for explicit input/output operations. Existing trusted
@@ -32,3 +33,10 @@ Run `python3 -B -m unittest discover -s . -p test_documentation.py` for focused
 documentation and release-asset controls. These tests run against the sibling
 `../common` payload. Browser/WebGL qualification and exact published-install
 readback remain distinct obligations.
+
+The tooling distribution is built with `tooling.py build --repository ROOT
+--destination ABSENT`, using explicit `tooling-selection.json`. Its checker is
+`tooling.py check PACKAGE`; `tooling_materialize.py` is copied exactly into the
+installed source bundle. `test_tooling.py` covers extraction and inventory
+refusals. `qualify_tooling.py --help` exercises extracted public commands from
+an arbitrary current directory using an existing disposable installation.

@@ -8,7 +8,7 @@ import sys
 _target = Path(__file__).resolve().parents[3] / "build_tenants/common-tools/package_tools.py"
 try:
     _source = _target.read_bytes()
-    if hashlib.sha256(_source).hexdigest() != "30b70f6e7771535cf50b37e56a51bb595b477364b6c1112acf044c7b76e4ceac":
+    if hashlib.sha256(_source).hexdigest() != "c4efb97adeb071a9d2750ebd4bcb69240f8cd09c6ebed2373bf405f61c30a921":
         raise ValueError("registered package checker differs from compatibility selection")
 except (OSError, ValueError) as _error:
     print(json.dumps({"valid": False, "error": str(_error)}))

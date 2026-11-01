@@ -10,7 +10,7 @@ Start with the [method entry](../standards/README.md),
 [installed documentation](../standards/documentation/index.html), or
 [installation guidance](../plugins/spec/references/GETTING_STARTED.md#new-project).
 The native package carries the method, distributed `spec` plugin and offline
-interactive documentation. The separately distributed manager wheel supplies
+interactive documentation and exact a_c/Skills source tools. The separately distributed manager wheel supplies
 installation; reading the documentation needs only a browser. The [licence](../LICENSE)
 applies, with the explorer's upstream license notices embedded in its HTML.
 
@@ -24,7 +24,7 @@ the same selected information; Layered works without WebGL. No separate suppleme
 Graphify, Lean, a_c or Node installation is needed to review it. The installed
 README and Getting Started guide expose its entry and logical URI.
 
-This is a documentation/distribution increment over 3.0.2. It changes no
+This is a tooling and documentation distribution increment over 3.0.2. It changes no
 constitutional method rule. The included graph preserves the reviewed common
 35fb4824 proposal: 1,987 local records, including 841 constraints. It is
 historical explanatory documentation, not a source-matched representation of
@@ -36,7 +36,7 @@ binds the distributing release, represented source and exact viewer bytes.
 
 The native manifest includes the documentation members and their digests.
 Release qualification checks the actual installed bytes, logical resolution,
-source-independent browser use and tamper detection. A valid staging directory
+source-independent offline payload access and tamper detection. A valid staging directory
 alone does not establish an installed or published result; the release record
 binds final qualification to the published cut.
 
@@ -49,3 +49,20 @@ whole-method representation and practical-qualification obligations.
 The documentation distribution does not adopt another basis for an existing
 consumer or make a_c a runtime dependency of STDO. Other installed cuts, prior
 immutable tags and the historical v2 matched cohort remain unchanged.
+
+## Included tools and examples
+
+The shared documentation home now includes the exact reviewed ABI code explorer
+and a [Lean proof reader](../standards/documentation/proofs/index.html) with
+retained source-bound T-011 evidence. Neither implies ABI test execution or a
+fresh Lean result.
+
+The [tooling guide](../standards/tooling/README.md) exposes the manifest-bound
+a_c Graphify/Lean and Codex/Claude Skills source bundle, exact inventory and
+stdlib verifier/materializer. The user explicitly creates a separate writable
+workspace; runtime dependencies, support, caches and evidence are not written
+under the immutable release. No separate supplemental download is needed for
+these selected sources. Optional Graphify and Lean execution require their
+declared dependencies. Exact compiled Lean support and fresh-machine proof
+execution are not included. The existing source contracts and construction
+bases remain unchanged.

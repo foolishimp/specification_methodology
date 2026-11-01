@@ -1,0 +1,92 @@
+{
+  "actual_generated_page_dom": {
+    "exit_code": 0,
+    "script": "test_proof_reader.DOM_TEST",
+    "stdout": "offline proof reader DOM checks passed\n",
+    "subject": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/index.html"
+  },
+  "check": {
+    "declarations": 484,
+    "members": 11,
+    "report_sha256": "8b002e3821e99cd88bae0ccf07794d2e99818ba4e5b38d919fc3e3b45c672061",
+    "sources": 8,
+    "standing": "documentation custody/reproduction; no fresh Lean execution",
+    "status": "checked"
+  },
+  "kind": "stdo.proof-reader-worker-validation/1",
+  "limits": [
+    "Historical evidence; no fresh Lean execution.",
+    "jsdom navigation, not browser visual or file-URL visual qualification.",
+    "Lexical source navigation, not kernel dependencies.",
+    "Documentation integrity, not semantic acceptance or a release decision."
+  ],
+  "pins": {
+    "specification_methodology/v3/build_tenants/common-design/proof-reader.md": {
+      "bytes": 3343,
+      "sha256": "372d927a6e54c2efc895d7820eed4296863648bfc7d946ca601cb423fed19294"
+    },
+    "specification_methodology/v3/build_tenants/common-tools/proof_reader.py": {
+      "bytes": 31599,
+      "sha256": "37a74b721347635ddfdf1032cbed124c97c46aabbfd5f4fd919aca19f9cdf457"
+    },
+    "specification_methodology/v3/build_tenants/common-tools/test_proof_reader.py": {
+      "bytes": 13476,
+      "sha256": "2ac5ea85168476f778ea8bc6055b260b97d65834585d30fd9e5cd83f15e1d425"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/PROOFS.json": {
+      "bytes": 422110,
+      "sha256": "76c4b1f0543d9d690f8e479598bcd8266d97494869e0fc8c548f984c7c3b7fa6"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/index.html": {
+      "bytes": 764937,
+      "sha256": "f7729208c0396473389a0322039d3b724ef2a1c006a56885ab916b0e3c5f4418"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/report.json": {
+      "bytes": 2741,
+      "sha256": "8b002e3821e99cd88bae0ccf07794d2e99818ba4e5b38d919fc3e3b45c672061"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/sources/AC.lean": {
+      "bytes": 129,
+      "sha256": "a887a453a58b5a2e56b2eb9580d97227d5efb60ea79f4082decb8c5c79e4209f"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/sources/AC/Audit.lean": {
+      "bytes": 10357,
+      "sha256": "bbe185b9e3550029328a19fbb927719450f6885720918cb45a60e5ba6131b647"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/sources/AC/Closure.lean": {
+      "bytes": 7243,
+      "sha256": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/sources/AC/Fixture.lean": {
+      "bytes": 315965,
+      "sha256": "483293b34e35efd01883dd57a222eabfbba658c0c4d797b0bc54633192f236ea"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/sources/AC/Model.lean": {
+      "bytes": 2894,
+      "sha256": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/sources/AC/Projection.lean": {
+      "bytes": 8407,
+      "sha256": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/sources/AC/Run.lean": {
+      "bytes": 3572,
+      "sha256": "12a07031acb8d1a4bdcedd3341a2d70633e57598aede87c97cfab67aedad9ab6"
+    },
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/sources/AC/Toy.lean": {
+      "bytes": 97713,
+      "sha256": "9cf4aaba1f9c98329b7fc2cefbd08042ef05dffe12148e1e6399363cfdf559b8"
+    },
+    "specification_methodology/v3/specification/requirements/PROOF_READER.md": {
+      "bytes": 1791,
+      "sha256": "85136714bb26aa768cb268ebd8f9c17d99d6ad6dfb2ae6707f52ba3bd491c0be"
+    }
+  },
+  "unit_tests": {
+    "command": "NODE_PATH=/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-navigation-dom-hf_s3qyf/node_modules python3 -B -m unittest -v test_proof_reader",
+    "cwd": "specification_methodology/v3/build_tenants/common-tools",
+    "passed": 9,
+    "seconds": "2.257",
+    "skipped": 0
+  }
+}
