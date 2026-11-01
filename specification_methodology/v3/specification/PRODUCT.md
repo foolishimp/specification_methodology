@@ -14,7 +14,14 @@ Under the [standalone successor requirement](requirements/README.md#standalone-s
 
 Each rule has one owning section, under [Method Structure](#method-structure) and the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
-The currently selected source increment is
+The selected distribution increment is STDO 3.0.3, including
+[installed interactive documentation](requirements/INSTALLED_DOCUMENTATION.md)
+under [T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md).
+The constraint explorer is a required documentation asset. Packaging preserves
+its exact represented source and explanatory standing; it does not turn a
+historical graph into the current methodology or a proof of its prose.
+
+The preceding source increment is
 [recursive Product composition](requirements/PRODUCT_COMPOSITION.md), constructed
 over the published 3.0.1 baseline. The owner now selects its standalone native
 3.0.2 stable release under the [release selection](../.ai-workspace/work/STDO302_DELIVERY/SELECTION.md).

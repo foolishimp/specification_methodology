@@ -26,7 +26,9 @@ Representation host discovery and behavior need their own observed evidence.
 python3 -B /absolute/path/to/codex/tests/verify_package.py /absolute/path/to/codex
 ```
 
-The inventory binds every ordinary regular file under this tenant except inventory.json itself; retain that manifest's digest separately. Checks cover exact inventory, skill metadata, contained resolvable local resources and source-hash syntax. They do not acquire external sources to verify their contents. No host/model invocation or semantic verdict follows.
+The inventory binds every ordinary regular file under this tenant except inventory.json itself; retain that manifest's digest separately. Checks cover exact inventory, skill metadata and contained resolvable local resources. At this tenant's normal repository location, the verifier also compares the current selected Product/tool source routes with their actual bytes. Untagged historical construction routes retain their original pins and are not checked as current.
+
+A portable copy needs no source checkout for package or installed-copy custody checks; its result reports external currentness as `not_performed`. To check its selected source pins against an explicit construction repository, add `--repository /absolute/path/to/specification_methodology`. The duplicated provider-manifest pins must agree even without that repository. This check selects no runtime provider or grant and supplies no host/model qualification or semantic verdict.
 
 ## Repository-local installation
 

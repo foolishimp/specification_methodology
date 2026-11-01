@@ -1,63 +1,51 @@
-# STDO 3.0.2
+# STDO 3.0.3
 
-STDO 3.0.2 is the standalone native methodology release using the `stable-v1`
-profile. Its immutable annotated tag is `specification_methodology/v3.0.2`,
-its logical cut is `stdo://releases/v3.0.2/`, and its native predecessor is
-published 3.0.1 RC1, commit `fe4941f56a52ed3697a2b516d8d68948b0ea65d9`.
-The public installed manifest binds the exact tag, commit, trees and payload
-members. No RC suffix or second mutable selector belongs to this cut.
-Earlier RC-labelled cuts remain proper immutable releases with their existing
-selector semantics; this release does not reclassify or move them.
+STDO 3.0.3 uses the standalone native `stable-v1` release profile. Its immutable
+annotated tag is `specification_methodology/v3.0.3` and its logical cut is
+`stdo://releases/v3.0.3/`. The native predecessor is published STDO 3.0.2,
+commit `23ca9c0929d7be8570edafaf30542e3daeb8dc1f`. The published manifest binds
+the actual tag, commit, trees and complete installed member inventory.
 
-The package contains the method standards and distributed `spec` plugin. Start
-with the [method entry](../standards/README.md),
-[templates](../standards/templates/README.md) and
+Start with the [method entry](../standards/README.md),
+[installed documentation](../standards/documentation/index.html), or
 [installation guidance](../plugins/spec/references/GETTING_STARTED.md#new-project).
-The [licence](../LICENSE) applies. Install using the separately distributed
-`stdo-toolchain 0.1.6` wheel and its checksum; the native tag does not contain
-the manager's Python source package. The manifest and checksum are public
-release assets. Installation preserves other installed versions and changes
-no Product Definition or host plugin selection automatically.
+The native package carries the method, distributed `spec` plugin and offline
+interactive documentation. The separately distributed manager wheel supplies
+installation; reading the documentation needs only a browser. The [licence](../LICENSE)
+applies, with the explorer's upstream license notices embedded in its HTML.
 
-## Changes
+## Installed documentation
 
-[Product composition](../standards/PRODUCT_DEFINITION.md#9-recursive-discovery-and-explicit-composition)
-adds PC-01–PC-07: recursive independently enterable Products, leaf and composite
-scope, explicit dependency contracts, integrated outcome responsibility,
-route-specific authority, context eligibility and adequacy, and material
-invalidation with retained history. Tenants remain realizations. Reachability
-never grants transitive authority; an authorized detailed dependency inventory
-is permitted without requiring every encapsulated dependency to be flattened.
-The [contract template](../standards/templates/PRODUCT_COMPOSITION_CONTRACT_TEMPLATE.md)
-and [worked example](../standards/examples/PRODUCT_COMPOSITION.md) make these
-conditions concrete, including shared leaves, incompatible replacement,
-source leakage and continuation limits.
+The [constraint explorer](../standards/documentation/constraint-explorer/index.html)
+is part of the ordinary release payload. Every complete installation receives
+its 3D/2D/Layered views, Files navigation, full constraint reader, exact reading
+trail, recorded source quotations and embedded source files. The modes retain
+the same selected information; Layered works without WebGL. No separate supplement download or
+Graphify, Lean, a_c or Node installation is needed to review it. The installed
+README and Getting Started guide expose its entry and logical URI.
 
-[Release profiles](../standards/RELEASE.md#stable-cuts) now support a directly
-published stable semantic-version cut alongside the conserved RC profile.
-The stable line requires its explicit annotation and manifest profile, refuses
-legacy selector collisions and keeps its tag immutable. Changed qualifying
-bytes after stable publication require a new version. Discovery and explicit
-digest-bound consumer adoption remain separate.
+This is a documentation/distribution increment over 3.0.2. It changes no
+constitutional method rule. The included graph preserves the reviewed common
+35fb4824 proposal: 1,987 local records, including 841 constraints. It is
+historical explanatory documentation, not a source-matched representation of
+all current 3.0.3 law. Use the current installed standards for current method
+decisions. The [documentation inventory](../standards/documentation/DOCUMENTATION.json)
+binds the distributing release, represented source and exact viewer bytes.
 
-## Evidence and retained limits
+## Evidence and boundaries
 
-The composition source, tooling and Skills construction received independent
-review, including supported repairs, before the release increment. Native frames
-are generated from their current owners. Release preparation adds targeted
-stable/legacy identity checks and exact package/install verification. Public
-release records bind those observations to the actual published subject.
+The native manifest includes the documentation members and their digests.
+Release qualification checks the actual installed bytes, logical resolution,
+source-independent browser use and tamper detection. A valid staging directory
+alone does not establish an installed or published result; the release record
+binds final qualification to the published cut.
 
-The separate a_c/Graphify supplement covers composition clauses and the changed
-release-profile contract, with exact source grounding and carrier recovery.
-It is not an installed dependency and does not complete the earlier incomplete
-whole-method interpretation. Mechanical recovery does not establish semantic
-acceptance, optimal compression or practical delivery/cost improvement.
-Whole-method qualification remains bounded by the inherited recorded evidence;
-publishing this release does not assert new general qualification.
+The reader preserves the distinction between authored semantic relations,
+required retention links and other typed references. Links and layout do not
+assert logical implication. The existing Lean proofs of closure and retained
+record projection do not prove the prose constraints or complete the remaining
+whole-method representation and practical-qualification obligations.
 
-Skills' installed 3.0.1 basis, a_c's 2.5.1 construction basis and the older v2
-matched cohort remain unchanged. The source repository also carries separate
-manager, a_c and Skills increments; co-location does not add them to this native
-payload or migrate their consumers. Adoption requires each consumer's explicit
-selection and applicable compatibility assessment.
+The documentation distribution does not adopt another basis for an existing
+consumer or make a_c a runtime dependency of STDO. Other installed cuts, prior
+immutable tags and the historical v2 matched cohort remain unchanged.

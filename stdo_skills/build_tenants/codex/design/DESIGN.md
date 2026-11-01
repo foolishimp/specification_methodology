@@ -119,3 +119,13 @@ The package verifier and skill-creator quick validator cover resource custody an
 metadata. T-003 public-workflow fixture evidence, actual Codex host discovery and
 semantic behavior are separate observations; package checks qualify none of
 those claims and do not change historical Q01–Q12 standing.
+
+The current provider's selection identifies the source-route entries checked for
+currentness. The package verifier compares their Product/tool file digests at
+the recognized in-repository tenant location, or in an explicitly supplied
+construction repository. It checks agreement between the provider-manifest pin
+and its corresponding selected source entry in every package. Portable custody
+checks without source roots report external currentness as `not_performed`;
+they remain usable for installed copies. Untagged historical acquisition routes
+retain their original identities. Repository inference belongs only to this
+construction check and supplies no runtime provider selection or authority.

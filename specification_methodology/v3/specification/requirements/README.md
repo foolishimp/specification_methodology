@@ -9,6 +9,7 @@ The common requirements bind both build tenants' candidates. This file holds the
 - [PREDECESSOR_CLAIMS](PREDECESSOR_CLAIMS.md): the common claim inventory under STDO-UP-015. Each tenant's frontier names its proposed dispositions and required carrying loci; its ticket supplies acceptance standing.
 - [PRODUCT_COMPOSITION](PRODUCT_COMPOSITION.md): selected recursive composition source increment, its authority/context rules, concrete consumers and bounded representation.
 - [STDO_3_0_1](STDO_3_0_1.md): the selected bounded amendment for the common successor, its exact native predecessor, operation-profile migration and preserved acceptance obligations.
+- [INSTALLED_DOCUMENTATION](INSTALLED_DOCUMENTATION.md): mandatory offline documentation in the 3.0.3 distribution, source identity, installed access and qualification.
 
 The working foundation statements in PRINCIPLES are content under evaluation, not installed law. The installed 2.5.1-rc.2 release is the law the builders work under, and it is the predecessor the new release evolves from.
 

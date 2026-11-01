@@ -42,6 +42,15 @@ them; it is not a new calculus or project lifecycle.
 The optional required formal-checker path and trusted digest are selected during
 prepare, using the existing gate configuration and its resource-root contract.
 Neither a skills label nor an ordinary build result implies Lean ran.
+When selected, its origin reservation applies before the project wrapper reads
+the definition, source, submitted answers or retained artifacts, and before it
+creates a run or output. It also guards directories before source traversal.
+Resume resolves the inherited checker through generation's fixed operator-owned
+startup metadata before reading `PROJECT.json` or its named paths. The public
+project workflow selects the checker at prepare; adding a later selection to
+an unselected checkpoint requires a fresh project run. The wrapper uses the
+same exact-source adapter and refusal type as generation. Without a checker,
+these operations perform no origin lookup and retain their local-file contract.
 
 ## Retained state and trust boundary
 

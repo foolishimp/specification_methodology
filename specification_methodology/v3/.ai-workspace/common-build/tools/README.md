@@ -2,7 +2,14 @@
 
 This tooling implements the mechanical G1–G5 and A3 construction contributions under [T-003](../../tickets/active/T-003-COMMON-standalone-v3-construction.md). It stays outside the delivered V3 package. It does not confer semantic qualification, acceptance, release or installation.
 
-`package_tools.py` is one standalone standard-library program. It accepts an explicit package root and works from an unrelated working directory. It neither imports nor executes candidate code or project helpers. Use Python 3.11 or later; the recorded controls identify the actual interpreter tested.
+The maintained [package_tools.py](../../../build_tenants/common-tools/package_tools.py)
+is registered under `build_tenants/common-tools/`. It is one standalone
+standard-library program. It accepts an explicit package root and works from
+an unrelated working directory. It neither imports nor executes candidate code
+or project helpers. The former `package_tools.py` entry here is a compatibility
+launcher that checks the fixed canonical implementation digest before execution.
+Use the canonical path for the single-file trusted invocation below. Use Python
+3.11 or later; the recorded controls identify the actual interpreter tested.
 
 ## Trusted invocation
 

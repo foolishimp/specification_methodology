@@ -11,7 +11,7 @@ import tempfile
 import unittest
 
 
-SCRIPT = Path(__file__).resolve().parents[1] / "package_tools.py"
+SCRIPT = Path(__file__).resolve().parents[4] / "build_tenants/common-tools/package_tools.py"
 INSTALLED_PYTHON = Path("/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python")
 INSTALLED_MANIFEST_SCHEMA = Path("/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/schemas/installed-release-manifest.schema.json")
 

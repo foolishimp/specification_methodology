@@ -4,7 +4,8 @@
 one offline reader with a 3D / 2D / Layered middle-panel switch. All renderers
 consume one unchanged representation and preserve selection and navigation state.
 Implementation, finite checks and independent repair review are complete;
-browser visual qualification remains open. The work remains local.
+browser visual qualification remains open. The current repairs are checkpointed
+on `main` with a [closed independent repair review](../../specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/review-repairs-001/INDEPENDENT_REVIEW.md).
 
 [T-017](../.ai-workspace/tickets/active/T-017-source-navigation.md) adds source
 folder/file navigation to the portable reader under PU-03, with transitions

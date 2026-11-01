@@ -1,0 +1,57 @@
+{
+  "kind": "stdo303.installed-browser-observation/1",
+  "installation": "qualification-003/qualification.json",
+  "served_from": "qualification-003/store/releases/v3.0.3",
+  "transport": "loopback HTTP, port 8769",
+  "source_repository_absent": true,
+  "scope": "Observed installed documentation, not public-release or whole-method qualification",
+  "harness_correction": "Initial wait used nonexistent #search instead of actual #query; corrected to the actual UI selector. Initial search read preceded rendering; explicit wait supplied the subsequent result.",
+  "runs": [
+    {
+      "observations": {
+        "entryTitle": "STDO 3.0.3 documentation",
+        "historyDisclosure": true,
+        "search": "",
+        "selected": "Every feature, bug, failed test, operator finding, scenario failure and release concern begins with inta…",
+        "source": {
+          "title": "plugins/spec/references/GETTING_STARTED.md:388–393",
+          "digest": "Embedded file SHA-256: e5f7402194c39192a9825603c0f6f69751e8aba01ca9f9eea8ef4a4c8969acec",
+          "highlightedLines": 6,
+          "visible": true
+        },
+        "trailSteps": 2,
+        "trailText": "1. Every feature, bug, failed test, operator finding, scenario fail…\n2. Using STDO guide\n→ Requires retention\nrequired:2097",
+        "backReturnedToOriginal": true,
+        "mode2": "true",
+        "mode3": "true",
+        "canvasPresent": true,
+        "expanded": "13 visible nodes · 24 visible links · 1987 local records available",
+        "focused": "13 visible nodes · 24 visible links · 1987 local records available",
+        "requests": [
+          "http://127.0.0.1:8769/standards/documentation/index.html",
+          "http://127.0.0.1:8769/standards/documentation/constraint-explorer/index.html"
+        ],
+        "externalRequests": [],
+        "errors": [],
+        "browserVersion": "156.0.8078.79"
+      },
+      "runner_transcript": "### Result\n{\"entryTitle\":\"STDO 3.0.3 documentation\",\"historyDisclosure\":true,\"search\":\"\",\"selected\":\"Every feature, bug, failed test, operator finding, scenario failure and release concern begins with inta…\",\"source\":{\"title\":\"plugins/spec/references/GETTING_STARTED.md:388–393\",\"digest\":\"Embedded file SHA-256: e5f7402194c39192a9825603c0f6f69751e8aba01ca9f9eea8ef4a4c8969acec\",\"highlightedLines\":6,\"visible\":true},\"trailSteps\":2,\"trailText\":\"1. Every feature, bug, failed test, operator finding, scenario fail…\\n2. Using STDO guide\\n→ Requires retention\\nrequired:2097\",\"backReturnedToOriginal\":true,\"mode2\":\"true\",\"mode3\":\"true\",\"canvasPresent\":true,\"expanded\":\"13 visible nodes · 24 visible links · 1987 local records available\",\"focused\":\"13 visible nodes · 24 visible links · 1987 local records available\",\"requests\":[\"http://127.0.0.1:8769/standards/documentation/index.html\",\"http://127.0.0.1:8769/standards/documentation/constraint-explorer/index.html\"],\"externalRequests\":[],\"errors\":[],\"browserVersion\":\"156.0.8078.79\"}\n### Ran Playwright code\n```js\nawait (async (page) => { const requests=[], errors=[]; const requestListener=r=>requests.push(r.url()), errorListener=e=>errors.push(e.message); page.on('request',requestListener); page.on('pageerror',errorListener); await page.goto('http://127.0.0.1:8769/standards/documentation/index.html'); const entryTitle=await page.title(); const historyDisclosure=(await page.locator('main').innerText()).includes('35fb4824'); await page.getByRole('link',{name:'Open the constraint explorer →'}).click(); await page.locator('#query').fill('authority'); const search=await page.locator('#matches').innerText(); await page.locator('#results button').first().click(); const selected=await page.locator('#details h2').innerText(); await page.locator('#details .source-link').first().click(); const source={title:await page.locator('#source-title').innerText(),digest:await page.locator('#source-digest').innerText(),highlightedLines:await page.locator('#source-text .selected-line').count(),visible:await page.locator('#source-dialog').isVisible()}; await page.locator('#source-close').click(); const originalHash=new URL(page.url()).hash; await page.locator('#details .connection').first().click(); const trailSteps=await page.locator('#trail button').count(); const trailText=await page.locator('#trail').innerText(); await page.locator('#back').click(); const returned=new URL(page.url()).hash===originalHash; await page.locator('#mode2').click(); const mode2=await page.locator('#mode2').getAttribute('aria-pressed'); await page.locator('#mode3').click(); const mode3=await page.locator('#mode3').getAttribute('aria-pressed'); const canvas=await page.locator('#graph canvas').boundingBox(); await page.mouse.move(canvas.x+canvas.width/2,canvas.y+canvas.height/2); await page.mouse.down(); await page.mouse.move(canvas.x+canvas.width/2+65,canvas.y+canvas.height/2+20,{steps:8}); await page.mouse.up(); await page.mouse.wheel(0,-60); await page.locator('#expand').click(); const expanded=await page.locator('#map-count').innerText(); await page.locator('#focus').click(); const focused=await page.locator('#map-count').innerText(); page.off('request',requestListener); page.off('pageerror',errorListener); return {entryTitle,historyDisclosure,search,selected,source,trailSteps,trailText,backReturnedToOriginal:returned,mode2,mode3,canvasPresent:!!canvas,expanded,focused,requests,externalRequests:requests.filter(x=>!x.startsWith('http://127.0.0.1:8769/')),errors,browserVersion:page.context().browser().version()}; })(page);\n```\n### Open tabs\n- 0: (current) [STDO · Read the constraints](http://127.0.0.1:8769/standards/documentation/constraint-explorer/index.html#urn%3Aa-c%3Ageneration%3A0657852b6fd1fa48457c3f7d%3Arecord%3A2c944816a4d279b5813e38f7eeaeac72)\n- 1: [New tab](chrome://new-tab-page/)\n### Page\n- Page URL: http://127.0.0.1:8769/standards/documentation/constraint-explorer/index.html#urn%3Aa-c%3Ageneration%3A0657852b6fd1fa48457c3f7d%3Arecord%3A2c944816a4d279b5813e38f7eeaeac72\n- Page Title: STDO · Read the constraints"
+    },
+    {
+      "observations": {
+        "search": {
+          "query": "evaluation",
+          "result": "273 matches · showing 50",
+          "selected": "Base ticket fields are exactly id, title, type, ticket_category, status, goal, change_intent, change_cla…"
+        },
+        "noWebGL": {
+          "message": "3D rendering is unavailable in this browser. Search, constraint reading, sources and the navigation trail remain available.",
+          "search": "459 matches · showing 50",
+          "selected": "Every feature, bug, failed test, operator finding, scenario failure and release concern begins with inta…",
+          "modeDisabled": true
+        }
+      },
+      "runner_transcript": "### Result\n{\"search\":{\"query\":\"evaluation\",\"result\":\"273 matches · showing 50\",\"selected\":\"Base ticket fields are exactly id, title, type, ticket_category, status, goal, change_intent, change_cla…\"},\"noWebGL\":{\"message\":\"3D rendering is unavailable in this browser. Search, constraint reading, sources and the navigation trail remain available.\",\"search\":\"459 matches · showing 50\",\"selected\":\"Every feature, bug, failed test, operator finding, scenario failure and release concern begins with inta…\",\"modeDisabled\":true}}\n### Ran Playwright code\n```js\nawait (async (page) => { await page.locator('#query').fill('evaluation'); await page.waitForFunction(()=>/^\\d+ matches/.test(document.querySelector('#matches').textContent),{},{timeout:5000}); const search={query:await page.locator('#query').inputValue(),result:await page.locator('#matches').innerText()}; await page.locator('#results button').first().click(); search.selected=await page.locator('#details h2').innerText(); const fallback=await page.context().newPage(); await fallback.addInitScript(()=>{ const original=HTMLCanvasElement.prototype.getContext; HTMLCanvasElement.prototype.getContext=function(kind,...args){return kind.startsWith('webgl')?null:original.call(this,kind,...args);}; }); await fallback.goto('http://127.0.0.1:8769/standards/documentation/constraint-explorer/index.html'); await fallback.waitForFunction(()=>document.querySelector('#graph').textContent.includes('3D rendering is unavailable'),{},{timeout:5000}); await fallback.locator('#query').fill('authority'); await fallback.waitForFunction(()=>/^\\d+ matches/.test(document.querySelector('#matches').textContent),{},{timeout:5000}); await fallback.locator('#results button').first().click(); const noWebGL={message:await fallback.locator('#graph').innerText(),search:await fallback.locator('#matches').innerText(),selected:await fallback.locator('#details h2').innerText(),modeDisabled:await fallback.locator('#mode3').isDisabled()}; await fallback.close(); return {search,noWebGL}; })(page);\n```\n### Open tabs\n- 0: (current) [STDO · Read the constraints](http://127.0.0.1:8769/standards/documentation/constraint-explorer/index.html#urn%3Aa-c%3Ageneration%3A0657852b6fd1fa48457c3f7d%3Arecord%3Af4c1301f673fa91e1df2cef24cde5298)\n- 1: [New tab](chrome://new-tab-page/)\n### Page\n- Page URL: http://127.0.0.1:8769/standards/documentation/constraint-explorer/index.html#urn%3Aa-c%3Ageneration%3A0657852b6fd1fa48457c3f7d%3Arecord%3Af4c1301f673fa91e1df2cef24cde5298\n- Page Title: STDO · Read the constraints"
+    }
+  ]
+}

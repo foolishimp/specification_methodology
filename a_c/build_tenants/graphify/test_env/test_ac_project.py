@@ -31,7 +31,8 @@ class ProjectBuildTests(unittest.TestCase):
             "what": {"intent": "specification/RULES.md", "product": "specification/RULES.md", "specification": ["specification"]}}
         gen.save(self.definition, self.product)
         self.run = self.root / "representation"
-        self.manager = patch.object(project, "verify_definition", side_effect=lambda p, m: (gen.load(p), {"valid": True, "test_fixture": True}))
+        self.manager = patch.object(project, "verify_definition", side_effect=lambda p, m, checker=None:
+                                    (gen._decode(project.regular(p, checker)), {"valid": True, "test_fixture": True}))
         self.manager.start()
 
     def tearDown(self):

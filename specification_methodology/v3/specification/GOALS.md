@@ -4,6 +4,23 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
+**STDO 3.0.3 documentation review repairs are implemented and independently reviewed** under
+[T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md).
+The offline constraint explorer is a required installed documentation member,
+now using the unified reader with Files and 3D/2D/Layered views over unchanged
+historical representation data. The [repair return](../.ai-workspace/work/STDO303_DELIVERY/review-repairs-001/README.md)
+records fresh installed-manager acquisition, tamper rejection, DOM/state
+controls, release-asset correction and registered tool ownership. The
+[independent successor review](../.ai-workspace/work/STDO303_DELIVERY/review-repairs-001/INDEPENDENT_REVIEW.md)
+closes all six repair conditions with no actionable S0–S4 finding. Actual
+browser/WebGL qualification of the new HTML remains open; the earlier browser
+observation and review apply to the previous artifact. This is part of the
+owner's selected tooling/distribution increment;
+checkpoint, other tooling bundling and 3.0.3 release publication remain separate
+outstanding delivery work.
+
+### Published predecessor
+
 **STDO 3.0.2 delivery is complete and published as a normal standalone release
 and GitHub Latest**, without an RC suffix. The owner's later release selection
 and the Executive's closed independent review, packaging and public-acquisition

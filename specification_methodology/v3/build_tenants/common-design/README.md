@@ -1,5 +1,10 @@
 # Common native realisation design
 
+The [installed documentation design](installed-documentation.md) binds the
+3.0.3 constraint-explorer distribution under T-006. Its maintained bundler and
+verification command live in `../common-tools/documentation.py`; the output
+is part of the normal native payload and installed manifest.
+
 This design route is outside the installed payload in `../common/`. It binds
 the common native realisation of the selected [3.0.1 amendment](../../specification/requirements/STDO_3_0_1.md)
 under [T-004](../../.ai-workspace/tickets/active/T-004-STDO-3.0.1-delivery.md).

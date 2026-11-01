@@ -49,7 +49,8 @@ model and release bundles remain unchanged.
 - 1,987 local records; 1,021 external resolutions; 3,995 retention edges;
   186 authored relation records; 16,498 typed-reference occurrences.
 
-Generate a fresh copy with the reusable tenant command:
+Generate a current unified view of this same historical model with the reusable
+tenant command:
 
 ```sh
 python3 build_tenants/graphify/code/ac_explore.py \
@@ -57,6 +58,7 @@ python3 build_tenants/graphify/code/ac_explore.py \
   --source-root applications/stdo-v3-common-35fb4824/run/corpus \
   --focus urn:a-c:generation:0657852b6fd1fa48457c3f7d:record:bb792864114a40c2a0bbe3c265517dc0 \
   --title 'STDO · Read the constraints' \
+  --layout unified \
   --out /tmp/stdo-constraints-new.html
 ```
 
@@ -65,3 +67,7 @@ fully recoverable Graphify carrier as input. Omitting `--source-root` retains
 recorded quotations without embedding full files. The pinned renderer is
 `3d-force-graph` 1.80.1; license notices are included in the HTML and tenant
 assets. No new model authoring or Lean proof run is performed by this command.
+The current export includes Files navigation, repaired planar labels and the
+3D/2D/Layered switch. Its presentation bytes differ from the frozen T-014
+`index.html`; `VIEW.json` identifies that historical artifact's original
+generator and asset cut. This command does not reproduce or replace those bytes.
