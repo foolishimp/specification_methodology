@@ -67,6 +67,8 @@
     return entries.length ? open + '\n' + inner + entries.join(',\n' + inner) + '\n' + pad + close : open + close;
   }
   const data = parseExact($('explorer-data').textContent);
+  const codeOverlay = data.code_overlay || null;
+  const overlayFamilies = new Set(['code', 'test', 'code_external']);
   const exportLayout = document.body.dataset.renderer;
   const unified = exportLayout === 'unified';
   const hasTracks = typeof globalThis.ACTracks === 'object';
@@ -75,6 +77,15 @@
   const nodes = new Map(data.nodes.map(n => [n.id, n]));
   const colors = {constraints: '#e7bd84', objects: '#8dc9dc', relations: '#bba4e6', residuals: '#e2949c', latitude: '#a9ce8b', traversals: '#70c8b2', transformations: '#dfbdde', judgments: '#91ace9', external: '#718290'};
   const names = {constraints: 'Constraint', objects: 'Concept', relations: 'Relation', residuals: 'Caveat', latitude: 'Latitude', traversals: 'Traversal', transformations: 'Transformation', judgments: 'Judgment', external: 'External reference'};
+  if (codeOverlay) {
+    Object.assign(colors, {code: '#79c7aa', test: '#e5a6d3', code_external: '#d99c7d'});
+    Object.assign(names, {code: 'Code', test: 'Test source', code_external: 'Unresolved code reference'});
+    $('structure-control').hidden = $('trace-control').hidden = false;
+  }
+  const layerNames = {required: 'Retention dependency', relation: 'Authored relation', reference: 'Typed reference',
+    structure: 'Code observation', trace: 'Proposed trace'};
+  const linkColors = {relation: '#b8a0e0', required: '#779a9c', reference: '#455669',
+    structure: '#6fb8e3', trace: '#e6be79'};
   const short = (s, n = 100) => s.length > n ? s.slice(0, n - 1) + '…' : s;
   const prettyKey = s => s.replace(/_/g, ' ').replace(/^./, c => c.toUpperCase());
   const neighbours = new Map(data.nodes.map(n => [n.id, []]));
@@ -102,7 +113,10 @@
   }
   const graphNodes = new Map(data.nodes.map(n => [n.id, {id: n.id, family: n.family, label: n.label}]));
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function enabled(link) { return $(link.layer + '-layer').checked; }
+  function enabled(link) {
+    if (!codeOverlay && ['structure', 'trace'].includes(link.layer)) return false;
+    return !!$(link.layer + '-layer')?.checked;
+  }
   function other(link, id) { return link.source === id ? link.target : link.source; }
   function connected(id) { return (neighbours.get(id) || []).filter(enabled); }
 
@@ -132,7 +146,7 @@
   $('total').textContent = data.nodes.filter(n => n.family === 'constraints').length;
   for (const family of Object.keys(colors)) {
     if (family !== 'constraints' && data.nodes.some(n => n.family === family)) {
-      const option = el('option', family === 'external' ? 'External references' : prettyKey(family));
+      const option = el('option', overlayFamilies.has(family) ? names[family] : family === 'external' ? 'External references' : prettyKey(family));
       option.value = family;
       $('family').append(option);
     }
@@ -256,6 +270,8 @@
   function edgeDescription(link, from) {
     const dir = link.source === from ? '→ ' : '← ';
     if (link.layer === 'required') return dir + (link.source === from ? 'Requires retention' : 'Required by');
+    if (link.layer === 'structure') return dir + 'Code observation: ' + link.label;
+    if (link.layer === 'trace') return dir + 'Proposed trace: ' + link.label;
     return dir + (link.layer === 'relation' ? 'Authored: ' : 'Reference: ') + link.label;
   }
   function select(id, via = null) {
@@ -300,12 +316,12 @@
   }
   $('back').onclick = () => { if (trail.length > 1) $('trail').children[trail.length - 2].click(); };
 
-  function renderValue(value, path = []) {
+  function renderValue(value, path = [], references = true) {
     if (value === null) return el('span', 'None', 'muted');
     if (Array.isArray(value)) {
       if (!value.length) return el('span', 'None declared', 'muted');
       const list = el('ul');
-      value.forEach((v, index) => { const li = el('li'); li.append(renderValue(v, [...path, String(index)])); list.append(li); });
+      value.forEach((v, index) => { const li = el('li'); li.append(renderValue(v, [...path, String(index)], references)); list.append(li); });
       return list;
     }
     if (typeof value === 'object') {
@@ -315,11 +331,11 @@
       for (const key of keys) {
         const val = value[key];
         if (key === 'grounding') continue;
-        box.append(el('h4', prettyKey(key)), renderValue(val, [...path, key]));
+        box.append(el('h4', prettyKey(key)), renderValue(val, [...path, key], references));
       }
       return box;
     }
-    const reference = typeof value === 'string' && (neighbours.get(selected) || []).find(l =>
+    const reference = references && typeof value === 'string' && (neighbours.get(selected) || []).find(l =>
       l.layer === 'reference' && l.source === selected && l.target === value &&
       l.path.length === path.length && l.path.every((p, i) => p === path[i]));
     if (reference && nodes.has(value)) {
@@ -351,19 +367,52 @@
     $('source-text').scrollTop = 0;
     $('source-text').querySelector('.selected-line')?.scrollIntoView({block: 'center'});
   }
+  function appendGroundings(parent, gs) {
+    const seen = new Set();
+    parent.append(el('h3', 'Recorded source quotations'));
+    if (!gs.length) parent.append(el('p', 'No inline grounding quotation is recorded for this record. Follow its references or inspect the exact payload.', 'muted'));
+    for (const g of gs) {
+      const key = exactJSON(g);
+      if (seen.has(key)) continue;
+      seen.add(key);
+      const box = el('section', undefined, 'grounding');
+      const source = data.sources[g.path];
+      if (source) {
+        const button = el('button', g.path + ':' + g.start_line + '–' + g.end_line, 'source-link');
+        button.onclick = () => openSource(g); box.append(button);
+        const span = source.text.split('\n').slice(g.start_line - 1, g.end_line).join('\n');
+        const matches = span.replace(/\r/g, '').includes(g.quote.replace(/\r/g, '').trim());
+        box.append(el('p', matches ? 'Recorded excerpt occurs in the supplied source lines.' : 'Recorded excerpt does not occur verbatim in these source lines. Open the source to compare.', matches ? 'source-status' : 'source-status warning'));
+      } else box.append(el('p', g.path + ':' + g.start_line + '–' + g.end_line + ' · full source not embedded', 'muted'));
+      box.append(el('blockquote', g.quote)); parent.append(box);
+    }
+  }
   function addConnections(parent, title, links) {
     if (!links.length) return;
     const section = el('section', undefined, 'connection-group');
+    section.dataset.layer = links[0].layer;
     section.append(el('h3', title + ' · ' + links.length));
     for (const link of links) {
       const target = nodes.get(other(link, selected));
       if (!target) continue;
       const button = el('button', undefined, 'connection');
       button.dataset.link = link.id;
+      button.dataset.layer = link.layer;
       button.append(el('small', edgeDescription(link, selected)), el('span', target.label, 'target-label'));
       if (link.reasons) button.append(el('span', link.reasons.map(r => r.label + (r.path ? ' · ' + r.path.join('/') : '')).join('; '), 'edge-detail'));
       button.onclick = () => follow(link);
       section.append(button);
+      if (['structure', 'trace'].includes(link.layer)) {
+        const evidence = el('details', undefined, 'link-evidence');
+        evidence.dataset.link = link.id;
+        evidence.append(el('summary', link.layer === 'structure' ? 'Observation evidence and provenance' : 'Proposal attribution and evidence'));
+        evidence.append(el('p', link.id, 'source-path'), renderValue(link.detail || {}, [], false));
+        const grounding = getGroundings(link.detail);
+        if (grounding.length) appendGroundings(evidence, grounding);
+        const exact = el('details');
+        exact.append(el('summary', 'Exact overlay link'), el('pre', exactJSON(link)));
+        evidence.append(exact); section.append(evidence);
+      }
       if (link.record_id) {
         const inspect = el('button', 'Read relation and qualifications', 'source-link');
         inspect.onclick = () => select(link.record_id, 'Inspect authored relation record');
@@ -378,6 +427,14 @@
     const badge = el('span', names[node.family], 'badge');
     badge.style.setProperty('--family', colors[node.family]);
     pane.append(badge, el('h2', short(node.label, 105)));
+    if (codeOverlay && overlayFamilies.has(node.family)) {
+      const standing = node.family === 'test'
+        ? 'Test source. This overlay records no test execution or result.'
+        : node.family === 'code_external'
+          ? 'Unresolved code reference. No unique local endpoint is identified.'
+          : 'Extracted code structure. This observation does not establish implementation correctness.';
+      pane.append(el('p', standing, 'overlay-standing'));
+    }
     const files = recordFiles.get(node.id);
     if (files.size) {
       const sources = el('section', undefined, 'record-sources');
@@ -407,28 +464,18 @@
     addConnections(pane, 'Authored relationships', links.filter(l => l.layer === 'relation'));
     addConnections(pane, 'Must retain with this record', links.filter(l => l.layer === 'required' && l.source === selected));
     addConnections(pane, 'Required by', links.filter(l => l.layer === 'required' && l.target === selected && l.source !== selected));
+    if (codeOverlay) {
+      addConnections(pane, 'Code observations', links.filter(l => l.layer === 'structure'));
+      addConnections(pane, 'Proposed realization and test-source mappings', links.filter(l => l.layer === 'trace'));
+      if (node.family === 'code' && !links.some(l => l.layer === 'trace' && l.label === 'Test source for')) {
+        pane.append(el('p', 'No test-source mapping is recorded directly for this code in the selected overlay. This does not mean the project has no tests.', 'muted'));
+      }
+    }
     const refs = el('details');
     refs.append(el('summary', 'Other typed reference occurrences'));
     addConnections(refs, 'References', links.filter(l => l.layer === 'reference'));
     pane.append(refs);
-    const gs = getGroundings(record), seen = new Set();
-    pane.append(el('h3', 'Recorded source quotations'));
-    if (!gs.length) pane.append(el('p', 'No inline grounding quotation is recorded for this record. Follow its references or inspect the exact payload.', 'muted'));
-    for (const g of gs) {
-      const key = exactJSON(g);
-      if (seen.has(key)) continue;
-      seen.add(key);
-      const box = el('section', undefined, 'grounding');
-      const source = data.sources[g.path];
-      if (source) {
-        const button = el('button', g.path + ':' + g.start_line + '–' + g.end_line, 'source-link');
-        button.onclick = () => openSource(g); box.append(button);
-        const span = source.text.split('\n').slice(g.start_line - 1, g.end_line).join('\n');
-        const matches = span.replace(/\r/g, '').includes(g.quote.replace(/\r/g, '').trim());
-        box.append(el('p', matches ? 'Recorded excerpt occurs in the supplied source lines.' : 'Recorded excerpt does not occur verbatim in these source lines. Open the source to compare.', matches ? 'source-status' : 'source-status warning'));
-      } else box.append(el('p', g.path + ':' + g.start_line + '–' + g.end_line + ' · full source not embedded', 'muted'));
-      box.append(el('blockquote', g.quote)); pane.append(box);
-    }
+    appendGroundings(pane, getGroundings(record));
     const raw = el('details');
     raw.append(el('summary', 'Exact record · identity, owner, scope and all fields'), el('pre', exactJSON(record)));
     pane.append(raw);
@@ -443,7 +490,10 @@
   }
   function drawGraph() {
     const links = data.links.filter(l => enabled(l) && visible.has(l.source) && visible.has(l.target));
-    $('map-count').textContent = (fileMapView ? 'File map · ' + fileMapView + ' · ' : '') + visible.size + ' visible nodes · ' + links.length + ' visible links · ' + data.counts.records + ' local records available';
+    const availability = codeOverlay
+      ? data.counts.records + ' native records · ' + (data.counts.external || 0) + ' native external references · ' + codeOverlay.counts.nodes + ' overlay nodes · ' + data.nodes.length + ' total nodes available'
+      : data.counts.records + ' local records available';
+    $('map-count').textContent = (fileMapView ? 'File map · ' + fileMapView + ' · ' : '') + visible.size + ' visible nodes · ' + links.length + ' visible links · ' + availability;
     if (renderMode === 'layered' && tracks) {
       tracks.draw([...visible].filter(id => nodes.has(id)).map(id => nodes.get(id)), links, selected);
       return;
@@ -474,9 +524,9 @@
         .backgroundColor('#10171e').showNavInfo(false).nodeRelSize(3).nodeOpacity(0.95)
         .nodeVal(n => n.id === selected ? 3 : n.family === 'constraints' ? 1.5 : 1)
         .nodeLabel(n => el('div', names[n.family] + ' · ' + short(n.label, 350), 'graph-tooltip'))
-        .linkLabel(l => el('div', (l.layer === 'required' ? 'Retention dependency' : l.layer === 'relation' ? 'Authored relation' : 'Typed reference') + ': ' + l.label, 'graph-tooltip'))
-        .linkColor(l => l.layer === 'relation' ? '#b8a0e0' : l.layer === 'required' ? '#779a9c' : '#455669')
-        .linkOpacity(0.65).linkWidth(l => l.layer === 'relation' ? 1.3 : 0.6)
+        .linkLabel(l => el('div', layerNames[l.layer] + ': ' + l.label, 'graph-tooltip'))
+        .linkColor(l => linkColors[l.layer])
+        .linkOpacity(0.65).linkWidth(l => ['relation', 'trace'].includes(l.layer) ? 1.3 : 0.6)
         .linkCurvature('curve').linkDirectionalArrowLength(3).linkDirectionalArrowRelPos(0.8)
         .cooldownTicks(80).d3VelocityDecay(0.35)
         .onNodeClick(n => clickNode(n.id))
@@ -557,14 +607,15 @@
     visible = next; drawGraph();
   };
   function showOverview() {
-    visible = new Set(data.nodes.filter(n => n.family !== 'external' || $('reference-layer').checked).map(n => n.id));
+    visible = new Set(data.nodes.filter(n => (n.family !== 'external' || $('reference-layer').checked) &&
+      (n.family !== 'code_external' || codeOverlay && ($('structure-layer').checked || $('trace-layer').checked))).map(n => n.id));
     // Authored relations may have an external endpoint even with reference links hidden.
     for (const link of data.links.filter(enabled)) { visible.add(link.source); visible.add(link.target); }
     drawGraph();
   }
   $('overview').onclick = () => { overview = true; fileMapView = null; showOverview(); };
   $('fit').onclick = () => renderMode === 'layered' ? tracks?.fit() : graph?.zoomToFit(reducedMotion ? 0 : 350, 85);
-  for (const id of ['required-layer', 'relation-layer', 'reference-layer']) $(id).onchange = () => fileMapView ? showFileMap(fileMapView) : overview ? showOverview() : focusGraph();
+  for (const id of ['required-layer', 'relation-layer', 'reference-layer', 'structure-layer', 'trace-layer']) $(id).onchange = () => fileMapView ? showFileMap(fileMapView) : overview ? showOverview() : focusGraph();
   $('source-close').onclick = () => $('source-dialog').close();
   $('about-close').onclick = () => $('about-dialog').close();
   $('about-button').onclick = () => $('about-dialog').showModal();
@@ -572,6 +623,21 @@
   $('subject-basis').title = data.basis.subject.id;
   $('model-info').textContent = exactJSON({model: data.model, calculus: data.basis.calculus,
     subject: {id: data.basis.subject.id, sha256: data.basis.subject.sha256}, counts: data.counts});
+  if (codeOverlay) {
+    const panel = $('code-overlay-panel'), about = $('code-overlay-about');
+    panel.hidden = about.hidden = false;
+    panel.append(el('h3', 'Code overlay'), el('p', codeOverlay.id, 'source-path'));
+    const c = codeOverlay.counts;
+    panel.append(el('p', c.nodes + ' nodes · ' + c.structure_links + ' structural links · ' + c.trace_links + ' proposed traces · ' + c.unresolved_nodes + ' unresolved code references', 'muted'));
+    panel.append(el('p', codeOverlay.coverage.source_files + ' selected code/test files · ' + codeOverlay.coverage.unresolved_mappings + ' unresolved mappings', 'muted'));
+    panel.append(el('p', 'Code observations and proposed traces. Test sources have no execution result; the overlay has no Lean verdict.', 'overlay-standing'));
+    const scope = el('button', 'Overlay identity and scope');
+    scope.onclick = () => { $('about-dialog').showModal(); about.scrollIntoView({block: 'start'}); };
+    panel.append(scope);
+    about.append(el('h3', 'Separate code overlay'), el('p', 'The native model identity and proof scope above are unchanged. Overlay observations and proposed mappings are separate from native authored relations and retention dependencies.'));
+    for (const [key, value] of Object.entries(codeOverlay.standing)) about.append(el('h4', prettyKey(key)), el('p', value));
+    about.append(el('pre', exactJSON(codeOverlay)));
+  }
   window.addEventListener('hashchange', () => {
     let id; try { id = decodeURIComponent(location.hash.slice(1)); } catch (_) { return; }
     if (nodes.has(id) && id !== selected) select(id);

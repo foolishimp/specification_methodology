@@ -1,6 +1,6 @@
 {
   "schema": "stdo-skills.project-representation-provider/1",
-  "selection": "T-003 owner-selected development provider; no release or semantic acceptance",
+  "selection": "T-003 owner-selected development provider with optional T-019 code overlay; no release or semantic acceptance",
   "relation": "urn:stdo-skills:composition:a-c-project-build:1",
   "path_base": "repository root; provider paths do not supply acquisition or execution grants",
   "entry": "a_c/build_tenants/graphify/code/ac_project.py",
@@ -16,6 +16,11 @@
     "formal_checker": "caller-selected trusted configuration with its own closed input/toolchain and resource contract"
   },
   "files": [
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_code.py",
+      "sha256": "1c9a9b14de30f039727708da1c48ce4ba60effdd885b4a62392415c3673e0ed7",
+      "bytes": 44198
+    },
     {
       "path": "a_c/build_tenants/graphify/code/ac_explore.py",
       "sha256": "c25a8182749b6ee552f2c4503cec26794ff91414c26a970d8ec9cd7d8e32c389",
@@ -40,6 +45,11 @@
       "path": "a_c/build_tenants/graphify/code/ac_project.py",
       "sha256": "8a87775e937b6f1641c82d650f900d0d0b6808706466ebf0a274c223193ba9c9",
       "bytes": 25361
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/code-requirements.txt",
+      "sha256": "f508937dfbfe84108aee664ddba1eb9577ebfc6007eb5b76a057378793218bca",
+      "bytes": 276
     },
     {
       "path": "a_c/build_tenants/graphify/code/generation/author.schema.json",
@@ -68,18 +78,18 @@
     },
     {
       "path": "a_c/build_tenants/graphify/code/viewer/explorer.css",
-      "sha256": "66eaf7cdac2c6e4e085b3ba726a491e98684f06a053228c4f69d7d1699df3790",
-      "bytes": 12564
+      "sha256": "8508f8d81b570d5d5d5eb81adc3895ae1073fcf640694ec229ec54aef61ea16a",
+      "bytes": 13412
     },
     {
       "path": "a_c/build_tenants/graphify/code/viewer/explorer.html",
-      "sha256": "0bbce1d89c5c268de42ce04b3ce75b53f43495602c4c8f132704e03ff532b094",
-      "bytes": 5126
+      "sha256": "f6098541425badfb456982274107ce98bcf068b66b27db757b7bd20fe4e8beef",
+      "bytes": 5501
     },
     {
       "path": "a_c/build_tenants/graphify/code/viewer/explorer.js",
-      "sha256": "1769ae25715e13baf94ff63a8da977d809346431f4a681e16a1a77a8fbff0b17",
-      "bytes": 31876
+      "sha256": "4e0b821ba33e0c57a05ee44a200c839b47c1d14f777646ec1836aa7c915daf56",
+      "bytes": 36525
     },
     {
       "path": "a_c/build_tenants/graphify/code/viewer/layered.css",
@@ -88,8 +98,8 @@
     },
     {
       "path": "a_c/build_tenants/graphify/code/viewer/layered.js",
-      "sha256": "c3208cb3052825fd896c22b31c7ba8bdb94ca450a868428f0515965508029b88",
-      "bytes": 12085
+      "sha256": "134b082f87f15eca059432e07453ce27e5a963bd94c798ef32b1eafb9cdc8b80",
+      "bytes": 12223
     },
     {
       "path": "a_c/build_tenants/graphify/code/viewer/vendor/3d-force-graph-1.80.1.min.js",
@@ -112,6 +122,11 @@
       "bytes": 576
     },
     {
+      "path": "a_c/build_tenants/graphify/design/code-realization.md",
+      "sha256": "0bf4bc3ccab9b3e4c5236ba492b10a740ac2bb5f97d95e1a3123acdd032e3fbf",
+      "bytes": 8979
+    },
+    {
       "path": "a_c/build_tenants/graphify/design/generation.md",
       "sha256": "c7e596146596ef0929832fff73c04b5cc79bd2c4a5dcdc6f671b8782e7ed16d2",
       "bytes": 13844
@@ -122,9 +137,23 @@
       "bytes": 4659
     },
     {
+      "path": "a_c/specification/requirements/code-realization.md",
+      "sha256": "4cd0b23f7e11504a87430a7295b4f2e4878ba9ae7a9607ad7e54bc39a170f42e",
+      "bytes": 4450
+    },
+    {
       "path": "a_c/specification/requirements/project-use.md",
       "sha256": "365aaa555fff7b269e9cfd1e269a2da736b96d416824c1bfa84f4572211f5754",
       "bytes": 7868
     }
-  ]
+  ],
+  "code_overlay": {
+    "entry": "a_c/build_tenants/graphify/code/ac_code.py",
+    "contract": "a_c/build_tenants/graphify/design/code-realization.md",
+    "profile": "a_c.code-overlay/1",
+    "mapping_profile": "a_c.code-traces/1",
+    "parser_requirements": "a_c/build_tenants/graphify/code/code-requirements.txt",
+    "graphify": "required pinned upstream",
+    "formal_checker": "unsupported; native base evidence retains its original scope"
+  }
 }

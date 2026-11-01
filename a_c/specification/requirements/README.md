@@ -35,6 +35,12 @@ capabilities into a supported workflow for users' own STDO projects. They are
 active required outcomes; complete installed user delivery is not yet established.
 They reuse AC-R, FR, FD and FC contracts rather than owning another lifecycle.
 
+[CR-01–CR-07](code-realization.md) extend this workflow with an exact additive
+code-and-trace overlay: selected code/test observations, attributed F_P mappings
+and offline requirement→code→test navigation. They preserve the native model,
+carrier and proof scope; [T-019](../../.ai-workspace/tickets/active/T-019-code-representation.md)
+selects the first public implementation slice.
+
 ## Formalisation
 
 [FR-001–FR-007](formalisation.md) govern tenants declaring formal definitions

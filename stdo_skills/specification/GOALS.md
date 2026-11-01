@@ -13,6 +13,14 @@ limits. Package checks and prior T-001 trials do not qualify this changed path;
 neither explicit invocation nor a finite fixture establishes automatic discovery
 reliability, general semantic adequacy or whole-Product acceptance.
 
+The [T-019 code-overlay route](../../a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/DELIVERY.md)
+now extends this explicit provider relation in both tenants. Public source
+selection, attributed mapping, reader generation and currentness routes are
+implemented and independently reviewed; both final package checks pass. This
+does not supply a new native host trial, automatic invocation reliability or
+installed delivery. Skills keeps its exact installed 3.0.1 RC1 method; provider
+and application evidence transfer no methodology or acceptance authority.
+
 ### Retained composition increment
 
 [T-002](../.ai-workspace/tickets/active/T-002-composition-support.md) selects the

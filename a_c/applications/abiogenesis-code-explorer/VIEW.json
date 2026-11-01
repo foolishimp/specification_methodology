@@ -1,0 +1,337 @@
+{
+  "kind": "a_c.application-view/1",
+  "title": "ABIogenesis — canonicalization code and traces",
+  "entry": {
+    "path": "a_c/applications/abiogenesis-code-explorer/index.html",
+    "bytes": 12895180,
+    "sha256": "26e8e1e93221781b7a25fc48ad457c7ea97275cd08dcadba91075cbf8b1be8c9"
+  },
+  "base": {
+    "model": {
+      "path": "stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/abiogenesis-01/run/generation/proposal/model.json",
+      "bytes": 5719271,
+      "sha256": "19d435c8b96a24025c5b2204e62041d764bbbb4e91ac5b8f99fedee93d082859"
+    },
+    "carrier": {
+      "path": "stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/abiogenesis-01/run/generation/proposal/carrier.json",
+      "bytes": 28986752,
+      "sha256": "a4568267e2a52ae69570dd9b5b07ac04fb62ca18fe5a91b82483052f647cab4a"
+    },
+    "source_manifest": {
+      "path": "stdo_skills/.ai-workspace/work/T003_PROJECT_REPRESENTATION/abiogenesis-01/run/source-manifest.json",
+      "bytes": 16863,
+      "sha256": "c8f9e1f8a187cded5d919f319659add7e04330c37ad0a11856486276a0cf173f"
+    },
+    "model_canonical_identity": {
+      "id": "urn:a-c:generation:025cfe79dad60a1311fe20e1:model:276d9400d1d07ce054782c69",
+      "profile": "a_c.graphify.model/1",
+      "sha256": "6ad4fa0ef54a8fc705562acf695fce0a0855b0a0d68d6fc99dcf026e98a8b38a"
+    }
+  },
+  "selected_files": [
+    {
+      "path": "build_tenants/abiogenesis/typescript/code/src/gtl/canonicalization.ts",
+      "bytes": 6929,
+      "sha256": "392f10a579c5816453a7df6fd51cdcd2d5dcc39d1713a887a8982c44869e50e6"
+    },
+    {
+      "path": "build_tenants/abiogenesis/typescript/code/src/shared/canonical_json.ts",
+      "bytes": 2021,
+      "sha256": "08dc650521e9349ed1d7e4f2d5b65e701bbe148d1e89c3d077a9d2ed128d798a"
+    },
+    {
+      "path": "build_tenants/abiogenesis/typescript/code/src/shared/digests.ts",
+      "bytes": 1270,
+      "sha256": "dbb2c3d0a718dfc11abbfea5aadb184c8956de29dfbff8c64aea465c691a49fb"
+    },
+    {
+      "path": "build_tenants/abiogenesis/typescript/test_env/tests/a5-f02-canonical-gtl-identity.test.mjs",
+      "bytes": 32237,
+      "sha256": "d3c4880fa021338f3e212301c2abe3972ed7e52cb109de49fa9e8152ead93ffb"
+    }
+  ],
+  "overlay": {
+    "author": {
+      "identity": "caller-declared",
+      "label": "Codex source-inspection Worker /root/repair_stdo_docs (caller-declared)"
+    },
+    "base_model": {
+      "id": "urn:a-c:generation:025cfe79dad60a1311fe20e1:model:276d9400d1d07ce054782c69",
+      "profile": "a_c.graphify.model/1",
+      "sha256": "6ad4fa0ef54a8fc705562acf695fce0a0855b0a0d68d6fc99dcf026e98a8b38a"
+    },
+    "counts": {
+      "combined_links": 13388,
+      "combined_nodes": 1927,
+      "nodes": 59,
+      "structure_links": 127,
+      "trace_links": 5,
+      "unresolved_nodes": 11
+    },
+    "coverage": {
+      "acquisition": {
+        "denied_content_attempts": [],
+        "outside_metadata_paths": [
+          "/Users/jim/jsconfig.json",
+          "/Users/jim/package.json",
+          "/Users/jim/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/jsconfig.json",
+          "/Users/jim/src/apps/package.json",
+          "/Users/jim/src/apps/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/.graphifyrc",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.cjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.cts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.ejs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.jsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.mjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.mts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.svelte",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.js.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/product/index.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.cjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.cts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.ejs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.jsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.mjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.mts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.svelte",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.js.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/shared/digests.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.cjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.cts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.ejs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.jsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.mjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.mts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.svelte",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.js.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/build/code/src/validator/index.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.cjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.cts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.ejs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.jsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.mjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.mts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.svelte",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.js.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/gtl/contracts.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.cjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.cts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.ejs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.jsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.mjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.mts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.svelte",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.js.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/admission_predicates.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/canonical_json.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/digests.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.cjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.cts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.ejs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.jsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.mjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.mts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.svelte",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.js.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/immutable.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/shared/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/src/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/code/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.cjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.cts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.ejs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.js",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.jsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.mjs",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.mts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.svelte",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.ts",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/support/language-structural-gtl.mjs.tsx",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/tests/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/tests/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/tests/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/tests/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/test_env/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/abiogenesis/typescript/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/build_tenants/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/code/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/.ai-workspace/work/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/package.json",
+          "/Users/jim/src/apps/specification_methodology/a_c/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/a_c/tsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/jsconfig.json",
+          "/Users/jim/src/apps/specification_methodology/package.json",
+          "/Users/jim/src/apps/specification_methodology/pnpm-workspace.yaml",
+          "/Users/jim/src/apps/specification_methodology/tsconfig.json",
+          "/Users/jim/src/apps/tsconfig.json",
+          "/Users/jim/src/jsconfig.json",
+          "/Users/jim/src/package.json",
+          "/Users/jim/src/pnpm-workspace.yaml",
+          "/Users/jim/src/tsconfig.json",
+          "/Users/jim/tsconfig.json",
+          "/Users/jsconfig.json",
+          "/Users/package.json",
+          "/Users/pnpm-workspace.yaml",
+          "/Users/tsconfig.json",
+          "/jsconfig.json",
+          "/package.json",
+          "/pnpm-workspace.yaml",
+          "/tsconfig.json"
+        ],
+        "profile": "a_c.graphify.selected-source-only/1",
+        "resolution": "Unselected configs, packages, ancestors and imported source are unavailable; their semantics remain unresolved.",
+        "scope": "Only explicitly frozen source bytes and a fresh private extraction cache are available."
+      },
+      "diagnostics_status": "none reported",
+      "extractor_diagnostics": "",
+      "files_without_grounded_nodes": [],
+      "raw_edges": 127,
+      "raw_nodes": 48,
+      "selected_files": 4,
+      "source_files": 4,
+      "unresolved_mappings": 3,
+      "unresolved_nodes": 11
+    },
+    "id": "urn:a-c:code-overlay:8e9c5344ed6b5fc166be4d494d928464360ce0cf9ad93bea4e03343029a06185",
+    "profile": "a_c.code-overlay/1",
+    "sha256": "947e0e12bef00a66d7dc8a0783d8a0b4f98529075047468e066009e2e57b19dd",
+    "standing": {
+      "formal": "The overlay has not been Lean checked. Native model, dependency closure and proof scope are unchanged.",
+      "structure": "Fallible Graphify source observations; no source execution or semantic completeness claim.",
+      "trace": "Caller-attributed proposed correspondence; test source is not an executed test result."
+    },
+    "unresolved": [
+      {
+        "reason": "Full LAWS-021/022 satisfaction remains unassessed: totality, explicit-only dependencies, native-constructor and lossless raw-admission roundtrips, ambient-state rejection and publication boundary are outside this code slice.",
+        "subject": "urn:a-c:generation:025cfe79dad60a1311fe20e1:record:199abb585f5ac7f924f968362e11d55b"
+      },
+      {
+        "reason": "No direct test-source mapping for writeCanonicalJson is claimed in this slice. The selected helper reaches canonical digests indirectly; dedicated writer tests were not selected.",
+        "subject": "urn:a-c:code:ebdbb10696e460d027466e70dc5789cab3f57bcc50c307b60b3a93472a4f4c90:node:20"
+      },
+      {
+        "reason": "Test-support namespace and compiled imports are outside the selected files. Assertions were inspected but never executed; actual implementation binding and all test outcomes remain unqualified.",
+        "subject": "urn:a-c:code:ebdbb10696e460d027466e70dc5789cab3f57bcc50c307b60b3a93472a4f4c90:node:40"
+      }
+    ]
+  },
+  "artifacts": {
+    "overlay.json": {
+      "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/built/overlay.json",
+      "bytes": 307575,
+      "sha256": "8fd8941d3d384a6ebe3302bbbe4f90a9454079b2d6375262265627b9c70d2e0a"
+    },
+    "view-data.json": {
+      "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/built/view-data.json",
+      "bytes": 13409918,
+      "sha256": "f42f0aaf0ec7e2f32cfc08fb338e1834a0f7c1e8c0fce71c7d2898d0f3d349d7"
+    },
+    "mapping.json": {
+      "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/built/mapping.json",
+      "bytes": 24173,
+      "sha256": "2f067c86c995df2468f42110502c13fe82cfd272adbab7baa482802621623e7a"
+    }
+  },
+  "evidence": {
+    "inputs": {
+      "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/INPUTS.json",
+      "bytes": 1992,
+      "sha256": "023c9d3b13351063435bc2258aafb8670e67fe59102b7b5552ec269cc8feb69a"
+    },
+    "mapping": {
+      "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/mapping.json",
+      "bytes": 24173,
+      "sha256": "2f067c86c995df2468f42110502c13fe82cfd272adbab7baa482802621623e7a"
+    },
+    "observations": {
+      "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/OBSERVATIONS.json",
+      "bytes": 4756,
+      "sha256": "51591dd7a10883c150487453b6df14e7633d17710526f8d9339c678492bac512"
+    }
+  },
+  "qualification": {
+    "public_prepare_task_build_status_reuse": "passed",
+    "native_model_carrier_unchanged": true,
+    "native_view_preserved": true,
+    "actual_browser_webgl": "not_performed",
+    "subject_code_test_execution": "not_performed",
+    "overlay_lean_check": "not_performed",
+    "independent_application_review": "pending"
+  },
+  "limits": [
+    "This is a four-file canonicalization demonstration, not an ABIogenesis codebase census.",
+    "Trace mappings are caller-attributed source-inspection proposals with partial scope and unresolved conditions.",
+    "Unselected configuration, support/compiled imports and external dependencies are unavailable to the source-only extractor."
+  ]
+}

@@ -1,0 +1,132 @@
+{
+  "phase": "source-barrier-package-integration",
+  "source_barrier": "root-final-20261102-after-terminal-LF-repair",
+  "provider": {
+    "members": 26,
+    "bytes_matched": true,
+    "unchanged_since_barrier": true,
+    "manifest_sha256": "857ab27fd1bfa4c492715ef7ba4c1bc26b1d11cef3258873355b4b18ea64e314"
+  },
+  "codex_package": {
+    "status": "passed",
+    "files": 14,
+    "local_links": 22,
+    "current_source_routes": 13,
+    "source_root": "repository",
+    "inventory_sha256": "aa36b0f9aa7c0d5019ec66bc35fe741c2946b26da89e5c75416683f048303253"
+  },
+  "claude_package": {
+    "status": "ok",
+    "files": 14,
+    "errors": [],
+    "inventory_sha256": "dd2c22c76147a9ad32619dee88827c8703114ba163c4b47094b807bea4c95660"
+  },
+  "historical_codex_routes": {
+    "preserved": 17
+  },
+  "source_route_regressions": {
+    "passed": 6,
+    "failed": 0
+  },
+  "skill_metadata": {
+    "codex": "passed",
+    "claude": "passed"
+  },
+  "guide_commands": {
+    "shell_blocks_syntax_checked": 14,
+    "actual_cli_help_checked": [
+      "prepare",
+      "task",
+      "build",
+      "status"
+    ],
+    "code_examples_bound": [
+      {
+        "guide": "stdo_skills/build_tenants/codex/skills/stdo-work/references/representation.md",
+        "command": "prepare",
+        "flags": [
+          "--project",
+          "--model",
+          "--manifest",
+          "--source-root",
+          "--code",
+          "--test",
+          "--upstream",
+          "--out"
+        ]
+      },
+      {
+        "guide": "stdo_skills/build_tenants/codex/skills/stdo-work/references/representation.md",
+        "command": "task",
+        "flags": [
+          "--run",
+          "--record"
+        ]
+      },
+      {
+        "guide": "stdo_skills/build_tenants/codex/skills/stdo-work/references/representation.md",
+        "command": "build",
+        "flags": [
+          "--run",
+          "--mapping",
+          "--author"
+        ]
+      },
+      {
+        "guide": "stdo_skills/build_tenants/codex/skills/stdo-work/references/representation.md",
+        "command": "status",
+        "flags": [
+          "--run"
+        ]
+      },
+      {
+        "guide": "stdo_skills/build_tenants/claude/skills/stdo-tool-operations/references/representation.md",
+        "command": "prepare",
+        "flags": [
+          "--project",
+          "--model",
+          "--manifest",
+          "--source-root",
+          "--code",
+          "--test",
+          "--upstream",
+          "--out"
+        ]
+      },
+      {
+        "guide": "stdo_skills/build_tenants/claude/skills/stdo-tool-operations/references/representation.md",
+        "command": "task",
+        "flags": [
+          "--run",
+          "--record"
+        ]
+      },
+      {
+        "guide": "stdo_skills/build_tenants/claude/skills/stdo-tool-operations/references/representation.md",
+        "command": "build",
+        "flags": [
+          "--run",
+          "--mapping",
+          "--author"
+        ]
+      },
+      {
+        "guide": "stdo_skills/build_tenants/claude/skills/stdo-tool-operations/references/representation.md",
+        "command": "status",
+        "flags": [
+          "--run"
+        ]
+      }
+    ],
+    "schema_profile": "a_c.code-traces/1",
+    "schema_sha256": "eb2c7e7a2f27e7c39cea014cc424f6719931465730e77da978d8a4123eb52ca5",
+    "subject_operations_executed": false
+  },
+  "limits": [
+    "No fresh Codex or Claude host session trial.",
+    "No dependency installation or shared deployment performed.",
+    "CLI help/schema binding and package/source custody do not establish semantic adequacy or code/test outcomes.",
+    "Overlay has no Lean result; native evidence retains its exact base scope."
+  ],
+  "whitespace": "passed"
+}

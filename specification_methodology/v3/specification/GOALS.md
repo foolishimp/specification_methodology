@@ -15,9 +15,9 @@ controls, release-asset correction and registered tool ownership. The
 closes all six repair conditions with no actionable S0–S4 finding. Actual
 browser/WebGL qualification of the new HTML remains open; the earlier browser
 observation and review apply to the previous artifact. This is part of the
-owner's selected tooling/distribution increment;
-checkpoint, other tooling bundling and 3.0.3 release publication remain separate
-outstanding delivery work.
+owner's selected tooling/distribution increment. The reviewed repairs are
+checkpointed and pushed on `main` at `c034593eea08`. Other tooling bundling and
+3.0.3 release publication remain outstanding delivery work.
 
 ### Published predecessor
 

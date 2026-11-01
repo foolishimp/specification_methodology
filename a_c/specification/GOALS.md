@@ -1,5 +1,20 @@
 # Goals
 
+[T-019](../.ai-workspace/tickets/active/T-019-code-representation.md) is the current
+bounded delivery: the public code-overlay workflow, shared offline reader and
+both Skills consumer routes are implemented and independently reviewed. The common
+[CR-01–CR-07 requirements](requirements/code-realization.md) preserve the native
+model/carrier and separate structural observations from caller-attributed F_P
+trace mappings. The [delivery handoff](../.ai-workspace/work/T019_CODE_REPRESENTATION/DELIVERY.md)
+links the four-file ABIogenesis demonstration and
+[closed review](../.ai-workspace/work/T019_CODE_REPRESENTATION/review/INDEPENDENT_REVIEW.md),
+with no open actionable S0–S4 finding. Actual source extraction, currentness,
+reuse and requirement→code→test-source navigation are evidenced. Semantic and
+benefit qualification, fresh Skills-host use and actual browser/WebGL remain
+open; no ABIogenesis test result, overlay Lean verdict, owner acceptance or
+release is asserted. The starting checkpoint is `c034593eea08`; this delivery
+changes no installed method or STDO 3.0.3 distribution/release standing.
+
 [T-018](../.ai-workspace/tickets/active/T-018-static-layered-renderer.md) supplies
 one offline reader with a 3D / 2D / Layered middle-panel switch. All renderers
 consume one unchanged representation and preserve selection and navigation state.

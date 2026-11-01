@@ -7,6 +7,10 @@ separate from Skills' 3.0.1 RC1 construction basis and the provider's 2.5.1 RC2
 builder/calculus. It supplies no lifecycle admission under another method, and
 the output remains a proposal.
 
+For a request to trace an existing representation into code and tests, use
+[Add code and test traces](#add-code-and-test-traces). Build the base through the
+workflow below first only if a suitable source-matched representation is missing.
+
 ## Select the provider and eligible source
 
 Resolve `AC_PROJECT_TOOL` to the selected provider's `ac_project.py` from the
@@ -143,3 +147,74 @@ partial build is retained and refused for automatic overwrite: inspect what
 exists, report the incomplete build and select a new absent run if rebuilding
 remains authorized. Unknown effects, required-tool failure and missing chunks
 remain visible; none may be turned into a completed-build claim by narration.
+
+## Add code and test traces
+
+Use the selected provider's `ac_code.py` and `code-realization.md` contract.
+Resolve `AC_CODE_TOOL`, its compatible `AC_CODE_PYTHON` interpreter and the exact
+pinned `upstream_path` from the activation, operator or declared provider relation.
+This optional path requires Graphify; the base model may have been built in
+`direct` mode. A missing provider/upstream is a concrete missing dependency,
+not permission to fetch a different tool or change the selected mode.
+Resolve `AC_CODE_REQUIREMENTS` to the selected provider's
+`code/code-requirements.txt`. Its parser pins are additional to the existing
+tenant stack; a working Markdown-only Graphify environment may lack them. When
+setup of the selected Python environment is authorized, use the provider recipe:
+
+```sh
+"$AC_CODE_PYTHON" -m pip install -r "$AC_CODE_REQUIREMENTS"
+```
+
+Keep that setup within the selected environment; no shared/global environment
+change is implied by the skill.
+
+Bind the actual `base_model`, `base_manifest` and `base_source_root` from the
+retained representation inputs. The provider checks that the manifest matches
+the model and that every source member still matches both that corpus and
+`project_root`. Nominate finite project-relative implementation/test files or
+directories explicitly; ordinary WHAT selection does not authorize scanning all
+code. Keep `code_run` new and outside selected source and keep the base unchanged.
+The same local acquisition and composition restrictions above apply here.
+
+```sh
+"$AC_CODE_PYTHON" -B "$AC_CODE_TOOL" prepare \
+  --project "$project_root" --model "$base_model" --manifest "$base_manifest" \
+  --source-root "$base_source_root" --code "$code_relative" --test "$test_relative" \
+  --upstream "$upstream_path" --out "$code_run"
+"$AC_CODE_PYTHON" -B "$AC_CODE_TOOL" task --run "$code_run" --record "$record_id"
+```
+
+Repeat `--code`/`--test` for the nominated selections; omit `--test` if no test
+source is selected. `--record` can select exact base record IDs for the mapping
+task; omit it to inspect the available base endpoints. Read the returned schema,
+identities, selected source and observations. Treat extracted relationships as
+fallible discovery data, including unresolved/ambiguous endpoints.
+
+Author a fresh `mapping_file` **outside the prepared `code_run`**, in the
+permitted output territory, from that actual task. Use its exact digests and endpoint IDs, with supported source quotes,
+rationale, conditions and limitations. `proposed_realization` links a base record
+to implementation; `test_source_for` links a base/code record to selected test
+source. Neither means the requirement is satisfied or the test passed. Retain
+unjustified correspondence as unresolved; do not resolve endpoints by matching
+names or invent mappings merely to fill a coverage count.
+
+```sh
+"$AC_CODE_PYTHON" -B "$AC_CODE_TOOL" build --run "$code_run" \
+  --mapping "$mapping_file" --author codex-current-session
+"$AC_CODE_PYTHON" -B "$AC_CODE_TOOL" status --run "$code_run"
+```
+
+Return the actual overlay and combined offline explorer paths, base/overlay
+identities, exact selected files and mapping attribution. Summarize extraction
+gaps and unmapped scope. The reader's Structure and Trace layers distinguish
+observations from your proposals across all three renderers. No subject code or
+tests were executed by this operation. The overlay carries no Lean verdict;
+existing model/carrier evidence remains scoped to the unchanged base. If the
+activation requires a checker/origin-reservation mode, this initial overlay path
+is unsupported; do not remove that requirement to make it run.
+
+Resume with `status`. Reuse a completed build only with the same mapping and
+author through `build`; source, mapping, selection or machinery drift refuses
+current reuse. Preserve failed/partial outputs and prepare a new run only when
+its inputs and scope remain authorized. A receipt or successful graph render
+does not renew a semantic judgment.

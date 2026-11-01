@@ -149,13 +149,13 @@ globalThis.ACTracks = (() => {
       canvas.style.width = current.width + 'px'; canvas.style.height = current.height + 'px';
       const edges = svg('svg', {width: current.width, height: current.height, class: 'tracks-edges'});
       const defs = svg('defs'); edges.append(defs);
-      const edgeColors = {required: '#83afb0', relation: '#bea4eb', reference: '#8697ab'};
+      const edgeColors = {required: '#83afb0', relation: '#bea4eb', reference: '#8697ab', structure: '#6fb8e3', trace: '#e6be79'};
       for (const [layer, color] of Object.entries(edgeColors)) {
         const marker = svg('marker', {id: 'tracks-arrow-' + layer, viewBox: '0 0 10 10', refX: 9, refY: 5, markerWidth: 6, markerHeight: 6, orient: 'auto'});
         marker.append(svg('path', {d: 'M 0 0 L 10 5 L 0 10 z', fill: color})); defs.append(marker);
       }
       for (const {link, path, labelX, labelY} of current.edges) {
-        const description = (link.layer === 'relation' ? 'Authored: ' : link.layer === 'required' ? 'Retention: ' : 'Reference: ')
+        const description = (link.layer === 'structure' ? 'Code observation: ' : link.layer === 'trace' ? 'Proposed trace: ' : link.layer === 'relation' ? 'Authored: ' : link.layer === 'required' ? 'Retention: ' : 'Reference: ')
           + link.label + ' · ' + link.source + ' → ' + link.target;
         const actionable = !!link.record_id || link.source === selected || link.target === selected;
         const group = svg('g', {'data-link': link.id, 'data-layer': link.layer,

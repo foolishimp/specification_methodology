@@ -16,6 +16,18 @@ model adapter, carrier, optional formal gate and offline explorer. Skills owns
 recognition of the user's request, host-session authoring and consumption of
 actual operation results. It does not copy those algorithms into skill scripts.
 
+The selected extension consumes the provider's
+[code-realization contract](../../../a_c/build_tenants/graphify/design/code-realization.md),
+[CR-01–07](../../../a_c/specification/requirements/code-realization.md) and public
+`ac_code.py` for an optional additive code/trace overlay. It starts from an exact
+source-matched native representation and explicitly nominated implementation/test
+files. Pinned Graphify supplies structural observations; the current host authors
+attributed proposed mappings. The same offline reader exposes both without
+changing the native base, its dependency contract or its formal evidence. A
+test-source link reports no test result. This initial overlay has no selected
+checker mode or mediated acquisition route; an activation requiring either
+withholds this branch rather than dropping that requirement.
+
 Skills remains constructed under released 3.0.1 RC1; a_c remains constructed
 under 2.5.1 RC2. A nominated project's exact installed STDO 3.x definition is
 subject data for this bounded source operation. This relation does not issue
@@ -40,8 +52,10 @@ remain visible in coverage and the return.
 
 Runtime selection names the exact provider path/interpreter and ordinary manager;
 optional upstream Graphify and a required formal-checker configuration are
-additional declared dependencies. A skill installation alone does not install
-these tools. Supplied pins establish byte identity, not semantic acceptance,
+additional declared dependencies for the base workflow. The code-overlay branch
+requires the pinned upstream plus the exact parsers in `code/code-requirements.txt`;
+it supports no selected formal-checker mode. A skill installation alone does not
+install these tools. Supplied pins establish byte identity, not semantic acceptance,
 complete calculus conformance or authorization to run effects. Missing or changed
 dependencies withhold the dependent build claim. Source and artifact currentness
 is rechecked through the provider's public resume/readback operation.

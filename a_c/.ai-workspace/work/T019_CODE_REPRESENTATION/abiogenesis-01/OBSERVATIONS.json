@@ -1,0 +1,105 @@
+{
+  "kind": "a_c.code-application-observations/1",
+  "raw_extraction": {
+    "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/structural.json",
+    "bytes": 79734,
+    "sha256": "c09b66e4c19e1791269cf83c4fc253d70c5e7c4fbeab1ef4c377e0b5878ebb11"
+  },
+  "normalized_discovery": {
+    "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/DISCOVERY.json",
+    "bytes": 255947,
+    "sha256": "df19f1c8b1e901568df4ba60c4201963d1fb246901dc47ba9a89a8820d5726bf"
+  },
+  "discovery_canonical_sha256": "f63a5c08fa171925737a5703113cb20c05b10c44f401514c4908e5ae98323d55",
+  "acquisition": {
+    "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/ACQUISITION.json",
+    "bytes": 28382,
+    "sha256": "112631c4999eb11fcb4a6fca0e75e47e08629ded422462567041d398d50b6ceb"
+  },
+  "preparation": {
+    "path": "a_c/.ai-workspace/work/T019_CODE_REPRESENTATION/abiogenesis-01/run/PREPARE.json",
+    "bytes": 19247,
+    "sha256": "b3b31ee89539453f8c552f10d1ee24362816a72bc6f03c6e51df6e3cccc08fc1"
+  },
+  "upstream": {
+    "commit": "fe085cedddde3a18554f8749b230bfe47f3dcce7",
+    "prompt_path": "graphify/skills/codex/references/extraction-spec.md",
+    "prompt_sha256": "32d7decad42d58129c6694ea4e4ce1f72a531bc5161827d2095787e9448735e9",
+    "root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-graphify-t008-upstream-w0b_fyxv/checkout"
+  },
+  "dependencies": {
+    "igraph": "not installed",
+    "leidenalg": "not installed",
+    "networkx": {
+      "version": "3.4.2"
+    },
+    "python": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]",
+    "tree-sitter": {
+      "implementation_sha256": "0a7e346e37c293f2403f014602ca2b883420a53263990181acec1c068e42ca1d",
+      "version": "0.25.2"
+    },
+    "tree-sitter-javascript": {
+      "implementation_sha256": "2436f9e0ab926c93586e3219c6a1e1dc59984d310ad9f0698088361b8a177241",
+      "version": "0.25.0"
+    },
+    "tree-sitter-python": {
+      "implementation_sha256": "86602871aaa4b89b485ec33a624c92bdc5ab8442b1e3cf0652ed808c38de81d2",
+      "version": "0.25.0"
+    },
+    "tree-sitter-typescript": {
+      "implementation_sha256": "fe073f8a8da6370e0a88ab21dd6cf37fea63290c9ff51482cd5d5c04340963a9",
+      "version": "0.23.2"
+    }
+  },
+  "machinery": {
+    "ac_code.py": "1c9a9b14de30f039727708da1c48ce4ba60effdd885b4a62392415c3673e0ed7",
+    "ac_explore.py": "c25a8182749b6ee552f2c4503cec26794ff91414c26a970d8ec9cd7d8e32c389",
+    "ac_formal_gate.py": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8",
+    "ac_generate.py": "00d32296746265881aafd336e73797fca1fc431f6098ec3e9ee8bbbcdd92d16c",
+    "ac_graph.py": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+    "ac_project.py": "8a87775e937b6f1641c82d650f900d0d0b6808706466ebf0a274c223193ba9c9",
+    "code-requirements.txt": "f508937dfbfe84108aee664ddba1eb9577ebfc6007eb5b76a057378793218bca",
+    "viewer/explorer.css": "8508f8d81b570d5d5d5eb81adc3895ae1073fcf640694ec229ec54aef61ea16a",
+    "viewer/explorer.html": "f6098541425badfb456982274107ce98bcf068b66b27db757b7bd20fe4e8beef",
+    "viewer/explorer.js": "4e0b821ba33e0c57a05ee44a200c839b47c1d14f777646ec1836aa7c915daf56",
+    "viewer/layered.css": "fb2f005f61947def6c6c2f66fc1b36e8d87a40876c2a4ad4ffe137c22a313474",
+    "viewer/layered.js": "134b082f87f15eca059432e07453ce27e5a963bd94c798ef32b1eafb9cdc8b80",
+    "viewer/vendor/3d-force-graph-1.80.1.min.js": "13088340aad408156064fd120c3bc3a47c93a3cc45b8f132d6284b20e2223be9",
+    "viewer/vendor/3d-force-graph-LICENSE": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded",
+    "viewer/vendor/THIRD_PARTY_NOTICES.txt": "5550725cb2e36431fc64242442a5e0fb94be7a2d93749c3f55cc99f2f68fee22",
+    "viewer/vendor/manifest.json": "c8d258151ce83b7864d6579fd27d2f4ac79049cab7966a0db0e8eca3a6bc883f"
+  },
+  "native_counts": {
+    "external": 495,
+    "records": 1373,
+    "references": 10992,
+    "relations": 122,
+    "required": 2142
+  },
+  "overlay_counts": {
+    "combined_links": 13388,
+    "combined_nodes": 1927,
+    "nodes": 59,
+    "structure_links": 127,
+    "trace_links": 5,
+    "unresolved_nodes": 11
+  },
+  "source_files": 90,
+  "selected_source_files": 4,
+  "proposed_trace_links": 5,
+  "unresolved_mappings": 3,
+  "diagnostics_status": "none reported",
+  "raw_occurrences_preserved": true,
+  "native_view_preserved": true,
+  "original_model_carrier_manifest_unchanged": true,
+  "selected_code_test_bytes_unchanged": true,
+  "public_path": {
+    "prepare": "prepared",
+    "task": "mapping_required",
+    "build": "built",
+    "status": "built",
+    "repeat_build": "reused"
+  },
+  "overlay_formal_verification": "not_performed",
+  "subject_code_test_execution": "not_performed"
+}

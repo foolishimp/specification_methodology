@@ -16,6 +16,7 @@
 <main>
   <aside class="library" aria-label="Find constraints">
     <div class="section-heading"><h2 id="library-title">Find a constraint</h2><span id="total"></span></div>
+    <section id="code-overlay-panel" class="code-overlay-panel" aria-label="Code overlay" hidden></section>
     <section id="file-scope" aria-label="Selected source file" hidden></section>
     <label for="query">Search full record text</label><input id="query" type="search" placeholder="Try “evaluation” or “authority”…" autocomplete="off">
     <label for="family">Record family</label><select id="family"><option value="constraints">Constraints</option><option value="">All records</option></select>
@@ -26,7 +27,7 @@
     <div class="toolbar"><div id="force-controls" class="segmented" role="group" aria-label="Graph view"><button id="mode3" aria-pressed="false">3D</button><button id="mode2" aria-pressed="false">2D</button><button id="mode-layered" aria-pressed="false" hidden>Layered</button></div>
     <div id="layered-controls" hidden><span>Layered</span><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-reset" aria-label="Reset zoom">100%</button><button id="zoom-in" aria-label="Zoom in">+</button></div>
     <button id="focus">Focus</button><button id="expand">Expand one hop</button><button id="overview">Overview</button><button id="fit">Fit</button></div>
-    <div class="layers"><label><input id="required-layer" type="checkbox" checked> Retention dependencies</label><label><input id="relation-layer" type="checkbox" checked> Authored relations</label><label><input id="reference-layer" type="checkbox"> Other references</label></div>
+    <div class="layers"><label><input id="required-layer" type="checkbox" checked> Retention dependencies</label><label><input id="relation-layer" type="checkbox" checked> Authored relations</label><label><input id="reference-layer" type="checkbox"> Other references</label><label id="structure-control" hidden><input id="structure-layer" type="checkbox" checked> Code structure</label><label id="trace-control" hidden><input id="trace-layer" type="checkbox" checked> Proposed traces</label></div>
     <div id="graph"><div id="force-graph" class="renderer-host" hidden></div><div id="tracks-graph" class="renderer-host" hidden></div></div><div id="node-labels" aria-hidden="true"></div>
     <div class="map-foot"><p id="renderer-status" class="muted" role="status" hidden></p><p id="map-count" aria-live="polite"></p><p class="muted"><span id="map-help">Drag to orbit · scroll to zoom · click a node to read</span><br>Arrows follow the selected link type; they do not assert a proved inference.</p><div id="legend"></div></div>
   </section>
@@ -41,7 +42,7 @@
 <dialog id="about-dialog"><div class="dialog-toolbar"><h2>About this representation</h2><button id="about-close">Close</button></div>
 <p>This reader displays the authored constraints, relations and caveats in one exact a_c model. Retention links explain what the acquisition contract requires together. Authored relations retain their own meaning and qualifications.</p>
 <p>Neither a link nor its layout establishes a logical implication. The Lean work checks declared closure and record preservation; it does not prove the prose of these constraints. No per-constraint proof verdict is assigned here.</p>
-<pre id="model-info"></pre><details><summary>@@CREDITS@@</summary><pre>@@LICENSE@@</pre></details></dialog>
+<pre id="model-info"></pre><section id="code-overlay-about" hidden></section><details><summary>@@CREDITS@@</summary><pre>@@LICENSE@@</pre></details></dialog>
 <script id="explorer-data" type="application/json">@@DATA@@</script>
 <script>@@VENDOR@@</script><script>@@APP@@</script>
 </body></html>

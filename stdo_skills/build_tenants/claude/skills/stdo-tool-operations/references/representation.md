@@ -7,6 +7,10 @@ Follow the same procedure for natural discovery and explicit
 `/stdo-tool-operations` invocation. A prepared run or a list of commands is an
 incomplete result when the user requested a build.
 
+For a request to connect an existing representation to selected code and tests,
+use [Add code and test traces](#add-code-and-test-traces). Use the base workflow
+first only when the needed source-matched representation does not yet exist.
+
 ## Bind the operation
 
 - Resolve the nominated project root and its exact STDO 3.x Product Definition
@@ -169,3 +173,77 @@ link the retained run and state the exact pending or refused operation without
 inventing artifact links. This is a source-linked proposal: no semantic
 acceptance, publication, general host qualification or completion of the earlier
 Claude Q05 handoff follows from its existence.
+
+## Add code and test traces
+
+Consume the selected provider's `code-realization.md` contract and public
+`ac_code.py`; resolve `AC_CODE_TOOL`, `AC_CODE_PYTHON` and `PINNED_UPSTREAM` from
+the operator, activation or explicit provider relation. Do not infer a sibling
+checkout or silently install an extractor. Graphify is required for this optional
+path, including when the unchanged base was generated in `direct` mode.
+Resolve `AC_CODE_REQUIREMENTS` to that provider's `code/code-requirements.txt`.
+The exact parser pins supplement the tenant stack; Markdown extraction alone
+does not establish their availability. If setup of the selected environment is
+authorized, follow the provider's recipe:
+
+```sh
+"$AC_CODE_PYTHON" -m pip install -r "$AC_CODE_REQUIREMENTS"
+```
+
+Use the selected environment, without modifying a shared/global installation by
+implication.
+
+Bind `BASE_MODEL`, its exact `BASE_MANIFEST` and `BASE_SOURCE_ROOT` from the
+retained representation. The provider checks the model/manifest binding and all
+source members against both that corpus and the nominated `PROJECT_ROOT`.
+Select finite project-relative implementation and test paths expressly; the
+ordinary WHAT default does not authorize all code or any dependency traversal.
+Use a new `CODE_RUN` outside those selections. The local-file and composition
+restrictions above apply before this operation too.
+
+Use Bash to prepare and read a mapping task:
+
+```sh
+"$AC_CODE_PYTHON" -B "$AC_CODE_TOOL" prepare \
+  --project "$PROJECT_ROOT" --model "$BASE_MODEL" --manifest "$BASE_MANIFEST" \
+  --source-root "$BASE_SOURCE_ROOT" --code "$CODE_PATH" --test "$TEST_PATH" \
+  --upstream "$PINNED_UPSTREAM" --out "$CODE_RUN"
+"$AC_CODE_PYTHON" -B "$AC_CODE_TOOL" task --run "$CODE_RUN" --record "$RECORD_ID"
+```
+
+Repeat `--code`/`--test` for the selected scope; omit `--test` when no test source
+is nominated. `--record` selects exact base records, or omit it for the available
+base endpoints. Read actual JSON/exit status and the task's schema, identities,
+source and observed relationships. Preparation freezes and parses source; it
+neither executes that source nor runs its tests.
+
+In this Claude session, author `MAPPING_FILE` **outside the prepared
+`CODE_RUN`**, against the returned schema and exact identities. Use source-grounded rationale, conditions and limitations.
+The supported mappings are `proposed_realization` from a base record to code,
+and `test_source_for` from a base/code record to selected test source. Preserve
+uncertain correspondence in `unresolved`; a same-named symbol or a discovered
+call edge cannot justify a semantic mapping by itself. Use the authorized file
+writer and a fresh draft, without rewriting the base or the extractor's retained
+observations. A missing justified mapping is not permission to invent one.
+
+```sh
+"$AC_CODE_PYTHON" -B "$AC_CODE_TOOL" build --run "$CODE_RUN" \
+  --mapping "$MAPPING_FILE" --author "Claude host session"
+"$AC_CODE_PYTHON" -B "$AC_CODE_TOOL" status --run "$CODE_RUN"
+```
+
+Return the actual overlay and combined explorer paths, base/overlay identities,
+selected source scope, caller-declared author and remaining mapping/extraction
+gaps. Structure and Trace layers distinguish observations from F_P proposals in
+the same offline 3D/2D/Layered reader. A test-source link supplies no execution
+result; code correspondence supplies no satisfaction or acceptance decision.
+The overlay has no Lean verdict, and the base's evidence does not expand to it.
+A required checker/origin-reservation activation is unsupported by this initial
+path; report that boundary rather than dropping its required selection.
+
+On resume, inspect `status` before `build` with the same mapping/author. The
+provider rechecks source membership/content, mapping, machinery and artifacts.
+Preserve a drift refusal or incomplete output; do not patch retained hashes or
+claim current reuse. A new authorized run may bind changed inputs without
+changing the standing of the previous one. No fresh Claude host qualification is
+established merely by following this documented route.

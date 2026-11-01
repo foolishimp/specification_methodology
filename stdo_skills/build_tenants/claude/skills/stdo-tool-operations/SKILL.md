@@ -1,6 +1,6 @@
 ---
 name: stdo-tool-operations
-description: Build a representation, constraint model, recoverable carrier, coverage, and readable documentation for a user's nominated project through the a_c public workflow. Also use for governed STDO source acquisition, workspace observation, scoped writes, bounded context, and unsupported-tool or execution failures. Not for unrelated tasks.
+description: Build a representation, constraint model, recoverable carrier, coverage, and readable documentation for a user's nominated project, including traces to selected code and tests, through the a_c public workflow. Also use for governed STDO source acquisition, workspace observation, scoped writes, bounded context, and unsupported-tool or execution failures. Not for unrelated tasks.
 ---
 
 # STDO tool operations — supported use and bounded context
@@ -16,9 +16,11 @@ explicit `/stdo-tool-operations` request for that result, read
 Claude authors the returned frozen-source tasks in this host session, submits
 the actual JSON and builds the artifacts. Return the actual artifact links;
 instructions or prepared prompts alone are incomplete. This operation has its
-own provider contract and exact target-source basis. Take this branch before the
-general lifecycle transport below, without treating it as target-method adoption
-or general compatibility with another lifecycle profile.
+own provider contract and exact target-source basis. For a request to extend an
+existing representation into selected code/tests, take its
+[code-overlay branch](references/representation.md#add-code-and-test-traces).
+Take these branches before the general lifecycle transport below, without
+treating them as target-method adoption or general lifecycle compatibility.
 
 ## Transport and operations (SK-04)
 

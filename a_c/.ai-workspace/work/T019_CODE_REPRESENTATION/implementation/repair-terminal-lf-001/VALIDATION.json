@@ -1,0 +1,27 @@
+{
+  "actual_abi_base": {
+    "grounding_occurrences": 1636,
+    "live_and_frozen_source_files": 86,
+    "model_raw_sha256": "19d435c8b96a24025c5b2204e62041d764bbbb4e91ac5b8f99fedee93d082859",
+    "scope": "All occurrences traversed through base_inputs; repeated quotes are counted repeatedly. No source or model change.",
+    "status": "passed",
+    "terminal_lf_quote_occurrences": 887
+  },
+  "cases": [
+    "test_public_path_preserves_terminal_lf_grounding_without_quote_normalization",
+    "test_manifest_subject_file_identity_and_model_grounding_refuse",
+    "test_unknown_trace_false_quote_range_and_wrong_role_refuse_without_output"
+  ],
+  "elapsed_seconds": "2.110",
+  "errors": 0,
+  "failures": 0,
+  "prior_full_suite": {
+    "record": "../VALIDATION.json",
+    "status": "retained predecessor evidence; unchanged acquisition/renderer code",
+    "tests": 23
+  },
+  "profile": "a_c.t019.affected-validation/1",
+  "runtime_delta": "Preserve original source line endings in exact grounding range, matching ac_generate.author_check.",
+  "skips": 0,
+  "tests": 3
+}

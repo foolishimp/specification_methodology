@@ -1,6 +1,6 @@
 ---
 name: stdo-work
-description: Apply a selected STDO method to governed software work, or build an a_c representation of a user's nominated project. Use for project representation builds, tasks in an STDO workspace or explicit STDO setup, including changes, review, recovery and release preparation; do not impose STDO on unrelated requests.
+description: Apply a selected STDO method to governed software work, or build an a_c representation of a user's nominated project and trace requirements to selected code and tests. Use for project representation builds, tasks in an STDO workspace or explicit STDO setup, including changes, review, recovery and release preparation; do not impose STDO on unrelated requests.
 ---
 
 # STDO work
@@ -11,9 +11,11 @@ For a request to build or resume an a_c representation of a nominated project,
 follow [representation](references/representation.md). Execute its complete
 prepare → task → author → submit → build loop and return the actual artifacts.
 The current session authors each supplied chunk; preparing instructions alone
-does not complete the request. That route treats the target's method as subject
-data, with no lifecycle admission under another method. For governed changes
-and lifecycle operations, use the following workflow.
+does not complete the request. To extend an existing representation into selected
+code/tests, take the [code-overlay branch](references/representation.md#add-code-and-test-traces)
+instead. Both branches treat the target's method as subject data, with no
+lifecycle admission under another method. For governed changes and lifecycle
+operations, use the following workflow.
 
 1. Identify the outcome and changed owner: requirement, design, implementation, assessment or release. Select exactly one applicable Product Definition, or an explicitly authorized cross-Product relation. Read the applicable local bootstrap and deciding sources. If an activated Context already supplies the exact binding, use it and acquire only its missing material sources.
 2. Verify the pinned installation and operation compatibility through [basis](references/basis.md) and [tools](references/tools.md). Preserve sufficient existing authorization. Ask only for a material missing decision, not repeated consent for already granted work.

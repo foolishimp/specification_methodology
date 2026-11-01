@@ -2,8 +2,9 @@
 
 Status: review repairs implemented; successor installed-byte and DOM/state
 checks pass. Independent successor review is closed with no actionable S0–S4
-finding. Actual browser/WebGL qualification of changed HTML, broader tooling
-delivery and public release remain open.
+finding. The reviewed repairs are checkpointed and pushed on `main` at
+`c034593eea08`. Actual browser/WebGL qualification of changed HTML, broader
+tooling delivery and public release remain open.
 Owner: Jim. Re-entry: requirement refinement and distribution design.
 
 ## Owner instruction

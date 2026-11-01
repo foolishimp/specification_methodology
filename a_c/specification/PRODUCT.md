@@ -66,6 +66,15 @@ open. Existing component proofs and the STDO documentation example do not alone
 establish that delivery. The a_c builder and each consumer's selected method
 remain separately identified; a 3.0.x label is not a compatibility assertion.
 
+The [code representation requirements](requirements/code-realization.md) add
+selected local code and tests as a versioned overlay on the exact source model.
+Structural observations and caller-attributed F_P realization mappings remain
+distinct. Users can follow requirement→code→test links in the same offline
+reader without changing the native model/carrier or extending their proof scope.
+Such links establish neither correctness, executed tests nor satisfaction.
+[T-019](../.ai-workspace/tickets/active/T-019-code-representation.md) selects the
+first public CLI/reader slice and its independent actual-extractor review.
+
 ## Formalisation capability
 
 A formalisation tenant supplies an explicit mathematical interpretation of a

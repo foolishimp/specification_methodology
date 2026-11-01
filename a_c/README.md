@@ -7,6 +7,15 @@ checks, and supply selected context to LLM builders and reviewers. See the
 [delivery plan](.ai-workspace/work/T015_USER_PROJECT_PRODUCT/PLAN.md). Existing
 components are usable now; the unified installed user workflow remains in work.
 
+The [ABIogenesis code explorer](applications/abiogenesis-code-explorer/index.html)
+adds requirement→implementation→test-source navigation to that offline reader.
+Its [quickstart](applications/abiogenesis-code-explorer/README.md) walks through
+five proposed links over four selected files. Use the
+[public code-overlay commands](build_tenants/graphify/README.md#follow-requirements-into-code-and-test-sources)
+on another nominated project. [T-019's delivery](.ai-workspace/work/T019_CODE_REPRESENTATION/DELIVERY.md)
+is independently reviewed within its structural, public-path and reader scope;
+these links do not assert test execution, correctness or requirement satisfaction.
+
 The [STDO constraint explorer](applications/stdo-constraint-explorer/README.md)
 provides a local **3D/2D view with a full constraint reader**. Search constraints,
 follow labelled connections, inspect caveats and source passages, and navigate

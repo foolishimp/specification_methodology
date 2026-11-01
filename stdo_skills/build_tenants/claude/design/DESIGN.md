@@ -246,3 +246,16 @@ not establish actual Claude discovery, F_P authoring, independent review or host
 qualification. Such evidence must name its exact package, host, nominated fixture,
 invocation, source, submissions, checks and result; it does not rebind historical
 T-001/T-002 evidence to this package.
+
+## Optional code-overlay consumer
+
+`stdo-tool-operations` additionally routes code/test tracing requests through the
+conditional representation reference to a_c's `code-realization.md`/`ac_code.py`.
+Claude uses Bash and Read for actual prepare/task/build/status results and its
+authorized writer for the F_P mapping. It preserves the source-matched native
+base, explicitly selected local paths, pinned Graphify dependency and separate
+observation/interpretation standing. No test execution, satisfaction decision or
+overlay Lean result is inferred. A required unsupported checker or mediated
+route withholds this branch. The provider owns extraction, schema validation,
+currentness and rendering; neither skill algorithms nor host qualification are
+invented from this optional route's packaging.

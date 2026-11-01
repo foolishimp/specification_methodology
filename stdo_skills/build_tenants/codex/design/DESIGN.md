@@ -129,3 +129,17 @@ checks without source roots report external currentness as `not_performed`;
 they remain usable for installed copies. Untagged historical acquisition routes
 retain their original identities. Repository inference belongs only to this
 construction check and supplies no runtime provider selection or authority.
+
+## Optional code-overlay consumer
+
+The representation route additionally consumes a_c's `code-realization.md` and
+`ac_code.py` under the same explicit provider relation. Its separate entry takes
+an existing source-matched model/manifest/corpus and explicitly selected code/test
+paths. Codex authors attributed mappings from the returned task schema, then
+uses public build/status readback. Graphify owns structural discovery; the host
+owns proposed correspondence. The reader preserves the native base and separates
+Structure and Trace layers. Existing formal evidence does not cover the overlay.
+Provider selection includes the exact extractor dependency; no default scan,
+checker bypass, implicit source route or copied algorithm is introduced. Package
+checks and any public CLI evidence retain their own scope, independently of
+actual-host discovery/behavior qualification.

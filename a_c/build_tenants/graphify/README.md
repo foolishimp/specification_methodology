@@ -11,6 +11,58 @@ currentness and safe reuse. `direct` needs Python and the STDO manager;
 `graphify-ac` additionally uses the exact pinned upstream. Formal verification
 is optional and must be selected with the existing trusted checker contract.
 
+## Follow requirements into code and test sources
+
+[`code/ac_code.py`](code/ac_code.py) adds a separate, source-matched code overlay
+to a generated model. Graphify observes selected files and symbols; your current
+authoring host proposes the requirement-to-implementation and implementation-to-
+test-source links. The same offline reader follows those links in all three
+layouts, with Files navigation and exact source quotations.
+
+Install the optional parser versions in your selected Python environment, using
+[`code/code-requirements.txt`](code/code-requirements.txt). These match the pinned
+Graphify lockfile. The existing tenant stack and exact upstream checkout are
+also required for extraction. Neither Lean nor an LLM runtime is needed to read
+the exported HTML. The code overlay supplies no formal verification and does not
+run the nominated project's source or tests.
+Extraction sees only the nominated frozen files. Ambient configuration, package
+aliases and unselected imports stay unresolved; diagnostic messages and that
+scope remain visible in the reader.
+
+For example, from this tenant directory, with an already completed project run
+and the same project source still current:
+
+```sh
+python -m pip install -r code/code-requirements.txt
+python -B code/ac_code.py prepare \
+  --project /path/to/project \
+  --model /path/to/base-run/generation/proposal/model.json \
+  --manifest /path/to/base-run/source-manifest.json \
+  --source-root /path/to/base-run/generation/corpus \
+  --code src/implementation.ts --test tests/implementation.test.mjs \
+  --upstream /path/to/pinned-graphify --out /path/to/code-run
+python -B code/ac_code.py task --run /path/to/code-run
+```
+
+The task supplies exact endpoint IDs, source records, the mapping schema and an
+empty template. Use `--record ID` repeatedly to focus its base records. Save the
+authored mapping **outside** the prepared run, for example beside it:
+
+```sh
+python -B code/ac_code.py build --run /path/to/code-run \
+  --mapping /path/to/code-mapping.json --author 'current authoring session'
+python -B code/ac_code.py status --run /path/to/code-run
+```
+
+Open `/path/to/code-run/built/explorer.html`. It starts at the first proposed
+realization's requirement. **Code structure** and **Proposed traces** have their
+own controls and evidence. A selected test source is not a passing test result;
+the native model and any proof keep their original scope. Repeated build reuses
+only unchanged inputs and artifacts; changed source, selection, mapping, parser
+or renderer requires a fresh run. The exact frozen output remains historical.
+The [code-overlay contract](design/code-realization.md) defines supported input,
+attribution, ambiguity, invalidation and the bounded verification claim.
+
 This tenant implements a bounded structural realization of `a_c`. It runs
 independently of v3, Axiom Indexer and STDO Representation. The initial authored
 model family supports all eight core record shapes, exact basis and content
