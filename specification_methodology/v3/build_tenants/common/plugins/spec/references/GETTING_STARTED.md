@@ -1,12 +1,13 @@
 # Using STDO
 
 This guide is the practical entrypoint for a person or LLM entering an
-STDO-governed project. It answers four questions:
+STDO-governed project. It answers five questions:
 
 1. How do I get ready to work?
 2. How do I iterate requirements?
 3. What authorizes code development and testing?
 4. How do I monitor progress and help triage?
+5. How do I issue work to another actor without writing a replacement brief?
 
 This guide and its companion skills are non-deciding interaction projections.
 The project's exact installed STDO cut and Product-owned authority remain the
@@ -18,6 +19,7 @@ governing sources.
 - [Iterate Requirements](#2-iterate-requirements)
 - [Start Code Development And Testing](#3-start-code-development-and-testing)
 - [Monitor And Help Triage](#4-monitor-and-help-triage)
+- [Coordinate Work And Review](#coordinate-work-and-review)
 - [Common Stops](#common-stops)
 - [Read The Installed Documentation](#read-the-installed-documentation)
 - [Owning References](#owning-references)
@@ -77,6 +79,48 @@ STDO constrains governed relations. It does not prescribe an actor count,
 repository layout, prompt construction engine, internal decomposition, search
 procedure, or tool sequence where those choices cannot change a governed
 semantic, authority, evidence, safety, or release property.
+
+## Coordinate Work And Review
+
+The same skill supports direct work, issuing a bounded activation and receiving
+its packet. Choose from the actual frame/grant and task boundary. A sufficient
+direct task keeps its ordinary path; invoking a skill adds no actor or ticket.
+
+For a coordinating request, identify the existing admitted carrier and unit:
+
+```text
+Use stdo-work to issue W1 from <carrier at exact identity> to a separate Worker.
+Keep my coordinating frame and evaluate its return under that contract.
+```
+
+The skill follows [Coordinated Skill Handoff](COORDINATED_HANDOFF.md): it binds
+exact source references, permissions, result destination and stops, checks
+recipient acquisition, then uses the host's supported dispatch mechanism. The
+recipient invokes `stdo-work`, validates the packet before subject reads and
+executes the ordinary path. The issuer evaluates the closed result and issues
+`stdo-review` when the governing boundary requires it. If the host cannot
+perform the required dispatch, it returns a prepared, not-dispatched packet.
+
+Begin with the actor's own named control contract, before directory discovery
+or other project reads. The [verified section reader](COORDINATED_HANDOFF.md#compact-source-acquisition)
+uses the existing manager and explicit store to return compact verification
+and named source sections. A strict acquisition requirement also needs a
+compatible [host binding](HOST_BINDING.md); the opt-in Claude policy adapter
+gates exact native tool calls, while its unmeasured context and approved
+programs' internal behavior remain explicit limitations.
+
+Use the host's installed invocation syntax; the packaged Codex prompt uses
+`$spec:stdo-work`. In another host, select its installed `stdo-work` skill or
+open the exact installed `SKILL.md`. The
+[host binding](COORDINATED_HANDOFF.md#host-binding) records the actual context
+inheritance, tools and return mechanism; skill names alone establish none of
+those properties.
+
+`stdo-status` can obtain permitted read-only evidence through another actor;
+`stdo-ticket` can issue a carrier update to its authorized Writer;
+`stdo-help` checks existing rulings and routes a material missing question.
+These use the same handoff, with their own operation and result boundaries.
+For example, a status request cannot silently run a proof or edit a ticket.
 
 ## 1. Get Ready To Work
 

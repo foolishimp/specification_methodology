@@ -1,0 +1,33 @@
+{
+  "autoMemoryEnabled": false,
+  "claudeMdExcludes": [
+    "/Users/jim/**/CLAUDE.md",
+    "/Users/jim/**/.claude/rules/**",
+    "/private/tmp/CLAUDE.md",
+    "/private/CLAUDE.md"
+  ],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+            "args": [
+              "/private/tmp/stdo304-probes-2dbmyw3i/candidate/plugins/spec/scripts/claude_tool_gate.py",
+              "--policy",
+              "/private/tmp/stdo304-probes-2dbmyw3i/controls/receiver-policy.json",
+              "--policy-sha256",
+              "ab7907a19fcc7ab8dffc15bd25697a061fc5878494b8243cec8002fd11167bfa",
+              "--audit",
+              "/private/tmp/stdo304-probes-2dbmyw3i/controls/receiver-audit.jsonl"
+            ],
+            "timeout": 10,
+            "onFailure": "block"
+          }
+        ]
+      }
+    ]
+  }
+}

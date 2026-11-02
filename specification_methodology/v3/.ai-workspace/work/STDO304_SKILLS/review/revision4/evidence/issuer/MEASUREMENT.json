@@ -1,0 +1,120 @@
+{
+  "case": "issuer",
+  "host": "claude",
+  "argv": [
+    "/Users/jim/.local/bin/claude",
+    "--print",
+    "--verbose",
+    "--output-format",
+    "stream-json",
+    "--no-session-persistence",
+    "--permission-mode",
+    "dontAsk",
+    "--permission-prompts",
+    "none",
+    "--restricted",
+    "--tools",
+    "Read,Skill,Bash",
+    "--settings",
+    "/private/tmp/stdo304-probes-2dbmyw3i/controls/issuer-settings.json",
+    "--strict-mcp-config",
+    "--mcp-config",
+    "/private/tmp/stdo304-probes-2dbmyw3i/controls/empty-mcp.json",
+    "--plugin-dir",
+    "/private/tmp/stdo304-probes-2dbmyw3i/candidate/plugins/spec",
+    "--add-dir",
+    "/private/tmp/stdo304-probes-2dbmyw3i/candidate/plugins/spec",
+    "--model",
+    "claude-fable-5-1"
+  ],
+  "cwd": "/private/tmp/stdo304-probes-2dbmyw3i/coordinated",
+  "source_freeze_sha256": "68320109c3379df967a475a3f9db799b618241f6160189a5adb9321da065e0e0",
+  "prompt_bytes": 269,
+  "prompt_sha256": "f5dcb0d2512df5eae6adc8204c5cd5e82da8962ec0e51988869f6929af9e773a",
+  "wall_limit_seconds": 300,
+  "elapsed_seconds": 154.31,
+  "exit_code": 0,
+  "timeout": false,
+  "completed": true,
+  "known_process_ids": [
+    91466,
+    91821,
+    91929,
+    91948,
+    91949,
+    91950,
+    91951,
+    91952,
+    91955,
+    92011,
+    92012,
+    92013,
+    92286,
+    92287,
+    92288,
+    92319,
+    92320,
+    92321,
+    92352,
+    92353,
+    92354,
+    92371,
+    92393,
+    92394,
+    92395,
+    92397,
+    92500,
+    92502,
+    92503,
+    92539,
+    92540,
+    92541,
+    92587,
+    92588,
+    92589,
+    92592
+  ],
+  "terminated_descendants": [],
+  "remaining_known_processes": [],
+  "models_exposed": [
+    "claude-fable-5-1"
+  ],
+  "reported_cost_usd": 2.088432,
+  "usage": {
+    "input_tokens": 162,
+    "cache_creation_input_tokens": 72288,
+    "cache_read_input_tokens": 171408,
+    "output_tokens": 11964,
+    "output_tokens_details": {
+      "thinking_tokens": 3173
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 72288,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 32,
+        "output_tokens": 6115,
+        "cache_read_input_tokens": 73846,
+        "cache_creation_input_tokens": 5287,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 5287
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "host_instructions": "fresh process with fixture AGENTS/CLAUDE; no resumed conversation; managed/system inherited context unmeasured; selected per-run controls retained",
+  "discovery": "Claude --plugin-dir native plugin; Codex native local .agents/skills alias",
+  "standing": "raw bounded observation requiring semantic interpretation"
+}

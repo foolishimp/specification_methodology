@@ -1,6 +1,6 @@
 ---
 name: stdo-status
-description: Produce an evidence-backed read-only STDO project status and bounded triage candidates. Use when a user says stdo status or explicitly asks for progress, blockers, monitoring, or triage help in an STDO-governed project. Do not invoke for generic status.
+description: Produce evidence-backed read-only STDO project status, or obtain missing observations through an authorized actor. Use for progress, blockers, monitoring or triage in an STDO-governed project. Do not invoke for generic status.
 ---
 
 # STDO Status
@@ -8,6 +8,39 @@ description: Produce an evidence-backed read-only STDO project status and bounde
 Report Product and work truth without changing it. The shell command `stdo
 status` reports installed-basis integrity; this skill reports project delivery
 state from Product-owned authority and evidence.
+
+## Start With Your Own Control Intake
+
+Read the exact own contract or intake named in the request before any general
+search or project read. Bind your own permitted inputs, exclusions and return
+route, then apply [Control Intake](../../references/COORDINATED_HANDOFF.md#control-intake).
+This applies to issuer, recipient and direct work. Use named control routes;
+do not start with directory inventories, memory searches or neighbouring
+prompts. A Worker’s access never becomes its issuer’s access. Check the actual
+host boundary before relying on excluded information staying unavailable.
+
+## Choose The Entry
+
+If receiving a coordinated packet, apply
+[Receive](../../references/COORDINATED_HANDOFF.md#receive) before general
+discovery or evidence reads. Execute the procedure below only inside that
+read-only frame and return the permitted status/evidence projection.
+
+When the coordinating frame cannot acquire required evidence itself, use
+[Issue](../../references/COORDINATED_HANDOFF.md#issue) to bind a read-only
+observation task to an actor allowed to acquire it. Evaluate
+[the return](../../references/COORDINATED_HANDOFF.md#evaluate-the-return)
+without opening sources excluded from the issuer's own frame. If producing
+the evidence requires execution or mutation, route that operation through
+`stdo-work` under its existing grant; this status skill does not grant it.
+Otherwise report directly using the procedure below.
+
+For work produced outside the admitted process, establish its identity,
+provenance, grants and retained obligations from permitted metadata and
+evidence. Separate proposed reuse, preservation, repair or discard from an
+authorized disposition. Metadata alone does not establish semantic adequacy;
+do not delete work or change its status through this read-only skill
+(`ACTIVATION` §5 and §7).
 
 ## Select The Product Basis
 

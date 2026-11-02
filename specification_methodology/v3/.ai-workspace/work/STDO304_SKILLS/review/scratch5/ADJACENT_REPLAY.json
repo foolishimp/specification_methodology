@@ -1,0 +1,36 @@
+{
+  "reader_sha256": "a2dabd893dacf893d30ba35d91f6f2356084301175ba5bd01e98cfdd1976d3fb",
+  "all_retained_adjacent_cases_refuse": true,
+  "results": [
+    {
+      "name": "cdata",
+      "refused": true,
+      "reason": "unsupported_markdown_html_block"
+    },
+    {
+      "name": "declaration",
+      "refused": true,
+      "reason": "unsupported_markdown_html_block"
+    },
+    {
+      "name": "inline_comment",
+      "refused": true,
+      "reason": "unsupported_comment_placement"
+    },
+    {
+      "name": "<div/>",
+      "refused": true,
+      "reason": "unsupported_markdown_html_block"
+    },
+    {
+      "name": "<div",
+      "refused": true,
+      "reason": "unsupported_markdown_html_block"
+    },
+    {
+      "name": "<script",
+      "refused": true,
+      "reason": "unsupported_markdown_html_block"
+    }
+  ]
+}

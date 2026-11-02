@@ -1,0 +1,134 @@
+[
+  {
+    "case": "listed-control",
+    "input": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-probes-xun7ttbp/coordinated",
+      "tool_use_id": "synthetic-listed-control",
+      "tool_name": "Read",
+      "tool_input": {
+        "file_path": "/private/tmp/stdo304-probes-xun7ttbp/coordinated/contracts/issuer.json"
+      }
+    },
+    "expected": "allow",
+    "actual": "allow",
+    "exit": 0,
+    "output": {
+      "hookSpecificOutput": {
+        "hookEventName": "PreToolUse",
+        "permissionDecision": "allow",
+        "permissionDecisionReason": "exact_policy_match"
+      }
+    }
+  },
+  {
+    "case": "unlisted-output",
+    "input": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-probes-xun7ttbp/coordinated",
+      "tool_use_id": "synthetic-unlisted-output",
+      "tool_name": "Read",
+      "tool_input": {
+        "file_path": "/private/tmp/stdo304-probes-xun7ttbp/coordinated/excluded-outputs/private.txt"
+      }
+    },
+    "expected": "deny",
+    "actual": "deny",
+    "exit": 0,
+    "output": {
+      "hookSpecificOutput": {
+        "hookEventName": "PreToolUse",
+        "permissionDecision": "deny",
+        "permissionDecisionReason": "read_not_listed"
+      }
+    }
+  },
+  {
+    "case": "listed-command",
+    "input": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-probes-xun7ttbp/coordinated",
+      "tool_use_id": "synthetic-listed-command",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 -B /private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/scripts/read_basis.py check --stdo /Users/jim/.local/bin/stdo --store /private/tmp/stdo304-probes-xun7ttbp/store --definition /private/tmp/stdo304-probes-xun7ttbp/coordinated/stdo_fixture.json"
+      }
+    },
+    "expected": "allow",
+    "actual": "allow",
+    "exit": 0,
+    "output": {
+      "hookSpecificOutput": {
+        "hookEventName": "PreToolUse",
+        "permissionDecision": "allow",
+        "permissionDecisionReason": "exact_policy_match"
+      }
+    }
+  },
+  {
+    "case": "parent-listing",
+    "input": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-probes-xun7ttbp/coordinated",
+      "tool_use_id": "synthetic-parent-listing",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "ls .."
+      }
+    },
+    "expected": "deny",
+    "actual": "deny",
+    "exit": 0,
+    "output": {
+      "hookSpecificOutput": {
+        "hookEventName": "PreToolUse",
+        "permissionDecision": "deny",
+        "permissionDecisionReason": "command_not_listed"
+      }
+    }
+  },
+  {
+    "case": "command-suffix",
+    "input": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-probes-xun7ttbp/coordinated",
+      "tool_use_id": "synthetic-command-suffix",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 -B /private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/scripts/read_basis.py check --stdo /Users/jim/.local/bin/stdo --store /private/tmp/stdo304-probes-xun7ttbp/store --definition /private/tmp/stdo304-probes-xun7ttbp/coordinated/stdo_fixture.json && ls .."
+      }
+    },
+    "expected": "deny",
+    "actual": "deny",
+    "exit": 0,
+    "output": {
+      "hookSpecificOutput": {
+        "hookEventName": "PreToolUse",
+        "permissionDecision": "deny",
+        "permissionDecisionReason": "command_not_listed"
+      }
+    }
+  },
+  {
+    "case": "selected-skill",
+    "input": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-probes-xun7ttbp/coordinated",
+      "tool_use_id": "synthetic-selected-skill",
+      "tool_name": "Skill",
+      "tool_input": {
+        "skill": "spec:stdo-work"
+      }
+    },
+    "expected": "allow",
+    "actual": "allow",
+    "exit": 0,
+    "output": {
+      "hookSpecificOutput": {
+        "hookEventName": "PreToolUse",
+        "permissionDecision": "allow",
+        "permissionDecisionReason": "exact_policy_match"
+      }
+    }
+  }
+]

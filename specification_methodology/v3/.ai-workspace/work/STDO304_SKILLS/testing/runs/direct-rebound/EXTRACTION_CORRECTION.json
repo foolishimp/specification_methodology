@@ -1,0 +1,11 @@
+{
+  "standing": "incomplete; no closed actor return",
+  "reason": "The runner selected last Codex agent_message despite timeout and no turn.completed. It was a progress update, not a final result.",
+  "affected_artifacts": [
+    "FINAL.md",
+    "RELAY_RECEIPT.json",
+    "fixture records/direct-result.md"
+  ],
+  "preservation": "Original bytes retained; these artifacts do not establish a closed result or completed direct work.",
+  "future_rule": "Only a no-timeout turn.completed (Codex) or successful result event (Claude) permits final extraction and relay."
+}

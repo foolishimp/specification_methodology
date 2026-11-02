@@ -1,0 +1,21 @@
+{
+  "scope": "final issuer and dependent receiver only; earlier native outcomes retained",
+  "sessions": {
+    "issuer": {
+      "host": "claude",
+      "seconds": 300
+    },
+    "receiver": {
+      "host": "claude",
+      "seconds": 240,
+      "depends": "actual valid completed issuer packet"
+    }
+  },
+  "oracle": {
+    "sha256": "b50b63d4c1fc917747e9123fad131f845ab0208ba277a41f1776774faff25250",
+    "not_supplied_to_actor": true
+  },
+  "business_grants": "original contract bytes preserved",
+  "host_control_limit": "direct tool calls only; trusted frozen helper and bootstrap/context limits separate",
+  "new_metadata": "session settings, policies, command catalog, hook audit and final relay selected by fixture owner"
+}

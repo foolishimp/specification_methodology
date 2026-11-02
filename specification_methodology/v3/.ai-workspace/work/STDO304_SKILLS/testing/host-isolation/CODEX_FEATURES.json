@@ -1,0 +1,38 @@
+[
+  {
+    "argv": [
+      "codex",
+      "features",
+      "list"
+    ],
+    "exit_code": 0,
+    "selected_feature_lines": [
+      "memories                                 stable             true",
+      "plugins                                  stable             true",
+      "shell_tool                               stable             true",
+      "skill_search                             stable             true",
+      "skip_host_skill_discovery                under development  false"
+    ],
+    "stdout_sha256": "4dfbad513b863240aa75bf0acec2388d3ed8bc1a57c382e80f9de3d3cdc757df",
+    "stderr_bytes": 0
+  },
+  {
+    "argv": [
+      "codex",
+      "--disable",
+      "memories",
+      "features",
+      "list"
+    ],
+    "exit_code": 0,
+    "selected_feature_lines": [
+      "memories                                 stable             false",
+      "plugins                                  stable             true",
+      "shell_tool                               stable             true",
+      "skill_search                             stable             true",
+      "skip_host_skill_discovery                under development  false"
+    ],
+    "stdout_sha256": "170ea690852b12cacece0aa942a8e5a6b1f8bb0b233d109e070213daa3632d28",
+    "stderr_bytes": 0
+  }
+]

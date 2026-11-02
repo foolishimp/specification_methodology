@@ -1,0 +1,33 @@
+{
+  "base_freeze_sha256": "68320109c3379df967a475a3f9db799b618241f6160189a5adb9321da065e0e0",
+  "reader_sha256": "a2dabd893dacf893d30ba35d91f6f2356084301175ba5bd01e98cfdd1976d3fb",
+  "reproduction_script_sha256": "d37a9e8a99dd785bdafdcf6009c1a9e583c025c38f360daf0c66bcbd0374c9af",
+  "command": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/scratch5/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+    "read",
+    "--stdo",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/scratch5/scratch/html-selfclose/manager",
+    "--definition",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/scratch5/scratch/html-selfclose/definition.json",
+    "--member",
+    "standards/OWNER.md",
+    "--heading",
+    "Two"
+  ],
+  "exit": 1,
+  "stdout": {
+    "command": "read",
+    "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/scratch5/scratch/html-selfclose/definition.json",
+    "kind": "stdo.skill-source-read",
+    "reason": "unsupported_markdown_html_block",
+    "status": "refused"
+  },
+  "stderr": "",
+  "expected": "refuse unsupported HTML; Two is not a Markdown section",
+  "actual_invented_section": false,
+  "oracle": "CommonMark 0.31.2 HTML blocks: https://spec.commonmark.org/0.31.2/#html-blocks",
+  "limits": "Exact frozen reader under isolated review-owned verified mock manager; no native-source occurrence claimed"
+}

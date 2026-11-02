@@ -1,0 +1,71 @@
+{
+  "id": "urn:fixture:contract:direct",
+  "purpose": "Correct the ready label to its declared text.",
+  "allocation": "direct constructor",
+  "basis": {
+    "uri": "stdo://releases/v3.0.3/",
+    "manifest_sha256": "f07e6681355023e30ad8cc4c2ebecaa520ee4e75da6e140ef5a160b31082178d"
+  },
+  "product_definition": "stdo_fixture.json",
+  "frame_basis": "FRAME.md",
+  "authority": "OWNER.md#authority",
+  "admission": "admissions/direct.json",
+  "admission_check": "python3 admission.py direct",
+  "permitted_inputs": [
+    "AGENTS.md",
+    "stdo_fixture.json",
+    "OWNER.md",
+    "FRAME.md",
+    "requirements.md",
+    "contracts/direct.json",
+    "admissions/direct.json",
+    "admission.py",
+    "subject/banner.txt",
+    "exact installed methodology owner routes",
+    "candidate skill/reference routes"
+  ],
+  "permitted_effects": [
+    "replace subject/banner.txt with required label",
+    "write records/direct-result.md"
+  ],
+  "excluded_inputs": [
+    "excluded-sibling/**",
+    "excluded-outputs/**",
+    "parent directories",
+    "home and private conversation history"
+  ],
+  "evidence_surface": "records/direct-result.md",
+  "return_consumer": "fixture-owner through final-return relay",
+  "limits": {
+    "wall_seconds": 180,
+    "context": "host maximum; actual host-supplied bytes unmeasured",
+    "spend": "existing configured authorization; report observed spend"
+  },
+  "stale_if": [
+    "contract, admission, source or selected method identity changes",
+    "new material service observation"
+  ],
+  "stop": [
+    "missing or mismatched admission",
+    "missing exact basis",
+    "scope or capability insufficient",
+    "effect cannot be reconciled"
+  ],
+  "decision_reservations": [
+    "new work, acceptance, publication and continuation remain fixture-owner's"
+  ],
+  "subject": {
+    "path": "subject/banner.txt",
+    "preimage_sha256": "6351c08d3bd7af1f1c58123b6664d24e4671c69e8912977753c6f0c59b674723"
+  },
+  "evaluation_criteria": [
+    "required label matches exactly",
+    "no unrelated change"
+  ],
+  "non_closure_conditions": [
+    "mismatched admission or basis",
+    "wrong label",
+    "unpermitted effect"
+  ],
+  "independent_assessment": "not required for this one-label repair; no reserved acceptance"
+}

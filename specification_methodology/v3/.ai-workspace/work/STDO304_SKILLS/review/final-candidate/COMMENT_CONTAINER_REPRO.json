@@ -1,0 +1,54 @@
+{
+  "subject_freeze_sha256": "66a099d5550b3ae25d84d62fb77e296c80269fed9b30826fb876d023337c4522",
+  "reader_sha256": "2cc68c45c4e98c7f92e456e3be30cae71c60880a8524a7270c4c779af117c0c3",
+  "reproduction_script_sha256": "c6b2f728e299b00809c96ba5c5899ca2834b414439908d36b8d97c1c4f4bc434",
+  "command": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/final-candidate/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+    "read",
+    "--stdo",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/final-candidate/scratch/comment-container/manager",
+    "--definition",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/final-candidate/scratch/comment-container/definition.json",
+    "--member",
+    "standards/OWNER.md",
+    "--heading",
+    "One"
+  ],
+  "exit": 0,
+  "stdout": {
+    "basis_uri": "stdo://releases/review-specimen/",
+    "command": "read",
+    "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/final-candidate/scratch/comment-container/definition.json",
+    "definition_id": "urn:review:section-container",
+    "definition_sha256": "adfc9627c4a5938089cf14cad422e18d3bbb41196de5b3ec6de71aeb45ac982c",
+    "installed": true,
+    "kind": "stdo.skill-source-read",
+    "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/final-candidate/scratch/comment-container/manager",
+    "manifest_sha256": "29a06b48132e1f571650f544cddabb98d8e9f0fd30b39c78867947a9c3c1acc1",
+    "member_sha256": "1bf0a13e344bbcf8bee7befd9ab9220a0fd3e565b1b75852c68bb53e8d154da4",
+    "member_uri": "stdo://releases/review-specimen/standards/OWNER.md",
+    "sections": [
+      {
+        "first_line": 1,
+        "heading": "One",
+        "last_line": 6,
+        "sha256": "1e20346b0cb00dfe45cf7255704326e48be73650f9c34aaec7851fbbfdccbf66",
+        "text": "## One\n> <!--\n> quoted comment\n## Two\nUNSELECTED TWO\n> -->\n"
+      }
+    ],
+    "standing": "verified source projection; no admission or semantic verdict",
+    "status": "checked",
+    "store": null,
+    "valid": true
+  },
+  "stderr": "",
+  "expected_named_section": "## One\n> <!--\n> quoted comment\n",
+  "expected_first_line": 1,
+  "expected_last_line": 3,
+  "actual_contains_unselected_section": true,
+  "oracle": "CommonMark 0.31.2 HTML blocks close at the end of their containing block; https://spec.commonmark.org/0.31.2/#html-blocks",
+  "limits": "Mock manager supplies exact verified control responses; no real installed source was altered. This isolates shipped section parser behavior, not native-host behavior."
+}

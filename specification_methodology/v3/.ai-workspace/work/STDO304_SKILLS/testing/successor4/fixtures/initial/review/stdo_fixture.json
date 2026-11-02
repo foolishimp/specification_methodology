@@ -1,0 +1,94 @@
+{
+  "$schema": "stdo://releases/v3.0.3/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:fixture:review",
+    "name": "review",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:fixture:review:context",
+      "definition": "./OWNER.md#product"
+    }
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/3.0.3",
+      "basis": {
+        "uri": "stdo://releases/v3.0.3/",
+        "manifest_sha256": "f07e6681355023e30ad8cc4c2ebecaa520ee4e75da6e140ef5a160b31082178d"
+      }
+    },
+    "additional_authorities": [
+      "./OWNER.md"
+    ],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/frames/bootstrap.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./FRAME.md",
+      "authority": [
+        "./OWNER.md#authority"
+      ],
+      "applies_to": [
+        "urn:fixture:review"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./OWNER.md",
+    "product": "./OWNER.md",
+    "specification": [
+      "./requirements.md"
+    ]
+  },
+  "how": {
+    "common": [],
+    "build_tenants": [
+      {
+        "id": "urn:fixture:review:local",
+        "root": "./subject/",
+        "design": [
+          "./requirements.md"
+        ],
+        "implementation": [
+          "./subject/"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./OWNER.md",
+    "tickets": {
+      "root": "./tickets/",
+      "lanes": {
+        "backlog": "./tickets/backlog/",
+        "active": "./tickets/active/",
+        "completed": "./tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./records/"
+    }
+  },
+  "composition": []
+}

@@ -4,6 +4,28 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
+**STDO 3.0.4 coordinated skills have completed bounded implementation, testing
+and independent review and are accepted for inclusion** under
+[T-007](../.ai-workspace/tickets/active/T-007-STDO-3.0.4-coordinated-skills.md).
+The [contract](../.ai-workspace/work/STDO304_SKILLS/CONTRACT.md) binds the five
+native plugin skills and their shared handoff route. The selected outcome is
+bounded issuing/receiving and closed returns while preserving direct work,
+existing authority and the Product's exact selected basis. The
+[return](../.ai-workspace/work/STDO304_SKILLS/RETURN.md) binds final source
+`86afcb8a1d9e0d73297414fc935125dfb107f3cfad732be4694ec96ce8ce8c2b`
+and the [closed review](../.ai-workspace/work/STDO304_SKILLS/review/FINAL_REVIEW.md).
+No current actionable S0–S4 defect remains in the selected source-conservation
+and observed guarded consumer-path scope. Actual coordinated native execution
+used revision 4; revision 5 changes only the reader and tests. Its 33 matching
+replay objects cover 32 retained native helper calls and one labeled mechanical
+reproduction, not new native executions. Earlier failures remain recorded.
+The Executive accepts this bounded delivery for 3.0.4 with its declared host,
+source-syntax and coverage limits. Release preparation/publication and consumer
+adoption remain separate; publication is unselected. No standard law,
+installed basis or independent Skills Product basis is changed.
+
+### Published 3.0.3 predecessor
+
 **STDO 3.0.3 is released as normal standalone GitHub Latest**, including the
 selected tooling and offline readers
 under [T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md).

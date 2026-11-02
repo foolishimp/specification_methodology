@@ -2,6 +2,15 @@
 
 This source project constructs the next major release of Specification Methodology. One common specification governs the independent Codex and Claude realisations under `build_tenants/`. The installed STDO 2.5.1 RC2 release governs construction; the existing 2.* source and released products remain separate.
 
+**STDO 3.0.4 coordinated skills are accepted for inclusion; publication is pending.**
+[T-007](.ai-workspace/tickets/active/T-007-STDO-3.0.4-coordinated-skills.md)
+selects a shared issuing, receiving and return path for the five native plugin
+skills. The [work return](.ai-workspace/work/STDO304_SKILLS/RETURN.md) records
+the accepted bounded implementation, closed independent review and actual
+guarded consumer-path evidence. Native runs used revision 4; revision 5 adds
+reviewed reader refusals with exact retained-input replay. Host and coverage
+limits remain explicit. STDO 3.0.4 has not been published.
+
 **STDO 3.0.3 is published as a normal standalone release and GitHub Latest.**
 The [release record](.ai-workspace/work/STDO303_DELIVERY/RELEASED.md) binds the
 immutable native tag, manifest, public installation and closed independent

@@ -1,0 +1,42 @@
+{
+  "kind": "stdo.claude-tool-policy",
+  "schema_version": 1,
+  "policy_id": "urn:fixture:successor:negative",
+  "authority_ref": "/private/tmp/stdo304-probes-xun7ttbp/review/contracts/bad-review.json#existing-grant",
+  "cwd": "/private/tmp/stdo304-probes-xun7ttbp/review",
+  "read_paths": [
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/.claude-plugin/plugin.json",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/.codex-plugin/plugin.json",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/LICENSE",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/claude-skills/refresh/SKILL.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/references/COORDINATED_HANDOFF.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/references/GETTING_STARTED.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/references/HOST_BINDING.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/references/PRODUCT_BASIS.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/references/REFRESH.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/scripts/claude_tool_gate.py",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/scripts/read_basis.py",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-help/SKILL.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-help/agents/openai.yaml",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-review/SKILL.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-review/agents/openai.yaml",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-status/SKILL.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-status/agents/openai.yaml",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-ticket/SKILL.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-ticket/agents/openai.yaml",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-work/SKILL.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-work/agents/openai.yaml",
+    "/private/tmp/stdo304-probes-xun7ttbp/review/CLAUDE.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/review/SESSION-negative.md",
+    "/private/tmp/stdo304-probes-xun7ttbp/review/admission.py",
+    "/private/tmp/stdo304-probes-xun7ttbp/review/admissions/bad-review.json",
+    "/private/tmp/stdo304-probes-xun7ttbp/review/contracts/bad-review.json",
+    "/private/tmp/stdo304-probes-xun7ttbp/review/inbox/bad-packet.md"
+  ],
+  "bash_commands": [
+    "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 /private/tmp/stdo304-probes-xun7ttbp/review/admission.py bad-review"
+  ],
+  "skills": [
+    "spec:stdo-review"
+  ]
+}

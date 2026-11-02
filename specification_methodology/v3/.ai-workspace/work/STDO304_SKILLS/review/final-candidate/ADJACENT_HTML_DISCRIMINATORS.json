@@ -1,0 +1,84 @@
+{
+  "cdata": {
+    "subject": "## One\n<![CDATA[\n## Two\nNOT A HEADING SECTION\n]]>\n## Three\nend\n",
+    "headings": [
+      [
+        0,
+        2,
+        "One"
+      ],
+      [
+        2,
+        2,
+        "Two"
+      ],
+      [
+        5,
+        2,
+        "Three"
+      ]
+    ],
+    "projection": [
+      {
+        "heading": "Two",
+        "first_line": 3,
+        "last_line": 5,
+        "sha256": "94198b7ac923cfb0e20945a617b046a82daad7901cc127a7b508d8d8094fca6a",
+        "text": "## Two\nNOT A HEADING SECTION\n]]>\n"
+      }
+    ]
+  },
+  "declaration": {
+    "subject": "## One\n<!FOO\n## Two\nNOT A HEADING SECTION\n>\n## Three\nend\n",
+    "headings": [
+      [
+        0,
+        2,
+        "One"
+      ],
+      [
+        2,
+        2,
+        "Two"
+      ],
+      [
+        5,
+        2,
+        "Three"
+      ]
+    ],
+    "projection": [
+      {
+        "heading": "Two",
+        "first_line": 3,
+        "last_line": 5,
+        "sha256": "297f91202efe241ae12c40f85ab376a0454c1ed5d6a35e0b4ebc60cf2f7c8896",
+        "text": "## Two\nNOT A HEADING SECTION\n>\n"
+      }
+    ]
+  },
+  "inline_comment": {
+    "subject": "## One\nparagraph <!--\n## Two\nUNSELECTED TWO\n-->\n## Three\nend\n",
+    "headings": [
+      [
+        0,
+        2,
+        "One"
+      ],
+      [
+        5,
+        2,
+        "Three"
+      ]
+    ],
+    "projection": [
+      {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 5,
+        "sha256": "c7fec7f2f9f8a452899655bf3fe7789082c5e6bf9ee84eb9c12bf27860616ed1",
+        "text": "## One\nparagraph <!--\n## Two\nUNSELECTED TWO\n-->\n"
+      }
+    ]
+  }
+}

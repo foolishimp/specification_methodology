@@ -1,5 +1,9 @@
 # Common native realisation design
 
+The [coordinated skills design](COORDINATED_SKILLS.md) binds the selected
+3.0.4 native plugin increment under T-007. It adds one shared issue/receive/return
+procedure to the five skills; method law and published releases remain unchanged.
+
 The [installed documentation design](installed-documentation.md) binds the
 3.0.3 constraint-explorer distribution under T-006. Its maintained bundler and
 verification command live in `../common-tools/documentation.py`; the output

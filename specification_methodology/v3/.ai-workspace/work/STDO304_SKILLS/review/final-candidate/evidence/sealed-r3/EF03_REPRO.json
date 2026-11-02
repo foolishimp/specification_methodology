@@ -1,0 +1,58 @@
+{
+  "scope": "reproduce exact operator/policy mismatch without another actor",
+  "same_argv": true,
+  "literal_strings_equal": false,
+  "gate_checks": [
+    {
+      "label": "actor-recipe-spelling",
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 -B /private/tmp/stdo304-probes-3tln7qmn/candidate/plugins/spec/scripts/read_basis.py read --stdo /Users/jim/.local/bin/stdo --store /private/tmp/stdo304-probes-3tln7qmn/store --definition /private/tmp/stdo304-probes-3tln7qmn/coordinated/stdo_fixture.json --member standards/ACTIVATION.md --heading 'Effects'",
+      "exit": 0,
+      "decision": {
+        "hookSpecificOutput": {
+          "hookEventName": "PreToolUse",
+          "permissionDecision": "deny",
+          "permissionDecisionReason": "command_not_listed"
+        }
+      }
+    },
+    {
+      "label": "advertised-policy-spelling",
+      "command": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 -B /private/tmp/stdo304-probes-3tln7qmn/candidate/plugins/spec/scripts/read_basis.py read --stdo /Users/jim/.local/bin/stdo --store /private/tmp/stdo304-probes-3tln7qmn/store --definition /private/tmp/stdo304-probes-3tln7qmn/coordinated/stdo_fixture.json --member standards/ACTIVATION.md --heading Effects",
+      "exit": 0,
+      "decision": {
+        "hookSpecificOutput": {
+          "hookEventName": "PreToolUse",
+          "permissionDecision": "allow",
+          "permissionDecisionReason": "exact_policy_match"
+        }
+      }
+    }
+  ],
+  "reader_exit": 0,
+  "reader_result": {
+    "basis_uri": "stdo://releases/v3.0.3/",
+    "command": "read",
+    "definition": "/private/tmp/stdo304-probes-3tln7qmn/coordinated/stdo_fixture.json",
+    "definition_id": "urn:fixture:coordinated",
+    "definition_sha256": "77342e368687647213475b17251c405711251094542238a47f27f980cf8875e2",
+    "installed": true,
+    "kind": "stdo.skill-source-read",
+    "manager": "/Users/jim/.local/bin/stdo",
+    "manifest_sha256": "f07e6681355023e30ad8cc4c2ebecaa520ee4e75da6e140ef5a160b31082178d",
+    "member_sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+    "member_uri": "stdo://releases/v3.0.3/standards/ACTIVATION.md",
+    "sections": [
+      {
+        "first_line": 1114,
+        "heading": "Effects",
+        "last_line": 1163,
+        "sha256": "5256dd7b7399fdeb0176decb43623660821eb5ff038867b2193f8b7922e73e29",
+        "text": "### Effects\n\nAn effectful step's intended external effect has one of three values,\nmapped for the predicate \"the intended effect occurred\", that is, the\ndeclared outcome of the effect is attained. The value turns on what the\nadmitted evidence establishes about that outcome (P5 with the open-world\npremise, P6):\n\n| Value | Core value | Ground |\n|---|---|---|\n| `completed` | satisfied | evidence about the subject establishes that the intended effect occurred in full and that the effect has ended |\n| `not_effected` | falsified | evidence about the subject establishes that the declared outcome is not attained and that no later completion of the effect can attain it, for example where no effect began, the effect ended short, an interval that the declared outcome bounds has closed with part of it not done, or the part already done has itself made the declared outcome unattainable, as when it destroyed what the outcome needed; any part that did occur is named with the value |\n| `completion_unknown` | indeterminate | neither of the other values is established: the evidence cannot decide whether the intended effect has occurred or will occur, as for a request whose response was lost with no counterexample observed; or the evidence shows the intended effect in full while the effect may still be acting, and the outcome stays undecided until what the effect leaves on the subject is settled; its residual names the observation that would decide |\n\n`not_effected` requires evidence about the subject. A lost response, an\nabsent record, or an actor's context that holds no trace of the effect is\nnot that evidence, and the value stays `completion_unknown`.\n`completion_unknown` never maps to `completed` or to `not_effected`.\n\nWhether the effect has ended is a second question beside the predicate\nabove, and it enters the value only as a conjunct of `completed`. An\neffect has ended where evidence about the subject establishes\nthat it no longer acts on the subject or that it never began. Where an\neffect began and the evidence does not establish its end, the end is not\nestablished, and that is recorded beside the value as a residual naming\nthe observation that would establish it. The end never decides a\n`not_effected` value and is never folded into one: when an interval that\nthe declared outcome bounds has closed with part not done, the value is\n`not_effected` while the effect may still be acting. The residual does\nnot weaken the counterexample, and the counterexample does not resolve\nthe residual. `completed` alone requires the end established, so a\ncounterexample stands without proof that the effect has ended, while\nsuccess is never claimed for an effect that may still be acting\n([FOUNDATIONS \u00a74 Results](FOUNDATIONS.md#results), Standing).\n\nAn effect of uncertain completion is one whose value is\n`completion_unknown`, or whose value is `not_effected` with its end not\nestablished. \u00a75 reconciles it, sufficiently for the next dependent\naction, before any repetition or dependent action. A `not_effected`\nvalue licenses neither treating the effect as absent nor repeating it\nwhile its end is not established.\n\nThe refinement's material relation is whether an action whose\nexternal effect may have occurred is repeated or relied on; \u00a74 names a\nlost post-effect response as a case that no added core value solves, and\nthis refinement records it in the existing core. Keeping the end of the\neffect beside the value keeps two facts that one value would merge: a\ncounterexample already established for the declared outcome, and an\neffect that may still be acting.\n\n"
+      }
+    ],
+    "standing": "verified source projection; no admission or semantic verdict",
+    "status": "checked",
+    "store": "/private/tmp/stdo304-probes-3tln7qmn/store",
+    "valid": true
+  }
+}

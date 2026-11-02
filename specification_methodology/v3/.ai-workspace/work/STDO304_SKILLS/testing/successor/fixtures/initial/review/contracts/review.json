@@ -1,0 +1,74 @@
+{
+  "id": "urn:fixture:contract:review",
+  "purpose": "Independently assess the adjustment candidate against requirements.md.",
+  "allocation": "nonauthor reviewer; no repair",
+  "basis": {
+    "uri": "stdo://releases/v3.0.3/",
+    "manifest_sha256": "f07e6681355023e30ad8cc4c2ebecaa520ee4e75da6e140ef5a160b31082178d"
+  },
+  "product_definition": "stdo_fixture.json",
+  "frame_basis": "FRAME.md",
+  "authority": "OWNER.md#authority",
+  "admission": "admissions/review.json",
+  "admission_check": "python3 admission.py review",
+  "permitted_inputs": [
+    "inbox/review-packet.md",
+    "AGENTS.md",
+    "stdo_fixture.json",
+    "OWNER.md",
+    "FRAME.md",
+    "requirements.md",
+    "contracts/review.json",
+    "admissions/review.json",
+    "admission.py",
+    "subject/adjust.py",
+    "author-result.md",
+    "exact installed methodology owner routes",
+    "candidate skill/reference routes"
+  ],
+  "permitted_effects": [
+    "write records/review-result.md",
+    "evaluate bounded pure in-memory candidate examples without modifying subject"
+  ],
+  "excluded_inputs": [
+    "excluded-sibling/**",
+    "excluded-outputs/**",
+    "parent directory listings and unselected siblings; exact method-manager/store/skill routes remain admitted",
+    "home and private conversation history"
+  ],
+  "evidence_surface": "records/review-result.md",
+  "return_consumer": "fixture-owner through final-return relay",
+  "limits": {
+    "wall_seconds": 180,
+    "context": "host maximum; actual host-supplied bytes unmeasured",
+    "spend": "existing configured authorization; report observed spend"
+  },
+  "stale_if": [
+    "contract, admission, source or selected method identity changes",
+    "new material service observation"
+  ],
+  "stop": [
+    "missing or mismatched admission",
+    "missing exact basis",
+    "scope or capability insufficient",
+    "effect cannot be reconciled"
+  ],
+  "decision_reservations": [
+    "new work, acceptance, publication and continuation remain fixture-owner's"
+  ],
+  "subject": {
+    "path": "subject/adjust.py",
+    "sha256": "bf511a2dfbbd3fe1f6dd21001e4754a052f8cdf908758440b80c72d20bccedc4",
+    "author": "fixture-author"
+  },
+  "evaluation_criteria": [
+    "candidate implements x + 1 for every integer",
+    "exact-subject independent source-first assessment"
+  ],
+  "non_closure_conditions": [
+    "counterexample",
+    "wrong subject/basis",
+    "authorship conflict"
+  ],
+  "independence": "actor did not author fixture source; same-family nonauthor assessment allowed for this fixture-local predicate; method qualification/acceptance excluded"
+}

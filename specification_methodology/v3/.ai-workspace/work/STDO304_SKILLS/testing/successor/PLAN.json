@@ -1,0 +1,29 @@
+{
+  "scope": "four bounded sessions under root conditional authorization; original failures preserved",
+  "sessions": {
+    "direct": {
+      "host": "codex",
+      "seconds": 240
+    },
+    "issuer": {
+      "host": "claude",
+      "seconds": 300
+    },
+    "receiver": {
+      "host": "claude",
+      "seconds": 240,
+      "depends": "actual completed issuer packet"
+    },
+    "negative": {
+      "host": "claude",
+      "seconds": 180
+    }
+  },
+  "oracle": {
+    "sha256": "b50b63d4c1fc917747e9123fad131f845ab0208ba277a41f1776774faff25250",
+    "not_supplied_to_actor": true
+  },
+  "business_grants": "original contract bytes preserved",
+  "host_control_limit": "direct tool calls only; trusted frozen helper and bootstrap/context limits separate",
+  "new_metadata": "session settings, policies, command catalog, hook audit and final relay selected by fixture owner"
+}

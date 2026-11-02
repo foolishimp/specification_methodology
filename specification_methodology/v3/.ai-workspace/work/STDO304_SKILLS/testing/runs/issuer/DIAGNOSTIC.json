@@ -1,0 +1,437 @@
+{
+  "prompt": "Use the candidate spec plugin's stdo-help, stdo-ticket, stdo-work and stdo-status skills as relevant to prepare the next handoff for JOB-17. Your exact issuer contract is contracts/issuer.json; the existing worker contract is contracts/worker.json. Return the worker intake and current work standing in your final answer for the declared relay.\n\nThe selected candidate skills are available through this session. Remain inside this isolated fixture and its explicitly admitted source/store routes. Do not inspect credentials, change host configuration, install, browse the network, spawn agents or make Git effects.\n",
+  "tool_call_count": 43,
+  "tool_result_string_bytes": 191713,
+  "acquisitions": [
+    {
+      "line": 6,
+      "time": "2026-11-02T16:04:03.964Z",
+      "tool": "Skill",
+      "input": {
+        "skill": "spec:stdo-help"
+      }
+    },
+    {
+      "line": 14,
+      "time": "2026-11-02T16:04:08.108Z",
+      "tool": "Bash",
+      "input": {
+        "command": "ls -la /private/tmp/stdo304-probes-47pczhzi/coordinated/ /private/tmp/stdo304-probes-47pczhzi/coordinated/contracts/ 2>&1; echo \"---\"; ls -la /private/tmp/stdo304-probes-47pczhzi/ 2>&1; echo \"---\"; ls -R /private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/ 2>&1 | head -80",
+        "description": "List fixture directory, contracts, and plugin layout"
+      }
+    },
+    {
+      "line": 16,
+      "time": "2026-11-02T16:04:11.096Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/contracts/issuer.json"
+      }
+    },
+    {
+      "line": 18,
+      "time": "2026-11-02T16:04:11.637Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/contracts/worker.json"
+      }
+    },
+    {
+      "line": 20,
+      "time": "2026-11-02T16:04:12.203Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/stdo_fixture.json"
+      }
+    },
+    {
+      "line": 22,
+      "time": "2026-11-02T16:04:12.761Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/FRAME.md"
+      }
+    },
+    {
+      "line": 24,
+      "time": "2026-11-02T16:04:13.163Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/OWNER.md"
+      }
+    },
+    {
+      "line": 26,
+      "time": "2026-11-02T16:04:13.877Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/PROMPT-ISSUER.txt"
+      }
+    },
+    {
+      "line": 28,
+      "time": "2026-11-02T16:04:14.535Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/PROMPT-RECEIVER.txt"
+      }
+    },
+    {
+      "line": 30,
+      "time": "2026-11-02T16:04:15.183Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/admission.py"
+      }
+    },
+    {
+      "line": 32,
+      "time": "2026-11-02T16:04:15.836Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/prior-attempt.json"
+      }
+    },
+    {
+      "line": 34,
+      "time": "2026-11-02T16:04:16.421Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/requirements.md"
+      }
+    },
+    {
+      "line": 36,
+      "time": "2026-11-02T16:04:17.205Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/references/PRODUCT_BASIS.md"
+      }
+    },
+    {
+      "line": 38,
+      "time": "2026-11-02T16:04:17.926Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/references/COORDINATED_HANDOFF.md"
+      }
+    },
+    {
+      "line": 40,
+      "time": "2026-11-02T16:04:21.015Z",
+      "tool": "Bash",
+      "input": {
+        "command": "ls -laR /private/tmp/stdo304-probes-47pczhzi/coordinated/.agents /private/tmp/stdo304-probes-47pczhzi/coordinated/admissions /private/tmp/stdo304-probes-47pczhzi/coordinated/records /private/tmp/stdo304-probes-47pczhzi/coordinated/subject /private/tmp/stdo304-probes-47pczhzi/bin /private/tmp/stdo304-probes-47pczhzi/store 2>&1; echo \"--- AGENTS.md diff vs CLAUDE.md\"; diff /private/tmp/stdo304-probes-47pczhzi/coordinated/AGENTS.md /private/tmp/stdo304-probes-47pczhzi/coordinated/CLAUDE.md && echo identical",
+        "description": "List agents, admissions, records, subject, bin and store directories"
+      }
+    },
+    {
+      "line": 105,
+      "time": "2026-11-02T16:05:24.595Z",
+      "tool": "Bash",
+      "input": {
+        "command": "python3 /private/tmp/stdo304-probes-47pczhzi/coordinated/admission.py issuer; echo \"exit=$?\"; echo \"---worker---\"; python3 /private/tmp/stdo304-probes-47pczhzi/coordinated/admission.py worker; echo \"exit=$?\"; echo \"---sha256 contracts---\"; shasum -a 256 /private/tmp/stdo304-probes-47pczhzi/coordinated/contracts/issuer.json /private/tmp/stdo304-probes-47pczhzi/coordinated/contracts/worker.json /private/tmp/stdo304-probes-47pczhzi/coordinated/admissions/issuer.json /private/tmp/stdo304-probes-47pczhzi/coordinated/admissions/worker.json /private/tmp/stdo304-probes-47pczhzi/coordinated/FRAME.md /private/tmp/stdo304-probes-47pczhzi/coordinated/OWNER.md /private/tmp/stdo304-probes-47pczhzi/coordinated/requirements.md /private/tmp/stdo304-probes-47pczhzi/coordinated/prior-attempt.json /private/tmp/stdo304-probes-47pczhzi/coordinated/stdo_fixture.json /private/tmp/stdo304-probes-47pczhzi/coordinated/AGENTS.md",
+        "description": "Run issuer and worker admission checks and hash fixture inputs"
+      }
+    },
+    {
+      "line": 107,
+      "time": "2026-11-02T16:05:25.035Z",
+      "tool": "Bash",
+      "input": {
+        "command": "cat /private/tmp/stdo304-probes-47pczhzi/bin/stdo; echo; echo \"--- which stdo\"; which stdo; echo \"--- registry\"; cat /private/tmp/stdo304-probes-47pczhzi/store/registry.json; echo; echo \"--- status verify\"; stdo status --definition /private/tmp/stdo304-probes-47pczhzi/coordinated/stdo_fixture.json --verify; echo \"exit=$?\"",
+        "description": "Show stdo launcher, registry, and verify the Product definition"
+      }
+    },
+    {
+      "line": 109,
+      "time": "2026-11-02T16:05:26.807Z",
+      "tool": "Bash",
+      "input": {
+        "command": "stdo resolve \"stdo://releases/v3.0.3/manifest.json\"; echo \"exit=$?\"; echo \"--- manifest sha256 (installed store)\"; shasum -a 256 /private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/manifest.json",
+        "description": "Resolve basis manifest and compute its digest"
+      }
+    },
+    {
+      "line": 111,
+      "time": "2026-11-02T16:05:27.444Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/admissions/issuer.json"
+      }
+    },
+    {
+      "line": 113,
+      "time": "2026-11-02T16:05:28.083Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/coordinated/admissions/worker.json"
+      }
+    },
+    {
+      "line": 115,
+      "time": "2026-11-02T16:05:28.927Z",
+      "tool": "Glob",
+      "input": {
+        "pattern": "**/stdo_*.json",
+        "path": "/private/tmp/stdo304-probes-47pczhzi/coordinated"
+      }
+    },
+    {
+      "line": 117,
+      "time": "2026-11-02T16:05:29.372Z",
+      "tool": "Skill",
+      "input": {
+        "skill": "spec:stdo-work"
+      }
+    },
+    {
+      "line": 120,
+      "time": "2026-11-02T16:05:29.751Z",
+      "tool": "Skill",
+      "input": {
+        "skill": "spec:stdo-status"
+      }
+    },
+    {
+      "line": 123,
+      "time": "2026-11-02T16:05:30.065Z",
+      "tool": "Skill",
+      "input": {
+        "skill": "spec:stdo-ticket"
+      }
+    },
+    {
+      "line": 153,
+      "time": "2026-11-02T16:05:51.410Z",
+      "tool": "Bash",
+      "input": {
+        "command": "B='stdo://releases/v3.0.3/'; for m in standards/ACTIVATION.md standards/REFERENCE_FRAME.md standards/EXECUTIVE_BASELINE.md standards/PROFILES.md standards/frames/bootstrap.md standards/frames/FRAME_INPUTS.json; do echo \"== $m\"; stdo resolve \"${B}${m}\"; done; echo \"--- digests\"; shasum -a 256 /private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/ACTIVATION.md /private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/REFERENCE_FRAME.md /private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/EXECUTIVE_BASELINE.md /private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/PROFILES.md /private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/frames/bootstrap.md /private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/frames/FRAME_INPUTS.json; echo \"--- manifest entries for those members\"; python3 -I -c \"\nimport json\nm=json.load(open('/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/manifest.json'))\ndef walk(o,path=''):\n    if isinstance(o,dict):\n        if 'path' in o and 'sha256' in o and any(k in str(o['path']) for k in ['ACTIVATION.md','REFERENCE_FRAME.md','EXECUTIVE_BASELINE.md','PROFILES.md','frames/bootstrap.md','FRAME_INPUTS.json']):\n            print(o['path'],o['sha256'])\n        for v in o.values(): walk(v)\n    elif isinstance(o,list):\n        for v in o: walk(v)\nwalk(m)\nprint('top-level keys:',list(m.keys()))\n\"",
+        "description": "Resolve method members, hash them, and compare with manifest digests"
+      }
+    },
+    {
+      "line": 155,
+      "time": "2026-11-02T16:05:52.808Z",
+      "tool": "Grep",
+      "input": {
+        "pattern": "^#{1,3} ",
+        "path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/ACTIVATION.md",
+        "output_mode": "content"
+      }
+    },
+    {
+      "line": 157,
+      "time": "2026-11-02T16:05:54.149Z",
+      "tool": "Grep",
+      "input": {
+        "pattern": "^#{1,3} ",
+        "path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/REFERENCE_FRAME.md",
+        "output_mode": "content"
+      }
+    },
+    {
+      "line": 159,
+      "time": "2026-11-02T16:05:55.439Z",
+      "tool": "Grep",
+      "input": {
+        "pattern": "^#{1,3} ",
+        "path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/EXECUTIVE_BASELINE.md",
+        "output_mode": "content"
+      }
+    },
+    {
+      "line": 161,
+      "time": "2026-11-02T16:05:56.564Z",
+      "tool": "Grep",
+      "input": {
+        "pattern": "^#{1,3} ",
+        "path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/frames/bootstrap.md",
+        "output_mode": "content"
+      }
+    },
+    {
+      "line": 191,
+      "time": "2026-11-02T16:06:10.408Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/REFERENCE_FRAME.md",
+        "offset": 933,
+        "limit": 80
+      }
+    },
+    {
+      "line": 193,
+      "time": "2026-11-02T16:06:11.442Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/ACTIVATION.md",
+        "offset": 619,
+        "limit": 75
+      }
+    },
+    {
+      "line": 195,
+      "time": "2026-11-02T16:06:12.935Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/ACTIVATION.md",
+        "offset": 693,
+        "limit": 245
+      }
+    },
+    {
+      "line": 197,
+      "time": "2026-11-02T16:06:14.275Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/ACTIVATION.md",
+        "offset": 938,
+        "limit": 226
+      }
+    },
+    {
+      "line": 199,
+      "time": "2026-11-02T16:06:15.687Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/ACTIVATION.md",
+        "offset": 1370,
+        "limit": 149
+      }
+    },
+    {
+      "line": 201,
+      "time": "2026-11-02T16:06:17.178Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/ACTIVATION.md",
+        "offset": 1681,
+        "limit": 130
+      }
+    },
+    {
+      "line": 203,
+      "time": "2026-11-02T16:06:18.663Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/EXECUTIVE_BASELINE.md",
+        "offset": 1132,
+        "limit": 105
+      }
+    },
+    {
+      "line": 205,
+      "time": "2026-11-02T16:06:20.297Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/EXECUTIVE_BASELINE.md",
+        "offset": 1330,
+        "limit": 30
+      }
+    },
+    {
+      "line": 207,
+      "time": "2026-11-02T16:06:21.853Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/EXECUTIVE_BASELINE.md",
+        "offset": 1520,
+        "limit": 27
+      }
+    },
+    {
+      "line": 209,
+      "time": "2026-11-02T16:06:23.336Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/EXECUTIVE_BASELINE.md",
+        "offset": 1643,
+        "limit": 47
+      }
+    },
+    {
+      "line": 211,
+      "time": "2026-11-02T16:06:24.288Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/PROFILES.md"
+      }
+    },
+    {
+      "line": 213,
+      "time": "2026-11-02T16:06:25.391Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/frames/bootstrap.md",
+        "offset": 1,
+        "limit": 55
+      }
+    },
+    {
+      "line": 215,
+      "time": "2026-11-02T16:06:26.872Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/frames/bootstrap.md",
+        "offset": 576,
+        "limit": 163
+      }
+    },
+    {
+      "line": 217,
+      "time": "2026-11-02T16:06:28.223Z",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-probes-47pczhzi/store/releases/v3.0.3/standards/frames/bootstrap.md",
+        "offset": 987,
+        "limit": 167
+      }
+    }
+  ],
+  "assistant_text": [
+    {
+      "line": 5,
+      "text": "I'll start by loading the stdo-help skill to learn the lawful entry route, then read the fixture's contracts and product definition."
+    },
+    {
+      "line": 13,
+      "text": "Now let me read the referenced basis and handoff documents alongside the fixture's contracts and product definition."
+    }
+  ],
+  "loaded_skills": [
+    {
+      "line": 8,
+      "path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/skills/stdo-help/SKILL.md",
+      "candidate_file_sha256": "ee92b47d8757f86322640dd62d1411ee8340922d34289e6e42263339bae491bf",
+      "loaded_body_sha256": "06a9cc450799ad5d49c1f22a49f7cf02cfb20ba3d44321622d22b419dd0eeb22",
+      "source_body_sha256": "06a9cc450799ad5d49c1f22a49f7cf02cfb20ba3d44321622d22b419dd0eeb22",
+      "exact_body_match": true
+    },
+    {
+      "line": 119,
+      "path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/skills/stdo-work/SKILL.md",
+      "candidate_file_sha256": "3c77ae24c24b21c9f589048e9ab3f8713221bec56bc36541551a8d428261f4f6",
+      "loaded_body_sha256": "3435e92e25e2bbd15b5a374485600a8acb6fe4394ab86bf41ce1cd91b0289562",
+      "source_body_sha256": "3435e92e25e2bbd15b5a374485600a8acb6fe4394ab86bf41ce1cd91b0289562",
+      "exact_body_match": true
+    },
+    {
+      "line": 122,
+      "path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/skills/stdo-status/SKILL.md",
+      "candidate_file_sha256": "5047e3c6fd297b8692c56622fc86a5382c8a2dce56450b1042a4c115ee3243ba",
+      "loaded_body_sha256": "b1d55c9a76786d729a0f8e4aa41a0cbca4cf281508658cbf031edb020c24875d",
+      "source_body_sha256": "b1d55c9a76786d729a0f8e4aa41a0cbca4cf281508658cbf031edb020c24875d",
+      "exact_body_match": true
+    },
+    {
+      "line": 125,
+      "path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/skills/stdo-ticket/SKILL.md",
+      "candidate_file_sha256": "dbbef8a8049c96c2c6248ac5084d251f4b33f2bfcbcb7893a64bd1ec51074a53",
+      "loaded_body_sha256": "b3ae2800bafaf962b34ca87f7c4ff7d6317c2c4b099dedd05032ac6957130faa",
+      "source_body_sha256": "b3ae2800bafaf962b34ca87f7c4ff7d6317c2c4b099dedd05032ac6957130faa",
+      "exact_body_match": true
+    }
+  ],
+  "host_context_limit": "System and global instructions not fully exposed; fresh invocation did not resume or fork prior task context."
+}

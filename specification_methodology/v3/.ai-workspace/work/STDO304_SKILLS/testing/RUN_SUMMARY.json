@@ -1,0 +1,462 @@
+[
+  {
+    "run": "direct",
+    "case": "direct",
+    "host": "codex",
+    "argv": [
+      "/Users/jim/bin/codex",
+      "--no-daemon",
+      "exec",
+      "--ephemeral",
+      "--json",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "-C",
+      "/private/tmp/stdo304-probes-47pczhzi/direct",
+      "-"
+    ],
+    "cwd": "/private/tmp/stdo304-probes-47pczhzi/direct",
+    "source_freeze_sha256": "6d10acddf9821764b29a8d3f95441be4fe6a5e7aa60915b3d7eefd4ca8703782",
+    "prompt_bytes": 506,
+    "prompt_sha256": "8b9878a67afbe930f52ebb4d1e8405e5bf7dcf99496a959a396d078b8cd39082",
+    "wall_limit_seconds": 180,
+    "elapsed_seconds": 87.399,
+    "exit_code": 0,
+    "timeout": false,
+    "known_process_ids": [
+      25350,
+      25352,
+      25386,
+      25389,
+      25401,
+      25403,
+      25449,
+      25455,
+      25632,
+      25767,
+      26798
+    ],
+    "terminated_descendants": [],
+    "remaining_known_processes": [],
+    "models_exposed": [],
+    "reported_cost_usd": null,
+    "usage": {
+      "input_tokens": 112276,
+      "cached_input_tokens": 94976,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1337,
+      "reasoning_output_tokens": 614
+    },
+    "host_instructions": "fresh invocation, no prior conversation; configured user/host policies and system prompt not fully instrumented",
+    "discovery": "Claude session plugin --plugin-dir; Codex native .agents/skills alias, not plugin-install discovery",
+    "standing": "raw observation, requires independent interpretation",
+    "observable_tool_output_string_bytes": 25982,
+    "loaded_skills": [
+      {
+        "line": 5,
+        "path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/skills/stdo-work/SKILL.md",
+        "source_sha256": "3c77ae24c24b21c9f589048e9ab3f8713221bec56bc36541551a8d428261f4f6",
+        "exact_full_source_in_output": true
+      }
+    ],
+    "terminal_events": [
+      {
+        "line": 15,
+        "type": "turn.completed",
+        "is_error": null,
+        "subtype": null
+      }
+    ],
+    "closed_return_transport_observed": true,
+    "input_snapshot_missing": [],
+    "changes": {
+      "records/direct-relay.md": {
+        "before": null,
+        "after": {
+          "bytes": 1157,
+          "sha256": "e264f063f27ca00f51093c4daec749ff82219bf625fb36f303819671bd2840f1"
+        }
+      }
+    },
+    "extraction_correction": false
+  },
+  {
+    "run": "direct-launch-error",
+    "case": "direct",
+    "host": "codex",
+    "argv": [
+      "/Users/jim/bin/codex",
+      "--no-daemon",
+      "--ask-for-approval",
+      "never",
+      "exec",
+      "--ephemeral",
+      "--json",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "-C",
+      "/private/tmp/stdo304-probes-47pczhzi/direct",
+      "-"
+    ],
+    "cwd": "/private/tmp/stdo304-probes-47pczhzi/direct",
+    "source_freeze_sha256": "6d10acddf9821764b29a8d3f95441be4fe6a5e7aa60915b3d7eefd4ca8703782",
+    "prompt_bytes": 506,
+    "prompt_sha256": "8b9878a67afbe930f52ebb4d1e8405e5bf7dcf99496a959a396d078b8cd39082",
+    "wall_limit_seconds": 180,
+    "elapsed_seconds": 0.556,
+    "exit_code": 2,
+    "timeout": false,
+    "known_process_ids": [
+      23768
+    ],
+    "terminated_descendants": [],
+    "remaining_known_processes": [],
+    "models_exposed": [],
+    "reported_cost_usd": null,
+    "usage": null,
+    "host_instructions": "fresh invocation, no prior conversation; configured user/host policies and system prompt not fully instrumented",
+    "discovery": "Claude session plugin --plugin-dir; Codex native .agents/skills alias, not plugin-install discovery",
+    "standing": "raw observation, requires independent interpretation",
+    "observable_tool_output_string_bytes": 0,
+    "loaded_skills": [],
+    "terminal_events": [],
+    "closed_return_transport_observed": false,
+    "input_snapshot_missing": [],
+    "changes": {},
+    "extraction_correction": false
+  },
+  {
+    "run": "direct-rebound",
+    "case": "direct",
+    "host": "codex",
+    "argv": [
+      "/Users/jim/bin/codex",
+      "--no-daemon",
+      "exec",
+      "--ephemeral",
+      "--json",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "-C",
+      "/private/tmp/stdo304-probes-lrmfxx3m/direct",
+      "-"
+    ],
+    "cwd": "/private/tmp/stdo304-probes-lrmfxx3m/direct",
+    "source_freeze_sha256": "6d10acddf9821764b29a8d3f95441be4fe6a5e7aa60915b3d7eefd4ca8703782",
+    "prompt_bytes": 236,
+    "prompt_sha256": "e54e5817fae6d122297037810509f5f9e2f8a770804db8d2be3edb51e86846d5",
+    "wall_limit_seconds": 180,
+    "elapsed_seconds": 180.161,
+    "exit_code": 0,
+    "timeout": true,
+    "known_process_ids": [
+      30720,
+      30722,
+      30764,
+      30789,
+      30791,
+      30836,
+      30847,
+      30911,
+      31012,
+      31215,
+      31906,
+      32915,
+      32940,
+      33258,
+      33262
+    ],
+    "terminated_descendants": [],
+    "remaining_known_processes": [],
+    "models_exposed": [],
+    "reported_cost_usd": null,
+    "usage": null,
+    "host_instructions": "fresh invocation, no prior conversation; configured user/host policies and system prompt not fully instrumented",
+    "discovery": "Claude session plugin --plugin-dir; Codex native .agents/skills alias, not plugin-install discovery",
+    "standing": "raw observation, requires independent interpretation",
+    "observable_tool_output_string_bytes": 500365,
+    "loaded_skills": [
+      {
+        "line": 5,
+        "path": "/private/tmp/stdo304-probes-lrmfxx3m/candidate/plugins/spec/skills/stdo-work/SKILL.md",
+        "source_sha256": "3c77ae24c24b21c9f589048e9ab3f8713221bec56bc36541551a8d428261f4f6",
+        "exact_full_source_in_output": true
+      }
+    ],
+    "terminal_events": [],
+    "closed_return_transport_observed": false,
+    "input_snapshot_missing": [],
+    "changes": {
+      "records/direct-result.md": {
+        "before": null,
+        "after": {
+          "bytes": 262,
+          "sha256": "c13d33cc7161105bb8becae36fcb57a5c0db6a2c900e5c77fcd5ffcd7ead87c4"
+        }
+      }
+    },
+    "extraction_correction": true
+  },
+  {
+    "run": "issuer",
+    "case": "issuer",
+    "host": "claude",
+    "argv": [
+      "/Users/jim/.local/bin/claude",
+      "--print",
+      "--verbose",
+      "--output-format",
+      "stream-json",
+      "--no-session-persistence",
+      "--permission-mode",
+      "dontAsk",
+      "--permission-prompts",
+      "none",
+      "--tools",
+      "Read,Glob,Grep,Bash,Edit,Write,Skill",
+      "--allowedTools",
+      "Read,Glob,Grep,Bash,Edit,Write,Skill",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "{\"mcpServers\":{}}",
+      "--plugin-dir",
+      "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec"
+    ],
+    "cwd": "/private/tmp/stdo304-probes-47pczhzi/coordinated",
+    "source_freeze_sha256": "6d10acddf9821764b29a8d3f95441be4fe6a5e7aa60915b3d7eefd4ca8703782",
+    "prompt_bytes": 615,
+    "prompt_sha256": "117c4b71acacbed22677b08104c4279849078e267ce7bab2b8ea089758964518",
+    "wall_limit_seconds": 180,
+    "elapsed_seconds": 180.605,
+    "exit_code": 143,
+    "timeout": true,
+    "known_process_ids": [
+      24030,
+      24169,
+      24171,
+      24481,
+      24482,
+      25261,
+      25264,
+      25881,
+      25882
+    ],
+    "terminated_descendants": [],
+    "remaining_known_processes": [],
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "reported_cost_usd": null,
+    "usage": null,
+    "host_instructions": "fresh invocation, no prior conversation; configured user/host policies and system prompt not fully instrumented",
+    "discovery": "Claude session plugin --plugin-dir; Codex native .agents/skills alias, not plugin-install discovery",
+    "standing": "raw observation, requires independent interpretation",
+    "observable_tool_output_string_bytes": 191713,
+    "loaded_skills": [
+      {
+        "line": 8,
+        "path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/skills/stdo-help/SKILL.md",
+        "source_sha256": "ee92b47d8757f86322640dd62d1411ee8340922d34289e6e42263339bae491bf",
+        "loaded_body_sha256": "06a9cc450799ad5d49c1f22a49f7cf02cfb20ba3d44321622d22b419dd0eeb22",
+        "source_body_sha256": "06a9cc450799ad5d49c1f22a49f7cf02cfb20ba3d44321622d22b419dd0eeb22",
+        "exact_body_match": true,
+        "exact_source_body_in_loaded": true,
+        "transport_suffix": ""
+      },
+      {
+        "line": 119,
+        "path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/skills/stdo-work/SKILL.md",
+        "source_sha256": "3c77ae24c24b21c9f589048e9ab3f8713221bec56bc36541551a8d428261f4f6",
+        "loaded_body_sha256": "3435e92e25e2bbd15b5a374485600a8acb6fe4394ab86bf41ce1cd91b0289562",
+        "source_body_sha256": "3435e92e25e2bbd15b5a374485600a8acb6fe4394ab86bf41ce1cd91b0289562",
+        "exact_body_match": true,
+        "exact_source_body_in_loaded": true,
+        "transport_suffix": ""
+      },
+      {
+        "line": 122,
+        "path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/skills/stdo-status/SKILL.md",
+        "source_sha256": "5047e3c6fd297b8692c56622fc86a5382c8a2dce56450b1042a4c115ee3243ba",
+        "loaded_body_sha256": "b1d55c9a76786d729a0f8e4aa41a0cbca4cf281508658cbf031edb020c24875d",
+        "source_body_sha256": "b1d55c9a76786d729a0f8e4aa41a0cbca4cf281508658cbf031edb020c24875d",
+        "exact_body_match": true,
+        "exact_source_body_in_loaded": true,
+        "transport_suffix": ""
+      },
+      {
+        "line": 125,
+        "path": "/private/tmp/stdo304-probes-47pczhzi/candidate/plugins/spec/skills/stdo-ticket/SKILL.md",
+        "source_sha256": "dbbef8a8049c96c2c6248ac5084d251f4b33f2bfcbcb7893a64bd1ec51074a53",
+        "loaded_body_sha256": "b3ae2800bafaf962b34ca87f7c4ff7d6317c2c4b099dedd05032ac6957130faa",
+        "source_body_sha256": "b3ae2800bafaf962b34ca87f7c4ff7d6317c2c4b099dedd05032ac6957130faa",
+        "exact_body_match": true,
+        "exact_source_body_in_loaded": true,
+        "transport_suffix": ""
+      }
+    ],
+    "terminal_events": [],
+    "closed_return_transport_observed": false,
+    "input_snapshot_missing": [],
+    "changes": {},
+    "extraction_correction": false
+  },
+  {
+    "run": "issuer-focused",
+    "case": "issuer",
+    "host": "claude",
+    "argv": [
+      "/Users/jim/.local/bin/claude",
+      "--print",
+      "--verbose",
+      "--output-format",
+      "stream-json",
+      "--no-session-persistence",
+      "--permission-mode",
+      "dontAsk",
+      "--permission-prompts",
+      "none",
+      "--tools",
+      "Read,Glob,Grep,Bash,Edit,Write,Skill",
+      "--allowedTools",
+      "Read,Glob,Grep,Bash,Edit,Write,Skill",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "{\"mcpServers\":{}}",
+      "--plugin-dir",
+      "/private/tmp/stdo304-probes-lrmfxx3m/candidate/plugins/spec"
+    ],
+    "cwd": "/private/tmp/stdo304-probes-lrmfxx3m/coordinated",
+    "source_freeze_sha256": "6d10acddf9821764b29a8d3f95441be4fe6a5e7aa60915b3d7eefd4ca8703782",
+    "prompt_bytes": 214,
+    "prompt_sha256": "de3551f17e5c1bfb0e466f597ec0b46fc1ca2b59e17d9267da1626673d47d745",
+    "wall_limit_seconds": 300,
+    "elapsed_seconds": 300.917,
+    "exit_code": 143,
+    "timeout": true,
+    "known_process_ids": [
+      31115,
+      31726,
+      31728,
+      31729,
+      33181,
+      33182,
+      33291,
+      33292,
+      33623
+    ],
+    "terminated_descendants": [],
+    "remaining_known_processes": [],
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "reported_cost_usd": null,
+    "usage": null,
+    "host_instructions": "fresh invocation, no prior conversation; configured user/host policies and system prompt not fully instrumented",
+    "discovery": "Claude session plugin --plugin-dir; Codex native .agents/skills alias, not plugin-install discovery",
+    "standing": "raw observation, requires independent interpretation",
+    "observable_tool_output_string_bytes": 259204,
+    "loaded_skills": [
+      {
+        "line": 8,
+        "path": "/private/tmp/stdo304-probes-lrmfxx3m/candidate/plugins/spec/skills/stdo-work/SKILL.md",
+        "source_sha256": "3c77ae24c24b21c9f589048e9ab3f8713221bec56bc36541551a8d428261f4f6",
+        "loaded_body_sha256": "ba0d31c603e7eb26519a4ab5e8b21bc76568d4f95dc598f9094d203828f9f74e",
+        "source_body_sha256": "3435e92e25e2bbd15b5a374485600a8acb6fe4394ab86bf41ce1cd91b0289562",
+        "exact_body_match": false,
+        "exact_source_body_in_loaded": true,
+        "transport_suffix": "\n\nARGUMENTS: Use the candidate spec plugin's stdo-work as issuer for contracts/issuer.json. Prepare the JOB-17 worker handoff from the exact existing contracts/worker.json and return it through the declared final-return relay."
+      }
+    ],
+    "terminal_events": [],
+    "closed_return_transport_observed": false,
+    "input_snapshot_missing": [],
+    "changes": {},
+    "extraction_correction": false
+  },
+  {
+    "run": "review-boundaries",
+    "case": "review",
+    "host": "claude",
+    "argv": [
+      "/Users/jim/.local/bin/claude",
+      "--print",
+      "--verbose",
+      "--output-format",
+      "stream-json",
+      "--no-session-persistence",
+      "--permission-mode",
+      "dontAsk",
+      "--permission-prompts",
+      "none",
+      "--tools",
+      "Read,Glob,Grep,Bash,Edit,Write,Skill",
+      "--allowedTools",
+      "Read,Glob,Grep,Bash,Edit,Write,Skill",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "{\"mcpServers\":{}}",
+      "--plugin-dir",
+      "/private/tmp/stdo304-probes-lrmfxx3m/candidate/plugins/spec"
+    ],
+    "cwd": "/private/tmp/stdo304-probes-lrmfxx3m/review",
+    "source_freeze_sha256": "6d10acddf9821764b29a8d3f95441be4fe6a5e7aa60915b3d7eefd4ca8703782",
+    "prompt_bytes": 301,
+    "prompt_sha256": "3081fbed5e11011b6c0c4b8c9f5c86cee4079db23fe5f76c3af6b9723f8bddc7",
+    "wall_limit_seconds": 180,
+    "elapsed_seconds": 180.969,
+    "exit_code": 143,
+    "timeout": true,
+    "known_process_ids": [
+      33650,
+      33764,
+      33864,
+      33903,
+      35516,
+      35517,
+      35868,
+      35875,
+      35876
+    ],
+    "terminated_descendants": [],
+    "remaining_known_processes": [],
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "reported_cost_usd": null,
+    "usage": null,
+    "host_instructions": "fresh invocation, no prior conversation; configured user/host policies and system prompt not fully instrumented",
+    "discovery": "Claude session plugin --plugin-dir; Codex native .agents/skills alias, not plugin-install discovery",
+    "standing": "raw observation, requires independent interpretation",
+    "observable_tool_output_string_bytes": 130953,
+    "loaded_skills": [
+      {
+        "line": 19,
+        "path": "/private/tmp/stdo304-probes-lrmfxx3m/candidate/plugins/spec/skills/stdo-review/SKILL.md",
+        "source_sha256": "f3ab9e872c0888c2442ddaa587172401a001b2e7df9f79f2402b7431d6718f85",
+        "loaded_body_sha256": "413f2b6a2cb4af8771f310f42116056875d92707192ea354f75c740f877d4250",
+        "source_body_sha256": "413f2b6a2cb4af8771f310f42116056875d92707192ea354f75c740f877d4250",
+        "exact_body_match": true,
+        "exact_source_body_in_loaded": true,
+        "transport_suffix": ""
+      },
+      {
+        "line": 80,
+        "path": "/private/tmp/stdo304-probes-lrmfxx3m/candidate/plugins/spec/skills/stdo-status/SKILL.md",
+        "source_sha256": "5047e3c6fd297b8692c56622fc86a5382c8a2dce56450b1042a4c115ee3243ba",
+        "loaded_body_sha256": "b1d55c9a76786d729a0f8e4aa41a0cbca4cf281508658cbf031edb020c24875d",
+        "source_body_sha256": "b1d55c9a76786d729a0f8e4aa41a0cbca4cf281508658cbf031edb020c24875d",
+        "exact_body_match": true,
+        "exact_source_body_in_loaded": true,
+        "transport_suffix": ""
+      }
+    ],
+    "terminal_events": [],
+    "closed_return_transport_observed": false,
+    "input_snapshot_missing": [],
+    "changes": {},
+    "extraction_correction": false
+  }
+]

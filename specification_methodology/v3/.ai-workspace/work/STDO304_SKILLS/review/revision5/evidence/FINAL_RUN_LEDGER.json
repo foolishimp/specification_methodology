@@ -1,0 +1,174 @@
+[
+  {
+    "phase": "initial",
+    "run": "direct",
+    "evidence": "runs/direct",
+    "host": "codex",
+    "elapsed_seconds": 87.399,
+    "timeout": false,
+    "exit_code": 0,
+    "model_session": true,
+    "models_exposed": [],
+    "cost_usd_reported": null,
+    "standing": "harness-blocked basis refusal; wrong named relay in original harness"
+  },
+  {
+    "phase": "initial",
+    "run": "direct-launch-error",
+    "evidence": "runs/direct-launch-error",
+    "host": "codex",
+    "elapsed_seconds": 0.556,
+    "timeout": false,
+    "exit_code": 2,
+    "model_session": false,
+    "models_exposed": [],
+    "cost_usd_reported": null,
+    "standing": "pre-model transport error; no model work"
+  },
+  {
+    "phase": "initial",
+    "run": "direct-rebound",
+    "evidence": "runs/direct-rebound",
+    "host": "codex",
+    "elapsed_seconds": 180.161,
+    "timeout": true,
+    "exit_code": 0,
+    "model_session": true,
+    "models_exposed": [],
+    "cost_usd_reported": null,
+    "standing": "timeout; partial message wrongly relayed then explicitly withdrawn"
+  },
+  {
+    "phase": "initial",
+    "run": "issuer",
+    "evidence": "runs/issuer",
+    "host": "claude",
+    "elapsed_seconds": 180.605,
+    "timeout": true,
+    "exit_code": 143,
+    "model_session": true,
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "cost_usd_reported": null,
+    "standing": "timeout and out-of-grant acquisitions; no packet"
+  },
+  {
+    "phase": "initial",
+    "run": "issuer-focused",
+    "evidence": "runs/issuer-focused",
+    "host": "claude",
+    "elapsed_seconds": 300.917,
+    "timeout": true,
+    "exit_code": 143,
+    "model_session": true,
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "cost_usd_reported": null,
+    "standing": "timeout and out-of-grant acquisitions; no packet"
+  },
+  {
+    "phase": "initial",
+    "run": "review-boundaries",
+    "evidence": "runs/review-boundaries",
+    "host": "claude",
+    "elapsed_seconds": 180.969,
+    "timeout": true,
+    "exit_code": 143,
+    "model_session": true,
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "cost_usd_reported": null,
+    "standing": "timeout; pre-intake overreads; partial counterexample, no closed review"
+  },
+  {
+    "phase": "revision2",
+    "run": "direct",
+    "evidence": "successor/runs/direct",
+    "host": "codex",
+    "elapsed_seconds": 176.953,
+    "timeout": false,
+    "exit_code": 0,
+    "model_session": true,
+    "models_exposed": [],
+    "cost_usd_reported": null,
+    "standing": "bounded direct success; retained source inputs replayed unchanged"
+  },
+  {
+    "phase": "revision2",
+    "run": "issuer",
+    "evidence": "successor/runs/issuer",
+    "host": "claude",
+    "elapsed_seconds": 128.496,
+    "timeout": false,
+    "exit_code": 0,
+    "model_session": true,
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "cost_usd_reported": 1.1735685,
+    "standing": "incomplete source acquisition; closed claim rejected"
+  },
+  {
+    "phase": "revision2",
+    "run": "negative",
+    "evidence": "successor/runs/negative",
+    "host": "claude",
+    "elapsed_seconds": 53.435,
+    "timeout": false,
+    "exit_code": 0,
+    "model_session": true,
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "cost_usd_reported": 0.4345935,
+    "standing": "admission refusal/no subject acquisition retained; reporting assertions corrected"
+  },
+  {
+    "phase": "revision3",
+    "run": "issuer",
+    "evidence": "successor3/runs/issuer",
+    "host": "claude",
+    "elapsed_seconds": 130.109,
+    "timeout": false,
+    "exit_code": 0,
+    "model_session": true,
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "cost_usd_reported": 1.3428515,
+    "standing": "invalid derived retry/output permissions; dispatch withheld"
+  },
+  {
+    "phase": "revision4",
+    "run": "issuer",
+    "evidence": "successor4/runs/issuer",
+    "host": "claude",
+    "elapsed_seconds": 154.31,
+    "timeout": false,
+    "exit_code": 0,
+    "model_session": true,
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "cost_usd_reported": 2.088432,
+    "standing": "valid actual prepared packet independently reviewed"
+  },
+  {
+    "phase": "revision4",
+    "run": "receiver",
+    "evidence": "successor4/runs/receiver",
+    "host": "claude",
+    "elapsed_seconds": 121.406,
+    "timeout": false,
+    "exit_code": 0,
+    "model_session": true,
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "cost_usd_reported": 1.2724735,
+    "standing": "closed bounded result returned and consumed; no repeat effect"
+  }
+]

@@ -1,0 +1,370 @@
+[
+  {
+    "run": "direct",
+    "case": "direct",
+    "host": "codex",
+    "argv": [
+      "/Users/jim/bin/codex",
+      "--no-daemon",
+      "--disable",
+      "memories",
+      "exec",
+      "--ephemeral",
+      "--json",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "-C",
+      "/private/tmp/stdo304-probes-xun7ttbp/direct",
+      "-"
+    ],
+    "cwd": "/private/tmp/stdo304-probes-xun7ttbp/direct",
+    "source_freeze_sha256": "e246c76014a118e04e58b55482660b197ff1e587959514338e155c7de4626a65",
+    "prompt_bytes": 291,
+    "prompt_sha256": "a44372b49d7209bd72a1a6301783fe039de7327f98ed1320250e9b771b05088a",
+    "wall_limit_seconds": 240,
+    "elapsed_seconds": 176.953,
+    "exit_code": 0,
+    "timeout": false,
+    "completed": true,
+    "known_process_ids": [
+      66922,
+      66924,
+      66951,
+      66988,
+      66990,
+      67037,
+      67052,
+      67191,
+      67265,
+      67492,
+      67493,
+      67599,
+      68041,
+      68042,
+      68043,
+      68044,
+      68045,
+      68046,
+      68047,
+      68048,
+      68049,
+      68050,
+      68051,
+      68052,
+      68405,
+      68406,
+      68407,
+      68408,
+      68409,
+      68410,
+      68411,
+      68412,
+      68413,
+      68414,
+      68415,
+      68416
+    ],
+    "terminated_descendants": [],
+    "remaining_known_processes": [],
+    "models_exposed": [],
+    "reported_cost_usd": null,
+    "usage": {
+      "input_tokens": 407205,
+      "cached_input_tokens": 358656,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3967,
+      "reasoning_output_tokens": 834
+    },
+    "host_instructions": "fresh process with fixture AGENTS/CLAUDE; no resumed conversation; managed/system inherited context unmeasured; selected per-run controls retained",
+    "discovery": "Claude --plugin-dir native plugin; Codex native local .agents/skills alias",
+    "standing": "raw bounded observation requiring semantic interpretation",
+    "observable_tool_output_string_bytes": 237886,
+    "loaded_skills": [
+      {
+        "line": 5,
+        "path": "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-work/SKILL.md",
+        "source_sha256": "235015f91bdb454755566f0951e347fc3b129d43e28067ab7779fb3d17e7ffb1",
+        "exact_full_source_in_output": true
+      }
+    ],
+    "terminal_events": [
+      {
+        "line": 48,
+        "type": "turn.completed",
+        "is_error": null,
+        "subtype": null
+      }
+    ],
+    "closed_return_transport_observed": true,
+    "input_snapshot_missing": [],
+    "changes": {
+      "records/direct-result.md": {
+        "before": null,
+        "after": {
+          "bytes": 4566,
+          "sha256": "1224e6805b105b65c28348aa1b7fe05d5038d1d73f1c202868f44103305c2ad6"
+        }
+      },
+      "subject/banner.txt": {
+        "before": {
+          "bytes": 17,
+          "sha256": "6351c08d3bd7af1f1c58123b6664d24e4671c69e8912977753c6f0c59b674723"
+        },
+        "after": {
+          "bytes": 18,
+          "sha256": "24863b9e2c2ae26982b185a5a86baf6f1df83f8fee96bb80c7c85def0c36f79a"
+        }
+      }
+    },
+    "extraction_correction": false
+  },
+  {
+    "run": "issuer",
+    "case": "issuer",
+    "host": "claude",
+    "argv": [
+      "/Users/jim/.local/bin/claude",
+      "--print",
+      "--verbose",
+      "--output-format",
+      "stream-json",
+      "--no-session-persistence",
+      "--permission-mode",
+      "dontAsk",
+      "--permission-prompts",
+      "none",
+      "--restricted",
+      "--tools",
+      "Read,Skill,Bash",
+      "--settings",
+      "/private/tmp/stdo304-probes-xun7ttbp/controls/issuer-settings.json",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "/private/tmp/stdo304-probes-xun7ttbp/controls/empty-mcp.json",
+      "--plugin-dir",
+      "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec",
+      "--model",
+      "claude-fable-5-1"
+    ],
+    "cwd": "/private/tmp/stdo304-probes-xun7ttbp/coordinated",
+    "source_freeze_sha256": "e246c76014a118e04e58b55482660b197ff1e587959514338e155c7de4626a65",
+    "prompt_bytes": 269,
+    "prompt_sha256": "f5dcb0d2512df5eae6adc8204c5cd5e82da8962ec0e51988869f6929af9e773a",
+    "wall_limit_seconds": 300,
+    "elapsed_seconds": 128.496,
+    "exit_code": 0,
+    "timeout": false,
+    "completed": true,
+    "known_process_ids": [
+      67330,
+      67354,
+      67543,
+      67637,
+      67677,
+      67827,
+      67828,
+      67829
+    ],
+    "terminated_descendants": [],
+    "remaining_known_processes": [],
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "reported_cost_usd": 1.1735685,
+    "usage": {
+      "input_tokens": 258,
+      "cache_creation_input_tokens": 30306,
+      "cache_read_input_tokens": 151474,
+      "output_tokens": 10540,
+      "output_tokens_details": {
+        "thinking_tokens": 3209
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 30306,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 32,
+          "output_tokens": 3391,
+          "cache_read_input_tokens": 28297,
+          "cache_creation_input_tokens": 2009,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 2009
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "host_instructions": "fresh process with fixture AGENTS/CLAUDE; no resumed conversation; managed/system inherited context unmeasured; selected per-run controls retained",
+    "discovery": "Claude --plugin-dir native plugin; Codex native local .agents/skills alias",
+    "standing": "raw bounded observation requiring semantic interpretation",
+    "observable_tool_output_string_bytes": 19224,
+    "loaded_skills": [
+      {
+        "line": 44,
+        "path": "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-work/SKILL.md",
+        "source_sha256": "235015f91bdb454755566f0951e347fc3b129d43e28067ab7779fb3d17e7ffb1",
+        "loaded_body_sha256": "aaf3795d7314b3fc95c89aa2ff21c666c034ccce41d2e4a53422cfd791dbf383",
+        "source_body_sha256": "aaf3795d7314b3fc95c89aa2ff21c666c034ccce41d2e4a53422cfd791dbf383",
+        "exact_body_match": true,
+        "exact_source_body_in_loaded": true,
+        "transport_suffix": ""
+      }
+    ],
+    "terminal_events": [
+      {
+        "line": 176,
+        "type": "result",
+        "is_error": false,
+        "subtype": "success"
+      }
+    ],
+    "closed_return_transport_observed": true,
+    "input_snapshot_missing": [],
+    "changes": {
+      "incoming/issuer-return.md": {
+        "before": null,
+        "after": {
+          "bytes": 6958,
+          "sha256": "2497255a9d63cd70d48532a6c9ce87817813035e21d21e4f9385f3934663a47c"
+        }
+      },
+      "records/issuer-result.md": {
+        "before": null,
+        "after": {
+          "bytes": 6958,
+          "sha256": "2497255a9d63cd70d48532a6c9ce87817813035e21d21e4f9385f3934663a47c"
+        }
+      }
+    },
+    "extraction_correction": false
+  },
+  {
+    "run": "negative",
+    "case": "negative",
+    "host": "claude",
+    "argv": [
+      "/Users/jim/.local/bin/claude",
+      "--print",
+      "--verbose",
+      "--output-format",
+      "stream-json",
+      "--no-session-persistence",
+      "--permission-mode",
+      "dontAsk",
+      "--permission-prompts",
+      "none",
+      "--restricted",
+      "--tools",
+      "Read,Skill,Bash",
+      "--settings",
+      "/private/tmp/stdo304-probes-xun7ttbp/controls/negative-settings.json",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "/private/tmp/stdo304-probes-xun7ttbp/controls/empty-mcp.json",
+      "--plugin-dir",
+      "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec",
+      "--model",
+      "claude-fable-5-1"
+    ],
+    "cwd": "/private/tmp/stdo304-probes-xun7ttbp/review",
+    "source_freeze_sha256": "e246c76014a118e04e58b55482660b197ff1e587959514338e155c7de4626a65",
+    "prompt_bytes": 183,
+    "prompt_sha256": "80ce7f100b608836b0f3bb6fcad71d246fed1640fc992956e23f310d0fef97bd",
+    "wall_limit_seconds": 180,
+    "elapsed_seconds": 53.435,
+    "exit_code": 0,
+    "timeout": false,
+    "completed": true,
+    "known_process_ids": [
+      68289
+    ],
+    "terminated_descendants": [],
+    "remaining_known_processes": [],
+    "models_exposed": [
+      "claude-fable-5-1"
+    ],
+    "reported_cost_usd": 0.4345935,
+    "usage": {
+      "input_tokens": 130,
+      "cache_creation_input_tokens": 11260,
+      "cache_read_input_tokens": 53374,
+      "output_tokens": 3895,
+      "output_tokens_details": {
+        "thinking_tokens": 1486
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 11260,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 32,
+          "output_tokens": 1351,
+          "cache_read_input_tokens": 15492,
+          "cache_creation_input_tokens": 2065,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 2065
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "host_instructions": "fresh process with fixture AGENTS/CLAUDE; no resumed conversation; managed/system inherited context unmeasured; selected per-run controls retained",
+    "discovery": "Claude --plugin-dir native plugin; Codex native local .agents/skills alias",
+    "standing": "raw bounded observation requiring semantic interpretation",
+    "observable_tool_output_string_bytes": 5459,
+    "loaded_skills": [
+      {
+        "line": 40,
+        "path": "/private/tmp/stdo304-probes-xun7ttbp/candidate/plugins/spec/skills/stdo-review/SKILL.md",
+        "source_sha256": "e1cf1db274cbff3785d3e9ac1f503cb266d628f4926ee69cae9a2f1a69efcd45",
+        "loaded_body_sha256": "a097c9a8bec0f180c65c5602aff54c44f51ea3d6105cb1aa3f9140941ceb6948",
+        "source_body_sha256": "a097c9a8bec0f180c65c5602aff54c44f51ea3d6105cb1aa3f9140941ceb6948",
+        "exact_body_match": true,
+        "exact_source_body_in_loaded": true,
+        "transport_suffix": ""
+      }
+    ],
+    "terminal_events": [
+      {
+        "line": 78,
+        "type": "result",
+        "is_error": false,
+        "subtype": "success"
+      }
+    ],
+    "closed_return_transport_observed": true,
+    "input_snapshot_missing": [],
+    "changes": {
+      "records/bad-review-result.md": {
+        "before": null,
+        "after": {
+          "bytes": 3095,
+          "sha256": "a77aa337669fa3013df9606c26bc1318c170fbc953db6a53ef758246a60e2859"
+        }
+      }
+    },
+    "extraction_correction": false
+  }
+]

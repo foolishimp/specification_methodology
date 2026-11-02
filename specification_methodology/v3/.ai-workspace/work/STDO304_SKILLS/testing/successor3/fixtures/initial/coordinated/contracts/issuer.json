@@ -1,0 +1,67 @@
+{
+  "id": "urn:fixture:contract:issuer",
+  "purpose": "Prepare the next worker intake for the existing JOB-17 run and report present work standing.",
+  "allocation": "coordinated issuer without mutation authority",
+  "basis": {
+    "uri": "stdo://releases/v3.0.3/",
+    "manifest_sha256": "f07e6681355023e30ad8cc4c2ebecaa520ee4e75da6e140ef5a160b31082178d"
+  },
+  "product_definition": "stdo_fixture.json",
+  "frame_basis": "FRAME.md",
+  "authority": "OWNER.md#authority",
+  "admission": "admissions/issuer.json",
+  "admission_check": "python3 admission.py issuer",
+  "permitted_inputs": [
+    "AGENTS.md",
+    "stdo_fixture.json",
+    "OWNER.md",
+    "FRAME.md",
+    "requirements.md",
+    "contracts/issuer.json",
+    "admissions/issuer.json",
+    "contracts/worker.json",
+    "admissions/worker.json",
+    "admission.py",
+    "prior-attempt.json",
+    "exact installed methodology owner routes",
+    "candidate skill/reference routes"
+  ],
+  "permitted_effects": [],
+  "excluded_inputs": [
+    "excluded-sibling/**",
+    "excluded-outputs/**",
+    "parent directory listings and unselected siblings; exact method-manager/store/skill routes remain admitted",
+    "home and private conversation history"
+  ],
+  "evidence_surface": "records/issuer-result.md (final-return relay)",
+  "return_consumer": "fixture-owner through final-return relay",
+  "limits": {
+    "wall_seconds": 300,
+    "context": "host maximum; actual host-supplied bytes unmeasured",
+    "spend": "existing configured authorization; report observed spend"
+  },
+  "stale_if": [
+    "contract, admission, source or selected method identity changes",
+    "new material service observation"
+  ],
+  "stop": [
+    "missing or mismatched admission",
+    "missing exact basis",
+    "scope or capability insufficient",
+    "effect cannot be reconciled"
+  ],
+  "decision_reservations": [
+    "new work, acceptance, publication and continuation remain fixture-owner's"
+  ],
+  "worker_contract_sha256": "9aa35b360c5032124e3aeb66f356a0a79a93898ffd0e5f20b21954728fdad88d",
+  "evaluation_criteria": [
+    "fresh worker intake recoverable from declared routes",
+    "current work standing traceable to admitted carrier"
+  ],
+  "non_closure_conditions": [
+    "self-admitted or widened worker contract",
+    "subject observation or effect by issuer",
+    "lost residual or effect uncertainty"
+  ],
+  "output": "Return worker intake in final answer; it will be relayed unchanged to incoming/issuer-return.md for a fresh worker."
+}

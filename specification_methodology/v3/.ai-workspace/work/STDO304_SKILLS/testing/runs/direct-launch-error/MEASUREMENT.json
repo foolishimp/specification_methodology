@@ -1,0 +1,38 @@
+{
+  "case": "direct",
+  "host": "codex",
+  "argv": [
+    "/Users/jim/bin/codex",
+    "--no-daemon",
+    "--ask-for-approval",
+    "never",
+    "exec",
+    "--ephemeral",
+    "--json",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "workspace-write",
+    "-C",
+    "/private/tmp/stdo304-probes-47pczhzi/direct",
+    "-"
+  ],
+  "cwd": "/private/tmp/stdo304-probes-47pczhzi/direct",
+  "source_freeze_sha256": "6d10acddf9821764b29a8d3f95441be4fe6a5e7aa60915b3d7eefd4ca8703782",
+  "prompt_bytes": 506,
+  "prompt_sha256": "8b9878a67afbe930f52ebb4d1e8405e5bf7dcf99496a959a396d078b8cd39082",
+  "wall_limit_seconds": 180,
+  "elapsed_seconds": 0.556,
+  "exit_code": 2,
+  "timeout": false,
+  "known_process_ids": [
+    23768
+  ],
+  "terminated_descendants": [],
+  "remaining_known_processes": [],
+  "models_exposed": [],
+  "reported_cost_usd": null,
+  "usage": null,
+  "host_instructions": "fresh invocation, no prior conversation; configured user/host policies and system prompt not fully instrumented",
+  "discovery": "Claude session plugin --plugin-dir; Codex native .agents/skills alias, not plugin-install discovery",
+  "standing": "raw observation, requires independent interpretation"
+}

@@ -1,11 +1,48 @@
 ---
 name: stdo-ticket
-description: Create or update one governed STDO work item. Use when a user says stdo ticket or explicitly asks to ticket, open, or update an STDO-governed request, bug, failed test, finding, or release issue. Do not invoke for read-only classification.
+description: Create or update one governed STDO work item, directly or through a separately authorized Writer. Use for ticketing an STDO request, bug, finding or release issue. Do not invoke for read-only classification.
 ---
 
 # STDO Ticket
 
 Turn an intake into one durable work carrier without starting implementation.
+
+## Start With Your Own Control Intake
+
+Read the exact own contract or intake named in the request before any general
+search or project read. Bind your own permitted inputs, exclusions and return
+route, then apply [Control Intake](../../references/COORDINATED_HANDOFF.md#control-intake).
+This applies to issuer, recipient and direct work. Use named control routes;
+do not start with directory inventories, memory searches or neighbouring
+prompts. A Worker’s access never becomes its issuer’s access. Check the actual
+host boundary before relying on excluded information staying unavailable.
+
+## Choose The Entry
+
+If receiving a coordinated packet, apply
+[Receive](../../references/COORDINATED_HANDOFF.md#receive) before general
+discovery or ticket reads, then perform only its authorized carrier operation
+using the procedure below. Ticket-state authority is distinct from admission
+of the implementation the ticket describes.
+
+A coordinating issuer uses [Issue](../../references/COORDINATED_HANDOFF.md#issue)
+with the exact ticket-state operation, subject, territory and result surface.
+An Executive delegates all ticket edits, including frontmatter-only
+supersession, to the separately bound Writer. If its own frame cannot read the
+ticket, use permitted identity/metadata and an authorized reader's closed
+result; do not infer semantic closure from metadata. Unavailable sufficient
+evidence withholds the dependent operation. Evaluate
+[the return](../../references/COORDINATED_HANDOFF.md#evaluate-the-return)
+and stop at the declared boundary. A sufficient permitted direct Writer uses
+the ordinary procedure below.
+
+Before requesting admission or an owner choice, check the exact existing
+instruction, standing ruling or admitted grant and its applicability. If it
+already covers the operation, record that binding instead of asking again.
+For a missing material choice, lead with the concrete decision needed: the
+carrier/contract identity and digest where applicable, bounded effect and
+unresolved choice. Ask through the owning admission mechanism; no universal
+human phrase or additional approval round is required (`ACTIVATION` §1 and §7).
 
 ## Select The Product Basis
 

@@ -1,0 +1,52 @@
+{
+  "subject_freeze_sha256": "68320109c3379df967a475a3f9db799b618241f6160189a5adb9321da065e0e0",
+  "reader_sha256": "ea47d7d8c247f86a91b9f7674be94449b01ed30ed7b9645bf45f457dea8a10ec",
+  "reproduction_script_sha256": "18ac12a9494c3fd65e69b793c80891dfe8848634d9dd4a5bf1208a84f38c87ff",
+  "command": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/revision4/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+    "read",
+    "--stdo",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/revision4/scratch/html-selfclose/manager",
+    "--definition",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/revision4/scratch/html-selfclose/definition.json",
+    "--member",
+    "standards/OWNER.md",
+    "--heading",
+    "Two"
+  ],
+  "exit": 0,
+  "stdout": {
+    "basis_uri": "stdo://releases/review-specimen/",
+    "command": "read",
+    "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/revision4/scratch/html-selfclose/definition.json",
+    "definition_id": "urn:review:section-container",
+    "definition_sha256": "d020c3798257e73fd11aa1ad373bd26b85f324aea1ca4662dd501e6a5e00ab88",
+    "installed": true,
+    "kind": "stdo.skill-source-read",
+    "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/revision4/scratch/html-selfclose/manager",
+    "manifest_sha256": "818c630a26a94b433371ee99d9f9934a9d4d8be48e938a062320ae534be194f2",
+    "member_sha256": "d0e939a023ca424bdaa3f0d6905a71203e0e042c4599f0e713074517409317e2",
+    "member_uri": "stdo://releases/review-specimen/standards/OWNER.md",
+    "sections": [
+      {
+        "first_line": 3,
+        "heading": "Two",
+        "last_line": 5,
+        "sha256": "6d6bddd3069533f69c63f9f7868d40a6737991b409f2a2ff8d98a2dc579e06b6",
+        "text": "## Two\nNOT AN ATX SECTION\n\n"
+      }
+    ],
+    "standing": "verified source projection; no admission or semantic verdict",
+    "status": "checked",
+    "store": null,
+    "valid": true
+  },
+  "stderr": "",
+  "expected": "refuse unsupported HTML; Two is not a Markdown section",
+  "actual_invented_section": true,
+  "oracle": "CommonMark 0.31.2 HTML blocks: https://spec.commonmark.org/0.31.2/#html-blocks",
+  "limits": "Exact frozen reader under isolated review-owned verified mock manager; no native-source occurrence claimed"
+}

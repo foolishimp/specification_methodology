@@ -1,0 +1,61 @@
+{
+  "suite": "/private/tmp/stdo304-probes-2dbmyw3i",
+  "store": "/private/tmp/stdo304-probes-2dbmyw3i/store",
+  "projects": {
+    "direct": "/private/tmp/stdo304-probes-2dbmyw3i/direct",
+    "coordinated": "/private/tmp/stdo304-probes-2dbmyw3i/coordinated",
+    "review": "/private/tmp/stdo304-probes-2dbmyw3i/review"
+  },
+  "expectation_sha256": "b50b63d4c1fc917747e9123fad131f845ab0208ba277a41f1776774faff25250",
+  "candidate_loaded": true,
+  "candidate": "/private/tmp/stdo304-probes-2dbmyw3i/candidate",
+  "source_freeze_sha256": "68320109c3379df967a475a3f9db799b618241f6160189a5adb9321da065e0e0",
+  "python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+  "manager": "/Users/jim/.local/bin/stdo",
+  "controls": "/private/tmp/stdo304-probes-2dbmyw3i/controls",
+  "policies": {
+    "issuer": {
+      "policy": "/private/tmp/stdo304-probes-2dbmyw3i/controls/issuer-policy.json",
+      "policy_sha256": "7a0a0b1f4eca72384a7fa61405a4e575ade20ec037395c96addec3dba84b3ee7",
+      "settings": "/private/tmp/stdo304-probes-2dbmyw3i/controls/issuer-settings.json",
+      "settings_sha256": "0ad357e2464e454b507500c364c8f5533cfb3b9e2cb926bdf9121ec9b87e3e06",
+      "audit": "/private/tmp/stdo304-probes-2dbmyw3i/controls/issuer-audit.jsonl",
+      "session": "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/SESSION-issuer.md",
+      "operator_catalogs": [
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/issuer/ACTIVATION.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/issuer/REFERENCE_FRAME.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/issuer/EXECUTIVE_BASELINE.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/issuer/SPEC_METHOD.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/issuer/TICKETS.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/issuer/EVALUATION.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/issuer/frames_bootstrap.md.json"
+      ]
+    },
+    "receiver": {
+      "policy": "/private/tmp/stdo304-probes-2dbmyw3i/controls/receiver-policy.json",
+      "policy_sha256": "ab7907a19fcc7ab8dffc15bd25697a061fc5878494b8243cec8002fd11167bfa",
+      "settings": "/private/tmp/stdo304-probes-2dbmyw3i/controls/receiver-settings.json",
+      "settings_sha256": "7c6fa0e0b3662cabe614738e845b20ce72d3c7053f843192b19728e7dea51027",
+      "audit": "/private/tmp/stdo304-probes-2dbmyw3i/controls/receiver-audit.jsonl",
+      "session": "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/SESSION-receiver.md",
+      "operator_catalogs": [
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/receiver/ACTIVATION.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/receiver/REFERENCE_FRAME.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/receiver/EXECUTIVE_BASELINE.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/receiver/SPEC_METHOD.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/receiver/TICKETS.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/receiver/EVALUATION.md.json",
+        "/private/tmp/stdo304-probes-2dbmyw3i/coordinated/operators/receiver/frames_bootstrap.md.json"
+      ]
+    },
+    "negative": {
+      "policy": "/private/tmp/stdo304-probes-2dbmyw3i/controls/negative-policy.json",
+      "policy_sha256": "b8700dcfa7bea5204e73eb9650eb435f2746849918d6a15d7fb89e0b3d1bd29a",
+      "settings": "/private/tmp/stdo304-probes-2dbmyw3i/controls/negative-settings.json",
+      "settings_sha256": "d4a34f4ce7740888d8fe8be4e697d22581c2e96093d565a5827c01441e8f4e40",
+      "audit": "/private/tmp/stdo304-probes-2dbmyw3i/controls/negative-audit.jsonl",
+      "session": "/private/tmp/stdo304-probes-2dbmyw3i/review/SESSION-negative.md",
+      "operator_catalogs": []
+    }
+  }
+}

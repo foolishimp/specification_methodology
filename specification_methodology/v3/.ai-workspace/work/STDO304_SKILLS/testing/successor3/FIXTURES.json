@@ -1,0 +1,42 @@
+{
+  "suite": "/private/tmp/stdo304-probes-3tln7qmn",
+  "store": "/private/tmp/stdo304-probes-3tln7qmn/store",
+  "projects": {
+    "direct": "/private/tmp/stdo304-probes-3tln7qmn/direct",
+    "coordinated": "/private/tmp/stdo304-probes-3tln7qmn/coordinated",
+    "review": "/private/tmp/stdo304-probes-3tln7qmn/review"
+  },
+  "expectation_sha256": "b50b63d4c1fc917747e9123fad131f845ab0208ba277a41f1776774faff25250",
+  "candidate_loaded": true,
+  "candidate": "/private/tmp/stdo304-probes-3tln7qmn/candidate",
+  "source_freeze_sha256": "66a099d5550b3ae25d84d62fb77e296c80269fed9b30826fb876d023337c4522",
+  "python": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+  "manager": "/Users/jim/.local/bin/stdo",
+  "controls": "/private/tmp/stdo304-probes-3tln7qmn/controls",
+  "policies": {
+    "issuer": {
+      "policy": "/private/tmp/stdo304-probes-3tln7qmn/controls/issuer-policy.json",
+      "policy_sha256": "b0b2e1b2e16b73c3c0ef74628d23f7f5a8566ad59aaf208cc4c6636a92c4016a",
+      "settings": "/private/tmp/stdo304-probes-3tln7qmn/controls/issuer-settings.json",
+      "settings_sha256": "1f8f4c5283e0ebf7476ce6232563283ab78f78d984ca1980d8c91f44ea296efb",
+      "audit": "/private/tmp/stdo304-probes-3tln7qmn/controls/issuer-audit.jsonl",
+      "session": "/private/tmp/stdo304-probes-3tln7qmn/coordinated/SESSION-issuer.md"
+    },
+    "receiver": {
+      "policy": "/private/tmp/stdo304-probes-3tln7qmn/controls/receiver-policy.json",
+      "policy_sha256": "adf79e88c324cf73b2740a83fa7bb83ad0ab3feebf71d3102e65d3f8c5abdcf9",
+      "settings": "/private/tmp/stdo304-probes-3tln7qmn/controls/receiver-settings.json",
+      "settings_sha256": "0c56d31d0dc9acbcef7c0aab23b7b570aa8ded5368bf3d683843434ea6e3995e",
+      "audit": "/private/tmp/stdo304-probes-3tln7qmn/controls/receiver-audit.jsonl",
+      "session": "/private/tmp/stdo304-probes-3tln7qmn/coordinated/SESSION-receiver.md"
+    },
+    "negative": {
+      "policy": "/private/tmp/stdo304-probes-3tln7qmn/controls/negative-policy.json",
+      "policy_sha256": "b2a23d12ff6ff3be0855612f4dd0caafab92587e524922e3d4a5f78cc2515c46",
+      "settings": "/private/tmp/stdo304-probes-3tln7qmn/controls/negative-settings.json",
+      "settings_sha256": "d1330eeb94da5dc444b0ad7fee13086f74d75a3d8480b7dfa17d67706c7737ed",
+      "audit": "/private/tmp/stdo304-probes-3tln7qmn/controls/negative-audit.jsonl",
+      "session": "/private/tmp/stdo304-probes-3tln7qmn/review/SESSION-negative.md"
+    }
+  }
+}

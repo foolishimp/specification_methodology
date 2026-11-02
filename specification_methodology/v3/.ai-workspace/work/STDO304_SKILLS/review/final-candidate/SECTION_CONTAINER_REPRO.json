@@ -1,0 +1,35 @@
+{
+  "subject_freeze_sha256": "66a099d5550b3ae25d84d62fb77e296c80269fed9b30826fb876d023337c4522",
+  "reader_sha256": "2cc68c45c4e98c7f92e456e3be30cae71c60880a8524a7270c4c779af117c0c3",
+  "reproduction_script_sha256": "a9004392ebd457219001bdf8c924cee0ca5a481e64c86f79374021b9d88f8c91",
+  "command": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/final-candidate/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+    "read",
+    "--stdo",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/final-candidate/scratch/section-container/manager",
+    "--definition",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/final-candidate/scratch/section-container/definition.json",
+    "--member",
+    "standards/OWNER.md",
+    "--heading",
+    "One"
+  ],
+  "exit": 1,
+  "stdout": {
+    "command": "read",
+    "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/final-candidate/scratch/section-container/definition.json",
+    "kind": "stdo.skill-source-read",
+    "reason": "unsupported_container_fence",
+    "status": "refused"
+  },
+  "stderr": "",
+  "expected_named_section": "## One\n> ```\n> quoted example\n",
+  "expected_first_line": 1,
+  "expected_last_line": 3,
+  "actual_contains_unselected_section": false,
+  "oracle": "CommonMark 0.31.2 fenced code blocks close at the end of their containing block; https://spec.commonmark.org/0.31.2/#fenced-code-blocks",
+  "limits": "Mock manager supplies exact verified control responses; no real installed source was altered. This isolates shipped section parser behavior, not native-host behavior."
+}

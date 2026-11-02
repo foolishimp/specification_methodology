@@ -1,0 +1,24 @@
+# Initial coordinated-skills review result
+
+Frame: bounded independent same-family nonauthor working review. Activation: `/root/stdo304_skills_review`, consuming Executive `/root`. Exact source subject: `SOURCE_FREEZE.json` SHA256 `6d10acddf9821764b29a8d3f95441be4fe6a5e7aa60915b3d7eefd4ca8703782` (107 native payload files and five support files). Source expectations: `EXPECTATIONS.md` SHA256 `2f7bfea188a6ab41eb16226b16a65a1f38d3d4fe313e1c98898069fbf2f7c19f`, frozen before exposure. Builder remains verified installed2.5.1 RC2; immutable native3.0.3 at `07bdb34a2d472a3b5e678f60584fd02b24a388f4` is the semantic comparison subject.
+
+**Overall result: falsified for the initial candidate's selected usable native-path claim.** OP-01 S2 remains open and was selected by the Executive for bounded repair. Source-law conservation and static routing are satisfied within the changed cone; that narrower result does not close actual use.
+
+| Claim | Exact observed standing |
+|---|---|
+| Source identity and isolation | All107+5 source pins and exact payload inventory match before and after review. Exactly seven plugin payload files differ from released3.0.3; law is unchanged. |
+| Source-law conservation/routing | No actionable S0-S4 text-law defect found in the five skills, shared handoff, guide and five supporting sources. New routes/anchors resolve. Direct work and all owner boundaries remain stated. |
+| Native discovery | Claude session plugin actually loads the exact changed skills. Codex native local-skill alias loads stdo-work; Codex plugin-install discovery was not exercised. |
+| Issuer acquisition | Falsified twice: broad and focused native issuer paths acquire inputs outside their own declared boundary. Neither yields a packet before its declared cap. |
+| Direct work | Initial store-route refusal is harness-limited; corrected store/admission verifies, but the actor performs an excluded memory query and times out before the one-label change. No positive direct-completion witness. |
+| Review recipient | Native skill is loaded, then excluded trees are listed before exact intake validation. A bad digest is later rejected and a real candidate counterexample executed, but no source-first expectation record or closed verdict is returned. No whole-contract pass. |
+| Complete issuer -> recipient -> result -> Executive | Not performed: no successful issuer packet exists; no substituted packet was supplied. Unknown-effect reconciliation and consumer use are unobserved. |
+| Harness result integrity | EF-01 records the original wrong durable-result path. The later timeout extraction of progress as FINAL was explicitly withdrawn. Neither is counted as a closed result, and no unperformed corrected-run proof closes it. |
+
+Actionable finding and causal evidence are in `OPERATIONAL_REVIEW.md` (OP-01 S2). `EVIDENCE_FINDINGS.md` retains harness EF-01 and initial observations; `SEMANTIC_REVIEW.md` retains the bounded static assessment. These report technical evidence, not Product priority, promotion effect, disposition or authority for continuation.
+
+The sealed test report at `testing/REPORT.md` has SHA256 `23dd0b115ae03a2189872b6712e29dda1c51e46313d155e825702c812f3f810d`. Its evidence manifest `testing/INITIAL_EVIDENCE.json` has SHA256 `3f3e95fc90ac1e2795c817614cbed1096b8e0b0bd0a09f67b55ca58ba69e1e6b`; I independently verified every one of its212 members. Copies of the sealed report/manifest and the verification are under `evidence/sealed-initial/`. Selected raw traces, fixtures and contemporaneous hashes are retained under `evidence/` for independent review. Five actual model sessions completed or were stopped; the receiver was not performed. Reported descendant checks are empty. The source/store post-integrity check is distinct from operational success.
+
+Limits: test fixtures are finite declared populations; no universal unreliability rate or claim that all host configurations fail is established. Full default/global host instructions and retained-context fit are unmeasured. Specific source wording, execution configuration and actor behavior causes are not fully isolated. The first Claude issuer's store route worked; Codex's distinct PATH fault is no explanation of that issuer timeout. Source rules need not explicitly authorize an error for the actual usable path to be inadequate. No enforcement engine is inferred or demanded.
+
+The reviewer authored no candidate or repair, wrote only review records, and made no Git/release effects. Family, authorship and actual-use actor identity are separate; this is not cross-family method acceptance. `INDEPENDENCE_NOTE.md` records provenance and incidental post-review author-diagnostic exposure. Material changes require a new subject/applicability check; the already frozen expectations remain for the successor. The Executive has reopened construction for that successor. This result accepts neither candidate nor release.

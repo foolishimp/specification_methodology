@@ -1,0 +1,54 @@
+{
+  "subject_freeze_sha256": "e246c76014a118e04e58b55482660b197ff1e587959514338e155c7de4626a65",
+  "reader_sha256": "7ff07c6bce0b9e5bc2d8060190570e9a0108c87950a30bb7a42fd2ca968e6cff",
+  "reproduction_script_sha256": "12c984226142d812770bc47692c38bc741fb7672f080838fe2550b65d2d62a93",
+  "command": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/successor/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+    "read",
+    "--stdo",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/successor/scratch/section-container/manager",
+    "--definition",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/successor/scratch/section-container/definition.json",
+    "--member",
+    "standards/OWNER.md",
+    "--heading",
+    "One"
+  ],
+  "exit": 0,
+  "stdout": {
+    "basis_uri": "stdo://releases/review-specimen/",
+    "command": "read",
+    "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/successor/scratch/section-container/definition.json",
+    "definition_id": "urn:review:section-container",
+    "definition_sha256": "a3f2dd29eb03ce89d22d756f4c21b18243c05f4d2dc6944a0960a58522efa026",
+    "installed": true,
+    "kind": "stdo.skill-source-read",
+    "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review/successor/scratch/section-container/manager",
+    "manifest_sha256": "ab5096c47ea6860d54929d1b4b809cd897eca2263c0f559172c442b059dc9fa9",
+    "member_sha256": "307be3b86c06862e657ccfb3d3dbe01bdb8d1f90b3cb95545744d85fbcf92b73",
+    "member_uri": "stdo://releases/review-specimen/standards/OWNER.md",
+    "sections": [
+      {
+        "first_line": 1,
+        "heading": "One",
+        "last_line": 7,
+        "sha256": "f420ce6c948d3e552d6cb3f52752a753bf256700bf236e9387bcc37253fe5922",
+        "text": "## One\n> ```\n> quoted example\n## Two\nUNSELECTED TWO\n> ```\n> another quote\n"
+      }
+    ],
+    "standing": "verified source projection; no admission or semantic verdict",
+    "status": "checked",
+    "store": null,
+    "valid": true
+  },
+  "stderr": "",
+  "expected_named_section": "## One\n> ```\n> quoted example\n",
+  "expected_first_line": 1,
+  "expected_last_line": 3,
+  "actual_contains_unselected_section": true,
+  "oracle": "CommonMark 0.31.2 fenced code blocks close at the end of their containing block; https://spec.commonmark.org/0.31.2/#fenced-code-blocks",
+  "limits": "Mock manager supplies exact verified control responses; no real installed source was altered. This isolates shipped section parser behavior, not native-host behavior."
+}

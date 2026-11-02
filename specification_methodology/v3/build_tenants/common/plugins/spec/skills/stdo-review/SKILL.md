@@ -1,12 +1,45 @@
 ---
 name: stdo-review
-description: Independently evaluate one exact STDO-governed candidate and return a closed technical result. Use when a user says stdo review or explicitly asks to review an STDO-governed candidate, release claim, qualification claim, or governed boundary. Do not invoke for generic review.
+description: Independently evaluate one exact STDO-governed candidate, or issue that assessment to a separate Reviewer. Use for STDO candidate, release, qualification or governed-boundary review. Do not invoke for generic review.
 ---
 
 # STDO Review
 
-Act only as Reviewer for one exact claim. Review is read-only. It does not
+In the execution path, act as Reviewer for one exact claim. Review is read-only. It does not
 repair, assign Product priority, apply disposition, or activate the next work.
+
+## Start With Your Own Control Intake
+
+Read the exact own contract or intake named in the request before any general
+search or project read. Bind your own permitted inputs, exclusions and return
+route, then apply [Control Intake](../../references/COORDINATED_HANDOFF.md#control-intake).
+This applies to issuer, recipient and direct work. Use named control routes;
+do not start with directory inventories, memory searches or neighbouring
+prompts. A Worker’s access never becomes its issuer’s access. Check the actual
+host boundary before relying on excluded information staying unavailable.
+
+## Choose The Entry
+
+If receiving a coordinated packet, apply
+[Receive](../../references/COORDINATED_HANDOFF.md#receive) before general
+discovery or candidate reads, then execute the review below within its grant.
+
+A coordinating issuer uses [Issue](../../references/COORDINATED_HANDOFF.md#issue)
+with `EXECUTIVE_BASELINE` §12 step 5B and §19's Reviewer additions. Bind the
+exact claim, candidate, evidence population, severity scale and required
+authorship/evidence independence. Let the Reviewer derive expectations from
+governing source before candidate exposure (`EVALUATION` §3). Label supplied
+hypotheses or counterexamples as inputs; they neither prescribe the verdict
+nor replace independent assessment. Do not hide relevant evidence to create
+an appearance of independence.
+
+Partition only when each Reviewer has a sufficient complete slice and the
+declared conjunction covers the required claim, including interactions.
+Local green slices do not prove an unassessed whole path. Evaluate returned
+results through [the shared return procedure](../../references/COORDINATED_HANDOFF.md#evaluate-the-return);
+retain Reviewer severity and assign priority/disposition only under the
+issuer's separate grant. The issuer does not perform a second review merely
+by issuing this one. Otherwise enter the read-only Reviewer path below.
 
 ## Select The Product Basis
 
