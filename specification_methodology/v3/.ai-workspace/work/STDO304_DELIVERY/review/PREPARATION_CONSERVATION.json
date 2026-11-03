@@ -1,0 +1,42 @@
+{
+  "kind": "stdo304.release-review-conservation/1",
+  "checked_utc": "2026-11-03T03:58:05.217310+00:00",
+  "base": "4568edeeba415a877f1b9a4dd5ac9aeb404f6d7e",
+  "payload_count": 110,
+  "payload_total_bytes": 43159195,
+  "same_count": 100,
+  "changed_paths": [
+    "plugins/spec/.claude-plugin/plugin.json",
+    "plugins/spec/.codex-plugin/plugin.json",
+    "plugins/spec/references/GETTING_STARTED.md",
+    "release/release-note.md",
+    "standards/documentation/DOCUMENTATION.json",
+    "standards/documentation/README.md",
+    "standards/documentation/index.html",
+    "standards/tooling/README.md",
+    "standards/tooling/TOOLING.json",
+    "standards/tooling/materialize.py"
+  ],
+  "all_payload_modes_match_baseline": true,
+  "all_five_skills_unchanged": true,
+  "all_five_helper_dependencies_unchanged": true,
+  "historical_archive_sha256": "172eeb57040004365671372294e5c2a42833a0f574224fb66c57cf5a30c5d4e0",
+  "helper_ast_checks": [
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/native_release.py",
+      "ast_equal_after_selected_literal_coordinate_replacements": true,
+      "sha256": "47214e14465ee08119fd2d9bfa6367e2cd2c8f3b72260fcb9d71183527d62db4"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/documentation.py",
+      "ast_equal_after_selected_literal_coordinate_replacements": true,
+      "sha256": "d13b397a3b591fa55f7775e94ca30241db1523e48858ef56251023a74eeda103"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_materialize.py",
+      "ast_equal_after_selected_literal_coordinate_replacements": true,
+      "sha256": "1a4068b5ff9568f1a7a964534e18bbff06398db2184bb59b9ede3f77f3ff4d8d"
+    }
+  ],
+  "current_delta_sha256": "558564a8e0f4e1d20290ed3df986ba2b3e7b9daab539a3514df99be2570fed49"
+}

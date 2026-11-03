@@ -1,0 +1,75 @@
+{
+  "source_delta_sha256": "558564a8e0f4e1d20290ed3df986ba2b3e7b9daab539a3514df99be2570fed49",
+  "native_helper_sha256": "47214e14465ee08119fd2d9bfa6367e2cd2c8f3b72260fcb9d71183527d62db4",
+  "cases": [
+    {
+      "name": "exact_frozen_v3.0.4_payload",
+      "observed": "accepted",
+      "expected": "accepted",
+      "elapsed_seconds": 0.427
+    },
+    {
+      "name": "stale_release_header",
+      "observed": "refused",
+      "reason": "release declaration differs from stable cut/profile",
+      "expected": "refused",
+      "elapsed_seconds": 0.421
+    },
+    {
+      "name": "stale_plugins/spec/.claude-plugin/plugin.json",
+      "observed": "refused",
+      "reason": "plugin version does not match target cut",
+      "expected": "refused",
+      "elapsed_seconds": 0.42
+    },
+    {
+      "name": "stale_plugins/spec/.codex-plugin/plugin.json",
+      "observed": "refused",
+      "reason": "plugin version does not match target cut",
+      "expected": "refused",
+      "elapsed_seconds": 0.41
+    },
+    {
+      "name": "previous_stable_tag_does_not_block_new_line",
+      "observed": "accepted",
+      "expected": "accepted",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "name": "existing_historical_line_refs/tags/v3.0.4",
+      "observed": "refused",
+      "reason": "stable line collides with historical bare tag or RC history",
+      "expected": "refused",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "name": "existing_historical_line_refs/tags/v3.0.4-rc.1",
+      "observed": "refused",
+      "reason": "stable line collides with historical bare tag or RC history",
+      "expected": "refused",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "name": "existing_historical_line_refs/tags/specification_methodology/v3.0.4-rc.1",
+      "observed": "refused",
+      "reason": "stable line collides with historical bare tag or RC history",
+      "expected": "refused",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "name": "helper_refuses_git_mutation_without_invoking_git",
+      "observed": "refused",
+      "reason": "Git mutation is reserved to Root",
+      "expected": "refused",
+      "elapsed_seconds": 0.0
+    },
+    {
+      "name": "helper_refuses_outside_output_before_write",
+      "observed": "refused",
+      "reason": "outputs must be inside this native-release territory",
+      "expected": "refused",
+      "elapsed_seconds": 0.0
+    }
+  ],
+  "scope": "actual helper calls using the frozen payload and in-memory negative variants; no Git mutation/publication/native tag or install created"
+}

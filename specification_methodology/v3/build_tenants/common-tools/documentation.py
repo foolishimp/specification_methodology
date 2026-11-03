@@ -10,7 +10,7 @@ from pathlib import Path
 import re
 import sys
 
-VERSION = "3.0.3"
+VERSION = "3.0.4"
 DOC_ROOT = "standards/documentation/"
 VIEWER_SHA256 = "ea40c989b1f933f52294b71dba972775c8d51d836ae5842fbc44f69648dd4eb6"
 MODEL_SHA256 = "691c4ab0d0993312a31e7e2371070ea4758fdf74b32862ff4d5a32d05af79fbf"

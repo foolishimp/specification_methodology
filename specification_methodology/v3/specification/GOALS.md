@@ -4,6 +4,17 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
+**STDO 3.0.4 is owner-approved for normal standalone release and push.**
+The [release selection](../.ai-workspace/work/STDO304_DELIVERY/SELECTION.md)
+binds reviewed source `4568edeeba415a877f1b9a4dd5ac9aeb404f6d7e`, native
+predecessor 3.0.3 and the unchanged builder. Release preparation updates only
+version-coherent distribution metadata/guidance and current status before
+bounded review. Exact tag, assets, atomic remote publication and fresh public
+installation remain to be executed. The owner accepts the stated scope with
+its retained runtime limits; this does not qualify additional actor paths.
+
+### Accepted review-flow source
+
 **The owner selects the review-flow amendment for the 3.0.4 candidate.**
 Its [contract](../.ai-workspace/work/STDO304_SKILLS/review-flow-001/CONTRACT.md),
 [requirements](requirements/REVIEW_FLOW.md) and
@@ -13,7 +24,8 @@ EVALUATION, EXECUTIVE_BASELINE and TICKETS, with exact owner projections into
 the five native skills and frames. The review ratio, an additional capture
 landing hold and specific Product gates remain unselected. Source implementation
 and independent source assessment are complete. The Executive records
-`candidate_ready`, with final Product/release decisions reserved. The
+`candidate_ready` for that assessment; the owner subsequently accepted the
+stated scope for release above. The
 [successor delta](../.ai-workspace/work/STDO304_SKILLS/review-flow-001/SOURCE_DELTA_02.json)
 binds the later 1 highest–5 lowest severity convention, severity-3 downstream
 assessment and narrow activation-readiness reminder. Material dependent impact
@@ -26,8 +38,8 @@ not an aggregate pass: two strict-envelope failures, separately verified R1
 recovery, a conditional R2 record and E1's unsupported authorization/grouping
 claim remain explicit. Source/candidate batching and family-independence limits
 withhold native independent-review qualification. No successor call ran. This
-is reviewed candidate meaning, not installed or released law; builder,
-publication and consumer adoption remain unchanged.
+is accepted source meaning awaiting publication; the builder and all consumer
+selections remain unchanged.
 
 ### Preceding coordinated-skills delivery
 
@@ -54,7 +66,7 @@ belongs to revision 4 with direct skill-file loading and declared harness
 dispatch/recording. Earlier failures and other unqualified modes remain recorded.
 That bounded delivery remains selected for 3.0.4 with its declared host,
 source-syntax and coverage limits. Release preparation/publication and consumer
-adoption remain separate; publication is unselected. That delivery changed no
+adoption remain separate; publication is now selected above. That delivery changed no
 standard law, installed basis or independent Skills Product basis. Its review
 does not qualify the later review-flow amendment above.
 

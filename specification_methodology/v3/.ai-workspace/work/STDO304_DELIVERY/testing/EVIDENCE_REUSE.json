@@ -1,0 +1,213 @@
+{
+  "source_delta_sha256": "558564a8e0f4e1d20290ed3df986ba2b3e7b9daab539a3514df99be2570fed49",
+  "compared_prior_payload": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review-flow-001/testing/checks-02/INPUT_PINS_AFTER.json",
+    "bytes": 24384,
+    "sha256": "930645fda3a0baa220e0d9b0a7f4ffad0078b2cfc6a724925113924894528ba1"
+  },
+  "unchanged_payload_count": 100,
+  "changed_payload": [
+    {
+      "path": "plugins/spec/.claude-plugin/plugin.json",
+      "sha256": "884b3fc6a02e334fb1aad84053ff56cbbf530240b0c30694059c71404f6e5783",
+      "prior_sha256": "fdde5c5f0e35c9d037829d65a0bf28f7fda67c0fcbcb809acee7dbd28d9b5c65"
+    },
+    {
+      "path": "plugins/spec/.codex-plugin/plugin.json",
+      "sha256": "fad5097996c8d0f3835c75966348e3c05b0b9bdbb484252f1b364089f1376f4d",
+      "prior_sha256": "43e6307276a317523439185dccc84165def3462ab1f8a1b41d1d715fd9c858a1"
+    },
+    {
+      "path": "plugins/spec/references/GETTING_STARTED.md",
+      "sha256": "6bdaf95e39e49e5bd36b869077a2d3c7e7cd49b1a85cf873de190e53a5b7059b",
+      "prior_sha256": "ba37f11e1dea7982ac2c7273f03ba1025dd84115db1eb5bf2d6133787b86bdd9"
+    },
+    {
+      "path": "release/release-note.md",
+      "sha256": "6bce4434eeff024eb7dc73d81c9f61040bfaa9c2cd95012fd046941f33c83bd7",
+      "prior_sha256": "34a97626764b88829dcd53386b349d3f2b233984686a7cf3f0300b79225c44a5"
+    },
+    {
+      "path": "standards/documentation/DOCUMENTATION.json",
+      "sha256": "cf45a95943dfd440080bc5217cbc663ac7fd4c48295a7dc7eb0e7c192a069069",
+      "prior_sha256": "ef5ff0a9f10bb7721d32f093206c74dacb1df91dacef16fd5e7b003fdd033e42"
+    },
+    {
+      "path": "standards/documentation/README.md",
+      "sha256": "fc216572f6556d492046948064255675d9372c3ac375db31af023a94b924f534",
+      "prior_sha256": "a8353408cd3bb61cc1af4c6c2f94d7fd3b0943df5e85d8bc8d7ab5354fde46a0"
+    },
+    {
+      "path": "standards/documentation/index.html",
+      "sha256": "ca9766a3f60c8eeee322757935ed55d316babf825234611d3ca584fa187e5dca",
+      "prior_sha256": "4ca5db03783fb8d467f3a91d57613827c214097ad3e2f764953b7c6670e8719d"
+    },
+    {
+      "path": "standards/tooling/README.md",
+      "sha256": "defdd575a6c1b02f13b46c15d2453e2ad3fa4eda034d2981233d88831ab6654a",
+      "prior_sha256": "0ba22a9437e43d4b7f6d544cab35d778b1406dec88f0a345e47f1fd64322add6"
+    },
+    {
+      "path": "standards/tooling/TOOLING.json",
+      "sha256": "53a2453422c5c385755d5f230d495c836120dbbf0fc07ba8969bf84d450c1352",
+      "prior_sha256": "88bf8fd9ed0d91f1ae903b17498acd37b662b95f11625c5c5c2812e2cd5d4980"
+    },
+    {
+      "path": "standards/tooling/materialize.py",
+      "sha256": "1a4068b5ff9568f1a7a964534e18bbff06398db2184bb59b9ede3f77f3ff4d8d",
+      "prior_sha256": "1618537d414f195a08bbbe8cd0148b265158574e0fe31a985eb2799cfe21ad4e"
+    }
+  ],
+  "reuse": {
+    "reader_gate_35_tests": {
+      "receipt": {
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/testing/final_checks/FULL_HELPER_SUITE.json",
+        "bytes": 5940,
+        "sha256": "478e5e135a0f020f7d7e8246dd22c55055e04426f4d10de62d69c3a45d257ce9"
+      },
+      "exact_code_and_test_inputs": [
+        {
+          "path": "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+          "bytes": 11572,
+          "sha256": "df7730a1f661a8be7a3144feff474f83197987ebfd1cce4063aa9c5504e75c41"
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/claude_tool_gate.py",
+          "bytes": 6300,
+          "sha256": "d36b78356f4cc7ae47556fccf703332c7581bc970aeb1a61a486f7a058cc3574"
+        },
+        {
+          "path": "specification_methodology/v3/build_tenants/common-tools/test_skill_source_reader.py",
+          "bytes": 27239,
+          "sha256": "b2bc411ff716de57222aed64969bcaca6d2670d1325a45e4f061d8087f31d2fa"
+        }
+      ],
+      "standing": "prior executed test result reused; not rerun in release preparation"
+    },
+    "frames_13": {
+      "receipt": {
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review-flow-001/testing/checks-02/FRAMES.json",
+        "bytes": 376,
+        "sha256": "0a297be01d118bc295c720cb1d18c52bb46d841c174bed5b35d76f2ef3d66bd5"
+      },
+      "generator": {
+        "path": "specification_methodology/v3/.ai-workspace/common-build/frame-tools/generate_frames.py",
+        "bytes": 33921,
+        "sha256": "d114f3352063cbfbbe179aa5a395a745b03c3319173b8d63b55935ef04b1fc48"
+      },
+      "generator_equals_prior_input_commit": "8a756806c7ec5063ad7afbaff50d837882a33f12",
+      "frame_count": 13,
+      "exact_owner_manifest_output_paths": [
+        "standards/ACTIVATION.md",
+        "standards/ASSURANCE.md",
+        "standards/AXIOMATIC_CALCULUS.md",
+        "standards/CONFORMANCE.md",
+        "standards/DESIGN_MODULE.md",
+        "standards/EVALUATION.md",
+        "standards/EXECUTIVE_BASELINE.md",
+        "standards/FOUNDATIONS.md",
+        "standards/PRODUCT_DEFINITION.md",
+        "standards/REFERENCE_FRAME.md",
+        "standards/RELEASE.md",
+        "standards/SPEC_METHOD.md",
+        "standards/TICKETS.md",
+        "standards/TRAVERSAL_OCCURRENCE.md",
+        "standards/frames/FRAME_INPUTS.json",
+        "standards/frames/ac-task-a.md",
+        "standards/frames/acceptance-release.md",
+        "standards/frames/binding.md",
+        "standards/frames/bootstrap.md",
+        "standards/frames/configuration.md",
+        "standards/frames/dm-task-d.md",
+        "standards/frames/eb-task-d.md",
+        "standards/frames/member-build-assess.md",
+        "standards/frames/product-composition.md",
+        "standards/frames/rf-task-a.md",
+        "standards/frames/rf-task-b.md",
+        "standards/frames/stale-summary.md",
+        "standards/frames/traversal-task-f.md"
+      ],
+      "standing": "prior reproduction reused on unchanged source/generator/frame inputs and outputs"
+    },
+    "five_skill_validation": {
+      "validator_sha256": "ee6dba90f44d37171c5a6edb8095979c54919ff6822c1a907afca2e78c48738c",
+      "records": [
+        {
+          "skill": {
+            "path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-work/SKILL.md",
+            "bytes": 13369,
+            "sha256": "9dc06e03fd6f64483fa485ed55f35e414fefae472bb69aa930ecef9335585b35"
+          },
+          "receipt": {
+            "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review-flow-001/testing/checks-02/stdo-work.json",
+            "bytes": 334,
+            "sha256": "7ea5fb491697720786ab37f6f27755ada5d426c5f83076425602cdba30aca3a3"
+          }
+        },
+        {
+          "skill": {
+            "path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-review/SKILL.md",
+            "bytes": 8074,
+            "sha256": "b90b3a2014d7891e25b40c11e5f3638accb9f3408cb3f0cf3922d26f17bc57df"
+          },
+          "receipt": {
+            "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review-flow-001/testing/checks-02/stdo-review.json",
+            "bytes": 336,
+            "sha256": "b9e993cc65b28b11f1216eb879b54092868233dbc940cf1fffa866277e854b11"
+          }
+        },
+        {
+          "skill": {
+            "path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-status/SKILL.md",
+            "bytes": 6315,
+            "sha256": "23122f6bf8e78d6167fc0e45d24f17421459172ddc41e8ccb6b35a4873b29407"
+          },
+          "receipt": {
+            "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review-flow-001/testing/checks-02/stdo-status.json",
+            "bytes": 336,
+            "sha256": "37d12bf77e0bbf1907731cfb3e10a7f29ba2cf2292be127aa335541a17986095"
+          }
+        },
+        {
+          "skill": {
+            "path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-ticket/SKILL.md",
+            "bytes": 7866,
+            "sha256": "c37e615dbf280ef5a134f604932f5e709c5012968d73ae9362eb47dbab65719b"
+          },
+          "receipt": {
+            "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review-flow-001/testing/checks-02/stdo-ticket.json",
+            "bytes": 336,
+            "sha256": "99165e76551031331afd485410caab4f5be45729179c97e5a37fd40b4b45788a"
+          }
+        },
+        {
+          "skill": {
+            "path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-help/SKILL.md",
+            "bytes": 5226,
+            "sha256": "8a488add6bbba99dae6173adfcef4f949df264624620f52adb15e20b5144f931"
+          },
+          "receipt": {
+            "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review-flow-001/testing/checks-02/stdo-help.json",
+            "bytes": 334,
+            "sha256": "8814caaf39fcfe94adf516ba3eb8e78abb867490c3b396edec7865d58b8572b7"
+          }
+        }
+      ],
+      "standing": "prior validation reused on unchanged skill bodies and validator; changed Getting Started routes are covered by final package check"
+    }
+  },
+  "writer_preflight": {
+    "checks": {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/preparation-001/CHECKS.json",
+      "bytes": 7098,
+      "sha256": "246819f1b76888cb5371699dabf10c882daa1ee259fdf8095359784f243505c9"
+    },
+    "package": {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/preparation-001/package-report.json",
+      "bytes": 4468,
+      "sha256": "8c97db076d414715f3bc53243be06c5e398c7655becc5af6a10b3bca5e0d9aaa"
+    },
+    "standing": "Writer-executed package/docs/tooling preflight consumed; not claimed as tester-executed"
+  },
+  "native_limit": "No new native model sessions. Prior live revision4 direct skill-file loading after denied Skill calls, later replay-only source revisions and declared harness dispatch/recording remain distinct. Original review-flow three calls remain on first candidate; source-first/family independence was not established, R1/E1 strict transport failed, R1 had separate lossless recovery, E1 dispatched nothing."
+}

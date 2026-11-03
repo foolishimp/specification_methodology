@@ -14,27 +14,27 @@ from pathlib import Path, PurePosixPath
 
 HERE = Path(__file__).resolve().parent
 # Moving implementation does not widen the established release-output territory.
-BASE = HERE.parents[1] / ".ai-workspace/work/STDO303_DELIVERY/native-release"
+BASE = HERE.parents[1] / ".ai-workspace/work/STDO304_DELIVERY/native-release"
 
 
 def documentation_tools(name="documentation.py"):
     """Acquire registered construction tools only; no work-record dependency."""
     path = HERE / name
     try:
-        spec = importlib.util.spec_from_file_location("stdo303_documentation", path)
+        spec = importlib.util.spec_from_file_location("stdo304_documentation", path)
         module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(module)
         return module
     except (OSError, ImportError) as exc:
         raise ValueError("required documentation tool unavailable: " + str(exc)) from exc
-CUT = "v3.0.3"
+CUT = "v3.0.4"
 PREFIX = "specification_methodology/v3"
 NAMESPACE = "specification_methodology"
 TAG = f"refs/tags/{NAMESPACE}/{CUT}"
 PROFILE = "stable-v1"
-VERSION = "3.0.3"
+VERSION = "3.0.4"
 MANAGER_WHEEL = "stdo_toolchain-0.1.6-py3-none-any.whl"
-PREDECESSOR = "23ca9c0929d7be8570edafaf30542e3daeb8dc1f"
+PREDECESSOR = "07bdb34a2d472a3b5e678f60584fd02b24a388f4"
 REMOTE = "https://github.com/foolishimp/specification_methodology.git"
 MANIFEST_NAME = f"stdo-{CUT}-manifest.json"
 STANDING = "standalone_stable_release_preparation"
@@ -177,7 +177,7 @@ def prepare(args):
     require(not run.exists(), "preserve existing run")
     commit(args.repo, PREDECESSOR)
     tree, rows = source_inventory(args.repo, args.source_commit, args.source_path)
-    value = {"kind": "stdo303.native-preparation/1", "cut": CUT, "standing": STANDING,
+    value = {"kind": "stdo304.native-preparation/1", "cut": CUT, "standing": STANDING,
              "source_candidate": {"commit": args.source_commit, "package_path": args.source_path, "package_tree": tree},
              "native_parent": PREDECESSOR, "files": rows, "file_count": len(rows),
              "total_bytes": sum(row["bytes"] for row in rows), "inventory_sha256": inventory_digest(rows)}
@@ -227,7 +227,7 @@ def native_facts(repo, native_commit, source):
 def attest(args):
     run, source = load_source(args)
     native = native_facts(args.repo, args.native_commit, source)
-    return save_json(run / "native.json", {"kind": "stdo303.native-identity/1", "source_sha256": args.source_sha256, "native": native, "standing": STANDING})
+    return save_json(run / "native.json", {"kind": "stdo304.native-identity/1", "source_sha256": args.source_sha256, "native": native, "standing": STANDING})
 
 
 def expected_manifest(source, native):
@@ -242,7 +242,7 @@ def expected_manifest(source, native):
             "standards": {"source_root": "specification/standards", "installed_root": "standards", "member_count": len(standards), "member_set_sha256": digest, "members": standards},
             "auxiliary": {"plugin": {"source_root": "plugins/spec", "installed_root": "plugins/spec", "member_count": len(plugins), "members": plugins},
                           "license": {"path": "LICENSE", "sha256": by_path["LICENSE"]["sha256"]},
-                          "release_note": {"source_path": "releases/v3.0.3.md", "installed_path": "release/release-note.md", "sha256": by_path["release/release-note.md"]["sha256"]}}}
+                          "release_note": {"source_path": "releases/v3.0.4.md", "installed_path": "release/release-note.md", "sha256": by_path["release/release-note.md"]["sha256"]}}}
 
 
 def seal(args):
@@ -258,9 +258,9 @@ def seal(args):
     digest = sha(raw)
     require(report["manifest_sha256"] == digest, "manager manifest digest differs from canonical bytes")
     asset = run / MANIFEST_NAME
-    require(asset.is_relative_to(Path(args.repo).resolve()), "use the 303 worktree as --repo so manifest_path is repository-relative")
+    require(asset.is_relative_to(Path(args.repo).resolve()), "use the 304 worktree as --repo so manifest_path is repository-relative")
     native.update(manifest_sha256=digest, manifest_path=asset.relative_to(Path(args.repo).resolve()).as_posix())
-    selection = {"kind": "a_c.stdo303.native-source-selection/1", "source_candidate": source["source_candidate"],
+    selection = {"kind": "a_c.stdo304.native-source-selection/1", "source_candidate": source["source_candidate"],
                  "native": native, "subject_uri": "repo://stdo-v3-native/" + native["commit"],
                  "files": source["files"], "inventory_sha256": source["inventory_sha256"],
                  "file_count": source["file_count"], "total_bytes": source["total_bytes"], "standing": STANDING}
@@ -303,7 +303,7 @@ def installed(args):
     expected = {row["path"]: {"bytes": row["bytes"], "sha256": row["sha256"]} for row in selection["files"]}
     expected["manifest.json"] = {"bytes": len(manifest), "sha256": sha(manifest)}
     compare_files(disk_files(root), expected)
-    return save_json(run / ("installed-" + args.label + ".json"), {"kind": "stdo303.installed-byte-proof/1", "selection_sha256": args.selection_sha256,
+    return save_json(run / ("installed-" + args.label + ".json"), {"kind": "stdo304.installed-byte-proof/1", "selection_sha256": args.selection_sha256,
                      "commit": selection["native"]["commit"], "manifest_sha256": sha(manifest), "store": str(store),
                      "files": len(expected), "exact_payload_and_manifest": True, "standing": STANDING,
                      "limits": "Exact bytes and installer verification only; no semantic acceptance, task-use or adoption claim."})
@@ -331,7 +331,7 @@ def assets(args):
         path = run / "asset-checksums" / (row["name"] + ".sha256")
         save(path, sidecar)
         rows.append({"name": path.name, "path": str(path), "bytes": len(sidecar), "sha256": sha(sidecar)})
-    return save_json(run / "assets.json", {"kind": "stdo303.public-assets/1", "cut": CUT, "selection_sha256": args.selection_sha256, "files": sorted(rows, key=lambda r: r["name"])})
+    return save_json(run / "assets.json", {"kind": "stdo304.public-assets/1", "cut": CUT, "selection_sha256": args.selection_sha256, "files": sorted(rows, key=lambda r: r["name"])})
 
 
 def check_assets(args):
@@ -339,7 +339,7 @@ def check_assets(args):
     selected = read_json(run / "assets.json", args.assets_sha256)
     expected = {row["name"]: {"bytes": row["bytes"], "sha256": row["sha256"]} for row in selected["files"]}
     compare_files(disk_files(args.directory), expected)
-    return save_json(run / "public-download-proof.json", {"kind": "stdo303.public-download-proof/1", "assets_sha256": args.assets_sha256, "files": len(expected), "exact_downloads": True, "standing": STANDING})
+    return save_json(run / "public-download-proof.json", {"kind": "stdo304.public-download-proof/1", "assets_sha256": args.assets_sha256, "files": len(expected), "exact_downloads": True, "standing": STANDING})
 
 
 def remote_refs(repo):
@@ -395,7 +395,7 @@ def publication_plan(args):
     argv = ["git", "-C", str(Path(args.repo).resolve()), "push", "--atomic"]
     argv += [f"--force-with-lease={ref}:{expected[ref]}" for ref in sorted(sources)]
     argv += [REMOTE] + [f"{sources[ref]}:{ref}" for ref in sorted(sources)]
-    return save_json(run / "publication-plan.json", {"kind": "stdo303.atomic-publication-plan/1", "repository": REMOTE,
+    return save_json(run / "publication-plan.json", {"kind": "stdo304.atomic-publication-plan/1", "repository": REMOTE,
                      "selection_sha256": args.selection_sha256, "assets_sha256": args.assets_sha256, "native_commit": native["commit"], "sources": sources,
                      "expected_remote": expected, "remote_before": observed, "push_argv": argv,
                      "standing": "prepared_not_executed", "limits": "No publication authority or semantic acceptance is granted by this plan."})
@@ -413,7 +413,7 @@ def published(args):
     before_other = {k: v for k, v in plan["remote_before"].items() if k not in changed}
     after_other = {k: v for k, v in now.items() if k not in changed}
     require(before_other == after_other, "unrelated remote refs changed; reconcile and do not assert full preservation")
-    return save_json(run / "published-refs.json", {"kind": "stdo303.remote-ref-proof/1", "plan_sha256": args.plan_sha256,
+    return save_json(run / "published-refs.json", {"kind": "stdo304.remote-ref-proof/1", "plan_sha256": args.plan_sha256,
                      "remote": REMOTE, "refs": {ref: now[ref] for ref in sorted(changed)}, "unrelated_refs_preserved": True,
                      "standing": "published_stable_refs_verified"})
 

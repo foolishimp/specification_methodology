@@ -12,9 +12,9 @@ is not a runtime dependency.
 - `package_tools.py` is the single standalone package checker and materializer.
   Use its `--help` for explicit input/output operations. Existing trusted
   single-file launchers may select this file's digest before execution.
-- `native_release.py` prepares and checks exact STDO 3.0.3 native release
+- `native_release.py` prepares and checks exact STDO 3.0.4 native release
   records. It consumes sibling `documentation.py` and keeps output confined to
-  this source project's `STDO303_DELIVERY/native-release/` territory. It performs
+  this source project's `STDO304_DELIVERY/native-release/` territory. It performs
   no Git mutations, installations or publication. The required public assets
   are the native manifest and manager wheel; extra explicitly selected assets
   are optional.

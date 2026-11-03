@@ -82,7 +82,7 @@ class DocumentationTests(unittest.TestCase):
         original = self.payload[path]
         mutations = [
             original.replace(b'../../../standards/documentation/', b'../../standards/documentation/'),
-            original.replace(b'stdo://releases/v3.0.3/standards/documentation/index.html',
+            original.replace(f'stdo://releases/v{docs.VERSION}/standards/documentation/index.html'.encode(),
                              b'stdo://releases/v3.0.2/standards/documentation/index.html'),
             b'documentation/index.html standards/documentation/index.html\n',
             b'```md\n' + original + b'\n```\n',
@@ -90,7 +90,7 @@ class DocumentationTests(unittest.TestCase):
         ]
         destinations = [b'../../../standards/documentation/' + name.encode()
                         for name in ('index.html', 'README.md', 'constraint-explorer/index.html')]
-        command = b'\nstdo resolve stdo://releases/v3.0.3/standards/documentation/index.html\n'
+        command = f'\nstdo resolve stdo://releases/v{docs.VERSION}/standards/documentation/index.html\n'.encode()
         mutations += [b'\n'.join(b'[unused]: ' + dest for dest in destinations) + command,
                       b'\n'.join(b'![image](' + dest + b')' for dest in destinations) + command]
         for index, content in enumerate(mutations):

@@ -1,4 +1,4 @@
-# STDO 3.0.3 tools
+# STDO 3.0.4 tools
 
 This installation includes a pinned source snapshot of a_c's representation,
 code-overlay and Lean tenants, plus the Codex and Claude Skills packages. The
@@ -15,7 +15,7 @@ The constraints, ABI code example and Lean proof reader need no tool setup.
 First resolve the immutable installed directory using the ordinary manager:
 
 ```sh
-stdo resolve stdo://releases/v3.0.3/standards/tooling/materialize.py
+stdo resolve stdo://releases/v3.0.4/standards/tooling/materialize.py
 ```
 
 Use the returned absolute `path`. Python 3.11 or later is required. Replace the
@@ -100,7 +100,7 @@ The extracted `stdo_skills/build_tenants/codex/README.md` and
 installation. Both packages and their provider contract pins are included;
 the running coding host and nominated project's selected methodology remain
 external. Their original static construction basis is STDO 3.0.1 RC1, not an
-automatic adoption of the distributing 3.0.3 release. The provider was built
+automatic adoption of the distributing 3.0.4 release. The provider was built
 under 2.5.1 RC2. This distribution does not migrate either basis.
 
 The archive preserves source tests and design records as reference material.

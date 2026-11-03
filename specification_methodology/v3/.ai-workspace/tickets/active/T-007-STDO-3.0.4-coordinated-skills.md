@@ -1,10 +1,17 @@
 # T-007 Coordinated skills for STDO 3.0.4
 
-Status: **review-flow source `candidate_ready`, source review satisfied; mixed
-native qualification retained; prior bounded implementation accepted**.
+Status: **owner-approved for 3.0.4 release; preparation selected, publication
+pending; source review satisfied and mixed native qualification retained**.
 Owner: Jim. Target distribution: STDO 3.0.4.
 
-## Current review-flow selection
+## Current release selection
+
+The owner approved this reviewed scope as an actual release and instructed
+“tag and push it”. The [standalone release selection](../../work/STDO304_DELIVERY/SELECTION.md)
+continues 3.0.3 with exact version metadata, release checks and public readback.
+No new native qualification campaign or consumer migration is selected.
+
+## Accepted review-flow source
 
 The owner adds the Executive/Reviewer changes shown in IMG_3377–3379 to the
 current 3.0.4 work. The [bounded contract](../../work/STDO304_SKILLS/review-flow-001/CONTRACT.md)
@@ -13,9 +20,9 @@ the approved A+B+C meaning and preserve D's unsettled policy choices. Candidate
 method owners change through requirement/design re-entry; installed releases,
 the independent Skills Product and all earlier evidence retain their identity.
 The [independent source review](../../work/STDO304_SKILLS/review-flow-001/review/FINAL_REVIEW.md)
-is closed with no current actionable source finding. The Executive selects one
-local checkpoint for this task; publication, installation, version stamping and
-consumer-basis operations remain unselected.
+is closed with no current actionable source finding. The source was locally
+checkpointed before the subsequent release selection above. Shared installation
+and consumer-basis operations remain unselected.
 
 The later [severity steering](../../work/STDO304_SKILLS/review-flow-001/SEVERITY_STEERING.md)
 selects 1 highest–5 lowest and explicit downstream/blast-radius assessment for
@@ -27,8 +34,7 @@ for repair; local containment permits a reasoned, owned deferral. Its
 original calls, two strict-envelope failures, separately verified R1 recovery,
 the conditional R2 record and unsupported E1 authorization/grouping. Batching
 and family-independence limits remain; no successor native call ran. This is
-reviewed candidate meaning, not installed or released law or final Product
-acceptance.
+accepted source meaning with the recorded limits; publication remains pending.
 
 ## Prior delivery and accepted repair
 
@@ -47,7 +53,7 @@ defect. Inclusion in 3.0.4 retains the recorded limits and publishes no release.
 of 3.0.4”. The [execution contract](../../work/STDO304_SKILLS/CONTRACT.md)
 binds that exact instruction, starting checkpoint, builder, actors, territory,
 stops and result surface. This is implementation and assessment of the five
-native plugin skills; publication remains unselected.
+native plugin skills; the later owner instruction selects publication above.
 
 ## Selected change
 

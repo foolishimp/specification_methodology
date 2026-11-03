@@ -1,4 +1,4 @@
-# STDO 3.0.3 documentation
+# STDO 3.0.4 documentation
 
 Open the [documentation home](index.html), then choose:
 
@@ -9,7 +9,7 @@ Open the [documentation home](index.html), then choose:
 - [Use the tools](../tooling/README.md): create a writable copy to build your own.
 
 All three readers open in a browser.
-These files are installed with STDO 3.0.3; no additional download or
+These files are installed with STDO 3.0.4; no additional download or
 Graphify, Lean, a_c or Node installation is needed to read them.
 
 ## Open an installed copy
@@ -17,7 +17,7 @@ Graphify, Lean, a_c or Node installation is needed to read them.
 The ordinary manager resolves the local file:
 
 ```sh
-stdo resolve stdo://releases/v3.0.3/standards/documentation/index.html
+stdo resolve stdo://releases/v3.0.4/standards/documentation/index.html
 ```
 
 Open the returned `path` in a desktop browser. The file and its explorer work
@@ -58,11 +58,11 @@ code overlay. The [proof catalog](proofs/PROOFS.json) binds its sources.
 
 ## Represented source and current method
 
-**Distributed with STDO 3.0.3; represented source: historical common cut
+**Distributed with STDO 3.0.4; represented source: historical common cut
 35fb4824.** This preserves the T-014 representation and source data
 with the current unified reader. It contains 1,987 local records (841 constraints), 1,021 external
 resolutions and 58 embedded source files. It is not a source-matched map of
-the 3.0.3 standards and has not acquired that authority by being bundled.
+the 3.0.4 standards and has not acquired that authority by being bundled.
 
 Use the [installed current method](../README.md) and
 [Getting Started](../../plugins/spec/references/GETTING_STARTED.md) for current

@@ -1,0 +1,64 @@
+[
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "-I",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/package_tools.py",
+      "freeze",
+      "--root",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common",
+      "--inventory",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/preparation-001/payload-inventory.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"inventory\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/preparation-001/payload-inventory.json\", \"inventory_sha256\": \"29ff2e1433d25e1706bd1c4a1d95199382523be2778b7ab6aa1d1c4f310255f3\", \"member_count\": 110, \"standing\": \"identity capture, not validation or acceptance\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "-I",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/package_tools.py",
+      "check",
+      "--root",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common",
+      "--inventory",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/preparation-001/payload-inventory.json",
+      "--inventory-sha256",
+      "29ff2e1433d25e1706bd1c4a1d95199382523be2778b7ab6aa1d1c4f310255f3",
+      "--report",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/preparation-001/package-report.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"failures\": [], \"advisory_signals\": [{\"path\": \"plugins/spec/references/GETTING_STARTED.md\", \"line\": 700, \"pattern\": \"complete Product view\", \"text\": \"uncertainty. Executive combines that evidence with the complete Product view\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/EXECUTIVE_BASELINE.md\", \"line\": 379, \"pattern\": \"complete Product view\", \"text\": \"complete Product view and the current MVP or release mandate needed to\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/EXECUTIVE_BASELINE.md\", \"line\": 1358, \"pattern\": \"complete Product view\", \"text\": \"current subject and basis, revalidates the complete Product view and the\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/EXECUTIVE_BASELINE.md\", \"line\": 1967, \"pattern\": \"complete Product view\", \"text\": \"against the complete Product view and the current MVP or release\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/ODD.md\", \"line\": 14, \"pattern\": \"result algebra is\", \"text\": \"the core result algebra is [FOUNDATIONS \u00a74 Results](FOUNDATIONS.md#results).\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/TRAVERSAL_OCCURRENCE.md\", \"line\": 15, \"pattern\": \"result algebra is\", \"text\": \"core result algebra is [FOUNDATIONS \u00a74 Results](FOUNDATIONS.md#results),\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/UX.md\", \"line\": 16, \"pattern\": \"result algebra is\", \"text\": \"again: the core result algebra is\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/frames/eb-task-d.md\", \"line\": 67, \"pattern\": \"complete Product view\", \"text\": \"complete Product view and the current MVP or release mandate needed to\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}, {\"path\": \"standards/frames/eb-task-d.md\", \"line\": 726, \"pattern\": \"complete Product view\", \"text\": \"current subject and basis, revalidates the complete Product view and the\", \"context\": \"visible_text\", \"standing\": \"advisory search signal; requires semantic review\"}], \"parsed_json_count\": 11, \"checked_local_reference_count\": 6130, \"external_or_template_references\": [{\"path\": \"plugins/spec/references/GETTING_STARTED.md\", \"location\": \"line 452\", \"target\": \"https://developers.openai.com/plugins/build/plugins\"}, {\"path\": \"plugins/spec/references/HOST_BINDING.md\", \"location\": \"line 92\", \"target\": \"https://code.claude.com/docs/en/hooks\"}, {\"path\": \"plugins/spec/references/HOST_BINDING.md\", \"location\": \"line 93\", \"target\": \"https://code.claude.com/docs/en/cli-reference\"}, {\"path\": \"plugins/spec/references/HOST_BINDING.md\", \"location\": \"line 94\", \"target\": \"https://code.claude.com/docs/en/memory\"}], \"reference_scope\": \"Markdown inline/reference/HTML links outside code examples; JSON $ref, explicit standards/plugins routes and non-template path-shaped fields. Prose and generated-project paths require review.\", \"kind\": \"stdo.common-package-check\", \"publication_policy\": \"standalone-v3-publication-1\", \"package_root\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common\", \"inventory_sha256\": \"29ff2e1433d25e1706bd1c4a1d95199382523be2778b7ab6aa1d1c4f310255f3\", \"member_count\": 110, \"empty_directories\": [], \"checker_sha256\": \"c4efb97adeb071a9d2750ebd4bcb69240f8cd09c6ebed2373bf405f61c30a921\", \"checker_authentication\": \"not attested by this invocation; use the pinned inline launcher\", \"project_helpers\": [], \"valid\": true, \"standing\": \"mechanical package checks only; no semantic qualification, acceptance or installation\"}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "-I",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/documentation.py",
+      "check",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"checked\",\n  \"version\": \"3.0.4\",\n  \"members\": 16,\n  \"viewer_sha256\": \"ea40c989b1f933f52294b71dba972775c8d51d836ae5842fbc44f69648dd4eb6\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "argv": [
+      "python3",
+      "-B",
+      "-I",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/tooling.py",
+      "check",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"checked\",\n  \"source_files\": 191,\n  \"source_commit\": \"9c9626ffd20ea88a75ac8143802c13f4f828ec1c\",\n  \"archive_sha256\": \"172eeb57040004365671372294e5c2a42833a0f574224fb66c57cf5a30c5d4e0\"\n}\n",
+    "stderr": ""
+  }
+]

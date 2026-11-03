@@ -1,68 +1,89 @@
-# STDO 3.0.3
+# STDO 3.0.4
 
-STDO 3.0.3 uses the standalone native `stable-v1` release profile. Its immutable
-annotated tag is `specification_methodology/v3.0.3` and its logical cut is
-`stdo://releases/v3.0.3/`. The native predecessor is published STDO 3.0.2,
-commit `23ca9c0929d7be8570edafaf30542e3daeb8dc1f`. The published manifest binds
-the actual tag, commit, trees and complete installed member inventory.
+STDO 3.0.4 is the standalone native `stable-v1` release. Its immutable tag is
+`specification_methodology/v3.0.4` and logical cut is
+`stdo://releases/v3.0.4/`. It continues published STDO 3.0.3, native commit
+`07bdb34a2d472a3b5e678f60584fd02b24a388f4`. The published manifest binds the
+actual tag, commit, trees and installed inventory. This is a normal release,
+not a prerelease; existing releases and consumer selections remain unchanged.
 
-Start with the [method entry](../standards/README.md),
-[installed documentation](../standards/documentation/index.html), or
-[installation guidance](../plugins/spec/references/GETTING_STARTED.md#new-project).
-The native package carries the method, distributed `spec` plugin and offline
-interactive documentation and exact a_c/Skills source tools. The separately distributed manager wheel supplies
-installation; reading the documentation needs only a browser. The [licence](../LICENSE)
-applies, with the explorer's upstream license notices embedded in its HTML.
+## Use the release
 
-## Installed documentation
+Follow [installation guidance](../plugins/spec/references/GETTING_STARTED.md#new-project)
+to install and verify the exact cut using the separately distributed manager
+wheel and manifest. Then use [the five native skills](../plugins/spec/references/GETTING_STARTED.md#install-the-shared-skills):
+`stdo-work`, `stdo-review`, `stdo-status`, `stdo-ticket` and `stdo-help`.
+The guide locates the installed `plugins/spec/` root, gives direct Claude
+loading, direct Codex file use and optional local Codex registration, and
+requires the actual loaded copy to match the installed inventory.
 
-The [constraint explorer](../standards/documentation/constraint-explorer/index.html)
-is part of the ordinary release payload. Every complete installation receives
-its 3D/2D/Layered views, Files navigation, full constraint reader, exact reading
-trail, recorded source quotations and embedded source files. The modes retain
-the same selected information; Layered works without WebGL. No separate supplement download or
-Graphify, Lean, a_c or Node installation is needed to review it. The installed
-README and Getting Started guide expose its entry and logical URI.
+For example: “Use stdo-work for this admitted task under this Product's exact
+basis.” For coordination, identify the admitted carrier and unit to issue;
+for review, identify the frozen subject and assessment boundary. The skills
+preserve direct small tasks and do not automatically create tickets or actors.
+They follow the Product's selected basis, not a basis inferred from their
+version number. Installation does not migrate that Product.
 
-This is a tooling and documentation distribution increment over 3.0.2. It changes no
-constitutional method rule. The included graph preserves the reviewed common
-35fb4824 proposal: 1,987 local records, including 841 constraints. It is
-historical explanatory documentation, not a source-matched representation of
-all current 3.0.3 law. Use the current installed standards for current method
-decisions. The [documentation inventory](../standards/documentation/DOCUMENTATION.json)
-binds the distributing release, represented source and exact viewer bytes.
+## Changes from 3.0.3
 
-## Evidence and boundaries
+The native skills share a reference-based issuing, receiving and return path.
+They bind the actor's own control grant before dependent acquisition, preserve
+existing permissions and stop conditions, and distinguish a prepared packet
+from an executed activation. Compact verified source reading and an opt-in
+Claude exact-call policy adapter support declared host bindings; neither is
+an admission authority, general orchestration engine or OS sandbox.
 
-The native manifest includes the documentation members and their digests.
-Release qualification checks the actual installed bytes, logical resolution,
-source-independent offline payload access and tamper detection. A valid staging directory
-alone does not establish an installed or published result; the release record
-binds final qualification to the published cut.
+Review is QA with distinct landing, work closure and Product release decisions.
+Linked findings, bounded repair/recheck, dependency invalidation and explicit
+Product acceptance gates preserve their separate owners. A repair test may
+supply the required evidence when independent reassessment is not triggered.
 
-The reader preserves the distinction between authored semantic relations,
-required retention links and other typed references. Links and layout do not
-assert logical implication. The existing Lean proofs of closure and retained
-record projection do not prove the prose constraints or complete the remaining
-whole-method representation and practical-qualification obligations.
+The selected review flow grades severity **1 highest to 5 lowest**, separately
+from Executive priority and disposition. Severity 3 needs an explicit downstream
+impact assessment: material dependent impact normally calls for repair;
+contained local impact may be deferred with a reason and owner. Hard stops and
+mandatory claims still govern closure. Alternate selected scales keep their
+identity; historical findings are not renumbered. No universal review ratio or
+additional Product gate is invented.
 
-The documentation distribution does not adopt another basis for an existing
-consumer or make a_c a runtime dependency of STDO. Other installed cuts, prior
-immutable tags and the historical v2 matched cohort remain unchanged.
+The bounded Markdown source reader now preserves LF/CRLF/CR line coordinates
+and original section bytes, uses ASCII space/tab boundaries for fences and ATX
+headings, and correctly handles empty closing-hash headings. Unsupported HTML
+and ambiguous containers are refused. This is a closed selector domain, not a
+general Markdown parser.
 
-## Included tools and examples
+## Evidence and limits
 
-The shared documentation home now includes the exact reviewed ABI code explorer
-and a [Lean proof reader](../standards/documentation/proofs/index.html) with
-retained source-bound T-011 evidence. Neither implies ABI test execution or a
-fresh Lean result.
+The owner accepted the reviewed source at `4568edeeba415a877f1b9a4dd5ac9aeb404f6d7e`
+for release. Release preparation adds version-coherent metadata and usage notes;
+the final immutable manifest binds the resulting payload. The Unicode/ATX
+repair passed 35 helper tests, independent CLI controls and exact retained-input
+replays. The source amendment's 13 frames, five skills and package checks pass.
+These are bounded results, not whole-method or all-host qualification.
 
-The [tooling guide](../standards/tooling/README.md) exposes the manifest-bound
-a_c Graphify/Lean and Codex/Claude Skills source bundle, exact inventory and
-stdlib verifier/materializer. The user explicitly creates a separate writable
-workspace; runtime dependencies, support, caches and evidence are not written
-under the immutable release. No separate supplemental download is needed for
-these selected sources. Optional Graphify and Lean execution require their
-declared dependencies. Exact compiled Lean support and fresh-machine proof
-execution are not included. The existing source contracts and construction
-bases remain unchanged.
+The three review-flow source-use trials remain mixed: two strict-return format
+failures, a separately verified R1 recovery, an R2 conditional record and E1's
+unsupported authorization/grouping claim. No dispatch followed that claim and
+no successor actor trial was run. Earlier guarded handoff evidence belongs to
+its exact revision-4 subject with direct file loading and declared harness
+relay/recording. Other modes, full independent-review operation, broad host
+portability and practical improvement remain unqualified. Publishing the
+accepted scope does not erase those limits or convert historical failures into
+passes. The release's integrity and public installation are checked separately.
+
+## Documentation and separate tooling sources
+
+The [documentation home](../standards/documentation/index.html) retains the
+3D/2D/Layered constraint explorer, ABI code example and Lean proof reader.
+The constraint representation still describes historical common source
+35fb4824; it is not a complete source-matched graph of 3.0.4 law. The proof
+reader retains source-bound historical evidence, not a fresh Lean result or
+proof of the prose. Use the installed owners for current methodology decisions.
+
+The [tooling guide](../standards/tooling/README.md) retains the exact 191-file
+a_c/independent Skills source archive from 3.0.3. Those sources are distinct from
+the five native skills above and retain their own Product bases and contracts.
+Their versioned wrappers create an explicit writable workspace; optional
+Graphify/Lean runtime dependencies are selected separately. No supplemental
+archive is required for the included tools or offline readers. The
+[licence](../LICENSE) and embedded upstream notices continue to apply.

@@ -14,7 +14,15 @@ Under the [standalone successor requirement](requirements/README.md#standalone-s
 
 Each rule has one owning section, under [Method Structure](#method-structure) and the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
-The selected distribution increment is STDO 3.0.3, including
+The selected distribution increment is STDO 3.0.4 under the owner's
+[release selection](../.ai-workspace/work/STDO304_DELIVERY/SELECTION.md).
+It adds the reviewed [coordinated skills](requirements/COORDINATED_SKILLS.md),
+[review-flow amendment](requirements/REVIEW_FLOW.md) and bounded reader repairs
+to the published 3.0.3 payload. Release integrity is checked separately from the
+retained, limited native workflow qualification. Consumer selections and the
+independently owned a_c/Skills source bundle remain unchanged.
+
+The preceding 3.0.3 distribution introduced
 [installed interactive documentation](requirements/INSTALLED_DOCUMENTATION.md)
 under [T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md).
 The constraint explorer is a required documentation asset. Packaging preserves

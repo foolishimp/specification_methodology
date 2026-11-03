@@ -2,7 +2,15 @@
 
 This source project constructs the next major release of Specification Methodology. One common specification governs the independent Codex and Claude realisations under `build_tenants/`. The installed STDO 2.5.1 RC2 release governs construction; the existing 2.* source and released products remain separate.
 
-**STDO 3.0.4 review-flow source is a reviewed, ready candidate.**
+**The owner has accepted STDO 3.0.4 for a normal standalone release.**
+The [release selection](.ai-workspace/work/STDO304_DELIVERY/SELECTION.md)
+continues 3.0.3 under `stable-v1`, including the reviewed skills, source-reader
+repairs and review-flow amendment. Exact version metadata and public guidance
+are being prepared for bounded review, followed by the authorized tag and push.
+Publication and public-install readback have not yet occurred; native workflow
+limits remain disclosed.
+
+The 3.0.4 review-flow source is reviewed and accepted for that bounded release.
 The [new contract](.ai-workspace/work/STDO304_SKILLS/review-flow-001/CONTRACT.md)
 binds the owner's Executive/Reviewer screenshots: distinct landing, closure and
 release, bounded QA/recheck, linked findings and explicit Product gates. The
@@ -11,10 +19,11 @@ adds the owner's 1–5 severity convention and explicit severity-3 impact
 assessment: material dependent impact normally calls for repair; supported
 local deferral needs a reason and owner. The [source review](.ai-workspace/work/STDO304_SKILLS/review-flow-001/review/FINAL_REVIEW.md)
 is closed, with no current actionable source finding. The Executive records
-`candidate_ready`; final Product/release decisions remain separate. The three
+`candidate_ready` for that review subject; the owner has now accepted its
+disclosed scope for release. The three
 original native trials had mixed outcomes, including two strict-return failures
 and an unsupported authorization claim; no successor actor ran. This is reviewed
-candidate meaning, not installed or released law.
+source meaning; no installation or publication has occurred yet.
 
 The preceding coordinated-skills delivery is accepted for inclusion.
 [T-007](.ai-workspace/tickets/active/T-007-STDO-3.0.4-coordinated-skills.md)

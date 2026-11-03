@@ -15,7 +15,7 @@ import sys
 import unicodedata
 import zipfile
 
-VERSION = "3.0.3"
+VERSION = "3.0.4"
 SOURCE_COMMIT = "9c9626ffd20ea88a75ac8143802c13f4f828ec1c"
 MEMBERS = {"README.md", "TOOLING.json", "sources.zip", "materialize.py"}
 SOURCE_INVENTORY_SHA256 = "15b0dd94626158f282c7202413cfc580ca3451165fc4d62642ccf3fac9923c82"
