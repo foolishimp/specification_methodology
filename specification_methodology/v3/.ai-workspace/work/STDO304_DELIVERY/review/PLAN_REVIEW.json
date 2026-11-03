@@ -1,0 +1,39 @@
+{
+  "kind": "stdo304.release-review-plan/1",
+  "checked_utc": "2026-11-03T04:08:05.287621+00:00",
+  "plan_sha256": "9e82b9622af3cb56d20152689ef32fec133b6605ac9b11f2fc5701c598b5ca6b",
+  "source_A": "e8e3d1b06ccf8679e3e875f6e4a8592717e0c90a",
+  "carrier_B": "0f8b3acd37eff9fe5df678d1d5a03ecb0fb645eb",
+  "native_C": "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+  "tag_object": "e7bc3083bfb87ff6756a361cb14740dd9a9fedcd",
+  "carrier_preserves_payload_tree": true,
+  "literal_endpoint": "https://github.com/foolishimp/specification_methodology.git",
+  "exact_three_ref_sources": {
+    "refs/heads/main": "0f8b3acd37eff9fe5df678d1d5a03ecb0fb645eb",
+    "refs/heads/release/specification_methodology/3.0.4": "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+    "refs/tags/specification_methodology/v3.0.4": "e7bc3083bfb87ff6756a361cb14740dd9a9fedcd"
+  },
+  "expected_remote": {
+    "refs/heads/main": "eb9300a837de00daffe09fff91c6861885334eec",
+    "refs/heads/release/specification_methodology/3.0.4": "",
+    "refs/tags/specification_methodology/v3.0.4": ""
+  },
+  "exact_atomic_leased_argv": [
+    "git",
+    "-C",
+    "/Users/jim/src/apps/specification_methodology",
+    "push",
+    "--atomic",
+    "--force-with-lease=refs/heads/main:eb9300a837de00daffe09fff91c6861885334eec",
+    "--force-with-lease=refs/heads/release/specification_methodology/3.0.4:",
+    "--force-with-lease=refs/tags/specification_methodology/v3.0.4:",
+    "https://github.com/foolishimp/specification_methodology.git",
+    "0f8b3acd37eff9fe5df678d1d5a03ecb0fb645eb:refs/heads/main",
+    "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d:refs/heads/release/specification_methodology/3.0.4",
+    "e7bc3083bfb87ff6756a361cb14740dd9a9fedcd:refs/tags/specification_methodology/v3.0.4"
+  ],
+  "independent_live_remote_equals_plan": true,
+  "live_remote_ref_entries": 199,
+  "predecessor_tag_and_peel_unchanged": true,
+  "scope": "Read-only exact-plan assessment; no push executed by Reviewer."
+}
