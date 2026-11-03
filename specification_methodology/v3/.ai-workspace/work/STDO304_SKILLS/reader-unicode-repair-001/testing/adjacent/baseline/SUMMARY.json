@@ -1,0 +1,47 @@
+{
+  "specimens": 3,
+  "cli_calls": 9,
+  "passes": 3,
+  "failures": [
+    {
+      "case": "NBSP-after-empty-ATX-marker",
+      "selector": "One",
+      "status": "checked",
+      "reason": null
+    },
+    {
+      "case": "NBSP-after-empty-ATX-marker",
+      "selector": "catalog",
+      "status": "checked",
+      "reason": null
+    },
+    {
+      "case": "NBSP-after-setext-looking-line",
+      "selector": "One",
+      "status": "refused",
+      "reason": "unsupported_setext_heading"
+    },
+    {
+      "case": "NBSP-after-setext-looking-line",
+      "selector": "catalog",
+      "status": "refused",
+      "reason": "unsupported_setext_heading"
+    },
+    {
+      "case": "NBSP-nonblank-before-real-setext",
+      "selector": "One",
+      "status": "checked",
+      "reason": null
+    },
+    {
+      "case": "NBSP-nonblank-before-real-setext",
+      "selector": "catalog",
+      "status": "checked",
+      "reason": null
+    }
+  ],
+  "expectation_sha256": "0e7cbc272d9e05cd75ef6d7e28be493b21b8eb6d7a4970c160e65bba221c1461",
+  "scratch": "/private/tmp/stdo304-unicode-baseline-uc1w42mb",
+  "manager_scope": "explicit synthetic manager double; projection CLI evidence only",
+  "reader_sha256": "a2dabd893dacf893d30ba35d91f6f2356084301175ba5bd01e98cfdd1976d3fb"
+}

@@ -1,0 +1,69 @@
+{
+  "reader_sha256": "4c180df846327bf6a1eac337d5bc584f067f55bc044848d5f332e0f52bcd8ac5",
+  "fixture_sha256": "aed7733234232363d71d1ae186832d60a846d13d3e4c2dbe77b1cc4960a7629e",
+  "standing": "isolated fixture interface; actual public reader subprocess; no native manager or actor claim",
+  "records": [
+    {
+      "case": "u2028_is_not_a_line_ending",
+      "subject": "## One\nordinary\u2028## False\nnot a heading\n",
+      "subject_sha256": "4d4424555d5bfcf67e3c62558d3839dd84e0da76a1bf7f041fb8dbb44622235d",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+        "read",
+        "--stdo",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-jfc55xq_/manager",
+        "--store",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-jfc55xq_/store",
+        "--definition",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-jfc55xq_/stdo_fixture.json",
+        "--member",
+        "standards/OWNER.md",
+        "--heading",
+        "False"
+      ],
+      "exit_code": 1,
+      "stdout": "{\"command\": \"read\", \"definition\": \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-jfc55xq_/stdo_fixture.json\", \"kind\": \"stdo.skill-source-read\", \"reason\": \"section_missing_or_ambiguous:False\", \"status\": \"refused\"}\n",
+      "stderr": "",
+      "result": {
+        "command": "read",
+        "definition": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-jfc55xq_/stdo_fixture.json",
+        "kind": "stdo.skill-source-read",
+        "reason": "section_missing_or_ambiguous:False",
+        "status": "refused"
+      }
+    },
+    {
+      "case": "nbsp_does_not_close_fence",
+      "subject": "## One\n```text\ncode\n```\u00a0\n## False\nstill code\n",
+      "subject_sha256": "6af287ee28c3c804003d88565f73e4a915fb567baa4cbfcf48d8276fadf33f30",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+        "read",
+        "--stdo",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-6dus0djw/manager",
+        "--store",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-6dus0djw/store",
+        "--definition",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-6dus0djw/stdo_fixture.json",
+        "--member",
+        "standards/OWNER.md",
+        "--heading",
+        "False"
+      ],
+      "exit_code": 1,
+      "stdout": "{\"command\": \"read\", \"definition\": \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-6dus0djw/stdo_fixture.json\", \"kind\": \"stdo.skill-source-read\", \"reason\": \"unterminated_markdown_structure\", \"status\": \"refused\"}\n",
+      "stderr": "",
+      "result": {
+        "command": "read",
+        "definition": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-6dus0djw/stdo_fixture.json",
+        "kind": "stdo.skill-source-read",
+        "reason": "unterminated_markdown_structure",
+        "status": "refused"
+      }
+    }
+  ]
+}

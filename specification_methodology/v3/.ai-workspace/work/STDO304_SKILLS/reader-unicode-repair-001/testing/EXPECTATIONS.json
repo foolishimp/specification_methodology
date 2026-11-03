@@ -1,0 +1,449 @@
+{
+  "basis": "User counterexamples and predecessor closed-ATX projection contract; CR/LF/CRLF are physical line endings; other Unicode separators are literal paragraph data; fence trailing whitespace is ASCII space/tab only.",
+  "frozen_before_successor_exposure": true,
+  "specimens": [
+    {
+      "name": "paragraph-VT",
+      "text": "## One\nparagraph\u000b## Phantom\nkept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nparagraph\u000b## Phantom\nkept\n",
+      "one_last_line": 3,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 4,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "paragraph-FF",
+      "text": "## One\nparagraph\f## Phantom\nkept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nparagraph\f## Phantom\nkept\n",
+      "one_last_line": 3,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 4,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "paragraph-FS",
+      "text": "## One\nparagraph\u001c## Phantom\nkept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nparagraph\u001c## Phantom\nkept\n",
+      "one_last_line": 3,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 4,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "paragraph-GS",
+      "text": "## One\nparagraph\u001d## Phantom\nkept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nparagraph\u001d## Phantom\nkept\n",
+      "one_last_line": 3,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 4,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "paragraph-RS",
+      "text": "## One\nparagraph\u001e## Phantom\nkept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nparagraph\u001e## Phantom\nkept\n",
+      "one_last_line": 3,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 4,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "paragraph-NEL",
+      "text": "## One\nparagraph\u0085## Phantom\nkept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nparagraph\u0085## Phantom\nkept\n",
+      "one_last_line": 3,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 4,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "paragraph-LS",
+      "text": "## One\nparagraph\u2028## Phantom\nkept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nparagraph\u2028## Phantom\nkept\n",
+      "one_last_line": 3,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 4,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "paragraph-PS",
+      "text": "## One\nparagraph\u2029## Phantom\nkept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nparagraph\u2029## Phantom\nkept\n",
+      "one_last_line": 3,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 4,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "fence-NBSP-unclosed",
+      "text": "## One\n```text\ninside\n```\u00a0\n## Phantom\nstill code\n",
+      "outcome": "refuse"
+    },
+    {
+      "name": "fence-NBSP-later-close",
+      "text": "## One\n```text\ninside\n```\u00a0\n## Phantom\nstill code\n```\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\n```text\ninside\n```\u00a0\n## Phantom\nstill code\n```\n",
+      "one_last_line": 7,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 8,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "fence-EM_SPACE-unclosed",
+      "text": "## One\n```text\ninside\n```\u2003\n## Phantom\nstill code\n",
+      "outcome": "refuse"
+    },
+    {
+      "name": "fence-EM_SPACE-later-close",
+      "text": "## One\n```text\ninside\n```\u2003\n## Phantom\nstill code\n```\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\n```text\ninside\n```\u2003\n## Phantom\nstill code\n```\n",
+      "one_last_line": 7,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 8,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "fence-NNBSP-unclosed",
+      "text": "## One\n```text\ninside\n```\u202f\n## Phantom\nstill code\n",
+      "outcome": "refuse"
+    },
+    {
+      "name": "fence-NNBSP-later-close",
+      "text": "## One\n```text\ninside\n```\u202f\n## Phantom\nstill code\n```\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\n```text\ninside\n```\u202f\n## Phantom\nstill code\n```\n",
+      "one_last_line": 7,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 8,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "fence-IDEOGRAPHIC_SPACE-unclosed",
+      "text": "## One\n```text\ninside\n```\u3000\n## Phantom\nstill code\n",
+      "outcome": "refuse"
+    },
+    {
+      "name": "fence-IDEOGRAPHIC_SPACE-later-close",
+      "text": "## One\n```text\ninside\n```\u3000\n## Phantom\nstill code\n```\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\n```text\ninside\n```\u3000\n## Phantom\nstill code\n```\n",
+      "one_last_line": 7,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 8,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "line-ending-LF",
+      "text": "## One\nfirst\n### Nested\nkept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nfirst\n### Nested\nkept\n",
+      "one_last_line": 4,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Nested",
+          "level": 3,
+          "first_line": 3,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 5,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "line-ending-CR",
+      "text": "## One\rfirst\r### Nested\rkept\r## Two\rexcluded\r",
+      "outcome": "projection",
+      "one_text": "## One\rfirst\r### Nested\rkept\r",
+      "one_last_line": 4,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Nested",
+          "level": 3,
+          "first_line": 3,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 5,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "line-ending-CRLF",
+      "text": "## One\r\nfirst\r\n### Nested\r\nkept\r\n## Two\r\nexcluded\r\n",
+      "outcome": "projection",
+      "one_text": "## One\r\nfirst\r\n### Nested\r\nkept\r\n",
+      "one_last_line": 4,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Nested",
+          "level": 3,
+          "first_line": 3,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 5,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "line-ending-mixed",
+      "text": "## One\r\nfirst\r### Nested\nkept\r\n## Two\nexcluded",
+      "outcome": "projection",
+      "one_text": "## One\r\nfirst\r### Nested\nkept\r\n",
+      "one_last_line": 4,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Nested",
+          "level": 3,
+          "first_line": 3,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 5,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "fence-positive-SPACE",
+      "text": "## One\n```text\n## Phantom\n``` \n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\n```text\n## Phantom\n``` \n",
+      "one_last_line": 4,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 5,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "fence-positive-TAB",
+      "text": "## One\n```text\n## Phantom\n```\t\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\n```text\n## Phantom\n```\t\n",
+      "one_last_line": 4,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 5,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "fence-positive-SPACES_TAB",
+      "text": "## One\n```text\n## Phantom\n  ``` \t\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\n```text\n## Phantom\n  ``` \t\n",
+      "one_last_line": 4,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 5,
+          "unique": true
+        }
+      ]
+    }
+  ]
+}

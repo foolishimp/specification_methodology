@@ -1,0 +1,544 @@
+{
+  "source_delta_sha256": "6cd82322ac23d4dfe8ce7d8bf0df73fd2d3ffcbe06f3f70be8925d27e22dc523",
+  "reader_sha256": "4c180df846327bf6a1eac337d5bc584f067f55bc044848d5f332e0f52bcd8ac5",
+  "oracle": "CommonMark0.31.2 \u00a74.2 Example79; frozen U-05; parent independently requested this exact adjacent selector case before execution",
+  "scope": "Actual helper CLI with controlled mock manager; not installed or native-host qualification",
+  "cases": [
+    {
+      "case": "empty_closing_hashes",
+      "member_sha256": "f7e6476e1e2321608fccd86d40684fa5df048b676d1733a4d11d65317bcd49a8",
+      "member_text": "## One\nfirst\n## ###\nselected\n## Two\nlast\n",
+      "expected_heading": "",
+      "calls": [
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--list-headings"
+          ],
+          "exit": 0,
+          "result": {
+            "basis_uri": "stdo://releases/review-adjacent/",
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/definition.json",
+            "definition_id": "urn:review:adjacent:empty_closing_hashes",
+            "definition_sha256": "d006349a9438282d9a0c3d286984fa7afce24498ffaff7b0204a9bec40e556f6",
+            "headings": [
+              {
+                "first_line": 1,
+                "heading": "One",
+                "level": 2,
+                "unique": true
+              },
+              {
+                "first_line": 3,
+                "heading": "###",
+                "level": 2,
+                "unique": true
+              },
+              {
+                "first_line": 5,
+                "heading": "Two",
+                "level": 2,
+                "unique": true
+              }
+            ],
+            "installed": true,
+            "kind": "stdo.skill-source-read",
+            "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/manager",
+            "manifest_sha256": "38e19d30a25563b0920e4b817cd31e4c8c6b9b24a7aa46d5dc5a255e49c369db",
+            "member_sha256": "f7e6476e1e2321608fccd86d40684fa5df048b676d1733a4d11d65317bcd49a8",
+            "member_uri": "stdo://releases/review-adjacent/standards/OWNER.md",
+            "standing": "verified source projection; no admission or semantic verdict",
+            "status": "checked",
+            "store": null,
+            "valid": true
+          },
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--heading",
+            ""
+          ],
+          "exit": 1,
+          "result": {
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/definition.json",
+            "kind": "stdo.skill-source-read",
+            "reason": "section_missing_or_ambiguous:",
+            "status": "refused"
+          },
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--heading",
+            "###"
+          ],
+          "exit": 0,
+          "result": {
+            "basis_uri": "stdo://releases/review-adjacent/",
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/definition.json",
+            "definition_id": "urn:review:adjacent:empty_closing_hashes",
+            "definition_sha256": "d006349a9438282d9a0c3d286984fa7afce24498ffaff7b0204a9bec40e556f6",
+            "installed": true,
+            "kind": "stdo.skill-source-read",
+            "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_closing_hashes/manager",
+            "manifest_sha256": "38e19d30a25563b0920e4b817cd31e4c8c6b9b24a7aa46d5dc5a255e49c369db",
+            "member_sha256": "f7e6476e1e2321608fccd86d40684fa5df048b676d1733a4d11d65317bcd49a8",
+            "member_uri": "stdo://releases/review-adjacent/standards/OWNER.md",
+            "sections": [
+              {
+                "first_line": 3,
+                "heading": "###",
+                "last_line": 4,
+                "sha256": "f530dab8d88aa060d14b1fb6cf44a71427ba6389d50c7c5553ad10b575e2e7e3",
+                "text": "## ###\nselected\n"
+              }
+            ],
+            "standing": "verified source projection; no admission or semantic verdict",
+            "status": "checked",
+            "store": null,
+            "valid": true
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "empty_tabs_closing_hashes",
+      "member_sha256": "e3716fe62516e04b1c82b78bd0c757a4839c6cbf331adf0401d3b9e30215c1df",
+      "member_text": "## One\nfirst\n## \t### \t\nselected\n## Two\nlast\n",
+      "expected_heading": "",
+      "calls": [
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--list-headings"
+          ],
+          "exit": 0,
+          "result": {
+            "basis_uri": "stdo://releases/review-adjacent/",
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/definition.json",
+            "definition_id": "urn:review:adjacent:empty_tabs_closing_hashes",
+            "definition_sha256": "91bde372edf6129ab809963c6962b5972697810b9134a3d23bfd32bb1dc29416",
+            "headings": [
+              {
+                "first_line": 1,
+                "heading": "One",
+                "level": 2,
+                "unique": true
+              },
+              {
+                "first_line": 3,
+                "heading": "###",
+                "level": 2,
+                "unique": true
+              },
+              {
+                "first_line": 5,
+                "heading": "Two",
+                "level": 2,
+                "unique": true
+              }
+            ],
+            "installed": true,
+            "kind": "stdo.skill-source-read",
+            "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/manager",
+            "manifest_sha256": "0767df6ccafebefdf4f7e43b8d448e15a14240afd0a7f1ff67cc9e403c16d424",
+            "member_sha256": "e3716fe62516e04b1c82b78bd0c757a4839c6cbf331adf0401d3b9e30215c1df",
+            "member_uri": "stdo://releases/review-adjacent/standards/OWNER.md",
+            "standing": "verified source projection; no admission or semantic verdict",
+            "status": "checked",
+            "store": null,
+            "valid": true
+          },
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--heading",
+            ""
+          ],
+          "exit": 1,
+          "result": {
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/definition.json",
+            "kind": "stdo.skill-source-read",
+            "reason": "section_missing_or_ambiguous:",
+            "status": "refused"
+          },
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--heading",
+            "###"
+          ],
+          "exit": 0,
+          "result": {
+            "basis_uri": "stdo://releases/review-adjacent/",
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/definition.json",
+            "definition_id": "urn:review:adjacent:empty_tabs_closing_hashes",
+            "definition_sha256": "91bde372edf6129ab809963c6962b5972697810b9134a3d23bfd32bb1dc29416",
+            "installed": true,
+            "kind": "stdo.skill-source-read",
+            "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/empty_tabs_closing_hashes/manager",
+            "manifest_sha256": "0767df6ccafebefdf4f7e43b8d448e15a14240afd0a7f1ff67cc9e403c16d424",
+            "member_sha256": "e3716fe62516e04b1c82b78bd0c757a4839c6cbf331adf0401d3b9e30215c1df",
+            "member_uri": "stdo://releases/review-adjacent/standards/OWNER.md",
+            "sections": [
+              {
+                "first_line": 3,
+                "heading": "###",
+                "last_line": 4,
+                "sha256": "686627b6dd4940b871067b6dc5f826b6100660d6ec908976914040e9d83846bc",
+                "text": "## \t### \t\nselected\n"
+              }
+            ],
+            "standing": "verified source projection; no admission or semantic verdict",
+            "status": "checked",
+            "store": null,
+            "valid": true
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "nbsp_preserves_hashes",
+      "member_sha256": "75dad9a813aa18745f2f7907cd75c7c3d91fb29155e08c2f79b8f0e87ba8894c",
+      "member_text": "## One\nfirst\n## \u00a0###\nselected\n## Two\nlast\n",
+      "expected_heading": "\u00a0###",
+      "calls": [
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--list-headings"
+          ],
+          "exit": 0,
+          "result": {
+            "basis_uri": "stdo://releases/review-adjacent/",
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/definition.json",
+            "definition_id": "urn:review:adjacent:nbsp_preserves_hashes",
+            "definition_sha256": "4f86f4b1cf85d44a3bb1099c94c29bbc99aea1c4fabf3376a103942afe60a006",
+            "headings": [
+              {
+                "first_line": 1,
+                "heading": "One",
+                "level": 2,
+                "unique": true
+              },
+              {
+                "first_line": 3,
+                "heading": "\u00a0###",
+                "level": 2,
+                "unique": true
+              },
+              {
+                "first_line": 5,
+                "heading": "Two",
+                "level": 2,
+                "unique": true
+              }
+            ],
+            "installed": true,
+            "kind": "stdo.skill-source-read",
+            "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/manager",
+            "manifest_sha256": "c0c6284c1d49aacbe3dd68398f4d2a3ad763599196188d82ccce083d3f1883b0",
+            "member_sha256": "75dad9a813aa18745f2f7907cd75c7c3d91fb29155e08c2f79b8f0e87ba8894c",
+            "member_uri": "stdo://releases/review-adjacent/standards/OWNER.md",
+            "standing": "verified source projection; no admission or semantic verdict",
+            "status": "checked",
+            "store": null,
+            "valid": true
+          },
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--heading",
+            "\u00a0###"
+          ],
+          "exit": 0,
+          "result": {
+            "basis_uri": "stdo://releases/review-adjacent/",
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/definition.json",
+            "definition_id": "urn:review:adjacent:nbsp_preserves_hashes",
+            "definition_sha256": "4f86f4b1cf85d44a3bb1099c94c29bbc99aea1c4fabf3376a103942afe60a006",
+            "installed": true,
+            "kind": "stdo.skill-source-read",
+            "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/manager",
+            "manifest_sha256": "c0c6284c1d49aacbe3dd68398f4d2a3ad763599196188d82ccce083d3f1883b0",
+            "member_sha256": "75dad9a813aa18745f2f7907cd75c7c3d91fb29155e08c2f79b8f0e87ba8894c",
+            "member_uri": "stdo://releases/review-adjacent/standards/OWNER.md",
+            "sections": [
+              {
+                "first_line": 3,
+                "heading": "\u00a0###",
+                "last_line": 4,
+                "sha256": "4c93c414e7ba4d9a16c3fb5d8ff1966f8a0b90a031a7a90e6357047d3c1c7b95",
+                "text": "## \u00a0###\nselected\n"
+              }
+            ],
+            "standing": "verified source projection; no admission or semantic verdict",
+            "status": "checked",
+            "store": null,
+            "valid": true
+          },
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--heading",
+            "###"
+          ],
+          "exit": 1,
+          "result": {
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_preserves_hashes/definition.json",
+            "kind": "stdo.skill-source-read",
+            "reason": "section_missing_or_ambiguous:###",
+            "status": "refused"
+          },
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "case": "nbsp_blocks_closing",
+      "member_sha256": "cb88aa4231f0635d8667022816973c639811f55de2d1ff87c25b81d3427c0d31",
+      "member_text": "## One\nfirst\n## ###\u00a0\nselected\n## Two\nlast\n",
+      "expected_heading": "###\u00a0",
+      "calls": [
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--list-headings"
+          ],
+          "exit": 0,
+          "result": {
+            "basis_uri": "stdo://releases/review-adjacent/",
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/definition.json",
+            "definition_id": "urn:review:adjacent:nbsp_blocks_closing",
+            "definition_sha256": "e7a824f08e1ccacfdb2e1e68864f3fa38a142e54a66525371291f8d0b264c2e0",
+            "headings": [
+              {
+                "first_line": 1,
+                "heading": "One",
+                "level": 2,
+                "unique": true
+              },
+              {
+                "first_line": 3,
+                "heading": "###\u00a0",
+                "level": 2,
+                "unique": true
+              },
+              {
+                "first_line": 5,
+                "heading": "Two",
+                "level": 2,
+                "unique": true
+              }
+            ],
+            "installed": true,
+            "kind": "stdo.skill-source-read",
+            "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/manager",
+            "manifest_sha256": "31306709e8643c7f9d3db74ea7975513b8dd036a0eff118562df9d102ba1087f",
+            "member_sha256": "cb88aa4231f0635d8667022816973c639811f55de2d1ff87c25b81d3427c0d31",
+            "member_uri": "stdo://releases/review-adjacent/standards/OWNER.md",
+            "standing": "verified source projection; no admission or semantic verdict",
+            "status": "checked",
+            "store": null,
+            "valid": true
+          },
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--heading",
+            "###\u00a0"
+          ],
+          "exit": 0,
+          "result": {
+            "basis_uri": "stdo://releases/review-adjacent/",
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/definition.json",
+            "definition_id": "urn:review:adjacent:nbsp_blocks_closing",
+            "definition_sha256": "e7a824f08e1ccacfdb2e1e68864f3fa38a142e54a66525371291f8d0b264c2e0",
+            "installed": true,
+            "kind": "stdo.skill-source-read",
+            "manager": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/manager",
+            "manifest_sha256": "31306709e8643c7f9d3db74ea7975513b8dd036a0eff118562df9d102ba1087f",
+            "member_sha256": "cb88aa4231f0635d8667022816973c639811f55de2d1ff87c25b81d3427c0d31",
+            "member_uri": "stdo://releases/review-adjacent/standards/OWNER.md",
+            "sections": [
+              {
+                "first_line": 3,
+                "heading": "###\u00a0",
+                "last_line": 4,
+                "sha256": "d14b0668d6c95842f820f1801392f3bf21933a5fee5936618f639930fd702395",
+                "text": "## ###\u00a0\nselected\n"
+              }
+            ],
+            "standing": "verified source projection; no admission or semantic verdict",
+            "status": "checked",
+            "store": null,
+            "valid": true
+          },
+          "stderr": ""
+        },
+        {
+          "argv": [
+            "/usr/local/bin/python3",
+            "-I",
+            "-B",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/frozen_subject/specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+            "read",
+            "--stdo",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/manager",
+            "--definition",
+            "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/definition.json",
+            "--member",
+            "standards/OWNER.md",
+            "--heading",
+            "###"
+          ],
+          "exit": 1,
+          "result": {
+            "command": "read",
+            "definition": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/probes/adjacent-atx/nbsp_blocks_closing/definition.json",
+            "kind": "stdo.skill-source-read",
+            "reason": "section_missing_or_ambiguous:###",
+            "status": "refused"
+          },
+          "stderr": ""
+        }
+      ]
+    }
+  ]
+}

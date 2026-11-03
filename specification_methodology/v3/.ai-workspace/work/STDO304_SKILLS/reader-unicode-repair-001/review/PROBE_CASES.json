@@ -1,0 +1,1358 @@
+[
+  {
+    "name": "paragraph_vt",
+    "text": "## One\nprefix\u000b## Invented\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "1178190a18df5e7d131390a13d621e17749da5f470cd9b72e418dc983d85636b",
+        "text": "## One\nprefix\u000b## Invented\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "paragraph_ff",
+    "text": "## One\nprefix\f## Invented\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "749b12084585362a6aa9e24b4a7cc646e68a2f39bf04cdb581c887feb8116bbf",
+        "text": "## One\nprefix\f## Invented\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "paragraph_fs",
+    "text": "## One\nprefix\u001c## Invented\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "7301058ddd1fd5915d53ebfcb3383cf6ff23e7d14cb0945e1647581d2f3661e4",
+        "text": "## One\nprefix\u001c## Invented\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "paragraph_gs",
+    "text": "## One\nprefix\u001d## Invented\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "62d29c2a72df583403159da2affc33d723b12e26f25501da4fd710edafc99be0",
+        "text": "## One\nprefix\u001d## Invented\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "paragraph_rs",
+    "text": "## One\nprefix\u001e## Invented\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "7d6408a73dd7fb52f2023fd825f09ba1b355bb544ed691b7b31b9bac168b69d7",
+        "text": "## One\nprefix\u001e## Invented\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "paragraph_nel",
+    "text": "## One\nprefix\u0085## Invented\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "8bbea4a2773b4a807d2bbc5f1641a4a6382f538e9024c5d127dfb2e229ac7c94",
+        "text": "## One\nprefix\u0085## Invented\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "paragraph_ls",
+    "text": "## One\nprefix\u2028## Invented\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "b657b923c476c67e0b605a7734e1a6491abfce18e2d9349eb58db86f891c6ac7",
+        "text": "## One\nprefix\u2028## Invented\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "paragraph_ps",
+    "text": "## One\nprefix\u2029## Invented\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "88f49d242562f758009a1d8fa149caf4bf691574b1bb6ae2c9c54b4a3e512149",
+        "text": "## One\nprefix\u2029## Invented\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "paragraph_nbsp",
+    "text": "## One\nprefix\u00a0## Invented\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "d95eb03c640804a917c77546b65cd2c43bab7099bcdff3e5375793013ff85a42",
+        "text": "## One\nprefix\u00a0## Invented\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_close_nbsp",
+    "text": "## One\n```\ncode\n```\u00a0\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "afab92873e00d70b50f9ca4e545c5115976a86c7100f92c26d72cd5366d020f6",
+        "text": "## One\n```\ncode\n```\u00a0\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_close_ls",
+    "text": "## One\n```\ncode\n```\u2028\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "25010cfae069d05952435f22fa6f2c972756539bb48badd8490b7d197d39497c",
+        "text": "## One\n```\ncode\n```\u2028\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_close_nel",
+    "text": "## One\n```\ncode\n```\u0085\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "b78a5d8ab0c81b657f8db985198d8a1e95577d9d996049b92a77d5d2045824f8",
+        "text": "## One\n```\ncode\n```\u0085\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_close_vt",
+    "text": "## One\n```\ncode\n```\u000b\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "deaef562180dadee0bc02faadf2c95db69bf460260e4ada907f09e1f32024e8d",
+        "text": "## One\n```\ncode\n```\u000b\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_close_ff",
+    "text": "## One\n```\ncode\n```\f\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "4de2b1af3fb39a23cbebd7a3073f6c8ac279b5d515bedb003b5f5edd0a711f42",
+        "text": "## One\n```\ncode\n```\f\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_close_emspace",
+    "text": "## One\n```\ncode\n```\u2003\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "7c891d3fcb79a79850db0f5559afa4e91f7c6c556724e61e171f32a06a3ed95c",
+        "text": "## One\n```\ncode\n```\u2003\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_valid_close_none",
+    "text": "## One\n```\ncode\n```\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 5,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 4,
+        "sha256": "5cae777d3504b05df96eebfc9e5c4421958ba6ec80fc21e4b910bf9fde241eb3",
+        "text": "## One\n```\ncode\n```\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 5,
+        "last_line": 6,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_valid_close_space",
+    "text": "## One\n```\ncode\n``` \n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 5,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 4,
+        "sha256": "57f8892d2b5da4401932ffbd732d5431d550b9f769f4b987ed3b44ae24c5707f",
+        "text": "## One\n```\ncode\n``` \n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 5,
+        "last_line": 6,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_valid_close_tab",
+    "text": "## One\n```\ncode\n```\t\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 5,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 4,
+        "sha256": "1c4bc995881cac51d85d21d284d570c25fafff5cba77f705f6e34ff571cc39f2",
+        "text": "## One\n```\ncode\n```\t\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 5,
+        "last_line": 6,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "backtick_valid_close_space_tab",
+    "text": "## One\n```\ncode\n``` \t \n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 5,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 4,
+        "sha256": "ab28dbc0aec1b8fe58304fa8a469146695d1e57ee6d1f4de034feb50c17416b0",
+        "text": "## One\n```\ncode\n``` \t \n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 5,
+        "last_line": 6,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_close_nbsp",
+    "text": "## One\n~~~\ncode\n~~~\u00a0\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "774a7a30ea99ba2cf1094af274c9aa812f5b2c71a5904905f7d2345baa44a6ee",
+        "text": "## One\n~~~\ncode\n~~~\u00a0\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_close_ls",
+    "text": "## One\n~~~\ncode\n~~~\u2028\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "aa587e7f04d2c2c6cff089e1342ff89884bc27fd92ea1f7a443f2a3b8057a87b",
+        "text": "## One\n~~~\ncode\n~~~\u2028\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_close_nel",
+    "text": "## One\n~~~\ncode\n~~~\u0085\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "6573b72dd600db2984b1fedcbed797f894bc6d5a114b80425432b606b0116874",
+        "text": "## One\n~~~\ncode\n~~~\u0085\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_close_vt",
+    "text": "## One\n~~~\ncode\n~~~\u000b\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "f2583d506caa92c3ff01067174cc221fc95adfab1ea0d68071187d5f8723f22c",
+        "text": "## One\n~~~\ncode\n~~~\u000b\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_close_ff",
+    "text": "## One\n~~~\ncode\n~~~\f\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "10824e4aecf99525732848badaac974179c5eb543dc4abf39573fd31134a67a0",
+        "text": "## One\n~~~\ncode\n~~~\f\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_close_emspace",
+    "text": "## One\n~~~\ncode\n~~~\u2003\n## Invented\ninside\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "a6b9698e3c29492c842cf9bbdd7fa288c676c04bc5083f642430fb59c9e79cfd",
+        "text": "## One\n~~~\ncode\n~~~\u2003\n## Invented\ninside\n"
+      }
+    },
+    "selected": "Invented",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_valid_close_none",
+    "text": "## One\n~~~\ncode\n~~~\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 5,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 4,
+        "sha256": "a7089de33e4cd9f69063e742982ffaae6ef481170122f4dcc7e705639bc4d241",
+        "text": "## One\n~~~\ncode\n~~~\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 5,
+        "last_line": 6,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_valid_close_space",
+    "text": "## One\n~~~\ncode\n~~~ \n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 5,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 4,
+        "sha256": "e48e02f4e80a95f72d8f287b2a5daf45367ddd0793c1575d54c4408a8af5168e",
+        "text": "## One\n~~~\ncode\n~~~ \n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 5,
+        "last_line": 6,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_valid_close_tab",
+    "text": "## One\n~~~\ncode\n~~~\t\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 5,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 4,
+        "sha256": "a8cc9e5d654ea829462bc4d20142a2b477f82f36db20e8252caac83afcc3aded",
+        "text": "## One\n~~~\ncode\n~~~\t\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 5,
+        "last_line": 6,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "tilde_valid_close_space_tab",
+    "text": "## One\n~~~\ncode\n~~~ \t \n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 5,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 4,
+        "sha256": "2ec184d729d05ebf2bb81e378fe78f9117894c58d4544f1b2d06a45850b4a370",
+        "text": "## One\n~~~\ncode\n~~~ \t \n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 5,
+        "last_line": 6,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "fence_short",
+    "text": "## One\n````\ncode\n```\n## Invented\ninside\n````\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 8,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 7,
+        "sha256": "2b8f3b77bbc29ad35e963e836b644a3ca0857dc0cef28bb98828dcdf13b9f639",
+        "text": "## One\n````\ncode\n```\n## Invented\ninside\n````\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 8,
+        "last_line": 9,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "fence_wrong",
+    "text": "## One\n````\ncode\n~~~~\n## Invented\ninside\n````\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 8,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 7,
+        "sha256": "a14679df973b48c86601a8823d5b63b61675ecae180233aa6c46e6c3fbcec99d",
+        "text": "## One\n````\ncode\n~~~~\n## Invented\ninside\n````\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 8,
+        "last_line": 9,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "fence_trailing_text",
+    "text": "## One\n````\ncode\n````x\n## Invented\ninside\n````\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 8,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 7,
+        "sha256": "8134e10fd96b2f46c01d1398cbae32780b06eaad9a269e107530b8dd757ca322",
+        "text": "## One\n````\ncode\n````x\n## Invented\ninside\n````\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 8,
+        "last_line": 9,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "line_endings_lf",
+    "text": "## One\nfirst\n```\n## Invented\n```\nlast\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 7,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "aba72fcd19676662b1feb9362e0912af2500f96778a337b736aca724ddd305e8",
+        "text": "## One\nfirst\n```\n## Invented\n```\nlast\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 7,
+        "last_line": 8,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "line_endings_crlf",
+    "text": "## One\r\nfirst\r\n```\r\n## Invented\r\n```\r\nlast\r\n## Two\r\ntwo\r\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 7,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "a9d932c706c0aaafb6bebc0579382c142f80311c43e4d955789d609dd488bfc9",
+        "text": "## One\r\nfirst\r\n```\r\n## Invented\r\n```\r\nlast\r\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 7,
+        "last_line": 8,
+        "sha256": "d1b0963ea31eb3a507732dd25bd97186fba70ae3884b1290c1ff1e22aeb1ffdc",
+        "text": "## Two\r\ntwo\r\n"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "line_endings_cr",
+    "text": "## One\rfirst\r```\r## Invented\r```\rlast\r## Two\rtwo\r",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 7,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 6,
+        "sha256": "3d686195ac8b291ed816c9a53dcad411090d687a3ccf7f4b069fab2ac875d9f1",
+        "text": "## One\rfirst\r```\r## Invented\r```\rlast\r"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 7,
+        "last_line": 8,
+        "sha256": "f2ddcb33c1ed8db5bf9b295ef3cdceac4c7af29c2efbb73cd14ae4b0aa645685",
+        "text": "## Two\rtwo\r"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "mixed_line_endings",
+    "text": "## One\r\nfirst\rsecond\n## Two\rtwo",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "dee34c0c179c5b413ad7e67421ddc41cd18f90b9177eaf6da9e3faad810efa87",
+        "text": "## One\r\nfirst\rsecond\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "196af76b16d5fb43e5627e6d623fbf4b0292b65e4218b349a42b8e298bdd6181",
+        "text": "## Two\rtwo"
+      }
+    },
+    "selected": "One",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "nbsp_after_hash_not_heading",
+    "text": "## One\n##\u00a0\ninside\n## Two\ntwo\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Two",
+        "level": 2,
+        "first_line": 4,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 3,
+        "sha256": "37b2ea50d652b4ca9617d3035ea76c50b29a1f8a3c0b689b59f1b2b572b1ee69",
+        "text": "## One\n##\u00a0\ninside\n"
+      },
+      "Two": {
+        "heading": "Two",
+        "first_line": 4,
+        "last_line": 5,
+        "sha256": "58690d4b1753963ab43b029080650f27e87f766d44d2af368c46a7e92879310f",
+        "text": "## Two\ntwo\n"
+      }
+    },
+    "selected": "",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "nbsp_title_preserved",
+    "text": "## One\nbody\n## Name\u00a0\ntext\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Name\u00a0",
+        "level": 2,
+        "first_line": 3,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 2,
+        "sha256": "cf14957338df09dc6b3880378da4c35528162e184a6cfa35d9b4484b2e790311",
+        "text": "## One\nbody\n"
+      },
+      "Name\u00a0": {
+        "heading": "Name\u00a0",
+        "first_line": 3,
+        "last_line": 4,
+        "sha256": "f22229a2de4a01821a1f2de6473c8abaa677c4c5b9d674382e620b7bf175742a",
+        "text": "## Name\u00a0\ntext\n"
+      }
+    },
+    "selected": "Name\u00a0",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "ls_in_heading_text",
+    "text": "## One\nbody\n## Name\u2028Part\ntext\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Name\u2028Part",
+        "level": 2,
+        "first_line": 3,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 2,
+        "sha256": "cf14957338df09dc6b3880378da4c35528162e184a6cfa35d9b4484b2e790311",
+        "text": "## One\nbody\n"
+      },
+      "Name\u2028Part": {
+        "heading": "Name\u2028Part",
+        "first_line": 3,
+        "last_line": 4,
+        "sha256": "e60c68ab5f88c50e0ec28724974f6e879941806a15f8f2bbb28988cb960f48b4",
+        "text": "## Name\u2028Part\ntext\n"
+      }
+    },
+    "selected": "Name\u2028Part",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "ascii_empty_heading",
+    "text": "## One\nbody\n## \t\ntext\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "",
+        "level": 2,
+        "first_line": 3,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 2,
+        "sha256": "cf14957338df09dc6b3880378da4c35528162e184a6cfa35d9b4484b2e790311",
+        "text": "## One\nbody\n"
+      },
+      "": {
+        "heading": "",
+        "first_line": 3,
+        "last_line": 4,
+        "sha256": "dfb1a354c12aa3767577a1113706880b29d31ae21ca991c82ca0234f7692d093",
+        "text": "## \t\ntext\n"
+      }
+    },
+    "selected": "",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "nbsp_after_closing_hash",
+    "text": "## One\nbody\n## Name ###\u00a0\ntext\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Name ###\u00a0",
+        "level": 2,
+        "first_line": 3,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 2,
+        "sha256": "cf14957338df09dc6b3880378da4c35528162e184a6cfa35d9b4484b2e790311",
+        "text": "## One\nbody\n"
+      },
+      "Name ###\u00a0": {
+        "heading": "Name ###\u00a0",
+        "first_line": 3,
+        "last_line": 4,
+        "sha256": "1f5da72d842058e14911e83a0720041448ded4d2291b9d0c38d2f64f025bc97f",
+        "text": "## Name ###\u00a0\ntext\n"
+      }
+    },
+    "selected": "Name ###\u00a0",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  },
+  {
+    "name": "nbsp_before_closing_hash",
+    "text": "## One\nbody\n## Name\u00a0###\ntext\n",
+    "expected_catalog": [
+      {
+        "heading": "One",
+        "level": 2,
+        "first_line": 1,
+        "unique": true
+      },
+      {
+        "heading": "Name\u00a0###",
+        "level": 2,
+        "first_line": 3,
+        "unique": true
+      }
+    ],
+    "expected_sections": {
+      "One": {
+        "heading": "One",
+        "first_line": 1,
+        "last_line": 2,
+        "sha256": "cf14957338df09dc6b3880378da4c35528162e184a6cfa35d9b4484b2e790311",
+        "text": "## One\nbody\n"
+      },
+      "Name\u00a0###": {
+        "heading": "Name\u00a0###",
+        "first_line": 3,
+        "last_line": 4,
+        "sha256": "bc6bce1e2f063bd92451f542c55e17cdfc8b4ceb36fed592b06263827a19c799",
+        "text": "## Name\u00a0###\ntext\n"
+      }
+    },
+    "selected": "Name\u00a0###",
+    "permitted_outcomes": "exact successful projection or explicit whole-projection refusal"
+  }
+]

@@ -1,0 +1,391 @@
+[
+  {
+    "case": "NBSP-after-empty-ATX-marker",
+    "selector": "One",
+    "raw_source_sha256": "af03ee2705a266a491edf9255ab5468c745f067d50c3f88df8d79e2093a805af",
+    "raw_source_utf8_hex": "2323204f6e650a6b6570740a2323c2a00a6d6f7265206b6570740a23232054776f0a6578636c756465640a",
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/read_basis.py",
+      "read",
+      "--stdo",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "--store",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "--definition",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "--member",
+      "standards/OWNER.md",
+      "--heading",
+      "One"
+    ],
+    "exit": 0,
+    "stdout": "{\"basis_uri\": \"stdo://releases/v0-unicode-fixture/\", \"command\": \"read\", \"definition\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json\", \"definition_id\": \"urn:fixture:unicode\", \"definition_sha256\": \"84512b9c6462bf4ecc7d16922e17f6b288e977f81af42b0a4cd2c69529dd6ca0\", \"installed\": true, \"kind\": \"stdo.skill-source-read\", \"manager\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py\", \"manifest_sha256\": \"85ec3799a339ee0a0019aab9c480016dba137bb4ec7b9f61f08d8b547de2fa3c\", \"member_sha256\": \"af03ee2705a266a491edf9255ab5468c745f067d50c3f88df8d79e2093a805af\", \"member_uri\": \"stdo://releases/v0-unicode-fixture/standards/OWNER.md\", \"sections\": [{\"first_line\": 1, \"heading\": \"One\", \"last_line\": 4, \"sha256\": \"666941fded74296ee9a38187b7441a332455040f412d2407582267810e8a1c17\", \"text\": \"## One\\nkept\\n##\u00a0\\nmore kept\\n\"}], \"standing\": \"verified source projection; no admission or semantic verdict\", \"status\": \"checked\", \"store\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/store\", \"valid\": true}\n",
+    "stderr": "",
+    "actual": {
+      "basis_uri": "stdo://releases/v0-unicode-fixture/",
+      "command": "read",
+      "definition": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "definition_id": "urn:fixture:unicode",
+      "definition_sha256": "84512b9c6462bf4ecc7d16922e17f6b288e977f81af42b0a4cd2c69529dd6ca0",
+      "installed": true,
+      "kind": "stdo.skill-source-read",
+      "manager": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "manifest_sha256": "85ec3799a339ee0a0019aab9c480016dba137bb4ec7b9f61f08d8b547de2fa3c",
+      "member_sha256": "af03ee2705a266a491edf9255ab5468c745f067d50c3f88df8d79e2093a805af",
+      "member_uri": "stdo://releases/v0-unicode-fixture/standards/OWNER.md",
+      "sections": [
+        {
+          "first_line": 1,
+          "heading": "One",
+          "last_line": 4,
+          "sha256": "666941fded74296ee9a38187b7441a332455040f412d2407582267810e8a1c17",
+          "text": "## One\nkept\n##\u00a0\nmore kept\n"
+        }
+      ],
+      "standing": "verified source projection; no admission or semantic verdict",
+      "status": "checked",
+      "store": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "valid": true
+    },
+    "expected": "exact raw section, lines and digest",
+    "passes": true
+  },
+  {
+    "case": "NBSP-after-empty-ATX-marker",
+    "selector": "Phantom",
+    "raw_source_sha256": "af03ee2705a266a491edf9255ab5468c745f067d50c3f88df8d79e2093a805af",
+    "raw_source_utf8_hex": "2323204f6e650a6b6570740a2323c2a00a6d6f7265206b6570740a23232054776f0a6578636c756465640a",
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/read_basis.py",
+      "read",
+      "--stdo",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "--store",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "--definition",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "--member",
+      "standards/OWNER.md",
+      "--heading",
+      "Phantom"
+    ],
+    "exit": 1,
+    "stdout": "{\"command\": \"read\", \"definition\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json\", \"kind\": \"stdo.skill-source-read\", \"reason\": \"section_missing_or_ambiguous:Phantom\", \"status\": \"refused\"}\n",
+    "stderr": "",
+    "actual": {
+      "command": "read",
+      "definition": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "kind": "stdo.skill-source-read",
+      "reason": "section_missing_or_ambiguous:Phantom",
+      "status": "refused"
+    },
+    "expected": "refusal without projection",
+    "passes": true
+  },
+  {
+    "case": "NBSP-after-empty-ATX-marker",
+    "selector": "catalog",
+    "raw_source_sha256": "af03ee2705a266a491edf9255ab5468c745f067d50c3f88df8d79e2093a805af",
+    "raw_source_utf8_hex": "2323204f6e650a6b6570740a2323c2a00a6d6f7265206b6570740a23232054776f0a6578636c756465640a",
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/read_basis.py",
+      "read",
+      "--stdo",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "--store",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "--definition",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "--member",
+      "standards/OWNER.md",
+      "--list-headings"
+    ],
+    "exit": 0,
+    "stdout": "{\"basis_uri\": \"stdo://releases/v0-unicode-fixture/\", \"command\": \"read\", \"definition\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json\", \"definition_id\": \"urn:fixture:unicode\", \"definition_sha256\": \"84512b9c6462bf4ecc7d16922e17f6b288e977f81af42b0a4cd2c69529dd6ca0\", \"headings\": [{\"first_line\": 1, \"heading\": \"One\", \"level\": 2, \"unique\": true}, {\"first_line\": 5, \"heading\": \"Two\", \"level\": 2, \"unique\": true}], \"installed\": true, \"kind\": \"stdo.skill-source-read\", \"manager\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py\", \"manifest_sha256\": \"85ec3799a339ee0a0019aab9c480016dba137bb4ec7b9f61f08d8b547de2fa3c\", \"member_sha256\": \"af03ee2705a266a491edf9255ab5468c745f067d50c3f88df8d79e2093a805af\", \"member_uri\": \"stdo://releases/v0-unicode-fixture/standards/OWNER.md\", \"standing\": \"verified source projection; no admission or semantic verdict\", \"status\": \"checked\", \"store\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/store\", \"valid\": true}\n",
+    "stderr": "",
+    "actual": {
+      "basis_uri": "stdo://releases/v0-unicode-fixture/",
+      "command": "read",
+      "definition": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "definition_id": "urn:fixture:unicode",
+      "definition_sha256": "84512b9c6462bf4ecc7d16922e17f6b288e977f81af42b0a4cd2c69529dd6ca0",
+      "headings": [
+        {
+          "first_line": 1,
+          "heading": "One",
+          "level": 2,
+          "unique": true
+        },
+        {
+          "first_line": 5,
+          "heading": "Two",
+          "level": 2,
+          "unique": true
+        }
+      ],
+      "installed": true,
+      "kind": "stdo.skill-source-read",
+      "manager": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "manifest_sha256": "85ec3799a339ee0a0019aab9c480016dba137bb4ec7b9f61f08d8b547de2fa3c",
+      "member_sha256": "af03ee2705a266a491edf9255ab5468c745f067d50c3f88df8d79e2093a805af",
+      "member_uri": "stdo://releases/v0-unicode-fixture/standards/OWNER.md",
+      "standing": "verified source projection; no admission or semantic verdict",
+      "status": "checked",
+      "store": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "valid": true
+    },
+    "expected": "exact catalog",
+    "passes": true
+  },
+  {
+    "case": "NBSP-after-setext-looking-line",
+    "selector": "One",
+    "raw_source_sha256": "8add5f1b762b6a0836fa9a733a3e1b54b3de0ecd9245fe8adc0f101083674943",
+    "raw_source_utf8_hex": "2323204f6e650a7061726167726170680a3d3d3dc2a00a6d6f7265206b6570740a23232054776f0a6578636c756465640a",
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/read_basis.py",
+      "read",
+      "--stdo",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "--store",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "--definition",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "--member",
+      "standards/OWNER.md",
+      "--heading",
+      "One"
+    ],
+    "exit": 0,
+    "stdout": "{\"basis_uri\": \"stdo://releases/v0-unicode-fixture/\", \"command\": \"read\", \"definition\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json\", \"definition_id\": \"urn:fixture:unicode\", \"definition_sha256\": \"1f3640b391caa74c0217340b2c4f686d9e9d4cd4712c71e3140a1862355954be\", \"installed\": true, \"kind\": \"stdo.skill-source-read\", \"manager\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py\", \"manifest_sha256\": \"44ab64dd06ff9da3b4a029310c3677eeddadde22b6d27b38d89cb4d91808a150\", \"member_sha256\": \"8add5f1b762b6a0836fa9a733a3e1b54b3de0ecd9245fe8adc0f101083674943\", \"member_uri\": \"stdo://releases/v0-unicode-fixture/standards/OWNER.md\", \"sections\": [{\"first_line\": 1, \"heading\": \"One\", \"last_line\": 4, \"sha256\": \"d641971bc0665a41012244e9007622b1a6f5c303c9ff2bdd4d42585e57073812\", \"text\": \"## One\\nparagraph\\n===\u00a0\\nmore kept\\n\"}], \"standing\": \"verified source projection; no admission or semantic verdict\", \"status\": \"checked\", \"store\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/store\", \"valid\": true}\n",
+    "stderr": "",
+    "actual": {
+      "basis_uri": "stdo://releases/v0-unicode-fixture/",
+      "command": "read",
+      "definition": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "definition_id": "urn:fixture:unicode",
+      "definition_sha256": "1f3640b391caa74c0217340b2c4f686d9e9d4cd4712c71e3140a1862355954be",
+      "installed": true,
+      "kind": "stdo.skill-source-read",
+      "manager": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "manifest_sha256": "44ab64dd06ff9da3b4a029310c3677eeddadde22b6d27b38d89cb4d91808a150",
+      "member_sha256": "8add5f1b762b6a0836fa9a733a3e1b54b3de0ecd9245fe8adc0f101083674943",
+      "member_uri": "stdo://releases/v0-unicode-fixture/standards/OWNER.md",
+      "sections": [
+        {
+          "first_line": 1,
+          "heading": "One",
+          "last_line": 4,
+          "sha256": "d641971bc0665a41012244e9007622b1a6f5c303c9ff2bdd4d42585e57073812",
+          "text": "## One\nparagraph\n===\u00a0\nmore kept\n"
+        }
+      ],
+      "standing": "verified source projection; no admission or semantic verdict",
+      "status": "checked",
+      "store": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "valid": true
+    },
+    "expected": "exact raw section, lines and digest",
+    "passes": true
+  },
+  {
+    "case": "NBSP-after-setext-looking-line",
+    "selector": "Phantom",
+    "raw_source_sha256": "8add5f1b762b6a0836fa9a733a3e1b54b3de0ecd9245fe8adc0f101083674943",
+    "raw_source_utf8_hex": "2323204f6e650a7061726167726170680a3d3d3dc2a00a6d6f7265206b6570740a23232054776f0a6578636c756465640a",
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/read_basis.py",
+      "read",
+      "--stdo",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "--store",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "--definition",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "--member",
+      "standards/OWNER.md",
+      "--heading",
+      "Phantom"
+    ],
+    "exit": 1,
+    "stdout": "{\"command\": \"read\", \"definition\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json\", \"kind\": \"stdo.skill-source-read\", \"reason\": \"section_missing_or_ambiguous:Phantom\", \"status\": \"refused\"}\n",
+    "stderr": "",
+    "actual": {
+      "command": "read",
+      "definition": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "kind": "stdo.skill-source-read",
+      "reason": "section_missing_or_ambiguous:Phantom",
+      "status": "refused"
+    },
+    "expected": "refusal without projection",
+    "passes": true
+  },
+  {
+    "case": "NBSP-after-setext-looking-line",
+    "selector": "catalog",
+    "raw_source_sha256": "8add5f1b762b6a0836fa9a733a3e1b54b3de0ecd9245fe8adc0f101083674943",
+    "raw_source_utf8_hex": "2323204f6e650a7061726167726170680a3d3d3dc2a00a6d6f7265206b6570740a23232054776f0a6578636c756465640a",
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/read_basis.py",
+      "read",
+      "--stdo",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "--store",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "--definition",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "--member",
+      "standards/OWNER.md",
+      "--list-headings"
+    ],
+    "exit": 0,
+    "stdout": "{\"basis_uri\": \"stdo://releases/v0-unicode-fixture/\", \"command\": \"read\", \"definition\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json\", \"definition_id\": \"urn:fixture:unicode\", \"definition_sha256\": \"1f3640b391caa74c0217340b2c4f686d9e9d4cd4712c71e3140a1862355954be\", \"headings\": [{\"first_line\": 1, \"heading\": \"One\", \"level\": 2, \"unique\": true}, {\"first_line\": 5, \"heading\": \"Two\", \"level\": 2, \"unique\": true}], \"installed\": true, \"kind\": \"stdo.skill-source-read\", \"manager\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py\", \"manifest_sha256\": \"44ab64dd06ff9da3b4a029310c3677eeddadde22b6d27b38d89cb4d91808a150\", \"member_sha256\": \"8add5f1b762b6a0836fa9a733a3e1b54b3de0ecd9245fe8adc0f101083674943\", \"member_uri\": \"stdo://releases/v0-unicode-fixture/standards/OWNER.md\", \"standing\": \"verified source projection; no admission or semantic verdict\", \"status\": \"checked\", \"store\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/store\", \"valid\": true}\n",
+    "stderr": "",
+    "actual": {
+      "basis_uri": "stdo://releases/v0-unicode-fixture/",
+      "command": "read",
+      "definition": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "definition_id": "urn:fixture:unicode",
+      "definition_sha256": "1f3640b391caa74c0217340b2c4f686d9e9d4cd4712c71e3140a1862355954be",
+      "headings": [
+        {
+          "first_line": 1,
+          "heading": "One",
+          "level": 2,
+          "unique": true
+        },
+        {
+          "first_line": 5,
+          "heading": "Two",
+          "level": 2,
+          "unique": true
+        }
+      ],
+      "installed": true,
+      "kind": "stdo.skill-source-read",
+      "manager": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "manifest_sha256": "44ab64dd06ff9da3b4a029310c3677eeddadde22b6d27b38d89cb4d91808a150",
+      "member_sha256": "8add5f1b762b6a0836fa9a733a3e1b54b3de0ecd9245fe8adc0f101083674943",
+      "member_uri": "stdo://releases/v0-unicode-fixture/standards/OWNER.md",
+      "standing": "verified source projection; no admission or semantic verdict",
+      "status": "checked",
+      "store": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "valid": true
+    },
+    "expected": "exact catalog",
+    "passes": true
+  },
+  {
+    "case": "NBSP-nonblank-before-real-setext",
+    "selector": "One",
+    "raw_source_sha256": "9adb79a69521a4fe9edeccaabe63974ed001009d46c0f96d7a09efeb9583c8a5",
+    "raw_source_utf8_hex": "2323204f6e650ac2a00a3d3d3d0a23232054776f0a6578636c756465640a",
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/read_basis.py",
+      "read",
+      "--stdo",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "--store",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "--definition",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "--member",
+      "standards/OWNER.md",
+      "--heading",
+      "One"
+    ],
+    "exit": 1,
+    "stdout": "{\"command\": \"read\", \"definition\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json\", \"kind\": \"stdo.skill-source-read\", \"reason\": \"unsupported_setext_heading\", \"status\": \"refused\"}\n",
+    "stderr": "",
+    "actual": {
+      "command": "read",
+      "definition": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "kind": "stdo.skill-source-read",
+      "reason": "unsupported_setext_heading",
+      "status": "refused"
+    },
+    "expected": "refusal without projection",
+    "passes": true
+  },
+  {
+    "case": "NBSP-nonblank-before-real-setext",
+    "selector": "Phantom",
+    "raw_source_sha256": "9adb79a69521a4fe9edeccaabe63974ed001009d46c0f96d7a09efeb9583c8a5",
+    "raw_source_utf8_hex": "2323204f6e650ac2a00a3d3d3d0a23232054776f0a6578636c756465640a",
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/read_basis.py",
+      "read",
+      "--stdo",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "--store",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "--definition",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "--member",
+      "standards/OWNER.md",
+      "--heading",
+      "Phantom"
+    ],
+    "exit": 1,
+    "stdout": "{\"command\": \"read\", \"definition\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json\", \"kind\": \"stdo.skill-source-read\", \"reason\": \"unsupported_setext_heading\", \"status\": \"refused\"}\n",
+    "stderr": "",
+    "actual": {
+      "command": "read",
+      "definition": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "kind": "stdo.skill-source-read",
+      "reason": "unsupported_setext_heading",
+      "status": "refused"
+    },
+    "expected": "refusal without projection",
+    "passes": true
+  },
+  {
+    "case": "NBSP-nonblank-before-real-setext",
+    "selector": "catalog",
+    "raw_source_sha256": "9adb79a69521a4fe9edeccaabe63974ed001009d46c0f96d7a09efeb9583c8a5",
+    "raw_source_utf8_hex": "2323204f6e650ac2a00a3d3d3d0a23232054776f0a6578636c756465640a",
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/read_basis.py",
+      "read",
+      "--stdo",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/manager.py",
+      "--store",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/store",
+      "--definition",
+      "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "--member",
+      "standards/OWNER.md",
+      "--list-headings"
+    ],
+    "exit": 1,
+    "stdout": "{\"command\": \"read\", \"definition\": \"/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json\", \"kind\": \"stdo.skill-source-read\", \"reason\": \"unsupported_setext_heading\", \"status\": \"refused\"}\n",
+    "stderr": "",
+    "actual": {
+      "command": "read",
+      "definition": "/private/tmp/stdo304-unicode-successor02-n6eda1tk/definition.json",
+      "kind": "stdo.skill-source-read",
+      "reason": "unsupported_setext_heading",
+      "status": "refused"
+    },
+    "expected": "refusal without projection",
+    "passes": true
+  }
+]

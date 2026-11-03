@@ -64,6 +64,8 @@ discovery, and supplies two bounded implementation helpers:
   quoted/list/indented or inline comments, mixed comment/fence boundaries and
   unsupported HTML states refuse before projection. It distinguishes manager
   timeout from refusal and selects no authority or source policy.
+  Scanning and byte-preserving extraction share LF/CRLF/CR physical lines;
+  structural whitespace is explicitly space/tab, never Python Unicode `\s`.
 - `scripts/claude_tool_gate.py` projects an already-authorized, digest-bound
   policy over the documented `PreToolUse` event. Exact canonical Read paths,
   exact complete Bash strings and named no-argument Skill calls are supported;

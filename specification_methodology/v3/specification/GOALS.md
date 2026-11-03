@@ -11,15 +11,21 @@ The [contract](../.ai-workspace/work/STDO304_SKILLS/CONTRACT.md) binds the five
 native plugin skills and their shared handoff route. The selected outcome is
 bounded issuing/receiving and closed returns while preserving direct work,
 existing authority and the Product's exact selected basis. The
-[return](../.ai-workspace/work/STDO304_SKILLS/RETURN.md) binds final source
-`86afcb8a1d9e0d73297414fc935125dfb107f3cfad732be4694ec96ce8ce8c2b`
-and the [closed review](../.ai-workspace/work/STDO304_SKILLS/review/FINAL_REVIEW.md).
-No current actionable S0–S4 defect remains in the selected source-conservation
-and observed guarded consumer-path scope. Actual coordinated native execution
-used revision 4; revision 5 changes only the reader and tests. Its 33 matching
-replay objects cover 32 retained native helper calls and one labeled mechanical
-reproduction, not new native executions. Earlier failures remain recorded.
-The Executive accepts this bounded delivery for 3.0.4 with its declared host,
+[return](../.ai-workspace/work/STDO304_SKILLS/RETURN.md) binds the current
+[reader repair delta](../.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/SOURCE_DELTA_02.json),
+`6f129f5e680b620bd20ad5d493586eb6326a0dcac1bff5eaca148f57941c45a6`,
+and its [superseding review](../.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/FINAL_REVIEW.md).
+The owner's Unicode S2 report was valid; independent review found an adjacent
+empty-ATX S2. Both are closed within this bounded repair, which the Executive
+accepts as `local_repair`. The original reader no-actionable/OP-02 conclusion
+is superseded for this defect, with its bytes and evidence preserved.
+Current checks pass: 35 helper tests, 78 tester and 138 reviewer CLI checks,
+110 package members/6,091 references and five skill checks. All 33 retained
+replay objects match: 32 native helper calls plus one labeled mechanical
+reproduction. There were no new native sessions. Actual Claude execution still
+belongs to revision 4 with direct skill-file loading and declared harness
+dispatch/recording. Earlier failures and other unqualified modes remain recorded.
+The bounded delivery remains selected for 3.0.4 with its declared host,
 source-syntax and coverage limits. Release preparation/publication and consumer
 adoption remain separate; publication is unselected. No standard law,
 installed basis or independent Skills Product basis is changed.

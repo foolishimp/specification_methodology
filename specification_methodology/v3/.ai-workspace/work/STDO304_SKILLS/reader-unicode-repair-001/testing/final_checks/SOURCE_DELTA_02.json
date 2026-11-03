@@ -1,0 +1,34 @@
+{
+  "changed_files": [
+    {
+      "bytes": 11572,
+      "path": "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+      "predecessor_bytes": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/retained-01/read_basis.py",
+      "predecessor_sha256": "4c180df846327bf6a1eac337d5bc584f067f55bc044848d5f332e0f52bcd8ac5",
+      "sha256": "df7730a1f661a8be7a3144feff474f83197987ebfd1cce4063aa9c5504e75c41"
+    },
+    {
+      "bytes": 27239,
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_skill_source_reader.py",
+      "predecessor_bytes": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/retained-01/test_skill_source_reader.py",
+      "predecessor_sha256": "aed7733234232363d71d1ae186832d60a846d13d3e4c2dbe77b1cc4960a7629e",
+      "sha256": "b2bc411ff716de57222aed64969bcaca6d2670d1325a45e4f061d8087f31d2fa"
+    }
+  ],
+  "checks": {
+    "command": "python3 -B -m unittest -v test_skill_source_reader",
+    "passed": 35
+  },
+  "kind": "stdo.coordinated-skills.reader-unicode-delta",
+  "predecessor": {
+    "source_delta": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/SOURCE_DELTA.json",
+    "source_delta_sha256": "6cd82322ac23d4dfe8ce7d8bf0df73fd2d3ffcbe06f3f70be8925d27e22dc523"
+  },
+  "review_cause": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/ADJACENT_ATX_FINDING.md",
+    "sha256": "4afcd90fe10b9550310a2a342d917b487653b76c28f12e27af6e765e380ba200"
+  },
+  "schema_version": 1,
+  "standing": "Frozen bounded ATX closing-delimiter successor for independent test/review; prior delta/evidence preserved; no Git or release effect",
+  "unchanged_predecessor_inputs": 114
+}

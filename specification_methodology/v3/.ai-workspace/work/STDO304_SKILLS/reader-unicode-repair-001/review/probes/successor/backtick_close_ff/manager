@@ -1,0 +1,8 @@
+#!/usr/local/bin/python3
+import json,sys
+from pathlib import Path
+s=json.loads((Path(__file__).parent/'state.json').read_text())
+a=sys.argv[1:]
+if a[0]=='status': print(json.dumps(s['status']))
+elif a[0]=='resolve': print(json.dumps({'uri':a[1],'path':s['manifest'] if a[1].endswith('manifest.json') else s['member']}))
+else: sys.exit(2)

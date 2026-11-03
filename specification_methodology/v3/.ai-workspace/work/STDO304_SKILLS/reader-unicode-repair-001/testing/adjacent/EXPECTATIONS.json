@@ -1,0 +1,53 @@
+{
+  "basis": "User counterexamples and predecessor closed-ATX projection contract; CR/LF/CRLF are physical line endings; other Unicode separators are literal paragraph data; fence trailing whitespace is ASCII space/tab only.",
+  "frozen_before_successor_exposure": true,
+  "specimens": [
+    {
+      "name": "NBSP-after-empty-ATX-marker",
+      "text": "## One\nkept\n##\u00a0\nmore kept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nkept\n##\u00a0\nmore kept\n",
+      "one_last_line": 4,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 5,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "NBSP-after-setext-looking-line",
+      "text": "## One\nparagraph\n===\u00a0\nmore kept\n## Two\nexcluded\n",
+      "outcome": "projection",
+      "one_text": "## One\nparagraph\n===\u00a0\nmore kept\n",
+      "one_last_line": 4,
+      "headings": [
+        {
+          "heading": "One",
+          "level": 2,
+          "first_line": 1,
+          "unique": true
+        },
+        {
+          "heading": "Two",
+          "level": 2,
+          "first_line": 5,
+          "unique": true
+        }
+      ]
+    },
+    {
+      "name": "NBSP-nonblank-before-real-setext",
+      "text": "## One\n\u00a0\n===\n## Two\nexcluded\n",
+      "outcome": "refuse"
+    }
+  ]
+}

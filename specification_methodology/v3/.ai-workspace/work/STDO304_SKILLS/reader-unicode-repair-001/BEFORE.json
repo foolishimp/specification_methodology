@@ -1,0 +1,107 @@
+{
+  "reader_sha256": "a2dabd893dacf893d30ba35d91f6f2356084301175ba5bd01e98cfdd1976d3fb",
+  "fixture_sha256": "02dcddcb3f231b2cf8c5c36bd2671f8f18a128ca97b0964ed19197ca9971f67c",
+  "standing": "isolated fixture interface; actual public reader subprocess; no native manager or actor claim",
+  "records": [
+    {
+      "case": "u2028_is_not_a_line_ending",
+      "subject": "## One\nordinary\u2028## False\nnot a heading\n",
+      "subject_sha256": "4d4424555d5bfcf67e3c62558d3839dd84e0da76a1bf7f041fb8dbb44622235d",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+        "read",
+        "--stdo",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-ye3gge6r/manager",
+        "--store",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-ye3gge6r/store",
+        "--definition",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-ye3gge6r/stdo_fixture.json",
+        "--member",
+        "standards/OWNER.md",
+        "--heading",
+        "False"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"basis_uri\": \"stdo://releases/v3.0.3/\", \"command\": \"read\", \"definition\": \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-ye3gge6r/stdo_fixture.json\", \"definition_id\": \"urn:fixture\", \"definition_sha256\": \"d976edd149689d51413ab5f4626ea51068acde724648721448be5822ac8dd33c\", \"installed\": true, \"kind\": \"stdo.skill-source-read\", \"manager\": \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-ye3gge6r/manager\", \"manifest_sha256\": \"3577f5a7a92d1ef34981f8b604f19f057e3af7db8ff8e1b2e019a44aa606e87b\", \"member_sha256\": \"4d4424555d5bfcf67e3c62558d3839dd84e0da76a1bf7f041fb8dbb44622235d\", \"member_uri\": \"stdo://releases/v3.0.3/standards/OWNER.md\", \"sections\": [{\"first_line\": 3, \"heading\": \"False\", \"last_line\": 4, \"sha256\": \"842b7ef3848d3fd53b6fe4f4fb37858508ee5adaa51fc5692029522f7e846d63\", \"text\": \"## False\\nnot a heading\\n\"}], \"standing\": \"verified source projection; no admission or semantic verdict\", \"status\": \"checked\", \"store\": \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-ye3gge6r/store\", \"valid\": true}\n",
+      "stderr": "",
+      "result": {
+        "basis_uri": "stdo://releases/v3.0.3/",
+        "command": "read",
+        "definition": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-ye3gge6r/stdo_fixture.json",
+        "definition_id": "urn:fixture",
+        "definition_sha256": "d976edd149689d51413ab5f4626ea51068acde724648721448be5822ac8dd33c",
+        "installed": true,
+        "kind": "stdo.skill-source-read",
+        "manager": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-ye3gge6r/manager",
+        "manifest_sha256": "3577f5a7a92d1ef34981f8b604f19f057e3af7db8ff8e1b2e019a44aa606e87b",
+        "member_sha256": "4d4424555d5bfcf67e3c62558d3839dd84e0da76a1bf7f041fb8dbb44622235d",
+        "member_uri": "stdo://releases/v3.0.3/standards/OWNER.md",
+        "sections": [
+          {
+            "first_line": 3,
+            "heading": "False",
+            "last_line": 4,
+            "sha256": "842b7ef3848d3fd53b6fe4f4fb37858508ee5adaa51fc5692029522f7e846d63",
+            "text": "## False\nnot a heading\n"
+          }
+        ],
+        "standing": "verified source projection; no admission or semantic verdict",
+        "status": "checked",
+        "store": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-ye3gge6r/store",
+        "valid": true
+      }
+    },
+    {
+      "case": "nbsp_does_not_close_fence",
+      "subject": "## One\n```text\ncode\n```\u00a0\n## False\nstill code\n",
+      "subject_sha256": "6af287ee28c3c804003d88565f73e4a915fb567baa4cbfcf48d8276fadf33f30",
+      "command": [
+        "/usr/local/bin/python3",
+        "-B",
+        "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+        "read",
+        "--stdo",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-inp45mmq/manager",
+        "--store",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-inp45mmq/store",
+        "--definition",
+        "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-inp45mmq/stdo_fixture.json",
+        "--member",
+        "standards/OWNER.md",
+        "--heading",
+        "False"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"basis_uri\": \"stdo://releases/v3.0.3/\", \"command\": \"read\", \"definition\": \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-inp45mmq/stdo_fixture.json\", \"definition_id\": \"urn:fixture\", \"definition_sha256\": \"82551b544ace512574b704ae7391934e825231ec456767fd3f7989dabf29624a\", \"installed\": true, \"kind\": \"stdo.skill-source-read\", \"manager\": \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-inp45mmq/manager\", \"manifest_sha256\": \"5825b2a5f70cd40250ae6fabd55c0511f33e8f8ff517ef30433536d9fd373a42\", \"member_sha256\": \"6af287ee28c3c804003d88565f73e4a915fb567baa4cbfcf48d8276fadf33f30\", \"member_uri\": \"stdo://releases/v3.0.3/standards/OWNER.md\", \"sections\": [{\"first_line\": 5, \"heading\": \"False\", \"last_line\": 6, \"sha256\": \"d79800fe450590e08c4cde090c39a67383a97c3838f233cd7d70158444afc946\", \"text\": \"## False\\nstill code\\n\"}], \"standing\": \"verified source projection; no admission or semantic verdict\", \"status\": \"checked\", \"store\": \"/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-inp45mmq/store\", \"valid\": true}\n",
+      "stderr": "",
+      "result": {
+        "basis_uri": "stdo://releases/v3.0.3/",
+        "command": "read",
+        "definition": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-inp45mmq/stdo_fixture.json",
+        "definition_id": "urn:fixture",
+        "definition_sha256": "82551b544ace512574b704ae7391934e825231ec456767fd3f7989dabf29624a",
+        "installed": true,
+        "kind": "stdo.skill-source-read",
+        "manager": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-inp45mmq/manager",
+        "manifest_sha256": "5825b2a5f70cd40250ae6fabd55c0511f33e8f8ff517ef30433536d9fd373a42",
+        "member_sha256": "6af287ee28c3c804003d88565f73e4a915fb567baa4cbfcf48d8276fadf33f30",
+        "member_uri": "stdo://releases/v3.0.3/standards/OWNER.md",
+        "sections": [
+          {
+            "first_line": 5,
+            "heading": "False",
+            "last_line": 6,
+            "sha256": "d79800fe450590e08c4cde090c39a67383a97c3838f233cd7d70158444afc946",
+            "text": "## False\nstill code\n"
+          }
+        ],
+        "standing": "verified source projection; no admission or semantic verdict",
+        "status": "checked",
+        "store": "/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-source-reader-inp45mmq/store",
+        "valid": true
+      }
+    }
+  ]
+}

@@ -6,10 +6,11 @@ This source project constructs the next major release of Specification Methodolo
 [T-007](.ai-workspace/tickets/active/T-007-STDO-3.0.4-coordinated-skills.md)
 selects a shared issuing, receiving and return path for the five native plugin
 skills. The [work return](.ai-workspace/work/STDO304_SKILLS/RETURN.md) records
-the accepted bounded implementation, closed independent review and actual
-guarded consumer-path evidence. Native runs used revision 4; revision 5 adds
-reviewed reader refusals with exact retained-input replay. Host and coverage
-limits remain explicit. STDO 3.0.4 has not been published.
+the accepted bounded implementation and superseding Unicode/ATX reader repair.
+The [current review](.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/FINAL_REVIEW.md)
+closes the valid S2 findings on that repair. Native runs still belong to
+revision 4; subsequent reader cuts have bounded retained-input replay evidence.
+Host and coverage limits remain explicit. STDO 3.0.4 has not been published.
 
 **STDO 3.0.3 is published as a normal standalone release and GitHub Latest.**
 The [release record](.ai-workspace/work/STDO303_DELIVERY/RELEASED.md) binds the

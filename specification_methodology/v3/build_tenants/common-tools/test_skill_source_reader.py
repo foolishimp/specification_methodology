@@ -138,7 +138,7 @@ else:sys.exit(8)
         self.subject("# Owner\n\n## One\nkeep me\n\n### Nested\nkeep this too\n\n## Two\nexclude this\n")
 
     def subject(self, text):
-        self.member.write_text(text)
+        self.member.write_bytes(text.encode("utf-8"))
         manifest = {"standards": {"installed_root": "standards", "members": [
             {"path": "OWNER.md", "sha256": hashlib.sha256(self.member.read_bytes()).hexdigest()}]}}
         raw = (json.dumps(manifest) + "\n").encode()
@@ -324,6 +324,115 @@ else:sys.exit(8)
         code, result = self.invoke(heading="Two")
         self.assertEqual(code, 0)
         self.assertEqual(result["sections"][0]["text"], "## Two\nreal section\n")
+
+    def test_unicode_separators_cannot_invent_lines_or_sections(self):
+        for separator in ["\v", "\f", "\x1c", "\x1d", "\x1e", "\x85", "\u2028", "\u2029"]:
+            with self.subTest(codepoint=f"U+{ord(separator):04X}"):
+                self.subject("## One\nordinary" + separator + "## False\n## Two\nreal section\n")
+                code, result = self.invoke(heading="False")
+                self.assertEqual((code, result["status"], result["reason"]),
+                                 (1, "refused", "section_missing_or_ambiguous:False"))
+                self.assertNotIn("sections", result)
+                code, catalog = self.invoke(catalog=True)
+                self.assertEqual(code, 0)
+                self.assertEqual([(h["heading"], h["first_line"]) for h in catalog["headings"]],
+                                 [("One", 1), ("Two", 3)])
+                code, result = self.invoke(heading="One")
+                self.assertEqual(code, 0)
+                expected = "## One\nordinary" + separator + "## False\n"
+                self.assertEqual(result["sections"][0]["text"], expected)
+                self.assertEqual(result["sections"][0]["sha256"], hashlib.sha256(expected.encode()).hexdigest())
+
+    def test_non_ascii_whitespace_cannot_close_fences(self):
+        for fence in ["```", "~~~"]:
+            for whitespace in ["\u00a0", "\u1680", "\u2000", "\u2028", "\u2029", "\v", "\f", "\x85"]:
+                with self.subTest(fence=fence, codepoint=f"U+{ord(whitespace):04X}"):
+                    self.subject("## One\n" + fence + "text\ncode\n" + fence + whitespace + "\n## False\nstill code\n")
+                    code, result = self.invoke(heading="False")
+                    self.assertEqual((code, result["status"], result["reason"]),
+                                     (1, "refused", "unterminated_markdown_structure"))
+                    self.assertNotIn("sections", result)
+
+    def test_physical_endings_preserve_section_bytes_and_coordinates(self):
+        bodies = ["# Owner", "", "## One", "body\u2028continuation", "### Nested", "caf\u00e9\u00a0", "## Two", "end"]
+        for endings in [["\n"] * 8, ["\r\n"] * 8, ["\r"] * 8,
+                        ["\r\n", "\r", "\n", "\r\n", "\n", "\r", "\r\n", "\n"]]:
+            for final_ending in (True, False):
+                with self.subTest(endings=repr(endings), final_ending=final_ending):
+                    lines = [body + ending for body, ending in zip(bodies, endings)]
+                    if not final_ending:
+                        lines[-1] = bodies[-1]
+                    self.subject("".join(lines))
+                    code, result = self.invoke()
+                    self.assertEqual(code, 0)
+                    section = result["sections"][0]
+                    expected = "".join(lines[2:6]).encode("utf-8")
+                    self.assertEqual(section["text"].encode("utf-8"), expected)
+                    self.assertEqual(section["sha256"], hashlib.sha256(expected).hexdigest())
+                    self.assertEqual((section["first_line"], section["last_line"]), (3, 6))
+                    code, catalog = self.invoke(catalog=True)
+                    self.assertEqual(code, 0)
+                    self.assertEqual([(h["heading"], h["first_line"]) for h in catalog["headings"]],
+                                     [("Owner", 1), ("One", 3), ("Nested", 5), ("Two", 7)])
+
+    def test_spaces_and_tabs_close_fences_after_literal_unicode(self):
+        for fence in ["```", "~~~"]:
+            for ending in ["\n", "\r\n", "\r"]:
+                with self.subTest(fence=fence, ending=repr(ending)):
+                    self.subject(ending.join(["## One", fence, fence + "\u00a0", "## False",
+                                              "   " + fence + " \t", "## Two", "body", ""]))
+                    code, result = self.invoke(heading="Two")
+                    self.assertEqual(code, 0)
+                    self.assertEqual(result["sections"][0]["text"], "## Two" + ending + "body" + ending)
+                    self.assertEqual((result["sections"][0]["first_line"], result["sections"][0]["last_line"]), (6, 7))
+
+    def test_atx_and_blank_line_whitespace_is_space_or_tab(self):
+        self.subject("## One\n##\u00a0\n##\u2028\n## \u00a0\nkept\n## \t\n## Two\nend\n")
+        code, result = self.invoke(catalog=True)
+        self.assertEqual(code, 0)
+        self.assertEqual([(h["heading"], h["first_line"]) for h in result["headings"]],
+                         [("One", 1), ("\u00a0", 4), ("", 6), ("Two", 7)])
+        self.subject("## One\n\u00a0\n---\n## Two\nend\n")
+        self.assertEqual(self.invoke()[1]["reason"], "unsupported_setext_heading")
+        for middle in [" \t\n---", "paragraph\n---\u00a0"]:
+            self.subject("## One\n" + middle + "\n## Two\nend\n")
+            code, result = self.invoke(catalog=True)
+            self.assertEqual(code, 0)
+            self.assertEqual([h["heading"] for h in result["headings"]], ["One", "Two"])
+
+    def test_empty_atx_closing_hashes_do_not_invent_named_sections(self):
+        for line in ["## ###", "## \t### \t", "##\t#\t", "## #######"]:
+            with self.subTest(line=line):
+                self.subject("# Owner\n\n" + line + "\nselected\n## Next\nother\n")
+                code, catalog = self.invoke(catalog=True)
+                self.assertEqual(code, 0)
+                self.assertEqual([(h["heading"], h["first_line"]) for h in catalog["headings"]],
+                                 [("Owner", 1), ("", 3), ("Next", 5)])
+                code, result = self.invoke(heading="###")
+                self.assertEqual((code, result["reason"]), (1, "section_missing_or_ambiguous:###"))
+                code, result = self.invoke(heading="")
+                self.assertEqual(code, 0)
+                section = result["sections"][0]
+                expected = line + "\nselected\n"
+                self.assertEqual((section["first_line"], section["last_line"]), (3, 4))
+                self.assertEqual(section["text"], expected)
+                self.assertEqual(section["sha256"], hashlib.sha256(expected.encode()).hexdigest())
+
+    def test_atx_closing_hashes_preserve_title_and_unicode_boundaries(self):
+        cases = [("## Title ###", "Title"), ("## Title###", "Title###"),
+                 (r"## Title \###", r"Title \###"), (r"## \###", r"\###"),
+                 ("## ### ###", "###"), (r"## Title \# ##", r"Title \#"),
+                 ("## \u00a0###", "\u00a0###"), ("## ###\u00a0", "###\u00a0"),
+                 ("## \u00a0 ###", "\u00a0"), ("## ### \u00a0", "### \u00a0")]
+        for line, title in cases:
+            with self.subTest(line=line):
+                self.subject(line + "\nselected\n## Next\nother\n")
+                code, catalog = self.invoke(catalog=True)
+                self.assertEqual(code, 0)
+                self.assertEqual([h["heading"] for h in catalog["headings"]], [title, "Next"])
+                code, result = self.invoke(heading=title)
+                self.assertEqual(code, 0)
+                self.assertEqual(result["sections"][0]["text"], line + "\nselected\n")
 
     def test_adjacent_nested_fence_and_heading_containers_refuse(self):
         for opener in ["  ```", "- ```", "1. ```", "> > ```"]:

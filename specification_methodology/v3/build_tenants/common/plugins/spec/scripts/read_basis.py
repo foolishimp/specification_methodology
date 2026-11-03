@@ -86,6 +86,11 @@ def verified(args):
     return root, manifest, result
 
 
+def physical_lines(text: str):
+    """CommonMark LF/CRLF/CR lines, retaining their exact original endings."""
+    return re.findall(r"[^\r\n]*(?:\r\n|\r|\n)|[^\r\n]+\Z", text)
+
+
 def headings(text: str):
     """Closed ATX subset; ignore examples/comments, refuse unsupported HTML blocks.
 
@@ -98,10 +103,10 @@ def headings(text: str):
     found = []
     fence = None
     comment = False
-    source_lines = text.splitlines()
+    source_lines = [line.rstrip("\r\n") for line in physical_lines(text)]
     for index, line in enumerate(source_lines):
         if fence:
-            if re.fullmatch(r" {0,3}" + re.escape(fence[0]) + "{" + str(len(fence)) + r",}\s*", line):
+            if re.fullmatch(r" {0,3}" + re.escape(fence[0]) + "{" + str(len(fence)) + r",}[ \t]*", line):
                 fence = None
             continue
         if not comment and "<!--" in line and not line.startswith("<!--"):
@@ -142,20 +147,20 @@ def headings(text: str):
                 raise Refusal("unsupported_fence_info")
             fence = marker[1]
             continue
-        if re.match(r"#{1,6}(?:\s|$)", clean_container) and not visible.startswith("#"):
+        if re.match(r"#{1,6}(?:[ \t]|\Z)", clean_container) and not visible.startswith("#"):
             raise Refusal("unsupported_container_heading")
         if clean_container.startswith("<"):
             raise Refusal("unsupported_markdown_html_block")
-        if commented_line and re.match(r"^ {0,3}#{1,6}(?:\s|$)", visible):
+        if commented_line and re.match(r"^ {0,3}#{1,6}(?:[ \t]|\Z)", visible):
             raise Refusal("unsupported_heading_comment")
-        if (index and source_lines[index - 1].strip()
-                and re.fullmatch(r" {0,3}(?:=+|-+)\s*", visible)):
+        if (index and source_lines[index - 1].strip(" \t")
+                and re.fullmatch(r" {0,3}(?:=+|-+)[ \t]*", visible)):
             raise Refusal("unsupported_setext_heading")
-        match = re.fullmatch(r" {0,3}(#{1,6})[ \t]+(.+?)(?:[ \t]+#+)?[ \t]*", visible)
+        match = re.fullmatch(r" {0,3}(#{1,6})(?:[ \t]+(.*))?", visible)
         if match:
-            found.append((index, len(match[1]), match[2]))
-        elif re.fullmatch(r" {0,3}#{1,6}\s*", visible):
-            found.append((index, len(visible.strip()), ""))
+            title = (match[2] or "").strip(" \t")
+            title = re.sub(r"(?:\A|[ \t]+)#+\Z", "", title).rstrip(" \t")
+            found.append((index, len(match[1]), title))
     if fence or comment:
         raise Refusal("unterminated_markdown_structure")
     return found
@@ -163,7 +168,7 @@ def headings(text: str):
 
 def sections(text: str, requested):
     parsed = headings(text)
-    lines = text.splitlines(keepends=True)
+    lines = physical_lines(text)
     result = []
     for name in requested:
         matches = [h for h in parsed if h[2] == name]

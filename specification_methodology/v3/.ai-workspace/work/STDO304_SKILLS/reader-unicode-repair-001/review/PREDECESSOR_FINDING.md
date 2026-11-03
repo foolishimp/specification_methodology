@@ -1,0 +1,15 @@
+# OP-02 Unicode reopening — S2 confirmed on predecessor
+
+Exact predecessor: source freeze5 `86afcb8a1d9e0d73297414fc935125dfb107f3cfad732be4694ec96ce8ce8c2b`; reader `a2dabd893dacf893d30ba35d91f6f2356084301175ba5bd01e98cfdd1976d3fb`. The unchanged archived reader was invoked by its actual CLI with a controlled manager fixture, exact definition/manifest/member hashes, and both catalog and named-section operations. This tests the shipped verification-to-projection path, not a real installation or native actor.
+
+The former `review/FINAL_REVIEW.md` no-actionable conclusion and OP-02 closure are superseded for this defect. That record's hash remains `77ed471319ee80b12301ea528a193dd841488a6ef4cb70f532c29acc9fedbf47`; no original evidence was edited.
+
+Cause and location: `read_basis.py:101` and `:166` use Python splitlines, whose extra separators are not CommonMark line endings. The closing-fence pattern at `:104` uses Unicode whitespace, admitting characters that do not close a CommonMark fence. Verification of a member digest does not validate this derived meaning.
+
+- In `backtick_close_nbsp`, a backtick fence followed by U+00A0 is falsely closed. The CLI returns exit0/status checked, catalogs Invented at line5, and returns `## Invented\ninside\n` as its verified section. That text remains inside the unclosed code block under the declared syntax. The selected One section is incorrectly cut at line4.
+- In `paragraph_ls`, U+2028 within physical line2 is treated as a new line. The same invented section is returned from the paragraph, One is cut midway through its physical line, and real heading Two shifts from physical line4 to reported line5.
+- Adjacent controls expose the same ASCII/Unicode boundary problem in empty-heading detection at `:157–158`: `##` followed by NBSP is positively cataloged as an empty heading. Separately, a valid space-tab-only empty ATX heading is cataloged as a tab due to the title match at `:154–156`. These are retained selector discriminators for successor assessment, not a claim about every CommonMark feature.
+
+CS-09 requires a unique bounded source section or explicit refusal/incomplete result. The positive invented projections violate that obligation; an explicit conservative refusal would be adequate. CommonMark0.31.2 §2.1, §4.5 and adjacent §4.2 supply the source oracle, recorded in frozen EXPECTATIONS.md. The S2 impact is false verified authority-bearing source selection and incorrect line provenance, not merely formatting.
+
+Evidence: `predecessor_RESULTS.json` SHA256 `8d10c6886b4843de76f4aa412bc185ac627c85bf95c90a70472e3a93f356a2e4`; independently frozen `PROBE_CASES.json` SHA256 `ce6f9ac1d22a3d0ab69afdfc9cd8f2ccaf690ace30099880b9a6aef4e359124c`; the complete source-derived probe script and fixture bytes are retained here. 42 cases /126 CLI calls cover the selected boundaries and adjacent controls. No assertion that these characters occur in released 3.0.3 is made. No successor delta had been inspected when these probes and expectations were frozen.

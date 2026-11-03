@@ -1,0 +1,57 @@
+{
+  "changed_files": [
+    {
+      "bytes": 11590,
+      "path": "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py",
+      "predecessor_sha256": "a2dabd893dacf893d30ba35d91f6f2356084301175ba5bd01e98cfdd1976d3fb",
+      "sha256": "4c180df846327bf6a1eac337d5bc584f067f55bc044848d5f332e0f52bcd8ac5"
+    },
+    {
+      "bytes": 6167,
+      "path": "specification_methodology/v3/build_tenants/common-design/COORDINATED_SKILLS.md",
+      "predecessor_sha256": "b796327e20054f6ddcd24191259b4139fb8efc3a489b07e9a6732fb2929b8cbf",
+      "sha256": "58e79f4d7fd7ba1ad8083907d1fd2e80436148a56c3edfc284258b7d464ea6f1"
+    },
+    {
+      "bytes": 25115,
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_skill_source_reader.py",
+      "predecessor_sha256": "02dcddcb3f231b2cf8c5c36bd2671f8f18a128ca97b0964ed19197ca9971f67c",
+      "sha256": "aed7733234232363d71d1ae186832d60a846d13d3e4c2dbe77b1cc4960a7629e"
+    }
+  ],
+  "checks": {
+    "command": "python3 -B -m unittest -v test_skill_source_reader",
+    "passed": 33
+  },
+  "evidence": [
+    {
+      "bytes": 2638,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/README.md",
+      "sha256": "09f3ca1b0078d0b0dec5a3129f07c8f83753cb5031c4295dfb7e05bfbc7a5050"
+    },
+    {
+      "bytes": 2529,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/probe.py",
+      "sha256": "6964b1c7f3a9a90df4095f27bd8b9810810d987b867e94a44e51a6c3e335117d"
+    },
+    {
+      "bytes": 7042,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/BEFORE.json",
+      "sha256": "6bff34831bd0f0a44cd5a33fca4a008f2610a4635f280be076fd279b4396fe15"
+    },
+    {
+      "bytes": 3242,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/AFTER.json",
+      "sha256": "95a9f2380aca631ae00096965a63322dfd7b016a23d4d730247ebdae5bff2c9f"
+    }
+  ],
+  "kind": "stdo.coordinated-skills.reader-unicode-delta",
+  "predecessor": {
+    "commit": "0aa00244602293d8e0fd384b7a280ae443afcd7d",
+    "source_freeze": "specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/SOURCE_FREEZE.json",
+    "source_freeze_sha256": "86afcb8a1d9e0d73297414fc935125dfb107f3cfad732be4694ec96ce8ce8c2b"
+  },
+  "schema_version": 1,
+  "standing": "Frozen construction successor for independent test and review; no native actor, acceptance or release claim",
+  "unchanged_predecessor_inputs": 113
+}
