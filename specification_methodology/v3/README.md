@@ -2,13 +2,13 @@
 
 This source project constructs the next major release of Specification Methodology. One common specification governs the independent Codex and Claude realisations under `build_tenants/`. The installed STDO 2.5.1 RC2 release governs construction; the existing 2.* source and released products remain separate.
 
-**The owner has accepted STDO 3.0.4 for a normal standalone release.**
-The [release selection](.ai-workspace/work/STDO304_DELIVERY/SELECTION.md)
-continues 3.0.3 under `stable-v1`, including the reviewed skills, source-reader
-repairs and review-flow amendment. Exact version metadata and public guidance
-are being prepared for bounded review, followed by the authorized tag and push.
-Publication and public-install readback have not yet occurred; native workflow
-limits remain disclosed.
+**STDO 3.0.4 is published as a normal standalone release and GitHub Latest.**
+The [release record](.ai-workspace/work/STDO304_DELIVERY/RELEASED.md) binds the
+immutable tag, four public assets, exact fresh public installation and closed
+independent review. It includes the five native coordinated skills, source-reader
+repairs and review-flow amendment. The 111-file installation, 20 logical routes
+and 191-source materialization pass; existing native workflow limits remain.
+No shared installation or consumer basis was changed.
 
 The 3.0.4 review-flow source is reviewed and accepted for that bounded release.
 The [new contract](.ai-workspace/work/STDO304_SKILLS/review-flow-001/CONTRACT.md)
@@ -23,7 +23,7 @@ is closed, with no current actionable source finding. The Executive records
 disclosed scope for release. The three
 original native trials had mixed outcomes, including two strict-return failures
 and an unsupported authorization claim; no successor actor ran. This is reviewed
-source meaning; no installation or publication has occurred yet.
+meaning is now released; publication adds no new actor qualification.
 
 The preceding coordinated-skills delivery is accepted for inclusion.
 [T-007](.ai-workspace/tickets/active/T-007-STDO-3.0.4-coordinated-skills.md)
@@ -33,9 +33,9 @@ the accepted bounded implementation and superseding Unicode/ATX reader repair.
 The [reader repair review](.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/FINAL_REVIEW.md)
 closes the valid S2 findings on that repair. Native runs still belong to
 revision 4; subsequent reader cuts have bounded retained-input replay evidence.
-Host and coverage limits remain explicit. STDO 3.0.4 has not been published.
+Host and coverage limits remain explicit in the published release.
 
-**STDO 3.0.3 is published as a normal standalone release and GitHub Latest.**
+**STDO 3.0.3 remains available as the preceding standalone release.**
 The [release record](.ai-workspace/work/STDO303_DELIVERY/RELEASED.md) binds the
 immutable native tag, manifest, public installation and closed independent
 review. The installed documentation home includes Constraints, the reviewed

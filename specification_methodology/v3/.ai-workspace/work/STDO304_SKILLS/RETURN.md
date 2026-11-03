@@ -1,7 +1,12 @@
 # Coordinated skills delivery return
 
-Status: **review-flow source `candidate_ready`, independent source review
-satisfied; preceding bounded implementation accepted for inclusion in 3.0.4**.
+Status: **published in STDO 3.0.4; independent source and bounded release
+reviews closed; existing native qualification limits retained**.
+
+The [release record](../STDO304_DELIVERY/RELEASED.md) binds the owner's accepted
+scope, exact native tag and manifest, normal GitHub Latest publication and
+fresh public installation. This current status supersedes the earlier
+publication-pending selection without rewriting the frozen subjects below.
 
 The owner has selected a further [review-flow contract](review-flow-001/CONTRACT.md)
 over checkpoint `8a756806c7ec5063ad7afbaff50d837882a33f12`. It changes candidate
@@ -16,14 +21,15 @@ reasoned, owned local deferral. Executive priority/disposition stays separate.
 The three first-candidate native calls are not an aggregate pass: two strict
 return failures, separately verified R1 recovery, conditional R2 recording and
 E1's unsupported authorization/grouping remain recorded, with batching/family
-limits and no successor runs. The Executive selects a local checkpoint only.
-This is reviewed candidate meaning; final Product/release decisions, installed
-law and consumer bases remain separate.
+limits and no successor runs. The owner subsequently accepted this bounded
+scope for the completed release above. Publication establishes no additional
+actor qualification and changes no existing consumer basis.
 
 ## Preceding delivery and reader repair
 The Executive consumed the sealed test report and closed independent review,
 then accepted the superseding Unicode/ATX `local_repair` described below.
-Publication remains unselected; this return supplies no released 3.0.4 cut.
+At that repair stage publication was unselected. The later released cut and
+its separate acceptance are bound by the current release record above.
 
 The [contract](CONTRACT.md) binds the owner's selected 3.0.4 increment. Five
 native plugin skills now route coordinated requests through one

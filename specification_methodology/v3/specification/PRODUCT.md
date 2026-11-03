@@ -14,8 +14,10 @@ Under the [standalone successor requirement](requirements/README.md#standalone-s
 
 Each rule has one owning section, under [Method Structure](#method-structure) and the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
-The selected distribution increment is STDO 3.0.4 under the owner's
-[release selection](../.ai-workspace/work/STDO304_DELIVERY/SELECTION.md).
+The selected distribution increment, STDO 3.0.4, is published under the owner's
+[release selection](../.ai-workspace/work/STDO304_DELIVERY/SELECTION.md); the
+[release record](../.ai-workspace/work/STDO304_DELIVERY/RELEASED.md) binds its
+exact publication, public installation and closed independent review.
 It adds the reviewed [coordinated skills](requirements/COORDINATED_SKILLS.md),
 [review-flow amendment](requirements/REVIEW_FLOW.md) and bounded reader repairs
 to the published 3.0.3 payload. Release integrity is checked separately from the

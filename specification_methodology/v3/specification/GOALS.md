@@ -4,18 +4,18 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
-**STDO 3.0.4 is owner-approved for normal standalone release and push.**
-The [release selection](../.ai-workspace/work/STDO304_DELIVERY/SELECTION.md)
-binds reviewed source `4568edeeba415a877f1b9a4dd5ac9aeb404f6d7e`, native
-predecessor 3.0.3 and the unchanged builder. Release preparation updates only
-version-coherent distribution metadata/guidance and current status before
-bounded review. Exact tag, assets, atomic remote publication and fresh public
-installation remain to be executed. The owner accepts the stated scope with
-its retained runtime limits; this does not qualify additional actor paths.
+**STDO 3.0.4 is published as a normal standalone release and GitHub Latest.**
+The [release record](../.ai-workspace/work/STDO304_DELIVERY/RELEASED.md) binds
+source A, publication carrier B2, native C, annotated tag, manifest and GitHub
+release 432270412. Exact remote publication, four public downloads, the fresh
+111-file public installation, 20 routes and 191-source materialization pass.
+Independent public review is closed and the Executive accepts that bounded
+distribution result under the owner's release authority. Existing native
+workflow limits, the builder and all consumer basis selections remain unchanged.
 
 ### Accepted review-flow source
 
-**The owner selects the review-flow amendment for the 3.0.4 candidate.**
+**The owner-selected review-flow amendment is included in 3.0.4.**
 Its [contract](../.ai-workspace/work/STDO304_SKILLS/review-flow-001/CONTRACT.md),
 [requirements](requirements/REVIEW_FLOW.md) and
 [design](../build_tenants/common-design/REVIEW_FLOW.md) bind the approved
@@ -38,7 +38,7 @@ not an aggregate pass: two strict-envelope failures, separately verified R1
 recovery, a conditional R2 record and E1's unsupported authorization/grouping
 claim remain explicit. Source/candidate batching and family-independence limits
 withhold native independent-review qualification. No successor call ran. This
-is accepted source meaning awaiting publication; the builder and all consumer
+is released meaning with bounded qualification; the builder and all consumer
 selections remain unchanged.
 
 ### Preceding coordinated-skills delivery
@@ -66,13 +66,13 @@ belongs to revision 4 with direct skill-file loading and declared harness
 dispatch/recording. Earlier failures and other unqualified modes remain recorded.
 That bounded delivery remains selected for 3.0.4 with its declared host,
 source-syntax and coverage limits. Release preparation/publication and consumer
-adoption remain separate; publication is now selected above. That delivery changed no
+adoption remain separate; publication is complete above. That delivery changed no
 standard law, installed basis or independent Skills Product basis. Its review
 does not qualify the later review-flow amendment above.
 
 ### Published 3.0.3 predecessor
 
-**STDO 3.0.3 is released as normal standalone GitHub Latest**, including the
+**STDO 3.0.3 remains the published standalone predecessor**, including the
 selected tooling and offline readers
 under [T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md).
 The [preparation return](../.ai-workspace/work/STDO303_DELIVERY/tooling-integration-001/README.md)

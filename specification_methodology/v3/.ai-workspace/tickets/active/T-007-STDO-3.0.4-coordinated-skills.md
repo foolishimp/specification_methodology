@@ -1,7 +1,7 @@
 # T-007 Coordinated skills for STDO 3.0.4
 
-Status: **owner-approved for 3.0.4 release; preparation selected, publication
-pending; source review satisfied and mixed native qualification retained**.
+Status: **released in STDO 3.0.4; public installation and independent release
+review complete; mixed native qualification retained**.
 Owner: Jim. Target distribution: STDO 3.0.4.
 
 ## Current release selection
@@ -9,6 +9,8 @@ Owner: Jim. Target distribution: STDO 3.0.4.
 The owner approved this reviewed scope as an actual release and instructed
 “tag and push it”. The [standalone release selection](../../work/STDO304_DELIVERY/SELECTION.md)
 continues 3.0.3 with exact version metadata, release checks and public readback.
+The [release record](../../work/STDO304_DELIVERY/RELEASED.md) binds completed
+publication and accepted public verification as a normal GitHub Latest release.
 No new native qualification campaign or consumer migration is selected.
 
 ## Accepted review-flow source
@@ -34,7 +36,7 @@ for repair; local containment permits a reasoned, owned deferral. Its
 original calls, two strict-envelope failures, separately verified R1 recovery,
 the conditional R2 record and unsupported E1 authorization/grouping. Batching
 and family-independence limits remain; no successor native call ran. This is
-accepted source meaning with the recorded limits; publication remains pending.
+released meaning with the recorded qualification limits.
 
 ## Prior delivery and accepted repair
 
@@ -45,7 +47,8 @@ repairs. The [superseding reader review](../../work/STDO304_SKILLS/reader-unicod
 closes the valid Unicode S2 and independently found empty-ATX S2 within its
 bounded scope. The Executive accepts that `local_repair`; the prior reader
 no-actionable/OP-02 conclusion remains historical and is superseded for this
-defect. Inclusion in 3.0.4 retains the recorded limits and publishes no release.
+defect. That repair assessment alone did not publish a release; the later
+owner-authorized publication above retains its recorded limits.
 
 ## Owner instruction and work binding
 
