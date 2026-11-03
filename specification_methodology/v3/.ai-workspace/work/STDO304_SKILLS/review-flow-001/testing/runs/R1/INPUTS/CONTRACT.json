@@ -1,0 +1,42 @@
+{
+  "case": "R1",
+  "purpose": "candidate-procedure forward test over the stated hypothetical Product",
+  "premise": "PROFILE.json",
+  "role": "Reviewer",
+  "procedure_skill": "/private/tmp/stdo304-review-flow-vefr_9wk/candidate/plugins/spec/skills/stdo-review/SKILL.md",
+  "source_views": "/private/tmp/stdo304-review-flow-vefr_9wk/R1/basis/OWNER_VIEW.md",
+  "source_view_authentication": "Each exact verbatim slice is checked against the pinned candidate member before launch. The view is the admitted transport for those owner clauses, not another method version.",
+  "read_paths": [
+    "/private/tmp/stdo304-review-flow-vefr_9wk/R1/CONTRACT.json",
+    "/private/tmp/stdo304-review-flow-vefr_9wk/R1/PROFILE.json",
+    "/private/tmp/stdo304-review-flow-vefr_9wk/R1/metadata.json",
+    "/private/tmp/stdo304-review-flow-vefr_9wk/R1/basis/OWNER_VIEW.md",
+    "/private/tmp/stdo304-review-flow-vefr_9wk/R1/requirements.md",
+    "/private/tmp/stdo304-review-flow-vefr_9wk/R1/source-invoices.json",
+    "/private/tmp/stdo304-review-flow-vefr_9wk/R1/export.csv",
+    "/private/tmp/stdo304-review-flow-vefr_9wk/candidate/plugins/spec/skills/stdo-review/SKILL.md",
+    "/private/tmp/stdo304-review-flow-vefr_9wk/candidate/plugins/spec/references/COORDINATED_HANDOFF.md",
+    "/private/tmp/stdo304-review-flow-vefr_9wk/candidate/plugins/spec/references/PRODUCT_BASIS.md"
+  ],
+  "excluded": "All unlisted paths, parent directories, other actor prompts/results except the declared R1 transport, capture bodies, native project discovery and global state.",
+  "effects": "No actor file, shell, Git, network, ticket or publication effects. Return the specified JSON only. An explicitly admitted recorder persists the complete success result and any non-null bug report at the exact destinations below.",
+  "recorder": {
+    "result": "records/R1.json",
+    "bug_report": "records/B-41.md",
+    "authority": "test Executive grant; recorder writes verbatim fields only, no independent decisions"
+  },
+  "return_json": {
+    "review_markdown": "complete closed conditional review result",
+    "bug_report_markdown": "complete named report payload if this review has findings, otherwise null"
+  },
+  "subject": "All R-ARITH, R-DATE and R-IDENTITY obligations for the three source/export rows",
+  "limits": {
+    "wall_seconds": 180,
+    "api_budget_usd": 4,
+    "initial_bytes": 8192,
+    "distinct_admitted_text_bytes": 65536,
+    "completed_acquisition_bytes": 131072
+  },
+  "stop": "Missing exact input, unreadable required source, invalidated candidate, exceeded budget, or insufficient evidence: return the bounded unresolved result; do not invent facts.",
+  "return_transport_limit_bytes": 8192
+}

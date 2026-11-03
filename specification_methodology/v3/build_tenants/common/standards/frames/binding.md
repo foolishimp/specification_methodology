@@ -49,7 +49,7 @@ Routes, in order:
 14. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 15. [SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity](../SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity)
 
-Size of this frame: 97263 bytes.
+Size of this frame: 98224 bytes.
 
 Source: SPEC_METHOD.md#11-build-tenant-binding sha256=06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e
 
@@ -619,7 +619,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: EVALUATION.md#2-separation sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#2-separation sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ## 2. Separation
 
@@ -671,7 +671,7 @@ scope (P3;
 [RF-005](../REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates)).
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#3-independent-assessment sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ## 3. Independent assessment
 
@@ -1162,7 +1162,7 @@ foundations and which are choices, with the owner of each choice, so no
 choice is presented as derived (P6, P1).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=6/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=6/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -1197,8 +1197,21 @@ they are traced in family F3 at
 [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
 what §4 decides about the review record, triage and returns.
 
+The review-flow refinement applies P6's separation of operation, evidence and
+decision to [Landing, closure and release](../EVALUATION.md#landing-closure-and-release): making
+a candidate available cannot establish its claims. P3 binds provisional use to
+an exact subject, and P4b with ACTIVATION §7 preserves and invalidates dependent
+results. Permitting authorized landing beside pending QA, and providing
+[Declared Product acceptance gates](../EVALUATION.md#declared-product-acceptance-gates), are
+explicit domain policies of §5, not consequences of finite attention alone.
+The concrete gate and its acceptance owner are Product selections. Consumers
+are EXECUTIVE_BASELINE §12's cadence, TICKETS §7's closure application and the
+Project Reference-Frame Basis template. The exact report-effect refinement of
+§4 applies existing operation/acquisition law; TICKETS §4 owns its carrier
+shape and consumes it. No timing or report policy creates authority.
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=0/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=0/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 

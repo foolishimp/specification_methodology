@@ -1,0 +1,42 @@
+# R1 Review: EXPORT-41 (W-41)
+
+Role: Reviewer, direct path, read-only. Basis: hypothetical premise PROFILE.json (invoice-trial-profile-1); procedure = candidate stdo-review SKILL.md plus owner clauses via basis/OWNER_VIEW.md (EVALUATION §3-4, EXECUTIVE_BASELINE §10, TICKETS §4). Product Basis Selection and `stdo status --verify` were NOT performed: no installed basis exists in this fixture and shell/discovery are excluded. The result is conditional on that premise being verified by the scenario.
+
+Subject: export.csv = EXPORT-41 (sha256 b15f42f8... per metadata.json) vs source-invoices.json (11bde5b0...) and requirements.md (66f94d8a...). Digests were not recomputed (no shell); identity rests on the contract's pre-launch authentication.
+Claims: R-ARITH, R-DATE, R-IDENTITY over rows I-41, I-42, I-43 (whole declared population).
+Exclusions: no repair, priority, disposition, promotion-boundary effect; H-CAP not evaluated; implementation, tests, fixtures, runtime not in admitted read set; Worker summary not used.
+
+## Expectations (from source before candidate comparison)
+| id | date | net | tax | gross |
+|---|---|---|---|---|
+| I-41 | 2026-11-03 | 100.00 | 10.00 | 110.00 |
+| I-42 | 2026-11-03 | 20.00 | 2.00 | 22.00 |
+| I-43 | 2026-11-03 | 30.00 | 3.00 | 33.00 |
+
+## Per-predicate core results
+- R-ARITH: **falsified**. I-41 gross is 112.00, expected 110.00 (net 100.00 + tax 10.00). I-42 and I-43 arithmetic correct.
+- R-DATE: **falsified**. I-42 invoice_date is `03/11/2026`, expected `2026-11-03`. I-41 and I-43 correct.
+- R-IDENTITY: **satisfied**. Each source invoice_id appears exactly once; quantity, unit_price, tax_rate, currency match source on all three rows. Triage not_applicable.
+
+Conjunction over the subject: **falsified**. No planned predicate left unperformed.
+
+## Findings (Product severity scale; severity unchanged; priority and boundary effect reserved for E1)
+
+F1 (R-ARITH), export.csv line 2, I-41: gross 112.00 vs required 110.00; monetary error of 2.00 on one invoice. Severity S2. Entry/state: landed EXPORT-41 row. Causal path: gross column not equal to net+tax for this row; cause indeterminate (implementation not in admitted evidence; the error is not uniform across rows, so a simple rate error is not supported). Confidence in the violation: high (direct arithmetic). Blast radius: one of three invoices; archive consumer would receive an incorrect gross. Workaround: recompute gross from exported net+tax, which are correct. Repair complexity: indeterminate. Regression risk: indeterminate. Residual: cause and extent beyond this population unknown.
+
+F2 (R-DATE), export.csv line 3, I-42: `03/11/2026` is locale-formatted (DD/MM/YYYY), not YYYY-MM-DD, and is ambiguous as rendered. Severity S4 (no monetary change). Causal path: locale-dependent date rendering on one row while the other two rows comply; cause indeterminate from admitted evidence. Confidence in the violation: high. Blast radius: one row; downstream date parsing risk. Workaround: source issue_date 2026-11-03 is unambiguous. Repair complexity and regression risk: indeterminate.
+
+Counterexample search: all rows compared field-by-field; no rival path, proof masking or composition boundary evaluable from the admitted set (no tests or implementation supplied).
+
+## Not evaluated / adjacent
+- EVALUATION §5 (when a finding blocks promotion) was not acquired; blocking is E1's decision.
+- Hard stop H-CAP and the provisional archive preview dependency are outside this subject; E1 retains them.
+
+## Independence
+Authorship: metadata.json declares no Reviewer contribution; candidate constructed by fixture-author. Actor-family independence policy is not declared in PROFILE.json; under EVALUATION §3 default this is recorded as not established.
+
+## Invalidation
+Any change to export.csv, source-invoices.json, requirements.md, PROFILE.json severity scale or basis, or the stdo-review skill text; verified Product basis differing from the premise.
+
+## Effects and re-entry
+No file, shell, Git, network, ticket or publication effects by this actor. Bug report B-41 returned as payload for the admitted recorder at records/B-41.md. Return to E1 (Executive frame adopted by the premise) via W-41. Stop.

@@ -1,0 +1,34 @@
+{
+  "current_candidate": "EXPORT-41",
+  "results": [
+    {
+      "id": "D-TOTAL",
+      "state": "previously satisfied",
+      "subject_bytes": "unchanged",
+      "depends_on": [
+        "EXPORT-41:I-41:gross"
+      ],
+      "claim": "Archive preview total equals the invoice arithmetic"
+    },
+    {
+      "id": "D-DATE",
+      "state": "previously satisfied",
+      "subject_bytes": "unchanged",
+      "depends_on": [
+        "EXPORT-41:I-42:invoice_date"
+      ],
+      "claim": "Archive preview date uses ISO format"
+    },
+    {
+      "id": "D-LOGO",
+      "state": "satisfied",
+      "subject_bytes": "unchanged",
+      "depends_on": [
+        "logo-v1:approved-color"
+      ],
+      "claim": "Approved logo color preserved",
+      "non_influence_evidence": "Uses only separately fixed logo bytes and color policy; no invoice data, export code, date or arithmetic dependency"
+    }
+  ],
+  "requested_decision": "Assess continued reliance and the declared producer-to-consumer gate after the current review."
+}

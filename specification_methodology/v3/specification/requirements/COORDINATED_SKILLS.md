@@ -7,6 +7,11 @@ Product. The builder remains installed STDO 2.5.1 RC2. The successor conserves
 the existing 3.0.3 method decisions while making their handoff usable from a
 coordinating invocation.
 
+That conservation claim describes the original handoff increment. The later
+[review-flow amendment](REVIEW_FLOW.md) explicitly selects changed candidate
+methodology meaning and its skill projection; it preserves the original
+qualification records on their exact subjects.
+
 | ID | Required behavior | Deciding 3.0.3 owner |
 |---|---|---|
 | CS-01 | Select direct execution, issuing or receiving from the actual frame/grant and material boundary. Preserve direct Writer use and the smallest lawful work carrier; no automatic ticket, coordinator or review. | ACTIVATION §1 Roles and delegation; TICKETS §5; EXECUTIVE_BASELINE §6 |

@@ -1,0 +1,87 @@
+[
+  {
+    "label": "control",
+    "event": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-review-flow-vefr_9wk/R2",
+      "tool_use_id": "control",
+      "tool_name": "Read",
+      "tool_input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/R2/CONTRACT.json"
+      }
+    },
+    "exit": 0,
+    "actual": "allow",
+    "expected": "allow",
+    "stdout": "{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"allow\", \"permissionDecisionReason\": \"exact_policy_match\"}}\n",
+    "stderr": ""
+  },
+  {
+    "label": "subject",
+    "event": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-review-flow-vefr_9wk/R2",
+      "tool_use_id": "subject",
+      "tool_name": "Read",
+      "tool_input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/candidate/plugins/spec/references/PRODUCT_BASIS.md"
+      }
+    },
+    "exit": 0,
+    "actual": "allow",
+    "expected": "allow",
+    "stdout": "{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"allow\", \"permissionDecisionReason\": \"exact_policy_match\"}}\n",
+    "stderr": ""
+  },
+  {
+    "label": "excluded",
+    "event": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-review-flow-vefr_9wk/R2",
+      "tool_use_id": "excluded",
+      "tool_name": "Read",
+      "tool_input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/R2/excluded/capture.txt"
+      }
+    },
+    "exit": 0,
+    "actual": "deny",
+    "expected": "deny",
+    "stdout": "{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"deny\", \"permissionDecisionReason\": \"read_not_listed\"}}\n",
+    "stderr": ""
+  },
+  {
+    "label": "shell",
+    "event": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-review-flow-vefr_9wk/R2",
+      "tool_use_id": "shell",
+      "tool_name": "Bash",
+      "tool_input": {
+        "command": "pwd"
+      }
+    },
+    "exit": 0,
+    "actual": "deny",
+    "expected": "deny",
+    "stdout": "{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"deny\", \"permissionDecisionReason\": \"command_not_listed\"}}\n",
+    "stderr": ""
+  },
+  {
+    "label": "skill",
+    "event": {
+      "hook_event_name": "PreToolUse",
+      "cwd": "/private/tmp/stdo304-review-flow-vefr_9wk/R2",
+      "tool_use_id": "skill",
+      "tool_name": "Skill",
+      "tool_input": {
+        "skill": "spec:stdo-review"
+      }
+    },
+    "exit": 0,
+    "actual": "allow",
+    "expected": "allow",
+    "stdout": "{\"hookSpecificOutput\": {\"hookEventName\": \"PreToolUse\", \"permissionDecision\": \"allow\", \"permissionDecisionReason\": \"exact_policy_match\"}}\n",
+    "stderr": ""
+  }
+]

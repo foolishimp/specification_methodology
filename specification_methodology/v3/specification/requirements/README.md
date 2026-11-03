@@ -11,6 +11,7 @@ The common requirements bind both build tenants' candidates. This file holds the
 - [STDO_3_0_1](STDO_3_0_1.md): the selected bounded amendment for the common successor, its exact native predecessor, operation-profile migration and preserved acceptance obligations.
 - [INSTALLED_DOCUMENTATION](INSTALLED_DOCUMENTATION.md): mandatory offline documentation in the 3.0.3 distribution, source identity, installed access and qualification.
 - [COORDINATED_SKILLS](COORDINATED_SKILLS.md): selected 3.0.4 native skill handoff increment, preserving direct work, exact authority, bounded context and closed returns.
+- [REVIEW_FLOW](REVIEW_FLOW.md): selected 3.0.4 candidate amendment for bounded QA, separate landing/closure/release, linked findings and explicit Product gates.
 
 The working foundation statements in PRINCIPLES are content under evaluation, not installed law. The installed 2.5.1-rc.2 release is the law the builders work under, and it is the predecessor the new release evolves from.
 

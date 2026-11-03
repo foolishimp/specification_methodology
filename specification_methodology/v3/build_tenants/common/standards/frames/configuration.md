@@ -58,7 +58,7 @@ Routes, in order:
 23. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 24. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 144114 bytes.
+Size of this frame: 145724 bytes.
 
 Source: ACTIVATION.md#transitions sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
@@ -985,7 +985,7 @@ missing condition instead of acquiring prohibited material. Byte deduplication
 or recursion must not merge distinct route permissions (P1, P3, P6).
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#3-independent-assessment sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ## 3. Independent assessment
 
@@ -1060,7 +1060,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#frame-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#frame-qualification sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ### Frame qualification
 
@@ -1118,7 +1118,7 @@ test. Finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
+Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff
 
 ### The executive configuration
 
@@ -1583,7 +1583,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=6/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=6/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -1618,8 +1618,21 @@ they are traced in family F3 at
 [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
 what §4 decides about the review record, triage and returns.
 
+The review-flow refinement applies P6's separation of operation, evidence and
+decision to [Landing, closure and release](../EVALUATION.md#landing-closure-and-release): making
+a candidate available cannot establish its claims. P3 binds provisional use to
+an exact subject, and P4b with ACTIVATION §7 preserves and invalidates dependent
+results. Permitting authorized landing beside pending QA, and providing
+[Declared Product acceptance gates](../EVALUATION.md#declared-product-acceptance-gates), are
+explicit domain policies of §5, not consequences of finite attention alone.
+The concrete gate and its acceptance owner are Product selections. Consumers
+are EXECUTIVE_BASELINE §12's cadence, TICKETS §7's closure application and the
+Project Reference-Frame Basis template. The exact report-effect refinement of
+§4 applies existing operation/acquisition law; TICKETS §4 owns its carrier
+shape and consumes it. No timing or report policy creates authority.
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=2/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=2/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -1650,7 +1663,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a rows=8/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff rows=8/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 
@@ -1716,6 +1729,15 @@ relation: a reader of this profile sees which of its rules rest on the
 commitments and imported families, and which are choices this profile or
 the adopting Product makes, so no profile choice is presented as following
 from the foundations (P6, P2).
+
+The review-flow refinement in §5 and §12 applies P6 to keep assessment,
+priority, operation and acceptance distinct, and P2 to avoid an extra actor or
+review when no outcome requires it. Its particular QA cadence, four recheck
+triggers, selected severity convention and optional response policy are this profile's domain choices, not
+deductions of a numeric scale or review ratio. Product adoption selects the
+response policy and local sizing; EVALUATION §5 still owns boundary meaning and
+TICKETS §4 owns finding carriers. The consumers are §12's Executive decision,
+§19's adoption projection and the Project Reference-Frame Basis template.
 
 
 Source: REFERENCE_FRAME.md#foundation-to-law sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64 rows=16/36 selected by the anchors this frame carries; the consumers paragraph of 36 items is omitted

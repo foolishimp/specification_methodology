@@ -1,0 +1,32 @@
+{
+  "kind": "stdo.review.external-input-retention",
+  "original_seal": {
+    "path": "REVIEW_EVIDENCE.json",
+    "sha256": "e1ad85d923825a8b69d51079e220666e3014d31e23d73535cd1e7fa8f59a056e"
+  },
+  "started_utc": "2026-11-03T02:59:24.863161+00:00",
+  "completed_utc": "2026-11-03T02:59:24.923846+00:00",
+  "operation": "Verified byte-for-byte external retention of exactly three raw acquisition images, followed by removal of only their repository copies. Downloads originals and all frozen manifests/reports remain unchanged.",
+  "members": [
+    {
+      "old_sealed_relative_path": "inputs/IMG_3377.png",
+      "external_path": "/Users/jim/.local/share/stdo-review-evidence/STDO304_SKILLS/review-flow-001/inputs/IMG_3377.png",
+      "bytes": 16096861,
+      "sha256": "430afb7b1f18b103e507de4c02cd8badc90f230eea6ad33653ce03e1d7533cf8"
+    },
+    {
+      "old_sealed_relative_path": "inputs/IMG_3378.png",
+      "external_path": "/Users/jim/.local/share/stdo-review-evidence/STDO304_SKILLS/review-flow-001/inputs/IMG_3378.png",
+      "bytes": 15189347,
+      "sha256": "2de5184b4d5faa970ee678d77aa9203ccaa9b293aa5425e021c0ad3febc2f529"
+    },
+    {
+      "old_sealed_relative_path": "inputs/IMG_3379.png",
+      "external_path": "/Users/jim/.local/share/stdo-review-evidence/STDO304_SKILLS/review-flow-001/inputs/IMG_3379.png",
+      "bytes": 14362632,
+      "sha256": "2838dd25ef4cd0b6755c2ef6d7bdf848f6b0cf94da72ab9abd1eb6063f050957"
+    }
+  ],
+  "limitation": "Git alone does not include these three raw acquisition inputs. Verification of the original seal resolves these recorded old paths to the exact external retained bytes.",
+  "standing": "Custody relocation only; no re-run, renewed assessment, source or qualification change."
+}

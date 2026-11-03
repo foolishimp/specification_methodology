@@ -1,0 +1,206 @@
+diff --git a/specification_methodology/v3/build_tenants/common/plugins/spec/references/COORDINATED_HANDOFF.md b/specification_methodology/v3/build_tenants/common/plugins/spec/references/COORDINATED_HANDOFF.md
+index bb65fc5e3..904fb9858 100644
+--- a/specification_methodology/v3/build_tenants/common/plugins/spec/references/COORDINATED_HANDOFF.md
++++ b/specification_methodology/v3/build_tenants/common/plugins/spec/references/COORDINATED_HANDOFF.md
+@@ -189,10 +189,52 @@ For an admitted sequence, each continuation uses the previous closed result
+ and current bindings. Retain the boundaries the contract actually declares:
+ neither a new human check-in at every pass nor review only at the end is a
+ universal rule. Refresh affected bindings on material change, not every
+ unchanged status observation (`ACTIVATION` §1 Roles and delegation; §7).
+ 
++## Review Flow From The Selected Basis
++
++Acquire the selected basis's `EVALUATION` §5, `TICKETS` §4 and §7, and, where
++adopted, `EXECUTIVE_BASELINE` §5 and §12. Use their actual clauses. A loaded
++3.0.4 skill cannot amend an older Product-selected method or silently adopt
++the candidate's review cadence or optional priority policy.
++
++Where that basis contains **Landing, closure and release**, **Declared Product
++acceptance gates**, **QA cadence and repair rechecks**, and **Review findings
++and bug items**, route the next decision as follows:
++
++1. Name which decision is requested: authorized candidate landing, work
++   closure, or release. Keep its actual conditions separate. A pending review
++   alone is not a landing hold; no operation, access or hard-stop waiver follows.
++2. Bind the exact QA subject, coverage, size and reason. Use the owning recheck
++   triggers; do not automatically request a new review after every repair or
++   set a review ratio. Keep test verification distinct from required independent
++   review, and retain any uncovered subject.
++3. Return unchanged Reviewer severity. The Executive decides priority and
++   ownership directly when clear, or delegates bounded grouping/proposals to a
++   triage Worker when volume warrants it; that Worker changes no assessment.
++4. If findings need a durable carrier, use `stdo-ticket` under the exact report
++   or item-update grant. Bind report ID/path, source linkage and visibility
++   before the effect. No findings means no bug report; sufficient direct work
++   gains no redundant ticket. A Reviewer records only its granted report and
++   makes no candidate repair. The reviewed work item's ledger holds decisions
++   and repair/verification provenance, not a new copy of the assessment.
++5. For provisional downstream use, retain exact dependencies and uncertainty.
++   Check only explicitly declared Product gates; a later material finding
++   invalidates affected dependent results before further reliance. Keep other
++   valid work. If a policy or boundary decision is genuinely missing, return
++   that material choice rather than inventing numeric meanings or a gate.
++
++Example: a granted Writer lands candidate C while its selected QA runs. QA
++reports finding F in the named restricted report R. The Executive retains F's
++severity, assigns priority and links item B on the reviewed work carrier. A
++repair returns C2 with its failing-before/passing-after reproduction and
++declared suite evidence. The Executive applies the selected recheck conditions:
++tests may verify B when no independent recheck is required; otherwise B awaits
++that exact report. Neither outcome by itself authorizes release or adopts C2
++at an explicitly gated downstream boundary.
++
+ ## Host Binding
+ 
+ For a strict selected tool-acquisition boundary, use the concrete
+ [host adapter and its limits](HOST_BINDING.md). Do not assume the ordinary
+ host permission prompt or a fresh actor supplies that boundary.
+diff --git a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-help/SKILL.md b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-help/SKILL.md
+index 4ae5ebac5..ae3294309 100644
+--- a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-help/SKILL.md
++++ b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-help/SKILL.md
+@@ -80,10 +80,16 @@ continuation, recovery, adoption or conclusion; route only the affected part.
+ A sufficient local instruction may use a direct Writer where the accepted
+ frame basis permits it. Do not add a coordinating activation, ticket or review merely to
+ answer a help request. Ask for a missing owner choice only when the next action
+ depends on it; reuse a sufficient existing ruling.
+ 
++For review, repair, landing or closure questions, use
++[the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis).
++Do not infer a review ratio, P0–P5 meanings or a particular Product gate from
++this skill. Ask only for a missing policy choice that affects the requested
++next action; preserve direct work and any already sufficient ruling.
++
+ ## Return
+ 
+ Answer directly. For re-entry, include definition identity, immutable cut and
+ manifest, current outcome, work carrier and re-entry point, role/grant, proof
+ boundary, unresolved gaps, and one next already-authorized action.
+diff --git a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-review/SKILL.md b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-review/SKILL.md
+index d79c22e4f..14acebe54 100644
+--- a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-review/SKILL.md
++++ b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-review/SKILL.md
+@@ -3,12 +3,14 @@ name: stdo-review
+ description: Independently evaluate one exact STDO-governed candidate, or issue that assessment to a separate Reviewer. Use for STDO candidate, release, qualification or governed-boundary review. Do not invoke for generic review.
+ ---
+ 
+ # STDO Review
+ 
+-In the execution path, act as Reviewer for one exact claim. Review is read-only. It does not
+-repair, assign Product priority, apply disposition, or activate the next work.
++In the execution path, act as Reviewer for one exact claim. The reviewed subject
++is read-only. Record findings only through the exact artifact effects the
++selected basis and activation grant. Do not repair, assign Product priority,
++apply disposition, or activate the next work.
+ 
+ ## Start With Your Own Control Intake
+ 
+ Read the exact own contract or intake named in the request before any general
+ search or project read. Bind your own permitted inputs, exclusions and return
+@@ -37,18 +39,20 @@ Partition only when each Reviewer has a sufficient complete slice and the
+ declared conjunction covers the required claim, including interactions.
+ Local green slices do not prove an unassessed whole path. Evaluate returned
+ results through [the shared return procedure](../../references/COORDINATED_HANDOFF.md#evaluate-the-return);
+ retain Reviewer severity and assign priority/disposition only under the
+ issuer's separate grant. The issuer does not perform a second review merely
+-by issuing this one. Otherwise enter the read-only Reviewer path below.
++by issuing this one. Apply [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis)
++for coverage, proportional sizing and any recheck; do not copy the optional
++candidate policy onto an older basis. Otherwise enter the Reviewer path below.
+ 
+ ## Select The Product Basis
+ 
+ Read and apply
+ [`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before activating review.
+-Continue only from its exactly-one verified selection. This skill remains
+-read-only.
++Continue only from its exactly-one verified selection. That selection supplies
++no artifact-write grant.
+ 
+ ## Activate The Review
+ 
+ 1. From the verified definition and installed basis, bind candidate/checkpoint,
+    exact affected Product claims, authority, scope,
+@@ -117,8 +121,13 @@ Return one closed result containing exact subject and basis, claim, scope and
+ exclusions, evidence, verdict, findings and counterexamples, triage, residuals,
+ adjacent observations, uncertainty, invalidation, and owning re-entry point.
+ Bind each reusable judgment to its question, subject/basis, supporting facts,
+ actor/authority, conclusion/scope and revising observation in the existing
+ result carrier. Preserve original owner rulings separately from interpretation.
++Name any unperformed coverage. When the selected TICKETS law provides a linked
++bug report, record it only at the exact granted identity/path, with unchanged
++severity and inherited visibility restrictions; otherwise return it for the
++lawful Writer. With no findings, create no bug report. Return the report link
++without exposing withheld evidence in the surrounding summary.
+ Return to the coordination the applicable configuration selects: the
+ Executive when the Project Reference-Frame Basis adopts that frame;
+ otherwise the Product-owned decision authority. Stop.
+diff --git a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-status/SKILL.md b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-status/SKILL.md
+index 16cf4186d..f67dc6157 100644
+--- a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-status/SKILL.md
++++ b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-status/SKILL.md
+@@ -91,10 +91,16 @@ reconciliation of uncertain external effects in ACTIVATION §5 requires. No obse
+ effect alone does not mean the request is complete or that retry is needed.
+ Keep unknown effects unknown and withhold repetition until its rule permits it.
+ For completion, evaluate satisfied obligations, current evidence, required
+ judgments/rulings and active non-closure conditions. Report missing conditions
+ without making a fresh review an automatic gate.
++Apply [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis)
++to report landed, closure-ready and release-ready separately. Show pending
++coverage, retained Bug items, actual verification provenance and affected
++downstream dependencies; do not infer a gate or priority from severity alone.
++Where triage assistance is granted, grouping and owner/priority proposals stay
++advice, not changed Reviewer assessments or Executive decisions.
+ 
+ ## Return
+ 
+ Lead with Product outcome and current boundary. Report basis health, completed
+ since the comparison point, current work/evidence, blockers/findings, proposed
+diff --git a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-ticket/SKILL.md b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-ticket/SKILL.md
+index f6884dae7..9716908a4 100644
+--- a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-ticket/SKILL.md
++++ b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-ticket/SKILL.md
+@@ -98,11 +98,21 @@ that selection grants no ticket-state authority.
+    is independently evidenced. Ticket creation, lane placement, and `active`
+    status do not change that state.
+ 9. Keep commentary and generated summaries subordinate to the ticket. Assign
+    priority only under Product-owned policy and decision authority. When the
+    Executive baseline profile is adopted, do not turn Reviewer technical severity
+-  directly into Executive Product priority.
++   directly into Executive Product priority.
++
++For review findings, use [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis)
++and the actual selected TICKETS clauses. Bind one authorized report to the
++issuing work item; no findings means no report. Keep the original assessment
++in that report and the triaged Bug items on the reviewed work item. Preserve
++severity, priority reason, cause/owner, source link and actual open/fixed/verified
++state with repair and verification identities. A test result is not labelled
++independent review. Report naming, lane or metadata edits confer no access;
++preserve withheld evidence across every projection. Reuse a sufficient direct
++carrier instead of minting a redundant ticket.
+ 
+ For an authorized state update, evaluate the ticket's actual closure condition:
+ satisfied obligations, valid applicable evidence, required judgments and owner
+ rulings, and no active non-closure condition. Review checks that evidence when
+ required; occurrence of review is not the closing event. Record reusable
+diff --git a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-work/SKILL.md b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-work/SKILL.md
+index 0a7a29839..d018b1c49 100644
+--- a/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-work/SKILL.md
++++ b/specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-work/SKILL.md
+@@ -191,10 +191,16 @@ a new activation or wholesale rehash. Refresh bindings on material change.
+    Product-owned decision authority, or an
+    authorized Executive when that profile is adopted, decides whether Product,
+    qualification, release, risk, or admitted-work law requires independence
+    and separately activates `stdo-review`.
+ 
++For a selected repair pass, apply [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis):
++bind linked findings/items, exact repaired subject, failing-before/passing-after
++reproduction and the declared suite. Identify tests versus any required
++independent recheck honestly. Keep authorized landing separate from work
++closure and release; a local repair does not automatically add a review round.
++
+ Keep reusable judgments and owner rulings in the existing carrier: exact
+ question, subject/basis, supporting computed evidence, actor and authority,
+ conclusion, scope, uncertainty and revising observation. Preserve the original
+ owner ruling separately from interpretation. Invalidate the affected claim
+ when one of the invalidators of `ACTIVATION.md` section 7 occurs; retain

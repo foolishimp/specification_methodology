@@ -2,7 +2,10 @@
 
 The [coordinated skills design](COORDINATED_SKILLS.md) binds the selected
 3.0.4 native plugin increment under T-007. It adds one shared issue/receive/return
-procedure to the five skills; method law and published releases remain unchanged.
+procedure to the five skills; that increment conserved method law.
+The later [review-flow design](REVIEW_FLOW.md) selects a bounded candidate
+methodology amendment for QA cadence, linked findings and explicit acceptance
+gates. Published releases and the installed construction basis remain unchanged.
 
 The [installed documentation design](installed-documentation.md) binds the
 3.0.3 constraint-explorer distribution under T-006. Its maintained bundler and

@@ -1,0 +1,27 @@
+{
+  "autoMemoryEnabled": false,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/local/bin/python3",
+            "args": [
+              "/private/tmp/stdo304-review-flow-vefr_9wk/candidate/plugins/spec/scripts/claude_tool_gate.py",
+              "--policy",
+              "/private/tmp/stdo304-review-flow-vefr_9wk/controls/R1/policy.json",
+              "--policy-sha256",
+              "ced99ae73b98e36ffdd661813212f72aef5ebe1395c783dbfb3402e5e72921ed",
+              "--audit",
+              "/private/tmp/stdo304-review-flow-vefr_9wk/controls/R1/audit.jsonl"
+            ],
+            "timeout": 10,
+            "onFailure": "block"
+          }
+        ]
+      }
+    ]
+  }
+}

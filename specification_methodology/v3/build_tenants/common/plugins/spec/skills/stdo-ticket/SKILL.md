@@ -100,7 +100,17 @@ that selection grants no ticket-state authority.
 9. Keep commentary and generated summaries subordinate to the ticket. Assign
    priority only under Product-owned policy and decision authority. When the
    Executive baseline profile is adopted, do not turn Reviewer technical severity
-  directly into Executive Product priority.
+   directly into Executive Product priority.
+
+For review findings, use [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis)
+and the actual selected TICKETS clauses. Bind one authorized report to the
+issuing work item; no findings means no report. Keep the original assessment
+in that report and the triaged Bug items on the reviewed work item. Preserve
+severity, priority reason, cause/owner, source link and actual open/fixed/verified
+state with repair and verification identities. A test result is not labelled
+independent review. Report naming, lane or metadata edits confer no access;
+preserve withheld evidence across every projection. Reuse a sufficient direct
+carrier instead of minting a redundant ticket.
 
 For an authorized state update, evaluate the ticket's actual closure condition:
 satisfied obligations, valid applicable evidence, required judgments and owner

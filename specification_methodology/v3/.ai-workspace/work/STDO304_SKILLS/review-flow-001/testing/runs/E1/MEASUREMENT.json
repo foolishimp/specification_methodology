@@ -1,0 +1,56 @@
+{
+  "case": "E1",
+  "process_completed": true,
+  "transport_recorded": false,
+  "transport_error": "Expecting value: line 1 column 1 (char 0)",
+  "exit": 0,
+  "stop_reason": null,
+  "elapsed_seconds": 209.9,
+  "wall_limit_seconds": 240,
+  "configured_budget_usd": 5,
+  "reported_cost_usd": 1.4962695000000001,
+  "usage": {
+    "input_tokens": 66,
+    "cache_creation_input_tokens": 29645,
+    "cache_read_input_tokens": 25038,
+    "output_tokens": 17929,
+    "output_tokens_details": {
+      "thinking_tokens": 11702
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 29645,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 32,
+        "output_tokens": 16621,
+        "cache_read_input_tokens": 11196,
+        "cache_creation_input_tokens": 23569,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 23569
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "models_exposed": [
+    "claude-fable-5-1"
+  ],
+  "initial_prompt_bytes": 451,
+  "distinct_admitted_text_bytes": 61136,
+  "completed_tool_result_bytes": 64559,
+  "context_limit_note": "Acquisition is monitored after complete tool results; managed/system context unmeasured, total active-context fit indeterminate.",
+  "remaining_known_processes": [],
+  "terminated_descendants": [],
+  "native_qualification": "candidate-procedure forward test only; synthetic Product premise; source-file/native Skill acquisition reported from actual trace; recorder is external and declared"
+}

@@ -8,7 +8,7 @@ Binds:
 
 - This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
 - An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
-- As the reconstruction task, its return distinguishes semantic conservation, demonstrated reduction and mere relocation ([../EVALUATION.md#return-of-a-reconstruction](../EVALUATION.md#return-of-a-reconstruction); member sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff; section sha256=562980b12fdfe47dc66ec7f5eb13f27b4ea24730184ae7e0aba51102bdc74346)
+- As the reconstruction task, its return distinguishes semantic conservation, demonstrated reduction and mere relocation ([../EVALUATION.md#return-of-a-reconstruction](../EVALUATION.md#return-of-a-reconstruction); member sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485; section sha256=562980b12fdfe47dc66ec7f5eb13f27b4ea24730184ae7e0aba51102bdc74346)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -46,7 +46,7 @@ Routes, in order:
 10. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 
-Size of this frame: 105866 bytes.
+Size of this frame: 107415 bytes.
 
 Source: FOUNDATIONS.md#authority-kinds sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
@@ -483,7 +483,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: EVALUATION.md#3-independent-assessment sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#3-independent-assessment sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ## 3. Independent assessment
 
@@ -558,7 +558,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#4-review-results sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#4-review-results sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ## 4. Review results
 
@@ -620,6 +620,15 @@ severity alone (P6, P2).
 The assessor returns to the decision owner, not to the constructor. It does
 not edit the candidate, direct the repair or authorise continuation (P6,
 §3).
+
+Recording the assessment is a separate artifact effect. Where the activation
+grants it, the assessor may write the exact named findings carrier under
+[TICKETS §4 Review findings and bug items](../TICKETS.md#review-findings-and-bug-items).
+That grant adds no candidate-repair authority or acquisition route. A review
+has covered its declared subject only when every planned predicate has been
+evaluated or lawfully removed from that subject; a partial return preserves
+the unperformed coverage. Closing the review activity does not satisfy a
+falsified or unresolved work claim (P6, P5).
 
 Purpose and material relation: every configuration keeps severity,
 priority, boundary effect and disposition separate. The rule applies to any
@@ -922,7 +931,7 @@ presence establishes no execution or whole-method qualification (P6).
 | PC-C09 Cycles | B consumes immutable A0 fixtures versus B1/A1 waiting for each other's current acceptance | Explicit seeded work can proceed; a lead name alone cannot close an unexecutable prerequisite cycle. |
 | PC-C10 Inspection | Reviewer has a separately authorized broader causal-cone read | The review may inspect it without granting Worker exposure, cross-boundary mutation or automatic dependency adoption. |
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=7/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=7/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -958,8 +967,21 @@ they are traced in family F3 at
 [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
 what §4 decides about the review record, triage and returns.
 
+The review-flow refinement applies P6's separation of operation, evidence and
+decision to [Landing, closure and release](../EVALUATION.md#landing-closure-and-release): making
+a candidate available cannot establish its claims. P3 binds provisional use to
+an exact subject, and P4b with ACTIVATION §7 preserves and invalidates dependent
+results. Permitting authorized landing beside pending QA, and providing
+[Declared Product acceptance gates](../EVALUATION.md#declared-product-acceptance-gates), are
+explicit domain policies of §5, not consequences of finite attention alone.
+The concrete gate and its acceptance owner are Product selections. Consumers
+are EXECUTIVE_BASELINE §12's cadence, TICKETS §7's closure application and the
+Project Reference-Frame Basis template. The exact report-effect refinement of
+§4 applies existing operation/acquisition law; TICKETS §4 owns its carrier
+shape and consumes it. No timing or report policy creates authority.
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 

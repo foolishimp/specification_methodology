@@ -185,11 +185,64 @@ decision owner assigns priority and boundary effect within its grant
 (`EXECUTIVE_BASELINE` §12 steps 4–7). Do not turn a closed result into implicit
 authority to repair, accept, publish or start the next stage.
 
+A proposed next action is not an executable activation. Before calling it
+already authorized or issuing it, bind the actual operation grant and the
+settled subject/pass grouping required by that contract. If either is missing,
+return the proposal and exact unresolved binding; do not presume a Writer grant
+or combine unsettled passes. This checks the existing intake, not a new gate.
+
 For an admitted sequence, each continuation uses the previous closed result
 and current bindings. Retain the boundaries the contract actually declares:
 neither a new human check-in at every pass nor review only at the end is a
 universal rule. Refresh affected bindings on material change, not every
 unchanged status observation (`ACTIVATION` §1 Roles and delegation; §7).
+
+## Review Flow From The Selected Basis
+
+Acquire the selected basis's `EVALUATION` §5, `TICKETS` §4 and §7, and, where
+adopted, `EXECUTIVE_BASELINE` §5 and §12. Use their actual clauses. A loaded
+3.0.4 skill cannot amend an older Product-selected method or silently adopt
+the candidate's review cadence or optional priority policy.
+
+Where that basis contains **Landing, closure and release**, **Declared Product
+acceptance gates**, **QA cadence and repair rechecks**, and **Review findings
+and bug items**, route the next decision as follows:
+
+1. Name which decision is requested: authorized candidate landing, work
+   closure, or release. Keep its actual conditions separate. A pending review
+   alone is not a landing hold; no operation, access or hard-stop waiver follows.
+2. Bind the exact QA subject, coverage, size and reason. Use the owning recheck
+   triggers; do not automatically request a new review after every repair or
+   set a review ratio. Keep test verification distinct from required independent
+   review, and retain any uncovered subject.
+3. Return unchanged Reviewer severity. The Executive decides priority and
+   ownership directly when clear, or delegates bounded grouping/proposals to a
+   triage Worker when volume warrants it; that Worker changes no assessment.
+   If the basis selects the 1 highest–5 lowest convention, apply its qualitative
+   anchors and explicit severity-3 downstream/blast-radius assessment. Material
+   dependent impact normally calls for repair; contained local deferral needs
+   a reason and owner. Keep severity 3 distinct from priority P3 and retain old
+   or alternative scales on their own identities.
+4. If findings need a durable carrier, use `stdo-ticket` under the exact report
+   or item-update grant. Bind report ID/path, source linkage and visibility
+   before the effect. No findings means no bug report; sufficient direct work
+   gains no redundant ticket. A Reviewer records only its granted report and
+   makes no candidate repair. The reviewed work item's ledger holds decisions
+   and repair/verification provenance, not a new copy of the assessment.
+5. For provisional downstream use, retain exact dependencies and uncertainty.
+   Check only explicitly declared Product gates; a later material finding
+   invalidates affected dependent results before further reliance. Keep other
+   valid work. If a policy or boundary decision is genuinely missing, return
+   that material choice rather than inventing numeric meanings or a gate.
+
+Example: a granted Writer lands candidate C while its selected QA runs. QA
+reports finding F in the named restricted report R. The Executive retains F's
+severity, assigns priority and links item B on the reviewed work carrier. A
+repair returns C2 with its failing-before/passing-after reproduction and
+declared suite evidence. The Executive applies the selected recheck conditions:
+tests may verify B when no independent recheck is required; otherwise B awaits
+that exact report. Neither outcome by itself authorizes release or adopts C2
+at an explicitly gated downstream boundary.
 
 ## Host Binding
 

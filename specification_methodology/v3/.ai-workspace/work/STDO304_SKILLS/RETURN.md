@@ -1,6 +1,26 @@
 # Coordinated skills delivery return
 
-Status: **bounded implementation delivery accepted for inclusion in STDO 3.0.4**.
+Status: **review-flow source `candidate_ready`, independent source review
+satisfied; preceding bounded implementation accepted for inclusion in 3.0.4**.
+
+The owner has selected a further [review-flow contract](review-flow-001/CONTRACT.md)
+over checkpoint `8a756806c7ec5063ad7afbaff50d837882a33f12`. It changes candidate
+methodology owners and their skill/frame projections; previous tests and
+reviews below do not qualify that amendment. Its new return and source delta
+bind the new assessment. The [candidate-2 return](review-flow-001/RETURN_02.md)
+and [delta](review-flow-001/SOURCE_DELTA_02.json) record the later severity
+clarification and the [closed source review](review-flow-001/review/FINAL_REVIEW.md).
+The selected convention is 1 highest–5 lowest; severity 3 explicitly assesses
+downstream impact, normally repairs material dependent harm, and permits only
+reasoned, owned local deferral. Executive priority/disposition stays separate.
+The three first-candidate native calls are not an aggregate pass: two strict
+return failures, separately verified R1 recovery, conditional R2 recording and
+E1's unsupported authorization/grouping remain recorded, with batching/family
+limits and no successor runs. The Executive selects a local checkpoint only.
+This is reviewed candidate meaning; final Product/release decisions, installed
+law and consumer bases remain separate.
+
+## Preceding delivery and reader repair
 The Executive consumed the sealed test report and closed independent review,
 then accepted the superseding Unicode/ATX `local_repair` described below.
 Publication remains unselected; this return supplies no released 3.0.4 cut.
@@ -11,7 +31,7 @@ native plugin skills now route coordinated requests through one
 control validation before general discovery, actual host binding and closed
 return handling. The ordinary direct paths and exact selected method remain.
 
-The **current source** is [repair delta 02](reader-unicode-repair-001/SOURCE_DELTA_02.json),
+The **accepted reader source** is [repair delta 02](reader-unicode-repair-001/SOURCE_DELTA_02.json),
 SHA-256 `6f129f5e680b620bd20ad5d493586eb6326a0dcac1bff5eaca148f57941c45a6`,
 composed over [delta 01](reader-unicode-repair-001/SOURCE_DELTA.json) and the
 original source freeze. The full repair changes only reader, tests and one
@@ -81,7 +101,7 @@ preserve the complete campaign: 11 model sessions, four timeouts and one
 additional pre-model transport error. Later success does not relabel those
 failures. All native processes and observed descendants are closed.
 
-Current bounded repair checks:
+Accepted bounded reader-repair checks:
 
 | Check | Observed result |
 |---|---|

@@ -1,0 +1,50 @@
+{
+  "standing": "separate recovery proposal pending independent verification before named recording or E1; original R1 transport remains failed",
+  "authority": "Executive explicitly selected lossless single-fence recovery of retained R1 only",
+  "original": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review-flow-001/testing/runs/R1/FINAL.txt",
+    "bytes": 6523,
+    "sha256": "0500a0df9c1b98728a4770fb28c11d10f643101be050a941758f5614b63e0e71",
+    "measurement": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_SKILLS/review-flow-001/testing/runs/R1/MEASUREMENT.json",
+    "measurement_sha256": "00d5cf06c57e98eb69bcfac92c82e8020a068457b826a499830e921d38376a83"
+  },
+  "selected_span": {
+    "start_inclusive": 164,
+    "end_exclusive": 6520,
+    "bytes": 6356,
+    "sha256": "8446028c896cfe796b67ca92885611653530ebd35c4a599a27432ab6ff23fb11",
+    "trailing_newline_retained": true
+  },
+  "fields": {
+    "review_markdown": {
+      "path": "review_markdown.txt",
+      "bytes": 4218,
+      "sha256": "c84d8d4a2a2ecbfdfcd87d5c35875ced723afc30eb7417502193a2a645cb0cb9"
+    },
+    "bug_report_markdown": {
+      "path": "bug_report_markdown.txt",
+      "bytes": 2014,
+      "sha256": "69450c6336983174847fb61fe256a839b9a6ef614927fedbefb6d494fe8ca773"
+    }
+  },
+  "decoder_sha256": "ca41e4c4971d5fa11722017a97e47c1d4995dd5369cb8fa59f0742b8744c0cd3",
+  "negative_checks": [
+    {
+      "case": "second-fence",
+      "refused": true
+    },
+    {
+      "case": "changed-prefix",
+      "refused": true
+    },
+    {
+      "case": "duplicate-key",
+      "refused": true
+    },
+    {
+      "case": "malformed-object",
+      "refused": true
+    }
+  ],
+  "limitations": "No wording, uncertainty, family-independence or qualification is repaired. This does not prove original raw-JSON compliance. No model invocation or Product carrier is written by this proposal."
+}

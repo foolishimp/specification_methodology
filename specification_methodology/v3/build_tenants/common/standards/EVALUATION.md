@@ -87,7 +87,7 @@ by name. The standing of the consequences below is stated in
 | P6 (independent), P3 (independent); instance premise c | Self-review is construction output (P6), and identities are scoped by kind (P3), so the party whose self-review is excluded must be identified apart from whoever performs an operation: author identity, the party responsible for the content of a realised subject, is distinct from actor identity, and independence is judged against the author | [§3](#3-independent-assessment), the author-identity paragraph | none | 2, 9 |
 | P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise) | By P6 a result must let its consumer check and dispose it, and by P5 an unevaluated predicate has no result, so a review result carries, for each predicate it evaluated, the exact subject and basis, the evidence consulted, the findings ranked by consequence with each finding's evidence and smallest bounded correction, the residual uncertainty and the invalidation conditions. A recommended disposition is evidence only and never a disposition, and the review applies none; a finding without evidence a consumer can chase is commentary | [§4](#4-review-results), first paragraph | none | 3, 9 |
 | P6 (independent), P2 (independent), P1 (independent) | By P6 evaluation and decision are separate authorities, and by P1 a mapped value is not the value it maps, so severity, the assessor's grade of consequence, is evaluation evidence, while priority, the effect on the current promotion boundary and the disposition are the decision owner's and stay distinct values even where a policy maps one to another; a recommended disposition is never adopted mechanically. By P2 only a decided result serves the outcome, so the decision owner consumes no `indeterminate` or `out_of_frame` result as satisfaction or as a settled finding, and returns an `invalid_basis` result through the declared basis re-entry relation without consuming it. The payload classes `complete`, `indeterminate` and `not_applicable` classify the triage only and are not results, dispositions, priorities or lifecycle states | [Result and triage projection](#result-and-triage-projection), its first two paragraphs and the consumption column of its table | the triage fields: the profile that adopts the triage, such as [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect); the scales, and the priority and boundary policy: the adopting Product | 3, 9 |
-| P6 (independent), P2 (independent) | By P6 a verdict is bounded by its claim, and by P2 work outside the claim needs its own route to an outcome, so an observation outside the evaluated claim does not replace the claim-relative result: the assessor returns it separately with its repricing or re-entry pressure, and the decision owner returns it to its owner without a claim-relative block or another review round from its severity alone. By P6 the assessor holds no construction authority, so it returns to the decision owner, not to the constructor, and does not edit the candidate, direct the repair or authorise continuation | [Result and triage projection](#result-and-triage-projection), the last two paragraphs | none | 9 |
+| P6 (independent), P2 (independent) | By P6 a verdict is bounded by its claim, and by P2 work outside the claim needs its own route to an outcome, so an observation outside the evaluated claim does not replace the claim-relative result: the assessor returns it separately with its repricing or re-entry pressure, and the decision owner returns it to its owner without a claim-relative block or another review round from its severity alone. By P6 the assessor holds no construction authority, so it returns to the decision owner, not to the constructor, and does not edit the candidate, direct the repair or authorise continuation | [Result and triage projection](#result-and-triage-projection), the adjacent-observation and assessor-return paragraphs | none | 9 |
 | P6 (independent), P2 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); instance premise d | By P6 and (d) acceptance is the decision owner's act, and by P0 the subject accepted must be the evaluated one, so acceptance is the decision owner's disposition over an unchanged subject; recording it cannot widen it, and by P2 it exhausts only the instance and interval it names. A work item closes by the condition it stated, and a reviewer result is an input to closure, never the closure; green labels, document counts, review counts and historical outcomes are not acceptance | [§5](#5-acceptance), first paragraph | the acceptance boundary, its interval and its decision owner: the governing basis that names them; the closing condition of a work item: that work item ([TICKETS](TICKETS.md#7-authority-judgment-closure-and-state)) | 9 |
 | P6 (independent), P3 (independent); instance premise d | By P6 and (d) a decision is the owner's, exercised directly or through a grant it admits, and by P3 a proxy's identity stays distinct from the human authority's, so a human decision may be exercised directly or through an explicitly admitted bounded proxy; a change a proxy cannot make, under FOUNDATIONS §2's proxy limit, re-enters at its owning relation | [§5](#5-acceptance), the proxy sentences | what a proxy grant names: [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004); what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); whether a proxy is admitted, with its scope and exclusions: the human authority that grants it | 9 |
 | P6 (independent); instance premise d | By P6 a verdict is bounded by the exact claim it evaluated, so a finding can block current promotion only through a condition that bears on that claim's acceptance at the current boundary, and an observation outside the claim blocks nothing by itself. By instance premise d blocking is the decision owner's act, so no block follows mechanically from a finding or its severity; a non-waivable hard stop is by definition one that no decision waives, so a valid falsification of a mandatory claim under it blocks whatever the priority or cutoff | [§5, When a finding blocks promotion](#when-a-finding-blocks-promotion) | the four blocking conditions (falsifies the claim; competing or ambiguous authority on its acceptance path; violated active authority, safety or retained accepted behaviour; a durable architectural decision foreclosing an admitted Product outcome): this section, conserving UP-007; the decision cutoff and the severity and priority scales: the adopting Product; the hard stops and which are non-waivable: [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) and the owner of each stop; domain triggers, such as a design check's: the profile or work carrier that refers to §5 | 9 |
@@ -124,6 +124,19 @@ its own locus:
 
 Each consumer applies the rule and decides nothing the owning section does
 not (P2, P6).
+
+The review-flow refinement applies P6's separation of operation, evidence and
+decision to [Landing, closure and release](#landing-closure-and-release): making
+a candidate available cannot establish its claims. P3 binds provisional use to
+an exact subject, and P4b with ACTIVATION §7 preserves and invalidates dependent
+results. Permitting authorized landing beside pending QA, and providing
+[Declared Product acceptance gates](#declared-product-acceptance-gates), are
+explicit domain policies of §5, not consequences of finite attention alone.
+The concrete gate and its acceptance owner are Product selections. Consumers
+are EXECUTIVE_BASELINE §12's cadence, TICKETS §7's closure application and the
+Project Reference-Frame Basis template. The exact report-effect refinement of
+§4 applies existing operation/acquisition law; TICKETS §4 owns its carrier
+shape and consumes it. No timing or report policy creates authority.
 
 ## 2. Separation
 
@@ -307,6 +320,15 @@ The assessor returns to the decision owner, not to the constructor. It does
 not edit the candidate, direct the repair or authorise continuation (P6,
 §3).
 
+Recording the assessment is a separate artifact effect. Where the activation
+grants it, the assessor may write the exact named findings carrier under
+[TICKETS §4 Review findings and bug items](TICKETS.md#review-findings-and-bug-items).
+That grant adds no candidate-repair authority or acquisition route. A review
+has covered its declared subject only when every planned predicate has been
+evaluated or lawfully removed from that subject; a partial return preserves
+the unperformed coverage. Closing the review activity does not satisfy a
+falsified or unresolved work claim (P6, P5).
+
 Purpose and material relation: every configuration keeps severity,
 priority, boundary effect and disposition separate. The rule applies to any
 assessor and decision owner; [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md)
@@ -337,6 +359,49 @@ unresolved cannot be qualified and so cannot be accepted; how the record
 is evaluated is [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015).
 An intentionally removed disposition is a decision of the current Product
 authority, and its record is that decision (P6, P3, P4b).
+
+### Landing, closure and release
+
+Landing makes an exact candidate available at an authorized checkpoint or
+integration destination. It is an operation under its existing grant, not
+acceptance of the candidate's claims. Work closure applies the stated closing
+condition; release applies the separately selected publication and acceptance
+conditions of [RELEASE](RELEASE.md). Record these as separate decisions (P6,
+P3).
+
+Review supplies QA evidence for those decisions. A pending review does not by
+itself hold landing: an admitted candidate may land after its bounded work
+and fix pass, while review of that exact candidate runs beside subsequent
+authorized work. A required review holds the closure or acceptance claim that
+depends on its complete report. A governing landing condition, applicable hard
+stop or missing operation authority still prevents landing; availability is
+no waiver. [EXECUTIVE_BASELINE §12](EXECUTIVE_BASELINE.md#qa-cadence-and-repair-rechecks)
+binds the optional profile's repair/recheck cadence (P6, P2).
+
+Permitted downstream work may consume a landed candidate before its review
+reports, carrying its exact identity, unresolved conditions and dependency
+links. This is provisional use, not admitted truth. A later material finding
+invalidates the affected dependent results under
+[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse); unrelated valid results
+remain reusable. Repair and re-evaluation follow those dependencies before
+further reliance (P4b, P6).
+
+### Declared Product acceptance gates
+
+A Product-owned frame basis, or a work contract explicitly delegated that
+choice by the basis, may declare a gated handoff between two Products. It
+names both Product identities, the directed relation, exact candidate/claim,
+required review and coverage, acceptance conditions and decision owner. Until
+that review has covered its declared subject and the acceptance conditions
+are satisfied, the downstream Product cannot accept the candidate as an
+admitted input or close claims dependent on that acceptance. Authorized
+provisional work and repair may continue under the preceding section (P6,
+P2).
+
+The gate's declaration is explicit; co-location, a dependency or this available
+mechanism creates none. Existing user-acceptance, release/go-live and other
+Product boundaries retain their own conditions. This member declares no
+particular Product gate or extra capture-review hold on landing (P6).
 
 ### When a finding blocks promotion
 

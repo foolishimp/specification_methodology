@@ -1,0 +1,65 @@
+{
+  "profile_id": "invoice-trial-profile-1",
+  "standing": "Synthetic prospective candidate-method premise, admitted only for this procedure forward test. This is not a real installed Product or an adoption operation.",
+  "candidate_method": {
+    "source_delta_sha256": "5d99a826ccedb5257aa5c01b92e5347f4fed43271123526c73a4e501d1bf7810",
+    "owner_views": "basis/OWNER_VIEW.md",
+    "interpretation": "The named candidate skill and exact owner clauses are the procedure being evaluated. Installed-Product discovery/verification is a hypothetical prerequisite of the scenario, not an operation performed or claimed by this trial. No installed 3.0.4 exists in this fixture. Evaluate conditional scenario decisions under these explicit premises."
+  },
+  "products": {
+    "producer": "urn:fixture:invoice-export",
+    "consumer": "urn:fixture:archive-entry"
+  },
+  "severity_scale": {
+    "S1": "loss of source identity or widespread irreversible incorrect charging",
+    "S2": "incorrect monetary amount for an invoice",
+    "S3": "operational failure with a usable workaround",
+    "S4": "presentation or format violation without a monetary change"
+  },
+  "priority_policy": {
+    "selected": "candidate Executive baseline Optional P0-P5 response policy",
+    "assignment": {
+      "P1": "monetary error in the next export delivery",
+      "P4": "date presentation with an unambiguous source-date workaround"
+    },
+    "other_assignment": "Executive records evidence, outcome and reason; no mechanical severity mapping"
+  },
+  "review_policy": {
+    "selected": "candidate Executive baseline QA cadence and repair rechecks",
+    "ratio": null,
+    "initial_subject": "all three invoices and all three export requirements",
+    "size_reason": "small complete population; one bounded assessment"
+  },
+  "hard_stops": [
+    "H-CAP: capture source-fidelity claim required for publication; its fixed state alone is insufficient while its required recheck is open"
+  ],
+  "acceptance_gate": {
+    "from": "urn:fixture:invoice-export",
+    "to": "urn:fixture:archive-entry",
+    "relation": "published invoice export becomes admitted archive input",
+    "candidate": "EXPORT-41",
+    "claims": [
+      "R-ARITH",
+      "R-DATE",
+      "R-IDENTITY"
+    ],
+    "required_review": "R1 on the whole declared population, plus applicable repairs/rechecks",
+    "acceptance_conditions": "all listed requirements satisfied on the exact accepted subject; all required coverage and review closed",
+    "decision_owner": "E1 within this hypothetical decision grant"
+  },
+  "provisional_operations": [
+    "Archive preview may process exact landed EXPORT-41 while retaining unresolved obligations and dependencies"
+  ],
+  "landing": {
+    "identity": "EXPORT-41",
+    "operation": "already occurred at the authorised fixture checkpoint",
+    "extra_review_hold": null
+  },
+  "release": "go-live requires all selected export requirements and retained release items satisfied; no publication operation is granted",
+  "carriers": {
+    "issuing_work": "W-41",
+    "review_report": "B-41 at records/B-41.md when findings exist",
+    "bug_item_ledger": "W-41 Bug items in the Executive decision payload",
+    "no_rival_status_surface": true
+  }
+}

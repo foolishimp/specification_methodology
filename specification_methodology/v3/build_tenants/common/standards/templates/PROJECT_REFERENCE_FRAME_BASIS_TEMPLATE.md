@@ -98,6 +98,11 @@ frames only where every authority and independence condition remains valid.
 
 - exact current Product and MVP or release mandate:
 - Product-selected severity scale, direction, and evidence criteria:
+- for the selected review flow: bind EXECUTIVE_BASELINE §5's 1 highest–5 lowest
+  convention and Product-specific consequence criteria, or identify the retained
+  alternative scale; preserve historical grades and any explicit translation:
+- severity-3 downstream/blast-radius evidence, containment, disposition reason
+  and responsible owner under that convention:
 - Product-selected priority scale, direction, and assignment authority:
 - current-boundary decision cutoff and the decision owner's required
   disposition (the Executive where the executive profile is adopted):
@@ -106,6 +111,15 @@ frames only where every authority and independence condition remains valid.
 - claim-relative release-blocking and scope-narrowing rule:
 - required Reviewer technical-triage fields and capability envelope:
 - unsupported or indeterminate technical-assessment return route:
+- selected response policy and its authority (optional P0–P5 example only
+  when expressly adopted from EXECUTIVE_BASELINE §5):
+- separate landing, work-closure and release conditions:
+- review size and rationale; a review-to-work ratio only if selected:
+- finding-report effect/visibility bindings and the reviewed work item's
+  authoritative Bug items ledger:
+- explicit Product acceptance gates, if any: both Products, directed relation,
+  exact claim/candidate, required review, acceptance conditions and owner;
+  any delegated gate-declaration authority:
 
 Reviewer grades severity and returns evidence, affected claims, causal
 assessment where supportable, blast radius, workaround, repair complexity,
@@ -114,12 +128,18 @@ profile, Executive assigns priority and determines promotion-boundary effect aga
 view and current mandate. Severity, priority, frame result, boundary effect,
 and disposition under [ACTIVATION §3](../ACTIVATION.md#disposition) remain distinct.
 
-This template imposes no universal numeric scale. A project may bind `S0..Sn`
+This template does not silently select or translate a scale. A project may bind `S0..Sn`
 and `P0..Pn`, including a `P2` decision cutoff, only by defining their exact
 direction and effect here. When a finding blocks promotion, and that a
 cutoff cannot waive a hard stop or turn an out-of-claim observation into a
 blocker, is decided by `EVALUATION.md` section 5, When a finding blocks
 promotion.
+
+Pending review alone is not a landing hold. Required review and declared
+acceptance gates retain their closure/release effects under EVALUATION §5.
+Keep downstream provisional dependencies and invalidation routes explicit.
+No numeric ratio, extra capture landing hold or particular Product gate is
+selected by leaving these fields blank.
 
 ## Executive Attention, Evaluation, And Action
 

@@ -93,6 +93,12 @@ Keep unknown effects unknown and withhold repetition until its rule permits it.
 For completion, evaluate satisfied obligations, current evidence, required
 judgments/rulings and active non-closure conditions. Report missing conditions
 without making a fresh review an automatic gate.
+Apply [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis)
+to report landed, closure-ready and release-ready separately. Show pending
+coverage, retained Bug items, actual verification provenance and affected
+downstream dependencies; do not infer a gate or priority from severity alone.
+Where triage assistance is granted, grouping and owner/priority proposals stay
+advice, not changed Reviewer assessments or Executive decisions.
 
 ## Return
 

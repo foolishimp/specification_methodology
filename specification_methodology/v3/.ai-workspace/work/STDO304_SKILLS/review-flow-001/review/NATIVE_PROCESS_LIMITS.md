@@ -1,0 +1,13 @@
+# Native process limits and correction of inference
+
+R1 and R2 are bounded candidate-procedure forward tests over synthetic premises. They are not qualified independent reviews or installed-method qualification.
+
+R1's exact Read results physically appear in source-before-export order. That limited fact is recorded in NATIVE_R1_INITIAL_OBSERVATION.json. It must **not** be read as evidence that the actor derived and recorded expectations before candidate exposure. Calls at raw STDOUT.jsonl lines 9, 10, 13, 15, 17, 19, 21, 22 and 23 all share assistant message `msg_011CgfBUpwx4uM6c8xai2wJ3`. Skill, owner view, requirements, source invoices and export were requested in that message. There is no separately observable pre-exposure expectation record. The final table is retrospective evidence, and result-line serialization does not establish the required semantic acquisition boundary.
+
+R2 similarly groups calls at lines 9, 11, 13, 15, 17, 19, 21, 23 and 25 under `msg_011CgfCEBhZfowp3vBGoZAne`; its final result explicitly describes one batched read. No pre-exposure expectation record is observed. Its arithmetic calculations and no-in-scope-finding result can be checked independently against the fixture, but the result does not establish compliance with EVALUATION §3's source-first record protocol (candidate owner lines 202–219).
+
+R1 correctly leaves actor-family independence unestablished. R2's statement that the constructor is a fixture author “rather than a model activation” is unsupported by the admitted metadata: `candidate_constructed_by: fixture-author` is a label, not a provider/family assertion. R2 also retains the unstated policy as residual uncertainty. Neither the label nor fresh context resolves that uncertainty; no consumer may upgrade it to qualified independence. The procedure can be assessed conditionally without claiming this stronger result.
+
+R1 additionally failed its raw-only JSON return contract. The separate lossless recovery is explicitly selected, checked and recorded; it cannot retroactively turn that native return into a contract-conforming one. R2 returned valid raw JSON and the declared recorder wrote only its result, with no bug report. The distinct recording outcomes must remain visible.
+
+These observations constrain the evidence claim. They do not demonstrate that the shipped owner law authorizes the observed procedural shortcuts: EVALUATION §3 and the skill's review routing retain the independent/source-first obligation. No new universal role, approval, enforcement mechanism or review round is inferred. The current review's own expectations were frozen before candidate exposure and remain unchanged.

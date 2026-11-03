@@ -193,6 +193,12 @@ a new activation or wholesale rehash. Refresh bindings on material change.
    qualification, release, risk, or admitted-work law requires independence
    and separately activates `stdo-review`.
 
+For a selected repair pass, apply [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis):
+bind linked findings/items, exact repaired subject, failing-before/passing-after
+reproduction and the declared suite. Identify tests versus any required
+independent recheck honestly. Keep authorized landing separate from work
+closure and release; a local repair does not automatically add a review round.
+
 Keep reusable judgments and owner rulings in the existing carrier: exact
 question, subject/basis, supporting computed evidence, actor and authority,
 conclusion, scope, uncertainty and revising observation. Preserve the original

@@ -5,6 +5,10 @@ for the five native plugin skills. It adds no standard law or independent
 Skills Product adoption. The implementation is an interaction projection of
 the exact Product-selected method, with 3.0.3 as the conservation subject.
 
+The later [review-flow design](REVIEW_FLOW.md) is a separately selected candidate
+methodology amendment. Its new owner clauses and skill projections do not
+retroactively broaden this handoff increment's conservation or qualification.
+
 ## One handoff procedure
 
 `common/plugins/spec/references/COORDINATED_HANDOFF.md` holds mode selection,

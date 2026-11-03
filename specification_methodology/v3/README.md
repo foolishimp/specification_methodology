@@ -2,12 +2,26 @@
 
 This source project constructs the next major release of Specification Methodology. One common specification governs the independent Codex and Claude realisations under `build_tenants/`. The installed STDO 2.5.1 RC2 release governs construction; the existing 2.* source and released products remain separate.
 
-**STDO 3.0.4 coordinated skills are accepted for inclusion; publication is pending.**
+**STDO 3.0.4 review-flow source is a reviewed, ready candidate.**
+The [new contract](.ai-workspace/work/STDO304_SKILLS/review-flow-001/CONTRACT.md)
+binds the owner's Executive/Reviewer screenshots: distinct landing, closure and
+release, bounded QA/recheck, linked findings and explicit Product gates. The
+[successor candidate](.ai-workspace/work/STDO304_SKILLS/review-flow-001/SOURCE_DELTA_02.json)
+adds the owner's 1–5 severity convention and explicit severity-3 impact
+assessment: material dependent impact normally calls for repair; supported
+local deferral needs a reason and owner. The [source review](.ai-workspace/work/STDO304_SKILLS/review-flow-001/review/FINAL_REVIEW.md)
+is closed, with no current actionable source finding. The Executive records
+`candidate_ready`; final Product/release decisions remain separate. The three
+original native trials had mixed outcomes, including two strict-return failures
+and an unsupported authorization claim; no successor actor ran. This is reviewed
+candidate meaning, not installed or released law.
+
+The preceding coordinated-skills delivery is accepted for inclusion.
 [T-007](.ai-workspace/tickets/active/T-007-STDO-3.0.4-coordinated-skills.md)
 selects a shared issuing, receiving and return path for the five native plugin
 skills. The [work return](.ai-workspace/work/STDO304_SKILLS/RETURN.md) records
 the accepted bounded implementation and superseding Unicode/ATX reader repair.
-The [current review](.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/FINAL_REVIEW.md)
+The [reader repair review](.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/FINAL_REVIEW.md)
 closes the valid S2 findings on that repair. Native runs still belong to
 revision 4; subsequent reader cuts have bounded retained-input replay evidence.
 Host and coverage limits remain explicit. STDO 3.0.4 has not been published.

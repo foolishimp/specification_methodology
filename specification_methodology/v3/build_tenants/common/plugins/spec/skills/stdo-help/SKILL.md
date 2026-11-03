@@ -82,6 +82,12 @@ frame basis permits it. Do not add a coordinating activation, ticket or review m
 answer a help request. Ask for a missing owner choice only when the next action
 depends on it; reuse a sufficient existing ruling.
 
+For review, repair, landing or closure questions, use
+[the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis).
+Do not infer a review ratio, P0–P5 meanings or a particular Product gate from
+this skill. Ask only for a missing policy choice that affects the requested
+next action; preserve direct work and any already sufficient ruling.
+
 ## Return
 
 Answer directly. For re-entry, include definition identity, immutable cut and

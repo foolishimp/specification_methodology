@@ -1,0 +1,69 @@
+{
+  "standing": "R2 conditional arithmetic/no-findings decision and declared recorder path observed; independent-process qualification excluded",
+  "members": [
+    {
+      "path": "testing/runs/R2/FINAL.txt",
+      "sha256": "e234af24a3d3d34e85302603734e3ecc447ce9d36365af0543ab8f6d2ddcbe7e",
+      "bytes": 8082
+    },
+    {
+      "path": "testing/runs/R2/MEASUREMENT.json",
+      "sha256": "d034bccce2616d82e84878acb8f3ba9e324a41066bbdc6a735b06705cea45865",
+      "bytes": 1731
+    },
+    {
+      "path": "testing/runs/R2/STDOUT.jsonl",
+      "sha256": "e6ac9368b25ccbd77d39937c475cf3f52c13150244eff3c5ca85835bd2cf2a0e",
+      "bytes": 205431
+    },
+    {
+      "path": "testing/runs/R2/RECORDING.json",
+      "sha256": "e426412047f3b5615aa0b5f7c7f094df93b59368144d19cd9d97eb7e232dd2f6",
+      "bytes": 283
+    },
+    {
+      "path": "testing/runs/R2/CHANGES.json",
+      "sha256": "6eb8ad371bb2975065f80458589418176841f5b4c1d96d225d2515746243bdfa",
+      "bytes": 176
+    },
+    {
+      "path": "testing/runs/R2/BEFORE.json",
+      "sha256": "88a5606bfbdec72e6719242cdb4430850c78f94e6ebef0286f4e0278d4e6c30c",
+      "bytes": 1015
+    },
+    {
+      "path": "testing/runs/R2/AFTER.json",
+      "sha256": "e6749799952298779a6bc96faeaf70ac29e53dae3ce9f6393a99fbc195ccb291",
+      "bytes": 1143
+    },
+    {
+      "path": "testing/runs/R2/POLICY.json",
+      "sha256": "02975ddf7e96a208b0a501a3fdc633338226c0776edbda0097bed4e61ab77544",
+      "bytes": 1165
+    },
+    {
+      "path": "testing/runs/R2/SETTINGS.json",
+      "sha256": "bb1d063fe89630a44927ceaa603e1f01e7c0adc06f28de21085372b8a266836f",
+      "bytes": 789
+    },
+    {
+      "path": "testing/runs/R2/INVOCATION.json",
+      "sha256": "2f4e32535faa7baa3e6b059d6efd782a5ff8aa51416578135b4c4207f6e880a2",
+      "bytes": 974
+    },
+    {
+      "path": "testing/runs/R2/HOOK_AUDIT.jsonl",
+      "sha256": "92c78a56f379f38f2ed8ae657bd27646ddf4b96df5e81b7b8c7dce4beeeed9fc",
+      "bytes": 2930
+    }
+  ],
+  "assertions": {
+    "strict_raw_json": true,
+    "whole_final_exactly_recorded": true,
+    "null_bug_payload": true,
+    "no_bug_report": true,
+    "only_named_record_changed": true,
+    "candidate_inputs_unchanged": true
+  },
+  "semantic_assessment": "All three expected net/tax/gross values correct; R-DATE remains adjacent and outside delegated claim; no overall acceptance or disposition; W-41/W-42 provenance retained. Unsupported non-model-author inference and missing pre-exposure expectation record are preserved in NATIVE_PROCESS_LIMITS.md."
+}

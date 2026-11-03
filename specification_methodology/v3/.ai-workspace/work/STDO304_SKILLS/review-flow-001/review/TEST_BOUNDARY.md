@@ -1,0 +1,3 @@
+# Forward-test claim boundary
+
+The Executive selected this binding after expectations were frozen and before candidate assessment: candidate owner/profile/skill bytes are explicit synthetic scenario premises and the object of evaluation, not an installed3.0.4 method. The real installed2.5.1 builder controls the test work. Actors receive named source/artifact reads and a declared final-result recorder, with no live Product changes. Evidence covers candidate-procedure decisions/output under those supplied rules, not installed-plugin qualification or direct-native ticket-writing effects. Inputs and independent expected outcomes remain separately pinned. This binding does not alter the source-derived expectations or authorize release.

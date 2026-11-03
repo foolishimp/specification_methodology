@@ -1,0 +1,223 @@
+{
+  "standing": "completed R1 native observation; initial return-envelope failure retained",
+  "members": [
+    {
+      "path": "testing/runs/R1/FINAL.txt",
+      "sha256": "0500a0df9c1b98728a4770fb28c11d10f643101be050a941758f5614b63e0e71",
+      "bytes": 6523
+    },
+    {
+      "path": "testing/runs/R1/MEASUREMENT.json",
+      "sha256": "00d5cf06c57e98eb69bcfac92c82e8020a068457b826a499830e921d38376a83",
+      "bytes": 1763
+    },
+    {
+      "path": "testing/runs/R1/STDOUT.jsonl",
+      "sha256": "778accd204aef2707d84e8be6d5a805be8d7225b4aa3102c0a3d831e2a05679c",
+      "bytes": 182708
+    },
+    {
+      "path": "testing/runs/R1/RECORDING.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "bytes": 3
+    },
+    {
+      "path": "testing/runs/R1/CHANGES.json",
+      "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+      "bytes": 3
+    },
+    {
+      "path": "testing/runs/R1/BEFORE.json",
+      "sha256": "c62112cee6ea09a3c70418d99f0dc52995178c540387d74206c1681f0261074c",
+      "bytes": 1015
+    },
+    {
+      "path": "testing/runs/R1/AFTER.json",
+      "sha256": "c62112cee6ea09a3c70418d99f0dc52995178c540387d74206c1681f0261074c",
+      "bytes": 1015
+    },
+    {
+      "path": "testing/runs/R1/POLICY.json",
+      "sha256": "ced99ae73b98e36ffdd661813212f72aef5ebe1395c783dbfb3402e5e72921ed",
+      "bytes": 1165
+    },
+    {
+      "path": "testing/runs/R1/SETTINGS.json",
+      "sha256": "270c7f9547771463f80a4dcac28fb715d8343561e213568a148cfcf383fc874f",
+      "bytes": 789
+    },
+    {
+      "path": "testing/runs/R1/INVOCATION.json",
+      "sha256": "b381184c7a1a8baeaa5b638e074aea47a7dca0a0417f92a2ecada992ff346362",
+      "bytes": 974
+    },
+    {
+      "path": "testing/runs/R1/HOOK_AUDIT.jsonl",
+      "sha256": "07a514adc50178b99dd51092244662646f2d0af49f49b3e3e4a36a8bb04e28bb",
+      "bytes": 2930
+    }
+  ],
+  "observable_tools": [
+    {
+      "line": 4,
+      "type": "call",
+      "id": "toolu_01QzgthLQkaKNdatwzQUZTnv",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/R1/CONTRACT.json"
+      }
+    },
+    {
+      "line": 6,
+      "type": "result",
+      "id": "toolu_01QzgthLQkaKNdatwzQUZTnv",
+      "is_error": false
+    },
+    {
+      "line": 9,
+      "type": "call",
+      "id": "toolu_01BD7NHxuigLQ2GRCioKFYgk",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/candidate/plugins/spec/skills/stdo-review/SKILL.md"
+      }
+    },
+    {
+      "line": 10,
+      "type": "call",
+      "id": "toolu_01A29ZaL1yVNo9i9FCFMtz39",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/R1/basis/OWNER_VIEW.md"
+      }
+    },
+    {
+      "line": 11,
+      "type": "result",
+      "id": "toolu_01A29ZaL1yVNo9i9FCFMtz39",
+      "is_error": false
+    },
+    {
+      "line": 12,
+      "type": "result",
+      "id": "toolu_01BD7NHxuigLQ2GRCioKFYgk",
+      "is_error": false
+    },
+    {
+      "line": 13,
+      "type": "call",
+      "id": "toolu_017vEc6cNCcAJU594AhFaUMW",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/R1/PROFILE.json"
+      }
+    },
+    {
+      "line": 14,
+      "type": "result",
+      "id": "toolu_017vEc6cNCcAJU594AhFaUMW",
+      "is_error": false
+    },
+    {
+      "line": 15,
+      "type": "call",
+      "id": "toolu_01VAESJ5u3T1hpwh77smiiS9",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/R1/metadata.json"
+      }
+    },
+    {
+      "line": 16,
+      "type": "result",
+      "id": "toolu_01VAESJ5u3T1hpwh77smiiS9",
+      "is_error": false
+    },
+    {
+      "line": 17,
+      "type": "call",
+      "id": "toolu_016FaBhzSWHbrgRbKKLBWCye",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/R1/requirements.md"
+      }
+    },
+    {
+      "line": 18,
+      "type": "result",
+      "id": "toolu_016FaBhzSWHbrgRbKKLBWCye",
+      "is_error": false
+    },
+    {
+      "line": 19,
+      "type": "call",
+      "id": "toolu_01W4ZbZFUXE4DmGMFsnvEoPT",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/R1/source-invoices.json"
+      }
+    },
+    {
+      "line": 20,
+      "type": "result",
+      "id": "toolu_01W4ZbZFUXE4DmGMFsnvEoPT",
+      "is_error": false
+    },
+    {
+      "line": 21,
+      "type": "call",
+      "id": "toolu_0161iS4avYQiAr4VizmPH9CV",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/R1/export.csv"
+      }
+    },
+    {
+      "line": 22,
+      "type": "call",
+      "id": "toolu_01AVXJPoaG4iMaGmrnTeqiiE",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/candidate/plugins/spec/references/COORDINATED_HANDOFF.md"
+      }
+    },
+    {
+      "line": 23,
+      "type": "call",
+      "id": "toolu_01XLANr5qNRAaQZ6Jg7PKZUd",
+      "tool": "Read",
+      "input": {
+        "file_path": "/private/tmp/stdo304-review-flow-vefr_9wk/candidate/plugins/spec/references/PRODUCT_BASIS.md"
+      }
+    },
+    {
+      "line": 24,
+      "type": "result",
+      "id": "toolu_0161iS4avYQiAr4VizmPH9CV",
+      "is_error": false
+    },
+    {
+      "line": 25,
+      "type": "result",
+      "id": "toolu_01XLANr5qNRAaQZ6Jg7PKZUd",
+      "is_error": false
+    },
+    {
+      "line": 26,
+      "type": "result",
+      "id": "toolu_01AVXJPoaG4iMaGmrnTeqiiE",
+      "is_error": false
+    }
+  ],
+  "assessment": {
+    "source_before_subject": true,
+    "read_calls": 10,
+    "native_skill_calls": 0,
+    "semantic_findings": "Correct arithmetic S2 and date-format S4 on exact fixture; original findings and unknown cause/complexity preserved; no Reviewer priority or acceptance",
+    "return_contract": "PROMPT requires only specified JSON; final has prose prefix and Markdown JSON fence; strict json.loads rejects it",
+    "initial_transport_recorded": false,
+    "dependent_path": "No recorded R1.json or B-41 and no admitted R1-to-E1 transport at this observation",
+    "independence_limit": "Nonauthor fresh actor observed; actor-family independence not established, explicitly reported",
+    "processes": "Completed without timeout; no remaining known descendants"
+  }
+}

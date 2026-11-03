@@ -5,8 +5,10 @@ description: Independently evaluate one exact STDO-governed candidate, or issue 
 
 # STDO Review
 
-In the execution path, act as Reviewer for one exact claim. Review is read-only. It does not
-repair, assign Product priority, apply disposition, or activate the next work.
+In the execution path, act as Reviewer for one exact claim. The reviewed subject
+is read-only. Record findings only through the exact artifact effects the
+selected basis and activation grant. Do not repair, assign Product priority,
+apply disposition, or activate the next work.
 
 ## Start With Your Own Control Intake
 
@@ -39,14 +41,16 @@ Local green slices do not prove an unassessed whole path. Evaluate returned
 results through [the shared return procedure](../../references/COORDINATED_HANDOFF.md#evaluate-the-return);
 retain Reviewer severity and assign priority/disposition only under the
 issuer's separate grant. The issuer does not perform a second review merely
-by issuing this one. Otherwise enter the read-only Reviewer path below.
+by issuing this one. Apply [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis)
+for coverage, proportional sizing and any recheck; do not copy the optional
+candidate policy onto an older basis. Otherwise enter the Reviewer path below.
 
 ## Select The Product Basis
 
 Read and apply
 [`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before activating review.
-Continue only from its exactly-one verified selection. This skill remains
-read-only.
+Continue only from its exactly-one verified selection. That selection supplies
+no artifact-write grant.
 
 ## Activate The Review
 
@@ -93,6 +97,11 @@ read-only.
   assessment and confidence where supportable, blast radius, workaround or
   containment, repair complexity, regression risk, and residual uncertainty.
 - Use only the Product-bound scale. Keep adjacent observations separate.
+- When the basis selects the review flow's 1 highest–5 lowest convention, use
+  its qualitative consequence anchors and Product evidence criteria. For
+  severity 3, explicitly assess dependent paths and blast radius; do not call
+  unknown impact contained or relabel an older finding's scale. The Executive
+  still owns priority and any repair/deferral decision.
 - Never turn technical severity into Executive priority or promotion-boundary
   effect. Whether a finding blocks promotion is decided by EVALUATION §5 When
   a finding blocks promotion.
@@ -119,6 +128,11 @@ adjacent observations, uncertainty, invalidation, and owning re-entry point.
 Bind each reusable judgment to its question, subject/basis, supporting facts,
 actor/authority, conclusion/scope and revising observation in the existing
 result carrier. Preserve original owner rulings separately from interpretation.
+Name any unperformed coverage. When the selected TICKETS law provides a linked
+bug report, record it only at the exact granted identity/path, with unchanged
+severity and inherited visibility restrictions; otherwise return it for the
+lawful Writer. With no findings, create no bug report. Return the report link
+without exposing withheld evidence in the surrounding summary.
 Return to the coordination the applicable configuration selects: the
 Executive when the Project Reference-Frame Basis adopts that frame;
 otherwise the Product-owned decision authority. Stop.

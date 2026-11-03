@@ -1,0 +1,170 @@
+{
+  "standing": "synthetic exact current evidence; not native Worker runs",
+  "repairs": [
+    {
+      "id": "FIX-0",
+      "candidate": "FIX-0-after",
+      "landing": "completed under its operation grant",
+      "claim": "bounded local repair predicate for FIX-0",
+      "original_severity": "S3",
+      "assigned_priority": "P2",
+      "source_report": "FIX-0-report",
+      "source_finding": "FIX-0-finding",
+      "state": "fixed",
+      "reproducer": {
+        "before": "falsified",
+        "after": "satisfied",
+        "same_claim": true
+      },
+      "required_suite": {
+        "scope": "all tests selected for this repair",
+        "result": "satisfied"
+      },
+      "prior_review_population": [
+        "A",
+        "B"
+      ],
+      "declared_review_population": [
+        "A",
+        "B"
+      ],
+      "boundary_requires_independent_review": false,
+      "hard_stop": null,
+      "capture": false,
+      "other_closure_conditions": "satisfied in the fixture",
+      "new_review": null
+    },
+    {
+      "id": "FIX-B",
+      "candidate": "FIX-B-after",
+      "landing": "completed under its operation grant",
+      "claim": "bounded local repair predicate for FIX-B",
+      "original_severity": "S3",
+      "assigned_priority": "P2",
+      "source_report": "FIX-B-report",
+      "source_finding": "FIX-B-finding",
+      "state": "fixed",
+      "reproducer": {
+        "before": "falsified",
+        "after": "satisfied",
+        "same_claim": true
+      },
+      "required_suite": {
+        "scope": "all tests selected for this repair",
+        "result": "satisfied"
+      },
+      "prior_review_population": [
+        "A",
+        "B"
+      ],
+      "declared_review_population": [
+        "A",
+        "B"
+      ],
+      "boundary_requires_independent_review": true,
+      "hard_stop": null,
+      "capture": false,
+      "other_closure_conditions": "satisfied in the fixture",
+      "new_review": null
+    },
+    {
+      "id": "FIX-H",
+      "candidate": "FIX-H-after",
+      "landing": "completed under its operation grant",
+      "claim": "bounded local repair predicate for FIX-H",
+      "original_severity": "S2",
+      "assigned_priority": "P5",
+      "source_report": "FIX-H-report",
+      "source_finding": "FIX-H-finding",
+      "state": "fixed",
+      "reproducer": {
+        "before": "falsified",
+        "after": "satisfied",
+        "same_claim": true
+      },
+      "required_suite": {
+        "scope": "all tests selected for this repair",
+        "result": "satisfied"
+      },
+      "prior_review_population": [
+        "A",
+        "B"
+      ],
+      "declared_review_population": [
+        "A",
+        "B"
+      ],
+      "boundary_requires_independent_review": false,
+      "hard_stop": "H-CAP",
+      "capture": true,
+      "other_closure_conditions": "satisfied in the fixture",
+      "new_review": null,
+      "repairs": "H-CAP source-fidelity capture",
+      "assigned_priority_reason": "prior Executive scheduled late; this is a scheduling fact"
+    },
+    {
+      "id": "FIX-N",
+      "candidate": "FIX-N-after",
+      "landing": "completed under its operation grant",
+      "claim": "bounded local repair predicate for FIX-N",
+      "original_severity": "S3",
+      "assigned_priority": "P2",
+      "source_report": "FIX-N-report",
+      "source_finding": "FIX-N-finding",
+      "state": "fixed",
+      "reproducer": null,
+      "required_suite": {
+        "scope": "all tests selected for this repair",
+        "result": "satisfied"
+      },
+      "prior_review_population": [
+        "A",
+        "B"
+      ],
+      "declared_review_population": [
+        "A",
+        "B"
+      ],
+      "boundary_requires_independent_review": false,
+      "hard_stop": null,
+      "capture": false,
+      "other_closure_conditions": "satisfied in the fixture",
+      "new_review": null
+    },
+    {
+      "id": "FIX-U",
+      "candidate": "FIX-U-after",
+      "landing": "completed under its operation grant",
+      "claim": "bounded local repair predicate for FIX-U",
+      "original_severity": "S3",
+      "assigned_priority": "P2",
+      "source_report": "FIX-U-report",
+      "source_finding": "FIX-U-finding",
+      "state": "fixed",
+      "reproducer": {
+        "before": "falsified",
+        "after": "satisfied",
+        "same_claim": true
+      },
+      "required_suite": {
+        "scope": "all tests selected for this repair",
+        "result": "satisfied"
+      },
+      "prior_review_population": [
+        "A",
+        "B"
+      ],
+      "declared_review_population": [
+        "A",
+        "B",
+        "C"
+      ],
+      "boundary_requires_independent_review": false,
+      "hard_stop": null,
+      "capture": false,
+      "other_closure_conditions": "satisfied in the fixture",
+      "new_review": null
+    }
+  ],
+  "requested_decision": "For each exact repair, state whether its bounded repair claim may close, its verification provenance, any needed evaluation and the effect on landing/closure/release."
+}

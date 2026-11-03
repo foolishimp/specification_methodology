@@ -1,0 +1,27 @@
+# B-41: Review findings for EXPORT-41
+
+Linked work item: W-41. Review: R1. Reviewer role: direct, read-only. Subject: export.csv (EXPORT-41, sha256 b15f42f8efe6af04e90862b4d57c62bbd036220945a5936c505f7e4b1ed5806b) against source-invoices.json (11bde5b00007c3daf248ee1515e523de80ad34663c04346a84becba6aa7e0670) and requirements.md (66f94d8a0fcb293527acb7f13e1794a74765a697a4658d8069bfb4dffe4d0b4d). Basis: hypothetical premise PROFILE.json invoice-trial-profile-1; basis verification not performed in this fixture (conditional). Visibility: no withheld capture; no restriction inherited.
+
+Severity is the original Reviewer grade on the Product scale. Priority, disposition and boundary effect are not assigned here (E1).
+
+## B-41-F1
+- Violated claim: R-ARITH (gross = net + tax)
+- Location: export.csv line 2, invoice I-41, column gross
+- Evidence: exported net 100.00, tax 10.00, gross 112.00; required gross 110.00 (source qty 2 x 50.00, tax_rate 0.10)
+- Severity: S2 (incorrect monetary amount for an invoice)
+- Triage: complete except cause, repair complexity and regression risk = indeterminate (implementation not in admitted evidence; I-42 and I-43 gross are correct, so the fault is not uniform)
+- Blast radius: one invoice; archive consumer receives wrong gross
+- Workaround: recompute gross from exported net + tax
+- State: open
+
+## B-41-F2
+- Violated claim: R-DATE (invoice_date rendered YYYY-MM-DD irrespective of locale)
+- Location: export.csv line 3, invoice I-42, column invoice_date
+- Evidence: exported `03/11/2026`; source issue_date `2026-11-03`; other rows comply
+- Severity: S4 (presentation or format violation without monetary change)
+- Triage: complete except cause, repair complexity and regression risk = indeterminate
+- Blast radius: one row; ambiguous date for downstream parsing
+- Workaround: source issue_date is unambiguous
+- State: open
+
+R-IDENTITY: satisfied, no finding. Residual uncertainty: digests not independently recomputed; actor-family independence not declared in premise.

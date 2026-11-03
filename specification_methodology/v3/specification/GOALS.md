@@ -4,6 +4,33 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
+**The owner selects the review-flow amendment for the 3.0.4 candidate.**
+Its [contract](../.ai-workspace/work/STDO304_SKILLS/review-flow-001/CONTRACT.md),
+[requirements](requirements/REVIEW_FLOW.md) and
+[design](../build_tenants/common-design/REVIEW_FLOW.md) bind the approved
+screenshot A+B+C changes. This is a bounded requirement/design re-entry into
+EVALUATION, EXECUTIVE_BASELINE and TICKETS, with exact owner projections into
+the five native skills and frames. The review ratio, an additional capture
+landing hold and specific Product gates remain unselected. Source implementation
+and independent source assessment are complete. The Executive records
+`candidate_ready`, with final Product/release decisions reserved. The
+[successor delta](../.ai-workspace/work/STDO304_SKILLS/review-flow-001/SOURCE_DELTA_02.json)
+binds the later 1 highest–5 lowest severity convention, severity-3 downstream
+assessment and narrow activation-readiness reminder. Material dependent impact
+normally calls for repair; supported local deferral needs a reason and owner.
+The [source review](../.ai-workspace/work/STDO304_SKILLS/review-flow-001/review/FINAL_REVIEW.md)
+is closed with no current actionable source finding. All 13 frames reproduce,
+five skill checks pass and the 110-member/6,131-reference package passes.
+The three original source-use calls remain evidence for their first candidate,
+not an aggregate pass: two strict-envelope failures, separately verified R1
+recovery, a conditional R2 record and E1's unsupported authorization/grouping
+claim remain explicit. Source/candidate batching and family-independence limits
+withhold native independent-review qualification. No successor call ran. This
+is reviewed candidate meaning, not installed or released law; builder,
+publication and consumer adoption remain unchanged.
+
+### Preceding coordinated-skills delivery
+
 **STDO 3.0.4 coordinated skills have completed bounded implementation, testing
 and independent review and are accepted for inclusion** under
 [T-007](../.ai-workspace/tickets/active/T-007-STDO-3.0.4-coordinated-skills.md).
@@ -25,10 +52,11 @@ replay objects match: 32 native helper calls plus one labeled mechanical
 reproduction. There were no new native sessions. Actual Claude execution still
 belongs to revision 4 with direct skill-file loading and declared harness
 dispatch/recording. Earlier failures and other unqualified modes remain recorded.
-The bounded delivery remains selected for 3.0.4 with its declared host,
+That bounded delivery remains selected for 3.0.4 with its declared host,
 source-syntax and coverage limits. Release preparation/publication and consumer
-adoption remain separate; publication is unselected. No standard law,
-installed basis or independent Skills Product basis is changed.
+adoption remain separate; publication is unselected. That delivery changed no
+standard law, installed basis or independent Skills Product basis. Its review
+does not qualify the later review-flow amendment above.
 
 ### Published 3.0.3 predecessor
 

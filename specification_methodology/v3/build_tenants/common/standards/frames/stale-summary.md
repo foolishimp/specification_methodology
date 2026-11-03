@@ -48,7 +48,7 @@ Routes, in order:
 12. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 13. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 96165 bytes.
+Size of this frame: 97323 bytes.
 
 Source: ACTIVATION.md#transitions sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
@@ -731,7 +731,7 @@ proof when loss of incidental process state is a material counterexample:
 the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
-Source: TICKETS.md#execution-and-verification-authority-separation-up-007 sha256=5f7e4cb0785a27b9e6dda1fd91044e775183b6a0e6e80b33811e54665b144b57
+Source: TICKETS.md#execution-and-verification-authority-separation-up-007 sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
 
 ### Execution and verification authority separation (UP-007)
 
@@ -792,7 +792,7 @@ traceability; ACTIVATION §1 and SPEC_METHOD §8 own the execution semantics
 (P2, P6).
 
 
-Source: TICKETS.md#recorded-judgment-and-owner-ruling-continuity sha256=5f7e4cb0785a27b9e6dda1fd91044e775183b6a0e6e80b33811e54665b144b57
+Source: TICKETS.md#recorded-judgment-and-owner-ruling-continuity sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
 
 ### Recorded judgment and owner-ruling continuity
 
@@ -883,7 +883,7 @@ delivery, and a superseded, deferred or withdrawn state cannot erase
 unresolved obligations or evidence (P5, P1, P6).
 
 
-Source: TICKETS.md#condition-based-closure-and-reuse sha256=5f7e4cb0785a27b9e6dda1fd91044e775183b6a0e6e80b33811e54665b144b57
+Source: TICKETS.md#condition-based-closure-and-reuse sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
 
 ### Condition-based closure and reuse
 
@@ -921,8 +921,15 @@ it does not reopen a satisfied claim or expand the work automatically.
 Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
 
+Landing a candidate and releasing it are distinct from this condition; apply
+[EVALUATION §5](../EVALUATION.md#landing-closure-and-release) and any explicitly
+declared Product acceptance gate. An open required review withholds the work
+claim that depends on its complete coverage, not an independently authorized
+landing merely because review is open. Keep the linked Bug items and their
+verification provenance current; a report's existence closes none of them.
 
-Source: TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009 sha256=5f7e4cb0785a27b9e6dda1fd91044e775183b6a0e6e80b33811e54665b144b57
+
+Source: TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009 sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
 
 ### One-truth state projection and drift refusal (UP-009)
 
@@ -1235,7 +1242,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: TICKETS.md#foundation-to-law-work-carriers sha256=5f7e4cb0785a27b9e6dda1fd91044e775183b6a0e6e80b33811e54665b144b57 rows=3/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
+Source: TICKETS.md#foundation-to-law-work-carriers sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67 rows=3/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
 
 ### Foundation to law: work carriers
 
@@ -1263,4 +1270,14 @@ The standing of these consequences is stated in
 [FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
 The table accounts for §1 to §9, and for POSTING_GUIDE §2, §7 and §9,
 which have no family table of their own.
+
+The [Review findings and bug items](../TICKETS.md#review-findings-and-bug-items) refinement
+applies the same P3/P4b identity and retained-obligation premises to findings
+that outlive review. P6 keeps the assessment source, decision ledger and
+artifact effects distinct, and P2 avoids an empty report or redundant ticket.
+One report per finding-bearing review, the item fields and the three item
+states are explicit carrier choices of §4. Verification still uses EVALUATION
+and the applicable cadence rather than treating a state label as proof. The
+consumers are EVALUATION §4's report effect, EXECUTIVE_BASELINE §5/§12's triage
+and repair decisions, §7's closure and §8's ticket shape.
 

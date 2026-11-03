@@ -1,0 +1,238 @@
+--- candidate1/build_tenants/common/plugins/spec/references/COORDINATED_HANDOFF.md
++++ candidate2/build_tenants/common/plugins/spec/references/COORDINATED_HANDOFF.md
+@@ -185,6 +185,12 @@
+ (`EXECUTIVE_BASELINE` §12 steps 4–7). Do not turn a closed result into implicit
+ authority to repair, accept, publish or start the next stage.
+ 
++A proposed next action is not an executable activation. Before calling it
++already authorized or issuing it, bind the actual operation grant and the
++settled subject/pass grouping required by that contract. If either is missing,
++return the proposal and exact unresolved binding; do not presume a Writer grant
++or combine unsettled passes. This checks the existing intake, not a new gate.
++
+ For an admitted sequence, each continuation uses the previous closed result
+ and current bindings. Retain the boundaries the contract actually declares:
+ neither a new human check-in at every pass nor review only at the end is a
+@@ -212,6 +218,11 @@
+ 3. Return unchanged Reviewer severity. The Executive decides priority and
+    ownership directly when clear, or delegates bounded grouping/proposals to a
+    triage Worker when volume warrants it; that Worker changes no assessment.
++   If the basis selects the 1 highest–5 lowest convention, apply its qualitative
++   anchors and explicit severity-3 downstream/blast-radius assessment. Material
++   dependent impact normally calls for repair; contained local deferral needs
++   a reason and owner. Keep severity 3 distinct from priority P3 and retain old
++   or alternative scales on their own identities.
+ 4. If findings need a durable carrier, use `stdo-ticket` under the exact report
+    or item-update grant. Bind report ID/path, source linkage and visibility
+    before the effect. No findings means no bug report; sufficient direct work
+--- candidate1/build_tenants/common/plugins/spec/skills/stdo-review/SKILL.md
++++ candidate2/build_tenants/common/plugins/spec/skills/stdo-review/SKILL.md
+@@ -97,6 +97,11 @@
+   assessment and confidence where supportable, blast radius, workaround or
+   containment, repair complexity, regression risk, and residual uncertainty.
+ - Use only the Product-bound scale. Keep adjacent observations separate.
++- When the basis selects the review flow's 1 highest–5 lowest convention, use
++  its qualitative consequence anchors and Product evidence criteria. For
++  severity 3, explicitly assess dependent paths and blast radius; do not call
++  unknown impact contained or relabel an older finding's scale. The Executive
++  still owns priority and any repair/deferral decision.
+ - Never turn technical severity into Executive priority or promotion-boundary
+   effect. Whether a finding blocks promotion is decided by EVALUATION §5 When
+   a finding blocks promotion.
+--- candidate1/build_tenants/common/standards/EXECUTIVE_BASELINE.md
++++ candidate2/build_tenants/common/standards/EXECUTIVE_BASELINE.md
+@@ -291,7 +291,7 @@
+ The review-flow refinement in §5 and §12 applies P6 to keep assessment,
+ priority, operation and acceptance distinct, and P2 to avoid an extra actor or
+ review when no outcome requires it. Its particular QA cadence, four recheck
+-triggers and optional response policy are this profile's domain choices, not
++triggers, selected severity convention and optional response policy are this profile's domain choices, not
+ deductions of a numeric scale or review ratio. Product adoption selects the
+ response policy and local sizing; EVALUATION §5 still owns boundary meaning and
+ TICKETS §4 owns finding carriers. The consumers are §12's Executive decision,
+@@ -438,8 +438,9 @@
+ [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) Hard stops,
+ whose classes are typical, not closed; the basis names its own
+ non-waivable hard stops, each holding as that section states. "Non-waivable hard stop" in this
+-profile and in EVALUATION §5 means such a stop. This profile imposes no
+-universal numeric scale. Severity, priority, the frame result
++profile and in EVALUATION §5 means such a stop. The selected review-flow
++severity convention below does not relabel another Product's declared scale.
++Severity, priority, the frame result
+ (FOUNDATIONS §4 Results) and the current-boundary effect are four distinct
+ values. When a finding can block a promotion boundary is
+ [EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion),
+@@ -463,6 +464,39 @@
+ label (P6, P2). How each result member projects the triage payload and
+ constrains its consumption is EVALUATION §4 (Result and triage
+ projection).
++
++#### Selected 1–5 severity convention
++
++The severity convention selected for this review flow is **1 highest to 5
++lowest**. The Reviewer grades the consequence of the demonstrated defect if
++it manifests, using these qualitative anchors. The Product-owned frame basis
++binds the convention and its Product-specific evidence criteria: affected
++claims, users/paths, consequence, dependencies and supported containment (P6).
++
++| Severity | Consequence anchor |
++|---|---|
++| 1 | Critical loss of the governed outcome or of essential safety, authority or integrity across its affected scope. |
++| 2 | Major failure of essential behaviour, with substantial affected users, paths or dependencies and no adequate ordinary containment. |
++| 3 | Material but bounded failure whose disposition depends on its downstream impact and wider blast radius. |
++| 4 | Limited local failure with supported containment or a practical workaround and little effect outside that local scope. |
++| 5 | Minor actionable defect with minimal functional consequence for the declared outcome. |
++
++Severity 3 requires an explicit assessment of downstream dependencies and
++blast radius. Material impact on dependent work normally calls for repair;
++contained local impact may be deferred with a recorded reason and responsible
++owner. The Executive makes that disposition from the evidence and its grant,
++preserving the Reviewer's grade; a departure from the normal repair response
++also records its reason. Unknown dependent impact is not evidence of
++containment. Mandatory claims, hard stops and acceptance conditions still
++determine boundary effects under EVALUATION §5. Severity 3 is not priority P3,
++and no severity value automatically supplies priority, a block or permission
++to defer (P6, P2).
++
++An older or alternative Product-selected scale keeps its identity and evidence
++criteria. Selecting this convention is explicit; any translation is declared
++and justified rather than inferred from matching numbers. Historical findings
++retain the scale and grade under which they were assessed. A no-finding result
++carries no severity grade; it is not severity 5 (EVALUATION §4; P3, P6).
+ 
+ #### Proportional triage assistance
+ 
+@@ -1755,6 +1789,9 @@
+ - role-specific actor capability, authority and independence bindings:
+ - Product-selected severity and priority scales, current-boundary cutoff,
+   non-waivable hard stops, and the Reviewer-to-Executive triage relation:
++- selected review-flow severity convention (1 highest–5 lowest), or the exact
++  retained alternative; Product-specific evidence criteria and severity-3
++  downstream/blast-radius assessment:
+ - selected response policy (the optional P0–P5 policy or a named alternative),
+   review sizing and rationale; review ratio only if separately selected:
+ - distinct landing, closure and release conditions; any expressly declared
+--- candidate1/build_tenants/common/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md
++++ candidate2/build_tenants/common/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md
+@@ -98,6 +98,11 @@
+ 
+ - exact current Product and MVP or release mandate:
+ - Product-selected severity scale, direction, and evidence criteria:
++- for the selected review flow: bind EXECUTIVE_BASELINE §5's 1 highest–5 lowest
++  convention and Product-specific consequence criteria, or identify the retained
++  alternative scale; preserve historical grades and any explicit translation:
++- severity-3 downstream/blast-radius evidence, containment, disposition reason
++  and responsible owner under that convention:
+ - Product-selected priority scale, direction, and assignment authority:
+ - current-boundary decision cutoff and the decision owner's required
+   disposition (the Executive where the executive profile is adopted):
+@@ -123,7 +128,7 @@
+ view and current mandate. Severity, priority, frame result, boundary effect,
+ and disposition under [ACTIVATION §3](../ACTIVATION.md#disposition) remain distinct.
+ 
+-This template imposes no universal numeric scale. A project may bind `S0..Sn`
++This template does not silently select or translate a scale. A project may bind `S0..Sn`
+ and `P0..Pn`, including a `P2` decision cutoff, only by defining their exact
+ direction and effect here. When a finding blocks promotion, and that a
+ cutoff cannot waive a hard stop or turn an out-of-claim observation into a
+--- candidate1/build_tenants/common-design/REVIEW_FLOW.md
++++ candidate2/build_tenants/common-design/REVIEW_FLOW.md
+@@ -1,6 +1,6 @@
+ # Review flow owner and projection design
+ 
+-This realizes [QF-01–08](../../specification/requirements/REVIEW_FLOW.md) in the
++This realizes [QF-01–09](../../specification/requirements/REVIEW_FLOW.md) in the
+ native 3.0.4 candidate. It changes methodology meaning deliberately; it is not
+ a conservation claim over the automatic re-review sentence in the predecessor.
+ The [contract](../../.ai-workspace/work/STDO304_SKILLS/review-flow-001/CONTRACT.md)
+@@ -20,7 +20,7 @@
+ |---|---|
+ | EXECUTIVE_BASELINE §12 automatically reactivates affected review after repair | Superseded by named recheck triggers and condition-based test verification. Changed candidate/results still invalidate where material. |
+ | No separately named landing/closure/release projection in EVALUATION §5 | Extended with distinct operations/claims; existing acceptance and release requirements conserved. |
+-| Product-selected scales and boundary cutoff | Conserved; optional P0–P5 response policy added as an explicit selection, not a default numeric law. |
++| Product-selected scales and boundary cutoff | Conserved; the later selected 1–5 review-flow severity convention has its own identity and evidence criteria, with no silent historical translation. Optional P0–P5 response policy remains a separate explicit selection. |
+ | TICKETS uses existing durable carriers, state is not proof | Conserved and refined with linked report/items and actual verification provenance, no compulsory duplicate ticket. |
+ | Reviewer does not edit candidate or direct repair | Conserved; exact report-artifact effects may be granted without candidate mutation or extra reads. |
+ | Complete declared coverage and dependency invalidation | Conserved; made explicit for pending QA and provisional downstream consumers. |
+@@ -61,6 +61,13 @@
+ the report names that population and leaves the remaining required coverage
+ open; a review budget cannot convert it to complete coverage.
+ 
++Under the later selected severity convention, a severity-3 defect's material
++effect on Product B normally leads the Executive to select repair. A contained
++local severity-3 defect may instead be deferred with its owner and supported
++reason. This is not a conversion to priority P3 and cannot make an unmet
++mandatory claim satisfied. Missing dependency evidence keeps the impact
++uncertain rather than establishing that the defect is local.
++
+ ## Projection and qualification
+ 
+ The shared skill reference presents one deciding route and compact example;
+@@ -74,3 +81,12 @@
+ must bind the exact unreleased candidate as its declared evaluation premise,
+ separate from the actual installed builder; it cannot claim a published 3.0.4
+ or silently substitute candidate owners into an older installed basis.
++
++The first source-use campaign remains bound to its preserved first candidate.
++Its Executive proposed an already-authorized combined review with unsettled
++pass grouping and presumed a repair Writer grant absent from the scenario.
++No dispatch occurred. The shared return path now briefly distinguishes a
++proposed action from an executable activation by requiring those existing
++bindings; this clarifies existing law and creates no gate or new actor. The
++later severity convention and reminder receive bounded source/mechanical
++assessment, with no new native-use claim.
+--- candidate1/specification/requirements/REVIEW_FLOW.md
++++ candidate2/specification/requirements/REVIEW_FLOW.md
+@@ -16,9 +16,15 @@
+ | QF-06 | Declare Product acceptance gates explicitly, naming both Products, relation, candidate/claim, required coverage, conditions and owner. Permit authorized provisional work while withholding dependent acceptance/closure; invalidate affected downstream results after material findings. | EVALUATION §5; frame-basis template |
+ | QF-07 | Review sizing/budget preserves the declared population and conjunction; samples establish only their stated scope. No universal ratio, extra capture landing hold or particular Product gate is inferred from the screenshots. | EXECUTIVE_BASELINE §12; EVALUATION §3–5 |
+ | QF-08 | Skills and generated frames project the single owners. Each skill follows its actual Product-selected basis; a newer skill cannot silently amend an older method. Preserve direct work, existing read/effect grants and the reviewed-subject freeze. | Five native skills and shared handoff; exact owner frame generation |
++| QF-09 | The selected review flow grades severity 1 highest–5 lowest using qualitative consequence anchors and Product-specific evidence criteria. Severity 3 explicitly assesses downstream/blast-radius impact: material dependent impact normally calls for repair; contained local impact may be deferred with reason and owner. Preserve independent priority/boundary decisions and historical/alternate scale identities. | EXECUTIVE_BASELINE §5; source wording in the later owner steering |
+ 
+ Candidate acceptance needs independently derived boundary cases, including
+ missing/partial review, nonmandatory deferred work versus a false mandatory
+ claim, no-finding return, unauthorized report writing, test-only verification,
+ each recheck trigger and explicit versus absent downstream gates. Historical
+ native trials qualify only their retained subjects and scopes.
++
++The later [owner steering](../../.ai-workspace/work/STDO304_SKILLS/review-flow-001/SEVERITY_STEERING.md)
++selects QF-09 after the first frozen source-use trials. Those trials remain
++evidence for their original candidate and declared scale, not a fresh test of
++the later convention.
+--- candidate1/.ai-workspace/work/STDO304_SKILLS/review-flow-001/SEVERITY_STEERING.md
++++ candidate2/.ai-workspace/work/STDO304_SKILLS/review-flow-001/SEVERITY_STEERING.md
+@@ -0,0 +1,34 @@
++# Later severity steering
++
++After the first candidate's source-use calls ended, the owner added:
++
++> the review means the bugs can be assigned a severity of 1-5
++
++> generally 3 is the one that can go either way, if it has downstream impact and broader splash zone probably needs to be fixed
++
++The Executive binds the selected convention as 1 highest–5 lowest. Reviewer
++grades consequence; Executive retains that grade and separately decides
++priority/disposition. Product-specific evidence criteria remain explicit.
++Severity 3 requires downstream/blast-radius assessment, with repair normally
++selected for material dependent impact and reason/owner retained for a lawful
++contained-local deferral. No automatic priority, hard-stop or boundary mapping
++is authorized, and older/alternative scales are not relabelled.
++
++The original [source delta](SOURCE_DELTA.json), SHA-256
++`5d99a826ccedb5257aa5c01b92e5347f4fed43271123526c73a4e501d1bf7810`,
++is unchanged. Its 25 changed source files and full package inventory are retained
++under [candidate-001](candidate-001/RETENTION.json); unchanged source remains
++the Git predecessor `8a756806c7ec5063ad7afbaff50d837882a33f12`.
++The original native observations retain that subject and their scenario scale.
++
++The Executive separately records the E1 source-use limitation: the actor's
++[actual return](testing/runs/E1/FINAL.txt) labelled a combined next review
++already authorized while its grouping was unresolved and presumed a repair
++Writer grant absent from the scenario. No dispatch occurred. This is operational
++evidence, not a finding of contradictory normative text. A concise readiness
++reminder may clarify the existing intake law; parser/gate semantics do not
++change. Raw-JSON transport failures remain fixture/actor limitations.
++
++The bounded successor receives source and mechanical checks only. No further
++native calls, installation, consumer adoption, Git mutation or release is
++selected in this activation.

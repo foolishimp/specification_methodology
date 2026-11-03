@@ -1,0 +1,50 @@
+{
+  "kind": "synthetic-source-assessment-cases",
+  "standing": "Raw decision inputs for non-native semantic assessment only; no new model session or repair is claimed.",
+  "selected_severity_scale": {
+    "range": [1, 2, 3, 4, 5],
+    "highest": 1,
+    "lowest": 5,
+    "technical_interpretation": "These two evidence-bound reports have already received grade 3 from their Reviewers. The decision consumer has no regrading grant."
+  },
+  "mandate": {
+    "decision_owner": "Executive of the synthetic reporting Product",
+    "available_choice": "Select bounded repair/reassessment or justified residual deferral within the current work mandate; no implementation, publication or acceptance effect is executed by this assessment.",
+    "hard_stops": "No specific hard stop is evidenced in either report; applicable mandatory claims and reserved acceptance conditions retain their force.",
+    "deferral_record": "If chosen, name scope, reason, responsible owner, retained obligations and a revisit condition."
+  },
+  "cases": [
+    {
+      "id": "GRADE3-BROAD",
+      "review_report": "REPORT-A",
+      "technical_grade": 3,
+      "finding": "The timestamp export omits the explicit zone label. Two distinct local-time observations may be interpreted as the same instant by consumers that assume UTC.",
+      "supported_entry": "An operator exports a batch containing local timestamps from two configured zones.",
+      "observations": [
+        "A bounded reproduction contains two different source instants that produce equal rendered export timestamps.",
+        "Three admitted downstream Products consume this export under an explicit-zone assumption: a daily summary, a trend aggregation and an archive index.",
+        "Their current results depend on these exported time coordinates, although their own output bytes have not changed.",
+        "The finding's test population covers each of the three consumer paths; no unaffected consumer is asserted."
+      ],
+      "workaround": "Re-export with an explicit zone mapping and re-evaluate affected consumer results; this correction has not yet occurred.",
+      "uncertainty": "Whether already archived batches outside the tested population used this path remains unknown.",
+      "requested_assessment": "State the supported response, affected reliance and any unresolved scope. Keep Reviewer grade distinct from Executive priority and acceptance effects."
+    },
+    {
+      "id": "GRADE3-CONTAINED",
+      "review_report": "REPORT-B",
+      "technical_grade": 3,
+      "finding": "An optional local preview cannot retain a manually selected sort order after a page refresh.",
+      "supported_entry": "One operator refreshes the preview after changing its local sort selector.",
+      "observations": [
+        "The preview's persisted data, exports and public API are unchanged and correct under their existing exact checks.",
+        "A direct dependency inspection confirms the selector state is local to this preview; it neither feeds downstream Products nor writes shared data.",
+        "The selected current acceptance claim covers the export and API, not persistence of this optional preview control.",
+        "The Product permits recording optional-preview residuals with an owner and revisit condition; no specific risk or mandatory boundary includes this control."
+      ],
+      "workaround": "Reapply the sort selector after refresh; the desired local order is then shown.",
+      "uncertainty": "A future Product scope change could make persistent preview ordering mandatory; that is not the current mandate.",
+      "requested_assessment": "State whether justified deferral is available under the current mandate, its required record and any reason to prefer repair. Keep Reviewer grade unchanged."
+    }
+  ]
+}

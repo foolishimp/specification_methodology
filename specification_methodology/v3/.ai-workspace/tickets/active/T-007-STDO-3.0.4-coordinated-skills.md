@@ -1,7 +1,36 @@
 # T-007 Coordinated skills for STDO 3.0.4
 
-Status: **bounded implementation delivery accepted; publication pending**.
+Status: **review-flow source `candidate_ready`, source review satisfied; mixed
+native qualification retained; prior bounded implementation accepted**.
 Owner: Jim. Target distribution: STDO 3.0.4.
+
+## Current review-flow selection
+
+The owner adds the Executive/Reviewer changes shown in IMG_3377–3379 to the
+current 3.0.4 work. The [bounded contract](../../work/STDO304_SKILLS/review-flow-001/CONTRACT.md)
+and [requirements](../../../specification/requirements/REVIEW_FLOW.md) select
+the approved A+B+C meaning and preserve D's unsettled policy choices. Candidate
+method owners change through requirement/design re-entry; installed releases,
+the independent Skills Product and all earlier evidence retain their identity.
+The [independent source review](../../work/STDO304_SKILLS/review-flow-001/review/FINAL_REVIEW.md)
+is closed with no current actionable source finding. The Executive selects one
+local checkpoint for this task; publication, installation, version stamping and
+consumer-basis operations remain unselected.
+
+The later [severity steering](../../work/STDO304_SKILLS/review-flow-001/SEVERITY_STEERING.md)
+selects 1 highest–5 lowest and explicit downstream/blast-radius assessment for
+severity 3. [Candidate 2](../../work/STDO304_SKILLS/review-flow-001/SOURCE_DELTA_02.json)
+is frozen with passing frame, skill and package checks and a satisfied bounded
+source/impact assessment. Material severity-3 dependent impact normally calls
+for repair; local containment permits a reasoned, owned deferral. Its
+[return](../../work/STDO304_SKILLS/review-flow-001/RETURN_02.md) preserves all three
+original calls, two strict-envelope failures, separately verified R1 recovery,
+the conditional R2 record and unsupported E1 authorization/grouping. Batching
+and family-independence limits remain; no successor native call ran. This is
+reviewed candidate meaning, not installed or released law or final Product
+acceptance.
+
+## Prior delivery and accepted repair
 
 The first source candidate passed static review but failed bounded native
 operation under [OP-01](../../work/STDO304_SKILLS/review/OPERATIONAL_REVIEW.md).
@@ -34,7 +63,7 @@ The [delivery return](../../work/STDO304_SKILLS/RETURN.md) records actual
 checks, review findings and residuals against the exact candidate. This ticket
 does not convert a passed test or review into release acceptance.
 
-The current [source delta](../../work/STDO304_SKILLS/reader-unicode-repair-001/SOURCE_DELTA_02.json)
+The accepted reader [source delta](../../work/STDO304_SKILLS/reader-unicode-repair-001/SOURCE_DELTA_02.json)
 is `6f129f5e680b620bd20ad5d493586eb6326a0dcac1bff5eaca148f57941c45a6`,
 composed over the preserved first repair delta and original revision-5 freeze.
 The repair passes 35 helper tests, 78 tester and 138 reviewer CLI checks,

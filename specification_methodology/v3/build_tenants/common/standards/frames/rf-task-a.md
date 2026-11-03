@@ -61,7 +61,7 @@ Routes, in order:
 26. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 27. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 112828 bytes.
+Size of this frame: 113789 bytes.
 
 Source: FOUNDATIONS.md#2-ontology sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
 
@@ -779,7 +779,7 @@ The out_of_frame residual field carries what
 result to name, and reads `none` for any other result (P5).
 
 
-Source: EVALUATION.md#frame-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#frame-qualification sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ### Frame qualification
 
@@ -1302,7 +1302,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=1/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=1/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -1332,8 +1332,21 @@ they are traced in family F3 at
 [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
 what §4 decides about the review record, triage and returns.
 
+The review-flow refinement applies P6's separation of operation, evidence and
+decision to [Landing, closure and release](../EVALUATION.md#landing-closure-and-release): making
+a candidate available cannot establish its claims. P3 binds provisional use to
+an exact subject, and P4b with ACTIVATION §7 preserves and invalidates dependent
+results. Permitting authorized landing beside pending QA, and providing
+[Declared Product acceptance gates](../EVALUATION.md#declared-product-acceptance-gates), are
+explicit domain policies of §5, not consequences of finite attention alone.
+The concrete gate and its acceptance owner are Product selections. Consumers
+are EXECUTIVE_BASELINE §12's cadence, TICKETS §7's closure application and the
+Project Reference-Frame Basis template. The exact report-effect refinement of
+§4 applies existing operation/acquisition law; TICKETS §4 owns its carrier
+shape and consumes it. No timing or report policy creates authority.
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
