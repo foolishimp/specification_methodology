@@ -55,9 +55,9 @@ Routes, in order:
 19. [EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification](../EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification)
 20. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 
-Size of this frame: 116673 bytes.
+Size of this frame: 126093 bytes.
 
-Source: EXECUTIVE_BASELINE.md#executive sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
+Source: EXECUTIVE_BASELINE.md#executive sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff
 
 ### Executive
 
@@ -75,7 +75,7 @@ universal semantic owner, controller, manager service or runtime executive
 observer (P6, RF-016).
 
 
-Source: EXECUTIVE_BASELINE.md#reviewer sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
+Source: EXECUTIVE_BASELINE.md#reviewer sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff
 
 ### Reviewer
 
@@ -88,7 +88,7 @@ technical triage when a finding exists. It does not implement the repair,
 assign priority, apply disposition or activate the next frame (P6).
 
 
-Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
+Source: EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff
 
 ### Technical triage, severity, priority and boundary effect
 
@@ -124,8 +124,9 @@ appetite, so that no decision waives it, are
 [ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement) Hard stops,
 whose classes are typical, not closed; the basis names its own
 non-waivable hard stops, each holding as that section states. "Non-waivable hard stop" in this
-profile and in EVALUATION §5 means such a stop. This profile imposes no
-universal numeric scale. Severity, priority, the frame result
+profile and in EVALUATION §5 means such a stop. The selected review-flow
+severity convention below does not relabel another Product's declared scale.
+Severity, priority, the frame result
 (FOUNDATIONS §4 Results) and the current-boundary effect are four distinct
 values. When a finding can block a promotion boundary is
 [EVALUATION §5 When a finding blocks promotion](../EVALUATION.md#when-a-finding-blocks-promotion),
@@ -150,8 +151,74 @@ label (P6, P2). How each result member projects the triage payload and
 constrains its consumption is EVALUATION §4 (Result and triage
 projection).
 
+#### Selected 1–5 severity convention
 
-Source: EXECUTIVE_BASELINE.md#work-result sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
+The severity convention selected for this review flow is **1 highest to 5
+lowest**. The Reviewer grades the consequence of the demonstrated defect if
+it manifests, using these qualitative anchors. The Product-owned frame basis
+binds the convention and its Product-specific evidence criteria: affected
+claims, users/paths, consequence, dependencies and supported containment (P6).
+
+| Severity | Consequence anchor |
+|---|---|
+| 1 | Critical loss of the governed outcome or of essential safety, authority or integrity across its affected scope. |
+| 2 | Major failure of essential behaviour, with substantial affected users, paths or dependencies and no adequate ordinary containment. |
+| 3 | Material but bounded failure whose disposition depends on its downstream impact and wider blast radius. |
+| 4 | Limited local failure with supported containment or a practical workaround and little effect outside that local scope. |
+| 5 | Minor actionable defect with minimal functional consequence for the declared outcome. |
+
+Severity 3 requires an explicit assessment of downstream dependencies and
+blast radius. Material impact on dependent work normally calls for repair;
+contained local impact may be deferred with a recorded reason and responsible
+owner. The Executive makes that disposition from the evidence and its grant,
+preserving the Reviewer's grade; a departure from the normal repair response
+also records its reason. Unknown dependent impact is not evidence of
+containment. Mandatory claims, hard stops and acceptance conditions still
+determine boundary effects under EVALUATION §5. Severity 3 is not priority P3,
+and no severity value automatically supplies priority, a block or permission
+to defer (P6, P2).
+
+An older or alternative Product-selected scale keeps its identity and evidence
+criteria. Selecting this convention is explicit; any translation is declared
+and justified rather than inferred from matching numbers. Historical findings
+retain the scale and grade under which they were assessed. A no-finding result
+carries no severity grade; it is not severity 5 (EVALUATION §4; P3, P6).
+
+#### Proportional triage assistance
+
+When the cause and consequence are sufficiently clear, the Executive decides
+priority and ownership directly. Where finding volume would overwhelm its
+bounded attention, it may activate a triage Worker to group causes, identify
+duplicates and propose priorities and responsible owners from the admitted
+findings. The assistant neither grades nor changes Reviewer severity and
+decides no priority or disposition. The Executive consumes its evidence and
+records its own decision; unsupported cause relations stay uncertain. The
+assistant adds no read authority, and this profile requires no extra actor
+for a small or clear result (P6, P2).
+
+#### Optional P0–P5 response policy
+
+An adopting Product may explicitly select the following response policy in its
+frame basis. The labels have no numeric meaning outside that adoption; the
+Product supplies its ordering/assignment criteria and any finer distinctions.
+This is priority policy, not a Reviewer severity scale (P6, P2).
+
+| Selected priority | Response and boundary effect |
+|---|---|
+| P0–P2 | Include in the next bounded fix pass; hold the affected outcome's closure and release, not candidate landing merely because of this priority. |
+| P3–P5 | Repair before release/go-live; hold that release, while bounded work may close with the item durably retained or transferred with its disposition. |
+
+This policy never waives applicable hard stops, mandatory claims, acceptance
+conditions, access restrictions or operation grants. Those owners may require
+an earlier hold at any priority. A P3–P5 item may outlive a local work claim's
+closure only when that claim does not require the unfixed behaviour; assigning
+that priority cannot satisfy a false mandatory claim. No review-to-work ratio or additional
+capture-review landing hold is selected by adopting this example. Durable
+items and their actual verification state are owned by
+[TICKETS §4](../TICKETS.md#review-findings-and-bug-items).
+
+
+Source: EXECUTIVE_BASELINE.md#work-result sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff
 
 ### Work result
 
@@ -211,7 +278,7 @@ revises only the affected results, preserving originals and supported
 surviving claims (ACTIVATION §7; P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
+Source: EXECUTIVE_BASELINE.md#6-executive-attention-evaluation-and-action sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff
 
 ## 6. Executive attention, evaluation and action
 
@@ -421,7 +488,7 @@ Cut or exact Install stays immutable under its own lifecycle law and imposes
 no immutability on the Source Project constructing a successor (P3, P4b).
 
 
-Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
+Source: EXECUTIVE_BASELINE.md#the-executive-configuration sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff
 
 ### The executive configuration
 
@@ -504,7 +571,7 @@ allocation only where it fits, and whether its prohibitions and its
 reporting of blockers hold wherever it is used.
 
 
-Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
+Source: EXECUTIVE_BASELINE.md#12-complete-engagement-transition sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff
 
 ## 12. Complete engagement transition
 
@@ -667,7 +734,9 @@ ACTIVATION §3 and §5 stay the owners of each disposition, the exact accepted
 checkpoint and the next already-authorised bounded action. The disposition
 is the acceptance result; neither `candidate_ready` nor a satisfied review
 result is acceptance (FOUNDATIONS §4 Results). A repair creates
-a new candidate, and an affected review is reactivated against it.
+a new candidate; the Executive invalidates affected results and selects
+verification or independent recheck under the cadence below, rather than
+automatically reactivating every affected review.
 Acceptance does not widen the Product outcome or authorise an unselected
 successor (P4b, EVALUATION §5).
 
@@ -679,6 +748,55 @@ of it. The Executive records its determination as the current-boundary
 effect (§5 Technical triage, severity, priority and boundary effect). An
 unsupported technical assessment returns through a new or refined
 activation rather than being silently rewritten (P6, P1).
+
+### QA cadence and repair rechecks
+
+Landing, closure, release and explicit Product gates have one owner,
+[EVALUATION §5](../EVALUATION.md#landing-closure-and-release). For this profile,
+an admitted step lands its candidate after its selected work and fix pass.
+Where review is required or selected, one bounded QA review covers that exact
+declared subject and may run beside the next authorized step. It is not a
+standing permission for another review of every local change. The Executive
+records review size and its reason in the existing work carrier; any ratio is
+Product-selected, and none is imposed here (P6, P2).
+
+Sizing does not shrink a declared claim. Preserve the exact evaluated
+population and conjunction; a sample supports its stated scope and leaves
+uncovered required coverage explicit. A budget or ratio cannot turn that
+residual into a completed whole-subject review (P6, P5).
+
+Each test-reproducible repair binds a reproduction that fails on the faulty
+subject and passes on the repaired subject, with the full suite declared for
+that repair scope passing. A repair without a reproduction states that gap and
+requires the independent recheck below; a green total does not fill the gap.
+Tests may verify a repair without becoming independent assessment. A fix pass
+closes on that evidence and its other applicable conditions unless independent
+recheck is required by one of these conditions (P6, P5):
+
+1. the candidate reaches a boundary whose governing basis requires or claims
+   independent review, including any Product, release, qualification, risk or
+   admitted-work addition;
+2. the pass repairs a hard stop or a capture whose source-fidelity claim is
+   material to the outcome;
+3. a repair has no reproducing test; or
+4. a selected review left part of its declared subject uncovered.
+
+For a required recheck, activate one fresh Reviewer for the bounded fix pass,
+with its affected claims, prior findings, reproductions and remaining coverage.
+Fresh means a new bounded assessment activation with the independence of
+EVALUATION §3, not independence inferred from a new context or actor name.
+Partitioning follows the declared conjunction, not extra serial rounds. The
+covered fixes remain unresolved for the dependent closure claim until that
+report arrives and the required predicates are satisfied; tests alone cannot
+substitute for this required review. A later material finding is a new input
+to the next bounded disposition, not an unbounded review loop (P6, P2).
+
+The Executive preserves Reviewer severity, assigns priority under the selected
+policy and hands the linked items to the lawful repair Writer. Pending review
+alone holds no landing. An open required review holds its dependent closure,
+and release retains all its selected conditions. Downstream use and later
+invalidation follow EVALUATION §5; access and artifact-effect grants remain
+unchanged (P6).
 
 ### Promotion constraint projection
 
@@ -705,7 +823,7 @@ and of the Executive's exclusions (§8):
 | an unsupported or materially incomplete technical assessment | a capable evaluation is reactivated, or `indeterminate` is kept; Reviewer evidence is not rewritten |
 
 
-Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a
+Source: EXECUTIVE_BASELINE.md#17-actor-binding-and-independence sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff
 
 ## 17. Actor binding and independence
 
@@ -917,7 +1035,7 @@ proof when loss of incidental process state is a material counterexample:
 the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
-Source: EVALUATION.md#3-independent-assessment sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#3-independent-assessment sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ## 3. Independent assessment
 
@@ -992,7 +1110,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: EVALUATION.md#4-review-results sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#4-review-results sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ## 4. Review results
 
@@ -1054,6 +1172,15 @@ severity alone (P6, P2).
 The assessor returns to the decision owner, not to the constructor. It does
 not edit the candidate, direct the repair or authorise continuation (P6,
 §3).
+
+Recording the assessment is a separate artifact effect. Where the activation
+grants it, the assessor may write the exact named findings carrier under
+[TICKETS §4 Review findings and bug items](../TICKETS.md#review-findings-and-bug-items).
+That grant adds no candidate-repair authority or acquisition route. A review
+has covered its declared subject only when every planned predicate has been
+evaluated or lawfully removed from that subject; a partial return preserves
+the unperformed coverage. Closing the review activity does not satisfy a
+falsified or unresolved work claim (P6, P5).
 
 Purpose and material relation: every configuration keeps severity,
 priority, boundary effect and disposition separate. The rule applies to any
@@ -1421,7 +1548,7 @@ The standing of these consequences is stated in
 The table accounts for §1 to §16.
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=7/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=7/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -1457,8 +1584,21 @@ they are traced in family F3 at
 [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
 what §4 decides about the review record, triage and returns.
 
+The review-flow refinement applies P6's separation of operation, evidence and
+decision to [Landing, closure and release](../EVALUATION.md#landing-closure-and-release): making
+a candidate available cannot establish its claims. P3 binds provisional use to
+an exact subject, and P4b with ACTIVATION §7 preserves and invalidates dependent
+results. Permitting authorized landing beside pending QA, and providing
+[Declared Product acceptance gates](../EVALUATION.md#declared-product-acceptance-gates), are
+explicit domain policies of §5, not consequences of finite attention alone.
+The concrete gate and its acceptance owner are Product selections. Consumers
+are EXECUTIVE_BASELINE §12's cadence, TICKETS §7's closure application and the
+Project Reference-Frame Basis template. The exact report-effect refinement of
+§4 applies existing operation/acquisition law; TICKETS §4 owns its carrier
+shape and consumes it. No timing or report policy creates authority.
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=0/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=0/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -1487,7 +1627,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=064eb55ec6b1870da8411da814c0a6c59fd7113bd4cb2631351c141f66a02f2a rows=10/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: EXECUTIVE_BASELINE.md#foundation-to-law sha256=ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff rows=10/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 
@@ -1555,4 +1695,13 @@ relation: a reader of this profile sees which of its rules rest on the
 commitments and imported families, and which are choices this profile or
 the adopting Product makes, so no profile choice is presented as following
 from the foundations (P6, P2).
+
+The review-flow refinement in §5 and §12 applies P6 to keep assessment,
+priority, operation and acceptance distinct, and P2 to avoid an extra actor or
+review when no outcome requires it. Its particular QA cadence, four recheck
+triggers, selected severity convention and optional response policy are this profile's domain choices, not
+deductions of a numeric scale or review ratio. Product adoption selects the
+response policy and local sizing; EVALUATION §5 still owns boundary meaning and
+TICKETS §4 owns finding carriers. The consumers are §12's Executive decision,
+§19's adoption projection and the Project Reference-Frame Basis template.
 

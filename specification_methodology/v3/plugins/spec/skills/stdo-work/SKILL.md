@@ -1,12 +1,43 @@
 ---
 name: stdo-work
-description: Execute one admitted STDO work item through its lawful re-entry point. Use when a user says stdo work or explicitly asks to perform requirements, design, code, or test work under an STDO-governed basis. Do not invoke for generic non-STDO development.
+description: Execute or coordinate one admitted STDO work item through its lawful re-entry point. Use for STDO requirements, design, code or test work, including issuing bounded work to a separate Worker. Do not invoke for generic non-STDO development.
 ---
 
 # STDO Work
 
 Deliver the smallest causally closed change authorized by one exact work basis.
 The admitted re-entry point decides where work begins.
+
+## Start With Your Own Control Intake
+
+Read the exact own contract or intake named in the request before any general
+search or project read. Bind your own permitted inputs, exclusions and return
+route, then apply [Control Intake](../../references/COORDINATED_HANDOFF.md#control-intake).
+This applies to issuer, recipient and direct work. Use named control routes;
+do not start with directory inventories, memory searches or neighbouring
+prompts. A Worker’s access never becomes its issuer’s access. Check the actual
+host boundary before relying on excluded information staying unavailable.
+
+## Choose The Entry
+
+If receiving a coordinated packet, apply
+[Receive](../../references/COORDINATED_HANDOFF.md#receive) before the general
+discovery, classification or subject reads below. After validation, use this
+skill's ordinary procedure within that packet; return its closed work result
+through the named surface and consumer, then stop.
+
+If the active frame coordinates this work across a material boundary, use
+[Issue](../../references/COORDINATED_HANDOFF.md#issue). Select the authorized
+unit from its existing carrier, bind the Worker additions of
+`EXECUTIVE_BASELINE` §19 and dispatch a recipient of this same skill. The
+issuer consumes [the return](../../references/COORDINATED_HANDOFF.md#evaluate-the-return)
+under §12 steps 3–4 and determines required review; it does not fall through
+into construction in its Executive frame. If the grant requires another
+actor, a same-actor role change is insufficient.
+
+Otherwise follow the direct path below. A sufficient direct Writer invocation
+needs no added coordinator, Worker, ticket or review. The accepted frame basis
+and actual authority decide; the requested mode alone grants nothing.
 
 ## Select The Product Basis
 
@@ -161,6 +192,12 @@ a new activation or wholesale rehash. Refresh bindings on material change.
    authorized Executive when that profile is adopted, decides whether Product,
    qualification, release, risk, or admitted-work law requires independence
    and separately activates `stdo-review`.
+
+For a selected repair pass, apply [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis):
+bind linked findings/items, exact repaired subject, failing-before/passing-after
+reproduction and the declared suite. Identify tests versus any required
+independent recheck honestly. Keep authorized landing separate from work
+closure and release; a local repair does not automatically add a review round.
 
 Keep reusable judgments and owner rulings in the existing carrier: exact
 question, subject/basis, supporting computed evidence, actor and authority,

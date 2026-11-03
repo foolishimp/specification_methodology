@@ -1,12 +1,39 @@
 ---
 name: stdo-help
-description: Explain or establish the next lawful STDO step. Use when a user says stdo help or explicitly asks how to enter or operate an STDO-governed project. Do not invoke for generic non-STDO help.
+description: Explain the next lawful STDO step and route direct or coordinated work. Use when entering or operating an STDO-governed project or resolving a missing work binding. Do not invoke for generic non-STDO help.
 ---
 
 # STDO Help
 
 Give practical help from the project's exact selected basis. This skill routes
 attention; it does not replace method or Product authority.
+
+## Start With Your Own Control Intake
+
+Read the exact own contract or intake named in the request before any general
+search or project read. Bind your own permitted inputs, exclusions and return
+route, then apply [Control Intake](../../references/COORDINATED_HANDOFF.md#control-intake).
+This applies to issuer, recipient and direct work. Use named control routes;
+do not start with directory inventories, memory searches or neighbouring
+prompts. A Worker’s access never becomes its issuer’s access. Check the actual
+host boundary before relying on excluded information staying unavailable.
+
+## Choose The Entry
+
+If receiving a coordinated packet, apply
+[Receive](../../references/COORDINATED_HANDOFF.md#receive) before general
+discovery or project reads. Answer within its read-only frame and named
+return relation. A coordinator that needs another actor to resolve a material
+read-only question uses [Issue](../../references/COORDINATED_HANDOFF.md#issue)
+and [evaluates its return](../../references/COORDINATED_HANDOFF.md#evaluate-the-return).
+Otherwise answer directly; a help request creates no need for delegation.
+
+Check applicable standing rulings and exact existing instructions before
+asking for a choice. If a material choice remains, put the concise question
+first and explain the dependent action it holds. Continue already-authorized
+independent work while waiting; do not treat time or silence as an answer.
+Do not execute installation, setup or ticket mutations from this read-only
+skill (`ACTIVATION` §1 Roles and delegation and §7).
 
 ## Select The Product Basis
 
@@ -54,6 +81,12 @@ A sufficient local instruction may use a direct Writer where the accepted
 frame basis permits it. Do not add a coordinating activation, ticket or review merely to
 answer a help request. Ask for a missing owner choice only when the next action
 depends on it; reuse a sufficient existing ruling.
+
+For review, repair, landing or closure questions, use
+[the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis).
+Do not infer a review ratio, P0–P5 meanings or a particular Product gate from
+this skill. Ask only for a missing policy choice that affects the requested
+next action; preserve direct work and any already sufficient ruling.
 
 ## Return
 

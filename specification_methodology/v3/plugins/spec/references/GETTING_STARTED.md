@@ -1,12 +1,13 @@
 # Using STDO
 
 This guide is the practical entrypoint for a person or LLM entering an
-STDO-governed project. It answers four questions:
+STDO-governed project. It answers five questions:
 
 1. How do I get ready to work?
 2. How do I iterate requirements?
 3. What authorizes code development and testing?
 4. How do I monitor progress and help triage?
+5. How do I issue work to another actor without writing a replacement brief?
 
 This guide and its companion skills are non-deciding interaction projections.
 The project's exact installed STDO cut and Product-owned authority remain the
@@ -18,18 +19,19 @@ governing sources.
 - [Iterate Requirements](#2-iterate-requirements)
 - [Start Code Development And Testing](#3-start-code-development-and-testing)
 - [Monitor And Help Triage](#4-monitor-and-help-triage)
+- [Coordinate Work And Review](#coordinate-work-and-review)
 - [Common Stops](#common-stops)
 - [Read The Installed Documentation](#read-the-installed-documentation)
 - [Owning References](#owning-references)
 
 ## Read The Installed Documentation
 
-STDO 3.0.3 installs its [documentation home](../../../standards/documentation/index.html)
+STDO 3.0.4 installs its [documentation home](../../../standards/documentation/index.html)
 and [3D/2D/Layered constraint explorer](../../../standards/documentation/constraint-explorer/index.html)
 with the ordinary method payload. Resolve the installed entry:
 
 ```sh
-stdo resolve stdo://releases/v3.0.3/standards/documentation/index.html
+stdo resolve stdo://releases/v3.0.4/standards/documentation/index.html
 ```
 
 Open the returned `path` in a browser. Search constraints, read their complete
@@ -39,7 +41,7 @@ without losing the selected information. Layered works without WebGL. No
 Graphify, Lean or Node installation is needed for this offline reader.
 The [reading guide](../../../standards/documentation/README.md) explains access
 and controls. Its represented common source is the historical 35fb4824 cut,
-not the complete current 3.0.3 corpus; use the owning installed standards for
+not the complete current 3.0.4 corpus; use the owning installed standards for
 current method decisions.
 
 The same home offers the [ABI code example](../../../standards/documentation/code-explorer/index.html)
@@ -77,6 +79,48 @@ STDO constrains governed relations. It does not prescribe an actor count,
 repository layout, prompt construction engine, internal decomposition, search
 procedure, or tool sequence where those choices cannot change a governed
 semantic, authority, evidence, safety, or release property.
+
+## Coordinate Work And Review
+
+The same skill supports direct work, issuing a bounded activation and receiving
+its packet. Choose from the actual frame/grant and task boundary. A sufficient
+direct task keeps its ordinary path; invoking a skill adds no actor or ticket.
+
+For a coordinating request, identify the existing admitted carrier and unit:
+
+```text
+Use stdo-work to issue W1 from <carrier at exact identity> to a separate Worker.
+Keep my coordinating frame and evaluate its return under that contract.
+```
+
+The skill follows [Coordinated Skill Handoff](COORDINATED_HANDOFF.md): it binds
+exact source references, permissions, result destination and stops, checks
+recipient acquisition, then uses the host's supported dispatch mechanism. The
+recipient invokes `stdo-work`, validates the packet before subject reads and
+executes the ordinary path. The issuer evaluates the closed result and issues
+`stdo-review` when the governing boundary requires it. If the host cannot
+perform the required dispatch, it returns a prepared, not-dispatched packet.
+
+Begin with the actor's own named control contract, before directory discovery
+or other project reads. The [verified section reader](COORDINATED_HANDOFF.md#compact-source-acquisition)
+uses the existing manager and explicit store to return compact verification
+and named source sections. A strict acquisition requirement also needs a
+compatible [host binding](HOST_BINDING.md); the opt-in Claude policy adapter
+gates exact native tool calls, while its unmeasured context and approved
+programs' internal behavior remain explicit limitations.
+
+Use the host's installed invocation syntax; the packaged Codex prompt uses
+`$spec:stdo-work`. In another host, select its installed `stdo-work` skill or
+open the exact installed `SKILL.md`. The
+[host binding](COORDINATED_HANDOFF.md#host-binding) records the actual context
+inheritance, tools and return mechanism; skill names alone establish none of
+those properties.
+
+`stdo-status` can obtain permitted read-only evidence through another actor;
+`stdo-ticket` can issue a carrier update to its authorized Writer;
+`stdo-help` checks existing rulings and routes a material missing question.
+These use the same handoff, with their own operation and result boundaries.
+For example, a status request cannot silently run a proof or edit a ticket.
 
 ## 1. Get Ready To Work
 
@@ -155,7 +199,7 @@ selected method basis.
 
 ### New Project
 
-For the standalone STDO 3.0.3 release, acquire the separately distributed
+For the standalone STDO 3.0.4 release, acquire the separately distributed
 manager wheel and installed-manifest assets from that exact release. The native
 method tag contains the payload, not the manager's Python package. Python 3.11+
 and Git are prerequisites. The following installs the manager into an explicit
@@ -163,11 +207,11 @@ user-selected virtual environment; it does not replace a global manager:
 
 ```sh
 set -eu
-STDO_CUT='v3.0.3'
-STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.3'
+STDO_CUT='v3.0.4'
+STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.4'
 STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-0.1.6"
 STDO_DOWNLOAD_DIR="$(mktemp -d)"
-for asset in stdo_toolchain-0.1.6-py3-none-any.whl stdo-v3.0.3-manifest.json; do
+for asset in stdo_toolchain-0.1.6-py3-none-any.whl stdo-v3.0.4-manifest.json; do
   curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset" "$STDO_ASSETS/$asset"
   curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset.sha256" "$STDO_ASSETS/$asset.sha256"
 done
@@ -175,7 +219,7 @@ python3 - "$STDO_DOWNLOAD_DIR" <<'PYVERIFY'
 from pathlib import Path
 import hashlib, sys
 root = Path(sys.argv[1])
-for name in ('stdo_toolchain-0.1.6-py3-none-any.whl', 'stdo-v3.0.3-manifest.json'):
+for name in ('stdo_toolchain-0.1.6-py3-none-any.whl', 'stdo-v3.0.4-manifest.json'):
     fields = (root / (name + '.sha256')).read_text().split()
     if len(fields) != 2 or fields[1] != name or fields[0] != hashlib.sha256((root/name).read_bytes()).hexdigest():
         raise SystemExit('release asset checksum mismatch: ' + name)
@@ -184,7 +228,7 @@ python3 -m venv "$STDO_MANAGER_ENV"
 "$STDO_MANAGER_ENV/bin/python" -m pip install --force-reinstall "$STDO_DOWNLOAD_DIR/stdo_toolchain-0.1.6-py3-none-any.whl"
 stdo() { "$STDO_MANAGER_ENV/bin/stdo" "$@"; }
 stdo --version
-STDO_MANIFEST="$(python3 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.3-manifest.json")"
+STDO_MANIFEST="$(python3 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.4-manifest.json")"
 stdo install "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
 stdo verify "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
 ```
@@ -356,31 +400,64 @@ provides the frame-basis declaration.
 
 ### Install The Shared Skills
 
-The following install commands apply after coordinated publication.
-The `spec` plugin version and immutable repository cut are aligned at
-`<version>-rc.<n>`, bound at the RC cut under `RELEASE.md` section 7. An
-earlier cut retains its own plugin payload and never moves. The Specification Stack marketplace name is `specification_stack`.
-
-Claude Code:
+The standalone 3.0.4 installation includes all five native skills under
+`plugins/spec/`. They are separate from the independently owned a_c/Skills
+sources in `standards/tooling/sources.zip`. First install and verify the exact
+cut as above, then locate its plugin through the manager:
 
 ```sh
-SPEC_PLUGIN_REF='specification_methodology/v<version>-rc.<n>'
-claude plugin marketplace add \
-  "foolishimp/specification_methodology@${SPEC_PLUGIN_REF}"
-claude plugin install spec@specification_stack
+STDO_PLUGIN_ROOT="$(
+  stdo resolve stdo://releases/v3.0.4/plugins/spec/.codex-plugin/plugin.json |
+    python3 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)'
+)"
 ```
 
-Codex:
+For a Claude Code session, load that directory directly:
 
 ```sh
-SPEC_PLUGIN_REF='specification_methodology/v<version>-rc.<n>'
-codex plugin marketplace add foolishimp/specification_methodology \
-  --ref "$SPEC_PLUGIN_REF"
-codex plugin add spec@specification_stack
+claude --plugin-dir "$STDO_PLUGIN_ROOT"
 ```
 
-Both hosts consume the same workflow skill bytes. Use this conversational
-convention:
+For Codex, direct use needs no marketplace: ask the actor to read the exact
+`$STDO_PLUGIN_ROOT/skills/stdo-work/SKILL.md` (substitute its resolved absolute
+path) and follow that skill for the admitted task. The shared references and
+scripts remain relative to that installed plugin root. This is explicit file
+loading, not a claim that the host registered a plugin.
+
+For registered Codex invocation, copy the complete verified plugin into a new
+local marketplace, outside the immutable release. The following creates a new
+directory and refuses to overwrite an existing one:
+
+```sh
+set -eu
+STDO_NATIVE_MARKETPLACE="$HOME/.local/share/stdo-native-3.0.4"
+test ! -e "$STDO_NATIVE_MARKETPLACE"
+mkdir -p "$STDO_NATIVE_MARKETPLACE/.agents/plugins" "$STDO_NATIVE_MARKETPLACE/plugins"
+cp -R "$STDO_PLUGIN_ROOT" "$STDO_NATIVE_MARKETPLACE/plugins/spec"
+cat > "$STDO_NATIVE_MARKETPLACE/.agents/plugins/marketplace.json" <<'JSON'
+{
+  "name": "stdo-native-3-0-4",
+  "plugins": [{
+    "name": "spec",
+    "source": {"source": "local", "path": "./plugins/spec"},
+    "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+    "category": "Productivity"
+  }]
+}
+JSON
+codex plugin marketplace add "$STDO_NATIVE_MARKETPLACE"
+codex plugin add spec@stdo-native-3-0-4
+```
+
+This follows [OpenAI's local-marketplace route](https://developers.openai.com/plugins/build/plugins).
+Restart or open a new host session as required, identify its actual loaded
+copy and perform [the member comparison](#verify-the-hosts-plugin-copy) before
+relying on it. The setup commands are installation guidance, not additional
+native workflow qualification. Required context/acquisition limits still need
+the explicit [host binding](HOST_BINDING.md); registration supplies no new
+authority or isolation guarantee.
+
+Both hosts consume the same workflow skill bytes. Once registered, use:
 
 | Say | Portable skill | Claude | Codex |
 |---|---|---|---|

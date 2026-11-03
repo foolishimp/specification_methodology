@@ -46,9 +46,9 @@ Routes, in order:
 11. [RELEASE.md#foundation-to-law-release-and-successor-conservation](../RELEASE.md#foundation-to-law-release-and-successor-conservation)
 12. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 63967 bytes.
+Size of this frame: 69121 bytes.
 
-Source: EVALUATION.md#4-review-results sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#4-review-results sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ## 4. Review results
 
@@ -111,13 +111,22 @@ The assessor returns to the decision owner, not to the constructor. It does
 not edit the candidate, direct the repair or authorise continuation (P6,
 §3).
 
+Recording the assessment is a separate artifact effect. Where the activation
+grants it, the assessor may write the exact named findings carrier under
+[TICKETS §4 Review findings and bug items](../TICKETS.md#review-findings-and-bug-items).
+That grant adds no candidate-repair authority or acquisition route. A review
+has covered its declared subject only when every planned predicate has been
+evaluated or lawfully removed from that subject; a partial return preserves
+the unperformed coverage. Closing the review activity does not satisfy a
+falsified or unresolved work claim (P6, P5).
+
 Purpose and material relation: every configuration keeps severity,
 priority, boundary effect and disposition separate. The rule applies to any
 assessor and decision owner; [EXECUTIVE_BASELINE](../EXECUTIVE_BASELINE.md)
 binds its Reviewer and Executive instance (P6).
 
 
-Source: EVALUATION.md#5-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff
+Source: EVALUATION.md#5-acceptance sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485
 
 ## 5. Acceptance
 
@@ -144,6 +153,49 @@ unresolved cannot be qualified and so cannot be accepted; how the record
 is evaluated is [RELEASE §9](../RELEASE.md#9-successor-baseline-conservation-stdo-up-015).
 An intentionally removed disposition is a decision of the current Product
 authority, and its record is that decision (P6, P3, P4b).
+
+### Landing, closure and release
+
+Landing makes an exact candidate available at an authorized checkpoint or
+integration destination. It is an operation under its existing grant, not
+acceptance of the candidate's claims. Work closure applies the stated closing
+condition; release applies the separately selected publication and acceptance
+conditions of [RELEASE](../RELEASE.md). Record these as separate decisions (P6,
+P3).
+
+Review supplies QA evidence for those decisions. A pending review does not by
+itself hold landing: an admitted candidate may land after its bounded work
+and fix pass, while review of that exact candidate runs beside subsequent
+authorized work. A required review holds the closure or acceptance claim that
+depends on its complete report. A governing landing condition, applicable hard
+stop or missing operation authority still prevents landing; availability is
+no waiver. [EXECUTIVE_BASELINE §12](../EXECUTIVE_BASELINE.md#qa-cadence-and-repair-rechecks)
+binds the optional profile's repair/recheck cadence (P6, P2).
+
+Permitted downstream work may consume a landed candidate before its review
+reports, carrying its exact identity, unresolved conditions and dependency
+links. This is provisional use, not admitted truth. A later material finding
+invalidates the affected dependent results under
+[ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse); unrelated valid results
+remain reusable. Repair and re-evaluation follow those dependencies before
+further reliance (P4b, P6).
+
+### Declared Product acceptance gates
+
+A Product-owned frame basis, or a work contract explicitly delegated that
+choice by the basis, may declare a gated handoff between two Products. It
+names both Product identities, the directed relation, exact candidate/claim,
+required review and coverage, acceptance conditions and decision owner. Until
+that review has covered its declared subject and the acceptance conditions
+are satisfied, the downstream Product cannot accept the candidate as an
+admitted input or close claims dependent on that acceptance. Authorized
+provisional work and repair may continue under the preceding section (P6,
+P2).
+
+The gate's declaration is explicit; co-location, a dependency or this available
+mechanism creates none. Existing user-acceptance, release/go-live and other
+Product boundaries retain their own conditions. This member declares no
+particular Product gate or extra capture-review hold on landing (P6).
 
 ### When a finding blocks promotion
 
@@ -522,7 +574,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: TICKETS.md#condition-based-closure-and-reuse sha256=5f7e4cb0785a27b9e6dda1fd91044e775183b6a0e6e80b33811e54665b144b57
+Source: TICKETS.md#condition-based-closure-and-reuse sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
 
 ### Condition-based closure and reuse
 
@@ -559,6 +611,13 @@ reliance. An unrelated observation is retained as bounded repricing input;
 it does not reopen a satisfied claim or expand the work automatically.
 Closure recording preserves the exact evaluated scope, the satisfied
 conditions, the evidence and the remaining residuals (P4b, P2).
+
+Landing a candidate and releasing it are distinct from this condition; apply
+[EVALUATION §5](../EVALUATION.md#landing-closure-and-release) and any explicitly
+declared Product acceptance gate. An open required review withholds the work
+claim that depends on its complete coverage, not an independently authorized
+landing merely because review is open. Keep the linked Bug items and their
+verification provenance current; a report's existence closes none of them.
 
 
 Source: RELEASE.md#8-acceptance sha256=b5aedcbfc68c6a168bc4c220828146f94b181a3c0fc3925405259890f6fe6886
@@ -724,7 +783,7 @@ and remaining obligations. This relation settles no general version-line
 policy and waives no acceptance gate.
 
 
-Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=4/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
+Source: EVALUATION.md#foundation-to-law-claims-evidence-assessment-and-acceptance sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=4/17 selected by the anchors this frame carries; the consumers paragraph of 17 items is omitted
 
 ### Foundation to law: claims, evidence, assessment and acceptance
 
@@ -757,8 +816,21 @@ they are traced in family F3 at
 [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), and the rows above trace
 what §4 decides about the review record, triage and returns.
 
+The review-flow refinement applies P6's separation of operation, evidence and
+decision to [Landing, closure and release](../EVALUATION.md#landing-closure-and-release): making
+a candidate available cannot establish its claims. P3 binds provisional use to
+an exact subject, and P4b with ACTIVATION §7 preserves and invalidates dependent
+results. Permitting authorized landing beside pending QA, and providing
+[Declared Product acceptance gates](../EVALUATION.md#declared-product-acceptance-gates), are
+explicit domain policies of §5, not consequences of finite attention alone.
+The concrete gate and its acceptance owner are Product selections. Consumers
+are EXECUTIVE_BASELINE §12's cadence, TICKETS §7's closure application and the
+Project Reference-Frame Basis template. The exact report-effect refinement of
+§4 applies existing operation/acquisition law; TICKETS §4 owns its carrier
+shape and consumes it. No timing or report policy creates authority.
 
-Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=478fd21feda72d64e62a92f970b37bade3f9aadfb17c73649cdb1a7866581eff rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+
+Source: EVALUATION.md#foundation-to-law-conformance-equivalence-and-qualification sha256=b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 rows=1/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: conformance, equivalence and qualification
 
@@ -824,7 +896,7 @@ The table accounts for §1 to §9 and for FOUNDATIONS §2 Product lineage
 objects. §10 records open questions and decides nothing.
 
 
-Source: TICKETS.md#foundation-to-law-work-carriers sha256=5f7e4cb0785a27b9e6dda1fd91044e775183b6a0e6e80b33811e54665b144b57 rows=1/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
+Source: TICKETS.md#foundation-to-law-work-carriers sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67 rows=1/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
 
 ### Foundation to law: work carriers
 
@@ -850,4 +922,14 @@ The standing of these consequences is stated in
 [FOUNDATIONS §3 Foundation to law](../FOUNDATIONS.md#foundation-to-law).
 The table accounts for §1 to §9, and for POSTING_GUIDE §2, §7 and §9,
 which have no family table of their own.
+
+The [Review findings and bug items](../TICKETS.md#review-findings-and-bug-items) refinement
+applies the same P3/P4b identity and retained-obligation premises to findings
+that outlive review. P6 keeps the assessment source, decision ledger and
+artifact effects distinct, and P2 avoids an empty report or redundant ticket.
+One report per finding-bearing review, the item fields and the three item
+states are explicit carrier choices of §4. Verification still uses EVALUATION
+and the applicable cadence rather than treating a state label as proof. The
+consumers are EVALUATION §4's report effect, EXECUTIVE_BASELINE §5/§12's triage
+and repair decisions, §7's closure and §8's ticket shape.
 
