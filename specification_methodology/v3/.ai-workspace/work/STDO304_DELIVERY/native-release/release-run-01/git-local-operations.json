@@ -1,0 +1,173 @@
+{
+  "operations": [
+    {
+      "name": "absent-local-refs/tags/specification_methodology/v3.0.4",
+      "at_utc": "2026-11-03T04:03:02.171168+00:00",
+      "argv": [
+        "git",
+        "show-ref",
+        "--verify",
+        "--quiet",
+        "refs/tags/specification_methodology/v3.0.4"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "absent-local-refs/heads/release/specification_methodology/3.0.4",
+      "at_utc": "2026-11-03T04:03:02.183415+00:00",
+      "argv": [
+        "git",
+        "show-ref",
+        "--verify",
+        "--quiet",
+        "refs/heads/release/specification_methodology/3.0.4"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "source-checkpoint",
+      "at_utc": "2026-11-03T04:03:02.193303+00:00",
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "e8e3d1b06ccf8679e3e875f6e4a8592717e0c90a\n",
+      "stderr": ""
+    },
+    {
+      "name": "prepare",
+      "at_utc": "2026-11-03T04:03:03.920152+00:00",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "prepare",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/native-release/source-preparation-001",
+        "--source-commit",
+        "e8e3d1b06ccf8679e3e875f6e4a8592717e0c90a",
+        "--source-path",
+        "specification_methodology/v3/build_tenants/common"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/native-release/source-preparation-001/source.json\", \"sha256\": \"1d31661621137372f853b9bfd6e512c1bdd4ef8288cc89059ebc55ba3ffbd53d\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "empty-native-index",
+      "at_utc": "2026-11-03T04:03:03.933362+00:00",
+      "argv": [
+        "git",
+        "read-tree",
+        "--empty"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "bind-native-index",
+      "at_utc": "2026-11-03T04:03:03.944454+00:00",
+      "argv": [
+        "git",
+        "update-index",
+        "-z",
+        "--index-info"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "native-root-tree",
+      "at_utc": "2026-11-03T04:03:03.958419+00:00",
+      "argv": [
+        "git",
+        "write-tree"
+      ],
+      "exit_code": 0,
+      "stdout": "ae32eb45c44e70499a18ecbf22c1d790d11da9bf\n",
+      "stderr": ""
+    },
+    {
+      "name": "native-commit",
+      "at_utc": "2026-11-03T04:03:03.970829+00:00",
+      "argv": [
+        "git",
+        "commit-tree",
+        "ae32eb45c44e70499a18ecbf22c1d790d11da9bf",
+        "-p",
+        "07bdb34a2d472a3b5e678f60584fd02b24a388f4",
+        "-F",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/native-release/source-preparation-001/native-commit-message.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d\n",
+      "stderr": ""
+    },
+    {
+      "name": "annotated-native-tag",
+      "at_utc": "2026-11-03T04:03:03.983261+00:00",
+      "argv": [
+        "git",
+        "tag",
+        "-a",
+        "--cleanup=verbatim",
+        "specification_methodology/v3.0.4",
+        "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+        "-F",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/native-release/source-preparation-001/tag-message.txt"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "native-release-branch",
+      "at_utc": "2026-11-03T04:03:03.996057+00:00",
+      "argv": [
+        "git",
+        "update-ref",
+        "refs/heads/release/specification_methodology/3.0.4",
+        "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+        "0000000000000000000000000000000000000000"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "name": "native-attestation",
+      "at_utc": "2026-11-03T04:03:05.928561+00:00",
+      "argv": [
+        "python3",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "attest",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/native-release/source-preparation-001",
+        "--source-sha256",
+        "1d31661621137372f853b9bfd6e512c1bdd4ef8288cc89059ebc55ba3ffbd53d",
+        "--native-commit",
+        "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"path\": \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO304_DELIVERY/native-release/source-preparation-001/native.json\", \"sha256\": \"9dd5571993b032f8902072ba33eb86d10df992e62fab7706c320a4ed3b5c2a00\"}\n",
+      "stderr": ""
+    }
+  ]
+}
