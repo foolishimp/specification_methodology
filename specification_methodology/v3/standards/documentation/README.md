@@ -1,72 +1,61 @@
-# STDO 3.0.4 documentation
+# STDO 3.0.5 documentation
 
-Open the [documentation home](index.html), then choose:
-
-- [Constraints](constraint-explorer/index.html): STDO's historical common model.
-- [Code example](code-explorer/index.html): ABIogenesis requirements, selected
-  canonicalization code and test sources, with attributed proposed traces.
-- [Lean proofs](proofs/index.html): proof statements, source and retained results.
-- [Use the tools](../tooling/README.md): create a writable copy to build your own.
-
-All three readers open in a browser.
-These files are installed with STDO 3.0.4; no additional download or
-Graphify, Lean, a_c or Node installation is needed to read them.
-
-## Open an installed copy
-
-The ordinary manager resolves the local file:
+Open the [documentation home](index.html), the
+[current constraint explorer](constraint-explorer/index.html), or the
+[current Lean proof reader](proofs/index.html). These readers work offline.
 
 ```sh
-stdo resolve stdo://releases/v3.0.4/standards/documentation/index.html
+stdo resolve stdo://releases/v3.0.5/standards/documentation/index.html
 ```
 
-Open the returned `path` in a desktop browser. The file and its explorer work
-offline. A browser with WebGL supports 3D and 2D. The initial Layered view,
-search, Files navigation and full text reader remain available without WebGL.
-No service is needed.
+Open the returned path in a browser. Choose **3D**, **2D** or **Layered** to
+view the same model, selection and reading trail. Search by statement, select
+a record to read its full content and caveats, then follow labelled relations.
+Use **Files**, **Show in files** and **Back to file** to follow embedded source
+passages. Layered and text work without WebGL. No service or tool installation
+is needed to read these files.
 
-## Read and follow constraints
+The explorer embeds the complete selected semantic source: standards plus
+native workflow contracts. Its model and source inventory are exact inputs,
+bound in [DOCUMENTATION.json](DOCUMENTATION.json). Generated frames and these
+documentation files are derived routes rather than additional semantic owners.
+Use the [owning installed standards](../README.md) and
+[Getting Started](../../plugins/spec/references/GETTING_STARTED.md) for method
+decisions. A graph edge does not by itself prove an implication.
 
-1. Search the constraints, select another record family, or use **Files** to
-   browse the represented source folders and files.
-2. Select a result to read its complete statement, conditions and exceptions.
-3. Follow labelled authored relations or required-retention links. They have
-   different meanings; a graph edge does not assert a proved implication.
-4. Read attached caveats and source quotations. Open a quotation to see its
-   embedded source file and highlighted lines.
-5. Use the reading trail and Back to revisit exact steps, including parallel
-   and self-relations. Selecting an unrelated result begins a new trail.
-6. Switch **3D**, **2D** or **Layered** to view the same selected record,
-   relationships and reading trail. Focus, expand or show the overview. Drag
-   to orbit in force views; scroll and use zoom controls in Layered.
-7. Use **Show in files** or **Back to file** to move between source discovery
-   and logical connections. Folder order does not create a semantic relation.
+The proof reader exposes actual verification of this exact finite model and
+its selected views, generated proof source, compiled artifacts, theorem axiom
+audit, runtime identities, logs and explicit limits. Its reusable library
+retains its original provenance. The source-prose-to-model assessment is
+separate from Lean's structural model/projection result. Checking the reader
+verifies retained bytes and bindings; it does not execute a new Lean proof.
 
-## Code and proof examples
+The [frozen ABI code example](code-explorer/index.html) retains the exact
+ABIogenesis T-019 artifact published with STDO 3.0.4. Its
+[example identity](code-explorer/EXAMPLE.json) names that publication custody
+and original model. It is not current ABI qualification or current STDO
+model/proof evidence; the current readers above retain their own exact subjects.
 
-The ABI example is the reviewed T-019 artifact: a frozen representation of
-ABIogenesis and a four-file code/test selection. Its five proposed trace links
-cover part of canonical ordering and serialization. They do not establish the
-broader roundtrip/admission clauses, executed tests or semantic satisfaction.
-The reader names its source, author, parser and unresolved endpoints. Use the
-browser's Back button or open readers in separate tabs to return to this home.
+[Use the installed tools](../tooling/README.md) to materialize the four peer
+Product packages and set up Graphify, Lean and host bindings in writable
+locations. The native workflow stays intact inside its installed package.
 
-The Lean reader shows exact T-011 proof sources and its retained independent
-report. It explains finite closure and record-preserving projection, premises
-and limits. This historical report is not a new Lean run or a proof of the
-code overlay. The [proof catalog](proofs/PROOFS.json) binds its sources.
+After the declared Lean setup, run the following with new writable output
+locations. Use the selected runtime's Python and formal owner executable:
 
-## Represented source and current method
+```sh
+python3 proofs/materialize.py materialize --destination /absolute/new/evidence
+python3 proofs/materialize.py request --evidence /absolute/new/evidence --output /absolute/current-request.json
+/absolute/runtime-python -I -S -B /absolute/runtime-a_c/build_tenants/lean/scripts/formal_gate.py verify --request /absolute/current-request.json --output /absolute/new/verification
+```
 
-**Distributed with STDO 3.0.4; represented source: historical common cut
-35fb4824.** This preserves the T-014 representation and source data
-with the current unified reader. It contains 1,987 local records (841 constraints), 1,021 external
-resolutions and 58 embedded source files. It is not a source-matched map of
-the 3.0.4 standards and has not acquired that authority by being bundled.
+The request command verifies the extracted bytes and substitutes only local
+model/view paths. The original request, including construction paths, remains
+unchanged in the evidence. A new verification produces its own result and
+runtime identity; the retained construction verdict does not become an
+installed verdict. Output directories and the request must not already exist.
 
-Use the [installed current method](../README.md) and
-[Getting Started](../../plugins/spec/references/GETTING_STARTED.md) for current
-method decisions. The explorer's embedded source remains the historical source
-it names. Lean's structural closure and projection proofs do not prove the
-English constraint predicates. [DOCUMENTATION.json](DOCUMENTATION.json) binds
-the distributing version, represented source and exact documentation bytes.
+The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5/stack-release-v3.0.5.json)
+is the separately published binding of semantic source, current model, native
+installation, component inventories and qualification evidence. It is external
+to this payload so the release does not contain its own unknown digest.

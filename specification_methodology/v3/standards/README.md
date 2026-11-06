@@ -11,9 +11,10 @@ current state under explicit uncertainty.
 
 The [installed documentation](documentation/index.html) includes an offline
 [3D/2D/Layered constraint explorer](documentation/constraint-explorer/index.html) and
-[reading guide](documentation/README.md). It is explanatory documentation of
-the historical source cut identified there. The current owning standards
-below decide method questions; bundling does not reclassify the older graph.
+[reading guide](documentation/README.md). The current representation binds the
+exact semantic-source inventory named by the cohort. The owning standards
+below decide method questions; the generated view supplies navigation and
+its stated evidence boundary, not an independent source of method authority.
 It also includes the [ABI code example](documentation/code-explorer/index.html),
 [Lean proof reader](documentation/proofs/index.html), and
 [bundled tool setup](tooling/README.md) for an explicit writable workspace.
