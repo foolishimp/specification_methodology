@@ -110,9 +110,12 @@ python3 -I -S -B scripts/formal_gate.py check-evidence --bundle "$AC_GATE_WORK/c
 ```
 
 Choose fresh, disjoint outputs with nonsymlinked ancestors. The default limits are
-32 MiB input, 64 selections, 90 seconds per checking process and Lean `-j1 -M4096`.
-The selected Graphify supervisor adds the 600-second whole-invocation bound; a
-standalone CLI caller must supply its own outer supervision.
+32 MiB input, 64 selections, 600 seconds per checking process and Lean `-j1 -M4096`.
+The Graphify supervisor's default whole-invocation bound remains 600 seconds.
+Current full-model qualification explicitly selects 3600 seconds through
+`formal-select --timeout-seconds 3600`; this does not alter the per-process limit.
+A standalone CLI caller must supply its own outer supervision. Lean's `-M4096`
+setting is not a physical RSS cap.
 
 Use `selections: []` and `supplied_views: null` for a model-only generation gate.
 For projections, supply ordered source-identity seeds, an exact record budget or

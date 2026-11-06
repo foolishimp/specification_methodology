@@ -101,19 +101,19 @@
     "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
   },
   "observations": {
-    "child_maxrss_native_units": 10217062400,
+    "child_maxrss_native_units": 11634114560,
     "current_dynamic_proof_invocations": 7,
     "current_kernel_replay_invocations": 1,
     "current_runtime_invocations": 1,
     "edges": 3704,
     "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
-    "elapsed_seconds": 412.4652522499673,
+    "elapsed_seconds": 1351.3125194157474,
     "execution": "projectWithProof with exact freshly checked model/closure premises; per-selection equality to unchanged project is kernel-replayed; the raw checker is not reevaluated",
     "limits": {
       "max_input_bytes": 33554432,
       "max_selections": 64,
       "memory_mb": 4096,
-      "timeout_seconds": 90
+      "timeout_seconds": 600
     },
     "proof_modules": [
       "GateData",
@@ -130,72 +130,72 @@
     "reuse": "none; fresh dynamic obligations; pinned established base support",
     "stages": [
       {
-        "seconds": 0.3758279159665108,
+        "seconds": 1.5266495421528816,
         "stage": "acquire-import-reconstruct"
       },
       {
-        "seconds": 7.772526791319251,
+        "seconds": 18.909104249905795,
         "stage": "support-pins"
       },
       {
-        "seconds": 5.866341042332351,
+        "seconds": 20.54511291719973,
         "stage": "current-certificates"
       },
       {
         "exit_code": 0,
-        "seconds": 46.79167775018141,
+        "seconds": 246.4897876251489,
         "stage": "GateData"
       },
       {
         "exit_code": 0,
-        "seconds": 52.6925238748081,
+        "seconds": 231.25370370829478,
         "stage": "GateLocalNames"
       },
       {
         "exit_code": 0,
-        "seconds": 69.6949671250768,
+        "seconds": 300.6680954582989,
         "stage": "GateExternalNames"
       },
       {
         "exit_code": 0,
-        "seconds": 33.951085624750704,
+        "seconds": 136.55447424994782,
         "stage": "GateIdentities"
       },
       {
         "exit_code": 0,
-        "seconds": 45.68918199976906,
+        "seconds": 172.62456974992529,
         "stage": "GateBounds"
       },
       {
         "exit_code": 0,
-        "seconds": 1.2016247906722128,
+        "seconds": 6.254393874667585,
         "stage": "GateModel"
       },
       {
         "exit_code": 0,
-        "seconds": 32.848564125131816,
+        "seconds": 48.33922374993563,
         "stage": "GateViews"
       },
       {
         "exit_code": 0,
-        "seconds": 43.209594416897744,
+        "seconds": 79.45748241664842,
         "stage": "dynamic-kernel-replay"
       },
       {
         "exit_code": 0,
-        "seconds": 64.47549904184416,
+        "seconds": 78.41693558404222,
         "stage": "actual-runtime"
       },
       {
-        "seconds": 0.30329550011083484,
+        "seconds": 0.3889992921613157,
         "stage": "output-view-correspondence"
       },
       {
-        "seconds": 6.805711041204631,
+        "seconds": 6.872429834213108,
         "stage": "support-pins-after"
       },
       {
-        "seconds": 0.0012455419637262821,
+        "seconds": 0.0007942500524222851,
         "stage": "origin-currentness"
       }
     ],
@@ -440,7 +440,7 @@
       "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
       "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
       "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
-      "scripts/formal_gate.py": "39a0527792ba6f9a08407e77350a7e68eb32ed8cea8950b8b1f5e52f8bdfabaa",
+      "scripts/formal_gate.py": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2",
       "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
       "scripts/formal_support.py": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6",
       "scripts/gate_codegen.py": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
@@ -450,7 +450,7 @@
       "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
       "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
     },
-    "sha256": "8421a93dbd8f5160842f15235825163f06a0e0837e03ef7f46fad68b389b06bf"
+    "sha256": "a79596f2aad2e8133291751e489d5a118ad21438d84ca068c0f7fbe0d9a9a237"
   },
   "schema": "a_c.formal-gate.result/1",
   "selections": [

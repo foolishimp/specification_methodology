@@ -1,0 +1,88 @@
+{
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/source-tools/stdo_skills/scripts/manage_skills.py",
+      "verify",
+      "--workspace",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/hosts/codex",
+      "--host",
+      "codex",
+      "--receipt-sha256",
+      "130edff680895b7662def297ff6568080a26bf7d979dac3611d3fb9039680f75"
+    ],
+    "child_maxrss_native_units": 467795968,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002",
+    "elapsed_seconds": 0.225417,
+    "ended_ns": 1793972073448921000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 4098,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/hosts/codex/.agents/stdo-skills-3.0.5.receipt.json",
+        "sha256": "130edff680895b7662def297ff6568080a26bf7d979dac3611d3fb9039680f75"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 61,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/codex-skills-verify/stdout.txt",
+        "sha256": "41c53b112f668f4ac204d18a92c7b7166547e51a283a4b181240978586dbceb0"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/codex-skills-verify/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 61,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/codex-skills-verify/result.json",
+        "sha256": "fe7b88c7d91042960172a09925176ac7add29bb216014b2ced9dce60f77193fa"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1793972073223504000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/codex-skills-verify/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 61,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/codex-skills-verify/stdout.txt",
+      "sha256": "41c53b112f668f4ac204d18a92c7b7166547e51a283a4b181240978586dbceb0"
+    },
+    "system_seconds": 0.029433000000000042,
+    "user_seconds": 0.07395800000000108
+  },
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/hosts/codex/.agents/stdo-skills-3.0.5.receipt.json",
+      "retained": {
+        "bytes": 4098,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/hosts/codex/.agents/stdo-skills-3.0.5.receipt.json",
+        "sha256": "130edff680895b7662def297ff6568080a26bf7d979dac3611d3fb9039680f75"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 16552,
+    "path": "stdo_skills/scripts/manage_skills.py",
+    "sha256": "688c2ac7abfe55ca4d52cc29bbd51b4b68cfceee5f133d2f41c7b299cc4b24b4"
+  },
+  "result": {
+    "bytes": 61,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/codex-skills-verify/result.json",
+    "sha256": "fe7b88c7d91042960172a09925176ac7add29bb216014b2ced9dce60f77193fa"
+  },
+  "schema": "stdo.execution-observation/1"
+}

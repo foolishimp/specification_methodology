@@ -1,0 +1,108 @@
+{
+  "kind": "independent.installed-browser-assessment/1",
+  "assessor": "/root/stdo305_integration_review",
+  "authors": [
+    "/root/stdo305_release_tools",
+    "/root/stdo305_tools_skills",
+    "/root/stdo305_representation"
+  ],
+  "conclusion": "satisfied",
+  "findings": [],
+  "native_commit": "304c48bfb6d52db40c35267bc7179d835404344a",
+  "manifest_sha256": "998852a22578a798abceb821fa654d5287c0b1fb908734afa3ee9403738596cd",
+  "actual_installed_page": {
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/explorer.html",
+    "sha256": "b8104f3e6e97d061b035f0f541345bf633278e3f5aa2d370786dcc8059cad21c"
+  },
+  "observation": {
+    "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/recovery018/browser-local002/OBSERVATION.json",
+    "sha256": "1f2383f3ba8a00c77891d899b5e538c1565bf8ddfddc3812d7861ca884c8216a",
+    "bytes": 17630
+  },
+  "readiness": {
+    "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/recovery018/BROWSER_READY.json",
+    "sha256": "b3a4b4dd2ed1555d5210b1c95ea1f62646586c496d5d461ded8b6e4f997d7def"
+  },
+  "driver": {
+    "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/recovery018/observe_installed_local002.py",
+    "sha256": "55ee27ebee011f897ff09043df78f70971839349c095ef5637a85e634ca81bb7"
+  },
+  "browser": {
+    "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "fresh_profile": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/recovery018/browser-local002/isolated-profile",
+    "headless": true,
+    "offline": true,
+    "sha256": "3f0acaf1e585195596d73ffa1824baa72c3c3ac115b5cfc43d789030a3f23d93",
+    "version": {
+      "jsVersion": "15.6.75.27",
+      "product": "Chrome/156.0.8078.80",
+      "protocolVersion": "1.3",
+      "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"
+    }
+  },
+  "driver_versions": {
+    "playwright": "1.58.0",
+    "python": "3.11.5"
+  },
+  "observed": [
+    "Actual installed materialized 3D, 2D labels, layered cards retain selected STDO Work record.",
+    "Grounded source passage and owning Files navigation show embedded content.",
+    "Required dependency click and Back return to selected record.",
+    "Actual installed landing follows current explorer and current model proof routes.",
+    "Current AC.GateData.result0 theorem opens; lexical AC.project link, Back and full current source navigation work."
+  ],
+  "manual_screenshot_inspection": {
+    "count": 9,
+    "all_viewed": true
+  },
+  "observational_errors": [],
+  "console": [],
+  "blocked_requests": [],
+  "request_failures": [],
+  "network_requests": [
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/explorer.html"
+    },
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5/standards/documentation/index.html"
+    },
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5/standards/documentation/constraint-explorer/index.html"
+    },
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5/standards/documentation/index.html"
+    },
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5/standards/documentation/proofs/index.html"
+    }
+  ],
+  "elapsed_seconds": 47.62474,
+  "currentness": {
+    "native172_bytes_modes_mtimes_unchanged": true,
+    "selected_source424_hashes_unchanged": true,
+    "all_observed_pages_unchanged": {
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/explorer.html": true,
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5/standards/documentation/constraint-explorer/index.html": true,
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5/standards/documentation/index.html": true,
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5/standards/documentation/proofs/index.html": true
+    }
+  },
+  "limits": [
+    "Single fresh local Chrome/Playwright session; same-family nonauthor observation, not enforced clean-room independence.",
+    "File routes and actual visible browser interaction only; no Lean execution or proof-acceptance inference.",
+    "OS/browser background telemetry is not packet-captured; page request events, offline context and route refusal are recorded.",
+    "This is a fresh local002 observation, not relabelled A1 evidence.",
+    "No Lean/native actor execution, semantic fidelity acceptance, complete external B review or publication claim."
+  ]
+}

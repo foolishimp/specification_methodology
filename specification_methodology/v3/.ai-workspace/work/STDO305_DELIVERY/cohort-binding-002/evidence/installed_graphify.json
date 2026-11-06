@@ -1,0 +1,191 @@
+{
+  "artifacts": {
+    "carrier.json": {
+      "bytes": 42191734,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/carrier.json",
+      "sha256": "c0bc5d26abbb3b456033ad1cff1cee38981459495be4de3e68d365415b767269"
+    },
+    "graph.json": {
+      "bytes": 37126766,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/graph.json",
+      "sha256": "f01b28cad899d7d07b063afbaa4e26a1824e4a9a365b62d958b5228fd4ee4ffe"
+    },
+    "model.json": {
+      "bytes": 8521879,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/model.json",
+      "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+    },
+    "runtime.json": {
+      "bytes": 998,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/runtime.json",
+      "sha256": "cc0c97c01d6c4f1f47dc7340bf45e59150697a2d785467ec0167219e5b53a314"
+    },
+    "selections.json": {
+      "bytes": 742,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/selections.json",
+      "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+    },
+    "views.json": {
+      "bytes": 1446025,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/views.json",
+      "sha256": "5e3328851495682f0bc3b66cbc5a8ede16a4d10776e0231e51331e1f3d5aa148"
+    }
+  },
+  "category": "execution",
+  "claim": "installed_graphify",
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/graphify/code/ac_upstream.py",
+      "--model",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+      "--carrier",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/carrier.json",
+      "--selections",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-selections.json",
+      "--upstream",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/dependencies/graphify/graphify",
+      "--runtime",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/dependencies/graphify/RUNTIME.json",
+      "--output",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/graphify/current-roundtrip"
+    ],
+    "child_maxrss_native_units": 721616896,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002",
+    "elapsed_seconds": 98.425196,
+    "ended_ns": 1793972331401478000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 8521879,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+        "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+      },
+      {
+        "bytes": 42191734,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/carrier.json",
+        "sha256": "c0bc5d26abbb3b456033ad1cff1cee38981459495be4de3e68d365415b767269"
+      },
+      {
+        "bytes": 742,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-selections.json",
+        "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+      },
+      {
+        "bytes": 998,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/dependencies/graphify/RUNTIME.json",
+        "sha256": "cc0c97c01d6c4f1f47dc7340bf45e59150697a2d785467ec0167219e5b53a314"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 99455,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/graphify-current-roundtrip/stdout.txt",
+        "sha256": "44c7951365b6946962a964a8d6a5c136c69632d0a86342205615af33a55450a3"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/graphify-current-roundtrip/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 42191734,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/carrier.json",
+        "sha256": "c0bc5d26abbb3b456033ad1cff1cee38981459495be4de3e68d365415b767269"
+      },
+      {
+        "bytes": 37126766,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/graph.json",
+        "sha256": "f01b28cad899d7d07b063afbaa4e26a1824e4a9a365b62d958b5228fd4ee4ffe"
+      },
+      {
+        "bytes": 8521879,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/model.json",
+        "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+      },
+      {
+        "bytes": 110453,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/result.json",
+        "sha256": "2375d8cc578c79cd33404b0d37ad5612d7efbe2617420bbe598fcb0f786382aa"
+      },
+      {
+        "bytes": 998,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/runtime.json",
+        "sha256": "cc0c97c01d6c4f1f47dc7340bf45e59150697a2d785467ec0167219e5b53a314"
+      },
+      {
+        "bytes": 742,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/selections.json",
+        "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+      },
+      {
+        "bytes": 1446025,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/graphify/current-roundtrip/views.json",
+        "sha256": "5e3328851495682f0bc3b66cbc5a8ede16a4d10776e0231e51331e1f3d5aa148"
+      },
+      {
+        "bytes": 110453,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/graphify-current-roundtrip/result.json",
+        "sha256": "2375d8cc578c79cd33404b0d37ad5612d7efbe2617420bbe598fcb0f786382aa"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1793972232976282000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/graphify-current-roundtrip/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 99455,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/graphify-current-roundtrip/stdout.txt",
+      "sha256": "44c7951365b6946962a964a8d6a5c136c69632d0a86342205615af33a55450a3"
+    },
+    "system_seconds": 2.511931,
+    "user_seconds": 45.286567
+  },
+  "installation": {
+    "bytes": 106563,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-002/INSTALLATION.json",
+    "sha256": "353b059982008707baa27b932eb2267225bd4a1a54da1ec4f5a99f1e1680fed3"
+  },
+  "kind": "stdo.cohort-evidence/1",
+  "limits": "Actual source-current installed Graphify build/export/load/decode roundtrip and five supplied-view equality under exact private dependencies. Public upstream commit identity is independent of STDO component version. No local LLM/Context verdict inferred.",
+  "original_execution": {
+    "bytes": 8884,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/graphify-current-roundtrip/execution.json",
+    "sha256": "d2be3b0b7a2e9fa865cef8e22e75e7c6c614410fa4f5c4b088eae6cc98fe04df"
+  },
+  "output_directory": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/graphify/current-roundtrip",
+  "producer": {
+    "bytes": 7981,
+    "path": "a_c/build_tenants/graphify/code/ac_upstream.py",
+    "sha256": "13179a552f7dcaac35890da19e4fee674eb8933681723cddd78e7043a8f55888"
+  },
+  "result": {
+    "bytes": 110453,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/executions/graphify-current-roundtrip/result.json",
+    "sha256": "2375d8cc578c79cd33404b0d37ad5612d7efbe2617420bbe598fcb0f786382aa"
+  },
+  "runtime": {
+    "bytes": 998,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/dependencies/graphify/RUNTIME.json",
+    "sha256": "cc0c97c01d6c4f1f47dc7340bf45e59150697a2d785467ec0167219e5b53a314"
+  },
+  "runtime_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/dependencies/graphify/RUNTIME.json",
+  "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "status": "passed",
+  "subjects": {
+    "a_c": "855e5e91c8ed564f9385f5ff72a3a2b6b6f5faf2a98adece9e2be4ef26f132f0",
+    "stdo_representation": "dfb125e33a2bcb57588ae4b7731488cb2401e16715202d3efb1630b9c3960486"
+  }
+}

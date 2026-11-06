@@ -1,0 +1,102 @@
+{
+  "authors": [
+    "/root/stdo305_release_tools",
+    "/root/stdo305_tools_skills"
+  ],
+  "conclusion": "satisfied",
+  "created_at": "2026-11-06T15:30:14.789452+00:00",
+  "currentness": {
+    "all240_source_pins_rechecked_after": true,
+    "all68_semantic_pins_rechecked_after": true,
+    "all_frozen_metadata_native_bytes_modes_mtimes_identical_before_after": true,
+    "frozen_reference_count": 41
+  },
+  "evidence": [
+    {
+      "bytes": 85290,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/AFTER.json",
+      "sha256": "b952129d40a9e730187e5d60d921a18c6697016a67c7fc474cd1f624a8cb82f8"
+    },
+    {
+      "bytes": 27127,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/EXECUTION_JOIN.json",
+      "sha256": "38408343bb8ffcf955d72727b5fceef95259b7f820728b51eaf002cf045363ec"
+    },
+    {
+      "bytes": 1165,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/HARNESS_NOTE.txt",
+      "sha256": "78b974e71e712d88cd19a473ecd9d7a4ba78e7e8bd9bfad3f07a8e6d854d7b8a"
+    },
+    {
+      "bytes": 86016,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/NATIVE_CHECK.json",
+      "sha256": "26f03aeeab9d781fb4ce120b5c5a0879ddeaee88c2313f17f8db733f22b32194"
+    },
+    {
+      "bytes": 1777,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/READER_JOIN.json",
+      "sha256": "1510eae57719a92a66c186d28a09d6bf7e6b3b9aad18020528003f14b95e2551"
+    },
+    {
+      "bytes": 1027,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/SOURCE_ARCHIVE_CHECK.json",
+      "sha256": "714d9855213231c94d11db3894f4d019b2c1efb24559b3952bc77481346afa9a"
+    },
+    {
+      "bytes": 8944,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/TRANSPORT_CHECK.json",
+      "sha256": "838e5925cbb84b2162e7a575f26dff80f1a26d15499287601aa98192db5ca618"
+    },
+    {
+      "bytes": 11356,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/check_payload.py",
+      "sha256": "6686e2e4d2b1a0e6ae274d677f95a0ac6bbbcf2b9b5438bf4b791658204687df"
+    },
+    {
+      "bytes": 7394,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/continue_payload.py",
+      "sha256": "d7c5c661ba51a14db6f04c3bfdfeb7b92166760247a2ceab45bfb7eda3fba5e0"
+    },
+    {
+      "bytes": 4536,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/finish_payload.py",
+      "sha256": "7ebdc7cfda92656ce72d5dea30a11af02f4593cdf620fa59673eed30b0a61c20"
+    },
+    {
+      "bytes": 4769,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/finish_payload_bound.py",
+      "sha256": "a324df89e3a2a1f2699bcbea014871586828980fb5ca649017601b01cbda8c16"
+    },
+    {
+      "bytes": 5138,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/payload019/finish_payload_receipts.py",
+      "sha256": "4d080029bb8236704c7ca86f8082851463499b6f005b3b9964bcd5a6498cbbfd"
+    }
+  ],
+  "findings": [],
+  "harness_note": "Initial scratch drivers stopped on reviewer assumptions about logical source aliases, process-versus-data-binding receipt shape, declared SHA placeholders and bundle-versus-transcript outputs. Those assumptions were corrected only in scratch; all original drivers and HARNESS_NOTE are retained. No failure was attributed to candidate from these harness errors.",
+  "independence": "Separately bound nonauthor; same-family review, not a clean-room or cross-family assessment. No repository/source writes, Git effects, compiler/Lean runs, installed operations or support-population scans.",
+  "kind": "stdo305.independent-generated-payload-review/1",
+  "not_discharged": [
+    "Actual C3 commit, A3 native/tag creation and final concrete tag-input readback remain future operations; this review accepts their bounded prepared rule, not nonexistent actual identities.",
+    "Fresh A3/local003 installed proof, Context delivery, actual Codex/Claude sessions, browser observation at the actual new installation and complete externalB review remain required.",
+    "Remote/publication/public download and public installed qualification remain unexecuted. No release acceptance is supplied.",
+    "Finite structural claims do not prove prose-to-model F_P semantic fidelity, whole-method assurance or performance benefits."
+  ],
+  "reviewer": "/root/stdo305_integration_review",
+  "satisfied": [
+    "Exact native closure is 171 ordinary files, 290060754 bytes. The declared 14 byte changes match original A2 preimages and generated outputs; all 157 other members and modes remain identical. No added/removed native files.",
+    "Both ordered transport parts obey 64MiB ceiling. Concatenation is exact archive55dc7c2ce1eb5cbcabf08f33f0830596449625871edb142311efea53fbe65c79; all61 decompressed member identities and expanded size579468245 verified independently. All59 mathematical artifacts have original008 manifestf7e26781; new result e02a84ee remains a distinct current execution.",
+    "Current cold/result, owner inspection, archive result, reader catalog, embedded HTML data and copied runtime pin agree on current a79596f2 and accepted formal_gate c84ade91. Observed retained execution reports7 dynamic proofs,1 kernel replay,1 runtime comparison and all5 claims,600 per-stage limit; no earlier execution relabelled.",
+    "Reader catalog changes only membership/custody/result/runtime/observations/transport. Its declarations,14 logical source files,selection semantics,claims and limits are identical to prior accepted reader. HTML scaffold/JS and all embedded source text unchanged; new embedded catalog equals current PROOFS.json.",
+    "Tooling ZIP retains exact240-member population; every current archive member equals selected owning source. Four changed members are precisely the accepted budget016 source/docs/tests. Other236 source members, S68/model/map/viewer/generation machinery remain unchanged; historical304 ABI bytes and standing remain unchanged.",
+    "Seven prescribed operations are truthfully recorded as five successful CLI invocations plus two declared input-binding writes. Actual argv match plan after resolving only two documented digest placeholders; inputs/output/stdout/stderr pins and exact61 bundle output identities match. No new proof was executed by reviewer.",
+    "Upcoming tag correction selects only newly prepared cut003 message and requires actual C3/source tree/A3/predecessor identities. Existing native_release prepare generates those exact selected trailers and attest checks raw annotation equality. Old cut002 template is explicitly superseded and must not be executed."
+  ],
+  "subject": {
+    "native_inventory_sha256": "ce5b5dd36440a3460b54ee05a39600bbf1d76fa43a8c9e41e36c51165f87e9df",
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/PAYLOAD_REVIEW_FREEZE.json",
+    "sha256": "0ce9dd9361ab428d501091157f491da20b87a0e010968cb1d2664a3a38e09a44",
+    "subject_sha256": "af32b32888cda7efb20b7a98e2a505e84d9476dedf5a06d647e2e37ff87b74a2"
+  }
+}

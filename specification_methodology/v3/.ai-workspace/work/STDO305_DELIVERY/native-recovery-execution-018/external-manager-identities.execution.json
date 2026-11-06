@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "elapsed_seconds": 0.17190949991345406,
+  "ended_ns": 1793970785881530000,
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHOME": "unset",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONPATH": "unset",
+    "STDO_STORE": "unset"
+  },
+  "returncode": 0,
+  "started_ns": 1793970785709623000,
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_sha256": "b052f9a6de986c498345f9be5716c8c6c95d9b96f60518b22bcf792a5a8cbc1d"
+}

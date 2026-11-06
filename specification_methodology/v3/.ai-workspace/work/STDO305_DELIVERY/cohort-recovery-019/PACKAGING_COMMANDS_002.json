@@ -1,0 +1,372 @@
+{
+  "absent_destinations": [
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/archives/cold016.zip",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/archives/cold016-transport",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proof-selection-019.json",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proofs-019",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-documentation-selection-019.json",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-documentation-019",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-tooling-019"
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "pack",
+        "--bundle",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/archives/cold016.zip"
+      ],
+      "id": "pack-current016",
+      "output_binding": "Exact actualZIP SHA/size/member set from successful existing tool; do not stage this oversized duplicate if it exceeds the normal Git blob bound.",
+      "required_prior": "Actual owner inspection consistent/clean completion and explicit heavy-slot release plus Root effect assignment"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "split",
+        "--input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/archives/cold016.zip",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/archives/cold016-transport"
+      ],
+      "id": "split-current016",
+      "output_binding": "Exact descriptor and ordered64MiB part refs; retain full ZIP digest and all original manifest/result/member identities.",
+      "required_prior": "pack-current016 success"
+    },
+    {
+      "destination": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proof-selection-019.json",
+      "field_bindings": {
+        "bundle_archive": {
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/archives/cold016-transport/TRANSPORT.json",
+          "sha256_from_actual": "SHA256(successful transport/TRANSPORT.json)"
+        },
+        "inspector": {
+          "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+          "sha256": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2"
+        },
+        "python": {
+          "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+          "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+        },
+        "result": {
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold/result.json",
+          "sha256": "e02a84ee32ad9ce796e3807ec6c990aea0d3e022b7093defaa0cc8fcdf49e4e6"
+        },
+        "standing": "Current accepted repair-002 model and reviewed budget016 actual cold result; bounded implementation review plus exact original proof execution retained."
+      },
+      "id": "bind-proof-selection",
+      "operation": "Write successor valid selection only after exact transport descriptor exists; clone the exact predecessor selection and apply the following bounded fields. Preserve all other fields verbatim as data.",
+      "output_binding": "PROOF_SELECTION_SHA256 = SHA256(actual saved successor selection); missing dynamic inputs must refuse binding.",
+      "predecessor": {
+        "bytes": 2021,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proof-selection-008.json",
+        "sha256": "e0279b523abd50b0901469380bef2bc40e849c9ebab2b991da767ffb8a7a6da6"
+      }
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+        "build-current",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proof-selection-019.json",
+        "--selection-sha256",
+        "${PROOF_SELECTION_SHA256}",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proofs-019"
+      ],
+      "checks": "Existing recovered-transport owner inspection with180s limit and full check_files/catalog/render run inside builder; no extra immediate duplicate check command.",
+      "id": "build-current-reader",
+      "required_prior": "Bound exact valid successor proof selection"
+    },
+    {
+      "destination": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-documentation-selection-019.json",
+      "field_bindings": {
+        "proof_catalog": {
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proofs-019/PROOFS.json",
+          "sha256_from_actual": "SHA256(actual successful current-proofs-019/PROOFS.json)"
+        }
+      },
+      "id": "bind-documentation-selection",
+      "operation": "Clone exact predecessor selection and replace proof_catalog only with actual successful reader PROOFS.json ref; all current model/source/viewer and frozen published304 ABI example pins remain unchanged.",
+      "output_binding": "DOCUMENTATION_SELECTION_SHA256 = SHA256(actual saved successor selection).",
+      "predecessor": {
+        "bytes": 3906,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-documentation-selection-011.json",
+        "sha256": "6f41adf1d1f2927df9d6d505abff7a237a64726d401f739e8a6a03d60057ad64"
+      }
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/documentation.py",
+        "bundle-current",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-documentation-selection-019.json",
+        "--selection-sha256",
+        "${DOCUMENTATION_SELECTION_SHA256}",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-documentation-019"
+      ],
+      "checks": "Existing builder current view reproduction/member checks; no new model generation or ABI subject generation.",
+      "id": "build-current-documentation",
+      "required_prior": "Successful current reader and exact documentation selection"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/tooling.py",
+        "build",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-tooling-selection-019.json",
+        "--selection-sha256",
+        "dff1801b58e537e5ee93fb9b0cf42fe2b3c90e505dca394ad32afe771d6c1e61",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-tooling-019"
+      ],
+      "checks": "Existing full240-source member/archive check inside builder; observed8-file output comparison and four a_c source deltas required.",
+      "id": "build-current-tooling",
+      "required_prior": "Exact owner selection portable016 and unchanged peers; no concurrent heavy process"
+    }
+  ],
+  "construction_success": {
+    "claims": [
+      "imported-model-well-formedness",
+      "whole-model-source-correspondence",
+      "declared-closure-and-projection",
+      "record-budget-result",
+      "supplied-graphify-view-correspondence"
+    ],
+    "elapsed_seconds": 1352.034075,
+    "execution": {
+      "bytes": 19976,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold-execution/execution.json",
+      "sha256": "6fb751fa2fd5e9fd70dbc7ee4acc5c0e252055acaadfa4ff8e950066f85ff944"
+    },
+    "manifest": {
+      "bytes": 5639,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold/manifest.json",
+      "sha256": "f7e2678197599f5701b8c245a660f98a0b2570dc14b0c1b75b16d2f936673ee7"
+    },
+    "owner_inspection": {
+      "authoritative_handoff": {
+        "bytes": 7533,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/CURRENT_FORMAL.json",
+        "sha256": "9c4f8c0071bf055916f753332c6733e50fa473faa60cd2fac8e985c4bd92c104"
+      },
+      "checks": 9,
+      "elapsed_seconds": 20.393077,
+      "execution_sha256": "d54d674631399eb6c1a2b39d3f6ca9e92410b63fec5a0f47da73df8c80142f85",
+      "obligations": 5,
+      "result_sha256": "26b722c38fe3538f26a3f21735fd85f3e7677690c224cced67a02518e9aeca08",
+      "standing": "Actual assigned owner inspection complete and consistent; Executive independently consumed proof result and released heavy slot."
+    },
+    "result": {
+      "bytes": 20157,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold/result.json",
+      "sha256": "e02a84ee32ad9ce796e3807ec6c990aea0d3e022b7093defaa0cc8fcdf49e4e6"
+    },
+    "runtime_sha256": "a79596f2aad2e8133291751e489d5a118ad21438d84ca068c0f7fbe0d9a9a237"
+  },
+  "created_at": "2026-11-06T15:10:10.510024+00:00",
+  "current_formal_owner_handoff": {
+    "bundle_manifest": {
+      "bytes": 5639,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold/manifest.json",
+      "sha256": "f7e2678197599f5701b8c245a660f98a0b2570dc14b0c1b75b16d2f936673ee7"
+    },
+    "checked_claims": [
+      "imported-model-well-formedness",
+      "whole-model-source-correspondence",
+      "declared-closure-and-projection",
+      "record-budget-result",
+      "supplied-graphify-view-correspondence"
+    ],
+    "child_maxrss_native_units": 11634114560,
+    "elapsed_seconds": 1352.034075,
+    "execution": {
+      "bytes": 19976,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold-execution/execution.json",
+      "sha256": "6fb751fa2fd5e9fd70dbc7ee4acc5c0e252055acaadfa4ff8e950066f85ff944"
+    },
+    "heavy_slot": "Current proof and single owner inspection completed. No compiler, scan or native actor launched by this Writer remains running.",
+    "inspection": {
+      "bytes": 11247,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold-inspection.json",
+      "sha256": "26b722c38fe3538f26a3f21735fd85f3e7677690c224cced67a02518e9aeca08"
+    },
+    "inspection_elapsed_seconds": 20.393077,
+    "inspection_execution": {
+      "bytes": 5301,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/inspection/execution.json",
+      "sha256": "d54d674631399eb6c1a2b39d3f6ca9e92410b63fec5a0f47da73df8c80142f85"
+    },
+    "inspection_preconditions": {
+      "bytes": 6134,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/inspection/PREINVOCATION.json",
+      "sha256": "e94639868b86e11beee5650ee36dd9819a2c88cd3d654f378b4d918b9b983497"
+    },
+    "limits": {
+      "max_input_bytes": 33554432,
+      "max_selections": 64,
+      "memory_mb": 4096,
+      "timeout_seconds": 600
+    },
+    "mathematical_artifacts_correspondence": {
+      "comparison": "Exact new manifest member map equals retained construction008 map; current owner inspection verified actual new members against the new result. This preserves previous proof bytes without transferring a previous execution verdict.",
+      "prior_manifest": {
+        "bytes": 5639,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-008/cold/manifest.json",
+        "sha256": "f7e2678197599f5701b8c245a660f98a0b2570dc14b0c1b75b16d2f936673ee7"
+      },
+      "same_manifest_bytes": true,
+      "same_member_map": true
+    },
+    "model": {
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+      "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+    },
+    "observations": {
+      "current_dynamic_proof_invocations": 7,
+      "current_kernel_replay_invocations": 1,
+      "current_runtime_invocations": 1,
+      "edges": 3704,
+      "records": 1885,
+      "references": 15630
+    },
+    "remaining": [
+      "Exact compressed portable transport for new result/runtime and original full member closure.",
+      "Successor native packaging and separate fresh installed proof under its newly derived support/origin identity.",
+      "Selected current Context delivery and actual Codex/Claude sessions; eventual independent public installed proof."
+    ],
+    "request": {
+      "bytes": 1439,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-request.json",
+      "sha256": "32759755cf1d5370c5324a05c418b983b4cfffde125160af3e511ab87006ceee"
+    },
+    "result": {
+      "bytes": 20157,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold/result.json",
+      "sha256": "e02a84ee32ad9ce796e3807ec6c990aea0d3e022b7093defaa0cc8fcdf49e4e6"
+    },
+    "review_custody": {
+      "bytes": 11567,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-review-016/CUSTODY.json",
+      "sha256": "6762b6080975f0c101c86fdf8c92ac99123f971e1224c81b350beefda1683808"
+    },
+    "runtime_identity": {
+      "pins": {
+        ".cache/formal-origin-v1/selection.json": "a6f7cce1d1654d43c4cc7c05445a39c090e3ff4b490bf7646d8870835ae1c8af",
+        "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+        "AC/GateProof.lean": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+        "AC/GateRuntime.lean": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f",
+        "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+        "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+        "AC/Structure.lean": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb",
+        "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+        "lakefile.toml": "f22cba4f5f31d23815c62533bb9e6db49fc85e08e8bd707bd20d82497f9583f5",
+        "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+        "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+        "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+        "profiles/proof-support-v1.json": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+        "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+        "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+        "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+        "scripts/formal_gate.py": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2",
+        "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
+        "scripts/formal_support.py": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6",
+        "scripts/gate_codegen.py": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
+        "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+        "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+        "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+        "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+        "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+      },
+      "sha256": "a79596f2aad2e8133291751e489d5a118ad21438d84ca068c0f7fbe0d9a9a237"
+    },
+    "schema": "stdo305.current-formal-return/1",
+    "selected_checker": {
+      "bytes": 2923,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-recovery-016/SELECTED_CHECKER.json",
+      "sha256": "7a8ea8510cbd469f699e70e0f1023c9b0eec4941892f52592bf7471b127f8cf0"
+    },
+    "standing": "Actual fresh current source proof and owner retained-evidence inspection. This does not establish successor installation, Context delivery, native host behavior, Product acceptance or release.",
+    "supervision": {
+      "bytes": 739,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016/cold-execution/SUPERVISION.json",
+      "sha256": "285fccf6b84af04d42d60e29fedc7645bcfb5e7d9253258813429ea3464d10aa"
+    }
+  },
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "execution_custody": "Retain each actual argv/cwd, selected interpreter identity, stdout/stderr, exit/timing and exact output refs; dynamic refs arise solely from successful prior steps. Builders retain their unchanged own validation semantics and fixed timeouts.",
+  "explicit_exclusions": [
+    "No source S/model/map/generator change",
+    "No native/common overwrite in these7 prepared operations",
+    "No Git/index/ref/store effect",
+    "No private local-origin keys in archive",
+    "No large archive scan while inspection is active"
+  ],
+  "heavy_slot": "Executive and tools owner report current016 proof+inspection closed; clear for exact assigned sequential packaging. No operation has yet run.",
+  "kind": "stdo305.current016-packaging-command-plan/1",
+  "next_step_after_success": "Compare exact generated current docs/proofs/tooling to pinned A2 native inventory; copy only selected declared auxiliary deltas on assignment, one full existing native payload check and bounded review, then exact C3/A3 stage/native plan.",
+  "permitted_planned_writes": "New019 archive/transport/selection/generated-output/receipt paths only; common payload overwrite is a separately bound next step after outputs are compared.",
+  "portable_changed_rows": [
+    {
+      "after": "53659ff19357fc6726e7c8a351abcb2a7fbc727a172d9572739ce927a21a1220",
+      "before": "433670151458e6300f2931b25012368b9a4b0c814e223c8fc09dcc73b3c14716",
+      "path": "a_c/build_tenants/lean/README.md"
+    },
+    {
+      "after": "24ce7e6f7a12b0d80429c6380c761df56e6963e3d7bc4125645e14f24b1b50fa",
+      "before": "84a55716296c7df5231fbc271bb907361826f6125b6df98f834b22c6fa8a8e60",
+      "path": "a_c/build_tenants/lean/design/FORMAL_GATE.md"
+    },
+    {
+      "after": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2",
+      "before": "39a0527792ba6f9a08407e77350a7e68eb32ed8cea8950b8b1f5e52f8bdfabaa",
+      "path": "a_c/build_tenants/lean/scripts/formal_gate.py"
+    },
+    {
+      "after": "8697fc62998d3b87be5ee6a4d35e45672de07324e9a885e34719e709c7d08ab9",
+      "before": "0e2989db25113b0fefb97097455166fb3751c7dfe91de38141f45a440b075390",
+      "path": "a_c/build_tenants/lean/tests/test_formal_gate.py"
+    }
+  ],
+  "selected_python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "source_selection": {
+    "bytes": 78617,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-tooling-selection-019.json",
+    "sha256": "dff1801b58e537e5ee93fb9b0cf42fe2b3c90e505dca394ad32afe771d6c1e61"
+  },
+  "status": "prepared_unexecuted_ready_for_Executive_effect_assignment",
+  "supersedes_unexecuted": {
+    "bytes": 13927,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/PACKAGING_COMMANDS_001.json",
+    "sha256": "91455c18526d7338eaed5f8d79365a6c56af1d4fead9d0d4f9049c7c82eede22"
+  },
+  "tag_annotation_correction": {
+    "bytes": 2493,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/TAG_ANNOTATION_CORRECTION.json",
+    "sha256": "3413039d9fc06c84ebf612b18ef965e4485b8c8fbc7be7cf6e9c4c6e64c1fda2"
+  }
+}

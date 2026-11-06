@@ -1,0 +1,39 @@
+{
+  "kind": "independent.stdo305-recovery-native-check/1",
+  "reviewer": "/root/stdo305_integration_review",
+  "conclusion": "satisfied_for_native_installation",
+  "handoff_sha256": "419281a1ed1b8f5cb4fadf116f85006dfec53c49367f36b50f2dae7020838d99",
+  "source_checkpoint": "327bb14af2ee5c1673a5f66bca6a6ec1bfcde402",
+  "native_commit": "304c48bfb6d52db40c35267bc7179d835404344a",
+  "native_tag_object": "b83d9d56be19ff9f44be0a144cab02f9522aa0a7",
+  "native_manifest_sha256": "998852a22578a798abceb821fa654d5287c0b1fb908734afa3ee9403738596cd",
+  "native_root": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5",
+  "transport_mode": "local_prepublication",
+  "installed_members": 172,
+  "native_input_and_manifest_members_exact": true,
+  "manager_source_members": 13,
+  "handoff_refs_verified": 10,
+  "independent_manager_verify": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/manager/bin/stdo",
+      "--store",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store",
+      "verify",
+      "v3.0.5",
+      "--manifest-sha256",
+      "998852a22578a798abceb821fa654d5287c0b1fb908734afa3ee9403738596cd"
+    ],
+    "returncode": 0,
+    "stdout_sha256": "7ceca09d76fed7d090bdc7c42a3d1899badb9b4b56b56a52b9096c77fe9b7e1e",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "valid": true,
+    "failures": [],
+    "elapsed_seconds_including_native_readback": 1.4183335420675576
+  },
+  "native_bytes_modes_mtimes_unchanged": true,
+  "limits": [
+    "Local prepublication acquisition only. Runtime/host/Context/current proof/browser observations not established by this check.",
+    "Source delta report remains separately attributed; no original A1 execution relabelled.",
+    "No source writes, builds, Lean or native actor sessions."
+  ]
+}

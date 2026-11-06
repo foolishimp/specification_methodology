@@ -1,0 +1,53 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/dependencies/graphify/venv/bin/python",
+    "-B",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+    "--out",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/hosts/codex/early-readonly",
+    "--product-root",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/anchors/codex",
+    "--definition-name",
+    "stdo_runtime.json",
+    "--profile",
+    "stdo-3.0.5",
+    "--method-installation",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5",
+    "--stdo",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/anchors/codex/stdo"
+  ],
+  "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002",
+  "environment_additions": {},
+  "inputs": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+      "retained": {
+        "bytes": 36641,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+        "sha256": "2646296a9eda3d2a9f74b4cac120740c136164a684479a48ff7b519a90ad399b"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/anchors/codex/stdo_runtime.json",
+      "retained": {
+        "bytes": 2535,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-015/observed/anchors/codex/stdo_runtime.json",
+        "sha256": "f8567b4aa2854ef74c81ef070141a7a94ef449df2e5329e8903cae9f95519af8"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 14280,
+    "path": "a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+    "sha256": "ca3b705c9daffeaf6538d8188d887c8c3c157176dac9a9f903a0690d55bd9980"
+  },
+  "python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/dependencies/graphify/venv/bin/python",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "recovery": "Retain failed/partial outputs and reconcile before any further invocation.",
+  "schema": "stdo.execution-invocation/1",
+  "stdin": null
+}

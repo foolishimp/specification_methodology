@@ -1,0 +1,51 @@
+{
+  "kind": "stdo.github-release-preflight/1",
+  "limits": "Read-only release metadata observations; all relevant conditions must be checked again at assigned publication effects.",
+  "observations": [
+    {
+      "argv": [
+        "gh",
+        "api",
+        "--include",
+        "repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.5"
+      ],
+      "elapsed_seconds": 0.9278031247667968,
+      "http_status_line": "HTTP/2.0 404 Not Found",
+      "id": "selected-release",
+      "returncode": 1,
+      "stderr": {
+        "bytes": 25,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-002/publication/selected-release.stderr",
+        "sha256": "d2c8985c89b29a842ac4946d13bdbc297709f44f20bb968faf9682664b211db6"
+      },
+      "stdout": {
+        "bytes": 1375,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-002/publication/selected-release.stdout",
+        "sha256": "b57109fb022d02868cc407f8bc8d95516a6e396508a71122ac970fef1407448d"
+      }
+    },
+    {
+      "argv": [
+        "gh",
+        "api",
+        "--include",
+        "repos/foolishimp/specification_methodology/releases/latest"
+      ],
+      "elapsed_seconds": 0.6015579160302877,
+      "http_status_line": "HTTP/2.0 200 OK",
+      "id": "prior-latest",
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-002/publication/prior-latest.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 12840,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-002/publication/prior-latest.stdout",
+        "sha256": "5ba539c1c946bbdcade11d8f4206e6414c066f2d460161ece88e427643638e2b"
+      }
+    }
+  ],
+  "observed_ns": 1793972453362828000
+}

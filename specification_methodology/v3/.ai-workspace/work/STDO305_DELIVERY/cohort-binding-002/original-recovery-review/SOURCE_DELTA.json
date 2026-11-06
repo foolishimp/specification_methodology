@@ -1,0 +1,50 @@
+{
+  "kind": "independent.stdo305-recovery-source-check/1",
+  "reviewer": "/root/stdo305_integration_review",
+  "status": "satisfied_for_frozen_source_delta",
+  "source_commit": "327bb14af2ee5c1673a5f66bca6a6ec1bfcde402",
+  "source_parent": "7f0027250dd2e3faf96e52b038417f38b490e0ee",
+  "previous_native_commit": "d1f6eff7f4eafe6e9b1cf3a18117d9fa68b41bbe",
+  "subject_sha256": "8a897d49184f98f78771a58eae83921c8fe4053dc2a43b06c8ef51155dc1155b",
+  "native_input_inventory_sha256": "69f365bb7b51b9ac50d6fb11abc78975925d9ab0ccef51cad0997426c25f343a",
+  "distinct_source_members": 424,
+  "changed_source_members": [
+    "a_c/build_tenants/graphify/code/ac_support_core.py",
+    "specification_methodology/v3/build_tenants/common/standards/tooling/SELECTION.json",
+    "specification_methodology/v3/build_tenants/common/standards/tooling/TOOLING.json",
+    "specification_methodology/v3/build_tenants/common/standards/tooling/sources.zip"
+  ],
+  "native_members": 171,
+  "changed_native_members": [
+    "standards/tooling/SELECTION.json",
+    "standards/tooling/TOOLING.json",
+    "standards/tooling/sources.zip"
+  ],
+  "zip_members": 240,
+  "changed_zip_members": [
+    "a_c/build_tenants/graphify/code/ac_support_core.py"
+  ],
+  "zip_changed_member_before": {
+    "sha256": "1707b5ce1f02f215000e8aee4ec93008165cbd008c641094c8d41dab0cb24e1b",
+    "bytes": 235829,
+    "mode": 2175008768
+  },
+  "zip_changed_member_after": {
+    "sha256": "8798e1b822a631d0e64991fa5e6caa446accb9ec098e4735b8c0858ad2f46636",
+    "bytes": 236167,
+    "mode": 2175008768
+  },
+  "all_current_source_hashes_match": true,
+  "only_changed_product_subjects": [
+    "a_c",
+    "specification_methodology"
+  ],
+  "only_changed_component_subjects": [
+    "graphify"
+  ],
+  "limits": [
+    "Frozen C2/native input delta and owning subjects checked. A2 native object, actual local002 installation and qualification are pending.",
+    "All other native file Git modes and blob identities are unchanged, including documentation, current model, proof reader and exact transport.",
+    "No builds, source edits, Lean, native actor or browser session performed by this check."
+  ]
+}

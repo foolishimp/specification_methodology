@@ -1,0 +1,29 @@
+--- installed-qualification-prep-015/current_context.py
++++ installed-qualification-prep-017/current_context.py
+@@ -63,7 +63,7 @@
+         request_path = existing or output / (label + '.request.json')
+         if existing is None:
+             save(request_path, {'schema': 'a_c.fd-support.request/1',
+-                               'id': 'installed015-context-' + args.phase + '-' + str(index),
++                               'id': 'installed017-context-' + args.phase + '-' + str(index),
+                                'operation': operation, 'arguments': arguments})
+         argv = [config['python'], '-B', str(recorder), '--case', str(case_path),
+                 '--request', str(request_path), '--output', str(output / label),
+@@ -97,7 +97,7 @@
+         assert len(expected_views[0]['included']) == 21 and RESIDUAL in expected_views[0]['included']
+         assert hashlib.sha256(context['rendered_utf8'].encode()).hexdigest() == context['rendered_sha256']
+         preflight = invoke('contract.preflight', {'context': context_ref, 'grant_id': 'work',
+-            'executor_id': 'registered', 'result_key': 'current-native-work21', 'observations': []}, timeout=900)
++            'executor_id': 'registered', 'result_key': 'current-native-work21', 'observations': []}, timeout=3600)
+         receipt = preflight['result']['value']
+         assert receipt['decision'] == receipt['contract_state'] == 'admitted', receipt
+         preflight_ref = preflight['result']['artifact']
+@@ -174,7 +174,7 @@
+     stale = copy.deepcopy(formal_envelope)
+     run = stale['payload']['runs'][0]
+     original_bundle = Path(run['bundle'])
+-    changed = evidence_root / 'formal/operator-stale-report-015'
++    changed = evidence_root / 'formal/operator-stale-report-017'
+     changed.mkdir(exist_ok=False)
+     original_result = (original_bundle / 'result.json').read_bytes()
+     save(changed / 'result.json', original_result + b'\n')

@@ -1,0 +1,61 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lean",
+    "-j",
+    "1",
+    "-M",
+    "4096",
+    "-R",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/diagnostics/gatedata-016",
+    "-o",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/diagnostics/gatedata-016/GateData.olean",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/diagnostics/gatedata-016/GateData.lean"
+  ],
+  "authority": "Root authorized one isolated exact GateData compiler diagnostic at600s/-j1/-M4096; no full-model proof or release verdict.",
+  "compiler": {
+    "bytes": 49968,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/lean",
+    "sha256": "d1d9c26a539f54fe839d2aa7760bf1ac1dd76a30b26e2c9684bebf2900038fcf"
+  },
+  "copied_input": {
+    "bytes": 11470670,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/diagnostics/gatedata-016/GateData.lean",
+    "sha256": "5c98ff5174d5eb2c0f490d287456b14358091951f0929f811df9ed2c10071553"
+  },
+  "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean",
+  "environment_rule": "Exact formal_support.proof_environment(OUTPUT) result supplied unchanged; inherited authentication/unrelated environment values are neither inspected nor recorded. The helper excludes Lean/Lake/loader/Python overrides and supplies these selected paths.",
+  "helpers": [
+    {
+      "bytes": 16535,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/scripts/formal_support.py",
+      "sha256": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6"
+    },
+    {
+      "bytes": 1881,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/scripts/runtime_process.py",
+      "sha256": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018"
+    }
+  ],
+  "input": {
+    "bytes": 11470670,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/formal/current-full-002/GateData.lean",
+    "sha256": "5c98ff5174d5eb2c0f490d287456b14358091951f0929f811df9ed2c10071553"
+  },
+  "output": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/diagnostics/gatedata-016",
+  "process_rule": "Pinned runtime_process.run private process group and timeout cleanup; child stderr merged into retained stdout exactly as helper specifies.",
+  "runtime_identity": "6aa51c198b71853477255b62ed30b7dabd7d6b72a0ce7309780d6bfd1e3099c8",
+  "schema": "stdo305.compiler-diagnostic-invocation/1",
+  "selected_environment": {
+    "LEAN_PATH": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/diagnostics/gatedata-016:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/build/lib/lean:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/packages/Cli/.lake/build/lib/lean:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/packages/batteries/.lake/build/lib/lean:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/packages/Qq/.lake/build/lib/lean:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/packages/aesop/.lake/build/lib/lean:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/packages/importGraph/.lake/build/lib/lean:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/packages/plausible/.lake/build/lib/lean:/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.lake/packages/mathlib/.lake/build/lib/lean",
+    "MATHLIB_CACHE_DIR": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.cache/mathlib",
+    "MATHLIB_NO_CACHE_ON_UPDATE": "1",
+    "PATH": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+  },
+  "standing": "Recorded before the single diagnostic invocation.",
+  "support_profile": {
+    "bytes": 4318680,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/runtime/a_c/build_tenants/lean/profiles/proof-support-v1.json",
+    "sha256": "122e5a17e314de4866aa848b9505a79aad2e932c7cdda2a9a03e66cd91ff688d"
+  },
+  "timeout_seconds": 600
+}

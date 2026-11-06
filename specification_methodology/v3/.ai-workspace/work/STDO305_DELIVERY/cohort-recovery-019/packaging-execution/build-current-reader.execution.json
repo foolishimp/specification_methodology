@@ -1,0 +1,58 @@
+{
+  "argv": [
+    "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+    "build-current",
+    "--repository",
+    "/Users/jim/src/apps/specification_methodology",
+    "--selection",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proof-selection-019.json",
+    "--selection-sha256",
+    "157d8607561c0655f64a64834cbdc991d34a5df30e9da934cb1b11ff1693d832",
+    "--output",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proofs-019"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "elapsed_seconds": 45.191008,
+  "ended_ns": 1793978229514927000,
+  "exit_code": 0,
+  "kind": "stdo.packaging-execution/1",
+  "operation": "build-current-reader",
+  "plan": {
+    "bytes": 23066,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/PACKAGING_COMMANDS_002.json",
+    "sha256": "5bca40ca466e711e365780f8fe3cb456da4d7ca408c85fe2d054723cd099ccef"
+  },
+  "python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "result": {
+    "destination": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proofs-019",
+    "kind": "stdo.current-proof-reader/1",
+    "members": 63,
+    "model": {
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+      "profile": "a_c.graphify.model/1",
+      "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+    },
+    "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+    "standing": "documentation custody/reproduction; no fresh Lean execution",
+    "status": "built",
+    "version": "3.0.5"
+  },
+  "started_ns": 1793978184323088000,
+  "stderr": {
+    "bytes": 0,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/packaging-execution/build-current-reader.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 639,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/packaging-execution/build-current-reader.stdout",
+    "sha256": "acd8c3cccd3a6a3aad702f3e393e13034aa5066bf413d2c570ce474db5ac3a91"
+  }
+}

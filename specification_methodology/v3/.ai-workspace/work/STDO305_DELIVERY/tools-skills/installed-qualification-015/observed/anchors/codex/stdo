@@ -1,0 +1,31 @@
+#!/usr/bin/env python3
+import hashlib,json,os,pathlib,subprocess,sys
+C = {'manager': '/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/manager/bin/stdo', 'manager_sha256': 'b336889e5b5e3d05446a399aee783d19e2263c0ad30e6775007e6c5b6ee67695', 'store': '/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store', 'manifest': '/Users/jim/.local/share/stdo-qualification/v3.0.5/local-002/store/releases/v3.0.5/manifest.json', 'manifest_sha256': '998852a22578a798abceb821fa654d5287c0b1fb908734afa3ee9403738596cd'}
+def regular(name):
+    p=pathlib.Path(name)
+    if not p.is_absolute() or any(q.is_symlink() for q in (p,*p.parents)) or not p.is_file():
+        raise ValueError("Selected runtime launcher input redirected or missing")
+    return p.read_bytes()
+try:
+    if any(x=="--store" or x.startswith("--store=") for x in sys.argv[1:]):
+        raise ValueError("Runtime launcher store is fixed; another store requires a new explicit anchor")
+    if hashlib.sha256(regular(C['manager'])).hexdigest()!=C['manager_sha256']:
+        raise ValueError("Selected underlying manager executable changed")
+    if hashlib.sha256(regular(C['manifest'])).hexdigest()!=C['manifest_sha256']:
+        raise ValueError("Selected store/native manifest changed")
+    if pathlib.Path(C['store']).resolve(strict=True)!=pathlib.Path(C['store']):
+        raise ValueError("Selected store path changed")
+    result=subprocess.run([C['manager'],'--store',C['store'],*sys.argv[1:]],capture_output=True)
+    sys.stderr.buffer.write(result.stderr)
+    try:
+        value=json.loads(result.stdout)
+    except (ValueError,UnicodeDecodeError):
+        sys.stdout.buffer.write(result.stdout)
+    else:
+        if isinstance(value,dict):
+            value['runtime_launcher']={'path':str(pathlib.Path(__file__).absolute()),
+                'sha256':hashlib.sha256(regular(__file__)).hexdigest(),**C}
+        print(json.dumps(value,indent=2))
+    raise SystemExit(result.returncode)
+except (OSError,ValueError) as error:
+    print(json.dumps({'status':'refused','reason':str(error)}));raise SystemExit(2)

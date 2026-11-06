@@ -1,0 +1,43 @@
+--- a_c/build_tenants/lean/tests/test_formal_gate.py
++++ a_c/build_tenants/lean/tests/test_formal_gate.py
+@@ -104,6 +104,40 @@
+     def test_resource_byte_limit_is_incomplete(self):
+         result=gate.verify(request_for(self.directory/'subject/model.json'),self.directory/'byte-limit',{'max_input_bytes':1})
+         self.assertEqual(result['status'],'incomplete')
++    def test_selected_default_and_api_override_reach_timeout_without_claims(self):
++        # Compiler timing is an explicit stub here. The separately retained
++        # current GateData diagnostic measures actual compilation at this bound.
++        for label,limits,expected in (('default',None,600),('api-override',{'timeout_seconds':7},7)):
++            with self.subTest(selection=label):
++                output=self.directory/('selected-timeout-'+label)
++                def timed_out(command,**kwargs):
++                    self.assertEqual(kwargs['timeout'],expected)
++                    self.assertEqual(command[1:5],['-j','1','-M','4096'])
++                    raise subprocess.TimeoutExpired(command,expected)
++                with patch.object(support,'check',return_value={'fixture':'selected-support-stub'}), \
++                     patch.object(gate.runtime_process,'run',side_effect=timed_out) as invoked:
++                    result=gate.verify(request_for(self.directory/'subject/model.json'),output,limits)
++                invoked.assert_called_once()
++                self.assertEqual(result['status'],'incomplete')
++                self.assertEqual(result['reason'],'GateData exceeded selected time limit')
++                self.assertEqual(result['checked_claims'],[])
++                self.assertEqual(result['observations']['limits'],dict(gate.DEFAULT_LIMITS,timeout_seconds=expected))
++                self.assertEqual(json.loads((output/'result.json').read_text()),result)
++                self.assertFalse((output/'local-origin.json').exists())
++
++    def test_malformed_limits_refuse_before_effect_or_compiler(self):
++        bad=[{'timeout_seconds':value} for value in (0,-1,True,1.5,'600',None)]
++        bad.append({'caller_selected_other_limit':600})
++        for index,limits in enumerate(bad):
++            with self.subTest(limits=limits):
++                output=self.directory/('malformed-limits-'+str(index))
++                with patch.object(gate.runtime_process,'run',side_effect=AssertionError('malformed limit launched compiler')):
++                    result=gate.verify(request_for(self.directory/'subject/model.json'),output,limits)
++                self.assertEqual(result['status'],'refused')
++                self.assertEqual(result['reason'],'Malformed resource limits')
++                self.assertEqual(result['checked_claims'],[])
++                self.assertFalse(output.exists())
++
+     def test_existing_output_and_input_alias_never_overwritten(self):
+         p=self.directory/'subject/model.json';before=p.read_bytes()
+         result=gate.verify(request_for(p),p)

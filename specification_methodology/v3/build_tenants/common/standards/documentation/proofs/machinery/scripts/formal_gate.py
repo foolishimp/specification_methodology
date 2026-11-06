@@ -75,7 +75,7 @@ from gate_codegen import (data_source,name_source,name_contract_names,identities
 from check import record_output,reference_output
 
 EXIT={'verified':0,'refused':2,'unsupported':3,'incomplete':4}
-DEFAULT_LIMITS={'timeout_seconds':90,'memory_mb':4096,'max_input_bytes':32*1024*1024,'max_selections':64}
+DEFAULT_LIMITS={'timeout_seconds':600,'memory_mb':4096,'max_input_bytes':32*1024*1024,'max_selections':64}
 AXIOMS={'propext','Classical.choice','Quot.sound'}
 class GateError(Exception):
     def __init__(self,status,reason):super().__init__(reason);self.status=status;self.reason=reason

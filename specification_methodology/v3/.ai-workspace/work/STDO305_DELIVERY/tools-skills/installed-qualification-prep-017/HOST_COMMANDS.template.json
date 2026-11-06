@@ -1,0 +1,81 @@
+{
+  "claim_limits": [
+    "Requested model or alias is recorded separately from any actually observed resolved model.",
+    "CLI help/version and prepared argv are not native qualification.",
+    "No clean-room, cross-family or host-enforcement guarantee follows from a fresh session.",
+    "A process timeout/failed authentication remains a failed mandatory case until resolved; no fabricated success or blind retry."
+  ],
+  "claude": {
+    "argv": [
+      "CLAUDE_INVOCATION",
+      "--print",
+      "--output-format",
+      "stream-json",
+      "--verbose",
+      "--no-session-persistence",
+      "--setting-sources",
+      "project",
+      "--settings",
+      "OUTPUT/claude-settings.json",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "OUTPUT/empty-mcp.json",
+      "--no-chrome",
+      "--permission-mode",
+      "dontAsk",
+      "--allowedTools",
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Skill",
+      "--effort",
+      "xhigh",
+      "--model",
+      "SELECTED_CLAUDE_MODEL"
+    ],
+    "cwd": "HOST_WORKSPACE",
+    "settings": "Only explicit disposable project/session settings. Do not use bare mode because it bypasses the available OAuth/keychain route.",
+    "settings_files": {
+      "claude-settings.json": {},
+      "empty-mcp.json": {
+        "mcpServers": {}
+      }
+    },
+    "stdin": "OUTPUT/host-prompt.txt"
+  },
+  "codex": {
+    "argv": [
+      "CODEX_INVOCATION",
+      "exec",
+      "--ignore-user-config",
+      "--ephemeral",
+      "--skip-git-repo-check",
+      "--sandbox",
+      "workspace-write",
+      "--cd",
+      "HOST_WORKSPACE",
+      "--model",
+      "SELECTED_CODEX_MODEL",
+      "-c",
+      "model_reasoning_effort=\"xhigh\"",
+      "-c",
+      "approval_policy=\"never\"",
+      "--json",
+      "--output-last-message",
+      "OUTPUT/codex-final.txt",
+      "-"
+    ],
+    "settings": "Session-local CLI overrides; existing authentication path remains unchanged.",
+    "stdin": "OUTPUT/host-prompt.txt"
+  },
+  "environment": {
+    "HOME_and_CODEX_HOME": "Preserve existing values; do not repurpose or mutate global configuration.",
+    "STDO_STORE": "Deliberately unrelated private path may be selected to exercise explicit launcher consumption.",
+    "credential_values": "Pass existing authentication unchanged; never read, serialize or hash secret values."
+  },
+  "schema": "stdo305.native-host-command-template/1",
+  "standing": "Parameterized preparation only; substitute exact verified paths/model and record final argv before actual launch. No native session has run."
+}

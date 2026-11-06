@@ -1,0 +1,172 @@
+{
+  "checked_claims": [],
+  "context_binding": null,
+  "evidence": {
+    "manifest_sha256": "a8ef7d9d9834f91b9de47afcdafefa08b6abe37416b3373b8b962cbb01cad5af",
+    "members": {
+      "GateBounds.lean": "252a444f97a68378313bc84382c60e120417965ec7210939151470d7b644974f",
+      "GateData.lean": "5c98ff5174d5eb2c0f490d287456b14358091951f0929f811df9ed2c10071553",
+      "GateData.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GateExternalNames.lean": "fd06de4c664293aeaed4e25e7ebfa19a783655ebfbc14cef49f080e54e592678",
+      "GateIdentities.lean": "467091a5be5262ca09dd978429a45651c5dab6bb4c0c6c333e8d1308cdd1c829",
+      "GateLocalNames.lean": "c98acbc18b496c98aaf51bbeeacd9fdc9c9651159179ebf7af85049c8814e791",
+      "GateModel.lean": "a107ba20966853cf3dc43a3e109588a186f36333f584605c63d99b3b9e2160d9",
+      "GateRun.lean": "3aca46dd2a8de76afb0a9f568bff1c07a07deb02f5713f69515f9de63e28e69a",
+      "GateViews.lean": "14449a93e7a35485e9873511e3f1a8c52e56dbb6d76911c1d1e84f125557a20d",
+      "certificates.json": "f3d9f7ce08db655b9b8b2221ff879efd3cf2542c2c4567439dacffd234087cdb",
+      "input.json": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "model.json": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "replay-request.json": "cc9200cd08d6e39a9911c2aabed41b358fd46291b6a42a28b3e5e4db5e1e7ee3",
+      "request.json": "fe5896827b46d2fc48b0ad7c4e20992b8654a423b9f9b92cefa133ba33025f50",
+      "supplied-views.json": "3710472f2528b4b3b2097c5ad4d413d3176a7e1e7f95f025210f43c38ddd0131"
+    }
+  },
+  "inputs": {
+    "input": {
+      "bytes": 8521879,
+      "raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "retained_path": "input.json"
+    },
+    "model": {
+      "canonical_sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02",
+      "raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "retained_path": "input.json"
+    },
+    "supplied_views": {
+      "bytes": 1446025,
+      "raw_sha256": "3710472f2528b4b3b2097c5ad4d413d3176a7e1e7f95f025210f43c38ddd0131",
+      "retained_path": "supplied-views.json"
+    }
+  },
+  "limits": [
+    "Finite declared structural model/closure/projection only; no semantic acceptance.",
+    "Whole-model-source-correspondence covers only supplied or carrier-recovered model JSON; original prose/corpus-to-model F_P fidelity remains opaque and unproved.",
+    "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+    "Python API imports and interpreter initialization remain trusted-host responsibilities; the CLI isolates helper loading after startup.",
+    "Context binding is metadata; consumer must check actual delivered bytes.",
+    "Crossing relations are checked source-derived metadata, not a Lean theorem."
+  ],
+  "model": {
+    "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+    "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+  },
+  "observations": {
+    "child_maxrss_native_units": 3227041792,
+    "edges": 3704,
+    "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
+    "elapsed_seconds": 137.33730712532997,
+    "execution": "projectWithProof with exact freshly checked model/closure premises; per-selection equality to unchanged project is kernel-replayed; the raw checker is not reevaluated",
+    "limits": {
+      "max_input_bytes": 33554432,
+      "max_selections": 64,
+      "memory_mb": 4096,
+      "timeout_seconds": 90
+    },
+    "proof_modules": [
+      "GateData",
+      "GateLocalNames",
+      "GateExternalNames",
+      "GateIdentities",
+      "GateBounds",
+      "GateModel",
+      "GateViews",
+      "GateRun"
+    ],
+    "records": 1885,
+    "references": 15630,
+    "reuse": "none; fresh dynamic obligations; pinned established base support",
+    "stages": [
+      {
+        "seconds": 1.2612175839021802,
+        "stage": "acquire-import-reconstruct"
+      },
+      {
+        "seconds": 21.63589462544769,
+        "stage": "support-pins"
+      },
+      {
+        "seconds": 21.179026166908443,
+        "stage": "current-certificates"
+      }
+    ],
+    "support": {
+      "manifest_sha256": "122e5a17e314de4866aa848b9505a79aad2e932c7cdda2a9a03e66cd91ff688d",
+      "members": 28460,
+      "platform": "Darwin-arm64"
+    },
+    "theorem_audit": {}
+  },
+  "reason": "GateData exceeded selected time limit",
+  "request_sha256": "a8f7c0939b86f4a07994689a88d02d6061ec2cb8f566d476f671e2891de43f37",
+  "requested_claims": [
+    "imported-model-well-formedness",
+    "whole-model-source-correspondence",
+    "declared-closure-and-projection",
+    "record-budget-result",
+    "supplied-graphify-view-correspondence"
+  ],
+  "runtime_identity": {
+    "pins": {
+      ".cache/formal-origin-v1/selection.json": "f668b12d98367ae942615ddddd9aec4c6834508c67dea2c7c6088243abc0fb0d",
+      "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+      "AC/GateProof.lean": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+      "AC/GateRuntime.lean": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f",
+      "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+      "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+      "AC/Structure.lean": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb",
+      "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+      "lakefile.toml": "f22cba4f5f31d23815c62533bb9e6db49fc85e08e8bd707bd20d82497f9583f5",
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+      "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+      "profiles/proof-support-v1.json": "122e5a17e314de4866aa848b9505a79aad2e932c7cdda2a9a03e66cd91ff688d",
+      "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+      "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+      "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+      "scripts/formal_gate.py": "39a0527792ba6f9a08407e77350a7e68eb32ed8cea8950b8b1f5e52f8bdfabaa",
+      "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
+      "scripts/formal_support.py": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6",
+      "scripts/gate_codegen.py": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
+      "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+      "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+      "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+      "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+      "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+    },
+    "sha256": "6aa51c198b71853477255b62ed30b7dabd7d6b72a0ce7309780d6bfd1e3099c8"
+  },
+  "schema": "a_c.formal-gate.result/1",
+  "selections": [
+    {
+      "budget_records": 21,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c"
+      ]
+    },
+    {
+      "budget_records": 17,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a8cafeeacc2f8bc2deda01690eaaf31b"
+      ]
+    },
+    {
+      "budget_records": 11,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bcb769c763230c0182097d3cc494c488"
+      ]
+    },
+    {
+      "budget_records": 5,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:ca69fb183db64514704157409ebe758d"
+      ]
+    },
+    {
+      "budget_records": 15,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17011ff678c1e1fc0723e12d17e820d"
+      ]
+    }
+  ],
+  "status": "incomplete"
+}

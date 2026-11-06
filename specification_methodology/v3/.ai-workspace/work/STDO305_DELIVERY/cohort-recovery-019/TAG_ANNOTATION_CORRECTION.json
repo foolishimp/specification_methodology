@@ -1,0 +1,27 @@
+{
+  "correct_new_tag_message_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-003/tag-message.txt",
+  "correct_stdin_template": "object ${A3}\ntype commit\ntag specification_methodology/v3.0.5\ntagger ${actual_committer_ident}\n\n${exact bytes of newly prepared cut-003/tag-message.txt}",
+  "created_at": "2026-11-06T15:09:48.017532+00:00",
+  "finding": "TRANSACTION_SKELETON.json native-annotated-tag-object.stdin_template retained the descriptive cut-002/tag-message.txt suffix. That would select the old C2/tree annotation and must not be executed.",
+  "kind": "stdo305.native-tag-template-correction/1",
+  "predecessor": {
+    "bytes": 20783,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/TRANSACTION_SKELETON.json",
+    "sha256": "af885ab80191f961f34a3f59be7f88187441d1145a346501a78439f951025d45"
+  },
+  "required_before_mktag": [
+    "Only consume tag-message.txt emitted by successful configured native prepare for actualC3/current common source path.",
+    "Pin its actual full raw bytes/SHA after preparation, with source.json and actual selected package tree.",
+    "Require Frozen-Source-Commit exactly actualC3, Frozen-Source-Path exactly specification_methodology/v3/build_tenants/common, Frozen-Source-Tree exactly successful source_candidate.package_tree at C3, Predecessor-Native-Commit exactly16bc30d215915a4b7b3ed2f13e52e14510ae1c9d.",
+    "Actual raw tag header object is successfulA3, not C3 or A2. Recheck annotation bytes immediately before mktag.",
+    "Rehash retained raw tag input and require actual mktag object result before CAS. Registered attest must compare exact selected annotation to current source.json.",
+    "CAS expects exact unpublished local tagb83d9d56be19ff9f44be0a144cab02f9522aa0a7 and current remote absence. Final concrete plan must carry this corrected template and actual prepared-byte binding."
+  ],
+  "source_coordinates": "native_release.tag_message lines231-239; prepare writes tag-message.txt line262; attest lines285 onward verifies selected source/tag relation.",
+  "source_owner": {
+    "bytes": 32671,
+    "path": "specification_methodology/v3/build_tenants/common-tools/native_release.py",
+    "sha256": "3c0e1fffd5810f2a3dd5fa7fafe9ae4069a544f1be3d7643da9f86c49d3fa30a"
+  },
+  "standing": "Append-only preparation correction; no tag/native/Git effect. Frozen019 skeleton remains unchanged."
+}

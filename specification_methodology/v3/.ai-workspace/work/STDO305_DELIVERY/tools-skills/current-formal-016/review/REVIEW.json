@@ -1,0 +1,134 @@
+{
+  "kind": "independent.bounded-review/1",
+  "reviewer": "/root/stdo305_integration_review",
+  "authors": [
+    "/root/stdo305_tools_skills"
+  ],
+  "independence": "Separately bound nonauthor same-family reviewer; not enforced clean-room or cross-family independence. Source/evidence read-only; scratch-only probes and evidence.",
+  "subject": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-recovery-016/FREEZE.json",
+    "sha256": "5f588897838264cfd332102de43c31533b54adb4c5602fb01934e07c2e0aedf2",
+    "bytes": 13480
+  },
+  "conclusion": "satisfied",
+  "severity_scale": "1 highest through 5 lowest",
+  "findings": [],
+  "implementation_scope": [
+    "Only formal_gate.DEFAULT_LIMITS timeout_seconds changes from 90 to 600; all other production bytes are identical to the retained predecessor.",
+    "Current README/design distinguish per-checking-process 600 from Graphify default outer 600 and explicitly selected qualification outer 3600; historical 90-second observations retained.",
+    "Default and explicit API override reach existing supervisor; malformed selected entries refuse before output; timeout is incomplete with no checked claims/origin establishment.",
+    "Existing child/grandchild, unresolved-child and outer nested-group cleanup behavior remains active.",
+    "Actual old source checker selection refuses before output; new public selector reproduces current runtime and 3600-second whole-invocation selection. Old-runtime compatibility remains false."
+  ],
+  "executed": {
+    "focused_tests": {
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/formal-budget016/TEST_RESULT.json",
+      "sha256": "11e54e1823206d4e0da6e510c084fe6e6fd62eb3cba7ead1ef5381949de8b7cd",
+      "bytes": 294
+    },
+    "focused_test_output": {
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/formal-budget016/test-output.txt",
+      "sha256": "5f45dadffcdd2e533b30dbfcc5bfea043cc5726b9ae28332c896458ac3de6628",
+      "bytes": 1149
+    },
+    "fixture_driver": {
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/formal-budget016/run_narrow.py",
+      "sha256": "2537c316a73e2bd1ebc49a5b54e8886aed7c9df9dac4aaf87fc2b55cf125cb64",
+      "bytes": 2213
+    },
+    "selection_check": {
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/formal-budget016/SELECTION_CHECK.json",
+      "sha256": "1eab5c7d8ff94f990b364bf62354c585bb6c38cc047629e48e76aaf50194cbd3",
+      "bytes": 1217
+    },
+    "selection_driver": {
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/formal-budget016/check_selection.py",
+      "sha256": "6ab5f2612b1d1a02dd5b654e70f9e10920b2c3e1f3e2e1ff56c2b8926f35ed33",
+      "bytes": 2877
+    },
+    "tests": 5,
+    "skips": 0,
+    "native_compiler_or_support_scan": false
+  },
+  "currentness": {
+    "before_after_refs": 45,
+    "mismatches": [],
+    "source": [
+      {
+        "bytes": 45863,
+        "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+        "previous_sha256": "39a0527792ba6f9a08407e77350a7e68eb32ed8cea8950b8b1f5e52f8bdfabaa",
+        "sha256": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2",
+        "snapshot": {
+          "bytes": 45863,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-recovery-016/source/a_c/build_tenants/lean/scripts/formal_gate.py",
+          "sha256": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2"
+        }
+      },
+      {
+        "bytes": 11836,
+        "path": "a_c/build_tenants/lean/README.md",
+        "previous_sha256": "433670151458e6300f2931b25012368b9a4b0c814e223c8fc09dcc73b3c14716",
+        "sha256": "53659ff19357fc6726e7c8a351abcb2a7fbc727a172d9572739ce927a21a1220",
+        "snapshot": {
+          "bytes": 11836,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-recovery-016/source/a_c/build_tenants/lean/README.md",
+          "sha256": "53659ff19357fc6726e7c8a351abcb2a7fbc727a172d9572739ce927a21a1220"
+        }
+      },
+      {
+        "bytes": 25475,
+        "path": "a_c/build_tenants/lean/design/FORMAL_GATE.md",
+        "previous_sha256": "84a55716296c7df5231fbc271bb907361826f6125b6df98f834b22c6fa8a8e60",
+        "sha256": "24ce7e6f7a12b0d80429c6380c761df56e6963e3d7bc4125645e14f24b1b50fa",
+        "snapshot": {
+          "bytes": 25475,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-recovery-016/source/a_c/build_tenants/lean/design/FORMAL_GATE.md",
+          "sha256": "24ce7e6f7a12b0d80429c6380c761df56e6963e3d7bc4125645e14f24b1b50fa"
+        }
+      },
+      {
+        "bytes": 16675,
+        "path": "a_c/build_tenants/lean/tests/test_formal_gate.py",
+        "previous_sha256": "0e2989db25113b0fefb97097455166fb3751c7dfe91de38141f45a440b075390",
+        "sha256": "8697fc62998d3b87be5ee6a4d35e45672de07324e9a885e34719e709c7d08ab9",
+        "snapshot": {
+          "bytes": 16675,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-recovery-016/source/a_c/build_tenants/lean/tests/test_formal_gate.py",
+          "sha256": "8697fc62998d3b87be5ee6a4d35e45672de07324e9a885e34719e709c7d08ab9"
+        }
+      }
+    ],
+    "generation19_unchanged": true,
+    "source_freeze_manifest_unchanged": true,
+    "model_bytes_unchanged": true,
+    "runtime_identity": "a79596f2aad2e8133291751e489d5a118ad21438d84ca068c0f7fbe0d9a9a237",
+    "runtime_pin_changes": [
+      {
+        "after": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2",
+        "before": "39a0527792ba6f9a08407e77350a7e68eb32ed8cea8950b8b1f5e52f8bdfabaa",
+        "path": "scripts/formal_gate.py"
+      }
+    ]
+  },
+  "retained_writer_evidence": {
+    "diagnostic": {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-recovery-016/RESULT.json",
+      "sha256": "11d91247c1f32aade8229ed71861757f09a79b8035bb433220b462f079c3f9a7",
+      "bytes": 2529
+    },
+    "diagnostic_interpretation": "Exact GateData stage completed in 355.526842 seconds at bound600/-M4096. This was Writer execution inspected as a bounded diagnostic, not independently repeated or treated as a full proof.",
+    "support_check": {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-recovery-016/SUPPORT_CURRENTNESS.json",
+      "sha256": "cd71fd878845986d64dc1061e66431f2a83e87097a6e15d46eaefb7b4ca3535d",
+      "bytes": 3968
+    },
+    "support_interpretation": "Writer retained current support check; reviewer did not scan 30,405 support members."
+  },
+  "limitations": [
+    "Implementation review only; complete current model proof, current proof-reader/transport regeneration and successor installed/native Context/host qualification remain pending.",
+    "Gate timeout tests explicitly stub compiler TimeoutExpired. Three cleanup controls use real bounded subprocesses.",
+    "Test fixture placement was redirected in memory to external scratch; original test bodies and production source were unchanged.",
+    "No repository edits, Git effects, Lean compiler, base support establishment or full support-population scan."
+  ]
+}
