@@ -1,0 +1,57 @@
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+Attempting to download 623 file(s) from leanprover-community/mathlib4 cache at https://cache.mathlib.org/mathlib4-master
+Decompressed 623 file(s)
+Already decompressed 623 file(s)
+Private toolchain ready: /Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64
+✔ [639/644] Built AC.Closure (692ms)
+✔ [640/644] Built AC.Model (817ms)
+✔ [641/644] Built AC.Projection (687ms)
+✔ [642/644] Built AC.Structure (709ms)
+ℹ [643/644] Built AC.GateProof (568ms)
+info: AC/GateProof.lean:32:0: 'AC.checkModel_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:33:0: 'AC.certificate_exact_reachability' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:34:0: 'AC.certificate_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:35:0: 'AC.project_ok_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:36:0: 'AC.projection_all_residuals_accounted' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:37:0: 'AC.names_nodup_of_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:38:0: 'AC.array_reconstruct' depends on axioms: [propext, Quot.sound]
+info: AC/GateProof.lean:39:0: 'AC.sortLabeled_perm' depends on axioms: [propext]
+info: AC/GateProof.lean:40:0: 'AC.nodup_of_labeled_characters' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:41:0: 'AC.rendered_labeled_source' depends on axioms: [propext]
+info: AC/GateProof.lean:42:0: 'AC.isChain_of_pairs' does not depend on any axioms
+info: AC/GateProof.lean:43:0: 'AC.separated_of_nodup' depends on axioms: [propext, Quot.sound]
+info: AC/GateProof.lean:44:0: 'AC.member_of_block_index' depends on axioms: [propext]
+info: AC/GateProof.lean:45:0: 'AC.mapped_block_inside' depends on axioms: [propext, Quot.sound]
+info: AC/GateProof.lean:46:0: 'AC.wellFormed_of_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:47:0: 'AC.checked_of_wellFormed' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: AC/GateProof.lean:48:0: 'AC.projectWithProof_eq_project' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [644/644] Built AC.GateRuntime (577ms)
+Build completed successfully (644 jobs).
+'AC.checkModel_sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AC.certificate_exact_reachability' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AC.certificate_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AC.project_ok_properties' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AC.projection_all_residuals_accounted' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AC.names_nodup_of_order' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AC.array_reconstruct' depends on axioms: [propext, Quot.sound]
+'AC.sortLabeled_perm' depends on axioms: [propext]
+'AC.nodup_of_labeled_characters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AC.rendered_labeled_source' depends on axioms: [propext]
+'AC.isChain_of_pairs' does not depend on any axioms
+'AC.separated_of_nodup' depends on axioms: [propext, Quot.sound]
+'AC.member_of_block_index' depends on axioms: [propext]
+'AC.mapped_block_inside' depends on axioms: [propext, Quot.sound]
+'AC.wellFormed_of_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AC.checked_of_wellFormed' depends on axioms: [propext, Classical.choice, Quot.sound]
+'AC.projectWithProof_eq_project' depends on axioms: [propext, Classical.choice, Quot.sound]
+{"status": "established", "members": 28460, "seconds": 58.55940595874563}
+{
+  "version": "3.0.5",
+  "status": "installed",
+  "lean_root": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/lean",
+  "execution": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/lean/.bootstrap/setup-319dc475e9ef48db9b0e6a97a4aeac4c/execution.json",
+  "toolchain_lock_sha256": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b",
+  "proof_support": "freshly_established",
+  "next": "Select the exact checker with ac.py formal-select after support establishment."
+}

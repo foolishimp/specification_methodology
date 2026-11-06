@@ -1,0 +1,423 @@
+{
+  "actual_proof_binding": {
+    "limits": {
+      "max_input_bytes": 33554432,
+      "max_selections": 64,
+      "memory_mb": 4096,
+      "timeout_seconds": 1800
+    },
+    "result_sha256": "5362b1433dd54df28dd140f4c4ccc47d5472d506e445daf5eb808c3936cb5109",
+    "runtime_sha256": "0eb147c86f6d8d1abb1749281c3c70d188cad1fa8e07c27ae6a452532b446e26"
+  },
+  "assessor": "/root/stdo305_integration_review",
+  "authors": [
+    "/root/stdo305_release_tools",
+    "/root/stdo305_tools_skills",
+    "/root/stdo305_representation"
+  ],
+  "blocked_requests": [],
+  "browser": {
+    "executable": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "fresh_profile": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/recovery020/browser-local004/isolated-profile",
+    "headless": true,
+    "offline": true,
+    "sha256": "3f0acaf1e585195596d73ffa1824baa72c3c3ac115b5cfc43d789030a3f23d93",
+    "version": {
+      "jsVersion": "15.6.75.27",
+      "product": "Chrome/156.0.8078.80",
+      "protocolVersion": "1.3",
+      "revision": "@fb096c0011f9d50f0a264a9376420cdea9c421e3",
+      "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36"
+    }
+  },
+  "console": [],
+  "dependency_navigation": {
+    "observed": true,
+    "returned_to": "STDO Work",
+    "target": "The native display name, description and default invocation prompt expose this named skill to the host. \u2026"
+  },
+  "documentation_observations": [
+    {
+      "action": "Opened installed offline documentation landing.",
+      "id": "landing",
+      "observed": true,
+      "screenshot": {
+        "bytes": 153416,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/browser-local004/landing.png",
+        "sha256": "bb8557705756837fb5e2d5482222b8eb18939234a8d89d8a29a82079bc075ccc"
+      },
+      "visible_result": {
+        "current_explorer_href": "constraint-explorer/index.html",
+        "proof_reader_href": "proofs/index.html",
+        "title": "STDO 3.0.5 documentation"
+      }
+    },
+    {
+      "action": "Clicked Current constraints from installed landing.",
+      "id": "landing-native-explorer",
+      "observed": true,
+      "visible_result": {
+        "model": {
+          "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+          "profile": "a_c.graphify.model/1",
+          "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+        },
+        "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/constraint-explorer/index.html#urn%3Aa-c%3Ageneration%3Aba37e2825e4e3c758a5cfaec%3Arecord%3Aff3737d6b3e5090161e9ee472a95a5a9"
+      }
+    },
+    {
+      "action": "Clicked Current model proofs from installed landing.",
+      "id": "proof-reader",
+      "observed": true,
+      "screenshot": {
+        "bytes": 197376,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/browser-local004/proof-reader.png",
+        "sha256": "273b4435656ad357c766e916475e5178603d7f2f0f446fb93e3fd1b58d6ca559"
+      },
+      "visible_result": {
+        "bounds": "These retained executions check the finite declared model and selected views. Original prose-to-model fidelity and semantic acceptance remain separate. This reader and its inventory checker do not execute Lean.",
+        "counts": "7 current elaborations \u00b7 1 kernel replay \u00b7 1 runtime invocation",
+        "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/proofs/index.html"
+      }
+    },
+    {
+      "action": "Searched and opened current selected-view result theorem.",
+      "id": "proof-declaration",
+      "observed": true,
+      "screenshot": {
+        "bytes": 233707,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/browser-local004/proof-declaration.png",
+        "sha256": "e33c98c790d9b209bf8883261646039a6d50d8cd66c8266dca12561e268e422e"
+      },
+      "visible_result": {
+        "location": "Theorem \u00b7 current/GateViews.lean:65\u201367",
+        "statement": "theorem result0 : project model seeds0 trace0 21 = .ok (makeProjection model seeds0 included0)",
+        "theorem": "AC.GateData.result0"
+      }
+    },
+    {
+      "action": "Followed lexical AC.project reference, returned with Back, then opened full current source at theorem line65.",
+      "id": "proof-source",
+      "observed": true,
+      "screenshot": {
+        "bytes": 296328,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/browser-local004/proof-source.png",
+        "sha256": "dc3e4396dd5d05c2986f7be0595c75c692fdd4b83ca041fdf5eebc5bb6f7ee34"
+      },
+      "visible_result": {
+        "file": "current/GateViews.lean",
+        "reference_statement": "def project (m : Model) (seeds : Finset Nat) (trace : List Nat) (budget : Nat) :\n    Except String Projection",
+        "reference_target": "AC.project",
+        "selected_line": "   65  theorem result0 : project model seeds0 trace0 21 = .ok (makeProjection model seeds0 included0) := by"
+      }
+    }
+  ],
+  "driver": {
+    "playwright": "1.58.0",
+    "python": "3.11.5"
+  },
+  "elapsed_seconds": 9.886404,
+  "errors": [],
+  "harness": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/observe_installed_local004.py",
+    "sha256": "4f7cd5cb1b54346a01a13c64cc5471b18698d8839cc9953bd1f5cde3974f380e"
+  },
+  "kind": "stdo.current-browser-observation/1",
+  "limits": [
+    "Single fresh local Chrome/Playwright session; same-family nonauthor observation, not enforced clean-room independence.",
+    "File routes and actual visible browser interaction only; no Lean execution or proof-acceptance inference.",
+    "OS/browser background telemetry is not packet-captured; page request events, offline context and route refusal are recorded."
+  ],
+  "model": {
+    "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+    "profile": "a_c.graphify.model/1",
+    "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+  },
+  "network_requests": [
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/explorer.html"
+    },
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/index.html"
+    },
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/constraint-explorer/index.html"
+    },
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/index.html"
+    },
+    {
+      "method": "GET",
+      "resource_type": "document",
+      "url": "file:///Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/proofs/index.html"
+    }
+  ],
+  "observations": {
+    "2d": {
+      "action": "Switched same selection to 2D and Fit; checked visible selected node label.",
+      "observed": true,
+      "screenshot": {
+        "bytes": 388730,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/browser-local004/2d.png",
+        "sha256": "bd52656f775572f0be7a9fc0980f96917f3d606f609b69bb739fc797e46b87ac"
+      },
+      "visible_result": {
+        "selected_title": "STDO Work",
+        "selection_preserved": true,
+        "visible_labels": [
+          "STDO Work",
+          "The native display name, description and default invoc\u2026",
+          "Resolve exactly one applicable Product Definition and \u2026",
+          "Apply own control intake before ordinary discovery or \u2026",
+          "Construct from the first changed authority layer: curr\u2026",
+          "This skill\u2019s allowed branch and acquisitions depend on\u2026",
+          "Establish the selected authorized outcome and smallest\u2026",
+          "Own control intake",
+          "For issued work, own intake validates the admitted uni\u2026",
+          "Read the exact own intake/contract first, bind its all\u2026",
+          "This skill\u2019s allowed branch and acquisitions depend on\u2026",
+          "This skill\u2019s allowed branch and acquisitions depend on\u2026",
+          "This skill\u2019s allowed branch and acquisitions depend on\u2026",
+          "This skill\u2019s allowed branch and acquisitions depend on\u2026",
+          "Projection of an admitted unit",
+          "STDO Help",
+          "STDO Review",
+          "STDO Status",
+          "STDO Ticket"
+        ]
+      }
+    },
+    "3d": {
+      "action": "Opened exact installed materialized file; selected constraint; chose 3D and Fit.",
+      "observed": true,
+      "screenshot": {
+        "bytes": 372455,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/browser-local004/3d.png",
+        "sha256": "82c92932e491f5bf5aa36e7c1532a54f86bdbec762cc41508d227195ba5cebec"
+      },
+      "visible_result": {
+        "canvas": {
+          "height": 1106,
+          "width": 890,
+          "x": 570,
+          "y": 94
+        },
+        "renderer": "",
+        "selected_title": "STDO Work",
+        "selection_preserved": true
+      }
+    },
+    "files": {
+      "action": "Revealed owning file in Files tree, opened full embedded file, and returned to same constraint.",
+      "observed": true,
+      "screenshot": {
+        "bytes": 411211,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/browser-local004/files.png",
+        "sha256": "940db8c144691cd3be913f27c3ae4c74c03f1a8c4f925183079fcc84ae877f11"
+      },
+      "visible_result": {
+        "full_file_characters": 14746,
+        "scope": "build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md\n\n7 grounded records across all families\n\nRead file\nFile map\nAll files",
+        "selected_file_count": 1,
+        "selection_preserved": true
+      }
+    },
+    "layered": {
+      "action": "Switched same selection to Layered; checked selected card and multiple track columns.",
+      "observed": true,
+      "screenshot": {
+        "bytes": 400716,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/browser-local004/layered.png",
+        "sha256": "81912ef57dd69f35ebb2f84367ac293c20fe548f90cdcb3fab133e96152ba414"
+      },
+      "visible_result": {
+        "cards": [
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:885f69d26b232aa811ab4f2763b40e47",
+            "width": 240,
+            "x": 86,
+            "y": 86
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:b87762c48ac1ce211e6dcc5b0531ac09",
+            "width": 240,
+            "x": 86,
+            "y": 268
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:19a4e04c15d0ac1b4277930535fc86bd",
+            "width": 240,
+            "x": 86,
+            "y": 450
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:8ffeef2e7fab6a5625491d28ec6be578",
+            "width": 240,
+            "x": 86,
+            "y": 632
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:930b04e65546fd602dc406c49f07dc07",
+            "width": 240,
+            "x": 86,
+            "y": 814
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:fff78249bd048ab91b53c5d59e52c232",
+            "width": 240,
+            "x": 86,
+            "y": 996
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c",
+            "width": 240,
+            "x": 86,
+            "y": 1178
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:3b6dd792f91570ce6dd258c64f6296cd",
+            "width": 240,
+            "x": 472,
+            "y": 86
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:28df7f404819568f94d26b4eff80e35f",
+            "width": 240,
+            "x": 472,
+            "y": 268
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:097aea050aca30f7e3b58eadf1d3639a",
+            "width": 240,
+            "x": 472,
+            "y": 450
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:6e55f1d21d02467f0e33542e30effcf8",
+            "width": 240,
+            "x": 472,
+            "y": 632
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:8518f243ea746ac5dc74561a36001990",
+            "width": 240,
+            "x": 472,
+            "y": 814
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9e7321c8065656d0f624a4e10481b6b8",
+            "width": 240,
+            "x": 472,
+            "y": 996
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e4ed34b2a5199a4071101b62c73ae1a1",
+            "width": 240,
+            "x": 472,
+            "y": 1178
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:421a2f3fa75817ae6e4ba72b2268eeca",
+            "width": 240,
+            "x": 858,
+            "y": 86
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1e3dfa6ecc143a459a2b9cdae8abd06c",
+            "width": 240,
+            "x": 858,
+            "y": 268
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:79e0b9d751458cd38e955d1b4a1e2889",
+            "width": 240,
+            "x": 1244,
+            "y": 86
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:294282fbcecc6dec9efba3d79ed0ef56",
+            "width": 240,
+            "x": 1244,
+            "y": 268
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:730bf7af36543198d8c4c4de3a56d457",
+            "width": 240,
+            "x": 1630,
+            "y": 86
+          },
+          {
+            "height": 112,
+            "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:7273eee8de3f5344e030eac0d2fd8c38",
+            "width": 240,
+            "x": 2016,
+            "y": 86
+          }
+        ],
+        "selection_preserved": true
+      }
+    },
+    "source": {
+      "action": "Opened selected constraint grounding passage.",
+      "observed": true,
+      "screenshot": {
+        "bytes": 420256,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/original-native-review/browser-local004/source.png",
+        "sha256": "9e7591e92b23cbebb4cf96c9a44e5fb448c39c0ebae75b067018f33866373789"
+      },
+      "visible_result": {
+        "digest": "Embedded file SHA-256: 9dc06e03fd6f64483fa485ed55f35e414fefae472bb69aa930ecef9335585b35",
+        "highlighted_lines": [
+          "   1  ---",
+          "   2  name: stdo-work",
+          "   3  description: Execute or coordinate one admitted STDO work item through its lawful re-entry point. Use for STDO requirements, design, code or test work, including issuing bounded work to a separate Worker. Do not invoke for generic non-STDO development.",
+          "   4  ---"
+        ],
+        "title": "build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md:1\u20134"
+      }
+    }
+  },
+  "owned_browser_closed": true,
+  "page": {
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/explorer.html",
+    "sha256": "b8104f3e6e97d061b035f0f541345bf633278e3f5aa2d370786dcc8059cad21c"
+  },
+  "pages_unchanged_after": {
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/explorer.html": true,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/constraint-explorer/index.html": true,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/index.html": true,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/proofs/index.html": true
+  },
+  "request_failures": [],
+  "selected_record": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c",
+  "selected_title": "STDO Work",
+  "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "status": "observed"
+}

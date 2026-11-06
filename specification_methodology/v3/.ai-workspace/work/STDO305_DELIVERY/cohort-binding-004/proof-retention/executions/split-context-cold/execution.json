@@ -1,0 +1,59 @@
+{
+  "argv": [
+    "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+    "split",
+    "--input",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/context-cold.zip",
+    "--destination",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/context-cold-transport"
+  ],
+  "boundary_producer": {
+    "bytes": 2510,
+    "path": "specification_methodology/v3/build_tenants/common-tools/payload_boundary.py",
+    "sha256": "d01d30b9afcaf310c2ee0347a8c7424eda222a6acf58a48a244efdd15a85ec7c"
+  },
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "elapsed_seconds": 0.8307929588481784,
+  "ended_ns": 1793994164361100000,
+  "input_binding": "exact archive emitted by immediately prior successful pack; no replacement or retry",
+  "inputs": {},
+  "kind": "stdo.actual-packaging-execution/1",
+  "limits": "Actual single prescribed public owner invocation. Output archive/member digests are the owner-computed result; no extra post-build full read was added.",
+  "operation": "split-context-cold",
+  "output": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/context-cold-transport",
+  "plan": {
+    "bytes": 8783,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/PACKAGING_PLAN.json",
+    "sha256": "ed454656b39046eedde109880d6bc1354cd5804dabe3d513d2916b9883aa4e33"
+  },
+  "producer": {
+    "bytes": 17655,
+    "path": "specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+    "sha256": "659518c6e0d9110dd073ae59d3d5fa6ba4471e622a75069e718c0ae8ec3e2fc6"
+  },
+  "python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "result": {
+    "bytes": 8162,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/executions/split-context-cold/result.json",
+    "sha256": "d56102420ed7fd004fddabaeeceff4ae46761abde43363c5e22d68d72d980145"
+  },
+  "returncode": 0,
+  "started_ns": 1793994163530289000,
+  "stderr": {
+    "bytes": 0,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/executions/split-context-cold/stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 8162,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/executions/split-context-cold/stdout.txt",
+    "sha256": "d56102420ed7fd004fddabaeeceff4ae46761abde43363c5e22d68d72d980145"
+  }
+}

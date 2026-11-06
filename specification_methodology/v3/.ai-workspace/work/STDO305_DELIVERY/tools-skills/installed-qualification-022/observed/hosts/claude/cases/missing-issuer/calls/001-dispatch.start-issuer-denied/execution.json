@@ -1,0 +1,54 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+    "-B",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+    "--policy",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-issuer/policy.json",
+    "--policy-sha256",
+    "2cd2c81e7723a3ac471e4bed1e6cafc951984ac77d0312ee625b199b65c84252",
+    "--principal",
+    "executive",
+    "call",
+    "--request",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-issuer/issuer-request.json"
+  ],
+  "configuration": {
+    "bytes": 36649,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/.claude/stdo-3.0.5/CONFIG.json",
+    "sha256": "ee998c87f09136bb7dc87c44c15bb9d207ed934df3fa9c3a6b58455e7306439d"
+  },
+  "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-issuer/workspace",
+  "ended_ns": 1793993376992743000,
+  "policy": {
+    "bytes": 8540,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-issuer/policy.json",
+    "sha256": "2cd2c81e7723a3ac471e4bed1e6cafc951984ac77d0312ee625b199b65c84252"
+  },
+  "producer": {
+    "bytes": 21703,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+    "sha256": "689c70822429c5a4257b323ff5f41fdbcb8457ddecc4c4a8c1ef15a12e5568f2"
+  },
+  "recovery": "On timeout retain output and reconcile descendant/effect state before any retry.",
+  "request": {
+    "bytes": 270,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-issuer/issuer-request.json",
+    "sha256": "7b98e0c2e17b5d925ff17c428bffeb70aa33a7da221ba33091e1b7bbb5629890"
+  },
+  "returncode": 2,
+  "schema": "stdo305.public-installed-operation/1",
+  "started_ns": 1793993374928587000,
+  "stderr": {
+    "bytes": 0,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-issuer/calls/001-dispatch.start-issuer-denied/stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 859,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-issuer/calls/001-dispatch.start-issuer-denied/stdout.json",
+    "sha256": "e06a35abdba1a6c16e9309f20917ce9dfc8e7cbaa5303ba9a75ffa9ee196b90f"
+  },
+  "timed_out": false,
+  "timeout_seconds": 60
+}

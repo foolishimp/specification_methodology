@@ -1,0 +1,37 @@
+{
+  "schema": "stdo305.host-case-observation/1",
+  "case": "uncertain",
+  "worker_activation": "urn:stdo305:qualification:claude:1565615c3cdefff3:worker",
+  "case_activation": "urn:stdo305:qualification:claude:9d5ae5be5bc345be:uncertain:activation",
+  "product_definition_id": "urn:stdo305:qualification:claude:9d5ae5be5bc345be:uncertain",
+  "policy": {"id": "urn:stdo305:qualification:claude:9d5ae5be5bc345be:uncertain:policy", "sha256": "fe41df3d632ceeab30ab3befd88c939e0a11eba824d6227e83406b16ca023273"},
+  "grant": {"local_id": "work", "authority_sha256": "941d1ac98edc7491c040c4709eeca2c9b64cd48f358bc1519287d2e777b002c4"},
+  "prior_attempt": {
+    "retained_observation": {"path": "PRIOR_ATTEMPT.json", "sha256": "7d3d95151d15af869878be8be0ca193597f474ee72163d4a5d6e1b09921eb371"},
+    "attempt": "sha256:d7f0a4ef6038df5bb104378d75088f254963ee8191496d6bd280c335c263872a",
+    "preflight": "sha256:819c6b04671731ff643f9e7baa3ac26b472e533cc9dcca1eb07762a220a2bae7",
+    "context": "sha256:5583c29d1cc1735e46ed1b4799eb43ef8bd79765969cd3fc8f87b5f9ecc97b1b",
+    "state": {"effect": "completion_unknown", "core_value": "indeterminate", "end_established": false, "process_end_established": true, "returncode": 0, "descendants": "unknown", "consumer_receipt": "unknown", "cursor": 8, "local_counter": 1}
+  },
+  "calls": [
+    {"ordinal": 1, "request": "requests/001-evidence.read.request.json", "id": "claude-worker-uncertain-evidence-read-attempt-1", "operation": "evidence.read", "recorder_output": "calls/001-evidence.read/", "returncode": 0, "status": "ok", "result": "attempt envelope d7f0a4… (kind attempt, 6059 bytes) returned", "provider_evidence": "sha256:dd0731cb93056380560468e0c411830e957879500a01c3ca5f66d26d4aa4f177"},
+    {"ordinal": 2, "request": "requests/002-dispatch.observe.request.json", "id": "claude-worker-uncertain-observe-before-probe-1", "operation": "dispatch.observe", "recorder_output": "calls/002-dispatch.observe/", "returncode": 0, "status": "ok", "result": "Observation is byte-for-byte equal (as JSON) to PRIOR_ATTEMPT.json observation: 8 events (reserved, supervisor_spawned, actor_launch_intent, actor_started, context_delivery, output_chunk, output_finalized, effect_observation); effect completion_unknown", "provider_evidence": "sha256:0efe366e5244b9c487fda7d1a358c049037ad4a2f6426225843fd4aec091dbaa"},
+    {"ordinal": 3, "request": {"path": "retry-request.json", "sha256": "cd7f71e77a6173187d3c5b25daab69e113d133a86a421d35f51ef094f748004a", "id": "host-selected-single-retry-probe", "provenance": "operator-prepared single selected probe; used unchanged; retry_of=d7f0a4…; no reconciliation"}, "operation": "dispatch.start", "recorder_output": "calls/003-dispatch.start-selected-retry-probe/", "returncode": 1, "status": "error", "response": {"value": "held(effect)", "core_value": "indeterminate", "code": "effect_unreconciled", "reason": "Retry does not bind an existing predecessor/reconciliation"}, "provider_evidence": "sha256:e7f554cdfbbc4c9ec500326346b63b32b614d3eb492d3c83e5bbc127abf320c2"},
+    {"ordinal": 4, "request": "requests/004-dispatch.observe.request.json", "id": "claude-worker-uncertain-observe-after-probe-1", "operation": "dispatch.observe", "recorder_output": "calls/004-dispatch.observe-after-probe/", "returncode": 0, "status": "ok", "result": "Post-probe observation equals the pre-probe observation: cursor 8, completion_unknown, anchor retry_of null, reconciliation null. This is an observation, not a retry."}
+  ],
+  "retry_probe_count": 1,
+  "preserved": {
+    "original_activation": "urn:stdo305:qualification:claude:9d5ae5be5bc345be:uncertain:activation (unchanged; no replacement activation issued)",
+    "attempt_population": "Exactly one attempt object (d7f0a4…) before and after the probe",
+    "history": "evidence/events still 8 files and diagnostics still 2; nothing was deleted or reset",
+    "outputs": "workspace/outputs count=1; received-stdin.bin 04fe3d4a… and received-views.json 4f53cda1… are unchanged (observations/03-pre-probe.txt vs 04-post-probe.txt)"
+  },
+  "dependent_effect_of_probe": {"occurred": false, "basis": "No new attempt, event, diagnostic or output change. Only new provider operation/evidence records of the held probe were added."},
+  "next_lawful_recovery_step": {
+    "owner": "Root / operator (Product policy owner), not this Worker",
+    "finding": "Provider dispatch requires a predecessor-bound reconciliation artifact (ac_support_effects._dispatch, lines 1226-1234). verify_reconciliation (ac_support_core, lines 2952-2993) refuses unless the grant's admission selects required_reconciliation_predicates that are registered in policy.predicates and bound to predecessor d7f0a4… and the current basis, each with an actual satisfied checks.evaluate judgment. This policy's grant 'work' selects no reconciliation predicates and policy.predicates is {}, so no reconciliation can currently verify under this immutable policy.",
+    "step": "Keep the attempt held. The owner must first reconcile the uncertain prior effect: establish a predecessor-bound reconciliation contract (a registered predicate bound to attempt d7f0a4… and the current basis, selected by the grant) under its own authority. An authorized actor must then produce actual satisfied checks.evaluate evidence that settles the prior effect, including descendant/external effect end, which process exit alone does not establish. Only then may a new authorized retry bind retry_of=d7f0a4… plus that reconciliation artifact under the same activation. If reconciliation shows the effect already settled, no retry may be needed. This Worker cannot change the policy, issue a replacement activation, fabricate a reconciliation or retry again."
+  },
+  "not_done": ["No replacement activation, history reset, invented reconciliation, policy change or second retry."],
+  "limits": ["Process-end observation leaves external/descendant effects unknown.", "No semantic acceptance."]
+}

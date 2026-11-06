@@ -1,0 +1,266 @@
+{
+  "schema": "a_c.bootstrap.execution/1",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "steps": [
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-m",
+        "venv",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990563561782000,
+      "ended_ns": 1793990564673314000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "001.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "001.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/graphify"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990564673634000,
+      "ended_ns": 1793990564687999000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "002.stdout.log",
+        "sha256": "d3291f2da6df43e72e884aef5f256bdd8643ea39fcbc079c3461b1b58c2dd486",
+        "bytes": 133
+      },
+      "stderr": {
+        "path": "002.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/graphify",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/Graphify-Labs/graphify.git"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990564688294000,
+      "ended_ns": 1793990564698857000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "003.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "003.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/graphify",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990564699119000,
+      "ended_ns": 1793990567005066000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "004.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "004.stderr.log",
+        "sha256": "7db95a954de31d0c54746e1b1157d354d7754b2a5b78a7858d99216cf52df746",
+        "bytes": 123
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/graphify",
+        "checkout",
+        "--detach",
+        "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990567005643000,
+      "ended_ns": 1793990567158741000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "005.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "005.stderr.log",
+        "sha256": "e484fef7f73871c4e1cba449b4d0d8b2fbdd80978bfbe7669f6b796ea099d53b",
+        "bytes": 94
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/graphify",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990567159096000,
+      "ended_ns": 1793990567169814000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "006.stdout.log",
+        "sha256": "b2d4806fcdefa876d230238c9a61e9a387b9e260e2e7add07e0980ae44afe954",
+        "bytes": 41
+      },
+      "stderr": {
+        "path": "006.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/source-tools/a_c/build_tenants/graphify/test_env/requirements-qualification.txt"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990567170172000,
+      "ended_ns": 1793990568810418000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "007.stdout.log",
+        "sha256": "ef6b320ddc9287518c40ba9c7111f3528e2867314f172e75d7a65fe6438021d2",
+        "bytes": 1886
+      },
+      "stderr": {
+        "path": "007.stderr.log",
+        "sha256": "0cf7d97946bba6b3c326612215d5058b34350346fa5b2258ea31332cf48f9112",
+        "bytes": 210
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/source-tools/a_c/build_tenants/graphify/code/generation/requirements.txt"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990568810873000,
+      "ended_ns": 1793990570419357000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "008.stdout.log",
+        "sha256": "68aa00a3d3b23d4b9836fa4bf3a112b06867852bf6fb79aa97e3efdbd63b1eae",
+        "bytes": 1157
+      },
+      "stderr": {
+        "path": "008.stderr.log",
+        "sha256": "0cf7d97946bba6b3c326612215d5058b34350346fa5b2258ea31332cf48f9112",
+        "bytes": 210
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/source-tools/a_c/build_tenants/graphify/code/code-requirements.txt"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990570419812000,
+      "ended_ns": 1793990570846961000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "009.stdout.log",
+        "sha256": "7a89b0d2a19cb0c00d0c80d262d9d824be4d1f32a6fac96611d582cf1241eda4",
+        "bytes": 1566
+      },
+      "stderr": {
+        "path": "009.stderr.log",
+        "sha256": "0cf7d97946bba6b3c326612215d5058b34350346fa5b2258ea31332cf48f9112",
+        "bytes": 210
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "freeze",
+        "--all"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990570847444000,
+      "ended_ns": 1793990570959121000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "010.stdout.log",
+        "sha256": "fa0b8397f3e955a08a59a88b61ad7269e548cf2b2e3a5d4d946638cb4e98ffea",
+        "bytes": 253
+      },
+      "stderr": {
+        "path": "010.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/graphify",
+        "diff",
+        "--exit-code",
+        "HEAD"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+      "started_ns": 1793990570959592000,
+      "ended_ns": 1793990571033236000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "011.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "011.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ]
+}

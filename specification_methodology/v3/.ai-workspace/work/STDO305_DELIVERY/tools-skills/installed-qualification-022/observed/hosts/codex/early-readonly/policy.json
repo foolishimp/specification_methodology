@@ -1,0 +1,252 @@
+{
+  "authority_sources": [
+    {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "OPERATOR.md",
+      "root": "operator",
+      "selector": null,
+      "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794"
+    }
+  ],
+  "event_sinks": {},
+  "evidence_root": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/early-readonly/evidence",
+  "executors": {},
+  "grants": {},
+  "id": "urn:a-c:fd-support:read-only-example",
+  "independence_policy": null,
+  "limits": {
+    "max_bytes": 8388608,
+    "max_files": 1024,
+    "max_history_records": 10000,
+    "max_message_bytes": 1048576,
+    "max_wait_ms": 1000
+  },
+  "method_installation": {
+    "root": "installed-method"
+  },
+  "method_profile": {
+    "id": "urn:a-c:fd-support:method:stdo-3.0.5:executive:1",
+    "sha256": "4c08017964cffb50308ba38ed80c15b7babca902f234950a5a92a9da5e7e22b6",
+    "source": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "build_tenants/graphify/design/fd-method-stdo-3.0.5.json",
+      "root": "tool",
+      "selector": null,
+      "sha256": "4c08017964cffb50308ba38ed80c15b7babca902f234950a5a92a9da5e7e22b6"
+    }
+  },
+  "operators": {},
+  "predicates": {},
+  "principals": {
+    "executive": {
+      "actor_id": "urn:a-c:fd-support:read-only-example:executive",
+      "authorship": "operator-example",
+      "family": "example-no-model",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project"
+      ],
+      "role": "Executive",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794"
+      },
+      "role_transition": null
+    },
+    "reviewer": {
+      "actor_id": "urn:a-c:fd-support:read-only-example:reviewer",
+      "authorship": "operator-example",
+      "family": "example-no-model",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project"
+      ],
+      "role": "Reviewer",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794"
+      },
+      "role_transition": null
+    },
+    "worker": {
+      "actor_id": "urn:a-c:fd-support:read-only-example:worker",
+      "authorship": "operator-example",
+      "family": "example-no-model",
+      "operations": [
+        "tools.describe",
+        "workspace.observe",
+        "source.read",
+        "records.find",
+        "records.read",
+        "graph.project",
+        "relations.query",
+        "evidence.read",
+        "work.project"
+      ],
+      "role": "Worker",
+      "role_binding": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794"
+      },
+      "role_transition": null
+    }
+  },
+  "product": {
+    "authority_binding": {
+      "definition_locator": "/reference_frame_bases/0/authority/0",
+      "mechanism": {
+        "id": "product-policy-preflight/1",
+        "implementation_sha256": "8798e1b822a631d0e64991fa5e6caa446accb9ec098e4735b8c0858ad2f46636",
+        "source": {
+          "engine": "workspace-regular-file",
+          "object": null,
+          "path": "build_tenants/graphify/code/ac_support_core.py",
+          "root": "tool",
+          "selector": null,
+          "sha256": "8798e1b822a631d0e64991fa5e6caa446accb9ec098e4735b8c0858ad2f46636"
+        }
+      },
+      "owner_record": {
+        "engine": "workspace-regular-file",
+        "object": null,
+        "path": "OPERATOR.md",
+        "root": "operator",
+        "selector": null,
+        "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794"
+      },
+      "result_surface": {
+        "consumer": "read-only-example",
+        "namespace": "readonly-demo",
+        "root": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/early-readonly/evidence"
+      },
+      "scope": {
+        "Product_work_authority": false,
+        "kind": "read-only-example"
+      }
+    },
+    "definition": {
+      "engine": "workspace-regular-file",
+      "object": null,
+      "path": "stdo_runtime.json",
+      "root": "product",
+      "selector": null,
+      "sha256": "8491e33db101ee7b98402072dceb9c13ecc77dfadb403a87dc245ef883fff3d1"
+    },
+    "definition_id": "urn:stdo:runtime-installation-anchor:9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142"
+  },
+  "schema": "a_c.fd-support.policy/1",
+  "sources": {
+    "installed-method": {
+      "kind": "workspace",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "manifest.json"
+        },
+        {
+          "kind": "file",
+          "path": "LICENSE"
+        },
+        {
+          "kind": "directory",
+          "path": "standards"
+        },
+        {
+          "kind": "directory",
+          "path": "plugins"
+        },
+        {
+          "kind": "directory",
+          "path": "release"
+        }
+      ],
+      "writable": false
+    },
+    "operator": {
+      "kind": "workspace",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/early-readonly/control",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "OPERATOR.md"
+        }
+      ],
+      "writable": false
+    },
+    "product": {
+      "kind": "workspace",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/codex",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "stdo_runtime.json"
+        },
+        {
+          "kind": "directory",
+          "path": "specification"
+        },
+        {
+          "kind": "directory",
+          "path": "build_tenants/graphify/design"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/test_env/fixtures/toy_model.json"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/examples/subject.md"
+        }
+      ],
+      "writable": false
+    },
+    "tool": {
+      "kind": "workspace",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c",
+      "read_scope": [
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/design/fd-method-stdo-3.0.5.json"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/design/fd-support.md"
+        },
+        {
+          "kind": "file",
+          "path": "build_tenants/graphify/code/ac_support_core.py"
+        }
+      ],
+      "writable": false
+    }
+  }
+}

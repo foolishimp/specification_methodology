@@ -1,0 +1,21 @@
+--- native-recorder-before-env.py
++++ run_native_once.py
+@@ -11,8 +11,9 @@
+ helper=b/'runtime/a_c/build_tenants/graphify/code/ac_formal_gate.py';assert o.sha(helper)==bound['observer_source']['sha256'];spec=importlib.util.spec_from_file_location('selected_native_observer',helper);observer=importlib.util.module_from_spec(spec);spec.loader.exec_module(observer)
+ selection=next(x for x in bound['sessions'] if x['id']==host+'-native-session');stdout=Path(selection['stdout']);stderr=Path(selection['stderr']);limit=selection['wall_timeout_seconds'];assert limit==900
+ for x in [stdout,stderr]:assert not x.exists() and not x.is_symlink()
++environment_additions=command['environment_additions'];assert environment_additions=={'STDO_STORE':str(workspace/'deliberately-unselected-store')}
+ record=p/'executions'/(host+'-native-session');record.mkdir(exist_ok=False);executable=Path(argv[0]);physical=executable.resolve(strict=True);assert physical.is_file()
+-inputs=[stdin,case/'WORKER_INTAKE.json',case/'REVIEW_INTAKE.json',case/'SELECTION.json',Path(selected['configuration']['path']),case/'uncertain/PRIOR_ATTEMPT.json'];invocation={'schema':'stdo.native-host-invocation/1','argv':argv,'cwd':str(workspace),'stdin':o.ref(stdin),'inputs':[o.ref(x) for x in inputs],'executable':{'invocation':str(executable),'physical':str(physical),'sha256':o.sha(physical)},'requested_model':argv[argv.index('--model')+1],'requested_effort':'xhigh','observed_resolved_model':'unproven before actual session','wall_timeout_seconds':limit,'observer':o.ref(helper,canonical='a_c/build_tenants/graphify/code/ac_formal_gate.py'),'recorder':o.ref(Path(__file__)),'environment':'Inherited without inspecting or recording credentials; no HOME/CODEX_HOME override.'}
++inputs=[stdin,case/'WORKER_INTAKE.json',case/'REVIEW_INTAKE.json',case/'SELECTION.json',Path(selected['configuration']['path']),case/'uncertain/PRIOR_ATTEMPT.json'];invocation={'schema':'stdo.native-host-invocation/1','argv':argv,'cwd':str(workspace),'stdin':o.ref(stdin),'inputs':[o.ref(x) for x in inputs],'executable':{'invocation':str(executable),'physical':str(physical),'sha256':o.sha(physical)},'requested_model':argv[argv.index('--model')+1],'requested_effort':'xhigh','observed_resolved_model':'unproven before actual session','wall_timeout_seconds':limit,'observer':o.ref(helper,canonical='a_c/build_tenants/graphify/code/ac_formal_gate.py'),'recorder':o.ref(Path(__file__)),'environment':'Authentication inherited without inspecting or recording credentials; no HOME/CODEX_HOME override.','environment_additions':environment_additions}
+ (record/'invocation.json').write_bytes(o.encoded(invocation));before=resource.getrusage(resource.RUSAGE_CHILDREN);started=time.time_ns();deadline=time.monotonic()+limit;groups=set();notes=[];timed=False;cleanup_needed=False;unresolved=[]
+ def observe(pid):
+  found,observed=observer._owned_groups(pid);groups.update(found);entry={'observed_ns':time.time_ns(),'groups':sorted(found),'notes':observed}
+@@ -27,6 +28,7 @@
+  return live
+ print(json.dumps({'phase':host+'-native-session','status':'starting','requested_model':invocation['requested_model'],'requested_effort':'xhigh','wall_timeout_seconds':limit}),flush=True)
+ with stdout.open('xb') as out,stderr.open('xb') as err,stdin.open('rb') as inp:
++ os.environ.update(environment_additions)
+  process=subprocess.Popen(argv,cwd=workspace,stdin=inp,stdout=out,stderr=err,start_new_session=True,close_fds=True)
+  (record/'PROCESS.json').write_bytes(o.encoded({'pid':process.pid,'private_group':process.pid,'started_ns':started}));groups.add(process.pid)
+  while True:

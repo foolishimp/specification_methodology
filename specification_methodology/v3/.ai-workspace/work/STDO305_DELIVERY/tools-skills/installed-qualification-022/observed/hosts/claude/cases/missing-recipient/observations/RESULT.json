@@ -1,0 +1,46 @@
+{
+  "schema": "stdo305.host-case-observation/1",
+  "case": "missing-recipient",
+  "worker_activation": "urn:stdo305:qualification:claude:1565615c3cdefff3:worker",
+  "case_activation": "urn:stdo305:qualification:claude:d5bdee414deba2c6:missing-recipient:activation",
+  "product_definition_id": "urn:stdo305:qualification:claude:d5bdee414deba2c6:missing-recipient",
+  "policy": {"id": "urn:stdo305:qualification:claude:d5bdee414deba2c6:missing-recipient:policy", "sha256": "ea936ad6e5654944556676ae7f766ab887041a0583275a9f039e40b0fd7b6aac"},
+  "grant": {"local_id": "work", "authority_sha256": "3616ffb87de198687885b809754b7175c33477e156d67f1297e581301d741f6a"},
+  "authority_discriminator": {"issuer_dispatch_operation": true, "recipient_target": false, "shared_positive_case_grant": false},
+  "policy_reading": "Principal 'executive' holds dispatch.start, but grant 'work' has targets [] (no registered recipient target).",
+  "calls": [
+    {
+      "ordinal": 1,
+      "request": {"path": "context-request.json", "sha256": "67b6132470f0922a0356ddc191433b460f7e8849ec43daef7c7e6abbf8af10f2", "id": "missing-recipient-context", "operation": "context.assemble", "provenance": "operator-provided; used unchanged"},
+      "recorder_output": "calls/001-context.assemble/",
+      "returncode": 0,
+      "response": {"status": "ok", "value": "returned"},
+      "returned_artifact": "sha256:96cab0ff057f5afe9ceab86b9d17421fc9479c5659be53d8c101a1c7d0f3b2d7",
+      "provider_evidence": "sha256:9baedc42f180921b4f4c5aad5312a73d2c15e770b0fb91f4e2ed4f3b3576a46f"
+    },
+    {
+      "ordinal": 2,
+      "request": {"path": "requests/002-contract.preflight.request.json", "id": "claude-worker-missing-recipient-preflight-1", "operation": "contract.preflight", "provenance": "authored by this Worker; binds the exact returned context artifact; observations [] equal to the context's observations; no admission_record or override"},
+      "recorder_output": "calls/002-contract.preflight/",
+      "returncode": 0,
+      "response": {"status": "ok", "value": "returned", "contract_state": "rejected", "decision": "rejected", "gaps": [{"code": "authority_missing", "predicate": "registered requester-to-target authority"}], "other_evaluations": "8 of 9 satisfied"},
+      "returned_artifact": "sha256:6db8a9bd143a68d6806c62eb34f49831a0316298cc44b08ba044ca4745e2df78",
+      "provider_evidence": "sha256:47c1bf20d5fc850dd9749af921da46666884ece35ce567715cee33616b903d33"
+    },
+    {
+      "ordinal": 3,
+      "request": {"path": "requests/003-dispatch.start.request.json", "id": "claude-worker-missing-recipient-dispatch-1", "operation": "dispatch.start", "provenance": "authored by this Worker; binds the exact returned rejected preflight"},
+      "recorder_output": "calls/003-dispatch.start/",
+      "returncode": 2,
+      "response": {"status": "refused", "value": "refused(authority)", "core_value": "out_of_frame", "code": "authority_missing", "reason": "Dispatch requires an actual admitted complete receipt", "gaps": ["sha256:6db8a9bd143a68d6806c62eb34f49831a0316298cc44b08ba044ca4745e2df78"]},
+      "provider_evidence": "sha256:6f95f80c712c15e4d96c762fc05034bff5bf688702a3be698830743acb19a041"
+    }
+  ],
+  "dependent_effect": {
+    "occurred": false,
+    "basis": "workspace/outputs/ was empty before and after every call. evidence/attempts and evidence/events had 0 files before and after dispatch. See observations/pre-calls.txt, pre-dispatch.txt and post-dispatch.txt."
+  },
+  "not_done": ["No grant repair, target registration, principal switch, override, policy change or repeated dispatch."],
+  "result": "Refusal preserved: preflight rejected for missing recipient target authority, and dispatch against that rejected receipt was refused with no recipient launch.",
+  "limits": ["The recipient process was never launched.", "No semantic acceptance."]
+}

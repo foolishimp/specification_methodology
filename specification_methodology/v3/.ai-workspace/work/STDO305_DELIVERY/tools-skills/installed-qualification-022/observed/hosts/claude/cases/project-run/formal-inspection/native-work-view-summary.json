@@ -1,0 +1,165 @@
+{
+ "source": {
+  "path": "construction-evidence/supplied-views.json",
+  "sha256": "3710472f2528b4b3b2097c5ad4d413d3176a7e1e7f95f025210f43c38ddd0131",
+  "view_index": 0
+ },
+ "parent": {
+  "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+  "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02",
+  "profile": "a_c.graphify.model/1"
+ },
+ "selection": {
+  "seeds": [
+   "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c"
+  ],
+  "budget_records": 21,
+  "dependency_contract": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:dependency-contract:authored-governing-relations"
+ },
+ "included_count": 21,
+ "excluded_count": 1864,
+ "claim": "view of exact parent; not a replacement complete model or semantic acceptance",
+ "families": {
+  "objects": 4,
+  "relations": 3,
+  "constraints": 13,
+  "latitude": 0,
+  "residuals": 1,
+  "traversals": 0,
+  "transformations": 0,
+  "judgments": 0
+ },
+ "objects": [
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:730bf7af36543198d8c4c4de3a56d457",
+   "label": "Own control intake"
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:7273eee8de3f5344e030eac0d2fd8c38",
+   "label": "Projection of an admitted unit"
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:abc877141275aeedee9cb23f37d83ed6",
+   "label": "Actual host acquisition boundary"
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c",
+   "label": "STDO Work"
+  }
+ ],
+ "required_relations": [
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:294282fbcecc6dec9efba3d79ed0ef56",
+   "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:relation-kind:governing:requires",
+   "source": "Own control intake",
+   "target": "Projection of an admitted unit",
+   "meaning": "For issued work, own intake validates the admitted unit’s projected controls rather than deriving authority from packet text.",
+   "conditions": [
+    "The task is issued or received through a handoff."
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:27518e1529eab354d8d92a4a7054b6ab",
+   "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:relation-kind:governing:requires",
+   "source": "Projection of an admitted unit",
+   "target": "Actual host acquisition boundary",
+   "meaning": "Dispatch of an admitted packet requires the actual host to satisfy every required acquisition and capability boundary.",
+   "conditions": []
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:8518f243ea746ac5dc74561a36001990",
+   "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:relation-kind:governing:requires",
+   "source": "STDO Work",
+   "target": "Own control intake",
+   "meaning": "This skill’s allowed branch and acquisitions depend on its own exact verified control intake.",
+   "conditions": []
+  }
+ ],
+ "constraints": [
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:79e0b9d751458cd38e955d1b4a1e2889",
+   "applies_to": [
+    "Own control intake"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:5def4ae0bd1038ee029105208cbb54a2",
+   "applies_to": [
+    "Projection of an admitted unit"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:814e0ce702aa1648a05b59502de64dbf",
+   "applies_to": [
+    "Projection of an admitted unit"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:46427fe4c09ae332b9e5794c722b92f5",
+   "applies_to": [
+    "Actual host acquisition boundary"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9087031b848aa726ec724991e683bc50",
+   "applies_to": [
+    "Actual host acquisition boundary"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:225cc175cf584eef5d5d3da8821bf6a7",
+   "applies_to": [
+    "Actual host acquisition boundary"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:ef6e439d490ee5fe90137a77cbb83c07",
+   "applies_to": [
+    "Projection of an admitted unit"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:3b6dd792f91570ce6dd258c64f6296cd",
+   "applies_to": [
+    "STDO Work"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:28df7f404819568f94d26b4eff80e35f",
+   "applies_to": [
+    "STDO Work"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1e3dfa6ecc143a459a2b9cdae8abd06c",
+   "applies_to": [
+    "STDO Work"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:885f69d26b232aa811ab4f2763b40e47",
+   "applies_to": [
+    "STDO Work"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:b87762c48ac1ce211e6dcc5b0531ac09",
+   "applies_to": [
+    "STDO Work"
+   ]
+  },
+  {
+   "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:421a2f3fa75817ae6e4ba72b2268eeca",
+   "applies_to": [
+    "STDO Work"
+   ]
+  }
+ ],
+ "host_residual": {
+  "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:3aefacf2fe0b450b760b5bca67a02c82",
+  "subject": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:abc877141275aeedee9cb23f37d83ed6",
+  "consequence": "A consumer must supply the concrete host/inheritance/policy evidence and preserve unsupported boundaries. Instruction compliance, permission enforcement and semantic review independence remain separate claims.",
+  "uncertainty": "This normative source model binds no actual host session, command-policy installation, actor exposure history or observed enforcement receipt. It cannot establish that a concrete work or review activation is isolated or eligible."
+ },
+ "note": "Summary extracted by the claude Worker from the selected supplied view; the view is the authority, this file is a reading aid."
+}

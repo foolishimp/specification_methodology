@@ -1,0 +1,141 @@
+{
+  "schema": "stdo305.review-return/1",
+  "activation": "urn:stdo305:qualification:claude:1565615c3cdefff3:reviewer",
+  "role": "Reviewer",
+  "issuer": "/root",
+  "return_to": "/root",
+  "intake": {"path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/REVIEW_INTAKE.json", "sha256": "e480e55397849024349903a2fef4692ebac8bf643996e178279178374a908c33"},
+  "subject": {
+    "candidate": {"path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/candidate.py", "sha256": "e2c7f4b7861ae0b36b581f1dbd92bc11dc6908597873a385bc751965edeb0324", "bytes": 129},
+    "unit": "admitted(issuer_grant, recipient_grant, evidence_current), candidate.py lines 1-2",
+    "author": "operator (per intake); reviewer authorship of candidate: none",
+    "frozen_by": "sha256 verified immediately before reading and again inside the executable falsifier"
+  },
+  "basis": {
+    "product_definition": {"path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/Product.json", "sha256": "121ba5e03445193ab402b0b660dc8c793356d4076c8714705516a4499d33ed03", "definition_id": "urn:stdo305:qualification:claude:1565615c3cdefff3:review"},
+    "verification": "stdo status --definition <Product.json> --verify via the configured anchor /Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/claude/stdo returned installed=true, valid=true, failures=[], basis stdo://releases/v3.0.5/, manifest 9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142",
+    "method": {"uri": "stdo://releases/v3.0.5/", "manifest_sha256": "9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142"},
+    "governing_source": {"path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/REQUIREMENT.md", "sha256": "54f24cf970602adb1937460aa17b932c92e07e3d89eb399ff5188ef60e57553e", "text": "# Admission / Dispatch only if both issuer and recipient grants exist and evidence is current. No exception is selected. A caller may not infer one grant from the other."},
+    "product_frame_authority": {"path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/README.md", "sha256": "ce0f1559d00128f5fed0041b401e6c2fd155acae53a82ef1c0fcd561f3325e71"},
+    "review_law": [
+      {"member_uri": "stdo://releases/v3.0.5/standards/EVALUATION.md", "member_sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485", "sections": ["3. Independent assessment", "4. Review results", "Result and triage projection"]},
+      {"member_uri": "stdo://releases/v3.0.5/standards/TICKETS.md", "member_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67", "sections": ["Review findings and bug items", "Triage metadata"]},
+      {"member_uri": "stdo://releases/v3.0.5/standards/EXECUTIVE_BASELINE.md", "member_sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff", "sections": ["Technical triage, severity, priority and boundary effect", "Selected 1–5 severity convention"]}
+    ],
+    "severity_scale": "Selected native review convention, 1 highest to 5 lowest (EXECUTIVE_BASELINE 'Selected 1–5 severity convention'), as named by the intake and README.md",
+    "skill_entrypoints": ["/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/.claude/skills/stdo-review/SKILL.md", "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/.claude/stdo-3.0.5/native/skills/stdo-review/SKILL.md"]
+  },
+  "claim": "Candidate preserves every admission prerequisite in REQUIREMENT.md",
+  "scope": "Admission predicate and its immediate dependent delivery behavior",
+  "exclusions": ["Project-build outputs as governing evidence", "Repair", "Priority", "Executive disposition", "Publication"],
+  "expectations_recorded_before_candidate_exposure": [
+    "E1: Admission requires all three: an issuer grant, a recipient grant and current evidence (conjunction). Of the 8 boolean states, only (issuer=T, recipient=T, current=T) may be admitted.",
+    "E2: No exception path. No override, flag or alternative branch may admit when any prerequisite is absent.",
+    "E3: Neither grant may be inferred from the other. One grant's presence must not satisfy the other's requirement.",
+    "E4: 'Current' is not defined by REQUIREMENT.md, so a predicate taking a caller-computed currency flag can only preserve the prerequisite relative to that flag (residual)."
+  ],
+  "evidence": [
+    {"kind": "source-read", "subject": "REQUIREMENT.md", "sha256": "54f24cf970602adb1937460aa17b932c92e07e3d89eb399ff5188ef60e57553e", "note": "Read in full before the candidate"},
+    {"kind": "source-read", "subject": "candidate.py", "sha256": "e2c7f4b7861ae0b36b581f1dbd92bc11dc6908597873a385bc751965edeb0324", "content": "def admitted(issuer_grant, recipient_grant, evidence_current):\\n    return (issuer_grant or recipient_grant) and evidence_current"},
+    {"kind": "executable-falsifier", "producer": "this Reviewer; in-process run with no file effects, using the configured Python /Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python -I -B; candidate bytes digest-checked then exec'd", "method": "exhaustive enumeration of the 8 boolean (issuer, recipient, current) states against E1", "result": "2 of 8 violate: (F,T,T) -> True and (T,F,T) -> True; the other 6 conform", "retention": "Run output is reproduced in counterexamples below; no artifact file was written because review effects are limited to REVIEW_RETURN.json and HOST_RETURN.md"},
+    {"kind": "executable-probe", "result": "admitted('grant-A', None, True) -> True; admitted(None, 'grant-B', True) -> True; admitted({'id':'g'}, {}, 'ts-2026') -> 'ts-2026'; admitted(True, True, None) -> None"},
+    {"kind": "basis-verification", "result": "Review Product verified, and the basis members above were read through the native read_basis.py with status 'checked' and member digests equal to the installed manifest members"}
+  ],
+  "verdict": {
+    "core_value": "falsified",
+    "statement": "The candidate does not preserve every admission prerequisite. It admits when exactly one of the issuer or recipient grants is present and evidence is current. That violates the required conjunction of both grants and the prohibition on inferring one grant from the other."
+  },
+  "findings": [
+    {
+      "id": "REV-claude-1565615c3cdefff3-F1",
+      "title": "Disjunctive grant check admits dispatch with only one grant",
+      "location": "candidate.py:2, expression (issuer_grant or recipient_grant)",
+      "violated_requirement": ["REQUIREMENT.md: 'Dispatch only if both issuer and recipient grants exist and evidence is current.'", "REQUIREMENT.md: 'A caller may not infer one grant from the other.'", "REQUIREMENT.md: 'No exception is selected.' (the one-grant path acts as an unselected exception)"],
+      "trigger": "evidence_current is truthy and exactly one of issuer_grant or recipient_grant is truthy. Concretely: admitted(False, True, True) or admitted(True, False, True).",
+      "observed_failure": "admitted(...) returns True in both trigger states, where REQUIREMENT.md requires no admission.",
+      "consequence": "A dispatch decided by this predicate proceeds without the missing grant. Either a recipient without a recipient grant receives delivery, or delivery happens on behalf of an issuer without an issuer grant. Each grant check is fully nullified whenever the other grant is present, so the admission gate fails open on authority. A dispatched delivery is an external effect that cannot be withdrawn by a later admission correction.",
+      "affected_consumer": "Any caller that dispatches or delivers when admitted() is truthy: the immediate dependent delivery behavior in scope, and the issuer and recipient whose missing grant is bypassed. No consumer code was supplied, so the dependent path is assessed from the predicate's contract, not executed.",
+      "containment": "None in the candidate: admitted() is the only guard present and has no secondary check. Whether any downstream consumer independently re-checks both grants is unknown and outside the supplied subject. Unknown dependent containment is not evidence of containment.",
+      "smallest_bounded_correction": "Require both grants conjunctively, for example by changing `or` to `and` (optionally normalizing to bool). This describes the correction as review evidence under EVALUATION §4. No repair is made or directed. If the wording is adopted, this Reviewer becomes author of that contribution and cannot independently assess the repair.",
+      "evidence_refs": ["executable-falsifier", "executable-probe", "source-read candidate.py", "source-read REQUIREMENT.md"]
+    }
+  ],
+  "counterexamples": [
+    {"input": {"issuer_grant": false, "recipient_grant": true, "evidence_current": true}, "expected": false, "actual": true, "violates": "issuer grant required and not inferable from the recipient grant"},
+    {"input": {"issuer_grant": true, "recipient_grant": false, "evidence_current": true}, "expected": false, "actual": true, "violates": "recipient grant required and not inferable from the issuer grant"}
+  ],
+  "conforming_states_checked": [
+    {"input": [false, false, false], "actual": false}, {"input": [false, false, true], "actual": false}, {"input": [false, true, false], "actual": false}, {"input": [true, false, false], "actual": false}, {"input": [true, true, false], "actual": false}, {"input": [true, true, true], "actual": true}
+  ],
+  "triage": {
+    "payload_class": "complete, except field-level indeterminate values named below",
+    "findings": [
+      {
+        "finding": "REV-claude-1565615c3cdefff3-F1",
+        "affected_claim": "Candidate preserves every admission prerequisite in REQUIREMENT.md",
+        "severity": 1,
+        "severity_scale": "1 highest to 5 lowest (selected native review convention)",
+        "severity_rationale": "Anchor 1: 'Critical loss of the governed outcome or of essential safety, authority or integrity across its affected scope.' The governed outcome of this unit is an authority gate requiring both grants. The candidate reduces it to 'at least one grant' across its entire input domain, so neither grant requirement holds whenever the other grant is present. The gate fails open on authority, and its dependent effect (dispatch/delivery) is external. Severity 2 was considered: it would fit only if an established downstream guard re-checked both grants. No such guard is in the subject, and unknown containment cannot be credited.",
+        "causal_assessment": "Direct and deterministic: the `or` operator on line 2 is the sole cause of both counterexamples.",
+        "confidence": {"defect_existence": "Established by exhaustive enumeration of the finite 8-state boolean domain, with 2 deterministic violations; no sampling uncertainty.", "severity_grade": "Reviewer judgment from the anchors. No quantified confidence is stated because no FOUNDATIONS §4 quantified-assurance model was selected for this grade, so it is indeterminate rather than invented."},
+        "blast_radius": "Every admission decision where exactly one grant is present and evidence is current: 2 of the 7 non-admissible boolean states, covering both single-grant-missing classes. Affected parties are the bypassed issuer or recipient and every delivery consumer of admitted(). The wider downstream dependency count is indeterminate because no consumer code or call-site inventory was supplied.",
+        "workaround_or_containment": "None supported in the subject. A caller-side pre-check of both grants would mask the defect, but nothing establishes that one exists, and it would be an undeclared second guard.",
+        "repair_complexity": "Low: a single-operator change within one expression.",
+        "regression_risk": "Low for the predicate itself, because the 8-state domain can be exhaustively re-tested. Consumers currently relying on one-grant admission would begin to be refused, which is the required behavior. The non-boolean return behavior (adjacent observation) is unaffected by the minimal correction unless bool() normalization is also chosen.",
+        "material_dependencies": "Callers' computation of evidence_current and of grant presence (see residuals).",
+        "residual_uncertainty": "Downstream containment and the actual dispatch consumer are not in the subject.",
+        "evidence_that_would_reduce_uncertainty": "The actual dispatch consumer and its call sites, any independent downstream grant re-check, and the Product's declared hard stops for authority."
+      }
+    ],
+    "not_assigned": ["priority", "current-boundary effect", "landing", "closure", "release disposition"]
+  },
+  "residuals": [
+    "Evidence currency is caller-computed. REQUIREMENT.md does not define 'current', and the candidate accepts an evidence_current value without checking currency itself. The prerequisite is preserved only relative to the caller's flag, and a wrong caller flag is outside this predicate's observable behavior.",
+    "Grant existence is judged by Python truthiness of caller-supplied values. The candidate cannot tell a real grant from any truthy value. This is an interface residual, not a demonstrated violation of the claim for boolean inputs.",
+    "The immediate dependent delivery behavior was assessed analytically: no dispatch or delivery consumer was supplied, so no consumer execution was performed (unperformed coverage).",
+    "Context isolation is not established. This Reviewer ran sequentially in the same Claude Code process as the earlier Worker activation, and that process had read and interpreted a related rule set (project RULES.md: 'Delivery requires an issuer grant, a recipient grant and current evidence.'). Project-build outputs were not used as governing evidence; REQUIREMENT.md alone governs this result.",
+    "Cross-family independence is not claimed. The constructor's (operator's) actor family relative to this Reviewer is not declared. Authorship independence holds only in that this Reviewer did not author the candidate."
+  ],
+  "adjacent_observations": [
+    {
+      "observation": "admitted() returns operand values rather than a bool, for example admitted({'id':'g'}, {}, 'ts-2026') -> 'ts-2026' and admitted(True, True, None) -> None. Truthiness matches the expected admission for the states tested apart from F1. A consumer that compares with `is True`, serializes the result, or treats None as distinct from False could behave differently.",
+      "triage": "not_applicable to the evaluated claim",
+      "pressure": "Interface/contract clarification belongs to the predicate owner. It creates no claim-relative block or review round."
+    },
+    {
+      "observation": "The native stdo-review/COORDINATED_HANDOFF compact-source example passes --store to the manager. The configured runtime anchor /Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/claude/stdo refuses any --store ('Runtime launcher store is fixed; another store requires a new explicit anchor'), so read_basis.py check returned refused (manager_failed:status:exit=2). Omitting --store, so the anchor applies its fixed selected store (the same CONFIG-bound store), returned 'checked'.",
+      "triage": "not_applicable to the evaluated claim",
+      "pressure": "Installed skill reference / host anchor integration seam, for the skills package owner."
+    }
+  ],
+  "uncertainty": {
+    "verdict": "Low. The falsification is deterministic and exhaustive over the boolean domain.",
+    "severity": "Moderate. Grade 1 rests on the absence of any established downstream containment, and evidence of an independent downstream re-check could support revising it to 2.",
+    "scope_limits": "The predicate unit only. No consumer, integration, installed runtime or live dispatch path was exercised."
+  },
+  "invalidation": [
+    "Candidate bytes differ from sha256 e2c7f4b7861ae0b36b581f1dbd92bc11dc6908597873a385bc751965edeb0324",
+    "REQUIREMENT.md differs from sha256 54f24cf970602adb1937460aa17b932c92e07e3d89eb399ff5188ef60e57553e, or a successor requirement is established",
+    "Review Product.json differs from sha256 121ba5e03445193ab402b0b660dc8c793356d4076c8714705516a4499d33ed03, or the selected basis/manifest changes from stdo://releases/v3.0.5/ (9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142)",
+    "The selected severity scale or Reviewer capability changes",
+    "Evidence of a downstream independent grant re-check is supplied. This would revise the severity grade, not the falsified verdict."
+  ],
+  "re_entry": {
+    "to": "/root (decision owner named by the intake)",
+    "decision_owner_inputs": "Root/Executive assigns priority, current-boundary effect and disposition, and decides whether and by whom a repair occurs. This Reviewer assigns none of these.",
+    "lawful_path": "Under an unchanged REQUIREMENT.md this is a nonconforming candidate, so repair re-enters at realization (candidate) by an authorized Writer, not by requirement change. A repair should carry failing-before/passing-after evidence over the 8-state domain. Any required independent recheck is selected by the decision owner, and an assessor who authored the adopted correction cannot supply it.",
+    "durable_carrier": "No bug report was written: this activation grants only REVIEW_RETURN.json and HOST_RETURN.md. If a durable findings carrier is needed, a lawful Writer records it under TICKETS §4 'Review findings and bug items' with severity 1 unchanged.",
+    "stop": "Returning to Root. No further work is activated."
+  },
+  "independence": {
+    "candidate_author": "operator",
+    "reviewer_candidate_authorship": "none",
+    "context_isolation": "not established; sequential activation in the same host process",
+    "cross_family_independence": "not claimed"
+  },
+  "reviewer_actor": {
+    "host": "Claude Code CLI, single process",
+    "resolved_model_observed": "claude-opus-5-5 (system-reported in this session's system context; no independent telemetry)",
+    "requested_model_effort": "not supplied through this activation's permitted inputs"
+  }
+}

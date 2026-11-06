@@ -1,0 +1,550 @@
+{
+  "schema": "stdo305.actual-uncertain-prior/1",
+  "attempt": {
+    "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+    "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+  },
+  "context": {
+    "id": "sha256:868d0c6454c382111e8fc940e49a8d65cd639470e16806a833ae8edbf81a8e69",
+    "sha256": "868d0c6454c382111e8fc940e49a8d65cd639470e16806a833ae8edbf81a8e69"
+  },
+  "preflight": {
+    "id": "sha256:0180cea154d62280e6c14a9611303fcdcc7325c1a4ef78ad23d721f2e8e48bcd",
+    "sha256": "0180cea154d62280e6c14a9611303fcdcc7325c1a4ef78ad23d721f2e8e48bcd"
+  },
+  "observation": {
+    "anchor": {
+      "context": {
+        "id": "sha256:868d0c6454c382111e8fc940e49a8d65cd639470e16806a833ae8edbf81a8e69",
+        "sha256": "868d0c6454c382111e8fc940e49a8d65cd639470e16806a833ae8edbf81a8e69"
+      },
+      "executor": "registered",
+      "invocation": {
+        "argv": [
+          "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+          "-B",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace/inputs/recipient.py",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace/outputs"
+        ],
+        "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace",
+        "environment": {},
+        "executable": {
+          "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+          "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+        },
+        "settings": {
+          "max_output_bytes": 1000000,
+          "timeout_ms": 10000
+        },
+        "stdin_bytes": 12301,
+        "stdin_sha256": "9ac6d3c51cf954304ba45fe62d07e28efc1aa5dd40ab8c38df54bd25c2ff6ae6",
+        "supervisor": {
+          "argv": [
+            "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+            "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+            "_supervise",
+            "--policy",
+            "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/policy.json",
+            "--policy-sha256",
+            "6038451f99fc489fba3badbdc8d7e83621d2f065b8f55edec590f91dc87d7012",
+            "--principal",
+            "executive",
+            "--attempt-id",
+            "<immutable-anchor-id>",
+            "--attempt-sha256",
+            "<immutable-anchor-sha256>"
+          ],
+          "argv_template": "fixed-private-entry-with-anchor",
+          "modules": [
+            {
+              "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+              "sha256": "689c70822429c5a4257b323ff5f41fdbcb8457ddecc4c4a8c1ef15a12e5568f2"
+            },
+            {
+              "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support_core.py",
+              "sha256": "8798e1b822a631d0e64991fa5e6caa446accb9ec098e4735b8c0858ad2f46636"
+            },
+            {
+              "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support_effects.py",
+              "sha256": "a2ec2f0bcd73c6923e7bf93ebe8503bbc2a2df7d73b4b8649dbdee14ada8b3cf"
+            },
+            {
+              "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support_composition.py",
+              "sha256": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625"
+            },
+            {
+              "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_formal_gate.py",
+              "sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8"
+            },
+            {
+              "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+              "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+            },
+            {
+              "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_fs_boundary.py",
+              "sha256": "93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b"
+            }
+          ],
+          "python": {
+            "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+            "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+          },
+          "startup": {
+            "policy": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/policy.json",
+            "policy_sha256": "6038451f99fc489fba3badbdc8d7e83621d2f065b8f55edec590f91dc87d7012",
+            "principal": "executive",
+            "python": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python"
+          }
+        }
+      },
+      "notification": {
+        "binding": {
+          "authority_source": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/owner.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "e5d3be9dffec1d4b84128c96f7f92b6b22e2e27be0a26944c51865b8db8401c5"
+          },
+          "consumer": "executive",
+          "directory": "events",
+          "kind": "durable-file-events",
+          "retention": "indefinite"
+        },
+        "sink_id": "events"
+      },
+      "preflight": {
+        "id": "sha256:0180cea154d62280e6c14a9611303fcdcc7325c1a4ef78ad23d721f2e8e48bcd",
+        "sha256": "0180cea154d62280e6c14a9611303fcdcc7325c1a4ef78ad23d721f2e8e48bcd"
+      },
+      "reconciliation": null,
+      "request": {
+        "arguments": {
+          "preflight": {
+            "id": "sha256:0180cea154d62280e6c14a9611303fcdcc7325c1a4ef78ad23d721f2e8e48bcd",
+            "sha256": "0180cea154d62280e6c14a9611303fcdcc7325c1a4ef78ad23d721f2e8e48bcd"
+          }
+        },
+        "id": "operator-seed-3",
+        "operation": "dispatch.start",
+        "schema": "a_c.fd-support.request/1"
+      },
+      "requester": "executive",
+      "result_key": "uncertain-seed",
+      "retry_of": null,
+      "schema": "a_c.fd-support.attempt/1",
+      "target": "worker"
+    },
+    "attempt": {
+      "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+      "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+    },
+    "consumer_receipt": "unknown",
+    "cursor": 8,
+    "effect": {
+      "core_value": "indeterminate",
+      "end_established": false,
+      "process_end_established": true,
+      "residuals": [
+        "Generic process/return does not establish intended semantic outcome or all external/descendant effect end."
+      ],
+      "value": "completion_unknown"
+    },
+    "events": [
+      {
+        "attempt": {
+          "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+          "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+        },
+        "cursor": 1,
+        "data": {
+          "invocation": {
+            "argv": [
+              "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+              "-B",
+              "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace/inputs/recipient.py",
+              "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace/outputs"
+            ],
+            "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace",
+            "environment": {},
+            "executable": {
+              "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+              "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+            },
+            "settings": {
+              "max_output_bytes": 1000000,
+              "timeout_ms": 10000
+            },
+            "stdin_bytes": 12301,
+            "stdin_sha256": "9ac6d3c51cf954304ba45fe62d07e28efc1aa5dd40ab8c38df54bd25c2ff6ae6",
+            "supervisor": {
+              "argv": [
+                "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+                "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+                "_supervise",
+                "--policy",
+                "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/policy.json",
+                "--policy-sha256",
+                "6038451f99fc489fba3badbdc8d7e83621d2f065b8f55edec590f91dc87d7012",
+                "--principal",
+                "executive",
+                "--attempt-id",
+                "<immutable-anchor-id>",
+                "--attempt-sha256",
+                "<immutable-anchor-sha256>"
+              ],
+              "argv_template": "fixed-private-entry-with-anchor",
+              "modules": [
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+                  "sha256": "689c70822429c5a4257b323ff5f41fdbcb8457ddecc4c4a8c1ef15a12e5568f2"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support_core.py",
+                  "sha256": "8798e1b822a631d0e64991fa5e6caa446accb9ec098e4735b8c0858ad2f46636"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support_effects.py",
+                  "sha256": "a2ec2f0bcd73c6923e7bf93ebe8503bbc2a2df7d73b4b8649dbdee14ada8b3cf"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support_composition.py",
+                  "sha256": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_formal_gate.py",
+                  "sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+                  "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_fs_boundary.py",
+                  "sha256": "93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b"
+                }
+              ],
+              "python": {
+                "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+                "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+              },
+              "startup": {
+                "policy": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/policy.json",
+                "policy_sha256": "6038451f99fc489fba3badbdc8d7e83621d2f065b8f55edec590f91dc87d7012",
+                "principal": "executive",
+                "python": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python"
+              }
+            }
+          },
+          "launch": "not-yet-established"
+        },
+        "kind": "reserved",
+        "observed_at_ns": 1793992000948366000,
+        "previous": null,
+        "schema": "a_c.fd-support.attempt-event/1"
+      },
+      {
+        "attempt": {
+          "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+          "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+        },
+        "cursor": 2,
+        "data": {
+          "actor_launch": "not-established-by-supervisor-receipt",
+          "argv": [
+            "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+            "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+            "_supervise",
+            "--policy",
+            "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/policy.json",
+            "--policy-sha256",
+            "6038451f99fc489fba3badbdc8d7e83621d2f065b8f55edec590f91dc87d7012",
+            "--principal",
+            "executive",
+            "--attempt-id",
+            "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+            "--attempt-sha256",
+            "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+          ],
+          "pid": 78576
+        },
+        "kind": "supervisor_spawned",
+        "observed_at_ns": 1793992000966403000,
+        "previous": {
+          "id": "sha256:24014cf9fe49cf6f6e29b8404582769047bd181e032d40eaef2496daf5fb26d8",
+          "sha256": "24014cf9fe49cf6f6e29b8404582769047bd181e032d40eaef2496daf5fb26d8"
+        },
+        "schema": "a_c.fd-support.attempt-event/1"
+      },
+      {
+        "attempt": {
+          "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+          "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+        },
+        "cursor": 3,
+        "data": {
+          "external_effect": "not-transactionally-coupled-to-evidence",
+          "invocation": {
+            "argv": [
+              "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+              "-B",
+              "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace/inputs/recipient.py",
+              "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace/outputs"
+            ],
+            "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace",
+            "environment": {},
+            "executable": {
+              "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+              "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+            },
+            "settings": {
+              "max_output_bytes": 1000000,
+              "timeout_ms": 10000
+            },
+            "stdin_bytes": 12301,
+            "stdin_sha256": "9ac6d3c51cf954304ba45fe62d07e28efc1aa5dd40ab8c38df54bd25c2ff6ae6",
+            "supervisor": {
+              "argv": [
+                "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+                "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+                "_supervise",
+                "--policy",
+                "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/policy.json",
+                "--policy-sha256",
+                "6038451f99fc489fba3badbdc8d7e83621d2f065b8f55edec590f91dc87d7012",
+                "--principal",
+                "executive",
+                "--attempt-id",
+                "<immutable-anchor-id>",
+                "--attempt-sha256",
+                "<immutable-anchor-sha256>"
+              ],
+              "argv_template": "fixed-private-entry-with-anchor",
+              "modules": [
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+                  "sha256": "689c70822429c5a4257b323ff5f41fdbcb8457ddecc4c4a8c1ef15a12e5568f2"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support_core.py",
+                  "sha256": "8798e1b822a631d0e64991fa5e6caa446accb9ec098e4735b8c0858ad2f46636"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support_effects.py",
+                  "sha256": "a2ec2f0bcd73c6923e7bf93ebe8503bbc2a2df7d73b4b8649dbdee14ada8b3cf"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support_composition.py",
+                  "sha256": "3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_formal_gate.py",
+                  "sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+                  "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+                },
+                {
+                  "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_fs_boundary.py",
+                  "sha256": "93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b"
+                }
+              ],
+              "python": {
+                "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+                "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+              },
+              "startup": {
+                "policy": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/policy.json",
+                "policy_sha256": "6038451f99fc489fba3badbdc8d7e83621d2f065b8f55edec590f91dc87d7012",
+                "principal": "executive",
+                "python": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python"
+              }
+            }
+          }
+        },
+        "kind": "actor_launch_intent",
+        "observed_at_ns": 1793992002074056000,
+        "previous": {
+          "id": "sha256:f913b8ad0afa016b8303c895291094c3981e45a9c4a0383749701de5610d851b",
+          "sha256": "f913b8ad0afa016b8303c895291094c3981e45a9c4a0383749701de5610d851b"
+        },
+        "schema": "a_c.fd-support.attempt-event/1"
+      },
+      {
+        "attempt": {
+          "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+          "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+        },
+        "cursor": 4,
+        "data": {
+          "executable": {
+            "path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+            "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+          },
+          "pid": 78601,
+          "receipt_scope": "local-process-start-only",
+          "settings": {
+            "max_output_bytes": 1000000,
+            "timeout_ms": 10000
+          }
+        },
+        "kind": "actor_started",
+        "observed_at_ns": 1793992002095464000,
+        "previous": {
+          "id": "sha256:b170be88dc1a598c0603988b09243a4ba103baffa3364714d2fc460517c740f3",
+          "sha256": "b170be88dc1a598c0603988b09243a4ba103baffa3364714d2fc460517c740f3"
+        },
+        "schema": "a_c.fd-support.attempt-event/1"
+      },
+      {
+        "attempt": {
+          "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+          "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+        },
+        "cursor": 5,
+        "data": {
+          "bytes": 12301,
+          "complete": true,
+          "context": {
+            "id": "sha256:868d0c6454c382111e8fc940e49a8d65cd639470e16806a833ae8edbf81a8e69",
+            "sha256": "868d0c6454c382111e8fc940e49a8d65cd639470e16806a833ae8edbf81a8e69"
+          },
+          "interval": {
+            "clock": "unix_ns",
+            "ended_ns": 1793992002112817000,
+            "started_ns": 1793992002112794000
+          },
+          "recipient": "worker",
+          "rendered_sha256": "9ac6d3c51cf954304ba45fe62d07e28efc1aa5dd40ab8c38df54bd25c2ff6ae6",
+          "scope": "local child stdin write; mental attention/remote consumer receipt unknown"
+        },
+        "kind": "context_delivery",
+        "observed_at_ns": 1793992002125677000,
+        "previous": {
+          "id": "sha256:f75b7d4973693d8e646d7e1658a9b6648fa557887ba5d6b5da3dfbfb4f31e735",
+          "sha256": "f75b7d4973693d8e646d7e1658a9b6648fa557887ba5d6b5da3dfbfb4f31e735"
+        },
+        "schema": "a_c.fd-support.attempt-event/1"
+      },
+      {
+        "attempt": {
+          "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+          "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+        },
+        "cursor": 6,
+        "data": {
+          "bytes_base64": "eyJzdGRpbl9zaGEyNTYiOiAiOWFjNmQzYzUxY2Y5NTQzMDRiYTQ1ZmU2MmQwN2UyOGVmYzFhYTVkZDQwYWI4YzM4ZGY1NGJkMjVjMmZmNmFlNiIsICJ2aWV3c19zaGEyNTYiOiAiNGY1M2NkYTE4YzJiYWEwYzAzNTRiYjVmOWEzZWNiZTVlZDEyYWI0ZDhlMTFiYTg3M2MyZjExMTYxMjAyYjk0NSIsICJjb3VudCI6IDF9Cg==",
+          "complete_slot": false,
+          "observed_bytes": 181,
+          "retained_bytes": 181,
+          "stream": "stdout"
+        },
+        "kind": "output_chunk",
+        "observed_at_ns": 1793992002156735000,
+        "previous": {
+          "id": "sha256:3d61afbbde0478ef9a6b02ba370bb1e0419fc881619aebe2dadbe4e75b68e617",
+          "sha256": "3d61afbbde0478ef9a6b02ba370bb1e0419fc881619aebe2dadbe4e75b68e617"
+        },
+        "schema": "a_c.fd-support.attempt-event/1"
+      },
+      {
+        "attempt": {
+          "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+          "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+        },
+        "cursor": 7,
+        "data": {
+          "observed_bytes": {
+            "stderr": 0,
+            "stdout": 181
+          },
+          "process_end": {
+            "descendants": "unknown",
+            "ended_ns": 1793992002174829000,
+            "observed": true,
+            "returncode": 0
+          },
+          "stderr": {
+            "id": "sha256:cb420cba058ca26417831e40b39e6cc36803c06e32c56ec09a199142e3fbc090",
+            "sha256": "cb420cba058ca26417831e40b39e6cc36803c06e32c56ec09a199142e3fbc090"
+          },
+          "stdout": {
+            "id": "sha256:8ba565f5f78427f176286ae0a85d1b54ca4b70501c431d80883ba8308715db90",
+            "sha256": "8ba565f5f78427f176286ae0a85d1b54ca4b70501c431d80883ba8308715db90"
+          }
+        },
+        "kind": "output_finalized",
+        "observed_at_ns": 1793992002192409000,
+        "previous": {
+          "id": "sha256:312ce8392e984e196622d48759c1f63df64b592aad6d01a6d9fd27c45e2b295b",
+          "sha256": "312ce8392e984e196622d48759c1f63df64b592aad6d01a6d9fd27c45e2b295b"
+        },
+        "schema": "a_c.fd-support.attempt-event/1"
+      },
+      {
+        "attempt": {
+          "id": "sha256:1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527",
+          "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+        },
+        "cursor": 8,
+        "data": {
+          "effect": {
+            "core_value": "indeterminate",
+            "end_established": false,
+            "process_end_established": true,
+            "residuals": [
+              "Generic process/return does not establish intended semantic outcome or all external/descendant effect end."
+            ],
+            "value": "completion_unknown"
+          },
+          "observations": {
+            "changes": [],
+            "gaps": [],
+            "observations": []
+          }
+        },
+        "kind": "effect_observation",
+        "observed_at_ns": 1793992002222045000,
+        "previous": {
+          "id": "sha256:163f37ef67650ab353b7a867b5804ec85ff9ea3c70bf1fb97aa66f61a1b8804d",
+          "sha256": "163f37ef67650ab353b7a867b5804ec85ff9ea3c70bf1fb97aa66f61a1b8804d"
+        },
+        "schema": "a_c.fd-support.attempt-event/1"
+      }
+    ],
+    "history_gaps": [],
+    "limits": [
+      "Process exit alone proves neither intended outcome nor descendant/external end."
+    ],
+    "output": {
+      "observed_bytes": {
+        "stderr": 0,
+        "stdout": 181
+      },
+      "process_end": {
+        "descendants": "unknown",
+        "ended_ns": 1793992002174829000,
+        "observed": true,
+        "returncode": 0
+      },
+      "stderr": {
+        "id": "sha256:cb420cba058ca26417831e40b39e6cc36803c06e32c56ec09a199142e3fbc090",
+        "sha256": "cb420cba058ca26417831e40b39e6cc36803c06e32c56ec09a199142e3fbc090"
+      },
+      "stdout": {
+        "id": "sha256:8ba565f5f78427f176286ae0a85d1b54ca4b70501c431d80883ba8308715db90",
+        "sha256": "8ba565f5f78427f176286ae0a85d1b54ca4b70501c431d80883ba8308715db90"
+      }
+    },
+    "process_end": {
+      "descendants": "unknown",
+      "ended_ns": 1793992002174829000,
+      "observed": true,
+      "returncode": 0
+    }
+  },
+  "count": 1,
+  "standing": "Actual controlled process receipt with unknown generic effect completion; no semantic completion or reconciliation asserted."
+}

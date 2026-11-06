@@ -1,0 +1,27 @@
+I wrote both files, in the required order, and changed nothing else. No command, verifier, proof, retry or reconciliation was run, and `REVIEW_RETURN.json` was only read, never written.
+
+**1. `cases/REVIEW_RATIONALE_ADDENDUM.json` (ROLE1)**
+- **Verdict:** `falsified` on whether the original rationale followed the selected severity scale. The old return made severity 2 depend on a proven downstream re-check of both grants (line 78), and rested severity 1 on that re-check being absent (line 113). But the selected definition of severity 2 already includes "no adequate ordinary containment" (EXECUTIVE_BASELINE line 479). So whether downstream containment exists is not what separates 1 from 2.
+- **Grade:** severity 1, reaffirmed for a different reason. The candidate's `or` means each grant stops being required whenever the other grant is present, so the "both grants" authority rule is lost entirely wherever the defect applies. What happens downstream, and whether anything there contains it, is unknown and doesn't move the grade either way. If a downstream re-check were later proven, the grade would need reassessing against levels 3–4, not 2.
+- **Carried forward unchanged:** the two retained counterexamples, (F,T,T)→True and (T,F,T)→True. I did not rerun them.
+- **Disclosed:** the concern's gist was in your request before I read the sources; I then read the full old report; same model family; no clean-room claim.
+
+**2. `cases/HOST_RETURN.md` (ROLE2)**
+It covers everything the reporting intake required. It states the original session stayed incomplete (900.59747 s, exit 143, no final result, cleanup confirmed only for the known process groups) and that this is a separate continuation. It also covers the project run (built, which is not semantic acceptance), the five formal obligations, the 21-record chain and unresolved host boundary, the three controls, both review artifacts, the shared Context result (not run by this host), requested versus observed model/effort, the original read-order and temporary-write deviations, and unperformed coverage.
+
+**Defects in what I wrote** (left as-is because overwriting is prohibited):
+- In the addendum, one currentness line shows a garbled shorthand of the FOUNDATIONS.md digest. The exact digest `7fe9ecf2…127e` follows it in the same line.
+- In HOST_RETURN §6, "Section 9" should say §10, where the deviations are.
+- In HOST_RETURN, the explanations of the five obligations are my reading of theorem names, stages and limits. The inspector names them but doesn't define them, and the report says so.
+
+**Remaining unmet obligations:**
+- The original 900-second session is still incomplete.
+- Host-boundary enforcement and isolation are unresolved.
+- Reconciling the uncertain effect belongs to its owner.
+- "Authenticated reuse 0/0/0" comes only from the intake; no selected record I read contains it.
+- I couldn't re-check the original deviations' raw-stream line numbers, because the raw stream isn't in the selection.
+- I computed no digests.
+- `PLAN.json` and `review/README.md` weren't in the selection, so I didn't read them.
+- I can't measure whether this session stayed within its 600-second envelope.
+
+Priority, disposition, acceptance and release decisions stay with you.

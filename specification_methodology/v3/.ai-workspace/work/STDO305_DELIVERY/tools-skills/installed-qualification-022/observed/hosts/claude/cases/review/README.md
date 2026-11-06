@@ -1,0 +1,3 @@
+# Controlled review
+
+Review the candidate admission predicate against REQUIREMENT.md under the selected installed Product basis. This is a separate read-only Reviewer activation after the Worker cases. The operator authored the candidate. Use the selected 1 highest to 5 lowest severity convention, retaining actual dependent effects and limits. No Executive priority, disposition, repair or next-work activation is granted. The only permitted effects are the named review return and final host report. One CLI process shares prior context; no clean-room or host-enforced context isolation is claimed.

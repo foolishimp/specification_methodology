@@ -1,0 +1,13 @@
+object d1f13c53ab733a73993615498f66251041a74073
+type commit
+tag specification_methodology/v3.0.5
+tagger Dimitar Popov <jimpopov@gmail.com> 1793989846 +1100
+
+STDO v3.0.5: complete cohort native stable release
+
+STDO-Release-Profile: stable-v1
+Frozen-Source-Commit: 2ee0147ad06b58dbdf6dad4b874c363a035aab9e
+Frozen-Source-Path: specification_methodology/v3/build_tenants/common
+Frozen-Source-Tree: e65f9e879d0695e75fb617e6226ef4fcaacd6c4a
+Predecessor-Native-Commit: 16bc30d215915a4b7b3ed2f13e52e14510ae1c9d
+Scope: Complete five-Product cohort: current methodology, native plugin, documentation, executable tools, proof evidence and host Skills; external binding preserves Product ownership.

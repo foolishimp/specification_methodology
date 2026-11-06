@@ -1,0 +1,428 @@
+{
+  "schema": "stdo305.qualification-review-return/1",
+  "activation": "urn:stdo305:qualification:codex:ee434095bfa270cf:reviewer",
+  "state": "closed-review-result",
+  "subject": {
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/review/candidate.py",
+    "sha256": "e2c7f4b7861ae0b36b581f1dbd92bc11dc6908597873a385bc751965edeb0324",
+    "candidate_author": "operator",
+    "reviewer_candidate_authorship": "none"
+  },
+  "basis": {
+    "verification": {
+      "basis_uri": "stdo://releases/v3.0.5/",
+      "command": "check",
+      "definition": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/review/Product.json",
+      "definition_id": "urn:stdo305:qualification:codex:ee434095bfa270cf:review",
+      "definition_sha256": "c9f9d0e303decd107b6a6c808ae64b661ef9cde87a3d6385842ba0dca0b98312",
+      "installed": true,
+      "kind": "stdo.skill-source-read",
+      "manager": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/codex/stdo",
+      "manifest_sha256": "9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142",
+      "standing": "verified source projection; no admission or semantic verdict",
+      "status": "checked",
+      "store": null,
+      "valid": true
+    },
+    "authority": "REVIEW_INTAKE.json and review/README.md; explicit existing owner-authorized review qualification",
+    "requirement": {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/review/REQUIREMENT.md",
+      "sha256": "54f24cf970602adb1937460aa17b932c92e07e3d89eb399ff5188ef60e57553e",
+      "line": 2,
+      "text": "Dispatch only if both issuer and recipient grants exist and evidence is current. No exception is selected. A caller may not infer one grant from the other."
+    }
+  },
+  "claim": "Candidate preserves every admission prerequisite in REQUIREMENT.md",
+  "scope": "Admission predicate and its immediate dependent delivery behavior",
+  "exclusions": [
+    "Project-build outputs as governing evidence",
+    "Repair",
+    "Priority",
+    "Executive disposition",
+    "Publication"
+  ],
+  "source_first_expectations": {
+    "recorded_before_candidate_read": true,
+    "source": "review/REQUIREMENT.md",
+    "expected": "A dispatch-admitting result implies issuer_grant AND recipient_grant AND current_evidence. None of these three conditions substitutes for another; no exception is selected.",
+    "oracle": "For boolean grants and evidence, every combination except all three true must refuse. All-three-true is eligible under the declared prerequisites; the source's 'only if' does not establish an unconditional duty to dispatch.",
+    "falsification": "Any true admission result with either grant absent or evidence not current falsifies the claim.",
+    "planned_evaluation": "Read exact pinned candidate after recording this oracle; inspect the immediate path and use all eight boolean combinations as a focused falsifier without any external dispatch."
+  },
+  "evidence": {
+    "native_owner_acquisitions": [
+      {
+        "argv": [
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+          "-I",
+          "-S",
+          "-B",
+          ".agents/stdo-3.0.5/native/scripts/read_basis.py",
+          "read",
+          "--stdo",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/codex/stdo",
+          "--definition",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/review/Product.json",
+          "--member",
+          "standards/EVALUATION.md",
+          "--heading",
+          "3. Independent assessment",
+          "--heading",
+          "4. Review results",
+          "--heading",
+          "When a finding blocks promotion"
+        ],
+        "returncode": 0,
+        "projection": {
+          "basis_uri": "stdo://releases/v3.0.5/",
+          "command": "read",
+          "definition": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/review/Product.json",
+          "definition_id": "urn:stdo305:qualification:codex:ee434095bfa270cf:review",
+          "definition_sha256": "c9f9d0e303decd107b6a6c808ae64b661ef9cde87a3d6385842ba0dca0b98312",
+          "installed": true,
+          "kind": "stdo.skill-source-read",
+          "manager": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/codex/stdo",
+          "manifest_sha256": "9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142",
+          "member_sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485",
+          "member_uri": "stdo://releases/v3.0.5/standards/EVALUATION.md",
+          "sections": [
+            {
+              "first_line": 190,
+              "heading": "3. Independent assessment",
+              "last_line": 261,
+              "sha256": "d5e8cd4f574cebc1728e1aefafd5cd05763ab782f872bce3f29d7c8649e442c9",
+              "text": "## 3. Independent assessment\n\nA constructor's self-review is construction output, not assessment. Where\npromotion needs independent assessment, the assessor evaluates the exact\nlive subject, authority paths, proof and installed state, not the\nconstructor's summary (P6, and P0 with its premise that a step's output is\na candidate until evaluated; instance premise (c) of §1 Foundation to law).\nThis section decides what counts as independent assessment. Which\nboundaries require it is a policy choice of the Spec Method, owned by\n[TICKETS §7 Execution and verification authority separation](TICKETS.md#execution-and-verification-authority-separation-up-007);\na governing basis may add boundaries.\n\nProtocol: where method qualification applies\n([§7 Method self-qualification](#method-self-qualification)), the subject is\nfrozen by identity before material reference exposure; elsewhere it is\nstabilised by an immutable identity or an equivalent exact-subject relation\nsufficient for the claimed assessment. The assessor records its\nexpectations from the governing source before opening the candidate; it\nreads the subject at that identity or relation, never a mutable working\ntree; it makes no repair; it does not assess its\nown authorship. Reusing the constructor's judgment does not satisfy\nindependence; shared mechanical evidence may be reused, judgment may not\n(ACTIVATION §7). Binding a returned assessment to its producer, subject,\nbasis and evidence authenticates the result; it establishes neither the\nassertion provenance of its expected answer nor the execution provenance\nof its run, which\n[FOUNDATIONS §4 Parallel derivation and mutual assurance](FOUNDATIONS.md#parallel-derivation-and-mutual-assurance)\nrequires separately (P6, P3). Membership in a plan authenticates nothing,\nan unauthenticated result satisfies no required assessment, and a result\nbound to another subject satisfies no planned assessment\n([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results));\nno cryptographic or transport protocol is prescribed for the binding (P6). Any post-exposure revision is a declared intervention: it\nis either a method constituent with its own qualification boundary or a new\nqualification subject, and it cannot retroactively make the original\nfrozen construction pass. This law prescribes no actor type or count,\nreview-round count, engine, prompt or orchestration (P6).\n\nAuthor identity is the party responsible for the content of a realised\nsubject. It is distinct from actor identity, whoever performs one\noperation, which is an identity and not an authority\n([FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds)).\nAuthorship is one of the conditions on\nwhich the independence of an assessment rests; the evidence conditions are\nthe other (P6, P3).\n\nReporting a defect, supplying a counterexample or identifying behaviour\nalready required by governing law does not by itself author the realised\nsubject. Contributing wording, design or policy that is adopted into the\nsubject, including through directions for a particular repair, is authorship\nof that contribution. A\nreporter may assess a later repair only when the existing assessment grant,\nauthorship relation and evidence-independence conditions permit it; a\nreporter gains no review authority from having found the defect. A person\nwho authored an adopted repair cannot supply its required independent\nassessment by calling that authorship a finding (P6, P3).\n\nIndependence rests on authorship and on the evidence conditions above, not\non a new context. The assessor may read the same governing sources as the\nconstructor. A fresh context alone establishes no independence, and it\nsupplies no review authority the author lacks: an author that opens a\nfresh context to review its own candidate is still its author, and its\nreview is self-review, which stays construction output and cannot be\nrelabelled as independent assessment (P6;\n[TICKETS UP-007](TICKETS.md#execution-and-verification-authority-separation-up-007)). A contribution received from another author stays that\nauthor's wherever it is carried, and that author's reading of it supplies\nno independent acceptance of it (P6).\n\nIndependence across actor families is declared, not assumed. Whether two\nactivations of one model family are independent for a semantic judgment is a\npolicy the governing basis states for the claim; the default where it is not\nstated is that they are not independent.\n\n"
+            },
+            {
+              "first_line": 262,
+              "heading": "4. Review results",
+              "last_line": 336,
+              "sha256": "44ed1b5227eef6a0c1619af386f2c0b0423dd44e187b576466d3eed212723074",
+              "text": "## 4. Review results\n\nA review returns one core result\n([FOUNDATIONS §4, Results](FOUNDATIONS.md#results)) for each declared\npredicate it evaluated, with: the exact subject and basis, the evidence\nconsulted, the findings ranked by consequence, each finding's evidence and\nthe smallest bounded correction, the residual uncertainty, and the\ninvalidation conditions. A declared predicate the review planned and did\nnot evaluate has no result (FOUNDATIONS §4, Results). The review names it\nas not performed and reports no core value for it, neither\n`indeterminate` nor `falsified`, so that conjunction keeps it apart from\nan undecided predicate and from required coverage that no planned\nassessment addresses\n([FOUNDATIONS §4, Conjunction of results](FOUNDATIONS.md#conjunction-of-results);\nP5, P6). It may recommend a disposition\n([ACTIVATION §3](ACTIVATION.md#3-step-results-and-disposition)), which is\nevidence only and never a disposition; it does not apply one. A finding\nwithout evidence a consumer can chase is commentary.\n\n### Result and triage projection\n\nWhere a review returns findings with technical triage, the triage is the\nassessor's evidence-bound assessment of each finding against the exact\nevaluated claim and basis. Severity, the assessor's grade of consequence,\nis evaluation evidence. Priority, the effect on the current promotion\nboundary and the disposition are the decision owner's (ACTIVATION §1,\nRoles and delegation; when a finding can block is\n[§5, When a finding blocks promotion](#when-a-finding-blocks-promotion))\nand stay distinct values even where a\nProduct-defined policy maps one to another. A recommended disposition\nis evidence for the decision owner: it is not a disposition, a\npriority or a boundary effect, and it is never adopted mechanically (P6,\nRF-007). The fields of a triage are declared by the profile that adopts it, and\nthe scales it uses are bound by the adopting Product (P2, P6).\n\nThe projection of the finding-level triage payload is total over the core\nvalues of [FOUNDATIONS §4, Results](FOUNDATIONS.md#results). A predicate\nnot performed has no result and so no triage payload; the payload class\n`indeterminate` never stands for it. The payload classes `complete`,\n`indeterminate` and `not_applicable` classify the triage only; they are\nnot new results, dispositions, priorities or lifecycle states (P5, P1).\n\n| Core result | Finding and triage payload | Decision-owner consumption constraint |\n|---|---|---|\n| satisfied | an explicit no-finding state; triage `not_applicable`; evidence, residuals and invalidation stay present | priority and boundary effect are `not_applicable` to this result unless another exact consumed result supplies a finding |\n| falsified | one or more exact findings; triage `complete` where supported, keeping `indeterminate` fields where evidence cannot close them | apply the Product-owned priority and boundary policy without mapping severity mechanically to a disposition |\n| indeterminate | a partial finding or observation state; triage `indeterminate`; the exact evidence gaps and residual uncertainty | keep the uncertainty or reactivate a capable evaluation; do not consume it as satisfaction or as a closed finding |\n| out_of_frame | the evaluated claim needs an undeclared material relation or evaluator capability; triage `indeterminate`; the missing relation or capability and the exact reconfiguration pressure are named | refine or reconfigure a capable activation and keep the claim unresolved; do not consume the result as satisfaction or falsification |\n| invalid_basis | a basis failure; triage `not_applicable`; invalidation evidence and basis-repair pressure | refuse to consume the result and return through the declared basis re-entry relation |\n\nAn adjacent observation outside the evaluated claim does not replace the\nclaim-relative result. The assessor returns it separately, with triage\n`not_applicable` to that claim and the exact repricing or re-entry\npressure; the decision owner returns it to its declared owner without\ncreating a claim-relative block, or another review round, from its\nseverity alone (P6, P2).\n\nThe assessor returns to the decision owner, not to the constructor. It does\nnot edit the candidate, direct the repair or authorise continuation (P6,\n§3).\n\nRecording the assessment is a separate artifact effect. Where the activation\ngrants it, the assessor may write the exact named findings carrier under\n[TICKETS §4 Review findings and bug items](TICKETS.md#review-findings-and-bug-items).\nThat grant adds no candidate-repair authority or acquisition route. A review\nhas covered its declared subject only when every planned predicate has been\nevaluated or lawfully removed from that subject; a partial return preserves\nthe unperformed coverage. Closing the review activity does not satisfy a\nfalsified or unresolved work claim (P6, P5).\n\nPurpose and material relation: every configuration keeps severity,\npriority, boundary effect and disposition separate. The rule applies to any\nassessor and decision owner; [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md)\nbinds its Reviewer and Executive instance (P6).\n\n"
+            },
+            {
+              "first_line": 406,
+              "heading": "When a finding blocks promotion",
+              "last_line": 444,
+              "sha256": "1e55b06fb26a9c6c204dba61e32bece659a120ae71bba11379e1fc1e2610f752",
+              "text": "### When a finding blocks promotion\n\nA finding is a defect a review reports against the exact claim it\nevaluated (§4). Blocking current promotion is the decision owner's act\nover that finding (§4, Result and triage projection). This section is the\none statement of when a finding can block; profiles and work carriers\nrefer to it and add only their domain triggers.\n\nA review verdict is bounded by the exact reviewed claim and its applicable\nhard stops ([ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement)). A\nfinding can block current promotion only when it:\n\n1. falsifies that claim;\n2. exposes competing or ambiguous authority on the claim's acceptance\n   path;\n3. violates applicable active authority, safety or retained accepted\n   behaviour; or\n4. establishes a material architectural decision with durable\n   consequences that forecloses an admitted Product outcome.\n\nThese conditions are necessary. Which of them suffice is decided as\nfollows:\n\n| Consumed condition | Effect on the current promotion boundary |\n|---|---|\n| a valid falsification of a mandatory claim governed by a non-waivable hard stop | the boundary blocks, whatever the assigned priority or the decision cutoff |\n| any other finding meeting one of the four conditions | the decision owner decides blocking from the exact affected claim, the governed outcome or decision the work serves ([ACTIVATION §1, Intake](ACTIVATION.md#intake)), the applicable hard stops and the Product-owned cutoff policy; below that cutoff no block follows mechanically, and an accepted residual is retained explicitly |\n| a finding meeting none of the four conditions | it does not block |\n| an observation outside the exact reviewed claim | repricing or re-entry input, returned as §4 states: by itself it does not widen the reviewed subject, block its bounded claim, or require a new ticket, artifact, review round or implementation increment |\n\nSeverity selects neither priority nor a block mechanically, and priority\nneither erases severity nor waives a hard stop. The decision cutoff is the\nadopting Product's policy; this member sets no cutoff (P6, P2). This law\napplies at any promotion boundary; [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md#promotion-constraint-projection)\nbinds the Executive instance. Purpose and material relation: one owner\ngives every review consumer the same blocking condition. A bounded review\ndoes not block on observations outside its claim, while a non-waivable hard\nstop still blocks.\n\n"
+            }
+          ],
+          "standing": "verified source projection; no admission or semantic verdict",
+          "status": "checked",
+          "store": null,
+          "valid": true
+        }
+      },
+      {
+        "argv": [
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+          "-I",
+          "-S",
+          "-B",
+          ".agents/stdo-3.0.5/native/scripts/read_basis.py",
+          "read",
+          "--stdo",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/codex/stdo",
+          "--definition",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/review/Product.json",
+          "--member",
+          "standards/EXECUTIVE_BASELINE.md",
+          "--heading",
+          "Technical triage, severity, priority and boundary effect",
+          "--heading",
+          "Selected 1–5 severity convention",
+          "--heading",
+          "Activation additions"
+        ],
+        "returncode": 0,
+        "projection": {
+          "basis_uri": "stdo://releases/v3.0.5/",
+          "command": "read",
+          "definition": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/review/Product.json",
+          "definition_id": "urn:stdo305:qualification:codex:ee434095bfa270cf:review",
+          "definition_sha256": "c9f9d0e303decd107b6a6c808ae64b661ef9cde87a3d6385842ba0dca0b98312",
+          "installed": true,
+          "kind": "stdo.skill-source-read",
+          "manager": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/codex/stdo",
+          "manifest_sha256": "9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142",
+          "member_sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff",
+          "member_uri": "stdo://releases/v3.0.5/standards/EXECUTIVE_BASELINE.md",
+          "sections": [
+            {
+              "first_line": 407,
+              "heading": "Technical triage, severity, priority and boundary effect",
+              "last_line": 533,
+              "sha256": "3de6c11539a8989765dcbca84ee7068fb55030b7ed9cf1c75b54d9bdca95791e",
+              "text": "### Technical triage, severity, priority and boundary effect\n\nTechnical triage is the Reviewer's assessment of one finding against the\nexact evaluated claim and basis. Where admissible evidence and the actor's\ncapability envelope support it, the triage records (P6, P5):\n\n- the affected claim and the observed failure;\n- severity on the Product-selected severity scale;\n- causal assessment and confidence, the confidence being a quantified\n  claim under [FOUNDATIONS §4 Quantified assurance](FOUNDATIONS.md#quantified-assurance);\n- blast radius and the affected users, paths or relations;\n- an available workaround or containment;\n- repair complexity, regression risk and material dependencies; and\n- residual uncertainty and the evidence that would reduce it.\n\nMissing causal or repair evidence stays explicit. Where the missing\nrelation can change the evaluation, the Reviewer returns `indeterminate` or\n`out_of_frame` pressure (FOUNDATIONS §4 Results); it does not invent precision and\ndoes not send work sideways to the Worker (P5).\n\nSeverity grades the consequence if the finding manifests. Priority orders\nthe response relative to the complete Product outcome, likelihood and\nexposure, the current MVP or release mandate, reversibility, dependencies,\ncost of delay and available capacity. The Reviewer grades severity; the\nExecutive assigns priority (P6, P2).\n\nThe Product-owned Project Reference-Frame Basis binds the severity scale,\nthe priority scale and the current-boundary decision cutoff, and names\nwhich conditions of the governed outcome are hard stops. What a hard stop\nis, its classes, and that it holds whatever the priority, cutoff or risk\nappetite, so that no decision waives it, are\n[ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) Hard stops,\nwhose classes are typical, not closed; the basis names its own\nnon-waivable hard stops, each holding as that section states. \"Non-waivable hard stop\" in this\nprofile and in EVALUATION §5 means such a stop. The selected review-flow\nseverity convention below does not relabel another Product's declared scale.\nSeverity, priority, the frame result\n(FOUNDATIONS §4 Results) and the current-boundary effect are four distinct\nvalues. When a finding can block a promotion boundary is\n[EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion),\nand none of the four values alone decides it (P6, P1).\n\nCurrent-boundary effect is the Executive's recorded determination of what\none finding does to the current promotion boundary: it blocks it, requires\nnarrowing it, or may remain an explicit residual. It is a decision\nprojection, a state this profile declares, not a result and not a\ndisposition (§8): it maps to no core value of its own and decides nothing\nby itself. Where it is \"blocks\", a condition of EVALUATION §5 holds; the\ndecision it records returns through the core only through the one\nexisting disposition the Executive then applies (ACTIVATION §3,\nDisposition). Purpose and material relation: the record keeps the\nExecutive's reading of each finding apart from severity, priority and the\ndisposition, so a consumer can see why a boundary was held, narrowed or\npromoted with a residual, and no field other than the disposition decides\nacceptance (P6, P2). A hard stop or a falsified mandatory claim cannot be\nwaived by lowering priority. An observation outside the exact claim\nboundary cannot open another review round because it carries a severe\nlabel (P6, P2). How each result member projects the triage payload and\nconstrains its consumption is EVALUATION §4 (Result and triage\nprojection).\n\n#### Selected 1–5 severity convention\n\nThe severity convention selected for this review flow is **1 highest to 5\nlowest**. The Reviewer grades the consequence of the demonstrated defect if\nit manifests, using these qualitative anchors. The Product-owned frame basis\nbinds the convention and its Product-specific evidence criteria: affected\nclaims, users/paths, consequence, dependencies and supported containment (P6).\n\n| Severity | Consequence anchor |\n|---|---|\n| 1 | Critical loss of the governed outcome or of essential safety, authority or integrity across its affected scope. |\n| 2 | Major failure of essential behaviour, with substantial affected users, paths or dependencies and no adequate ordinary containment. |\n| 3 | Material but bounded failure whose disposition depends on its downstream impact and wider blast radius. |\n| 4 | Limited local failure with supported containment or a practical workaround and little effect outside that local scope. |\n| 5 | Minor actionable defect with minimal functional consequence for the declared outcome. |\n\nSeverity 3 requires an explicit assessment of downstream dependencies and\nblast radius. Material impact on dependent work normally calls for repair;\ncontained local impact may be deferred with a recorded reason and responsible\nowner. The Executive makes that disposition from the evidence and its grant,\npreserving the Reviewer's grade; a departure from the normal repair response\nalso records its reason. Unknown dependent impact is not evidence of\ncontainment. Mandatory claims, hard stops and acceptance conditions still\ndetermine boundary effects under EVALUATION §5. Severity 3 is not priority P3,\nand no severity value automatically supplies priority, a block or permission\nto defer (P6, P2).\n\nAn older or alternative Product-selected scale keeps its identity and evidence\ncriteria. Selecting this convention is explicit; any translation is declared\nand justified rather than inferred from matching numbers. Historical findings\nretain the scale and grade under which they were assessed. A no-finding result\ncarries no severity grade; it is not severity 5 (EVALUATION §4; P3, P6).\n\n#### Proportional triage assistance\n\nWhen the cause and consequence are sufficiently clear, the Executive decides\npriority and ownership directly. Where finding volume would overwhelm its\nbounded attention, it may activate a triage Worker to group causes, identify\nduplicates and propose priorities and responsible owners from the admitted\nfindings. The assistant neither grades nor changes Reviewer severity and\ndecides no priority or disposition. The Executive consumes its evidence and\nrecords its own decision; unsupported cause relations stay uncertain. The\nassistant adds no read authority, and this profile requires no extra actor\nfor a small or clear result (P6, P2).\n\n#### Optional P0–P5 response policy\n\nAn adopting Product may explicitly select the following response policy in its\nframe basis. The labels have no numeric meaning outside that adoption; the\nProduct supplies its ordering/assignment criteria and any finer distinctions.\nThis is priority policy, not a Reviewer severity scale (P6, P2).\n\n| Selected priority | Response and boundary effect |\n|---|---|\n| P0–P2 | Include in the next bounded fix pass; hold the affected outcome's closure and release, not candidate landing merely because of this priority. |\n| P3–P5 | Repair before release/go-live; hold that release, while bounded work may close with the item durably retained or transferred with its disposition. |\n\nThis policy never waives applicable hard stops, mandatory claims, acceptance\nconditions, access restrictions or operation grants. Those owners may require\nan earlier hold at any priority. A P3–P5 item may outlive a local work claim's\nclosure only when that claim does not require the unfixed behaviour; assigning\nthat priority cannot satisfy a false mandatory claim. No review-to-work ratio or additional\ncapture-review landing hold is selected by adopting this example. Durable\nitems and their actual verification state are owned by\n[TICKETS §4](TICKETS.md#review-findings-and-bug-items).\n\n"
+            },
+            {
+              "first_line": 468,
+              "heading": "Selected 1–5 severity convention",
+              "last_line": 500,
+              "sha256": "7d45ff27b50162bab44886d3dfa98dd49e196bc2838f5cb8e159393f7bddc29c",
+              "text": "#### Selected 1–5 severity convention\n\nThe severity convention selected for this review flow is **1 highest to 5\nlowest**. The Reviewer grades the consequence of the demonstrated defect if\nit manifests, using these qualitative anchors. The Product-owned frame basis\nbinds the convention and its Product-specific evidence criteria: affected\nclaims, users/paths, consequence, dependencies and supported containment (P6).\n\n| Severity | Consequence anchor |\n|---|---|\n| 1 | Critical loss of the governed outcome or of essential safety, authority or integrity across its affected scope. |\n| 2 | Major failure of essential behaviour, with substantial affected users, paths or dependencies and no adequate ordinary containment. |\n| 3 | Material but bounded failure whose disposition depends on its downstream impact and wider blast radius. |\n| 4 | Limited local failure with supported containment or a practical workaround and little effect outside that local scope. |\n| 5 | Minor actionable defect with minimal functional consequence for the declared outcome. |\n\nSeverity 3 requires an explicit assessment of downstream dependencies and\nblast radius. Material impact on dependent work normally calls for repair;\ncontained local impact may be deferred with a recorded reason and responsible\nowner. The Executive makes that disposition from the evidence and its grant,\npreserving the Reviewer's grade; a departure from the normal repair response\nalso records its reason. Unknown dependent impact is not evidence of\ncontainment. Mandatory claims, hard stops and acceptance conditions still\ndetermine boundary effects under EVALUATION §5. Severity 3 is not priority P3,\nand no severity value automatically supplies priority, a block or permission\nto defer (P6, P2).\n\nAn older or alternative Product-selected scale keeps its identity and evidence\ncriteria. Selecting this convention is explicit; any translation is declared\nand justified rather than inferred from matching numbers. Historical findings\nretain the scale and grade under which they were assessed. A no-finding result\ncarries no severity grade; it is not severity 5 (EVALUATION §4; P3, P6).\n\n"
+            },
+            {
+              "first_line": 1812,
+              "heading": "Activation additions",
+              "last_line": 1822,
+              "sha256": "88c8deb5a65adf063ffc8e2da6fd1b611074790899a6652261db84ef5559ff55",
+              "text": "### Activation additions\n\nEvery activation first carries the generic binding of REFERENCE_FRAME §11\n(minimal activation binding). This profile adds, by frame (P0, P6):\n\n| Frame | Added to the generic binding |\n|---|---|\n| Worker | the binding is also the sufficient execution intake of ACTIVATION §1, and adds the exact inherited operation grant, mutation subject and write territory where applicable |\n| Reviewer | the exact claim, composition boundary, evaluated population, oracle, ordinary or module path, falsification condition, the independence and assurance basis (EVALUATION §3 and §7), the Product-selected severity scale and the required technical-triage capability |\n| Executive | the current Product-role map, the MVP or release mandate, the evaluation frontier, the closed-result and technical-triage ledger, the priority and boundary policy, the conjunction rule and the exact disposition grant |\n\n"
+            }
+          ],
+          "standing": "verified source projection; no admission or semantic verdict",
+          "status": "checked",
+          "store": null,
+          "valid": true
+        }
+      },
+      {
+        "argv": [
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+          "-I",
+          "-S",
+          "-B",
+          ".agents/stdo-3.0.5/native/scripts/read_basis.py",
+          "read",
+          "--stdo",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/codex/stdo",
+          "--definition",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/review/Product.json",
+          "--member",
+          "standards/TICKETS.md",
+          "--heading",
+          "Review findings and bug items"
+        ],
+        "returncode": 0,
+        "projection": {
+          "basis_uri": "stdo://releases/v3.0.5/",
+          "command": "read",
+          "definition": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/review/Product.json",
+          "definition_id": "urn:stdo305:qualification:codex:ee434095bfa270cf:review",
+          "definition_sha256": "c9f9d0e303decd107b6a6c808ae64b661ef9cde87a3d6385842ba0dca0b98312",
+          "installed": true,
+          "kind": "stdo.skill-source-read",
+          "manager": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/anchors/codex/stdo",
+          "manifest_sha256": "9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142",
+          "member_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67",
+          "member_uri": "stdo://releases/v3.0.5/standards/TICKETS.md",
+          "sections": [
+            {
+              "first_line": 536,
+              "heading": "Review findings and bug items",
+              "last_line": 578,
+              "sha256": "7cee83c6fbf62249ba04cd00ccaed3faf2f746b5fd81aba9ba7e6c09093edc15",
+              "text": "### Review findings and bug items\n\nWhen findings from a review need a durable work carrier, record one linked bug\nreport for that review, with one entry per finding: stable identity, original\nReviewer severity and triage, exact subject/basis, violated claim, location and\nchaseable evidence. Link it to the work item that issued the review. With no\nfindings, create no bug report. A sufficient existing direct-work carrier may\ncarry the same relations without a redundant ticket (P3, P2).\n\nThe Reviewer may record this report only when its activation grants the exact\nartifact identity/path and effects. Otherwise it returns the findings and a\nlawful Writer records them. Recording creates no repair, priority, admission or\nclosure authority. Keep the report within its evidence/read and visibility\nrestrictions: findings derived from a withheld capture are withheld from the\nsame recipients, including any report projection that reveals them. The\nProduct may bind a recognizable report naming pattern and exclusion route to\nits actual access mechanism; a filename or separate lane alone enforces\nnothing and grants no additional read (P6).\n\nAfter Executive or other authorized decision-owner triage, the reviewed work\nitem carries a linked Bug items section. Each item records its identity,\noriginal severity, assigned priority and reason, cause group, responsible owner,\nsource report/finding, disposition and state. The report remains the technical\nfinding source; the item is the decision and repair ledger. An actor/session\nindex, where used, points the Reviewer to its report and the triage/repair work\nto the reviewed work item's ledger, rather than duplicating that truth (P3).\n\n| Item state | Required trace |\n|---|---|\n| open | Finding and triage/disposition, with unresolved work named. |\n| fixed | Exact repaired subject (commit or equivalent immutable identity) and repair evidence; not yet a claim of verification. |\n| verified | The satisfied repair predicate and exact evidence; identify tests and, when required, the independent recheck/report. Tests alone are not labelled independent review. |\n\nThese are carrier states, not core evaluation results or acceptance. A required\nrecheck keeps its affected items unverified until the required result is\navailable and applicable. A test-verified fix needs no invented Reviewer when\nthe governing basis requires none; the optional Executive cadence is\n[EXECUTIVE_BASELINE §12](EXECUTIVE_BASELINE.md#qa-cadence-and-repair-rechecks).\nRetained or deferred findings stay linked until their selected boundary, or\ntransfer with owner, disposition and destination when the work item closes.\nChanging priority does not erase the original severity or the obligation (P6,\nP4b).\n\n"
+            }
+          ],
+          "standing": "verified source projection; no admission or semantic verdict",
+          "status": "checked",
+          "store": null,
+          "valid": true
+        }
+      }
+    ],
+    "candidate_source": "def admitted(issuer_grant, recipient_grant, evidence_current):\n    return (issuer_grant or recipient_grant) and evidence_current\n",
+    "focused_execution": {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "-"
+      ],
+      "stdin_program": "import hashlib,itertools,json\nfrom pathlib import Path\np=Path('cases/review/candidate.py');raw=p.read_bytes();expected_digest='e2c7f4b7861ae0b36b581f1dbd92bc11dc6908597873a385bc751965edeb0324';assert hashlib.sha256(raw).hexdigest()==expected_digest\nns={};exec(compile(raw,str(p),'exec'),ns);rows=[]\nfor issuer,recipient,current in itertools.product([False,True],repeat=3):\n actual=ns['admitted'](issuer,recipient,current);prerequisites=issuer and recipient and current\n rows.append({'issuer_grant':issuer,'recipient_grant':recipient,'evidence_current':current,'all_required_prerequisites':prerequisites,'actual_admitted':actual,'violates_only_if':bool(actual and not prerequisites)})\nassert p.read_bytes()==raw\nprint(json.dumps({'candidate_sha256':expected_digest,'oracle_source':'review/REQUIREMENT.md:2','rows':rows,'counterexamples':sum(r['violates_only_if'] for r in rows),'candidate_unchanged':True,'external_dispatch_performed':False},indent=2))\n",
+      "returncode": 0,
+      "actual_output": {
+        "candidate_sha256": "e2c7f4b7861ae0b36b581f1dbd92bc11dc6908597873a385bc751965edeb0324",
+        "oracle_source": "review/REQUIREMENT.md:2",
+        "rows": [
+          {
+            "issuer_grant": false,
+            "recipient_grant": false,
+            "evidence_current": false,
+            "all_required_prerequisites": false,
+            "actual_admitted": false,
+            "violates_only_if": false
+          },
+          {
+            "issuer_grant": false,
+            "recipient_grant": false,
+            "evidence_current": true,
+            "all_required_prerequisites": false,
+            "actual_admitted": false,
+            "violates_only_if": false
+          },
+          {
+            "issuer_grant": false,
+            "recipient_grant": true,
+            "evidence_current": false,
+            "all_required_prerequisites": false,
+            "actual_admitted": false,
+            "violates_only_if": false
+          },
+          {
+            "issuer_grant": false,
+            "recipient_grant": true,
+            "evidence_current": true,
+            "all_required_prerequisites": false,
+            "actual_admitted": true,
+            "violates_only_if": true
+          },
+          {
+            "issuer_grant": true,
+            "recipient_grant": false,
+            "evidence_current": false,
+            "all_required_prerequisites": false,
+            "actual_admitted": false,
+            "violates_only_if": false
+          },
+          {
+            "issuer_grant": true,
+            "recipient_grant": false,
+            "evidence_current": true,
+            "all_required_prerequisites": false,
+            "actual_admitted": true,
+            "violates_only_if": true
+          },
+          {
+            "issuer_grant": true,
+            "recipient_grant": true,
+            "evidence_current": false,
+            "all_required_prerequisites": false,
+            "actual_admitted": false,
+            "violates_only_if": false
+          },
+          {
+            "issuer_grant": true,
+            "recipient_grant": true,
+            "evidence_current": true,
+            "all_required_prerequisites": true,
+            "actual_admitted": true,
+            "violates_only_if": false
+          }
+        ],
+        "counterexamples": 2,
+        "candidate_unchanged": true,
+        "external_dispatch_performed": false
+      }
+    }
+  },
+  "independence": {
+    "context_isolation": "not established; sequential activations in one host process",
+    "cross_family_independence": "not claimed",
+    "candidate_authorship": "Operator per intake; no reviewer contribution to candidate",
+    "prior_context": "Worker context retained, excluded from governing evidence for this claim"
+  },
+  "verdict": {
+    "core_value": "falsified",
+    "predicate": "Candidate preserves every admission prerequisite in REQUIREMENT.md",
+    "reason": "The exact candidate admits both one-grant-only cases when evidence is current, violating a mandatory prerequisite.",
+    "assessment_closed": true,
+    "semantic_acceptance": "not issued"
+  },
+  "findings": [
+    {
+      "id": "R-001",
+      "title": "Either grant substitutes for the required pair",
+      "location": "review/candidate.py:2",
+      "violated_source": "review/REQUIREMENT.md:2",
+      "trigger": "Current evidence and exactly one of issuer_grant or recipient_grant is false.",
+      "observed_consequence": "admitted returns True despite the missing required grant.",
+      "affected_consumer": "The immediate caller using admitted as the delivery admission gate; the issuer-authority and recipient-authority paths are both affected.",
+      "causal_path": "Boolean inputs -> issuer_grant or recipient_grant -> conjunction with evidence_current -> True delivered to the caller. One present grant masks the absence of the other.",
+      "smallest_correction_obligation": "Preserve both independent grant prerequisites together with current evidence under the unchanged source requirement. No candidate repair or repair activation was performed.",
+      "severity": 3,
+      "severity_scale": "STDO v3.0.5 EXECUTIVE_BASELINE §5 Selected 1–5 severity convention; 1 highest, 5 lowest",
+      "severity_basis": "Material but bounded failure in the disposable admission predicate: two supported input classes bypass a required grant and can affect dependent delivery decisions. No substantial production user population, irreversible loss or critical system-wide consequence is established. Unknown downstream exposure is retained, not treated as containment.",
+      "evidence": [
+        "evidence.focused_execution.actual_output.rows[3]",
+        "evidence.focused_execution.actual_output.rows[5]"
+      ]
+    }
+  ],
+  "counterexamples": [
+    {
+      "issuer_grant": false,
+      "recipient_grant": true,
+      "evidence_current": true,
+      "all_required_prerequisites": false,
+      "actual_admitted": true,
+      "violates_only_if": true,
+      "required_result": "False; dispatch is forbidden by the missing prerequisite"
+    },
+    {
+      "issuer_grant": true,
+      "recipient_grant": false,
+      "evidence_current": true,
+      "all_required_prerequisites": false,
+      "actual_admitted": true,
+      "violates_only_if": true,
+      "required_result": "False; dispatch is forbidden by the missing prerequisite"
+    }
+  ],
+  "triage": {
+    "payload_class": "complete",
+    "findings": [
+      {
+        "finding_id": "R-001",
+        "severity": 3,
+        "causal_assessment": "The disjunction on candidate line 2 is sufficient to explain both counterexamples; no state, randomness, exception handler or alternate path exists in the supplied function.",
+        "confidence": {
+          "value": "Directly demonstrated for boolean inputs by exact-source inspection and all eight combinations.",
+          "numeric_probability": "not estimated"
+        },
+        "blast_radius": {
+          "supported": "Both one-grant-only admission paths and every immediate delivery decision that relies solely on this predicate under those inputs.",
+          "external_exposure": "indeterminate; no concrete dispatch caller, deployed service, production users or descendant effects were supplied or executed.",
+          "contained_scope": "The qualification subject is explicitly a disposable Product; this bounds the review claim, not any unobserved downstream use."
+        },
+        "containment": {
+          "available": "A caller can independently establish all three required conditions before allowing dispatch, or decline to use the candidate as sole authority.",
+          "standing": "Requirement-derived containment option only; no existing deployed guard was observed and none was installed."
+        },
+        "repair_complexity": {
+          "assessment": "Local predicate correction appears small for the supplied function.",
+          "limit": "Broader integration effort is indeterminate without callers and their contracts."
+        },
+        "regression_risk": {
+          "assessment": "The candidate's acceptance of one-grant inputs must change. Current-evidence refusal and all-three-true eligibility must be preserved.",
+          "limit": "Reliance by unprovided callers on the incorrect acceptance is unknown; no repair or passing-after evidence exists."
+        },
+        "material_dependencies": [
+          "Both independent grant inputs",
+          "Evidence-current input",
+          "Immediate caller's use of the boolean decision",
+          "Exact governing requirement and Product basis"
+        ],
+        "residual_uncertainty": [
+          "Concrete downstream delivery effects and production exposure are not established.",
+          "Behavior for non-boolean inputs is unspecified by the source and outside this focused falsifier."
+        ]
+      }
+    ]
+  },
+  "residuals": [
+    "No external delivery was executed; conditional downstream consequence is inferred from an immediate caller relying on the admission decision.",
+    "No candidate repair, release evaluation or deployed containment verification was performed."
+  ],
+  "adjacent_observations": [],
+  "uncertainty": {
+    "claim_falsification": "Established by two supported boolean counterexamples.",
+    "broader_safety_or_release": "Not evaluated.",
+    "independence": "Candidate authored by operator per exact intake; source-first expectation recorded before candidate exposure. Same process retains Worker context; no clean-room, cross-family independence or host-enforced isolation claimed.",
+    "model": "No exact resolved model/effort receipt exposed to this review."
+  },
+  "invalidation": [
+    "Any candidate-byte change requires reassessment of the changed subject.",
+    "Changes to REQUIREMENT.md, Product basis, admitted claim/scope, severity convention, required independence or capability invalidate affected judgments.",
+    "New evidence of downstream consumers, containment or consequential exposure revises blast radius and severity support without erasing these exact-subject counterexamples."
+  ],
+  "re_entry": {
+    "consumer": "/root",
+    "owner": "Product-owned admission implementation and decision authority",
+    "route": "Return this closed assessment to Root for its existing decision process. Any repair requires a separately authorized Writer under unchanged REQUIREMENT.md; changed governing meaning requires its source owner.",
+    "next_activation": "none"
+  }
+}

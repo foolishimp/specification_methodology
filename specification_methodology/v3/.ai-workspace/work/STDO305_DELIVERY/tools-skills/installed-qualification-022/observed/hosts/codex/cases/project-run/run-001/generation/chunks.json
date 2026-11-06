@@ -1,0 +1,17 @@
+[
+  {
+    "id": "chunk-5ee1f5b64631d8168dd7",
+    "segments": [
+      {
+        "end_line": 8,
+        "heading": "Bounded receipt service",
+        "id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+        "path": "RULES.md",
+        "sha256": "383e5099d0816b7ecdf570ab426e2483294ea90dc233791bd459a6da2b63eb15",
+        "start_line": 1,
+        "text": "# Bounded receipt service\nThe service records whether a requested delivery is admitted.\nDelivery requires an issuer grant, a recipient grant and current evidence.\nIf any required grant is absent or evidence is stale, refuse delivery.\nA completed process alone does not establish that all external effects settled.\nAn uncertain prior effect must be reconciled before a new attempt; keep its activation and history.\nThe report may vary in wording but must preserve every prerequisite and unresolved item.\nThe meaning and enforcement of an external host's permission setting remain unresolved here.\n"
+      }
+    ],
+    "source_chars": 596
+  }
+]

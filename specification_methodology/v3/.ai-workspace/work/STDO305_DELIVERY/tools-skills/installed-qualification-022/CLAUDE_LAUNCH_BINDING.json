@@ -1,0 +1,73 @@
+{
+  "command": {
+    "argv": [
+      "/Users/jim/.local/bin/claude",
+      "--print",
+      "--output-format",
+      "stream-json",
+      "--verbose",
+      "--no-session-persistence",
+      "--setting-sources",
+      "project",
+      "--settings",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/claude-settings.json",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/empty-mcp.json",
+      "--no-chrome",
+      "--permission-mode",
+      "dontAsk",
+      "--allowedTools",
+      "Bash",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Skill",
+      "--effort",
+      "xhigh",
+      "--model",
+      "opus"
+    ],
+    "auth": "Inherit authenticated process environment unchanged; do not inspect, dump, copy or pin secret values.",
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude",
+    "environment_additions": {
+      "STDO_STORE": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/deliberately-unselected-store"
+    },
+    "execution_status": "not_run",
+    "id": "claude-native-session",
+    "native_actor": true,
+    "private_session": true,
+    "regular_streams": true,
+    "standing": "Prepared only; use actual installed skills, retain full stream and final report, no fallback model or duplicate Lean run.",
+    "stdin": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/host-prompt.txt",
+    "wall_timeout_seconds": 900
+  },
+  "mcp_configuration": {
+    "bytes": 23,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/observed/hosts/claude/cases/empty-mcp.json",
+    "sha256": "d8e397af03b5b032f21d0aa967086f0c78b33c87b76f2e9898ae0a144df7de02"
+  },
+  "physical_executable": {
+    "path": "/Users/jim/.local/share/claude/versions/2.1.306",
+    "sha256": "b5d795b7760032d79954b55a9cd1876dcf3a8dc9608fd6bb9f618593f69fd44b"
+  },
+  "recorder": {
+    "bytes": 6911,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/run_native_once.py",
+    "sha256": "7171f6efa86cbf67d4a23a133ba2bde0f5de4edfa631d0d53f5d2998a2985792"
+  },
+  "schema": "stdo305.actual-native-settings-selection/1",
+  "settings": {
+    "bytes": 3,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/observed/hosts/claude/cases/claude-settings.json",
+    "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+  },
+  "settings_source": {
+    "bytes": 1040,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/CLAUDE_SETTINGS_BINDING.json",
+    "sha256": "a7b318bba1979604399525dc5fcb166b6ee204de68a0f2593fa16ad1afee9ab9"
+  },
+  "state": "Actual selected nonsecret inputs pinned before process launch; no host result inferred."
+}

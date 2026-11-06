@@ -1,0 +1,342 @@
+{
+  "checked_claims": [
+    "imported-model-well-formedness",
+    "whole-model-source-correspondence",
+    "declared-closure-and-projection",
+    "record-budget-result",
+    "supplied-graphify-view-correspondence"
+  ],
+  "context_binding": {
+    "activation_identity": {
+      "id": "urn:stdo305:qualification:codex:d2c6312ded6eb475:current-context:activation",
+      "sha256": "e8934837813b28377e454b7471b94f01700385b0c98e10e1a0b07562129e696a"
+    },
+    "rendered_sha256": "9107744f6020ef6f7a999ad58e08e2a7ca074bca0f6593b81b770ccba4957137"
+  },
+  "evidence": {
+    "manifest_sha256": "55eddad95ed0d152bf872b50eff57980a7a75f9d549ccccede70dd1e5e1ede09",
+    "members": {
+      "GateBounds.ir": "c1ded6364858a21532d7b0d3d1b8f853f2552d363d5ce7e03afc15f969acb996",
+      "GateBounds.ir.sig": "6f30da785554a7c7a7888098fc3d1cd0ece7ecbf635710277bae22d18843d903",
+      "GateBounds.lean": "252a444f97a68378313bc84382c60e120417965ec7210939151470d7b644974f",
+      "GateBounds.log": "562c7c5980f8678ff89e93b5516df462443cef5b5139d94b0fa98208d29bc863",
+      "GateBounds.olean": "57fe6229a952fd076795cc018a82d00f154e64e1c580cf643f541d5847a34d52",
+      "GateBounds.olean.private": "6cd5ac9b2b3d741df190931b85b42a272587d0b55dc56dbc9da9b94f7638dd2b",
+      "GateBounds.olean.server": "94b63b76bacb342b6eb71807081eb7c2fcb52ab51e88e4eeca98f11653e9b7c1",
+      "GateData.ir": "37795fbb4aaca7851ffec653733b50bbd9eb784d7473d360441c8e46e7ee0178",
+      "GateData.ir.sig": "ef0f5154b1ae5adbcf4a0d57fd190ebd435d4e80a57a748669a5df689d43bab0",
+      "GateData.lean": "5c98ff5174d5eb2c0f490d287456b14358091951f0929f811df9ed2c10071553",
+      "GateData.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GateData.olean": "56f3058b7a1b82b5e6d379bc6b82fd24cb19a11e6714a31e80947c942a6c9720",
+      "GateData.olean.private": "29ea455c024387a9943015752b650a74d3c4d97e72cb532077db3c3ca9a2b37f",
+      "GateData.olean.server": "113c8bb533e296bbfc9c7cae2d4cd5d38a813e1212fab763913ed1d9e9f20dd3",
+      "GateExternalNames.ir": "631b60ea8181786bc5b68e74c37b564424c69fb8263f9cda61fd581658f18ffa",
+      "GateExternalNames.ir.sig": "60bb6fb7e45eebb178af0994cd4de606945bade1f83198e35b105f8e94d6f546",
+      "GateExternalNames.lean": "fd06de4c664293aeaed4e25e7ebfa19a783655ebfbc14cef49f080e54e592678",
+      "GateExternalNames.log": "fdabef16c62d559f3a259458c7da7abf80eddccc22b99f39dd8bceb31df00e78",
+      "GateExternalNames.olean": "485f8e8c770b38409cdc5a6cfbc01a28a3c58e059334a30358bb540a7e2dc34a",
+      "GateExternalNames.olean.private": "e1e5993a271ad568ecbb61e342cc1412ab8c287616c2dc152224c91ddfb67155",
+      "GateExternalNames.olean.server": "425083dd178c5594cc6df01b41eb5413759e0002325bc8a173f2fdec7d7ed409",
+      "GateIdentities.ir": "3362801a1515a2db97b37a0aa4e7e8aa3e418440b394db15f612e0df806225c2",
+      "GateIdentities.ir.sig": "9ee9d29e8ad631db89be41b5c903fcd07b03d7dc0f4d412f0b654a1fe2a69561",
+      "GateIdentities.lean": "467091a5be5262ca09dd978429a45651c5dab6bb4c0c6c333e8d1308cdd1c829",
+      "GateIdentities.log": "0bb726123b06a438c8cac66b2562ae2ab43c21939de8a1a7cf79789816bd4c0f",
+      "GateIdentities.olean": "ae7e3a3d96936407c7ac45d33f759108a1a177af9b05327a61d69b64da098863",
+      "GateIdentities.olean.private": "c66db118d64bae2441e7116be6f910a491188352c850509ea20530ec776a09ce",
+      "GateIdentities.olean.server": "0a0cc77d2079faa7a86c03a9b2601c96b1ffd04fe14d097de845de74b1e5867b",
+      "GateLocalNames.ir": "6df3d48178fe7b3d625d552d710d9455294228776175696b8714c16935711139",
+      "GateLocalNames.ir.sig": "78e164976c4ef9fdbbd23becb78feb2f301bfebdf144b8a43530ec934bd9d88b",
+      "GateLocalNames.lean": "c98acbc18b496c98aaf51bbeeacd9fdc9c9651159179ebf7af85049c8814e791",
+      "GateLocalNames.log": "3bc917c3e95719e361856ba2ec2b22dc6ff3f8318348a2149022ee74c3fa93d0",
+      "GateLocalNames.olean": "20cf6e65b70722b777a8ee31b6145e3caecd871188fcdae56950c69d6db08059",
+      "GateLocalNames.olean.private": "f86272d956b7e523ef97f9210d5761ae102b719f635daeab22e48caa13176366",
+      "GateLocalNames.olean.server": "fa99ddb6f3fc1553fe4d606814a9fcd2191f0c37124d16e1a8c38c2394bad1dc",
+      "GateModel.ir": "d36c482cb4dde2ffa4b702dbff1697d381eca43c2a578391a33bd386fb130c5a",
+      "GateModel.ir.sig": "a3cc15a301b053f068ac6525b37a4de73cab86c8906c4809e7ce8f1a79cf0b64",
+      "GateModel.lean": "a107ba20966853cf3dc43a3e109588a186f36333f584605c63d99b3b9e2160d9",
+      "GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+      "GateModel.olean": "79244f38704d50b333e5ec14dce43820eda274bcdfaeca16d83f48e4e86aa713",
+      "GateModel.olean.private": "83a1316e422cf9636a81a659bd0c575274da728bb69d0d741f08289e44aaf6b5",
+      "GateModel.olean.server": "dee4edda370ff414b36a13685fdec5194a0af27a50d28db096d047e58f48b391",
+      "GateRun.lean": "3aca46dd2a8de76afb0a9f568bff1c07a07deb02f5713f69515f9de63e28e69a",
+      "GateViews.ir": "74c7e49b870005442e072cd5049bcda4ad45e1db1ce42edb134499f43e13cf97",
+      "GateViews.ir.sig": "a092dee3843e33a19cc22e3314bdbb65cbd2cc6087a1607e2b3a2da1fea5ceb3",
+      "GateViews.lean": "bccc0f28fdb9d090f05ca8ef13d6a994f940a229f0f0ea49caa0cb3f58c17211",
+      "GateViews.log": "f82f3e8f7640bca99be6d30f10151a49bc958d3ff13cb1fe93df794c985756cb",
+      "GateViews.olean": "a8860aaa1aa52c5f9bdf8d351aaca34de8b8e38afa6de995b96242488e0bb6ab",
+      "GateViews.olean.private": "afba081b2eb97ca81d708cbb0b1c1374e486980e5e15a7836f994ac59f6de979",
+      "GateViews.olean.server": "6d2f04b4690a60870bbefade91776b0c48e61816aca54e2bd274c3cb235ee24a",
+      "actual-runtime.log": "a228f22e132b01a46f3e184cdabc03c5437faebbc1ad207964be0c23cc38ac75",
+      "certificates.json": "0261f9751237f4c8070f69e655f261cc5c9e9f8d7de5ab1c13107a7ee7582f9f",
+      "dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "input.json": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "model.json": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "origin-manifest.json": "4ff0b32da9884d78c569780330e3309459d2702f49ed70c7dcb22e952474fa24",
+      "origin-replay-request.json": "f9898f6f350356fe8beb6826f143f6102c72392ae283b720c0f2050fd4fb1f7e",
+      "origin-request.json": "bf92ea9ac9b75626bac1e877984f23b6b5656a14f4029be27dd68bb2af49e230",
+      "origin-result.json": "dd0fe5b65a9d1e9840e28610545a109d58dbd03e6e0079400684206a8ce32fcc",
+      "replay-request.json": "f9898f6f350356fe8beb6826f143f6102c72392ae283b720c0f2050fd4fb1f7e",
+      "request.json": "f9898f6f350356fe8beb6826f143f6102c72392ae283b720c0f2050fd4fb1f7e",
+      "supplied-views.json": "47f7f19d80f43c653c5fdd8ccaf718cb371154f8bd502c2ddb41b71a4ad3e23b",
+      "view-comparison.json": "3210d4e43ab4541930e9bba378be55843e2d7fb4574e060e37d6c35faa5c841d"
+    }
+  },
+  "inputs": {
+    "input": {
+      "bytes": 8521879,
+      "raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "retained_path": "input.json"
+    },
+    "model": {
+      "canonical_sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02",
+      "raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "retained_path": "input.json"
+    },
+    "supplied_views": {
+      "bytes": 306426,
+      "raw_sha256": "47f7f19d80f43c653c5fdd8ccaf718cb371154f8bd502c2ddb41b71a4ad3e23b",
+      "retained_path": "supplied-views.json"
+    }
+  },
+  "limits": [
+    "Finite declared structural model/closure/projection only; no semantic acceptance.",
+    "Whole-model-source-correspondence covers only supplied or carrier-recovered model JSON; original prose/corpus-to-model F_P fidelity remains opaque and unproved.",
+    "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+    "Python API imports and interpreter initialization remain trusted-host responsibilities; the CLI isolates helper loading after startup.",
+    "Context binding is metadata; consumer must check actual delivered bytes.",
+    "Crossing relations are checked source-derived metadata, not a Lean theorem."
+  ],
+  "model": {
+    "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+    "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+  },
+  "observations": {
+    "child_maxrss_native_units": 0,
+    "current_dynamic_proof_invocations": 0,
+    "current_kernel_replay_invocations": 0,
+    "current_runtime_invocations": 0,
+    "edges": 3704,
+    "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
+    "elapsed_seconds": 9.730117250233889,
+    "execution": "retained authenticated cold runtime; current source/import/certificate/output correspondence checked",
+    "limits": {
+      "max_input_bytes": 33554432,
+      "max_selections": 64,
+      "memory_mb": 4096,
+      "timeout_seconds": 1800
+    },
+    "original_establishment": {
+      "caller_return": "not established by local origin",
+      "entry_id": "219801389fd05687959e441619f30cc9f943c19a0e434044a3e77f969fa4b711",
+      "manifest_sha256": "4ff0b32da9884d78c569780330e3309459d2702f49ed70c7dcb22e952474fa24",
+      "origin_id": "5a8ebdf224a20ce86368dd6935276c26",
+      "result_path": "origin-result.json",
+      "result_sha256": "dd0fe5b65a9d1e9840e28610545a109d58dbd03e6e0079400684206a8ce32fcc"
+    },
+    "proof_modules": [
+      "GateData",
+      "GateLocalNames",
+      "GateExternalNames",
+      "GateIdentities",
+      "GateBounds",
+      "GateModel",
+      "GateViews",
+      "GateRun"
+    ],
+    "records": 1885,
+    "references": 15630,
+    "reuse": "local-origin",
+    "stages": [
+      {
+        "seconds": 0.37164374999701977,
+        "stage": "acquire-import-reconstruct"
+      },
+      {
+        "seconds": 3.3182606669142842,
+        "stage": "support-pins"
+      },
+      {
+        "seconds": 1.25168712483719,
+        "stage": "current-certificates"
+      },
+      {
+        "seconds": 1.0366192082874477,
+        "stage": "authenticated-artifacts"
+      },
+      {
+        "seconds": 0.20413941703736782,
+        "stage": "output-view-correspondence"
+      },
+      {
+        "seconds": 3.307727334089577,
+        "stage": "support-pins-after"
+      },
+      {
+        "seconds": 0.2342098751105368,
+        "stage": "origin-currentness"
+      }
+    ],
+    "support": {
+      "manifest_sha256": "a258720f9b011e947f19260f4272a1ec85fc25ffb7f7dcfc46c108f7e20f2378",
+      "members": 28460,
+      "platform": "Darwin-arm64"
+    },
+    "theorem_audit": {
+      "AC.GateData.chars_reconstructed": [],
+      "AC.GateData.checked0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.edgeBounds": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.execution_matches_project0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.externalCharsBlock0_source": [],
+      "AC.GateData.externalCharsBlock1_source": [],
+      "AC.GateData.externalCharsBlock2_source": [],
+      "AC.GateData.externalCharsBlock3_source": [],
+      "AC.GateData.externalCharsBlock4_source": [],
+      "AC.GateData.externalCharsBlock5_source": [],
+      "AC.GateData.externalCharsBlock6_source": [],
+      "AC.GateData.externalCharsBlock7_source": [],
+      "AC.GateData.externalCharsBlock8_source": [],
+      "AC.GateData.externalChars_source": [
+        "propext"
+      ],
+      "AC.GateData.identities_checked": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.localCharsBlock0_source": [],
+      "AC.GateData.localCharsBlock10_source": [],
+      "AC.GateData.localCharsBlock11_source": [],
+      "AC.GateData.localCharsBlock12_source": [],
+      "AC.GateData.localCharsBlock13_source": [],
+      "AC.GateData.localCharsBlock14_source": [],
+      "AC.GateData.localCharsBlock1_source": [],
+      "AC.GateData.localCharsBlock2_source": [],
+      "AC.GateData.localCharsBlock3_source": [],
+      "AC.GateData.localCharsBlock4_source": [],
+      "AC.GateData.localCharsBlock5_source": [],
+      "AC.GateData.localCharsBlock6_source": [],
+      "AC.GateData.localCharsBlock7_source": [],
+      "AC.GateData.localCharsBlock8_source": [],
+      "AC.GateData.localCharsBlock9_source": [],
+      "AC.GateData.localChars_source": [
+        "propext"
+      ],
+      "AC.GateData.model_checked": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.names_exact": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.orderedPairsChecked0": [],
+      "AC.GateData.orderedPairsChecked1": [],
+      "AC.GateData.orderedPairsChecked10": [],
+      "AC.GateData.orderedPairsChecked11": [],
+      "AC.GateData.orderedPairsChecked12": [],
+      "AC.GateData.orderedPairsChecked13": [],
+      "AC.GateData.orderedPairsChecked14": [],
+      "AC.GateData.orderedPairsChecked15": [],
+      "AC.GateData.orderedPairsChecked16": [],
+      "AC.GateData.orderedPairsChecked17": [],
+      "AC.GateData.orderedPairsChecked18": [],
+      "AC.GateData.orderedPairsChecked19": [],
+      "AC.GateData.orderedPairsChecked2": [],
+      "AC.GateData.orderedPairsChecked20": [],
+      "AC.GateData.orderedPairsChecked21": [],
+      "AC.GateData.orderedPairsChecked22": [],
+      "AC.GateData.orderedPairsChecked23": [],
+      "AC.GateData.orderedPairsChecked3": [],
+      "AC.GateData.orderedPairsChecked4": [],
+      "AC.GateData.orderedPairsChecked5": [],
+      "AC.GateData.orderedPairsChecked6": [],
+      "AC.GateData.orderedPairsChecked7": [],
+      "AC.GateData.orderedPairsChecked8": [],
+      "AC.GateData.orderedPairsChecked9": [],
+      "AC.GateData.ordered_chain": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.reachability0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.refBounds": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.result0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.set0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "reason": null,
+  "request_sha256": "f4c485f2be48a9b59ca043c4e2fdc07aab1e97ee6c08bcea4567ba92c15b58fb",
+  "requested_claims": [
+    "imported-model-well-formedness",
+    "whole-model-source-correspondence",
+    "declared-closure-and-projection",
+    "record-budget-result",
+    "supplied-graphify-view-correspondence"
+  ],
+  "runtime_identity": {
+    "pins": {
+      ".cache/formal-origin-v1/selection.json": "e826fb3de31b7521b106d218222b74ed9535a00da90214483fd85b95aba93365",
+      "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+      "AC/GateProof.lean": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+      "AC/GateRuntime.lean": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f",
+      "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+      "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+      "AC/Structure.lean": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb",
+      "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+      "lakefile.toml": "f22cba4f5f31d23815c62533bb9e6db49fc85e08e8bd707bd20d82497f9583f5",
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+      "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+      "profiles/proof-support-v1.json": "a258720f9b011e947f19260f4272a1ec85fc25ffb7f7dcfc46c108f7e20f2378",
+      "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+      "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+      "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+      "scripts/formal_gate.py": "4fb6daab9d1b9a14be797d1595f201e3dab1f1e5800d96babb130259b1234b2c",
+      "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
+      "scripts/formal_support.py": "10ec02e8297ddb02a2522457b26c71fd9c1b4e0d60985ce59e3d083afd5f2615",
+      "scripts/gate_codegen.py": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
+      "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+      "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+      "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+      "scripts/runtime_process.py": "a32e8cdc66f05bd89876cd9bc1935912a94377007e75193d57fbe369b6259046",
+      "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+    },
+    "sha256": "985260db20335ce77be7fe50c67cd12bc4ebd715ca5f30b06e285a626500b247"
+  },
+  "schema": "a_c.formal-gate.result/1",
+  "selections": [
+    {
+      "budget_records": 21,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c"
+      ]
+    }
+  ],
+  "status": "verified"
+}

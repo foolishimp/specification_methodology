@@ -1,0 +1,132 @@
+{
+  "boundary_producer": {
+    "bytes": 2510,
+    "path": "specification_methodology/v3/build_tenants/common-tools/payload_boundary.py",
+    "sha256": "d01d30b9afcaf310c2ee0347a8c7424eda222a6acf58a48a244efdd15a85ec7c"
+  },
+  "byte_alias_preparation": {
+    "bytes": 232649,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/RETENTION.json",
+    "sha256": "6a8c97262b41850f2d8fa930be378f1b9ebb6bcf982e57296369cf4b903607b1"
+  },
+  "closed_owner_selection": {
+    "bytes": 4451,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/CLOSED_PROOF_BUNDLES.json",
+    "sha256": "1ff96b68ef229a582bfb7728c64edd78e7645e602341ba81ffe8c91312de0ff4"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "pack",
+        "--bundle",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/formal/current-full",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/full.zip"
+      ],
+      "id": "pack-full",
+      "inputs": {
+        "actual_manifest": {
+          "bytes": 5639,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/formal/current-full/manifest.json",
+          "sha256": "d5eb5a5b2a5344f17af37ea4a8984e70ebdfb8928567a7ca303bbf9d810b8fff"
+        },
+        "actual_result": {
+          "bytes": 20158,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/formal/current-full/result.json",
+          "sha256": "d1386aab366b74939315168c724a8c7709651b8c66efebb64c32daffb159d3bc"
+        }
+      },
+      "output": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/full.zip",
+      "receipt_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/executions/pack-full"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "split",
+        "--input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/full.zip",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/full-transport"
+      ],
+      "id": "split-full",
+      "input_binding": "exact archive emitted by immediately prior successful pack; no replacement or retry",
+      "output": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/full-transport",
+      "receipt_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/executions/split-full"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "pack",
+        "--bundle",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/current-context/evidence/formal/b77879ce1880420aaae5a466414ed56c/bundle",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/context-cold.zip"
+      ],
+      "id": "pack-context-cold",
+      "inputs": {
+        "actual_manifest": {
+          "bytes": 5639,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/current-context/evidence/formal/b77879ce1880420aaae5a466414ed56c/bundle/manifest.json",
+          "sha256": "4ff0b32da9884d78c569780330e3309459d2702f49ed70c7dcb22e952474fa24"
+        },
+        "actual_result": {
+          "bytes": 17571,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/current-context/evidence/formal/b77879ce1880420aaae5a466414ed56c/bundle/result.json",
+          "sha256": "dd0fe5b65a9d1e9840e28610545a109d58dbd03e6e0079400684206a8ce32fcc"
+        }
+      },
+      "output": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/context-cold.zip",
+      "receipt_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/executions/pack-context-cold"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "split",
+        "--input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/context-cold.zip",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/context-cold-transport"
+      ],
+      "id": "split-context-cold",
+      "input_binding": "exact archive emitted by immediately prior successful pack; no replacement or retry",
+      "output": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/archives/context-cold-transport",
+      "receipt_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/executions/split-context-cold"
+    }
+  ],
+  "created_ns": 1793993135383781000,
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "kind": "stdo.closed-installed-proof-transport-preparation/1",
+  "limits": "Prepared during native sessions using small closed metadata only. No archive body, support tree, compiled file or runtime hash scan performed by this plan. Root has not assigned these actual archive effects in this record.",
+  "postconditions": [
+    "Preserve actual stdout/stderr/timing/returncode/result for each operation; stop on refusal or drift.",
+    "Select descriptor+ordered64MiB parts as portable custody; retain oversized intermediate ZIP locally as exact transport duplicate, no deletion.",
+    "Bind current full-proof archive to installed_lean, and Context cold/reuse retention to original actual host/Context review records. No verdict transfer."
+  ],
+  "preconditions": [
+    "Root selects the closed native-session boundary; no active host/compiler/support actor shares the slot.",
+    "Each selected actual manifest/result is unchanged and every output is absent. Existing pack/split predicates perform complete member/ordinary/path/hash checks.",
+    "Only these two complete fresh bundles are packed. Authenticated reuse bundles retain distinct small result/manifest/request/origin metadata and alias identical mathematical members through the resulting exact transports.",
+    "No source/payload/installed runtime mutation, no new proof or changed gate."
+  ],
+  "producer": {
+    "bytes": 17655,
+    "path": "specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+    "sha256": "659518c6e0d9110dd073ae59d3d5fa6ba4471e622a75069e718c0ae8ec3e2fc6"
+  },
+  "python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "status": "prepared_unexecuted_pending_explicit_exclusive_slot"
+}

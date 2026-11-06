@@ -1,0 +1,123 @@
+{
+  "activation": "urn:stdo305:qualification:claude:local004:rationale-addendum:001",
+  "basis": {
+    "configuration": {
+      "bytes": 36649,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/.claude/stdo-3.0.5/CONFIG.json",
+      "sha256": "ee998c87f09136bb7dc87c44c15bb9d207ed934df3fa9c3a6b58455e7306439d"
+    },
+    "manifest": {
+      "bytes": 28269,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/manifest.json",
+      "sha256": "9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142"
+    },
+    "uri": "stdo://releases/v3.0.5/",
+    "verified_product": {
+      "bytes": 1661,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/Product.json",
+      "sha256": "121ba5e03445193ab402b0b660dc8c793356d4076c8714705516a4499d33ed03"
+    }
+  },
+  "claim": "Assess whether the original severity rationale follows the exact selected consequence anchors and demonstrated scope; independently reaffirm or revise the grade without an expected answer.",
+  "control_references": [
+    {
+      "bytes": 22028,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/plugins/spec/references/COORDINATED_HANDOFF.md",
+      "sha256": "e06139911583717a1d18994aee314db3aa29a0b5ebab61f3c6cfd11e37030e00"
+    },
+    {
+      "bytes": 3947,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/plugins/spec/references/PRODUCT_BASIS.md",
+      "sha256": "d4d1528af1af32e6951cc42e83ce8c55f0b95cfd3594e85a85493ef871ea1979"
+    }
+  ],
+  "forbidden": [
+    "Command execution or new probes",
+    "Re-evaluating operational controls or whole Product",
+    "Original REVIEW_RETURN edits",
+    "Candidate repair",
+    "Priority, landing, disposition or release acceptance",
+    "Any other writes or nested sessions"
+  ],
+  "independence": "New nonpersistent process but same requested model family. Original candidate authored by operator, not this Reviewer. Prior report and supplied independent concern are disclosed inputs after governing source acquisition; no clean-room or cross-family claim.",
+  "issuer": "/root",
+  "only_after_sources": [
+    {
+      "bytes": 1830,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/REVIEW_INTAKE.json",
+      "sha256": "e480e55397849024349903a2fef4692ebac8bf643996e178279178374a908c33"
+    },
+    {
+      "bytes": 18186,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/REVIEW_RETURN.json",
+      "sha256": "79294cf3083720519b3a4fe29f21697cc9b7f15301697f8c47dca5d20b1d2027"
+    },
+    {
+      "bytes": 129,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/candidate.py",
+      "sha256": "e2c7f4b7861ae0b36b581f1dbd92bc11dc6908597873a385bc751965edeb0324"
+    }
+  ],
+  "owning_law": [
+    {
+      "bytes": 91301,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/EVALUATION.md",
+      "sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485"
+    },
+    {
+      "bytes": 142205,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/ACTIVATION.md",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+    },
+    {
+      "bytes": 131400,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/FOUNDATIONS.md",
+      "sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e"
+    }
+  ],
+  "permitted_effects": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/REVIEW_RATIONALE_ADDENDUM.json"
+  ],
+  "required_return_fields": [
+    "activation",
+    "subject",
+    "basis",
+    "claim",
+    "scope",
+    "exclusions",
+    "evidence",
+    "verdict",
+    "original_grade",
+    "resulting_grade",
+    "rationale",
+    "demonstrated_unit_consequence",
+    "downstream_magnitude_and_containment",
+    "prior_rationale_correction",
+    "residuals",
+    "uncertainty",
+    "independence",
+    "invalidation",
+    "re_entry"
+  ],
+  "review_entry": {
+    "bytes": 8074,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/plugins/spec/skills/stdo-review/SKILL.md",
+    "sha256": "b90b3a2014d7891e25b40c11e5f3638accb9f3408cb3f0cf3922d26f17bc57df"
+  },
+  "role": "Reviewer: severity rationale addendum only",
+  "schema": "stdo305.native-control-intake/1",
+  "source_first": [
+    {
+      "bytes": 165730,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/EXECUTIVE_BASELINE.md",
+      "sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff"
+    },
+    {
+      "bytes": 168,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/REQUIREMENT.md",
+      "sha256": "54f24cf970602adb1937460aa17b932c92e07e3d89eb399ff5188ef60e57553e"
+    }
+  ],
+  "status": "prospective_requires_Root_execution_assignment",
+  "transition": "After writing this complete addendum, Root has prospectively selected the distinct reporting role in REPORTING_INTAKE.json; no new review or work is self-activated. Both roles still require Root execution assignment of PLAN.json."
+}

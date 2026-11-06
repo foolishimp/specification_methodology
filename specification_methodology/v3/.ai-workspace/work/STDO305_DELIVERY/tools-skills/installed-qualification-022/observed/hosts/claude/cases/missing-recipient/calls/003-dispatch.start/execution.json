@@ -1,0 +1,54 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+    "-B",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+    "--policy",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/policy.json",
+    "--policy-sha256",
+    "ea936ad6e5654944556676ae7f766ab887041a0583275a9f039e40b0fd7b6aac",
+    "--principal",
+    "executive",
+    "call",
+    "--request",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/requests/003-dispatch.start.request.json"
+  ],
+  "configuration": {
+    "bytes": 36649,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/.claude/stdo-3.0.5/CONFIG.json",
+    "sha256": "ee998c87f09136bb7dc87c44c15bb9d207ed934df3fa9c3a6b58455e7306439d"
+  },
+  "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/workspace",
+  "ended_ns": 1793993446741852000,
+  "policy": {
+    "bytes": 8576,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/policy.json",
+    "sha256": "ea936ad6e5654944556676ae7f766ab887041a0583275a9f039e40b0fd7b6aac"
+  },
+  "producer": {
+    "bytes": 21703,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+    "sha256": "689c70822429c5a4257b323ff5f41fdbcb8457ddecc4c4a8c1ef15a12e5568f2"
+  },
+  "recovery": "On timeout retain output and reconcile descendant/effect state before any retry.",
+  "request": {
+    "bytes": 311,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/requests/003-dispatch.start.request.json",
+    "sha256": "24786b8c49c367823b1ebde1a3482b838157c1d0e03ac155a340d2dcc0fd8f1b"
+  },
+  "returncode": 2,
+  "schema": "stdo305.public-installed-operation/1",
+  "started_ns": 1793993443649919000,
+  "stderr": {
+    "bytes": 0,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/calls/003-dispatch.start/stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 1043,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/calls/003-dispatch.start/stdout.json",
+    "sha256": "a05a084a2c94baaea69a7e8b133fda20b6143dd0f70053774c65237ec145d9ff"
+  },
+  "timed_out": false,
+  "timeout_seconds": 60
+}

@@ -1,0 +1,31 @@
+{
+  "schema": "stdo305.host-case-observation/1",
+  "case": "missing-issuer",
+  "worker_activation": "urn:stdo305:qualification:claude:1565615c3cdefff3:worker",
+  "case_activation": "urn:stdo305:qualification:claude:9af9719cb0820352:missing-issuer:activation",
+  "product_definition_id": "urn:stdo305:qualification:claude:9af9719cb0820352:missing-issuer",
+  "policy": {"id": "urn:stdo305:qualification:claude:9af9719cb0820352:missing-issuer:policy", "sha256": "2cd2c81e7723a3ac471e4bed1e6cafc951984ac77d0312ee625b199b65c84252"},
+  "grant": {"local_id": "work", "authority_sha256": "fcf283dd923708d94b20269ba2b4a97be75011a57ed197a30e41f35aa5bae764"},
+  "authority_discriminator": {"issuer_dispatch_operation": false, "recipient_target": true, "shared_positive_case_grant": false},
+  "policy_reading": "Principal 'executive' (the recorder's fixed principal) has no 'dispatch.start' in its operations. The grant 'work' lists dispatch.start and targets [worker], but principal capability is absent.",
+  "calls": [
+    {
+      "ordinal": 1,
+      "request": {"path": "issuer-request.json", "sha256": "7b98e0c2e17b5d925ff17c428bffeb70aa33a7da221ba33091e1b7bbb5629890", "id": "issuer-denied", "operation": "dispatch.start", "provenance": "operator-provided; used unchanged"},
+      "recorder_output": "calls/001-dispatch.start-issuer-denied/",
+      "returncode": 2,
+      "response": {"status": "refused", "value": "refused(authority)", "core_value": "out_of_frame", "code": "authority_missing", "reason": "Startup principal has no selected operation capability"},
+      "response_stdout_sha256": "e06a35abdba1a6c16e9309f20917ce9dfc8e7cbaa5303ba9a75ffa9ee196b90f",
+      "provider_evidence": "sha256:a71a64478b97402cd488b7282e5a1cb8969854399a589345fcf61cf6afbbe711"
+    }
+  ],
+  "call_count": 1,
+  "dependent_effect": {
+    "occurred": false,
+    "basis": "workspace/outputs/ was empty before and after; no count, received-stdin.bin or received-views.json. The evidence store holds only operation, resource, acquisition and raw-policy objects; it has no attempts/ or events/ entries, and the operation record has attempt=null. See observations/pre-issuer-dispatch.txt and post-issuer-dispatch.txt.",
+    "evidence_store_effect": "The provider created evidence/ (locks, objects) to retain its refusal record. This is its own evidence surface, not a recipient effect."
+  },
+  "not_done": ["No grant repair, principal switch, policy change or second dispatch call."],
+  "result": "Refusal preserved: issuer dispatch refused for missing principal capability, and no recipient launch was observed.",
+  "limits": ["The observation covers local files and provider evidence only; the recipient process was never launched, so no external effect can arise from it.", "No semantic acceptance."]
+}

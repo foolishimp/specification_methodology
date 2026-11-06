@@ -1,0 +1,404 @@
+{
+  "concepts": [
+    {
+      "key": "receipt_service",
+      "label": "Bounded receipt service",
+      "definition": "The service records whether a requested delivery is admitted.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "The service records whether a requested delivery is admitted."
+        }
+      ]
+    },
+    {
+      "key": "delivery",
+      "label": "Requested delivery",
+      "definition": "A requested delivery whose admission is recorded by the service.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "The service records whether a requested delivery is admitted."
+        }
+      ]
+    },
+    {
+      "key": "issuer_grant",
+      "label": "Issuer grant",
+      "definition": "One of the required permissions for delivery, distinct from recipient permission.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Delivery requires an issuer grant, a recipient grant and current evidence."
+        }
+      ]
+    },
+    {
+      "key": "recipient_grant",
+      "label": "Recipient grant",
+      "definition": "The recipient permission required for delivery alongside the issuer grant.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Delivery requires an issuer grant, a recipient grant and current evidence."
+        }
+      ]
+    },
+    {
+      "key": "current_evidence",
+      "label": "Current evidence",
+      "definition": "Evidence required to be current for delivery; stale evidence requires refusal.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Delivery requires an issuer grant, a recipient grant and current evidence."
+        }
+      ]
+    },
+    {
+      "key": "process_completion",
+      "label": "Completed process",
+      "definition": "A process completion, which by itself is insufficient to establish external-effect settlement.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "A completed process alone does not establish that all external effects settled."
+        }
+      ]
+    },
+    {
+      "key": "prior_effect",
+      "label": "Prior external effect",
+      "definition": "A prior effect that may be uncertain; its activation and history must be retained when reconciling before a new attempt.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "An uncertain prior effect must be reconciled before a new attempt; keep its activation and history."
+        }
+      ]
+    },
+    {
+      "key": "report",
+      "label": "Report",
+      "definition": "An account with variable wording that must preserve every prerequisite and unresolved item.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "The report may vary in wording but must preserve every prerequisite and unresolved item."
+        }
+      ]
+    },
+    {
+      "key": "host_permission",
+      "label": "External host permission setting",
+      "definition": "A host permission setting whose meaning and enforcement are unresolved in this source.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "The meaning and enforcement of an external host's permission setting remain unresolved here."
+        }
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "key": "delivery_requires_issuer",
+      "kind": "requires",
+      "source_key": "delivery",
+      "target_key": "issuer_grant",
+      "meaning": "Delivery requires an issuer grant.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Delivery requires an issuer grant, a recipient grant and current evidence."
+        }
+      ]
+    },
+    {
+      "key": "delivery_requires_recipient",
+      "kind": "requires",
+      "source_key": "delivery",
+      "target_key": "recipient_grant",
+      "meaning": "Delivery requires a recipient grant.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Delivery requires an issuer grant, a recipient grant and current evidence."
+        }
+      ]
+    },
+    {
+      "key": "delivery_requires_evidence",
+      "kind": "requires",
+      "source_key": "delivery",
+      "target_key": "current_evidence",
+      "meaning": "Delivery requires current evidence.",
+      "governing": true,
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Delivery requires an issuer grant, a recipient grant and current evidence."
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "key": "record_admission",
+      "applies_to_keys": [
+        "receipt_service",
+        "delivery"
+      ],
+      "statement": "The service records whether each requested delivery is admitted.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 2,
+          "end_line": 2,
+          "quote": "The service records whether a requested delivery is admitted."
+        }
+      ]
+    },
+    {
+      "key": "conjunctive_prerequisites",
+      "applies_to_keys": [
+        "delivery",
+        "issuer_grant",
+        "recipient_grant",
+        "current_evidence"
+      ],
+      "statement": "Delivery requires all three: an issuer grant, a recipient grant and current evidence.",
+      "uncertainty": "The source does not say these are sufficient for admission.",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Delivery requires an issuer grant, a recipient grant and current evidence."
+        }
+      ]
+    },
+    {
+      "key": "refuse_missing_or_stale",
+      "applies_to_keys": [
+        "delivery"
+      ],
+      "statement": "Refuse delivery if any required grant is absent or evidence is stale.",
+      "uncertainty": "",
+      "conditions": [
+        "Any required grant is absent, or evidence is stale."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "If any required grant is absent or evidence is stale, refuse delivery."
+        }
+      ]
+    },
+    {
+      "key": "process_not_settlement",
+      "applies_to_keys": [
+        "process_completion",
+        "prior_effect"
+      ],
+      "statement": "A completed process alone does not establish that all external effects settled.",
+      "uncertainty": "",
+      "conditions": [
+        "Only process completion has been established."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "A completed process alone does not establish that all external effects settled."
+        }
+      ]
+    },
+    {
+      "key": "reconcile_before_attempt",
+      "applies_to_keys": [
+        "prior_effect"
+      ],
+      "statement": "Reconcile an uncertain prior effect before a new attempt, preserving its activation and history.",
+      "uncertainty": "The required reconciliation evidence and mechanism are unspecified.",
+      "conditions": [
+        "A prior effect is uncertain and a new attempt is contemplated."
+      ],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "An uncertain prior effect must be reconciled before a new attempt; keep its activation and history."
+        }
+      ]
+    },
+    {
+      "key": "preserve_report_obligations",
+      "applies_to_keys": [
+        "report"
+      ],
+      "statement": "The report must preserve every prerequisite and every unresolved item even when its wording varies.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "The report may vary in wording but must preserve every prerequisite and unresolved item."
+        }
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "report_wording_variation",
+      "applies_to_keys": [
+        "report"
+      ],
+      "allowed": [
+        "Vary report wording while preserving every prerequisite and unresolved item."
+      ],
+      "forbidden": [
+        "Omit or change a prerequisite or unresolved item through wording variation."
+      ],
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "The report may vary in wording but must preserve every prerequisite and unresolved item."
+        }
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "unresolved_host_enforcement",
+      "subject_key": "host_permission",
+      "uncertainty": "The meaning and enforcement of an external host's permission setting remain unresolved here.",
+      "consequence": "No host confinement, permission equivalence or enforcement claim follows from this representation.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "The meaning and enforcement of an external host's permission setting remain unresolved here."
+        }
+      ]
+    },
+    {
+      "key": "unspecified_reconciliation",
+      "subject_key": "reconcile_before_attempt",
+      "uncertainty": "The source requires reconciliation but does not define its procedure or deciding observations.",
+      "consequence": "Retain the original activation and history; do not claim a new attempt is safe based on process completion alone.",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "An uncertain prior effect must be reconciled before a new attempt; keep its activation and history."
+        }
+      ]
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+      "decision": "residual",
+      "keys": [
+        "receipt_service",
+        "delivery",
+        "issuer_grant",
+        "recipient_grant",
+        "current_evidence",
+        "process_completion",
+        "prior_effect",
+        "report",
+        "host_permission",
+        "delivery_requires_issuer",
+        "delivery_requires_recipient",
+        "delivery_requires_evidence",
+        "record_admission",
+        "conjunctive_prerequisites",
+        "refuse_missing_or_stale",
+        "process_not_settlement",
+        "reconcile_before_attempt",
+        "preserve_report_obligations",
+        "report_wording_variation",
+        "unresolved_host_enforcement",
+        "unspecified_reconciliation"
+      ],
+      "reason": "All eight source lines, including the title and each material condition, are retained through grounded records; host meaning and enforcement and unspecified reconciliation details remain explicit residuals. No supplied section is omitted."
+    }
+  ],
+  "limitations": [
+    "Only the exact supplied RULES.md section is interpreted; Product.json and README.md bind this run but are not authored corpus sections.",
+    "The source states necessary delivery prerequisites, not that their presence alone is sufficient for admission.",
+    "Grant validation, evidence freshness criteria, reconciliation procedure and external host enforcement are not operationally specified here.",
+    "This representation records source meaning; it performs no delivery, admission, reconciliation or semantic acceptance. Judgments, traversals and transformations remain uninstantiated."
+  ]
+}

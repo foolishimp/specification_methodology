@@ -1,0 +1,2667 @@
+{
+  "basis": {
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+    "subject": {
+      "id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2",
+      "inventory": [
+        {
+          "id": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+          "sha256": "383e5099d0816b7ecdf570ab426e2483294ea90dc233791bd459a6da2b63eb15"
+        }
+      ],
+      "sha256": "93df99793b4a9d035bb88e649ff59344f5b103a49bee882b011082ace6f026c2"
+    }
+  },
+  "coordinates": {
+    "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+    "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+    "scope": [
+      "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+    ]
+  },
+  "dependency_contract": {
+    "attachment_families": [
+      "constraints",
+      "latitude",
+      "residuals"
+    ],
+    "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:dependency-contract:authored-governing-relations",
+    "required_relation_kinds": [
+      "urn:a-c:generation:d62e6228288c671fb9b712e8:relation-kind:governing:requires"
+    ]
+  },
+  "external_resolutions": [
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:authority:proposal-authoring-only",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:authority",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:authority:proposal-authoring-only"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:basis",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:constraint-kind",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:context",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:invalidation:source-or-interpretation-change",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:invalidation",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:invalidation:source-or-interpretation-change"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:judgment-kind",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:relation-kind:governing:requires",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:relation-kind",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:relation-kind:governing:requires"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:residual-kind:authored-uncertainty",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:residual-kind",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:residual-kind:authored-uncertainty"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:scope",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:sort",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:stop",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance"
+    },
+    {
+      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+      "evidence_identity": "urn:a-c:generation:d62e6228288c671fb9b712e8:evidence:explicit-generation-signature",
+      "external_identity": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+      "external_target_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section",
+      "reference_domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+      "resolution_basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+      "resolved_target_identity": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service"
+    }
+  ],
+  "functor_bindings": {},
+  "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:model:fc88c382a1c53ec3bfdb0e7d",
+  "identity_universe": [
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:authority:proposal-authoring-only",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:invalidation:source-or-interpretation-change",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:02af1463a104d1829341dc8628b1165b",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:0ef9c26f54c728ce9294735e9d8d0804",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:22e4f48d7f810f8d6156eeb1bf188905",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:42c3553457354ade1ea1a42824bf2955",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:4cca60bcd7184956ad54428a8dd89692",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:525da6eb14b019ca5e88b89f5fef889c",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:59ce388e7e9a331203318556235f7835",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5d3965854096acd9808fbb9038539352",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5de1640fa22fe9313898740e1dc730b4",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5e1b29bdb9fbc92c1c9d23aeb5a1a482",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:6b2096d281798b26badbeaf9d6a865ac",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:709ed82f6089781846801b7af8b622e7",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:74cea13c5f631518dc87a95134d68ce9",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:77ab7e3b2b4723bf90fa790373ae6f4e",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:81300aea29ed2af0e1175a716171d644",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:96bcca10bf3bc0f2336c67f5fd0d0cc7",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:9fb02e09f46b229b66674f59c25b60e4",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:b33e0a8f2eeb573669eb01d6279ef955",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:c1b388fcb1285d91097945768ca71374",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:ca08135d71adad2928d178c898ccefc5",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:record:d3e61cee7c39b73bea230034ecaf8d13",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:relation-kind:governing:requires",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:residual-kind:authored-uncertainty",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+    "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance",
+    "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service"
+  ],
+  "interpretation": {
+    "authority": {
+      "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:authority:proposal-authoring-only",
+      "sha256": "332110e600d3ac9be0047e9c5fed7dfc01d4cf9d6f8805b40ad871a91766e1ed"
+    },
+    "contract": {
+      "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:interpretation-contract",
+      "sha256": "de0c523005e51b2e9cedb909671f697be4aba999698ecdd024d316dceaa6a7d4"
+    },
+    "dispositions": [
+      {
+        "authority": "urn:a-c:generation:d62e6228288c671fb9b712e8:authority:proposal-authoring-only",
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "decision": "residual",
+        "reason": "All eight source lines, including the title and each material condition, are retained through grounded records; host meaning and enforcement and unspecified reconciliation details remain explicit residuals. No supplied section is omitted.",
+        "records": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:77ab7e3b2b4723bf90fa790373ae6f4e",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:42c3553457354ade1ea1a42824bf2955",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:0ef9c26f54c728ce9294735e9d8d0804",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:b33e0a8f2eeb573669eb01d6279ef955",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:d3e61cee7c39b73bea230034ecaf8d13",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:9fb02e09f46b229b66674f59c25b60e4",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:59ce388e7e9a331203318556235f7835",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:6b2096d281798b26badbeaf9d6a865ac",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5e1b29bdb9fbc92c1c9d23aeb5a1a482",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5de1640fa22fe9313898740e1dc730b4",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:74cea13c5f631518dc87a95134d68ce9",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:81300aea29ed2af0e1175a716171d644",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:ca08135d71adad2928d178c898ccefc5",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:22e4f48d7f810f8d6156eeb1bf188905",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5d3965854096acd9808fbb9038539352",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:709ed82f6089781846801b7af8b622e7",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:4cca60bcd7184956ad54428a8dd89692",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:96bcca10bf3bc0f2336c67f5fd0d0cc7",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:c1b388fcb1285d91097945768ca71374",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:525da6eb14b019ca5e88b89f5fef889c",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:02af1463a104d1829341dc8628b1165b"
+        ],
+        "source": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service"
+      }
+    ],
+    "interpreter": {
+      "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:interpreter:f-p-cli",
+      "sha256": "c391ed8fc34e542eab861963dfc776f03ec19e7b41f928aa2d1c447f8ff5ce5e"
+    },
+    "invalidation": {
+      "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:invalidation:source-or-interpretation-change",
+      "sha256": "ec23fb2d5994461d3e78305466f14b0922e86f4e3e25e66ce35749f4849b6e08"
+    },
+    "provenance": [
+      {
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:provenance:generation-plan",
+        "sha256": "60984fe2ab548bdec0369a4630de5af8d8a6c514fdd04d7d8659100340b41a51"
+      },
+      {
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:provenance:author-invocations",
+        "sha256": "c391ed8fc34e542eab861963dfc776f03ec19e7b41f928aa2d1c447f8ff5ce5e"
+      }
+    ],
+    "selection_ledger": {
+      "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:selection-ledger",
+      "sha256": "6f7d150574d73700b31193a1e8aa1fdf75a702135bd0033e8e5501675702f3db"
+    },
+    "source_reentry": {
+      "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:source-reentry",
+      "sha256": "37f5a44456903d98c82a099409d5e5a48ece3d473999c2b9b46877e5c759a08e"
+    }
+  },
+  "populations": {
+    "constraints": [
+      {
+        "applies_to": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:77ab7e3b2b4723bf90fa790373ae6f4e",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:42c3553457354ade1ea1a42824bf2955"
+        ],
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:ca08135d71adad2928d178c898ccefc5",
+        "judgment_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "RULES.md",
+              "quote": "The service records whether a requested delivery is admitted.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 2
+            }
+          ],
+          "statement": "The service records whether each requested delivery is admitted.",
+          "uncertainty": ""
+        },
+        "refusal": "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:42c3553457354ade1ea1a42824bf2955",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:0ef9c26f54c728ce9294735e9d8d0804",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:b33e0a8f2eeb573669eb01d6279ef955",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:d3e61cee7c39b73bea230034ecaf8d13"
+        ],
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:22e4f48d7f810f8d6156eeb1bf188905",
+        "judgment_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "RULES.md",
+              "quote": "Delivery requires an issuer grant, a recipient grant and current evidence.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 3
+            }
+          ],
+          "statement": "Delivery requires all three: an issuer grant, a recipient grant and current evidence.",
+          "uncertainty": "The source does not say these are sufficient for admission."
+        },
+        "refusal": "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:42c3553457354ade1ea1a42824bf2955"
+        ],
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5d3965854096acd9808fbb9038539352",
+        "judgment_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "predicate": {
+          "conditions": [
+            "Any required grant is absent, or evidence is stale."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 4,
+              "path": "RULES.md",
+              "quote": "If any required grant is absent or evidence is stale, refuse delivery.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 4
+            }
+          ],
+          "statement": "Refuse delivery if any required grant is absent or evidence is stale.",
+          "uncertainty": ""
+        },
+        "refusal": "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:9fb02e09f46b229b66674f59c25b60e4",
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:59ce388e7e9a331203318556235f7835"
+        ],
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:709ed82f6089781846801b7af8b622e7",
+        "judgment_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "predicate": {
+          "conditions": [
+            "Only process completion has been established."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 5,
+              "path": "RULES.md",
+              "quote": "A completed process alone does not establish that all external effects settled.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 5
+            }
+          ],
+          "statement": "A completed process alone does not establish that all external effects settled.",
+          "uncertainty": ""
+        },
+        "refusal": "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:59ce388e7e9a331203318556235f7835"
+        ],
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:4cca60bcd7184956ad54428a8dd89692",
+        "judgment_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "predicate": {
+          "conditions": [
+            "A prior effect is uncertain and a new attempt is contemplated."
+          ],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 6,
+              "path": "RULES.md",
+              "quote": "An uncertain prior effect must be reconciled before a new attempt; keep its activation and history.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 6
+            }
+          ],
+          "statement": "Reconcile an uncertain prior effect before a new attempt, preserving its activation and history.",
+          "uncertainty": "The required reconciliation evidence and mechanism are unspecified."
+        },
+        "refusal": "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ]
+      },
+      {
+        "applies_to": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:6b2096d281798b26badbeaf9d6a865ac"
+        ],
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:96bcca10bf3bc0f2336c67f5fd0d0cc7",
+        "judgment_kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement",
+        "latitude_ref": [],
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "predicate": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "RULES.md",
+              "quote": "The report may vary in wording but must preserve every prerequisite and unresolved item.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 7
+            }
+          ],
+          "statement": "The report must preserve every prerequisite and every unresolved item even when its wording varies.",
+          "uncertainty": ""
+        },
+        "refusal": "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ]
+      }
+    ],
+    "judgments": [],
+    "latitude": [
+      {
+        "allowed_variation": {
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "RULES.md",
+              "quote": "The report may vary in wording but must preserve every prerequisite and unresolved item.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 7
+            }
+          ],
+          "statements": [
+            "Vary report wording while preserving every prerequisite and unresolved item."
+          ]
+        },
+        "applies_to": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:record:6b2096d281798b26badbeaf9d6a865ac"
+        ],
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "forbidden_variation": {
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "RULES.md",
+              "quote": "The report may vary in wording but must preserve every prerequisite and unresolved item.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 7
+            }
+          ],
+          "statements": [
+            "Omit or change a prerequisite or unresolved item through wording variation."
+          ]
+        },
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:c1b388fcb1285d91097945768ca71374",
+        "invalidation": "urn:a-c:generation:d62e6228288c671fb9b712e8:invalidation:source-or-interpretation-change",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ]
+      }
+    ],
+    "objects": [
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:77ab7e3b2b4723bf90fa790373ae6f4e",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The service records whether a requested delivery is admitted.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "RULES.md",
+              "quote": "The service records whether a requested delivery is admitted.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 2
+            }
+          ],
+          "label": "Bounded receipt service"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:42c3553457354ade1ea1a42824bf2955",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A requested delivery whose admission is recorded by the service.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 2,
+              "path": "RULES.md",
+              "quote": "The service records whether a requested delivery is admitted.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 2
+            }
+          ],
+          "label": "Requested delivery"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:0ef9c26f54c728ce9294735e9d8d0804",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "One of the required permissions for delivery, distinct from recipient permission.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "RULES.md",
+              "quote": "Delivery requires an issuer grant, a recipient grant and current evidence.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 3
+            }
+          ],
+          "label": "Issuer grant"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:b33e0a8f2eeb573669eb01d6279ef955",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "The recipient permission required for delivery alongside the issuer grant.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "RULES.md",
+              "quote": "Delivery requires an issuer grant, a recipient grant and current evidence.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 3
+            }
+          ],
+          "label": "Recipient grant"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:d3e61cee7c39b73bea230034ecaf8d13",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "Evidence required to be current for delivery; stale evidence requires refusal.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "RULES.md",
+              "quote": "Delivery requires an issuer grant, a recipient grant and current evidence.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 3
+            }
+          ],
+          "label": "Current evidence"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:9fb02e09f46b229b66674f59c25b60e4",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A process completion, which by itself is insufficient to establish external-effect settlement.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 5,
+              "path": "RULES.md",
+              "quote": "A completed process alone does not establish that all external effects settled.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 5
+            }
+          ],
+          "label": "Completed process"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:59ce388e7e9a331203318556235f7835",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A prior effect that may be uncertain; its activation and history must be retained when reconciling before a new attempt.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 6,
+              "path": "RULES.md",
+              "quote": "An uncertain prior effect must be reconciled before a new attempt; keep its activation and history.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 6
+            }
+          ],
+          "label": "Prior external effect"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:6b2096d281798b26badbeaf9d6a865ac",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "An account with variable wording that must preserve every prerequisite and unresolved item.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 7,
+              "path": "RULES.md",
+              "quote": "The report may vary in wording but must preserve every prerequisite and unresolved item.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 7
+            }
+          ],
+          "label": "Report"
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5e1b29bdb9fbc92c1c9d23aeb5a1a482",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "sort": "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept",
+        "value": {
+          "conditions": [],
+          "definition": "A host permission setting whose meaning and enforcement are unresolved in this source.",
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 8,
+              "path": "RULES.md",
+              "quote": "The meaning and enforcement of an external host's permission setting remain unresolved here.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 8
+            }
+          ],
+          "label": "External host permission setting"
+        }
+      }
+    ],
+    "relations": [
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5de1640fa22fe9313898740e1dc730b4",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:relation-kind:governing:requires",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "RULES.md",
+              "quote": "Delivery requires an issuer grant, a recipient grant and current evidence.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 3
+            }
+          ],
+          "kind": "requires",
+          "meaning": "Delivery requires an issuer grant."
+        },
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:42c3553457354ade1ea1a42824bf2955",
+        "target": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:0ef9c26f54c728ce9294735e9d8d0804"
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:74cea13c5f631518dc87a95134d68ce9",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:relation-kind:governing:requires",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "RULES.md",
+              "quote": "Delivery requires an issuer grant, a recipient grant and current evidence.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 3
+            }
+          ],
+          "kind": "requires",
+          "meaning": "Delivery requires a recipient grant."
+        },
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:42c3553457354ade1ea1a42824bf2955",
+        "target": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:b33e0a8f2eeb573669eb01d6279ef955"
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:81300aea29ed2af0e1175a716171d644",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:relation-kind:governing:requires",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "qualifiers": {
+          "conditions": [],
+          "exceptions": [],
+          "grounding": [
+            {
+              "end_line": 3,
+              "path": "RULES.md",
+              "quote": "Delivery requires an issuer grant, a recipient grant and current evidence.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 3
+            }
+          ],
+          "kind": "requires",
+          "meaning": "Delivery requires current evidence."
+        },
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "source": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:42c3553457354ade1ea1a42824bf2955",
+        "target": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:d3e61cee7c39b73bea230034ecaf8d13"
+      }
+    ],
+    "residuals": [
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "consequence": "No host confinement, permission equivalence or enforcement claim follows from this representation.",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:525da6eb14b019ca5e88b89f5fef889c",
+        "invalidation": "urn:a-c:generation:d62e6228288c671fb9b712e8:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:5e1b29bdb9fbc92c1c9d23aeb5a1a482",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 8,
+              "path": "RULES.md",
+              "quote": "The meaning and enforcement of an external host's permission setting remain unresolved here.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 8
+            }
+          ],
+          "statement": "The meaning and enforcement of an external host's permission setting remain unresolved here."
+        }
+      },
+      {
+        "basis": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis",
+        "consequence": "Retain the original activation and history; do not claim a new attempt is safe based on process completion alone.",
+        "context": "urn:a-c:generation:d62e6228288c671fb9b712e8:context:source-first-proposal",
+        "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:02af1463a104d1829341dc8628b1165b",
+        "invalidation": "urn:a-c:generation:d62e6228288c671fb9b712e8:invalidation:source-or-interpretation-change",
+        "kind": "urn:a-c:generation:d62e6228288c671fb9b712e8:residual-kind:authored-uncertainty",
+        "owner": "urn:a-c:generation:d62e6228288c671fb9b712e8:actor:f-p-author",
+        "re_entry": [],
+        "scope": [
+          "urn:a-c:generation:d62e6228288c671fb9b712e8:scope:source-corpus"
+        ],
+        "subject": "urn:a-c:generation:d62e6228288c671fb9b712e8:record:4cca60bcd7184956ad54428a8dd89692",
+        "uncertainty": {
+          "grounding": [
+            {
+              "end_line": 6,
+              "path": "RULES.md",
+              "quote": "An uncertain prior effect must be reconciled before a new attempt; keep its activation and history.",
+              "section": "urn:a-c:project:94305df4436ef6fdb037fe860a7df2476edaa46c02a6fb64d36e7544e6d139b2/source/RULES.md#Bounded%20receipt%20service",
+              "start_line": 6
+            }
+          ],
+          "statement": "The source requires reconciliation but does not define its procedure or deciding observations."
+        }
+      }
+    ],
+    "transformations": [],
+    "traversals": []
+  },
+  "profile": "a_c.graphify.model/1",
+  "signature": {
+    "definition": {
+      "constraint_kinds": {
+        "urn:a-c:generation:d62e6228288c671fb9b712e8:constraint-kind:authored-source-statement": {
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "predicate": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "uncertainty": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "fields": {
+        "constraints": {
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "judgment_kind": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:judgment-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:constraint-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "latitude_ref": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "latitude"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "predicate": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "uncertainty": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "refusal": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:stop"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        },
+        "judgments": {
+          "authority": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "decided_at": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evaluator": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:judgment-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "subject_digest": {
+            "min_length": 1,
+            "type": "string"
+          }
+        },
+        "latitude": {
+          "allowed_variation": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statements": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "applies_to": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "forbidden_variation": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statements": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              }
+            },
+            "type": "object"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        },
+        "objects": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "sort": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:sort"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "value": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "definition": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "label": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "relations": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:relation-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "residuals": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "consequence": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "kind": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:residual-kind"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "uncertainty": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        },
+        "transformations": {
+          "basis": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "codomain_model": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:model"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "domain_model": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:model"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_introduced": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_preserved": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_removed": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:external-resolution"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "external_resolution_witnesses": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:witness"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "introduced": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:future-record"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "operation_authority": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "preconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "preservation_relation": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:preservation-law"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "preserved": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "removed": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "residuals": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "residuals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "stop_states": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:stop"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "traversal": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "traversals"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        },
+        "traversals": {
+          "authority": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:authority"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "basis": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:basis"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "codomain": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:domain"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "context": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:context"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "domain": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:domain"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "id": {
+            "type": "identity"
+          },
+          "owner": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:actor"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "postconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "preconditions": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": true,
+              "local_families": [
+                "constraints"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "provenance": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "scope": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:scope"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "stop_states": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:stop"
+              ],
+              "governing": false,
+              "local_families": [],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          }
+        }
+      },
+      "functor_kinds": [
+        "urn:stdo:concept:axiomatic-calculus:f-d",
+        "urn:stdo:concept:axiomatic-calculus:f-p",
+        "urn:stdo:concept:axiomatic-calculus:f-h"
+      ],
+      "judgment_kinds": {
+        "urn:a-c:generation:d62e6228288c671fb9b712e8:judgment-kind:external-semantic-review": {
+          "decision": {
+            "type": "enum",
+            "values": [
+              "indeterminate",
+              "refused",
+              "accepted"
+            ]
+          },
+          "evidence": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [
+                "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:evidence"
+              ],
+              "governing": false,
+              "local_families": [
+                "objects"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 1,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        }
+      },
+      "relation_kinds": {
+        "urn:a-c:generation:d62e6228288c671fb9b712e8:relation-kind:governing:requires": {
+          "qualifiers": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "kind": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "meaning": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "source": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "target": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          }
+        }
+      },
+      "required_families": [],
+      "residual_kinds": {
+        "urn:a-c:generation:d62e6228288c671fb9b712e8:residual-kind:authored-uncertainty": {
+          "consequence": {
+            "min_length": 1,
+            "type": "string"
+          },
+          "invalidation": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [
+              "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:invalidation"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "re_entry": {
+            "items": {
+              "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+              "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+              "external_kinds": [],
+              "governing": false,
+              "local_families": [
+                "traversals"
+              ],
+              "local_sorts": [],
+              "type": "ref"
+            },
+            "min_items": 0,
+            "type": "array"
+          },
+          "subject": {
+            "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+            "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects",
+              "relations",
+              "constraints",
+              "latitude"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "uncertainty": {
+            "fields": {
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "statement": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "sorts": {
+        "urn:a-c:generation:d62e6228288c671fb9b712e8:sort:authored-concept": {
+          "value": {
+            "fields": {
+              "conditions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "definition": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "exceptions": {
+                "items": {
+                  "min_length": 1,
+                  "type": "string"
+                },
+                "min_items": 0,
+                "type": "array"
+              },
+              "grounding": {
+                "items": {
+                  "fields": {
+                    "end_line": {
+                      "type": "integer"
+                    },
+                    "path": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "quote": {
+                      "min_length": 1,
+                      "type": "string"
+                    },
+                    "section": {
+                      "basis_relation": "urn:a-c:generation:d62e6228288c671fb9b712e8:basis-relation:exact",
+                      "domain": "urn:a-c:generation:d62e6228288c671fb9b712e8:reference-domain:declared",
+                      "external_kinds": [
+                        "urn:a-c:generation:d62e6228288c671fb9b712e8:external-kind:source-section"
+                      ],
+                      "governing": false,
+                      "local_families": [],
+                      "local_sorts": [],
+                      "type": "ref"
+                    },
+                    "start_line": {
+                      "type": "integer"
+                    }
+                  },
+                  "type": "object"
+                },
+                "min_items": 1,
+                "type": "array"
+              },
+              "label": {
+                "min_length": 1,
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "stop_kinds": [
+        "urn:a-c:generation:d62e6228288c671fb9b712e8:stop:no-execution-or-acceptance"
+      ]
+    },
+    "id": "urn:a-c:generation:d62e6228288c671fb9b712e8:signature:compact-source-proposal-v1",
+    "sha256": "0861058c4ef086995656f2a56adcc2797f05936dc8d942e456d135d6377e7331"
+  }
+}

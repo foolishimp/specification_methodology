@@ -1,0 +1,54 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+    "-B",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+    "--policy",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/policy.json",
+    "--policy-sha256",
+    "ea936ad6e5654944556676ae7f766ab887041a0583275a9f039e40b0fd7b6aac",
+    "--principal",
+    "executive",
+    "call",
+    "--request",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/context-request.json"
+  ],
+  "configuration": {
+    "bytes": 36649,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/.claude/stdo-3.0.5/CONFIG.json",
+    "sha256": "ee998c87f09136bb7dc87c44c15bb9d207ed934df3fa9c3a6b58455e7306439d"
+  },
+  "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/workspace",
+  "ended_ns": 1793993414795678000,
+  "policy": {
+    "bytes": 8576,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/policy.json",
+    "sha256": "ea936ad6e5654944556676ae7f766ab887041a0583275a9f039e40b0fd7b6aac"
+  },
+  "producer": {
+    "bytes": 21703,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+    "sha256": "689c70822429c5a4257b323ff5f41fdbcb8457ddecc4c4a8c1ef15a12e5568f2"
+  },
+  "recovery": "On timeout retain output and reconcile descendant/effect state before any retry.",
+  "request": {
+    "bytes": 5212,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/context-request.json",
+    "sha256": "67b6132470f0922a0356ddc191433b460f7e8849ec43daef7c7e6abbf8af10f2"
+  },
+  "returncode": 0,
+  "schema": "stdo305.public-installed-operation/1",
+  "started_ns": 1793993411741251000,
+  "stderr": {
+    "bytes": 0,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/calls/001-context.assemble/stderr.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 3459,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/missing-recipient/calls/001-context.assemble/stdout.json",
+    "sha256": "4cf6265d98da2cc2ebf39d592b8d76bb3e01aa4022a9bdd5c706b27a05a25282"
+  },
+  "timed_out": false,
+  "timeout_seconds": 60
+}

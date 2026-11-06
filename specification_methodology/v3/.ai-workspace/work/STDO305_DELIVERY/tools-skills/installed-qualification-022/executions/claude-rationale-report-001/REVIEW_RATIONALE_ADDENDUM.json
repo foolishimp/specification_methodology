@@ -1,0 +1,221 @@
+{
+  "schema": "stdo305.review-rationale-addendum/1",
+  "activation": "urn:stdo305:qualification:claude:local004:rationale-addendum:001",
+  "role": "Reviewer: severity rationale addendum only",
+  "issuer": "/root",
+  "return_to": "/root",
+  "intake": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/claude-successor-001/REVIEWER_INTAKE.json",
+    "declared_sha256_in_INPUTS": "737420a415ae3988c4ac3fe4c8a2226f302b33372cf8c15804a098fb0d30dd2e",
+    "intake_status_field": "prospective_requires_Root_execution_assignment",
+    "execution_assignment_relied_on": "The Root request that opened this successor session, which assigns ROLE1 and then ROLE2. PLAN.json is named in the intake transition but is not in the INPUTS.json selection, so it was not read."
+  },
+  "subject": {
+    "reviewed_judgment": "Severity grade and severity rationale for finding REV-claude-1565615c3cdefff3-F1 in the original review return",
+    "original_review_return": {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/REVIEW_RETURN.json",
+      "declared_sha256": "79294cf3083720519b3a4fe29f21697cc9b7f15301697f8c47dca5d20b1d2027",
+      "declared_bytes": 18186,
+      "relied_lines": [16, 25, 56, 58, 63, 64, 65, 67, 68, 76, 78, 81, 82, 113, 121],
+      "treatment": "Read-only. Not edited, not overwritten. This addendum is a separate artifact."
+    },
+    "candidate": {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/candidate.py",
+      "declared_sha256": "e2c7f4b7861ae0b36b581f1dbd92bc11dc6908597873a385bc751965edeb0324",
+      "declared_bytes": 129,
+      "content_as_read": "def admitted(issuer_grant, recipient_grant, evidence_current):\n    return (issuer_grant or recipient_grant) and evidence_current",
+      "author": "operator (per original REVIEW_INTAKE); this Reviewer authored neither the candidate nor the original review"
+    },
+    "unit": "admitted(issuer_grant, recipient_grant, evidence_current), candidate.py lines 1-2, and its immediate dependent delivery behavior as scoped by the original REVIEW_INTAKE"
+  },
+  "basis": {
+    "product_definition": {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/Product.json",
+      "declared_sha256": "121ba5e03445193ab402b0b660dc8c793356d4076c8714705516a4499d33ed03",
+      "definition_id_as_read": "urn:stdo305:qualification:claude:1565615c3cdefff3:review",
+      "bound_basis_as_read": {"uri": "stdo://releases/v3.0.5/", "manifest_sha256": "9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142"}
+    },
+    "currentness_support_from_retained_records": [
+      "project-run/product-verify/stdout.json (retained, not rerun): basis stdo://releases/v3.0.5/, manifest_sha256 9304727d…6142, installed true, valid true, failures []. This record is for the sibling definition cases/project/Product.json, not for review/Product.json. It establishes the installed immutable basis, which review/Product.json binds to the same URI and manifest digest.",
+      "Definition-level verification of review/Product.json is retained only as the original Reviewer's recorded result (REVIEW_RETURN line 16: installed=true, valid=true, failures=[], same basis and manifest). This Reviewer relies on that retained record and did not re-verify it.",
+      "Member digests declared in REVIEWER_INTAKE.json for EXECUTIVE_BASELINE.md (ba089c92…24ff), EVALUATION.md (b856cf04…7485), ACTIVATION.md (56109ffa…441d) and FOUNDATIONS.md (7fe9ecf2…24ff… see manifest: 7fe9ecf257ad…24ff not applicable; exact 7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e) match both the installed manifest.json and the retained verify record. Plugin members stdo-review/SKILL.md (b90b3a20…7df), references/COORDINATED_HANDOFF.md (e0613991…0e00) and references/PRODUCT_BASIS.md (d4d1528a…1ea1979) match the installed manifest.json plugin inventory."
+    ],
+    "currentness_limit": "No SHA-256 was computed in this session because command execution is excluded. Digest equality between the bytes read here and the declared digests is not independently established by this Reviewer. It rests on the retained records above. Any mismatch invalidates this addendum.",
+    "severity_scale": {
+      "identity": "EXECUTIVE_BASELINE.md 'Selected 1–5 severity convention', 1 highest to 5 lowest",
+      "source_lines_read": "EXECUTIVE_BASELINE.md lines 440–529 (selected section 468–499 plus surrounding context)",
+      "binding": "Named by the original REVIEW_INTAKE severity_scale field and by REVIEWER_INTAKE source_first. The Product frame authority review/README.md, which REVIEW_RETURN line 25 also cites as naming the scale, is outside this session's selection and was not read."
+    },
+    "governing_requirement": {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/cases/review/REQUIREMENT.md",
+      "declared_sha256": "54f24cf970602adb1937460aa17b932c92e07e3d89eb399ff5188ef60e57553e",
+      "text_as_read": "# Admission\nDispatch only if both issuer and recipient grants exist and evidence is current. No exception is selected. A caller may not infer one grant from the other."
+    },
+    "review_entry_and_controls_read": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/plugins/spec/skills/stdo-review/SKILL.md",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/plugins/spec/references/COORDINATED_HANDOFF.md",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/plugins/spec/references/PRODUCT_BASIS.md"
+    ]
+  },
+  "claim": "Assess whether the original severity rationale follows the exact selected consequence anchors and demonstrated scope; independently reaffirm or revise the grade without an expected answer.",
+  "scope": "Only the severity grade and severity rationale of finding F1, together with the parts of the original triage that state the grade's basis and its revision conditions (REVIEW_RETURN lines 78, 113 and 121, with lines 56, 58, 81 and 82 read as their support). The falsified verdict, the defect's existence and the retained counterexamples are carried forward unchanged and not re-assessed.",
+  "exclusions": [
+    "Command execution, new probes or a rerun of the original falsifier",
+    "Re-evaluating operational controls or the whole Product",
+    "Edits to REVIEW_RETURN.json or any other existing file",
+    "Candidate repair, or wording a correction for adoption",
+    "Priority, current-boundary effect, landing, closure, disposition or release acceptance",
+    "Re-verifying review/Product.json, and reading review/README.md or PLAN.json (both outside the selection)",
+    "Full re-reads of EVALUATION.md, ACTIVATION.md or FOUNDATIONS.md. Their digests were checked against retained records, but their sections were not re-acquired for this narrow rationale question."
+  ],
+  "evidence": [
+    {
+      "kind": "source-read (before any old review, intake, candidate or concern content)",
+      "subject": "EXECUTIVE_BASELINE.md lines 440–529",
+      "relied_text": {
+        "line_470_472": "The Reviewer grades the consequence of the demonstrated defect if it manifests, using these qualitative anchors.",
+        "line_473_474": "The Product-owned frame basis binds the convention and its Product-specific evidence criteria: affected claims, users/paths, consequence, dependencies and supported containment (P6).",
+        "anchor_1_line_478": "Critical loss of the governed outcome or of essential safety, authority or integrity across its affected scope.",
+        "anchor_2_line_479": "Major failure of essential behaviour, with substantial affected users, paths or dependencies and no adequate ordinary containment.",
+        "anchor_3_line_480": "Material but bounded failure whose disposition depends on its downstream impact and wider blast radius.",
+        "anchor_4_line_481": "Limited local failure with supported containment or a practical workaround and little effect outside that local scope.",
+        "anchor_5_line_482": "Minor actionable defect with minimal functional consequence for the declared outcome.",
+        "line_489_490": "Unknown dependent impact is not evidence of containment.",
+        "line_491_493": "no severity value automatically supplies priority, a block or permission to defer"
+      }
+    },
+    {
+      "kind": "source-read (before any old review, intake, candidate or concern content)",
+      "subject": "review/REQUIREMENT.md",
+      "derived_anchors": [
+        "A1: The governed outcome of this Product's only requirement is an authority gate. Dispatch requires the conjunction of an issuer grant, a recipient grant and current evidence.",
+        "A2: Each grant is an independent authority prerequisite. 'A caller may not infer one grant from the other' forbids letting either grant stand in for the other.",
+        "A3: 'No exception is selected', so no state outside the full conjunction is a lawful admission.",
+        "A4: The essential authority property the requirement adds beyond a single-grant gate is the 'both' conjunction. Losing it is a loss of authority, not a degraded quality of service."
+      ]
+    },
+    {
+      "kind": "retained-deterministic-counterexamples (carried forward from REVIEW_RETURN lines 63–68; not rerun)",
+      "counterexamples": [
+        {"input": {"issuer_grant": false, "recipient_grant": true, "evidence_current": true}, "expected": false, "actual": true, "violates": "issuer grant required and not inferable from the recipient grant"},
+        {"input": {"issuer_grant": true, "recipient_grant": false, "evidence_current": true}, "expected": false, "actual": true, "violates": "recipient grant required and not inferable from the issuer grant"}
+      ],
+      "conforming_states_retained": [[false, false, false], [false, false, true], [false, true, false], [true, false, false], [true, true, false], [true, true, true]],
+      "original_producer": "Original Reviewer's in-process exhaustive 8-state enumeration (REVIEW_RETURN line 40)",
+      "this_session": "Not executed. Reading candidate.py line 2 directly gives the same truth table: (I or R) and C. That is analytic reading, not a new run."
+    },
+    {
+      "kind": "supplied-concern (read only after governing sources)",
+      "subject": "REVIEW_CONCERN_AFTER_SOURCES.json",
+      "declared_sha256_in_INPUTS": "0f0d8884cb560aed8bb48652b55a9a8d61f9bf7e116c6e81742b9aaaf62b42f0",
+      "treatment": "Treated as a labelled hypothesis input. It prescribes no grade. This Reviewer checked each assertion against EXECUTIVE_BASELINE lines 478–490 and REVIEW_RETURN lines 78 and 113."
+    }
+  ],
+  "verdict": {
+    "core_value": "falsified",
+    "applies_to": "The claim that the original severity rationale follows the exact selected consequence anchors and demonstrated scope",
+    "statement": "The original rationale cites anchor 1 correctly, and its first four sentences are grounded in the demonstrated unit consequence. Its stated discriminator between grades 1 and 2 misreads the selected scale. It makes grade 2 conditional on an established downstream re-check, and it rests grade 1 on the absence of established containment (lines 78 and 113). Under the selected anchors, absence of adequate containment is part of grade 2 itself (line 479). An established re-check would be supported containment, which bears on grades 3–4 (lines 480–481). It is not the boundary between 1 and 2. On independent reassessment, grade 1 is reaffirmed on the demonstrated unit consequence alone. The F1 defect verdict (falsified candidate) is unaffected.",
+    "finding_triage": "This addendum's finding concerns the reasoning in a prior judgment, not Product behaviour. It is carried in prior_rationale_correction. It has no Product severity grade and needs no bug report."
+  },
+  "original_grade": {
+    "finding": "REV-claude-1565615c3cdefff3-F1",
+    "severity": 1,
+    "scale": "1 highest to 5 lowest (selected native review convention)",
+    "source": "REVIEW_RETURN.json line 76"
+  },
+  "resulting_grade": {
+    "finding": "REV-claude-1565615c3cdefff3-F1",
+    "severity": 1,
+    "scale": "1 highest to 5 lowest (EXECUTIVE_BASELINE 'Selected 1–5 severity convention'), unchanged identity",
+    "change": "reaffirmed on corrected grounds; the grade is unchanged and the rationale is replaced",
+    "not_assigned": ["priority", "current-boundary effect", "landing", "closure", "disposition", "repair"]
+  },
+  "rationale": [
+    "R1 (what is graded). Line 470–472 grades the consequence of the demonstrated defect if it manifests. The demonstrated defect is the unit's replacement of the 'both grants' conjunction by 'at least one grant'. This is deterministic over the finite boolean domain (retained counterexamples).",
+    "R2 (anchor 1 fit from unit consequence). The governed outcome (A1) is an authority gate, and the defect strikes its essential authority property (A2, A4). The candidate admits iff (I or R) and C. So the issuer-grant requirement constrains admission only when the recipient grant is absent, and the reverse holds too. Each grant requirement is fully nullified in every state where the other grant is present. In effect the candidate makes the inference the requirement forbids. Within the defect's affected scope (every current-evidence state with exactly one grant, covering both single-grant-missing classes), the authority property is lost entirely, not degraded. That matches anchor 1's 'critical loss … of essential … authority … across its affected scope' (line 478).",
+    "R3 (why not 2). Anchor 2 (line 479) describes a major failure of essential behaviour with substantial affected users, paths or dependencies. The F1 defect also meets anchor 2's descriptive conditions: 2 of the 7 non-admissible states, and no adequate ordinary containment in the subject. Anchor 1 is the more specific and stronger fit for two reasons. The anchor text names authority explicitly. And the defect removes the requirement's distinguishing authority property entirely within its affected scope, rather than partially failing a behaviour. The 1-versus-2 choice rests on this unit-level consequence, not on containment.",
+    "R4 (what the grade does not rest on). The grade does not rest on unknown downstream magnitude, on an unestablished downstream consumer, or on an unestablished claim that the external effect cannot be withdrawn. Absent containment is recorded as a fact of the subject (no secondary guard in the unit). It is not used as positive evidence of extensive or critical downstream loss (line 489–490 governs only that unknown impact is not containment).",
+    "R5 (what established containment would change). An independently established downstream re-check of both grants would be supported containment of the dependent path. That is a material input change requiring re-grading against anchors 3–4 with an explicit downstream and blast-radius assessment (lines 480–481, 484–490). It would not make anchor 2 fit, because anchor 2 presupposes no adequate ordinary containment. This addendum does not pre-commit a hypothetical grade.",
+    "R6 (indeterminate confidence carried). As in REVIEW_RETURN line 80, no quantified assurance model is selected for the grade. Confidence in the grade is Reviewer judgment from qualitative anchors and is not quantified."
+  ],
+  "demonstrated_unit_consequence": {
+    "statement": "For admitted() as written, any call with truthy evidence_current and exactly one truthy grant returns truthy (admission). The missing grant is never required. Within the unit, the essential authority prerequisite 'both grants' is lost entirely across the defect's affected scope. The zero-grant and non-current-evidence rejections are preserved (6 of 8 states conform).",
+    "affected_states": "(F,T,T) and (T,F,T): 2 of the 7 states REQUIREMENT.md requires to be refused, covering both single-grant-missing classes",
+    "immediate_dependent_behavior_in_scope": "By the predicate's contract and the original scope, a dispatch decided by admitted() proceeds in those states without the missing grant. This is assessed analytically. No consumer was supplied or executed (REVIEW_RETURN line 57, line 95).",
+    "determinism": "Deterministic; established by the retained exhaustive enumeration, not sampled",
+    "containment_in_subject": "None. admitted() is the only guard in the subject and has no secondary check."
+  },
+  "downstream_magnitude_and_containment": {
+    "magnitude": "Unknown. No dispatch consumer, call-site inventory, delivery-effect description or count of affected deliveries is in the subject or this session's selection. The original statement that a dispatched delivery is an external effect that cannot be withdrawn (line 56, echoed in line 78) is an inference from the predicate's contract. It is not demonstrated, and this addendum does not rely on it.",
+    "containment": "Unknown beyond the unit. No downstream re-check is established, and none is excluded. Under EXECUTIVE_BASELINE line 489–490, unknown dependent impact is not evidence of containment. Equally, unknown containment is not evidence of extensive or critical downstream loss.",
+    "effect_on_grade": "None in either direction. Grade 1 rests on the demonstrated unit consequence (R2). Downstream magnitude stays a residual for the decision owner's blast-radius and disposition reasoning. If containment is later established, re-grading follows R5.",
+    "blast_radius_restatement": "Demonstrated: every current-evidence admission decision with exactly one grant. Indeterminate: the number and kind of downstream consumers and effects."
+  },
+  "prior_rationale_correction": [
+    {
+      "location": "REVIEW_RETURN.json line 78, final two sentences",
+      "original_text": "Severity 2 was considered: it would fit only if an established downstream guard re-checked both grants. No such guard is in the subject, and unknown containment cannot be credited.",
+      "correction": "The conditional misreads anchor 2. Anchor 2 includes 'no adequate ordinary containment' (EXECUTIVE_BASELINE line 479), so an established downstream re-check would take the finding out of anchor 2, not into it. The correct comparison is unit-level: anchor 1 (critical loss of essential authority across the affected scope) versus anchor 2 (major failure of essential behaviour with substantial affected paths and no adequate containment). On that comparison anchor 1 fits (rationale R2–R3). The clause 'unknown containment cannot be credited' is correct and is retained."
+    },
+    {
+      "location": "REVIEW_RETURN.json line 78, phrase 'and its dependent effect (dispatch/delivery) is external'",
+      "correction": "Demonstrated only as the predicate's contractual consequence. Irreversibility and external magnitude are not established and do not support the grade (downstream_magnitude_and_containment.magnitude)."
+    },
+    {
+      "location": "REVIEW_RETURN.json line 113 (uncertainty.severity)",
+      "original_text": "Moderate. Grade 1 rests on the absence of any established downstream containment, and evidence of an independent downstream re-check could support revising it to 2.",
+      "correction": "Grade 1 rests on the demonstrated unit consequence, not on absent downstream containment. Evidence of an independent downstream re-check would require re-grading against anchors 3–4 (R5), not revision to 2. Uncertainty in the grade is restated in this addendum's uncertainty field."
+    },
+    {
+      "location": "REVIEW_RETURN.json line 121 (invalidation, last item)",
+      "original_text": "Evidence of a downstream independent grant re-check is supplied. This would revise the severity grade, not the falsified verdict.",
+      "correction": "Retained as an invalidator, with the corrected consequence: it triggers re-grading under R5 with an explicit severity-3 downstream assessment. Its direction is not toward 2."
+    },
+    {
+      "location": "REVIEW_RETURN.json lines 56, 58, 81, 82",
+      "correction": "No correction. These state containment as 'none in the candidate' and 'unknown' downstream, and the dependent count as indeterminate. That is consistent with the selected scale."
+    }
+  ],
+  "residuals": [
+    "review/Product.json definition-level verification rests on the original Reviewer's retained record (REVIEW_RETURN line 16). The only retained verifier output in the selection is for cases/project/Product.json.",
+    "review/README.md (Product frame authority, said to name the scale and its Product-specific evidence criteria) was not in the selection and was not read. Any Product-specific criteria it adds beyond EXECUTIVE_BASELINE lines 473–474 are unassessed here.",
+    "No digest was recomputed in this session (no command execution).",
+    "Downstream consumer, magnitude and containment remain indeterminate, as in the original.",
+    "The original residuals on caller-computed evidence currency and on truthiness-judged grants (REVIEW_RETURN lines 93–94) are carried forward unchanged and not re-assessed.",
+    "PLAN.json, named in the intake transition, was not in the selection. Execution assignment was taken from the Root request for this session."
+  ],
+  "uncertainty": {
+    "rationale_correction": "Low. The misreading is textual: anchor 2's own wording includes absent containment.",
+    "grade": "Moderate. The choice between 1 and 2 is a qualitative judgment on anchor fit. A reasonable reading could weight the preserved zero-grant and currency rejections toward anchor 2's 'major failure' wording. This Reviewer weights anchor 1's explicit 'authority' term and the total loss of the 'both' property within the affected scope. The grade does not depend on downstream evidence that is absent.",
+    "defect_existence": "Low, carried from the retained deterministic enumeration (not rerun)."
+  },
+  "independence": {
+    "process": "New nonpersistent Claude Code session (successor-001). System context reports model claude-opus-5-5, the same model family as the original Reviewer (REVIEW_RETURN line 138). No cross-family independence is claimed. Requested model and effort were not supplied to this session through its inputs, so only the system-reported model is stated.",
+    "authorship": "This Reviewer authored neither the candidate (operator) nor the original review or concern.",
+    "prior_report_exposure": [
+      "Before source acquisition, the Root request text in this session already stated the concern's gist ('the old rationale making Severity2 conditional on an established downstream recheck'), named the role sequence, and said no expected grade was supplied. The anchors were therefore derived with that hypothesis already known.",
+      "Before source acquisition, REVIEWER_INTAKE.json and INPUTS.json exposed paths, byte counts and digests of REVIEW_RETURN, REVIEW_INTAKE, the candidate and the concern, but no contents.",
+      "After EXECUTIVE_BASELINE lines 440–529, REQUIREMENT.md, review/Product.json and the retained verify, SELECTION and FORMAL_CONTEXT records, this Reviewer read REVIEW_CONCERN_AFTER_SOURCES.json, REVIEW_INTAKE.json, the full REVIEW_RETURN.json (including the original grade 1 and rationale) and candidate.py, in that order.",
+      "No memory or other session content was read."
+    ],
+    "clean_room": "Not claimed. Context isolation from the prior report and the concern is not established."
+  },
+  "invalidation": [
+    "REVIEW_RETURN.json bytes differ from sha256 79294cf3083720519b3a4fe29f21697cc9b7f15301697f8c47dca5d20b1d2027",
+    "candidate.py differs from sha256 e2c7f4b7861ae0b36b581f1dbd92bc11dc6908597873a385bc751965edeb0324",
+    "REQUIREMENT.md differs from sha256 54f24cf970602adb1937460aa17b932c92e07e3d89eb399ff5188ef60e57553e, or a successor requirement is established",
+    "review/Product.json differs from sha256 121ba5e03445193ab402b0b660dc8c793356d4076c8714705516a4499d33ed03, or the basis changes from stdo://releases/v3.0.5/ / manifest 9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142",
+    "EXECUTIVE_BASELINE.md differs from sha256 ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff, or the selected severity scale changes",
+    "review/README.md is found to bind Product-specific severity criteria that alter anchor fit",
+    "Evidence of an independent downstream re-check of both grants, or of the dispatch consumer's actual effects, is supplied. This triggers re-grading under R5; the falsified verdict is unaffected.",
+    "The retained counterexamples are found not to reflect candidate behaviour"
+  ],
+  "re_entry": {
+    "to": "/root (decision owner)",
+    "decision_owner_inputs": "Root/Executive retains this Reviewer's severity 1 for F1, now with this corrected rationale, and assigns priority, current-boundary effect and disposition. This Reviewer assigns none of them.",
+    "original_report": "REVIEW_RETURN.json is preserved unchanged. Any consumer of its line 78, 113 or 121 rationale should read this addendum alongside it.",
+    "durable_carrier": "No bug report written. If one is needed, a lawful Writer records it with severity 1 unchanged and links this addendum.",
+    "transition": "Per REVIEWER_INTAKE transition, the Root-selected reporting role (REPORTING_INTAKE.json) follows. This addendum activates no review or work.",
+    "stop": "ROLE1 complete; returning to Root."
+  }
+}

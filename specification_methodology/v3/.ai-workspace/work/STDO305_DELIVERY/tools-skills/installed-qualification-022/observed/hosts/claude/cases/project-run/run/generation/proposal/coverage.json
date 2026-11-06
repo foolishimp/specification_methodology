@@ -1,0 +1,208 @@
+{
+  "chunks_authored": 1,
+  "chunks_missing": [],
+  "chunks_total": 1,
+  "family_counts": {
+    "constraints": 16,
+    "judgments": 0,
+    "latitude": 1,
+    "objects": 38,
+    "relations": 24,
+    "residuals": 8,
+    "transformations": 0,
+    "traversals": 0
+  },
+  "interpretation_contract": {
+    "author_schema_sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+    "calculus": {
+      "sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d",
+      "uri": "stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md"
+    },
+    "limits": [
+      "Proposal only; no semantic acceptance or full coverage claim.",
+      "Source supplies meaning; graph supplies fallible discovery data.",
+      "References are chunk-local; cross-chunk identity/conservation requires independent review.",
+      "Conditions, exceptions and uncertainty are inert source-linked statements, not executed predicates."
+    ],
+    "meaning": "F_P-authored source interpretation. Five declared active record families; traversals/transformations/judgments unimplemented and explicitly empty. Source documents and templates are interpreted as documents; prescribed operations are not executed or accepted.",
+    "mode": "direct",
+    "profile": "ac.generation.contract/1",
+    "semantic_extraction_profile": "a_c.direct.source-authoring/1"
+  },
+  "mode": "direct",
+  "processing_complete": true,
+  "profile": "ac.generation.coverage/1",
+  "section_dispositions": [
+    {
+      "chunk": "chunk-3823620bbffcbb09795b",
+      "dispositions": [
+        {
+          "decision": "retained",
+          "keys": [
+            "controlled_project"
+          ],
+          "reason": "The top-level heading names the controlled project; retained as the project concept. Line 2 is blank.",
+          "section_id": "urn:a-c:project:0294efa6e1bb96fb616b7d6b3869b06ca0bf02ab766af0b650f0eeb372cb25ca/source/README.md#Controlled%20project"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "receipt_service_representation",
+            "project_intends_representation",
+            "representation_target_unlinked"
+          ],
+          "reason": "The intent is retained as a non-governing declares_intent relation. Where the 'declared' representation is declared is unresolved and kept as a residual.",
+          "section_id": "urn:a-c:project:0294efa6e1bb96fb616b7d6b3869b06ca0bf02ab766af0b650f0eeb372cb25ca/source/README.md#Controlled%20project%2FIntent"
+        },
+        {
+          "decision": "retained",
+          "keys": [
+            "project_scope",
+            "scope_only_this_project"
+          ],
+          "reason": "The scope limit is retained as a concept and a constraint.",
+          "section_id": "urn:a-c:project:0294efa6e1bb96fb616b7d6b3869b06ca0bf02ab766af0b650f0eeb372cb25ca/source/README.md#Controlled%20project%2FScope"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "root_qualification_instruction",
+            "project_framed_by_root_instruction",
+            "root_instruction_content_unresolved"
+          ],
+          "reason": "The frame reference is retained, but the instruction's content is not supplied and is kept as a residual.",
+          "section_id": "urn:a-c:project:0294efa6e1bb96fb616b7d6b3869b06ca0bf02ab766af0b650f0eeb372cb25ca/source/README.md#Controlled%20project%2FFrame"
+        },
+        {
+          "decision": "retained",
+          "keys": [
+            "public_project_provider",
+            "current_host_authored_answers",
+            "project_implemented_via_provider",
+            "provider_uses_host_answers"
+          ],
+          "reason": "The implementation route is retained as descriptive, non-governing relations.",
+          "section_id": "urn:a-c:project:0294efa6e1bb96fb616b7d6b3869b06ca0bf02ab766af0b650f0eeb372cb25ca/source/README.md#Controlled%20project%2FImplementation"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "root_owner_authorized_qualification",
+            "selected_disposable_product",
+            "operator",
+            "operator_created_surfaces",
+            "named_executive",
+            "registered_local_recipient",
+            "existing_work_grant",
+            "recipient_outputs_territory",
+            "excluded_effects",
+            "negative_variant",
+            "named_issuer_permission",
+            "named_recipient_permission",
+            "resulting_refusal",
+            "process_fixture",
+            "exact_context",
+            "receipt_bytes_and_local_counter",
+            "process_end_observation",
+            "external_descendants_effects",
+            "qualification_selects_product",
+            "operator_may_create_surfaces",
+            "executive_may_dispatch_recipient",
+            "work_grant_bounds_executive",
+            "recipient_writes_outputs_only",
+            "negative_variant_removes_issuer_permission",
+            "negative_variant_removes_recipient_permission",
+            "negative_variant_preserves_refusal",
+            "fixture_receives_exact_context",
+            "fixture_records_only_receipt_and_counter",
+            "process_end_leaves_effects_unknown",
+            "qualification_selects_only_this_product",
+            "operator_creation_permission",
+            "executive_limited_to_registered_recipient",
+            "recipient_write_territory_outputs_only",
+            "excluded_effects_not_granted",
+            "negative_variants_preserve_refusal",
+            "fixture_context_and_recording_bound",
+            "process_exit_not_reconciliation",
+            "executive_recipient_and_grant_unnamed",
+            "issuer_permission_identity_unresolved"
+          ],
+          "reason": "Every grant clause, permission, territory, excluded effect, negative-variant rule, fixture bound and process-end rule is retained. The unnamed actors, the unsupplied grant and the cross-document issuer/recipient identity are kept as residuals.",
+          "section_id": "urn:a-c:project:0294efa6e1bb96fb616b7d6b3869b06ca0bf02ab766af0b650f0eeb372cb25ca/source/README.md#Operator%20qualification%20grant"
+        },
+        {
+          "decision": "residual",
+          "keys": [
+            "bounded_receipt_service",
+            "requested_delivery",
+            "admission_outcome",
+            "issuer_grant",
+            "recipient_grant",
+            "current_evidence",
+            "completed_process",
+            "external_effects_settlement",
+            "uncertain_prior_effect",
+            "reconciliation",
+            "new_attempt",
+            "activation_and_history",
+            "report",
+            "external_host_permission_setting",
+            "service_records_admission_outcome",
+            "admission_outcome_for_requested_delivery",
+            "delivery_requires_issuer_grant",
+            "delivery_requires_recipient_grant",
+            "delivery_requires_current_evidence",
+            "completed_process_not_settlement",
+            "uncertain_effect_requires_reconciliation",
+            "reconciliation_precedes_new_attempt",
+            "uncertain_effect_retains_activation_history",
+            "service_records_admission",
+            "delivery_requires_all_prerequisites",
+            "refuse_on_absent_grant_or_stale_evidence",
+            "process_completion_not_settlement",
+            "reconcile_uncertain_effect_before_new_attempt",
+            "keep_uncertain_effect_activation_and_history",
+            "report_preserves_prerequisites_and_unresolved",
+            "report_wording_latitude",
+            "evidence_currency_undefined",
+            "settlement_evidence_undefined",
+            "reconciliation_procedure_undefined",
+            "host_permission_setting_unresolved"
+          ],
+          "reason": "All eight lines are retained: the admission record, the conjunctive prerequisites, refusal triggers, process completion versus settlement, reconcile-before-retry with history retention, and report wording latitude. The undefined freshness, settlement evidence and reconciliation procedure, and the host permission setting the source explicitly leaves unresolved, are kept as residuals.",
+          "section_id": "urn:a-c:project:0294efa6e1bb96fb616b7d6b3869b06ca0bf02ab766af0b650f0eeb372cb25ca/source/RULES.md#Bounded%20receipt%20service"
+        }
+      ],
+      "limitations": [
+        "The fixed author prompt asset says 'The selected published calculus basis is STDO 2.5.1-rc.2', but PROJECT_BINDING_JSON binds the method stdo://releases/v3.0.5/ (manifest 9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142). This interpretation uses the project binding as the method identity and records the discrepancy without resolving it.",
+        "Cross-section and cross-document identities are kept as separate local concepts and not merged: the Root instruction versus the owner-authorized qualification, the controlled project versus the selected disposable Product, and the named issuer/recipient permission versus the RULES.md issuer/recipient grants.",
+        "Source-described workflow (acquire, assemble, preflight, dispatch, reconciliation, refusal) is represented only as concepts and constraints. No judgment, traversal, transformation or operation is claimed or performed.",
+        "Product.json, AGENTS.md, ticketing surfaces and any policy/activation data are outside the declared-WHAT-only source scope (README.md and RULES.md) and are not interpreted here.",
+        "Grounded quotes prove source re-entry only. They do not prove that the authored statements are faithful or that the interpretation is semantically complete.",
+        "Authored in the current Claude Code host session under Worker activation urn:stdo305:qualification:claude:1565615c3cdefff3:worker. Author identity is caller-declared and no isolated-actor provenance is claimed."
+      ]
+    }
+  ],
+  "semantic_acceptance": "not requested or issued",
+  "semantic_completeness": "unassessed",
+  "source_sections": 7,
+  "unqualified": [
+    "cross-chunk consolidation",
+    "normative interpretation fidelity",
+    "complete calculus conformance",
+    "accepted-result cost"
+  ],
+  "unresolved_boundaries": [
+    {
+      "author_declared_limitations": [
+        "The fixed author prompt asset says 'The selected published calculus basis is STDO 2.5.1-rc.2', but PROJECT_BINDING_JSON binds the method stdo://releases/v3.0.5/ (manifest 9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142). This interpretation uses the project binding as the method identity and records the discrepancy without resolving it.",
+        "Cross-section and cross-document identities are kept as separate local concepts and not merged: the Root instruction versus the owner-authorized qualification, the controlled project versus the selected disposable Product, and the named issuer/recipient permission versus the RULES.md issuer/recipient grants.",
+        "Source-described workflow (acquire, assemble, preflight, dispatch, reconciliation, refusal) is represented only as concepts and constraints. No judgment, traversal, transformation or operation is claimed or performed.",
+        "Product.json, AGENTS.md, ticketing surfaces and any policy/activation data are outside the declared-WHAT-only source scope (README.md and RULES.md) and are not interpreted here.",
+        "Grounded quotes prove source re-entry only. They do not prove that the authored statements are faithful or that the interpretation is semantically complete.",
+        "Authored in the current Claude Code host session under Worker activation urn:stdo305:qualification:claude:1565615c3cdefff3:worker. Author identity is caller-declared and no isolated-actor provenance is claimed."
+      ],
+      "chunk": "chunk-3823620bbffcbb09795b"
+    }
+  ]
+}

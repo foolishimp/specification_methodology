@@ -1,0 +1,128 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/documentation.py",
+        "check",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "environment": {
+        "set": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONNOUSERSITE": "1"
+        },
+        "unset": [
+          "PYTHONPATH",
+          "PYTHONHOME",
+          "STDO_STORE"
+        ]
+      },
+      "expected": {
+        "kind": "stdo.installed-documentation/2",
+        "model": {
+          "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+          "profile": "a_c.graphify.model/1",
+          "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+        },
+        "returncode": 0,
+        "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+        "status": "checked",
+        "version": "3.0.5"
+      },
+      "id": "installed_documentation",
+      "inputs": [],
+      "output_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/installed-owner-checks/installed_documentation",
+      "producer": {
+        "bytes": 17475,
+        "path": "specification_methodology/v3/build_tenants/common-tools/documentation.py",
+        "sha256": "1bb37666c0508fdd0cab4137d898f041840f293f54f41441139845f2c9814cdf"
+      },
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      },
+      "record": "stdo.execution-observation/1; retain exact argv/cwd/interpreter/environment, started/ended/elapsed, returncode, raw stdout/stderr, JSON result and original receipt refs; producer/result actual identity."
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+        "check",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store/releases/v3.0.5/standards/documentation/proofs"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "environment": {
+        "set": {
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONNOUSERSITE": "1"
+        },
+        "unset": [
+          "PYTHONPATH",
+          "PYTHONHOME",
+          "STDO_STORE"
+        ]
+      },
+      "expected": {
+        "kind": "stdo.current-proof-reader/1",
+        "model": {
+          "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+          "profile": "a_c.graphify.model/1",
+          "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+        },
+        "returncode": 0,
+        "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+        "status": "checked",
+        "version": "3.0.5"
+      },
+      "id": "current_proof_reader",
+      "inputs": [],
+      "output_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/installed-owner-checks/current_proof_reader",
+      "producer": {
+        "bytes": 32561,
+        "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+        "sha256": "ab88b94ad392f93f80599c0fb9afab543476e8d419bf4978728c085afff39589"
+      },
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      },
+      "record": "stdo.execution-observation/1; retain exact argv/cwd/interpreter/environment, started/ended/elapsed, returncode, raw stdout/stderr, JSON result and original receipt refs; producer/result actual identity."
+    }
+  ],
+  "failure_policy": "Retain actual failed output and notify Root; do not change checker/source semantics or repeat broad checks.",
+  "installation": {
+    "bytes": 105968,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/INSTALLATION.json",
+    "sha256": "db31f308193c6c0e190590cded3c8ec92daa29ae7fb0811fc6c321c7dcd35cb7"
+  },
+  "kind": "stdo.required-installed-owner-check-plan/1",
+  "limits": "Preparation only. No owner execution, installation/support scan, archive operation, Git/ref/public effect or new qualification claim.",
+  "native_commit": "d1f13c53ab733a73993615498f66251041a74073",
+  "native_handoff": {
+    "bytes": 8437,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-execution-020/HANDOFF.json",
+    "sha256": "26659c43b6367b15747c51bf21f629ecaac072b01c7e78900a8a338d4904e307"
+  },
+  "native_manifest": {
+    "bytes": 28269,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/stdo-v3.0.5-manifest.json",
+    "sha256": "9304727d370ae58a0b955d1f831ee15e8dddeb2ca3e8886454233a8422846142"
+  },
+  "owner_bounds": "Existing current owners retain their own180-second subprocess limits; no source/default/timeout override. Actual outer elapsed time is recorded. No automatic retry.",
+  "preconditions": [
+    "Tools explicitly reports full-model/inspection/Context proof/controls/dispatch settled and no compiler process before native sessions.",
+    "Root selected one exclusive short slot for these two prescribed current owner checks; return it immediately after both close.",
+    "Source producer pins and local004 manager/native selection unchanged; both exact output directories absent."
+  ],
+  "prepared_ns": 1793991224778816000,
+  "source_checkpoint": "2ee0147ad06b58dbdf6dad4b874c363a035aab9e",
+  "status": "prepared_unexecuted_waiting_exclusive_slot"
+}

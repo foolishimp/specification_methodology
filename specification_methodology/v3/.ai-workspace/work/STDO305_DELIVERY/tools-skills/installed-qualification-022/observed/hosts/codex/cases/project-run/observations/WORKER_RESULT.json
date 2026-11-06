@@ -1,0 +1,372 @@
+{
+  "worker_activation": "urn:stdo305:qualification:codex:ee434095bfa270cf:worker",
+  "authority": "Explicit user activation and existing Root bounded qualification instruction; no new approval inferred or requested.",
+  "project": {
+    "status": "built",
+    "pending": [],
+    "artifacts": {
+      "carrier": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/project-run/run-001/generation/proposal/carrier.json",
+      "coverage": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/project-run/run-001/generation/proposal/coverage.json",
+      "explorer": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/project-run/run-001/generation/proposal/explorer.html",
+      "model": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/project-run/run-001/generation/proposal/model.json"
+    },
+    "formal_gate": {
+      "status": "not_performed"
+    },
+    "semantic_acceptance": "not issued"
+  },
+  "selected_existing_formal": {
+    "status": "consistent",
+    "checks": [
+      "complete-member-integrity",
+      "current-runtime-and-support",
+      "exact-current-request-inputs",
+      "known-required-obligations",
+      "regenerated-proof-sources",
+      "complete-theorem-axiom-audit",
+      "cold-stage-consistency",
+      "current-runtime-output-correspondence",
+      "supplied-view-correspondence"
+    ],
+    "limits": [
+      "Read-only retained-evidence consistency and currentness, not a new execution verdict.",
+      "Process transcripts and actual cold/fresh kernel execution remain separate required evidence.",
+      "Finite declared structural model/closure/projection only; no semantic acceptance.",
+      "Whole-model-source-correspondence covers only supplied or carrier-recovered model JSON; original prose/corpus-to-model F_P fidelity remains opaque and unproved.",
+      "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+      "Python API imports and interpreter initialization remain trusted-host responsibilities; the CLI isolates helper loading after startup.",
+      "Context binding is metadata; consumer must check actual delivered bytes.",
+      "Crossing relations are checked source-derived metadata, not a Lean theorem."
+    ]
+  },
+  "controls": {
+    "missing-issuer": {
+      "case": {
+        "activation": {
+          "configuration": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/grant.md",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "b097f2a1c14a89d9a97a243f1823498d50ff2646d7726a6e7c1fcd6e54d9984a"
+          },
+          "id": "urn:stdo305:qualification:codex:1a2b442ec9dc62fb:missing-issuer:activation",
+          "revision": "1"
+        },
+        "authority_discriminator": {
+          "issuer_dispatch_operation": false,
+          "recipient_target": true,
+          "shared_positive_case_grant": false
+        },
+        "configuration": {
+          "bytes": 36641,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+          "sha256": "2d0cfb4949c38dcabeec16166182c37094c66d79e86f5b9a709fc6920843f2c8"
+        },
+        "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/missing-issuer/workspace",
+        "grant": {
+          "authority": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/owner.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "9f9bb81a3ce90ef251890154480dcf36d63ecba8c9935c85a25b7ebc34d53fb4"
+          },
+          "local_id": "work",
+          "policy_id": "urn:stdo305:qualification:codex:1a2b442ec9dc62fb:missing-issuer:policy"
+        },
+        "label": "missing-issuer",
+        "policy": {
+          "bytes": 8532,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/missing-issuer/policy.json",
+          "sha256": "f1a2f64f05c5952df26b73c5fabe5ae9139bb3f013fcddaf1266915404ce0d37"
+        },
+        "product_definition_id": "urn:stdo305:qualification:codex:1a2b442ec9dc62fb:missing-issuer",
+        "provider": {
+          "bytes": 21703,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+          "sha256": "689c70822429c5a4257b323ff5f41fdbcb8457ddecc4c4a8c1ef15a12e5568f2"
+        },
+        "schema": "stdo305.prepared-installed-case/1",
+        "standing": "Prepared actual installed inputs only; no process, proof, admission or host execution claimed."
+      },
+      "dispatch_response": {
+        "evidence": {
+          "id": "sha256:2d9fc0cd7e363b551b0186d7f43dff1bf2d6f37f2fe2ebf11e78f4b96604e7c3",
+          "sha256": "2d9fc0cd7e363b551b0186d7f43dff1bf2d6f37f2fe2ebf11e78f4b96604e7c3"
+        },
+        "id": "issuer-denied",
+        "operation": "dispatch.start",
+        "operation_outcome": {
+          "cause": "authority_missing",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.start): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "authority_missing",
+          "gaps": [],
+          "reason": "Startup principal has no selected operation capability",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "output_files": [],
+      "event_and_attempt_files": [],
+      "observed_dependent_effect": "No recipient launch or output effect observed; actual refusal plus no recorded event/attempt and empty outputs."
+    },
+    "missing-recipient": {
+      "case": {
+        "activation": {
+          "configuration": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/grant.md",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "b097f2a1c14a89d9a97a243f1823498d50ff2646d7726a6e7c1fcd6e54d9984a"
+          },
+          "id": "urn:stdo305:qualification:codex:bac7dc920fd0828d:missing-recipient:activation",
+          "revision": "1"
+        },
+        "authority_discriminator": {
+          "issuer_dispatch_operation": true,
+          "recipient_target": false,
+          "shared_positive_case_grant": false
+        },
+        "configuration": {
+          "bytes": 36641,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+          "sha256": "2d0cfb4949c38dcabeec16166182c37094c66d79e86f5b9a709fc6920843f2c8"
+        },
+        "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/missing-recipient/workspace",
+        "grant": {
+          "authority": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/owner.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "e26fc0e4fcd7659d46460a262ed1b7784c14d68447d681dbb1959160a6a7db38"
+          },
+          "local_id": "work",
+          "policy_id": "urn:stdo305:qualification:codex:bac7dc920fd0828d:missing-recipient:policy"
+        },
+        "label": "missing-recipient",
+        "policy": {
+          "bytes": 8568,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/missing-recipient/policy.json",
+          "sha256": "6ef91e4cc51237f37a6a955581415c8e5f0ffd6a4a267e0c86d171ed252daf07"
+        },
+        "product_definition_id": "urn:stdo305:qualification:codex:bac7dc920fd0828d:missing-recipient",
+        "provider": {
+          "bytes": 21703,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+          "sha256": "689c70822429c5a4257b323ff5f41fdbcb8457ddecc4c4a8c1ef15a12e5568f2"
+        },
+        "schema": "stdo305.prepared-installed-case/1",
+        "standing": "Prepared actual installed inputs only; no process, proof, admission or host execution claimed."
+      },
+      "dispatch_response": {
+        "evidence": {
+          "id": "sha256:9f7325c6235390282a7948e87d644cf97f47790f0dbee0fae1b15053da11f53d",
+          "sha256": "9f7325c6235390282a7948e87d644cf97f47790f0dbee0fae1b15053da11f53d"
+        },
+        "id": "host-recipient-dispatch-a8a4ee37b0e84cbca78458dff3ba412a",
+        "operation": "dispatch.start",
+        "operation_outcome": {
+          "cause": "authority_missing",
+          "core_value": "out_of_frame",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.start): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e"
+          },
+          "value": "refused(authority)"
+        },
+        "refusal": {
+          "code": "authority_missing",
+          "gaps": [
+            {
+              "id": "sha256:15f9114dadb0220f96f9118e8703b9a3465dfef88d14866af3b9ca5c524f7f97",
+              "sha256": "15f9114dadb0220f96f9118e8703b9a3465dfef88d14866af3b9ca5c524f7f97"
+            }
+          ],
+          "reason": "Dispatch requires an actual admitted complete receipt",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "refused"
+      },
+      "output_files": [],
+      "event_and_attempt_files": [],
+      "observed_dependent_effect": "No recipient launch or output effect observed; actual refusal plus no recorded event/attempt and empty outputs."
+    },
+    "uncertain": {
+      "case": {
+        "activation": {
+          "configuration": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/grant.md",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "b097f2a1c14a89d9a97a243f1823498d50ff2646d7726a6e7c1fcd6e54d9984a"
+          },
+          "id": "urn:stdo305:qualification:codex:c9bf549d92fdc49b:uncertain:activation",
+          "revision": "1"
+        },
+        "authority_discriminator": {
+          "issuer_dispatch_operation": true,
+          "recipient_target": true,
+          "shared_positive_case_grant": false
+        },
+        "configuration": {
+          "bytes": 36641,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+          "sha256": "2d0cfb4949c38dcabeec16166182c37094c66d79e86f5b9a709fc6920843f2c8"
+        },
+        "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/workspace",
+        "grant": {
+          "authority": {
+            "engine": "workspace-regular-file",
+            "object": null,
+            "path": "inputs/owner.json",
+            "root": "workspace",
+            "selector": null,
+            "sha256": "e5d3be9dffec1d4b84128c96f7f92b6b22e2e27be0a26944c51865b8db8401c5"
+          },
+          "local_id": "work",
+          "policy_id": "urn:stdo305:qualification:codex:c9bf549d92fdc49b:uncertain:policy"
+        },
+        "label": "uncertain",
+        "policy": {
+          "bytes": 8504,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/codex/cases/uncertain/policy.json",
+          "sha256": "6038451f99fc489fba3badbdc8d7e83621d2f065b8f55edec590f91dc87d7012"
+        },
+        "product_definition_id": "urn:stdo305:qualification:codex:c9bf549d92fdc49b:uncertain",
+        "provider": {
+          "bytes": 21703,
+          "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+          "sha256": "689c70822429c5a4257b323ff5f41fdbcb8457ddecc4c4a8c1ef15a12e5568f2"
+        },
+        "schema": "stdo305.prepared-installed-case/1",
+        "standing": "Prepared actual installed inputs only; no process, proof, admission or host execution claimed."
+      },
+      "probe": {
+        "evidence": {
+          "id": "sha256:08da3674677817d541ce89a73472bc6784e9c97f627d7daafe9e58a4957ec7db",
+          "sha256": "08da3674677817d541ce89a73472bc6784e9c97f627d7daafe9e58a4957ec7db"
+        },
+        "id": "host-selected-single-retry-probe",
+        "operation": "dispatch.start",
+        "operation_outcome": {
+          "cause": "effect_unreconciled",
+          "core_value": "indeterminate",
+          "evidence": [],
+          "limits": [
+            "output availability only; no semantic acceptance"
+          ],
+          "predicate": "B(dispatch.start): declared exact output/effect-evidence payload availability on the requested basis",
+          "source_parent": {
+            "clause": "results",
+            "member": "FOUNDATIONS.md",
+            "sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e"
+          },
+          "value": "held(effect)"
+        },
+        "refusal": {
+          "code": "effect_unreconciled",
+          "gaps": [],
+          "reason": "Retry does not bind an existing predecessor/reconciliation",
+          "source_refs": []
+        },
+        "result": null,
+        "schema": "a_c.fd-support.response/1",
+        "status": "error"
+      },
+      "post_probe": {
+        "event_and_attempt_files": [
+          {
+            "path": "evidence/events/1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527-1.json",
+            "sha256": "7fbff4a46d76eed67d33f7f8b405d09b20296fac64d38193c62d14bf0a7bab5d"
+          },
+          {
+            "path": "evidence/events/1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527-2.json",
+            "sha256": "a056ee16f712a429b09cce49d7f7ad08de3741f7c87fb1daeefbffeea12407fc"
+          },
+          {
+            "path": "evidence/events/1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527-3.json",
+            "sha256": "bad282eab51b3d403365583b0bd03823907428ebae8ec94b09a69c1f36504d3e"
+          },
+          {
+            "path": "evidence/events/1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527-4.json",
+            "sha256": "a53b479dc239502253de66174221821d561d6473fcbbee841108125b838b297f"
+          },
+          {
+            "path": "evidence/events/1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527-5.json",
+            "sha256": "5ad0e90a083c4e689ca1b549298762e14c47756b1d1707dfac9feeb7fd39c385"
+          },
+          {
+            "path": "evidence/events/1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527-6.json",
+            "sha256": "6239bed7756a845e378c46334fbda25d14417e22ad03e061f513e0e68d8231f2"
+          },
+          {
+            "path": "evidence/events/1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527-7.json",
+            "sha256": "5b237f00e76b70900e9ace89aab71485443820c33c7335563047fb4759012623"
+          },
+          {
+            "path": "evidence/events/1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527-8.json",
+            "sha256": "909d864eff9c6f5aa55a3b2e4644c707a1811e87946f46bbb3995d005f5171f8"
+          },
+          {
+            "path": "evidence/requests/8df4f333adf21b551090b2f6bc73d5ad945597f5e3dfdcc35345fc81d9808085.attempt.json",
+            "sha256": "1e4c87391c074a7b2aa6b3154d0552ab86010c6dac708aba449882f59a66b527"
+          }
+        ],
+        "output_files": [
+          {
+            "path": "workspace/outputs/count",
+            "sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+            "bytes": 1
+          },
+          {
+            "path": "workspace/outputs/received-stdin.bin",
+            "sha256": "9ac6d3c51cf954304ba45fe62d07e28efc1aa5dd40ab8c38df54bd25c2ff6ae6",
+            "bytes": 12301
+          },
+          {
+            "path": "workspace/outputs/received-views.json",
+            "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+            "bytes": 2
+          }
+        ],
+        "count": "1",
+        "history_unchanged": true,
+        "outputs_unchanged": true
+      },
+      "next_lawful_step": "Return to Root/owning recovery authority. Reconcile the same prior attempt using subject-level evidence of intended outcome and external/descendant effect end before a separately authorized repetition or dependent action; otherwise yield or stop. No reconciliation or further retry was performed."
+    }
+  },
+  "host_limits": "Same Codex process with supplied context; broad shell read capability and workspace write restrictions do not enforce exact acquisition. No clean-room, host isolation, resolved model identity, whole-context fit or acceptance claim."
+}

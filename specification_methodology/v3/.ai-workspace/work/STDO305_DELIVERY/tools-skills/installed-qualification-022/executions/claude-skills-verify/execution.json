@@ -1,0 +1,88 @@
+{
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/source-tools/stdo_skills/scripts/manage_skills.py",
+      "verify",
+      "--workspace",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude",
+      "--host",
+      "claude",
+      "--receipt-sha256",
+      "f891413589b8058264286f5db8e874511ca66605a682e8a23e2e727c67a2740b"
+    ],
+    "child_maxrss_native_units": 1048018944,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004",
+    "elapsed_seconds": 0.031732,
+    "ended_ns": 1793990789020652000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 4230,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/observed/hosts/claude/.claude/stdo-skills-3.0.5.receipt.json",
+        "sha256": "f891413589b8058264286f5db8e874511ca66605a682e8a23e2e727c67a2740b"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 62,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/executions/claude-skills-verify/stdout.txt",
+        "sha256": "129b42659aaa5d9029ae13e7af0ac58c40e4627ef5a09f51baaa42dd50d90b07"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/executions/claude-skills-verify/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 62,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/executions/claude-skills-verify/result.json",
+        "sha256": "72ed456b4438ee2a1ce66956f61baa5b873ef41e017ccce2861913bba7dfb8b8"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1793990788988920000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/executions/claude-skills-verify/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 62,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/executions/claude-skills-verify/stdout.txt",
+      "sha256": "129b42659aaa5d9029ae13e7af0ac58c40e4627ef5a09f51baaa42dd50d90b07"
+    },
+    "system_seconds": 0.006720999999999755,
+    "user_seconds": 0.02270599999999945
+  },
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/hosts/claude/.claude/stdo-skills-3.0.5.receipt.json",
+      "retained": {
+        "bytes": 4230,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/observed/hosts/claude/.claude/stdo-skills-3.0.5.receipt.json",
+        "sha256": "f891413589b8058264286f5db8e874511ca66605a682e8a23e2e727c67a2740b"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 16552,
+    "path": "stdo_skills/scripts/manage_skills.py",
+    "sha256": "688c2ac7abfe55ca4d52cc29bbd51b4b68cfceee5f133d2f41c7b299cc4b24b4"
+  },
+  "result": {
+    "bytes": 62,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-022/executions/claude-skills-verify/result.json",
+    "sha256": "72ed456b4438ee2a1ce66956f61baa5b873ef41e017ccce2861913bba7dfb8b8"
+  },
+  "schema": "stdo.execution-observation/1"
+}
