@@ -1,0 +1,42 @@
+{
+  "kind": "independent.model-evidence016-recheck/1",
+  "subject_sha256": "82b8fed5cc6fce0d84b481269d5913a98fbbc9f0a7ffabd626810b205e6b4363",
+  "source_refs_before_after": 22,
+  "production_sha256": "4a123e29da167015e978cc5b9deb37a2c15908ed957a90286971464148ac81fb",
+  "delta": "Only representation() changed; prior function-excluded AST is identical.",
+  "actual_record_sha256": "edf144d196953e13605a354e5c269347e2f43fb847d437f4e1fd4b8aec314f65",
+  "actual_adapter_result": null,
+  "predecessor_refusal": "execution input closure omits a prescribed current input",
+  "readback_files_current_unchanged_bytes_modes_mtimes": 206,
+  "focused_tests": {
+    "argv": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_representation_evidence.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stderr": "test_actual_construction_inputs_cannot_be_replaced_by_canonical_output (test_representation_evidence.RepresentationEvidenceTests.test_actual_construction_inputs_cannot_be_replaced_by_canonical_output) ... ok\ntest_built_status_requires_produced_model_output (test_representation_evidence.RepresentationEvidenceTests.test_built_status_requires_produced_model_output) ... ok\ntest_readback_binds_inputs_and_current_artifact (test_representation_evidence.RepresentationEvidenceTests.test_readback_binds_inputs_and_current_artifact) ... ok\ntest_readback_cannot_be_labelled_emission (test_representation_evidence.RepresentationEvidenceTests.test_readback_cannot_be_labelled_emission) ... ok\ntest_result_cannot_name_another_project (test_representation_evidence.RepresentationEvidenceTests.test_result_cannot_name_another_project) ... ok\ntest_wrong_generated_model_refuses_even_rehashed (test_representation_evidence.RepresentationEvidenceTests.test_wrong_generated_model_refuses_even_rehashed) ... ok\ntest_wrong_plan_input_refuses_even_rehashed (test_representation_evidence.RepresentationEvidenceTests.test_wrong_plan_input_refuses_even_rehashed) ... ok\ntest_wrong_project_root_refuses_even_rehashed (test_representation_evidence.RepresentationEvidenceTests.test_wrong_project_root_refuses_even_rehashed) ... ok\ntest_wrong_source_input_refuses_even_rehashed (test_representation_evidence.RepresentationEvidenceTests.test_wrong_source_input_refuses_even_rehashed) ... ok\n\n----------------------------------------------------------------------\nRan 9 tests in 0.052s\n\nOK\n"
+  },
+  "independent_deeper_negative_controls": [
+    {
+      "name": "coherently-rehashed-source-omission",
+      "refusal": "model producer did not consume the complete exact semantic source"
+    },
+    {
+      "name": "rehash-plan-and-project-with-wrong-subject",
+      "refusal": "model producer did not consume the complete exact semantic source"
+    },
+    {
+      "name": "reused-model-output-without-read-input",
+      "refusal": "actual model artifact is not bound to its produced/read-back role"
+    }
+  ],
+  "limits": "Receipt interpretation only; actual owner BUILD readback was performed by Writer exactly once. Reviewer did not rerun BUILD, generation, Lean, native actors or any repository mutation."
+}

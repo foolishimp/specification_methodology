@@ -1,0 +1,1602 @@
+{
+  "kind": "stdo.unpublished-native-predecessor-custody/1",
+  "local_annotated_tag": {
+    "object": "5b9ef1d2fc88452dbbf3d9ec414f034c0fe7379d",
+    "ref": "refs/tags/specification_methodology/v3.0.5"
+  },
+  "native_blob_source_bindings": [
+    {
+      "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "git_mode": "100644",
+      "installed_path": "LICENSE",
+      "native_git_path": "specification_methodology/v3/LICENSE",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/LICENSE"
+    },
+    {
+      "git_blob": "fa6cb45bcc07a44c32e07c220c4cab75ff6c1783",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/.claude-plugin/plugin.json",
+      "native_git_path": "specification_methodology/v3/plugins/spec/.claude-plugin/plugin.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/.claude-plugin/plugin.json"
+    },
+    {
+      "git_blob": "99f9c9637bacbb29d7569d44be0943141ff16def",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/.codex-plugin/plugin.json",
+      "native_git_path": "specification_methodology/v3/plugins/spec/.codex-plugin/plugin.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/.codex-plugin/plugin.json"
+    },
+    {
+      "git_blob": "d645695673349e3947e8e5ae42332d0ac3164cd7",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/LICENSE",
+      "native_git_path": "specification_methodology/v3/plugins/spec/LICENSE",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/LICENSE"
+    },
+    {
+      "git_blob": "e8fab360726013bb39e308795a325d9d3887f64a",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/claude-skills/refresh/SKILL.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/claude-skills/refresh/SKILL.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/claude-skills/refresh/SKILL.md"
+    },
+    {
+      "git_blob": "9916edac37b49f676ab233eb8c91f1105f349175",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/references/COORDINATED_HANDOFF.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/references/COORDINATED_HANDOFF.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/references/COORDINATED_HANDOFF.md"
+    },
+    {
+      "git_blob": "af51bdead1a6e93ef9c8af6f46eaea1abf1eeec8",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/references/GETTING_STARTED.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/references/GETTING_STARTED.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md"
+    },
+    {
+      "git_blob": "352b34830955b60e37904aeb55ec8654d45e718c",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/references/HOST_BINDING.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/references/HOST_BINDING.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/references/HOST_BINDING.md"
+    },
+    {
+      "git_blob": "2051fac5989d069ef63edf73b769b6df4e8e8246",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/references/PRODUCT_BASIS.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/references/PRODUCT_BASIS.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/references/PRODUCT_BASIS.md"
+    },
+    {
+      "git_blob": "d753e88c297e2859c9427c013dc2c1d55cb622c3",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/references/REFRESH.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/references/REFRESH.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/references/REFRESH.md"
+    },
+    {
+      "git_blob": "af03d8f365e30ad38e7c28134a73271449ebab59",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/scripts/claude_tool_gate.py",
+      "native_git_path": "specification_methodology/v3/plugins/spec/scripts/claude_tool_gate.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/claude_tool_gate.py"
+    },
+    {
+      "git_blob": "17557bc9fe083fc3a506aff57e67d22f74337eb5",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/scripts/read_basis.py",
+      "native_git_path": "specification_methodology/v3/plugins/spec/scripts/read_basis.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/scripts/read_basis.py"
+    },
+    {
+      "git_blob": "ae3294309d054400ca336c20fbcc1b72965cd75e",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-help/SKILL.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-help/SKILL.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-help/SKILL.md"
+    },
+    {
+      "git_blob": "86574512bbd2af32e80adffd50aafefcbaafcd3a",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-help/agents/openai.yaml",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-help/agents/openai.yaml",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-help/agents/openai.yaml"
+    },
+    {
+      "git_blob": "e12af01e44d9e4502bf1a9d4b6a6e0a4dc96867d",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-review/SKILL.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-review/SKILL.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-review/SKILL.md"
+    },
+    {
+      "git_blob": "b71698e6b234027c06bfbb60eef918c814b5ee79",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-review/agents/openai.yaml",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-review/agents/openai.yaml",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-review/agents/openai.yaml"
+    },
+    {
+      "git_blob": "f67dc615781ce52dc3ed9473917934415afda868",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-status/SKILL.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-status/SKILL.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-status/SKILL.md"
+    },
+    {
+      "git_blob": "8ff2919b46256945411100194b9b9a949a26b189",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-status/agents/openai.yaml",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-status/agents/openai.yaml",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-status/agents/openai.yaml"
+    },
+    {
+      "git_blob": "9716908a422a303788c639125d3b58b5c8851a56",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-ticket/SKILL.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-ticket/SKILL.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-ticket/SKILL.md"
+    },
+    {
+      "git_blob": "9b9357efe2e387c2bb10340d0e3ce752e41ca527",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-ticket/agents/openai.yaml",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-ticket/agents/openai.yaml",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-ticket/agents/openai.yaml"
+    },
+    {
+      "git_blob": "d018b1c49c16821b40e742e628154dc60f7f3882",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-work/SKILL.md",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-work/SKILL.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-work/SKILL.md"
+    },
+    {
+      "git_blob": "1eefc02ba356e71a4bcd1679685b8d7f55bf14a6",
+      "git_mode": "100644",
+      "installed_path": "plugins/spec/skills/stdo-work/agents/openai.yaml",
+      "native_git_path": "specification_methodology/v3/plugins/spec/skills/stdo-work/agents/openai.yaml",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-work/agents/openai.yaml"
+    },
+    {
+      "git_blob": "a1180021ebab2e1c5e9ff77749e97db5c9b5130c",
+      "git_mode": "100644",
+      "installed_path": "release/release-note.md",
+      "native_git_path": "specification_methodology/v3/release/release-note.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/release/release-note.md"
+    },
+    {
+      "git_blob": "d312ae956f8c6452f92d265943eea84601136a65",
+      "git_mode": "100644",
+      "installed_path": "standards/ACTIVATION.md",
+      "native_git_path": "specification_methodology/v3/standards/ACTIVATION.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/ACTIVATION.md"
+    },
+    {
+      "git_blob": "29f287c99009a16a9523efa8942c1aa0144cd62e",
+      "git_mode": "100644",
+      "installed_path": "standards/ASSURANCE.md",
+      "native_git_path": "specification_methodology/v3/standards/ASSURANCE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/ASSURANCE.md"
+    },
+    {
+      "git_blob": "0048d3116f7983e4e7f96ce972eae21b10eb8f54",
+      "git_mode": "100644",
+      "installed_path": "standards/AXIOMATIC_CALCULUS.md",
+      "native_git_path": "specification_methodology/v3/standards/AXIOMATIC_CALCULUS.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/AXIOMATIC_CALCULUS.md"
+    },
+    {
+      "git_blob": "86d8b5de5a4c3e739c304bfa6058ba582a423235",
+      "git_mode": "100644",
+      "installed_path": "standards/CONFORMANCE.md",
+      "native_git_path": "specification_methodology/v3/standards/CONFORMANCE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/CONFORMANCE.md"
+    },
+    {
+      "git_blob": "3e4f7c4fd982d1c35884290af293922d9fbe85be",
+      "git_mode": "100644",
+      "installed_path": "standards/DESIGN_MODULE.md",
+      "native_git_path": "specification_methodology/v3/standards/DESIGN_MODULE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/DESIGN_MODULE.md"
+    },
+    {
+      "git_blob": "cccdf0f25a1cec918733880260593b0b1c382cc8",
+      "git_mode": "100644",
+      "installed_path": "standards/EVALUATION.md",
+      "native_git_path": "specification_methodology/v3/standards/EVALUATION.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/EVALUATION.md"
+    },
+    {
+      "git_blob": "c3db6798e4dd98ebd442c80ba4f959fb5526e673",
+      "git_mode": "100644",
+      "installed_path": "standards/EXECUTIVE_BASELINE.md",
+      "native_git_path": "specification_methodology/v3/standards/EXECUTIVE_BASELINE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/EXECUTIVE_BASELINE.md"
+    },
+    {
+      "git_blob": "b8d79bf8ce2eac22f1781bddbc134b5861040d3a",
+      "git_mode": "100644",
+      "installed_path": "standards/FOUNDATIONS.md",
+      "native_git_path": "specification_methodology/v3/standards/FOUNDATIONS.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/FOUNDATIONS.md"
+    },
+    {
+      "git_blob": "68c17e1d186a4c0bd3c3d24c2c769d10b63a111e",
+      "git_mode": "100644",
+      "installed_path": "standards/GLOSSARY.md",
+      "native_git_path": "specification_methodology/v3/standards/GLOSSARY.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/GLOSSARY.md"
+    },
+    {
+      "git_blob": "b03dbe490795458b3daf71850422630aeb8ceb69",
+      "git_mode": "100644",
+      "installed_path": "standards/IDENTITY.md",
+      "native_git_path": "specification_methodology/v3/standards/IDENTITY.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/IDENTITY.md"
+    },
+    {
+      "git_blob": "28d6d62c934ad13981129b6dfb8c828406c83f94",
+      "git_mode": "100644",
+      "installed_path": "standards/ODD.md",
+      "native_git_path": "specification_methodology/v3/standards/ODD.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/ODD.md"
+    },
+    {
+      "git_blob": "482aedd227405e7a4b33ae5d180632e0244a66b4",
+      "git_mode": "100644",
+      "installed_path": "standards/POSTING_GUIDE.md",
+      "native_git_path": "specification_methodology/v3/standards/POSTING_GUIDE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/POSTING_GUIDE.md"
+    },
+    {
+      "git_blob": "76a2bd7d542de4024de6cb08a2d1e5a79dffb023",
+      "git_mode": "100644",
+      "installed_path": "standards/PRODUCT_DEFINITION.md",
+      "native_git_path": "specification_methodology/v3/standards/PRODUCT_DEFINITION.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/PRODUCT_DEFINITION.md"
+    },
+    {
+      "git_blob": "619e1424b32c1b74e83ad608ae1566b4dbafce05",
+      "git_mode": "100644",
+      "installed_path": "standards/PROFILES.md",
+      "native_git_path": "specification_methodology/v3/standards/PROFILES.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/PROFILES.md"
+    },
+    {
+      "git_blob": "103fc1b8c95c7e637f0e4abeabc0da37b2f615c6",
+      "git_mode": "100644",
+      "installed_path": "standards/README.md",
+      "native_git_path": "specification_methodology/v3/standards/README.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/README.md"
+    },
+    {
+      "git_blob": "46558db2a73f09661879249a507b685f560b011b",
+      "git_mode": "100644",
+      "installed_path": "standards/REFERENCE_FRAME.md",
+      "native_git_path": "specification_methodology/v3/standards/REFERENCE_FRAME.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/REFERENCE_FRAME.md"
+    },
+    {
+      "git_blob": "2945ef943c9d7287f94dc7e7738de9d54069689f",
+      "git_mode": "100644",
+      "installed_path": "standards/RELEASE.md",
+      "native_git_path": "specification_methodology/v3/standards/RELEASE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/RELEASE.md"
+    },
+    {
+      "git_blob": "e5410dff6268f581a0ee96050fd2f9f4115a90ef",
+      "git_mode": "100644",
+      "installed_path": "standards/SPEC_METHOD.md",
+      "native_git_path": "specification_methodology/v3/standards/SPEC_METHOD.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/SPEC_METHOD.md"
+    },
+    {
+      "git_blob": "01f96df3c31af2499040917d036b1c8cbd530566",
+      "git_mode": "100644",
+      "installed_path": "standards/TICKETS.md",
+      "native_git_path": "specification_methodology/v3/standards/TICKETS.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/TICKETS.md"
+    },
+    {
+      "git_blob": "d2adf692518fb920d54d1487da950784edfe4d9b",
+      "git_mode": "100644",
+      "installed_path": "standards/TRAVERSAL_OCCURRENCE.md",
+      "native_git_path": "specification_methodology/v3/standards/TRAVERSAL_OCCURRENCE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/TRAVERSAL_OCCURRENCE.md"
+    },
+    {
+      "git_blob": "2a08d7f71efe1421d5ab92b4d8cd04baf6f11837",
+      "git_mode": "100644",
+      "installed_path": "standards/UX.md",
+      "native_git_path": "specification_methodology/v3/standards/UX.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/UX.md"
+    },
+    {
+      "git_blob": "e1d3e3452ded53a5f77ab60d7c64aed83f64066e",
+      "git_mode": "100644",
+      "installed_path": "standards/WORLD_MODEL.md",
+      "native_git_path": "specification_methodology/v3/standards/WORLD_MODEL.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/WORLD_MODEL.md"
+    },
+    {
+      "git_blob": "f975b12de1ef8001ba29ef0146f8b919bf768ac1",
+      "git_mode": "100644",
+      "installed_path": "standards/WRITING_GUIDE.md",
+      "native_git_path": "specification_methodology/v3/standards/WRITING_GUIDE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/WRITING_GUIDE.md"
+    },
+    {
+      "git_blob": "389018323df0bf1162c3226e6720397046ea832f",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/DOCUMENTATION.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/DOCUMENTATION.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/DOCUMENTATION.json"
+    },
+    {
+      "git_blob": "70bbbea7186f5161a8c0a9d1c82c282cd7062e12",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/README.md",
+      "native_git_path": "specification_methodology/v3/standards/documentation/README.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/README.md"
+    },
+    {
+      "git_blob": "aa385e793e4b3d5d0cf90de4530c4b244101d414",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/SELECTION.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/SELECTION.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/SELECTION.json"
+    },
+    {
+      "git_blob": "e5d6fd021c617db01b8f66c664b080c74a5f5377",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/code-explorer/EXAMPLE.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/code-explorer/EXAMPLE.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/code-explorer/EXAMPLE.json"
+    },
+    {
+      "git_blob": "e5daeddf8f6b6ceabbc2fbe9aa2729662f3ec0af",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/code-explorer/index.html",
+      "native_git_path": "specification_methodology/v3/standards/documentation/code-explorer/index.html",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/code-explorer/index.html"
+    },
+    {
+      "git_blob": "7244b12804830152cc1ec16a82590af199edd4b5",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/constraint-explorer/index.html",
+      "native_git_path": "specification_methodology/v3/standards/documentation/constraint-explorer/index.html",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/constraint-explorer/index.html"
+    },
+    {
+      "git_blob": "7c4f26b9562dd1020c69560398efa77b66b961b5",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/index.html",
+      "native_git_path": "specification_methodology/v3/standards/documentation/index.html",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/index.html"
+    },
+    {
+      "git_blob": "90097771aeac1265c40b49dc5dd6cb351e27303a",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/model.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/model.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/model.json"
+    },
+    {
+      "git_blob": "19a37e34fc43d33d0b8091818a1bc187ced03a9a",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/PROOFS.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/PROOFS.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/PROOFS.json"
+    },
+    {
+      "git_blob": "5ef4e8a9b5f9ca346fcfe38a3df7c045811d9cd3",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/SELECTION.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/SELECTION.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/SELECTION.json"
+    },
+    {
+      "git_blob": "755d4810d8b6f3f767992e7fd0f0bc84bf9775e2",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/correspondence.md",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/correspondence.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/correspondence.md"
+    },
+    {
+      "git_blob": "6e10997fab7d21042636bb00856eca5a5a3e8cfa",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateBounds.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateBounds.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateBounds.lean"
+    },
+    {
+      "git_blob": "4cc47305b19b3e0a39ed0b2f785dd24265f08b0a",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateBounds.log",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateBounds.log",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateBounds.log"
+    },
+    {
+      "git_blob": "9f787d38381cdcc0cb44036e24230d118ef7258d",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateData.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateData.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateData.lean"
+    },
+    {
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateData.log",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateData.log",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateData.log"
+    },
+    {
+      "git_blob": "e2ecadc1e5239011e024dcafc4db5bf3d4085e4f",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateExternalNames.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateExternalNames.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateExternalNames.lean"
+    },
+    {
+      "git_blob": "d341f27545cbde2cd38ed4a928d5d314372c0587",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateExternalNames.log",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateExternalNames.log",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateExternalNames.log"
+    },
+    {
+      "git_blob": "b3bc27c631b5012190ca611731d9c68783b3a072",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateIdentities.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateIdentities.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateIdentities.lean"
+    },
+    {
+      "git_blob": "6b3f40f50f1b46aec62ceaf05416a17d2e1f56f6",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateIdentities.log",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateIdentities.log",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateIdentities.log"
+    },
+    {
+      "git_blob": "f4422f7825502e6003712cfb605e4c68f38f83eb",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateLocalNames.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateLocalNames.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateLocalNames.lean"
+    },
+    {
+      "git_blob": "2c93c7307419c8c2bdf086d5d4230d7c5368470f",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateLocalNames.log",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateLocalNames.log",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateLocalNames.log"
+    },
+    {
+      "git_blob": "efc9dde7a320c14fb4f6b75ca586b244759b8405",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateModel.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateModel.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateModel.lean"
+    },
+    {
+      "git_blob": "eaf8487b69378c4963548f446a55ed1e589a8a1f",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateModel.log",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateModel.log",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateModel.log"
+    },
+    {
+      "git_blob": "e43164afaf9c958706b0d337f0290400e7f7dc95",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateRun.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateRun.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateRun.lean"
+    },
+    {
+      "git_blob": "d1b28fcf99f79d96ea1631407047a3d181bab4ef",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateViews.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateViews.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateViews.lean"
+    },
+    {
+      "git_blob": "050d22205e52de1e5c575e71f72d78d5b47312ff",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/GateViews.log",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/GateViews.log",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/GateViews.log"
+    },
+    {
+      "git_blob": "570b8fbfce82b70439ce505e90f15231b8b6d15b",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/actual-runtime.log",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/actual-runtime.log",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/actual-runtime.log"
+    },
+    {
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/dynamic-kernel-replay.log",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/dynamic-kernel-replay.log",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/dynamic-kernel-replay.log"
+    },
+    {
+      "git_blob": "081b2009adb37bf88a87165d4cd98f56025f95ac",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/manifest.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/manifest.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/manifest.json"
+    },
+    {
+      "git_blob": "8e953acc4302613de231441d0867c240c4b60a48",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/replay-request.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/replay-request.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/replay-request.json"
+    },
+    {
+      "git_blob": "75c92cccb1bd26067f75a769236c90bafa7b42ec",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/request.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/request.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/request.json"
+    },
+    {
+      "git_blob": "6ac187c149bed055b6ae93873afbffcb212911f4",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/result.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/result.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/result.json"
+    },
+    {
+      "git_blob": "55d3aa849dacc51087c456bcdec502592121adce",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/supplied-views.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/supplied-views.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/supplied-views.json"
+    },
+    {
+      "git_blob": "7f68ce41f73ca1790b93d7d4164251f5d61acac4",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/evidence/view-comparison.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/evidence/view-comparison.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/evidence/view-comparison.json"
+    },
+    {
+      "git_blob": "104fddc15e1a8c38c6ba50fc99ec1eb0cf886434",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/index.html",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/index.html",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/index.html"
+    },
+    {
+      "git_blob": "eb5c0b5b9edc4aabccfbc116e6c70663f4f878c6",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/inspection-execution.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/inspection-execution.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/inspection-execution.json"
+    },
+    {
+      "git_blob": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/inspection-stderr.txt",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/inspection-stderr.txt",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/inspection-stderr.txt"
+    },
+    {
+      "git_blob": "046b5231b9c3cd9702feb68c27e118fd651a62bb",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/inspection.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/inspection.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/inspection.json"
+    },
+    {
+      "git_blob": "bc646c779e31863070569d5f0b85756fd57be39c",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/library-provenance.md",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/library-provenance.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/library-provenance.md"
+    },
+    {
+      "git_blob": "28c565a5808fa222645cb32ebcec967e7cd7ef00",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/.cache/formal-origin-v1/selection.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/.cache/formal-origin-v1/selection.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/.cache/formal-origin-v1/selection.json"
+    },
+    {
+      "git_blob": "17871811213431269ee1bafec34902bae509b08e",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/AC/Closure.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/AC/Closure.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/AC/Closure.lean"
+    },
+    {
+      "git_blob": "3c20b19bc6b1909403cfeecb06b14d5d1e4a3f38",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/AC/GateProof.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/AC/GateProof.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/AC/GateProof.lean"
+    },
+    {
+      "git_blob": "42ecffb76bcd00e6f668f6ccc3a04d49e5a6e1ab",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/AC/GateRuntime.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/AC/GateRuntime.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/AC/GateRuntime.lean"
+    },
+    {
+      "git_blob": "b8d24d41cc8b8cdddcd56b3c533a12844d279da3",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/AC/Model.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/AC/Model.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/AC/Model.lean"
+    },
+    {
+      "git_blob": "460f8902b62e8020e17121b79f4dda3b10f82f09",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/AC/Projection.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/AC/Projection.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/AC/Projection.lean"
+    },
+    {
+      "git_blob": "ba598ef250dffcc56a1298d7a3177034d40300ce",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/AC/Structure.lean",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/AC/Structure.lean",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/AC/Structure.lean"
+    },
+    {
+      "git_blob": "b9c5960e5c31f40013295c4015036fc5820d9791",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/lake-manifest.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/lake-manifest.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/lake-manifest.json"
+    },
+    {
+      "git_blob": "3e7f0c839fc5353421ef475cf3c1dc5f4f12b469",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/lakefile.toml",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/lakefile.toml",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/lakefile.toml"
+    },
+    {
+      "git_blob": "a6aff065db2882c535684f8c5bcd4f16e9a23915",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/lean-toolchain",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/lean-toolchain",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/lean-toolchain"
+    },
+    {
+      "git_blob": "6c46ef45aed6a44d4ae53883dc76e60e085830e0",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/profiles/formal-gate-request.schema.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/profiles/formal-gate-request.schema.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/profiles/formal-gate-request.schema.json"
+    },
+    {
+      "git_blob": "35259bda401691ed73fd4cb9a956e5331ac6e59e",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/profiles/generation-signature-v1.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/profiles/generation-signature-v1.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/profiles/generation-signature-v1.json"
+    },
+    {
+      "git_blob": "c86d52682abffdec6a15b064320999079055ef49",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/profiles/proof-support-v1.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/profiles/proof-support-v1.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/profiles/proof-support-v1.json"
+    },
+    {
+      "git_blob": "d37aa34248757ef0552da203f34ecc77b2bb7650",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/bootstrap.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/bootstrap.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/bootstrap.py"
+    },
+    {
+      "git_blob": "0d536a9e795a2db4137bd51cbcaaf14d9e17ca98",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/check.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/check.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/check.py"
+    },
+    {
+      "git_blob": "a842f6f624a123697fe5accfe4a790328204b043",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/check_gate.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/check_gate.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/check_gate.py"
+    },
+    {
+      "git_blob": "4b3a1f6e6f1cd1cec4000ba1a0250800753f160d",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/formal_gate.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/formal_gate.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/formal_gate.py"
+    },
+    {
+      "git_blob": "7d6590a5e9188d7e43aae011ef0b169909a120a0",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/formal_reuse.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/formal_reuse.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/formal_reuse.py"
+    },
+    {
+      "git_blob": "e4436825f155a8750eaccfac7ba5d213df6c3565",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/formal_support.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/formal_support.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/formal_support.py"
+    },
+    {
+      "git_blob": "3433a153b57b483d9d66abb4a16ec3f12acfb78e",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/gate_codegen.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/gate_codegen.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/gate_codegen.py"
+    },
+    {
+      "git_blob": "9f1fdddae4b9241577f4734adf0235cf7dda782e",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/generate_fixture.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/generate_fixture.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/generate_fixture.py"
+    },
+    {
+      "git_blob": "b23c70094a41521dc853ec2e12d21c112c6c64a1",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/generation_profile.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/generation_profile.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/generation_profile.py"
+    },
+    {
+      "git_blob": "99e2eb4842fde53f64d5ecbdd7a5339ec45d3cd9",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/import_fixture.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/import_fixture.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/import_fixture.py"
+    },
+    {
+      "git_blob": "69c7f19ddae8e712449a1b74e81ebc9901562f59",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/scripts/runtime_process.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/scripts/runtime_process.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/scripts/runtime_process.py"
+    },
+    {
+      "git_blob": "e5e94734f175bef206440d2653f1b684bae1f420",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/machinery/toolchain-lock.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/machinery/toolchain-lock.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/machinery/toolchain-lock.json"
+    },
+    {
+      "git_blob": "fb44e11205c9baab54715e7c2179201a2b10161e",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/materialize.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/materialize.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/materialize.py"
+    },
+    {
+      "git_blob": "37aacc4291ae162c5ff546f4c7575677dac98846",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/payload_boundary.py",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/payload_boundary.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/payload_boundary.py"
+    },
+    {
+      "git_blob": "b28f05362b107f0276851a0a57b26a1f4b6b817a",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/selected-request.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/selected-request.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/selected-request.json"
+    },
+    {
+      "git_blob": "2569993af784752f5b905b23766dc03e43ab1cab",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/source-freeze.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/source-freeze.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/source-freeze.json"
+    },
+    {
+      "git_blob": "5f1329d1130a8f4c54eca9dd2ac22a16c222d8c9",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/transport/TRANSPORT.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/transport/TRANSPORT.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/transport/TRANSPORT.json"
+    },
+    {
+      "git_blob": "611dfd1ce13bda4fd9e80ac6f9e0e3b0ddd66674",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/transport/part-001.bin",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/transport/part-001.bin",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/transport/part-001.bin"
+    },
+    {
+      "git_blob": "8e6679c5bbd843968d59d4877736fa7b8c13ce25",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/proofs/transport/part-002.bin",
+      "native_git_path": "specification_methodology/v3/standards/documentation/proofs/transport/part-002.bin",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/transport/part-002.bin"
+    },
+    {
+      "git_blob": "2569993af784752f5b905b23766dc03e43ab1cab",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/source-freeze.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/source-freeze.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/source-freeze.json"
+    },
+    {
+      "git_blob": "dc9854dade26144de25e3fe4263e954253959423",
+      "git_mode": "100644",
+      "installed_path": "standards/documentation/source-manifest.json",
+      "native_git_path": "specification_methodology/v3/standards/documentation/source-manifest.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/documentation/source-manifest.json"
+    },
+    {
+      "git_blob": "f3b943536908544582486addf4f6caf70c7b4dab",
+      "git_mode": "100644",
+      "installed_path": "standards/examples/DETERMINISTIC_CONTRACTS.md",
+      "native_git_path": "specification_methodology/v3/standards/examples/DETERMINISTIC_CONTRACTS.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/examples/DETERMINISTIC_CONTRACTS.md"
+    },
+    {
+      "git_blob": "6817d9795aabd6e8bfb6a9ce78225bc9b2633a76",
+      "git_mode": "100644",
+      "installed_path": "standards/examples/PRODUCT_COMPOSITION.md",
+      "native_git_path": "specification_methodology/v3/standards/examples/PRODUCT_COMPOSITION.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/examples/PRODUCT_COMPOSITION.md"
+    },
+    {
+      "git_blob": "f686a7cbdf81554cf5fe7221bbdcee5f0f9a790b",
+      "git_mode": "100644",
+      "installed_path": "standards/examples/deterministic_contracts.py",
+      "native_git_path": "specification_methodology/v3/standards/examples/deterministic_contracts.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/examples/deterministic_contracts.py"
+    },
+    {
+      "git_blob": "1f1adc5a66c8d60bbc812fe05cc6dcd9d4f9bcef",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/FRAME_INPUTS.json",
+      "native_git_path": "specification_methodology/v3/standards/frames/FRAME_INPUTS.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/FRAME_INPUTS.json"
+    },
+    {
+      "git_blob": "0362c462c9c1883b0cc7b4d26f1f3d8393cd9b09",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/ac-task-a.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/ac-task-a.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/ac-task-a.md"
+    },
+    {
+      "git_blob": "d954d9229c98a724b233f7e5631691a348f5ff0c",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/acceptance-release.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/acceptance-release.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/acceptance-release.md"
+    },
+    {
+      "git_blob": "49bdb313b70754031f59319499f45b595ad02fd7",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/binding.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/binding.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/binding.md"
+    },
+    {
+      "git_blob": "f27b6a5ce2fcf14de55b1bc8b8efe345592af676",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/bootstrap.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/bootstrap.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/bootstrap.md"
+    },
+    {
+      "git_blob": "8675b8ef86c13027b9f0497e2121a5961e90ac03",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/configuration.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/configuration.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/configuration.md"
+    },
+    {
+      "git_blob": "f98e74537d9223a882849ebd0d770bac6498e6a6",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/dm-task-d.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/dm-task-d.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/dm-task-d.md"
+    },
+    {
+      "git_blob": "da19237ed1e22f7bce66c0d6bc6ff61cf4512825",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/eb-task-d.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/eb-task-d.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/eb-task-d.md"
+    },
+    {
+      "git_blob": "53d853fb96927a6f8d386268fdbcc8f230460779",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/member-build-assess.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/member-build-assess.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/member-build-assess.md"
+    },
+    {
+      "git_blob": "83d367ba8b6f24bde7d907ca3022f4c129408f61",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/product-composition.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/product-composition.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/product-composition.md"
+    },
+    {
+      "git_blob": "837bd3f5fb1f787e6349f078d0f681d8e095f9f9",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/rf-task-a.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/rf-task-a.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/rf-task-a.md"
+    },
+    {
+      "git_blob": "0461b556a2275780d02157e16669e994f62d2987",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/rf-task-b.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/rf-task-b.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/rf-task-b.md"
+    },
+    {
+      "git_blob": "493e97df52db8c204fe2059c72af45a6d98f54d7",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/stale-summary.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/stale-summary.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/stale-summary.md"
+    },
+    {
+      "git_blob": "a30f0c52119368e661b27987271b88686126bf13",
+      "git_mode": "100644",
+      "installed_path": "standards/frames/traversal-task-f.md",
+      "native_git_path": "specification_methodology/v3/standards/frames/traversal-task-f.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/frames/traversal-task-f.md"
+    },
+    {
+      "git_blob": "70728658589e677b304d9384a029a02cae0f2c99",
+      "git_mode": "100644",
+      "installed_path": "standards/schemas/installed-release-manifest.schema.json",
+      "native_git_path": "specification_methodology/v3/standards/schemas/installed-release-manifest.schema.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/schemas/installed-release-manifest.schema.json"
+    },
+    {
+      "git_blob": "a76751c0ec28c13a6e8967c0ec780aa36387fa97",
+      "git_mode": "100644",
+      "installed_path": "standards/schemas/product-definition.schema.json",
+      "native_git_path": "specification_methodology/v3/standards/schemas/product-definition.schema.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/schemas/product-definition.schema.json"
+    },
+    {
+      "git_blob": "ea537a71989d7905224ed84428abc24405c7f92c",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/AGENTS_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/AGENTS_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/AGENTS_TEMPLATE.md"
+    },
+    {
+      "git_blob": "ea537a71989d7905224ed84428abc24405c7f92c",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/CLAUDE_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/CLAUDE_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/CLAUDE_TEMPLATE.md"
+    },
+    {
+      "git_blob": "c2df8dc7ad366d86f564216d70be06962b3d233b",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/GOALS_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/GOALS_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/GOALS_TEMPLATE.md"
+    },
+    {
+      "git_blob": "38c7c5a9863388ac16b58ae5de99e582b514bf2c",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/INTENT_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/INTENT_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/INTENT_TEMPLATE.md"
+    },
+    {
+      "git_blob": "957eb69bddc708631b4589594d216f4829a83951",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/PRODUCT_COMPOSITION_CONTRACT_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/PRODUCT_COMPOSITION_CONTRACT_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/PRODUCT_COMPOSITION_CONTRACT_TEMPLATE.md"
+    },
+    {
+      "git_blob": "da3447e748e818dedbb7bd2fcb4e580f9f90e7c5",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/PRODUCT_DEFINITION_TEMPLATE.json",
+      "native_git_path": "specification_methodology/v3/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json"
+    },
+    {
+      "git_blob": "3a30478cdd4757e5f728485bcd8384ac284f2a5e",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/PRODUCT_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/PRODUCT_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/PRODUCT_TEMPLATE.md"
+    },
+    {
+      "git_blob": "6bce2989366474d19efc2eef369cefc380bc35e9",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md"
+    },
+    {
+      "git_blob": "aea40514b5b0f061c8a76a83429401e6ef81ea1e",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/README.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/README.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/README.md"
+    },
+    {
+      "git_blob": "6feb61a0e816ef61093c83c907dc72b9d07bf0af",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md"
+    },
+    {
+      "git_blob": "7b3d11b40d53604edc5207c812d95c74ef8144b1",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/common/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/common/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/common/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "a4c6be518933ca1d8382dcd564287369036f52ed",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/common/design/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/common/design/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/common/design/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "125dd2b7c6a6e555c109719e039f15435106377a",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md"
+    },
+    {
+      "git_blob": "fb98a3cad6ed9a44adb9aa2b95c8f34e787ca7f5",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "927b2940c0cf6dc8c1d660512d1f15d6901a32e8",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/variant/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/variant/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/variant/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "4cd6fe25a96cae203288d19dcc83e5b0db367c94",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/variant/design/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "fbd374ac1bb21bdd89a945effdafd7499dcfbe5c",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md"
+    },
+    {
+      "git_blob": "c7b3d88a5b80bd9e90c45e8779dd58e1216f9029",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "05a5c8b06758ea952561cf77566488beafa48395",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md"
+    },
+    {
+      "git_blob": "73f8b5451974ea90e2b4a004ca5894d45424e903",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "d94acaa61f2989b25a7c1cb110d7534c1a35a70c",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json"
+    },
+    {
+      "git_blob": "df03ac0d405c75b03ef9c90620e17ae98eb162dc",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "8602f43a4599b901178ebbea1b1227b406586808",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/docs/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/docs/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/docs/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "a24f354777beee250160f8da3da5f2bd8de9e1c2",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/requirements/README_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/requirements/README_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/requirements/README_TEMPLATE.md"
+    },
+    {
+      "git_blob": "8f3e06c2c347d5bc215624a1ccc7568e34b16d86",
+      "git_mode": "100644",
+      "installed_path": "standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md",
+      "native_git_path": "specification_methodology/v3/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md"
+    },
+    {
+      "git_blob": "c9916182588f8fd10550e7c993de1a97e5e87d77",
+      "git_mode": "100644",
+      "installed_path": "standards/tooling/README.md",
+      "native_git_path": "specification_methodology/v3/standards/tooling/README.md",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/tooling/README.md"
+    },
+    {
+      "git_blob": "f959e7d28d7ae672da43f8513f1c147fa2281ce7",
+      "git_mode": "100644",
+      "installed_path": "standards/tooling/SELECTION.json",
+      "native_git_path": "specification_methodology/v3/standards/tooling/SELECTION.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/tooling/SELECTION.json"
+    },
+    {
+      "git_blob": "6b0ffda50a4b8e664defecad36cedad38e7c34f7",
+      "git_mode": "100644",
+      "installed_path": "standards/tooling/TOOLING.json",
+      "native_git_path": "specification_methodology/v3/standards/tooling/TOOLING.json",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/tooling/TOOLING.json"
+    },
+    {
+      "git_blob": "72ac310586e40b01ff572df447166d519e01992a",
+      "git_mode": "100644",
+      "installed_path": "standards/tooling/materialize.py",
+      "native_git_path": "specification_methodology/v3/standards/tooling/materialize.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/tooling/materialize.py"
+    },
+    {
+      "git_blob": "37aacc4291ae162c5ff546f4c7575677dac98846",
+      "git_mode": "100644",
+      "installed_path": "standards/tooling/payload_boundary.py",
+      "native_git_path": "specification_methodology/v3/standards/tooling/payload_boundary.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/tooling/payload_boundary.py"
+    },
+    {
+      "git_blob": "ca1b40e28eed6608d8594e49fa6946a551e3b846",
+      "git_mode": "100644",
+      "installed_path": "standards/tooling/runtime.py",
+      "native_git_path": "specification_methodology/v3/standards/tooling/runtime.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/tooling/runtime.py"
+    },
+    {
+      "git_blob": "b7f448ab23c1dca91fa86db0ddac403c54941a31",
+      "git_mode": "100644",
+      "installed_path": "standards/tooling/setup.py",
+      "native_git_path": "specification_methodology/v3/standards/tooling/setup.py",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/tooling/setup.py"
+    },
+    {
+      "git_blob": "500b9fd564ef236bcf308077bc52b712dcf460f0",
+      "git_mode": "100644",
+      "installed_path": "standards/tooling/sources.zip",
+      "native_git_path": "specification_methodology/v3/standards/tooling/sources.zip",
+      "source_checkpoint_path": "specification_methodology/v3/build_tenants/common/standards/tooling/sources.zip"
+    }
+  ],
+  "native_commit": "d1f6eff7f4eafe6e9b1cf3a18117d9fa68b41bbe",
+  "native_member_count": 171,
+  "observed_at": "2026-11-06T12:46:16.913971+00:00",
+  "preserved": "A1 objects and local-001 installation remain unchanged. Every native blob is reachable at its recorded path in retained source C; no giant duplicate archive. No Git object/ref effect performed.",
+  "raw_objects": [
+    {
+      "bytes": 69,
+      "object": "08eacb4fc4af61c81cfb3133d80f5ca41f2a3073",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/08eacb4fc4af61c81cfb3133d80f5ca41f2a3073.tree",
+      "sha256": "d9bb2feafe71f6eee804f04eac43f3cb4f6abd716dabbe9f2ef44be15f31dab7",
+      "type": "tree"
+    },
+    {
+      "bytes": 43,
+      "object": "12cf526892cf82cf91b2d22ce91fbb7162e99ef7",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/12cf526892cf82cf91b2d22ce91fbb7162e99ef7.tree",
+      "sha256": "8a85852d372e275f7e93da4778d32fd27ce02799e2386a2866d3743c4de6e1ae",
+      "type": "tree"
+    },
+    {
+      "bytes": 39,
+      "object": "2913ffea21704d1a39caac5fbec1903c14971ef9",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/2913ffea21704d1a39caac5fbec1903c14971ef9.tree",
+      "sha256": "a8597803ba557c5b564dced7f5003ce9f075192fa391742a2dd49baa6b433d49",
+      "type": "tree"
+    },
+    {
+      "bytes": 106,
+      "object": "2dcfcb9121cb19f9201c86ba74267d44cf73fcb1",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/2dcfcb9121cb19f9201c86ba74267d44cf73fcb1.tree",
+      "sha256": "c5c6289ab65a3ff5cb3db57eecf4a084cc9115a65a02c091a59aa36264232c78",
+      "type": "tree"
+    },
+    {
+      "bytes": 649,
+      "object": "326ca3df59fbb5ab1efc989f2c9f06ac80bac710",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/326ca3df59fbb5ab1efc989f2c9f06ac80bac710.tree",
+      "sha256": "66434a2cc6f9ca02d50702528f357b6482e48553abefed86ccbed87b8024546a",
+      "type": "tree"
+    },
+    {
+      "bytes": 36,
+      "object": "3501c481a32c932102d24aa785c5b4bac7999cc6",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/3501c481a32c932102d24aa785c5b4bac7999cc6.tree",
+      "sha256": "e8b64cdbc9c9c55fa5ae88ac847cfa3ed381142a51c0c07ddb1d857b1041ccbb",
+      "type": "tree"
+    },
+    {
+      "bytes": 88,
+      "object": "3521ff03537e51d7a0ca8e94874059d8fd3cf8fe",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/3521ff03537e51d7a0ca8e94874059d8fd3cf8fe.tree",
+      "sha256": "ae01cb432716ad9e9eeaea388e4c0b07393c3d3a7397f55101a2c1ebad4217a4",
+      "type": "tree"
+    },
+    {
+      "bytes": 106,
+      "object": "3d25d83da3c7e3f4cc180bd3e1d8198c739fd3ca",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/3d25d83da3c7e3f4cc180bd3e1d8198c739fd3ca.tree",
+      "sha256": "f1c658ad34270721a65502048b7cfc72a2e71e916f06e9cf6899d30e98c6fb8e",
+      "type": "tree"
+    },
+    {
+      "bytes": 46,
+      "object": "42a541a5a7de28cf2a2dbcceb86664e4c13f3c8c",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/42a541a5a7de28cf2a2dbcceb86664e4c13f3c8c.tree",
+      "sha256": "5be7903adcf6bf2a08faa3914b5252c40d185d1966b51eb8f591d868ad322c97",
+      "type": "tree"
+    },
+    {
+      "bytes": 69,
+      "object": "4600d00b4cd5ab42da37f3181f5436e478ea35c5",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/4600d00b4cd5ab42da37f3181f5436e478ea35c5.tree",
+      "sha256": "12f10a5f400d94fbe34bf9a7a24eb655e8c516048e31376f79a5e2f0b0c9f51b",
+      "type": "tree"
+    },
+    {
+      "bytes": 79,
+      "object": "4a3636bb58573021446bea1699167cb3c1da6439",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/4a3636bb58573021446bea1699167cb3c1da6439.tree",
+      "sha256": "59308b4671b2e88e596f3a663a23f303e8093a7e08dbd0d234d81f0b39099ca9",
+      "type": "tree"
+    },
+    {
+      "bytes": 122,
+      "object": "4a88bd6cc543fce872399bd248b37f2103edfb25",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/4a88bd6cc543fce872399bd248b37f2103edfb25.tree",
+      "sha256": "21b2c59630f0b1d0f3443762154b3e3688d5d819e58d5fd0c119c6205fe8a90d",
+      "type": "tree"
+    },
+    {
+      "bytes": 39,
+      "object": "4c9a9e426d4bb8f79c77d588843ca92f53f2505c",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/4c9a9e426d4bb8f79c77d588843ca92f53f2505c.tree",
+      "sha256": "ff245ee7fd0edf2b65bd74556ed56b8528cf93ab35170504a46da952a63307d3",
+      "type": "tree"
+    },
+    {
+      "bytes": 42,
+      "object": "4d1ba6a08304fdb55cf6880c0b183455e293a26c",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/4d1ba6a08304fdb55cf6880c0b183455e293a26c.tree",
+      "sha256": "024a29bdd18bc6a23fed670a664bc6991b067bcc304c29d91124355bd0197d76",
+      "type": "tree"
+    },
+    {
+      "bytes": 164,
+      "object": "4d833df55ee7a19b9bc9f327814c245f6b6f25de",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/4d833df55ee7a19b9bc9f327814c245f6b6f25de.tree",
+      "sha256": "cda266930901b55ad9608c963ceea58d05fa62a93a655210fc6916f770c08003",
+      "type": "tree"
+    },
+    {
+      "bytes": 477,
+      "object": "573ec862b96f1fca58a7c7bb91a60e4b0511a9c1",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/573ec862b96f1fca58a7c7bb91a60e4b0511a9c1.tree",
+      "sha256": "c47cd5892159982f3784c0abaac9aaf7e2d697309fd8feaadd73ed9e55457fcb",
+      "type": "tree"
+    },
+    {
+      "bytes": 687,
+      "object": "5b9ef1d2fc88452dbbf3d9ec414f034c0fe7379d",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/5b9ef1d2fc88452dbbf3d9ec414f034c0fe7379d.tag",
+      "sha256": "f5e768f37b444c0bceef725185736affdb6d560652d4acf7d3bb7f52bc364bcb",
+      "type": "tag"
+    },
+    {
+      "bytes": 133,
+      "object": "61a158c95a05eff0ac93ae63aef80c0034dc8c82",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/61a158c95a05eff0ac93ae63aef80c0034dc8c82.tree",
+      "sha256": "ca797ba97bd9e06c1ffcec1fbe218e885de42f774d6f6f249490c602ec7812fb",
+      "type": "tree"
+    },
+    {
+      "bytes": 89,
+      "object": "639e492daa79d6b085a59fdb4e358e446c9747b5",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/639e492daa79d6b085a59fdb4e358e446c9747b5.tree",
+      "sha256": "be5ceca2eac8420bd8c9066bdc0fa1d55dfb4c16b9e9b4303cc619215c7c7ec5",
+      "type": "tree"
+    },
+    {
+      "bytes": 321,
+      "object": "6765069f9139f3a9b5f869dd892ee26df771684c",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/6765069f9139f3a9b5f869dd892ee26df771684c.tree",
+      "sha256": "84c154454a44def680676dedce60e68a502550d85e6eb5aa57694036ff842e20",
+      "type": "tree"
+    },
+    {
+      "bytes": 78,
+      "object": "69c59be62ff1b63ba514370a051d2190d2188206",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/69c59be62ff1b63ba514370a051d2190d2188206.tree",
+      "sha256": "01053af7dfb16a26dd333f96a7c8b2c6ad5a4543bd525f02f10d9861774df37b",
+      "type": "tree"
+    },
+    {
+      "bytes": 607,
+      "object": "71941f39035bf80dc9b8ff29fa47fa43ed454450",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/71941f39035bf80dc9b8ff29fa47fa43ed454450.tree",
+      "sha256": "698c6377e308b56b82a8f3b1e06c8e2c61800322ec94b16d6959808ff75f8d8e",
+      "type": "tree"
+    },
+    {
+      "bytes": 186,
+      "object": "7a86b9d12ecb2573bf99497d638f6231cb4fe58b",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/7a86b9d12ecb2573bf99497d638f6231cb4fe58b.tree",
+      "sha256": "77e124d6f7a53cc92b20543fddb696d93c9c119475ba67d72d5461a24d67d9a1",
+      "type": "tree"
+    },
+    {
+      "bytes": 69,
+      "object": "7e504e10f328e5b7039ccd0b0497dae4f1a73c13",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/7e504e10f328e5b7039ccd0b0497dae4f1a73c13.tree",
+      "sha256": "32a6071192648e2c08e38ef29d1b12d91e466d99ee5d172c9594120cf5f7d9f2",
+      "type": "tree"
+    },
+    {
+      "bytes": 139,
+      "object": "7ef3c433f5d0c4f561f395e909de29c21a913b00",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/7ef3c433f5d0c4f561f395e909de29c21a913b00.tree",
+      "sha256": "f49adbde12cfcecafcd8892852166b15c9f7e067333ba440e31c56e353efa95d",
+      "type": "tree"
+    },
+    {
+      "bytes": 270,
+      "object": "7f0027250dd2e3faf96e52b038417f38b490e0ee",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/7f0027250dd2e3faf96e52b038417f38b490e0ee.commit",
+      "sha256": "a3b60999b2723f0c9a5cc823cf8eb8814799fa2e91e9b688714cf9e421458f9d",
+      "type": "commit"
+    },
+    {
+      "bytes": 574,
+      "object": "7ff0d6ca1937038340b50c334e0a0d7357e6452f",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/7ff0d6ca1937038340b50c334e0a0d7357e6452f.tree",
+      "sha256": "218c15bc4fb37781a13e1413bb42e36b25d0711fda8ece023113f7401cb13a27",
+      "type": "tree"
+    },
+    {
+      "bytes": 39,
+      "object": "8511c8226ed6bccef796f4cd3c4dabbadf258a41",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/8511c8226ed6bccef796f4cd3c4dabbadf258a41.tree",
+      "sha256": "b2d7dd0a0f1728066cdceae1ec594cecde4b455affe577d54389ff58249caff0",
+      "type": "tree"
+    },
+    {
+      "bytes": 307,
+      "object": "8c3e45c399f277c119181e08fb2c46f24faae895",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/8c3e45c399f277c119181e08fb2c46f24faae895.tree",
+      "sha256": "7557c6c70fa5e8a913ef59ffd8056f71e1c15b6dd810a0fed0263a8176311116",
+      "type": "tree"
+    },
+    {
+      "bytes": 52,
+      "object": "8d3042afc1752f3779e72c1717443ed3a67cde55",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/8d3042afc1752f3779e72c1717443ed3a67cde55.tree",
+      "sha256": "3fd12ac7e9063d3f4dc9f08380b44cef94bec809b217f389e2e200a257e8a373",
+      "type": "tree"
+    },
+    {
+      "bytes": 39,
+      "object": "91ed67a62a314607347d2e607e2838c8412b478d",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/91ed67a62a314607347d2e607e2838c8412b478d.tree",
+      "sha256": "623452c81990015ebe91223e7afeccd6b6b30a22c6f22541735dc1ecf489229e",
+      "type": "tree"
+    },
+    {
+      "bytes": 77,
+      "object": "93c39470ec853ac1c8a33dd9afa10a26b3e78502",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/93c39470ec853ac1c8a33dd9afa10a26b3e78502.tree",
+      "sha256": "2cd10b806d4e9eb993fe9c0db461211a32f85045d06acbd8b018c1749748659b",
+      "type": "tree"
+    },
+    {
+      "bytes": 158,
+      "object": "9c3217b24da886a7eb454f1fadcf608afaf40ed4",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/9c3217b24da886a7eb454f1fadcf608afaf40ed4.tree",
+      "sha256": "2da6b0d0e3c657e38178cf37a5aab90eb1a5201386cb02c36277c9eec9efe537",
+      "type": "tree"
+    },
+    {
+      "bytes": 89,
+      "object": "a5c80046333a7af21452cf9ebfbc52e7c643ad28",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/a5c80046333a7af21452cf9ebfbc52e7c643ad28.tree",
+      "sha256": "a1e62eb2cbc11db6c049016f8ff67106cb05960b838d78d66cd59fcef3f98265",
+      "type": "tree"
+    },
+    {
+      "bytes": 39,
+      "object": "b066fdc9063f74f76edb7c58a8589f644324b834",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/b066fdc9063f74f76edb7c58a8589f644324b834.tree",
+      "sha256": "3c62020a5eb04614f6332687c119199574b9057f90ad344cd04e1d333b5d9f85",
+      "type": "tree"
+    },
+    {
+      "bytes": 260,
+      "object": "b361659b59c72809000274bd23f97a8455c08af0",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/b361659b59c72809000274bd23f97a8455c08af0.tree",
+      "sha256": "11ff703d972166a46d8fb2fa9a604fdf4e59657c7abcce791a2a83f5e2524da1",
+      "type": "tree"
+    },
+    {
+      "bytes": 38,
+      "object": "b7048e9972308c76ad072bb4cce9e45d82541c5d",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/b7048e9972308c76ad072bb4cce9e45d82541c5d.tree",
+      "sha256": "eb3153d451d4035710b1e6dccd01480f4f269a61e6dac894f6d9ba4c70083330",
+      "type": "tree"
+    },
+    {
+      "bytes": 31,
+      "object": "b854fbc263545ba4c8b2ac020fb6caa742bc4c23",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/b854fbc263545ba4c8b2ac020fb6caa742bc4c23.tree",
+      "sha256": "96aa8160af9c4d557f590f0f74f1b478a03f6e346745fe5b72a3dd10637c88fe",
+      "type": "tree"
+    },
+    {
+      "bytes": 79,
+      "object": "bbb466f2ff65c6283542b78beb5d266cd960e88e",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/bbb466f2ff65c6283542b78beb5d266cd960e88e.tree",
+      "sha256": "92861b9a3c31af9b19bc90eaf33ae29458209f22931d0ae2e67e927ae7be9b0c",
+      "type": "tree"
+    },
+    {
+      "bytes": 221,
+      "object": "bd5310f8de833e920b429951f3ceb890c15d2b42",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/bd5310f8de833e920b429951f3ceb890c15d2b42.tree",
+      "sha256": "52db2b014d21a2e04825bb96a4db10b455e344ef1fb18ec9d8208729ac75cfc2",
+      "type": "tree"
+    },
+    {
+      "bytes": 1175,
+      "object": "cb1aae42daa7735361564bfd8e8148434df620c3",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/cb1aae42daa7735361564bfd8e8148434df620c3.tree",
+      "sha256": "6eaf24f8b2ddcdcc673b48d47371ef41996e06f9d2cb04e34aa610b10f5f6847",
+      "type": "tree"
+    },
+    {
+      "bytes": 1018,
+      "object": "cf92b472fa1b1eb08b188237cd765d27a981a9ae",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/cf92b472fa1b1eb08b188237cd765d27a981a9ae.tree",
+      "sha256": "1449a0e4dbdb20cf174921de7cd95e55ef474a7ec857ac42940be75053a2791c",
+      "type": "tree"
+    },
+    {
+      "bytes": 39,
+      "object": "d107431c4e55dc76bcbb7bb7003746cfbb6bda9c",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/d107431c4e55dc76bcbb7bb7003746cfbb6bda9c.tree",
+      "sha256": "a069c5e9938250c78752f86b841e9597e145b507a0f84024e08e7464648e7ea0",
+      "type": "tree"
+    },
+    {
+      "bytes": 580,
+      "object": "d1f6eff7f4eafe6e9b1cf3a18117d9fa68b41bbe",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/d1f6eff7f4eafe6e9b1cf3a18117d9fa68b41bbe.commit",
+      "sha256": "83ab9fd4070072baa9db21bfa357061b223c20a7a1bc8b48fa1889eb4ba51330",
+      "type": "commit"
+    },
+    {
+      "bytes": 124,
+      "object": "d2aa86c5d562db817207ee14fb6fda8d76026392",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/d2aa86c5d562db817207ee14fb6fda8d76026392.tree",
+      "sha256": "ec477adc5cc2878bc1c8deef08ac76b9b78d218670705ae6ca62520034c33a24",
+      "type": "tree"
+    },
+    {
+      "bytes": 249,
+      "object": "d4df380ab6f9f070b81cbcbcb93a0d0dc434dfb5",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/d4df380ab6f9f070b81cbcbcb93a0d0dc434dfb5.tree",
+      "sha256": "16c17f75c6e50d307d941954d6c1e7106a2b0d7deb493b6aff851a6b170a159a",
+      "type": "tree"
+    },
+    {
+      "bytes": 43,
+      "object": "e0d58770d2bbf9c14eeaa2c564acefd2e02972f9",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/e0d58770d2bbf9c14eeaa2c564acefd2e02972f9.tree",
+      "sha256": "f1c9db3eb2940feaad9336e5a094f8850d759ea6b8d2ac475b0f0fc3be9769bd",
+      "type": "tree"
+    },
+    {
+      "bytes": 29,
+      "object": "e40737f6d9ed8742cc5f3a2f957f5b19e017f082",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/e40737f6d9ed8742cc5f3a2f957f5b19e017f082.tree",
+      "sha256": "fe5c626c8fb66220e511ee645e17961c79289ae4472a625bdbe7163ceee380df",
+      "type": "tree"
+    },
+    {
+      "bytes": 414,
+      "object": "e559dd9a55fa5387a965896e7dff23b45258a820",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/e559dd9a55fa5387a965896e7dff23b45258a820.tree",
+      "sha256": "25810a16f74c263047af55c80b86b735dda02f727d2a6068cfef010463156bd4",
+      "type": "tree"
+    },
+    {
+      "bytes": 39,
+      "object": "e56b06801a4b151df70f6aa4979b867b36e5372b",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/e56b06801a4b151df70f6aa4979b867b36e5372b.tree",
+      "sha256": "c50ca47de4dc507098c9b0979254c42199800385e294e2ec4d07b748bfc38554",
+      "type": "tree"
+    },
+    {
+      "bytes": 101,
+      "object": "e57c0dfa1d34c31f549a464c02e32a67569b7623",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/e57c0dfa1d34c31f549a464c02e32a67569b7623.tree",
+      "sha256": "b1f3e99adee4adb2bf35aa71bb8133ba57d4af93f71fc1ca71cf826cadbfbad6",
+      "type": "tree"
+    },
+    {
+      "bytes": 122,
+      "object": "e7fdc966df65f46e55dd12bdeaefec2bc3140ab8",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/e7fdc966df65f46e55dd12bdeaefec2bc3140ab8.tree",
+      "sha256": "aa618a019a739be9c40a5e12ccd45482ab52c695acc12408b71ccc70e4f71ffb",
+      "type": "tree"
+    },
+    {
+      "bytes": 69,
+      "object": "eb73a671353a7f26ea97bd9bac23ddfccac458fc",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/eb73a671353a7f26ea97bd9bac23ddfccac458fc.tree",
+      "sha256": "750fb8c8e036cd7ab17d7cfdafbd99330800a121d9a8f1a3753927de24fab5ba",
+      "type": "tree"
+    },
+    {
+      "bytes": 34,
+      "object": "ed23cc29ff681116ef94e1d8a45a44a3ab0eff41",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/ed23cc29ff681116ef94e1d8a45a44a3ab0eff41.tree",
+      "sha256": "6d8a502146808f1d54674ac318ca2132f6b93b7f2de043db4659720a7412e764",
+      "type": "tree"
+    },
+    {
+      "bytes": 69,
+      "object": "f27df95077f01489504f450748a74d653a2ea229",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-018/predecessor-objects/f27df95077f01489504f450748a74d653a2ea229.tree",
+      "sha256": "20038c7836095317585a683455f952cad9199290b94e5376f82d891e58d7ef5f",
+      "type": "tree"
+    }
+  ],
+  "remote_observed": {
+    "refs/heads/main": "15cbfbe2cac784860d6c948eca75ee9ecf5159f8"
+  },
+  "root_disposition": "Unpublished local candidate A1/tag may be replaced only by a separately assigned exact CAS operation after accepted repair and C2/A2. Published refs are immutable.",
+  "source_checkpoint": "7f0027250dd2e3faf96e52b038417f38b490e0ee"
+}

@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/usr/local/bin/python3",
+    "-I",
+    "-B",
+    "-c",
+    "import sys,json;sys.path.insert(0,sys.argv[1]);import ac,ac_model;p=ac.load_json(sys.argv[2]);m=ac.load_json(sys.argv[3]);v=ac.load_json(sys.argv[4]);report=ac.load_json(sys.argv[5]);print(json.dumps({\"restored\":ac_model.restore(p)==m,\"map\":ac.instantiate(p,report)==v}))",
+    "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-001/axiom-validation-017/stdout.json"
+  ],
+  "returncode": 1
+}

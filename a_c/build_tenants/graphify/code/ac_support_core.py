@@ -644,7 +644,13 @@ def verify_native_installation(runtime: Runtime) -> Object:
     def acquire(path: str, sha256: JSON) -> bytes:
         ref: Object = {"engine": "workspace-regular-file", "root": root_id,
                        "path": path, "object": None, "sha256": sha256, "selector": None}
-        return base64.b64decode(text(read_source(runtime, ref)["content_base64"]))
+        encoded = read_source(runtime, ref)["content_base64"]
+        if not isinstance(encoded, str):
+            raise SupportError("contract_violation", "Installed member encoding must be a string")
+        try:
+            return base64.b64decode(encoded, validate=True)
+        except ValueError as exc:
+            raise SupportError("contract_violation", "Installed member encoding must be valid base64") from exc
 
     manifest = as_object(parse_json(acquire("manifest.json", basis["manifest_sha256"])))
     if (manifest.get("kind") != "stdo.installed-release-manifest"

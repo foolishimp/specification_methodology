@@ -1,0 +1,32 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "elapsed_seconds": 0.0548033332452178,
+  "ended_ns": 1793967073838848000,
+  "environment": {
+    "PIP_CONFIG_FILE": "/dev/null",
+    "PIP_NO_INPUT": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONNOUSERSITE": "1",
+    "PYTHONPATH_and_PYTHONHOME_removed": true,
+    "other_PIP_variables_removed": true
+  },
+  "returncode": 0,
+  "started_ns": 1793967073784044000,
+  "stderr": {
+    "bytes": 0,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-execution-002/external-manager-identities.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 1209,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-execution-002/external-manager-identities.stdout",
+    "sha256": "62325258593fdc3ecd54f0e20e581eb258b54fe1de71b04b4c57a2e4be7641a1"
+  }
+}

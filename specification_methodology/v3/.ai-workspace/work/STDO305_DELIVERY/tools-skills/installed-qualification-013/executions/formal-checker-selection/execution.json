@@ -1,0 +1,108 @@
+{
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/a_c/scripts/ac.py",
+      "formal-select",
+      "--lean-root",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/a_c/build_tenants/lean",
+      "--python",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/dependencies/graphify/venv/bin/python",
+      "--timeout-seconds",
+      "900",
+      "--output",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/formal/checker.json"
+    ],
+    "child_maxrss_native_units": 1720909824,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001",
+    "elapsed_seconds": 0.381611,
+    "ended_ns": 1793968239746433000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 4318680,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/runtime/a_c/build_tenants/lean/profiles/proof-support-v1.json",
+        "sha256": "ff519688352cca9ce581ec52709a8c250a10944ab325b8483dc7e18a8dd6e268"
+      },
+      {
+        "bytes": 223,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/runtime/a_c/build_tenants/lean/.cache/formal-origin-v1/selection.json",
+        "sha256": "55124dd52453d423b4d14fb422f97bb38ce8fb6609bf90b59f02946d5518f9e2"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 179,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/formal-checker-selection/stdout.txt",
+        "sha256": "4a7ecdfc666414f872af30977b6044cd1e7e7521fce725105c2598f89e87d7a4"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/formal-checker-selection/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 2944,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/formal/checker.json",
+        "sha256": "0c9cdec7888546a709b1eab847917994baf4881c08f44ed17ef02d8bb9470c1b"
+      },
+      {
+        "bytes": 185,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/formal-checker-selection/result.json",
+        "sha256": "b2bc52667cda72589d1cb6b287235939c590006f9977df63628220309534db65"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1793968239364822000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/formal-checker-selection/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 179,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/formal-checker-selection/stdout.txt",
+      "sha256": "4a7ecdfc666414f872af30977b6044cd1e7e7521fce725105c2598f89e87d7a4"
+    },
+    "system_seconds": 0.043085999999999736,
+    "user_seconds": 0.32041399999999953
+  },
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/a_c/build_tenants/lean/profiles/proof-support-v1.json",
+      "retained": {
+        "bytes": 4318680,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/runtime/a_c/build_tenants/lean/profiles/proof-support-v1.json",
+        "sha256": "ff519688352cca9ce581ec52709a8c250a10944ab325b8483dc7e18a8dd6e268"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/a_c/build_tenants/lean/.cache/formal-origin-v1/selection.json",
+      "retained": {
+        "bytes": 223,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/runtime/a_c/build_tenants/lean/.cache/formal-origin-v1/selection.json",
+        "sha256": "55124dd52453d423b4d14fb422f97bb38ce8fb6609bf90b59f02946d5518f9e2"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 1149,
+    "path": "a_c/scripts/ac.py",
+    "sha256": "195e76276774f5a5a82fbab48216b314bfa1d0e092c25419bd53c5bb9638b71a"
+  },
+  "result": {
+    "bytes": 185,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/formal-checker-selection/result.json",
+    "sha256": "b2bc52667cda72589d1cb6b287235939c590006f9977df63628220309534db65"
+  },
+  "schema": "stdo.execution-observation/1"
+}

@@ -1,0 +1,17 @@
+test_empty_member_integrity_and_population_refuse_before_effects (test_ac_support_empty_members.EmptyNativeMembersTests.test_empty_member_integrity_and_population_refuse_before_effects) ... ok
+test_empty_member_public_startup_and_initializer (test_ac_support_empty_members.EmptyNativeMembersTests.test_empty_member_public_startup_and_initializer) ... FAIL
+test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) ... ok
+
+======================================================================
+FAIL: test_empty_member_public_startup_and_initializer (test_ac_support_empty_members.EmptyNativeMembersTests.test_empty_member_public_startup_and_initializer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_empty_members.py", line 76, in test_empty_member_public_startup_and_initializer
+    self.assertEqual(initialized.returncode, 0, initialized.stderr.decode())
+AssertionError: 2 != 0 : Read-only setup refused: 'product'
+
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.190s
+
+FAILED (failures=1)

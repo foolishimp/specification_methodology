@@ -1,0 +1,84 @@
+test_empty_member_integrity_and_population_refuse_before_effects (test_ac_support_empty_members.EmptyNativeMembersTests.test_empty_member_integrity_and_population_refuse_before_effects) ... ok
+test_empty_member_public_startup_and_initializer (test_ac_support_empty_members.EmptyNativeMembersTests.test_empty_member_public_startup_and_initializer) ... FAIL
+test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) ... 
+  test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) (encoded='!') ... FAIL
+  test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) (encoded='a') ... ERROR
+  test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) (encoded='\n') ... FAIL
+  test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) (encoded='é') ... ERROR
+
+======================================================================
+ERROR: test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) (encoded='a')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_empty_members.py", line 125, in test_encoded_member_response_is_strict_at_internal_boundary
+    c.Runtime.from_policy(self.policy_path, self.policy_sha, 'executive')
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py", line 592, in from_policy
+    verify_native_installation(runtime)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py", line 687, in verify_native_installation
+    acquire(path, sha256)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py", line 647, in acquire
+    return base64.b64decode(text(read_source(runtime, ref)["content_base64"]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/base64.py", line 88, in b64decode
+    return binascii.a2b_base64(s, strict_mode=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+binascii.Error: Invalid base64-encoded string: number of data characters (1) cannot be 1 more than a multiple of 4
+
+======================================================================
+ERROR: test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) (encoded='é')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/base64.py", line 37, in _bytes_from_decode_data
+    return s.encode('ascii')
+           ^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'ascii' codec can't encode character '\xe9' in position 0: ordinal not in range(128)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_empty_members.py", line 125, in test_encoded_member_response_is_strict_at_internal_boundary
+    c.Runtime.from_policy(self.policy_path, self.policy_sha, 'executive')
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py", line 592, in from_policy
+    verify_native_installation(runtime)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py", line 687, in verify_native_installation
+    acquire(path, sha256)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_support_core.py", line 647, in acquire
+    return base64.b64decode(text(read_source(runtime, ref)["content_base64"]))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/base64.py", line 83, in b64decode
+    s = _bytes_from_decode_data(s)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/base64.py", line 39, in _bytes_from_decode_data
+    raise ValueError('string argument should contain only ASCII characters')
+ValueError: string argument should contain only ASCII characters
+
+======================================================================
+FAIL: test_empty_member_public_startup_and_initializer (test_ac_support_empty_members.EmptyNativeMembersTests.test_empty_member_public_startup_and_initializer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_empty_members.py", line 60, in test_empty_member_public_startup_and_initializer
+    self.assertEqual(result.returncode, 0, response)
+AssertionError: 2 != 0 : {'evidence': None, 'id': None, 'operation': None, 'operation_outcome': None, 'refusal': {'code': 'contract_violation', 'gaps': [{'unretained_scope': 'no complete durable response evidence'}], 'reason': 'string must be a nonempty string', 'source_refs': []}, 'result': None, 'schema': 'a_c.fd-support.response/1', 'status': 'refused'}
+
+======================================================================
+FAIL: test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) (encoded='!')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_empty_members.py", line 124, in test_encoded_member_response_is_strict_at_internal_boundary
+    with self.assertRaises(c.SupportError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SupportError not raised
+
+======================================================================
+FAIL: test_encoded_member_response_is_strict_at_internal_boundary (test_ac_support_empty_members.EmptyNativeMembersTests.test_encoded_member_response_is_strict_at_internal_boundary) (encoded='\n')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_empty_members.py", line 124, in test_encoded_member_response_is_strict_at_internal_boundary
+    with self.assertRaises(c.SupportError) as caught:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: SupportError not raised
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.884s
+
+FAILED (failures=3, errors=2)

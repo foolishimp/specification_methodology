@@ -1,0 +1,50 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/dependencies/graphify/venv/bin/python",
+    "-B",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/a_c/scripts/ac.py",
+    "formal-select",
+    "--lean-root",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/a_c/build_tenants/lean",
+    "--python",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/dependencies/graphify/venv/bin/python",
+    "--timeout-seconds",
+    "900",
+    "--output",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/formal/checker.json"
+  ],
+  "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001",
+  "environment_additions": {},
+  "inputs": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/a_c/build_tenants/lean/profiles/proof-support-v1.json",
+      "retained": {
+        "bytes": 4318680,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/runtime/a_c/build_tenants/lean/profiles/proof-support-v1.json",
+        "sha256": "ff519688352cca9ce581ec52709a8c250a10944ab325b8483dc7e18a8dd6e268"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/a_c/build_tenants/lean/.cache/formal-origin-v1/selection.json",
+      "retained": {
+        "bytes": 223,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/runtime/a_c/build_tenants/lean/.cache/formal-origin-v1/selection.json",
+        "sha256": "55124dd52453d423b4d14fb422f97bb38ce8fb6609bf90b59f02946d5518f9e2"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 1149,
+    "path": "a_c/scripts/ac.py",
+    "sha256": "195e76276774f5a5a82fbab48216b314bfa1d0e092c25419bd53c5bb9638b71a"
+  },
+  "python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/dependencies/graphify/venv/bin/python",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "recovery": "Retain failed/partial outputs and reconcile before any further invocation.",
+  "schema": "stdo.execution-invocation/1",
+  "stdin": null
+}

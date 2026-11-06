@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-prep/prepare_native_inputs.py", line 284, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-prep/prepare_native_inputs.py", line 223, in main
+    recorded([config['python'], '-B', str(ac_root / 'build_tenants/graphify/examples/fd-support/prepare_readonly.py'),
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              '--out', str(output / 'readonly-initializer'), '--product-root', str(Path(config['definition']).parent),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+              '--definition-name', Path(config['definition']).name, '--profile', 'stdo-3.0.5', '--method-installation', config['method_root'], '--stdo', config['stdo']], output / 'initializer-execution', output)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-prep/prepare_native_inputs.py", line 85, in recorded
+    if timed_out or returncode: raise ValueError('Actual setup/check incomplete or refused; retain and reconcile: ' + str(directory))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Actual setup/check incomplete or refused; retain and reconcile: /Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/hosts/codex/cases/initializer-execution

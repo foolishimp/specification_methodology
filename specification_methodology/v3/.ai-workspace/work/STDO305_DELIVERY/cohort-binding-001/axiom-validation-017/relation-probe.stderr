@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py", line 73, in load_json
+    return json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=unique_pairs)
+                      ^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'read_text'

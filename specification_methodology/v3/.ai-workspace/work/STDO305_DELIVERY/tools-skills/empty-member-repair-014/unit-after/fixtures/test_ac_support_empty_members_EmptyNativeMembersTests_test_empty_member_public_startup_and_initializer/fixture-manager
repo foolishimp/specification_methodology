@@ -1,0 +1,6 @@
+#!/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12
+import json
+from pathlib import Path
+p=Path('/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-2bh0sgw6/workspace/Product.json')
+v=json.loads(p.read_bytes())
+print(json.dumps({"basis":v["constitution"]["stdo"]["basis"]["uri"],"manifest_sha256":v["constitution"]["stdo"]["basis"]["manifest_sha256"],"definition_id":v["product"]["definition_id"],"valid":True,"installed":True,"failures":[],"path":'/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/ac-public-retry-2bh0sgw6/method'}))

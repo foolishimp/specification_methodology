@@ -1,0 +1,93 @@
+{
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/store/releases/v3.0.5/standards/tooling/setup.py",
+      "derive-runtime",
+      "--tools",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/source-tools",
+      "--destination",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/a_c",
+      "--receipt",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/runtime/prepared.json"
+    ],
+    "child_maxrss_native_units": 348749824,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001",
+    "elapsed_seconds": 0.412344,
+    "ended_ns": 1793967445467513000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 60295,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/store/releases/v3.0.5/standards/tooling/TOOLING.json",
+        "sha256": "055eda7ec1d7a2bda55b3840dd0a18caa3b4ad0c1765a1cea122a04bf6a7d983"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 305,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/runtime-derivation/stdout.txt",
+        "sha256": "d9b2a28c05144c1e41237c567186848fc53bf02de60f200b7c4ab4f3949afa57"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/runtime-derivation/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 30839,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/runtime/prepared.json",
+        "sha256": "9c029d31661e6bdedf0cdeeccddd05766be58ce82139a62651b10bb3682f1d0f"
+      },
+      {
+        "bytes": 305,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/runtime-derivation/result.json",
+        "sha256": "239e690d01496c6d3a0c120f441c771d97c213f67f9450ca8b0d3ed23258b36c"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1793967445055169000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/runtime-derivation/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 305,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/runtime-derivation/stdout.txt",
+      "sha256": "d9b2a28c05144c1e41237c567186848fc53bf02de60f200b7c4ab4f3949afa57"
+    },
+    "system_seconds": 0.081149,
+    "user_seconds": 0.301989
+  },
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/store/releases/v3.0.5/standards/tooling/TOOLING.json",
+      "retained": {
+        "bytes": 60295,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/observed/store/releases/v3.0.5/standards/tooling/TOOLING.json",
+        "sha256": "055eda7ec1d7a2bda55b3840dd0a18caa3b4ad0c1765a1cea122a04bf6a7d983"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 13670,
+    "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+    "sha256": "ed91e16b48469d89a3551871dada90e605c9bdd32758c27124828d7e3b445cfc"
+  },
+  "result": {
+    "bytes": 305,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/executions/runtime-derivation/result.json",
+    "sha256": "239e690d01496c6d3a0c120f441c771d97c213f67f9450ca8b0d3ed23258b36c"
+  },
+  "schema": "stdo.execution-observation/1"
+}

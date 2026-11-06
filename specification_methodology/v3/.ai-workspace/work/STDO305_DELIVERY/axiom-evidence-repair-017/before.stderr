@@ -1,0 +1,19 @@
+test_real_current_owner_relation (test_axiom_release_evidence.AxiomReleaseEvidenceTests.test_real_current_owner_relation) ... ERROR
+test_rehashed_malformed_map_relation_refused (test_axiom_release_evidence.AxiomReleaseEvidenceTests.test_rehashed_malformed_map_relation_refused) ... ok
+
+======================================================================
+ERROR: test_real_current_owner_relation (test_axiom_release_evidence.AxiomReleaseEvidenceTests.test_real_current_owner_relation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/tests/test_axiom_release_evidence.py", line 36, in test_real_current_owner_relation
+    owner.representation(api.View(ROOT), self.record, "source_current_map", self.manifest, api)
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/axiom-evidence-repair-017/predecessor.py", line 844, in representation
+    s.require(checked.returncode == 0 and json.loads(checked.stdout) == {'restored': True, 'map': True},
+  File "/Users/jim/src/apps/specification_methodology/scripts/stable_stack_release.py", line 55, in require
+    raise ValueError(message)
+ValueError: owning conversion/map functions do not preserve the actual current model/program relation
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.635s
+
+FAILED (errors=1)

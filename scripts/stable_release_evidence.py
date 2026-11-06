@@ -754,8 +754,35 @@ def installed_formal(view, record, manifest, api, installed):
 def representation(view, record, claim, manifest, api):
     s = gate(); facts, identity = model_facts(view, manifest, api)
     if claim == 'source_current_model':
-        run = str(view.root.absolute() / s.path(facts['build_run']))
-        result = execution(view, record, api, PROJECT, ['build', '--run', run], inputs=[facts['model']])
+        run_relative = s.path(facts['build_run'])
+        run = str(view.root.absolute() / run_relative)
+        inputs = {key: facts[key] for key in ('project', 'source_manifest', 'generation_plan', 'definition', 'retained_definition')}
+        for key, suffix in (('project', '/PROJECT.json'), ('source_manifest', '/source-manifest.json'),
+                            ('generation_plan', '/generation/plan.json'), ('retained_definition', '/product-definition.json')):
+            s.require(inputs[key]['path'] == run_relative + suffix, 'model construction input route differs: ' + key)
+        project = s.pinned(view, inputs['project'], api)
+        plan = s.pinned(view, inputs['generation_plan'], api)
+        definition = s.pinned(view, inputs['definition'], api)
+        s.require(s.pinned(view, inputs['retained_definition'], api) == definition and
+                  inputs['definition']['sha256'] == inputs['retained_definition']['sha256'] == project.get('definition_sha256') and
+                  project.get('definition') == artifact_location(view, inputs['definition'], api), 'model construction definition binding differs')
+        s.require(project.get('profile') == 'a_c.project-build/1' and
+                  project.get('manifest_sha256') == inputs['source_manifest']['sha256'] and
+                  project.get('plan_sha256') == inputs['generation_plan']['sha256'] and
+                  project.get('project') == str(view.root.absolute() / s.path(manifest['products']['stdo_representation']['source_root'])),
+                  'model construction project/source/plan binding differs')
+        result = execution(view, record, api, PROJECT, ['build', '--run', run], inputs=list(inputs.values()))
+        s.require(result.get('project_sha256') == inputs['project']['sha256'], 'model result names a different construction project')
+        generated = facts['generated_model']
+        s.require(generated['path'] == run_relative + '/generation/proposal/model.json' and
+                  s.pinned(view, generated, api, as_json=False) == s.pinned(view, facts['model'], api, as_json=False) and
+                  result.get('artifacts', {}).get('model') == artifact_location(view, generated, api) and
+                  result.get('files', {}).get('generation/proposal/model.json') == generated['sha256'],
+                  'actual generated model differs from current canonical model')
+        mode = {'built': ('emitted_model', 'outputs'), 'reused': ('current_build_readback', 'inputs')}.get(result.get('status'))
+        s.require(mode is not None and record.get('operation') == mode[0], 'model execution status/operation differs')
+        s.require(any(row['path'] == generated['path'] and row['sha256'] == generated['sha256']
+                      for row in record['execution'][mode[1]]), 'actual model artifact is not bound to its produced/read-back role')
         binding = s.pinned(view, facts['current_binding'], api)
         s.require(binding.get('source_identity_sha256') == manifest['source']['source_identity_sha256']
                   and binding.get('source_freeze_raw_sha256') == manifest['source']['sha256']
@@ -764,10 +791,16 @@ def representation(view, record, claim, manifest, api):
         s.require(result.get('profile') == 'a_c.project-build-result/1' and result.get('status') in ('built', 'reused')
                   and result.get('model') == {'id': identity['id'], 'sha256': identity['sha256']}, 'current model producer result differs')
         source_manifest = s.pinned(view, facts['source_manifest'], api)
+        s.require(source_manifest.get('definition_sha256') == inputs['definition']['sha256'] and
+                  source_manifest.get('definition_id') == definition['product']['definition_id'] and
+                  source_manifest.get('method') == project.get('method') == result.get('method') == definition['constitution']['stdo']['basis'],
+                  'model construction source/definition/method relation differs')
         semantic = s.pinned(view, manifest['source'], api)
         prefix = s.path(facts['source_copy_prefix']).rstrip('/') + '/'
         expected = sorted([{**row, 'path': prefix + row['path']} for row in semantic['members'] + semantic['native_contracts']], key=lambda r: r['path'])
-        s.require(source_manifest.get('files') == expected and result.get('source_manifest_sha256') == facts['source_manifest']['sha256'],
+        s.require(source_manifest.get('files') == expected and project.get('files') == expected and plan.get('files') == expected and
+                  project.get('subject_id') == plan.get('subject_id') == source_manifest.get('subject_id') and
+                  result.get('source_manifest_sha256') == facts['source_manifest']['sha256'],
                   'model producer did not consume the complete exact semantic source')
         for row in expected:
             s.pinned(view, {**row, 'path': 'stdo_representation/' + row['path']}, api, as_json=False)
@@ -800,9 +833,9 @@ def representation(view, record, claim, manifest, api):
         artifact_location(view, members[helper], api)
         # Use the owning conversion and map functions directly, without copying
         # their semantic rules into this release controller.
-        code = ('import sys,json;sys.path.insert(0,sys.argv[1]);import ac,ac_model;'
-                'p=ac.load_json(sys.argv[2]);m=ac.load_json(sys.argv[3]);v=ac.load_json(sys.argv[4]);'
-                'report=ac.load_json(sys.argv[5]);'
+        code = ('import sys,json;from pathlib import Path;sys.path.insert(0,sys.argv[1]);import ac,ac_model;'
+                'p=ac.load_json(Path(sys.argv[2]));m=ac.load_json(Path(sys.argv[3]));v=ac.load_json(Path(sys.argv[4]));'
+                'report=ac.load_json(Path(sys.argv[5]));'
                 'print(json.dumps({"restored":ac_model.restore(p)==m,"map":ac.instantiate(p,report)==v}))')
         python = python_identity(record['execution']['environment']['python'], api)
         checked = subprocess.run([python, '-I', '-B', '-c', code, str((view.root / helper).parent.absolute()),

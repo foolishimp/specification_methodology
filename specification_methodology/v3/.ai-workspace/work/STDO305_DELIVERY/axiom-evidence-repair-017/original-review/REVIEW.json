@@ -1,0 +1,75 @@
+{
+  "kind": "independent.axiom-evidence017-review/1",
+  "assessor": "/root/stdo305_integration_review",
+  "author": "/root/stdo305_release_tools",
+  "subject_sha256": "ad4f71d6cedad5c78ce1939ec67390c6b329ad63e371ede66732249d5f532b90",
+  "production_sha256": "d172d03ff3c935e91e95ea30baaf8ab7ee7be2e0b14b3e757d51e7f65336b943",
+  "source_refs_before_after": 31,
+  "exact_delta": "Existing subprocess helper gains pathlib.Path import and four Path(argv) wrappers only;016 branch and all surrounding guards unchanged.",
+  "current": {
+    "argv": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_axiom_release_evidence.py",
+      "-v"
+    ],
+    "returncode": 0,
+    "stderr": "test_real_current_owner_relation (test_axiom_release_evidence.AxiomReleaseEvidenceTests.test_real_current_owner_relation) ... ok\ntest_rehashed_malformed_map_relation_refused (test_axiom_release_evidence.AxiomReleaseEvidenceTests.test_rehashed_malformed_map_relation_refused) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 1.128s\n\nOK\n"
+  },
+  "predecessor": {
+    "returncode": 1,
+    "stderr": "test_real_current_owner_relation (test_axiom_release_evidence.AxiomReleaseEvidenceTests.test_real_current_owner_relation) ... ERROR\ntest_rehashed_malformed_map_relation_refused (test_axiom_release_evidence.AxiomReleaseEvidenceTests.test_rehashed_malformed_map_relation_refused) ... ok\n\n======================================================================\nERROR: test_real_current_owner_relation (test_axiom_release_evidence.AxiomReleaseEvidenceTests.test_real_current_owner_relation)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/jim/src/apps/specification_methodology/tests/test_axiom_release_evidence.py\", line 36, in test_real_current_owner_relation\n    owner.representation(api.View(ROOT), self.record, \"source_current_map\", self.manifest, api)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/axiom-evidence-repair-017/predecessor.py\", line 844, in representation\n    s.require(checked.returncode == 0 and json.loads(checked.stdout) == {'restored': True, 'map': True},\n    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n              'owning conversion/map functions do not preserve the actual current model/program relation')\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jim/src/apps/specification_methodology/scripts/stable_stack_release.py\", line 55, in require\n    raise ValueError(message)\nValueError: owning conversion/map functions do not preserve the actual current model/program relation\n\n----------------------------------------------------------------------\nRan 2 tests in 0.693s\n\nFAILED (errors=1)\n",
+    "standing": "Same read-only actual-map relation test fails on predecessor; synthetic malformed-map control retained as separate observation."
+  },
+  "current_owner_inputs_unchanged": {
+    "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json": {
+      "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "mode": 33188,
+      "mtime_ns": 1793953322327342960
+    },
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json": {
+      "sha256": "c3b3c056f0072cdd2781885b1fefaefb054e4645191361a304461b2625a66ddf",
+      "mode": 33188,
+      "mtime_ns": 1793953349598414225
+    },
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json": {
+      "sha256": "ed827014be6f6c95255d92d2e68d3401d38ffc3bb5850a97308b3a7107d88fcc",
+      "mode": 33188,
+      "mtime_ns": 1793968796846190502
+    },
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json": {
+      "sha256": "f7505eacd9bfc15dc87a908098732f97b35a8dcf103cecc131ed4bea0244567c",
+      "mode": 33188,
+      "mtime_ns": 1793948204196958485
+    },
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/source-corpus.json": {
+      "sha256": "d5b1b97971db1b68c8f74c88132830e62da19a82689aabb9c0ba9dcbc729e0a2",
+      "mode": 33188,
+      "mtime_ns": 1793953357398152702
+    },
+    "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/conversion-preservation.json": {
+      "sha256": "7ffc4729e0d2a1db533e6eca3b0a6c9acb779fa7231c8075a58162adf7f2c02a",
+      "mode": 33188,
+      "mtime_ns": 1793953349598689728
+    },
+    "axiom_indexer/build_tenants/core/code/ac.py": {
+      "sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+      "mode": 33188,
+      "mtime_ns": 1789467121114650229
+    },
+    "axiom_indexer/build_tenants/core/code/ac_model.py": {
+      "sha256": "a8baaeb06e45957d486ecf2977294ac49b481762d65812330018127e60c27ad2",
+      "mode": 33188,
+      "mtime_ns": 1793945475371072529
+    }
+  },
+  "conclusion": "satisfied",
+  "open_required_findings": [],
+  "limits": "Read-only actual current owner relation and synthetic rehashed malformed-map control; no map generation/write, no model/native/Lean or actor run; final release qualification remains pending."
+}

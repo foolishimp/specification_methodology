@@ -1,0 +1,8 @@
+{
+  "actual_evidence": "cohort-binding-001/axiom-validation-017/relation-probe.json",
+  "component": "source_current_map owner API adapter",
+  "kind": "stdo.actual-gate-defect/1",
+  "observed": "Actual owner validate/emit-map succeeded and exactly reproduced current map. Release consumer then passed strings to ac.load_json, whose public function requires pathlib.Path; subprocess exited1 AttributeError before relation evaluation.",
+  "predecessor_sha256": "4a123e29da167015e978cc5b9deb37a2c15908ed957a90286971464148ac81fb",
+  "repair": "Convert the four argv inputs to Path in the existing owner subprocess only; no owner or model/proof/native change."
+}
