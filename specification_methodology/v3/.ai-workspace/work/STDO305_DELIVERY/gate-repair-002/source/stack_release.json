@@ -1,0 +1,232 @@
+{
+  "cohort": {
+    "carrier_ref": "refs/heads/main",
+    "cut": "v3.0.5",
+    "publication_mode": "atomic",
+    "status": "assembling",
+    "version": "3.0.5"
+  },
+  "components": {
+    "axiom_indexer": {
+      "evidence": [],
+      "owner": "axiom_indexer",
+      "required_claims": [
+        "current_index_validation"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "claude_skills": {
+      "evidence": [],
+      "owner": "stdo_skills",
+      "required_claims": [
+        "current_claude_skills"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "codex_skills": {
+      "evidence": [],
+      "owner": "stdo_skills",
+      "required_claims": [
+        "current_codex_skills"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "documentation": {
+      "evidence": [],
+      "owner": "specification_methodology",
+      "required_claims": [
+        "installed_documentation"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "graphify": {
+      "evidence": [],
+      "owner": "a_c",
+      "required_claims": [
+        "installed_graphify"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "lean": {
+      "evidence": [],
+      "owner": "a_c",
+      "required_claims": [
+        "installed_lean",
+        "exact_candidate_lean_result"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "manager": {
+      "evidence": [],
+      "owner": "specification_methodology",
+      "required_claims": [
+        "installed_manager"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "native_plugin": {
+      "evidence": [],
+      "owner": "specification_methodology",
+      "required_claims": [
+        "installed_native_workflow"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "proof_reader": {
+      "evidence": [],
+      "owner": "specification_methodology",
+      "required_claims": [
+        "current_proof_reader"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "representation": {
+      "evidence": [],
+      "owner": "stdo_representation",
+      "required_claims": [
+        "source_current_model",
+        "source_current_map",
+        "independent_semantic_review"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "unified_explorer": {
+      "evidence": [],
+      "owner": "stdo_representation",
+      "required_claims": [
+        "current_3d_2d_layered",
+        "source_files_navigation"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    }
+  },
+  "dependency_edges": [
+    {
+      "consumer": "stdo_representation",
+      "provider": "specification_methodology",
+      "relation": "exact_semantic_source"
+    },
+    {
+      "consumer": "stdo_representation",
+      "provider": "axiom_indexer",
+      "relation": "exact_validation_mechanics"
+    },
+    {
+      "consumer": "stdo_representation",
+      "provider": "a_c",
+      "relation": "exact_projection_and_formal_tools"
+    },
+    {
+      "consumer": "a_c",
+      "provider": "specification_methodology",
+      "relation": "exact_semantic_profile"
+    },
+    {
+      "consumer": "stdo_skills",
+      "provider": "specification_methodology",
+      "relation": "exact_native_workflow"
+    },
+    {
+      "consumer": "stdo_skills",
+      "provider": "stdo_representation",
+      "relation": "exact_current_representation"
+    },
+    {
+      "consumer": "stdo_skills",
+      "provider": "a_c",
+      "relation": "exact_tool_routes"
+    }
+  ],
+  "kind": "specification-stack.release-matched-cohort",
+  "native": null,
+  "native_preparation": {
+    "manager_wheel": "stdo_toolchain-3.0.5-py3-none-any.whl",
+    "output_root": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release",
+    "package_path": "specification_methodology/v3",
+    "predecessor_native_commit": "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+    "scope": "Complete five-Product cohort: current methodology, native plugin, documentation, executable tools, proof evidence and host Skills; external binding preserves Product ownership."
+  },
+  "products": {
+    "a_c": {
+      "namespace": "a_c",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/a_c/v3.0.5",
+      "source_root": "a_c",
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "axiom_indexer": {
+      "namespace": "axiom_indexer",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/axiom_indexer/v3.0.5",
+      "source_root": "axiom_indexer",
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "specification_methodology": {
+      "namespace": "specification_methodology",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/specification_methodology/v3.0.5",
+      "source_root": "specification_methodology/v3/build_tenants/common",
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "stdo_representation": {
+      "namespace": "stdo_representation",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/stdo_representation/v3.0.5",
+      "source_root": "stdo_representation",
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "stdo_skills": {
+      "namespace": "stdo_skills",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/stdo_skills/v3.0.5",
+      "source_root": "stdo_skills",
+      "subject": null,
+      "version": "3.0.5"
+    }
+  },
+  "profile": "stable-five-product-v1",
+  "publication": {
+    "assets": [],
+    "expected_remote": {},
+    "external_manifest_asset": {
+      "name": "stack-release-v3.0.5.json",
+      "url": "https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5/stack-release-v3.0.5.json"
+    },
+    "preserved_immutable_refs": {},
+    "repository_url": "https://github.com/foolishimp/specification_methodology.git"
+  },
+  "qualification": {
+    "evidence": [],
+    "required_claims": [
+      "independent_release_review",
+      "complete_installed_cohort"
+    ]
+  },
+  "schema_version": 2,
+  "source": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/source-freeze-002.json",
+    "sha256": "640141354a53504999c1c21757689f7a3ecf6cbe77c3f30804f8493a2928dc99",
+    "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba"
+  },
+  "third_party_dependencies": []
+}

@@ -1,5 +1,7 @@
 # Goals
 
+Current delivery: the [3.0.5 contract](RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+
 [T-019](../.ai-workspace/tickets/active/T-019-code-representation.md) is the current
 bounded delivery: the public code-overlay workflow, shared offline reader and
 both Skills consumer routes are implemented and independently reviewed. The common

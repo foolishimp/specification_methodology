@@ -5,6 +5,27 @@ Status: active source definition. The [Product Definition](../stdo_default.json)
 selection. Published release-coupled cuts remain immutable checkpoints;
 Axiom Indexer `v0.1.0-rc.1` remains the accepted released predecessor.
 
+## Current 3.0.5 construction and conversion
+
+The owner selected the complete 3.0.5 cohort. The source project now constructs
+under exact installed STDO 3.0.4. Axiom supplies generic model-to-program
+conversion as well as its existing resolution, validation, projection and join
+mechanics. [REQ-P-MODEL-CONVERSION](requirements/REQ-P-MODEL-CONVERSION.md)
+and [the conversion design](../build_tenants/core/design/MODEL_CONVERSION.md)
+own this explicit successor boundary. It preserves one provider-checked a_c
+source-semantic model and never claims to admit that upstream model or accept
+its interpretation. The conversion-derived program represents concepts as
+identity-preserving definition clauses; raw record/metadata payloads permit
+exact round-trip verification. Existing directly authored programs retain their
+unchanged contract and behavior.
+
+The release inventory contains eight regular files: VERSION, both executable
+surfaces and the five canonical native-skill files. Workspace discovery links
+remain outside the distributed inventory. Historical cuts and assessments
+retain their exact scope.
+The stable current ref is `refs/tags/axiom_indexer/v3.0.5`; represented model
+content remains owned by STDO Representation.
+
 ## Product statement
 
 Axiom Indexer indexes source-grounded constraint prose and its explicitly
@@ -29,7 +50,8 @@ benefits, not the Product claim.
 - **Binding Set** maps logical URI prefixes to physical or immutable resources
   for one invocation.
 - **Reference Frame** is the finite evaluation contract defined by the exact
-  selected Source STDO `REFERENCE_FRAME_METHOD.md`; its owner defines its
+  selected Source STDO reference-frame owner (`REFERENCE_FRAME.md` currently);
+  its owner defines its
   question, scope, constraints, evidence and result conditions. An index does
   not define or replace that contract.
 - **Frame URI** identifies that source-owned contract or its governing guidance.
@@ -42,9 +64,10 @@ benefits, not the Product claim.
        symbols, clauses, residuals, optional frame_indexes)
   ```
 
-  It is the MVP authoring surface for an axiomatic logical map. It does not by
-  itself claim a complete admitted `a_c` model `M_b`; that stronger mapping and
-  its carrier proof remain later work.
+  It is the source-facing surface for a logical map. It can be authored directly
+  by an LLM or derived losslessly from a provider-checked source-semantic a_c
+  model under the explicit conversion contract. The program itself neither
+  admits the upstream model nor supplies semantic acceptance or carrier proof.
 
 - **Symbol** is a URI-identified concept with concise meaning and source refs.
 - **Clause** is a URI-identified typed relation or constraint whose operator and
@@ -125,9 +148,9 @@ Every successor Axiom Indexer cut shall select one exact immutable Source STDO
 cut and use the same product-local cut suffix:
 
 ```text
-selected STDO cut:      v<version>-rc.<n>
-Axiom product cut:      v<version>-rc.<n>
-Axiom qualified Git ref: refs/tags/axiom_indexer/v<version>-rc.<n>
+selected STDO cut:       v<major>.<minor>.<patch> (stable-v1), or an exact RC cut
+Axiom product cut:       the same exact suffix under the selected profile
+Axiom qualified Git ref: refs/tags/axiom_indexer/<exact-cut>
 ```
 
 This relation couples release identity and qualification timing. It does not
@@ -247,18 +270,18 @@ runtime authority.
 ## Product disposition authority
 
 `urn:axiom-indexer:authority:product-owner` owns acceptance of an exact project
-frame set, release scope, and immutable RC subject. An agent may propose,
+frame set, release scope, and immutable cut subject. An agent may propose,
 evaluate, or publish only under a separate bounded grant; none of those actions
 accepts Product meaning or the release. Frame-set acceptance binds the exact
-declaration digest. Release acceptance binds the annotated immutable RC tag
+declaration digest. Release acceptance binds the annotated immutable cut tag
 object, peeled commit, repository tree, member set, and claim bytes.
 
 Release publication is governed by the exact installed STDO Release Method. It
 is a lifecycle over the Product, not an additional Product capability. Version
-and RC identities remain in release-scoped records rather than this live
+and cut identities remain in release-scoped records rather than this live
 present-tense definition.
 
-## Current boundary
+## Historical boundary
 
 The accepted released predecessor is the exact immutable `v0.1.0-rc.1` cut
 identified in `../releases/v0.1.0.md` and its durable acceptance record. The
@@ -267,11 +290,12 @@ immutable annotated tag `axiom_indexer/v2.5.0-rc.4`, tag object
 `4750e09639c118f1097d4ea046fe23d26713f96b`, peeling to commit
 `a953ad4634fbfaefb8bdffaccdf4eff651a1e3a2`. Publication identifies the
 qualified Product subject but is not Product acceptance. The source project
-continues without changing the accepted predecessor. The current
-`../releases/v2.5.1.md` selects the current matched cohort against exact
-Source STDO of the same version. All seven generic Axiom Product members are
-byte-conserved from the published RC7 predecessor. Semantic changes and new
-STDO frame indexes remain with Representation. The live Product Definition and
+continues without changing the accepted predecessor. The historical
+`../releases/v2.5.1.md` selected that matched cohort against exact
+Source STDO of the same version. Its seven generic members were
+byte-conserved from the published RC7 predecessor. The current 3.0.5 conversion
+extension and regular-file inventory are declared above; STDO semantic content
+and frame indexes remain with Representation. The live Product Definition and
 its exact frame decision govern source configuration; proposal and construction
 do not promote a new binding. Publication, Product acceptance and external
 consumer adoption remain distinct and are not inferred from preparation.

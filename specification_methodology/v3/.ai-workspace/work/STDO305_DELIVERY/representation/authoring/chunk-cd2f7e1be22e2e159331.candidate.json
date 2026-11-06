@@ -1,0 +1,1984 @@
+{
+  "concepts": [
+    {
+      "key": "prior_1906988707368f41598a83175d808b93",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FStatus",
+          "start_line": 519,
+          "end_line": 519,
+          "quote": "The minimum ticket status model is `backlog`, `active` and `completed`."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FLanes",
+          "start_line": 586,
+          "end_line": 589,
+          "quote": "`backlog`\nis accepted durable work that should remain visible but is not part of the\ncurrent execution focus; `active` is the current bounded execution set;\n`completed` is closed work retained as history."
+        }
+      ],
+      "label": "Ticket status and lane",
+      "definition": "Declared ticket states minimally comprise backlog, active and completed. Their corresponding lanes mean accepted durable work outside current execution focus, the current bounded execution set, and closed work retained as history. State labels are not evaluation results.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_52b796e9b8ce716db4e099c31df2b84e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FDeclaration%20and%20checklist",
+          "start_line": 843,
+          "end_line": 844,
+          "quote": "The required fields are `migration_strategy`, with the values\n`inside_out_hard_break` and `fundamental_re_adoption`"
+        }
+      ],
+      "label": "Migration strategy",
+      "definition": "A declared migration-strategy field with values inside_out_hard_break and fundamental_re_adoption; the value is a carrier state, not a core result.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_03245c6904f417787ce80ebcc3bf7f00",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FRecurring%20realisation%20and%20library%20declaration",
+          "start_line": 905,
+          "end_line": 908,
+          "quote": "An implementation migration ticket declares whether the active boundary is\nrebuilding a pattern locally, consuming an existing reusable library or\ncommonisation surface, or extending that surface before the local\nimplementation lands; `library_usage` records which"
+        }
+      ],
+      "label": "Library usage declaration",
+      "definition": "A declared library_usage field, with none, consume and extend values, recording whether an active migration boundary rebuilds locally, consumes an existing reusable library/commonisation surface, or extends that surface before local implementation lands.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f23081711b22632f373f64aaaeca6452",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FImpacted%20interface%20review%20checklist",
+          "start_line": 989,
+          "end_line": 991,
+          "quote": "The checklist is a named walk of every live\ninterface that can still bypass, reinterpret, replay or project the\nmigrating truth path"
+        }
+      ],
+      "label": "Impacted Interface Review Checklist",
+      "definition": "A named walk of every live interface capable of bypassing, reinterpreting, replaying or projecting the migrating truth path, with interface-specific closure assertions.",
+      "conditions": [
+        "Core-interface, carrier or authoritative-contract migration."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_915b70c152b3bc925415246921bfbaad",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FBreak%20order%20and%20break-to-closure%20map",
+          "start_line": 1036,
+          "end_line": 1037,
+          "quote": "a\n`Break-To-Closure Map` stating which break closes which closure-law clause;"
+        }
+      ],
+      "label": "Migration break order and closure map",
+      "definition": "Required Break Order, or an equivalent ordered execution section, running outward from authoritative source truth: discover the full best-guess interface family; publish/admit the new carrier; deliberately sever and keep broken one old authoritative seam; rebind the deepest semantic kernel; remove/demote old producers; rebind old consumers; reprice projections, reports, prompts, delivery bindings and tests. With several old interfaces, a Break-To-Closure Map identifies the closure-law clause discharged by each break.",
+      "conditions": [
+        "Implementation migration touches a core interface."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_5709d600fd5dda035a513b9a6af281e8",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FExecution%20and%20verification%20authority%20separation%20%28UP-007%29",
+          "start_line": 1090,
+          "end_line": 1091,
+          "quote": "Authority to author or implement a change is not independent authority to\nverify it."
+        }
+      ],
+      "label": "Independent assessment",
+      "definition": "Assessment independent of the author of the exact reviewed subject, with subject, basis, scope, exclusions, evidence, verdict and unresolved findings identified. Authoring authority and independent verification authority differ.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_aabfdedf155e1d5d7cde30038f43af26",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line": 1148,
+          "end_line": 1149,
+          "quote": "A residual judgment that another activation needs is recorded once, with\nits owning work, in the existing carrier selected under §5."
+        }
+      ],
+      "label": "Recorded residual judgment",
+      "definition": "A once-recorded judgment attached to its owning work in the existing selected carrier, identifying the question, exact subject and basis, supporting computed facts/evidence, responsible actor and authority, scoped conclusion, uncertainty and concrete revising observation. Rule-settled questions require no invented J record.",
+      "conditions": [
+        "A residual judgment is needed by another activation."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_4d57b8a26f85d45964bb1e7f57caf9e8",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line": 1175,
+          "end_line": 1177,
+          "quote": "A direct or lawfully proxied owner ruling is recorded in its original\nwording, with its owner, exact subject and basis, permitted scope and\neffects, conditions and source, separately from agent interpretation."
+        }
+      ],
+      "label": "Owner ruling",
+      "definition": "A direct or lawfully proxied owner ruling retained in original wording with owner, exact subject and basis, permitted scope/effects, conditions and source, separately from agent interpretation. It is distinct from residual judgment.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_da227221d3a03ed5c7408ecfff63e6d4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line": 1198,
+          "end_line": 1200,
+          "quote": "The four repricing dispositions are lifecycle states of an obligation,\nset by its owning authority. A state label is not an evaluation result and\nhas no automatic core mapping."
+        }
+      ],
+      "label": "Material repricing decision",
+      "definition": "The owner's separate authorized act establishing retained, superseded, deferred or withdrawn for an exact obligation, subject and basis. These four dispositions are lifecycle states without automatic core mappings. A material decision record identifies disposition, owner/grant, governing conditions, evidence, affected dependencies, remaining obligations and revisiting conditions.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_2306f4e60feb709f5c67ca75a73c1690",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line": 1221,
+          "end_line": 1221,
+          "quote": "| `repricing_indeterminate` | indeterminate | admissible evidence cannot decide whether the decision meets an applicable condition; the undecided condition and needed evidence remain explicit |"
+        }
+      ],
+      "label": "Repricing evaluation result",
+      "definition": "Evaluation of whether the named owner lawfully establishes the disposition for the exact obligation, subject and basis, satisfying all applicable conditions and preserving every surviving obligation. repricing_established maps to satisfied; repricing_falsified to falsified; repricing_indeterminate to indeterminate; repricing_out_of_frame to out_of_frame; repricing_invalid_basis to invalid_basis. These concern repricing legality, not candidate acceptance or delivery.",
+      "conditions": [
+        "An evaluation of the owner decision is actually performed."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_8f4f294b4aae61d03f01fb3afff526a8",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FCondition-based%20closure%20and%20reuse",
+          "start_line": 1236,
+          "end_line": 1237,
+          "quote": "A work claim is complete only when every applicable declared obligation is\nsatisfied by valid evidence for its exact subject, basis and scope;"
+        }
+      ],
+      "label": "Work claim",
+      "definition": "A bounded work claim with declared obligations, exact subject/basis/scope, required judgments and owner rulings, evidence and non-closure conditions. Its completion is condition-based; reviewer occurrence or a status label is not completion.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_e17862272f51f8550d5988e9dad8fcd0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FTest%20case%20authority",
+          "start_line": 1279,
+          "end_line": 1279,
+          "quote": "Tests are proof projections from admitted work authority."
+        }
+      ],
+      "label": "Ticket-local test case",
+      "definition": "A proof projection from admitted work authority. A substantive test should derive through ticket, intake triage, lawful re-entry, and governing requirement/design/module/published function/carrier/closure surface to its expectation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_2d06b1088727674c5114bbd1b8f6a018",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers",
+          "start_line": 613,
+          "end_line": 614,
+          "quote": "Its instance premises, which the commitments do\nnot supply, are named in the rows"
+        }
+      ],
+      "label": "F13 work-carrier derivation and consumer index",
+      "definition": "F13 is the source's work-carrier derivation family, tracing carrier selection, claims and closure to commitments and instance premises: differing lifetimes, competing-looking surfaces, multiple tenants, migrations and variable carriers. Its table reports P0 as recovered; P1/P2/P3/P4a/P6 as independent; P4b as derived from P0/P2 under non-reacquirable step facts; P5 as derived from P0/P6 under an open-world premise. It distinguishes derived consequences from member choices and external owners; it does not itself decide the linked owners' questions.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_ce6b4d3f0699e02cd1c718d0569a04d0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes",
+          "start_line": 1339,
+          "end_line": 1340,
+          "quote": "These shapes are the recommended carriers of the fields and sections the\nrules above require;"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes",
+          "start_line": 1472,
+          "end_line": 1472,
+          "quote": "- closure_law: migration closes only when the old projection is no longer authoritative within the affected scope and mixed old/new proof does not count as acceptance"
+        }
+      ],
+      "label": "Recommended carrier templates",
+      "definition": "Three recommended document shapes carrying the earlier required fields/sections: a sprint manifest, ordinary ticket and implementation migration ticket. The sprint example SPRINT-2026-04-30-operational-projection concerns layout/readability/interaction/evidence iteration, excludes product truth/data contracts/runtime-governance changes/new constructive carriers, declares realization_refactor, records UXI-001 screenshot evidence and pending contrast debt, and closes by walkthrough with explicit escrow/paydown. Ordinary example T-001 is an active feature/product_reprice at product re-entry to make the Product layer explicit, requiring PRODUCT.md, intent -> product -> requirements bootstrap and reconciled examples/reconstruction. Migration example B-010 is an active bug/design_reframe at design_surface, inside_out_hard_break, library_usage none with boundary-specific rationale; it replaces synthetic fallback gap truth with declared-obligation projection plus separately classified fallback gaps on the operator-query acceptance path, explicitly declares no disjoint scope, lists old/new producers, consumers and derived surfaces, and repeats the migration checklist. These are examples, not instantiated work records or proof that their claims hold.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_35c1997b02838efab6cb59877652df2c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FOperating%20mode",
+          "start_line": 1498,
+          "end_line": 1500,
+          "quote": "that `rg`\nis sufficient for finding active work; and that no database or board is\nrequired"
+        }
+      ],
+      "label": "Default local-file operating mode",
+      "definition": "Humans and agents directly read the active folder; backlog remains searchable durable work without competing for immediate attention. The model assumes rg suffices to find active work and requires neither database nor board. Supplied shell lines illustrate searches for headings/status/type/goal and ticket identifiers; they are documentary examples.",
+      "conditions": [
+        "The default local-file carrier is selected."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_ee3c8b088a7f0259a14a11460fb344f1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FRelationship%20to%20other%20surfaces",
+          "start_line": 1510,
+          "end_line": 1510,
+          "quote": "Each surface answers one question (P3, P6)."
+        }
+      ],
+      "label": "Work-surface role separation",
+      "definition": "Distinct surface roles: goals identify the current broad work wave; SPEC_METHOD identifies constitutional change class/re-entry; sprints price bounded-batch proof/evidence/paydown; tickets hold durable work units and state; comments record proposals, argument, decisions, review and handoff; POSTING_GUIDE specifies comment publication structure/naming. This separation prevents overloaded goal backlogs, diluted active focus, informal comment status and accidental board authority.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_75612f6702a23f4a631eb371f4aa0a2d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE",
+          "start_line": 22,
+          "end_line": 23,
+          "quote": "a `frontier_projection`\njudgment judges a `Projection` record and is not an"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition",
+          "start_line": 47,
+          "end_line": 47,
+          "quote": "Availability is not adoption."
+        }
+      ],
+      "label": "Traversal occurrence profile",
+      "definition": "Tier-3, application-neutral model-family signature for immutable application histories over externally mutable subjects. Stable concept identity: urn:stdo:concept:traversal-occurrence-profile; owning bounded context: urn:stdo:bounded-context:traversal-occurrence-profile. It imports one exact a_c basis without amending a_c, becoming universal, or importing consumer identities. Occurrence, lineage, EventFrontier, SemanticAdmissionCut and Projection are profile-specific meanings, not core release cuts/product lineage or other members' frontiers; frontier_projection judges a Projection record and is not AC-011 projection.",
+      "conditions": [
+        "Adoption is optional and belongs to the adopting Product."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b791117709f1f0565ea01a996a54f5e1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+          "start_line": 61,
+          "end_line": 62,
+          "quote": "Its instance premises hold where a Product adopts the profile; they are\nadopted with it and do not follow from the foundations"
+        }
+      ],
+      "label": "F19 premises, consequences and owners",
+      "definition": "Material family F19 imports F3 results/combination and F9 a_c under PROFILES §1. Adopted premises are I1 externally changing subject reality with stable binding, I2 one exact a_c basis, and I3 separately identified effects under owner-issued grants; these premises do not follow from foundations. Reported commitment standing is P0 recovered; P1/P3/P6 independent; P4b derived from P0/P2; P5 derived from P0/P6. The table separates consequences, profile policy choices and adopting-Product choices, with an internal consumer index.",
+      "conditions": [
+        "The Product adopts the profile and its instance premises."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7c694b903339568539f5073b033755b9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FScope",
+          "start_line": 122,
+          "end_line": 122,
+          "quote": "- distinct identity dependency, causal subgraphs and wider typed lineage."
+        }
+      ],
+      "label": "Occurrence-profile representation scope",
+      "definition": "The profile represents an immutable occurrence per exact traversal application; stable external subject binding; bounded pre/post observations; intended typed outcomes; separately authorized operations/evidence; immutable admitted framework-event facts; candidate claims, judgments and materialized typed relations; explicit frontiers and frontier-bound projections; distinct identity dependency, causal subgraphs and wider typed lineage.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_32e0954dfe17b0581711226c1b3cd946",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary",
+          "start_line": 137,
+          "end_line": 138,
+          "quote": "`instantiate_signature` and `OccurrenceSignatureDefinition` are this\nprofile's own notation; the calculus defines neither."
+        }
+      ],
+      "label": "Occurrence signature and model populations",
+      "definition": "Profile-owned notation Sigma_occurrence = instantiate_signature(b_ac, OccurrenceSignatureDefinition). The definition imports unchanged RecordKind_ac and closes sorts, relation/constraint/judgment/residual/stop kinds, auxiliary values, field references and inherited functor references. An occurrence model remains M_occ,b = (b, I, O, E, C, L, X, V, T, J), with semantic-object→O, typed-relation→E, constraint→C, latitude→L, residual→X, traversal→V, transformation→T, judgment→J. This is subject-defined notation, not an operation performed by this interpretation.",
+      "conditions": [
+        "An exact AxiomaticCalculusBasis identity b_ac is selected."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_05cec91b956ed0b3ef183307afd15af2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 192,
+          "end_line": 192,
+          "quote": "| `OccurrenceModelSubject` | `model_identity`, `model_sha256`, `profile_basis_ref` |"
+        }
+      ],
+      "label": "OccurrenceModelSubject",
+      "definition": "Profile SemanticObject sort requiring value fields model_identity, model_sha256 and profile_basis_ref.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_5556c9d8858c4f3b77e26c5206499fb4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 193,
+          "end_line": 193,
+          "quote": "| `TraversalApplication` | `traversal_ref`, `functor_kind_ref`, `input_refs`, `application_contract_ref` |"
+        }
+      ],
+      "label": "TraversalApplication",
+      "definition": "Profile identity-record sort, not an executor; value requires traversal_ref, functor_kind_ref, input_refs and application_contract_ref.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_2328163d8c2a7bea8aff888ec3f7378d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 194,
+          "end_line": 194,
+          "quote": "| `Occurrence` | `application_ref`, `traversal_ref`, `functor_kind_ref`, `subject_binding_ref`, `intended_outcome_ref`, `lineage_refs`, `identity_dependency_refs` |"
+        }
+      ],
+      "label": "Occurrence",
+      "definition": "Profile sort for an exact application occurrence; value requires application_ref, traversal_ref, functor_kind_ref, subject_binding_ref, intended_outcome_ref, lineage_refs and identity_dependency_refs.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_e61e7e5c748d443c37e30a5b325aff71",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 195,
+          "end_line": 195,
+          "quote": "| `SubjectBinding` | `subject_ref`, `authority_ref`, `invalidation_ref`; no mutable content digest |"
+        }
+      ],
+      "label": "SubjectBinding",
+      "definition": "Stable external-subject binding sort requiring subject_ref, authority_ref and invalidation_ref; its value contains no mutable content digest.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_0118bb401c0b96a292b49309470d55f2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 196,
+          "end_line": 196,
+          "quote": "| `Observation` | `subject_binding_ref`, `observation_kind`, `observer_ref`, `evidence_ref`, `evidence_sha256`, `observation_coordinate_ref` |"
+        }
+      ],
+      "label": "Observation",
+      "definition": "Bounded-observation sort requiring subject_binding_ref, observation_kind, observer_ref, evidence_ref, evidence_sha256 and observation_coordinate_ref. Core observation_kind values are pre_effect, post_effect and external_observation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_84f335e3f21f357a51c35903945e92a1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 197,
+          "end_line": 197,
+          "quote": "| `IntendedOutcome` | `outcome_ref`, `outcome_contract_ref`, `comparison_basis_ref` |"
+        }
+      ],
+      "label": "IntendedOutcome",
+      "definition": "Intended typed-outcome sort requiring outcome_ref, outcome_contract_ref and comparison_basis_ref.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_d1e96f42414bc402e9fde726c0c23e81",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 198,
+          "end_line": 198,
+          "quote": "| `OperationKind` | `operation_contract_ref`, `target_sort_ref`, `invalidation_ref` |"
+        }
+      ],
+      "label": "OperationKind",
+      "definition": "Identity-record sort, not an executor, requiring operation_contract_ref, target_sort_ref and invalidation_ref. Consumer instances belong to the adopting Product's finite population declared through its exact compatible signature and mapping; the core profile supplies no such instances.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_dc23753029f4d1128dd4e2dbd634880a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 199,
+          "end_line": 199,
+          "quote": "| `EffectOperation` | `operation_kind_ref`, `subject_binding_ref`, `effect_territory_ref`, `operation_contract_ref`, `invalidation_ref` |"
+        }
+      ],
+      "label": "EffectOperation",
+      "definition": "Separately identified effect-operation sort, not an executor; value requires operation_kind_ref, subject_binding_ref, effect_territory_ref, operation_contract_ref and invalidation_ref.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_38e3e0a9484edb3cff9134d451b16301",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 200,
+          "end_line": 200,
+          "quote": "| `OperationGrant` | `issuer_ref`, `subject_binding_ref`, `allowed_operation_kind_refs`, `allowed_effect_territory_ref`, `invalidation_ref` |"
+        }
+      ],
+      "label": "OperationGrant",
+      "definition": "Owner-issued operation-grant sort requiring issuer_ref, subject_binding_ref, allowed_operation_kind_refs, allowed_effect_territory_ref and invalidation_ref.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_5422fc753f4b9ea1001d500422d352b2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 201,
+          "end_line": 201,
+          "quote": "| `EffectInvocation` | `occurrence_ref`, `operation_ref`, `executor_ref`, `actor_ref`, `operation_grant_ref`, `effect_territory_ref`, `input_refs` |"
+        }
+      ],
+      "label": "EffectInvocation",
+      "definition": "Invocation sort requiring occurrence_ref, operation_ref, executor_ref, actor_ref, operation_grant_ref, effect_territory_ref and input_refs; these identify distinct coordinates.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_67e19469f016aa9f5ab7518c55df3a03",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 202,
+          "end_line": 202,
+          "quote": "| `EffectDisposition` | `invocation_ref_or_none`, `disposition`, `post_observation_ref_or_none`, `effect_evidence_refs`, `residual_ref_or_none` |"
+        }
+      ],
+      "label": "EffectDisposition",
+      "definition": "Effect-disposition sort requiring invocation_ref_or_none, disposition, post_observation_ref_or_none, effect_evidence_refs and residual_ref_or_none. Core disposition values are no_effect, completed_effect, partial_effect and refused_effect; exact value-to-core mappings are not provided in the supplied sort section.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b0dd17447a53aceb10e720510bed0a10",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 203,
+          "end_line": 203,
+          "quote": "| `EffectEvidence` | `invocation_ref`, `evidence_kind`, `evidence_refs`, `evidence_sha256_refs`, `observation_limit_ref` |"
+        }
+      ],
+      "label": "EffectEvidence",
+      "definition": "Effect-evidence sort requiring invocation_ref, evidence_kind, evidence_refs, evidence_sha256_refs and observation_limit_ref.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_ddc9b5793eaf5a1b0c090b03651c4d48",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 204,
+          "end_line": 204,
+          "quote": "| `RelationClaim` | `relation_kind_ref`, `source_ref`, `target_ref`, `relation_qualifiers`, `claimant_ref`, `claim_basis_ref`, `source_frontier_ref` |"
+        }
+      ],
+      "label": "RelationClaim",
+      "definition": "Candidate relation-claim sort requiring relation_kind_ref, source_ref, target_ref, relation_qualifiers, claimant_ref, claim_basis_ref and source_frontier_ref; a claim remains distinct from its judgment, admission event and materialized relation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_bfbf00f6b8998d30c4bcb4dde0cacd45",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 205,
+          "end_line": 205,
+          "quote": "| `FrameworkEvent` | `event_kind_ref`, `payload_ref`, `payload_sha256`, `scope_class`, `occurrence_ref_or_none`, `claim_ref_or_none`, `claim_judgment_ref_or_none`, `source_frontier_ref` |"
+        }
+      ],
+      "label": "FrameworkEvent",
+      "definition": "Framework-event sort requiring event_kind_ref, payload_ref, payload_sha256, scope_class, occurrence_ref_or_none, claim_ref_or_none, claim_judgment_ref_or_none and source_frontier_ref. Core scope classes are occurrence_scoped, subject_scoped and authority_scoped; an occurrence reference is optional.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_dfd4d1a152e893c77ec96c35f826899e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 206,
+          "end_line": 206,
+          "quote": "| `EventFrontier` | `event_set_identity`, `member_event_refs`, `projection_basis_ref`, `precedence_law_ref` |"
+        }
+      ],
+      "label": "EventFrontier",
+      "definition": "Profile event-frontier sort requiring event_set_identity, member_event_refs, projection_basis_ref and precedence_law_ref.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_17a43bd3fb2499f3995e928ea010d307",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 207,
+          "end_line": 207,
+          "quote": "| `Projection` | `frontier_ref`, `projection_rule_ref`, `selected_relation_refs`, `boundary_refs`, `residual_refs` |"
+        }
+      ],
+      "label": "Occurrence-profile Projection",
+      "definition": "Profile Projection sort requiring frontier_ref, projection_rule_ref, selected_relation_refs, boundary_refs and residual_refs. It binds one exact event frontier and does not denote a work-state board or AC-011 projection.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_395a04117ba05d7d54dc87da66cda3f6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 208,
+          "end_line": 208,
+          "quote": "| `SemanticAdmissionCut` | `claim_ref`, `claim_judgment_ref`, `event_ref`, `event_judgment_ref`, `materialized_relation_ref`, `source_frontier_ref`, `successor_frontier_ref` |"
+        }
+      ],
+      "label": "SemanticAdmissionCut",
+      "definition": "Atomic semantic-admission cut sort requiring claim_ref, claim_judgment_ref, event_ref, event_judgment_ref, materialized_relation_ref, source_frontier_ref and successor_frontier_ref.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_8406b4daa538a5ba8327a0943c030273",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 209,
+          "end_line": 209,
+          "quote": "| `EffectSubject` | `occurrence_ref`, `subject_binding_ref`, `pre_observation_ref`, `invocation_ref`, `operation_ref`, `operation_grant_ref`, `effect_territory_ref`, `currentness_invalidation_ref` |"
+        }
+      ],
+      "label": "EffectSubject",
+      "definition": "Effect-assessment subject sort requiring occurrence_ref, subject_binding_ref, pre_observation_ref, invocation_ref, operation_ref, operation_grant_ref, effect_territory_ref and currentness_invalidation_ref.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7ce6d5e8ef0b1f18effee52dfeeb907e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 210,
+          "end_line": 210,
+          "quote": "| `TransitionSubject` | `occurrence_ref`, `subject_binding_ref`, `pre_observation_ref`, `post_observation_ref_or_none`, `intended_outcome_ref`, `effect_disposition_ref`, `effect_evidence_refs` |"
+        }
+      ],
+      "label": "TransitionSubject",
+      "definition": "Transition-assessment subject sort requiring occurrence_ref, subject_binding_ref, pre_observation_ref, post_observation_ref_or_none, intended_outcome_ref, effect_disposition_ref and effect_evidence_refs.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_51a45d4874435e678a2c688eedea647d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 257,
+          "end_line": 257,
+          "quote": "The basis codes are exact relations, not labels (P3):"
+        }
+      ],
+      "label": "Finite reference domain",
+      "definition": "Complete specialization RefDomain_Sigma_occurrence(record_kind, qualified_field). O:S denotes semantic-object sort S; AnyLocal is exactly O union E union C union L union X union V union T union J; Sigma:K denotes one exact member of a closed signature population; an empty table cell supplies no target in that class. ReferenceDomain, ExternalTargetKind and BasisRelation are this profile's signature populations. B_model means the same M_occ,b and record basis; B_profile exact TraversalOccurrenceProfileBasis resolution; B_calculus exact imported AxiomaticCalculusBasis resolution; B_adopted the exact Product-adoption basis relation named for the external kind.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_9624d73c3e444915175da86b9f16bd55",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 277,
+          "end_line": 277,
+          "quote": "| `O:OccurrenceModelSubject.value.model_identity` | 1 |  |  | `ModelContentIdentity` | `B_adopted` |"
+        }
+      ],
+      "label": "OccurrenceModelSubject",
+      "definition": "OccurrenceModelSubject has exactly one value.model_identity resolving external ModelContentIdentity under B_adopted and one value.profile_basis_ref resolving TraversalOccurrenceProfileBasis under B_profile.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_d6929775316d15d4cf456457a54e73c6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 279,
+          "end_line": 279,
+          "quote": "| `O:TraversalApplication.value.traversal_ref` | 1 | `V` |  |  | `B_model` |"
+        }
+      ],
+      "label": "TraversalApplication",
+      "definition": "TraversalApplication value references: traversal_ref exactly one local V under B_model; functor_kind_ref exactly one Sigma:FunctorKind under B_calculus; input_refs zero or more AnyLocal under B_model or external TraversalInput under B_adopted; application_contract_ref exactly one external ApplicationContract under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_bb5d9a7a9414a764e856adcdb546110e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 283,
+          "end_line": 283,
+          "quote": "| `O:Occurrence.value.application_ref` | 1 | `O` | `TraversalApplication` |  | `B_model` |"
+        }
+      ],
+      "label": "Occurrence",
+      "definition": "Occurrence value references: exactly one application_ref:O:TraversalApplication, traversal_ref:V, subject_binding_ref:O:SubjectBinding and intended_outcome_ref:O:IntendedOutcome under B_model; exactly one functor_kind_ref:Sigma:FunctorKind under B_calculus; zero or more lineage_refs:O:Occurrence and identity_dependency_refs:AnyLocal under B_model. An occurrence identifies one traversal application.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_93382eaecbc960bd96daef83d5a39bdc",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 290,
+          "end_line": 290,
+          "quote": "| `O:SubjectBinding.value.subject_ref` | 1 |  |  | `MutableSubject` | `B_adopted` |"
+        }
+      ],
+      "label": "SubjectBinding",
+      "definition": "Stable SubjectBinding has exactly one value.subject_ref:MutableSubject, authority_ref:Authority and invalidation_ref:InvalidationContract, all external under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_acb40e70c351e0985da1a79ac676fe15",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 293,
+          "end_line": 293,
+          "quote": "| `O:Observation.value.subject_binding_ref` | 1 | `O` | `SubjectBinding` |  | `B_model` |"
+        }
+      ],
+      "label": "Observation",
+      "definition": "Observation has exactly one value.subject_binding_ref:O:SubjectBinding under B_model, and exactly one external observer_ref:Actor, evidence_ref:Evidence and observation_coordinate_ref:ObservationCoordinate under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_81b9dbf9cdfa30a61e5b7e60240876e1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 297,
+          "end_line": 297,
+          "quote": "| `O:IntendedOutcome.value.outcome_ref` | 1 |  |  | `Outcome` | `B_adopted` |"
+        }
+      ],
+      "label": "IntendedOutcome",
+      "definition": "IntendedOutcome has exactly one value.outcome_ref:Outcome, outcome_contract_ref:OutcomeContract and comparison_basis_ref:ComparisonBasis, all external under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f6d60ade4d09546b05c795b1db5def5f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 300,
+          "end_line": 300,
+          "quote": "| `O:OperationKind.value.operation_contract_ref` | 1 |  |  | `OperationContract` | `B_adopted` |"
+        }
+      ],
+      "label": "OperationKind",
+      "definition": "OperationKind has exactly one value.operation_contract_ref:OperationContract, target_sort_ref:TargetSort and invalidation_ref:InvalidationContract, all external under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b08edccb98d7b65b6ad90b22e0d72e2b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 303,
+          "end_line": 303,
+          "quote": "| `O:EffectOperation.value.operation_kind_ref` | 1 | `O` | `OperationKind` |  | `B_model` |"
+        }
+      ],
+      "label": "EffectOperation",
+      "definition": "Separately identified EffectOperation has exactly one value.operation_kind_ref:O:OperationKind and subject_binding_ref:O:SubjectBinding under B_model, and exactly one external effect_territory_ref:EffectTerritory, operation_contract_ref:OperationContract and invalidation_ref:InvalidationContract under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_6c52b1af9c7eefaf5fdb63a8aed8d160",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 310,
+          "end_line": 310,
+          "quote": "| `O:OperationGrant.value.allowed_operation_kind_refs` | 1..* | `O` | `OperationKind` |  | `B_model` |"
+        }
+      ],
+      "label": "OperationGrant",
+      "definition": "OperationGrant has exactly one value.issuer_ref:Authority, allowed_effect_territory_ref:EffectTerritory and invalidation_ref:InvalidationContract externally under B_adopted; one subject_binding_ref:O:SubjectBinding and one or more allowed_operation_kind_refs:O:OperationKind under B_model.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_bff96e38b4697622e3c7c2a83ea53668",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 313,
+          "end_line": 313,
+          "quote": "| `O:EffectInvocation.value.occurrence_ref` | 1 | `O` | `Occurrence` |  | `B_model` |"
+        }
+      ],
+      "label": "EffectInvocation",
+      "definition": "Immutable EffectInvocation has exactly one value.occurrence_ref:O:Occurrence, operation_ref:O:EffectOperation and operation_grant_ref:O:OperationGrant under B_model; exactly one external executor_ref:Executor, actor_ref:Actor and effect_territory_ref:EffectTerritory under B_adopted; zero or more input_refs:AnyLocal under B_model or external EffectInput under B_adopted. It contains no future disposition.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_18b049c10d1e3ebe0b56cae801d80182",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 320,
+          "end_line": 320,
+          "quote": "| `O:EffectDisposition.value.invocation_ref_or_none` | 0..1 | `O` | `EffectInvocation` |  | `B_model` |"
+        }
+      ],
+      "label": "EffectDisposition",
+      "definition": "EffectDisposition records a later outcome without rewriting its invocation. Its value has zero or one invocation_ref_or_none:O:EffectInvocation, post_observation_ref_or_none:O:Observation and residual_ref_or_none:X, and zero or more effect_evidence_refs:O:EffectEvidence, all under B_model. Closed cases are no_effect, completed_effect, partial_effect and refused_effect.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f7d930dcc90d018e2b3a6029e43130f9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 325,
+          "end_line": 325,
+          "quote": "| `O:EffectEvidence.value.evidence_refs` | 1..* |  |  | `Evidence` | `B_adopted` |"
+        }
+      ],
+      "label": "EffectEvidence",
+      "definition": "EffectEvidence has exactly one value.invocation_ref:O:EffectInvocation under B_model, one or more external evidence_refs:Evidence and exactly one external observation_limit_ref:ObservationLimit under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b58538e8bd09ac4655b55ba0db73160d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 328,
+          "end_line": 328,
+          "quote": "| `O:RelationClaim.value.source_ref` | 1 | `AnyLocal` |  | `DeclaredRelationEndpoint` | `B_model or B_adopted` |"
+        }
+      ],
+      "label": "RelationClaim",
+      "definition": "RelationClaim has exactly one value.relation_kind_ref:Sigma:RelationKind under B_profile; source_ref and target_ref each exactly one AnyLocal under B_model or external DeclaredRelationEndpoint under B_adopted; claimant_ref:Claimant and claim_basis_ref:ClaimBasis each exactly one external under B_adopted; source_frontier_ref exactly one O:EventFrontier under B_model.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_d1b37459e5225797b3afd443ba47e796",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 333,
+          "end_line": 333,
+          "quote": "| `O:FrameworkEvent.value.event_kind_ref` | 1 |  |  | `Sigma:EventKind_occurrence` | `B_profile` |"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20event-kind%20population",
+          "start_line": 524,
+          "end_line": 529,
+          "quote": "EventKind_occurrence = {\n  urn:stdo:traversal-occurrence:event-kind:claim-admission,\n  urn:stdo:traversal-occurrence:event-kind:occurrence-admission,\n  urn:stdo:traversal-occurrence:event-kind:effect-disposition,\n  urn:stdo:traversal-occurrence:event-kind:external-fact-admission\n}"
+        }
+      ],
+      "label": "FrameworkEvent",
+      "definition": "FrameworkEvent has exactly one value.event_kind_ref:Sigma:EventKind_occurrence under B_profile; exactly one payload_ref:AnyLocal and source_frontier_ref:O:EventFrontier under B_model; zero or one occurrence_ref_or_none:O:Occurrence, claim_ref_or_none:O:RelationClaim and claim_judgment_ref_or_none:J under B_model. Its four exact event-kind identities are urn:stdo:traversal-occurrence:event-kind:claim-admission, urn:stdo:traversal-occurrence:event-kind:occurrence-admission, urn:stdo:traversal-occurrence:event-kind:effect-disposition and urn:stdo:traversal-occurrence:event-kind:external-fact-admission.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_e9d5bfb2d91a2734f6135631c162dc74",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 339,
+          "end_line": 339,
+          "quote": "| `O:EventFrontier.value.event_set_identity` | 1 |  |  | `EventSetIdentity` | `B_model` |"
+        }
+      ],
+      "label": "EventFrontier",
+      "definition": "EventFrontier binds the complete evaluated event membership. Its value has exactly one external event_set_identity:EventSetIdentity under B_model, zero or more member_event_refs:O:FrameworkEvent under B_model, and exactly one external projection_basis_ref:ProjectionBasis and precedence_law_ref:PrecedenceLaw under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f964c9278a9073e8173185d1d258d293",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 343,
+          "end_line": 343,
+          "quote": "| `O:Projection.value.frontier_ref` | 1 | `O` | `EventFrontier` |  | `B_model` |"
+        }
+      ],
+      "label": "Projection",
+      "definition": "Projection has exactly one value.frontier_ref:O:EventFrontier under B_model and projection_rule_ref:ProjectionRule externally under B_adopted; zero or more selected_relation_refs:E and residual_refs:X under B_model; zero or more boundary_refs:AnyLocal under B_model or external ProjectionBoundary under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_974f75c61f0d64b28b0689320b851eef",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 348,
+          "end_line": 348,
+          "quote": "| `O:SemanticAdmissionCut.value.claim_ref` | 1 | `O` | `RelationClaim` |  | `B_model` |"
+        }
+      ],
+      "label": "SemanticAdmissionCut",
+      "definition": "SemanticAdmissionCut has exactly seven value references, each cardinality one under B_model: claim_ref:O:RelationClaim, claim_judgment_ref:J, event_ref:O:FrameworkEvent, event_judgment_ref:J, materialized_relation_ref:E, source_frontier_ref:O:EventFrontier and successor_frontier_ref:O:EventFrontier.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_0f5ee11a86b54acaeeeedcfe7e14d725",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 357,
+          "end_line": 357,
+          "quote": "| `O:EffectSubject.value.pre_observation_ref` | 1 | `O` | `Observation` |  | `B_model` |"
+        }
+      ],
+      "label": "EffectSubject",
+      "definition": "EffectSubject has exactly one value reference to each occurrence_ref:O:Occurrence, subject_binding_ref:O:SubjectBinding, pre_observation_ref:O:Observation, invocation_ref:O:EffectInvocation, operation_ref:O:EffectOperation and operation_grant_ref:O:OperationGrant under B_model; exactly one external effect_territory_ref:EffectTerritory and currentness_invalidation_ref:InvalidationContract under B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_8c290fd38df2d7bdadc2eb4fa012c2a1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 366,
+          "end_line": 366,
+          "quote": "| `O:TransitionSubject.value.post_observation_ref_or_none` | 0..1 | `O` | `Observation` |  | `B_model` |"
+        }
+      ],
+      "label": "TransitionSubject",
+      "definition": "TransitionSubject value references under B_model: exactly one occurrence_ref:O:Occurrence, subject_binding_ref:O:SubjectBinding, pre_observation_ref:O:Observation, intended_outcome_ref:O:IntendedOutcome and effect_disposition_ref:O:EffectDisposition; zero or one post_observation_ref_or_none:O:Observation; zero or more effect_evidence_refs:O:EffectEvidence.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b90ad20b7485c4a0dcc10d93f903a485",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 370,
+          "end_line": 370,
+          "quote": "| `E:<each RelationKind>.source/target` | 1 | exact family from relation table | exact sort from relation table | declared endpoint where table permits | `B_model or B_adopted` |"
+        }
+      ],
+      "label": "Inherited TypedRelation",
+      "definition": "Inherited TypedRelation E: source and target each resolve exactly one endpoint of the exact family/sort permitted by its relation-kind table, locally under B_model or in a permitted external domain under B_adopted. kind resolves one Sigma:RelationKind under B_profile. Qualifier references: authority_ref:Authority and invalidation_ref:InvalidationContract exactly one, evidence_refs:Evidence and provenance_refs:Provenance zero or more, externally under B_adopted; inverse_kind_ref_or_none zero or one Sigma:RelationKind under B_profile.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_13a779d6ead03e87244aa490cff2c6e4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 381,
+          "end_line": 381,
+          "quote": "| `C:*.latitude_ref` | 0..1 | `L` |  |  | `B_model` |"
+        }
+      ],
+      "label": "Inherited constraint, latitude and residual records",
+      "definition": "Inherited C has kind:Sigma:ConstraintKind and judgment_kind:Sigma:JudgmentKind exactly one under B_profile, applies_to:AnyLocal exactly one under B_model, predicate:PredicateContract exactly one external under B_adopted and latitude_ref:L zero or one under B_model. L has applies_to:AnyLocal exactly one under B_model and invalidation:InvalidationContract exactly one external under B_adopted. X has subject exactly one AnyLocal/B_model or external ResidualSubject/B_adopted; kind exactly one Sigma:ResidualKind/B_profile; re_entry exactly one V/B_model or external ReEntryContract/B_adopted; invalidation exactly one external InvalidationContract/B_adopted.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_23b4083110a04710450884622774fd06",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 388,
+          "end_line": 388,
+          "quote": "| `V:*.domain/codomain` | 1 |  |  | `TypeDomain` | `B_adopted` |"
+        }
+      ],
+      "label": "Inherited Traversal",
+      "definition": "Inherited Traversal V has domain and codomain each exactly one external TypeDomain/B_adopted; preconditions and postconditions each zero or more C/B_model; authority exactly one external AuthorityGrant/B_adopted; evidence and provenance each zero or more external EvidenceOrProvenance/B_adopted; stop_states one or more Sigma:StopKind/B_profile. These are represented record laws, not traversals performed by this interpretation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_bbb1a4c15742212a351ddb45ae861b18",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 411,
+          "end_line": 413,
+          "quote": "The external-resolution coordinates of the inherited transformation are\nclosed by this finite expansion and are not hidden inside the three\nlocal-delta rows above (P3, P4b):"
+        }
+      ],
+      "label": "Inherited Transformation",
+      "definition": "Inherited Transformation T: traversal exactly one V/B_model; domain_model and codomain_model each one external ModelContentIdentity/B_adopted; operation_authority one external AuthorityGrant/B_adopted; preconditions zero or more C/B_model; preservation_relation one E/B_model; preserved, introduced and removed each zero or more AnyLocal/B_model or external ModelMemberIdentity/B_adopted; residuals zero or more X/B_model; evidence and provenance each zero or more external EvidenceOrProvenance/B_adopted; stop_states one or more Sigma:StopKind/B_profile; invalidation one external InvalidationContract/B_adopted; re_entry one V/B_model or external ReEntryContract/B_adopted. External-resolution coordinates are additional to these local-delta rows.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_c5ba81da2ebac2527f94368f8ae46e4f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 405,
+          "end_line": 405,
+          "quote": "| `J:*.subject` | 1 | `AnyLocal` |  | `JudgmentSubject` | `B_model or B_adopted` |"
+        }
+      ],
+      "label": "Inherited Judgment",
+      "definition": "Inherited Judgment J: kind exactly one Sigma:JudgmentKind/B_profile; subject one AnyLocal/B_model or external JudgmentSubject/B_adopted; evaluator:Evaluator, authority:AuthorityGrant and decided_at:DecisionCoordinate each one external/B_adopted; evidence and provenance each zero or more external EvidenceOrProvenance/B_adopted. Judgments preserve their subject identity and digest and carry evaluator, authority, evidence, provenance and decision coordinate.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "prior_51548846e4602c3e4a36a4321768b55c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line": 1225,
+          "end_line": 1226,
+          "quote": "The evaluation records\nall applicable failure grounds and supplies no decision authority;"
+        }
+      ],
+      "kind": "assessment_of",
+      "meaning": "Repricing result assesses decision legality and obligation preservation; it neither enacts the decision nor establishes delivery.",
+      "conditions": [
+        "The evaluation is performed for the exact owner decision, obligation, subject and basis."
+      ],
+      "exceptions": [],
+      "source_key": "prior_2306f4e60feb709f5c67ca75a73c1690",
+      "target_key": "prior_da227221d3a03ed5c7408ecfff63e6d4",
+      "governing": false
+    },
+    {
+      "key": "prior_74583329999465951740c1ec8cae949f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition",
+          "start_line": 42,
+          "end_line": 44,
+          "quote": "The profile imports one exact `a_c` basis and\ninstantiates one closed model-family signature under that basis's record\nand model laws."
+        }
+      ],
+      "kind": "exact_basis_signature_binding",
+      "meaning": "The adopted profile is constrained by one exact imported basis and its closed signature; this relation asserts no present adoption or instantiation.",
+      "conditions": [
+        "The Product adopts the profile."
+      ],
+      "exceptions": [],
+      "source_key": "prior_75612f6702a23f4a631eb371f4aa0a2d",
+      "target_key": "prior_32e0954dfe17b0581711226c1b3cd946",
+      "governing": true
+    },
+    {
+      "key": "prior_00c93364d3d7080a10048ff3076920cc",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+          "start_line": 82,
+          "end_line": 82,
+          "quote": "a projection binds one complete event frontier"
+        }
+      ],
+      "kind": "scope_and_basis_binding",
+      "meaning": "A projection binds one complete unchanged frontier; new events require a new frontier and cannot extend the old projection's scope.",
+      "conditions": [
+        "A profile projection is represented."
+      ],
+      "exceptions": [],
+      "source_key": "prior_17a43bd3fb2499f3995e928ea010d307",
+      "target_key": "prior_dfd4d1a152e893c77ec96c35f826899e",
+      "governing": true
+    },
+    {
+      "key": "prior_da76a988ec551ca1ca81bed409c8cf75",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+          "start_line": 79,
+          "end_line": 79,
+          "quote": "no operation is lawful without a matching grant"
+        }
+      ],
+      "kind": "authorization_requirement",
+      "meaning": "Operation lawfulness requires an admitted grant matching operation kind, target and territory; profile representation alone supplies none.",
+      "conditions": [
+        "An effect operation is proposed under adopted premise I3."
+      ],
+      "exceptions": [
+        "Compatible Product-declared territory containment may replace exact equality."
+      ],
+      "source_key": "prior_dc23753029f4d1128dd4e2dbd634880a",
+      "target_key": "prior_38e3e0a9484edb3cff9134d451b16301",
+      "governing": true
+    },
+    {
+      "key": "prior_e36aaede8c061816bfbef990af542ce9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 241,
+          "end_line": 243,
+          "quote": "A model that contains an\n`EffectOperation` without an exact in-model `OperationKind` object or an\nexplicit compatible import refuses"
+        }
+      ],
+      "kind": "required_exact_kind_reference",
+      "meaning": "Each EffectOperation requires a resolved exact OperationKind identity; missing kind refuses rather than creating an inferred operation type.",
+      "conditions": [
+        "An EffectOperation is present."
+      ],
+      "exceptions": [
+        "An explicit compatible import can provide the required OperationKind instead of an in-model object."
+      ],
+      "source_key": "prior_dc23753029f4d1128dd4e2dbd634880a",
+      "target_key": "prior_d1e96f42414bc402e9fde726c0c23e81",
+      "governing": true
+    }
+  ],
+  "constraints": [
+    {
+      "key": "prior_e4ab127f2a8eb3f31444faabe4a3caf8",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution",
+          "start_line": 606,
+          "end_line": 606,
+          "quote": "The table traces these owners; it does not decide their questions."
+        }
+      ],
+      "statement": "The described actor reads this member only for the named unresolved lifecycle/proof question and cites used clauses. Deciding routes are Carrier selection for record/lifetime, Execution contract admission for execution, Recorded judgment and owner-ruling continuity for reusable judgments/repricing, and Condition-based closure and reuse for completion. The derivation table is traceability, not an alternative decision owner.",
+      "uncertainty": "This is source-described actor behaviour, not an instruction executed here.",
+      "conditions": [
+        "A derived surface or projected frame is insufficient."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_2d06b1088727674c5114bbd1b8f6a018"
+      ]
+    },
+    {
+      "key": "prior_fd01bb70c1a76c3624381181e017d45c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers",
+          "start_line": 659,
+          "end_line": 660,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot"
+        }
+      ],
+      "statement": "F13's eleven consequence groups concern lifetime-matched carriers, admitted execution basis, one authority chain, sprint escrow/close outcomes, recorded triage/upward re-entry, tenant-local lifecycles, migration proof/recurrence, independent verification and durable rulings, condition-based closure/test authority, semantic term resolution, and flexible carrier shape/bounded reading. Obligations surviving a run must be recorded before return; comment content is provisional until adopted into its owning surface and has its own discussion state. Member choices include carrier kinds/selection table, minimum fields/types/categories/statuses/lanes, offering sprints, escrow lists/result mappings, tenant suffixes, migration declarations/checklists/strategy/library values/thresholds/review questions/break order, four repricing states/predicate, five-step test reconciliation, recommended shapes/search defaults and bounded reading policy. Product definition owns carrier locations/rebinding and tenant registry; governing method owns whether debt may survive; POSTING_GUIDE owns post categories/structure/states. Admission step law, migration law, independent assessment/reuse, result conjunction/general test law and semantic resolution remain owned by the cited external sections. Consumers add no deciding authority. A credible recurrence requires review, not automatic commonisation or identity merging.",
+      "uncertainty": "The table states derivations and ownership; their external foundation standing and unsupplied owner clauses are not independently established.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_2d06b1088727674c5114bbd1b8f6a018"
+      ]
+    },
+    {
+      "key": "prior_862387e7e619d4cd1580b063dc8e5f40",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state",
+          "start_line": 1080,
+          "end_line": 1081,
+          "quote": "a constructor's self-review is construction\noutput"
+        }
+      ],
+      "statement": "The source assigns generic independent assessment to tier-1 EVALUATION §3, acceptance as decision-owner disposition and condition-based rather than reviewer-approved closure to EVALUATION §5, and closed-result reuse to ACTIVATION §7. Constructor self-review is construction output; this member states work-carrier consequences without taking ownership of those generic laws.",
+      "uncertainty": "Full generic laws are absent from the supplied source.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5709d600fd5dda035a513b9a6af281e8",
+        "prior_8f4f294b4aae61d03f01fb3afff526a8"
+      ]
+    },
+    {
+      "key": "prior_1749a5daeb057b2df05aa9ca3aeec6db",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line": 1164,
+          "end_line": 1165,
+          "quote": "a new\nrole or conversation alone invalidates nothing."
+        }
+      ],
+      "statement": "Later roles/runs recover judgments and check applicability rather than reauthor unchanged conclusions. Changed material facts/evidence, declared revising observation or basis invalidate affected results; preserve originals and successor links, retaining only demonstrably independent results and reassessing affected scope. Current C may be referenced but unknown facts cannot become established premises by reuse. Owner rulings are reused without widening or asking unchanged authority again; new ambiguity or material decision change returns only the affected question to owner. J is not O; recording either creates no admission, acceptance, effects or continuation beyond grant. Results follow selected run/sprint/ticket and named evidence-surface lifetime, without a separate registry, ticket per judgment or extra approval ceremony.",
+      "uncertainty": "Full C/J/O annotation and generic reuse definitions are external.",
+      "conditions": [],
+      "exceptions": [
+        "Required independent assessment must acquire sufficient exact evidence and supply its own independent judgment; reusing author J does not meet independence."
+      ],
+      "applies_to_keys": [
+        "prior_aabfdedf155e1d5d7cde30038f43af26",
+        "prior_4d57b8a26f85d45964bb1e7f57caf9e8"
+      ]
+    },
+    {
+      "key": "prior_a02d60f2393b5dc8a1a2b8225c6c1458",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line": 1225,
+          "end_line": 1225,
+          "quote": "An evaluation that was not performed has no result."
+        }
+      ],
+      "statement": "Repricing gives each affected obligation a retained/superseded/deferred/withdrawn disposition with owner and evidence in the same carrier; preserves surviving work, explains changed dependencies and does not copy unaffected history to parallel ledgers. Present owner decisions as short consequence deltas with original ruling separate; generic continuation does not accept undisclosed architecture/scope change. Performed repricing evaluation retains decision/state/evidence and all applicable failure grounds: established requires exact owner authority/evidence/conditions and surviving-obligation preservation; falsified requires a counterexample including exceeding grant or violating obligation; indeterminate retains undecided condition/needed evidence; out_of_frame retains undeclared material relation/capability; invalid_basis covers absent/stale/ambiguous/mismatched required basis. No performed evaluation means no result. Evaluation grants no decision authority; only authorized owner act changes state. Lawful deferral may satisfy repricing while delivery remains failed/outstanding. Unauthorized withdrawn cannot close; retention or satisfied repricing proves no delivery; supersession/deferral/withdrawal erase no unresolved obligation/evidence.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_da227221d3a03ed5c7408ecfff63e6d4",
+        "prior_2306f4e60feb709f5c67ca75a73c1690",
+        "prior_4d57b8a26f85d45964bb1e7f57caf9e8"
+      ]
+    },
+    {
+      "key": "prior_efbf0d91fb46f1e13701ebb98fcc489f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FScope",
+          "start_line": 124,
+          "end_line": 126,
+          "quote": "It defines no process scheduler, event-log carrier, state store, workspace\nformat, rollback mechanism, actor topology or prospective reference-frame\nprofile"
+        }
+      ],
+      "statement": "The profile supplies none of the listed scheduler/log/store/workspace/rollback/topology/prospective-frame implementations. It is no universal execution theory and grants no mutation, admission, evaluation or decision authority. Availability does not imply adoption. Adopting Product owns subject interpretation, vocabulary mappings, authorities, requirements, design, implementation and evidence; those identities are not imported by this member.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_75612f6702a23f4a631eb371f4aa0a2d",
+        "prior_7c694b903339568539f5073b033755b9"
+      ]
+    },
+    {
+      "key": "prior_60d3a5579c1abe398c04c120af119445",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+          "start_line": 81,
+          "end_line": 81,
+          "quote": "cause is admitted typed lineage and is never inferred from time, order, adjacency, containment or correlation"
+        }
+      ],
+      "statement": "F19 states: exact-basis ordinary a_c models add sorts/value domains, never record kinds; closed unknown/missing/mistyped elements refuse. Each exact application is immutable; changed-input reapplication creates a new occurrence and corrections append without erasure. Observations/events/projections describe rather than replace external subject reality; snapshot/rollback requires separate Product authorization. Effects require matching admitted grants, with functor/traversal/operation/executor/actor/grant/invocation distinct. Candidate, judgment, admitting event and materialized relation remain separate; precedence orders admitted facts without deciding authority. Cause requires admitted typed lineage; identity/causal subgraphs are acyclic so lineage walks reach first cause. Projection binds complete frontier; new event produces new frontier, never advances an old projection. Cut members share exactly one source frontier; successor equals that frontier plus exactly admitted event; missing/inconsistent members refuse; projection cannot be read beyond its frontier. Every judgment decision/stop and effect disposition for an effect-intending occurrence maps to exactly one core value for a named predicate. Undecidable effect outcome remains indeterminate; established non-attainment is falsified whether or not its end is established; no refusal maps to success.",
+      "uncertainty": "Detailed owning clauses, complete domains and most exact result mappings are outside the supplied excerpt.",
+      "conditions": [
+        "The profile's adopted premises apply."
+      ],
+      "exceptions": [
+        "Territory containment in place of exact equality requires the adopting Product's compatible signature.",
+        "Acyclicity is asserted for identity and causal subgraphs, not every wider typed-lineage graph."
+      ],
+      "applies_to_keys": [
+        "prior_b791117709f1f0565ea01a996a54f5e1",
+        "prior_2328163d8c2a7bea8aff888ec3f7378d",
+        "prior_ddc9b5793eaf5a1b0c090b03651c4d48",
+        "prior_bfbf00f6b8998d30c4bcb4dde0cacd45",
+        "prior_dfd4d1a152e893c77ec96c35f826899e",
+        "prior_17a43bd3fb2499f3995e928ea010d307",
+        "prior_395a04117ba05d7d54dc87da66cda3f6",
+        "prior_dc23753029f4d1128dd4e2dbd634880a",
+        "prior_38e3e0a9484edb3cff9134d451b16301"
+      ]
+    },
+    {
+      "key": "prior_fe68f70d8f59e774e342317d562f05f6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+          "start_line": 107,
+          "end_line": 108,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot"
+        }
+      ],
+      "statement": "Profile policy owns closed sort/reference/event/relation/qualifier domains, occurrence identity inputs, acyclicity of identity/causal subgraphs, decision/stop/residual vocabulary and mappings, and exclusion of out_of_frame from constraint values. Product owns precedence/evaluators/authorities, admitted causal claims, event scope/frontier laws, compatible territory containment and adoption. AC-007 owns hold/gap/two refusal values, core mappings and causes; traversal-specific refinements retain parent core values. Internal consumer summaries state: defects against five closed populations refuse as falsified structural constraints; basis mismatch in model validation/structural admission carries refuse_invalid_basis; application_of targets exact application seed, corrects_event does not erase, missing seed retains hold; invokes_effect requires exact operation grant and authorized_by checks kind/target/territory; unauthorized/stale effect_readiness never dispatches; identity_depends_on and causal occurrence/event graphs are acyclic admitted cause; event_for follows declared scope law, frontier_contains is complete under one exact basis, projects_frontier binds one unchanged frontier. Named residuals include unresolved_cause, unresolved_scope, competing_lineage and stale_frontier. Not every framework event belongs to an occurrence. Representative examples/checkers are neither engines nor semantic authority. No other member applies this profile's rules; an adopting Product does. Consumers add no decisions beyond owning rules.",
+      "uncertainty": "The referenced closed populations, judgment definitions, conformance items and refinements are not fully supplied.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_b791117709f1f0565ea01a996a54f5e1",
+        "prior_32e0954dfe17b0581711226c1b3cd946",
+        "prior_2328163d8c2a7bea8aff888ec3f7378d",
+        "prior_5422fc753f4b9ea1001d500422d352b2"
+      ]
+    },
+    {
+      "key": "prior_77343a3d5fd10f227cbb32e38e00e12a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary",
+          "start_line": 182,
+          "end_line": 184,
+          "quote": "Missing populations, hidden records, refs\nambiguous between local and external, unknown record kinds and undeclared\nfield domains refuse model validation"
+        }
+      ],
+      "statement": "Instantiation is invalid on conflict in calculus basis, inherited field meaning, record shape, population, value/reference/relation domain, authority coordinate or refusal law. Only semantic objects use SemanticObject.value; all other families retain inherited exact record shapes/coordinates. Population_M_occ is total over and exactly equals RecordKind_ac; every fundamental record belongs to exactly one finite population and local identities are unique across the disjoint union. Every other I identity resolves once through declared external domain/basis. No new fundamental kind is added. RefDomain_Sigma_occurrence closes every identity-bearing value and inherited field to one exact local record-kind/sort or declared external target kind; qualified_field includes source sort/kind and full nested path, so same labels do not merge domains. Missing populations, hidden records, local/external ambiguity, unknown kinds and undeclared domains refuse validation.",
+      "uncertainty": "Full inherited record definitions and the profile's finite reference-domain table are absent.",
+      "conditions": [
+        "Signature instantiation or model validation is considered."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_32e0954dfe17b0581711226c1b3cd946"
+      ]
+    },
+    {
+      "key": "prior_72e73c43563bc9591ec0111273427edc",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 213,
+          "end_line": 214,
+          "quote": "The value contract is closed: an\nunknown field or a missing required field refuses structural admission"
+        }
+      ],
+      "statement": "Sigma_occurrence.Sort contains exactly the nineteen supplied core sort identities. Every row is a SemanticObject with exact id, sort, context, owner, scope and basis in addition to its closed value fields. Unknown or missing required fields refuse structural admission. Refs are exact scoped identities and content digests SHA-256; every _ref resolves exactly once under AC-003. Ref lists follow the owning signature's declared order and reject duplicates. Closed core observation_kind values are pre_effect/post_effect/external_observation; effect dispositions no_effect/completed_effect/partial_effect/refused_effect; scope classes occurrence_scoped/subject_scoped/authority_scoped. TraversalApplication, OperationKind and EffectOperation are identities, not executors. EffectOperation without exact in-model OperationKind or explicit compatible import refuses.",
+      "uncertainty": "Reference-field target domains and compatible-extension rules beyond these statements remain external.",
+      "conditions": [],
+      "exceptions": [
+        "Other auxiliary-domain values require a separately identified compatible signature extension."
+      ],
+      "applies_to_keys": [
+        "prior_32e0954dfe17b0581711226c1b3cd946",
+        "prior_05cec91b956ed0b3ef183307afd15af2",
+        "prior_5556c9d8858c4f3b77e26c5206499fb4",
+        "prior_2328163d8c2a7bea8aff888ec3f7378d",
+        "prior_e61e7e5c748d443c37e30a5b325aff71",
+        "prior_0118bb401c0b96a292b49309470d55f2",
+        "prior_84f335e3f21f357a51c35903945e92a1",
+        "prior_d1e96f42414bc402e9fde726c0c23e81",
+        "prior_dc23753029f4d1128dd4e2dbd634880a",
+        "prior_38e3e0a9484edb3cff9134d451b16301",
+        "prior_5422fc753f4b9ea1001d500422d352b2",
+        "prior_67e19469f016aa9f5ab7518c55df3a03",
+        "prior_b0dd17447a53aceb10e720510bed0a10",
+        "prior_ddc9b5793eaf5a1b0c090b03651c4d48",
+        "prior_bfbf00f6b8998d30c4bcb4dde0cacd45",
+        "prior_dfd4d1a152e893c77ec96c35f826899e",
+        "prior_17a43bd3fb2499f3995e928ea010d307",
+        "prior_395a04117ba05d7d54dc87da66cda3f6",
+        "prior_8406b4daa538a5ba8327a0943c030273",
+        "prior_7ce6d5e8ef0b1f18effee52dfeeb907e"
+      ]
+    },
+    {
+      "key": "prior_4875623c9b7fe9ee860ce2de84c86380",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 221,
+          "end_line": 222,
+          "quote": "`claim_ref_or_none` and `claim_judgment_ref_or_none` are both absent or\nboth exact."
+        }
+      ],
+      "statement": "An event with scope independent of any occurrence gets no fictional occurrence merely to satisfy a total relation. Claim reference and claim-judgment reference are both absent or both exact. A claim-admission event requires both and a current source_frontier_ref. Other event kinds refuse the claim fields absent the explicit extension exception.",
+      "uncertainty": "The closed event-kind population and extension details are not supplied.",
+      "conditions": [],
+      "exceptions": [
+        "Non-claim-admission event kinds may carry claim fields only if a compatible extension explicitly declares them."
+      ],
+      "applies_to_keys": [
+        "prior_bfbf00f6b8998d30c4bcb4dde0cacd45"
+      ]
+    },
+    {
+      "key": "prior_9021eac9e6e98b448e33d10e64882ff5",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 500,
+          "end_line": 503,
+          "quote": "Every coordinate has exactly `Q_ext`; every witness has exactly\n`external_resolution`, `domain_model`, `codomain_model`,\n`domain_resolution`, `codomain_resolution`, `decision` and `evidence`;\nand `decision` is exactly `equal`."
+        }
+      ],
+      "statement": "D_ext is exactly {external_preserved,external_introduced,external_removed}; W_ext exactly {external_resolution,domain_resolution,codomain_resolution}; Q_ext exactly {external_identity,reference_domain,external_target_kind,resolved_target_identity,basis_relation,resolution_basis,evidence_identity}. For every d∈D_ext,q∈Q_ext, T.d[].q uses ResolutionRefDomain(q); for every w∈W_ext,q∈Q_ext, T.external_resolution_witnesses[].w.q does likewise. Witness domain_model and codomain_model each resolve one external ModelContentIdentity/B_adopted; witness evidence resolves one Evidence/B_adopted. Every Q_ext coordinate has cardinality one and no local target: external_identity and resolved_target_identity resolve the sibling external_target_kind under the sibling basis_relation over sibling resolution_basis; reference_domain resolves Sigma:ReferenceDomain/B_profile; external_target_kind resolves Sigma:ExternalTargetKind under B_profile or B_adopted; basis_relation resolves Sigma:BasisRelation/B_profile; resolution_basis resolves TraversalOccurrenceProfileBasis, AxiomaticCalculusBasis or ProductAdoptionBasis under B_profile, B_calculus or B_adopted; evidence_identity resolves Evidence/B_adopted. Each D_ext member is a finite duplicate-free Resolution_M list; external_resolution_witnesses is a finite duplicate-free ExternalResolutionPreservationWitness list. Coordinates have exactly Q_ext; witnesses have exactly the seven stated fields and decision equal. Missing/extra nested fields, unresolved nested identities, coordinate/basis mismatches, duplicate coordinates or witnesses outside the exact preserved population refuse model validation.",
+      "uncertainty": "Inherited Resolution_M and preservation-witness semantics are referenced but not fully supplied.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_bbb1a4c15742212a351ddb45ae861b18",
+        "prior_51a45d4874435e678a2c688eedea647d"
+      ]
+    },
+    {
+      "key": "prior_482548f51470bd03b185c4ca783c5702",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20event-kind%20population",
+          "start_line": 537,
+          "end_line": 537,
+          "quote": "| `external-fact-admission` | exact non-event `ProfileRecordRef` | `subject_scoped` or `authority_scoped`; occurrence and claim fields absent |"
+        }
+      ],
+      "statement": "event_kind_ref resolves exactly one of the four closed identities. claim-admission requires exact RelationClaim payload, exact claim and claim-judgment refs, source frontier equal to the claim frontier, and occurrence ref according to scope_class. occurrence-admission requires exact Occurrence payload, occurrence_scoped, occurrence ref equal to payload, no claim fields. effect-disposition requires exact EffectDisposition payload, occurrence_scoped, occurrence ref equal to the invocation's occurrence, no claim fields. external-fact-admission requires exact non-event ProfileRecordRef payload, subject_scoped or authority_scoped, no occurrence or claim fields. Payload ref and digest bind unchanged content. Unknown kinds, wrong payload sorts, digest mismatches, incompatible scopes and forbidden fields refuse event_admission.",
+      "uncertainty": "The complete scope_class law is outside the supplied sections.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_d1b37459e5225797b3afd443ba47e796"
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "prior_04f3077dee3ac99fd7ac5f925461f39c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FStatus",
+          "start_line": 519,
+          "end_line": 520,
+          "quote": "A\nproject may add `blocked`, `cancelled` or other explicit local states;"
+        }
+      ],
+      "applies_to_keys": [
+        "prior_1906988707368f41598a83175d808b93"
+      ],
+      "allowed": [
+        "Projects may add blocked, cancelled or other explicit local ticket states."
+      ],
+      "forbidden": [
+        "Treating any added state as an automatic evaluation/core result."
+      ]
+    },
+    {
+      "key": "prior_908468bbcf625d82b96cc24981313ab8",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition",
+          "start_line": 42,
+          "end_line": 42,
+          "quote": "Adoption is optional."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_75612f6702a23f4a631eb371f4aa0a2d"
+      ],
+      "allowed": [
+        "A Product may adopt the occurrence profile and own its subject interpretation, vocabulary, authorities and implementation/evidence.",
+        "A Product may leave the optional profile unadopted."
+      ],
+      "forbidden": [
+        "Inferring adoption from availability.",
+        "Treating the profile as part of every a_c model or a universal execution theory."
+      ]
+    },
+    {
+      "key": "prior_48ea7cf0ad0279e34a1f389dc90138f5",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 231,
+          "end_line": 233,
+          "quote": "Any\nother value requires a separately identified compatible signature\nextension."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_32e0954dfe17b0581711226c1b3cd946",
+        "prior_bfbf00f6b8998d30c4bcb4dde0cacd45",
+        "prior_d1e96f42414bc402e9fde726c0c23e81",
+        "prior_0118bb401c0b96a292b49309470d55f2",
+        "prior_67e19469f016aa9f5ab7518c55df3a03"
+      ],
+      "allowed": [
+        "Other observation/disposition/scope values only through separately identified compatible signature extension.",
+        "Non-claim-admission event claim fields only where compatible extension explicitly declares them.",
+        "Product-specific finite OperationKind populations through exact compatible signature and mapping."
+      ],
+      "forbidden": [
+        "Silently extending closed values or unknown fields.",
+        "Treating identity records as executors.",
+        "EffectOperation lacking exact in-model OperationKind or explicit compatible import."
+      ]
+    },
+    {
+      "key": "prior_38fcf06126fb7035b2f8e9cd5b360dbc",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 511,
+          "end_line": 512,
+          "quote": "A compatible extension changes this table by\nminting a new signature; it cannot reinterpret an existing row."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_51a45d4874435e678a2c688eedea647d"
+      ],
+      "allowed": [
+        "A compatible reference-domain extension changes the table by minting a new signature."
+      ],
+      "forbidden": [
+        "Reinterpreting an existing row within the existing signature."
+      ]
+    },
+    {
+      "key": "prior_0bfd8e2f4ce2564f413eb0b01ea12a15",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20event-kind%20population",
+          "start_line": 542,
+          "end_line": 544,
+          "quote": "A\ncompatible extension declares a new event-kind population and its relation\nto this signature; it cannot add an undeclared value to this population"
+        }
+      ],
+      "applies_to_keys": [
+        "prior_d1b37459e5225797b3afd443ba47e796"
+      ],
+      "allowed": [
+        "Compatible extension declares a new event-kind population and its relation to the existing signature."
+      ],
+      "forbidden": [
+        "Adding undeclared values to the existing closed event population."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "prior_819a7ab4c64fe06c95d600f344682321",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers",
+          "start_line": 643,
+          "end_line": 643,
+          "quote": "Consumers of these rows, where an actor enters them"
+        }
+      ],
+      "subject_key": "prior_2d06b1088727674c5114bbd1b8f6a018",
+      "uncertainty": "The table's linked consumers/owners are not supplied in full. Routes include SPEC_METHOD carrier selection/change classes/sprint boundary/computed classification/consistency/evidence/build tenancy; PRODUCT_DEFINITION binding, tenant registry, semantic resolution and bootstrap; ACTIVATION admission/reuse/acquisition; ODD manual-walkthrough admission; CONFORMANCE discriminators 41 and 48; UX escrow/results/family table; DESIGN_MODULE recurrence; EVALUATION independence/acceptance; EXECUTIVE_BASELINE reviewer/evaluation/independence/closure; ASSURANCE test authority; and POSTING_GUIDE boundary/discussion/ratification. Internal recommended-shape, judgment, status, triage, recurrence, milestone and closure consumers are described but not operationally traversed. Term binding and carrier-shape/bounded-reading rows expressly have no separate external consumer.",
+      "consequence": "Retain cited owners and consumer roles without reconstructing their laws or assigning graph-discovered authority. Exact application needs source re-entry at those owners."
+    },
+    {
+      "key": "prior_928d6272013e103fa46c70a33b0a136d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+          "start_line": 1226,
+          "end_line": 1227,
+          "quote": "the\nstate changes only through the owner's authorised act."
+        }
+      ],
+      "subject_key": "prior_2306f4e60feb709f5c67ca75a73c1690",
+      "uncertainty": "Source-defined judgments and acts have operational identity, applicability and evidence semantics that are not instantiated by this finite author schema. Full reuse, independence and C/J/O annotations require the referenced external sections.",
+      "consequence": "The five-family representation describes judgment records, reuse/invalidation and result mappings but performs no evaluation, ownership decision, successor construction or authority effect."
+    },
+    {
+      "key": "prior_cd9d2732ff3613b9f2cf4dad307faa7e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes",
+          "start_line": 1339,
+          "end_line": 1339,
+          "quote": "These shapes are the recommended carriers"
+        }
+      ],
+      "subject_key": "prior_ce6b4d3f0699e02cd1c718d0569a04d0",
+      "uncertainty": "The compact records preserve template roles, example intent, scoped exclusions, closure policy and checklist meaning rather than reproducing every timestamp, placeholder link, function name and Markdown formatting token. The examples are not declared exhaustive serialization schemas.",
+      "consequence": "The source examples remain re-entry material for exact artifact reconstruction. Their ids, timestamps, links and unchecked boxes confer no admission, truth, completed work or instantiated Product."
+    },
+    {
+      "key": "prior_14960db729ef75f8e2b40c858171be92",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "imports [AXIOMATIC_CALCULUS](AXIOMATIC_CALCULUS.md) by reference"
+        }
+      ],
+      "subject_key": "prior_75612f6702a23f4a631eb371f4aa0a2d",
+      "uncertainty": "PROFILES §1; AXIOMATIC_CALCULUS signature/RecordKind_ac/Population_M, typed records, AC-003, F_D/F_P/F_H, AC-016, basis identity and AC-011; FOUNDATIONS result algebra; and ACTIVATION effect refinement are referenced but not supplied. No concrete subject b_ac identity is established here.",
+      "consequence": "Treat imports and profile-local names as references only; do not equate the subject's imported calculus with the workflow-selected published basis or infer operational authority."
+    },
+    {
+      "key": "prior_08ec4426bd9756ee730b27944e0cb615",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+          "start_line": 86,
+          "end_line": 87,
+          "quote": "The Scope, the Exclusions and the Conformance obligations apply these\nconsequences"
+        }
+      ],
+      "subject_key": "prior_b791117709f1f0565ea01a996a54f5e1",
+      "uncertainty": "Detailed occurrence identity, OP-001–OP-007, mutable effects, closed relations/events/constraints/judgments/residuals/stops, exact profile identity, authority/adoption, exclusions and conformance items 1–21 are only summarized or linked. The consumer index associates rows with constraints/judgments and conformance items but supplies neither their complete contracts nor evidence. The five closed populations, effect-currentness/grant checks, cross-basis refusal, correction selection and frontier residual handling cannot be fully reconstructed.",
+      "consequence": "Preserve the stated nine consequence groups and consumer-specific conditions without fabricating full domains, endpoints, engines or a conformance result."
+    },
+    {
+      "key": "prior_3f0aeb5ce9f9a6503fd1344ecb6e7921",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary",
+          "start_line": 166,
+          "end_line": 168,
+          "quote": "Relations,\nconstraints, latitude, residuals, traversals, transformations and\njudgments keep their exact inherited `a_c` record families and coordinates"
+        }
+      ],
+      "subject_key": "prior_32e0954dfe17b0581711226c1b3cd946",
+      "uncertainty": "The source models eight inherited fundamental record populations, identity universe and exact inherited coordinates. This response schema has five active semantic families and cannot itself instantiate or validate that complete model, execute signature instantiation, or prove reference closure.",
+      "consequence": "Represent the model notation and closure laws as concepts/constraints. Keep judgment/traversal/transformation populations uninstantiated and retain operational details as unresolved source dependencies."
+    },
+    {
+      "key": "prior_74e417bfa522cb1d5cf427ab2e3a8d35",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+          "start_line": 233,
+          "end_line": 233,
+          "quote": "Every `_ref` resolves exactly once under AC-003,"
+        }
+      ],
+      "subject_key": "prior_72e73c43563bc9591ec0111273427edc",
+      "uncertainty": "The finite reference-domain table and complete auxiliary domains are not supplied, including evidence_kind, relation qualifiers and exact inherited external target domains. EffectDisposition labels alone do not determine their full predicate-specific core mappings. Required _or_none fields express optional references, while exact encoding and compatible extension mechanics require the omitted defining clauses.",
+      "consequence": "Retain each supplied closed field contract and refusal condition. Do not invent missing field target sorts, enum members or effect-to-core outcomes from labels."
+    },
+    {
+      "key": "prior_c0c3375d5edfca17d9b47b0c079c9fa3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 248,
+          "end_line": 249,
+          "quote": "Source families\nuse the exact `O/E/C/L/X/V/T/J` populations."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+          "start_line": 498,
+          "end_line": 499,
+          "quote": "`external_resolution_witnesses` is a finite inherited\n`ExternalResolutionPreservationWitness` value list without duplicates."
+        }
+      ],
+      "subject_key": "prior_51a45d4874435e678a2c688eedea647d",
+      "uncertainty": "The exact imported calculus record definitions, preceding semantic-object contracts and Product-adopted external-domain definitions are not fully supplied. ProfileRecordRef's local union and references to permitted external domains are preserved without enlarging the local union.",
+      "consequence": "Retain exact named domains and table constraints without fabricating external identities, imported record fields, basis resolutions or full preservation-witness semantics."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FTriage%20metadata",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FStatus",
+      "decision": "retained",
+      "keys": [
+        "prior_1906988707368f41598a83175d808b93",
+        "prior_04f3077dee3ac99fd7ac5f925461f39c"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FReview%20findings%20and%20bug%20items",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F4.%20Ticket%20rules%2FLanes",
+      "decision": "retained",
+      "keys": [
+        "prior_1906988707368f41598a83175d808b93"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution",
+      "decision": "retained",
+      "keys": [
+        "prior_e4ab127f2a8eb3f31444faabe4a3caf8"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FFoundation%20to%20law%3A%20work%20carriers",
+      "decision": "retained",
+      "keys": [
+        "prior_2d06b1088727674c5114bbd1b8f6a018",
+        "prior_fd01bb70c1a76c3624381181e017d45c",
+        "prior_819a7ab4c64fe06c95d600f344682321"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FCarrier%20selection",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FExecution%20contract%20admission",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FEvaluation%20criteria%20and%20non-closure%20conditions",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F5.%20From%20carrier%20to%20execution%2FBounded-context%20term%20binding",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FDeclaration%20and%20checklist",
+      "decision": "retained",
+      "keys": [
+        "prior_52b796e9b8ce716db4e099c31df2b84e"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FClosure%20of%20a%20migration%20ticket",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FStrategy%20requirements",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FRecurring%20realisation%20and%20library%20declaration",
+      "decision": "retained",
+      "keys": [
+        "prior_03245c6904f417787ce80ebcc3bf7f00"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMulti-build-tenant%20review",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FReview%20disambiguation",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FImpacted%20interface%20review%20checklist",
+      "decision": "retained",
+      "keys": [
+        "prior_f23081711b22632f373f64aaaeca6452"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FBreak%20order%20and%20break-to-closure%20map",
+      "decision": "retained",
+      "keys": [
+        "prior_915b70c152b3bc925415246921bfbaad"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F6.%20Implementation%20migration%2FMixed-state%20negative%20proof",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state",
+      "decision": "retained",
+      "keys": [
+        "prior_862387e7e619d4cd1580b063dc8e5f40"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FExecution%20and%20verification%20authority%20separation%20%28UP-007%29",
+      "decision": "retained",
+      "keys": [
+        "prior_5709d600fd5dda035a513b9a6af281e8"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FRecorded%20judgment%20and%20owner-ruling%20continuity",
+      "decision": "retained",
+      "keys": [
+        "prior_aabfdedf155e1d5d7cde30038f43af26",
+        "prior_4d57b8a26f85d45964bb1e7f57caf9e8",
+        "prior_da227221d3a03ed5c7408ecfff63e6d4",
+        "prior_2306f4e60feb709f5c67ca75a73c1690",
+        "prior_51548846e4602c3e4a36a4321768b55c",
+        "prior_1749a5daeb057b2df05aa9ca3aeec6db",
+        "prior_a02d60f2393b5dc8a1a2b8225c6c1458",
+        "prior_928d6272013e103fa46c70a33b0a136d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FCondition-based%20closure%20and%20reuse",
+      "decision": "retained",
+      "keys": [
+        "prior_8f4f294b4aae61d03f01fb3afff526a8"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FTest%20case%20authority",
+      "decision": "retained",
+      "keys": [
+        "prior_e17862272f51f8550d5988e9dad8fcd0"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F7.%20Authority%2C%20judgment%2C%20closure%20and%20state%2FOne-truth%20state%20projection%20and%20drift%20refusal%20%28UP-009%29",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F8.%20Recommended%20shapes",
+      "decision": "retained",
+      "keys": [
+        "prior_ce6b4d3f0699e02cd1c718d0569a04d0",
+        "prior_cd9d2732ff3613b9f2cf4dad307faa7e"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FOperating%20mode",
+      "decision": "retained",
+      "keys": [
+        "prior_35c1997b02838efab6cb59877652df2c"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TICKETS.md#TICKETS%2F9.%20Operating%20mode%20and%20relationships%2FRelationship%20to%20other%20surfaces",
+      "decision": "retained",
+      "keys": [
+        "prior_ee3c8b088a7f0259a14a11460fb344f1"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE",
+      "decision": "retained",
+      "keys": [
+        "prior_75612f6702a23f4a631eb371f4aa0a2d",
+        "prior_14960db729ef75f8e2b40c858171be92"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition",
+      "decision": "retained",
+      "keys": [
+        "prior_75612f6702a23f4a631eb371f4aa0a2d",
+        "prior_74583329999465951740c1ec8cae949f",
+        "prior_908468bbcf625d82b96cc24981313ab8"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FPosition%2FFoundation%20to%20law",
+      "decision": "retained",
+      "keys": [
+        "prior_b791117709f1f0565ea01a996a54f5e1",
+        "prior_00c93364d3d7080a10048ff3076920cc",
+        "prior_da76a988ec551ca1ca81bed409c8cf75",
+        "prior_60d3a5579c1abe398c04c120af119445",
+        "prior_fe68f70d8f59e774e342317d562f05f6",
+        "prior_08ec4426bd9756ee730b27944e0cb615"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FScope",
+      "decision": "retained",
+      "keys": [
+        "prior_7c694b903339568539f5073b033755b9",
+        "prior_efbf0d91fb46f1e13701ebb98fcc489f"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FImported%20calculus%20boundary",
+      "decision": "retained",
+      "keys": [
+        "prior_32e0954dfe17b0581711226c1b3cd946",
+        "prior_77343a3d5fd10f227cbb32e38e00e12a",
+        "prior_3f0aeb5ce9f9a6503fd1344ecb6e7921"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts",
+      "decision": "retained",
+      "keys": [
+        "prior_05cec91b956ed0b3ef183307afd15af2",
+        "prior_5556c9d8858c4f3b77e26c5206499fb4",
+        "prior_2328163d8c2a7bea8aff888ec3f7378d",
+        "prior_e61e7e5c748d443c37e30a5b325aff71",
+        "prior_0118bb401c0b96a292b49309470d55f2",
+        "prior_84f335e3f21f357a51c35903945e92a1",
+        "prior_d1e96f42414bc402e9fde726c0c23e81",
+        "prior_dc23753029f4d1128dd4e2dbd634880a",
+        "prior_38e3e0a9484edb3cff9134d451b16301",
+        "prior_5422fc753f4b9ea1001d500422d352b2",
+        "prior_67e19469f016aa9f5ab7518c55df3a03",
+        "prior_b0dd17447a53aceb10e720510bed0a10",
+        "prior_ddc9b5793eaf5a1b0c090b03651c4d48",
+        "prior_bfbf00f6b8998d30c4bcb4dde0cacd45",
+        "prior_dfd4d1a152e893c77ec96c35f826899e",
+        "prior_17a43bd3fb2499f3995e928ea010d307",
+        "prior_395a04117ba05d7d54dc87da66cda3f6",
+        "prior_8406b4daa538a5ba8327a0943c030273",
+        "prior_7ce6d5e8ef0b1f18effee52dfeeb907e",
+        "prior_e36aaede8c061816bfbef990af542ce9",
+        "prior_72e73c43563bc9591ec0111273427edc",
+        "prior_4875623c9b7fe9ee860ce2de84c86380",
+        "prior_48ea7cf0ad0279e34a1f389dc90138f5",
+        "prior_74e417bfa522cb1d5cf427ab2e3a8d35"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20semantic-object%20sorts%2FFinite%20reference-domain%20table",
+      "decision": "retained",
+      "keys": [
+        "prior_51a45d4874435e678a2c688eedea647d",
+        "prior_9624d73c3e444915175da86b9f16bd55",
+        "prior_d6929775316d15d4cf456457a54e73c6",
+        "prior_bb5d9a7a9414a764e856adcdb546110e",
+        "prior_93382eaecbc960bd96daef83d5a39bdc",
+        "prior_acb40e70c351e0985da1a79ac676fe15",
+        "prior_81b9dbf9cdfa30a61e5b7e60240876e1",
+        "prior_f6d60ade4d09546b05c795b1db5def5f",
+        "prior_b08edccb98d7b65b6ad90b22e0d72e2b",
+        "prior_6c52b1af9c7eefaf5fdb63a8aed8d160",
+        "prior_bff96e38b4697622e3c7c2a83ea53668",
+        "prior_18b049c10d1e3ebe0b56cae801d80182",
+        "prior_f7d930dcc90d018e2b3a6029e43130f9",
+        "prior_b58538e8bd09ac4655b55ba0db73160d",
+        "prior_d1b37459e5225797b3afd443ba47e796",
+        "prior_e9d5bfb2d91a2734f6135631c162dc74",
+        "prior_f964c9278a9073e8173185d1d258d293",
+        "prior_974f75c61f0d64b28b0689320b851eef",
+        "prior_0f5ee11a86b54acaeeeedcfe7e14d725",
+        "prior_8c290fd38df2d7bdadc2eb4fa012c2a1",
+        "prior_b90ad20b7485c4a0dcc10d93f903a485",
+        "prior_13a779d6ead03e87244aa490cff2c6e4",
+        "prior_23b4083110a04710450884622774fd06",
+        "prior_bbb1a4c15742212a351ddb45ae861b18",
+        "prior_c5ba81da2ebac2527f94368f8ae46e4f",
+        "prior_9021eac9e6e98b448e33d10e64882ff5",
+        "prior_38fcf06126fb7035b2f8e9cd5b360dbc",
+        "prior_c0c3375d5edfca17d9b47b0c079c9fa3"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20event-kind%20population",
+      "decision": "retained",
+      "keys": [
+        "prior_d1b37459e5225797b3afd443ba47e796",
+        "prior_482548f51470bd03b185c4ca783c5702",
+        "prior_0bfd8e2f4ce2564f413eb0b01ea12a15"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    }
+  ],
+  "limitations": [
+    "Source-local semantic proposal; processing coverage and mechanical checks do not establish semantic completeness or acceptance."
+  ]
+}

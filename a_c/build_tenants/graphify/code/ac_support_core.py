@@ -22,6 +22,7 @@ from typing import Callable, TypeAlias, TYPE_CHECKING, cast
 
 import ac_graph
 import ac_support_composition as composition
+from ac_fs_boundary import overlaps_existing
 
 if TYPE_CHECKING:
     import ac_formal_gate
@@ -55,6 +56,11 @@ NATIVE_PROFILE_SHA256 = 'a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e0189
 NATIVE_MANIFEST_SHA256 = '60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8'
 NATIVE_FOUNDATIONS_SHA256 = '92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5'
 BUILDER_SHA256 = "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
+NATIVE305_PROFILE_ID = "urn:a-c:fd-support:method:stdo-3.0.5:executive:1"
+NATIVE305_PROFILE_SHA256 = "4c08017964cffb50308ba38ed80c15b7babca902f234950a5a92a9da5e7e22b6"
+NATIVE305_FOUNDATIONS_SHA256 = "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e"
+FS_BOUNDARY_SHA256 = "93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b"
+CURRENT_BUILDER_SHA256 = "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
 CORE_VALUES = ("satisfied", "falsified", "indeterminate", "out_of_frame", "invalid_basis")
 KINDS = ("observation", "context", "preflight", "attempt", "return", "expectation", "acquisition", "operation", "resource", "raw", "qualification")
 PREFIX = "Use the activated frame and declared return contract below.\n"
@@ -367,7 +373,8 @@ def environment_passthrough(settings: JSON, environment: JSON) -> list[str]:
 def method_identity(profile: Object | None = None) -> Object:
     identity: Object = {"id": PROFILE_ID, "sha256": PROFILE_SHA256} if profile is None else {"id": profile.get("id"), "sha256": profile.get("sha256")}
     if identity not in ({"id": PROFILE_ID, "sha256": PROFILE_SHA256},
-                        {"id": NATIVE_PROFILE_ID, "sha256": NATIVE_PROFILE_SHA256}):
+                        {"id": NATIVE_PROFILE_ID, "sha256": NATIVE_PROFILE_SHA256},
+                        {"id": NATIVE305_PROFILE_ID, "sha256": NATIVE305_PROFILE_SHA256}):
         raise SupportError("unsupported_contract", "Method profile is not an exact supported binding")
     return document(identity)
 
@@ -376,12 +383,12 @@ def inventory(operation: str | None = None, *, profile: Object | None = None) ->
     if operation is not None and operation not in _ARGUMENTS:
         raise SupportError("unknown_operation", "Unknown operation: " + operation)
     identity = method_identity(profile)
-    native = identity["id"] == NATIVE_PROFILE_ID
+    native = identity["id"] in (NATIVE_PROFILE_ID, NATIVE305_PROFILE_ID)
     if native and operation == "results.conjoin":
         raise SupportError("unsupported_check", "Native conjunction operator is not qualified")
     names = [operation] if operation is not None else [name for name in sorted(_ARGUMENTS) if not (native and name == "results.conjoin")]
     return document({"schema": "a_c.fd-support.inventory/1", "method_profile": identity,
-            "builder": {"uri": "stdo://releases/v2.5.1-rc.2/", "manifest_sha256": BUILDER_SHA256},
+            "builder": ({"uri": "stdo://releases/v3.0.4/", "manifest_sha256": CURRENT_BUILDER_SHA256} if identity["id"] == NATIVE305_PROFILE_ID else {"uri": "stdo://releases/v2.5.1-rc.2/", "manifest_sha256": BUILDER_SHA256}),
             "operations": [{"name": name, "input_schema": request_schema(name),
                             "effect": name in EFFECT_OPERATIONS,
                             "output_schema": response_schema(),
@@ -424,7 +431,7 @@ def operation_outcome(operation: str, value: str = "returned", code: str | None 
     return document({"predicate": "B(" + operation + "): declared exact output/effect-evidence payload availability on the requested basis",
             "value": value, "cause": code if code is not None else "declared output available",
             "core_value": parents[value],
-            "source_parent": {"member": "FOUNDATIONS.md", "sha256": NATIVE_FOUNDATIONS_SHA256 if identity["id"] == NATIVE_PROFILE_ID else "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f", "clause": "results"},
+            "source_parent": {"member": "FOUNDATIONS.md", "sha256": NATIVE305_FOUNDATIONS_SHA256 if identity["id"] == NATIVE305_PROFILE_ID else NATIVE_FOUNDATIONS_SHA256 if identity["id"] == NATIVE_PROFILE_ID else "fd2d895f90eb39bda0950c1c7ff02057ef5d8ae73fcbc5b3203f7e99081d6e3f", "clause": "results"},
             "evidence": evidence if evidence is not None else [],
             "limits": limits if limits is not None else ["output availability only; no semantic acceptance"]})
 
@@ -472,7 +479,7 @@ class Runtime:
         if _sha(raw) != expected_sha256:
             raise SupportError("digest_mismatch", "Policy bytes do not match trusted startup digest")
         policy = as_object(parse_json(raw), "policy")
-        exact_keys(policy, ("schema", "id", "product", "method_profile", "sources", "principals", "grants", "predicates", "operators", "executors", "event_sinks", "independence_policy", "evidence_root", "limits", "authority_sources"), ("composition", "formal_gate"), label="policy")
+        exact_keys(policy, ("schema", "id", "product", "method_profile", "sources", "principals", "grants", "predicates", "operators", "executors", "event_sinks", "independence_policy", "evidence_root", "limits", "authority_sources"), ("composition", "formal_gate", "method_installation"), label="policy")
         if policy["schema"] != "a_c.fd-support.policy/1":
             raise SupportError("unsupported_contract", "Unsupported policy schema")
         text(policy["id"])
@@ -581,6 +588,10 @@ class Runtime:
             selected_basis = pointer(definition_value, "/constitution/stdo/basis")
             if selected_basis != {"uri": "stdo://releases/v3.0.1-rc.1/", "manifest_sha256": NATIVE_MANIFEST_SHA256}:
                 raise SupportError("basis_stale", "Native profile requires the exact released 3.0.1 Product basis")
+        if selected_profile["id"] == NATIVE305_PROFILE_ID:
+            verify_native_installation(runtime)
+        elif "method_installation" in policy:
+            raise SupportError("unsupported_contract", "Installed target binding requires the 3.0.5 profile")
         read_source(runtime, as_object(runtime.principal["role_binding"]))
         if "composition" in policy:
             runtime = replace(runtime, _composition=composition.load(runtime, as_object(policy["composition"])))
@@ -588,6 +599,108 @@ class Runtime:
 
     def with_callbacks(self, resolve_artifact: Resolver, query_artifacts: History) -> Runtime:
         return replace(self, resolve_artifact=resolve_artifact, query_artifacts=query_artifacts)
+
+
+
+def verify_native_installation(runtime: Runtime) -> Object:
+    """Bind frozen semantic owners to the real, operator-selected installed cut.
+
+    The Product and policy are trusted startup configuration. Neither the method
+    installation nor a future manifest digest is accepted from a call envelope.
+    Full verification is repeated at use, including long-lived MCP runtimes.
+    """
+    if _sha(_regular_bytes(Path(__file__).with_name("ac_fs_boundary.py"))) != FS_BOUNDARY_SHA256:
+        raise SupportError("dependency_changed", "Native305 filesystem boundary implementation changed")
+    selection = as_object(runtime.policy.get("method_installation"), "method installation")
+    exact_keys(selection, ("root",), label="method installation")
+    root_id = text(selection["root"])
+    root = _root(runtime, root_id)
+    if root["kind"] != "workspace" or root["writable"] is not False:
+        raise SupportError("unsupported_contract", "Method installation must be a registered read-only local root")
+    base = Path(text(root["path"]))
+    for ancestor in (base, *base.parents):
+        if ancestor.is_symlink():
+            raise SupportError("path_refused", "Method installation root may not traverse symlinks")
+    immutable = base.resolve(strict=True)
+    surface = as_object(as_object(as_object(runtime.policy["product"])["authority_binding"])["result_surface"])
+    writable = [runtime.evidence_root, Path(text(surface["root"]))]
+    for configured in as_object(runtime.policy["sources"]).values():
+        source_root = as_object(configured)
+        if source_root["writable"] is True:
+            # A source's declared read scopes are also its allowed write paths.
+            for scope_value in as_list(source_root["read_scope"]):
+                scope = as_object(scope_value)
+                writable.append(Path(text(source_root["path"])) / _relative(text(scope["path"])))
+    if any(overlaps_existing(path, immutable) for path in writable):
+        raise SupportError("role_effect_denied", "Effect storage or writable source scope overlaps immutable method installation")
+    product_ref = as_object(as_object(runtime.policy["product"])["definition"])
+    product = parse_json(base64.b64decode(text(read_source(runtime, product_ref)["content_base64"])))
+    basis = as_object(pointer(product, "/constitution/stdo/basis"), "Product method basis")
+    exact_keys(basis, ("uri", "manifest_sha256"), label="Product method basis")
+    if basis["uri"] != "stdo://releases/v3.0.5/":
+        raise SupportError("basis_stale", "3.0.5 profile requires the exact 3.0.5 Product cut")
+    validate_schema(basis["manifest_sha256"], as_object(as_object(CONTENT_SCHEMAS["$defs"])["Sha256"]))
+
+    def acquire(path: str, sha256: JSON) -> bytes:
+        ref: Object = {"engine": "workspace-regular-file", "root": root_id,
+                       "path": path, "object": None, "sha256": sha256, "selector": None}
+        return base64.b64decode(text(read_source(runtime, ref)["content_base64"]))
+
+    manifest = as_object(parse_json(acquire("manifest.json", basis["manifest_sha256"])))
+    if (manifest.get("kind") != "stdo.installed-release-manifest"
+            or manifest.get("schema_version") != 1
+            or as_object(manifest.get("release")).get("cut") != "v3.0.5"):
+        raise SupportError("basis_stale", "Installed manifest is not the selected STDO 3.0.5 cut")
+    expected: Object = {"manifest.json": basis["manifest_sha256"]}
+
+    def add(path: str, sha256: JSON) -> None:
+        _relative(path)
+        validate_schema(sha256, as_object(as_object(CONTENT_SCHEMAS["$defs"])["Sha256"]))
+        if path in expected:
+            raise SupportError("contract_violation", "Duplicate installed manifest member")
+        expected[path] = sha256
+
+    standards = as_object(manifest.get("standards"))
+    auxiliary = as_object(manifest.get("auxiliary"))
+    for group in (standards, as_object(auxiliary.get("plugin"))):
+        prefix = text(group.get("installed_root"))
+        members = as_list(group.get("members"))
+        if type(group.get("member_count")) is not int or group["member_count"] != len(members):
+            raise SupportError("contract_violation", "Installed manifest member count differs")
+        for member in members:
+            row = as_object(member)
+            add(prefix + "/" + text(row.get("path")), row.get("sha256"))
+    license_entry = as_object(auxiliary.get("license"))
+    add(text(license_entry.get("path")), license_entry.get("sha256"))
+    note = as_object(auxiliary.get("release_note"))
+    add(text(note.get("installed_path")), note.get("sha256"))
+    actual: set[str] = set()
+    for current, dirs, files in os.walk(base, followlinks=False):
+        for name in dirs:
+            if (Path(current) / name).is_symlink():
+                raise SupportError("path_refused", "Installed directory symlink is refused")
+        for name in files:
+            actual.add((Path(current) / name).relative_to(base).as_posix())
+    if actual != set(expected):
+        raise SupportError("basis_stale", "Installed member population differs from the selected manifest")
+    for path, sha256 in expected.items():
+        acquire(path, sha256)
+    profile_ref = as_object(as_object(runtime.policy["method_profile"])["source"])
+    profile = as_object(parse_json(base64.b64decode(text(read_source(runtime, profile_ref)["content_base64"]))))
+    if (profile.get("id") != NATIVE305_PROFILE_ID
+            or as_object(profile.get("method")).get("uri") != basis["uri"]):
+        raise SupportError("unsupported_contract", "Frozen profile target differs")
+    for member in as_list(profile.get("members")):
+        row = as_object(member)
+        path = text(standards["installed_root"]) + "/" + text(row.get("member"))
+        if expected.get(path) != row.get("sha256"):
+            raise SupportError("basis_stale", "Installed normative owner differs from frozen supported source: " + path)
+    for member in as_list(profile.get("native_contracts")):
+        row = as_object(member)
+        path = text(row.get("path"))
+        if expected.get(path) != row.get("sha256"):
+            raise SupportError("basis_stale", "Installed native contract differs from frozen source: " + path)
+    return {"basis": basis, "members_verified": len(expected), "profile": runtime.method_profile}
 
 
 def _strings(value: JSON) -> list[str]:
@@ -663,7 +776,7 @@ def _formal_source_path(runtime: Runtime, path: Path, *, write: bool, absent: bo
     selected = runtime.policy.get("formal_gate")
     if selected is not None:
         try:
-            ac_formal_gate.guard_path(as_object(selected)["checker"], path, output=write, absent=absent)
+            ac_formal_gate.guard_path(as_object(as_object(selected)["checker"]), path, output=write, absent=absent)
         except ac_formal_gate.GateError as exc:
             raise SupportError("path_refused", str(exc)) from exc
     return path
@@ -827,7 +940,9 @@ def make_artifact(kind: str, payload: JSON, provenance: Object) -> tuple[Object,
 def require_operation(runtime: Runtime, operation: str) -> None:
     if _sha(_regular_bytes(runtime.policy_path)) != runtime.policy_sha256:
         raise SupportError("basis_stale", "Trusted policy changed; no hot reload or stale authority use")
-    if runtime.method_profile["id"] == NATIVE_PROFILE_ID and operation == "results.conjoin":
+    if runtime.method_profile["id"] == NATIVE305_PROFILE_ID:
+        verify_native_installation(runtime)
+    if runtime.method_profile["id"] in (NATIVE_PROFILE_ID, NATIVE305_PROFILE_ID) and operation == "results.conjoin":
         raise SupportError("unsupported_check", "Native conjunction operator is not qualified")
     if operation not in _strings(runtime.principal["operations"]):
         raise SupportError("authority_missing", "Startup principal has no selected operation capability")
@@ -2290,7 +2405,7 @@ def _check_return(runtime: Runtime, args: Object) -> Object:
             joined = as_object(load_artifact(runtime, as_object(proof["conjunction"]), "operation")["payload"])
             if as_object(joined["request"])["operation"] != "results.conjoin":
                 gaps.append("Executive conjunction route is not an actual conjunction record")
-            if runtime.method_profile["id"] == NATIVE_PROFILE_ID:
+            if runtime.method_profile["id"] in (NATIVE_PROFILE_ID, NATIVE305_PROFILE_ID):
                 gaps.append("Native conjunction proof is unsupported; historical evidence grants no translation")
     predicate_ids = _strings(args["predicates"])
     if set(predicate_ids) - set(_strings(proof["predicate_ids"])):

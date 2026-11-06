@@ -1,0 +1,299 @@
+{
+  "cohort": {
+    "carrier_ref": "refs/heads/main",
+    "cut": "v3.0.5",
+    "publication_mode": "atomic",
+    "status": "assembling",
+    "version": "3.0.5"
+  },
+  "components": {
+    "axiom_indexer": {
+      "evidence": [],
+      "owner": "axiom_indexer",
+      "required_claims": [
+        "current_index_validation"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "claude_skills": {
+      "evidence": [],
+      "owner": "stdo_skills",
+      "required_claims": [
+        "current_claude_skills"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "codex_skills": {
+      "evidence": [],
+      "owner": "stdo_skills",
+      "required_claims": [
+        "current_codex_skills"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "documentation": {
+      "evidence": [],
+      "owner": "specification_methodology",
+      "required_claims": [
+        "installed_documentation"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "graphify": {
+      "evidence": [],
+      "owner": "a_c",
+      "required_claims": [
+        "installed_graphify"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "lean": {
+      "evidence": [],
+      "facts": {
+        "bundle": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-recorded-toy-003/cold",
+        "bundle_archive": {
+          "bytes": 9019,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archive-gate-toy-002/cold-transport/TRANSPORT.json",
+          "sha256": "1889f2ab57996650fbf4519b0af36cf38559f3a4fd58d862c4ad0574f257d2f5"
+        },
+        "bundle_manifest": {
+          "bytes": 5639,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-recorded-toy-003/cold/manifest.json",
+          "sha256": "f11724f117f0cb1e72e39437882ccb65568024137e1b5988f89a8f409e93a971"
+        },
+        "replay_archive": {
+          "bytes": 9019,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archive-gate-toy-002/fresh-transport/TRANSPORT.json",
+          "sha256": "3f3abbf3c401ed9812c3c4e2f9133ca1dc9e9d35d31c7a72de66028b56f33f15"
+        },
+        "replay_bundle": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-recorded-toy-003/fresh",
+        "request": {
+          "bytes": 725,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-inspection-tests/request.json",
+          "sha256": "e2c38a85eeb2a7d164eadd54186741775b7eab4dc4444cb3df93ba1db850cf70"
+        },
+        "runtime_auxiliary": {
+          ".cache/formal-origin-v1/selection.json": {
+            "bytes": 223,
+            "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archive-gate-toy-002/public-origin-selection.json",
+            "sha256": "a6f7cce1d1654d43c4cc7c05445a39c090e3ff4b490bf7646d8870835ae1c8af"
+          }
+        },
+        "runtime_identity": {
+          "bytes": 2564,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archive-gate-toy-002/runtime.json",
+          "sha256": "061d0f905304e4e109d86dd6aff5c31b8b98c44d0d1dbda591d91131aec0b542"
+        },
+        "selections": {
+          "bytes": 90,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archive-gate-toy-002/selections.json",
+          "sha256": "72e5dd396b513a6b4a281b57ce3ec88af4be5d1c6aa66f0871892384aee20148"
+        },
+        "supplied_views": {
+          "bytes": 13219,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-inspection-tests/views.json",
+          "sha256": "11dd3d804e3018b16079a1a1123182c6645f2abde989d849f64b7f84a09cceea"
+        }
+      },
+      "owner": "a_c",
+      "required_claims": [
+        "installed_lean",
+        "exact_candidate_lean_result"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "manager": {
+      "evidence": [],
+      "owner": "specification_methodology",
+      "required_claims": [
+        "installed_manager"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "native_plugin": {
+      "evidence": [],
+      "owner": "specification_methodology",
+      "required_claims": [
+        "installed_native_workflow"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "proof_reader": {
+      "evidence": [],
+      "owner": "specification_methodology",
+      "required_claims": [
+        "current_proof_reader"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "representation": {
+      "evidence": [],
+      "facts": {
+        "model": {
+          "bytes": 70776,
+          "path": "a_c/build_tenants/graphify/test_env/fixtures/toy_model.json",
+          "sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+        },
+        "model_canonical_sha256": "d275eb906b8ac2871e6fd7415065c1dabf915242e8583fe3e202bc723a18dec3",
+        "model_sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b"
+      },
+      "owner": "stdo_representation",
+      "required_claims": [
+        "source_current_model",
+        "source_current_map",
+        "independent_semantic_review"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    },
+    "unified_explorer": {
+      "evidence": [],
+      "owner": "stdo_representation",
+      "required_claims": [
+        "current_3d_2d_layered",
+        "source_files_navigation"
+      ],
+      "subject": null,
+      "version": "3.0.5"
+    }
+  },
+  "dependency_edges": [
+    {
+      "consumer": "stdo_representation",
+      "provider": "specification_methodology",
+      "relation": "exact_semantic_source"
+    },
+    {
+      "consumer": "stdo_representation",
+      "provider": "axiom_indexer",
+      "relation": "exact_validation_mechanics"
+    },
+    {
+      "consumer": "stdo_representation",
+      "provider": "a_c",
+      "relation": "exact_projection_and_formal_tools"
+    },
+    {
+      "consumer": "a_c",
+      "provider": "specification_methodology",
+      "relation": "exact_semantic_profile"
+    },
+    {
+      "consumer": "stdo_skills",
+      "provider": "specification_methodology",
+      "relation": "exact_native_workflow"
+    },
+    {
+      "consumer": "stdo_skills",
+      "provider": "stdo_representation",
+      "relation": "exact_current_representation"
+    },
+    {
+      "consumer": "stdo_skills",
+      "provider": "a_c",
+      "relation": "exact_tool_routes"
+    }
+  ],
+  "kind": "specification-stack.release-matched-cohort",
+  "native": null,
+  "native_preparation": {
+    "configuration": {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+      "sha256": "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353"
+    },
+    "manager_wheel": "stdo_toolchain-3.0.5-py3-none-any.whl",
+    "output_root": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release",
+    "package_path": "specification_methodology/v3",
+    "predecessor_native_commit": "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+    "scope": "Complete five-Product cohort: current methodology, native plugin, documentation, executable tools, proof evidence and host Skills; external binding preserves Product ownership."
+  },
+  "products": {
+    "a_c": {
+      "namespace": "a_c",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/a_c/v3.0.5",
+      "source_root": "a_c",
+      "subject": {
+        "sha256": "438336b48508e03da0fa79fa03643de49186609c5b21e89a4c949c1193c97b38"
+      },
+      "version": "3.0.5"
+    },
+    "axiom_indexer": {
+      "namespace": "axiom_indexer",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/axiom_indexer/v3.0.5",
+      "source_root": "axiom_indexer",
+      "subject": {
+        "sha256": "c9373d20d9237eba8dc74ae77f7634dba359d5df5816458873e75e98794aa460"
+      },
+      "version": "3.0.5"
+    },
+    "specification_methodology": {
+      "namespace": "specification_methodology",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/specification_methodology/v3.0.5",
+      "source_root": "specification_methodology/v3/build_tenants/common",
+      "subject": {
+        "sha256": "e68ae39e7992d4d9dd629cc8a64a023efe070ad3e90f287e846b8af8c2fadcd3"
+      },
+      "version": "3.0.5"
+    },
+    "stdo_representation": {
+      "namespace": "stdo_representation",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/stdo_representation/v3.0.5",
+      "source_root": "stdo_representation",
+      "subject": {
+        "sha256": "4d923f687831080d65f71b0bb8e2016ae328523ee11332fd6eac8f1fd7c03a33"
+      },
+      "version": "3.0.5"
+    },
+    "stdo_skills": {
+      "namespace": "stdo_skills",
+      "qualification": [],
+      "release_branch": null,
+      "release_ref": "refs/tags/stdo_skills/v3.0.5",
+      "source_root": "stdo_skills",
+      "subject": {
+        "sha256": "42b331802920017ccb3a6ccddc0594ac68e640d90554d61fd1127c15f0ab5526"
+      },
+      "version": "3.0.5"
+    }
+  },
+  "profile": "stable-five-product-v1",
+  "publication": {
+    "assets": [],
+    "expected_remote": {},
+    "external_manifest_asset": {
+      "name": "stack-release-v3.0.5.json",
+      "url": "https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5/stack-release-v3.0.5.json"
+    },
+    "preserved_immutable_refs": {},
+    "repository_url": "https://github.com/foolishimp/specification_methodology.git"
+  },
+  "qualification": {
+    "evidence": [],
+    "required_claims": [
+      "independent_release_review",
+      "complete_installed_cohort"
+    ]
+  },
+  "schema_version": 2,
+  "source": {
+    "source_identity_sha256": "c2ab8def0edebb28a4b499e2681a6150ec890a829a6cbb8972e26055b0bf7353"
+  },
+  "third_party_dependencies": []
+}

@@ -2,6 +2,8 @@
 
 The common requirements bind both build tenants' candidates. This file holds the requirements that come from this Product. The other files hold the rest:
 
+- [COMPLETE_RELEASE](COMPLETE_RELEASE.md): selected stable 3.0.5 five-Product cohort, source-current derived assets, installable tools and complete publication gates.
+
 - [PRINCIPLES](PRINCIPLES.md): the working foundations, the candidate first principles both tenants built from at C1, and their review questions.
 - [CAPABILITIES](CAPABILITIES.md): the capabilities required by the reconstruction and the questions that test their adequacy. Each trial binds its own subject and acceptance scope.
 - [ASSURANCE](ASSURANCE.md): preservation, assertion and observation obligations, mutual assurance, provenance, risk and targeted reassessment through construction and change.
@@ -13,7 +15,7 @@ The common requirements bind both build tenants' candidates. This file holds the
 - [COORDINATED_SKILLS](COORDINATED_SKILLS.md): selected 3.0.4 native skill handoff increment, preserving direct work, exact authority, bounded context and closed returns.
 - [REVIEW_FLOW](REVIEW_FLOW.md): selected 3.0.4 candidate amendment for bounded QA, separate landing/closure/release, linked findings and explicit Product gates.
 
-The working foundation statements in PRINCIPLES are content under evaluation, not installed law. The installed 2.5.1-rc.2 release is the law the builders work under, and it is the predecessor the new release evolves from.
+The working foundation statements in PRINCIPLES are content under evaluation, not installed law. Current work uses the adopted [3.0.4 development basis](../PRODUCT.md#current-development-basis). The original reconstruction requirements and their 2.5.1-rc.2 predecessor citations below retain that historical subject and basis; they are not current workflow entrypoints. The adoption leaves their acceptance obligations and evidence unchanged, and does not classify legacy concrete operations under 3.0.4.
 
 The Product Definition (`stdo_3.json`) adds two local axioms: the Product's [identity](../PRODUCT.md#product-identity-and-lineage) and [development isolation](../PRODUCT.md#development-isolation) sections. Its override and disambiguation lists are empty, so it overrides no installed rule and disambiguates no installed term.
 

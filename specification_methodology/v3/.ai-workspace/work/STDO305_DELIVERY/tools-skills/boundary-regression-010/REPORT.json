@@ -1,0 +1,112 @@
+{
+  "accepted_a_c_skills_source_files_unchanged": 111,
+  "actor": "/root/stdo305_tools_skills",
+  "after": {
+    "actual_case_alias_supported": true,
+    "all_native_preimages_unchanged": true,
+    "calls_by_test": {
+      "test_bootstrap_native_output_or_runtime_refuses_before_marker": 16,
+      "test_derive_and_materialize_external_or_standalone_still_work": 4,
+      "test_documented_default_transport_and_B_invocations_have_no_import_effects": 2,
+      "test_equal_ancestor_symlink_and_existing_outputs_preserve_preimage": 4,
+      "test_external_bootstrap_invokes_only_marker_and_retains_its_deliberate_failure": 2,
+      "test_proof_actual_case_aliases_refuse_including_raw_external_inputs": 6,
+      "test_proof_all_write_commands_refuse_whole_native_outputs": 6,
+      "test_proof_external_and_standalone_operations_preserve_native_and_originals": 12,
+      "test_runtime_destination_and_receipt_are_checked_together_before_effects": 8
+    },
+    "case_alias_fixture_observations": 49,
+    "execution": {
+      "bytes": 1235,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/after-final/execution.json",
+      "sha256": "5b4a0ddf6f8f677d4e2532e839fa6e8a21dbb64868e1f7aefaaa4d07ac9a3b62"
+    },
+    "negative_before_effects_refusals": 34,
+    "negative_bootstrap_invocations": 0,
+    "passed": 9,
+    "public_calls": 60,
+    "skipped": 0,
+    "tests": 9
+  },
+  "before": {
+    "execution": {
+      "bytes": 1242,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/before-final/execution.json",
+      "sha256": "d1f875a24ada36fb36412dfce65c282003de5dadbea92897665fd6d47a6f7ff9"
+    },
+    "failed_subcases": 29,
+    "native_changed_calls": 26,
+    "original_runtime_defect_witnesses": [
+      {
+        "bytes": 10185,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/before-final/fixtures/test_bootstrap_native_output_or_runtime_refuses_before_marker/False-output-True/observations/002/execution.json",
+        "sha256": "31288d455d504bf92ac75ca0b50d3cc6a82dc97143d5d84ca1530e89f518f610"
+      },
+      {
+        "bytes": 12128,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/before-final/fixtures/test_bootstrap_native_output_or_runtime_refuses_before_marker/False-runtime-True/observations/002/execution.json",
+        "sha256": "0d3dc040ab25570f3b3e8e7960d683c6f95872ea7f6e59100c5a19e69694b80e"
+      },
+      {
+        "bytes": 10182,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/before-final/fixtures/test_bootstrap_native_output_or_runtime_refuses_before_marker/True-output-True/observations/002/execution.json",
+        "sha256": "2cda1a2d6f96c4903ed629579ce954571c3cb329e53a7697fa7b850b2c2aa272"
+      },
+      {
+        "bytes": 12125,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/before-final/fixtures/test_bootstrap_native_output_or_runtime_refuses_before_marker/True-runtime-True/observations/002/execution.json",
+        "sha256": "db493d9db4749d9ac962489f4da528a26e54255bb99c71d8d3719119802a7b79"
+      },
+      {
+        "bytes": 11476,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/before-final/fixtures/test_runtime_destination_and_receipt_are_checked_together_before_effects/False-destination-True/observations/001/execution.json",
+        "sha256": "4492f1f69255663f195f1b54b99e430317b7c6edd2c79e292907bec4793c7193"
+      },
+      {
+        "bytes": 10303,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/before-final/fixtures/test_runtime_destination_and_receipt_are_checked_together_before_effects/False-receipt-True/observations/001/execution.json",
+        "sha256": "c11490815a03d4818bdb08143b0bf6a67eb2093fecb99d1bdf2c5fbb5f90ec52"
+      },
+      {
+        "bytes": 11470,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/before-final/fixtures/test_runtime_destination_and_receipt_are_checked_together_before_effects/True-destination-True/observations/001/execution.json",
+        "sha256": "09b068c87375c2ac19fa4020f84b0cf8149bde29f99e9ebb1c600b700765c920"
+      },
+      {
+        "bytes": 10297,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/before-final/fixtures/test_runtime_destination_and_receipt_are_checked_together_before_effects/True-receipt-True/observations/001/execution.json",
+        "sha256": "313c9641903533f91f6036a28778aec2f4c24f8813d7178d93f7d855e5b211ee"
+      }
+    ],
+    "public_calls": 60,
+    "tests": 9
+  },
+  "fixtures": "Synthetic selected source/profile and exact transport fixtures. Bootstrap is an explicit marker-only process exiting23; no Lean/compiler/download or model call.",
+  "invocation": "Ordinary documented Python with PYTHONDONTWRITEBYTECODE removed. Explicit -B variants isolate original storage failures from import bytecode failures.",
+  "limitations": [
+    "Same-family Writer checks; separate integration review pending.",
+    "Temporary synthetic native layouts are not final nativeA or full installed qualification.",
+    "No actual Lean establishment, host actor run, publication, acceptance or Git effect is asserted.",
+    "The marker bootstrap deliberately does not establish support; its incomplete result is retained."
+  ],
+  "loader_failure_before_fix": {
+    "bytes": 2771,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/boundary-regression-010/import-probe/RESULT.json",
+    "sha256": "e2c0c3657e58b8af9847faffc3c421671798086cf6f70cb81290e53bf7cbbea1"
+  },
+  "preservation": "Every call retains argv, stdout/stderr digests, and whole native file/directory hash/mode/mtime pre/post inventories. No preexisting fixture path was cleaned after refusal.",
+  "public_positive_scope": [
+    "Proof pack/split/exact materialization/request rewriting under installed entrypoint and standalone copy",
+    "External source materialization and runtime derivation under installed entrypoint and standalone copy",
+    "External bootstrap reaches exact marker stub and retains its deliberate incomplete return"
+  ],
+  "return": "candidate_ready for existing integration reviewer; Product source outside the one new test file was not edited by this Writer.",
+  "role": "Writer, not independent reviewer",
+  "schema": "stdo305.installed-boundary-regression/1",
+  "scope": "Public native immutability boundary for proof pack/split/materialize/request, source materialization, derive-runtime destination/receipt, bootstrap output/runtime and module-loading effects.",
+  "source_change": {
+    "bytes": 22970,
+    "path": "specification_methodology/v3/build_tenants/common-tools/test_installed_boundary.py",
+    "sha256": "4537ef5b5731551193a2b14f1f8f72ee3e08682cf91eb33aa440333f17d1c35c"
+  }
+}

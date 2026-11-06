@@ -1,131 +1,63 @@
-# STDO Representation Quickstart
+# STDO Representation 3.0.5 Quickstart
 
-Use the 2.5.1 RC1 program, map, native bundle and exact Axiom dependency
-bound by [the selected release record](releases/v2.5.1.md). This is a local
-construction candidate under its explicit grant; RC7 remains the published
-predecessor. Ordinary released use first verifies the exact published cohort.
-External callers retain their own Product Definition and accepted work/frame
-configuration; a represented rule does not silently replace that basis.
+Use the exact subject and same-version Axiom dependency bound by
+[the release record](releases/v3.0.5.md) and final cohort binding. The caller's
+own Product Definition, accepted frame and work grant remain operative.
 
-## 1. Verify the dependencies
+## Verify current identity
 
-From the coordinated Git source, the shared release checker verifies exact
-content, full member inventories and source closure:
+Check `VERSION`, the exact release inventory, source freeze, current model
+binding and conversion receipt before use. The canonical source snapshot is
+`build_tenants/a_c/representation/stdo-v3.0.5/source/`; it contains 68 frozen
+members. `current-binding.json` names its source identity and exact model.
+Final installed native manifest identity belongs to the external cohort binding.
 
-```sh
-python3 scripts/check_stack_release.py --phase content \
-  --revision refs/tags/stdo_representation/v2.5.1-rc.1
-```
+In an explicitly selected source candidate, the supplied invocation-local
+Binding Set routes `stdo://releases/v3.0.5/` to that exact snapshot. For an
+installed native release, bind the same URI to the verified Install root
+containing `standards/` and `plugins/`. Do not substitute a mutable neighboring
+checkout. Binding Sets are access coordinates, not authority or acceptance.
 
-Run that command at the repository root with the exact annotated cohort tags
-available. Bind their acquired identities to the retained publication receipt.
-The `published` phase verifies the immediate publication snapshot, including
-`main == commit B`. A permitted later bookkeeping commit changes that snapshot
-without invalidating the immutable releases. Prepublication construction uses
-the content and local-ref phases under its explicit grant.
+## Validate and select a bounded view
 
-The shared manager verifies the exact Source STDO Install:
+From the Representation Product root, use the verified Axiom Product:
 
 ```sh
-stdo verify v2.5.1-rc.1 \
-  --manifest-sha256 5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64
+python3 <axiom-product-root>/build_tenants/core/code/ac.py validate --program build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json --bindings build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json
 ```
 
-Use the Axiom Product root selected by the caller's dependency record, verify
-its seven-member inventory and executable/schema/contract digests against the
-release record, and set `AXIOM_INDEXER_ROOT` to that exact installation. Use
-`REPRESENTATION_ROOT` for the corresponding nine-member Representation Install.
-Source archives contain additional authority and evidence; only the declared
-members constitute each Product. Mutable sibling code does not substitute for
-the selected dependency.
-
-## 2. Validate the compression and index
-
-Prepare an invocation-local Binding Set in an authorized work directory:
-
-```json
-{
-  "kind": "axiom-indexer.binding-set",
-  "schema_version": 1,
-  "bindings": [{
-    "uri_prefix": "stdo://releases/v2.5.1-rc.1/",
-    "path": "/absolute/path/to/the/verified/2.5.1-RC1/Install"
-  }]
-}
-```
-
-The path is the Install root containing `standards/`. Set `STDO_BINDINGS` to
-that file. From the selected Representation Product root, validate to stdout:
+The map names five explicit indexes. For the current native work/control cone:
 
 ```sh
-python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" validate \
-  --program build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/axiomatic-program.json \
-  --bindings "$STDO_BINDINGS"
+python3 <axiom-product-root>/build_tenants/core/code/ac.py project --program build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json --map build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json --bindings build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json --frame-index urn:stdo-representation:frame-index:v3.0.5:native-work --mode reference-only
 ```
 
-To reproduce the map, add `--emit-map` with an explicitly writable destination
-and compare its bytes with the released `logical-constraint-map.json` beside
-the program. Binding Sets are local evidence, not portable Product members.
+Use `materialized` for unchanged authored rows of the same closure. Omitted
+`--output` writes stdout; `--output -` names a literal file. File outputs need
+an existing grant and must be separate from inputs and source. The native work
+selection contains 21 records, including its real nested control/issuer/host
+dependencies and unresolved actual-host evidence limit. It does not authorize
+work or certify isolation.
 
-## 3. Use the native skill
+## Source re-entry and native use
 
-Codex discovers `.agents/skills/stdo-representation`; Claude discovers
-`.claude/skills/stdo-representation`. Both resolve the same canonical bundle.
-Ask the agent to use `stdo-representation` for the bounded task. It verifies
-identities, reads the map, selects visible source-grounded frames, recovers
-sufficient task facts and valid judgments/rulings, re-enters source as needed,
-and returns the warranted result under the existing grant.
+Load the canonical `skills/stdo-representation/SKILL.md` through the host's
+actual supported skill mechanism. Workspace Codex/Claude discovery links point
+to that same bundle; distributed inventories contain regular files.
+Read [frame-index use](skills/stdo-representation/references/frame-index-use.md)
+for refusal, source-currentness and role boundaries.
 
-Direct sufficient work does not require an Executive appointment, new ticket
-or review round. Required independent assessment and reserved owner decisions
-remain conditions when their actual reference frames apply.
+Bring actual task facts, semantic judgments and owner rulings separately.
+Re-enter the exact owner for ambiguity, unsupported applicability, missing
+dependencies or changed normative premises. A historical judgment survives
+only its declared invalidators; equal source text alone is insufficient.
 
-## 4. Join an Executive request
+For a requested handoff, author an ordered array of `{label,text}` strings and
+use Axiom's pure `join --input <sections.json>` command. It selects no frames,
+rewrites no grants and invokes no model. A sufficient direct task needs no
+new ticket, coordination or approval merely to use this representation.
 
-For an actual bounded handoff, write an ordered array of caller-authored
-`{"label": "...", "text": "..."}` rows in an authorized work directory:
-
-```sh
-python3 "$AXIOM_INDEXER_ROOT/build_tenants/core/code/ac.py" join \
-  --input /authorized/path/ordered-sections.json
-```
-
-The pure joiner returns the exact labeled text to stdout. It selects no
-frames, rewrites no content and invokes no model. File output requires the
-applicable grant; omit `--output` for read-only use.
-
-## 5. Check the accepted basis
-
-For this source project:
-
-```sh
-stdo status --definition stdo_representation.json --verify
-```
-
-Follow that Definition's exact frame declaration and digest-bound decision.
-For an external project use its own Definition. Frame acceptance, exact-cut
-Product acceptance, publication and consumer adoption are separate relations;
-this guide does not create any of them.
-
-## 6. Use explicitly selected frame indexes
-
-The [frame-index guide](skills/stdo-representation/references/frame-index-use.md)
-provides the selected candidate's commands. Select the complete-update Worker or
-Reviewer index only when its declared question and scope apply. The interface
-integration and computational whole-path indexes expose their separately
-selected design, actual-path/work and ordinary-user claims. Ordinary tasks
-use relevant actual source frames and map entries. Both views preserve the
-same selected supporting closure and uncertainty; the materialized view
-resolves unchanged authored content.
-
-Supply actual task facts, residual judgments and owner rulings separately.
-A plan digest does not grant operation acceptance; stale source evidence does
-not complete an update. Unknown effects require permitted observation before
-dependent completion or unsafe retry, without inventing a new failure or
-revoking still-applicable original authority.
-
-## Historical paths
-
-Earlier RC4 cuts and `dogfood/t009-frame-projection/run-001` through `run-004`
-remain exact historical evidence. The semantic_compile, GTL, JSON Schema and
-prior carrier tools remain outside the current Product and installed path.
+Model/carrier preservation, source fidelity review, real Lean checking,
+native usability, publication and consumer adoption are distinct evidence.
+Historical 2.x artifacts remain historical; they do not substitute for this
+current model or its exact release dependencies.

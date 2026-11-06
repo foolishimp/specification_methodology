@@ -1,4 +1,4 @@
-# Claude Fable 5 Layout
+# Claude request layout
 
 Put the source-linked context before the operative request. Use clear labels or
 XML-style tags when they make the boundary easier to parse.
@@ -31,12 +31,9 @@ all dependency roles, literal qualifications, exceptions and residuals. Keep
 source-grounded rules separate from supplied C, semantic J and owner O; the
 projection does not choose applicability or extend the original grant.
 
-This layout follows the Claude Fable 5 guidance for brief steering, explicit
-boundaries and purpose, structured long context, and task instructions after
-long-form inputs.
-
-Guidance basis:
-<https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5>
-and
-<https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices>,
-retrieved 2026-08-31.
+This is the Representation Product's optional presentation convention, not a
+claim about any model version or an enforced host policy. Bind the actual
+Claude session, inherited context, available tools and permissions. Own control
+intake precedes subject acquisition; use the selected basis's actual host
+adapter when a strict tool-acquisition boundary is required. A fresh session or
+layout alone proves neither isolation nor independence.

@@ -1,42 +1,22 @@
 # Axiom Indexer Build Tenant
 
-Identity: `urn:stdo-representation:build-tenant:axiom-indexer`
+Identity: `urn:stdo-representation:build-tenant:axiom-indexer`.
 
-## Selected dependency
+The current subject is `representation/stdo-v3.0.5/`. Its program is derived
+from the canonical current a_c model, not separately authored. Exact source,
+model, conversion configuration, preservation, validation and projections are
+retained together. The selected 3.0.5 Axiom provider owns `ac_model.py` and
+`ac.py`; this tenant contains no copied executable or independent engine.
 
-Use the exact 2.5.1 RC1 Axiom Indexer dependency and full seven-member inventory
-bound by [the Representation release record](../../releases/v2.5.1.md) and
-[cohort carrier](../../../stack_release.json). Those records own the exact
-source, executable, schema, output contract and cut identities. This tenant
-contains no local executable, copied validator or second materializer.
+The five current indexes bind source-owned Worker/Reviewer frames for native
+work/control, common F_D, Product composition, finding reports and source-closed
+release. Each retains the actual a_c governing closure for its stated seed.
+Both Axiom projection modes were checked against that exact membership.
+Applicability, task facts, semantic judgment and operation authority remain
+external to these deterministic views.
 
-Axiom owns resolution, validation, logical-index generation, explicit
-reference-only/materialized projections and exact ordered text joining.
-An LLM authors and selects semantics; code follows declared references.
-
-## Product artifacts
-
-```text
-representation/stdo-v2.5.1-rc.1/
-  axiomatic-program.json
-  logical-constraint-map.json
-```
-
-The program is the canonical authored semantic compression; its map is a
-deterministic index over that unchanged program. Local bindings, source-corpus
-records and validation reports supply external exact-source evidence.
-The complete [native skill](../../skills/stdo-representation/SKILL.md) provides
-the installed route. A dogfood directory is not a runtime dependency.
-
-## Selected frame-index construction
-
-The [semantic design](FRAME_INDEX_PROJECTIONS.md) binds the existing complete-update
-Worker/Reviewer and Executive indexes plus the interface-integration and
-computational whole-path indexes, with shared rules, supporting premises,
-conditions, exceptions and residuals. The current published/candidate subject
-is identified by the exact release record; earlier authored runs retain their
-own evidence. Applicable task facts, semantic judgments, independent review
-and owner rulings remain external to the deterministic projections.
-
-No complete admitted `a_c` model, automatic frame selection, GTL,
-GraphFunction or model runtime is claimed by this tenant.
+[The current-model design](../a_c/design/CURRENT_MODEL.md) and
+[release record](../../releases/v3.0.5.md) own the current relation.
+`FRAME_INDEX_PROJECTIONS.md` retains the historical 2.x design and its evidence;
+its old canonical-program assumption is superseded by REQ-P-CURRENT-MODEL.
+Old `representation/stdo-v2.*` directories remain exact historical outputs.

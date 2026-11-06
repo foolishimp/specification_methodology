@@ -1,0 +1,331 @@
+[
+  {
+    "cone": "F_D, totality, evaluation, exhaustion and sufficiency",
+    "sources": [
+      "standards/AXIOMATIC_CALCULUS.md",
+      "standards/ACTIVATION.md",
+      "standards/FOUNDATIONS.md",
+      "standards/examples/DETERMINISTIC_CONTRACTS.md"
+    ],
+    "changed_meaning": "Replace evaluation-only generic F_D; keep deterministic construction, totality, explicit authority, predicate-relative exhaustion and continuation-sensitive sufficiency distinct.",
+    "keys": [
+      "common_fd",
+      "fd_eligibility_results",
+      "fd_evaluation_preserves_subject",
+      "exhaustion_preserves_result_distinctions",
+      "sufficiency_preserves_distinguishing_facts"
+    ],
+    "counterexamples": [
+      {
+        "input": "A terminating clock-dependent routine omits the clock from its basis",
+        "required": "F_D eligibility is not established; dependency contract violation is not cured by a deterministic label."
+      },
+      {
+        "input": "A sort mutates its input then reports the result sorted",
+        "required": "That proves the post-state predicate only; it is not unchanged-subject evaluation of the original."
+      },
+      {
+        "input": "Budget expires before sortedness is known but a closed report is returned",
+        "required": "Report availability may be satisfied; sortedness remains indeterminate."
+      },
+      {
+        "input": "Candidate digest equal, one assessment unperformed and another indeterminate",
+        "required": "Retain different continuation and standing facts."
+      }
+    ],
+    "record_ids": {
+      "common_fd": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a8cafeeacc2f8bc2deda01690eaaf31b",
+      "fd_eligibility_results": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:0016b176dc386a2ff2bb8aef0a1b5de5",
+      "fd_evaluation_preserves_subject": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:7715fec956660f5223e30edda07d78cd",
+      "exhaustion_preserves_result_distinctions": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:34acd3909e2bab07ae79cfb64247edc0",
+      "sufficiency_preserves_distinguishing_facts": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1d9d7a97edc9454994d42a4d6005b694"
+    }
+  },
+  {
+    "cone": "recursive Product composition and issuer/recipient authority",
+    "sources": [
+      "standards/PRODUCT_DEFINITION.md"
+    ],
+    "changed_meaning": "Explicit directed per-activation authority and information eligibility, standalone entry, material joins and currentness across depth/sharing.",
+    "keys": [
+      "product_identity_and_join",
+      "edge_contract_fields",
+      "no_transitive_grant_union",
+      "context_derivation_and_exposure",
+      "frontier_cycles_and_replacement",
+      "exact_source_and_material_change"
+    ],
+    "counterexamples": [
+      {
+        "input": "A→B and B→C exist; A requests C directly",
+        "required": "Check A’s actual grant and eligibility; no transitive permission."
+      },
+      {
+        "input": "Same leaf reached through a second route after forbidden exposure",
+        "required": "No union of grants and no cleansing of exposure."
+      },
+      {
+        "input": "Every component test passes but quantity units disagree at the join",
+        "required": "Composed outcome is not established."
+      },
+      {
+        "input": "A Product is entered alone with its own complete dependencies",
+        "required": "Do not demand its parent context absent a declared prerequisite."
+      }
+    ],
+    "record_ids": {
+      "product_identity_and_join": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:f154f9cde47886c10fbd42ffc5a191eb",
+      "edge_contract_fields": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a292c2e2f91c08e7bb15dc8fbb39062d",
+      "no_transitive_grant_union": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1772737a5815b2798326f45cd9051c97",
+      "context_derivation_and_exposure": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:96c5964ba764a6795da51c9c9cb72e72",
+      "frontier_cycles_and_replacement": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:50f3c26fec60a291bfb20925a8ddab54",
+      "exact_source_and_material_change": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:f226fa69dcfcfcd76be346ab3d60e777"
+    }
+  },
+  {
+    "cone": "review severity, report effects, QA and currentness",
+    "sources": [
+      "standards/EXECUTIVE_BASELINE.md",
+      "standards/EVALUATION.md",
+      "standards/TICKETS.md"
+    ],
+    "changed_meaning": "Selected severity convention and optional priority policy remain separate; granted landing, closure and release have distinct gates; report-only mutation does not confer repair authority; recheck is condition-driven.",
+    "keys": [
+      "severity_anchors_and_three",
+      "triage_roles_and_policy",
+      "landing_and_downstream_currentness",
+      "review_recheck_triggers",
+      "finding_report_effect_boundary"
+    ],
+    "counterexamples": [
+      {
+        "input": "Severity 3 has unknown downstream blast radius",
+        "required": "Do not call the issue contained; retain assessment uncertainty and route material impact."
+      },
+      {
+        "input": "Granted candidate landing with pending QA",
+        "required": "Pending review alone is no landing hold; required review still affects dependent closure/release."
+      },
+      {
+        "input": "Reviewer is allowed to write report R",
+        "required": "Only R is authorized; no candidate repair or priority/disposition follows."
+      },
+      {
+        "input": "A repair has exact reproduction and suite evidence, with no recheck trigger",
+        "required": "Do not require another review automatically; verification is still not independent review."
+      }
+    ],
+    "record_ids": {
+      "severity_anchors_and_three": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:33c9bfe60b1957ced00291ea6a3d730c",
+      "triage_roles_and_policy": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:cde3a0bd29cebd3a9378726078009ccc",
+      "landing_and_downstream_currentness": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:398698aa5495d85a5ad36479a8ca57a6",
+      "review_recheck_triggers": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:b8abf3c4dcae036cda33885639544f34",
+      "finding_report_effect_boundary": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:634ec16a1e1fc53db0bc5fcf70167e34"
+    }
+  },
+  {
+    "cone": "stable release, exact current source closure and deterministic migration",
+    "sources": [
+      "standards/RELEASE.md",
+      "standards/PRODUCT_DEFINITION.md",
+      "standards/schemas/installed-release-manifest.schema.json"
+    ],
+    "changed_meaning": "Stable-v1 is an explicitly marked immutable cut on a fresh line, alongside preserved historical RC rules. Current cohort derivation freezes all authoritative source then binds completed native payload externally. F_D migration requires actual eligibility.",
+    "keys": [
+      "stable_identity_fail_closed",
+      "adoption_exact_plan",
+      "source_freeze_then_derived_payload",
+      "native_then_external_binding",
+      "fd_migration_dispositions"
+    ],
+    "counterexamples": [
+      {
+        "input": "A historical bare version selector is presented as stable",
+        "required": "Refuse profile reinterpretation; preserve historical identity."
+      },
+      {
+        "input": "Native workflow owner omitted from S to avoid a digest cycle",
+        "required": "Source freeze is incomplete; include it and regenerate affected payload."
+      },
+      {
+        "input": "Old graph and new version label without current grounds",
+        "required": "Not a current source-matched representation."
+      },
+      {
+        "input": "Legacy deterministic helper has no termination argument or chosen remedy",
+        "required": "Unresolved classification, no automatic common F_D or F_P."
+      }
+    ],
+    "record_ids": {
+      "stable_identity_fail_closed": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:7eb3d14668a66acf4824d576dc5be6ad",
+      "adoption_exact_plan": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:b764f549b80df601ac3e0246fd4a0f36",
+      "source_freeze_then_derived_payload": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:ee30f0b1075b8138c78bda3e7ec514b4",
+      "native_then_external_binding": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d02591e735c7ae61ddf5c9449948429d",
+      "fd_migration_dispositions": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bea34e3623d1af6ddbebd548f5388998"
+    }
+  },
+  {
+    "cone": "native control intake and host acquisition",
+    "sources": [
+      "plugins/spec/references/COORDINATED_HANDOFF.md",
+      "plugins/spec/references/HOST_BINDING.md",
+      "plugins/spec/skills/stdo-work/SKILL.md",
+      "plugins/spec/skills/stdo-review/SKILL.md"
+    ],
+    "changed_meaning": "Own control first for every actor; issuer and recipient authority differ; packet is admitted-clause projection, not new procedure; actual host limits and effects govern continuation.",
+    "keys": [
+      "own_intake_before_subject",
+      "issuer_packet_bindings",
+      "issuer_outputs_and_dispatch",
+      "recipient_verification_and_return",
+      "return_reliance_and_continuation",
+      "actual_host_enforcement_uninstantiated",
+      "native_work_requires_control"
+    ],
+    "counterexamples": [
+      {
+        "input": "Issuer can see source X but recipient excludes X; issuer inlines a summary",
+        "required": "Recipient eligibility still governs; summary cannot cleanse prohibited source."
+      },
+      {
+        "input": "Recipient gets a packet with unknown grant digest",
+        "required": "Verify controls first and return missing binding without subject reads."
+      },
+      {
+        "input": "Tool command prints excluded filenames and redaction happens afterward",
+        "required": "Contradiction before dispatch; later redaction does not undo acquisition."
+      },
+      {
+        "input": "Actor timeout after an effectful operation",
+        "required": "Effect remains unknown; reconcile before retry."
+      }
+    ],
+    "record_ids": {
+      "own_intake_before_subject": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:79e0b9d751458cd38e955d1b4a1e2889",
+      "issuer_packet_bindings": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:5def4ae0bd1038ee029105208cbb54a2",
+      "issuer_outputs_and_dispatch": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:814e0ce702aa1648a05b59502de64dbf",
+      "recipient_verification_and_return": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a56fc9f56e5409b738c8f59c2d09eb21",
+      "return_reliance_and_continuation": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:6d77d124f18fdb7af546f68428efbb56",
+      "actual_host_enforcement_uninstantiated": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:3aefacf2fe0b450b760b5bca67a02c82",
+      "native_work_requires_control": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:8518f243ea746ac5dc74561a36001990"
+    }
+  },
+  {
+    "cone": "Repair S3: host adapter applicability",
+    "sources": [
+      "plugins/spec/references/HOST_BINDING.md",
+      "plugins/spec/references/COORDINATED_HANDOFF.md"
+    ],
+    "changed_meaning": "Bounded correction of the falsified predecessor under unchanged source S; see exact before/after fields and preserved cases in repair-001.",
+    "keys": [
+      "claude_host_boundary"
+    ],
+    "record_ids": {
+      "claude_host_boundary": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:225cc175cf584eef5d5d3da8821bf6a7"
+    },
+    "counterexamples": [
+      {
+        "id": "S3-direct-sufficient-tools",
+        "input": {
+          "host": "Claude",
+          "admitted": true,
+          "selected_Product_tools_sufficient": true,
+          "strict_boundary_selected": false,
+          "Claude_policy_hook_installed": false
+        },
+        "required": "The absence of the optional Claude adapter does not invalidate this direct task; use the already-selected sufficient Product tools."
+      },
+      {
+        "id": "S3-selected-strict-adapter",
+        "input": {
+          "host": "Claude",
+          "strict_boundary_selected": true,
+          "Claude_adapter_selected": true,
+          "required_policy_hook_missing": true
+        },
+        "required": "The selected adapter claim remains unsupported without its actual binding; no ordinary prompt or actor label supplies it."
+      }
+    ]
+  },
+  {
+    "cone": "Repair S4: pending migration alternatives",
+    "sources": [
+      "standards/RELEASE.md"
+    ],
+    "changed_meaning": "Bounded correction of the falsified predecessor under unchanged source S; see exact before/after fields and preserved cases in repair-001.",
+    "keys": [
+      "fd_migration_dispositions"
+    ],
+    "record_ids": {
+      "fd_migration_dispositions": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bea34e3623d1af6ddbebd548f5388998"
+    },
+    "counterexamples": [
+      {
+        "id": "S4-gap-remediation-only",
+        "input": {
+          "new_kind_eligibility_established": false,
+          "termination_proof_gap_identified": true,
+          "remediation_identified": true,
+          "bounded_successor_selected": false
+        },
+        "required": "pending-identified, with only exact lawful legacy standing and no successor F_D claim"
+      },
+      {
+        "id": "S4-selected-bounded-successor",
+        "input": {
+          "new_kind_eligibility_established": false,
+          "bounded_successor_selected": true,
+          "successor_remediation_obligation_identified": true,
+          "legacy_termination_proof_established": false
+        },
+        "required": "pending-identified for the separately declared successor; its contract does not retrospectively prove the legacy operation total"
+      },
+      {
+        "id": "S4-no-remediation-or-successor",
+        "input": {
+          "new_kind_eligibility_established": false,
+          "identified_gap_remediation": false,
+          "selected_bounded_successor": false
+        },
+        "required": "unresolved successor classification, neither common F_D nor automatic F_P"
+      }
+    ]
+  },
+  {
+    "cone": "Repair S4: supplied owners and retained independent limits",
+    "sources": [
+      "standards/ACTIVATION.md",
+      "standards/FOUNDATIONS.md"
+    ],
+    "changed_meaning": "Bounded correction of the falsified predecessor under unchanged source S; see exact before/after fields and preserved cases in repair-001.",
+    "keys": [
+      "prior_43aacce1d3f718320440fc9987a05d82",
+      "prior_ee54a35b161f7a01b98adb1fe788e2c8"
+    ],
+    "record_ids": {
+      "prior_43aacce1d3f718320440fc9987a05d82": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:5f0c2c26417f92f722617f981b728a66",
+      "prior_ee54a35b161f7a01b98adb1fe788e2c8": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:0cdfa38e802b13e04ed4835001f27d06"
+    },
+    "counterexamples": [
+      {
+        "id": "S4-activation-owner-present",
+        "input": {
+          "supplied_owner": "standards/ACTIVATION.md",
+          "supplied_section": "3. Step results and disposition"
+        },
+        "required": "Do not report this supplied source as absent; concrete task evidence remains a separate question."
+      },
+      {
+        "id": "S4-result-algebra-owner-present",
+        "input": {
+          "supplied_owner": "standards/FOUNDATIONS.md",
+          "supplied_sections": [
+            "Results",
+            "Conjunction of results"
+          ]
+        },
+        "required": "Do not report the supplied algebra and conjunction as absent; recording laws is not performing an evaluation."
+      }
+    ]
+  }
+]

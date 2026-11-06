@@ -1,8 +1,62 @@
 # Project Reference-Frame Basis
 
-This file binds the installed release's reference frames to this source project and attaches actors to their activations. Its Worker, Reviewer and Executive arrangement is the selected construction configuration under the [context-management contract](PRODUCT.md#construction-and-context-management). It separates attention to bounded tasks, longer-term delivery and the assessment this contract requires. These named responsibilities are not the method's complete set of possible configurations. Each activation receives the material and admitted authority for its task.
+## Current Declaration
 
-## Declaration
+| Coordinate | Binding |
+|---|---|
+| Declaration | urn:stdo-3:reference-frame-basis:builder-3.0.4 |
+| Product | urn:stdo:product-definition:stdo-3 |
+| Governing method | stdo://releases/v3.0.4/ |
+| Manifest SHA256 | 102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b |
+| Adopting authority | Owner's exact [builder-adoption instruction](../.ai-workspace/work/STDO304_BUILDER_ADOPTION/INTAKE.json), projected by [Product](PRODUCT.md#current-development-basis) |
+| Subject | Future work in this source project, within each exact current grant |
+
+The adopted [REFERENCE_FRAME](stdo://releases/v3.0.4/standards/REFERENCE_FRAME.md),
+[ACTIVATION](stdo://releases/v3.0.4/standards/ACTIVATION.md),
+[EVALUATION](stdo://releases/v3.0.4/standards/EVALUATION.md) and
+[EXECUTIVE_BASELINE](stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md)
+now supply the governing frame, activation, evaluation and coordination law.
+The [versioned guide](../development/STDO_3_0_4.md) routes verified native skills
+and tools. No mutable source or historical frame replaces these owners.
+
+## Activations And Owners
+
+The existing common-pen and separate Executive/Writer/Reviewer responsibilities
+continue under [Construction Authority](PRODUCT.md#construction-authority).
+Each new task binds its exact subject, current grant, admitted carrier,
+permitted reads/effects, actor capabilities and limits, applicable evaluations,
+result consumer and durable evidence surface. A role grants no operation.
+
+| Activation | Current responsibility and boundary |
+|---|---|
+| Executive | Coordinate within the owner grant, consume bounded closed results and choose an already-authorized next action. No file or Git mutation. |
+| Writer | The separately activated common pen or granted tenant actor performs bounded effects in its exact territory, checks them, records evidence and returns the exact subject. |
+| Reviewer | Independently assess the frozen subject and applicable obligations; no repair and no review of material authorship as independent evidence. Exact independence conditions and limits belong to that assessment grant. |
+
+Common meaning and acceptance remain with the Product owner. An existing exact
+owner instruction can admit its bounded implementation without another approval
+round. Work-carrier selection follows installed
+[TICKETS §5](stdo://releases/v3.0.4/standards/TICKETS.md#5-from-carrier-to-execution).
+Applicable obligations and closed results use the selected release's law;
+missing authority, uncertain applicability, subject drift and unavailable
+required capabilities withhold the dependent action or claim. The current
+host supplies ordinary tools and instruction-following, not a proven exact-file
+acquisition gate or clean-room boundary.
+
+This adoption carries forward these generic responsibilities only. Original
+C3 concrete operations, six-criterion acceptance, trials and evidence keep
+their historical basis below. Their reuse under 3.0.4 needs task-specific
+applicability and any required deterministic-operation classification; no
+blanket compatibility, renewed qualification or new method acceptance follows.
+
+## Historical C3 Scope
+
+The remainder preserves the original reconstruction configuration on
+2.5.1-rc.2. It locates old contracts and evidence and does not activate future
+work or override the current declaration. Historical actor assignments and
+acceptance standing are unchanged.
+
+## Historical C3 Declaration
 
 | Coordinate | Binding |
 |---|---|
@@ -15,7 +69,7 @@ This file binds the installed release's reference frames to this source project 
 
 The installed [Reference Frame Method](stdo://releases/v2.5.1-rc.2/standards/REFERENCE_FRAME_METHOD.md#reference-frame-laws) and its [baseline](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#canonical-compression) supply the roles and the rules for evaluation. This binding copies no profile and creates no runtime.
 
-## Activations And Owners
+## Historical C3 Activations And Owners
 
 The rows bind the installed baseline frames under the [C3 Construction Contract](PRODUCT.md#c3-construction-contract) and [Cross-Synthesis](PRODUCT.md#cross-synthesis). Their context selection follows the [bounded-transition and frame requirement](requirements/README.md#bounded-transitions-and-reference-frames). Writer is the Worker specialisation for document and record effects here. Current actor assignments and exact input snapshots are recorded in each tenant's admitted contract; a grant to the Codex line does not activate the Claude line. An actor without the required binding can be given no dependent activation.
 

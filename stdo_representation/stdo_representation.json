@@ -1,5 +1,5 @@
 {
-  "$schema": "stdo://releases/v2.5.1-rc.1/standards/schemas/product-definition.schema.json",
+  "$schema": "stdo://releases/v3.0.4/standards/schemas/product-definition.schema.json",
   "kind": "stdo.product-definition",
   "product": {
     "definition_id": "urn:stdo:product-definition:stdo-representation",
@@ -15,17 +15,17 @@
       "source": {
         "repository": "https://github.com/foolishimp/specification_methodology.git"
       },
-      "selector": "stdo://channels/2.5.1",
+      "selector": "stdo://channels/3.0.4",
       "basis": {
-        "uri": "stdo://releases/v2.5.1-rc.1/",
-        "manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64"
+        "uri": "stdo://releases/v3.0.4/",
+        "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
       }
     },
     "additional_authorities": [],
     "entrypoints": [
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/authority_compressions/stdo_bootstrap.md"
+        "uri": "standards/frames/bootstrap.md"
       },
       {
         "basis": "#/constitution/stdo/basis",
@@ -33,11 +33,11 @@
       },
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/REFERENCE_FRAME_METHOD.md"
+        "uri": "standards/REFERENCE_FRAME.md"
       },
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/STDO_REFERENCE_FRAME_BASELINE.md"
+        "uri": "standards/EXECUTIVE_BASELINE.md"
       },
       {
         "basis": "#/constitution/stdo/basis",
@@ -45,11 +45,19 @@
       },
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/IDENTITY_METHOD.md"
+        "uri": "standards/IDENTITY.md"
       },
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/RELEASE_METHOD.md"
+        "uri": "standards/RELEASE.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/ACTIVATION.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/EVALUATION.md"
       }
     ],
     "agent_bootstrap": {
@@ -79,11 +87,11 @@
         "term": "Executive",
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [
-          "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive"
+          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#executive"
         ],
-        "resolves_to": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+        "resolves_to": "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#executive",
         "authority": [
-          "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive",
+          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#executive",
           "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
         ],
         "basis": [
@@ -98,11 +106,11 @@
         "term": "Worker",
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [
-          "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker"
+          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#worker"
         ],
-        "resolves_to": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+        "resolves_to": "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#worker",
         "authority": [
-          "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#worker",
+          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#worker",
           "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
         ],
         "basis": [
@@ -117,11 +125,11 @@
         "term": "Reviewer",
         "context": "urn:stdo-representation:bounded-context:product",
         "disambiguates": [
-          "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer"
+          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#reviewer"
         ],
-        "resolves_to": "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+        "resolves_to": "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#reviewer",
         "authority": [
-          "stdo://releases/v2.5.1-rc.1/standards/STDO_REFERENCE_FRAME_BASELINE.md#reviewer",
+          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#reviewer",
           "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
         ],
         "basis": [
@@ -138,7 +146,7 @@
       "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
       "authority": [
         "./specification/PRODUCT.md#product-disposition-authority",
-        "./.ai-workspace/decisions/20260920_251_rc1_frame_basis_acceptance.json"
+        "./.ai-workspace/decisions/20261106_STDO305_configuration.json"
       ],
       "applies_to": [
         "urn:stdo:product-definition:stdo-representation"
@@ -163,6 +171,16 @@
         ],
         "implementation": [
           "./build_tenants/axiom_indexer/representation/"
+        ]
+      },
+      {
+        "id": "urn:stdo-representation:build-tenant:a-c",
+        "root": "./build_tenants/a_c/",
+        "design": [
+          "./build_tenants/a_c/design/CURRENT_MODEL.md"
+        ],
+        "implementation": [
+          "./build_tenants/a_c/representation/"
         ]
       }
     ]
@@ -193,6 +211,15 @@
         "./specification/PRODUCT.md#exact-dependency-bases",
         "./specification/requirements/REQ-P-CANDIDATE-VALIDATION.md#imported-validation-boundary",
         "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#frame-use-relation"
+      ]
+    },
+    {
+      "product_definition": "../a_c/stdo_a_c.json",
+      "target_definition_id": "urn:stdo:product-definition:a-c-implementations",
+      "relation": "./specification/PRODUCT.md#a-c-provider-relation",
+      "contracts": [
+        "./specification/requirements/REQ-P-CURRENT-MODEL.md",
+        "./build_tenants/a_c/design/CURRENT_MODEL.md"
       ]
     }
   ]

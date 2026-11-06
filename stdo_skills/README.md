@@ -1,5 +1,7 @@
 # STDO Skills
 
+Current delivery: the [3.0.5 contract](specification/RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+
 Both tenants now include a nominated-project representation workflow. Ask:
 “Build an a_c representation of `/path/to/my-project`.” Explicit entries are
 Codex `$stdo-work` and Claude `/stdo-tool-operations`. The current session authors

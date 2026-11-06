@@ -1,5 +1,7 @@
 # Project reference-frame basis
 
+Current delivery: the [3.0.5 contract](RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+
 Identity: `urn:stdo-skills:frame-basis:initial:1`.
 Status: selected for bounded construction by Root at common inventory
 `a6d348b8385ea453ce29362fb9d74559304b1b91743b3c9ea31a83a9f02b5f2d`,

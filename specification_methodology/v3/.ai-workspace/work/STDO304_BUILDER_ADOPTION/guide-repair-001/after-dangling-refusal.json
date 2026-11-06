@@ -1,0 +1,15 @@
+{
+  "shell": [
+    "sh"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.stdo/builder-adoption-guide-repair-001-cgy28goh/dangling-case",
+  "environment_binding": {
+    "STDO_RELEASE": "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+    "STDO_TOOLS": "unset before shell invocation"
+  },
+  "script": "set -eu\nSTDO_TOOLS=\"$(pwd -P)/.stdo/tools/3.0.4\"\npython3 -I -B \"$STDO_RELEASE/standards/tooling/materialize.py\" check\nif [ -e \"$STDO_TOOLS\" ] || [ -L \"$STDO_TOOLS\" ]; then\n  python3 -I -B \"$STDO_RELEASE/standards/tooling/materialize.py\" verify-tree \\\n    --destination \"$STDO_TOOLS\"\nelse\n  mkdir -p .stdo/tools\n  python3 -I -B \"$STDO_RELEASE/standards/tooling/materialize.py\" materialize \\\n    --destination \"$STDO_TOOLS\"\n  python3 -I -B \"$STDO_RELEASE/standards/tooling/materialize.py\" verify-tree \\\n    --destination \"$STDO_TOOLS\"\nfi\n",
+  "script_sha256": "180b639b9686cf27fb9566423a85b6a57780ad6b24a6af48fb90e902f920e241",
+  "exit_code": 2,
+  "stdout": "{\n  \"status\": \"checked\",\n  \"version\": \"3.0.4\",\n  \"source_commit\": \"9c9626ffd20ea88a75ac8143802c13f4f828ec1c\",\n  \"source_files\": 191,\n  \"source_bytes\": 25841956,\n  \"archive_sha256\": \"172eeb57040004365671372294e5c2a42833a0f574224fb66c57cf5a30c5d4e0\"\n}\n",
+  "stderr": "{\"status\": \"refused\", \"reason\": \"redirected path: /Users/jim/src/apps/specification_methodology/specification_methodology/v3/.stdo/builder-adoption-guide-repair-001-cgy28goh/dangling-case/.stdo/tools/3.0.4\"}\n"
+}

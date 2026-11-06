@@ -1,0 +1,14 @@
+# Required installed native actor frontier
+
+Run only after the actual nativeA installation, explicit-store runtime anchor, writable a_c runtime derivation, and both host packages are verified. Do not run native actors concurrently with large Lean executions. Each host uses a fresh disposable target, its own complete installed skill binding and a fresh CLI session at requested `xhigh`. Retain actual CLI argv, configuration, requested model/effort, any resolved-model observation, transcript, output artifacts and exact producer/input/output hashes. No assertion of an unreported resolved model, clean-room isolation or cross-family review is made. User/global configuration is not mutated.
+
+The selected claim is four concrete behaviors per host:
+
+1. Invoke the installed project extension to prepare, acquire a task, author a small grounded project representation, submit and build it through the public provider. The nominated fixture retains its own selected Product basis. Read the exact current installed formal evidence through its owner inspector and explain the structural guarantee, selected 21-record dependency closure and unresolved host residual without claiming source-prose faithfulness.
+2. Read the installed native work/admission contract and exercise controlled policies missing issuer or recipient grant. Preserve the actual refusal or rejected admission and show that no dependent effect occurs. The Skills runtime anchor supplies no grant or Product adoption.
+3. Encounter a retained uncertain-effect observation with an actual public retry boundary. Acquire the existing activation/effect evidence and return through the native recovery contract; do not invent completion or issue a replacement activation to reset history. Record the exact observed operation and return.
+4. Use the installed native review route on a bounded controlled candidate and return supported finding/evidence with the selected 1-highest–5-lowest severity convention. Preserve grade and downstream-impact reasoning; priority, disposition and release decisions remain with the deciding actor.
+
+The deterministic case setup may construct explicit grants and inputs under this task's existing setup grant. It does not manufacture a host's performed operations or semantic return. Actual CLI transcripts and file effects determine whether each host satisfied the case. A mandatory failure remains unresolved until repaired or returned to Executive.
+
+Separately, a controlled native305 public Context → preflight → dispatch path will consume the actually checked current 21-record view. It will bind and compare delivered stdin/view bytes, and exercise omission and stale-proof refusal. Recipient route grants remain independent of proof success. Installed proof support may differ from construction support; in that case run a new installed current verification and retain the actual derivation, never relabel the construction proof.

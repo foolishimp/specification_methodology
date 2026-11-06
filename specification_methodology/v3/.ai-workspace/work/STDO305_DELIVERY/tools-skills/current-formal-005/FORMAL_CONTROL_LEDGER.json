@@ -1,0 +1,550 @@
+{
+  "actual_negative_controls": [
+    {
+      "case": "budget",
+      "checked_claims": [
+        "imported-model-well-formedness",
+        "whole-model-source-correspondence",
+        "declared-closure-and-projection",
+        "record-budget-result"
+      ],
+      "elapsed_seconds": 294.282725,
+      "execution": {
+        "bytes": 20290,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/budget/execution/execution.json",
+        "sha256": "ce6d83c5d36f346d04c2a88de32acec53ed1f8e7914e90ab86edf24c3adcf4af"
+      },
+      "manifest": {
+        "bytes": 5448,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/budget/evidence/manifest.json",
+        "sha256": "bb7e27c43042f358f8c1e7992b84107c59035461bfcd75dba731b530ef841ddd"
+      },
+      "maxrss_bytes_darwin": 12585140224,
+      "model": {
+        "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+        "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+      },
+      "observations": {
+        "child_maxrss_native_units": 12585140224,
+        "current_dynamic_proof_invocations": 7,
+        "current_kernel_replay_invocations": 1,
+        "current_runtime_invocations": 1,
+        "edges": 3704,
+        "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
+        "elapsed_seconds": 294.0136167919263,
+        "execution": "projectWithProof with exact freshly checked model/closure premises; per-selection equality to unchanged project is kernel-replayed; the raw checker is not reevaluated",
+        "limits": {
+          "max_input_bytes": 33554432,
+          "max_selections": 64,
+          "memory_mb": 4096,
+          "timeout_seconds": 90
+        },
+        "proof_modules": [
+          "GateData",
+          "GateLocalNames",
+          "GateExternalNames",
+          "GateIdentities",
+          "GateBounds",
+          "GateModel",
+          "GateViews",
+          "GateRun"
+        ],
+        "records": 1885,
+        "references": 15630,
+        "reuse": "none; fresh dynamic obligations; pinned established base support",
+        "stages": [
+          {
+            "seconds": 0.3676638752222061,
+            "stage": "acquire-import-reconstruct"
+          },
+          {
+            "seconds": 3.6925396248698235,
+            "stage": "support-pins"
+          },
+          {
+            "seconds": 1.093945040833205,
+            "stage": "current-certificates"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 39.218996916897595,
+            "stage": "GateData"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 50.449384584091604,
+            "stage": "GateLocalNames"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 68.69255762500688,
+            "stage": "GateExternalNames"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 33.74636724963784,
+            "stage": "GateIdentities"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 42.75143379205838,
+            "stage": "GateBounds"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 0.7248010840266943,
+            "stage": "GateModel"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 10.350041958969086,
+            "stage": "GateViews"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 34.652899832930416,
+            "stage": "dynamic-kernel-replay"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 1.6865629171952605,
+            "stage": "actual-runtime"
+          },
+          {
+            "seconds": 0.17817320814356208,
+            "stage": "output-view-correspondence"
+          },
+          {
+            "seconds": 5.6658472078852355,
+            "stage": "support-pins-after"
+          }
+        ],
+        "support": {
+          "manifest_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+          "members": 30405,
+          "platform": "Darwin-arm64"
+        },
+        "theorem_audit": {
+          "AC.GateData.chars_reconstructed": [],
+          "AC.GateData.checked0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.edgeBounds": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.execution_matches_project0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.externalCharsBlock0_source": [],
+          "AC.GateData.externalCharsBlock1_source": [],
+          "AC.GateData.externalCharsBlock2_source": [],
+          "AC.GateData.externalCharsBlock3_source": [],
+          "AC.GateData.externalCharsBlock4_source": [],
+          "AC.GateData.externalCharsBlock5_source": [],
+          "AC.GateData.externalCharsBlock6_source": [],
+          "AC.GateData.externalCharsBlock7_source": [],
+          "AC.GateData.externalCharsBlock8_source": [],
+          "AC.GateData.externalChars_source": [
+            "propext"
+          ],
+          "AC.GateData.identities_checked": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.localCharsBlock0_source": [],
+          "AC.GateData.localCharsBlock10_source": [],
+          "AC.GateData.localCharsBlock11_source": [],
+          "AC.GateData.localCharsBlock12_source": [],
+          "AC.GateData.localCharsBlock13_source": [],
+          "AC.GateData.localCharsBlock14_source": [],
+          "AC.GateData.localCharsBlock1_source": [],
+          "AC.GateData.localCharsBlock2_source": [],
+          "AC.GateData.localCharsBlock3_source": [],
+          "AC.GateData.localCharsBlock4_source": [],
+          "AC.GateData.localCharsBlock5_source": [],
+          "AC.GateData.localCharsBlock6_source": [],
+          "AC.GateData.localCharsBlock7_source": [],
+          "AC.GateData.localCharsBlock8_source": [],
+          "AC.GateData.localCharsBlock9_source": [],
+          "AC.GateData.localChars_source": [
+            "propext"
+          ],
+          "AC.GateData.model_checked": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.names_exact": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.orderedPairsChecked0": [],
+          "AC.GateData.orderedPairsChecked1": [],
+          "AC.GateData.orderedPairsChecked10": [],
+          "AC.GateData.orderedPairsChecked11": [],
+          "AC.GateData.orderedPairsChecked12": [],
+          "AC.GateData.orderedPairsChecked13": [],
+          "AC.GateData.orderedPairsChecked14": [],
+          "AC.GateData.orderedPairsChecked15": [],
+          "AC.GateData.orderedPairsChecked16": [],
+          "AC.GateData.orderedPairsChecked17": [],
+          "AC.GateData.orderedPairsChecked18": [],
+          "AC.GateData.orderedPairsChecked19": [],
+          "AC.GateData.orderedPairsChecked2": [],
+          "AC.GateData.orderedPairsChecked20": [],
+          "AC.GateData.orderedPairsChecked21": [],
+          "AC.GateData.orderedPairsChecked22": [],
+          "AC.GateData.orderedPairsChecked23": [],
+          "AC.GateData.orderedPairsChecked3": [],
+          "AC.GateData.orderedPairsChecked4": [],
+          "AC.GateData.orderedPairsChecked5": [],
+          "AC.GateData.orderedPairsChecked6": [],
+          "AC.GateData.orderedPairsChecked7": [],
+          "AC.GateData.orderedPairsChecked8": [],
+          "AC.GateData.orderedPairsChecked9": [],
+          "AC.GateData.ordered_chain": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.reachability0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.refBounds": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.result0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.set0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      },
+      "reason": "Insufficient record budget; verified refusal, no truncated projection",
+      "request": {
+        "bytes": 542,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/budget/request.json",
+        "sha256": "f161b2384fcd41d93ed19062e5b2ac3c8b4780c3f53181fc3e631f2ee8fdbdc5"
+      },
+      "result": {
+        "bytes": 16765,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/budget/evidence/result.json",
+        "sha256": "9954dbc2f58c03bf54159dc9d1082fdf4468f07d0420cac15009d3713620092c"
+      },
+      "returncode": 2,
+      "selections": [
+        {
+          "budget_records": 20,
+          "seeds": [
+            "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c"
+          ]
+        }
+      ],
+      "status": "refused"
+    },
+    {
+      "case": "omission",
+      "checked_claims": [
+        "imported-model-well-formedness",
+        "whole-model-source-correspondence",
+        "declared-closure-and-projection",
+        "record-budget-result"
+      ],
+      "elapsed_seconds": 297.757725,
+      "execution": {
+        "bytes": 21011,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/omission/execution/execution.json",
+        "sha256": "fae9f9ca1a78b2ac0038bc177437031c6cdee05d67a7f58ed84ca5efa8524d50"
+      },
+      "manifest": {
+        "bytes": 5543,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/omission/evidence/manifest.json",
+        "sha256": "fe4159a7f31015a726ff0bec7c78b9ee2aa8ad7c005cd0918b0c19d0942936ea"
+      },
+      "maxrss_bytes_darwin": 13152649216,
+      "model": {
+        "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+        "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+      },
+      "observations": {
+        "child_maxrss_native_units": 13152649216,
+        "current_dynamic_proof_invocations": 7,
+        "current_kernel_replay_invocations": 1,
+        "current_runtime_invocations": 1,
+        "edges": 3704,
+        "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
+        "elapsed_seconds": 297.46244016708806,
+        "execution": "projectWithProof with exact freshly checked model/closure premises; per-selection equality to unchanged project is kernel-replayed; the raw checker is not reevaluated",
+        "limits": {
+          "max_input_bytes": 33554432,
+          "max_selections": 64,
+          "memory_mb": 4096,
+          "timeout_seconds": 90
+        },
+        "proof_modules": [
+          "GateData",
+          "GateLocalNames",
+          "GateExternalNames",
+          "GateIdentities",
+          "GateBounds",
+          "GateModel",
+          "GateViews",
+          "GateRun"
+        ],
+        "records": 1885,
+        "references": 15630,
+        "reuse": "none; fresh dynamic obligations; pinned established base support",
+        "stages": [
+          {
+            "seconds": 0.36501979175955057,
+            "stage": "acquire-import-reconstruct"
+          },
+          {
+            "seconds": 3.7874061251059175,
+            "stage": "support-pins"
+          },
+          {
+            "seconds": 1.0909661669284105,
+            "stage": "current-certificates"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 38.64715266600251,
+            "stage": "GateData"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 48.412545833271,
+            "stage": "GateLocalNames"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 64.69082341669127,
+            "stage": "GateExternalNames"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 32.63052654219791,
+            "stage": "GateIdentities"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 42.412775207776576,
+            "stage": "GateBounds"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 0.6773641249164939,
+            "stage": "GateModel"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 9.789339208975434,
+            "stage": "GateViews"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 34.830598583910614,
+            "stage": "dynamic-kernel-replay"
+          },
+          {
+            "exit_code": 0,
+            "seconds": 19.189558874815702,
+            "stage": "actual-runtime"
+          }
+        ],
+        "support": {
+          "manifest_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+          "members": 30405,
+          "platform": "Darwin-arm64"
+        },
+        "theorem_audit": {
+          "AC.GateData.chars_reconstructed": [],
+          "AC.GateData.checked0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.edgeBounds": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.execution_matches_project0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.externalCharsBlock0_source": [],
+          "AC.GateData.externalCharsBlock1_source": [],
+          "AC.GateData.externalCharsBlock2_source": [],
+          "AC.GateData.externalCharsBlock3_source": [],
+          "AC.GateData.externalCharsBlock4_source": [],
+          "AC.GateData.externalCharsBlock5_source": [],
+          "AC.GateData.externalCharsBlock6_source": [],
+          "AC.GateData.externalCharsBlock7_source": [],
+          "AC.GateData.externalCharsBlock8_source": [],
+          "AC.GateData.externalChars_source": [
+            "propext"
+          ],
+          "AC.GateData.identities_checked": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.localCharsBlock0_source": [],
+          "AC.GateData.localCharsBlock10_source": [],
+          "AC.GateData.localCharsBlock11_source": [],
+          "AC.GateData.localCharsBlock12_source": [],
+          "AC.GateData.localCharsBlock13_source": [],
+          "AC.GateData.localCharsBlock14_source": [],
+          "AC.GateData.localCharsBlock1_source": [],
+          "AC.GateData.localCharsBlock2_source": [],
+          "AC.GateData.localCharsBlock3_source": [],
+          "AC.GateData.localCharsBlock4_source": [],
+          "AC.GateData.localCharsBlock5_source": [],
+          "AC.GateData.localCharsBlock6_source": [],
+          "AC.GateData.localCharsBlock7_source": [],
+          "AC.GateData.localCharsBlock8_source": [],
+          "AC.GateData.localCharsBlock9_source": [],
+          "AC.GateData.localChars_source": [
+            "propext"
+          ],
+          "AC.GateData.model_checked": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.names_exact": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.orderedPairsChecked0": [],
+          "AC.GateData.orderedPairsChecked1": [],
+          "AC.GateData.orderedPairsChecked10": [],
+          "AC.GateData.orderedPairsChecked11": [],
+          "AC.GateData.orderedPairsChecked12": [],
+          "AC.GateData.orderedPairsChecked13": [],
+          "AC.GateData.orderedPairsChecked14": [],
+          "AC.GateData.orderedPairsChecked15": [],
+          "AC.GateData.orderedPairsChecked16": [],
+          "AC.GateData.orderedPairsChecked17": [],
+          "AC.GateData.orderedPairsChecked18": [],
+          "AC.GateData.orderedPairsChecked19": [],
+          "AC.GateData.orderedPairsChecked2": [],
+          "AC.GateData.orderedPairsChecked20": [],
+          "AC.GateData.orderedPairsChecked21": [],
+          "AC.GateData.orderedPairsChecked22": [],
+          "AC.GateData.orderedPairsChecked23": [],
+          "AC.GateData.orderedPairsChecked3": [],
+          "AC.GateData.orderedPairsChecked4": [],
+          "AC.GateData.orderedPairsChecked5": [],
+          "AC.GateData.orderedPairsChecked6": [],
+          "AC.GateData.orderedPairsChecked7": [],
+          "AC.GateData.orderedPairsChecked8": [],
+          "AC.GateData.orderedPairsChecked9": [],
+          "AC.GateData.ordered_chain": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.reachability0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.refBounds": [
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.result0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ],
+          "AC.GateData.set0": [
+            "Classical.choice",
+            "Quot.sound",
+            "propext"
+          ]
+        }
+      },
+      "reason": "Supplied Graphify view differs from actual formal result/boundary mapping",
+      "request": {
+        "bytes": 824,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/omission/request.json",
+        "sha256": "482b861177d44876f7793d871c8655363def2dc304be32111732c928088e12f0"
+      },
+      "result": {
+        "bytes": 16900,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/omission/evidence/result.json",
+        "sha256": "db0a2ffc346b4424e001d3535f0290d7bde8d151cc8c79229f8194e62e4d75d0"
+      },
+      "returncode": 2,
+      "selections": [
+        {
+          "budget_records": 21,
+          "seeds": [
+            "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c"
+          ]
+        }
+      ],
+      "status": "refused"
+    }
+  ],
+  "boundary": "Finite structural closure/projection; required record omission and insufficient budget refused by actual full-current-model kernel/runtime checks. Static stale inspector establishes refusal/currentness only. No source-prose fidelity or acceptance claim.",
+  "initial_fixture_refusals": [
+    {
+      "case": "budget setup",
+      "standing": "Conversation-observed initial ac_graph.project_many refusal for required closure21 versus budget20, before formal request creation; no separate raw transcript claimed. The actual formal refusal above supplies retained kernel evidence."
+    },
+    {
+      "case": "stale-copy setup",
+      "evidence_directory": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/stale-evidence",
+      "standing": "Initial hardlink fixture refused multiply-linked ordinary files before staleness check. It is not counted as the stale-proof control. Newly created aliases were replaced by independent bytes; original cold files restored to link count1 and re-inspected."
+    }
+  ],
+  "model_raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+  "positive_result": {
+    "bytes": 20155,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/cold/result.json",
+    "sha256": "ca33a44b40d5c54c70ea2e7cbe9de73ddca2b05c9e00f457732ad020ebbc5fbf"
+  },
+  "post_control_inspection": {
+    "bytes": 1842,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/post-controls-inspection/execution.json",
+    "sha256": "32d4959e1de67ccb447d10aabc9f694bb351a8264b1bbb88e8c8672b4fc37da8"
+  },
+  "schema": "stdo305.current-formal-control-ledger/1",
+  "stale_control": {
+    "changed_result": {
+      "bytes": 20155,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/stale-evidence-final/changed-result.json",
+      "sha256": "4a88b1a213f0d52d1bb5f94e571fe6f0ba6b39f99d70fdf3ed18e99d4fd6df02"
+    },
+    "execution": {
+      "bytes": 1533,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/stale-evidence-final/execution.json",
+      "sha256": "1fec4a183c1bf3ad5948046f92807be9c74d69a072e40cc1c1419b2a2ef1754d"
+    },
+    "reason": "Retained verifier/profile/proof source pins are stale",
+    "status": "refused",
+    "stdout": {
+      "bytes": 977,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-005/controls/stale-evidence-final/stdout.json",
+      "sha256": "8fa1fcc15ae832ba0b1e45d072f91b7c5255979431ec4dad86e0854ab274e5e6"
+    }
+  },
+  "transport": "Original bundles/results/manifests retained; complete deterministic compressed transport is owned by common release writer. No omitted members, private origin keys or raw over100MiB Git blobs selected."
+}

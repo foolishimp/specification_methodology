@@ -6,9 +6,19 @@ Each candidate's Spec Method implements the [build-tenant binding requirement](.
 
 The product owner owns the common specification (the WHAT) and its decisions. Codex holds the common construction pen; common changes receive review independent of their author before owner acceptance ([Construction Authority](../specification/PRODUCT.md#construction-authority)). Tenant work follows [Development Isolation](../specification/PRODUCT.md#development-isolation): own branch, own sparse worktree, own territory. A tenant requests a shared change through the pen. A tenant Writer does not edit the common specification, the tickets or its peer's candidate.
 
-## Current Task
+## Current Entry
 
-The current common-tenant task is [T-004](../.ai-workspace/tickets/active/T-004-STDO-3.0.1-delivery.md):
+Future v3 work uses the [adopted 3.0.4 builder and released tools](../development/STDO_3_0_4.md),
+[current frame configuration](../specification/REFERENCE_FRAME_BASIS.md#activations-and-owners)
+and exact current grant in [Goals](../specification/GOALS.md). The historical
+tenant admissions below keep their subjects and original construction basis.
+They do not activate a new tenant task or select mutable candidate source as
+builder law. Common routing maintenance is carried by the common pen on
+`main`; tenant construction still requires its own admitted territory.
+
+## Historical Common Task
+
+The preceding common-tenant task was [T-004](../.ai-workspace/tickets/active/T-004-STDO-3.0.1-delivery.md):
 the bounded [3.0.1 amendment](../specification/requirements/STDO_3_0_1.md),
 targeting `3.0.1-rc.1` from exact native `3.0.0-rc.1` in the isolated
 `codex/stdo-3.0.1-delivery` worktree. Its design route is

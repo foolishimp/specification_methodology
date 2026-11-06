@@ -1,0 +1,9 @@
+# Manager005 review return and Executive disposition
+
+This is a conversation transcription of the bounded return from `/root/stdo305_integration_review`, not a byte-identical original review report. The original observation JSON files are retained byte-identically beside this record; `REVIEW_CUSTODY.json` binds their original scratch location and digests.
+
+The reviewer returned **falsified**, with one actionable **Severity 3** finding under the selected 1-highest to 5-lowest scale. Both host `references/project.md` prepare examples omitted `--stdo`; both entry skills instructed the consumer to retain `python` and `ac_root` but omitted `stdo`. Actual installed `check-runtime` succeeded with an unrelated ambient manager/store, but the documented project prepare route invoked ambient `stdo` and refused on both hosts. Adding only `--stdo CONFIG.stdo` allowed actual prepare, task, submit, build and status operations to succeed. The saved PROJECT.json retained that manager and the nominated Product basis was preserved.
+
+The reviewer found no corresponding omission in the code-overlay route: it has no manager argument and consumes the selected existing model, manifest and corpus. Stale launcher, underlying manager and manifest controls refused before a manager call. At final readback all 110 source and 152 evidence digests in candidate005 were unchanged. The review issued no acceptance or release decision, and did not perform nativeA, heavy Lean or native-host qualification.
+
+Root separately selected repair because the documented omission affects project consumers. The frozen review was released for the narrowly scoped repair: retain returned `stdo` in both entry skills and forward it in both project prepare examples; preserve the code-overlay route and all 19 direct-generation pins. Root requested an actual documented public-path regression with wrong or unset ambient manager/store and a successor freeze for targeted recheck.

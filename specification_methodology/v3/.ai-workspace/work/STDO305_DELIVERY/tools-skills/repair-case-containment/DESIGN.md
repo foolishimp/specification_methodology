@@ -1,0 +1,7 @@
+# Filesystem-identity containment repair
+
+The two selected effect boundaries protect existing filesystem objects: a pinned upstream/input and the immutable installed method. Resolving a path does not canonicalize filesystem case aliases. The repair will use one standard-library helper in the Graphify tenant to compare actual device/inode identities against the other path's ancestor chain in both directions. A not-yet-created effect path is checked through its existing ancestors; a candidate that is an existing ancestor of the protected object is checked in reverse. The protected object must exist. Missing candidate suffixes do not justify assuming that an inaccessible path is absent; observation errors propagate to refusal/incomplete without effects.
+
+No string case folding, creating a probe path, directory writes, or upstream subprocess is needed. Existing symlink-output refusals remain. These are cooperative filesystem checks, with no claim against hostile concurrent directory replacement. Only the current upstream boundary and native305 immutable-method boundary will use this helper; unrelated historical path policies and the nineteen direct-generation machinery files remain unchanged.
+
+Regression evidence will use actual case aliases on this filesystem, retain before/after whole-tree snapshots, and exercise both public routes. Ordinary equal/ancestor/descendant/symlink/disjoint cases remain covered. A genuinely separate directory with a case-related name is allowed if the filesystem distinguishes its identity.

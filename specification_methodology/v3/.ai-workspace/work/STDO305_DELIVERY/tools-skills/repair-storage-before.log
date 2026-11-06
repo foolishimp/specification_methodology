@@ -1,0 +1,18 @@
+test_evidence_descendant_is_refused_before_effects (test_ac_support_native305.Native305PublicTests.test_evidence_descendant_is_refused_before_effects) ... FAIL
+
+======================================================================
+FAIL: test_evidence_descendant_is_refused_before_effects (test_ac_support_native305.Native305PublicTests.test_evidence_descendant_is_refused_before_effects)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_native305.py", line 152, in test_evidence_descendant_is_refused_before_effects
+    def test_evidence_descendant_is_refused_before_effects(self): self.storage_boundary('descendant')
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_support_native305.py", line 143, in storage_boundary
+    self.assertEqual(after, before, 'public startup must not mutate immutable method')
+AssertionError: {'LIC[2002066 chars]n', 'runtime-evidence/locks/57eae008495bf52f12[353721 chars].\n'} != {'LIC[2002066 chars]n', 'plugins/spec/references/REFRESH.md': b'# [192600 chars].\n'}
+Diff is 8934349 characters long. Set self.maxDiff to None to see it. : public startup must not mutate immutable method
+
+----------------------------------------------------------------------
+Ran 1 test in 0.637s
+
+FAILED (failures=1)

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@@TITLE@@</title><link rel="icon" href="data:,"><style>@@CSS@@</style></head>
+<body data-renderer="@@LAYOUT@@">
+<header><div><span class="eyebrow">AXIOMATIC CALCULUS / READING ROOM</span><h1>@@TITLE@@</h1><p id="subject-basis" class="muted"></p></div>
+<div class="header-actions"><button id="files-toggle" aria-expanded="false" aria-controls="files-pane">▤ Files</button><button id="about-button">About this model</button></div></header>
+<div class="workspace">
+<aside id="files-pane" class="files-pane" aria-label="Source files" hidden>
+  <div class="section-heading"><h2>Source files</h2><button id="files-close" aria-label="Close source files">×</button></div>
+  <p class="muted">Browse the documents behind this representation.</p>
+  <label for="file-query">Find a file or folder</label><input id="file-query" type="search" placeholder="Filter by path…" autocomplete="off">
+  <div class="files-actions"><span id="file-count" class="muted" aria-live="polite"></span><button id="folders-collapse">Collapse folders</button></div>
+  <nav id="file-tree" aria-label="Source folder and file hierarchy"></nav>
+  <p class="files-footnote muted">Paths in this exported model. This is not a live workspace browser.</p>
+</aside>
+<main>
+  <aside class="library" aria-label="Find constraints">
+    <div class="section-heading"><h2 id="library-title">Find a constraint</h2><span id="total"></span></div>
+    <section id="code-overlay-panel" class="code-overlay-panel" aria-label="Code overlay" hidden></section>
+    <section id="file-scope" aria-label="Selected source file" hidden></section>
+    <label for="query">Search full record text</label><input id="query" type="search" placeholder="Try “evaluation” or “authority”…" autocomplete="off">
+    <label for="family">Record family</label><select id="family"><option value="constraints">Constraints</option><option value="">All records</option></select>
+    <div id="matches" class="muted" aria-live="polite"></div><nav id="results" aria-label="Search results"></nav>
+    <button id="more" class="secondary">Show more results</button>
+  </aside>
+  <section class="map-pane" aria-label="Constraint map">
+    <div class="toolbar"><div id="force-controls" class="segmented" role="group" aria-label="Graph view"><button id="mode3" aria-pressed="false">3D</button><button id="mode2" aria-pressed="false">2D</button><button id="mode-layered" aria-pressed="false" hidden>Layered</button></div>
+    <div id="layered-controls" hidden><span>Layered</span><button id="zoom-out" aria-label="Zoom out">−</button><button id="zoom-reset" aria-label="Reset zoom">100%</button><button id="zoom-in" aria-label="Zoom in">+</button></div>
+    <button id="focus">Focus</button><button id="expand">Expand one hop</button><button id="overview">Overview</button><button id="fit">Fit</button></div>
+    <div class="layers"><label><input id="required-layer" type="checkbox" checked> Retention dependencies</label><label><input id="relation-layer" type="checkbox" checked> Authored relations</label><label><input id="reference-layer" type="checkbox"> Other references</label><label id="structure-control" hidden><input id="structure-layer" type="checkbox" checked> Code structure</label><label id="trace-control" hidden><input id="trace-layer" type="checkbox" checked> Proposed traces</label></div>
+    <div id="graph"><div id="force-graph" class="renderer-host" hidden></div><div id="tracks-graph" class="renderer-host" hidden></div></div><div id="node-labels" aria-hidden="true"></div>
+    <div class="map-foot"><p id="renderer-status" class="muted" role="status" hidden></p><p id="map-count" aria-live="polite"></p><p class="muted"><span id="map-help">Drag to orbit · scroll to zoom · click a node to read</span><br>Arrows follow the selected link type; they do not assert a proved inference.</p><div id="legend"></div></div>
+  </section>
+  <section class="reading-pane" aria-label="Read and follow constraints">
+    <div class="reader-nav"><div id="source-origin" hidden></div><div class="trail-heading"><h2>Reading trail</h2><button id="back" disabled>Back</button></div>
+    <nav id="trail" aria-label="Reading trail"></nav></div>
+    <article id="details" aria-live="polite"></article>
+  </section>
+</main>
+</div>
+<dialog id="source-dialog"><div class="dialog-toolbar"><h2 id="source-title">Source</h2><button id="source-close">Close</button></div><p id="source-digest" class="muted"></p><pre id="source-text"></pre></dialog>
+<dialog id="about-dialog"><div class="dialog-toolbar"><h2>About this representation</h2><button id="about-close">Close</button></div>
+<p>This reader displays the authored constraints, relations and caveats in one exact a_c model. Retention links explain what the acquisition contract requires together. Authored relations retain their own meaning and qualifications.</p>
+<p>Neither a link nor its layout establishes a logical implication. The Lean work checks declared closure and record preservation; it does not prove the prose of these constraints. No per-constraint proof verdict is assigned here.</p>
+<pre id="model-info"></pre><section id="code-overlay-about" hidden></section><details><summary>@@CREDITS@@</summary><pre>@@LICENSE@@</pre></details></dialog>
+<script id="explorer-data" type="application/json">@@DATA@@</script>
+<script>@@VENDOR@@</script><script>@@APP@@</script>
+</body></html>

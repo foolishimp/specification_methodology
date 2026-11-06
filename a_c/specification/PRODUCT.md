@@ -1,5 +1,7 @@
 # Axiomatic Calculus Implementations
 
+Current delivery: the [3.0.5 contract](RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+
 ## Product boundary
 
 This source project constructs implementations of the **axiomatic calculus**,

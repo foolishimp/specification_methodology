@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+import sys,json,pathlib
+assert sys.argv[1:3] == ['--store', '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmp8asc7zko/selected store']
+with open('/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmp8asc7zko/manager-calls.jsonl',"a") as f:f.write(json.dumps(sys.argv)+"\n")
+p=pathlib.Path(sys.argv[sys.argv.index("--definition")+1]);d=json.loads(p.read_text());b=d["constitution"]["stdo"]["basis"]
+print(json.dumps({"basis":b["uri"],"manifest_sha256":b["manifest_sha256"],"installed":True,"valid":True,"failures":[],"path":'/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmp8asc7zko/selected store/releases/v3.0.5',"definition":str(p),"definition_id":d["product"]["definition_id"]}))

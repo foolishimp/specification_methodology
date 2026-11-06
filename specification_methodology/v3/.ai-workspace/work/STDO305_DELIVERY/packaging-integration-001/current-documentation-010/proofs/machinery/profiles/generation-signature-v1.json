@@ -1,0 +1,1707 @@
+{
+  "definition": {
+    "constraint_kinds": {
+      "$NS:constraint-kind:authored-source-statement": {
+        "applies_to": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "predicate": {
+          "fields": {
+            "conditions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "exceptions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "grounding": {
+              "items": {
+                "fields": {
+                  "end_line": {
+                    "type": "integer"
+                  },
+                  "path": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "quote": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "section": {
+                    "basis_relation": "$NS:basis-relation:exact",
+                    "domain": "$NS:reference-domain:declared",
+                    "external_kinds": [
+                      "$NS:external-kind:source-section"
+                    ],
+                    "governing": false,
+                    "local_families": [],
+                    "local_sorts": [],
+                    "type": "ref"
+                  },
+                  "start_line": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "min_items": 1,
+              "type": "array"
+            },
+            "statement": {
+              "min_length": 1,
+              "type": "string"
+            },
+            "uncertainty": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      }
+    },
+    "fields": {
+      "constraints": {
+        "applies_to": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "basis": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:basis"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "context": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:context"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "id": {
+          "type": "identity"
+        },
+        "judgment_kind": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:judgment-kind"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "kind": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:constraint-kind"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "latitude_ref": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "latitude"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "owner": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:actor"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "predicate": {
+          "fields": {
+            "conditions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "exceptions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "grounding": {
+              "items": {
+                "fields": {
+                  "end_line": {
+                    "type": "integer"
+                  },
+                  "path": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "quote": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "section": {
+                    "basis_relation": "$NS:basis-relation:exact",
+                    "domain": "$NS:reference-domain:declared",
+                    "external_kinds": [
+                      "$NS:external-kind:source-section"
+                    ],
+                    "governing": false,
+                    "local_families": [],
+                    "local_sorts": [],
+                    "type": "ref"
+                  },
+                  "start_line": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "min_items": 1,
+              "type": "array"
+            },
+            "statement": {
+              "min_length": 1,
+              "type": "string"
+            },
+            "uncertainty": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "refusal": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:stop"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "scope": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:scope"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        }
+      },
+      "judgments": {
+        "authority": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:authority"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "basis": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:basis"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "context": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:context"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "decided_at": {
+          "min_length": 1,
+          "type": "string"
+        },
+        "decision": {
+          "type": "enum",
+          "values": [
+            "indeterminate",
+            "refused",
+            "accepted"
+          ]
+        },
+        "evaluator": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:actor"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "evidence": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:evidence"
+            ],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "id": {
+          "type": "identity"
+        },
+        "kind": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:judgment-kind"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "owner": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:actor"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "provenance": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:evidence"
+            ],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "scope": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:scope"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "subject": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [],
+          "governing": true,
+          "local_families": [
+            "objects"
+          ],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "subject_digest": {
+          "min_length": 1,
+          "type": "string"
+        }
+      },
+      "latitude": {
+        "allowed_variation": {
+          "fields": {
+            "grounding": {
+              "items": {
+                "fields": {
+                  "end_line": {
+                    "type": "integer"
+                  },
+                  "path": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "quote": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "section": {
+                    "basis_relation": "$NS:basis-relation:exact",
+                    "domain": "$NS:reference-domain:declared",
+                    "external_kinds": [
+                      "$NS:external-kind:source-section"
+                    ],
+                    "governing": false,
+                    "local_families": [],
+                    "local_sorts": [],
+                    "type": "ref"
+                  },
+                  "start_line": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "min_items": 1,
+              "type": "array"
+            },
+            "statements": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "applies_to": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "basis": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:basis"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "context": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:context"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "forbidden_variation": {
+          "fields": {
+            "grounding": {
+              "items": {
+                "fields": {
+                  "end_line": {
+                    "type": "integer"
+                  },
+                  "path": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "quote": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "section": {
+                    "basis_relation": "$NS:basis-relation:exact",
+                    "domain": "$NS:reference-domain:declared",
+                    "external_kinds": [
+                      "$NS:external-kind:source-section"
+                    ],
+                    "governing": false,
+                    "local_families": [],
+                    "local_sorts": [],
+                    "type": "ref"
+                  },
+                  "start_line": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "min_items": 1,
+              "type": "array"
+            },
+            "statements": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            }
+          },
+          "type": "object"
+        },
+        "id": {
+          "type": "identity"
+        },
+        "invalidation": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:invalidation"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "owner": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:actor"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "scope": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:scope"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        }
+      },
+      "objects": {
+        "basis": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:basis"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "context": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:context"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "id": {
+          "type": "identity"
+        },
+        "owner": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:actor"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "scope": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:scope"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "sort": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:sort"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "value": {
+          "fields": {
+            "conditions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "definition": {
+              "min_length": 1,
+              "type": "string"
+            },
+            "exceptions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "grounding": {
+              "items": {
+                "fields": {
+                  "end_line": {
+                    "type": "integer"
+                  },
+                  "path": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "quote": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "section": {
+                    "basis_relation": "$NS:basis-relation:exact",
+                    "domain": "$NS:reference-domain:declared",
+                    "external_kinds": [
+                      "$NS:external-kind:source-section"
+                    ],
+                    "governing": false,
+                    "local_families": [],
+                    "local_sorts": [],
+                    "type": "ref"
+                  },
+                  "start_line": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "min_items": 1,
+              "type": "array"
+            },
+            "label": {
+              "min_length": 1,
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "relations": {
+        "basis": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:basis"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "context": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:context"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "id": {
+          "type": "identity"
+        },
+        "kind": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:relation-kind"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "owner": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:actor"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "qualifiers": {
+          "fields": {
+            "conditions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "exceptions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "grounding": {
+              "items": {
+                "fields": {
+                  "end_line": {
+                    "type": "integer"
+                  },
+                  "path": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "quote": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "section": {
+                    "basis_relation": "$NS:basis-relation:exact",
+                    "domain": "$NS:reference-domain:declared",
+                    "external_kinds": [
+                      "$NS:external-kind:source-section"
+                    ],
+                    "governing": false,
+                    "local_families": [],
+                    "local_sorts": [],
+                    "type": "ref"
+                  },
+                  "start_line": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "min_items": 1,
+              "type": "array"
+            },
+            "kind": {
+              "min_length": 1,
+              "type": "string"
+            },
+            "meaning": {
+              "min_length": 1,
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "scope": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:scope"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "source": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [],
+          "governing": true,
+          "local_families": [
+            "objects"
+          ],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "target": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [],
+          "governing": true,
+          "local_families": [
+            "objects"
+          ],
+          "local_sorts": [],
+          "type": "ref"
+        }
+      },
+      "residuals": {
+        "basis": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:basis"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "consequence": {
+          "min_length": 1,
+          "type": "string"
+        },
+        "context": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:context"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "id": {
+          "type": "identity"
+        },
+        "invalidation": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:invalidation"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "kind": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:residual-kind"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "owner": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:actor"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "re_entry": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "traversals"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "scope": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:scope"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "subject": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [],
+          "governing": true,
+          "local_families": [
+            "objects",
+            "relations",
+            "constraints",
+            "latitude"
+          ],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "uncertainty": {
+          "fields": {
+            "grounding": {
+              "items": {
+                "fields": {
+                  "end_line": {
+                    "type": "integer"
+                  },
+                  "path": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "quote": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "section": {
+                    "basis_relation": "$NS:basis-relation:exact",
+                    "domain": "$NS:reference-domain:declared",
+                    "external_kinds": [
+                      "$NS:external-kind:source-section"
+                    ],
+                    "governing": false,
+                    "local_families": [],
+                    "local_sorts": [],
+                    "type": "ref"
+                  },
+                  "start_line": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "min_items": 1,
+              "type": "array"
+            },
+            "statement": {
+              "min_length": 1,
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "transformations": {
+        "basis": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:basis"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "codomain_model": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:model"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "context": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:context"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "domain_model": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:model"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "evidence": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:evidence"
+            ],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "external_introduced": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:external-resolution"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "external_preserved": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:external-resolution"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "external_removed": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:external-resolution"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "external_resolution_witnesses": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:witness"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "id": {
+          "type": "identity"
+        },
+        "introduced": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:future-record"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "invalidation": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:invalidation"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "operation_authority": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:authority"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "owner": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:actor"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "preconditions": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "constraints"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "preservation_relation": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:preservation-law"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "preserved": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "provenance": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:evidence"
+            ],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "re_entry": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "traversals"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "removed": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "residuals": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "residuals"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "scope": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:scope"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "stop_states": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:stop"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "traversal": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [],
+          "governing": true,
+          "local_families": [
+            "traversals"
+          ],
+          "local_sorts": [],
+          "type": "ref"
+        }
+      },
+      "traversals": {
+        "authority": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:authority"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "basis": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:basis"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "codomain": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:domain"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "context": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:context"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "domain": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:domain"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "evidence": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:evidence"
+            ],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "id": {
+          "type": "identity"
+        },
+        "owner": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:actor"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "postconditions": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "constraints"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "preconditions": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": true,
+            "local_families": [
+              "constraints"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "provenance": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:evidence"
+            ],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "scope": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:scope"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "stop_states": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:stop"
+            ],
+            "governing": false,
+            "local_families": [],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        }
+      }
+    },
+    "functor_kinds": [
+      "urn:stdo:concept:axiomatic-calculus:f-d",
+      "urn:stdo:concept:axiomatic-calculus:f-p",
+      "urn:stdo:concept:axiomatic-calculus:f-h"
+    ],
+    "judgment_kinds": {
+      "$NS:judgment-kind:external-semantic-review": {
+        "decision": {
+          "type": "enum",
+          "values": [
+            "indeterminate",
+            "refused",
+            "accepted"
+          ]
+        },
+        "evidence": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [
+              "$NS:external-kind:evidence"
+            ],
+            "governing": false,
+            "local_families": [
+              "objects"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 1,
+          "type": "array"
+        },
+        "subject": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [],
+          "governing": true,
+          "local_families": [
+            "objects"
+          ],
+          "local_sorts": [],
+          "type": "ref"
+        }
+      }
+    },
+    "relation_kinds": {},
+    "required_families": [],
+    "residual_kinds": {
+      "$NS:residual-kind:authored-uncertainty": {
+        "consequence": {
+          "min_length": 1,
+          "type": "string"
+        },
+        "invalidation": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [
+            "$NS:external-kind:invalidation"
+          ],
+          "governing": false,
+          "local_families": [],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "re_entry": {
+          "items": {
+            "basis_relation": "$NS:basis-relation:exact",
+            "domain": "$NS:reference-domain:declared",
+            "external_kinds": [],
+            "governing": false,
+            "local_families": [
+              "traversals"
+            ],
+            "local_sorts": [],
+            "type": "ref"
+          },
+          "min_items": 0,
+          "type": "array"
+        },
+        "subject": {
+          "basis_relation": "$NS:basis-relation:exact",
+          "domain": "$NS:reference-domain:declared",
+          "external_kinds": [],
+          "governing": true,
+          "local_families": [
+            "objects",
+            "relations",
+            "constraints",
+            "latitude"
+          ],
+          "local_sorts": [],
+          "type": "ref"
+        },
+        "uncertainty": {
+          "fields": {
+            "grounding": {
+              "items": {
+                "fields": {
+                  "end_line": {
+                    "type": "integer"
+                  },
+                  "path": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "quote": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "section": {
+                    "basis_relation": "$NS:basis-relation:exact",
+                    "domain": "$NS:reference-domain:declared",
+                    "external_kinds": [
+                      "$NS:external-kind:source-section"
+                    ],
+                    "governing": false,
+                    "local_families": [],
+                    "local_sorts": [],
+                    "type": "ref"
+                  },
+                  "start_line": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "min_items": 1,
+              "type": "array"
+            },
+            "statement": {
+              "min_length": 1,
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      }
+    },
+    "sorts": {
+      "$NS:sort:authored-concept": {
+        "value": {
+          "fields": {
+            "conditions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "definition": {
+              "min_length": 1,
+              "type": "string"
+            },
+            "exceptions": {
+              "items": {
+                "min_length": 1,
+                "type": "string"
+              },
+              "min_items": 0,
+              "type": "array"
+            },
+            "grounding": {
+              "items": {
+                "fields": {
+                  "end_line": {
+                    "type": "integer"
+                  },
+                  "path": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "quote": {
+                    "min_length": 1,
+                    "type": "string"
+                  },
+                  "section": {
+                    "basis_relation": "$NS:basis-relation:exact",
+                    "domain": "$NS:reference-domain:declared",
+                    "external_kinds": [
+                      "$NS:external-kind:source-section"
+                    ],
+                    "governing": false,
+                    "local_families": [],
+                    "local_sorts": [],
+                    "type": "ref"
+                  },
+                  "start_line": {
+                    "type": "integer"
+                  }
+                },
+                "type": "object"
+              },
+              "min_items": 1,
+              "type": "array"
+            },
+            "label": {
+              "min_length": 1,
+              "type": "string"
+            }
+          },
+          "type": "object"
+        }
+      }
+    },
+    "stop_kinds": [
+      "$NS:stop:no-execution-or-acceptance"
+    ]
+  },
+  "namespace_token": "$NS:",
+  "profile": "a_c.lean.generation-signature/1",
+  "source": "ac_generate.model_from_answers compact-source-proposal-v1",
+  "source_signature_sha256": "ba18237c16ba9bed43b058c27b135a7bb2f19fd8d79ee0ac76b309df26ba3ee7"
+}

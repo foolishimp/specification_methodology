@@ -1,5 +1,21 @@
 # Axiom Indexer Goals
 
+## Current STDO 3.0.5 cohort outcome
+
+Status: active, owner-selected full cohort modernization. Build using exact
+installed STDO 3.0.4 and deliver this Product's actual current outputs at common
+version 3.0.5. Historical versions and snapshots cannot satisfy currentness.
+The scoped construction intake is
+`../../specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/INTAKE.json`.
+
+Completion requires exact frozen semantic source, one coherent authored model,
+current derived interfaces, explicit coverage/residuals, bounded semantic
+review, fresh mechanical and native-use evidence, and exact release closure.
+Generic Axiom mechanics remain distinct from STDO-specific interpretation;
+validation, semantic assessment, release and consumer adoption remain separate.
+Prior Goals below retain their original historical outcomes and limits.
+
+
 Current release: T-033 in the STDO source project completes the published and
 freshly verified 2.5.1 RC2 cohort. Its [release record](../../specification_methodology/.ai-workspace/comments/codex/20260930_stdo_251_rc2/README.md)
 owns current work and final publication. RC1 results below remain historical

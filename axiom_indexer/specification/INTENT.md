@@ -37,6 +37,12 @@ logical map, reports inconsistencies, and concatenates exact caller-supplied
 labels and text. Code does not interpret prose, select truth or prompt content,
 rewrite requests, or accept semantics.
 
+When a canonical provider-checked a_c source-semantic model is already selected,
+the 3.0.5 conversion boundary exposes that exact model as the same program
+contract, preserving every record and metadata field for reversible recovery.
+It does not author a second interpretation or independently admit the upstream
+model. Direct source authoring and pure joining retain their existing scope.
+
 ## Identity and late binding
 
 - Logical identities, predicates, frames, and sources are stable URIs.

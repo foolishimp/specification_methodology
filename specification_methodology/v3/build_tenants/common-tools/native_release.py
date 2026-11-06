@@ -38,6 +38,53 @@ PREDECESSOR = "07bdb34a2d472a3b5e678f60584fd02b24a388f4"
 REMOTE = "https://github.com/foolishimp/specification_methodology.git"
 MANIFEST_NAME = f"stdo-{CUT}-manifest.json"
 STANDING = "standalone_stable_release_preparation"
+COHORT = None
+SCOPE = "standalone methodology, plugin and installed offline documentation and a_c/Skills tool sources; historical representation remains explanatory."
+
+
+def configure(manifest_path, expected_sha256):
+    """Select a digest-bound stable cohort without copying this implementation.
+
+    Omission retains the historical 3.0.4 preparation profile. The selected
+    cohort controls only version, native lineage, output territory and asset
+    names; complete publication remains the root cohort checker's operation.
+    """
+    global BASE, CUT, TAG, VERSION, MANAGER_WHEEL, PREDECESSOR, REMOTE, MANIFEST_NAME, STANDING, COHORT, PREFIX, SCOPE
+    require(expected_sha256 is not None, "cohort manifest digest required")
+    value = read_json(manifest_path, expected_sha256)
+    preparation = value.get("kind") == "stdo.native-preparation-config/1"
+    require(preparation or (value.get("schema_version") == 2 and value.get("profile") == "stable-five-product-v1"), "unsupported native cohort profile")
+    if preparation:
+        require(set(value) == {"kind", "version", "cut", "source", "repository_url", "native_preparation"}, "native preparation configuration contains unselected fields")
+    version = value["version"] if preparation else value["cohort"]["version"]
+    require(re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", version), "native stable version required")
+    require((value["cut"] if preparation else value["cohort"]["cut"]) == "v" + version, "cohort cut/version differs")
+    options = value["native_preparation"]
+    repository = HERE.parents[3]
+    destination = safe_member(options["output_root"])
+    require(destination.startswith("specification_methodology/v3/.ai-workspace/work/"), "native output territory outside declared common work")
+    BASE = repository / destination
+    PREFIX = safe_member(options["package_path"])
+    require(PREFIX == "specification_methodology/v3", "unsupported native package root")
+    PREDECESSOR = options["predecessor_native_commit"]
+    require(re.fullmatch(r"[a-f0-9]{40}", PREDECESSOR), "exact native predecessor required")
+    VERSION, CUT = version, "v" + version
+    TAG = f"refs/tags/{NAMESPACE}/{CUT}"
+    MANAGER_WHEEL = options["manager_wheel"]
+    require(MANAGER_WHEEL == f"stdo_toolchain-{version}-py3-none-any.whl", "manager component version differs")
+    REMOTE = value["repository_url"] if preparation else value["publication"]["repository_url"]
+    require(REMOTE.startswith("https://") and not any(c.isspace() for c in REMOTE), "literal HTTPS publication endpoint required")
+    MANIFEST_NAME = f"stdo-{CUT}-manifest.json"
+    STANDING = "complete_stable_cohort_native_preparation"
+    SCOPE = options["scope"]
+    require(isinstance(SCOPE, str) and SCOPE and "\n" not in SCOPE, "invalid native scope statement")
+    COHORT = {("configuration_sha256" if preparation else "manifest_sha256"): expected_sha256,
+              "source": value["source"], "version": version}
+    return COHORT
+
+
+def record_kind(name):
+    return ("stdo304." if COHORT is None else "stdo.") + name + "/1"
 
 
 def require(condition, message):
@@ -100,7 +147,7 @@ def read_json(path, pin=None):
 
 
 def git(repo, *args):
-    require(args and args[0] in {"rev-parse", "ls-tree", "cat-file", "show", "merge-base", "ls-remote"}, "Git mutation is reserved to Root")
+    require(args and args[0] in {"rev-parse", "ls-tree", "cat-file", "show", "merge-base", "ls-remote"}, "Git mutation is reserved to the separately assigned Writer")
     result = subprocess.run(["git", "--no-optional-locks", "-C", str(repo), *args], capture_output=True)
     require(result.returncode == 0, "read-only git failed: " + result.stderr.decode(errors="replace"))
     return result.stdout
@@ -130,6 +177,25 @@ def tree_rows(repo, treeish):
 
 def validate_payload(rows, data):
     require(rows, "empty payload")
+    if COHORT is not None:
+        source_ref = COHORT["source"]
+        semantic = read_json(HERE.parents[3] / safe_member(source_ref["path"]), source_ref["sha256"])
+        require(semantic["version"] == VERSION and semantic["source_identity_sha256"] == source_ref["source_identity_sha256"],
+                "native semantic source selection differs")
+        excluded = ("standards/frames/", "standards/documentation/", "standards/tooling/")
+        actual_standards = sorted(p for p in data if p.startswith("standards/") and not p.startswith(excluded))
+        require(actual_standards == [r["path"] for r in semantic["members"]], "native authoritative source closure differs")
+        for row in semantic["members"] + semantic["native_contracts"]:
+            require(row["path"] in data and len(data[row["path"]]) == row["bytes"] and sha(data[row["path"]]) == row["sha256"],
+                    "native semantic member changed: " + row["path"])
+        documentation = json.loads(data.get("standards/documentation/DOCUMENTATION.json", b"{}"))
+        tooling = json.loads(data.get("standards/tooling/TOOLING.json", b"{}"))
+        require(documentation.get("kind") == "stdo.installed-documentation/2"
+                and documentation.get("distribution_version") == VERSION
+                and documentation.get("source", {}).get("source_identity_sha256") == semantic["source_identity_sha256"],
+                "complete cohort requires current source-matched documentation")
+        require(tooling.get("kind") == "stdo.installed-tooling/2" and tooling.get("distribution_version") == VERSION,
+                "complete cohort requires current tooling distribution")
     documentation_tools().check_payload(data)
     documentation_tools("tooling.py").check_payload(data)
     seen = set()
@@ -163,13 +229,14 @@ def source_inventory(repo, source_commit, source_path):
 
 
 def tag_message(selected):
-    return (f"STDO {CUT}: standalone stable release\n\n"
+    label = "standalone stable release" if COHORT is None else "complete cohort native stable release"
+    return (f"STDO {CUT}: {label}\n\n"
             "STDO-Release-Profile: stable-v1\n"
             f"Frozen-Source-Commit: {selected['commit']}\n"
             f"Frozen-Source-Path: {selected['package_path']}\n"
             f"Frozen-Source-Tree: {selected['package_tree']}\n"
             f"Predecessor-Native-Commit: {PREDECESSOR}\n"
-            "Scope: standalone methodology, plugin and installed offline documentation and a_c/Skills tool sources; historical representation remains explanatory.\n").encode()
+            f"Scope: {SCOPE}\n").encode()
 
 
 def prepare(args):
@@ -177,12 +244,15 @@ def prepare(args):
     require(not run.exists(), "preserve existing run")
     commit(args.repo, PREDECESSOR)
     tree, rows = source_inventory(args.repo, args.source_commit, args.source_path)
-    value = {"kind": "stdo304.native-preparation/1", "cut": CUT, "standing": STANDING,
+    value = {"kind": record_kind("native-preparation"), "cut": CUT, "standing": STANDING,
              "source_candidate": {"commit": args.source_commit, "package_path": args.source_path, "package_tree": tree},
              "native_parent": PREDECESSOR, "files": rows, "file_count": len(rows),
              "total_bytes": sum(row["bytes"] for row in rows), "inventory_sha256": inventory_digest(rows)}
+    if COHORT is not None:
+        value["cohort_preparation"] = COHORT
     info = b"".join(f"{row['git_mode']} {row['git_blob']}\t{PREFIX}/{row['path']}\0".encode() for row in rows)
-    message = (f"STDO {CUT} standalone native stable release\n\n"
+    label = "standalone native stable release" if COHORT is None else "complete cohort native stable release"
+    message = (f"STDO {CUT} {label}\n\n"
                f"Frozen-Source-Commit: {args.source_commit}\nFrozen-Source-Path: {args.source_path}\n"
                f"Frozen-Source-Tree: {tree}\nPredecessor-Native-Commit: {PREDECESSOR}\n"
                "Profile: stable-v1; no automatic consumer adoption\n")
@@ -197,6 +267,7 @@ def load_source(args):
     run = output_path(args.run)
     source = read_json(run / "source.json", args.source_sha256)
     require(source["cut"] == CUT and source["native_parent"] == PREDECESSOR, "wrong preparation identity")
+    require(source.get("cohort_preparation") == COHORT, "native preparation configuration changed")
     selected = source["source_candidate"]
     tree, rows = source_inventory(args.repo, selected["commit"], selected["package_path"])
     require(tree == selected["package_tree"] and rows == source["files"], "source selection no longer matches immutable Git")
@@ -227,7 +298,7 @@ def native_facts(repo, native_commit, source):
 def attest(args):
     run, source = load_source(args)
     native = native_facts(args.repo, args.native_commit, source)
-    return save_json(run / "native.json", {"kind": "stdo304.native-identity/1", "source_sha256": args.source_sha256, "native": native, "standing": STANDING})
+    return save_json(run / "native.json", {"kind": record_kind("native-identity"), "source_sha256": args.source_sha256, "native": native, "standing": STANDING})
 
 
 def expected_manifest(source, native):
@@ -242,7 +313,7 @@ def expected_manifest(source, native):
             "standards": {"source_root": "specification/standards", "installed_root": "standards", "member_count": len(standards), "member_set_sha256": digest, "members": standards},
             "auxiliary": {"plugin": {"source_root": "plugins/spec", "installed_root": "plugins/spec", "member_count": len(plugins), "members": plugins},
                           "license": {"path": "LICENSE", "sha256": by_path["LICENSE"]["sha256"]},
-                          "release_note": {"source_path": "releases/v3.0.4.md", "installed_path": "release/release-note.md", "sha256": by_path["release/release-note.md"]["sha256"]}}}
+                          "release_note": {"source_path": f"releases/{CUT}.md", "installed_path": "release/release-note.md", "sha256": by_path["release/release-note.md"]["sha256"]}}}
 
 
 def seal(args):
@@ -258,12 +329,14 @@ def seal(args):
     digest = sha(raw)
     require(report["manifest_sha256"] == digest, "manager manifest digest differs from canonical bytes")
     asset = run / MANIFEST_NAME
-    require(asset.is_relative_to(Path(args.repo).resolve()), "use the 304 worktree as --repo so manifest_path is repository-relative")
+    require(asset.is_relative_to(Path(args.repo).resolve()), "use the selected repository as --repo so manifest_path is repository-relative")
     native.update(manifest_sha256=digest, manifest_path=asset.relative_to(Path(args.repo).resolve()).as_posix())
-    selection = {"kind": "a_c.stdo304.native-source-selection/1", "source_candidate": source["source_candidate"],
+    selection = {"kind": "a_c." + record_kind("native-source-selection"), "source_candidate": source["source_candidate"],
                  "native": native, "subject_uri": "repo://stdo-v3-native/" + native["commit"],
                  "files": source["files"], "inventory_sha256": source["inventory_sha256"],
                  "file_count": source["file_count"], "total_bytes": source["total_bytes"], "standing": STANDING}
+    if COHORT is not None:
+        selection["cohort_preparation"] = COHORT
     save(asset, raw)
     save(run / (MANIFEST_NAME + ".sha256"), f"{digest}  {MANIFEST_NAME}\n".encode())
     return save_json(run / "SOURCE_SELECTION.json", selection)
@@ -303,7 +376,7 @@ def installed(args):
     expected = {row["path"]: {"bytes": row["bytes"], "sha256": row["sha256"]} for row in selection["files"]}
     expected["manifest.json"] = {"bytes": len(manifest), "sha256": sha(manifest)}
     compare_files(disk_files(root), expected)
-    return save_json(run / ("installed-" + args.label + ".json"), {"kind": "stdo304.installed-byte-proof/1", "selection_sha256": args.selection_sha256,
+    return save_json(run / ("installed-" + args.label + ".json"), {"kind": record_kind("installed-byte-proof"), "selection_sha256": args.selection_sha256,
                      "commit": selection["native"]["commit"], "manifest_sha256": sha(manifest), "store": str(store),
                      "files": len(expected), "exact_payload_and_manifest": True, "standing": STANDING,
                      "limits": "Exact bytes and installer verification only; no semantic acceptance, task-use or adoption claim."})
@@ -331,7 +404,7 @@ def assets(args):
         path = run / "asset-checksums" / (row["name"] + ".sha256")
         save(path, sidecar)
         rows.append({"name": path.name, "path": str(path), "bytes": len(sidecar), "sha256": sha(sidecar)})
-    return save_json(run / "assets.json", {"kind": "stdo304.public-assets/1", "cut": CUT, "selection_sha256": args.selection_sha256, "files": sorted(rows, key=lambda r: r["name"])})
+    return save_json(run / "assets.json", {"kind": record_kind("public-assets"), "cut": CUT, "selection_sha256": args.selection_sha256, "files": sorted(rows, key=lambda r: r["name"])})
 
 
 def check_assets(args):
@@ -339,7 +412,7 @@ def check_assets(args):
     selected = read_json(run / "assets.json", args.assets_sha256)
     expected = {row["name"]: {"bytes": row["bytes"], "sha256": row["sha256"]} for row in selected["files"]}
     compare_files(disk_files(args.directory), expected)
-    return save_json(run / "public-download-proof.json", {"kind": "stdo304.public-download-proof/1", "assets_sha256": args.assets_sha256, "files": len(expected), "exact_downloads": True, "standing": STANDING})
+    return save_json(run / "public-download-proof.json", {"kind": record_kind("public-download-proof"), "assets_sha256": args.assets_sha256, "files": len(expected), "exact_downloads": True, "standing": STANDING})
 
 
 def remote_refs(repo):
@@ -359,6 +432,7 @@ def stable_line_available(refs):
 
 
 def publication_plan(args):
+    require(COHORT is None, "complete cohort publication requires scripts/check_stack_release.py --phase refs; standalone native push is forbidden")
     run = output_path(args.run)
     selected = read_json(run / "SOURCE_SELECTION.json", args.selection_sha256)
     local = read_json(run / "installed-local.json")
@@ -402,6 +476,7 @@ def publication_plan(args):
 
 
 def published(args):
+    require(COHORT is None, "complete cohort publication uses scripts/check_stack_release.py --phase published")
     run = output_path(args.run)
     plan = read_json(run / "publication-plan.json", args.plan_sha256)
     now = remote_refs(args.repo)
@@ -420,6 +495,10 @@ def published(args):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--cohort-manifest", type=Path)
+    parser.add_argument("--cohort-manifest-sha256")
+    parser.add_argument("--configuration", type=Path)
+    parser.add_argument("--configuration-sha256")
     sub = parser.add_subparsers(dest="command", required=True)
     def command(name, callback):
         p = sub.add_parser(name)
@@ -460,6 +539,15 @@ def main():
     p.add_argument("--plan-sha256", required=True)
     args = parser.parse_args()
     try:
+        if args.configuration is not None:
+            require(args.cohort_manifest is None and args.cohort_manifest_sha256 is None, "select one native preparation configuration")
+            require(read_json(args.configuration).get("kind") == "stdo.native-preparation-config/1", "dedicated native preparation configuration required")
+            configure(args.configuration, args.configuration_sha256)
+        elif args.cohort_manifest is not None:
+            require(args.configuration_sha256 is None, "configuration digest without configuration")
+            configure(args.cohort_manifest, args.cohort_manifest_sha256)
+        else:
+            require(args.cohort_manifest_sha256 is None and args.configuration_sha256 is None, "configuration digest without configuration")
         print(json.dumps(args.callback(args), sort_keys=True))
     except (ValueError, OSError, KeyError, json.JSONDecodeError) as exc:
         parser.exit(1, f"refused: {exc}\n")

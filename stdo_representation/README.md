@@ -1,99 +1,44 @@
 # STDO Representation
 
-STDO Representation supplies the source-linked STDO axiomatic program, its
-deterministic logical map and a shared native skill for Codex and Claude.
-The published release is 2.5.1 RC1; its source, dependency, member inventory
-and claims are bound by [the release record](releases/v2.5.1.md) and
-[cohort carrier](../stack_release.json). The
-[completed release](../specification_methodology/v2/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
-retains the native qualification limits. RC7 remains the immutable predecessor;
-external adoption is unselected. The live Product Definition identifies the
-operative source configuration and its exact decision.
+The current 3.0.5 Product supplies one source-linked a_c model, its checked
+carrier and coverage, the exact STDO corpus, derived Axiom program/map and
+bounded projections, and the shared Codex/Claude native skill.
+[The release record](releases/v3.0.5.md) identifies this subject; the external
+cohort binding records final native, publication and acceptance identities.
 
-An LLM authors and judges meaning. Axiom Indexer resolves and validates declared
-references, produces reference-only or unchanged-content materialized frame
-views, and joins caller-authored text. STDO remains semantic authority.
+The model was authored through public a_c prepare/task/submit/build against
+the frozen 53 standards and 15 native workflow contracts. Its 1,885 records
+include 42 explicit residuals. All 896 source sections have processing
+dispositions; 24 empty headings are omitted. These counts describe coverage,
+not semantic completeness or acceptance.
 
-## MVP
+Start with [Quickstart](QUICKSTART.md) and the
+[native skill](skills/stdo-representation/SKILL.md). The current source and
+model are in `build_tenants/a_c/representation/stdo-v3.0.5/`; the derived
+program, map and five frame indexes are in
+`build_tenants/axiom_indexer/representation/stdo-v3.0.5/`.
 
-The Product contains the program and map under
-`build_tenants/axiom_indexer/representation/stdo-v2.5.1-rc.1/`, the complete
-canonical `skills/stdo-representation/` bundle and its two native discovery
-symlinks. The exact nine-member inventory lives in the release record.
-There is no Representation-local executor or projection engine.
+The indexes cover native work/control intake, deterministic processing,
+Product composition, finding reports and source-closed release. Each points
+to an actual source-owned Worker or Reviewer frame. Applicability, operation
+authority and actual task evidence remain the caller's responsibility.
 
-The [frame-index design](build_tenants/axiom_indexer/FRAME_INDEX_PROJECTIONS.md)
-explains the two overlapping complete-update Worker/Reviewer indexes. They
-retain shared rules, supporting premises, conditions, exceptions and residuals.
-The agent selects applicability and supplies actual task evidence; an indexed
-rule is not an already satisfied condition. The program also retains
-Executive steel-thread and event-driven attention indexes and adds the existing
-interface-integration composite and its computational whole-path evaluation.
-Claims, supplied context, actual path/work and ordinary-user evidence remain
-distinct; no index appoints an actor or supplies operation authority.
+The exact 3.0.5 Axiom provider preserves every model record, field and identity
+through reversible conversion. Reference-only and materialized projections
+have the same declared supporting closure. Current a_c viewers and real
+formal verification consume this same model; their evidence retains its
+declared scope. This is not a proof of all STDO meaning or a new executor.
 
-## Use
+The source project's [Product Definition](stdo_representation.json) pins
+installed STDO 3.0.4 as construction methodology. The current provider candidate
+was explicitly pinned for the supported larger authoring transaction; the
+represented source and all owned release outputs are 3.0.5. A caller's method
+adoption is a separate relation.
 
-Start with the [Quickstart](QUICKSTART.md) and the
-[canonical skill](skills/stdo-representation/SKILL.md). Resolve the caller's
-exact Product Definition, accepted frame basis and existing work grant; then
-verify the selected native/dependency/source identities. Read the map, select
-material frames and re-enter their exact sources when needed. Use a frame view
-where one actually covers the task, and an exact join when a bounded handoff is
-requested. Ordinary answers do not acquire a join or review ceremony.
-
-The [frame guide](skills/stdo-representation/references/frame-index-use.md)
-provides the actual CLI. Omitting `--output` returns stdout. Supplying `-`
-names a literal file; file output requires the applicable write grant.
-
-## Exact bases
-
-The release record and cohort carrier bind exact Source STDO 2.5.1 RC1 and the
-same-version Axiom dependency, including their member and source digests.
-The caller's operative method basis remains a separate selection. A working
-candidate requires its explicit construction grant; discovery, matching version
-text or mechanical validation does not establish release or acceptance.
-
-## Evidence and boundary
-
-[T009](.ai-workspace/tickets/completed/T-009-deliver-qualified-native-stdo-use-with-axiom-indexer.md)
-links its completed predecessor result and exact evidence. The
-[current release record](../specification_methodology/v2/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
-binds the separate published 2.5.1 RC1 cohort. Reviewed authored predecessors,
-failed native attempts and repairs remain under `dogfood/t009-frame-projection/`.
-They are reacquirable evidence, not prerequisites of ordinary installed use.
-The final release proof binds source conservation, native UAT, installed-path
-checks and publication separately. Earlier immutable cuts retain their own
-bytes, claims and acceptance decisions.
-
-Validation does not establish semantic truth, completeness, unique
-interpretation, owner acceptance or universal model reliability. No complete
-admitted `a_c` model, automatic frame selection, GTL, GraphFunction, deterministic
-prompt runtime or ABG executor is claimed. Retained semantic-compiler/GTL/schema
-paths are historical evidence outside the current Product.
-
-## Product Definition
-
-[stdo_representation.json](stdo_representation.json) is the source project's
-single operative selection. Follow its exact method and frame-decision routes;
-this README does not independently maintain acceptance identities.
-
-## Authority order
-
-1. [Goals](specification/GOALS.md)
-2. [Intent](specification/INTENT.md)
-3. [Product](specification/PRODUCT.md)
-4. [Requirements](specification/requirements/)
-5. [Reference-frame basis](specification/REFERENCE_FRAME_BASIS.md)
-6. Selected tenant instructions and exact artifacts
-7. Retained evidence and history
-
-## Focused checks
-
-```sh
-stdo status --definition stdo_representation.json --verify
-```
-
-For coordinated release checking, run the shared checker from the repository
-root against the exact selected carrier. It verifies release integrity;
-source/semantic/native judgments retain their separate evidence.
+[Goals](specification/GOALS.md), [Intent](specification/INTENT.md),
+[Product](specification/PRODUCT.md), [requirements](specification/requirements/)
+and the [accepted frame basis](specification/REFERENCE_FRAME_BASIS.md) own the
+source project. Historical 2.x releases, GTL/schema/compiler prototypes and
+native trials retain their original bytes and claims; they are not the current
+model or release evidence. Workspace discovery symlinks are not distributed
+Product members; installed payloads use regular canonical files.

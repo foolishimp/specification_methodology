@@ -1,0 +1,15 @@
+{
+  "shell": [
+    "sh"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.stdo/builder-adoption-guide-repair-001-cgy28goh",
+  "environment_binding": {
+    "STDO_RELEASE": "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+    "STDO_TOOLS": "unset before shell invocation"
+  },
+  "script": "set -eu\nmkdir -p .stdo/tools\npython3 -I -B \"$STDO_RELEASE/standards/tooling/materialize.py\" materialize \\\n  --destination \"$STDO_TOOLS\"\npython3 -I -B \"$STDO_RELEASE/standards/tooling/materialize.py\" verify-tree \\\n  --destination \"$STDO_TOOLS\"\n",
+  "script_sha256": "7f35cf3a9c0dcdb168312ae666a1266a419888990209ee7287a86a9375fd653b",
+  "exit_code": 1,
+  "stdout": "",
+  "stderr": "sh: line 3: STDO_TOOLS: unbound variable\n"
+}

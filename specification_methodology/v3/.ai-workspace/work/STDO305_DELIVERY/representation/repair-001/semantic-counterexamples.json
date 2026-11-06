@@ -1,0 +1,134 @@
+{
+  "kind": "stdo305.semantic-repair-counterexamples/1",
+  "standing": "Writer source-derived before/after semantic judgments over exact built fields; independent targeted recheck pending. These are not execution tests or an automated semantic oracle.",
+  "source_S": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "predecessor_model_raw_sha256": "da07f44e9c51e1c7b3f4d0dc9a3c7aecca2a1f695de1b2bb3d391c56cd31fd1f",
+  "successor_model_raw_sha256": "68627579fdc654d5ccdcbf67d5d6954ce39392da70145308ea27557bc5c3b00f",
+  "cases": [
+    {
+      "id": "S3-direct-sufficient-tools",
+      "key": "claude_host_boundary",
+      "field": "statement",
+      "input": {
+        "host": "Claude",
+        "admitted": true,
+        "selected_Product_tools_sufficient": true,
+        "strict_boundary_selected": false,
+        "Claude_policy_hook_installed": false
+      },
+      "source": "plugins/spec/references/HOST_BINDING.md:3-7; plugins/spec/references/COORDINATED_HANDOFF.md:249-251",
+      "required": "The absence of the optional Claude adapter does not invalidate this direct task; use the already-selected sufficient Product tools.",
+      "before": "falsified: the unconditional policy/hook requirement rejects this source-permitted case",
+      "after": "satisfied in Writer source reading: applicability and sufficient-tool alternative are now explicit",
+      "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:225cc175cf584eef5d5d3da8821bf6a7",
+      "before_field": "For the selected Claude session use the explicit session tool policy and hook binding described by this host adapter, with actual allowed control/read commands, roots and output behavior. Disable or constrain alternate tools and channels that bypass the selected policy; validate the actual policy/hook/session result rather than infer isolation from a subagent label. This bounded tool boundary does not erase inherited or previously acquired information, prove arbitrary information-flow noninterference or supply semantic independence.",
+      "after_field": "The Product supplies the required acquisition boundary and grant. Use already-selected Product tools when they sufficiently realize that boundary; the host adapters are optional in that case and do not justify installing a competing mechanism. For a selected strict tool-acquisition boundary that uses the Claude adapter, bind its explicit session tool policy and hook, actual allowed control/read commands, roots and output behavior. Disable or constrain alternate tools and channels that bypass that selected policy; validate the actual policy/hook/session result rather than infer isolation from a subagent label or ordinary permission prompt. A direct admitted Claude task whose selected Product tools suffice and whose boundary is not strict does not require this adapter. The adapter covers hooked calls, not inherited or previously acquired context, arbitrary information-flow noninterference or semantic independence."
+    },
+    {
+      "id": "S3-selected-strict-adapter",
+      "key": "claude_host_boundary",
+      "field": "statement",
+      "input": {
+        "host": "Claude",
+        "strict_boundary_selected": true,
+        "Claude_adapter_selected": true,
+        "required_policy_hook_missing": true
+      },
+      "source": "plugins/spec/references/HOST_BINDING.md:9-95; plugins/spec/references/COORDINATED_HANDOFF.md:249-251",
+      "required": "The selected adapter claim remains unsupported without its actual binding; no ordinary prompt or actor label supplies it.",
+      "before": "satisfied for this strict adapter case",
+      "after": "satisfied in Writer source reading: the strict adapter conditions and limits are preserved",
+      "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:225cc175cf584eef5d5d3da8821bf6a7",
+      "before_field": "For the selected Claude session use the explicit session tool policy and hook binding described by this host adapter, with actual allowed control/read commands, roots and output behavior. Disable or constrain alternate tools and channels that bypass the selected policy; validate the actual policy/hook/session result rather than infer isolation from a subagent label. This bounded tool boundary does not erase inherited or previously acquired information, prove arbitrary information-flow noninterference or supply semantic independence.",
+      "after_field": "The Product supplies the required acquisition boundary and grant. Use already-selected Product tools when they sufficiently realize that boundary; the host adapters are optional in that case and do not justify installing a competing mechanism. For a selected strict tool-acquisition boundary that uses the Claude adapter, bind its explicit session tool policy and hook, actual allowed control/read commands, roots and output behavior. Disable or constrain alternate tools and channels that bypass that selected policy; validate the actual policy/hook/session result rather than infer isolation from a subagent label or ordinary permission prompt. A direct admitted Claude task whose selected Product tools suffice and whose boundary is not strict does not require this adapter. The adapter covers hooked calls, not inherited or previously acquired context, arbitrary information-flow noninterference or semantic independence."
+    },
+    {
+      "id": "S4-gap-remediation-only",
+      "key": "fd_migration_dispositions",
+      "field": "statement",
+      "input": {
+        "new_kind_eligibility_established": false,
+        "termination_proof_gap_identified": true,
+        "remediation_identified": true,
+        "bounded_successor_selected": false
+      },
+      "source": "standards/RELEASE.md:813,818-820",
+      "required": "pending-identified, with only exact lawful legacy standing and no successor F_D claim",
+      "before": "falsified: AND incorrectly requires a bounded successor as well",
+      "after": "satisfied in Writer source reading: identified gap/remediation OR selected bounded successor is explicit",
+      "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bea34e3623d1af6ddbebd548f5388998",
+      "before_field": "If totality, dependency closure and declared outcomes are established, migrate to common F_D while retaining the operation purpose, unchanged-subject evaluation profile where applicable, and exact grants. If eligibility is missing and an identified gap, remediation and bounded successor are selected, retain pending-identified migration. With no selected remediation retain unresolved classification; do not relabel automatically as F_P or claim common F_D. Old evidence remains valid only for its exact legacy basis/claims until the required preservation relation is established; patch naming does not promise semantic compatibility.",
+      "after_field": "If totality, dependency closure and declared outcomes are established, migrate to common F_D while retaining the operation purpose, unchanged-subject evaluation profile where applicable, and exact grants. If new-kind eligibility is unestablished and the owner has identified the evidence gap/remediation or selected a separately declared bounded successor and its remediation obligation, retain pending-identified migration. Either alternative suffices; an identified termination-proof gap/remediation does not require selecting a bounded successor. When neither supported remediation nor successor classification has been selected, retain unresolved classification; do not relabel automatically as F_P or claim common F_D. A bounded successor has its own identity, contract, exhaustion outcomes and preservation obligations and does not retrospectively prove the legacy operation total. Old evidence remains valid only for its exact legacy basis/claims until the required preservation relation is established; patch naming does not promise semantic compatibility."
+    },
+    {
+      "id": "S4-selected-bounded-successor",
+      "key": "fd_migration_dispositions",
+      "field": "statement",
+      "input": {
+        "new_kind_eligibility_established": false,
+        "bounded_successor_selected": true,
+        "successor_remediation_obligation_identified": true,
+        "legacy_termination_proof_established": false
+      },
+      "source": "standards/RELEASE.md:813,818-820",
+      "required": "pending-identified for the separately declared successor; its contract does not retrospectively prove the legacy operation total",
+      "before": "overrestricted by conjunction with the other alternative",
+      "after": "satisfied in Writer source reading: the second alternative and its distinct contract are retained",
+      "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bea34e3623d1af6ddbebd548f5388998",
+      "before_field": "If totality, dependency closure and declared outcomes are established, migrate to common F_D while retaining the operation purpose, unchanged-subject evaluation profile where applicable, and exact grants. If eligibility is missing and an identified gap, remediation and bounded successor are selected, retain pending-identified migration. With no selected remediation retain unresolved classification; do not relabel automatically as F_P or claim common F_D. Old evidence remains valid only for its exact legacy basis/claims until the required preservation relation is established; patch naming does not promise semantic compatibility.",
+      "after_field": "If totality, dependency closure and declared outcomes are established, migrate to common F_D while retaining the operation purpose, unchanged-subject evaluation profile where applicable, and exact grants. If new-kind eligibility is unestablished and the owner has identified the evidence gap/remediation or selected a separately declared bounded successor and its remediation obligation, retain pending-identified migration. Either alternative suffices; an identified termination-proof gap/remediation does not require selecting a bounded successor. When neither supported remediation nor successor classification has been selected, retain unresolved classification; do not relabel automatically as F_P or claim common F_D. A bounded successor has its own identity, contract, exhaustion outcomes and preservation obligations and does not retrospectively prove the legacy operation total. Old evidence remains valid only for its exact legacy basis/claims until the required preservation relation is established; patch naming does not promise semantic compatibility."
+    },
+    {
+      "id": "S4-no-remediation-or-successor",
+      "key": "fd_migration_dispositions",
+      "field": "statement",
+      "input": {
+        "new_kind_eligibility_established": false,
+        "identified_gap_remediation": false,
+        "selected_bounded_successor": false
+      },
+      "source": "standards/RELEASE.md:814,818-822",
+      "required": "unresolved successor classification, neither common F_D nor automatic F_P",
+      "before": "satisfied for this case",
+      "after": "satisfied in Writer source reading: neither supported alternative leaves classification unresolved",
+      "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bea34e3623d1af6ddbebd548f5388998",
+      "before_field": "If totality, dependency closure and declared outcomes are established, migrate to common F_D while retaining the operation purpose, unchanged-subject evaluation profile where applicable, and exact grants. If eligibility is missing and an identified gap, remediation and bounded successor are selected, retain pending-identified migration. With no selected remediation retain unresolved classification; do not relabel automatically as F_P or claim common F_D. Old evidence remains valid only for its exact legacy basis/claims until the required preservation relation is established; patch naming does not promise semantic compatibility.",
+      "after_field": "If totality, dependency closure and declared outcomes are established, migrate to common F_D while retaining the operation purpose, unchanged-subject evaluation profile where applicable, and exact grants. If new-kind eligibility is unestablished and the owner has identified the evidence gap/remediation or selected a separately declared bounded successor and its remediation obligation, retain pending-identified migration. Either alternative suffices; an identified termination-proof gap/remediation does not require selecting a bounded successor. When neither supported remediation nor successor classification has been selected, retain unresolved classification; do not relabel automatically as F_P or claim common F_D. A bounded successor has its own identity, contract, exhaustion outcomes and preservation obligations and does not retrospectively prove the legacy operation total. Old evidence remains valid only for its exact legacy basis/claims until the required preservation relation is established; patch naming does not promise semantic compatibility."
+    },
+    {
+      "id": "S4-activation-owner-present",
+      "key": "prior_43aacce1d3f718320440fc9987a05d82",
+      "field": "uncertainty",
+      "input": {
+        "supplied_owner": "standards/ACTIVATION.md",
+        "supplied_section": "3. Step results and disposition"
+      },
+      "source": "standards/ACTIVATION.md:938-1163",
+      "required": "Do not report this supplied source as absent; concrete task evidence remains a separate question.",
+      "before": "falsified: the full-corpus model calls its supplied §3 unsupplied",
+      "after": "satisfied in Writer source reading: the obsolete acquisition-gap field is empty; no new completeness claim is made",
+      "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:5f0c2c26417f92f722617f981b728a66",
+      "before_field": "The complete availability and ambiguity algebras are deferred to unsupplied §3.",
+      "after_field": ""
+    },
+    {
+      "id": "S4-result-algebra-owner-present",
+      "key": "prior_ee54a35b161f7a01b98adb1fe788e2c8",
+      "field": "uncertainty",
+      "input": {
+        "supplied_owner": "standards/FOUNDATIONS.md",
+        "supplied_sections": [
+          "Results",
+          "Conjunction of results"
+        ]
+      },
+      "source": "standards/FOUNDATIONS.md:732-1057",
+      "required": "Do not report the supplied algebra and conjunction as absent; recording laws is not performing an evaluation.",
+      "before": "falsified: the full-corpus model calls its supplied result algebra/conjunction unsupplied",
+      "after": "satisfied in Writer source reading: the obsolete acquisition-gap field is empty; actual evidence limitations are retained",
+      "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:0cdfa38e802b13e04ed4835001f27d06",
+      "before_field": "The complete core algebra and conjunction law are not supplied; only the quoted local uses and mappings are represented.",
+      "after_field": ""
+    }
+  ]
+}

@@ -30,3 +30,10 @@ The active requirement set does not define a complete admitted `a_c` model,
 GTL overlay, GraphFunction, automatic closure, deterministic prompt packet,
 renderer, skill generator, or ABG runtime. Retained implementations of those
 earlier directions are historical evidence outside the active Product.
+
+## Current 3.0.5 model relation
+
+[REQ-P-CURRENT-MODEL](REQ-P-CURRENT-MODEL.md) is the operative successor for
+the canonical model/provider relation and current version/source bindings.
+Historical fixed RC bindings in older requirement text retain their historical
+subjects and do not select current output paths.

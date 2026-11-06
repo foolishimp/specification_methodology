@@ -1,5 +1,7 @@
 # Construction Reference-Frame Basis
 
+Current delivery: the [3.0.5 contract](RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+
 ## Project frame basis
 
 The owner instruction in T-001 selects independent implementation of `a_c` with

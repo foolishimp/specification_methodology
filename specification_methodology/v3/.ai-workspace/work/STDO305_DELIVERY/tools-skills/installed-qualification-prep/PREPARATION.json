@@ -1,0 +1,50 @@
+{
+  "activation_boundary": "Disjoint Product/policy/activation/authority/evidence per controlled case; final Reviewer activation separate from project Worker. Same process context isolation is not claimed.",
+  "files": [
+    {
+      "bytes": 2581,
+      "path": "HOST_COMMANDS.template.json",
+      "sha256": "26e99edab4775cf6551932448b05b28c395acfb6e782229ffb6ed15ebb35407e"
+    },
+    {
+      "bytes": 1049,
+      "path": "HOST_RUNTIME.json",
+      "sha256": "3ed89522a598d4e5c50cfd4fa39f70b1f9987c93240815908849c294bd137bf0"
+    },
+    {
+      "bytes": 4056,
+      "path": "README.md",
+      "sha256": "da555af03b857183cb39fc3739dd798cd96ff3e8192af9512d899704336ac36b"
+    },
+    {
+      "bytes": 4267,
+      "path": "host-prompt.txt",
+      "sha256": "c7e7e3d6530c4ba03a8a179b50c5fa8b51a7b458486a9804c80ae90b1fee295a"
+    },
+    {
+      "bytes": 25663,
+      "path": "prepare_native_inputs.py",
+      "sha256": "a985e52b726b5a6a195ebbe7294164f19226b33a0dd7e39feeb369deb39ee8c2"
+    },
+    {
+      "bytes": 3027,
+      "path": "record_public_call.py",
+      "sha256": "c6da79243676f66492d57923dafb65915840d0961326d8836b67f0ed3e2f301a"
+    },
+    {
+      "bytes": 4001,
+      "path": "seed_uncertain.py",
+      "sha256": "042b228a092dea59c055c727bb9fa88a999ccb6a1d36e30153ece10ab5e903ee"
+    }
+  ],
+  "prerequisites": [
+    "Actual verified nativeA",
+    "Current writable runtime/bootstrap and host CONFIG",
+    "Actual installed current proof matching selected runtime",
+    "One actual retained uncertain process attempt per host",
+    "Root serialized heavy slot for current Context preflight; no concurrent native actors"
+  ],
+  "qualification": "Not yet performed. No Product source or global host setting changed.",
+  "schema": "stdo305.native-qualification-preparation/1",
+  "status": "parameterized_inputs_syntax_checked_unexecuted"
+}

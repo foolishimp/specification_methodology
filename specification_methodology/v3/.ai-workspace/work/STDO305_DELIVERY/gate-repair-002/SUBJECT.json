@@ -1,0 +1,168 @@
+{
+  "kind": "stdo305.gate-repair-review-subject/1",
+  "predecessor": "tooling-review-001/SUBJECT.json",
+  "conclusion_requested": "targeted independent recheck of four rejected gate findings plus bounded current adapter/manager integration",
+  "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "source_freeze_record_sha256": "640141354a53504999c1c21757689f7a3ecf6cbe77c3f30804f8493a2928dc99",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 3632,
+      "sha256": "3643f5754f93bdcdc145858b65d50c2acc8e4985e19a5231127b0fa8af18a025"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 3121,
+      "sha256": "3b189e10f4ca5551a6acfac6c5d73ffd4055d364bea19a88482f12c1db1704e5"
+    },
+    {
+      "path": "RELEASE_PRODUCTS.md",
+      "bytes": 2384,
+      "sha256": "841cb37485b9f13f21445811b8484b81e8f479e9c60d88a2e1812e57da90031f"
+    },
+    {
+      "path": "STACK_RELEASE.md",
+      "bytes": 5872,
+      "sha256": "a52d86a14fc95d7d93d6aa4e912971bcc723c554e53c20833681ef853afc6dc9"
+    },
+    {
+      "path": "scripts/STABLE_RELEASE_PROFILE.md",
+      "bytes": 7795,
+      "sha256": "f3ec999e12ae583882bad6809e09602279f8598a0f8be3d479d642b53e79b28f"
+    },
+    {
+      "path": "scripts/check_stack_release.py",
+      "bytes": 53173,
+      "sha256": "6367bc03f4ea37a895f7a1b195b1144fd44b94ef82712c4312a2d7cf85eb0690"
+    },
+    {
+      "path": "scripts/fixtures/stack_release-v2.5.1-rc.2.json",
+      "bytes": 11761,
+      "sha256": "1af97aeb7df12cd31dbddc04fad55a3ef6b3552c6e246a1c257aa942ec8ace18"
+    },
+    {
+      "path": "scripts/stable_release_evidence.py",
+      "bytes": 47312,
+      "sha256": "34b60df9a1188a24794b15251ba31773212de005e62f7294a1f6848af92bac49"
+    },
+    {
+      "path": "scripts/stable_stack_release.py",
+      "bytes": 31350,
+      "sha256": "afe0f292df9e7b4ce919aad3924026c83ec38c3b30f6a28a641a5a44a0560a92"
+    },
+    {
+      "path": "scripts/stdo_source_freeze.py",
+      "bytes": 5273,
+      "sha256": "b983160f03631efbea26bc7f50bf9a664f2372a04033d467f9ad1ecbcd263f76"
+    },
+    {
+      "path": "specification_methodology/v2/pyproject.toml",
+      "bytes": 495,
+      "sha256": "47c22e78d0a2d2f4a79ce592c61c9fe2088639174218beb7352895043c22cae4"
+    },
+    {
+      "path": "specification_methodology/v2/src/stdo_toolchain/__init__.py",
+      "bytes": 149,
+      "sha256": "9f5a60774e02336a110ac65156b81a755b0bbd7cff254eb5413222f376b8aabc"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/README.md",
+      "bytes": 3111,
+      "sha256": "75379dd6ef47dcdaa537e2608fcb39f44596f445cf6b40e6a8ed666f645fb854"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/native_release.py",
+      "bytes": 30670,
+      "sha256": "3585e4953975caa32686a9e05f1d4dbea28ea555a68bec0cc1528f9aba5d6834"
+    },
+    {
+      "path": "stack_release.json",
+      "bytes": 6433,
+      "sha256": "7d808313bf59f3492a5c56020a71d596352f25dc21fbebae6f27a1717044ed76"
+    },
+    {
+      "path": "tests/stable_formal_recorded_control.py",
+      "bytes": 5413,
+      "sha256": "9289f1d58c46a502b6bcd75bb7cea610c5a1d04689d896130ba3b993abec5e73"
+    },
+    {
+      "path": "tests/test_stable_stack_release.py",
+      "bytes": 38442,
+      "sha256": "a20bcd683f19a483350daca98c4950f656cdeb58d7b69fd54b0dc03706ce44d2"
+    },
+    {
+      "path": "tests/test_stack_release.py",
+      "bytes": 43938,
+      "sha256": "5b6dd8f87d90eb48c90cd9f50cd63affda0f264969ea5ab7d9c92873cf070686"
+    }
+  ],
+  "source_inventory_sha256": "f40318bc8af40c1c2dcfbfe8eedc6d8c8409651b02d08a3b6006a0dd8298a59b",
+  "evidence": [
+    {
+      "path": "REVIEW_DISPOSITION.json",
+      "bytes": 2570,
+      "sha256": "6c92efeeb670f6c721eb9dec3fe7ceaee26b344a7f3a3eacbe4515532934a438"
+    },
+    {
+      "path": "consumer_regressions.py",
+      "bytes": 4035,
+      "sha256": "97d4502e45930759e3da2cd9c5983ef8712a60ae99680d540933fafc29fa3355"
+    },
+    {
+      "path": "failing-before.json",
+      "bytes": 618,
+      "sha256": "bd8fc6595fba678a622c85d505ac09854349a797cc48f84ebd277101e52fd6e1"
+    },
+    {
+      "path": "passing-after.json",
+      "bytes": 1003,
+      "sha256": "f92afcf385f37821b7f64d87d191d26a31528770231f05d0d25e4761983b12ab"
+    },
+    {
+      "path": "TESTS.json",
+      "bytes": 423,
+      "sha256": "c0a01023e9cf52b7e1882fac7ccc9fcaf433f5abdec888c85b7ce19a3d264fac"
+    },
+    {
+      "path": "tests.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "tests.stderr",
+      "bytes": 172,
+      "sha256": "a791871527ab6f1bc23c7a6e0aa5777be6062efd4dc0a5d8700aab027eb07eb3"
+    },
+    {
+      "path": "formal-control-001/RESULT.json",
+      "bytes": 1691,
+      "sha256": "8eecaf2af50ddf4f9e34dea9277a6817140f0012e85d1ed1219d3e0772760348"
+    },
+    {
+      "path": "formal-control-001/test-manifest.json",
+      "bytes": 9233,
+      "sha256": "47b686cf4d3eefd3c84b738c3943c15804036a0fd8d5344ecdefb61f7c81e6e2"
+    },
+    {
+      "path": "formal-control-001/test-evidence.json",
+      "bytes": 59588,
+      "sha256": "cb807c3d66e1b35937118615dcf01c2e76073633e6ec6b0a2209e7249f8a4b84"
+    }
+  ],
+  "formal_owner_dependency": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/code-candidate-002.json",
+    "sha256": "b39ec1d2e9d91473110a914a2f17069c4dbf4a45ddaf92714d38637bbeb64cef"
+  },
+  "manager_build": "../manager/build.json",
+  "manager_source_verification": "../manager/verification.json",
+  "manager_stable_tests": "../manager/stable-tests.json",
+  "standing": "reviewable bounded repair; no complete cohort release verdict",
+  "limits": [
+    "Source S is unchanged; no Git effects.",
+    "Current repaired STDO model/proof/native A/public installed qualification remain pending.",
+    "Recorded toy proof is a real owner-execution adapter control, not current STDO proof.",
+    "Installed checks and owner inspections require the explicitly selected current local runtime/store; static hashes do not replace live qualification.",
+    "Current documentation/proof-reader packaging and installedA host paths have not yet been qualified.",
+    "Original review was a conversation return; REVIEW_DISPOSITION.json is an identified Executive transcription, not an invented original review file."
+  ]
+}

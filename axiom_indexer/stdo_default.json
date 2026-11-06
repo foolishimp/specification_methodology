@@ -1,5 +1,5 @@
 {
-  "$schema": "stdo://releases/v2.5.1-rc.1/standards/schemas/product-definition.schema.json",
+  "$schema": "stdo://releases/v3.0.4/standards/schemas/product-definition.schema.json",
   "kind": "stdo.product-definition",
   "product": {
     "definition_id": "urn:stdo:product-definition:axiom-indexer",
@@ -15,17 +15,17 @@
       "source": {
         "repository": "https://github.com/foolishimp/specification_methodology.git"
       },
-      "selector": "stdo://channels/2.5.1",
+      "selector": "stdo://channels/3.0.4",
       "basis": {
-        "uri": "stdo://releases/v2.5.1-rc.1/",
-        "manifest_sha256": "5d306da13994e69aa9f215d4c1cd2d0be96283c1e33a652b58e6e9262d036b64"
+        "uri": "stdo://releases/v3.0.4/",
+        "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
       }
     },
     "additional_authorities": [],
     "entrypoints": [
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/authority_compressions/stdo_bootstrap.md"
+        "uri": "standards/frames/bootstrap.md"
       },
       {
         "basis": "#/constitution/stdo/basis",
@@ -33,19 +33,31 @@
       },
       {
         "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/EXECUTIVE_BASELINE.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
         "uri": "standards/AXIOMATIC_CALCULUS.md"
       },
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/REFERENCE_FRAME_METHOD.md"
+        "uri": "standards/IDENTITY.md"
       },
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/IDENTITY_METHOD.md"
+        "uri": "standards/RELEASE.md"
       },
       {
         "basis": "#/constitution/stdo/basis",
-        "uri": "standards/RELEASE_METHOD.md"
+        "uri": "standards/ACTIVATION.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/EVALUATION.md"
       }
     ],
     "agent_bootstrap": {
@@ -66,7 +78,7 @@
       "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
       "authority": [
         "./specification/PRODUCT.md#product-disposition-authority",
-        "./.ai-workspace/decisions/20260920_251_rc1_frame_basis_acceptance.json"
+        "./.ai-workspace/decisions/20261106_STDO305_configuration.json"
       ],
       "applies_to": [
         "urn:stdo:product-definition:axiom-indexer"

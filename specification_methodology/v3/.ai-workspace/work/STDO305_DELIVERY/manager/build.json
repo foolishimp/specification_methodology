@@ -1,0 +1,61 @@
+{
+  "kind": "stdo.manager-build/1",
+  "selection_sha256": "70893cbfac370dd68f917125dc1b86b55ce04f367eda864a04f9d546d4e39f29",
+  "operations": [
+    {
+      "operation": "install-build-dependencies",
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-manager-build-6r08wep9/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/build-wheels",
+        "setuptools==75.8.0",
+        "wheel==0.45.1"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.6757687916979194,
+      "stdout_sha256": "95d996c45d46178ed653fbf9b1f8916d4490cf8e1b8294a70fb45c4d2a380ad8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "operation": "build-wheel",
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-manager-build-6r08wep9/venv/bin/python",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-build-isolation",
+        "--no-deps",
+        "--wheel-dir",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/dist",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-manager-build-6r08wep9/source"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 0.5300901657901704,
+      "stdout_sha256": "8d9daa8ee80fe79b9d6a903dee45eef29f63ed2a7273155a93d1906a6035330c",
+      "stderr_sha256": "c8583f4fc06dc2a5f69832bab935511022b0663ce3e6c3d9d7fc07dae5bf958c"
+    }
+  ],
+  "build_dependency_artifacts": [
+    {
+      "name": "setuptools-75.8.0-py3-none-any.whl",
+      "bytes": 1228782,
+      "sha256": "e3982f444617239225d675215d51f6ba05f845d4eec313da4418fdbb56fb27e3"
+    },
+    {
+      "name": "wheel-0.45.1-py3-none-any.whl",
+      "bytes": 72494,
+      "sha256": "708e7481cc80179af0e556bbf0cc00b8444c7321e2700b8d8580231d13017248"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/dist/stdo_toolchain-3.0.5-py3-none-any.whl",
+      "bytes": 61512,
+      "sha256": "072bce2c47663b84d28c83d8cbdb7eec54cfd126ba08a2ab5a7a61d9687cc293"
+    }
+  ]
+}

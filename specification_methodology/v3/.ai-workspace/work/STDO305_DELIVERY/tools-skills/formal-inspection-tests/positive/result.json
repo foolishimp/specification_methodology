@@ -1,0 +1,289 @@
+{
+  "checked_claims": [
+    "imported-model-well-formedness",
+    "whole-model-source-correspondence",
+    "declared-closure-and-projection",
+    "record-budget-result",
+    "supplied-graphify-view-correspondence"
+  ],
+  "context_binding": null,
+  "evidence": {
+    "manifest_sha256": "f11724f117f0cb1e72e39437882ccb65568024137e1b5988f89a8f409e93a971",
+    "members": {
+      "GateBounds.ir": "a3ab8c463cf7f3102a3952b0b4066cf19b7a350e51aa72a459899cda5b8d9d57",
+      "GateBounds.ir.sig": "6f30da785554a7c7a7888098fc3d1cd0ece7ecbf635710277bae22d18843d903",
+      "GateBounds.lean": "deb558bdbec1e9a90dfd21716bb95a1e6f767c546c0d8c839d8e0a809c1a72c3",
+      "GateBounds.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GateBounds.olean": "63a55a912764e20a8ad45a95966b433a5d4c579bbc1fb3793132458c209f996f",
+      "GateBounds.olean.private": "22ee2316e2500fd78160b2d0a3ac5637d917e9c871c448ec247fd69a79ea6d46",
+      "GateBounds.olean.server": "8afcf65ccd32c66f6ea5f562571327c009fe09ec36b4ef32626633d157f94ff1",
+      "GateData.ir": "f4dcf94385327f4a03aecc28dd720146ccfda970233bd0ef9784b83db98efba9",
+      "GateData.ir.sig": "ef0f5154b1ae5adbcf4a0d57fd190ebd435d4e80a57a748669a5df689d43bab0",
+      "GateData.lean": "d71920b9abfe733d79471a2b49197beda011fa32968294f4f708272869cc94ee",
+      "GateData.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GateData.olean": "7497a30030793e6681f623efe357e2b9f7e64eb04fdab3edfb5b63b611ba25cd",
+      "GateData.olean.private": "bcb9092fc31c6e329e9582f149e9e898a5c1597c97a5e34b1a64eede556e15b8",
+      "GateData.olean.server": "f58b59a96a6700edf87626668e6bef11584f180267015988816ae29482c6a06b",
+      "GateExternalNames.ir": "6cb98b7fc3273591196369149f7dd9dec49ebd76fb5faddb1eb0105d7ab650ac",
+      "GateExternalNames.ir.sig": "60bb6fb7e45eebb178af0994cd4de606945bade1f83198e35b105f8e94d6f546",
+      "GateExternalNames.lean": "deb558bdbec1e9a90dfd21716bb95a1e6f767c546c0d8c839d8e0a809c1a72c3",
+      "GateExternalNames.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GateExternalNames.olean": "c1f60de5a69146da8d6f2e32f17ed3f5448290563c9750c163a0de7f5edaab24",
+      "GateExternalNames.olean.private": "5cd3e09760d3aff459c974cc9dd2367122d990bbd28ac3471863f4ffb07bde56",
+      "GateExternalNames.olean.server": "52a44d11443a407c472cc6091ac1320d4357199fd33e5fd8083a2af22b140b93",
+      "GateIdentities.ir": "f94b542167d87af240738582fa378d9de2c524e7d6ca687d7767f9255194828c",
+      "GateIdentities.ir.sig": "9ee9d29e8ad631db89be41b5c903fcd07b03d7dc0f4d412f0b654a1fe2a69561",
+      "GateIdentities.lean": "8804c0619fca45e6be8d9d87f768818be20891f203eba7eddf29723c9dd56307",
+      "GateIdentities.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GateIdentities.olean": "b9bd54ec23fa0f2514b2cd05b9237b92871dab3496ba0d3c8baef3816d8e847e",
+      "GateIdentities.olean.private": "1ca481f03c22de5ac0af97c81cf7ff5d36df46b5718ab5669e3b85af38d56f35",
+      "GateIdentities.olean.server": "38d24b9fbf295c1540960cf2c6e49a387a10fbcc3002fcc5e1d5673027515159",
+      "GateLocalNames.ir": "ea4d0861de299d875090f8456b8728273519f30632cea010527111f5ca5ea368",
+      "GateLocalNames.ir.sig": "78e164976c4ef9fdbbd23becb78feb2f301bfebdf144b8a43530ec934bd9d88b",
+      "GateLocalNames.lean": "e24dde0f9759569ee7be722a63bcaa428a8a2e4e61128b7bd9512d2ffcd05243",
+      "GateLocalNames.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GateLocalNames.olean": "e035197190d250bc8b792050bd5e85f4d0687792fad763a52a4a14a89fc10677",
+      "GateLocalNames.olean.private": "bb186b68ab06f6e5783816afc82eaccc925cc5271eb2ad17fb02f66a16eab63e",
+      "GateLocalNames.olean.server": "e482029db10de6e05fb3c14f41f9a5ab75031c6f7dbe88f6720c1b125c9da11f",
+      "GateModel.ir": "d36c482cb4dde2ffa4b702dbff1697d381eca43c2a578391a33bd386fb130c5a",
+      "GateModel.ir.sig": "a3cc15a301b053f068ac6525b37a4de73cab86c8906c4809e7ce8f1a79cf0b64",
+      "GateModel.lean": "361ab6d764e5604b24982fbea12a6309a6a5752d004879878a59ad60a419ae62",
+      "GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+      "GateModel.olean": "79244f38704d50b333e5ec14dce43820eda274bcdfaeca16d83f48e4e86aa713",
+      "GateModel.olean.private": "a52c12a3f5a45469f3d9a0b73b7f8c82a62c9b430226ed58146ee1f2bef38956",
+      "GateModel.olean.server": "2b651b0577fc630159b2cc055e0adc4f44c58ec6622bd383e2a4c7c54bcd7999",
+      "GateRun.lean": "3aca46dd2a8de76afb0a9f568bff1c07a07deb02f5713f69515f9de63e28e69a",
+      "GateViews.ir": "e3eb799be5648598db09120a9fa0fe945c5c834c9323294e4a044fe9e87d9711",
+      "GateViews.ir.sig": "a092dee3843e33a19cc22e3314bdbb65cbd2cc6087a1607e2b3a2da1fea5ceb3",
+      "GateViews.lean": "7c78065e1847f3727238b60cd8c7555708d8f956d7778a2bd5a05d336d5faa7b",
+      "GateViews.log": "f82f3e8f7640bca99be6d30f10151a49bc958d3ff13cb1fe93df794c985756cb",
+      "GateViews.olean": "4649db330489e1ec8ea56ad7974c9378f701c7aa50fa5df4e12ea62e2c082686",
+      "GateViews.olean.private": "82e53f471963044e98efd8b320b9ce3778ad5fc6b1e466bef04a974920a2d806",
+      "GateViews.olean.server": "7ce144ba65e787c38d0ed4fec3a6a085fa6cdfed27d70548b094ec2e8600873e",
+      "actual-runtime.log": "1a7c409c649ce125e36e00aabfe01c296c531127ceafb37501a909b3b3737c4e",
+      "certificates.json": "f832b60e7e121781573ef1cd66284972ba43d0d820bd475cf33e7e48776e576a",
+      "dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "input.json": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+      "model.json": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+      "replay-request.json": "20693d088bb6354f1ec72653d78523cb6bdc970930f897532bd9994f69d33b02",
+      "request.json": "e2c38a85eeb2a7d164eadd54186741775b7eab4dc4444cb3df93ba1db850cf70",
+      "supplied-views.json": "11dd3d804e3018b16079a1a1123182c6645f2abde989d849f64b7f84a09cceea",
+      "view-comparison.json": "fae2e3eca277630c8f499b61661defeaa46e85ce5585394730cb1a8224f5697b"
+    }
+  },
+  "inputs": {
+    "input": {
+      "bytes": 70776,
+      "raw_sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+      "retained_path": "input.json"
+    },
+    "model": {
+      "canonical_sha256": "d275eb906b8ac2871e6fd7415065c1dabf915242e8583fe3e202bc723a18dec3",
+      "raw_sha256": "a72d423a222ecd84a429e28796c93ba07ac8b79d40caf3b74af02c36029f3b0b",
+      "retained_path": "input.json"
+    },
+    "supplied_views": {
+      "bytes": 13219,
+      "raw_sha256": "11dd3d804e3018b16079a1a1123182c6645f2abde989d849f64b7f84a09cceea",
+      "retained_path": "supplied-views.json"
+    }
+  },
+  "limits": [
+    "Finite declared structural model/closure/projection only; no semantic acceptance.",
+    "Whole-model-source-correspondence covers only supplied or carrier-recovered model JSON; original prose/corpus-to-model F_P fidelity remains opaque and unproved.",
+    "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+    "Python API imports and interpreter initialization remain trusted-host responsibilities; the CLI isolates helper loading after startup.",
+    "Context binding is metadata; consumer must check actual delivered bytes.",
+    "Crossing relations are checked source-derived metadata, not a Lean theorem."
+  ],
+  "model": {
+    "id": "urn:a-c:toy:model:proposal",
+    "sha256": "d275eb906b8ac2871e6fd7415065c1dabf915242e8583fe3e202bc723a18dec3"
+  },
+  "observations": {
+    "child_maxrss_native_units": 8224178176,
+    "current_dynamic_proof_invocations": 7,
+    "current_kernel_replay_invocations": 1,
+    "current_runtime_invocations": 1,
+    "edges": 29,
+    "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
+    "elapsed_seconds": 29.67239495879039,
+    "execution": "projectWithProof with exact freshly checked model/closure premises; per-selection equality to unchanged project is kernel-replayed; the raw checker is not reevaluated",
+    "limits": {
+      "max_input_bytes": 33554432,
+      "max_selections": 64,
+      "memory_mb": 4096,
+      "timeout_seconds": 90
+    },
+    "proof_modules": [
+      "GateData",
+      "GateLocalNames",
+      "GateExternalNames",
+      "GateIdentities",
+      "GateBounds",
+      "GateModel",
+      "GateViews",
+      "GateRun"
+    ],
+    "records": 14,
+    "references": 124,
+    "reuse": "none; fresh dynamic obligations; pinned established base support",
+    "stages": [
+      {
+        "seconds": 0.007240290753543377,
+        "stage": "acquire-import-reconstruct"
+      },
+      {
+        "seconds": 8.102153749670833,
+        "stage": "support-pins"
+      },
+      {
+        "seconds": 0.014728374779224396,
+        "stage": "current-certificates"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 1.850655083078891,
+        "stage": "GateData"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 0.670415582600981,
+        "stage": "GateLocalNames"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 0.6683951248414814,
+        "stage": "GateExternalNames"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 0.6729609998874366,
+        "stage": "GateIdentities"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 0.6631444999948144,
+        "stage": "GateBounds"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 1.2602580417878926,
+        "stage": "GateModel"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 0.7893539583310485,
+        "stage": "GateViews"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 8.710825791116804,
+        "stage": "dynamic-kernel-replay"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 0.6676735407672822,
+        "stage": "actual-runtime"
+      },
+      {
+        "seconds": 0.0028732498176395893,
+        "stage": "output-view-correspondence"
+      },
+      {
+        "seconds": 5.560205832589418,
+        "stage": "support-pins-after"
+      },
+      {
+        "seconds": 0.0013002501800656319,
+        "stage": "origin-currentness"
+      }
+    ],
+    "support": {
+      "manifest_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+      "members": 30405,
+      "platform": "Darwin-arm64"
+    },
+    "theorem_audit": {
+      "AC.GateData.checked0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.execution_matches_project0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.model_checked": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.reachability0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.result0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.set0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "reason": null,
+  "request_sha256": "feb7af6e7602f38b3ce3a7f6a296570d064da1ed4938378d5a838dbdb9ffa0a9",
+  "requested_claims": [
+    "imported-model-well-formedness",
+    "whole-model-source-correspondence",
+    "declared-closure-and-projection",
+    "record-budget-result",
+    "supplied-graphify-view-correspondence"
+  ],
+  "runtime_identity": {
+    "pins": {
+      ".cache/formal-origin-v1/selection.json": "a6f7cce1d1654d43c4cc7c05445a39c090e3ff4b490bf7646d8870835ae1c8af",
+      "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+      "AC/GateProof.lean": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+      "AC/GateRuntime.lean": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f",
+      "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+      "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+      "AC/Structure.lean": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb",
+      "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+      "lakefile.toml": "68338aa894a2a54fd3f4f9f22366359cc0107ba581459b29699f03c629437fc3",
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+      "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+      "profiles/proof-support-v1.json": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+      "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+      "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+      "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+      "scripts/formal_gate.py": "a5ea204472e0e44f9b1d97ff64c9087f4040d88965e8226be1077872a3cb30ec",
+      "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
+      "scripts/formal_support.py": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6",
+      "scripts/gate_codegen.py": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
+      "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+      "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+      "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+      "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+      "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+    },
+    "sha256": "28986fb44823a91c6487c83ba069d2910af8fdb6fb0a27eb42172b8fe781501f"
+  },
+  "schema": "a_c.formal-gate.result/1",
+  "selections": [
+    {
+      "budget_records": null,
+      "seeds": [
+        "urn:a-c:toy:object:a"
+      ]
+    }
+  ],
+  "status": "verified"
+}

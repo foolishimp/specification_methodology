@@ -19,3 +19,5 @@ Release publication adds no Product requirement family; the installed STDO
 Release Method and the selected release record govern each point-in-time cut.
 The release-coupling family owns the permanent cross-release identity and
 dependency relation, not publication operations.
+
+[REQ-P-MODEL-CONVERSION](REQ-P-MODEL-CONVERSION.md) owns the 3.0.5 exact model-to-program boundary.

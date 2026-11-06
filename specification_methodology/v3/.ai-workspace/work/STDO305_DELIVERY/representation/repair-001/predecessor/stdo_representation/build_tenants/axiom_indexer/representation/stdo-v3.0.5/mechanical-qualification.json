@@ -1,0 +1,122 @@
+{
+  "kind": "stdo305.axiom-current-qualification/1",
+  "version": "3.0.5",
+  "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "model_raw_sha256": "da07f44e9c51e1c7b3f4d0dc9a3c7aecca2a1f695de1b2bb3d391c56cd31fd1f",
+  "program_raw_sha256": "eb47d9dc63b2d589a2900fb785342e5e6313a201802ab0289b3039a3882abc18",
+  "map_raw_sha256": "1b89afb552e17d1d178c2bdb1a638dc73362a6fb1de3fd90336e20954b5969bc",
+  "mechanics": {
+    "ac.py": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+    "ac_model.py": "a8baaeb06e45957d486ecf2977294ac49b481762d65812330018127e60c27ad2"
+  },
+  "exact_model_value_restored": true,
+  "source_members_verified": 68,
+  "map_bytes_reproduced": true,
+  "projection_modes_match_current_model_closures": [
+    21,
+    17,
+    11,
+    5,
+    15
+  ],
+  "cases": [
+    {
+      "case": "visible-tamper-refused",
+      "argv": [
+        "python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac_model.py",
+        "restore",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/axiom-qualification/tampered-program.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/axiom-qualification/should-not-exist.json"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "elapsed_seconds": 0.15651104180142283,
+      "stdout_sha256": "4cee0dafec73bb39f92a09a7390be407745f6cb65aea55ff74f4f5e51edca5b8"
+    },
+    {
+      "case": "dangling-reference-refused",
+      "argv": [
+        "python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "validate",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/axiom-qualification/dangling-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--emit-map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/axiom-qualification/must-not-be-map.json"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "elapsed_seconds": 0.36282145883888006,
+      "stdout_sha256": "d83c8cc481043e5591fa2be192929d4be0e307f4ebdd59a82d4d1734bbe41536"
+    },
+    {
+      "case": "stale-map-refused",
+      "argv": [
+        "python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/axiom-qualification/stale-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:native-work",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/axiom-qualification/must-not-be-view.json"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "elapsed_seconds": 0.5036534578539431,
+      "stdout_sha256": "185bc7c2a8ce0b89e1771dc371a976617573341a479a28006a8c11dbe3fd2236"
+    },
+    {
+      "case": "map-reproduction",
+      "argv": [
+        "python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "validate",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/axiom-qualification/reproduction-validation.json",
+        "--emit-map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/axiom-qualification/reproduced-map.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.43509408412501216,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "pure-join",
+      "argv": [
+        "python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "join",
+        "--input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/axiom-qualification/sections.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.04036166612058878,
+      "stdout_sha256": "d421f536d32581ced40212952700d9c9c3b07226d7e589cb47fa571fc02ad8f2"
+    }
+  ],
+  "claim": "Actual bounded mechanical checks; no independent semantic acceptance, native LLM usability, Lean execution or release publication is claimed."
+}

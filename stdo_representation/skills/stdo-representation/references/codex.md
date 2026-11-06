@@ -1,4 +1,4 @@
-# Codex GPT-5.6 Sol Layout
+# Codex request layout
 
 Use a lean, source-linked request. State each instruction once. Include only
 material index regions and tools.
@@ -30,9 +30,8 @@ ordered dependency roles, literal conditions, exceptions and residuals; do not
 present an authored premise as an observed C fact. The view changes neither
 the acting role nor the original operation grant.
 
-This layout follows the GPT-5.6 guidance to keep prompts lean, expose only
-relevant tools, and place the action after its constraints, evidence, and return
-boundary.
-
-Guidance basis: <https://developers.openai.com/api/docs/guides/latest-model>,
-retrieved 2026-08-31.
+This is the Representation Product's optional presentation convention, not a
+claim about any model version or an enforced host policy. Bind the actual
+Codex session, inherited context, available tools and read/write permissions.
+Own control intake precedes subject acquisition on coordinated work. An issuer
+projects admitted source clauses; this layout never rewrites or adds a grant.

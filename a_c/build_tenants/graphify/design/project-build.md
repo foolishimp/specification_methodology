@@ -67,3 +67,30 @@ and three empty operational families retain the existing bounded adapter's
 meaning. Processing all chunks does not prove semantic completeness. Output is
 a proposal, with omissions, residuals and source re-entry visible. The existing
 isolated batch path and its stricter event evidence remain separate and usable.
+
+## Explicit coherent authoring transaction — 3.0.5
+
+The owner-selected current STDO corpus has approximately 2.1 MB across 68 files.
+Its public build exposed that the previous maximum 500,000-character task can
+partition declared cross-file concept dependencies. The Executive admitted a
+bounded realization change: the existing explicit `--chunk-chars` argument
+now supports 1,000 through 3,000,000 decoded Unicode characters. That finite
+cap admits this measured corpus with headroom for its transaction metadata.
+Project default 20,000, generation default 120,000 and graph context maximum
+200,000 are unchanged. No subject-specific exception or implicit widening is
+introduced. A source larger than the selected limit still produces multiple
+chunks under the existing algorithm; the option is a bound, not a promise that
+every source becomes one transaction.
+
+The transaction groups source identity and authored dependencies; it is not an
+actor context grant or a claim that an LLM consumed the whole prompt. The host
+may acquire deciding source cones within its actual context boundary, but must
+return one coherent answer with all required grounding, dispositions, record
+keys and references passing the unchanged public validators. No empty duplicate
+concepts or forced local references substitute for missing source semantics.
+
+The old released 3.0.4 provider refuses the larger explicit value. The current
+3.0.5 candidate source supplies this capability under the released 3.0.4 builder.
+Retained failing-before and passing-after checks bind the changed provider.
+Actual whole-corpus public prepare/task/submit/build, elapsed time and process
+resource observations remain part of the current representation evidence.

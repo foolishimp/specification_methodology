@@ -1,5 +1,7 @@
 # Goals
 
+Current delivery: the [3.0.5 contract](RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+
 ## Current selection
 
 [T-003](../.ai-workspace/tickets/active/T-003-project-representation.md) implements

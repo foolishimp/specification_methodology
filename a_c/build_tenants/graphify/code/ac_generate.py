@@ -327,7 +327,7 @@ def _upstream_path(output: Path, path: Path) -> Path:
 def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream: Path | None,
             chunk_chars: int = 120_000, graph_chars: int = 40_000, *, formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
     require(mode in SEMANTIC_PROFILES, "unsupported generation mode")
-    require(1_000 <= chunk_chars <= 500_000 and 1_000 <= graph_chars <= 200_000, "explicit chunk/graph character envelope outside supported range")
+    require(1_000 <= chunk_chars <= 3_000_000 and 1_000 <= graph_chars <= 200_000, "explicit chunk/graph character envelope outside supported range")
     if formal_checker is not None:
         ac_formal_gate.validate_config(formal_checker)
         _selected_path(formal_checker, output, write=True)

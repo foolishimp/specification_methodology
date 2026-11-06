@@ -1,0 +1,109 @@
+{
+  "REFRESH_source_delta": {
+    "current_sha256": "1db71eddb3e797b84d4092197ccda5ce1f888f035626059d9ba74a21e28028ea",
+    "previous_sha256": "12b9524ea60e58eaa6c3b96c1d547625483e030ba91a2f834e4881be0eaf2a89",
+    "scope": "--release accepts exact stable-v1 or RC cut; moving selector supplies no Product basis authority"
+  },
+  "checks": [
+    {
+      "check": "successor_current_source",
+      "result": {
+        "member_count": 53,
+        "native_contract_count": 15,
+        "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+        "status": "valid"
+      }
+    },
+    {
+      "check": "predecessor_refused_as_current",
+      "reason": "semantic source closure, member digest, contract or classification differs",
+      "status": "passed"
+    },
+    {
+      "check": "REFRESH_tamper_refused",
+      "reason": "semantic source closure, member digest, contract or classification differs",
+      "status": "passed"
+    },
+    {
+      "check": "REFRESH_omission_refused",
+      "reason": "semantic source closure, member digest, contract or classification differs",
+      "status": "passed"
+    },
+    {
+      "check": "installed_manager_exact_cut_route",
+      "requested_uri": "stdo://releases/v3.0.4/standards/RELEASE.md",
+      "result": {
+        "path": "/Users/jim/Library/Application Support/STDO/releases/v3.0.4/standards/RELEASE.md",
+        "uri": "stdo://releases/v3.0.4/standards/RELEASE.md"
+      }
+    },
+    {
+      "check": "installed_manager_exact_cut_route",
+      "requested_uri": "stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md",
+      "result": {
+        "path": "/Users/jim/Library/Application Support/STDO/releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md",
+        "uri": "stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md"
+      }
+    },
+    {
+      "check": "frame_reproduction",
+      "exit_code": 0,
+      "status": "passed"
+    },
+    {
+      "check": "contract_definition_route",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/stdo_3.json",
+      "status": "passed"
+    }
+  ],
+  "executive_disposition": "repair S3 and S4 before source acceptance; include verified stable exact-cut wording in REFRESH",
+  "findings": [
+    {
+      "finding": "REFRESH.md omitted although native refresh skill requires its full procedure",
+      "repair": "include REFRESH and verify transitive operational reference closure",
+      "severity": 3,
+      "subject": "scripts/stdo_source_freeze.py native contract closure"
+    },
+    {
+      "finding": "../../stdo_3.json does not resolve to source Product definition",
+      "repair": "../../../stdo_3.json",
+      "severity": 4,
+      "subject": "CONTRACT.md definition route"
+    }
+  ],
+  "inventory_delta": {
+    "added": [
+      "plugins/spec/references/REFRESH.md"
+    ],
+    "changed_preexisting_members": [],
+    "removed": [],
+    "standards_member_set_unchanged": true
+  },
+  "kind": "stdo305.source-freeze-repair/1",
+  "operational_reference_inspection": {
+    "included": [
+      "PRODUCT_BASIS.md",
+      "COORDINATED_HANDOFF.md",
+      "HOST_BINDING.md",
+      "REFRESH.md"
+    ],
+    "support_only": [
+      "GETTING_STARTED.md is a stdo-help New Project navigation target without executing setup; installation guide is separately inventoried at native freeze",
+      "read_basis.py and claude_tool_gate.py are separately inventoried executable helpers",
+      "generated frame/documentation/tooling outputs retain their explicit classification"
+    ],
+    "transitive_routes": "all local operational Markdown references from six native skills and these four contracts terminate in this set or inventoried standards; REFRESH adds only PRODUCT_BASIS and standards routes"
+  },
+  "predecessor": {
+    "path": "source-freeze-001.json",
+    "sha256": "08d793c9857359bd035960399ec894ef780db0c2662ab283f26cf56f9b943c6b",
+    "source_identity_sha256": "924e112838f050caf62529e35f8c5bbbfef96b83760b0d8e26046db99006e86e",
+    "standing": "preserved; not current; all dependent subject identities invalidated"
+  },
+  "status": "repaired_awaiting_independent_recheck",
+  "successor": {
+    "path": "source-freeze-002.json",
+    "sha256": "640141354a53504999c1c21757689f7a3ecf6cbe77c3f30804f8493a2928dc99",
+    "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba"
+  }
+}

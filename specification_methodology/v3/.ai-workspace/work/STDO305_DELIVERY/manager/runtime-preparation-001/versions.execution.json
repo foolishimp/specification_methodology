@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-001/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "returncode": 0,
+  "elapsed_seconds": 0.22066116333007812,
+  "stdout_sha256": "9cf86b8dd705c5c95cbc5664cff1af4d6a1c02edc33ef9469531a29e1f7612c3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

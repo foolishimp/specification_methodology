@@ -1,0 +1,15 @@
+{
+  "shell": [
+    "sh"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.stdo/builder-adoption-guide-repair-001-cgy28goh",
+  "environment_binding": {
+    "STDO_RELEASE": "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+    "STDO_TOOLS": "unset before shell invocation"
+  },
+  "script": "set -eu\npython3 -I -B \"$STDO_RELEASE/standards/tooling/materialize.py\" check\nSTDO_TOOLS=\"$(pwd -P)/.stdo/tools/3.0.4\"\npython3 -I -B \"$STDO_RELEASE/standards/tooling/materialize.py\" verify-tree \\\n  --destination \"$STDO_TOOLS\"\n",
+  "script_sha256": "a55e23bf15e5e59ad8d38cc94f90d0c203d55d36754614684265bf482026d24d",
+  "exit_code": 2,
+  "stdout": "{\n  \"status\": \"checked\",\n  \"version\": \"3.0.4\",\n  \"source_commit\": \"9c9626ffd20ea88a75ac8143802c13f4f828ec1c\",\n  \"source_files\": 191,\n  \"source_bytes\": 25841956,\n  \"archive_sha256\": \"172eeb57040004365671372294e5c2a42833a0f574224fb66c57cf5a30c5d4e0\"\n}\n",
+  "stderr": "{\"status\": \"refused\", \"reason\": \"missing materialized tree\"}\n"
+}

@@ -1,0 +1,5 @@
+import sys,json,hashlib
+body=json.loads(sys.stdin.read().split('\n',1)[1]); p=body['packet']
+finding={'severity':3,'scale':'1-highest-5-lowest','consequence':'bounded material failure','downstream_impact':'one declared dependency','containment':'not established','priority':None,'disposition':None}
+result={'schema':'a_c.fd-support.closed-return/1','id':'reviewer-return','frame':{k:p['frame'][k] for k in ('id','revision')},'activation':{'id':p['activation']['id'],'sha256':hashlib.sha256(json.dumps(p,ensure_ascii=False,sort_keys=True,separators=(',',':')).encode()).hexdigest()},'subject':p['subject_basis']['subject'],'basis':{k:p['subject_basis'][k] for k in ('method_profile','observations')},'actor':{'id':'reviewer','family':'B','authorship':'reviewer'},'consumer':'executive','evaluations':[{'id':'review','predicate':p['frame']['evaluation'],'domain_outcome':finding,'core_value':'falsified','evidence':[],'residuals':[],'invalidators':[]}],'not_performed':[],'work_result':None,'residuals':[],'invalidators':[]}
+print(json.dumps(result,ensure_ascii=False,sort_keys=True,separators=(',',':')))

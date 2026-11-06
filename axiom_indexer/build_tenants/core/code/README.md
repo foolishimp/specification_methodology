@@ -1,6 +1,6 @@
 # Core Code
 
-`ac.py` is the complete MVP executable surface. It validates a program against
+`ac.py` is the original program executable surface. It validates a program against
 a URI Binding Set, emits a logical constraint map only when validation is
 valid, projects explicitly selected frame indexes, and joins an ordered list
 of caller-supplied labels and text.
@@ -35,3 +35,19 @@ neither evaluates conditions or selects a task disposition. A stale source,
 missing dependency, mismatched map or unsafe output route returns diagnostics.
 Safe stale projection outputs are removed on refusal; input/source aliases are
 preserved. Use stable read inputs and exclusive output scope for each invocation.
+
+## Preserve an existing a_c model
+
+`ac_model.py` converts a provider-checked source-semantic proposal without
+authoring new meaning. Read [MODEL_CONVERSION](../design/MODEL_CONVERSION.md).
+
+```sh
+python3 build_tenants/core/code/ac_model.py convert \
+  --model model.json --config conversion.json \
+  --output axiomatic-program.json --receipt preservation.json
+python3 build_tenants/core/code/ac_model.py restore \
+  --program axiomatic-program.json --output restored-model.json
+```
+
+Outputs must be new paths. Then use `ac.py validate` and `project` with exact
+source bindings. No conversion result implies source fidelity or acceptance.

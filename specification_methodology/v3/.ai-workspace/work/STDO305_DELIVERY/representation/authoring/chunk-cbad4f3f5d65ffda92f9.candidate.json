@@ -1,0 +1,1830 @@
+{
+  "concepts": [
+    {
+      "key": "prior_c1e29a3a272cebc316ca4887eeb77da1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FAuthority%20and%20adoption",
+          "start_line": 1454,
+          "end_line": 1455,
+          "quote": "This profile owns only the application-neutral record, relation, identity,\ncausal, effect-boundary, frontier and refusal laws above."
+        }
+      ],
+      "label": "Traversal-occurrence profile",
+      "definition": "Application-neutral traversal-occurrence profile owning record, relation, identity, causal, effect-boundary, frontier and refusal laws. It supplies no operation or judgment authority and is available but inactive for a Product without complete Product adoption.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_49dc667e9ee6fce0e4c097984dfcc282",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds",
+          "start_line": 721,
+          "end_line": 721,
+          "quote": "The core constraint kinds are (P3, P5):"
+        }
+      ],
+      "label": "Occurrence constraint, judgment, residual and stop domains",
+      "definition": "Closed constraint kinds: identity_dependency_acyclic, occurrence_causation_acyclic, event_causation_acyclic, occurrence_seed_complete, relation_claim_admissible, semantic_cut_complete, pre_effect_current, operation_grant_contains_effect, event_scope_compatible, frontier_complete, transition_subject_complete. Closed judgment kinds: model_validation, occurrence_admission, event_admission, claim_admission, semantic_cut_admission, effect_readiness, transition_evaluation, frontier_projection. Closed residual kinds: unobserved_subject_state, partial_effect, unresolved_cause, unresolved_scope, competing_lineage, stale_frontier, stale_currentness, unobserved_external_mutation. Closed stop kinds: hold, gap, refusal, invalid_basis, out_of_scope, partial_effect.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_fc8a95625a4b04333e0c6df48e6c6717",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation%2FOP-005%20Mutable%20reality%20conservation",
+          "start_line": 1408,
+          "end_line": 1410,
+          "quote": "`W` remains the carrier of mutable reality. Observation, evidence, result,\ncheckpoint, event, projection, cache or model content may describe `W`;\nnone replaces it."
+        }
+      ],
+      "label": "Mutable subject W",
+      "definition": "Externally mutable subject W, observed under stable SubjectBinding b_W. W remains the carrier of mutable reality; observations, evidence, results, checkpoints, events, projections, caches and model content describe it without replacing it.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_8cb491ac532c53d1b031f6ddd56b8227",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity",
+          "start_line": 1480,
+          "end_line": 1481,
+          "quote": "The stable concept identity does not identify one immutable profile\nedition."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature",
+          "start_line": 1487,
+          "end_line": 1487,
+          "quote": "TraversalOccurrenceSignature = {"
+        }
+      ],
+      "label": "TraversalOccurrenceSignature and exact profile basis",
+      "definition": "Stable concept identity differs from an immutable profile edition. TraversalOccurrenceSignature has exact kind stdo.traversal-occurrence-signature, schema_version 1, calculus_basis_identity, calculus_signature_schema_clause_ref, occurrence_signature_clause_refs and profile_member_sha256. Its identity is sha256(JCS(TraversalOccurrenceSignature)). TraversalOccurrenceProfileBasis has exact kind stdo.traversal-occurrence-profile-basis, schema_version 1, concept_identity urn:stdo:concept:traversal-occurrence-profile, calculus_basis_identity, embedded occurrence_signature, occurrence_signature_sha256 and publication_basis containing exactly release_uri, manifest_sha256, member_uri and member_sha256. Its identity is urn:stdo:traversal-occurrence-profile-basis:sha256: followed by sha256 of its RFC 8785 JCS value.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_5364ed6b537f501c3e9da24b34e62cd8",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "Tier 3. An optional profile for realising UX surfaces:"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 89,
+          "end_line": 89,
+          "quote": "This member is material family F20, UX."
+        }
+      ],
+      "label": "UX profile",
+      "definition": "Optional Tier 3 UX profile, material family F20, refining DESIGN_MODULE for UX modules. Its own terms include UX surface, State, Msg, Update, View, ViewTree, Cmd, Sub, view-local ephemera, effect membrane, product-truth-changing message, admitted product carrier, Msg-replay test/proof, scaffold, exemption record, UX sprint and its refined result values. It imports FOUNDATIONS, ACTIVATION, EVALUATION, SPEC_METHOD and TICKETS under PROFILES without redefining their objects. Graph function and ABG remain graph-execution terms; AssetSurface and workorder remain Product-design carriers.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7a9d378573708e829488aa2ffbb49efa",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers",
+          "start_line": 214,
+          "end_line": 215,
+          "quote": "UX surfaces are projection and control surfaces: they render admitted\ntruth and emit typed messages (P6, P0)."
+        }
+      ],
+      "label": "UX surface",
+      "definition": "UX surfaces project and control admitted Product truth by rendering it and emitting typed messages. They supplement module realization discipline with render purity, state-transition algebra, effect-membrane discipline and accessibility minimums. In graph-execution Products they are projection and query surfaces.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_c9843b48485016f674dd3003449d040f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model",
+          "start_line": 248,
+          "end_line": 249,
+          "quote": "- Update: the pure reducer of signature `(Msg, State) → (State, Cmd)`; it\n  describes side effects as Cmd values and does not perform them;"
+        }
+      ],
+      "label": "Elm Architecture and typed UX process coordinates",
+      "definition": "Elm Architecture is the UX constitutional process model: typed runtime-owned State; typed Msg algebra naming every user/system action; pure Update:(Msg,State)→(State,Cmd); pure View:State→ViewTree, producing the same output for the same State; typed Cmd descriptions of scheduled effects and Sub descriptions of external subscriptions interpreted at the runtime's effect membrane. Runtime loop: current State→render View→user Msg→Update produces State and Cmds→runtime interprets Cmds→repeat.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_593429f1fa25b744fdcf828e4235cd1c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers",
+          "start_line": 228,
+          "end_line": 228,
+          "quote": "Such a message maps to one admitted product carrier (P6, P4a):"
+        }
+      ],
+      "label": "Admitted UX Product carrier",
+      "definition": "Admitted Product carrier for a truth-changing UX message: an AssetSurface action; published graph function or lawful composition; Product-design-admitted workorder, job or runtime command; ABG event/command boundary where ABG is runtime authority; or another typed Product contract named by the design module. AssetSurface or its named equivalent supplies shared typed projections and action contracts.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b3ee6d135ca780f28776d4755a5fbf1b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F6.%20Effect%20membrane",
+          "start_line": 381,
+          "end_line": 381,
+          "quote": "The membrane has one job: interpret declared Cmd values."
+        }
+      ],
+      "label": "UX effect membrane",
+      "definition": "Declared effect boundary interpreting reducer-produced Cmd values and returning outcomes as typed Msg values. It is the permitted location for I/O, external subscriptions and imperative host-platform interop, rather than a controller or owner of business decisions.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_38bc94913c88b810c504dd4ecae182ca",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay",
+          "start_line": 454,
+          "end_line": 455,
+          "quote": "The discipline test is the Msg-replay test: can the view's\nbehaviour be replayed by replaying its Msg log against an empty State?"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof",
+          "start_line": 471,
+          "end_line": 474,
+          "quote": "- an initial State fixture;\n- an ordered Msg log;\n- the expected final State;\n- the expected ordered Cmd values;"
+        }
+      ],
+      "label": "Msg-replay test and proof",
+      "definition": "Msg-replay test asks whether the view's behavior can be reproduced by replaying its Msg log against empty State. Executable Msg-replay proof is recorded work-state resumption evidence that the view owns no hidden continuation. It includes initial State fixture, ordered Msg log, expected final State, expected ordered Cmds, typed Cmd outcome Msgs including every materially possible unresolved outcome and recovery messages, and injected deterministic time, randomness, generated ids and external payloads.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_2baee2e53c0d830eab71c96035503953",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F10.%20Type%20sharing",
+          "start_line": 539,
+          "end_line": 541,
+          "quote": "The project uses a typed-schema mechanism so that the same type\ndefinition is the source of both compile-time types and runtime\nvalidators; the mechanism choice is project-local."
+        }
+      ],
+      "label": "Shared UX type contract",
+      "definition": "Shared front-end/back-end typed contract is the source of UX-consumed types and Product record shapes. A project-local typed-schema mechanism produces both compile-time types and runtime validators from the same definition.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_a5c323426e83c24d36ee5025b541da67",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F2.%20Role%20and%20composition",
+          "start_line": 163,
+          "end_line": 165,
+          "quote": "SPEC_METHOD defines constitutional process and lawful re-entry; the\ngraph-execution profile defines graph-native constructive carrier law;\nDESIGN_MODULE defines deterministic module-level realisation discipline"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FRelationship%20to%20other%20members",
+          "start_line": 197,
+          "end_line": 197,
+          "quote": "TICKETS governs ticket and sprint lifecycle;"
+        }
+      ],
+      "label": "UX upstream document roles",
+      "definition": "Referenced upstream roles: SPEC_METHOD owns constitutional process, authority flow, lawful re-entry, repricing and migration; ODD/graph-execution owns graph-native constructive carrier law; DESIGN_MODULE owns deterministic module realization discipline, including immutability, totality, effect edges, no semantic centre and coupling; TICKETS owns ticket/sprint lifecycle and generic escrow; WORLD_MODEL owns world-model semantic law for Products with that dimension. These are referenced document roles, not imported full definitions.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_ac03acbc25d43f1c4cec70fe0b4cab0a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption",
+          "start_line": 570,
+          "end_line": 571,
+          "quote": "Product authority adopts this profile for a project (§1 Authority), and\nthe adoption is recorded by (P6, P4b):"
+        }
+      ],
+      "label": "UX profile",
+      "definition": "The UX profile governs UX surfaces within its adopted or default scope. Product authority adopts it per project, with adoption and any restricted surface scope recorded in design modules.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_254e32e899936a647b4a4ae7b911dd86",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum",
+          "start_line": 548,
+          "end_line": 549,
+          "quote": "A UX surface that is the public face of a product capability declares\n(P2, P6):"
+        }
+      ],
+      "label": "UX surface",
+      "definition": "A UX interaction surface, including public product capabilities and potentially internal debug, scaffold, prototype or temporary proof surfaces; applicability and exemptions depend on declared scope and the profile's default triggers.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f07b5194dc5c79f56d598c615a03f3b1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption",
+          "start_line": 578,
+          "end_line": 579,
+          "quote": "4. declaring the State, Msg, Update, Cmd and Sub shapes for each UX\n   surface in the design module before implementation;"
+        }
+      ],
+      "label": "UX design module",
+      "definition": "The design document carrying UX adoption, architecture, surface shapes, contracts, proof references, accessibility refinements and exemptions. Answerability from this document is a basis condition for surface review.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_fba38b75e6777b991248c792e3cacb39",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 626,
+          "end_line": 629,
+          "quote": "A UX sprint may defer local UX\ncompliance proof during a short iteration window when per-change proof\ncost is higher than expected correction cost. This is a cost-optimisation\nrule; it does not weaken the UX process model (P2)."
+        }
+      ],
+      "label": "UX sprint compliance escrow",
+      "definition": "A short UX iteration window permitting specified local compliance proof to be deferred when per-change proof cost exceeds expected correction cost, followed by forensic close review.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_0248d4f244332b39c63670566a866da5",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 766,
+          "end_line": 770,
+          "quote": "Purpose and material relation: this profile's verdicts decide closure of a UX surface\nand enter conjunctions with the results of other members, which combine\nonly in the core, so a review, a proof, a closure claim and a carrier\ncheck are each read for their own predicate and none is read as another\n(P5, P6)."
+        }
+      ],
+      "label": "UX result refinements",
+      "definition": "Four predicate-specific result refinements: surface review, replay proof, closure obligations and carrier admission. Their values map individually to core results and combine with other members' results only in the core.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "prior_a1d5d296e3c5a59602ec4f6dcfdef693",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX",
+          "start_line": 40,
+          "end_line": 41,
+          "quote": "Direction: profile to tier 2; preserved meaning: the tier-2 escrow law\napplies unchanged to the bound objects;"
+        }
+      ],
+      "kind": "profile_to_tier_two_binding",
+      "meaning": "UX binds TICKETS replay-proof escrow to §8 Msg-replay proof and changed public-function/carrier contracts to §7 AssetSurface/equivalent typed contract. Tier-2 escrow meaning is preserved, scope narrowed to governed UX surfaces; changed proof or bound-contract definitions require binding re-evaluation.",
+      "conditions": [
+        "For UX surfaces governed by this profile."
+      ],
+      "exceptions": [],
+      "source_key": "prior_5364ed6b537f501c3e9da24b34e62cd8",
+      "target_key": "prior_a5c323426e83c24d36ee5025b541da67",
+      "governing": true
+    },
+    {
+      "key": "prior_bcd987fdae91e3fbfce049a727ef7d7b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F2.%20Role%20and%20composition",
+          "start_line": 166,
+          "end_line": 167,
+          "quote": "This profile refines DESIGN_MODULE with the\nadditional rules a module needs when it realises a UX surface"
+        }
+      ],
+      "kind": "conditional_refinement",
+      "meaning": "UX adds surface realization discipline to referenced DESIGN_MODULE discipline while preserving the parent's governed concerns.",
+      "conditions": [
+        "A module realizes a UX surface."
+      ],
+      "exceptions": [
+        "Non-UX modules apply only DESIGN_MODULE."
+      ],
+      "source_key": "prior_5364ed6b537f501c3e9da24b34e62cd8",
+      "target_key": "prior_a5c323426e83c24d36ee5025b541da67",
+      "governing": true
+    },
+    {
+      "key": "prior_900946d9ec2250956a315797f26c2db2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers",
+          "start_line": 228,
+          "end_line": 228,
+          "quote": "Such a message maps to one admitted product carrier (P6, P4a):"
+        }
+      ],
+      "kind": "requires_admitted_carrier",
+      "meaning": "Truth-changing UX action depends on one admitted Product carrier; absence blocks until carrier authoring or repricing.",
+      "conditions": [
+        "The surface's Msg changes Product truth."
+      ],
+      "exceptions": [
+        "Genuinely view-local Msg does not trigger this carrier requirement."
+      ],
+      "source_key": "prior_7a9d378573708e829488aa2ffbb49efa",
+      "target_key": "prior_593429f1fa25b744fdcf828e4235cd1c",
+      "governing": true
+    },
+    {
+      "key": "prior_de9496ad20a2700ea15b95d3cf91c8e2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F6.%20Effect%20membrane",
+          "start_line": 373,
+          "end_line": 375,
+          "quote": "The membrane interprets Cmd values\nproduced by the reducer and translates side-effect outcomes back into Msg\nvalues delivered to the reducer."
+        }
+      ],
+      "kind": "interprets_commands_returns_messages",
+      "meaning": "Effect membrane consumes the process model's declared Cmd values and returns typed outcome Msg to its reducer; it acquires no controller authority.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_b3ee6d135ca780f28776d4755a5fbf1b",
+      "target_key": "prior_c9843b48485016f674dd3003449d040f",
+      "governing": false
+    },
+    {
+      "key": "prior_311d519cda8951695e0f3d78bea3c737",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FScaffold%20and%20exemption",
+          "start_line": 594,
+          "end_line": 595,
+          "quote": "A UX surface is governed by this profile by default when any of these are\ntrue (P6, P5):"
+        }
+      ],
+      "kind": "governs",
+      "meaning": "The source explicitly makes profile law applicable to triggered surfaces, subject to recorded scope.",
+      "conditions": [
+        "At least one default-governance trigger holds."
+      ],
+      "exceptions": [
+        "A qualifying recorded scaffold/debug/prototype/temporary-proof exemption governs its scope."
+      ],
+      "source_key": "prior_ac03acbc25d43f1c4cec70fe0b4cab0a",
+      "target_key": "prior_254e32e899936a647b4a4ae7b911dd86",
+      "governing": true
+    }
+  ],
+  "constraints": [
+    {
+      "key": "prior_6136ab950d47fcc392b6b8445078b261",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FAuthority%20and%20adoption",
+          "start_line": 1461,
+          "end_line": 1461,
+          "quote": "Only Product authority adopts the profile"
+        }
+      ],
+      "statement": "The profile grants no semantic, operation, evaluation, admission, decision, correction, continuation or closure authority. Every material operation/judgment resolves an existing owner-issued grant; copying records or adopting the profile transfers none. Only Product authority adopts it. Adoption declares at least exact profile basis, subject and subject-binding interpretation, Product-concept mappings to sorts/relations, operation/actor/executor/admission/projection/decision authorities, event scope/frontier laws, invalidation/re-entry conditions and qualification evidence of no lost Product distinction. Absent/incomplete adoption means available but inactive for that Product.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_c1e29a3a272cebc316ca4887eeb77da1"
+      ]
+    },
+    {
+      "key": "prior_fd343d80ad1473da2071baac82b528cf",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature",
+          "start_line": 1526,
+          "end_line": 1527,
+          "quote": "The list is free of duplicates and sorted by ascending unsigned\nUTF-16 code units."
+        }
+      ],
+      "statement": "occurrence_signature_clause_refs is a nonempty duplicate-free list sorted by ascending unsigned UTF-16 code units, containing exactly absolute publication member URIs with fragments #authority-and-adoption, #candidate-judgment-event-and-relation-separation, #causality-and-typed-lineage, #closed-constraint-judgment-residual-and-stop-kinds, #closed-event-kind-population, #closed-relation-families, #closed-semantic-object-sorts, #event-frontier-and-projection, #mutable-subject-effect-relation and #occurrence-identity. These collectively define closed sorts, fields, domains, relations, constraints, judgments, residuals, stops and functor refs. profile_member_sha256 equals publication member digest. The calculus clause resolves exact inherited signature schema/record law in its exact publication. Relative paths, mutable source URIs, missing fragments, duplicates or references outside the two exact publication members refuse the signature.",
+      "uncertainty": "",
+      "conditions": [
+        "Once immutable publication member bytes exist."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_8cb491ac532c53d1b031f6ddd56b8227"
+      ]
+    },
+    {
+      "key": "prior_fb35cb4a4220cb1de8d13960c5466da3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature",
+          "start_line": 1600,
+          "end_line": 1601,
+          "quote": "Its spelling establishes\nidentity, not acceptance or release standing."
+        }
+      ],
+      "statement": "Embedded signature digest equals its RFC 8785 JCS digest. Basis likewise uses JCS, rejecting duplicate object names before canonicalization. Imported AxiomaticCalculusBasis resolves exact RFC 8785 bytes satisfying referenced calculus §8; its calculated identity equals both calculus_basis_identity fields. Manifest digest resolves exact manifest bytes containing calculus member path/digest once; member bytes match; calculus clause URI is that member plus #2-signature. Derivation/publication bases bind the same immutable package but preserve distinct premise/owner versus publication roles. Principle refs are exactly the sorted duplicate-free expansion declared by that calculus member, never a subset or invented list. Every referenced member's digest occurs once in the manifest and each fragment resolves one heading under publication address law. Unresolved basis, mismatched manifest/member, missing/extra principle refs, invented/absent fragments or unbound bytes refuse admission. Profile member obeys the same rules; mutable paths, strategy posts, implementations and consumer mappings substitute for neither basis nor publication identity. release_uri is one absolute immutable stdo://releases/v<version>-rc.<positive-ordinal>/ URI; acceptance is a verdict on that cut, creates no second identity, and is not established by spelling. member_uri is release_uri plus standards/TRAVERSAL_OCCURRENCE.md; manifest contains that path/digest exactly once and signature repeats the digest. Kind/version values are exact; digests use lowercase sha256:<64-hex>. Identity preimages are exact JCS values: alternate bytes, newline, object order, duplicate names, non-I-JSON values or implementation-specific serialization cannot acquire the declared identity.",
+      "uncertainty": "No instantiated publication basis, manifest or byte-resolution evidence is supplied.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_8cb491ac532c53d1b031f6ddd56b8227"
+      ]
+    },
+    {
+      "key": "prior_170403b9ff2d3c77c4964ab6d80b0044",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature",
+          "start_line": 1612,
+          "end_line": 1613,
+          "quote": "Any change to the calculus basis, the signature refs, the closed signature\nor the profile member bytes mints a new profile basis."
+        }
+      ],
+      "statement": "Changes to calculus basis, signature refs, closed signature or profile bytes mint a new profile basis. Supersession is an external Product/release judgment; old bases never silently advance. Instances of signature and basis are issued only after member bytes freeze and excluded from the member set whose manifest digest they name. Their member schemas embed neither instance nor instance digest, preventing self-dependent digest preimages.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_8cb491ac532c53d1b031f6ddd56b8227"
+      ]
+    },
+    {
+      "key": "prior_e633f174ccfb9e355266c93b5cf2a951",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExclusions",
+          "start_line": 1630,
+          "end_line": 1630,
+          "quote": "- a process, traversal, retry, continuation or closure engine;"
+        }
+      ],
+      "statement": "Profile is neither a change to pure a_c/reference-frame law nor mandatory for all symbolic models; neither concrete subject/workspace ontology nor process/traversal/retry/continuation/closure engine; neither event store/log schema/projection implementation/state carrier nor mutation/admission/evaluation/decision authority; neither prospective-frame nor sensor-population profile. It guarantees neither occurrence ownership of every event nor acyclicity of every typed-lineage graph.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_c1e29a3a272cebc316ca4887eeb77da1"
+      ]
+    },
+    {
+      "key": "prior_cab2df421b136e58a2959f119f2aac4b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FConformance%20obligations",
+          "start_line": 1640,
+          "end_line": 1640,
+          "quote": "Review and qualification cover at least (P6, P5):"
+        }
+      ],
+      "statement": "Review covers at least: exact a_c basis/eight RecordKind_ac populations/closed domains without shadowing; inherited families/direct coordinates/disjoint local-external identities; complete seeds/congruent mirrors/no future results/events; first event without fictional predecessor; distinct candidate/judgment/event/relation/cut/cut-judgment ids with unchanged subject digest; idempotent or refused duplicates; cycles in each identity/causal subgraph; lawful opposing support/correction; closed event kinds/payload/digest/scope/bindings without fabricated event_for; separated functor/traversal/operation-kind/instance/executor/actor/grant/invocation/target/territory; missing/stale/mismatched/out-of-territory grants; all four effect cases; mutable reality carrier; fresh reapplication identities; component/aggregate identities; refusal on stale pre-observation and grant currentness; incomplete cut refusal including missing/non-admitted cut judgment or unequal source frontiers; frontier completeness/staleness/correction selection; no cause from timestamp/ordinal/adjacency/containment/correlation; absent adoption and incomplete-mapping refusal; exact JCS/kind/schema/URI/digest/calculus-address/publication-membership reconstruction. Examples/checkers establish only evaluated claims and acquire no engine or semantic authority.",
+      "uncertainty": "The conformance list uses 'refusal' for stale readiness while the detailed law distinguishes stale, hold and stale_currentness.",
+      "conditions": [
+        "For review and qualification of an adoption/implementation."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_c1e29a3a272cebc316ca4887eeb77da1"
+      ]
+    },
+    {
+      "key": "prior_7c170c708178b1a7ca3376c9e6595edd",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F1.%20Position",
+          "start_line": 58,
+          "end_line": 58,
+          "quote": "The view is not a state owner."
+        }
+      ],
+      "statement": "View is a pure projection of typed State; transitions are pure reductions over typed Msg; effects are reducer-described values interpreted at a declared membrane; runtime owns lifecycle and continuation. Stateful mutation in views, two-way binding without action emission and effect handlers acting as controllers violate the profile despite ecosystem convention.",
+      "uncertainty": "",
+      "conditions": [
+        "For UX work governed by this profile."
+      ],
+      "exceptions": [
+        "The narrowly conditioned view-local ephemera allowance is stated separately."
+      ],
+      "applies_to_keys": [
+        "prior_5364ed6b537f501c3e9da24b34e62cd8",
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_c9843b48485016f674dd3003449d040f"
+      ]
+    },
+    {
+      "key": "prior_cb37db971ec24fbe1aa2fa4051ca9483",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F1.%20Position%2FAuthority",
+          "start_line": 84,
+          "end_line": 85,
+          "quote": "until one of them is taken, the ambiguity is\n`blocked` and implementation does not proceed."
+        }
+      ],
+      "statement": "Adopted profile is the surface's sole UX realization authority. Project ADRs may choose stack but cannot weaken process model. Existing code, library convention, screenshots, comments, design history, prototypes and generated artifacts are evidence only. Concrete ambiguity fails closed: satisfy stricter interpretation→resolved; reprice through governing constitutional method to governing-surface owner→escalated; record scoped design-module exemption before implementation→carried with exemption residual. Until an exit is taken, ambiguity is blocked and implementation cannot proceed.",
+      "uncertainty": "Referenced §15 gives further result definitions outside the supplied sections.",
+      "conditions": [
+        "Product authority adopts the profile for a UX surface and records adoption in product definition, ticket, design module or review."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5364ed6b537f501c3e9da24b34e62cd8",
+        "prior_7a9d378573708e829488aa2ffbb49efa"
+      ]
+    },
+    {
+      "key": "prior_efa832cfabb5bfc3cc21ed6c8f386c61",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 105,
+          "end_line": 107,
+          "quote": "Its instance\npremises hold where a UX surface is realised under this profile; they are\nadopted with it and do not follow from the foundations"
+        }
+      ],
+      "statement": "F20 imports F2 transitions/steps/configuration, F3 results/combination, F4 work-state/resumption/reuse, F11 change/ambiguity and F13 carriers, and refines F17 software design. Adopted instance premises, not foundational deductions, are: I1 people/systems observe admitted truth and request changes through surfaces; I2 external Product design declares truth/carriers; I3 stacks differ and tolerate view state/continuation/effects; I4 uncontrolled data seams; I5 short iterations can make per-change proof cost exceed correction. Ten authored consequence rows preserve ownership: (1) P6/P1+F2/F11+I1/I2 require admitted carriers and blocking absent carriers; profile owns five carrier kinds/binding requirements, Product design actual contracts. (2) P0/P1/P4a+F2+I3 support typed transitions; choosing TEA and ephemera test is profile policy. (3) P0/P5+F2 require declared effects; profile owns membrane/handler rules refining DESIGN_MODULE, project interpreter. (4) P4b/P6+F4 require replayable recorded behavior and executable proof before closure; profile owns test/six proof contents, project design module proof surface. (5) P3/P1/P6+I4 require shared types and runtime validation; profile makes six seams mandatory, project schema mechanism. (6) P2/P6+I1 require public-capability accessibility declarations and recorded internal-debug exemption; profile owns five declarations, WCAG AA is only recommended web default, project may strengthen. (7) P2/P1+I3 permit stack freedom, never rankings; project owns choices, profile owns compliance tests and stricter fail-closed handling. (8) P6+F11+I3 require admitted adoption/one authority and ambiguity outcomes. (9) P6/P4b+F4/F11/F13+I5 require authorized scoped scaffold exemption with retirement, no production by accumulation, visible bounded payable proof escrow and classification of every close finding; profile owns default-governance/escrow/trigger choices, TICKETS generic escrow and six close classifications, SPEC_METHOD sprint boundary. (10) P5/P6+F3 require four predicate-specific refinements, one core mapping per value without conflating review/replay/closure/carrier results. Pillar associations by row are respectively {4,5,9},{3,4},{4,8},{6,8,9},{2,3,4},{1,9},{4,8},{1,7,9},{1,9},{3,9}. P0 is recovered; P1/P2/P3/P4a/P6 independent; P5 derives from P0/P6 with open-world premise; P4b derives from P0/P2 with non-reacquirable step facts. No policy choice is presented as foundational derivation. Adoption-opening steps, failure patterns and review questions apply these consequences; each clause names its requiring principle.",
+      "uncertainty": "Detailed five accessibility declarations, default-governance conditions, escrow inventories, classifications and four result refinements are referenced but not enumerated in the supplied source.",
+      "conditions": [
+        "Instance premises hold where a UX surface is realized under this adopted profile."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5364ed6b537f501c3e9da24b34e62cd8",
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_593429f1fa25b744fdcf828e4235cd1c",
+        "prior_a5c323426e83c24d36ee5025b541da67"
+      ]
+    },
+    {
+      "key": "prior_fecad2c0df40148fe08d1e0d672e7dec",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 158,
+          "end_line": 159,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6)."
+        }
+      ],
+      "statement": "Authored consumer loci remain directional applications, not extra authority: carrier row→ACTIVATION §2, relationship clause, both realization tests, adoption step5, escrow, failures7/13, review3/4, §15 carrier/block results; process row→both tests, adoption4/9, failures1/2/8/10, review1/2/6/10/11, surface review; membrane row→discretion, transitions, view shape, adoption6/9, failures3/5/11, review5/10, surface review; replay row→adoption7, escrow, failures4/12, review7/12, replay/closure results; types row→discretion, failures6/14, review8/9, surface review; accessibility row→adoption8, escrow, failure9, review10, closure; stack row→adoption2, review11, stricter §15 review; authority row→adoption, failure16, §15 fail-closed; scaffold/escrow row→relationship, failures15/17, review10/14, closure and §15 scope/classification boundary; results row→authority, carriers and both tests. Consumers decide nothing beyond owning sections. No other member returns the UX refined values, and FOUNDATIONS owns their core without applying this UX section's rule.",
+      "uncertainty": "Most target loci are not supplied; their detailed rules cannot be reconstructed from consumer indexes.",
+      "conditions": [
+        "When consumers enter the foundation-to-law rows."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5364ed6b537f501c3e9da24b34e62cd8",
+        "prior_a5c323426e83c24d36ee5025b541da67"
+      ]
+    },
+    {
+      "key": "prior_930f9ca9b8c21bbf8305911bae23eb2f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F2.%20Role%20and%20composition",
+          "start_line": 180,
+          "end_line": 181,
+          "quote": "- when a module realises a non-UX surface, only DESIGN_MODULE applies, and\n  its design module ignores this profile;"
+        }
+      ],
+      "statement": "UX refines rather than duplicates DESIGN_MODULE: parent-governed immutability, totality, effect edges, no semantic centre and coupling remain parent law; UX extends render lifecycle, browser events, layout and accessibility. For a UX module, both apply and its design module reads both; for a non-UX module, only DESIGN_MODULE applies and UX is ignored. A graph-execution Product projection/query surface including UX follows UX realization law. Graph execution determines Product graph-native shape, DESIGN_MODULE module discipline, UX additional surface discipline.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5364ed6b537f501c3e9da24b34e62cd8",
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_a5c323426e83c24d36ee5025b541da67"
+      ]
+    },
+    {
+      "key": "prior_8b6e2f6ba6a000bcf40842dc546ff52f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FRelationship%20to%20other%20members",
+          "start_line": 197,
+          "end_line": 199,
+          "quote": "UX work may use sprint\ncompliance escrow under §12 when the sprint boundary makes deferred proof\nvisible, bounded and payable."
+        }
+      ],
+      "statement": "UX sprint compliance escrow is permitted under referenced §12 only when the sprint boundary makes deferred proof visible, bounded and payable. WORLD_MODEL governs world-model semantic law only for Products with that dimension; UX over world-model state still binds AssetSurface or equivalent under §7.",
+      "uncertainty": "Detailed escrow and world-model laws are not supplied.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_593429f1fa25b744fdcf828e4235cd1c",
+        "prior_a5c323426e83c24d36ee5025b541da67"
+      ]
+    },
+    {
+      "key": "prior_1fac002a0d0acaf859ad0d6a1613903b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FNon-goals",
+          "start_line": 209,
+          "end_line": 210,
+          "quote": "Those are valid concerns; they\nbelong in product-local surfaces, not in this constitutional profile (P2)."
+        }
+      ],
+      "statement": "UX profile does not supply styling/design-system specification, component library, brand/visual identity, wireframing/prototyping process, user-study method, stack ranking or framework recommendation. These valid concerns belong to Product-local surfaces.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5364ed6b537f501c3e9da24b34e62cd8"
+      ]
+    },
+    {
+      "key": "prior_0139ae9e00673559bff5696e9bc13db9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers",
+          "start_line": 236,
+          "end_line": 239,
+          "quote": "If no\nadmitted carrier exists for a product-truth-changing message, the UX\nsurface is blocked until the carrier is authored or the requirement is\nrepriced"
+        }
+      ],
+      "statement": "Every Product-truth-changing message maps to one admitted Product carrier. Such changes include asset writes/creation/moves/deletion; Context, selection authority, pinning/global state; session spawning/attachment/resumption; agent/job/workorder/graph-call/runtime-command dispatch; closure/approval/continuation/lineage/provenance/evidence; publishing/accepting/rejecting/superseding records. UX cannot become a hidden constructive carrier. Without an admitted carrier, surface is blocked until one is authored or requirement repriced.",
+      "uncertainty": "",
+      "conditions": [
+        "A Msg changes Product truth."
+      ],
+      "exceptions": [
+        "UX-local messages may govern genuinely view-local expansion, sort, filter, focus and draft concerns."
+      ],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_593429f1fa25b744fdcf828e4235cd1c",
+        "prior_c9843b48485016f674dd3003449d040f"
+      ]
+    },
+    {
+      "key": "prior_64a5a63086d9bef75b170a8d0c4c5208",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model%2FProcess%20model%20without%20stack%20mandate",
+          "start_line": 269,
+          "end_line": 270,
+          "quote": "Any\nrealisation that preserves §4 to §8 is compliant with this profile."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model%2FRealisation%20discretion",
+          "start_line": 314,
+          "end_line": 315,
+          "quote": "A realisation is compliant with this profile when §4 to §10\nhold under inspection and the §13 failure patterns are absent"
+        }
+      ],
+      "statement": "Project records chosen stack and short justification in design module. Each discretionary choice must preserve §4 Elm model and §6 membrane. Process model is non-negotiable, stack free within it; profile tests realizations and never ranks frameworks. One clause tests §4–§8; Realisation discretion tests §4–§10 under inspection plus absence of §13 failures. Source explicitly retains this difference for governing authority and refers to §15's stricter fail-closed selection. Reject view-owned state continuation, render effects, state mutation outside typed reducer, multi-step view state machines bypassing Msg, two-way binding without Msg, imperative DOM manipulation in render and handlers used as controllers. Non-normative examples are language-integrated reducers, typed reducer plus effect interpreter, reactive signals behind reducer with no external signal mutation, and server-rendered hypermedia using server derivation and request/response effect boundary; examples confer no compliance verdict.",
+      "uncertainty": "Full §13 and §15 are absent; no implementation's compliance is evaluated.",
+      "conditions": [
+        "For a project selecting a realization stack."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_c9843b48485016f674dd3003449d040f"
+      ]
+    },
+    {
+      "key": "prior_65fe28c7940fc5ec87e25232878bf53f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F5.%20State%20transitions",
+          "start_line": 350,
+          "end_line": 351,
+          "quote": "A lost or failed transport reply alone\nestablishes neither completion nor non-completion."
+        }
+      ],
+      "statement": "Surface declares State shape, Msg algebra, pure Update:(Msg,State)→(State,Cmd), Cmd algebra and conditional Sub algebra. State changes through typed Msg reduction. Each Cmd names effect kind, typed input, admitted carrier/external target, typed outcome Msg family covering every materially possible observed or unresolved result including success/failure, outcome-selection evidence and observations resolving uncertainty, and any required deterministic correlation among Cmd, invocation, outcome messages and replay. Outcome Msg represents available evidence; intended-effect meanings completed, not_effected, completion_unknown answer 'the intended effect occurred' without replacing Product message vocabulary. Lost/failed transport alone proves neither completion nor non-completion; sufficient independent observation may decide, otherwise Msg and State retain completion_unknown, correlation and missing observation. Reducer performs no I/O, side-channel logging or global mutation; runtime interprets effects at membrane.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Sub algebra is required when subscribing to external or runtime events."
+      ],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_c9843b48485016f674dd3003449d040f"
+      ]
+    },
+    {
+      "key": "prior_87673ea216f1bf2d4e3e4d3cc77989a8",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F6.%20Effect%20membrane",
+          "start_line": 389,
+          "end_line": 390,
+          "quote": "Recovery is an\nexplicit Cmd/Msg interaction, not hidden membrane continuation"
+        }
+      ],
+      "statement": "Effects are isolated to declared membrane. It interprets reducer-produced Cmd and returns outcomes through Msg; branching, conditional state derivation and multi-step business decisions belong in reducer. One declared Cmd is interpreted per effect. Unresolved outcome returns typed unresolved Msg without coercion to success/failure. Before repetition or dependent effect whose safety depends on outcome, Product observes owning state and follows referenced recovery with current authority/territory retained; recovery is explicit Cmd/Msg. Any useEffect/createEffect/onMount/subscribe/server-action or other handler belongs to membrane only when interpreting a declared Cmd. A handler deciding transitions violates the law; move that logic to reducer. Render, render helpers and reducer have no I/O, subscription or imperative platform manipulation.",
+      "uncertainty": "Full ACTIVATION recovery law is referenced but absent.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_b3ee6d135ca780f28776d4755a5fbf1b",
+        "prior_c9843b48485016f674dd3003449d040f",
+        "prior_7a9d378573708e829488aa2ffbb49efa"
+      ]
+    },
+    {
+      "key": "prior_d01e00b8535fa22e955445eb22b82f1f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+          "start_line": 421,
+          "end_line": 422,
+          "quote": "Absence of an admitted\ncontract blocks product-truth-changing UX actions"
+        }
+      ],
+      "statement": "Bind one or more AssetSurface contracts as data sources/action targets. State derives from their projections without local asset-shape redeclaration. Truth-changing Msg variants map one-to-one to action-registry entries or documented projection wrappers with no hidden semantic change. UX-local variants remain local concerns. Selection emits Context update/equivalent consistent with selection contract. Writes use action registry, never direct file/service calls. Shared typed contract is ground truth on both sides; no admitted equivalent contract means truth-changing actions are blocked.",
+      "uncertainty": "",
+      "conditions": [
+        "When Product publishes typed AssetSurface contracts under graph-execution carrier law and Product design."
+      ],
+      "exceptions": [
+        "Without AssetSurface, the design module names an equivalent typed contract and applies the same law."
+      ],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_593429f1fa25b744fdcf828e4235cd1c",
+        "prior_2baee2e53c0d830eab71c96035503953"
+      ]
+    },
+    {
+      "key": "prior_bb790d5b5e9ac86b1c3fc329e73b2d63",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+          "start_line": 432,
+          "end_line": 434,
+          "quote": "If the prompt cannot identify that\ncarrier and action path, the correct result is a block or re-entry, not\nlocal UI invention"
+        }
+      ],
+      "statement": "A UI/operator work prompt carries needed governing UX law using a current derived surface/projected frame where suitable, otherwise deciding sections directly, rather than requiring raw-member rediscovery. If work changes Product truth through UI, prompt names admitted carrier and action path; failure to identify them yields block/re-entry rather than local invention. This is a represented prompt-processing requirement, not an instruction to execute that workflow here.",
+      "uncertainty": "Acquisition mechanics are owned by absent ACTIVATION §2.",
+      "conditions": [
+        "For source-described prompt construction for UI/operator-surface work."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_593429f1fa25b744fdcf828e4235cd1c",
+        "prior_5364ed6b537f501c3e9da24b34e62cd8"
+      ]
+    },
+    {
+      "key": "prior_a4a1f3a0571c982d240915fb015df0ab",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay",
+          "start_line": 443,
+          "end_line": 445,
+          "quote": "A view does not:\n\n- decide on its own what the next state will be after a user event;"
+        }
+      ],
+      "statement": "Runtime owns continuation; view owns none. All transitions use declared Msg interpreted by reducer. View cannot independently decide next state, chain local updates without separate Msg emissions or hide inter-event state in refs, closures or module variables. A needed multi-step machine belongs in reducer State with explicit phase Msg; view projects the phase. Inability to replay behavior from Msg log against empty State indicates leaked view continuation.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_c9843b48485016f674dd3003449d040f",
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_38bc94913c88b810c504dd4ecae182ca"
+      ]
+    },
+    {
+      "key": "prior_8c8a167c1fde72c63efa7c2fb21b751e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof",
+          "start_line": 494,
+          "end_line": 495,
+          "quote": "`replay_passes` can coexist with `completion_unknown` for the\neffect predicate"
+        }
+      ],
+      "statement": "Require at least one executable replay proof per Product-meaningful interaction family, with all six declared proof components. Correctness depending on unrepresented DOM state; mutable refs/module variables/closures/timers/handler memory; network/file results bypassing Msg; or local state affecting Product after unmount/replay fails proof. Where effect may be unresolved, cover correlated unresolved Msg, retained State and recovery, including no outcome-dependent repeat before required observation. Reproducing that State proves only replay, never external completion: replay_passes and completion_unknown may coexist. Projection-only no-effect proof can be Msg log, final State and empty Cmd sequence.",
+      "uncertainty": "",
+      "conditions": [
+        "Before a Product UX surface claims closure under the profile."
+      ],
+      "exceptions": [
+        "A pure projection-only surface may use a no-effect proof."
+      ],
+      "applies_to_keys": [
+        "prior_38bc94913c88b810c504dd4ecae182ca",
+        "prior_7a9d378573708e829488aa2ffbb49efa"
+      ]
+    },
+    {
+      "key": "prior_7598c50552d1d8f9cd86daf797a954a6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F9.%20View%20shape",
+          "start_line": 506,
+          "end_line": 508,
+          "quote": "- declares its consumed inputs explicitly;\n- does not capture mutable state in closures across renders;\n- does not read from sources outside its declared input."
+        }
+      ],
+      "statement": "View accepts typed State/props/context, returns typed ViewTree, declares every consumed input, captures no mutable cross-render closure state and reads no undeclared source. Function/component/template/server handler/signal expression/other framework shape is a recorded stack decision; constitutional State→ViewTree and no body side effects remain. An effect-handler-written ref read during rendering violates §6 unless covered by the narrow declared-membrane exception.",
+      "uncertainty": "The membrane-handle exception does not expressly waive typed inputs, declared reads or replay requirements.",
+      "conditions": [],
+      "exceptions": [
+        "Out-of-render mutation is excepted from the cited §6 violation when part of declared membrane, such as a design-module-named imperative-interop platform handle."
+      ],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_c9843b48485016f674dd3003449d040f"
+      ]
+    },
+    {
+      "key": "prior_b8ebcf3303ae97dad6b4b273f3cebbdf",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F10.%20Type%20sharing",
+          "start_line": 528,
+          "end_line": 528,
+          "quote": "Runtime validation is mandatory at every untrusted or out-of-process seam"
+        }
+      ],
+      "statement": "Import UX-consumed/back-end shapes from shared front/back contract rather than redeclaring them; same package or contracts/ package is typical, not mandatory. Runtime validation is obligatory for HTTP/RPC responses, MCP payloads, file-loaded records, websocket/event streams, agent/worker outputs and URL/storage/clipboard/browser integration payloads. One typed-schema definition produces compile-time types and runtime validators; mechanism is project-local. Compile-time TypeScript alone is insufficient. View-local form drafts, sort enums and filter strings may have local types without shadowing back-end types.",
+      "uncertainty": "",
+      "conditions": [
+        "At every untrusted or out-of-process seam."
+      ],
+      "exceptions": [
+        "UX-local types may describe view-local concerns but cannot shadow back-end types."
+      ],
+      "applies_to_keys": [
+        "prior_2baee2e53c0d830eab71c96035503953",
+        "prior_7a9d378573708e829488aa2ffbb49efa"
+      ]
+    },
+    {
+      "key": "prior_77b14a2cd014d3c961415d7c5150f1bc",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum",
+          "start_line": 551,
+          "end_line": 566,
+          "quote": "- semantic structure (heading levels, landmarks, lists, or\n  platform-equivalent affordances);\n- keyboard or platform-equivalent navigability for every action that has\n  a pointer interaction;\n- focus management on dynamic content changes;\n- accessibility annotations for any custom interactive element that lacks\n  a native semantic equivalent;\n- colour contrast at the project's declared accessibility standard (WCAG\n  AA is the recommended default for web).\n\nAccessibility is not optional for product capabilities. It is optional\nfor internal-only debug surfaces, and the design module records the\nexemption (P2, P6). This section is intentionally minimal. Projects with\nstricter accessibility obligations (regulated industry, public-sector\nprocurement) author a project-local accessibility refinement and cite it\nfrom their design modules (P2)."
+        }
+      ],
+      "statement": "Declare semantic structure or platform equivalents; keyboard or platform-equivalent navigation for every pointer action; focus management for dynamic changes; annotations for every custom interactive element lacking native semantics; and contrast at the project's declared standard. WCAG AA is a recommended web default, not an unconditional mandate. Projects with stricter obligations author a local accessibility refinement and cite it from design modules.",
+      "uncertainty": "Other supplied sections mention recorded public-surface exemptions; their relationship to this section's non-optional language is retained as a residual.",
+      "conditions": [
+        "The UX surface is the public face of a product capability."
+      ],
+      "exceptions": [
+        "Accessibility is optional for internal-only debug surfaces, with the exemption recorded in the design module."
+      ],
+      "applies_to_keys": [
+        "prior_254e32e899936a647b4a4ae7b911dd86",
+        "prior_f07b5194dc5c79f56d598c615a03f3b1"
+      ]
+    },
+    {
+      "key": "prior_df924d63a6cd5f43c2500101b50e3609",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption",
+          "start_line": 573,
+          "end_line": 586,
+          "quote": "1. naming the profile in the project's UX-related design modules;\n2. recording the realisation stack choice (§4 Realisation discretion) and\n   the justification;\n3. declaring the irreducible architectural carrier set and the structural\n   carrier diagram the design profile requires (DESIGN_MODULE §6 and §7);\n4. declaring the State, Msg, Update, Cmd and Sub shapes for each UX\n   surface in the design module before implementation;\n5. declaring the AssetSurface or equivalent typed-contract bindings (§7)\n   the surface consumes and emits to;\n6. naming the effect-membrane mechanism (§6) and the Cmd algebra it\n   interprets;\n7. naming the executable Msg-replay proof surface required by §8;\n8. naming any §11 accessibility refinement the project requires;\n9. noting any §9 view-shape or §6 effect-membrane exemptions explicitly."
+        }
+      ],
+      "statement": "Record the profile name, chosen realisation stack and justification, irreducible architectural carrier set and required structural diagram, State/Msg/Update/Cmd/Sub shapes for each surface before implementation, consumed and emitted AssetSurface or equivalent typed-contract bindings, effect-membrane mechanism and interpreted Cmd algebra, executable Msg-replay proof surface, required accessibility refinements and explicit view-shape/effect-membrane exemptions.",
+      "uncertainty": "The referenced UX §§1, 4, 6–9 and DESIGN_MODULE §§6–7 are not supplied in full.",
+      "conditions": [
+        "Product authority adopts the profile for a project."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_ac03acbc25d43f1c4cec70fe0b4cab0a",
+        "prior_f07b5194dc5c79f56d598c615a03f3b1"
+      ]
+    },
+    {
+      "key": "prior_b2ee3ea9c8630dbf7cfb3340686a9952",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FScaffold%20and%20exemption",
+          "start_line": 594,
+          "end_line": 603,
+          "quote": "A UX surface is governed by this profile by default when any of these are\ntrue (P6, P5):\n\n- it is reachable from the product shell;\n- it is used as proof for a ticket, requirement, design module, release or\n  review;\n- it can mutate product truth;\n- it can spawn, attach, resume or dispatch work;\n- it can change Context, selection authority, closure, continuation,\n  evidence or provenance."
+        }
+      ],
+      "statement": "Any listed trigger brings a surface under the profile by default.",
+      "uncertainty": "",
+      "conditions": [
+        "Any one trigger holds: reachable from product shell; used as proof for a ticket, requirement, design module, release or review; can mutate product truth; can spawn, attach, resume or dispatch work; or can change Context, selection authority, closure, continuation, evidence or provenance."
+      ],
+      "exceptions": [
+        "A scaffold, prototype, debug pane or temporary proof surface can be exempt only with the specified record."
+      ],
+      "applies_to_keys": [
+        "prior_254e32e899936a647b4a4ae7b911dd86",
+        "prior_ac03acbc25d43f1c4cec70fe0b4cab0a"
+      ]
+    },
+    {
+      "key": "prior_496aeeabaf67e1abe4e61c1a5030372a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FScaffold%20and%20exemption",
+          "start_line": 605,
+          "end_line": 618,
+          "quote": "A scaffold, prototype, debug pane or temporary proof surface may be\nexempt only when the design module or ticket records (P6, P4b):\n\n- the exemption scope;\n- the permitted operations;\n- whether mutation is forbidden or explicitly bounded;\n- a visible scaffold or debug label where user-facing;\n- the authoritative surface that will supersede it;\n- the retirement condition and owning ticket;\n- the non-closure condition preventing release if the scaffold remains.\n\nAn exempt scaffold cannot become the production UX by accumulation. It is\nretired, repriced into a governed UX surface, or kept outside product\nclosure (P4b, P6)."
+        }
+      ],
+      "statement": "The design module or ticket must record scope, permitted operations, forbidden or explicitly bounded mutation, visible scaffold/debug label when user-facing, authoritative replacement, retirement condition and owning ticket, and a non-closure condition preventing release while the scaffold remains. An exempt scaffold cannot become production UX by accumulation: retire it, reprice it into governed UX or keep it outside product closure.",
+      "uncertainty": "",
+      "conditions": [
+        "A scaffold, prototype, debug pane or temporary proof surface claims exemption."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_254e32e899936a647b4a4ae7b911dd86",
+        "prior_f07b5194dc5c79f56d598c615a03f3b1"
+      ]
+    },
+    {
+      "key": "prior_cf0fd0fdd58e88c9c99baa48c55da5fa",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 652,
+          "end_line": 655,
+          "quote": "If one of those appears, the sprint records the finding and the work\nexits the UX sprint path through standalone repricing or sprint\nsupersession. The UX layer still does not become the hidden constructive\ncarrier (P6; §3)."
+        }
+      ],
+      "statement": "Record the finding and exit the UX sprint path through standalone repricing or sprint supersession; the UX layer cannot become a hidden constructive carrier.",
+      "uncertainty": "Generic escrow law and close mechanics belong to unsupplied TICKETS §3; SPEC_METHOD §4 admits this profile statement.",
+      "conditions": [
+        "Any non-escrowable change appears during a UX sprint."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_fba38b75e6777b991248c792e3cacb39"
+      ]
+    },
+    {
+      "key": "prior_271f649683d1a142747d6760e07ba7d6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 657,
+          "end_line": 658,
+          "quote": "A UX sprint should close when continued iteration is more expensive or\nless trustworthy than review. Valid close triggers include (P2, P6):"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 668,
+          "end_line": 683,
+          "quote": "UX sprint close is a forensic walkthrough: it reviews each changed\nscreen, state and product-meaningful interaction against the cited\nauthority (P6). Each finding takes one of the six classifications of\nTICKETS §3 Close review (`accepted`, `local_paydown`, `design_reframe`,\n`requirement_reprice`, `product_reprice`, `remove`); for a UX finding,\n`accepted` reads as compliant with this profile and the cited design,\nand `local_paydown` as local UX debt captured by a paydown ticket (P6,\nP5). The sprint may close with explicit local paydown tickets only where\nthe debt is local to UX realisation and the governing method allows\nfollow-up. It may not close while product-truth carrier gaps, hidden\nstate continuation or authority drift remain unclassified (P6, P4b).\n\nClosure under this profile for a product UX surface still requires the\n§8 Msg-replay proof and the §11 accessibility obligations unless an\nexplicit exemption is recorded. The sprint can defer those obligations\nduring iteration; it cannot erase them (P4b, P6)."
+        }
+      ],
+      "statement": "A sprint should close when further iteration is costlier or less trustworthy than review. Valid triggers include timebox expiry, too many changed states for casual review, obsolete screenshots/walkthroughs, interaction changes beyond polish, or reviewer uncertainty requiring reconciliation. Close reviews every changed screen, state and meaningful interaction against cited authority, classifying every finding as accepted, local_paydown, design_reframe, requirement_reprice, product_reprice or remove. Accepted means profile-and-design compliant; local_paydown means local UX debt captured by ticket. Unclassified carrier gaps, hidden state continuation or authority drift prohibit close. Replay and accessibility obligations may be deferred, never erased.",
+      "uncertainty": "The six classifications are TICKETS-owned and are not mapped by the UX result section.",
+      "conditions": [
+        "UX sprint close is considered or claimed."
+      ],
+      "exceptions": [
+        "Explicitly recorded exemptions can cover replay or accessibility closure obligations.",
+        "Explicit local paydown tickets permit close only for debt local to UX realisation and only where the governing method allows follow-up."
+      ],
+      "applies_to_keys": [
+        "prior_fba38b75e6777b991248c792e3cacb39",
+        "prior_254e32e899936a647b4a4ae7b911dd86"
+      ]
+    },
+    {
+      "key": "prior_43c97761547580e308eee89061745e79",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F13.%20Failure%20patterns",
+          "start_line": 687,
+          "end_line": 687,
+          "quote": "A UX surface violates this profile when any of these are true (P6, P5):"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F13.%20Failure%20patterns",
+          "start_line": 723,
+          "end_line": 725,
+          "quote": "Any of these is a violation of this profile. Repeated violations are not\nnormalised by usage; they are repaired or the surface is repriced (P6,\nP4b)."
+        }
+      ],
+      "statement": "Each independently constitutes a violation: render code directly mutates state/props/context; view-local cells carry product meaning rather than ephemera; effect-handler conditional logic decides transitions; multistep state machines live in views instead of reducers; render reads mutable refs outside the declared membrane; UX-local types shadow/redeclare backend types instead of importing shared contracts; selection/action emission writes file/network without AssetSurface action; unrecorded view-shape exemption; public-capability accessibility omitted without recorded exemption; two-way binding emits no typed Msg and bypasses reducer; Cmd logic implemented imperatively inside an effect handler; behaviour unreplayable from Msg log against empty State; truth-changing message lacks admitted carrier, graph function, runtime command or typed product contract; external data enters UX state without runtime validation; reachable, mutating or proof-used scaffold/debug surface lacks §12 exemption record; local ADR/convention/existing code weakens the profile; sprint claims closure with deferred proof, accessibility, carrier, scaffold or authority debt unclassified or un-ticketed. Repetition does not normalise violations: repair or reprice.",
+      "uncertainty": "",
+      "conditions": [
+        "Any listed failure pattern is present on a surface to which the profile applies."
+      ],
+      "exceptions": [
+        "The source expressly conditions view-shape and accessibility failures on absence of recorded exemptions; scaffold failure refers to its required exemption record."
+      ],
+      "applies_to_keys": [
+        "prior_254e32e899936a647b4a4ae7b911dd86",
+        "prior_fba38b75e6777b991248c792e3cacb39"
+      ]
+    },
+    {
+      "key": "prior_fd17ddd967fe93010fb3428daeff289c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F14.%20Review%20questions",
+          "start_line": 729,
+          "end_line": 729,
+          "quote": "A UX surface review under this profile should answer (P6, P2):"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F14.%20Review%20questions",
+          "start_line": 754,
+          "end_line": 755,
+          "quote": "If any of these cannot be answered, the design module is incomplete (P6,\nP5)."
+        }
+      ],
+      "statement": "Review should answer: State/Msg/Update; Cmd/Sub algebra; bound contracts; truth-changing messages' admitted carriers; membrane location and interpreted Cmds; provable View=f(State) purity; Msg-log replay proof; shared-contract import of all consumed types; runtime validation of all out-of-process payloads; documented view/membrane/accessibility/scaffold/debug exemptions; chosen stack's preservation of the Elm process model; non-ownership of replay continuation by the view; design-module carrier set and structural diagram for closure; and, if a sprint was used, classification of every deferred proof/accessibility/carrier/scaffold/authority finding. Any unanswerable question makes the design module incomplete.",
+      "uncertainty": "Answerability is not an instruction to evaluate a particular surface here.",
+      "conditions": [
+        "A UX surface review is performed under the profile.",
+        "The sprint-specific question applies if the work used a UX sprint."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_254e32e899936a647b4a4ae7b911dd86",
+        "prior_f07b5194dc5c79f56d598c615a03f3b1"
+      ]
+    },
+    {
+      "key": "prior_2c4a61a3aee70ca6b01811102a83e20a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 783,
+          "end_line": 783,
+          "quote": "| surface review | `design_module_incomplete` | invalid_basis | no counterexample of `violation` is found, and a §14 review question cannot be answered from the design module, so the design module, on which the review rests, cannot support the evaluation; the value names the unanswered question |"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 799,
+          "end_line": 808,
+          "quote": "Fail closed (§1 Authority). Where this profile is ambiguous for a case,\nthe surface review applies the stricter interpretation and returns its\nvalue under it; the ambiguity alone never yields `compliant`. Where the\nambiguity leaves a term the review depends on undefined, so that no\nstricter interpretation is fixed, the review returns\n`out_of_frame` and names the term and its owner\n([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or\nindeterminate, first case). A reprice or a scoped exemption, the other\ntwo exits of §1 Authority, is a re-entry or a scope recorded in the\ndesign module, not a value of this section (P5, P6)."
+        }
+      ],
+      "statement": "compliant→satisfied requires §§4–10 under inspection, no §13 failure and every §14 question answered from the design module. violation→falsified when a failure pattern, §4-rejected realisation or broken §§4–10 rule supplies a counterexample. design_module_incomplete→invalid_basis applies only with no violation counterexample and an unanswered design-module question, which is named. The source chooses the stricter §§4–10 test over the competing §§4–8 compliance test and retains the disagreement for authority. Ambiguity requires the stricter fixed interpretation; ambiguity alone cannot yield compliant. If an undefined required term prevents fixing a stricter interpretation, return out_of_frame naming term and owner. Repricing and scoped exemption are re-entry/scope, not results.",
+      "uncertainty": "The two §4 tests and §1 authority are only described here, not supplied directly.",
+      "conditions": [
+        "A surface review is evaluated on its exact basis."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_0248d4f244332b39c63670566a866da5"
+      ]
+    },
+    {
+      "key": "prior_3c52cb66f1e449df88a3c64d510a50f9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 784,
+          "end_line": 789,
+          "quote": "| replay proof | `replay_passes` | satisfied | the proof reproduces its expected final State and ordered Cmd values on its injected deterministic values, and no dependency that §8 lists decides its correctness; reproducing an unresolved outcome proves replay only and does not establish external completion |\n| replay proof | `replay_fails` | falsified | the proof diverges from its expected final State or Cmd values, or its correctness depends on something §8 lists; the divergence or the dependency is the counterexample |\n| closure obligations | `closure_obligations_met` | satisfied | every product-meaningful interaction family carries its Msg-replay proof and the surface its accessibility declarations, or a recorded exemption covers the obligation |\n| closure obligations | `closure_unproven` | falsified | an interaction family lacks its proof or the surface an accessibility declaration, with no recorded exemption; that family or obligation is the counterexample. Inside an open UX sprint closure is not claimed, and a deferred obligation is escrow under §12 |\n| carrier admission | `carrier_admitted` | satisfied | each product-truth-changing message or action maps to an admitted carrier of §3 and binds under §7 to an AssetSurface contract where the product publishes one, otherwise to the equivalent typed contract its design module names |\n| carrier admission | `carrier_missing` | falsified | a product-truth-changing message or action has no admitted carrier or typed contract (§13 pattern 13); that message or action is the counterexample |"
+        }
+      ],
+      "statement": "For replay: replay_passes→satisfied iff injected deterministic values reproduce expected final State and ordered Cmds without a §8-prohibited correctness dependency; replay_fails→falsified for divergence or such a dependency, naming it. Replaying unresolved outcomes establishes replay only, not external completion. For closure: closure_obligations_met→satisfied requires every meaningful interaction family's proof and surface accessibility declarations or applicable recorded exemptions; closure_unproven→falsified identifies a missing uncovered proof/declaration. For carrier admission: carrier_admitted→satisfied requires every truth-changing message/action to map to a §3-admitted carrier and bind to the published AssetSurface contract, otherwise the equivalent typed contract named in the design module; carrier_missing→falsified identifies a message/action without admitted carrier or typed contract.",
+      "uncertainty": "The §8 forbidden-dependency list and detailed carrier admission law are outside the supplied source.",
+      "conditions": [
+        "The relevant predicate is evaluated; closure obligations apply where product-UX closure is claimed."
+      ],
+      "exceptions": [
+        "A recorded exemption can cover a closure obligation.",
+        "Inside an open UX sprint closure is not claimed; deferred obligations are escrow."
+      ],
+      "applies_to_keys": [
+        "prior_0248d4f244332b39c63670566a866da5"
+      ]
+    },
+    {
+      "key": "prior_6e20b7347a459dd5ce10aec6a4e631b5",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 791,
+          "end_line": 797,
+          "quote": "Where none of these values applies, the evaluation returns a core value\ndirectly under [FOUNDATIONS §4 Results](FOUNDATIONS.md#results):\n`indeterminate` where the admissible evidence cannot decide its predicate,\nnaming the evidence that would decide; `out_of_frame` where its claim\nneeds a relation or capability that its frame does not declare; and\n`invalid_basis` where its subject or basis cannot support it on a ground\nother than `design_module_incomplete` (P5)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 819,
+          "end_line": 826,
+          "quote": "Two collisions are resolved here (P1): \"blocked\" for want of a carrier is\nnot the ambiguity outcome `blocked` of\n[ACTIVATION §3 Ambiguity outcome](ACTIVATION.md#ambiguity-outcome), and\n`design_module_incomplete` is not the value `incomplete` of ACTIVATION §3\nConstruction availability. An exempt scaffold is a recorded scope (§12),\nnot a result; evaluations outside its recorded scope proceed under this\nsection. The six close classifications of §12 belong to TICKETS §3 and are\nnot mapped here (P6)."
+        }
+      ],
+      "statement": "Every mapping carries its own predicate, maps to exactly one core result and cannot raise standing or satisfy another predicate. Where no refinement applies, return indeterminate for undecidable admissible evidence and name deciding evidence; out_of_frame for undeclared required relation/capability; invalid_basis for unsupported subject/basis other than design_module_incomplete. Missing carrier yields carrier_missing for admission and violation for review; a construction step needing it stops with re_entry_requested(authority), naming carrier, design owner and re-entry to author it or reprice the requirement. This is distinct from ACTIVATION ambiguity blocked; design_module_incomplete is distinct from construction incomplete. Exempt scaffold is scope, not result; evaluations outside its scope use this algebra. TICKETS close classes are not mapped here.",
+      "uncertainty": "ACTIVATION owns the construction-stop mapping; its full semantics are not supplied.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_0248d4f244332b39c63670566a866da5"
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "prior_70bf63d008bf71edda52f0febbf3e5f3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model%2FProcess%20model%20without%20stack%20mandate",
+          "start_line": 268,
+          "end_line": 269,
+          "quote": "the stack is project-local\nand free, provided it preserves the model"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model%2FRealisation%20discretion",
+          "start_line": 308,
+          "end_line": 308,
+          "quote": "- the runtime validator, if any;"
+        }
+      ],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_c9843b48485016f674dd3003449d040f"
+      ],
+      "allowed": [
+        "Project selects language, framework/runtime, optional state-container library, effect interpreter, runtime validator if any, and build/bundling/deployment toolchain; records and justifies each against process model and membrane.",
+        "Non-normative realization examples may be used where they preserve required laws."
+      ],
+      "forbidden": [
+        "Negotiating away the constitutional process model.",
+        "Treating stack name or example status as compliance.",
+        "Weakening mandatory runtime validation at applicable seams through optional mechanism wording."
+      ]
+    },
+    {
+      "key": "prior_f872259eaa14d9fbc77058c523367ba3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F5.%20State%20transitions",
+          "start_line": 364,
+          "end_line": 365,
+          "quote": "Product-meaningful state goes\nthrough the reducer without exception"
+        }
+      ],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_c9843b48485016f674dd3003449d040f"
+      ],
+      "allowed": [
+        "Framework-provided implementation-local cells may hold genuinely view-local open/closed, hover or draft values only when no other view observes them, they are outside Product state and they have no consequence after unmount."
+      ],
+      "forbidden": [
+        "Keeping Product-meaningful state outside reducer.",
+        "Local-cell treatment when loss on unmount changes Product behavior or another UI view."
+      ]
+    },
+    {
+      "key": "prior_1b7af871ff9c8d6caca7ca66d0f0cf58",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F6.%20Effect%20membrane",
+          "start_line": 375,
+          "end_line": 377,
+          "quote": "Inside the membrane, I/O, subscriptions\nto external sources, and imperative interop with the host platform (DOM,\nfile system, native APIs) are allowed."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_b3ee6d135ca780f28776d4755a5fbf1b"
+      ],
+      "allowed": [
+        "I/O, external subscriptions and imperative DOM/file-system/native-API interop inside the declared effect membrane."
+      ],
+      "forbidden": [
+        "Those effects in render, render helpers or reducer.",
+        "Hidden continuation or transition-deciding business logic inside effect handlers."
+      ]
+    },
+    {
+      "key": "prior_a92f3de84ec8af1c6c8f8012a83715cf",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof",
+          "start_line": 497,
+          "end_line": 498,
+          "quote": "For a pure projection-only surface, the replay proof may be a no-effect\nproof: a Msg log plus the final State and an empty Cmd sequence (P2)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_38bc94913c88b810c504dd4ecae182ca",
+        "prior_7a9d378573708e829488aa2ffbb49efa"
+      ],
+      "allowed": [
+        "For a pure projection-only surface, a no-effect replay proof comprising Msg log, final State and empty Cmd sequence."
+      ],
+      "forbidden": [
+        "Using replay success to establish external effect completion."
+      ]
+    },
+    {
+      "key": "prior_2bd3895824fe3eae8ae8ace4ef7ed246",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F9.%20View%20shape",
+          "start_line": 510,
+          "end_line": 513,
+          "quote": "Whether the implementation expresses this as a function, a function\ncomponent, a template, a server-rendered handler, a signal-derived\nexpression or another framework-specific shape is a stack decision\nrecorded in the design module."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_c9843b48485016f674dd3003449d040f"
+      ],
+      "allowed": [
+        "Recorded stack-specific function, component, template, server handler, signal expression or other view form preserving State→ViewTree and side-effect-free body.",
+        "Declared membrane mutation for named imperative-interop handles within the source's exception."
+      ],
+      "forbidden": [
+        "Using implementation form to bypass pure view signature.",
+        "Undeclared out-of-render mutable dependencies."
+      ]
+    },
+    {
+      "key": "prior_3bda1e7670908b5d18ef1d7d201e6033",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F10.%20Type%20sharing",
+          "start_line": 544,
+          "end_line": 544,
+          "quote": "UX-local types do not shadow back-end types (P3)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_2baee2e53c0d830eab71c96035503953",
+        "prior_7a9d378573708e829488aa2ffbb49efa"
+      ],
+      "allowed": [
+        "Project-local typed-schema mechanism.",
+        "UX-local form draft, sort-order enum and filter-string types for view-local concerns."
+      ],
+      "forbidden": [
+        "Shadowing back-end record types.",
+        "Relying on compile-time TypeScript alone at untrusted/out-of-process seams."
+      ]
+    },
+    {
+      "key": "prior_a315f37867fff54223235c4be408071d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption",
+          "start_line": 588,
+          "end_line": 590,
+          "quote": "Adoption is per project. A project may adopt this profile only for some\nUX surfaces, for example the production UI but not internal debug tools,\nwith the scope recorded in the design module (P2, P6)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_ac03acbc25d43f1c4cec70fe0b4cab0a",
+        "prior_254e32e899936a647b4a4ae7b911dd86"
+      ],
+      "allowed": [
+        "Adopt the profile only for selected project UX surfaces, such as production UI, with scope recorded in the design module."
+      ],
+      "forbidden": []
+    },
+    {
+      "key": "prior_3e1595e9f8cb57b1afa03d8b1a56f155",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 631,
+          "end_line": 650,
+          "quote": "A UX sprint may escrow (P2, P4b):\n\n- screenshots or walkthrough capture;\n- visual review;\n- copy, spacing, density and layout cleanup;\n- accessibility review and remediation;\n- Msg-replay proof updates for product-meaningful interaction families;\n- design-module wording cleanup;\n- trace cleanup between changed UX states and governing authority.\n\nA UX sprint may not escrow (P6):\n\n- product-truth-changing Msg variants that lack an admitted carrier;\n- new or changed AssetSurface contracts or equivalent typed product\n  contracts;\n- new navigation, information architecture or selection authority that\n  changes product meaning;\n- runtime, governance, closure, continuation, lineage, provenance or\n  evidence semantics;\n- release criteria or method law."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_fba38b75e6777b991248c792e3cacb39"
+      ],
+      "allowed": [
+        "During a short iteration window when per-change proof costs more than expected correction, escrow screenshots/walkthroughs, visual review, copy/spacing/density/layout cleanup, accessibility review/remediation, meaningful-interaction Msg-replay proof updates, design-module wording cleanup and trace cleanup between changed states and authority."
+      ],
+      "forbidden": [
+        "Escrowing truth-changing Msg variants lacking admitted carriers; new/changed AssetSurface or equivalent typed product contracts; navigation/information architecture/selection authority changing product meaning; runtime/governance/closure/continuation/lineage/provenance/evidence semantics; release criteria or method law.",
+        "Weakening the UX process model or erasing eventual replay/accessibility obligations through escrow."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "prior_f6816d048908db9c77d86f1165982516",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature",
+          "start_line": 1617,
+          "end_line": 1618,
+          "quote": "The instantiated signature and basis records are issued after their\nmember bytes are frozen."
+        }
+      ],
+      "subject_key": "prior_8cb491ac532c53d1b031f6ddd56b8227",
+      "uncertainty": "Full immutable publication members, manifests, instantiated basis/signature records and referenced calculus derivation addresses are absent.",
+      "consequence": "Schema and reconstruction conditions are retained without minting identities, verifying manifests or asserting installation, acceptance or supersession."
+    },
+    {
+      "key": "prior_c2ec0865664863227c927e26a934a980",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FConformance%20obligations",
+          "start_line": 1666,
+          "end_line": 1666,
+          "quote": "16. refusal on a stale pre-effect observation and on grant currentness;"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds",
+          "start_line": 818,
+          "end_line": 818,
+          "quote": "| `pre_effect_current` | `EffectSubject` | `effect_readiness` | `stale` plus `hold` and `stale_currentness` | `hold` plus `stale_currentness` |"
+        }
+      ],
+      "subject_key": "prior_cab2df421b136e58a2959f119f2aac4b",
+      "uncertainty": "The review checklist says refusal on stale currentness; the exact predicate table says stale plus hold and stale_currentness. 'Refusal' may be broader no-start language there, but that reading is not silently imposed.",
+      "consequence": "Keep no-dispatch and re-observation requirements, but do not collapse stale, hold, refusal and invalid_basis into one outcome or invent an extra refusal mapping."
+    },
+    {
+      "key": "prior_e35a5b24e8b8d558ee3002917244b2ba",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX",
+          "start_line": 31,
+          "end_line": 31,
+          "quote": "the refined result values of §15."
+        }
+      ],
+      "subject_key": "prior_5364ed6b537f501c3e9da24b34e62cd8",
+      "uncertainty": "UX §11–§15, core result algebra, ambiguity governance, Product adoption, graph-execution carriers and much of the upstream law are referenced but not supplied.",
+      "consequence": "Retain named roles and explicit bindings only. Do not fabricate unseen replay/result refinements, exemption records, escrow inventories, carrier semantics or cross-file graph endpoints."
+    },
+    {
+      "key": "prior_3df5bc0ae93f7a2968cfb897d48c9b0e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 139,
+          "end_line": 140,
+          "quote": "which are choices of this profile, the product or the\nproject, with their owners, so no choice is presented as derived"
+        }
+      ],
+      "subject_key": "prior_efa832cfabb5bfc3cc21ed6c8f386c61",
+      "uncertainty": "The table refers to five accessibility declarations, five default-governance conditions, escrowable/non-escrowable items, close triggers, six close classifications and four result refinements without supplying their complete inventories. Foundation principle definitions and consequence standing are imported.",
+      "consequence": "Preserve stated owner, standing, consequence and consumer direction while leaving missing enumerations and derivations open to source re-entry."
+    },
+    {
+      "key": "prior_f007e4ecc4fc9d57d844d621d6b8a797",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model%2FProcess%20model%20without%20stack%20mandate",
+          "start_line": 270,
+          "end_line": 271,
+          "quote": "This\ntest differs from the test of §4 Realisation discretion;"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model%2FRealisation%20discretion",
+          "start_line": 316,
+          "end_line": 317,
+          "quote": "This test differs from the test of §4 Process model without stack\nmandate;"
+        }
+      ],
+      "subject_key": "prior_64a5a63086d9bef75b170a8d0c4c5208",
+      "uncertainty": "§4–§8 preservation and §4–§10 inspection with no §13 failure pattern are expressly different tests; full deciding §15 and failure inventory §13 are outside this source.",
+      "consequence": "Retain both tests and the expressly stated stricter fail-closed policy; do not certify compliance or silently equate the scopes. Governing-authority ambiguity remains."
+    },
+    {
+      "key": "prior_715076004740c027e9cf8bd8445893e3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum",
+          "start_line": 561,
+          "end_line": 563,
+          "quote": "Accessibility is not optional for product capabilities. It is optional\nfor internal-only debug surfaces, and the design module records the\nexemption (P2, P6)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+          "start_line": 680,
+          "end_line": 683,
+          "quote": "Closure under this profile for a product UX surface still requires the\n§8 Msg-replay proof and the §11 accessibility obligations unless an\nexplicit exemption is recorded. The sprint can defer those obligations\nduring iteration; it cannot erase them (P4b, P6)."
+        }
+      ],
+      "subject_key": "prior_77b14a2cd014d3c961415d7c5150f1bc",
+      "uncertainty": "§11 calls accessibility non-optional for product capabilities while §12 and result/failure clauses recognise recorded exemptions. Their complete reconciliation is not supplied.",
+      "consequence": "Retain non-optional public accessibility, the explicit internal-debug exception and later recorded-exemption language without inventing the authority or full permissible scope of a public exemption."
+    },
+    {
+      "key": "prior_8fb205e73dedb4631bad2a2828619fc2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 781,
+          "end_line": 781,
+          "quote": "The first part is the stricter of the two compliance tests of §4, which disagree: §4 Process model without stack mandate counts a realisation that preserves §4 to §8 as compliant. The tests differ in scope; this mapping applies the stricter under the fail-closed rule of §1 Authority and retains the ambiguity for the governing authority."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+          "start_line": 784,
+          "end_line": 784,
+          "quote": "and no dependency that §8 lists decides its correctness; reproducing an unresolved outcome proves replay only and does not establish external completion"
+        }
+      ],
+      "subject_key": "prior_0248d4f244332b39c63670566a866da5",
+      "uncertainty": "UX §§1–10 and referenced FOUNDATIONS, ACTIVATION, DESIGN_MODULE, SPEC_METHOD and TICKETS rules are outside this source set.",
+      "consequence": "The local result predicates and stricter-test choice are recorded, but exact replay exclusions, carrier admission mechanics, adoption authority and external construction mappings cannot be reconstructed."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20relation%20families",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FClosed%20constraint%2C%20judgment%2C%20residual%20and%20stop%20kinds",
+      "decision": "retained",
+      "keys": [
+        "prior_49dc667e9ee6fce0e4c097984dfcc282",
+        "prior_c2ec0865664863227c927e26a934a980"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FOccurrence%20identity",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FOccurrence%20identity%2FOP-001%20Seed%20acyclicity",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation%2FOP-002%20Atomic%20semantic%20admission",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCandidate%2C%20judgment%2C%20event%20and%20relation%20separation%2FOP-003%20Correction%20without%20erasure",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCausality%20and%20typed%20lineage",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FCausality%20and%20typed%20lineage%2FOP-004%20Precedence%20is%20not%20authority",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation%2FOP-005%20Mutable%20reality%20conservation",
+      "decision": "retained",
+      "keys": [
+        "prior_fc8a95625a4b04333e0c6df48e6c6717"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FMutable-subject%20effect%20relation%2FOP-006%20Immutable%20iteration%20history",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FEvent%20frontier%20and%20projection",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FEvent%20frontier%20and%20projection%2FOP-007%20Scope%20conservation",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FAuthority%20and%20adoption",
+      "decision": "retained",
+      "keys": [
+        "prior_c1e29a3a272cebc316ca4887eeb77da1",
+        "prior_6136ab950d47fcc392b6b8445078b261"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity",
+      "decision": "retained",
+      "keys": [
+        "prior_8cb491ac532c53d1b031f6ddd56b8227"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature",
+      "decision": "retained",
+      "keys": [
+        "prior_8cb491ac532c53d1b031f6ddd56b8227",
+        "prior_fd343d80ad1473da2071baac82b528cf",
+        "prior_fb35cb4a4220cb1de8d13960c5466da3",
+        "prior_170403b9ff2d3c77c4964ab6d80b0044",
+        "prior_f6816d048908db9c77d86f1165982516"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExclusions",
+      "decision": "retained",
+      "keys": [
+        "prior_e633f174ccfb9e355266c93b5cf2a951"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FConformance%20obligations",
+      "decision": "retained",
+      "keys": [
+        "prior_cab2df421b136e58a2959f119f2aac4b",
+        "prior_c2ec0865664863227c927e26a934a980"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX",
+      "decision": "retained",
+      "keys": [
+        "prior_5364ed6b537f501c3e9da24b34e62cd8",
+        "prior_a1d5d296e3c5a59602ec4f6dcfdef693",
+        "prior_e35a5b24e8b8d558ee3002917244b2ba"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F1.%20Position",
+      "decision": "retained",
+      "keys": [
+        "prior_7c170c708178b1a7ca3376c9e6595edd"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F1.%20Position%2FAuthority",
+      "decision": "retained",
+      "keys": [
+        "prior_cb37db971ec24fbe1aa2fa4051ca9483"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F1.%20Position%2FFoundation%20to%20law",
+      "decision": "retained",
+      "keys": [
+        "prior_5364ed6b537f501c3e9da24b34e62cd8",
+        "prior_efa832cfabb5bfc3cc21ed6c8f386c61",
+        "prior_fecad2c0df40148fe08d1e0d672e7dec",
+        "prior_3df5bc0ae93f7a2968cfb897d48c9b0e"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F2.%20Role%20and%20composition",
+      "decision": "retained",
+      "keys": [
+        "prior_a5c323426e83c24d36ee5025b541da67",
+        "prior_bcd987fdae91e3fbfce049a727ef7d7b",
+        "prior_930f9ca9b8c21bbf8305911bae23eb2f"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FRelationship%20to%20other%20members",
+      "decision": "retained",
+      "keys": [
+        "prior_a5c323426e83c24d36ee5025b541da67",
+        "prior_8b6e2f6ba6a000bcf40842dc546ff52f"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F2.%20Role%20and%20composition%2FNon-goals",
+      "decision": "retained",
+      "keys": [
+        "prior_1fac002a0d0acaf859ad0d6a1613903b"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F3.%20Product%20truth%20and%20admitted%20carriers",
+      "decision": "retained",
+      "keys": [
+        "prior_7a9d378573708e829488aa2ffbb49efa",
+        "prior_593429f1fa25b744fdcf828e4235cd1c",
+        "prior_900946d9ec2250956a315797f26c2db2",
+        "prior_0139ae9e00673559bff5696e9bc13db9"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model",
+      "decision": "retained",
+      "keys": [
+        "prior_c9843b48485016f674dd3003449d040f"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model%2FProcess%20model%20without%20stack%20mandate",
+      "decision": "retained",
+      "keys": [
+        "prior_64a5a63086d9bef75b170a8d0c4c5208",
+        "prior_70bf63d008bf71edda52f0febbf3e5f3",
+        "prior_f007e4ecc4fc9d57d844d621d6b8a797"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F4.%20Process%20model%2FRealisation%20discretion",
+      "decision": "retained",
+      "keys": [
+        "prior_64a5a63086d9bef75b170a8d0c4c5208",
+        "prior_70bf63d008bf71edda52f0febbf3e5f3",
+        "prior_f007e4ecc4fc9d57d844d621d6b8a797"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F5.%20State%20transitions",
+      "decision": "retained",
+      "keys": [
+        "prior_65fe28c7940fc5ec87e25232878bf53f",
+        "prior_f872259eaa14d9fbc77058c523367ba3"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F6.%20Effect%20membrane",
+      "decision": "retained",
+      "keys": [
+        "prior_b3ee6d135ca780f28776d4755a5fbf1b",
+        "prior_de9496ad20a2700ea15b95d3cf91c8e2",
+        "prior_87673ea216f1bf2d4e3e4d3cc77989a8",
+        "prior_1b7af871ff9c8d6caca7ca66d0f0cf58"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F7.%20Carrier%20binding",
+      "decision": "retained",
+      "keys": [
+        "prior_d01e00b8535fa22e955445eb22b82f1f",
+        "prior_bb790d5b5e9ac86b1c3fc329e73b2d63"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay",
+      "decision": "retained",
+      "keys": [
+        "prior_38bc94913c88b810c504dd4ecae182ca",
+        "prior_a4a1f3a0571c982d240915fb015df0ab"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F8.%20Continuation%20and%20replay%2FMsg-replay%20proof",
+      "decision": "retained",
+      "keys": [
+        "prior_38bc94913c88b810c504dd4ecae182ca",
+        "prior_8c8a167c1fde72c63efa7c2fb21b751e",
+        "prior_a92f3de84ec8af1c6c8f8012a83715cf"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F9.%20View%20shape",
+      "decision": "retained",
+      "keys": [
+        "prior_7598c50552d1d8f9cd86daf797a954a6",
+        "prior_2bd3895824fe3eae8ae8ace4ef7ed246"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F10.%20Type%20sharing",
+      "decision": "retained",
+      "keys": [
+        "prior_2baee2e53c0d830eab71c96035503953",
+        "prior_b8ebcf3303ae97dad6b4b273f3cebbdf",
+        "prior_3bda1e7670908b5d18ef1d7d201e6033"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F11.%20Accessibility%20minimum",
+      "decision": "retained",
+      "keys": [
+        "prior_254e32e899936a647b4a4ae7b911dd86",
+        "prior_77b14a2cd014d3c961415d7c5150f1bc",
+        "prior_715076004740c027e9cf8bd8445893e3"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption",
+      "decision": "retained",
+      "keys": [
+        "prior_ac03acbc25d43f1c4cec70fe0b4cab0a",
+        "prior_f07b5194dc5c79f56d598c615a03f3b1",
+        "prior_df924d63a6cd5f43c2500101b50e3609",
+        "prior_a315f37867fff54223235c4be408071d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FScaffold%20and%20exemption",
+      "decision": "retained",
+      "keys": [
+        "prior_311d519cda8951695e0f3d78bea3c737",
+        "prior_b2ee3ea9c8630dbf7cfb3340686a9952",
+        "prior_496aeeabaf67e1abe4e61c1a5030372a"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F12.%20Adoption%2FUX%20sprint%20compliance%20escrow",
+      "decision": "retained",
+      "keys": [
+        "prior_fba38b75e6777b991248c792e3cacb39",
+        "prior_cf0fd0fdd58e88c9c99baa48c55da5fa",
+        "prior_271f649683d1a142747d6760e07ba7d6",
+        "prior_3e1595e9f8cb57b1afa03d8b1a56f155",
+        "prior_715076004740c027e9cf8bd8445893e3"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F13.%20Failure%20patterns",
+      "decision": "retained",
+      "keys": [
+        "prior_43c97761547580e308eee89061745e79"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F14.%20Review%20questions",
+      "decision": "retained",
+      "keys": [
+        "prior_fd17ddd967fe93010fb3428daeff289c"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/UX.md#UX%2F15.%20Results%20of%20this%20profile",
+      "decision": "retained",
+      "keys": [
+        "prior_0248d4f244332b39c63670566a866da5",
+        "prior_2c4a61a3aee70ca6b01811102a83e20a",
+        "prior_3c52cb66f1e449df88a3c64d510a50f9",
+        "prior_6e20b7347a459dd5ce10aec6a4e631b5",
+        "prior_8fb205e73dedb4631bad2a2828619fc2"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    }
+  ],
+  "limitations": [
+    "Source-local semantic proposal; processing coverage and mechanical checks do not establish semantic completeness or acceptance."
+  ]
+}

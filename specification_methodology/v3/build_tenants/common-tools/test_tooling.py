@@ -12,8 +12,9 @@ import zipfile
 
 import tooling
 import tooling_materialize as materializer
+from historical_test_payload import published_payload
 
-PACKAGE = Path(__file__).resolve().parents[2] / "build_tenants/common"
+PACKAGE = published_payload()
 BUNDLE = PACKAGE / "standards/tooling"
 
 

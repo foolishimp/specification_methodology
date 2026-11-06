@@ -1,0 +1,35 @@
+--- historical/SPEC_METHOD.md
++++ 3.0.5/SPEC_METHOD.md
+@@ -1249,13 +1249,13 @@
+ surface, not the released artifact and not the builder that happens to be
+ running the build (P3).
+ 
+-The only exact operative release identifier is the immutable release-cut
+-tag `v<version>-rc.<n>` (P3). That cut is a
++The only exact operative release identifier is an immutable release-cut
++tag under the selected [RELEASE profile](RELEASE.md#2-release-identities):
++an RC cut or an explicit stable cut (P3). That cut is a
+ point-in-time release identity, a boundary over the feature set accepted
+ for that cut, and part of release metadata and release-process evaluation;
+-it is not part of the live project specification. The mutable `v<version>`
+-tag is a version-line discovery selector to the highest-ordinal published
+-immutable cut; it is not an exact dependency, evidence or constitutional
++it is not part of the live project specification. On an RC line the mutable
++`v<version>` tag is a discovery selector to the highest published ordinal; it is not an exact dependency, evidence or constitutional
+ basis and cannot silently change a consumer selection. How an active
+ constitutional surface uses version labels is the
+ [§2 Specification surface rule](#specification-surface-rule); shared
+@@ -1796,6 +1796,13 @@
+   Operation kind is what an operation does, such as construct, assess,
+   relay, record, measure or decide, together with the authority that kind
+   of operation requires.
++
++The common deterministic functor kind is a separate coordinate owned by
++[AXIOMATIC_CALCULUS §5](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds).
++A binding that claims F_D establishes the common kind's total-domain contract.
++It retains the operation's subject, evidence and effect permissions. Human,
++machine and mixed bindings preserve these same distinctions; no runtime,
++event log or annotation carrier follows from the classification.
+ 
+ Rules:
+ 

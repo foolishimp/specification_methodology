@@ -1,0 +1,1574 @@
+{
+  "concepts": [
+    {
+      "key": "prior_b6b525988325f2bf81fd5df06a4e1be9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FExact-cut%20qualification",
+          "start_line": 382,
+          "end_line": 386,
+          "quote": "- the exact release-scoped claim bytes;\n- the governing Product and release basis;\n- each claimed property and its observation boundary;\n- evidence subjects, owner verdicts and unresolved gaps; and\n- the complete successor relation to the declared predecessor (§9)."
+        }
+      ],
+      "label": "Exact-cut qualification",
+      "definition": "Evaluation bound to an exact immutable cut and member set, exact claim bytes, governing Product/release basis, each property's observation boundary, evidence subjects, owner verdicts, gaps and complete successor relation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_fa247d55722088d1c8208111b982761e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts",
+          "start_line": 554,
+          "end_line": 560,
+          "quote": "A Product authority may declare an explicit cross-Product Release-Matched\nAsset Cohort when one source corpus and its required distributed or\nderived assets need to remain usable as one versioned set. The declaring\nrelation names every required Product and asset, the exact source\ndependency, its owning authorities, the qualification boundary and the\npublication transaction. Path co-location, equal version text or a common\nactor cannot infer the relation (P3, P6)."
+        }
+      ],
+      "label": "Release-Matched Asset Cohort",
+      "definition": "Cross-Product Release-Matched Asset Cohort naming every required Product and asset, exact source dependency, owning authorities, qualification boundary and publication transaction. The STDO stack cohort contains the exact standards cut, its distributed spec plugin/host assets, exact Axiom Indexer mechanics Product, exact STDO Representation Product, and its released a_c.STDO program/logical constraint map or equivalent semantic index with complete source member inventory, member digests, member-set digest and exact derivation cut.",
+      "conditions": [
+        "A Product authority explicitly declares the relation when a source corpus and required distributed or derived assets need to be usable as one versioned set."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_d6c44732513e57f9b82a2af8b45fb479",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29",
+          "start_line": 742,
+          "end_line": 745,
+          "quote": "- conserved: the successor retains the claim;\n- superseded: an accepted successor relation replaces it;\n- intentionally removed: current Product authority removes it; or\n- not applicable: it has no successor effect, with a bounded reason."
+        }
+      ],
+      "label": "Successor semantic disposition",
+      "definition": "One semantic claim about that predecessor claim: conserved means retained; superseded means replaced by an accepted successor relation; intentionally removed means removed by current Product authority; not applicable means no successor effect with bounded reason. These are predicates to evaluate, not core result values or the decision owner's acceptance disposition. Unresolved states no claim and has no result.",
+      "conditions": [
+        "A predecessor claim is capable of affecting the successor."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7b19e39be9fd85c952d4163c0c025b77",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation",
+          "start_line": 100,
+          "end_line": 102,
+          "quote": "the table traces that section in its first two rows, whose rule column\nnames it, and owns none of it. Each commitment's standing is written as\nthe table of commitments in FOUNDATIONS §3 states it."
+        }
+      ],
+      "label": "F15 release and successor conservation",
+      "definition": "F15 traces release and successor-conservation laws from commitments plus explicitly additional instance premises: recursive products, published cuts, mutable carriers, derived assets, external services and successor lines. It traces but does not own FOUNDATIONS lineage objects. P1/P3/P6 are cited as independent, P0 as recovered, P4b as derived from P0/P2 with non-reacquirable step-produced facts, and P5 as derived from P0/P6 with the open-world premise. Domain choices and their owners are distinct from consequences.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_894323f233349c5a81fd1da1c9c828ba",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD",
+          "start_line": 12,
+          "end_line": 16,
+          "quote": "It is realised from [FOUNDATIONS](FOUNDATIONS.md),\n[REFERENCE_FRAME](REFERENCE_FRAME.md), [ACTIVATION](ACTIVATION.md) and\n[EVALUATION](EVALUATION.md): nothing here is foundational, every clause\nnames the principle that requires it (P0 to P6, FOUNDATIONS §3), and each\nmechanism could be realised differently under the same principles."
+        }
+      ],
+      "label": "SPEC_METHOD",
+      "definition": "Tier-2 particular method owning position/identity, constitutional chain and surfaces, manifesto/litmus tests, requirement/design/trace/live-surface laws, outcome conservation, change management/triage/classification/consistency/sprint boundaries, ambiguity/lifecycle, lineage/release boundary, migration/procedures/design records and build-tenant binding. It is a realisation of FOUNDATIONS, REFERENCE_FRAME, ACTIVATION and EVALUATION, not itself foundational; other Tier-2 members own project binding, testing, work carriers and release mechanics.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7b52a0bef35a63b536af6e7f80726a0a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution",
+          "start_line": 46,
+          "end_line": 52,
+          "quote": "Its role is meta-constitutional: it defines how goals, intent, product,\nrequirements, design, code, evidence and repricing relate; what counts as\nspecification sufficiency; what kinds of requirement truth exist; and how\nauthority flows during iterative delivery. If a project's implementation\ndisappears, the method should still be sufficient to bootstrap a new\nspec-driven project process from scratch; the method plus the surviving domain specification\ncan reconstruct the project (P2, P0)."
+        }
+      ],
+      "label": "Process constitution",
+      "definition": "Meta-constitutional process for spec-driven projects defining relations among goals, intent, product, requirements, design, code, evidence and repricing; specification sufficiency; kinds of requirement truth; and authority during iterative delivery. The method should bootstrap a new process if implementation disappears; method plus surviving domain specification can reconstruct the project.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_867a67ed8bb9b0e5119339afe287cda0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FMethod%20identity",
+          "start_line": 90,
+          "end_line": 95,
+          "quote": "S,\nSpecification, owned by this member; T, Ticketing, owned by\n[TICKETS](TICKETS.md); D, Design, owned by the design profile member\n[DESIGN_MODULE](DESIGN_MODULE.md); and O, Outcome-Driven Development, the\ncomplete area whose identity and realisation meaning are owned by its\nprofile member [ODD](ODD.md)."
+        }
+      ],
+      "label": "STDO method identity",
+      "definition": "STDO names four method-law areas: S Specification owned by SPEC_METHOD; T Ticketing owned by TICKETS; D Design owned by DESIGN_MODULE; O Outcome-Driven Development, whose complete identity and realisation meaning are owned by ODD.",
+      "conditions": [
+        "Within urn:stdo:bounded-context:method-identity under the selected complete basis."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_fc18dcf616a3cdc09fa46a6044df9951",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain",
+          "start_line": 210,
+          "end_line": 212,
+          "quote": "Goals → Intent → Product Definition → Requirements → Design → Code\n  → Events → Projection → Delta → Scenarios → Gap analysis\n  → Repricing at the layer its change class names"
+        }
+      ],
+      "label": "Constitutional chain",
+      "definition": "Homeostatic responsibility chain: Goals → Intent → Product Definition → Requirements → Design → Code → Events → Projection → Delta → Scenarios → Gap analysis → Repricing at the layer named by change class. Goals name current work-wave concerns; intent purpose/direction; Product Definition the current mutable source project's terms, boundaries and end-state shape; requirements invariant obligations; design structural decisions/interfaces/carriers/topology; Code realisation in software, human procedure or both; Events retained happenings; Projection reconstructs current truth from sufficient retained records; Delta exposes intended/realised drift; Scenarios test operational meaning; Gap analysis finds model insufficiency; Repricing changes the appropriate layer and generates new goals/intent when work-wave, direction or scope changes.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_26a8936b7793bf1681e921b95ed4987b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding",
+          "start_line": 155,
+          "end_line": 158,
+          "quote": "Standing of the commitments cited (FOUNDATIONS §3): P0\nrecovered; P1, P2, P3, P4a and P6 independent; P4b derived from P0 and\nP2, with P0's premise that step-produced facts are not re-acquirable; P5\nderived from P0 and P6, with P0's open-world premise."
+        }
+      ],
+      "label": "F10 chain, outcome and build-tenant binding",
+      "definition": "F10 traces how specification governs realisations from owned layers, layered surfaces, several changing realisations and immutable releases as instance premises not supplied by commitments. Commitment standings are P0 recovered; P1/P2/P3/P4a/P6 independent; P4b derived from P0/P2 with non-reacquirable step-produced facts; P5 derived from P0/P6 with the open-world premise. It distinguishes consequences, owning rules, domain/policy choices and consumers.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f80d75c7a70cd53604f225c790e0cbea",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "start_line": 276,
+          "end_line": 288,
+          "quote": "The method commits to these (P2, P6). It defines the\ncurrent goals for the active body of work before repricing deeper\nconstitutional layers. It works from intent before implementation. It\ndefines the current product definition in explicit present-tense terms\nbefore decomposing it into detailed requirements. It defines the full\nconstitutional what in requirements, not merely a feature list. It prefers\ndeclaring desired truth and lawful boundaries over prescribing step-by-step\nimperative procedure. It makes design the explicit structural bridge\nbetween requirements and code. It requires code to be derivable from\nrequirements and design, not defended as accidental precedent. It treats\nspec-driven development as a disambiguation pipeline: each major gate\nreduces the space of lawful interpretations before downstream realisation\nproceeds."
+        }
+      ],
+      "label": "Specification-driven method",
+      "definition": "Specification-driven development is a governed derivation and disambiguation method: current goals precede deeper repricing, intent precedes implementation, product definition precedes detailed requirements, and design explicitly bridges requirements to code.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_0fba6006fc3beaeee2b2da0429d2ebd5",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+          "start_line": 406,
+          "end_line": 407,
+          "quote": "Goals orient the current bounded work\nwave and are not a substitute requirement surface."
+        }
+      ],
+      "label": "Goals surface",
+      "definition": "Goals orient the current bounded work wave; they do not substitute for requirements.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_6aa1c6f8fac3acabc7f9abbc957c9418",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+          "start_line": 407,
+          "end_line": 409,
+          "quote": "Intent states why the\nsystem exists and what directional change is in or out of scope; it carries\nno optional realisation detail unless that detail is itself constitutional."
+        }
+      ],
+      "label": "Intent surface",
+      "definition": "Intent states why the system exists and which directional change is in or out of scope.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b468f75bb4237ed72bce6a9a5f81fb40",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+          "start_line": 410,
+          "end_line": 415,
+          "quote": "Product states the current concrete product definition and bridges intent\nto requirements; it is not a release-note surface; it carries enough\noperational lifecycle signal for downstream requirements and design to\nunderstand intended use, release and install posture, live-use posture,\nobservability posture, and retirement or supersession posture where those\nmaterially affect product meaning."
+        }
+      ],
+      "label": "Product definition",
+      "definition": "Product definition is the current concrete, present-tense bridge from intent to requirements, including lifecycle signal material to product meaning; it is not release notes.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+          "start_line": 415,
+          "end_line": 420,
+          "quote": "Requirements state stable obligations\nthat must be true; they carry explicit acceptance criteria and remain\nsufficient for downstream design derivation, including lifecycle\nobligations or named lifecycle ambiguity gaps where build, assurance,\nrelease, deployment, live usage, telemetry or retirement materially affect\nthe obligation."
+        }
+      ],
+      "label": "Requirements surface",
+      "definition": "Requirements state the full constitutional WHAT as stable obligations with explicit acceptance criteria, sufficient for downstream design derivation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_d9ba6983a42a941491c1518a443a52cf",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+          "start_line": 420,
+          "end_line": 423,
+          "quote": "Design states how requirement truth is realised; it is\ndownstream of requirements and may choose structure, interfaces, carriers,\npackaging and tenant boundaries. ADRs are durable design memory, not a\nsecond requirement surface."
+        }
+      ],
+      "label": "Design surface",
+      "definition": "Design is the downstream structural HOW that realises requirement truth and chooses lawful mechanisms, structures, interfaces, carriers, packaging and tenant boundaries.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f696d7d5c8744e38d05c8d6dc1e2fd47",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "start_line": 284,
+          "end_line": 285,
+          "quote": "It requires code to be derivable from\nrequirements and design, not defended as accidental precedent."
+        }
+      ],
+      "label": "Code realisation",
+      "definition": "Code is executable realisation derived from requirements and design, rather than a source of authority through accidental precedent.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f8a1b1b5f801b47764b6f0c9f0a8473d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+          "start_line": 333,
+          "end_line": 337,
+          "quote": "The generic law, that a layered specification is sufficient when a competent\nactor can derive each layer from the one above, that sufficiency is not\ndeterminism, that a boundary crossed only by hiding a major ambiguity is not\nsufficient, and that an accepted relation may be reused on its exact basis\nafter checking applicability and invalidation, is EVALUATION §6."
+        }
+      ],
+      "label": "Reconstruction sufficiency",
+      "definition": "Reconstruction sufficiency is competent reconstruction of conformant downstream layers in order. It is not determinism and cannot depend on hiding major ambiguity.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_5901946aac03404c647b37dbf3bfb477",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRenewal%20path",
+          "start_line": 380,
+          "end_line": 380,
+          "quote": "current specification → real-world use case → gap analysis → re-entry at the layer its change class names"
+        }
+      ],
+      "label": "Renewal cycle",
+      "definition": "Renewal is the cumulative feedback cycle from current specification through real-world use case and explicit gap analysis to lawful re-entry and forward repricing.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_55a257d3aa9a5758b48bd07e923451f9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape",
+          "start_line": 463,
+          "end_line": 469,
+          "quote": "For a realisation boundary that the design profile governs (DESIGN_MODULE,\ntier 3, adopted under its own adoption rule), the core rule is: semantic\nsteps should read as transforms over admitted truth; effects should be\nexplicit and pushed to the edge. If a reader has to inspect orchestration\ncode, mutable workspace state, service methods or fallback defaults to\ndetermine what the system means, the design is too imperative and too\ncoupled (P1, P6)."
+        }
+      ],
+      "label": "Profile-governed realisation shape",
+      "definition": "The design profile's realisation shape makes meaning readable as transforms over admitted truth and locates effects explicitly at the edge.",
+      "conditions": [
+        "The tier-3 DESIGN_MODULE profile governs the boundary under its own adoption rule."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7d0a9c90f5f4ae3de1e1726cf6d1423f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification",
+          "start_line": 489,
+          "end_line": 492,
+          "quote": "| Capability | a behaviour, function or surface the system must provide | what can the system do |\n| Constraint / Guarantee | an invariant, law, safety property, portability rule or semantic guarantee that bounds how the system may behave | what must always remain true |\n| Governance | a policy or control rule over lifecycle, authority, visibility, release or operator action | what governs use and change |\n| Verification | a requirement on tests, evidence, traceability, qualification or forensic surfaces | how do we know the claim is true |"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification",
+          "start_line": 507,
+          "end_line": 509,
+          "quote": "Every live requirement family is classified on two independent axes (P3,\nP1): lifecycle status (Active,\nDeferred, Superseded, Orphaned) and requirement category (the four above)."
+        }
+      ],
+      "label": "Requirement classifications",
+      "definition": "Requirement category and lifecycle status are independent declared-state domains. Categories are Capability (required behaviour/function/surface), Constraint / Guarantee (invariant, law, safety, portability or semantic bound), Governance (lifecycle, authority, visibility, release or operator policy), and Verification (tests, evidence, traceability, qualification or forensic obligations). Statuses are Active, Deferred, Superseded and Orphaned.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_d8b080fae05d72da046074755cfaa758",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift",
+          "start_line": 564,
+          "end_line": 566,
+          "quote": "Spec-driven development requires constitutional trace closure: the rule\nthat closes the constitution over realised behaviour, stricter than\ndocumentation completeness (P6, P4b)."
+        }
+      ],
+      "label": "Constitutional trace closure",
+      "definition": "Constitutional trace closure closes the constitution over realised behaviour and is stricter than documentation completeness.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_ed7ff9285b162fceacac9fd577163485",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability",
+          "start_line": 605,
+          "end_line": 610,
+          "quote": "A project may accumulate multiple live domain surfaces over time. A live\nsurface is versioned constitutional history, not scratch space (P3). Engine code, design documents, tests and\ntooling may be refactored aggressively while they remain mutable\nimplementation surfaces. Live domain artifacts, once published as live\nconstitutional surfaces, are immutable in place; if one is wrong, the valid\nactions are to supersede it with a new version or to withdraw or delete it"
+        }
+      ],
+      "label": "Live domain surface",
+      "definition": "A live domain surface is versioned constitutional history, immutable in place; a project may accumulate multiple such surfaces.",
+      "conditions": [
+        "A domain artifact has been published as a live constitutional surface."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7e3dd4056d50d0eb1d1209f1d770b654",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency",
+          "start_line": 623,
+          "end_line": 627,
+          "quote": "Any material\nproduct, application, module, function, runtime surface, plugin\nsurface, public interface, data surface or capability has an operational\nlifecycle, whose canonical chain is intent, requirement, build, assurance,\nrelease, deployment, live usage, observed telemetry, retirement."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency",
+          "start_line": 644,
+          "end_line": 648,
+          "quote": "Each phase has one of three answers, and this\nsection owns them: the phase is answered by the surface; if a phase is\nnot applicable, the surface says why; if it is unknown, a named gap such\nas `Gap:` or `Unanswered:` is recorded.\nSilent absence is not a valid lifecycle answer."
+        }
+      ],
+      "label": "Operational lifecycle",
+      "definition": "The canonical operational lifecycle is intent, requirement, build, assurance, release, deployment, live usage, observed telemetry and retirement. A phase has one declared answer: answered; not applicable with reason; or a named Gap:/Unanswered: marker.",
+      "conditions": [
+        "The designed product, application, module, function, runtime surface, plugin surface, public interface, data surface or capability is material."
+      ],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "prior_87692548edaa183f32e7f8e7540e9874",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29",
+          "start_line": 777,
+          "end_line": 782,
+          "quote": "Qualification evaluates each\ndisposition on evidence and records a value of the core result algebra\n([FOUNDATIONS §4 Results](FOUNDATIONS.md#results)) with that predicate.\nAn unresolved disposition states no claim and so has no result: in the\nqualification of the affected claim it is a planned assessment without a\nclosed result, which is why it blocks that qualification"
+        }
+      ],
+      "kind": "evaluates_claim",
+      "meaning": "Qualification evaluates the semantic disposition predicate and records its core value; the disposition label is not itself the result.",
+      "conditions": [
+        "A semantic disposition is asserted and evaluated on evidence."
+      ],
+      "exceptions": [
+        "An unresolved disposition states no claim and has no result."
+      ],
+      "source_key": "prior_b6b525988325f2bf81fd5df06a4e1be9",
+      "target_key": "prior_d6c44732513e57f9b82a2af8b45fb479",
+      "governing": false
+    },
+    {
+      "key": "prior_2bb7c63b498bda2294f4a623e3007a45",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution",
+          "start_line": 46,
+          "end_line": 49,
+          "quote": "Its role is meta-constitutional: it defines how goals, intent, product,\nrequirements, design, code, evidence and repricing relate; what counts as\nspecification sufficiency; what kinds of requirement truth exist; and how\nauthority flows during iterative delivery."
+        }
+      ],
+      "kind": "defines_process_relations",
+      "meaning": "The source explicitly assigns the process constitution authority to define relations and sufficiency across the constitutional chain; it does not replace project-domain WHAT.",
+      "conditions": [
+        "A project follows the described spec-driven process."
+      ],
+      "exceptions": [],
+      "source_key": "prior_7b52a0bef35a63b536af6e7f80726a0a",
+      "target_key": "prior_fc18dcf616a3cdc09fa46a6044df9951",
+      "governing": true
+    },
+    {
+      "key": "prior_3187b76d98085e7985a32d34fb4c93cd",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "start_line": 291,
+          "end_line": 292,
+          "quote": "goals govern intent, intent governs\nproduct definition"
+        }
+      ],
+      "kind": "governs",
+      "meaning": "Goals govern the intent surface.",
+      "conditions": [
+        "Throughout iteration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_0fba6006fc3beaeee2b2da0429d2ebd5",
+      "target_key": "prior_6aa1c6f8fac3acabc7f9abbc957c9418",
+      "governing": true
+    },
+    {
+      "key": "prior_31c25220a3ee1f8df008060446e23f6e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "start_line": 291,
+          "end_line": 292,
+          "quote": "intent governs\nproduct definition"
+        }
+      ],
+      "kind": "governs",
+      "meaning": "Intent governs product definition.",
+      "conditions": [
+        "Throughout iteration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_6aa1c6f8fac3acabc7f9abbc957c9418",
+      "target_key": "prior_b468f75bb4237ed72bce6a9a5f81fb40",
+      "governing": true
+    },
+    {
+      "key": "prior_51850bddf494220f3540093230e8d9bf",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "start_line": 292,
+          "end_line": 292,
+          "quote": "product definition governs requirements"
+        }
+      ],
+      "kind": "governs",
+      "meaning": "Product definition governs requirements.",
+      "conditions": [
+        "Throughout iteration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_b468f75bb4237ed72bce6a9a5f81fb40",
+      "target_key": "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+      "governing": true
+    },
+    {
+      "key": "prior_b991d8d76a5c5fb1b20d64ee8687cb18",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "start_line": 292,
+          "end_line": 293,
+          "quote": "requirements\ngovern design"
+        }
+      ],
+      "kind": "governs",
+      "meaning": "Requirements govern design.",
+      "conditions": [
+        "Throughout iteration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+      "target_key": "prior_d9ba6983a42a941491c1518a443a52cf",
+      "governing": true
+    },
+    {
+      "key": "prior_6c99bffecf5292ad877be042217063cd",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "start_line": 293,
+          "end_line": 293,
+          "quote": "requirements plus design govern code."
+        }
+      ],
+      "kind": "jointly_governs",
+      "meaning": "Requirements and design jointly govern code; this edge does not grant requirements-only sufficiency.",
+      "conditions": [
+        "Jointly with design; throughout iteration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+      "target_key": "prior_f696d7d5c8744e38d05c8d6dc1e2fd47",
+      "governing": true
+    },
+    {
+      "key": "prior_08a9f9b1847852827cc1472719a61a57",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "start_line": 293,
+          "end_line": 293,
+          "quote": "requirements plus design govern code."
+        }
+      ],
+      "kind": "jointly_governs",
+      "meaning": "Design and requirements jointly govern code; this edge does not grant design-only authority.",
+      "conditions": [
+        "Jointly with requirements; throughout iteration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_d9ba6983a42a941491c1518a443a52cf",
+      "target_key": "prior_f696d7d5c8744e38d05c8d6dc1e2fd47",
+      "governing": true
+    }
+  ],
+  "constraints": [
+    {
+      "key": "prior_6b5aceb8067abd7ae80b76b21feadbf0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts",
+          "start_line": 583,
+          "end_line": 590,
+          "quote": "The cohort is incomplete when a required member is missing, stale,\ndifferently versioned, built from another source cut, or unable to\nreproduce its declared source-member and digest closure. A change to any\nsource member covered by the index invalidates the old derived candidate\nfor the successor cohort. The index is regenerated, mechanically\nvalidated, independently qualified where required, and released under the\nsame new cut name. A stale index may remain immutable history; it cannot\naccompany the changed source as the current cohort (P3, P5, P6)."
+        }
+      ],
+      "statement": "Every required member uses exact <version>-rc.<n> suffix: cut/ref rendering adds v, embedded asset version does not. Qualification normalises only this leading marker and requires exact suffix equality. Equality establishes matching only, never Product/member/tag/acceptance/authority identity. Missing, stale, differently versioned, other-source-cut or nonreproducible source-member/digest closure makes cohort incomplete. Any covered source-member change invalidates old derived candidate for successor; regenerate, mechanically validate, independently qualify where required and release index under same new cut name.",
+      "uncertainty": "",
+      "conditions": [
+        "A cohort is explicitly declared."
+      ],
+      "exceptions": [
+        "A stale derived index may remain immutable history, but not accompany changed source as current cohort."
+      ],
+      "applies_to_keys": [
+        "prior_fa247d55722088d1c8208111b982761e"
+      ]
+    },
+    {
+      "key": "prior_bb1ef240d2f6e8bad0c2cf021c608fee",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction",
+          "start_line": 649,
+          "end_line": 659,
+          "quote": "If the remote does not support atomic ref publication, publication\nrefuses. The process has no sequential-push fallback. Every immutable cut\ntag is create-only and therefore requires bound remote absence. Every\nmutable carrier, RC branch, selector and release branch uses an explicit\nper-ref compare-and-swap lease, such as\n`--force-with-lease=<ref>:<expected-oid>`, in that same atomic\ntransaction. A missing expected ref, unexpected existing tag or changed\nremote object ID stops publication; the operator refetches and repeats\ncomplete content and local-ref-graph qualification before constructing\nanother push. A lease mismatch never falls back to an unguarded force, a\npartial push or an in-place expectation update (P5, P3)."
+        }
+      ],
+      "statement": "Refuse remote lacking atomic publication; no sequential fallback. Immutable tags are create-only with bound remote absence. Every mutable carrier/RC/selector/release ref uses explicit per-ref compare-and-swap lease in same atomic transaction. Missing expected ref, unexpected tag or changed OID stops publication; refetch and repeat full content/local-ref-graph qualification before another push. Never substitute unguarded force, partial push or in-place expectation update. Remote verification fails closed for any required ref absent, lightweight, differently versioned, wrong Product commit or selector/release-branch mismatch.",
+      "uncertainty": "",
+      "conditions": [
+        "Publishing or remotely verifying a coordinated cohort."
+      ],
+      "exceptions": [
+        "Later bookkeeping commits are allowed without moving immutable cohort tags."
+      ],
+      "applies_to_keys": [
+        "prior_fa247d55722088d1c8208111b982761e"
+      ]
+    },
+    {
+      "key": "prior_828f4fda7e7b0daeb2cae99ded013b03",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FQualification%20and%20recovery",
+          "start_line": 680,
+          "end_line": 687,
+          "quote": "A historically published source cut may be the basis of a later\nsame-version backfill only when separately authorised recovery law names\nthat exception. Every recovered asset still binds the exact historical cut\nand same cut name, and remote completeness remains mandatory. Recovery\ncannot move the historical tag, add bytes to its Product subject, or be\nrepresented as an atomic cohort that existed at the original publication.\nNormal successor publication uses the atomic cohort process above (P3,\nP6)."
+        }
+      ],
+      "statement": "Content qualification binds exact A tag/manifest, B source tree, all Product target refs/version markers/inventories/index bytes/full source digest closure, establishing tagging requires no qualifying-byte change. After refs exist, local-ref qualification binds annotated objects, peels, targets, exact push set and all remote expectations/absences to unchanged content result. Post-publication verifies same relation remotely and refuses partial cohort. Authorised backfill must retain exact historical cut/name and complete remote set; it cannot move tag, add Product bytes or claim original atomic existence. Normal successors use atomic process. Adding/changing cohort law changes qualifying bytes and governs only a higher RC containing them, never retroactively an earlier cut.",
+      "uncertainty": "No separate recovery law is supplied.",
+      "conditions": [
+        "Cohort qualification, recovery or change to cohort law."
+      ],
+      "exceptions": [
+        "Historical same-version backfill only under separately authorised recovery law naming that exception."
+      ],
+      "applies_to_keys": [
+        "prior_fa247d55722088d1c8208111b982761e",
+        "prior_b6b525988325f2bf81fd5df06a4e1be9"
+      ]
+    },
+    {
+      "key": "prior_632d538e4d8cc4c135962b3022730bec",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FExternal%20qualification%20dependencies",
+          "start_line": 728,
+          "end_line": 733,
+          "quote": "A clean skip caused by an unhealthy external dependency is an evaluation\nnot performed, which has no result\n([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Not performed). It may\npreserve correct Product classification, but it cannot establish that the\ndependent capability passed. The claim is either qualified against a\nhealthy dependency or narrowed before acceptance (P6, P5)."
+        }
+      ],
+      "statement": "A dependency may remain outside Product for carrier/migration classification and still block dependent claim. A clean skip due to unhealthy dependency is unperformed evaluation with no result; correct classification does not establish capability passed. Qualify with healthy dependency or narrow claim before acceptance.",
+      "uncertainty": "",
+      "conditions": [
+        "A release claim depends on an external backend, transport or operator-facing service."
+      ],
+      "exceptions": [
+        "The claim may be narrowed before acceptance instead of qualified against a healthy dependency."
+      ],
+      "applies_to_keys": [
+        "prior_b6b525988325f2bf81fd5df06a4e1be9"
+      ]
+    },
+    {
+      "key": "prior_883ea349cf4dac8dfad325c92f27ddc2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29",
+          "start_line": 764,
+          "end_line": 770,
+          "quote": "an obligation stays obligatory, a preference\nstays a preference, and every permitted exception and scope condition\nsurvives, or the claim is not conserved. A statement that a whole\npackage's wording is equivalent establishes none of this for any claim\n(P6, P1). A `conserved` disposition recorded\nbefore this test applied is re-evaluated under it before the affected\nclaim qualifies; until then its standing is `unresolved`."
+        }
+      ],
+      "statement": "Identify exact immutable predecessor; origin remains fixed for candidate. Every potentially affecting predecessor claim receives one semantic disposition. Retain/reassess evidence under change-impact law. Conservation compares same material case, scope and authority, must/may/prohibited outcomes, absent triggers/exceptions/prerequisites, owning text and consumer bindings, with discriminating counterexamples. Patch absence is not loss if successor-native behaviour is preserved; naming/code similarity is not conservation evidence. Indicative wording can bind; replacing must/shall alone neither conserves nor supersedes. Preserve obligation/preference force and every exception/scope condition. Package-wide equivalence proves no individual claim. Earlier conserved records predating this test must be reevaluated before qualification, remaining unresolved until then. Unresolved disposition blocks affected-claim qualification as a planned assessment without closed result; qualification records core value with each asserted disposition predicate, never treats disposition label as result.",
+      "uncertainty": "",
+      "conditions": [
+        "A successor evolves predecessor semantic claims."
+      ],
+      "exceptions": [
+        "Earlier conserved evidence may be reused when owning text and carrying consumer bindings are unchanged or the change demonstrably does not affect the claim."
+      ],
+      "applies_to_keys": [
+        "prior_d6c44732513e57f9b82a2af8b45fb479",
+        "prior_b6b525988325f2bf81fd5df06a4e1be9"
+      ]
+    },
+    {
+      "key": "prior_fc55efba4bbb738b20fa9951fd2d7476",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FPosition",
+          "start_line": 29,
+          "end_line": 35,
+          "quote": "Its\noverriding bias is declarative rather than imperative: the system should\nprimarily declare truths, structures, interfaces, constraints and evidence\nsurfaces, and let lawful processing derive and realise work from that\ndeclared surface.\nImperative procedure still exists and is subordinate to declared authority\n(P6, P1)."
+        }
+      ],
+      "statement": "Treat specification as constitutional source, enabling re-derivation, audit and correction under explicit authority. Declarative bias is a should: primarily declare truths, structures, interfaces, constraints and evidence surfaces for lawful derivation/realisation. Imperative procedure remains subordinate to declared authority. Constitutional examples use neutral capability/authority identities to demonstrate capabilities; consumer particulars are not precedent that becomes method law.",
+      "uncertainty": "PROFILES §1's complete boundary is external.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_894323f233349c5a81fd1da1c9c828ba",
+        "prior_7b52a0bef35a63b536af6e7f80726a0a"
+      ]
+    },
+    {
+      "key": "prior_5637e9cc7786f756d51ea6126c79dc64",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution",
+          "start_line": 70,
+          "end_line": 73,
+          "quote": "The authoritative split is strict: the surfaces bound as WHAT define WHAT;\ndesign and realisation surfaces define HOW; no build tenant, design, code,\ndefinition overlay or derived surface becomes co-equal constitutional\nauthority with the bound WHAT (P6)."
+        }
+      ],
+      "statement": "Method owns process constitution; goals current overriding work concerns; intent domain direction; product-definition current mutable source-project definition; requirements live obligations derived from it; shared/tenant-local design concrete mechanisms. Product definition binds actual authority locations and tenant registry realisations under shared specification. Bound WHAT alone defines WHAT; design/realisation define HOW. Tenants, design, code, definition overlays and derived surfaces never become co-equal with WHAT. Conventional GOALS.md, INTENT.md, PRODUCT.md and specification/requirements/ require no relocation/duplication. Structured requirement families are preferred to an imperative monolithic catch-all; location itself is not constitutional.",
+      "uncertainty": "Detailed binding and registry laws are external.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_7b52a0bef35a63b536af6e7f80726a0a",
+        "prior_fc18dcf616a3cdc09fa46a6044df9951"
+      ]
+    },
+    {
+      "key": "prior_c1e6d3b8caac4747375f043066a4aaee",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FMethod%20identity",
+          "start_line": 95,
+          "end_line": 98,
+          "quote": "The expansion does not make the four owning\nmembers independently selectable and does not reduce the released product\nto four members: consumer authority remains one complete immutable released\ncut with its exact member inventory ([RELEASE](RELEASE.md))."
+        }
+      ],
+      "statement": "Four named areas do not make their owning members independently selectable or reduce the released Product to four members. Consumer authority remains one complete immutable released cut with exact member inventory.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_867a67ed8bb9b0e5119339afe287cda0",
+        "prior_894323f233349c5a81fd1da1c9c828ba"
+      ]
+    },
+    {
+      "key": "prior_8158197d8da8585102c28aac5025de46",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FCanonical%20statement",
+          "start_line": 120,
+          "end_line": 124,
+          "quote": "The lifecycle is a governed disambiguation pipeline: each major\nboundary reduces the space of lawful interpretations and surfaces major\nambiguity explicitly; detection is mandatory; blocking or escalation is\npolicy under declared risk appetite, except for hard-stop prerequisite\nfailures (§5; ACTIVATION §4)."
+        }
+      ],
+      "statement": "The canonical statement routes each clause to its owner and decides nothing independently. Every Product publishes a layout-neutral routing definition locating constitution/local decisions/collective frame bases/WHAT/independent tenant HOW/work/composition, not rival truth. Material terms resolve under bounded context, owner, selected basis and scope; spelling creates no cross-context meaning/authority; explicit imports/translations/equivalences/disambiguations govern seams; zero or multiple applicable meanings fail closed. Requirements cover capabilities, guarantees, governance and verification; design records structural HOW. Major boundaries reduce lawful interpretations and explicitly detect ambiguity. Implementations never replace constitution. Scenarios supply end-to-end proof where capability claims need it. Design derives from requirements, requirements from goals/intent/product, code from requirements/design. Iteration cumulatively reprices; events/projection/delta reveal drift. Every live requirement family has design ownership, classification and downstream closure or explicit deferment; every design record grounds in requirements; shipping behaviour traces authority. Live surfaces change through supersession/withdrawal, never silent mutation. New intent follows real cases and gap analysis. Sprints price proof cost and force close review; they are no authority layer or concealment of drift.",
+      "uncertainty": "Several owning sections and hard-stop definitions are not supplied.",
+      "conditions": [],
+      "exceptions": [
+        "Ambiguity blocking/escalation is policy under declared risk appetite except hard-stop prerequisite failures."
+      ],
+      "applies_to_keys": [
+        "prior_894323f233349c5a81fd1da1c9c828ba",
+        "prior_7b52a0bef35a63b536af6e7f80726a0a",
+        "prior_fc18dcf616a3cdc09fa46a6044df9951"
+      ]
+    },
+    {
+      "key": "prior_713e02d3a0f0c7f07f0a8fae201c0c0b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding",
+          "start_line": 164,
+          "end_line": 164,
+          "quote": "A realisation choice that no upper layer constrains belongs to design."
+        }
+      ],
+      "statement": "Declared specification governs; realisations/overlays/views realise, locate or project without co-equal authority. Each live requirement needs owning design decision and downstream closure or explicit deferment; behaviour traces authorising requirements/design and broken trace is drift. A layer is sufficient when a competent actor can derive a conformant next layer; derivation failure is an upper-layer defect. Unconstrained realisation choice belongs to design. Live constitutional surfaces are versioned history changed through supersession/withdrawal, never in place; current truth uses present tense, not version labels denoting recency. Use-exposed inexpressible constitutional conditions reprice the deficient surface or remain recorded governed debt; unanswered lifecycle phases remain recorded gaps. F10 identifies requirement categories/statuses, ADR fields/lifecycle/storage, Gap:/Unanswered: markers and conventional chain layout as domain choices, not consequences supplied by commitments alone.",
+      "uncertainty": "Exact category/status values and detailed ADR/lifecycle rules are outside this excerpt.",
+      "conditions": [
+        "Applying F10's owned-layer, layered-surface and realisation premises."
+      ],
+      "exceptions": [
+        "Explicit deferment may substitute for downstream closure.",
+        "Multiple conformant realisations may satisfy a layer.",
+        "Explicit version labels may identify immutable release facts, selectors or clearly historical/superseded material."
+      ],
+      "applies_to_keys": [
+        "prior_26a8936b7793bf1681e921b95ed4987b",
+        "prior_fc18dcf616a3cdc09fa46a6044df9951"
+      ]
+    },
+    {
+      "key": "prior_ae59b4848fba7e0f8c128ee183b93294",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding",
+          "start_line": 167,
+          "end_line": 167,
+          "quote": "A regression or unresolved gap falsifies the claim of the path it affects, so it blocks further promotion only on that path."
+        }
+      ],
+      "statement": "Progress is judged against one selected directly verifiable outcome per work wave; evidence evaluates but cannot select/enlarge/replace outcome. Growth requires admitted basis and ends with it; regression/unresolved gap blocks promotion only on affected path. Closure evidence includes authority trace, realisation proof, negative proof where drift plausible, and remaining open pressure, under external TICKETS/EVALUATION/ASSURANCE laws. Lineage objects remain distinct and consumers select one complete release; reusable method change retains one authority relation from evidence to realising consumer. Method terms resolve in declared bounded context. Under governing design profile, semantic steps should read as transforms over admitted truth with explicit edge effects; higher-order/effectful boundaries require explicit composition/effect algebra without mandatory vocabulary. Admission carriers, evidence categories, eight-step adoption chain and mechanics are expressly allocated policy/domain choices.",
+      "uncertainty": "Full progress categories, growth admission, adoption chain and design-profile rules are external.",
+      "conditions": [
+        "Evaluating progress, closure, lineage or realisation shape under F10."
+      ],
+      "exceptions": [
+        "Negative proof is needed where drift is plausible.",
+        "Realisation-shape recommendations are scoped to boundaries governed by the design profile."
+      ],
+      "applies_to_keys": [
+        "prior_26a8936b7793bf1681e921b95ed4987b",
+        "prior_894323f233349c5a81fd1da1c9c828ba"
+      ]
+    },
+    {
+      "key": "prior_9bc4f54f9b28de45003ef90119cc24f1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding",
+          "start_line": 172,
+          "end_line": 172,
+          "quote": "Only an obligation's owner can weaken it (P6), so a change that needs a weaker obligation is a change to the WHAT at its owning layer."
+        }
+      ],
+      "statement": "Different means may realise the same obligations; obligations decide fitness. Executor kind neither accepts nor rejects a realisation, human performance is not adjudication, convenient stack weakens nothing, and structural representation validation does not prove correct execution. Binding divides requirements calculus, computational calculus and execution environment, chosen as tenant design. Identify operations, outcome values mapped to core, resource measures/units/boundaries and obligation-required limits so finite actors can evaluate them. Calculus may serve wherever its laws hold regardless of executor. Multi-tenant development mechanics belong to project law. Construction steps, data meaning and execution remain three separate accounts; mappings state and discharge preservation under ACTIVATION Refinement and AC-013 when recorded in a_c, with joined accounts and environmental evidence owned by tenant binding.",
+      "uncertainty": "Full §11, resource-limit law and three-account definitions are not supplied.",
+      "conditions": [
+        "A build tenant binds obligations to a realisation."
+      ],
+      "exceptions": [
+        "Only an obligation's owner can weaken it by changing WHAT at its owning layer."
+      ],
+      "applies_to_keys": [
+        "prior_26a8936b7793bf1681e921b95ed4987b",
+        "prior_fc18dcf616a3cdc09fa46a6044df9951"
+      ]
+    },
+    {
+      "key": "prior_f67740cf983b7a558cac5683f47a45b0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain",
+          "start_line": 240,
+          "end_line": 246,
+          "quote": "This is the homeostatic loop. Every link is load-bearing. A break at any\nlink, goals with no downstream repricing path, an unowned requirement, an\nungrounded design record, code without a design decision, creates\naccidental law (P6). Load-bearing means owned, not software: the links\nCode, Events and Projection name responsibilities every realisation\ncarries in the carrier its binding selects (§11), and no product owes a\ncode base or an event store that its binding does not select (P2, P6)."
+        }
+      ],
+      "statement": "Every chain link is owned and load-bearing; absent repricing path, unowned requirement, ungrounded design or code without design decision creates accidental law. ADR is a durable design record, not another constitutional layer. Code/Events/Projection are binding-selected responsibilities across software/human/mixed realisations, not universal codebase/event-store requirements. Goals keep temporary work focus out of deeper layers until intentional repricing. Present-tense Product Definition bridges direction to requirements, naming source-project terms/boundaries; it is neither immutable cut nor installed Product. Requirements state mandatory truth including capabilities/invariants/constraints/governance/verification, not merely visible features. Design chooses mechanisms, interfaces/topology/placement/carriers/entry-control/runtime wiring/lawful tenant boundaries; requirements may mandate delivered surfaces without deciding placement unless path is constitutional. Constitutional insufficiency re-enters at change-class-named layer.",
+      "uncertainty": "Detailed change classes and §11 binding rules are only referenced.",
+      "conditions": [],
+      "exceptions": [
+        "Projection need not replay a complete event stream if retained record is sufficient for Product obligations.",
+        "Design chooses where/how required surfaces are realised unless the path itself is constitutional."
+      ],
+      "applies_to_keys": [
+        "prior_fc18dcf616a3cdc09fa46a6044df9951",
+        "prior_7b52a0bef35a63b536af6e7f80726a0a"
+      ]
+    },
+    {
+      "key": "prior_5cbf9d8d4fb3f1e5f672ae5af5261cd4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+          "start_line": 288,
+          "end_line": 299,
+          "quote": "It demands evidence for claims through scenarios, tests, events,\nprojection and delta. It treats repricing as part of correctness: when\nreality exposes a constitutional gap, the specification changes. It keeps\nauthority directional while iterating: goals govern intent, intent governs\nproduct definition, product definition governs requirements, requirements\ngovern design, and requirements plus design govern code. It keeps the live\noperative surface in the present tense only: once a new current reality is\nestablished, transitional paths are erased from the live product unless\nexplicitly retained as compatibility features. It treats derived artifacts,\nindexes, trace matrices, reports, automation and generated views, as read\nmodels, never as constitutional truth. If these claims do not hold, the\nwork is not spec-driven."
+        }
+      ],
+      "statement": "The method requires full constitutional requirements, code derivable from requirements/design, narrowing at major gates, evidence through scenarios/tests/events/projection/delta, and specification repricing when reality exposes a constitutional gap. Authority stays directional during iteration. Current operative truth is present-tense; obsolete transitions are erased subject to the compatibility exception. Derived artifacts, indexes, trace matrices, reports, automation and generated views are read models, never constitutional truth. Failure of these commitments excludes the spec-driven designation. Declarative truth/boundaries over imperative procedure remains a preference.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Transitional paths may remain as explicitly retained compatibility features."
+      ],
+      "applies_to_keys": [
+        "prior_f80d75c7a70cd53604f225c790e0cbea"
+      ]
+    },
+    {
+      "key": "prior_bd239ac2a3bb35dd5712027f1279acac",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpec-drivenness%20litmus",
+          "start_line": 303,
+          "end_line": 329,
+          "quote": "The work is not spec-driven if any of these holds (P2, P6):\n\n1. Given goals, a competent team cannot derive a conformant intent surface.\n2. Given intent, a competent team cannot derive a conformant\n   product-definition surface.\n3. Given product definition, a competent team cannot derive conformant\n   requirements.\n4. Given requirements, a competent team cannot derive a conformant design.\n5. Given requirements and design, a competent team cannot derive conformant\n   code.\n6. A live requirement has no explicit status, category or owning design\n   decision.\n7. A live requirement has no downstream realisation or explicit deferment\n   surface.\n8. Code behaviour exists without requirement and design authority.\n9. A live domain artifact is rewritten in place after becoming part of the\n   live constitutional surface.\n10. A capability claim has no operational evidence.\n11. Drift is discovered, [Universal intake triage](#universal-intake-triage)\n    locates its cause in the constitutional source, and that source is not\n    repriced.\n12. A major ambiguity at a constitutional or realisation boundary is neither\n    recorded nor explicitly governed.\n13. A material product, module, function, application, runtime surface or\n    capability has no declared operational lifecycle signal and no recorded\n    gap for unanswered release, deployment, live-use, telemetry or\n    retirement questions."
+        }
+      ],
+      "statement": "Work is not spec-driven if a competent team cannot derive conformant intent from goals, product definition from intent, requirements from product, design from requirements, or code from requirements plus design; if any live requirement lacks explicit status, category, owning design decision, or both downstream realisation and explicit deferment; if code lacks requirement/design authority; if a live constitutional domain artifact is rewritten in place; if a capability lacks operational evidence; if triage attributes discovered drift to constitutional source that is not repriced; if major boundary ambiguity is neither recorded nor explicitly governed; or if a material product/module/function/application/runtime surface/capability has neither declared lifecycle signal nor recorded gap for unanswered release, deployment, live-use, telemetry or retirement questions.",
+      "uncertainty": "These are exclusion conditions, not an independently sufficient acceptance test.",
+      "conditions": [
+        "Any listed failure holds."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_f80d75c7a70cd53604f225c790e0cbea"
+      ]
+    },
+    {
+      "key": "prior_98a9cd244a3564e45267d06050c629ba",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+          "start_line": 347,
+          "end_line": 360,
+          "quote": "A failure at any boundary is a specification defect of the upper layer. If\nintent cannot be derived from goals, the goals surface is unclear,\ncontradictory or not concrete enough to orient the next bounded wave of\nwork. If product cannot be derived from intent, the intent surface is too\nvague, contradictory or not concrete enough to guide realisation. If\nrequirements cannot be derived from product, the product surface is\nunderspecified, contradictory or not decomposable enough to govern\nimplementation. If design cannot be derived from requirements, the\nrequirement surface is underspecified, contradictory or polluted with\naccidental implementation detail. If code cannot be derived from\nrequirements plus design, the design surface is incomplete, ambiguous or\nnot operational enough. ADRs and design documents are therefore not\ndecorative explanation; they are the load-bearing bridge between\nconstitutional truth and executable realisation."
+        }
+      ],
+      "statement": "Specification-drivenness requires ordered reconstructability. Boundary failure is an upper-layer defect: goals unclear/contradictory/insufficiently concrete for the bounded wave; intent vague/contradictory/insufficiently concrete for realisation; product underspecified/contradictory/insufficiently decomposable; requirements underspecified/contradictory/polluted by accidental implementation detail; or design incomplete/ambiguous/insufficiently operational for code. ADRs/design documents are load-bearing. Sufficiency depends on ambiguity governance; accepted relations may be reused only on exact basis after applicability/invalidation checks. A local selected function's span excludes rebuilding the whole product. The litmus neither waives the design profile's material-change gate nor requires recreation of unchanged accepted views.",
+      "uncertainty": "Detailed sufficiency, reconstruction-span and design-profile rules are externally owned.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_f8a1b1b5f801b47764b6f0c9f0a8473d"
+      ]
+    },
+    {
+      "key": "prior_9fa440eca043b00545f8bfd145131721",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRenewal%20path",
+          "start_line": 383,
+          "end_line": 393,
+          "quote": "The generative rule: a real use case (scenario, deployment, external review)\nhits the current model; gap analysis identifies what the constitution cannot\nexpress; if the gap is constitutional, not merely a missing implementation,\nit re-enters at the layer its [change class](#change-classes) names, and\nnew goals or intent are written where it changes the work wave, direction\nor scope; the repriced surface then flows forward through the layers that\nclass lists. New intents emerge from repeated, real use-case pressure\nagainst the current model, not from abstract speculation; a gap becomes\nintent only once it is concrete. Ad hoc coding pressure does not generate\nintent; explicit gap analysis does. This is how the system stays alive\ninstead of becoming a frozen constitution."
+        }
+      ],
+      "statement": "Explicit gap analysis identifies what the constitution cannot express. A constitutional gap, distinguished from missing implementation, re-enters at its change class's layer and flows forward through that class's layers. New goals/intent arise only where work-wave focus, direction or scope changes; intent emerges from concrete, repeated real-use pressure, not abstract speculation or ad hoc coding pressure. Requirements/design refine cumulatively, code is repeatedly re-derived, and implementation/testing/replay/scenario gaps feed repricing without reversing authority.",
+      "uncertainty": "",
+      "conditions": [
+        "A real use case, including scenario, deployment or external review, pressures the current model."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5901946aac03404c647b37dbf3bfb477"
+      ]
+    },
+    {
+      "key": "prior_7340b65094e8c49620520710fd9329fc",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+          "start_line": 425,
+          "end_line": 441,
+          "quote": "Constitutional specification is current-surface law and is written in the\npresent tense. Dead law does not remain in active constitutional artifacts\nfor historical comfort: what is no longer live is deleted, superseded or\nmoved to commentary, and a migration wave does not justify preserving stale\nconstitutional wording inside the live surface (P3). During a change wave\nthe live constitutional surface is written in terms of the current truth\nand the declared affected boundary; version-line branding such as `2.0` or\n`3.0` is not used merely to indicate recency, and explicit version labels\nare reserved for immutable release facts, selector bindings, or clearly\nhistorical or superseded material (§6).\n\nBefore a downstream specification artifact is treated as complete, the\nwhole affected span is checked: is the change class clear; is the re-entry\npoint lawful for that class; can each downstream layer still be derived\nfrom the upstream layer; do the active intent, product, requirements,\ndesign and qualification surfaces still say the same thing in the affected\nscope. If not, the gate is not closed (§4, consistency gate)."
+        }
+      ],
+      "statement": "Preserve each layer's role: goals do not replace requirements, intent excludes optional nonconstitutional implementation detail, product is not release notes, requirements carry explicit acceptance and material lifecycle obligations/gaps, and ADRs are not a second requirements surface. Live constitutional wording is present-tense current truth at its declared affected boundary; dead law is deleted, superseded or moved to commentary, even during migration. Recency alone does not justify version branding. Before treating a downstream artifact as complete, check the whole affected span for clear class, lawful re-entry, layer derivability and agreement among active intent/product/requirements/design/qualification; otherwise the gate stays open.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Optional realisation detail may appear in intent when itself constitutional.",
+        "Explicit version labels are reserved for immutable release facts, selector bindings, or clearly historical/superseded material."
+      ],
+      "applies_to_keys": [
+        "prior_0fba6006fc3beaeee2b2da0429d2ebd5",
+        "prior_6aa1c6f8fac3acabc7f9abbc957c9418",
+        "prior_b468f75bb4237ed72bce6a9a5f81fb40",
+        "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+        "prior_d9ba6983a42a941491c1518a443a52cf"
+      ]
+    },
+    {
+      "key": "prior_7060523aab54cb2263e871fea4f08b18",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FDesign%20rule",
+          "start_line": 445,
+          "end_line": 459,
+          "quote": "Requirements state what control or delivery surfaces must exist; design\ndecides the concrete mechanism that realises them. If a technology stack,\ncarrier or runtime is not already constrained by an upstream constitutional\nsurface, choosing it is part of design, not a separate upstream authority\n(P2, P1). A tenant's choice of stack, human process or\ncombination is its execution binding, declared in that design under §11.\nThe boundary matters especially for\nagent-facing bootstrap and control surfaces: requirements may say that\nauthoritative bootstrap or control surfaces must be present, carry bare\naxioms and route to the canonical method; design decides whether those\nsurfaces are entry documents, embedded blocks, standalone compiled\nartifacts or another lawful topology (PRODUCT_DEFINITION §12). If\nfilenames and placement are hardcoded in requirements without\nconstitutional necessity, the requirement surface has absorbed design\ndetail and made re-derivation harder."
+        }
+      ],
+      "statement": "Requirements specify required control/delivery surfaces; design chooses mechanisms, including stack/carrier/runtime and tenant execution binding unless upstream already constrains them. Agent-facing requirements may require authoritative bootstrap/control surfaces carrying bare axioms and routing to the canonical method; design chooses entry documents, embedded blocks, compiled artifacts or other lawful topology. Hardcoding filenames/placement without constitutional necessity absorbs design detail and impairs re-derivation.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Upstream constitutional constraints bind choices; constitutional necessity may require specific filenames, placement, paths or packaging."
+      ],
+      "applies_to_keys": [
+        "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+        "prior_d9ba6983a42a941491c1518a443a52cf"
+      ]
+    },
+    {
+      "key": "prior_ada670a35c42e3e337876d3d22f42952",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape",
+          "start_line": 471,
+          "end_line": 479,
+          "quote": "Non-goals of that profile (P1, P4a): it does not require one specific programming language,\nelimination of all imperative code, monadic or category-theory vocabulary,\nor replacing every exception with a custom algebraic type. It does require\nthat the implementation shape remain readable, modular and honest about\nwhere meaning lives and where effects happen. Where a boundary composes\nhigher-order functions or effectful computation, it does require an\nexplicit composition and effect algebra with its applicable identity,\nclosure, cardinality, effect and authority-conservation laws (FOUNDATIONS\n§4 Composition). The vocabulary is optional; the law is not."
+        }
+      ],
+      "statement": "Semantic steps should read as transforms over admitted truth, with explicit effects pushed to the edge. Meaning requiring inspection of orchestration, mutable workspace state, service methods or fallback defaults indicates excessive imperative coupling. Readability, modularity and honesty about meaning/effects are required. A boundary composing higher-order functions or effectful computation requires explicit composition/effect algebra with applicable identity, closure, cardinality, effect and authority-conservation laws.",
+      "uncertainty": "The applicable algebra and profile-adoption rule are referenced but not fully supplied.",
+      "conditions": [
+        "The design profile governs the realisation boundary."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_55a257d3aa9a5758b48bd07e923451f9"
+      ]
+    },
+    {
+      "key": "prior_4dea6098beebc338ba8d59c855575e72",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification",
+          "start_line": 517,
+          "end_line": 525,
+          "quote": "Every inherited or legacy requirement is classified as one of these, and\nnothing live remains unclassified (P3):\n\n| Classification | Meaning | Action |\n|---|---|---|\n| Deferred | retained in the live surface as an explicit not-yet-operative or not-yet-realised obligation | keep with an honest deferment surface; do not present as current closure |\n| Superseded | ownership has moved to a newer constitutional surface or design decision | add Implements and Supersedes to the governing design record |\n| Active | remains live constitutional law in the current surface | has an owning design decision; write or update one |\n| Orphaned | no longer part of the intended system | remove or explicitly supersede |"
+        }
+      ],
+      "statement": "Every live requirement family has explicit header Status and Category; either missing makes it incomplete. All four categories remain constitutional, not priority or user-facing labels. Scenarios validate capability meaning; not every requirement should become a marketed feature. Requirements should avoid premature concrete realisation choices; nonconstitutional path/filename/packaging choices belong to design. Every inherited/legacy requirement is classified: Deferred remains explicitly not-yet-operative/realised with honest deferment and no current-closure claim; Superseded transfers ownership and requires Implements/Supersedes in its governing design record; Active requires an owning design decision to be written/updated; Orphaned is removed or explicitly superseded. Nothing live remains unclassified.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+        "prior_7d0a9c90f5f4ae3de1e1726cf6d1423f"
+      ]
+    },
+    {
+      "key": "prior_521de85724d3b3e4f8e3ac8f9a9611f8",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift",
+          "start_line": 568,
+          "end_line": 580,
+          "quote": "Ownership: every live requirement family maps to one or more owning design\ndecisions; every ADR or other design record grounds itself in requirements\nthrough an explicit `Implements:` line.\n\nDownstream closure: no live requirement remains a free-floating statement\nof intent; if it is live it is realised through the downstream chain or\nexplicitly deferred with an honest surface that records the deferment, so\nevery live requirement family has downstream closure, realised in design,\ncode and tests or explicitly deferred. No shipping code or tests exist as\nungoverned behaviour: behaviour that exists traces back to live\nrequirements and the design decisions that authorise it. No hidden product\nsurface is allowed; behaviour without trace authority is accidental law\neven if it works."
+        }
+      ],
+      "statement": "Every live requirement family has one or more owning design decisions; every ADR/design record explicitly grounds requirements through Implements:. Live requirements close through design/code/tests or explicit honest deferment. All shipping code/tests trace to live requirements and authorising design; working untraced behaviour is still accidental law. Unowned requirements, ungrounded design, unrecorded deferment and ownerless code are drift; implementation-habit tests lock it in. Persistent event/projection delta is diagnosed by intake among code, requirement/design stack, predictive model or observation. Capability without a scenario has unverified operational meaning. Treating guarantees/governance/verification as features misclassifies them; in-place live-constitution correction corrupts history. A real-use gap inexpressible in requirements re-enters at Requirements or upstream according to class, not by a code hack.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "A live requirement may have an explicit honest deferment surface instead of realised design/code/tests."
+      ],
+      "applies_to_keys": [
+        "prior_d8b080fae05d72da046074755cfaa758",
+        "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+        "prior_d9ba6983a42a941491c1518a443a52cf",
+        "prior_f696d7d5c8744e38d05c8d6dc1e2fd47"
+      ]
+    },
+    {
+      "key": "prior_1349db414b8dc233b494faab235d1c6b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability",
+          "start_line": 611,
+          "end_line": 618,
+          "quote": "Transitional implementation paths, migration\nscaffolds and fallback behaviours have no permanent authority in the live\nsurface: once superseded they are retired, and any retained responsibility\nsatisfies the retention relation of §7 (closure criterion). The past is\npreserved by version control, operational event history where present and\nsuperseded constitutional artifacts. The method does not require shipping\ncompatibility shims forever, and it does not allow silent mutation of live\nconstitutional history."
+        }
+      ],
+      "statement": "Published live constitutional domain artifacts cannot be silently mutated in place. An incorrect artifact is superseded by a new version or withdrawn/deleted from the live surface. Superseded transitions, scaffolds and fallbacks retire unless retention is justified; they have no permanent authority and compatibility shims need not ship forever. History is preserved by version control, operational events where present and superseded artifacts.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Mutable implementation surfaces may be aggressively refactored while they retain that status.",
+        "Retained superseded responsibility must satisfy the migration retention relation."
+      ],
+      "applies_to_keys": [
+        "prior_ed7ff9285b162fceacac9fd577163485"
+      ]
+    },
+    {
+      "key": "prior_c25338f8b2a9b5a4eb114bee8b27c868",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency",
+          "start_line": 633,
+          "end_line": 654,
+          "quote": "For product definition this means naming the current product boundary,\nintended use context, release and install posture, live-use posture,\nobservability posture, and retirement or supersession posture where those\nmaterially affect the product's meaning. For requirements it means stating\nany invariant obligation that governs build, assurance, release,\ndeployment, live usage, telemetry, retirement, ownership, source truth,\nauthority boundary or downstream interpretation; a requirement may defer a\nphase only by naming the deferment and the surface that will own its later\nresolution.\n\nThe rule is an ambiguity detector, not a demand that every requirement\nbecome a release plan. Each phase has one of three answers, and this\nsection owns them: the phase is answered by the surface; if a phase is\nnot applicable, the surface says why; if it is unknown, a named gap such\nas `Gap:` or `Unanswered:` is recorded.\nSilent absence is not a valid lifecycle answer.\n[ASSURANCE §16](ASSURANCE.md#16-module-lifecycle-confirmation) applies\nthe three answers to the design evidence of a governed boundary. When the lifecycle signal is\nmissing, downstream design may not fill the gap by local convention,\nimplementation precedent, prompt prose or test fixture; it reprices the\nappropriate constitutional surface or carries the ambiguity as explicit,\ngoverned debt (§5)."
+        }
+      ],
+      "statement": "Product names boundary, intended use, release/install, live-use, observability and retirement/supersession posture where material. Requirements state invariant build/assurance/release/deployment/use/telemetry/retirement/ownership/source-truth/authority/interpretation obligations. Product/requirements provide enough signal for design or explicitly record ambiguity. Deferral names both deferment and later resolution owner surface. Each phase is answered, reasoned not-applicable, or named unknown; silence is invalid. Missing signal requires constitutional repricing or explicit governed debt, never invention from convention, precedent, prompts or fixtures. These phase answers are declared states, map to no core value and cannot substitute for satisfied; consuming evaluation has its own predicate/result.",
+      "uncertainty": "ASSURANCE §16 application and the full result calculus are not supplied.",
+      "conditions": [
+        "Lifecycle aspects materially affect product meaning or an obligation."
+      ],
+      "exceptions": [
+        "No implementation mechanism for every phase and no release plan for every requirement is demanded."
+      ],
+      "applies_to_keys": [
+        "prior_7e3dd4056d50d0eb1d1209f1d770b654",
+        "prior_b468f75bb4237ed72bce6a9a5f81fb40",
+        "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+        "prior_d9ba6983a42a941491c1518a443a52cf"
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "prior_3252fd9c83e4a4788a6bf098f110c7e3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution",
+          "start_line": 75,
+          "end_line": 82,
+          "quote": "In the default scaffold `requirements/` is a folder under `specification/`.\nRequirements may instead be stored at any location the product definition\nbinds, as individual files or grouped into requirement families. The default\nshape exists to avoid collapsing the constitutional surface into one\nmonolithic requirements document, not to make folder placement\nconstitutional. This is one expression of the declarative bias: declaring\nrequirement structure and family boundaries is preferred over maintaining\none imperative catch-all document (P2)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_7b52a0bef35a63b536af6e7f80726a0a"
+      ],
+      "allowed": [
+        "Requirements at any location bound by Product Definition, as individual files or grouped requirement families.",
+        "Existing file layouts without moving or duplicating files merely to match conventional names."
+      ],
+      "forbidden": [
+        "Treating conventional folder placement as constitutional authority.",
+        "Promoting a definition overlay or derived surface to co-equal WHAT authority."
+      ]
+    },
+    {
+      "key": "prior_bb86620c09d7a7cfbb776582c90c81e4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+          "start_line": 344,
+          "end_line": 345,
+          "quote": "Different designs may satisfy the same\nrequirements and different codebases the same design."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+          "start_line": 367,
+          "end_line": 371,
+          "quote": "this litmus applies them to the method's own chain, where the span of a\nlocal selected function excludes recreating the whole product. The design\nprofile owns design-view coverage, its material-change gate and\nunchanged-boundary reuse; this litmus neither waives that gate nor requires\nrecreating unchanged accepted views ([DESIGN_MODULE](DESIGN_MODULE.md))."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_f8a1b1b5f801b47764b6f0c9f0a8473d"
+      ],
+      "allowed": [
+        "Different designs may satisfy the same requirements and different codebases the same design.",
+        "Reuse an accepted relation on its exact basis after applicability and invalidation checks.",
+        "A selected local function need not reconstruct the whole product or unchanged accepted design views."
+      ],
+      "forbidden": [
+        "Treating sufficiency as determinism.",
+        "Hiding major ambiguity to cross a boundary.",
+        "Waiving the applicable design-profile material-change gate."
+      ]
+    },
+    {
+      "key": "prior_33ea0af40239189e31cd4dfb33227f30",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FDesign%20rule",
+          "start_line": 446,
+          "end_line": 450,
+          "quote": "If a technology stack,\ncarrier or runtime is not already constrained by an upstream constitutional\nsurface, choosing it is part of design, not a separate upstream authority\n(P2, P1). A tenant's choice of stack, human process or\ncombination is its execution binding, declared in that design under §11."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_d9ba6983a42a941491c1518a443a52cf"
+      ],
+      "allowed": [
+        "Design chooses stack, carrier, runtime or human/mixed process where upstream constitutional law leaves it open.",
+        "Bootstrap/control topology may use entry documents, embedded blocks, standalone compiled artifacts or another lawful arrangement."
+      ],
+      "forbidden": [
+        "Treating mechanism choice as a separate upstream authority.",
+        "Hardcoding mechanism detail in requirements without constitutional necessity."
+      ]
+    },
+    {
+      "key": "prior_b8e9b573c0411808e8c9624c7d84341d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape",
+          "start_line": 471,
+          "end_line": 479,
+          "quote": "Non-goals of that profile (P1, P4a): it does not require one specific programming language,\nelimination of all imperative code, monadic or category-theory vocabulary,\nor replacing every exception with a custom algebraic type. It does require\nthat the implementation shape remain readable, modular and honest about\nwhere meaning lives and where effects happen. Where a boundary composes\nhigher-order functions or effectful computation, it does require an\nexplicit composition and effect algebra with its applicable identity,\nclosure, cardinality, effect and authority-conservation laws (FOUNDATIONS\n§4 Composition). The vocabulary is optional; the law is not."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_55a257d3aa9a5758b48bd07e923451f9"
+      ],
+      "allowed": [
+        "No particular language is required.",
+        "Imperative code may remain.",
+        "Monadic/category-theory vocabulary is optional.",
+        "Not every exception needs a custom algebraic type."
+      ],
+      "forbidden": [
+        "Using optional vocabulary as grounds to omit required composition/effect laws.",
+        "Obscuring meaning or effects at a governed boundary."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "prior_8a769aed52e5cb076ee63993b475facf",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation",
+          "start_line": 141,
+          "end_line": 142,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6)."
+        }
+      ],
+      "subject_key": "prior_7b19e39be9fd85c952d4163c0c025b77",
+      "uncertainty": "F15 reports consumers in SPEC_METHOD, EXECUTIVE_BASELINE, WORLD_MODEL, ODD, IDENTITY, PRODUCT_DEFINITION, ACTIVATION, AXIOMATIC_CALCULUS, FOUNDATIONS, EVALUATION, TICKETS and CONFORMANCE, plus internal release clauses. It explicitly reports no separate consumer for external-dependency and support-line rows, and restricts operation-result consumers to this member; Product Definition maps its manager effects independently. Other reports include mandatory acceptance gates regardless of selected checks; digest-bound adopt versus selector-free sync; complete companion/dependency closure; unresolved successor disposition blocking acceptance; lifecycle, migration, commitment standing, repricing and work-carrier presence not supplying semantic disposition. Those external loci are not available to verify or expand.",
+      "consequence": "The consumer list supplies reported directed applications, not independently verified governing edges to absent endpoints. Detailed consumer loci, numerical policy inventories and pillar assignments remain source-linked residual detail."
+    },
+    {
+      "key": "prior_dd73635b5a53a1076c9f4774f208b086",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding",
+          "start_line": 178,
+          "end_line": 184,
+          "quote": "The table accounts for §1 to §3, §6 and §9 to §11. §1 Canonical statement\ndecides nothing of its own: each clause names its owning section. §8\nbinds the step of ACTIVATION to this method's terms; its delivery\npriority is accounted for by family F5 at ACTIVATION §6, and the rest of\nit by family F2 at ACTIVATION §1, whose paragraph after its table names\nthe rows §8 applies and the families that trace its statement of the\nstep's results and its use of the tenant's binding."
+        }
+      ],
+      "subject_key": "prior_26a8936b7793bf1681e921b95ed4987b",
+      "uncertainty": "F10 reports consumers in ASSURANCE, DESIGN_MODULE, ODD, TICKETS, CONFORMANCE, WRITING_GUIDE, RELEASE, IDENTITY, PRODUCT_DEFINITION, POSTING_GUIDE, ACTIVATION and FOUNDATIONS plus internal method sections. Reports distinguish truth layers, trace every branch/test expectation, deny lifecycle labels admission/compliance/closure, apply inherited requirement status, bind execution as design, preserve present-tense/supersession, confirm lifecycle, deny ticket activity growth admission, keep posting distinct from adoption and execution kind distinct from operation kind. Evidence-closure and three-account mapping rows expressly have no separate consumer; their closure/evidence/refinement laws belong elsewhere. Exact category/status values, ADR defaults, lifecycle phases, progress categories, eight adoption steps, §11 details, discriminator contents, consumer loci and pillar associations are not fully represented or supplied as owning text.",
+      "consequence": "Preserve the table's thirteen consequences and policy/owner distinctions as descriptions, without asserting external endpoint contents, executing account mappings, or proving derivations. Canonical statement adds no independent law; §8's step binding remains externally owned."
+    },
+    {
+      "key": "prior_64d3e270a4cf0b122627e1daadd41469",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+          "start_line": 362,
+          "end_line": 371,
+          "quote": "Reconstruction sufficiency depends on ambiguity governance (§5). The\nhidden-ambiguity limit, reuse of an accepted relation's evidence, what\nreconstructability requires and grants, and the reconstruction span are\nstated once at\n[EVALUATION §6 Layered sufficiency](EVALUATION.md#6-conformance-of-realisations);\nthis litmus applies them to the method's own chain, where the span of a\nlocal selected function excludes recreating the whole product. The design\nprofile owns design-view coverage, its material-change gate and\nunchanged-boundary reuse; this litmus neither waives that gate nor requires\nrecreating unchanged accepted views ([DESIGN_MODULE](DESIGN_MODULE.md))."
+        }
+      ],
+      "subject_key": "prior_f8a1b1b5f801b47764b6f0c9f0a8473d",
+      "uncertainty": "EVALUATION §6 and DESIGN_MODULE supply unprovided definitions, profile applicability, coverage, material-change and reuse predicates; P1/P2 foundations are cited but not established here.",
+      "consequence": "Retain only the stated sufficiency, reuse and local-span boundaries; no complete reconstruction proof, profile adoption or design-view acceptance is inferred."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F1.%20Context%20and%20position%2FFoundation%20to%20law%3A%20release%20and%20successor%20conservation",
+      "decision": "retained",
+      "keys": [
+        "prior_7b19e39be9fd85c952d4163c0c025b77",
+        "prior_8a769aed52e5cb076ee63993b475facf"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-qualified%20Git%20refs",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FStable%20cuts",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FProject-subtree%20release%20identity",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F2.%20Release%20identities%2FHistorical%20ref%20and%20public-URI%20conservation",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F3.%20Phases",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMutable%20candidate%20construction",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FImmutable%20RC%20publication",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FImmutable%20stable%20publication",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FExact-cut%20qualification",
+      "decision": "retained",
+      "keys": [
+        "prior_b6b525988325f2bf81fd5df06a4e1be9"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F3.%20Phases%2FMonotonic%20version-line%20advancement",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F4.%20Selector%20and%20consumer%20adoption",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F5.%20Naming",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FRelease-scoped%20assets",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F6.%20Release-scoped%20assets%20and%20the%20Product%20subject%2FProduct%20subject%20and%20repository%20carrier",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts",
+      "decision": "retained",
+      "keys": [
+        "prior_fa247d55722088d1c8208111b982761e",
+        "prior_6b5aceb8067abd7ae80b76b21feadbf0"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FSource%20freeze%20and%20stable%20cohort%20construction",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FTwo-commit%20construction%20and%20one%20publication%20transaction",
+      "decision": "retained",
+      "keys": [
+        "prior_bb1ef240d2f6e8bad0c2cf021c608fee"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F7.%20Coordinated%20release-matched%20asset%20cohorts%2FQualification%20and%20recovery",
+      "decision": "retained",
+      "keys": [
+        "prior_828f4fda7e7b0daeb2cae99ded013b03"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FAcceptance%20criteria",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F8.%20Acceptance%2FExternal%20qualification%20dependencies",
+      "decision": "retained",
+      "keys": [
+        "prior_632d538e4d8cc4c135962b3022730bec"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29",
+      "decision": "retained",
+      "keys": [
+        "prior_d6c44732513e57f9b82a2af8b45fb479",
+        "prior_87692548edaa183f32e7f8e7540e9874",
+        "prior_883ea349cf4dac8dfad325c92f27ddc2"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F9.%20Successor%20baseline%20conservation%20%28STDO-UP-015%29%2FDeterministic-kind%20migration",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/RELEASE.md#RELEASE%2F10.%20Open%20questions",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD",
+      "decision": "retained",
+      "keys": [
+        "prior_894323f233349c5a81fd1da1c9c828ba"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FPosition",
+      "decision": "retained",
+      "keys": [
+        "prior_fc55efba4bbb738b20fa9951fd2d7476"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FProcess%20constitution",
+      "decision": "retained",
+      "keys": [
+        "prior_7b52a0bef35a63b536af6e7f80726a0a",
+        "prior_2bb7c63b498bda2294f4a623e3007a45",
+        "prior_5637e9cc7786f756d51ea6126c79dc64",
+        "prior_3252fd9c83e4a4788a6bf098f110c7e3"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FMethod%20identity",
+      "decision": "retained",
+      "keys": [
+        "prior_867a67ed8bb9b0e5119339afe287cda0",
+        "prior_c1e6d3b8caac4747375f043066a4aaee"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F1.%20Position%20and%20identity%2FCanonical%20statement",
+      "decision": "retained",
+      "keys": [
+        "prior_8158197d8da8585102c28aac5025de46"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FFoundation%20to%20law%3A%20chain%2C%20outcome%20and%20build-tenant%20binding",
+      "decision": "retained",
+      "keys": [
+        "prior_26a8936b7793bf1681e921b95ed4987b",
+        "prior_713e02d3a0f0c7f07f0a8fae201c0c0b",
+        "prior_ae59b4848fba7e0f8c128ee183b93294",
+        "prior_9bc4f54f9b28de45003ef90119cc24f1",
+        "prior_dd73635b5a53a1076c9f4774f208b086"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FConstitutional%20chain",
+      "decision": "retained",
+      "keys": [
+        "prior_fc18dcf616a3cdc09fa46a6044df9951",
+        "prior_f67740cf983b7a558cac5683f47a45b0"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FManifesto",
+      "decision": "retained",
+      "keys": [
+        "prior_f80d75c7a70cd53604f225c790e0cbea",
+        "prior_f696d7d5c8744e38d05c8d6dc1e2fd47",
+        "prior_3187b76d98085e7985a32d34fb4c93cd",
+        "prior_31c25220a3ee1f8df008060446e23f6e",
+        "prior_51850bddf494220f3540093230e8d9bf",
+        "prior_b991d8d76a5c5fb1b20d64ee8687cb18",
+        "prior_6c99bffecf5292ad877be042217063cd",
+        "prior_08a9f9b1847852827cc1472719a61a57",
+        "prior_5cbf9d8d4fb3f1e5f672ae5af5261cd4"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpec-drivenness%20litmus",
+      "decision": "retained",
+      "keys": [
+        "prior_bd239ac2a3bb35dd5712027f1279acac"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FReconstruction%20litmus",
+      "decision": "retained",
+      "keys": [
+        "prior_f8a1b1b5f801b47764b6f0c9f0a8473d",
+        "prior_98a9cd244a3564e45267d06050c629ba",
+        "prior_bb86620c09d7a7cfbb776582c90c81e4",
+        "prior_64d3e270a4cf0b122627e1daadd41469"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRenewal%20path",
+      "decision": "retained",
+      "keys": [
+        "prior_5901946aac03404c647b37dbf3bfb477",
+        "prior_9fa440eca043b00545f8bfd145131721"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FSpecification%20surface%20rule",
+      "decision": "retained",
+      "keys": [
+        "prior_0fba6006fc3beaeee2b2da0429d2ebd5",
+        "prior_6aa1c6f8fac3acabc7f9abbc957c9418",
+        "prior_b468f75bb4237ed72bce6a9a5f81fb40",
+        "prior_9f2f38ea41a0381a444a2592fc8caaaa",
+        "prior_d9ba6983a42a941491c1518a443a52cf",
+        "prior_7340b65094e8c49620520710fd9329fc"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FDesign%20rule",
+      "decision": "retained",
+      "keys": [
+        "prior_7060523aab54cb2263e871fea4f08b18",
+        "prior_33ea0af40239189e31cd4dfb33227f30"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRealisation%20shape",
+      "decision": "retained",
+      "keys": [
+        "prior_55a257d3aa9a5758b48bd07e923451f9",
+        "prior_ada670a35c42e3e337876d3d22f42952",
+        "prior_b8e9b573c0411808e8c9624c7d84341d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FRequirement%20categories%20and%20classification",
+      "decision": "retained",
+      "keys": [
+        "prior_7d0a9c90f5f4ae3de1e1726cf6d1423f",
+        "prior_4dea6098beebc338ba8d59c855575e72"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FTrace%20closure%20and%20anti-drift",
+      "decision": "retained",
+      "keys": [
+        "prior_d8b080fae05d72da046074755cfaa758",
+        "prior_521de85724d3b3e4f8e3ac8f9a9611f8"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FLive%20surface%20immutability",
+      "decision": "retained",
+      "keys": [
+        "prior_ed7ff9285b162fceacac9fd577163485",
+        "prior_1349db414b8dc233b494faab235d1c6b"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/SPEC_METHOD.md#SPEC_METHOD%2F2.%20The%20chain%2FOperational%20lifecycle%20sufficiency",
+      "decision": "retained",
+      "keys": [
+        "prior_7e3dd4056d50d0eb1d1209f1d770b654",
+        "prior_c25338f8b2a9b5a4eb114bee8b27c868"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    }
+  ],
+  "limitations": [
+    "Source-local semantic proposal; processing coverage and mechanical checks do not establish semantic completeness or acceptance."
+  ]
+}

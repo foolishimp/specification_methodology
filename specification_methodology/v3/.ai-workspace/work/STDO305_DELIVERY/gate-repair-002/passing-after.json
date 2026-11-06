@@ -1,0 +1,31 @@
+{
+  "subject": "scripts/stable_stack_release.py",
+  "subject_sha256": "afe0f292df9e7b4ce919aad3924026c83ec38c3b30f6a28a641a5a44a0560a92",
+  "cases": [
+    {
+      "case": "S2-installed-help-stale-output",
+      "accepted": false,
+      "exception": "KeyError",
+      "reason": "'installation'"
+    },
+    {
+      "case": "S2-lean-trivial-missing-proof-unknown-runtime",
+      "accepted": false,
+      "exception": "ValueError",
+      "reason": "qualification omits a required current Product subject: exact_candidate_lean_result"
+    },
+    {
+      "case": "S3-bare-same-version-RC-preserved",
+      "accepted": false,
+      "exception": "ValueError",
+      "reason": "stable version collides with an existing RC or historical bare cut"
+    },
+    {
+      "case": "S2-public-single-asset-single-product-old-store",
+      "accepted": false,
+      "exception": "KeyError",
+      "reason": "'facts'"
+    }
+  ],
+  "claim_adapter_sha256": "34b60df9a1188a24794b15251ba31773212de005e62f7294a1f6848af92bac49"
+}

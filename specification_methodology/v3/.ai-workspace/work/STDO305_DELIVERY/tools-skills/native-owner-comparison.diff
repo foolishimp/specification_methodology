@@ -1,0 +1,1175 @@
+--- native301/REFERENCE_FRAME.md
++++ target305/REFERENCE_FRAME.md
+@@ -1001,6 +1001,14 @@
+ navigation or diagnostics; they do not substitute for the declared identity
+ and basis (P3).
+ 
++For an activation crossing Product boundaries, the packet applies
++[PRODUCT_DEFINITION PC-03–PC-05](PRODUCT_DEFINITION.md#pc-03--the-edges-contract-and-authority-record):
++its selected relation and grants, eligible sources/derivations, actual exposure,
++material basis and continuation obligations remain explicit. Permission and
++adequacy are separate predicates; an insufficient permitted view returns its
++missing condition instead of acquiring prohibited material. Byte deduplication
++or recursion must not merge distinct route permissions (P1, P3, P6).
++
+ ## 12. Violations
+ 
+ Each of the following is a violation of this member where it supports a
+--- native301/FOUNDATIONS.md
++++ target305/FOUNDATIONS.md
+@@ -244,7 +244,9 @@
+ states which).
+ Equal version text does not collapse these objects. A selector or a
+ mutable carrier may move; a release cut never moves. RELEASE §2 realises
+-them, with the carriers that hold them, as refs of one release source.
++them, with the carriers that hold them, as refs of one release source. A
++release profile need not provide a mutable selector: discovery can resolve
++an immutable cut directly without changing that cut into a selector.
+ 
+ ### Work boundary
+ 
+--- native301/EXECUTIVE_BASELINE.md
++++ target305/EXECUTIVE_BASELINE.md
+@@ -258,7 +258,7 @@
+ - Row 4, the executive configuration and its frames: [ACTIVATION §1 Configuration](ACTIVATION.md#configuration), Example, which names the executive configuration as one configuration for work in which a bounded change and delivery across tasks need separate attention and leaves its frames, prohibitions and explanation to this profile; [SPEC_METHOD §8](SPEC_METHOD.md#8-bounded-execution-in-this-method), where the configuration governs where it is selected; [PROFILES §6](PROFILES.md#6-engagement-baseline); [§1](#1-canonical-compression), where the configuration is selected where it fits and is not the method's default; [§3](#3-engagement-applicability), which names the entering and the coordinating frame where it is selected; [No mutation while Executive](#no-mutation-while-executive), which holds wherever it is selected; [§8](#8-derived-executive-frame), [§9](#9-derived-worker-frame) and [§10](#10-derived-reviewer-frame), the declarations of the three frames; [§12 step 2](#2-executive-activates-worker), where a refused activation returns to the Executive with its cause and no Worker result; [§18](#18-profile-qualification), obligations 1, 2 and 10; [§22](#22-closure), conditions 3 and 4.
+ - Row 5, Executive authority and the prohibition on mutation: [§1](#1-canonical-compression), where the Executive applies only decision authority already granted and no frame acquires operation authority from its label; [The executive configuration](#the-executive-configuration), where the prohibition is in force wherever the configuration is selected and no operation grant lifts it; [§14](#14-coverage-application), its closing paragraph, where visibility is not coverage and every mutation needs its existing owner's grant; [§17](#17-actor-binding-and-independence), its closing paragraph, where an Executive's inspection becomes no Reviewer result; [§18](#18-profile-qualification), obligations 4 and 10; [§20](#20-failure-classification), "the Executive rewrites semantics to close a local problem"; [§21](#21-anti-patterns), item 3; [§22](#22-closure), conditions 7 and 10.
+ - Row 6, the attention cycle and the drift locks: [Work result](#work-result), `re_entry_requested(basis)`, where the Executive revalidates the basis lock before any further activation; [§8](#8-derived-executive-frame), whose evaluation family asks whether a returned result is exact and current and whose invalidation row names the changes that reopen it; [§12 step 7](#7-executive-disposes-and-checkpoints), where every consumed result is verified against the current subject and basis before disposition; [Activation additions](#activation-additions), the Executive row; [§22](#22-closure), condition 7.
+-- Row 7, the Product-chain basis: [Drift locks](#drift-locks), the Product-role lock; [§11](#11-derived-generic-specialist-frame-set), the Product Composition family and its falsifier; [§12 step 7](#7-executive-disposes-and-checkpoints), where a repair creates a new candidate and an affected review is reactivated; [§18](#18-profile-qualification), obligation 9; [§20](#20-failure-classification), "a Development Product's structure becomes the authored Product's meaning" and "an authorised mutable Source Project is treated as one immutable review subject throughout construction"; [§21](#21-anti-patterns), item 11.
++- Row 7, the Product-chain basis: [Drift locks](#drift-locks), the Product-role lock; [§11](#11-derived-generic-specialist-frame-set), the Product Composition family and its falsifier; [§12 step 7](#7-executive-disposes-and-checkpoints), where a repair creates a new candidate and affected results are invalidated before verification or a required recheck; [§18](#18-profile-qualification), obligation 9; [§20](#20-failure-classification), "a Development Product's structure becomes the authored Product's meaning" and "an authorised mutable Source Project is treated as one immutable review subject throughout construction"; [§21](#21-anti-patterns), item 11.
+ - Row 8, the non-hierarchical configuration: [§1](#1-canonical-compression), where the three frames are overlapping evaluation contexts and neither a hierarchy nor an actor topology; [§11](#11-derived-generic-specialist-frame-set), its closing paragraph, and [Refinement and conjunction](#refinement-and-conjunction), where refinement is a frame dependency and no hierarchy; [§14](#14-coverage-application), which organises finite evaluations over specialist frames; [§17](#17-actor-binding-and-independence), where frames and actors are separate identities; [§21](#21-anti-patterns), item 2; [§22](#22-closure), condition 3.
+ - Row 9, steel-thread delivery: no separate consumer applies. The sequence is the Executive's selected strategy under ACTIVATION §1 Strategy, as the section states; the generic sequencing heuristic is SPEC_METHOD §8's own rule and the testing frames it schedules are ASSURANCE §7's; none of them applies this section, and SPEC_METHOD §8 names it only to defer to it.
+ - Row 10, the work result: [§12 step 4](#4-executive-evaluates-the-work-result), where no variant is accepted progress because work occurred, and [step 7](#7-executive-disposes-and-checkpoints), where `candidate_ready` is not acceptance; [§13](#13-handoff-projection), the activation-refusal and work-result projections; [§18](#18-profile-qualification), obligations 2 and 5; [Project-basis additions](#project-basis-additions), the work-result to core-result mapping; [§21](#21-anti-patterns), items 5 to 7; [§22](#22-closure), condition 4.
+@@ -287,6 +287,15 @@
+ commitments and imported families, and which are choices this profile or
+ the adopting Product makes, so no profile choice is presented as following
+ from the foundations (P6, P2).
++
++The review-flow refinement in §5 and §12 applies P6 to keep assessment,
++priority, operation and acceptance distinct, and P2 to avoid an extra actor or
++review when no outcome requires it. Its particular QA cadence, four recheck
++triggers, selected severity convention and optional response policy are this profile's domain choices, not
++deductions of a numeric scale or review ratio. Product adoption selects the
++response policy and local sizing; EVALUATION §5 still owns boundary meaning and
++TICKETS §4 owns finding carriers. The consumers are §12's Executive decision,
++§19's adoption projection and the Project Reference-Frame Basis template.
+ 
+ ## 4. Empirical revision boundary
+ 
+@@ -429,8 +438,9 @@
+ [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) Hard stops,
+ whose classes are typical, not closed; the basis names its own
+ non-waivable hard stops, each holding as that section states. "Non-waivable hard stop" in this
+-profile and in EVALUATION §5 means such a stop. This profile imposes no
+-universal numeric scale. Severity, priority, the frame result
++profile and in EVALUATION §5 means such a stop. The selected review-flow
++severity convention below does not relabel another Product's declared scale.
++Severity, priority, the frame result
+ (FOUNDATIONS §4 Results) and the current-boundary effect are four distinct
+ values. When a finding can block a promotion boundary is
+ [EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion),
+@@ -455,6 +465,72 @@
+ constrains its consumption is EVALUATION §4 (Result and triage
+ projection).
+ 
++#### Selected 1–5 severity convention
++
++The severity convention selected for this review flow is **1 highest to 5
++lowest**. The Reviewer grades the consequence of the demonstrated defect if
++it manifests, using these qualitative anchors. The Product-owned frame basis
++binds the convention and its Product-specific evidence criteria: affected
++claims, users/paths, consequence, dependencies and supported containment (P6).
++
++| Severity | Consequence anchor |
++|---|---|
++| 1 | Critical loss of the governed outcome or of essential safety, authority or integrity across its affected scope. |
++| 2 | Major failure of essential behaviour, with substantial affected users, paths or dependencies and no adequate ordinary containment. |
++| 3 | Material but bounded failure whose disposition depends on its downstream impact and wider blast radius. |
++| 4 | Limited local failure with supported containment or a practical workaround and little effect outside that local scope. |
++| 5 | Minor actionable defect with minimal functional consequence for the declared outcome. |
++
++Severity 3 requires an explicit assessment of downstream dependencies and
++blast radius. Material impact on dependent work normally calls for repair;
++contained local impact may be deferred with a recorded reason and responsible
++owner. The Executive makes that disposition from the evidence and its grant,
++preserving the Reviewer's grade; a departure from the normal repair response
++also records its reason. Unknown dependent impact is not evidence of
++containment. Mandatory claims, hard stops and acceptance conditions still
++determine boundary effects under EVALUATION §5. Severity 3 is not priority P3,
++and no severity value automatically supplies priority, a block or permission
++to defer (P6, P2).
++
++An older or alternative Product-selected scale keeps its identity and evidence
++criteria. Selecting this convention is explicit; any translation is declared
++and justified rather than inferred from matching numbers. Historical findings
++retain the scale and grade under which they were assessed. A no-finding result
++carries no severity grade; it is not severity 5 (EVALUATION §4; P3, P6).
++
++#### Proportional triage assistance
++
++When the cause and consequence are sufficiently clear, the Executive decides
++priority and ownership directly. Where finding volume would overwhelm its
++bounded attention, it may activate a triage Worker to group causes, identify
++duplicates and propose priorities and responsible owners from the admitted
++findings. The assistant neither grades nor changes Reviewer severity and
++decides no priority or disposition. The Executive consumes its evidence and
++records its own decision; unsupported cause relations stay uncertain. The
++assistant adds no read authority, and this profile requires no extra actor
++for a small or clear result (P6, P2).
++
++#### Optional P0–P5 response policy
++
++An adopting Product may explicitly select the following response policy in its
++frame basis. The labels have no numeric meaning outside that adoption; the
++Product supplies its ordering/assignment criteria and any finer distinctions.
++This is priority policy, not a Reviewer severity scale (P6, P2).
++
++| Selected priority | Response and boundary effect |
++|---|---|
++| P0–P2 | Include in the next bounded fix pass; hold the affected outcome's closure and release, not candidate landing merely because of this priority. |
++| P3–P5 | Repair before release/go-live; hold that release, while bounded work may close with the item durably retained or transferred with its disposition. |
++
++This policy never waives applicable hard stops, mandatory claims, acceptance
++conditions, access restrictions or operation grants. Those owners may require
++an earlier hold at any priority. A P3–P5 item may outlive a local work claim's
++closure only when that claim does not require the unfixed behaviour; assigning
++that priority cannot satisfy a false mandatory claim. No review-to-work ratio or additional
++capture-review landing hold is selected by adopting this example. Durable
++items and their actual verification state are owned by
++[TICKETS §4](TICKETS.md#review-findings-and-bug-items).
++
+ ### Work result
+ 
+ A work result is the Worker's closed output to its declared consumer; in
+@@ -704,6 +780,14 @@
+ P6).
+ 
+ ### Product-chain basis
++
++Capability composition, including recursive and shared constituents, applies
++[PRODUCT_DEFINITION §9](PRODUCT_DEFINITION.md#product-composition-contract).
++Select the outcome-owning frame and the actual dependency-ready work; retain
++path-specific authority and material far-side reliance. A cycle in Product
++relations is not itself a work deadlock, and naming a lead supplies no missing
++current prerequisite. An enclosing Product is not required for a constituent's
++scoped standalone entry when its declared dependencies suffice (P3, P6).
+ 
+ A governed outcome may concern one Product or an explicit directed chain of
+ Products. Its basis records the distinct role of every mutable Source
+@@ -1282,7 +1366,9 @@
+ checkpoint and the next already-authorised bounded action. The disposition
+ is the acceptance result; neither `candidate_ready` nor a satisfied review
+ result is acceptance (FOUNDATIONS §4 Results). A repair creates
+-a new candidate, and an affected review is reactivated against it.
++a new candidate; the Executive invalidates affected results and selects
++verification or independent recheck under the cadence below, rather than
++automatically reactivating every affected review.
+ Acceptance does not widen the Product outcome or authorise an unselected
+ successor (P4b, EVALUATION §5).
+ 
+@@ -1294,6 +1380,55 @@
+ effect (§5 Technical triage, severity, priority and boundary effect). An
+ unsupported technical assessment returns through a new or refined
+ activation rather than being silently rewritten (P6, P1).
++
++### QA cadence and repair rechecks
++
++Landing, closure, release and explicit Product gates have one owner,
++[EVALUATION §5](EVALUATION.md#landing-closure-and-release). For this profile,
++an admitted step lands its candidate after its selected work and fix pass.
++Where review is required or selected, one bounded QA review covers that exact
++declared subject and may run beside the next authorized step. It is not a
++standing permission for another review of every local change. The Executive
++records review size and its reason in the existing work carrier; any ratio is
++Product-selected, and none is imposed here (P6, P2).
++
++Sizing does not shrink a declared claim. Preserve the exact evaluated
++population and conjunction; a sample supports its stated scope and leaves
++uncovered required coverage explicit. A budget or ratio cannot turn that
++residual into a completed whole-subject review (P6, P5).
++
++Each test-reproducible repair binds a reproduction that fails on the faulty
++subject and passes on the repaired subject, with the full suite declared for
++that repair scope passing. A repair without a reproduction states that gap and
++requires the independent recheck below; a green total does not fill the gap.
++Tests may verify a repair without becoming independent assessment. A fix pass
++closes on that evidence and its other applicable conditions unless independent
++recheck is required by one of these conditions (P6, P5):
++
++1. the candidate reaches a boundary whose governing basis requires or claims
++   independent review, including any Product, release, qualification, risk or
++   admitted-work addition;
++2. the pass repairs a hard stop or a capture whose source-fidelity claim is
++   material to the outcome;
++3. a repair has no reproducing test; or
++4. a selected review left part of its declared subject uncovered.
++
++For a required recheck, activate one fresh Reviewer for the bounded fix pass,
++with its affected claims, prior findings, reproductions and remaining coverage.
++Fresh means a new bounded assessment activation with the independence of
++EVALUATION §3, not independence inferred from a new context or actor name.
++Partitioning follows the declared conjunction, not extra serial rounds. The
++covered fixes remain unresolved for the dependent closure claim until that
++report arrives and the required predicates are satisfied; tests alone cannot
++substitute for this required review. A later material finding is a new input
++to the next bounded disposition, not an unbounded review loop (P6, P2).
++
++The Executive preserves Reviewer severity, assigns priority under the selected
++policy and hands the linked items to the lawful repair Writer. Pending review
++alone holds no landing. An open required review holds its dependent closure,
++and release retains all its selected conditions. Downstream use and later
++invalidation follow EVALUATION §5; access and artifact-effect grants remain
++unchanged (P6).
+ 
+ ### Promotion constraint projection
+ 
+@@ -1654,6 +1789,13 @@
+ - role-specific actor capability, authority and independence bindings:
+ - Product-selected severity and priority scales, current-boundary cutoff,
+   non-waivable hard stops, and the Reviewer-to-Executive triage relation:
++- selected review-flow severity convention (1 highest–5 lowest), or the exact
++  retained alternative; Product-specific evidence criteria and severity-3
++  downstream/blast-radius assessment:
++- selected response policy (the optional P0–P5 policy or a named alternative),
++  review sizing and rationale; review ratio only if separately selected:
++- distinct landing, closure and release conditions; any expressly declared
++  Product acceptance gates and their authorized declaration route:
+ - work-result to core-result mapping: ACTIVATION §3 construction
+   availability, recorded by reference, with each project refinement of a
+   work-result value mapped to its parent value's core value (ACTIVATION §3):
+--- native301/EVALUATION.md
++++ target305/EVALUATION.md
+@@ -87,7 +87,7 @@
+ | P6 (independent), P3 (independent); instance premise c | Self-review is construction output (P6), and identities are scoped by kind (P3), so the party whose self-review is excluded must be identified apart from whoever performs an operation: author identity, the party responsible for the content of a realised subject, is distinct from actor identity, and independence is judged against the author | [§3](#3-independent-assessment), the author-identity paragraph | none | 2, 9 |
+ | P6 (independent), P5 (derived from P0 and P6, with P0's open-world premise) | By P6 a result must let its consumer check and dispose it, and by P5 an unevaluated predicate has no result, so a review result carries, for each predicate it evaluated, the exact subject and basis, the evidence consulted, the findings ranked by consequence with each finding's evidence and smallest bounded correction, the residual uncertainty and the invalidation conditions. A recommended disposition is evidence only and never a disposition, and the review applies none; a finding without evidence a consumer can chase is commentary | [§4](#4-review-results), first paragraph | none | 3, 9 |
+ | P6 (independent), P2 (independent), P1 (independent) | By P6 evaluation and decision are separate authorities, and by P1 a mapped value is not the value it maps, so severity, the assessor's grade of consequence, is evaluation evidence, while priority, the effect on the current promotion boundary and the disposition are the decision owner's and stay distinct values even where a policy maps one to another; a recommended disposition is never adopted mechanically. By P2 only a decided result serves the outcome, so the decision owner consumes no `indeterminate` or `out_of_frame` result as satisfaction or as a settled finding, and returns an `invalid_basis` result through the declared basis re-entry relation without consuming it. The payload classes `complete`, `indeterminate` and `not_applicable` classify the triage only and are not results, dispositions, priorities or lifecycle states | [Result and triage projection](#result-and-triage-projection), its first two paragraphs and the consumption column of its table | the triage fields: the profile that adopts the triage, such as [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md#technical-triage-severity-priority-and-boundary-effect); the scales, and the priority and boundary policy: the adopting Product | 3, 9 |
+-| P6 (independent), P2 (independent) | By P6 a verdict is bounded by its claim, and by P2 work outside the claim needs its own route to an outcome, so an observation outside the evaluated claim does not replace the claim-relative result: the assessor returns it separately with its repricing or re-entry pressure, and the decision owner returns it to its owner without a claim-relative block or another review round from its severity alone. By P6 the assessor holds no construction authority, so it returns to the decision owner, not to the constructor, and does not edit the candidate, direct the repair or authorise continuation | [Result and triage projection](#result-and-triage-projection), the last two paragraphs | none | 9 |
++| P6 (independent), P2 (independent) | By P6 a verdict is bounded by its claim, and by P2 work outside the claim needs its own route to an outcome, so an observation outside the evaluated claim does not replace the claim-relative result: the assessor returns it separately with its repricing or re-entry pressure, and the decision owner returns it to its owner without a claim-relative block or another review round from its severity alone. By P6 the assessor holds no construction authority, so it returns to the decision owner, not to the constructor, and does not edit the candidate, direct the repair or authorise continuation | [Result and triage projection](#result-and-triage-projection), the adjacent-observation and assessor-return paragraphs | none | 9 |
+ | P6 (independent), P2 (independent), P0 (recovered, with its premise that a step's output is a candidate until evaluated); instance premise d | By P6 and (d) acceptance is the decision owner's act, and by P0 the subject accepted must be the evaluated one, so acceptance is the decision owner's disposition over an unchanged subject; recording it cannot widen it, and by P2 it exhausts only the instance and interval it names. A work item closes by the condition it stated, and a reviewer result is an input to closure, never the closure; green labels, document counts, review counts and historical outcomes are not acceptance | [§5](#5-acceptance), first paragraph | the acceptance boundary, its interval and its decision owner: the governing basis that names them; the closing condition of a work item: that work item ([TICKETS](TICKETS.md#7-authority-judgment-closure-and-state)) | 9 |
+ | P6 (independent), P3 (independent); instance premise d | By P6 and (d) a decision is the owner's, exercised directly or through a grant it admits, and by P3 a proxy's identity stays distinct from the human authority's, so a human decision may be exercised directly or through an explicitly admitted bounded proxy; a change a proxy cannot make, under FOUNDATIONS §2's proxy limit, re-enters at its owning relation | [§5](#5-acceptance), the proxy sentences | what a proxy grant names: [IDENTITY §6](IDENTITY.md#6-authority-identity-and-conservation-stdo-up-004); what a proxy can never decide: [FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); whether a proxy is admitted, with its scope and exclusions: the human authority that grants it | 9 |
+ | P6 (independent); instance premise d | By P6 a verdict is bounded by the exact claim it evaluated, so a finding can block current promotion only through a condition that bears on that claim's acceptance at the current boundary, and an observation outside the claim blocks nothing by itself. By instance premise d blocking is the decision owner's act, so no block follows mechanically from a finding or its severity; a non-waivable hard stop is by definition one that no decision waives, so a valid falsification of a mandatory claim under it blocks whatever the priority or cutoff | [§5, When a finding blocks promotion](#when-a-finding-blocks-promotion) | the four blocking conditions (falsifies the claim; competing or ambiguous authority on its acceptance path; violated active authority, safety or retained accepted behaviour; a durable architectural decision foreclosing an admitted Product outcome): this section, conserving UP-007; the decision cutoff and the severity and priority scales: the adopting Product; the hard stops and which are non-waivable: [ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) and the owner of each stop; domain triggers, such as a design check's: the profile or work carrier that refers to §5 | 9 |
+@@ -124,6 +124,19 @@
+ 
+ Each consumer applies the rule and decides nothing the owning section does
+ not (P2, P6).
++
++The review-flow refinement applies P6's separation of operation, evidence and
++decision to [Landing, closure and release](#landing-closure-and-release): making
++a candidate available cannot establish its claims. P3 binds provisional use to
++an exact subject, and P4b with ACTIVATION §7 preserves and invalidates dependent
++results. Permitting authorized landing beside pending QA, and providing
++[Declared Product acceptance gates](#declared-product-acceptance-gates), are
++explicit domain policies of §5, not consequences of finite attention alone.
++The concrete gate and its acceptance owner are Product selections. Consumers
++are EXECUTIVE_BASELINE §12's cadence, TICKETS §7's closure application and the
++Project Reference-Frame Basis template. The exact report-effect refinement of
++§4 applies existing operation/acquisition law; TICKETS §4 owns its carrier
++shape and consumes it. No timing or report policy creates authority.
+ 
+ ## 2. Separation
+ 
+@@ -307,6 +320,15 @@
+ not edit the candidate, direct the repair or authorise continuation (P6,
+ §3).
+ 
++Recording the assessment is a separate artifact effect. Where the activation
++grants it, the assessor may write the exact named findings carrier under
++[TICKETS §4 Review findings and bug items](TICKETS.md#review-findings-and-bug-items).
++That grant adds no candidate-repair authority or acquisition route. A review
++has covered its declared subject only when every planned predicate has been
++evaluated or lawfully removed from that subject; a partial return preserves
++the unperformed coverage. Closing the review activity does not satisfy a
++falsified or unresolved work claim (P6, P5).
++
+ Purpose and material relation: every configuration keeps severity,
+ priority, boundary effect and disposition separate. The rule applies to any
+ assessor and decision owner; [EXECUTIVE_BASELINE](EXECUTIVE_BASELINE.md)
+@@ -337,6 +359,49 @@
+ is evaluated is [RELEASE §9](RELEASE.md#9-successor-baseline-conservation-stdo-up-015).
+ An intentionally removed disposition is a decision of the current Product
+ authority, and its record is that decision (P6, P3, P4b).
++
++### Landing, closure and release
++
++Landing makes an exact candidate available at an authorized checkpoint or
++integration destination. It is an operation under its existing grant, not
++acceptance of the candidate's claims. Work closure applies the stated closing
++condition; release applies the separately selected publication and acceptance
++conditions of [RELEASE](RELEASE.md). Record these as separate decisions (P6,
++P3).
++
++Review supplies QA evidence for those decisions. A pending review does not by
++itself hold landing: an admitted candidate may land after its bounded work
++and fix pass, while review of that exact candidate runs beside subsequent
++authorized work. A required review holds the closure or acceptance claim that
++depends on its complete report. A governing landing condition, applicable hard
++stop or missing operation authority still prevents landing; availability is
++no waiver. [EXECUTIVE_BASELINE §12](EXECUTIVE_BASELINE.md#qa-cadence-and-repair-rechecks)
++binds the optional profile's repair/recheck cadence (P6, P2).
++
++Permitted downstream work may consume a landed candidate before its review
++reports, carrying its exact identity, unresolved conditions and dependency
++links. This is provisional use, not admitted truth. A later material finding
++invalidates the affected dependent results under
++[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse); unrelated valid results
++remain reusable. Repair and re-evaluation follow those dependencies before
++further reliance (P4b, P6).
++
++### Declared Product acceptance gates
++
++A Product-owned frame basis, or a work contract explicitly delegated that
++choice by the basis, may declare a gated handoff between two Products. It
++names both Product identities, the directed relation, exact candidate/claim,
++required review and coverage, acceptance conditions and decision owner. Until
++that review has covered its declared subject and the acceptance conditions
++are satisfied, the downstream Product cannot accept the candidate as an
++admitted input or close claims dependent on that acceptance. Authorized
++provisional work and repair may continue under the preceding section (P6,
++P2).
++
++The gate's declaration is explicit; co-location, a dependency or this available
++mechanism creates none. Existing user-acceptance, release/go-live and other
++Product boundaries retain their own conditions. This member declares no
++particular Product gate or extra capture-review hold on landing (P6).
+ 
+ ### When a finding blocks promotion
+ 
+--- native301/SPEC_METHOD.md
++++ target305/SPEC_METHOD.md
+@@ -1249,13 +1249,13 @@
+ surface, not the released artifact and not the builder that happens to be
+ running the build (P3).
+ 
+-The only exact operative release identifier is the immutable release-cut
+-tag `v<version>-rc.<n>` (P3). That cut is a
++The only exact operative release identifier is an immutable release-cut
++tag under the selected [RELEASE profile](RELEASE.md#2-release-identities):
++an RC cut or an explicit stable cut (P3). That cut is a
+ point-in-time release identity, a boundary over the feature set accepted
+ for that cut, and part of release metadata and release-process evaluation;
+-it is not part of the live project specification. The mutable `v<version>`
+-tag is a version-line discovery selector to the highest-ordinal published
+-immutable cut; it is not an exact dependency, evidence or constitutional
++it is not part of the live project specification. On an RC line the mutable
++`v<version>` tag is a discovery selector to the highest published ordinal; it is not an exact dependency, evidence or constitutional
+ basis and cannot silently change a consumer selection. How an active
+ constitutional surface uses version labels is the
+ [§2 Specification surface rule](#specification-surface-rule); shared
+--- native301/PRODUCT_DEFINITION.md
++++ target305/PRODUCT_DEFINITION.md
+@@ -209,7 +209,7 @@
+ `constitution.stdo.basis` locates the complete selected STDO constitutional
+ set; `constitution.additional_authorities` locates every additional
+ constitutional set or source. The STDO basis identifies one complete
+-immutable RC cut and its exact installed-release manifest, never a
++immutable release cut and its exact installed-release manifest, never a
+ hand-selected subset. Each `constitution.entrypoints[]` member names the
+ basis against which its URI resolves. Entry points are derived navigation
+ and can neither narrow nor replace a complete selected constitution (P3,
+@@ -231,7 +231,7 @@
+ (immutable stdo://releases/<cut>/ URI, installed-manifest SHA-256)
+ ```
+ 
+-The URI identifies one immutable annotated RC cut. The digest identifies
++The URI identifies one immutable annotated release cut. The digest identifies
+ the deterministic installed-release manifest, which binds the cut's tag
+ object, commit, repository tree, standards subtree, exact standards
+ inventory, member bytes and admitted auxiliary payloads. The manifest shape
+@@ -262,8 +262,8 @@
+ - resolves logical `stdo://releases/...` URIs to verified installed bytes;
+ - inventories and verifies complete installed distributions;
+ - synchronises the exact basis already selected by a Product Definition;
+-- emits an exact digest-bound adoption plan from a mutable version-line
+-  selector and performs adoption only when that plan is explicitly
++- emits an exact digest-bound adoption plan from a release-profile discovery
++  route and performs adoption only when that plan is explicitly
+   accepted;
+ - manages the stable marker-bounded bootstrap in declared agent files; and
+ - applies those operations to an explicitly discovered fleet of Product
+@@ -283,19 +283,21 @@
+ unmanifested alias (P5, P3).
+ 
+ `constitution.stdo.source.repository` identifies the transport source.
+-`constitution.stdo.selector` is a mutable `stdo://channels/<version>`
+-discovery selector whose alias semantics are owned by the release law (the
+-[RELEASE](RELEASE.md) member). Neither is operative authority.
++`constitution.stdo.selector` is a `stdo://channels/<version>` discovery
++route whose profile semantics are owned by [RELEASE §4](RELEASE.md#4-selector-and-consumer-adoption).
++An RC line resolves its mutable selector; a stable line resolves its exact
++immutable cut without a second selector. Neither discovery nor the transport
++source is operative authority.
+ `constitution.stdo.basis.uri` and `constitution.stdo.basis.manifest_sha256`
+ are the sole authored STDO selection for that Product Definition (P6, P3).
+ 
+ The manager observes these command boundaries (P6, P5):
+ 
+-- `install` admits one explicitly named immutable RC cut without changing
++- `install` admits one explicitly named immutable release cut without changing
+   any Product Definition;
+ - `sync` installs and verifies only the exact basis already selected by
+   the Product Definition and never consults its mutable selector;
+-- `adopt --dry-run` resolves the annotated selector and immutable RC, and
++- `adopt --dry-run` resolves the selected release profile and immutable cut, and
+   presents the target cut, tag object, commit, tree, manifest digest,
+   current Product-Definition byte digest and a deterministic
+   adoption-plan digest, without mutation;
+@@ -706,7 +708,10 @@
+ authority and contracts, lifecycle, evidence boundary, refusal and
+ invalidation conditions. Common actors, repositories, files,
+ implementations, outputs or tool access create no composition or identity
+-relation (P3, P6).
++relation (P3, P6). The recursive capability, authority and context bindings
++of [§9](#9-recursive-discovery-and-explicit-composition) apply equally to
++peer Products and enclosing/constituent outcomes; the Product-role map
++retains those separate uses rather than flattening their grants.
+ 
+ An accepted Project Reference-Frame Basis may be expressed entirely as
+ source-linked prose. The starter at
+@@ -835,6 +840,159 @@
+ the semantic subset of these checks are distinct claims (EVALUATION §2;
+ P1, P6).
+ 
++### Product composition contract
++
++The following clauses apply the shared authority, identity, context,
++preservation and change laws to Product composition. They define no second
++admission or result algebra. A Product may consume, coordinate or assess
++another Product through its declared relation; these roles are neither a closed
++nor disjoint kind taxonomy, and none confers authority (P6, P3).
++
++[The contract template](templates/PRODUCT_COMPOSITION_CONTRACT_TEMPLATE.md)
++projects these coordinates; [the recursive example](examples/PRODUCT_COMPOSITION.md)
++works them through a shared leaf and an independently enterable composite.
++[CONFORMANCE](CONFORMANCE.md#product-composition-discriminators) names their
++positive and adverse discriminators. These artifacts apply this owner (P1, P6).
++
++### PC-01 — Recursive Product boundaries
++
++A Product identifies one coherent WHAT and its owning authority. Alternative
++realizations of that WHAT are build tenants. A decomposition into Products names
++which distinct outcomes and authorities each constituent owns, and which outer
++outcome the composition owns.
++
++Under the identity and ownership laws (P3, P6), within a declared decomposition scope, a leaf has no further constituent Product
++boundary exposed by that decomposition. It may contain modules and declared
++external dependencies. A composite relates two or more constituent capabilities
++or an outer capability to its constituent capability; its own capability may in
++turn be consumed as a constituent. The same definition, contract and authority
++laws apply at every depth. Shared constituents keep one identity and their
++separately bound uses; a hierarchy view may show several references to one leaf.
++
++Decomposition, capability/data dependency, inspection permission, authority and
++work prerequisites are distinct relations. A directory tree establishes none of
++them. A named composition view states its root, participating identities,
++selected boundaries and relation kinds rather than treating all reachable edges
++as one hierarchy.
++
++### PC-02 — Independent entry and the integrated outcome
++
++A Product offered as a standalone constituent must be enterable through its own
++Product Definition and a Product-authorized applicable frame basis, with the
++dependency closure and capabilities its contract declares. Entry must not require
++an enclosing composition's activation unless that enclosing capability is itself
++an explicit prerequisite. Such a prerequisite is disclosed as a limit on the
++standalone claim. Shared or externally located frame documents are permitted
++where adoption, scope and availability are established; file ownership alone is
++not the deciding test.
++
++Standalone does not imply dependency-free, separately deployable or able to
++supply every host itself. The claim names which construction, evaluation or use
++can be performed independently and its required inputs. The composition owner
++separately establishes interface compatibility, material joins and its complete
++outcome. Successful constituent checks do not establish that outer predicate.
++
++### PC-03 — The edge's contract and authority record
++
++For each directed relation, the `relation` authority and referenced `contracts`
++state, directly or by exact reference:
++
++1. Source and target Product identities and roles; the consumed capability,
++   outcome, purpose, selected basis and currentness policy.
++2. The existing owners and grants for each material operation: acquisition,
++   disclosure, use, execution, mutation, assessment and disposition. A kind or
++   role label records no grant by itself.
++3. Admissible inputs and exports; material assumptions, effects, failures,
++   obligations and evidence; restrictions on implementation material and derived
++   information where applicable.
++4. The acting principals or binding rule, task/phase scope, permitted delegation,
++   return consumer, stop/refusal conditions and revocation/invalidation route.
++
++These coordinates may be supplied by source-linked prose. The relation locates
++and constrains lawfully granted authority; it cannot manufacture the target's
++permission or the source's admission. Missing material authority or an unresolved
++conflict withholds the dependent action. The execution-scoped activation remains
++the place where a particular actor, input, effect and return are bound.
++
++### PC-04 — Recursive authority and information eligibility
++
++A permitted A → B use does not entail A's access to B's dependencies. Neither
++A → B plus B → C nor two routes to a shared leaf imply a union of their grants.
++Each onward acquisition, disclosure or delegated effect needs authority for that
++actor, purpose and path, including any permitted onward use of returned material.
++Existing delegation may authorize a chain explicitly; its scope cannot expand
++silently at a recursive step.
++
++A provider may encapsulate internal dependencies behind an adequate contract.
++Consumers need not flatten every implementation dependency into a direct edge.
++Where an outer claim materially relies on a far-side contract, assumption,
++evidence item or acquisition, that reliance and its applicable authority must be
++preserved through the boundary. Unknown impact is not evidence of encapsulation.
++
++Durable Product consumption and bounded authorized inspection are different
++relations. A Reviewer or diagnostic Worker may inspect a larger causal cone under
++an explicit access grant without thereby adopting those internals as a runtime
++dependency or gaining a write grant. If findings become a continuing construction
++constraint or dependency, their producer, applicability and governing relation
++must be retained.
++
++### PC-05 — Context construction and clean-room conditions
++
++An actor's selected context must satisfy both permission and adequacy for its
++engagement. Permission covers the source information and permitted derivations,
++not only paths or filenames. The boundary identifies eligible source classes,
++exports and tool outputs, material provenance, intended use, later acquisitions
++and the effect of prior exposure. An allowed file location or a fresh summary
++does not sanitize prohibited information.
++
++A target owner may authorize an export, but clean-room eligibility additionally
++requires that the engagement's information policy admits that export and its
++provenance. The actual delivered/acquired material must be recorded to the extent
++required by the claim. An uncertain or prohibited exposure follows the declared
++hold/re-entry rule; it cannot be repaired by deleting its receipt or relabeling
++the same actor fresh. Prior actor knowledge and external acquisition channels are
++part of the declared limits.
++
++Adequacy retains the distinctions required for the task's decisions and
++continuations, including unresolved obligations, result standing, currentness and
++authority. If the permitted material is insufficient, acquire an authorized
++extension, narrow the task with the owner, use a suitable actor or return the
++unresolved outcome. Permission is not evidence of sufficiency, and a budget is
++not permission to omit a deciding condition. This applies [FOUNDATIONS Observation sufficiency](FOUNDATIONS.md#assurance-relations)
++and its scoped preservation law; it supplies no general optimal context selector (P1, P2, P6).
++
++### PC-06 — Readiness, cycles and replacement
++
++Work selects a dependency-ready frontier at the required subjects and revisions.
++A cycle in declared Product relationships need not be a cycle in the selected
++work. A cycle of current prerequisite claims requires an executable resolution:
++for example an admitted prior revision, explicit seed, staged contract or bounded
++iteration with its continuation/stop conditions. Naming a lead alone does not
++supply a missing prerequisite or establish convergence.
++
++Replacing a constituent or refining it into further Products preserves the
++consumer's material contract: meaning, preconditions, effects, failures,
++authority, lifecycle, evidence and subsequent obligations. A semantic change
++requires an authorized successor relation and affected reassessment. The [ACTIVATION refinement contract](ACTIVATION.md#refinement) governs this
++preservation. Matching signatures, labels or a sample output is insufficient (P4a, P6). New capabilities may be
++added without silently widening existing consumers' duties or grants.
++
++### PC-07 — Change, evidence and reliance
++
++Each cross-boundary use binds the actual selected sources and material execution
++basis, including uncommitted bytes where relevant. A moving selection identifies
++how advancement is detected and which reliance must be reassessed. Git is one
++possible carrier, not a mandatory identity system.
++
++Changes and new counterexamples propagate through material assertion, execution
++and evidence-use dependencies under [FOUNDATIONS Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse). Historical
++evidence remains about its original subject. Reuse on a changed subject needs an
++established applicability or preservation relation; rereading alone does not
++establish it. A new release does not invalidate a still-selected older release,
++and a changed hash alone establishes neither semantic incompatibility nor
++continued validity. Unknown impact holds the dependent assurance or widens
++assessment; it does not require unrelated work to restart.
++
+ ## 10. Semantic-resolution conformance cases
+ 
+ Conformance covers both uniquely resolved use and material collision. At
+@@ -1017,8 +1175,8 @@
+ 
+ The bootstrap sequence is (P3, P6, P2):
+ 
+-1. Install the STDO toolchain manager once, resolve one version-line
+-   selector, and explicitly select one immutable RC cut.
++1. Install the STDO toolchain manager once, resolve the applicable release-profile
++   discovery route (§4), and explicitly select one immutable release cut.
+ 2. Install that complete cut in the shared release store and retain its
+    deterministic installed-manifest digest.
+ 3. Copy `PRODUCT_DEFINITION_TEMPLATE.json` from that exact cut to the
+@@ -1050,11 +1208,15 @@
+     optional sprint root.
+ 13. Bind every known product-composition edge explicitly, including its
+     target definition identity, relation authority and non-empty contract
+-    set (§9).
++    set (§9). Bind the standalone/composed outcome, material recursive
++    reliance and each actor's information boundary under PC-01–PC-07;
++    separate authorized inspection from durable consumption.
+ 14. Validate the JSON shape, assert URI and URI-reference syntax,
+     synchronise and verify the exact installed basis, then resolve every
+     URI and perform the cross-definition identity, composition,
+-    constitutional-sufficiency and authority-congruence checks.
++    constitutional-sufficiency and authority-congruence checks. Mechanical
++    resolution alone establishes neither the grants nor context adequacy
++    of an admitted activation; unresolved material conditions remain open.
+ 
+ Once a bound requirement set is the live constitutional surface, no rival
+ monolithic requirements document should remain co-equal authority with it. This
+--- native301/IDENTITY.md
++++ target305/IDENTITY.md
+@@ -334,8 +334,9 @@
+ 
+ - an immutable release cut is the only exact operative release
+   identifier;
+-- the mutable version-line selector only names the highest-ordinal
+-  published immutable cut on its line (FOUNDATIONS §2);
++- an RC-profile mutable version-line selector only names the highest-ordinal
++  published immutable cut on its line (FOUNDATIONS §2); a stable profile
++  discovers its immutable tag directly under RELEASE §2;
+ - release version is a release-process fact; and
+ - release version is not the live constitutional identity of every
+   object in the project.
+--- native301/TICKETS.md
++++ target305/TICKETS.md
+@@ -533,6 +533,49 @@
+ a ticket marked `completed`, or a sprint marked `closed`, cannot stand in
+ for a `satisfied` result (P5, P1).
+ 
++### Review findings and bug items
++
++When findings from a review need a durable work carrier, record one linked bug
++report for that review, with one entry per finding: stable identity, original
++Reviewer severity and triage, exact subject/basis, violated claim, location and
++chaseable evidence. Link it to the work item that issued the review. With no
++findings, create no bug report. A sufficient existing direct-work carrier may
++carry the same relations without a redundant ticket (P3, P2).
++
++The Reviewer may record this report only when its activation grants the exact
++artifact identity/path and effects. Otherwise it returns the findings and a
++lawful Writer records them. Recording creates no repair, priority, admission or
++closure authority. Keep the report within its evidence/read and visibility
++restrictions: findings derived from a withheld capture are withheld from the
++same recipients, including any report projection that reveals them. The
++Product may bind a recognizable report naming pattern and exclusion route to
++its actual access mechanism; a filename or separate lane alone enforces
++nothing and grants no additional read (P6).
++
++After Executive or other authorized decision-owner triage, the reviewed work
++item carries a linked Bug items section. Each item records its identity,
++original severity, assigned priority and reason, cause group, responsible owner,
++source report/finding, disposition and state. The report remains the technical
++finding source; the item is the decision and repair ledger. An actor/session
++index, where used, points the Reviewer to its report and the triage/repair work
++to the reviewed work item's ledger, rather than duplicating that truth (P3).
++
++| Item state | Required trace |
++|---|---|
++| open | Finding and triage/disposition, with unresolved work named. |
++| fixed | Exact repaired subject (commit or equivalent immutable identity) and repair evidence; not yet a claim of verification. |
++| verified | The satisfied repair predicate and exact evidence; identify tests and, when required, the independent recheck/report. Tests alone are not labelled independent review. |
++
++These are carrier states, not core evaluation results or acceptance. A required
++recheck keeps its affected items unverified until the required result is
++available and applicable. A test-verified fix needs no invented Reviewer when
++the governing basis requires none; the optional Executive cadence is
++[EXECUTIVE_BASELINE §12](EXECUTIVE_BASELINE.md#qa-cadence-and-repair-rechecks).
++Retained or deferred findings stay linked until their selected boundary, or
++transfer with owner, disposition and destination when the work item closes.
++Changing priority does not erase the original severity or the obligation (P6,
++P4b).
++
+ ### Lanes
+ 
+ Backlog tickets live at the product definition's
+@@ -615,6 +658,16 @@
+ 
+ Each consumer applies the rule and decides nothing the owning section does
+ not (P2, P6).
++
++The [Review findings and bug items](#review-findings-and-bug-items) refinement
++applies the same P3/P4b identity and retained-obligation premises to findings
++that outlive review. P6 keeps the assessment source, decision ledger and
++artifact effects distinct, and P2 avoids an empty report or redundant ticket.
++One report per finding-bearing review, the item fields and the three item
++states are explicit carrier choices of §4. Verification still uses EVALUATION
++and the applicable cadence rather than treating a state label as proof. The
++consumers are EVALUATION §4's report effect, EXECUTIVE_BASELINE §5/§12's triage
++and repair decisions, §7's closure and §8's ticket shape.
+ 
+ ### Carrier selection
+ 
+@@ -1214,6 +1267,13 @@
+ Closure recording preserves the exact evaluated scope, the satisfied
+ conditions, the evidence and the remaining residuals (P4b, P2).
+ 
++Landing a candidate and releasing it are distinct from this condition; apply
++[EVALUATION §5](EVALUATION.md#landing-closure-and-release) and any explicitly
++declared Product acceptance gate. An open required review withholds the work
++claim that depends on its complete coverage, not an independently authorized
++landing merely because review is open. Keep the linked Bug items and their
++verification provenance current; a report's existence closes none of them.
++
+ ### Test case authority
+ 
+ Tests are proof projections from admitted work authority. Every
+@@ -1362,6 +1422,16 @@
+ ## Links
+ 
+ - comment: `.ai-workspace/comments/<agent-id>/...`
++
++## Bug items
++
++Only when findings exist; use one row per triaged finding. The source report
++owns the original assessment. The decision owner owns this item's priority
++and disposition.
++
++| ID | Source report/finding | Severity | Priority and reason | Cause group / owner | State | Repair subject / verification evidence | Disposition / retained destination |
++|---|---|---|---|---|---|---|---|
++| <item> | <exact report and finding> | <unchanged grade> | <decision> | <cause and owner> | <open/fixed/verified> | <identity; tests; required review if any> | <exact decision and link> |
+ ```
+ 
+ An implementation migration ticket, carrying the declaration, fields and
+--- native301/RELEASE.md
++++ target305/RELEASE.md
+@@ -3,7 +3,7 @@
+ Tier 2. Owns release publication: the release-publication bounded
+ context, release identities, project-qualified refs and the project
+ subtree, historical ref conservation, the three phases with candidate
+-construction, immutable RC publication, exact-cut qualification and
++construction, immutable RC or stable publication, exact-cut qualification and
+ monotonic version-line advancement, the selector and its relation to
+ consumer adoption, naming, release-scoped assets and the Product subject,
+ coordinated release-matched asset cohorts, acceptance, external
+@@ -43,29 +43,20 @@
+ Release process defines how one published point-in-time cut is evaluated,
+ bounded, named, published and made discoverable (P3).
+ 
+-The product-local cut name is always:
+-
+-```text
+-v<version>-rc.<n>
+-```
+-
+-In a release source carrying one independently released project, that
+-name may also be the Git tag name. In a shared release source it is the
+-suffix of the project-qualified Git ref of §2. Equal product-local cut
+-names do not collapse releases owned by different projects (P3).
+-
+-The product-local version-line selector name is:
+-
+-```text
+-v<version>
+-```
+-
+-It denotes a mutable version-line selector (FOUNDATIONS §2). The selector
+-points to the latest published immutable RC cut on that line, where latest
+-means the greatest positive RC ordinal published for that project and
+-version line. It is convenient discovery, not immutable identity and not
+-sufficient as an exact constitutional, dependency, evidence or replay
+-basis (P3, P6).
++The release authority selects one of two disjoint cut profiles (P3, P6):
++
++- RC: product-local `v<version>-rc.<n>`, with a mutable `v<version>`
++  version-line selector naming the greatest published positive RC ordinal;
++- stable-v1: product-local `v<major>.<minor>.<patch>`, with no RC suffix and
++  no separate mutable selector at that ref, under
++  [§2 Stable cuts](#stable-cuts).
++
++Both profiles identify immutable published releases. The RC suffix does not
++make a published release provisional or require a second final cut. The
++stable profile is an explicit naming and discovery choice, not stronger
++semantic qualification. Equal product-local names do not collapse different
++Products. A mutable RC selector remains discovery, never an exact
++constitutional, dependency, evidence or replay basis (P3, P6).
+ 
+ Release handling is downstream of intake triage. A bug, feature,
+ regression or release blocker first receives its change class, lawful
+@@ -163,9 +154,10 @@
+   source-project state constructing a possible successor;
+ - RC Branch: a mutable project-qualified carrier for the current
+   candidate window;
+-- Immutable RC Cut: an annotated project-qualified Git tag plus its exact
+-  Product release subject (FOUNDATIONS §2), naming one published candidate
+-  and, once accepted, one released Product; it realises the release cut;
++- Immutable Release Cut: an annotated project-qualified Git tag plus its
++  exact Product release subject (FOUNDATIONS §2), under the selected RC or
++  stable profile; publication, qualification and acceptance retain their
++  respective meanings; it realises the release cut;
+ - Version-Line Selector: the mutable project-qualified tag alias naming
+   the highest-ordinal published immutable RC cut for that project and
+   version line; it realises the version-line selector of FOUNDATIONS §2;
+@@ -174,7 +166,7 @@
+   carrier aligned to the same latest-published commit as the selector.
+ 
+ Equal version text does not collapse these identities. Branches and the
+-version-line selector may move. An immutable RC tag never moves (P3).
++version-line selector may move. An immutable release tag never moves (P3).
+ 
+ ### Project-qualified Git refs
+ 
+@@ -185,7 +177,7 @@
+ definition label, package name or matching version cannot infer or
+ reassign it (P3, P6).
+ 
+-A shared release source uses these exact ref shapes for every future
++A shared release source uses these exact ref shapes for an RC-profile
+ publication (P3):
+ 
+ ```text
+@@ -210,6 +202,45 @@
+ `specification_methodology`, `axiom_indexer` and `stdo_representation`.
+ These keys distinguish release refs; they do not merge the three Products
+ or imply a dependency or composition relation (P3, P6).
++
++### Stable cuts
++
++The `stable-v1` profile publishes an immutable release directly as
++`refs/tags/<project>/v<major>.<minor>.<patch>`. Each numeric component is a
++nonnegative decimal integer, with no leading zero except the single digit
++`0`. The tag is annotated, targets a commit and contains exactly one
++standalone annotation line (P3):
++
++```text
++STDO-Release-Profile: stable-v1
++```
++
++Its exact release declaration names the same stable cut, declared payload,
++source selection and predecessor. The installed manifest records
++`release.profile = "stable-v1"` alongside the complete identity of
++[Project-subtree release identity](#project-subtree-release-identity).
++An RC manifest retains its prior shape; adding stable support must not
++change the canonical bytes of a historical release manifest (P3, P4b).
++
++The stable coordinate is available only on a fresh version line with no
++same-version RC tag in either the historical or project-qualified namespace
++and no historical unqualified bare-version tag. The stable tag itself is
++create-only. A same-line collision or a missing, duplicated or different
++profile marker refuses stable acquisition; bare spelling or annotation alone
++cannot turn an RC selector into an immutable cut (P3, P5).
++
++There is no separate version-line selector or RC branch for this profile.
++A channel `stdo://channels/<major>.<minor>.<patch>` may discover that exact
++immutable stable tag; its cut ordinal is absent (`null`), and resolution
++must verify the stable profile and complete identity. That channel route
++creates neither another tag nor mutable alias semantics. Consumer adoption
++still follows §4 (P3, P6).
++
++A published stable tag never moves. Any change to its qualifying bytes
++requires a new version and a new immutable cut, not an RC added to the
++already stable line. Historical RC lines keep their selector semantics,
++refs, objects, peels and URIs; this profile neither finalises nor renames
++them. An RC-labelled published release remains a proper release (P3, P4b).
+ 
+ ### Project-subtree release identity
+ 
+@@ -250,8 +281,9 @@
+ (P3, P4b).
+ 
+ Product-local cut names and public logical release URIs also remain
+-unchanged. In particular, a logical STDO release remains
+-`stdo://releases/v<version>-rc.<n>/`; the project-qualified Git ref is
++unchanged. An RC logical STDO release remains
++`stdo://releases/v<version>-rc.<n>/`; a stable release uses
++`stdo://releases/v<major>.<minor>.<patch>/`. The project-qualified Git ref is
+ transport identity and is not inserted into that URI. Resolution binds
+ the public logical cut to its exact historical or project-qualified Git
+ ref and fails closed if one project-local coordinate names different tag
+@@ -269,15 +301,16 @@
+ The release process has three phases (P0, P3, P6):
+ 
+ 1. mutable candidate construction;
+-2. immutable RC publication and monotonic version-line advancement; and
++2. immutable publication under the selected profile, with RC selector
++   advancement only for an RC line; and
+ 3. exact-cut qualification, acceptance and explicit consumer adoption.
+ 
+-There is no second final cut after an accepted RC. Publication immediately
+-makes the new highest ordinal discoverable through the version-line
+-selector; acceptance remains a verdict over the exact immutable RC rather
+-than a second carrier. If any byte capable of affecting the Product or a
+-release-scoped claim changes, the project publishes and reviews a higher
+-immutable RC cut instead (P3, P6).
++An accepted RC needs no second final cut. RC publication immediately makes
++the new highest ordinal discoverable through its selector. Stable publication
++makes its one exact tag discoverable under the stable profile. Acceptance is
++a verdict over the exact immutable subject, not a second carrier. A change
++to qualifying bytes requires a higher RC on an applicable RC line or a new
++version after a stable cut (P3, P6).
+ 
+ ### Mutable candidate construction
+ 
+@@ -285,12 +318,12 @@
+ 
+ - bounded fixes are allowed after intake triage;
+ - qualification and operator review may continue;
+-- release notes may remain draft until RC publication;
+-- the RC branch may move; and
++- release notes may remain draft until publication;
++- the candidate branch may move; and
+ - mutable source is explicitly non-operative for released consumers.
+ 
+ The intended Product boundary, release-scoped claims, excluded
+-source-project state and qualification basis become explicit before RC
++source-project state and qualification basis become explicit before
+ publication. A material scope change is repriced instead of being silently
+ absorbed (P2, P6).
+ 
+@@ -325,11 +358,25 @@
+ invalid, fail-closed release state; it never authorises resolution of the
+ older cut as the version-line latest (P3, P5).
+ 
++### Immutable stable publication
++
++Stable publication applies the same scope, source reconciliation, proportionate
++checks, exact carrier, subtree and inventory obligations as RC publication.
++It instead creates one stable-v1 annotated tag and any explicitly selected
++release branch, with no RC branch or separate selector. Before publication,
++verify the fresh-line conditions of [Stable cuts](#stable-cuts), bind remote
++absence for the immutable tag and bind every mutable destination's expected
++object. Publish the selected refs atomically where supported; a changed
++expectation stops publication for reconciliation. Read back the remote tag
++object, commit, subtree and declared assets. The release is publicly classified
++as a normal published release; release-host flags do not replace exact identity
++or qualification evidence (P3, P5, P6).
++
+ ### Exact-cut qualification
+ 
+ Qualification binds (P6, P3):
+ 
+-- the Project Release Namespace, qualified immutable RC ref, annotated tag
++- the Project Release Namespace, qualified immutable release ref, annotated tag
+   object, peeled commit, repository tree, Project Subtree root and tree,
+   and declared Product member set;
+ - the exact release-scoped claim bytes;
+@@ -343,16 +390,15 @@
+ behaviour; artifact presence does not prove usability unless presence is
+ the exact claim (P6, P1; EVALUATION §1 is the generic claim law).
+ 
+-An RC is accepted only when the required exact-cut review and operator
++A cut is accepted only when the required exact-cut review and operator
+ checks are complete and the human authority accepts that exact subject. If
+-review requires any qualifying-byte change, the verdict remains attached
+-to the old RC and a higher RC is published. The selector already
+-advertises the highest published RC; acceptance does not move it, rewrite
+-it or create another final carrier (P6, P3).
++review requires a qualifying-byte change, the verdict stays on its original
++subject and the applicable successor rule is used. Acceptance does not move
++an immutable tag or create another final carrier (P6, P3).
+ 
+ ### Monotonic version-line advancement
+ 
+-Version-line advancement makes the newly published highest RC for one
++On an RC-profile line, version-line advancement makes the newly published highest RC for one
+ Project Release Namespace discoverable (P3, P5):
+ 
+ 1. identify the exact new immutable RC tag, ordinal and peeled commit;
+@@ -381,7 +427,7 @@
+ 
+ ## 4. Selector and consumer adoption
+ 
+-The version-line selector answers only (P6, P3):
++An RC-profile version-line selector answers only (P6, P3):
+ 
+ > Which highest-ordinal published immutable RC cut currently exists on
+ > this version line?
+@@ -392,16 +438,17 @@
+ 
+ A Product Definition may retain `stdo://channels/<version>` as its
+ discovery selector, but its operative basis is the exact
+-`stdo://releases/v<version>-rc.<n>/` URI and installed-manifest digest,
++`stdo://releases/v<version>-rc.<n>/` or stable
++`stdo://releases/v<major>.<minor>.<patch>/` URI and installed-manifest digest,
+ the installed release basis of PRODUCT_DEFINITION §4. Moving the Git
+ version-line selector does not update any consumer. Adoption is a separate
+ explicit Product-Definition transition that resolves, presents, installs,
+-verifies and pins the selected immutable RC. Resolution requires an
++verifies and pins the selected immutable cut. RC resolution requires an
+ annotated selector with a distinct peeled commit; absence of a peeled
+ selector ref fails closed and cannot be interpreted as a lightweight
+ selector whose tag object is its commit (P6, P3, P5).
+ 
+-Channel resolution enumerates the published RC tags for the selected
++For an RC line, channel resolution enumerates the published RC tags for the selected
+ Project Release Namespace, including preserved unqualified historical cuts
+ during a namespace transition, selects the greatest positive ordinal,
+ requires that cut and the current selector to be annotated tags peeling to
+@@ -411,6 +458,11 @@
+ intentionally retains an older cut names that immutable RC URI and digest
+ explicitly and uses exact-basis operations such as `sync`; it does not
+ express that choice through the latest-version channel (P5, P6).
++
++For a stable line, channel resolution returns its verified stable-v1 cut
++without ordinal comparison or a separate selector. A legacy bare selector is
++never admitted as a stable exact basis; an ambiguous profile is refused. The
++same digest-bound adoption operation applies to either profile (P3, P5, P6).
+ 
+ Presentation and mutation are separate invocations. The read-only plan,
+ the Adoption Plan of PRODUCT_DEFINITION §4, binds the current Product
+@@ -431,14 +483,14 @@
+ 
+ ## 5. Naming
+ 
+-The shared-source naming shape is (P3):
++The shared-source RC-profile naming shape is (P3):
+ 
+ - RC branch: `rc/<project>/<version>`;
+ - immutable RC tag: `<project>/v<version>-rc.<n>`;
+ - optional release branch: `release/<project>/<version>`; and
+ - mutable version-line selector tag: `<project>/v<version>`.
+ 
+-For example:
++For example, on an RC line:
+ 
+ - candidate branch: `rc/example/3.0.0`;
+ - first immutable cut: `example/v3.0.0-rc.1`;
+@@ -446,7 +498,10 @@
+ - latest-release branch: `release/example/3.0.0`; and
+ - latest-published selector: `example/v3.0.0`.
+ 
+-The unqualified profile remains lawful only under the single-project and
++A stable example is `example/v3.0.2`, with the stable-v1 marker and no
++separate selector. The published tag is immutable.
++
++The unqualified RC profile remains lawful only under the single-project and
+ historical-conservation conditions of §2. Projects may choose another
+ spelling only in a release source whose ref policy proves collision
+ freedom and preserves the same project namespace, mutable carrier,
+@@ -456,7 +511,7 @@
+ 
+ ### Release-scoped assets
+ 
+-An immutable RC cut may carry release-scoped surfaces such as (P3, P6):
++An immutable release cut may carry release-scoped surfaces such as (P3, P6):
+ 
+ - release notes;
+ - release and installed-distribution manifests;
+@@ -465,13 +520,13 @@
+ - qualification receipts; and
+ - branch and tag identity declarations.
+ 
+-Before RC publication, each used surface is reconciled to the exact RC
+-subject. After publication, changing one of those bytes creates a
+-different candidate and therefore requires a higher RC tag. The
++Before publication, each used surface is reconciled to the exact cut
++subject. After publication, changing one of those bytes requires the
++applicable immutable successor: a higher RC or a new version after stable. The
+ version-line selector has no content-reconciliation phase because it adds
+ no new Product bytes (P3).
+ 
+-Exact version and RC identity belong in release-scoped carriers and
++Exact version and cut identity belong in release-scoped carriers and
+ consumer basis bindings (P3). How a live constitutional surface, Product
+ and requirements surfaces included, uses version labels is the
+ [SPEC_METHOD §2 Specification surface rule](SPEC_METHOD.md#specification-surface-rule).
+@@ -489,10 +544,10 @@
+ A repository commit carries those declared sets but does not make every
+ co-located file or sibling Project Subtree a Product member. The exact
+ Project Subtree tree and Product member inventory distinguish the subject
+-from the wider carrier. Once the immutable RC is published, no post-review
++from the wider carrier. Once the immutable cut is published, no post-review
+ carrier delta is admitted into that cut. Publication-caused ticket or
+ source-work bookkeeping is recorded afterward on the continuing source
+-branch and cannot move the immutable RC tag (P3, P6).
++branch and cannot move the immutable cut tag (P3, P6).
+ 
+ ## 7. Coordinated release-matched asset cohorts
+ 
+@@ -504,7 +559,7 @@
+ publication transaction. Path co-location, equal version text or a common
+ actor cannot infer the relation (P3, P6).
+ 
+-Every required member of one cohort uses one exact cohort version suffix
++For the existing RC-profile cohort, every required member uses one exact version suffix
+ `<version>-rc.<n>`. Product-local cut names and refs render it as
+ `v<version>-rc.<n>`; embedded asset-version fields render the same suffix
+ without `v`. Qualification normalises only that leading cut-name marker
+@@ -534,12 +589,41 @@
+ same new cut name. A stale index may remain immutable history; it cannot
+ accompany the changed source as the current cohort (P3, P5, P6).
+ 
++### Source freeze and stable cohort construction
++
++A declared stable cohort may select an exact `<major>.<minor>.<patch>` suffix
++instead of the RC-profile suffix. Its contract names the complete required
++Product and component set, current-source relationships and qualification
++obligations. The historical RC-profile member set above does not limit an
++explicitly selected successor cohort. Product identity and independent
++third-party version pins remain distinct from the shared cohort version.
++
++When a native package must include its derived documentation, tools or proof
++views, construction first freezes the exact semantic source independently of
++those generated bytes. The source record inventories every authoritative
++member and native contract, classifies derived routes, and names all generated
++exclusions with their owners. No authoritative source may be excluded merely
++to make a digest agree. Derived candidates bind that source record, its exact
++member digests and the intended cut URI. Generated frames remain projections
++of their exact owners, not independent semantic authorities (P3, P5, P6).
++
++All required installed assets are built and qualified before the native cut
++is frozen. After its annotated tag and installed manifest exist, an external
++cohort record binds the source freeze, complete native cut and every derived
++Product subject without modifying embedded payload bytes. No asset must
++embed its own containing manifest's digest. Source drift invalidates affected
++derivations; generation may add only the declared auxiliary bytes. This
++source-freeze construction preserves the same exact-subject, complete-ref,
++atomic publication and public verification obligations below (P3, P4b, P5).
++
+ ### Two-commit construction and one publication transaction
+ 
+ Exact installed-manifest identity includes the annotated STDO tag object,
+ so a same-commit carrier containing both that identity and derived child
+-bytes would be self-referential. A coordinated STDO cohort therefore uses
+-this bounded two-commit construction (P3, P5):
++bytes would be self-referential. The original RC-profile cohort, whose
++derived assets are outside the native package, uses this bounded two-commit
++construction. A stable cohort with embedded derived assets uses the source
++freeze above and retains the same external final binding (P3, P5):
+ 
+ 1. commit A freezes the exact STDO corpus, plugin, release record and
+    their qualification bytes;
+@@ -603,16 +687,16 @@
+ P6).
+ 
+ Adding or changing this cohort law changes qualifying bytes of this
+-member. It governs only a higher immutable RC that contains those bytes
++member. It governs only an immutable successor that contains those bytes
+ and cannot retroactively make an earlier cut a coordinated cohort (P3).
+ 
+ ## 8. Acceptance
+ 
+ ### Acceptance criteria
+ 
+-An RC may be accepted when (P6, P3):
+-
+-- pre-RC qualification passed for the declared subject;
++A release cut may be accepted when (P6, P3):
++
++- proportionate prepublication qualification passed for the declared subject;
+ - independent exact-cut review passed where required;
+ - required operator review is complete;
+ - the intended release scope and successor relation are stable;
+@@ -620,7 +704,7 @@
+ - all release-blocking gaps, including the findings that block promotion
+   under [EVALUATION §5 When a finding blocks promotion](EVALUATION.md#when-a-finding-blocks-promotion),
+   are closed or the claimed scope is explicitly narrowed; and
+-- the human Product authority accepted the exact immutable RC identity.
++- the human Product authority accepted the exact immutable cut identity.
+ 
+ Each criterion is a mandatory gate in the sense of
+ [FOUNDATIONS §4 Change impact and evidence reuse](FOUNDATIONS.md#change-impact-and-evidence-reuse):
+@@ -628,7 +712,7 @@
+ retained evidence satisfies it only under the validity conditions stated
+ there (P6).
+ 
+-Acceptance attaches to that immutable RC identity. It neither advances
++Acceptance attaches to that immutable cut identity. It neither advances
+ nor rolls back the version-line selector. Consumer adoption separately
+ evaluates the exact latest target presented by the channel and mutates
+ only after its digest-bound plan is accepted (P6, P3; EVALUATION §5 is
+@@ -650,7 +734,7 @@
+ 
+ ## 9. Successor baseline conservation (STDO-UP-015)
+ 
+-A successor identifies the exact predecessor immutable RC whose semantic
++A successor identifies the exact predecessor immutable cut whose semantic
+ claims it evolves. That origin remains immutable for the candidate. Every
+ predecessor claim capable of affecting the successor receives one semantic
+ disposition (P4b, P3, P6):

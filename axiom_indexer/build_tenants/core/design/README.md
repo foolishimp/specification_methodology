@@ -310,3 +310,9 @@ Implementation remains in the existing executable, tests, design, code README
 and canonical skill/schema/output contract. A bounded authoring fixture is
 qualification material, not an extra engine. Existing relative child/native
 routes and separate Product/release authority remain conserved.
+
+## Current model-conversion extension
+
+[MODEL_CONVERSION](MODEL_CONVERSION.md) owns the 3.0.5 generic conversion
+boundary under REQ-P-MODEL-CONVERSION. Existing program and projection mechanics
+remain unchanged; the additional executable preserves a declared a_c proposal.

@@ -1,0 +1,266 @@
+{
+  "schema": "a_c.bootstrap.execution/1",
+  "python": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]",
+  "steps": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-m",
+        "venv",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/venv"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947095080814000,
+      "ended_ns": 1793947096309593000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "001.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "001.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/graphify"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947096310113000,
+      "ended_ns": 1793947096328107000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "002.stdout.log",
+        "sha256": "edf7ab1c78b7cfb03093f3b8c3e71feee34df6971a3559fc1ebd774e3956d81e",
+        "bytes": 149
+      },
+      "stderr": {
+        "path": "002.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/graphify",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/Graphify-Labs/graphify.git"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947096328475000,
+      "ended_ns": 1793947096342874000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "003.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "003.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/graphify",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947096343197000,
+      "ended_ns": 1793947098953021000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "004.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "004.stderr.log",
+        "sha256": "7db95a954de31d0c54746e1b1157d354d7754b2a5b78a7858d99216cf52df746",
+        "bytes": 123
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/graphify",
+        "checkout",
+        "--detach",
+        "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947098953591000,
+      "ended_ns": 1793947099083326000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "005.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "005.stderr.log",
+        "sha256": "e484fef7f73871c4e1cba449b4d0d8b2fbdd80978bfbe7669f6b796ea099d53b",
+        "bytes": 94
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/graphify",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947099083746000,
+      "ended_ns": 1793947099096898000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "006.stdout.log",
+        "sha256": "b2d4806fcdefa876d230238c9a61e9a387b9e260e2e7add07e0980ae44afe954",
+        "bytes": 41
+      },
+      "stderr": {
+        "path": "006.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/requirements-qualification.txt"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947099097354000,
+      "ended_ns": 1793947101105636000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "007.stdout.log",
+        "sha256": "a36a6215a1141f2d11a04abf4a0bf1623b7d0b917f4e4f5fb9ba6dcc52fb4d78",
+        "bytes": 1750
+      },
+      "stderr": {
+        "path": "007.stderr.log",
+        "sha256": "565659f270f3b49133078d3bb67f262be0549fc52a31b86373797ac68ca516fd",
+        "bytes": 228
+      }
+    },
+    {
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/generation/requirements.txt"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947101106184000,
+      "ended_ns": 1793947102890397000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "008.stdout.log",
+        "sha256": "5d92acd3dd26adce68d6904ffe435700918f6607ffd4c6748ea1e34cb984152a",
+        "bytes": 1075
+      },
+      "stderr": {
+        "path": "008.stderr.log",
+        "sha256": "565659f270f3b49133078d3bb67f262be0549fc52a31b86373797ac68ca516fd",
+        "bytes": 228
+      }
+    },
+    {
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/code-requirements.txt"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947102891033000,
+      "ended_ns": 1793947103332310000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "009.stdout.log",
+        "sha256": "f50a97723d30136c288196eb79ce320c22830e265637c981c1e5582ba60105ff",
+        "bytes": 1531
+      },
+      "stderr": {
+        "path": "009.stderr.log",
+        "sha256": "565659f270f3b49133078d3bb67f262be0549fc52a31b86373797ac68ca516fd",
+        "bytes": 228
+      }
+    },
+    {
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "freeze",
+        "--all"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947103332921000,
+      "ended_ns": 1793947103468007000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "010.stdout.log",
+        "sha256": "66993c50bb06ae05b1bc94d69d1b3e2168295dfcee987ec08485a35c985c6efa",
+        "bytes": 255
+      },
+      "stderr": {
+        "path": "010.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-runtime-logged-zy3qk0do/graphify/graphify",
+        "diff",
+        "--exit-code",
+        "HEAD"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1793947103468622000,
+      "ended_ns": 1793947103525929000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "011.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "011.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ]
+}

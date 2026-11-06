@@ -1,0 +1,178 @@
+{
+  "scope": "synthetic current proof transport; no Lean execution",
+  "rows": [
+    {
+      "case": "transport-request-canonical",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "--transport",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/standards/documentation/proofs/transport/TRANSPORT.json",
+        "--transport-sha256",
+        "8e9cc362c16c6ed7f3f0c607219e3647e32d26e6603623c87b95fa0aebf703ad",
+        "request",
+        "--evidence",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/outside-evidence",
+        "--output",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/request-canonical.json"
+      ],
+      "returncode": 2,
+      "result": {
+        "status": "refused",
+        "reason": "evidence output overlaps protected input"
+      },
+      "created_inside_native": false
+    },
+    {
+      "case": "transport-request-alias",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "--transport",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/STANDARDS/DOCUMENTATION/PROOFS/TRANSPORT/TRANSPORT.json",
+        "--transport-sha256",
+        "8e9cc362c16c6ed7f3f0c607219e3647e32d26e6603623c87b95fa0aebf703ad",
+        "request",
+        "--evidence",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/outside-evidence",
+        "--output",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/request-alias.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "input_sha256": "a754c5df9ffcb080229b0a29d63b6c172dcb42d5e24802e0e5f7e9426c2536d1",
+        "kind": "stdo.current-proof-request/1",
+        "model": {
+          "id": "synthetic-transport-test-only",
+          "sha256": "a754c5df9ffcb080229b0a29d63b6c172dcb42d5e24802e0e5f7e9426c2536d1"
+        },
+        "notice": "Local request paths only; execute the selected installed Lean runtime for a new verdict.",
+        "original_request_sha256": "758633a9e92053ece2186a37f82ac4e4c3426fd83cf3771a87bc05172eaf01a4",
+        "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/request-alias.json",
+        "sha256": "651a7e660225afb80cc5ac5d96ccc20453301a425665acc04f492326f0506fb2",
+        "status": "prepared",
+        "supplied_views_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "created_inside_native": true
+    },
+    {
+      "case": "raw-request-canonical",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "--archive",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/standards/documentation/proofs/evidence.zip",
+        "--archive-sha256",
+        "ee58f684d060f8426ddb05d504a8cdd531d9e5c9a2c8aab3c32aea12ccd10a34",
+        "request",
+        "--evidence",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/outside-evidence",
+        "--output",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/raw-request.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "input_sha256": "a754c5df9ffcb080229b0a29d63b6c172dcb42d5e24802e0e5f7e9426c2536d1",
+        "kind": "stdo.current-proof-request/1",
+        "model": {
+          "id": "synthetic-transport-test-only",
+          "sha256": "a754c5df9ffcb080229b0a29d63b6c172dcb42d5e24802e0e5f7e9426c2536d1"
+        },
+        "notice": "Local request paths only; execute the selected installed Lean runtime for a new verdict.",
+        "original_request_sha256": "758633a9e92053ece2186a37f82ac4e4c3426fd83cf3771a87bc05172eaf01a4",
+        "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/raw-request.json",
+        "sha256": "651a7e660225afb80cc5ac5d96ccc20453301a425665acc04f492326f0506fb2",
+        "status": "prepared",
+        "supplied_views_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      },
+      "created_inside_native": true
+    },
+    {
+      "case": "raw-extract-canonical",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "--archive",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/standards/documentation/proofs/evidence.zip",
+        "--archive-sha256",
+        "ee58f684d060f8426ddb05d504a8cdd531d9e5c9a2c8aab3c32aea12ccd10a34",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/raw-canonical"
+      ],
+      "returncode": 2,
+      "result": {
+        "status": "refused",
+        "reason": "evidence output overlaps protected input"
+      },
+      "created_inside_native": false
+    },
+    {
+      "case": "raw-extract-alias",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "--archive",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/STANDARDS/DOCUMENTATION/PROOFS/evidence.zip",
+        "--archive-sha256",
+        "ee58f684d060f8426ddb05d504a8cdd531d9e5c9a2c8aab3c32aea12ccd10a34",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/raw-alias"
+      ],
+      "returncode": 0,
+      "result": {
+        "archive_bytes": 2007,
+        "archive_sha256": "ee58f684d060f8426ddb05d504a8cdd531d9e5c9a2c8aab3c32aea12ccd10a34",
+        "destination": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-proof-zip-cwcpylyr/installed/releases/v3.0.5/raw-alias",
+        "expanded_bytes": 25658,
+        "kind": "stdo.formal-evidence-transport/1",
+        "manifest_sha256": "9d62d451538605c43ee14fe03c1b947921f03623bd39761bff87e30666696e0a",
+        "members": {
+          "GateModel.lean": {
+            "bytes": 23,
+            "sha256": "113e0c00509aa03913cf8af71db671d86a20cb340f9a878b06ee3c8a0f998ad5"
+          },
+          "GateModel.olean.private": {
+            "bytes": 23552,
+            "sha256": "60f4c8a446a04cae4301eb2fc0414485dc6f9830ce5d8c9cd6c7afbc4906f349"
+          },
+          "input.json": {
+            "bytes": 14,
+            "sha256": "a754c5df9ffcb080229b0a29d63b6c172dcb42d5e24802e0e5f7e9426c2536d1"
+          },
+          "manifest.json": {
+            "bytes": 520,
+            "sha256": "9d62d451538605c43ee14fe03c1b947921f03623bd39761bff87e30666696e0a"
+          },
+          "request.json": {
+            "bytes": 392,
+            "sha256": "758633a9e92053ece2186a37f82ac4e4c3426fd83cf3771a87bc05172eaf01a4"
+          },
+          "result.json": {
+            "bytes": 1154,
+            "sha256": "3b1f7b560ddc3c86a1959c8233c13783313ccedddd02c0e0ab44a2bacfcc6a08"
+          },
+          "supplied-views.json": {
+            "bytes": 3,
+            "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+          }
+        },
+        "notice": "Exact retained proof bytes; no new Lean execution or authentication claim.",
+        "result_sha256": "3b1f7b560ddc3c86a1959c8233c13783313ccedddd02c0e0ab44a2bacfcc6a08",
+        "status": "materialized"
+      },
+      "created_inside_native": true
+    }
+  ]
+}

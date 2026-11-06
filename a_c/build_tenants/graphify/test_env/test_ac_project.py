@@ -56,6 +56,7 @@ class ProjectBuildTests(unittest.TestCase):
 
     def test_new_project_full_path_and_matching_reuse(self):
         before = (self.source / 'RULES.md').read_bytes()
+        definition_before = self.definition.read_bytes()
         prepared = self.prepare()
         self.assertEqual(prepared['source_files'], 1)
         task = project.task(self.run)
@@ -69,6 +70,8 @@ class ProjectBuildTests(unittest.TestCase):
         self.assertEqual(project.task(self.run), {'status': 'ready_to_build'})
         built = project.build(self.run)
         self.assertEqual(built['status'], 'built')
+        self.assertEqual(built['method'], self.product['constitution']['stdo']['basis'])
+        self.assertEqual(self.definition.read_bytes(), definition_before)
         self.assertEqual(built['formal_gate']['status'], 'not_performed')
         model = gen.load(Path(built['artifacts']['model']))
         carrier = gen.load(Path(built['artifacts']['carrier']))
@@ -82,6 +85,30 @@ class ProjectBuildTests(unittest.TestCase):
         self.assertEqual(project.build(self.run)['status'], 'reused')
         self.assertEqual(project.status(self.run)['status'], 'built')
         self.assertEqual((self.source / 'RULES.md').read_bytes(), before)
+
+    def test_explicit_coherent_transaction_retains_full_source_and_public_build(self):
+        # A bounded fixture exceeds the prior 500k cap. This tests mechanics,
+        # not whether an LLM can acquire or faithfully interpret this corpus.
+        source = SOURCE + ("Retained fixture context.\n" * 25000)
+        self.assertGreater(len(source), 500_000)
+        (self.source / 'RULES.md').write_text(source)
+        self.prepare(chunk_chars=3_000_000)
+        chunks = gen.load(self.run / 'generation/chunks.json')
+        self.assertEqual(len(chunks), 1)
+        task = project.task(self.run)
+        self.assertIn(source.splitlines()[-1], task['prompt'])
+        chunk, path = self.answer()
+        project.submit(self.run, chunk['id'], path, 'controlled-large-transaction-fixture')
+        built = project.build(self.run)
+        self.assertEqual(built['status'], 'built')
+        self.assertEqual(project.status(self.run)['status'], 'built')
+        self.assertEqual((self.run / 'generation/corpus/specification/RULES.md').read_text(), source)
+        self.assertEqual(gen.load(self.run / 'generation/plan.json')['chunk_chars'], 3_000_000)
+
+    def test_transaction_envelope_over_limit_is_refused(self):
+        with self.assertRaisesRegex(gen.GenerationError, 'outside supported range'):
+            self.prepare(chunk_chars=3_000_001)
+        self.assertFalse((self.run / 'generation').exists())
 
     def test_missing_authoring_does_not_build(self):
         self.prepare()

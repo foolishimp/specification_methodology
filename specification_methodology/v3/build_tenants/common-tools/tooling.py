@@ -12,6 +12,14 @@ import zipfile
 
 HERE = Path(__file__).resolve().parent
 ROOT = "standards/tooling/"
+LEGACY_MATERIALIZER = HERE / "fixtures/tooling_materialize-v3.0.4.py"
+
+
+def current():
+    if str(HERE) not in sys.path:
+        sys.path.insert(0, str(HERE))
+    import tooling_current
+    return tooling_current
 
 
 def materializer():
@@ -31,11 +39,13 @@ def selection():
 def check_payload(payload):
     tool = materializer()
     files = {p[len(ROOT):]: raw for p, raw in payload.items() if p.startswith(ROOT)}
+    if json.loads(files["TOOLING.json"]).get("kind") == "stdo.installed-tooling/2":
+        return current().check_files(files)
     meta, sources = tool.source_bytes(files)
     selected = selection()
     tool.require(meta["sources"] == selected["sources"] and meta["source_commit"] == selected["source_commit"],
                  "installed source inventory differs from release selection")
-    tool.require(files["materialize.py"] == (HERE / "tooling_materialize.py").read_bytes(), "installed materializer differs")
+    tool.require(files["materialize.py"] == LEGACY_MATERIALIZER.read_bytes(), "installed materializer differs")
     tool.require(files["README.md"] == (HERE / "tooling-guide.md").read_bytes(), "installed tooling guide differs")
     return {"status": "checked", "source_files": len(sources), "source_commit": meta["source_commit"],
             "archive_sha256": tool.sha(files["sources.zip"])}
@@ -59,7 +69,7 @@ def build(repository, destination):
             entry.create_system = 3; entry.compress_type = zipfile.ZIP_DEFLATED
             entry.external_attr = int(row["git_mode"], 8) << 16
             zipped.writestr(entry, raw, compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
-    files = {"sources.zip": archive.getvalue(), "materialize.py": (HERE / "tooling_materialize.py").read_bytes(),
+    files = {"sources.zip": archive.getvalue(), "materialize.py": LEGACY_MATERIALIZER.read_bytes(),
              "README.md": (HERE / "tooling-guide.md").read_bytes()}
     meta = {"kind": "stdo.installed-tooling/1", "distribution_version": tool.VERSION,
             "source_commit": selected["source_commit"], "sources": selected["sources"],
@@ -80,11 +90,14 @@ def main():
     build_parser = commands.add_parser("build")
     build_parser.add_argument("--repository", type=Path, required=True)
     build_parser.add_argument("--destination", type=Path, required=True)
+    build_parser.add_argument("--selection", type=Path)
+    build_parser.add_argument("--selection-sha256")
     commands.add_parser("check").add_argument("root", type=Path)
     args = parser.parse_args()
     try:
         if args.command == "build":
-            result = build(args.repository, args.destination)
+            result = (current().build(args.repository, args.destination, args.selection, args.selection_sha256)
+                      if args.selection else build(args.repository, args.destination))
         else:
             tool = materializer(); root = tool.ordinary_path(args.root)
             result = check_payload({ROOT + p: b for p, b in tool.read_bundle(root / ROOT).items()})

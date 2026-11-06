@@ -1,5 +1,7 @@
 # Common Realization Requirements
 
+Current delivery: the [3.0.5 contract](../RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+
 The authoritative calculus is
 `stdo://releases/v2.5.1-rc.2/standards/AXIOMATIC_CALCULUS.md`, SHA-256
 `cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d`.

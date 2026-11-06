@@ -1,0 +1,23 @@
+s....E..........
+======================================================================
+ERROR: test_explicit_coherent_transaction_retains_full_source_and_public_build (test_ac_project.ProjectBuildTests.test_explicit_coherent_transaction_retains_full_source_and_public_build)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_project.py", line 92, in test_explicit_coherent_transaction_retains_full_source_and_public_build
+    self.prepare(chunk_chars=3_000_000)
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/test_ac_project.py", line 43, in prepare
+    return project.prepare(self.subject, self.definition, self.run, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_project.py", line 144, in prepare
+    plan = gen.prepare(project, output / "source-manifest.json", output / "generation", mode,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_generate.py", line 330, in prepare
+    require(1_000 <= chunk_chars <= 500_000 and 1_000 <= graph_chars <= 200_000, "explicit chunk/graph character envelope outside supported range")
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_generate.py", line 67, in require
+    raise GenerationError(text)
+ac_generate.GenerationError: explicit chunk/graph character envelope outside supported range
+
+----------------------------------------------------------------------
+Ran 16 tests in 7.452s
+
+FAILED (errors=1, skipped=1)

@@ -1,0 +1,52 @@
+{
+  "kind": "stdo305.provider-generation-currentness/1",
+  "frozen_snapshot": "../tools-skills/project-provider-305.json",
+  "current_source_root": "a_c/build_tenants/graphify/code",
+  "changed_snapshot_files": [
+    {
+      "path": "ac_support_core.py",
+      "historical_snapshot_sha256": "8ff7e0604c561c5de3cb0dbacb1d09c477f0e0d7cd51572de2d27cdd766179f7",
+      "current_sha256": "ee85ee6316962cff48951bc33a868d567c7f6367d8cb9faef8ca15103b2982a9",
+      "in_public_machinery": false
+    }
+  ],
+  "actual_public_machinery_count": 19,
+  "actual_public_machinery_equal": true,
+  "direct_generation_imports": {
+    "ac_project.py": [
+      "ac_explore",
+      "ac_generate",
+      "ac_graph"
+    ],
+    "ac_generate.py": [
+      "ac_formal_gate",
+      "ac_graph"
+    ],
+    "ac_graph.py": [],
+    "ac_formal_gate.py": [],
+    "ac_explore.py": [
+      "ac_graph"
+    ]
+  },
+  "plan_fields": [
+    "assets",
+    "calculus",
+    "chunk_chars",
+    "chunks",
+    "chunks_sha256",
+    "claim",
+    "codec_sha256",
+    "files",
+    "graph_chars",
+    "mode",
+    "profile",
+    "runner_sha256",
+    "semantic_extraction_profile",
+    "source_manifest_sha256",
+    "subject_id",
+    "upstream"
+  ],
+  "selected_formal_checker": null,
+  "model_identity_dependency": "ac_generate.model_from_answers binds plan+answers into model.id; plan and author provenance into interpretation hashes. Public provenance binds submission receipt including PROJECT machinery. Changing a pinned public-machinery member requires fresh prepare/task/submit/build and may change model bytes even when semantic populations do not change.",
+  "current_assessment": "Observed ac_support_core change is outside the actual direct public-generation import graph and machinery/plan contract. Skills and formal_checker inspector are also outside this unselected-formal generation path. No F_P reauthoring invalidator observed. Final whole-provider qualification and actual formal checker still require their final source bindings; historical 29-file snapshot is retained as provenance, not relabelled current."
+}

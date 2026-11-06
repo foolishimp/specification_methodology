@@ -1,0 +1,41 @@
+{
+  "kind": "stdo.release-gate-recorded-toy-control/1",
+  "scope": "actual evidence() consumer only; no STDO candidate proof or release gate conclusion",
+  "manifest": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archive-gate-toy-002/test-manifest.json",
+    "bytes": 10124,
+    "sha256": "a2806cd76b1df3c69c0d855de20e015d625d06a02a668d44a65e3b34e9c353ea"
+  },
+  "evidence": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archive-gate-toy-002/test-evidence.json",
+    "bytes": 59588,
+    "sha256": "cb807c3d66e1b35937118615dcf01c2e76073633e6ec6b0a2209e7249f8a4b84"
+  },
+  "cold_receipt": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-recorded-toy-003/cold-execution/execution.json",
+    "bytes": 20271,
+    "sha256": "21dfdbe8eeb16db31158969504328bea6c837aa059119cb2d1a2028c9ce4523a"
+  },
+  "fresh_receipt": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-recorded-toy-003/fresh-execution/execution.json",
+    "bytes": 37087,
+    "sha256": "1a22192826233e9c7d1537311e7fe7c8b21ef2f6fccf915fd9f56cd04f6a6838"
+  },
+  "cases": [
+    {
+      "case": "real-recorded-cold-and-fresh-owner-inspection",
+      "status": "passed",
+      "elapsed_seconds": 15.73834608308971
+    },
+    {
+      "case": "wrong-current-model-refuses",
+      "status": "passed",
+      "reason": "selected model raw/canonical identities differ"
+    },
+    {
+      "case": "help-instead-of-real-proof-refuses",
+      "status": "passed",
+      "reason": "executed argv differs from prescribed current operation"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+--- historical/TICKETS.md
++++ 3.0.5/TICKETS.md
+@@ -533,6 +533,49 @@
+ a ticket marked `completed`, or a sprint marked `closed`, cannot stand in
+ for a `satisfied` result (P5, P1).
+ 
++### Review findings and bug items
++
++When findings from a review need a durable work carrier, record one linked bug
++report for that review, with one entry per finding: stable identity, original
++Reviewer severity and triage, exact subject/basis, violated claim, location and
++chaseable evidence. Link it to the work item that issued the review. With no
++findings, create no bug report. A sufficient existing direct-work carrier may
++carry the same relations without a redundant ticket (P3, P2).
++
++The Reviewer may record this report only when its activation grants the exact
++artifact identity/path and effects. Otherwise it returns the findings and a
++lawful Writer records them. Recording creates no repair, priority, admission or
++closure authority. Keep the report within its evidence/read and visibility
++restrictions: findings derived from a withheld capture are withheld from the
++same recipients, including any report projection that reveals them. The
++Product may bind a recognizable report naming pattern and exclusion route to
++its actual access mechanism; a filename or separate lane alone enforces
++nothing and grants no additional read (P6).
++
++After Executive or other authorized decision-owner triage, the reviewed work
++item carries a linked Bug items section. Each item records its identity,
++original severity, assigned priority and reason, cause group, responsible owner,
++source report/finding, disposition and state. The report remains the technical
++finding source; the item is the decision and repair ledger. An actor/session
++index, where used, points the Reviewer to its report and the triage/repair work
++to the reviewed work item's ledger, rather than duplicating that truth (P3).
++
++| Item state | Required trace |
++|---|---|
++| open | Finding and triage/disposition, with unresolved work named. |
++| fixed | Exact repaired subject (commit or equivalent immutable identity) and repair evidence; not yet a claim of verification. |
++| verified | The satisfied repair predicate and exact evidence; identify tests and, when required, the independent recheck/report. Tests alone are not labelled independent review. |
++
++These are carrier states, not core evaluation results or acceptance. A required
++recheck keeps its affected items unverified until the required result is
++available and applicable. A test-verified fix needs no invented Reviewer when
++the governing basis requires none; the optional Executive cadence is
++[EXECUTIVE_BASELINE §12](EXECUTIVE_BASELINE.md#qa-cadence-and-repair-rechecks).
++Retained or deferred findings stay linked until their selected boundary, or
++transfer with owner, disposition and destination when the work item closes.
++Changing priority does not erase the original severity or the obligation (P6,
++P4b).
++
+ ### Lanes
+ 
+ Backlog tickets live at the product definition's
+@@ -615,6 +658,16 @@
+ 
+ Each consumer applies the rule and decides nothing the owning section does
+ not (P2, P6).
++
++The [Review findings and bug items](#review-findings-and-bug-items) refinement
++applies the same P3/P4b identity and retained-obligation premises to findings
++that outlive review. P6 keeps the assessment source, decision ledger and
++artifact effects distinct, and P2 avoids an empty report or redundant ticket.
++One report per finding-bearing review, the item fields and the three item
++states are explicit carrier choices of §4. Verification still uses EVALUATION
++and the applicable cadence rather than treating a state label as proof. The
++consumers are EVALUATION §4's report effect, EXECUTIVE_BASELINE §5/§12's triage
++and repair decisions, §7's closure and §8's ticket shape.
+ 
+ ### Carrier selection
+ 
+@@ -1214,6 +1267,13 @@
+ Closure recording preserves the exact evaluated scope, the satisfied
+ conditions, the evidence and the remaining residuals (P4b, P2).
+ 
++Landing a candidate and releasing it are distinct from this condition; apply
++[EVALUATION §5](EVALUATION.md#landing-closure-and-release) and any explicitly
++declared Product acceptance gate. An open required review withholds the work
++claim that depends on its complete coverage, not an independently authorized
++landing merely because review is open. Keep the linked Bug items and their
++verification provenance current; a report's existence closes none of them.
++
+ ### Test case authority
+ 
+ Tests are proof projections from admitted work authority. Every
+@@ -1362,6 +1422,16 @@
+ ## Links
+ 
+ - comment: `.ai-workspace/comments/<agent-id>/...`
++
++## Bug items
++
++Only when findings exist; use one row per triaged finding. The source report
++owns the original assessment. The decision owner owns this item's priority
++and disposition.
++
++| ID | Source report/finding | Severity | Priority and reason | Cause group / owner | State | Repair subject / verification evidence | Disposition / retained destination |
++|---|---|---|---|---|---|---|---|
++| <item> | <exact report and finding> | <unchanged grade> | <decision> | <cause and owner> | <open/fixed/verified> | <identity; tests; required review if any> | <exact decision and link> |
+ ```
+ 
+ An implementation migration ticket, carrying the declaration, fields and

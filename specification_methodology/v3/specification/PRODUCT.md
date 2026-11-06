@@ -6,7 +6,7 @@ The product is a specification methodology. It consists of the documents stating
 
 The method's earlier releases are named STDO, short for Specification, Ticketing, Design and Outcome-Driven Development. The prefix remains in identifiers: a `stdo://` address names a file inside an installed release, which the installed toolchain resolves to the read-only copy on this machine, and rule IDs such as STDO-UP-015 name rules of that release.
 
-The product succeeds the method's previous release, 2.5.1-rc.2. That release is installed read-only at `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`) and is the tool used to build this one.
+The original v3 reconstruction succeeded the method's 2.5.1-rc.2 release. That immutable predecessor, `stdo://releases/v2.5.1-rc.2/` (manifest SHA-256 `3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782`), governed that construction. Its C3 contracts and evidence retain that historical basis. Current development uses the builder selected below.
 
 A predecessor claim is a rule or statement in the previous release that could affect the new one. Every predecessor claim is listed in [requirements/PREDECESSOR_CLAIMS.md](requirements/PREDECESSOR_CLAIMS.md). Each receives exactly one disposition: `conserved`, `superseded`, `intentionally removed` or `not applicable`. The previous release's own rule [STDO-UP-015](stdo://releases/v2.5.1-rc.2/standards/RELEASE_METHOD.md#successor-baseline-conservation-stdo-up-015) requires this before a successor is accepted.
 
@@ -44,7 +44,7 @@ It changes no installed consumer basis. The preceding bounded common successor w
 `3.0.1-rc.1` from the exact native `3.0.0-rc.1` predecessor it names. That
 amendment owns the changed deterministic-kind obligation and compatibility
 scope. The historical v3 reconstruction and inherited acceptance duties
-below retain their original subjects and standing; the builder is unchanged.
+below retain their original subjects and standing; their historical builder is unchanged.
 
 The method distinguishes three accounts of a construction. They apply across the tiers:
 
@@ -63,6 +63,25 @@ Example applications, such as Hello World and Data Mapper, are test subjects out
 The product changes nothing in the 2.* line: not its source project, its releases, its companion products or the selection of versions released together. The companion products are the Axiom Indexer; the STDO Representation, which publishes the method's canonical a_c map, linking each axiom to its source text; and the plugin, which carries the method's skills for coding agents.
 
 Construction proceeds through numbered checkpoints, C0 to C3, described under [Checkpoints](#checkpoints). The two candidate build tenants are described under [Source Project Construction](#source-project-construction).
+
+## Current Development Basis
+
+The owner now selects `stdo://releases/v3.0.4/`, manifest SHA-256
+`102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b`,
+as the builder for future work in this source project. The exact instruction,
+manager adoption plan and bounded evidence are retained in
+[STDO304_BUILDER_ADOPTION](../.ai-workspace/work/STDO304_BUILDER_ADOPTION/README.md).
+The [Product Definition](../stdo_3.json), [current frame configuration](REFERENCE_FRAME_BASIS.md#activations-and-owners)
+and [versioned tool binding](../development/STDO_3_0_4.md) route that use.
+
+This is post-release consumer adoption. It changes no method source law,
+peer Product basis, published release or past acceptance. The reconstruction
+requirements, C3 dispositions, isolation details and qualification below keep
+the subjects and 2.5.1-rc.2 basis under which they were admitted. Future work
+enters through the selected 3.0.4 owners and an exact current grant. Reusing a
+legacy concrete operation requires its own applicability and, where relevant,
+3.0.4 deterministic-operation classification; the adoption makes no blanket
+compatibility or renewed qualification claim.
 
 ## Foundational Reduction
 
@@ -149,8 +168,8 @@ The common specification bounds the permitted realisations. Each tenant selects 
 | Coordinate | Binding |
 |---|---|
 | Product line | the Specification Methodology, whose 2.* source project is `specification_methodology/v2/` (`urn:stdo:product-definition:specification-methodology`) and whose release namespace is `specification_methodology` |
-| Release | the next major release on that line; its release identities follow the installed RELEASE_METHOD, the previous release's rules for cutting and publishing releases, in the same namespace |
-| Predecessor | `stdo://releases/v2.5.1-rc.2/`, immutable |
+| Release | successor releases on that line, in the same namespace; current release work follows [RELEASE](stdo://releases/v3.0.4/standards/RELEASE.md), while historical cuts retain their original release basis |
+| Reconstruction predecessor | `stdo://releases/v2.5.1-rc.2/`, immutable; current development basis is declared above |
 | Source project | `specification_methodology/v3/`, beside the 2.* source project, which it does not overwrite |
 | Identifiers | `urn:stdo:product-definition:stdo-3`, `urn:stdo-3:bounded-context:method` and the `urn:stdo-3:` tenant identities are identifiers, not names. They do not change with the directory or the display name. |
 
@@ -228,7 +247,7 @@ Their organisation, wording and a_c encodings may differ. Their accepted outputs
 
 ### Construction Authority
 
-The common construction pen edits the common specification and records. Common changes receive review independent of their author before the product owner accepts them. Checkpoint commits on main provide review visibility; they do not supply acceptance. A review result informs the product owner's decision. The [frame basis](REFERENCE_FRAME_BASIS.md) binds the actors and their activations under the installed 2.5.1-rc.2 release.
+The common construction pen edits the common specification and records. Common changes receive review independent of their author before the product owner accepts them. Checkpoint commits on main provide review visibility; they do not supply acceptance. A review result informs the product owner's decision. The [frame basis](REFERENCE_FRAME_BASIS.md) binds current actors and activations under the adopted 3.0.4 release, with the historical C3 configuration separately preserved.
 
 Work is done in activations. An activation binds a capable actor to a selected reference frame, its subject and admitted authority. This source project's task-based construction separates two attention needs: carrying out a bounded change and managing delivery across successive tasks. The Executive retains the longer-term outcome and uses a sufficient bounded view of worker results to decide what follows. It requests further bounded evaluation when a decision needs more information. Independent assessment provides the checking required by this construction contract. These needs explain the selected responsibilities below; their named arrangement is one configuration under the installed builder:
 
@@ -238,11 +257,13 @@ Work is done in activations. An activation binds a capable actor to a selected r
 
 These frames organise context and attention for their respective tasks. Their names confer no authority. The existing grants below and in each activation supply the permitted effects and decisions.
 
-C3 disposition grant. The installed rule for agent-performed construction, [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), defines the outcomes a coordinator can give each delegated result. This grant states which of those outcomes the Executive may give in C3.
+#### Historical C3 Disposition Grant
+
+The following grant and six-criterion conjunction remain scoped to original C3 reconstruction under 2.5.1-rc.2. They do not supply current 3.0.4 workflow authority or renew old acceptance. The installed rule for agent-performed construction, [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020), defines the outcomes a coordinator can give each delegated result. This grant states which of those outcomes the Executive may give in C3.
 
 A member restatement supplies successor-owned determinations and the relationships required by the [standalone successor requirement](requirements/README.md#standalone-successor-requirement). Its frontier cone is the rows of PREDECESSOR_CLAIMS it covers, with their supported dispositions. One shared successor owner may cover claims from several predecessor members; a predecessor member may also map to several justified successor owners. The requirement permits unchanged text; neither relocation nor rewriting alone establishes its relationships.
 
-The Executive activation named in the [frame basis](REFERENCE_FRAME_BASIS.md#activations-and-owners) may dispose of a member restatement within its grant in four ways:
+The Executive activation named in the [historical frame basis](REFERENCE_FRAME_BASIS.md#historical-c3-activations-and-owners) may dispose of a member restatement within its grant in four ways:
 
 - `local_repair`: fix it locally, because the restatement is defective while the rule it implements is sound;
 - `re_enter`: send it back to an upstream stage that must change;
@@ -261,7 +282,7 @@ Acceptance of the C3 checkpoint, every merge to `main`, every `intentionally rem
 
 ### Development Isolation
 
-These are local development rules for this source project. They govern how tenant work is kept apart and merged, and they change no installed rule and no release cut.
+These local development rules preserve the original tenant reconstruction isolation contract. The common pen still owns common source changes on `main`, and a separately activated Writer performs effects. New work binds its exact territory and carrier under the [current development basis](#current-development-basis); the historical C3-specific ticket, snapshot and tenant clauses below are not an automatic new activation. They change no installed rule or release cut.
 
 - Lineage. `main` is the sole lineage of this source project. The common
   WHAT (`specification/` and the Product Definition) and common work records
@@ -279,7 +300,8 @@ These are local development rules for this source project. They govern how tenan
   A needed common change is requested from the pen and reaches the tenant by
   merging `main` inward. A tenant does not edit tickets, common files or the
   peer tenant.
-- Work carrier. The installed
+- Current work carrier. Use [TICKETS §5](stdo://releases/v3.0.4/standards/TICKETS.md#5-from-carrier-to-execution) and the exact current grant to select and admit a run-scoped execution contract.
+- Historical C3 work carrier. The then-installed
   [Work-Carrier-To-Execution Rule](stdo://releases/v2.5.1-rc.2/standards/TICKET_METHOD.md#work-carrier-to-execution-rule)
   requires every run to execute under one run-scoped execution contract,
   derived from an existing ticket.
@@ -300,8 +322,8 @@ These are local development rules for this source project. They govern how tenan
     common files, candidates or worktrees.
   - The tenant Writer's return is written in its own territory
     (`build_tenants/<tenant>/qualification/`) and never in the ticket.
-  - The ticket is the only record that can authorise an action. No Writer
-    activation starts without one, and no disposition exists until the pen has recorded it.
+  - Within that historical C3 contract, the ticket is the only record that can authorise an action. No C3 Writer
+    activation starts without one, and no C3 disposition exists until the pen has recorded it.
 - Inputs. Tenant worktrees use sparse-checkout cone mode. A declared shared
   input outside the cone is read from the snapshot's input commit with
   `git show <input-commit>:<path>`, never from a working tree. A
@@ -325,8 +347,7 @@ These are local development rules for this source project. They govern how tenan
   peer tenant's candidate at the donor commit named in its admitted contract
   under [Cross-Synthesis](#cross-synthesis), for porting and comparison. Ported
   text is written only in the porting tenant's own territory.
-- Release cuts. `rc/*` and `release/*` branches are governed by the installed
-  RELEASE_METHOD and are not tenant branches.
+- Release cuts. `rc/*` and `release/*` branches are not tenant branches. Historical cuts retain their selected RELEASE_METHOD basis; current release work uses the adopted [RELEASE](stdo://releases/v3.0.4/standards/RELEASE.md) owner.
 
 ### Cross-Synthesis
 
@@ -354,7 +375,7 @@ Comparable coverage means the same obligations and material cases are assessed o
 
 ### Checkpoints
 
-Construction proceeds through checkpoints:
+The original reconstruction proceeds through these historical checkpoints:
 
 - C0, structure and bootstrap (setting up this source project and the instruction files that route agents to it): closed;
 - C1, principles: closed;
@@ -367,14 +388,14 @@ In C3, members are restated under Executive coordination and evaluated independe
 
 ### C3 Construction Contract
 
-This section configures, for this source project, the installed 2.5.1-rc.2 Executive engagement: the previous release's procedure for coordinating agent work through an Executive. The governing process is:
+This section retains the original C3 construction contract under installed 2.5.1-rc.2, including its original acceptance obligations and evidence scope. It does not govern new post-adoption activations. For that historical reconstruction the governing process is:
 
 - the [Complete Engagement Transition](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#complete-engagement-transition), the step sequence from selecting the basis (the exact sources, versions and decisions the work is done against) to closing a result;
 - [Executive attention and drift locks](stdo://releases/v2.5.1-rc.2/standards/STDO_REFERENCE_FRAME_BASELINE.md#executive-attention-evaluation-and-action), which keep the outcome and basis fixed;
 - [STDO-UP-020](stdo://releases/v2.5.1-rc.2/standards/SPEC_METHOD.md#agentic-construction-execution-stdo-up-020) dispositions;
 - admission of execution contracts under TICKET_METHOD, the previous release's rules for tickets and execution contracts.
 
-Where this section and the installed baseline (STDO_REFERENCE_FRAME_BASELINE, the previous release's catalogue of standard frames and its Executive procedure) differ, the baseline governs and this section is corrected. Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
+Within that original C3 scope, the 2.5.1-rc.2 baseline (STDO_REFERENCE_FRAME_BASELINE) governs any difference with this section. That historical precedence does not replace the current 3.0.4 basis. Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
 
 Outcome. Each tenant produces a candidate of the product with:
 
@@ -460,10 +481,12 @@ Closure. C3 closes for a tenant when every frontier row is disposed, every membe
 
 ## Open Owner Decisions
 
+The reconstruction decisions below retain their recorded C3 subjects and standing. Later release records resolve only their explicitly selected scope; this builder adoption does not close historical qualification or acceptance obligations. New decisions use the current development basis.
+
 - Acceptance-review activations for each tenant in C3 remain owner decisions under the review allocation in [Cross-Synthesis](#cross-synthesis). Each ticket records its exact assignment; construction and defect-review authority alone supply no per-member `accept` disposition.
 - Actual-use resources for the two-line comparison: the selected actor mechanism, time and spend envelopes. Missing resources leave the affected criterion unresolved; they do not waive it or qualify the other candidate.
 - The UX profile's conflicting predecessor compliance tests: which successor determination replaces them and which claims it supersedes. The existing ambiguity rule governs affected construction until that replacement is accepted; a temporary stricter reading is not acceptance of a replacement.
 - The steel thread: its selection, its work carrier, and its spend and time limits. The steel thread is step 2 of [Categorical Construction](#categorical-construction).
 - Identity and packaging of the new release. The decisions cover whether the compressions are kept, superseded or removed; how identifiers for a_c concepts and for the Traversal Occurrence Profile are issued and accepted into use; and the released interpretation's encoding basis and its standalone acquisition. The successor does not depend on the previous release remaining in force. The relevant decision precedes any dependent member or C3 acceptance and, in all cases, a release-candidate cut.
 - Candidate number and release-candidate cut, in the `specification_methodology` release namespace under RELEASE_METHOD. Decided before a release-candidate cut.
-- Cohort relation: which versions of the companion products are released together with this one. Decided before a release-candidate cut. Existing Product identifiers and the current cohort are unchanged, and the installed 2.5.1-rc.2 release is the operative builder.
+- Cohort relation: which versions of the companion products are released together with this one. Decided before a release-candidate cut. Existing Product identifiers and the current cohort are unchanged. The original reconstruction used installed 2.5.1-rc.2; future work uses the adopted 3.0.4 builder.

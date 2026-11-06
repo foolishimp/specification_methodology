@@ -1,0 +1,37 @@
+{
+  "kind": "stdo305.gate-review-disposition/1",
+  "review_source": "Executive transcription of /root/stdo305_source_review conversation return; no pre-existing original review document or document hash is asserted",
+  "reviewed_subject": {
+    "path": "tooling-review-001/SUBJECT.json",
+    "sha256": "27b02d4df13fb8a940cc9a6b046a3beadc20eed83dc93782e8e9fccd8a451565"
+  },
+  "conclusion": "falsified",
+  "findings": [
+    {
+      "severity": "S2",
+      "coordinates": "scripts/stable_stack_release.py:173/196",
+      "finding": "Installed capability wrappers accepted current S/Product labels while actual argv was qualifier.py --help, actual output/environment named 3.0.4 and zero S, and caller observation was only status=verified.",
+      "repair": "Prescribed current inputs, actual installed operation/output identity and known per-claim predicates; no caller-selected labels."
+    },
+    {
+      "severity": "S2",
+      "coordinates": "scripts/stable_stack_release.py:188/194",
+      "finding": "Lean accepted arbitrary equal requested/checked unrelated-trivial-claim, nonexistent GateModel.olean path/hash, and runtime pins lean=unknown-old-runtime because only truthiness was checked.",
+      "repair": "Dereference exact proof/artifact membership, actual runtime/machinery and required obligation/current model/view binding using the formal owner adapter; missing or unverifiable artifacts refuse."
+    },
+    {
+      "severity": "S2",
+      "coordinates": "scripts/stable_stack_release.py:410/432",
+      "finding": "Public phase accepted arbitrary manager.whl plus external manifest and one Product a_c old-store evidence with zero actual native digest while receipt labels claimed current/fresh.",
+      "repair": "Required asset closure and all five Products/current components; fresh installed actual result bound to declared store/native/S/subjects and real current results."
+    },
+    {
+      "severity": "S3",
+      "coordinates": "scripts/stable_stack_release.py:387; RELEASE.md:225",
+      "finding": "Same-version unqualified refs/tags/v3.0.5-rc.1 was accepted if in preserved snapshot; qualified and historical namespaces both prohibit same-version RC.",
+      "repair": "Refuse both namespaces, allow other-version history."
+    }
+  ],
+  "executive_disposition": "Repair all four before using the gate; targeted independent recheck required. Preserve accepted source S. No Git effects.",
+  "review_boundary": "Historical no-config native profile was not proven a bypass; correct README to show explicit digest-bound candidate configuration."
+}

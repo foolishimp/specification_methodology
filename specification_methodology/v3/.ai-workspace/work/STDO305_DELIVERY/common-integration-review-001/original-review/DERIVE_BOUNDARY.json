@@ -1,0 +1,80 @@
+{
+  "scope": "synthetic selected sources; public materialize to setup derive path, no Lean executed",
+  "rows": [
+    {
+      "case": "outside",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/installed/releases/v3.0.5/standards/tooling/setup.py",
+        "derive-runtime",
+        "--tools",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/selected-tools",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/outside-runtime",
+        "--receipt",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/outside-receipt.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "derived",
+        "runtime_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/outside-runtime",
+        "receipt": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/outside-receipt.json",
+        "receipt_sha256": "b85e8c5ae9506bd46c3cf3cf2a69b367f929f7bede1879cd64a380f074fd394e"
+      },
+      "runtime_created": true,
+      "receipt_created": true
+    },
+    {
+      "case": "native-runtime",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/installed/releases/v3.0.5/standards/tooling/setup.py",
+        "derive-runtime",
+        "--tools",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/selected-tools",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/installed/releases/v3.0.5/new-runtime",
+        "--receipt",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/native-runtime-receipt.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "derived",
+        "runtime_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/installed/releases/v3.0.5/new-runtime",
+        "receipt": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/native-runtime-receipt.json",
+        "receipt_sha256": "05a70d7c2828681a3b0f153d00eb610202750825b01dbc888f41866aee385f38"
+      },
+      "runtime_created": true,
+      "receipt_created": true
+    },
+    {
+      "case": "native-receipt",
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-I",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/installed/releases/v3.0.5/standards/tooling/setup.py",
+        "derive-runtime",
+        "--tools",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/selected-tools",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/other-runtime",
+        "--receipt",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/installed/releases/v3.0.5/new-receipt.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "derived",
+        "runtime_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/other-runtime",
+        "receipt": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-bvr_yssx/installed/releases/v3.0.5/new-receipt.json",
+        "receipt_sha256": "667a5cc86812051608edbd6ba62c642df1d0b69bc8aebf7d87dc01d3f7682b28"
+      },
+      "runtime_created": true,
+      "receipt_created": true
+    }
+  ]
+}

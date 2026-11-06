@@ -1,5 +1,7 @@
 # STDO Skills
 
+Current delivery: the [3.0.5 contract](RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+
 Status: selected common construction basis under T-001; both tenant implementations exist.
 [Delivery evidence](../.ai-workspace/work/T001/DELIVERY.md) states the supported
 finite claims and remaining work; Product acceptance and release are separate.

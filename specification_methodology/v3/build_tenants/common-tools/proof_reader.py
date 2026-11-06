@@ -7,6 +7,17 @@ import hashlib
 import json
 import re
 from pathlib import Path
+import sys
+
+LEGACY_GENERATOR_SHA256 = "37a74b721347635ddfdf1032cbed124c97c46aabbfd5f4fd919aca19f9cdf457"
+
+
+def current():
+    here = str(Path(__file__).resolve().parent)
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import proof_reader_current
+    return proof_reader_current
 
 REPORT_SHA256 = "8b002e3821e99cd88bae0ccf07794d2e99818ba4e5b38d919fc3e3b45c672061"
 SOURCES = ("AC.lean", "AC/Audit.lean", "AC/Closure.lean", "AC/Fixture.lean",
@@ -215,7 +226,7 @@ def make_catalog(source_bytes: dict[str, bytes], report_raw: bytes) -> tuple[dic
         require(set(claim["declarations"]) <= ids, "curated theorem is missing")
     catalog = {
         "kind": "stdo.proof-reader/1", "distributing_release": "3.0.3",
-        "generator_sha256": sha(Path(__file__).read_bytes()), "basis": BASIS,
+        "generator_sha256": LEGACY_GENERATOR_SHA256, "basis": BASIS,
         "report": {"path": "report.json", "sha256": REPORT_SHA256, "status": report["status"],
                    "standing": "Retained historical T011 independent check; not a fresh proof execution.",
                    "projection_outputs": report["actual_projection_outputs"],
@@ -321,6 +332,8 @@ def create_payload(source_bytes: dict[str, bytes], report_raw: bytes) -> dict[st
 
 
 def check_payload(files: dict[str, bytes]) -> dict:
+    if json.loads(files.get("PROOFS.json", b"{}")).get("kind") == "stdo.current-proof-reader/1":
+        return current().check_files(files)
     require(set(files) == MEMBERS, "proof documentation member set changed")
     require(all(isinstance(v, bytes) for v in files.values()), "proof payload values must be bytes")
     expected = create_payload({name: files["sources/" + name] for name in SOURCES}, files["report.json"])
@@ -368,11 +381,19 @@ def main(argv=None) -> int:
     create.add_argument("--lean-root", type=Path, required=True)
     create.add_argument("--report", type=Path, required=True)
     create.add_argument("--output", type=Path, required=True)
+    create_current = commands.add_parser("build-current")
+    create_current.add_argument("--repository", type=Path, required=True)
+    create_current.add_argument("--selection", type=Path, required=True)
+    create_current.add_argument("--selection-sha256", required=True)
+    create_current.add_argument("--output", type=Path, required=True)
     check = commands.add_parser("check")
     check.add_argument("directory", type=Path)
     args = parser.parse_args(argv)
     try:
-        result = build(args.lean_root, args.report, args.output) if args.operation == "build" else check_payload(read_payload(args.directory))
+        if args.operation == "build-current":
+            result = current().build(args.repository, args.selection, args.selection_sha256, args.output)
+        else:
+            result = build(args.lean_root, args.report, args.output) if args.operation == "build" else check_payload(read_payload(args.directory))
         print(json.dumps(result, sort_keys=True))
         return 0
     except (ValueError, OSError, KeyError, TypeError) as exc:

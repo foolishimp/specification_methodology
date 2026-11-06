@@ -1326,6 +1326,12 @@ def check(
     payload = read_json(view, manifest_path, failures)
     if not isinstance(payload, dict):
         return failures
+    if payload.get("schema_version") == 2:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import stable_stack_release
+        return stable_stack_release.check(root, manifest_path, phase, revision, remote, sys.modules[__name__])
+    if phase not in {"content", "refs", "published"}:
+        return ["schema-1 historical cohorts support content, refs and published only"]
     validate_shape(payload, failures)
     if revision is not None:
         require(
@@ -1359,9 +1365,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--manifest", default="stack_release.json")
     parser.add_argument(
-        "--phase", choices=("content", "refs", "published"), default="content"
+        "--phase", choices=("ready", "content", "refs", "published", "public"), default="content"
     )
     parser.add_argument("--revision")
+    parser.add_argument("--public-receipt", help="post-publication receipt outside the frozen manifest")
+    parser.add_argument("--public-receipt-sha256")
     parser.add_argument(
         "--remote",
         default="origin",
@@ -1373,7 +1381,17 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     root = args.root.resolve()
-    failures = check(root, args.manifest, args.phase, args.revision, args.remote)
+    selection_failures: list[str] = []
+    selected = read_json(View(root, args.revision), args.manifest, selection_failures)
+    if selection_failures or not isinstance(selected, dict):
+        failures = selection_failures or ["cohort manifest must be an object"]
+    elif selected.get("schema_version") == 2 and args.phase == "public":
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        import stable_stack_release
+        failures = stable_stack_release.check(root, args.manifest, args.phase, args.revision, args.remote,
+                                              sys.modules[__name__], args.public_receipt, args.public_receipt_sha256)
+    else:
+        failures = check(root, args.manifest, args.phase, args.revision, args.remote)
     if failures:
         print(
             json.dumps(
@@ -1390,6 +1408,12 @@ def main() -> int:
     if args.phase == "refs":
         view = View(root, args.revision)
         manifest = view.read_json(args.manifest)
+        if manifest.get("schema_version") == 2:
+            import stable_stack_release
+            result.update(stable_stack_release.ref_graph(root, manifest, args.revision, args.phase, args.remote,
+                                                        sys.modules[__name__]))
+            print(json.dumps(result, indent=2))
+            return 0
         repository_url = manifest["publication"]["repository_url"]
         expectations = manifest["publication"]["expected_remote"]
         version_lines = manifest["publication"]["expected_version_lines"]

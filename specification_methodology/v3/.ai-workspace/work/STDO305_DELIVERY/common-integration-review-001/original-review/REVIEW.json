@@ -1,0 +1,108 @@
+{
+  "before_after": {
+    "all_match": true,
+    "model_raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+    "selected_evidence": 17,
+    "source_freeze_members": 68,
+    "source_members": 25
+  },
+  "evidence": [
+    {
+      "bytes": 15061,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-common-ntxe4c6y/TRANSPORT_REVIEW.json",
+      "sha256": "7040d14dd648b2a9579a3a97328c5e8c8f2bb3475ab3783f7ce21d65e209b440"
+    },
+    {
+      "bytes": 4108,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-boundary-oy1119hc/CASE_ALIAS.json",
+      "sha256": "c7398a6aecdaf635f1483b8f928a76af3373b410f8343f9a539155e71bf3b177"
+    },
+    {
+      "bytes": 8521,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-proof-boundary-035p5hfw/PROOF_BOUNDARIES.json",
+      "sha256": "517b056301754a36c61f9c1eadb37ed9b5fc0ebf52826ddc051819d39d78508c"
+    },
+    {
+      "bytes": 5193,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-proof-pack-boundary-0hpk4008/PACK_SPLIT_BOUNDARY.json",
+      "sha256": "a2799b95518290d8c90f00ba1afd1e11bd778f5a297aa364c416ff0bad37850d"
+    },
+    {
+      "bytes": 3906,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-derive-boundary-9ttogxij/DERIVE_BOUNDARY.json",
+      "sha256": "21d5a00d1a23841f40d4b3ce5a7bd849189a3043acc389072a28841426e2c2ef"
+    },
+    {
+      "bytes": 1196,
+      "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-bootstrap-boundary-rrmiiyxm/BOOTSTRAP_BOUNDARY.json",
+      "sha256": "24056a338e8e1f50fcfec3773ff2352087f45ecb1aa2574cf80bf3272e54fae6"
+    }
+  ],
+  "findings": [
+    {
+      "file": "specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+      "id": "CI-01",
+      "impact": "Adds undeclared files to the installed payload, invalidating exact native verification; no existing payload bytes were overwritten in the probes.",
+      "lines": [
+        242,
+        243,
+        257,
+        91,
+        114
+      ],
+      "observed": [
+        "Canonical transport materialize/request refuse native output.",
+        "Uppercase aliases for the same pinned transport permit materialize and request outputs inside native.",
+        "Canonical raw-archive request permits native output; raw-archive materialize alias permits native output.",
+        "Installed script pack and split also permit outputs inside native."
+      ],
+      "problem": "Installed proof commands can write inside the immutable native release because protected-root inference depends on path spelling and is omitted on some routes.",
+      "severity": 3
+    },
+    {
+      "file": "specification_methodology/v3/build_tenants/common-tools/tooling_runtime.py",
+      "id": "CI-02",
+      "impact": "Mutates installed native payload before a later verification can refuse; the bootstrap output case begins computation before noticing any problem.",
+      "lines": [
+        36,
+        129,
+        131,
+        134
+      ],
+      "not_executed": "A previously prepared runtime itself inside native is also not excluded by bootstrap source inspection; no real Lean/bootstrap execution or such second fixture runtime test performed.",
+      "observed": [
+        "Public installed setup derive-runtime succeeds with runtime destination inside native.",
+        "Public installed setup derive-runtime succeeds with receipt inside native.",
+        "Public installed setup bootstrap-lean creates native output and invokes the selected synthetic bootstrap before reporting its deliberate exit 2."
+      ],
+      "problem": "Derived runtime, derivation receipt and bootstrap output are not protected against the enclosing installed native release.",
+      "severity": 3
+    }
+  ],
+  "kind": "stdo.independent-common-integration-review/1",
+  "limits": [
+    "Same-family author-independent review, not enforced clean-room isolation.",
+    "Only temporary scratch writes; no repository/source/Git effects.",
+    "No heavy Lean, browser or native actor runs.",
+    "Current008 positive proof was separately observed; old005 transport and negative controls remain explicitly predecessor-runtime.",
+    "No final native payload A, host qualification, external B/public readback or release acceptance claimed."
+  ],
+  "passed_controls": {
+    "actual_predecessor_transport_public_calls": 4,
+    "complete_predecessor_archive_members": 61,
+    "expanded_bytes": 579468243,
+    "standing": "No new Lean proof; no final installed native or public release qualification.",
+    "targeted_common_unittests": 21,
+    "targeted_gate_unittests": 17
+  },
+  "repair_frontier": {
+    "already_guarded": "Source materializer has a whole-native-root guard; host setup guards its explicit method root, plus tools and runtime. No new defect found there.",
+    "proof": "Protect materialize destination, request output, pack output and split destination using the enclosing installation physical identity before effects; preserve ordinary standalone scratch archive use.",
+    "runtime": "Protect derive destination and receipt, bootstrap output and actual runtime against the installation containing setup.py, before mkdir or subprocess. Retain source/runtime disjointness and explicit allowed support-profile delta."
+  },
+  "reviewer": "/root/stdo305_integration_review",
+  "scale": "Severity 1 highest to 5 lowest",
+  "source_inventory_sha256": "9705ecaa0039add78d726981de1f024d4c47537aede152e1d89c72e04e1f83cf",
+  "subject_sha256": "c778fd0b302a2df24ead7159ac5136b2579e69e4159dc5b9f097b4fa40f570cb",
+  "verdict": "changes_requested"
+}

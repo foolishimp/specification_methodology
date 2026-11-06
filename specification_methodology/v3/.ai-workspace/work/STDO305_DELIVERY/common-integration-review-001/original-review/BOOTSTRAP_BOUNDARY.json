@@ -1,0 +1,31 @@
+{
+  "scope": "synthetic no-op bootstrap returns2; no Lean invoked",
+  "argv": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-I",
+    "-B",
+    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-c70t2_6x/installed/releases/v3.0.5/standards/tooling/setup.py",
+    "bootstrap-lean",
+    "--derivation",
+    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-c70t2_6x/derivation.json",
+    "--derivation-sha256",
+    "79534ae29581420767faf37dd9856e751b9934029031f5eafbe963300f388e5d",
+    "--python",
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "--output",
+    "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-current-tools-c70t2_6x/installed/releases/v3.0.5/bootstrap-evidence"
+  ],
+  "returncode": 2,
+  "result": {
+    "status": "refused_or_incomplete",
+    "reason": "Lean bootstrap incomplete; retain partial runtime and execution before recovery",
+    "recovery": "Retain partial setup and receipts; reconcile before retry."
+  },
+  "bootstrap_invoked": true,
+  "created_inside_native": true,
+  "native_output_members": [
+    "execution.json",
+    "stderr.txt",
+    "stdout.txt"
+  ]
+}

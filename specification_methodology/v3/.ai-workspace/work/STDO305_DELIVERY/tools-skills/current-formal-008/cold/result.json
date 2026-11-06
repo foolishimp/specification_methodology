@@ -1,0 +1,489 @@
+{
+  "checked_claims": [
+    "imported-model-well-formedness",
+    "whole-model-source-correspondence",
+    "declared-closure-and-projection",
+    "record-budget-result",
+    "supplied-graphify-view-correspondence"
+  ],
+  "context_binding": null,
+  "evidence": {
+    "manifest_sha256": "f7e2678197599f5701b8c245a660f98a0b2570dc14b0c1b75b16d2f936673ee7",
+    "members": {
+      "GateBounds.ir": "c1ded6364858a21532d7b0d3d1b8f853f2552d363d5ce7e03afc15f969acb996",
+      "GateBounds.ir.sig": "6f30da785554a7c7a7888098fc3d1cd0ece7ecbf635710277bae22d18843d903",
+      "GateBounds.lean": "252a444f97a68378313bc84382c60e120417965ec7210939151470d7b644974f",
+      "GateBounds.log": "562c7c5980f8678ff89e93b5516df462443cef5b5139d94b0fa98208d29bc863",
+      "GateBounds.olean": "57fe6229a952fd076795cc018a82d00f154e64e1c580cf643f541d5847a34d52",
+      "GateBounds.olean.private": "6cd5ac9b2b3d741df190931b85b42a272587d0b55dc56dbc9da9b94f7638dd2b",
+      "GateBounds.olean.server": "94b63b76bacb342b6eb71807081eb7c2fcb52ab51e88e4eeca98f11653e9b7c1",
+      "GateData.ir": "37795fbb4aaca7851ffec653733b50bbd9eb784d7473d360441c8e46e7ee0178",
+      "GateData.ir.sig": "ef0f5154b1ae5adbcf4a0d57fd190ebd435d4e80a57a748669a5df689d43bab0",
+      "GateData.lean": "5c98ff5174d5eb2c0f490d287456b14358091951f0929f811df9ed2c10071553",
+      "GateData.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "GateData.olean": "56f3058b7a1b82b5e6d379bc6b82fd24cb19a11e6714a31e80947c942a6c9720",
+      "GateData.olean.private": "29ea455c024387a9943015752b650a74d3c4d97e72cb532077db3c3ca9a2b37f",
+      "GateData.olean.server": "113c8bb533e296bbfc9c7cae2d4cd5d38a813e1212fab763913ed1d9e9f20dd3",
+      "GateExternalNames.ir": "631b60ea8181786bc5b68e74c37b564424c69fb8263f9cda61fd581658f18ffa",
+      "GateExternalNames.ir.sig": "60bb6fb7e45eebb178af0994cd4de606945bade1f83198e35b105f8e94d6f546",
+      "GateExternalNames.lean": "fd06de4c664293aeaed4e25e7ebfa19a783655ebfbc14cef49f080e54e592678",
+      "GateExternalNames.log": "fdabef16c62d559f3a259458c7da7abf80eddccc22b99f39dd8bceb31df00e78",
+      "GateExternalNames.olean": "485f8e8c770b38409cdc5a6cfbc01a28a3c58e059334a30358bb540a7e2dc34a",
+      "GateExternalNames.olean.private": "e1e5993a271ad568ecbb61e342cc1412ab8c287616c2dc152224c91ddfb67155",
+      "GateExternalNames.olean.server": "425083dd178c5594cc6df01b41eb5413759e0002325bc8a173f2fdec7d7ed409",
+      "GateIdentities.ir": "3362801a1515a2db97b37a0aa4e7e8aa3e418440b394db15f612e0df806225c2",
+      "GateIdentities.ir.sig": "9ee9d29e8ad631db89be41b5c903fcd07b03d7dc0f4d412f0b654a1fe2a69561",
+      "GateIdentities.lean": "467091a5be5262ca09dd978429a45651c5dab6bb4c0c6c333e8d1308cdd1c829",
+      "GateIdentities.log": "0bb726123b06a438c8cac66b2562ae2ab43c21939de8a1a7cf79789816bd4c0f",
+      "GateIdentities.olean": "ae7e3a3d96936407c7ac45d33f759108a1a177af9b05327a61d69b64da098863",
+      "GateIdentities.olean.private": "c66db118d64bae2441e7116be6f910a491188352c850509ea20530ec776a09ce",
+      "GateIdentities.olean.server": "0a0cc77d2079faa7a86c03a9b2601c96b1ffd04fe14d097de845de74b1e5867b",
+      "GateLocalNames.ir": "6df3d48178fe7b3d625d552d710d9455294228776175696b8714c16935711139",
+      "GateLocalNames.ir.sig": "78e164976c4ef9fdbbd23becb78feb2f301bfebdf144b8a43530ec934bd9d88b",
+      "GateLocalNames.lean": "c98acbc18b496c98aaf51bbeeacd9fdc9c9651159179ebf7af85049c8814e791",
+      "GateLocalNames.log": "3bc917c3e95719e361856ba2ec2b22dc6ff3f8318348a2149022ee74c3fa93d0",
+      "GateLocalNames.olean": "20cf6e65b70722b777a8ee31b6145e3caecd871188fcdae56950c69d6db08059",
+      "GateLocalNames.olean.private": "f86272d956b7e523ef97f9210d5761ae102b719f635daeab22e48caa13176366",
+      "GateLocalNames.olean.server": "fa99ddb6f3fc1553fe4d606814a9fcd2191f0c37124d16e1a8c38c2394bad1dc",
+      "GateModel.ir": "d36c482cb4dde2ffa4b702dbff1697d381eca43c2a578391a33bd386fb130c5a",
+      "GateModel.ir.sig": "a3cc15a301b053f068ac6525b37a4de73cab86c8906c4809e7ce8f1a79cf0b64",
+      "GateModel.lean": "a107ba20966853cf3dc43a3e109588a186f36333f584605c63d99b3b9e2160d9",
+      "GateModel.log": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee",
+      "GateModel.olean": "79244f38704d50b333e5ec14dce43820eda274bcdfaeca16d83f48e4e86aa713",
+      "GateModel.olean.private": "83a1316e422cf9636a81a659bd0c575274da728bb69d0d741f08289e44aaf6b5",
+      "GateModel.olean.server": "dee4edda370ff414b36a13685fdec5194a0af27a50d28db096d047e58f48b391",
+      "GateRun.lean": "3aca46dd2a8de76afb0a9f568bff1c07a07deb02f5713f69515f9de63e28e69a",
+      "GateViews.ir": "339972b0880fd71dcef2e92c3419dcb8803057d5c32dc388f8a49b4384575e88",
+      "GateViews.ir.sig": "a092dee3843e33a19cc22e3314bdbb65cbd2cc6087a1607e2b3a2da1fea5ceb3",
+      "GateViews.lean": "14449a93e7a35485e9873511e3f1a8c52e56dbb6d76911c1d1e84f125557a20d",
+      "GateViews.log": "d85eaa6120dd1a8dc828bc56542dd79590cf816998dbb1f404754a74cd16279b",
+      "GateViews.olean": "221687255ead31a9b8e91bf6b8c6d297208d3ef501634445dc78941dab81996b",
+      "GateViews.olean.private": "35977a333a902607d12b1af81fecf6f4b67542d852380a57816859c12e240f4f",
+      "GateViews.olean.server": "8284ccea113beca44b312f1edbb2bb579cdcf67d68b8a333e3f7d1eb14b0c8c0",
+      "actual-runtime.log": "d8d63d39af9a2d6e1740a9c4bb832923f89c64d87fdad06d2e5d8dc4a60b35d2",
+      "certificates.json": "f3d9f7ce08db655b9b8b2221ff879efd3cf2542c2c4567439dacffd234087cdb",
+      "dynamic-kernel-replay.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "input.json": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "model.json": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "replay-request.json": "cc9200cd08d6e39a9911c2aabed41b358fd46291b6a42a28b3e5e4db5e1e7ee3",
+      "request.json": "dd3b95a91d55b2c3a5792923e0e1a141de68574b5d92f6a309e4fe59b98bb55f",
+      "supplied-views.json": "3710472f2528b4b3b2097c5ad4d413d3176a7e1e7f95f025210f43c38ddd0131",
+      "view-comparison.json": "02e02d4350274d1d536f98a2b69cb5e424dae8e3484f6f9cac5a969167f7a8f1"
+    }
+  },
+  "inputs": {
+    "input": {
+      "bytes": 8521879,
+      "raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "retained_path": "input.json"
+    },
+    "model": {
+      "canonical_sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02",
+      "raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+      "retained_path": "input.json"
+    },
+    "supplied_views": {
+      "bytes": 1446025,
+      "raw_sha256": "3710472f2528b4b3b2097c5ad4d413d3176a7e1e7f95f025210f43c38ddd0131",
+      "retained_path": "supplied-views.json"
+    }
+  },
+  "limits": [
+    "Finite declared structural model/closure/projection only; no semantic acceptance.",
+    "Whole-model-source-correspondence covers only supplied or carrier-recovered model JSON; original prose/corpus-to-model F_P fidelity remains opaque and unproved.",
+    "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+    "Python API imports and interpreter initialization remain trusted-host responsibilities; the CLI isolates helper loading after startup.",
+    "Context binding is metadata; consumer must check actual delivered bytes.",
+    "Crossing relations are checked source-derived metadata, not a Lean theorem."
+  ],
+  "model": {
+    "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+    "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+  },
+  "observations": {
+    "child_maxrss_native_units": 10217062400,
+    "current_dynamic_proof_invocations": 7,
+    "current_kernel_replay_invocations": 1,
+    "current_runtime_invocations": 1,
+    "edges": 3704,
+    "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
+    "elapsed_seconds": 412.4652522499673,
+    "execution": "projectWithProof with exact freshly checked model/closure premises; per-selection equality to unchanged project is kernel-replayed; the raw checker is not reevaluated",
+    "limits": {
+      "max_input_bytes": 33554432,
+      "max_selections": 64,
+      "memory_mb": 4096,
+      "timeout_seconds": 90
+    },
+    "proof_modules": [
+      "GateData",
+      "GateLocalNames",
+      "GateExternalNames",
+      "GateIdentities",
+      "GateBounds",
+      "GateModel",
+      "GateViews",
+      "GateRun"
+    ],
+    "records": 1885,
+    "references": 15630,
+    "reuse": "none; fresh dynamic obligations; pinned established base support",
+    "stages": [
+      {
+        "seconds": 0.3758279159665108,
+        "stage": "acquire-import-reconstruct"
+      },
+      {
+        "seconds": 7.772526791319251,
+        "stage": "support-pins"
+      },
+      {
+        "seconds": 5.866341042332351,
+        "stage": "current-certificates"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 46.79167775018141,
+        "stage": "GateData"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 52.6925238748081,
+        "stage": "GateLocalNames"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 69.6949671250768,
+        "stage": "GateExternalNames"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 33.951085624750704,
+        "stage": "GateIdentities"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 45.68918199976906,
+        "stage": "GateBounds"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 1.2016247906722128,
+        "stage": "GateModel"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 32.848564125131816,
+        "stage": "GateViews"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 43.209594416897744,
+        "stage": "dynamic-kernel-replay"
+      },
+      {
+        "exit_code": 0,
+        "seconds": 64.47549904184416,
+        "stage": "actual-runtime"
+      },
+      {
+        "seconds": 0.30329550011083484,
+        "stage": "output-view-correspondence"
+      },
+      {
+        "seconds": 6.805711041204631,
+        "stage": "support-pins-after"
+      },
+      {
+        "seconds": 0.0012455419637262821,
+        "stage": "origin-currentness"
+      }
+    ],
+    "support": {
+      "manifest_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+      "members": 30405,
+      "platform": "Darwin-arm64"
+    },
+    "theorem_audit": {
+      "AC.GateData.chars_reconstructed": [],
+      "AC.GateData.checked0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.checked1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.checked2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.checked3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.checked4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.edgeBounds": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.execution_matches_project0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.execution_matches_project1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.execution_matches_project2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.execution_matches_project3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.execution_matches_project4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.externalCharsBlock0_source": [],
+      "AC.GateData.externalCharsBlock1_source": [],
+      "AC.GateData.externalCharsBlock2_source": [],
+      "AC.GateData.externalCharsBlock3_source": [],
+      "AC.GateData.externalCharsBlock4_source": [],
+      "AC.GateData.externalCharsBlock5_source": [],
+      "AC.GateData.externalCharsBlock6_source": [],
+      "AC.GateData.externalCharsBlock7_source": [],
+      "AC.GateData.externalCharsBlock8_source": [],
+      "AC.GateData.externalChars_source": [
+        "propext"
+      ],
+      "AC.GateData.identities_checked": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.localCharsBlock0_source": [],
+      "AC.GateData.localCharsBlock10_source": [],
+      "AC.GateData.localCharsBlock11_source": [],
+      "AC.GateData.localCharsBlock12_source": [],
+      "AC.GateData.localCharsBlock13_source": [],
+      "AC.GateData.localCharsBlock14_source": [],
+      "AC.GateData.localCharsBlock1_source": [],
+      "AC.GateData.localCharsBlock2_source": [],
+      "AC.GateData.localCharsBlock3_source": [],
+      "AC.GateData.localCharsBlock4_source": [],
+      "AC.GateData.localCharsBlock5_source": [],
+      "AC.GateData.localCharsBlock6_source": [],
+      "AC.GateData.localCharsBlock7_source": [],
+      "AC.GateData.localCharsBlock8_source": [],
+      "AC.GateData.localCharsBlock9_source": [],
+      "AC.GateData.localChars_source": [
+        "propext"
+      ],
+      "AC.GateData.model_checked": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.names_exact": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.orderedPairsChecked0": [],
+      "AC.GateData.orderedPairsChecked1": [],
+      "AC.GateData.orderedPairsChecked10": [],
+      "AC.GateData.orderedPairsChecked11": [],
+      "AC.GateData.orderedPairsChecked12": [],
+      "AC.GateData.orderedPairsChecked13": [],
+      "AC.GateData.orderedPairsChecked14": [],
+      "AC.GateData.orderedPairsChecked15": [],
+      "AC.GateData.orderedPairsChecked16": [],
+      "AC.GateData.orderedPairsChecked17": [],
+      "AC.GateData.orderedPairsChecked18": [],
+      "AC.GateData.orderedPairsChecked19": [],
+      "AC.GateData.orderedPairsChecked2": [],
+      "AC.GateData.orderedPairsChecked20": [],
+      "AC.GateData.orderedPairsChecked21": [],
+      "AC.GateData.orderedPairsChecked22": [],
+      "AC.GateData.orderedPairsChecked23": [],
+      "AC.GateData.orderedPairsChecked3": [],
+      "AC.GateData.orderedPairsChecked4": [],
+      "AC.GateData.orderedPairsChecked5": [],
+      "AC.GateData.orderedPairsChecked6": [],
+      "AC.GateData.orderedPairsChecked7": [],
+      "AC.GateData.orderedPairsChecked8": [],
+      "AC.GateData.orderedPairsChecked9": [],
+      "AC.GateData.ordered_chain": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.reachability0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.reachability1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.reachability2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.reachability3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.reachability4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.refBounds": [
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.result0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.result1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.result2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.result3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.result4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.set0": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.set1": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.set2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.set3": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "AC.GateData.set4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "reason": null,
+  "request_sha256": "caf69b36366033140af62b2554858a24a19e062cb0305d8f9913f79fdbe6421d",
+  "requested_claims": [
+    "imported-model-well-formedness",
+    "whole-model-source-correspondence",
+    "declared-closure-and-projection",
+    "record-budget-result",
+    "supplied-graphify-view-correspondence"
+  ],
+  "runtime_identity": {
+    "pins": {
+      ".cache/formal-origin-v1/selection.json": "a6f7cce1d1654d43c4cc7c05445a39c090e3ff4b490bf7646d8870835ae1c8af",
+      "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+      "AC/GateProof.lean": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+      "AC/GateRuntime.lean": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f",
+      "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+      "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+      "AC/Structure.lean": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb",
+      "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+      "lakefile.toml": "f22cba4f5f31d23815c62533bb9e6db49fc85e08e8bd707bd20d82497f9583f5",
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+      "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+      "profiles/proof-support-v1.json": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+      "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+      "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+      "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+      "scripts/formal_gate.py": "39a0527792ba6f9a08407e77350a7e68eb32ed8cea8950b8b1f5e52f8bdfabaa",
+      "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
+      "scripts/formal_support.py": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6",
+      "scripts/gate_codegen.py": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
+      "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+      "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+      "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+      "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+      "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+    },
+    "sha256": "8421a93dbd8f5160842f15235825163f06a0e0837e03ef7f46fad68b389b06bf"
+  },
+  "schema": "a_c.formal-gate.result/1",
+  "selections": [
+    {
+      "budget_records": 21,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c"
+      ]
+    },
+    {
+      "budget_records": 17,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a8cafeeacc2f8bc2deda01690eaaf31b"
+      ]
+    },
+    {
+      "budget_records": 11,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bcb769c763230c0182097d3cc494c488"
+      ]
+    },
+    {
+      "budget_records": 5,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:ca69fb183db64514704157409ebe758d"
+      ]
+    },
+    {
+      "budget_records": 15,
+      "seeds": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17011ff678c1e1fc0723e12d17e820d"
+      ]
+    }
+  ],
+  "status": "verified"
+}

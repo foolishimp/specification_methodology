@@ -1,0 +1,116 @@
+{
+  "kind": "independent.actual-tools010-consumer/1",
+  "source_check": {
+    "kind": "stdo.installed-tooling/2",
+    "status": "checked",
+    "version": "3.0.5",
+    "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+    "source_files": 240,
+    "source_inventory_sha256": "1b7655edc212a41915417059f47a30b44a955adde0719894e2e4a12748869aba",
+    "archive_sha256": "314f5f61cf5e19b4b250c1b90747edb514a11a1fc54a5457886b0ebdbff9c6a1"
+  },
+  "native_unchanged": true,
+  "native_bytecode_members": [],
+  "derived_source_members": 112,
+  "commands": [
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/store/releases/v3.0.5/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/sources"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "materialized",
+        "source_files": 240,
+        "destination": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/sources",
+        "version": "3.0.5",
+        "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+        "notice": "Source custody only; select dependencies, work and authority explicitly."
+      },
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/store/releases/v3.0.5/standards/tooling/materialize.py",
+        "verify-tree",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/sources"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "checked",
+        "source_files": 240,
+        "destination": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/sources"
+      },
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/store/releases/v3.0.5/standards/tooling/setup.py",
+        "derive-runtime",
+        "--tools",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/sources",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/runtime",
+        "--receipt",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/derivation.json"
+      ],
+      "returncode": 0,
+      "result": {
+        "status": "derived",
+        "runtime_root": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/runtime",
+        "receipt": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/derivation.json",
+        "receipt_sha256": "37cddde966dce1f00bcd750dee4cab8a6f82c449585730aa8ee8adb566e298c5"
+      },
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/store/releases/v3.0.5/standards/tooling/setup.py",
+        "derive-runtime",
+        "--tools",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/sources",
+        "--destination",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/must-not-create-runtime",
+        "--receipt",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/store/releases/v3.0.5/MUST-NOT-CREATE.json"
+      ],
+      "returncode": 2,
+      "result": {
+        "status": "refused_or_incomplete",
+        "reason": "output overlaps protected input or immutable native installation",
+        "recovery": "Retain partial setup and receipts; reconcile before retry."
+      },
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/store/releases/v3.0.5/standards/tooling/setup.py",
+        "bootstrap-lean",
+        "--derivation",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/derivation.json",
+        "--derivation-sha256",
+        "37cddde966dce1f00bcd750dee4cab8a6f82c449585730aa8ee8adb566e298c5",
+        "--python",
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "--output",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-tools010-hkrabmrk/store/releases/v3.0.5/MUST-NOT-BOOTSTRAP"
+      ],
+      "returncode": 2,
+      "result": {
+        "status": "refused_or_incomplete",
+        "reason": "output overlaps protected input or immutable native installation",
+        "recovery": "Retain partial setup and receipts; reconcile before retry."
+      },
+      "stderr": ""
+    }
+  ],
+  "scope": "actual current240file package to materialization and prepared runtime only; bootstrap blocked before invocation; no Lean or native host"
+}

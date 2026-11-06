@@ -1,0 +1,17 @@
+test_selected_venv_survives_both_installed_host_routes (test_install_305.Install305Tests.test_selected_venv_survives_both_installed_host_routes) ... FAIL
+
+======================================================================
+FAIL: test_selected_venv_survives_both_installed_host_routes (test_install_305.Install305Tests.test_selected_venv_survives_both_installed_host_routes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/stdo_skills/tests/test_install_305.py", line 106, in test_selected_venv_survives_both_installed_host_routes
+    self.assertEqual(actual.returncode, 0, actual.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named '_stdo305_probe'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.562s
+
+FAILED (failures=1)

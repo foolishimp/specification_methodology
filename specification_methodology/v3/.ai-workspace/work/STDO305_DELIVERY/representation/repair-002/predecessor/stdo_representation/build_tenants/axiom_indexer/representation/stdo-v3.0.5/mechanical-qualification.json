@@ -1,0 +1,430 @@
+{
+  "kind": "stdo305.axiom-current-qualification/1",
+  "version": "3.0.5",
+  "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "model_raw_sha256": "68627579fdc654d5ccdcbf67d5d6954ce39392da70145308ea27557bc5c3b00f",
+  "program_raw_sha256": "737fb2242bd98fa4643b54debe8b68fbdaab4ce76e75e189b18fcb292a7e94f8",
+  "map_raw_sha256": "b82d2be56d8ab5de6bcd88f57c5af40fba5fdc8e6f2bbfcd899f949b52e98f2c",
+  "mechanics": {
+    "ac.py": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8",
+    "ac_model.py": "a8baaeb06e45957d486ecf2977294ac49b481762d65812330018127e60c27ad2"
+  },
+  "exact_model_value_restored": true,
+  "source_members_verified": 68,
+  "map_bytes_reproduced": true,
+  "projection_modes_match_current_model_closures": [
+    21,
+    17,
+    11,
+    5,
+    15
+  ],
+  "changed_records": 150,
+  "projection_deltas": [
+    {
+      "key": "native_work",
+      "count": 21,
+      "changed_record_ids": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:225cc175cf584eef5d5d3da8821bf6a7"
+      ]
+    },
+    {
+      "key": "common_fd",
+      "count": 17,
+      "changed_record_ids": []
+    },
+    {
+      "key": "product_composition_contract",
+      "count": 11,
+      "changed_record_ids": []
+    },
+    {
+      "key": "finding_report_ledger",
+      "count": 5,
+      "changed_record_ids": []
+    },
+    {
+      "key": "source_closed_cohort",
+      "count": 15,
+      "changed_record_ids": []
+    }
+  ],
+  "cases": [
+    {
+      "case": "convert",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac_model.py",
+        "convert",
+        "--model",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+        "--config",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/conversion-config.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/axiomatic-program.json",
+        "--receipt",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/conversion-preservation.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.40394929191097617,
+      "stdout_sha256": "ab0ae3463dcf4fd1cf592f56c7d733094a32bfa5841d29722a8ea70e9669054f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "restore",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac_model.py",
+        "restore",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/axiomatic-program.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/restored-model.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.24122950015589595,
+      "stdout_sha256": "b48ddf58b32a2e5d3ae138190d02b7edc05ee281d74d1636d4cfe11de2a00fb3",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "validate-map",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "validate",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/validation-report.json",
+        "--emit-map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/logical-constraint-map.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.4223187919706106,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "map-reproduction",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "validate",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/reproduction-validation.json",
+        "--emit-map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/reproduced-map.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.41948162531480193,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-native_work-reference-only",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:native-work",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/native_work.reference-only.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.5185952498577535,
+      "stdout_sha256": "e28a00268aead0cea0d0585e892b16602c6357985283ef6263b99ee1ce1c4e66",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-native_work-materialized",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:native-work",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/native_work.materialized.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.4978640000335872,
+      "stdout_sha256": "e28a00268aead0cea0d0585e892b16602c6357985283ef6263b99ee1ce1c4e66",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-common_fd-reference-only",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:common-fd",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/common_fd.reference-only.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.5014383750967681,
+      "stdout_sha256": "4ad274e18d7c6a14910559d8e0a1ad74046489f1d21b9435fb2db0ae9f314511",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-common_fd-materialized",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:common-fd",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/common_fd.materialized.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.49330141581594944,
+      "stdout_sha256": "4ad274e18d7c6a14910559d8e0a1ad74046489f1d21b9435fb2db0ae9f314511",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-product_composition_contract-reference-only",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:product-composition-contract",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/product_composition_contract.reference-only.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.5197395412251353,
+      "stdout_sha256": "1525a3969e317ee78316dc3ef27e36a195cde42c1a764fea417694e26a82f1be",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-product_composition_contract-materialized",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:product-composition-contract",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/product_composition_contract.materialized.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.5174510423094034,
+      "stdout_sha256": "1525a3969e317ee78316dc3ef27e36a195cde42c1a764fea417694e26a82f1be",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-finding_report_ledger-reference-only",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:finding-report-ledger",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/finding_report_ledger.reference-only.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.5165893752127886,
+      "stdout_sha256": "22a14d5582a3b86b9d751ffa238ffdc7a77fed014074d97939c1d6ae1387be72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-finding_report_ledger-materialized",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:finding-report-ledger",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/finding_report_ledger.materialized.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.5227895001880825,
+      "stdout_sha256": "22a14d5582a3b86b9d751ffa238ffdc7a77fed014074d97939c1d6ae1387be72",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-source_closed_cohort-reference-only",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:source-closed-cohort",
+        "--mode",
+        "reference-only",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/source_closed_cohort.reference-only.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.5187633750028908,
+      "stdout_sha256": "a5e5583a3b4e47ef36b27295606cccb8aa6f4a421f230aba7fb21934f482e09e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "project-source_closed_cohort-materialized",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:source-closed-cohort",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/projections/source_closed_cohort.materialized.json"
+      ],
+      "returncode": 0,
+      "expected_returncode": 0,
+      "elapsed_seconds": 0.5092692920006812,
+      "stdout_sha256": "a5e5583a3b4e47ef36b27295606cccb8aa6f4a421f230aba7fb21934f482e09e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "case": "predecessor-map-refused",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+        "project",
+        "--program",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/axiomatic-program.json",
+        "--map",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/predecessor/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/logical-constraint-map.json",
+        "--bindings",
+        "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/bindings.json",
+        "--frame-index",
+        "urn:stdo-representation:frame-index:v3.0.5:native-work",
+        "--mode",
+        "materialized",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/derived/must-not-be-stale-view.json"
+      ],
+      "returncode": 1,
+      "expected_returncode": 1,
+      "elapsed_seconds": 0.5317370826378465,
+      "stdout_sha256": "185bc7c2a8ce0b89e1771dc371a976617573341a479a28006a8c11dbe3fd2236",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "prior_mechanics_evidence": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-001/predecessor/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5/mechanical-qualification.json",
+    "raw_sha256": "e7a4ae0a80c85744572f95d44739795b8dc27a3e94f90e48732759380bdc042a",
+    "scope": "Same unchanged converter mechanics; old positive model identity is not current evidence."
+  },
+  "claim": "Actual successor conversion/restoration/map and all ten projections; no semantic acceptance, Lean result, host qualification or release is asserted."
+}

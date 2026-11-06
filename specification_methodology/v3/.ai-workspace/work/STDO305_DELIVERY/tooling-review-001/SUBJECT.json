@@ -1,0 +1,142 @@
+{
+  "checks": [
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_stable_stack_release.py",
+        "-v"
+      ],
+      "name": "final_stable_profile_tests",
+      "returncode": 0,
+      "seconds": 0.10244008293375373,
+      "stderr_sha256": "1585ab498a7a0d67345ec1f680555a41de2eb4107ccbcdfb85a5047e87f14490",
+      "tests": 28
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/check_stack_release.py",
+        "--phase",
+        "ready"
+      ],
+      "expected_returncode": 1,
+      "returncode": 1,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"incomplete\",\n  \"phase\": \"ready\",\n  \"failures\": [\n    \"stable cohort: complete candidate status/cut required; assembling is not ready\"\n  ]\n}\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "scripts/stdo_source_freeze.py",
+        "check",
+        "--root",
+        "specification_methodology/v3/build_tenants/common",
+        "--record",
+        "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/source-freeze-002.json"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"valid\",\n  \"source_identity_sha256\": \"0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba\",\n  \"member_count\": 53,\n  \"native_contract_count\": 15\n}\n"
+    },
+    {
+      "argv": [
+        "python3",
+        "-m",
+        "py_compile",
+        "scripts/check_stack_release.py",
+        "scripts/stable_stack_release.py",
+        "specification_methodology/v3/build_tenants/common-tools/native_release.py"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  ],
+  "earlier_combined_suite": "TESTS.json: 54 tests passed; final focused 28 rerun after final native/current-artifact guard edits",
+  "files": [
+    {
+      "bytes": 3632,
+      "path": "AGENTS.md",
+      "sha256": "3643f5754f93bdcdc145858b65d50c2acc8e4985e19a5231127b0fa8af18a025"
+    },
+    {
+      "bytes": 3121,
+      "path": "CLAUDE.md",
+      "sha256": "3b189e10f4ca5551a6acfac6c5d73ffd4055d364bea19a88482f12c1db1704e5"
+    },
+    {
+      "bytes": 2384,
+      "path": "RELEASE_PRODUCTS.md",
+      "sha256": "841cb37485b9f13f21445811b8484b81e8f479e9c60d88a2e1812e57da90031f"
+    },
+    {
+      "bytes": 5872,
+      "path": "STACK_RELEASE.md",
+      "sha256": "a52d86a14fc95d7d93d6aa4e912971bcc723c554e53c20833681ef853afc6dc9"
+    },
+    {
+      "bytes": 4803,
+      "path": "scripts/STABLE_RELEASE_PROFILE.md",
+      "sha256": "e2674b73383d7014f0e9e0f2bf92beb06e22e91d81eba43de56247041e71197f"
+    },
+    {
+      "bytes": 53173,
+      "path": "scripts/check_stack_release.py",
+      "sha256": "6367bc03f4ea37a895f7a1b195b1144fd44b94ef82712c4312a2d7cf85eb0690"
+    },
+    {
+      "bytes": 11761,
+      "path": "scripts/fixtures/stack_release-v2.5.1-rc.2.json",
+      "sha256": "1af97aeb7df12cd31dbddc04fad55a3ef6b3552c6e246a1c257aa942ec8ace18"
+    },
+    {
+      "bytes": 31793,
+      "path": "scripts/stable_stack_release.py",
+      "sha256": "af98bf9d505ee319760f893ee13b47c9fae1872dccc4b74f836476aab4675672"
+    },
+    {
+      "bytes": 5273,
+      "path": "scripts/stdo_source_freeze.py",
+      "sha256": "b983160f03631efbea26bc7f50bf9a664f2372a04033d467f9ad1ecbcd263f76"
+    },
+    {
+      "bytes": 30670,
+      "path": "specification_methodology/v3/build_tenants/common-tools/native_release.py",
+      "sha256": "3585e4953975caa32686a9e05f1d4dbea28ea555a68bec0cc1528f9aba5d6834"
+    },
+    {
+      "bytes": 6433,
+      "path": "stack_release.json",
+      "sha256": "7d808313bf59f3492a5c56020a71d596352f25dc21fbebae6f27a1717044ed76"
+    },
+    {
+      "bytes": 23118,
+      "path": "tests/test_stable_stack_release.py",
+      "sha256": "d7c6044b22793b3ad9c5f6a630c1c73eba662b00677228bf50ec86645f312205"
+    },
+    {
+      "bytes": 43938,
+      "path": "tests/test_stack_release.py",
+      "sha256": "5b6dd8f87d90eb48c90cd9f50cd63affda0f264969ea5ab7d9c92873cf070686"
+    }
+  ],
+  "inventory_sha256": "b4cafea51f78cb0f8e788202063db8abcb91aea4dd905073b959a2dcffd96878",
+  "kind": "stdo305.tooling-review-subject/1",
+  "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "standing": "reviewable bounded gate implementation; current artifact integration and release readiness withheld",
+  "unresolved": [
+    "Current documentation/tooling/proof-reader schema-2 integration pending final peer artifacts. Configured native preparation refuses historical schema-1 assets.",
+    "Manager 3.0.5 source metadata, exact wheel build and installed qualification remain pending.",
+    "Final Product/component inventories, concrete qualification adapters and actual full-cohort execution evidence remain pending.",
+    "No current native cut, child tag, publication plan or public release has been created.",
+    "Independent review of this gate implementation remains pending."
+  ]
+}

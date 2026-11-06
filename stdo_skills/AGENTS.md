@@ -1,31 +1,28 @@
-# STDO Skills bootstrap
+# stdo_skills current bootstrap
 
-Select `stdo_skills.json`, verify its exact installed basis with `stdo status
---definition stdo_skills.json --verify`, and read the declared bootstrap and
-deciding owner sections from that installation. The operative cut is STDO
-v3.0.1-rc.1, manifest
-`60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`.
-Do not adopt a newer cut from the discovery selector implicitly.
+Select `stdo_skills.json` and verify its exact installed STDO 3.0.4 basis. Read README, Goals, Intent, Product, requirements and the applicable design. The owner-selected [3.0.5 delivery contract](specification/RELEASE_3_0_5.md) supersedes earlier builder/cohort exclusions. Historical qualification records retain their original bases.
 
-Read README, Intent, Product, Goals, requirements and the current frame-basis
-disposition. Common WHAT belongs in `specification/`. Codex and Claude are
-independent HOW tenants, each with its own design and skills. Shared requirements
-do not require identical prompts, decomposition or host machinery.
+This Product participates in the explicit five-Product release relation without merging Product ownership. Common WHAT remains in specification; build tenants own HOW. Root coordinates as Executive; separately granted Writer/Worker performs scoped effects. Existing grants remain valid within their exact scope. Missing authority, uncertain effects and failed required tools return through the deciding contract; never simulate success.
 
-The initial common documents are candidates for Executive construction
-disposition. Their presence and the Product Definition locator are not evidence
-of acceptance. T-001 records the owner's concrete construction instruction and
-the current admission/tooling limitation.
+Preserve unrelated work and frozen historical evidence. Runtime and Skills support must bind exact selected sources, actual interfaces and retained responses. Test public paths and actual pinned upstreams before claiming compatibility. A tool result, package check or role label is not semantic acceptance or release authority.
 
-Executive coordinates; it does not mutate. A separately bound Worker/Writer
-performs exact named effects. Use bounded delegation for material context,
-capability or independence boundaries. A sufficient small task may use direct
-Writer entry without automatic tickets or independent review. Reviewers acquire
-source-derived expectations and the exact candidate independently and return
-findings; they do not implement repairs or decide promotion.
+<!-- STDO_BOOTSTRAP_START -->
+## STDO Bootstrap
 
-Use the declared supported tool contracts and retain actual responses. Required
-tool failure or an unsupported method binding withholds its dependent claim;
-do not simulate a passing result or silently bypass the required path. Preserve
-unrelated work and the frozen released methodology. Native tools and actor calls
-are mechanisms, not new admission, acceptance or release authority.
+This scope is routed by an STDO Product Definition Overlay.
+
+Before constitutional work:
+
+1. Resolve the applicable `stdo_<label>.json` for the requested Product scope.
+2. Use `constitution.stdo.basis`, not its mutable selector, as the operative basis.
+3. Resolve and verify that exact installed release through the STDO toolchain manager.
+4. Load the Product Definition's declared bootstrap entrypoint, then exact owning standards as needed.
+5. Resolve the applicable accepted Project Reference-Frame Basis or its declared composition.
+6. Bind the exact outcome, basis and existing work grant. Use direct Writer entry when the accepted frame configuration permits it and one capable context suffices; use Executive or the declared project equivalent for material coordination. Activate only applicable dependency-ready evaluations, preserving unknown applicability and required independence. Executive does not mutate files or Git; a separate Writer activation binds those effects.
+7. Fail closed when the Product Definition, frame basis, subject, authority, or activation is missing, ambiguous, stale, or outside the governed scope.
+
+Mutable methodology source, another installed version, a cache entry, and this
+bootstrap cannot replace the exact basis selected by the Product Definition.
+A prompt, summary, symbolic map, or prior result may route attention but cannot
+replace current source authority or a closed frame result.
+<!-- STDO_BOOTSTRAP_END -->

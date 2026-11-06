@@ -22,6 +22,14 @@ PROOF_MEMBERS = {"index.html", "PROOFS.json", "report.json", "sources/AC.lean", 
 MEMBERS = {"index.html", "README.md", "constraint-explorer/index.html", "code-explorer/index.html", "DOCUMENTATION.json", *{"proofs/" + p for p in PROOF_MEMBERS}}
 
 
+def current():
+    here = str(Path(__file__).resolve().parent)
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import documentation_current
+    return documentation_current
+
+
 def proof_checker():
     path = Path(__file__).resolve().with_name("proof_reader.py")
     try:
@@ -202,6 +210,8 @@ def bundle(viewer, destination, code_viewer, proofs):
 
 
 def check_files(files):
+    if json.loads(files.get("DOCUMENTATION.json", b"{}")).get("kind") == "stdo.installed-documentation/2":
+        return current().check_files(files)
     require(set(files) == MEMBERS, "required documentation member set differs")
     metadata = json.loads(files["DOCUMENTATION.json"])
     require(metadata["kind"] == "stdo.installed-documentation/1"
@@ -249,7 +259,7 @@ def check_payload(payload):
                 f"required documentation links missing or misdirected in {source}")
     text = payload[getting_started].decode()
     commands = re.findall(r"(?m)^stdo resolve (stdo://\S+/standards/documentation/index\.html)\s*$", text)
-    require(commands == [f"stdo://releases/v{VERSION}/standards/documentation/index.html"],
+    require(commands == [f"stdo://releases/v{result['version']}/standards/documentation/index.html"],
             "Getting Started documentation command selects a different release")
     return result
 
@@ -269,11 +279,19 @@ def main(argv=None):
     b.add_argument("--destination", type=Path, required=True)
     b.add_argument("--code-viewer", type=Path, required=True)
     b.add_argument("--proofs", type=Path, required=True)
+    n = commands.add_parser("bundle-current")
+    n.add_argument("--repository", type=Path, required=True)
+    n.add_argument("--selection", type=Path, required=True)
+    n.add_argument("--selection-sha256", required=True)
+    n.add_argument("--destination", type=Path, required=True)
     c = commands.add_parser("check")
     c.add_argument("root", type=Path)
     args = parser.parse_args(argv)
     try:
-        result = bundle(args.viewer, args.destination, args.code_viewer, args.proofs) if args.command == "bundle" else check(args.root)
+        if args.command == "bundle-current":
+            result = current().build(args.repository, args.selection, args.selection_sha256, args.destination)
+        else:
+            result = bundle(args.viewer, args.destination, args.code_viewer, args.proofs) if args.command == "bundle" else check(args.root)
         print(json.dumps(result, indent=2))
         return 0
     except (OSError, ValueError, KeyError, TypeError) as exc:

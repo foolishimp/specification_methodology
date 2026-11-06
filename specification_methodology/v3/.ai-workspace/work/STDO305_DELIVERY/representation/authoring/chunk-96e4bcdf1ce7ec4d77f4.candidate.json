@@ -1,0 +1,2082 @@
+{
+  "concepts": [
+    {
+      "key": "prior_ad2911520dc8ffb9419df0fede4f0e57",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line": 77,
+          "end_line": 78,
+          "quote": "Its instance premises, which the commitments\ndo not supply, are named in the rows as follows:"
+        }
+      ],
+      "label": "F14 assurance and testing foundation account",
+      "definition": "F14 is the source's foundation-to-law account for evidence about realised products and its organisation. Its additional instance premises are runnable product (source and deployed, installed or runnable forms can produce execution or observation evidence), composition (modules, interfaces and owners form causal paths), users (claims concern supported-surface outcomes), external boundaries (workers, transports or fixtures outside source), and designed modules (a design profile may govern a boundary and module ownership). Commitments do not supply these premises. Fourteen rows distinguish claimed consequences from domain and policy choices.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_2e29eb63656a6092cdf8daa41beaada3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line": 135,
+          "end_line": 137,
+          "quote": "This member owns the product-assurance bounded context,\n`urn:stdo:bounded-context:product-assurance`, under the selected complete\nSTDO basis, and within it the Product-level test-authority taxonomy."
+        }
+      ],
+      "label": "Product-assurance proof taxonomy",
+      "definition": "The product-assurance bounded context is urn:stdo:bounded-context:product-assurance. Its Product-level taxonomy distinguishes design or module conformance authority from UAT or acceptance authority independently of execution breadth. Conformance asks whether implementation realises the module or design boundary; UAT asks whether the composed product satisfies its claimed requirement or scenario.",
+      "conditions": [
+        "The selected complete STDO basis supplies the bounded context."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_433fbad86b733e2a1409c02021a25be1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line": 173,
+          "end_line": 174,
+          "quote": "Under this method only sandbox tests, or an explicitly equivalent isolated\ncomposed-product proof lane, may be called UAT or acceptance tests."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line": 185,
+          "end_line": 189,
+          "quote": "- harnessed sandbox UAT exercises the full composed product path with a\n  deterministic, fake, recorded or injected worker or result surface; and\n- live sandbox UAT exercises the full composed product path with a real\n  configured worker, tool, agent, service or other external probabilistic\n  transport where the product depends on that live boundary."
+        }
+      ],
+      "label": "Harnessed and live sandbox UAT",
+      "definition": "Sandbox UAT exercises an isolated composed product through declared application, public, runtime or control surfaces using a requirement-sourced scenario or acceptance case. Harnessed mode uses deterministic, fake, recorded or injected worker or result surfaces; live mode uses a real configured worker, tool, agent, service or external probabilistic transport where the product depends on that boundary.",
+      "conditions": [],
+      "exceptions": [
+        "An explicitly equivalent isolated composed-product proof lane may also be called UAT or acceptance testing."
+      ]
+    },
+    {
+      "key": "prior_3bc1331fd561438b3abf435cbe8f3166",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+          "start_line": 217,
+          "end_line": 217,
+          "quote": "Required closure lanes are reproducible from the declared source boundary"
+        }
+      ],
+      "label": "Fixture and proof portability",
+      "definition": "Fixture and proof portability concerns reproducibility of required closure lanes from their declared source boundary and the classification or declared acquisition of external project evidence.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_12d92e8aac0a56903f7c6713bf136289",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority",
+          "start_line": 241,
+          "end_line": 245,
+          "quote": "Written authority includes the assertion\nprovenance of each expected result: the owning obligation, its\ninterpretation, assumptions, derivation and shared dependencies, and\nwhether the asserted predicate is the obligation, a necessary condition of\nit or part of a sufficient conjunction"
+        }
+      ],
+      "label": "Written test-case authority",
+      "definition": "Written test-case authority is traceable authority for each live requirement's proof. It includes each expected result's assertion provenance: owning obligation, interpretation, assumptions, derivation, shared dependencies and whether the asserted predicate is the obligation itself, a necessary condition or part of a sufficient conjunction.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_a53692f0d555aea884937662d5230e55",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F4.%20Scenario%20bundle",
+          "start_line": 262,
+          "end_line": 265,
+          "quote": "A scenario bundle shows the feature or use-case boundary being exercised,\nthe test-case sequence that proves it, and the outcomes expected at each\nsignificant step. It is the layer that makes operational meaning\ninspectable (P6)."
+        }
+      ],
+      "label": "Scenario bundle",
+      "definition": "An ordered proving surface showing the exercised feature or use-case boundary, the test-case sequence and expected outcomes at significant steps, making operational meaning inspectable. Declared scenarios and use cases expose operational boundaries, sequences, actors, controls and outcomes and are the preferred source for identifying significant code and control paths.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b0b4ff2640d207bee8d1ebe2ff5163f3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F5.%20Installed%20dev%20proof",
+          "start_line": 276,
+          "end_line": 279,
+          "quote": "Where a system has an installable or runnable development form, the\ndecisive proving lane runs against an installed development version as if\nit were an independent project or an externalised target, not only against\nthe source tree in place (P6, P3)."
+        }
+      ],
+      "label": "Installed development proof",
+      "definition": "The decisive proving lane exercises an installed development version as an independent project or externalised target.",
+      "conditions": [
+        "The system has an installable or runnable development form."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f9c245e92a9e876a8878777f5d99ecff",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F6.%20Significant%20path%20coverage",
+          "start_line": 289,
+          "end_line": 293,
+          "quote": "The proving surface declares and exercises the significant paths for the\nbehaviour being claimed (P6, P2).\nExhaustive proof does not mean every possible branch in every file; it\nmeans the project names the meaningful paths and proves them\nintentionally."
+        }
+      ],
+      "label": "Significant paths",
+      "definition": "Claim-relative meaningful paths deliberately named and exercised by the proving surface. Relevant paths usually include success, fail-closed or rejection, boundary or control, integration or dispatch or transport, and recovery or retry or replay.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_5501995e5fa70ff1ab307cf852168870",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set",
+          "start_line": 306,
+          "end_line": 306,
+          "quote": "## 7. Product testing frame set"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+          "start_line": 340,
+          "end_line": 345,
+          "quote": "Where the governing frame configuration (PRODUCT_DEFINITION §7) or the\nadmitted work authority selects testing frames for a Product promotion,\nclosure or release-assurance claim, testing is configured as a\nclaim-relative set of testing frames. Placement in this member makes the\nset, and the law of §8 to §13 that serves it, available; it adopts nothing,\nand each activation is decided by ACTIVATION §1 (Applicability)."
+        }
+      ],
+      "label": "Product testing frame set",
+      "definition": "A claim-relative testing configuration ordinarily containing four distinct frames: user acceptance, end to end, integration and unit. Availability in this member does not activate the set or its supporting sections 8–13.",
+      "conditions": [
+        "Governing frame configuration or admitted work authority selects testing frames for a Product promotion, closure or release-assurance claim."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_2aa7efe612226c86a56903f07ffef6a4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FTerms",
+          "start_line": 310,
+          "end_line": 313,
+          "quote": "A testing frame is a frame (REFERENCE_FRAME §1) whose evaluation executes\nor observes a declared subject to discriminate one exact claim through an\nexplicit oracle, evidence population, path boundary and falsification\ncondition."
+        }
+      ],
+      "label": "Testing frame",
+      "definition": "A frame whose evaluation executes or observes a declared subject to discriminate one exact claim using an explicit oracle, evidence population, path boundary and falsification condition.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_a95cc4187253ab78a3b16b5c7c45e144",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FTerms",
+          "start_line": 319,
+          "end_line": 322,
+          "quote": "An authoritative Product path is the declared ordinary causal composition\nfrom a supported user or public entry, through the exact selected\ninterfaces, owners, state transitions, effects, persistence and recovery\nboundaries, to the outcome projection the Product claim requires."
+        }
+      ],
+      "label": "Authoritative Product path",
+      "definition": "The declared ordinary causal composition from a supported user or public entry through the exact selected interfaces, owners, state transitions, effects, persistence and recovery boundaries to the outcome projection required by the Product claim.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_37c6c0adb01d42ea37f40ece5db0dad2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FTerms",
+          "start_line": 327,
+          "end_line": 330,
+          "quote": "Material combinatorial complexity is the claim-relative population of\nindependent dimensions and interactions whose combinations can change an\noutcome, violate an invariant, select another authority path or expose a\nfailure."
+        }
+      ],
+      "label": "Material combinatorial complexity",
+      "definition": "The claim-relative population of independent dimensions and interactions whose combinations can change an outcome, violate an invariant, select another authority path or expose failure. Unit dimensions include module-owned public-contract laws, algebraic operators, calculation regimes, states, transitions, boundary classes and failures; cross-participant interface, Product, persistence, configuration and user-role combinations belong to integration, end-to-end or user-acceptance frames.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_9e6e1272a4d33627b22f146f2f8b9751",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUser-acceptance%20frame",
+          "start_line": 409,
+          "end_line": 409,
+          "quote": "| capability envelope | ability to operate the Product as the declared user would, perceive the material outcome and refusal surfaces, and distinguish hidden setup or unsupported assistance |"
+        }
+      ],
+      "label": "User-acceptance frame",
+      "definition": "The primary Product-outcome evidence frame for claims that a user can use the Product. Its subject is the exact deployed, installed or runnable form under current Product, requirement, UX, identity, policy and acceptance authority, declared role, environment and harnessed/live mode. Its manifold covers goals, entries, permissions, inputs, configuration, ordinary dependencies, declared worker/transport substitutions, visible state and outputs, refusals, recovery and acceptance interval. Coordinates bind Product/artifact identity, install, role, capability, configuration, dependency realisation, mode, data, workspace, invocation, time, outcome and scenario. Evidence includes actual supported requests/responses, visible projections, claimed durable effects, refusals, recovery, scenario records and exact subject/dependency identities. Capability requires acting as the declared user, perceiving material outcomes/refusals and detecting hidden setup or unsupported assistance.",
+      "conditions": [
+        "The claim asks whether a declared user can obtain the exact Product-defined outcome through the supported ordinary surface."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_74b38a1ed583949eef88dee3e98a862a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FEnd-to-end%20frame",
+          "start_line": 434,
+          "end_line": 434,
+          "quote": "| evaluation family | Does the exact Product subject realise the claimed outcome through the complete authoritative Product path, including every material interface, owner, state transition, effect, persistence, continuation, recovery and projection boundary? |"
+        }
+      ],
+      "label": "End-to-end frame",
+      "definition": "Evaluates whether the exact runnable Product realises an outcome through every material interface, owner, state transition, effect, persistence, continuation, recovery and projection boundary of the complete authoritative path. Basis includes composition design, supported entry, selected owners/dependencies, ordinary runtime configuration and Product claim. The manifold includes entry-to-outcome producers/consumers, contracts, authority transitions, state, events, persistence, processes, continuation, retry, recovery, projections and competing paths. Coordinates identify artifact/install, entry, operation, definition/owner, path/edges, process, event prefix, state, configuration, dependency, result, replay and scenario. Evidence includes entry invocation, observed semantic path/authority edges, owner receipts, durable events, transitions, outputs, claimed replay/reconstruction, installed identity and negative paths. Capability requires observing the complete path without changing it, distinguishing rivals and reproducing material state/failure relations.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_1c4c010033a4beec67d91c7c12d3f812",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FIntegration%20frame",
+          "start_line": 457,
+          "end_line": 457,
+          "quote": "| evaluation family | Do the actual participants at one declared material composition boundary satisfy their joint contract across the combinations of state, authority, configuration, timing, failure and recovery that can change the boundary result? |"
+        }
+      ],
+      "label": "Integration frame",
+      "definition": "Evaluates actual participants at one declared material composition boundary against their joint contract across outcome-changing state, authority, configuration, timing, failure and recovery combinations. Basis binds the exact declaration, actual implementations or exact admitted substitutes, Product/requirement/design law and interaction population. The manifold includes both sides, shared carriers, pre/postconditions, authority/ownership, ordering, state, configuration, failure, retry, recovery, translation and competing participants. Coordinates bind participant/version, interface/carrier revision, state, configuration, dependency, interaction case, input, output, failure and evidence. Evidence comprises exchanges, admitted carriers, transitions, contract verdicts, failures, retries, recovery, combinations and participant identities. Capability requires exercising/observing the seam, detecting substitution and varying every material interaction dimension.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_9873a2fcf1a72b9c6d82964e88b5d0b2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUnit%20frame",
+          "start_line": 480,
+          "end_line": 481,
+          "quote": "| evaluation family | Does one module-owned law hold across its material combinations of algebraic operator, calculation regime, state, transition, public or private boundary class, and failure case? |\n| subject and basis | one exact module boundary, the accepted ontology and design, the active carrier inventory the design declares, module-owned requirements and public contracts, the implementation, and a module-bounded decidable oracle |"
+        }
+      ],
+      "label": "Unit frame",
+      "definition": "Evaluates one module-owned law across material operator, calculation-regime, state, transition, public/private boundary-class and failure combinations. Basis includes the exact module boundary, accepted ontology/design, active declared carrier inventory, owned requirements/public contracts, implementation and module-bounded decidable oracle. The manifold includes public contracts, algebras, calculations, parsers, reducers, state machines, transitions, combinators, admission predicates, conservation laws, invariants, numerical boundaries and failures. Coordinates bind module/implementation revision, law, operator/function family, state, input/boundary class, expected relation, generated case, mutation and result. Evidence includes law-derived examples, equivalence classes, available finite exhaustive cases, properties/generation, metamorphic relations, calculation/algebra oracles, boundary cases and killed internal mutations. Capability requires an independently law-derived oracle, identifying bounded combinations and distinguishing violations from implementation restatement.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_9998e713a60bf1ac244a0e611d7a518a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F8.%20Combinatorial%20coverage%20and%20testing%20value",
+          "start_line": 523,
+          "end_line": 526,
+          "quote": "Testing value is indexed first by the material combinations a frame can\ndiscriminate for its exact claim, not by test, assertion, file, line,\nbranch, mock, snapshot or runner count (P2, P6). For one claim, the\ntesting-value index considers at least:"
+        }
+      ],
+      "label": "Testing-value index",
+      "definition": "A claim-relative index of the material combinations a frame can discriminate. It considers at least subject/claim congruence, independent dimension number/materiality, covered interaction strength, authoritative-path exactness, oracle independence/precision, realistic-fault/rival-path/historical-failure sensitivity, observability/reconstruction/reproducibility, and explicit residual combinations/invalidation. It is not inherently a scalar.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_3635e0d97a204bc786bfeff7cc2b76e4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F9.%20Legitimate%20path%20and%20technical-debt%20erasure",
+          "start_line": 593,
+          "end_line": 594,
+          "quote": "A successor passing does not prove the predecessor removed. Technical-debt\nerasure evaluates two distinct, finite, subject-relative graphs (P3, P6):"
+        }
+      ],
+      "label": "Technical-debt erasure",
+      "definition": "Evaluation of two distinct finite subject-relative graphs: production closure over the exact runnable Product/configuration and transitive imports, exports, package paths, switches, registries, fallbacks, consumers, generated runtime artifacts, recovery and fresh-process reconstruction; and assurance/source closure over relied-on source consumers, fixtures, proof scripts, generators, mutations and assurance tools.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_4a758d8b16a2d0014a7ecd1bc24c03f7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F11.%20Assurance%20subject%20acquisition%20and%20evaluation",
+          "start_line": 666,
+          "end_line": 671,
+          "quote": "Acquiring the assurance subject and evaluating it are distinct relations\n(P6, P1). Where a\nclaim depends on owner-issued Product, runtime, lifecycle, admission,\nreplay or projection truth, the testing frame acquires that truth through\nthe exact runnable owner surface, validator, projection, receipt or\nreconstruction relation."
+        }
+      ],
+      "label": "Assurance subject acquisition and evaluation",
+      "definition": "Distinct acquisition and evaluation relations: acquire actual owner-issued subjects through exact runnable owner surfaces, validators, projections, receipts or reconstruction relations, then evaluate with an independently contract-derived oracle.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_75d7ebdc57547aefb3f31ca6c91db8e4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F12.%20Counterexample%20localisation",
+          "start_line": 701,
+          "end_line": 705,
+          "quote": "A testing counterexample is returned to its earliest supported causal\nfrontier on the declared path. The frontier holds the causally minimal\nviolated owner relations or seam coordinates the evidence establishes;\nearliest means minimal under the declared causal relation, not first in log\nor clock order (P5, P6)."
+        }
+      ],
+      "label": "Counterexample localisation",
+      "definition": "Return of a testing counterexample to its earliest supported causal frontier: causally minimal violated owner relations or seam coordinates under the declared causal relation, not log or clock order. Its four exclusive domain forms are unique locus, jointly established incomparable earliest loci whose combined violation is necessary, unresolved alternative frontiers, and an unbounded frontier represented by indeterminate.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_edbbabc8b2dc4636bae4930b21b2d9bb",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame",
+          "start_line": 743,
+          "end_line": 752,
+          "quote": "`urn:stdo:reference-frame:end-to-end-interface-integration:v1` is a\ncomposite refinement whose identity resolves in\n`urn:stdo:bounded-context:reference-frame-evaluation` (owned by\nREFERENCE_FRAME) under the exact selected basis; its assurance law is\nstated here. It relates the evaluation of public boundaries, design,\noperators, owners and proof to the integration, end-to-end and\nuser-acceptance frames of §7. Like the set, it is available and is\nactivated only where the governing frame configuration or admitted work\nauthority selects it. It adds no fifth testing type, role or\nuniversal activation gate (P2, P3)."
+        }
+      ],
+      "label": "End-to-end interface integration refinement",
+      "definition": "Composite refinement urn:stdo:reference-frame:end-to-end-interface-integration:v1, resolving in urn:stdo:bounded-context:reference-frame-evaluation owned by REFERENCE_FRAME. It relates public-boundary, design, operator, owner and proof evaluation to integration, end-to-end and user-acceptance frames. It asks whether one outcome remains constructable, understandable and correctly realised across its material interface chain with sufficient context and conserved meaning, authority and cause. Design subjects bind declared roles, functional paths, dependencies, configuration and capabilities; realisation subjects bind actual participants, callable selection, supported entry/exit and exact runnable artifact/install. Both bind an independent oracle, requirements/design, exact source/workspace checkpoint, contracts and finite cases. The manifold covers producers, consumers, transformations and effect owners, seam pre/postconditions, value/reference domains, lifecycle/time, context, mutable subject, refusals, observations and visible results. Coordinates distinguish Product, artifact/install, workspace, observation, invocation, candidate, admitted result and evidence, including revisions, domains, units, cardinality, ordering, empty/null/default meaning and validity intervals.",
+      "conditions": [
+        "Selected by governing frame configuration or admitted work authority under the exact selected basis."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_548e95b2ad0b13be8c12ff0b8188144c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FClaim%20boundaries",
+          "start_line": 775,
+          "end_line": 778,
+          "quote": "| contract sufficiency | Can each participant determine and perform its responsibility from the declared interface and the available context? Source-grounded design evaluation may establish this claim without an implemented runtime; unresolved realisability or actor-context questions stay explicit. |\n| boundary congruence | Do the actual selected producers, transformations and consumers preserve the declared domains, meanings, lifecycle and authority? An actual-composition claim acquires both sides and their exchanges; design correspondence alone proves no implementation behaviour. |\n| path realisation | Does the exact runnable subject use the authoritative entry-to-outcome path through its material state, effect and observation boundaries? Matching output through another path is insufficient. |\n| user usability | Can the ordinary human, LLM or software caller obtain the selected outcome using only its declared context, access and supported surface? Internal success or validator-aware fixtures cannot establish this claim. |"
+        }
+      ],
+      "label": "Interface refinement claims",
+      "definition": "Four distinct claims: contract sufficiency asks whether every participant can determine and perform its responsibility from declared interfaces/context; boundary congruence asks whether actual selected producers, transformations and consumers preserve domains, meanings, lifecycle and authority; path realisation asks whether the exact runnable subject uses the authoritative entry-to-outcome path; user usability asks whether the ordinary human, LLM or software caller obtains the outcome using only declared context, access and supported surfaces.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_fe7db12377fdd46a49a3d55fed08adb1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FComputational%20whole-path%20evaluation",
+          "start_line": 881,
+          "end_line": 888,
+          "quote": "For material computational composition or recurrence work, the selected\ninterface claims are composed with evaluations of the path's operators,\nowners, reused foundations and proof, to evaluate one complete\nproducer-to-consumer path under the design profile's computational\nrealisation and recurrence law (DESIGN_MODULE). The evaluation binds fact\nestablishment, each consumer, validity and invalidation, effects, retained\nalternatives and accumulated work. It evaluates equivalent computation\nacross different domain names without assuming semantic equivalence."
+        }
+      ],
+      "label": "Computational whole-path evaluation",
+      "definition": "Bounded composition of selected interface claims with evaluations of path operators, owners, reused foundations and proof, covering one complete producer-to-consumer path under DESIGN_MODULE computational-realisation and recurrence law. It binds fact establishment, every consumer, validity/invalidation, effects, retained alternatives and accumulated work, and evaluates equivalent computation across domain names without presuming semantic equivalence.",
+      "conditions": [
+        "Material computational composition or recurrence work."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_5a33a4d8c03287f415271883ababd0f6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 941,
+          "end_line": 946,
+          "quote": "The first chain is semantic derivation. The second is evidence feedback\nand cannot select or accept the affected semantic answer (P6). The two\nchains are this member's instance of parallel derivation: expected results\ncarry assertion provenance from the first chain and executions carry\nexecution provenance from the second; agreement between them is\ncompatible with a shared error, and disagreement requires diagnosis"
+        }
+      ],
+      "label": "Design-to-module evidence route",
+      "definition": "Two directed evidence chains: semantic derivation from constitutional WHAT and owning requirements through accepted ontology, declared carriers, target design and domain/sequence/state evidence to implementation and module-derived tests, reconciliation/acceptance, promotion/design-method closure; and feedback from implementation/tests through evidence, counterexamples or falsification to affected ontology/design relations. Assertion and execution provenance remain distinct.",
+      "conditions": [
+        "A new or materially changed realisation boundary is governed by a design profile."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f36832f6941f8683b920fbd70d2f5ad7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "start_line": 1023,
+          "end_line": 1025,
+          "quote": "Unit tests under the design profile are module-owned proof lanes. They\nderive from module ownership evidence, not from code shape alone. A unit\ntest should be traceable to (P6, P2):"
+        }
+      ],
+      "label": "Module-derived unit lane",
+      "definition": "Module-owned proof lanes derived from realisation authority owned by DESIGN_MODULE and from module ownership evidence. Their authority is for module proof; Product UAT and acceptance meaning remain with Product authority.",
+      "conditions": [
+        "Unit tests under the design profile."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_32452eb024ac40cc77301d8270aacad9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation",
+          "start_line": 1054,
+          "end_line": 1062,
+          "quote": "Every designed module, function, application surface, runtime surface,\nplugin surface, public interface, data surface, and published function or\nmodule of a profile exists inside an operational lifecycle. Under the\ndesign profile that lifecycle signal is confirmed at the realisation\nboundary before design-method closure (P2, P6). The\ncanonical operational lifecycle chain is SPEC_METHOD §2 Operational\nlifecycle sufficiency; this section consumes that chain and does not\nredefine its phases. The checklist is not a release plan and does not\nreplace RELEASE; it is an ambiguity detector for ultimate intended use."
+        }
+      ],
+      "label": "Module lifecycle confirmation",
+      "definition": "Confirmation at the realisation boundary, before design-method closure, of the operational lifecycle of every designed module, function, application/runtime/plugin/public/data surface and published profile function or module. It consumes SPEC_METHOD §2 phases without redefining them; its checklist detects ambiguity about ultimate intended use and is neither a release plan nor a replacement for RELEASE.",
+      "conditions": [
+        "A boundary is governed by the design profile."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_8710247991b836d7b07fd776cf748e2c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS",
+          "start_line": 3,
+          "end_line": 14,
+          "quote": "Tier 1. Owns the a_c theory in full: position and scope, the signature,\nthe typed records, the laws AC-001 to AC-020, traversals and functor\nkinds, interpretation and models, the three governed layers, the law of\ncalculus identity, the application boundary, external imports, exclusions\nand the conformance obligations of this member. Consumes the ontology of\n[FOUNDATIONS §2](FOUNDATIONS.md) (subject, representation, interpretation,\ncontext, object, claim, evidence, judgment, authority, residual, basis,\nmaterial) and the core result algebra of\n[FOUNDATIONS §4 Results](FOUNDATIONS.md#results); it states laws over\nthose objects and defines none of them a second time. Each clause names\nthe principle (P0 to P6) that requires it, as\n[FOUNDATIONS §1](FOUNDATIONS.md#1-vocabulary-of-standing) requires."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+          "start_line": 18,
+          "end_line": 25,
+          "quote": "The STDO Axiomatic Calculus for Governed Symbolic Systems, written `a_c`,\nis this method's domain-specific, carrier-neutral constitutional calculus\nfor representing and relating governed symbolic systems. Its stable\nconcept identity is `urn:stdo:concept:axiomatic-calculus:a-c`. This member\nowns that concept in the bounded context\n`urn:stdo:bounded-context:axiomatic-calculus`. Both identifiers are\ndeclared identities and do not change with the carrier or the directory\nthat publishes them (P3)."
+        }
+      ],
+      "label": "Subject-described a_c calculus",
+      "definition": "Subject-described Tier 1 STDO Axiomatic Calculus for Governed Symbolic Systems, a_c: domain-specific and carrier-neutral, with stable identity urn:stdo:concept:axiomatic-calculus:a-c in urn:stdo:bounded-context:axiomatic-calculus. Its member owns position/scope, signature, record shapes, AC-001–AC-020, traversals/functor kinds, interpretation/models, three layers, calculus identity, application/import/exclusion boundaries and conformance obligations. It consumes FOUNDATIONS ontology and core results without redefining them; clauses identify their requiring P0–P6 principles. Its definitions do not depend on derivation-record layout, selected interpretation, carrier, provider, runtime or repository topology.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7fd7c71247668ac4656ebb2663df6898",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+          "start_line": 53,
+          "end_line": 57,
+          "quote": "The calculus, an interpreted model and an encoded carrier are distinct\ngoverned layers with separate content identities and proof boundaries\n(§7). A layer becomes a released Product only through separately\nauthorised Product acceptance and release. Neither interpretation nor\nencoding can redefine the calculus (P6)."
+        }
+      ],
+      "label": "Calculus, interpreted model and encoded carrier",
+      "definition": "An interpreted model a_c.X is downstream of a_c plus exact subject X. A carrier a_c.X.C encodes that model with an exact accepted semantic judgment J_X and exact carrier C. Calculus, interpreted model and encoded carrier have separate content identities and proof boundaries.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_3dab7b4ae60847a9b5f77b8991c041fa",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+          "start_line": 61,
+          "end_line": 63,
+          "quote": "The calculus specialises the governing commitments declared in this\npackage. Its derivation basis is the following finite set of current local\nowners, resolved to exact clauses by the identity record of §8 (P6):"
+        }
+      ],
+      "label": "Calculus derivation basis",
+      "definition": "Finite local derivation owners cover scoped identity/authority and bounded-context meaning in FOUNDATIONS §2; bounded probabilistic construction in P0, Work boundary and ACTIVATION §1; delegation/candidate production/independent assessment in ACTIVATION §1 and EVALUATION §3; ambiguity/human adjudication/hard stops in ACTIVATION §4; exact basis, authority, evidence/verdict separation and results in RF-005–007 and FOUNDATIONS; constitutional derivation/re-entry in SPEC_METHOD §§1,4; closure/projection/residual/capability law in REFERENCE_FRAME §3; singular release authority in SPEC_METHOD §6 and PRODUCT_DEFINITION §4. AxiomaticCalculusBasis resolves these to immutable absolute clause addresses in derivation_basis.principle_refs. Generic F_D, F_P and F_H originate here, independently of equal-spelled runtime/profile/application terms.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "prior_5044cc3afb1f1e211f22ec62765ef5ea",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line": 183,
+          "end_line": 183,
+          "quote": "Sandbox UAT has two lawful execution modes"
+        }
+      ],
+      "kind": "execution_mode_specialisation",
+      "meaning": "Harnessed and live sandbox modes specialise the UAT side of the proof taxonomy without merging execution breadth with authority.",
+      "conditions": [],
+      "exceptions": [
+        "An explicitly equivalent isolated composed-product lane may carry the same UAT designation."
+      ],
+      "source_key": "prior_433fbad86b733e2a1409c02021a25be1",
+      "target_key": "prior_2e29eb63656a6092cdf8daa41beaada3",
+      "governing": false
+    },
+    {
+      "key": "prior_5da8d2ce630350a9754881a3d7989c25",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F4.%20Scenario%20bundle",
+          "start_line": 270,
+          "end_line": 272,
+          "quote": "For that reason they are also the best\nsource for identifying the significant code and control paths the proving\nsurface must exercise (§6; P2)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F6.%20Significant%20path%20coverage",
+          "start_line": 289,
+          "end_line": 290,
+          "quote": "The proving surface declares and exercises the significant paths for the\nbehaviour being claimed (P6, P2)."
+        }
+      ],
+      "kind": "identifies",
+      "meaning": "Declared scenarios and use cases provide the preferred discovery source for significant paths, without themselves supplying proof.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_a53692f0d555aea884937662d5230e55",
+      "target_key": "prior_f9c245e92a9e876a8878777f5d99ecff",
+      "governing": false
+    },
+    {
+      "key": "prior_77c1b3be8e8855e5902f29849ad813ea",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+          "start_line": 354,
+          "end_line": 355,
+          "quote": "- user acceptance evaluates the Product outcome from the user's supported\n  frame;"
+        }
+      ],
+      "kind": "has_member",
+      "meaning": "User acceptance is an ordinary member for supported-user outcome claims; membership is not a hierarchy.",
+      "conditions": [
+        "Ordinary selected configuration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_5501995e5fa70ff1ab307cf852168870",
+      "target_key": "prior_9e6e1272a4d33627b22f146f2f8b9751",
+      "governing": false
+    },
+    {
+      "key": "prior_876424bac1cfa84f69e396cbef8933c7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+          "start_line": 356,
+          "end_line": 357,
+          "quote": "- end to end evaluates the complete runnable causal realisation of that\n  outcome;"
+        }
+      ],
+      "kind": "has_member",
+      "meaning": "End to end is an ordinary member for complete runnable causal-path claims.",
+      "conditions": [
+        "Ordinary selected configuration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_5501995e5fa70ff1ab307cf852168870",
+      "target_key": "prior_74b38a1ed583949eef88dee3e98a862a",
+      "governing": false
+    },
+    {
+      "key": "prior_881e7eb5c998828a93e226e4b9a4d4a6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+          "start_line": 358,
+          "end_line": 359,
+          "quote": "- integration evaluates one material composition boundary and its\n  interaction population; and"
+        }
+      ],
+      "kind": "has_member",
+      "meaning": "Integration is an ordinary member for material composition-boundary claims.",
+      "conditions": [
+        "Ordinary selected configuration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_5501995e5fa70ff1ab307cf852168870",
+      "target_key": "prior_1c4c010033a4beec67d91c7c12d3f812",
+      "governing": false
+    },
+    {
+      "key": "prior_70670d5bd3792045923b0d8344895365",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+          "start_line": 360,
+          "end_line": 362,
+          "quote": "- unit evaluates one module-owned law; internal combinatorial complexity\n  decides the proportional size and strategy of that evidence, not whether\n  the law is eligible for unit proof."
+        }
+      ],
+      "kind": "has_member",
+      "meaning": "Unit is an ordinary member for module-owned laws, with proportional evidence rather than complexity-based eligibility.",
+      "conditions": [
+        "Ordinary selected configuration."
+      ],
+      "exceptions": [],
+      "source_key": "prior_5501995e5fa70ff1ab307cf852168870",
+      "target_key": "prior_9873a2fcf1a72b9c6d82964e88b5d0b2",
+      "governing": false
+    },
+    {
+      "key": "prior_2544a32587ee93cbf7f99a4c6fc8139d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FEnd-to-end%20frame",
+          "start_line": 434,
+          "end_line": 434,
+          "quote": "| evaluation family | Does the exact Product subject realise the claimed outcome through the complete authoritative Product path, including every material interface, owner, state transition, effect, persistence, continuation, recovery and projection boundary? |"
+        }
+      ],
+      "kind": "evaluates",
+      "meaning": "The frame evaluates complete authoritative-path realisation without acquiring ownership of that path.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_74b38a1ed583949eef88dee3e98a862a",
+      "target_key": "prior_a95cc4187253ab78a3b16b5c7c45e144",
+      "governing": false
+    },
+    {
+      "key": "prior_f37e1b069d6a6d1cd82ccb537943f57c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FClaim%20boundaries",
+          "start_line": 788,
+          "end_line": 789,
+          "quote": "A full end-to-end usability claim\nneeds all four distinct results and their explicit conjunction"
+        }
+      ],
+      "kind": "requires_claim_set",
+      "meaning": "The refinement's full-usability claim depends on distinct sufficiency, congruence, realisation and usability results and explicit conjunction.",
+      "conditions": [
+        "Activation selects claims by applicability."
+      ],
+      "exceptions": [
+        "Unselected claims have no result and retain scope reasons."
+      ],
+      "source_key": "prior_edbbabc8b2dc4636bae4930b21b2d9bb",
+      "target_key": "prior_548e95b2ad0b13be8c12ff0b8188144c",
+      "governing": true
+    },
+    {
+      "key": "prior_3f6e37decba967bdd053a161b1de89b4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FComputational%20whole-path%20evaluation",
+          "start_line": 881,
+          "end_line": 885,
+          "quote": "For material computational composition or recurrence work, the selected\ninterface claims are composed with evaluations of the path's operators,\nowners, reused foundations and proof, to evaluate one complete\nproducer-to-consumer path under the design profile's computational\nrealisation and recurrence law (DESIGN_MODULE)."
+        }
+      ],
+      "kind": "composes",
+      "meaning": "Whole-path evaluation must compose selected interface claims with operator, owner, foundation and proof evaluations.",
+      "conditions": [
+        "Material computational composition or recurrence work."
+      ],
+      "exceptions": [],
+      "source_key": "prior_fe7db12377fdd46a49a3d55fed08adb1",
+      "target_key": "prior_548e95b2ad0b13be8c12ff0b8188144c",
+      "governing": true
+    },
+    {
+      "key": "prior_b8a062661878ad33902b0b08339cdaf4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "start_line": 1049,
+          "end_line": 1050,
+          "quote": "What such a lane claims, and what it never closes, is\nthe unit frame of §7."
+        }
+      ],
+      "kind": "bounded_by",
+      "meaning": "The unit frame governs the lane's claim scope and prohibited broader closure.",
+      "conditions": [
+        "Module-derived proof under the design profile."
+      ],
+      "exceptions": [],
+      "source_key": "prior_f36832f6941f8683b920fbd70d2f5ad7",
+      "target_key": "prior_9873a2fcf1a72b9c6d82964e88b5d0b2",
+      "governing": true
+    },
+    {
+      "key": "prior_3529a53cf09dd7031d9aea81d2863916",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+          "start_line": 53,
+          "end_line": 54,
+          "quote": "The calculus, an interpreted model and an encoded carrier are distinct\ngoverned layers with separate content identities and proof boundaries"
+        }
+      ],
+      "kind": "distinguishes",
+      "meaning": "The subject calculus distinguishes itself from its interpreted and encoded downstream layers.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_8710247991b836d7b07fd776cf748e2c",
+      "target_key": "prior_7fd7c71247668ac4656ebb2663df6898",
+      "governing": false
+    },
+    {
+      "key": "prior_24da7e724352721050af0c3324c3b7a3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+          "start_line": 61,
+          "end_line": 63,
+          "quote": "The calculus specialises the governing commitments declared in this\npackage. Its derivation basis is the following finite set of current local\nowners, resolved to exact clauses by the identity record of §8 (P6):"
+        }
+      ],
+      "kind": "derivation_basis_for",
+      "meaning": "The named local governing commitments are the source calculus's one-way derivation basis, without transferring authority to downstream applications.",
+      "conditions": [
+        "Exact basis issuance resolves actual local clauses."
+      ],
+      "exceptions": [],
+      "source_key": "prior_3dab7b4ae60847a9b5f77b8991c041fa",
+      "target_key": "prior_8710247991b836d7b07fd776cf748e2c",
+      "governing": true
+    }
+  ],
+  "constraints": [
+    {
+      "key": "prior_1cfc131a76df6f85742a5443d4bf5f5e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line": 97,
+          "end_line": 97,
+          "quote": "the preference for a fresh sandbox, at \"should\": a policy choice of this member"
+        }
+      ],
+      "statement": "The foundation table separately states: every executable proof surface declares authority and derives expected results from it, not implementation; project lanes map to one taxonomy before closure. Composed-product acceptance evidence comes through declared surfaces; substituted workers/transports prove only exercised relations and narrower green lanes do not prove a real external boundary. Required lanes reproduce from exact declared source boundary using checked-in fixtures, declared external acquisition or classification outside required closure; missing fixture is an unperformed evaluation, not product semantic failure. Every live requirement has written traceable test authority. Where meaningful behaviour is claimed, proof should be an ordered coherent-use sequence; significant paths are declared and exercised, with undeclared coverage unjudgeable and unexercised behaviour unproved. For an installable-system claim, decisive proof runs against installed development form as an external target; source checks cannot replace it, and a fresh sandbox is a should-level preference. When testing frames are selected, each binds exact claim, subject, path, population, oracle and falsifier; results stay claim-bound and combine only through declared relations. Labels, runners, counts and coverage measures confer no assurance; broader results do not make narrower laws true and narrower green results do not establish unexamined broader claims.",
+      "uncertainty": "Detailed five significant paths, four ordinary frames and their complete declarations are referenced but not supplied.",
+      "conditions": [
+        "Use each row only under its specified instance premises."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_ad2911520dc8ffb9419df0fede4f0e57"
+      ]
+    },
+    {
+      "key": "prior_93cd36570856f72013f141f0e0562b0b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line": 100,
+          "end_line": 100,
+          "quote": "a reduced covering set is lawful only with a reason why the omitted interactions cannot change the claim, or with them kept as residuals"
+        }
+      ],
+      "statement": "Path claims require two-sided evidence: required ordinary supported paths witnessed and each forbidden path absent/refused in production and assurance graphs; equal output through a forbidden path falsifies a path claim. Testing value concerns material combinations discriminated, not counts; reduced covering sets need a reason omitted interactions cannot change the claim or explicit residuals, and code coverage proves only visits. Assurance evaluates the owner-issued subject acquired through its owner surface, never parallel reconstructed owner state; missing owner projection remains a named undecided gap. Counterexamples persist until disposed and return to the earliest evidence-supported causal frontier; unique locus, joint set, unresolved alternatives and unbounded frontier remain distinct core-mapped forms, and localisation grants no repair. Interface chains keep contract sufficiency, boundary congruence, path realisation and user usability distinct; full usability requires all four and their conjunction. Each seam binds domains, available context, translation, current observation, actual path and diagnostic cause; local success cannot replace complete-path results. For design-governed boundaries, implementation and unit tests derive from accepted ontology/design/module authority; evidence feeds back without choosing semantic answers. Module-owned unit tests are authoritative for module proof and should trace ownership rather than helper shape; no lane means not closure-ready. Before module closure every lifecycle phase is answered, reasoned not_applicable or named gap; implementation proves only within its authority and gaps proceed only when governed.",
+      "uncertainty": "The eight index terms, nine factors, four localisation mappings, twelve interface elements, six obligations, ten qualification cases, two module evidence chains and nine lifecycle items are referenced but not enumerated in the supplied source.",
+      "conditions": [
+        "Apply the relevant row's composition, runnable-product, users or designed-module premises."
+      ],
+      "exceptions": [
+        "Path-sensitive mutation is a policy choice only where proportionate and safe."
+      ],
+      "applies_to_keys": [
+        "prior_ad2911520dc8ffb9419df0fede4f0e57"
+      ]
+    },
+    {
+      "key": "prior_1c17d94aebc89ec5fec96a2ee6b78af1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line": 109,
+          "end_line": 109,
+          "quote": "The table accounts for §1 to §16."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line": 130,
+          "end_line": 131,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6)."
+        }
+      ],
+      "statement": "Row provenance is retained as source claims, not established derivations: verification P2/P6 with runnable product+users, pillars 1,5,9; taxonomy P6/P2/P1 with runnable product, 4,9; composed acceptance P6/P1/P5 with runnable product+users+external boundaries, 8,9; portability P3/P6/P5 with external boundaries, 8,9; test authority/paths P6/P2 with composition, 1,5,9; installed proof P6/P3 with runnable product, 8,9; testing frames P0/P6/P1/P4a with composition, 3,7,9; path claims P6/P3/P5 with runnable product+composition, 4,9; combinations P2/P6/P5/P4a with composition, 3,9; subject acquisition P6/P1/P5 with runnable product, 6,9; localisation P5/P1/P4b with composition, 3,9; interfaces P0/P1/P4a/P5/P6 with composition+users, 4,7,9; module tests P6/P4b/P2 with designed modules, 4,9; lifecycle P2/P6/P5 with designed modules, 1,9. P0 is recovered, P1/P2/P3/P4a/P6 independent, P5 derived from P0/P6 with open-world premise, and P4b derived from P0/P2 with non-reacquirable step-produced facts. ASSURANCE's added choices include the three layers/product-owner scenarios; two proof authorities/context/terminology; sandbox modes; three portability forms; scenario bundle/five usual paths; fresh-sandbox preference; four ordinary frames/declarations; proportionate safe path mutation; eight index terms/nine factors; four localisation forms; interface identity/twelve elements/four claims/six obligations/ten cases; two module evidence chains/completeness/traceability; nine lifecycle items. Project chooses lane names; governing frame configuration or admitted authority selects testing/interface frames; scalar scores belong to Product/requirement/accepted-design authority. SPEC_METHOD owns chain, change re-entry and lifecycle markers; FOUNDATIONS owns observation binding and install/development roles; ACTIVATION owns diagnosis; TICKETS owns admitted test derivation; DESIGN_MODULE binds module terms and computational recurrence; EXECUTIVE_BASELINE maps roles/families. Consumer listings identify applications, not transferred ownership; merely naming a law is distinguished from applying it, and each consumer decides nothing beyond the owner.",
+      "uncertainty": "Full standing and detailed referenced domain inventories remain outside the supplied excerpts.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_ad2911520dc8ffb9419df0fede4f0e57"
+      ]
+    },
+    {
+      "key": "prior_8c3f3bf2694e89b5c877cf9bfe75a242",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line": 149,
+          "end_line": 149,
+          "quote": "Authority source is not execution breadth."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+          "start_line": 196,
+          "end_line": 199,
+          "quote": "Where a product or release\nclaim depends on live probabilistic compute, semantic green, unit green,\nmodule-integration green and harnessed-sandbox green are necessary and not\nsufficient for live acceptance"
+        }
+      ],
+      "statement": "Every executable proof surface declares authority. For ticketed work, admitted ticket and triage path are immediate authority; expected results derive from lawful re-entry and cited constitutional/realisation law, never current implementation behaviour. Conformance derives from governing design, module ownership, declared carrier inventory or equivalent, structural diagrams where present and boundary-local fail-closed law. Unit tests are conformance; module integration, negative and fail-closed tests may be conformance when their target is a designed boundary rather than user scenario. UAT derives from requirements, acceptance criteria, declared scenarios/use cases and product release/qualification claims. Direct source unit/helper/module-integration tests cannot alone close user acceptance or be called UAT. Harnessed UAT proves composition, orchestration, control, projection, archive and scenario wiring with deterministic reproducibility; live UAT proves the same scenario crosses the actual external probabilistic boundary and returns evidence through result, evaluation, provenance and projection surfaces. Live-dependent claims require more than necessary semantic/unit/integration/harnessed green results. Unit denotes conformance scope, integration breadth rather than authority, sandbox composed acceptance, harnessed/fake/recorded/deterministic non-live execution, and live actual external execution; a projection merely named live is insufficient. Every local lane label maps to this taxonomy before closure.",
+      "uncertainty": "Module-derived unit-proof ownership is textually unsettled across the supplied sections.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_2e29eb63656a6092cdf8daa41beaada3",
+        "prior_433fbad86b733e2a1409c02021a25be1"
+      ]
+    },
+    {
+      "key": "prior_984f44328b8ff22b978be206672e8e52",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+          "start_line": 217,
+          "end_line": 221,
+          "quote": "Required closure lanes are reproducible from the declared source boundary\n(P3, P6). A unit, semantic or\nmodule-design conformance lane does not depend on an undeclared local path,\na sibling workspace, an operator home directory or a mutable external\nfixture.\n"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+          "start_line": 232,
+          "end_line": 234,
+          "quote": "A missing external fixture fails with a governed diagnostic that names the\nfixture authority and the lane; it never masquerades as a product semantic\nfailure"
+        }
+      ],
+      "statement": "Required closure lanes reproduce from the declared source boundary. Unit, semantic and module-design conformance lanes must not depend on an undeclared local path, sibling workspace, operator home directory or mutable external fixture. Missing external fixtures produce a governed diagnostic naming fixture authority and lane, never a product semantic failure.",
+      "uncertainty": "The family consumer note's reference to a core value for an unperformed evaluation is retained separately as a textual tension.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_3bc1331fd561438b3abf435cbe8f3166"
+      ]
+    },
+    {
+      "key": "prior_ef827f7709fbae8aa7a8fc67b6b9b176",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority",
+          "start_line": 248,
+          "end_line": 249,
+          "quote": "No live requirement is fully proved on\ninformal operator confidence, ambient habit or an unlabelled test corpus"
+        }
+      ],
+      "statement": "Every live requirement has written, traceable test-case authority including full expected-result assertion provenance and predicate relationship to its owning obligation. Informal confidence, ambient habit, unlabelled tests and green labels cannot by themselves establish full proof or acceptance. Derivation from admitted work authority is delegated by reference to TICKETS §7.",
+      "uncertainty": "The referenced ticket derivation and assertion/parallel-derivation laws are not fully supplied.",
+      "conditions": [
+        "A requirement is live."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_12d92e8aac0a56903f7c6713bf136289"
+      ]
+    },
+    {
+      "key": "prior_71fbadfc84c94fbba2786125bd21803d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F4.%20Scenario%20bundle",
+          "start_line": 256,
+          "end_line": 260,
+          "quote": "Features are not proved by isolated assertions alone. Where a requirement\nclaims meaningful system behaviour, the proving surface should be a scenario\nbundle or an equivalent ordered set of test cases that exercises that\nbehaviour through a coherent sequence rather than as disconnected\nfragments (P2, P6)."
+        }
+      ],
+      "statement": "Isolated assertions alone do not prove features. The proving surface should use a scenario bundle or equivalent ordered cases exercising coherent behaviour. Scenarios and use cases force operational intent/design to expose boundaries, sequences, actors, controls and outcomes; the significant paths they identify must be exercised.",
+      "uncertainty": "",
+      "conditions": [
+        "A requirement claims meaningful system behaviour."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_a53692f0d555aea884937662d5230e55",
+        "prior_f9c245e92a9e876a8878777f5d99ecff"
+      ]
+    },
+    {
+      "key": "prior_7551d47b1944a843c562ddfc1e4faf82",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F5.%20Installed%20dev%20proof",
+          "start_line": 280,
+          "end_line": 285,
+          "quote": "proof should prefer a fresh sandbox or equivalent isolated environment, an\ninstalled or built development artifact, and execution through the same\ndeclared entry, control and runtime surfaces the real product uses. Direct\nsource-level or unit-level checks may stay useful; they do not replace\ninstalled-dev proof of the system under test (P6; SPEC_METHOD §6 for the\ninstall and development-product roles)."
+        }
+      ],
+      "statement": "The decisive lane runs against an installed development target, not solely the source tree. It should prefer fresh isolation, an installed/built artifact and the Product's declared entry/control/runtime surfaces. Useful source/unit checks do not replace this proof.",
+      "uncertainty": "",
+      "conditions": [
+        "The system has an installable or runnable development form."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_b0b4ff2640d207bee8d1ebe2ff5163f3"
+      ]
+    },
+    {
+      "key": "prior_3bb2f2ed3c0876f49db01b235382acff",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F6.%20Significant%20path%20coverage",
+          "start_line": 301,
+          "end_line": 304,
+          "quote": "If the significant paths are not declared, scenario coverage cannot be\njudged. If they are declared and not exercised, the behaviour is not fully\nproved (P6; EVALUATION §1, a claim's scope cannot exceed its evaluated\nevidence)."
+        }
+      ],
+      "statement": "The proving surface declares and exercises meaningful paths intentionally; exhaustive proof does not require every possible branch in every file. Undeclared paths make scenario coverage unjudgeable; declared but unexercised significant paths leave behaviour not fully proved. Claim scope cannot exceed evaluated evidence. The listed path classes are usual and relevance-dependent, not a universal exhaustive checklist.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_f9c245e92a9e876a8878777f5d99ecff"
+      ]
+    },
+    {
+      "key": "prior_d8ac4e776c0b3c790d6cbf4644160d3d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FTerms",
+          "start_line": 323,
+          "end_line": 325,
+          "quote": "Producing an expected output through a bypass, an obsolete executor, a\ntest-only seam, an undeclared fallback or a competing authority falsifies\npath conformance even when the output value is equal (P6, P3)."
+        }
+      ],
+      "statement": "Files, suites, runners, fixtures, scenario labels, coverage percentages and actors do not become frames merely by existing. Authority stays within the exercised claim; counts, source coverage, duration and framework category do not enlarge it. Equal output through bypass, obsolete executor, test-only seam, undeclared fallback or competing authority falsifies path conformance. Cross-participant combinations cannot be mocked away and counted as unit evidence.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_2aa7efe612226c86a56903f07ffef6a4",
+        "prior_a95cc4187253ab78a3b16b5c7c45e144",
+        "prior_37c6c0adb01d42ea37f40ece5db0dad2"
+      ]
+    },
+    {
+      "key": "prior_9cfff93b30f99373281f0d72e5dc6bf7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+          "start_line": 377,
+          "end_line": 385,
+          "quote": "The fan-out assigns claims to evidence; it is neither an authority\nhierarchy nor a claim that one frame decomposes into another. Evidence\nmay relate through declared conjunction\n([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),\ntranslation (REFERENCE_FRAME §6), falsification and re-entry (P4a). A\nbroader frame cannot make a module-owned\nlaw true, and any number of narrower green frames cannot establish an\nunevaluated Product composition or user outcome (EVALUATION §1, the weaker\nproperty never substitutes for the claimed one)."
+        }
+      ],
+      "statement": "Frame selection is determined by evaluated claim, subject, path, population, oracle and falsification boundary, not runner kind. The four frames introduce no role, stage, authority or hierarchy and do not decompose into one another. Each claim is assigned congruent evidence: user outcome to UAT, runnable causal path to end to end, composition boundary to integration, module law to unit. Internal complexity sets unit evidence size/strategy, never eligibility. Broader evidence cannot make a module law true; arbitrarily many narrower successes cannot establish an unevaluated Product composition/outcome. Frame labels without declarations have no assurance value. Each core result retains its claim predicate; invalidation rows only instantiate material-input or basis changes under ACTIVATION §7, adding no other invalidator.",
+      "uncertainty": "The referenced activation, frame-declaration and core-result owners are not supplied in full.",
+      "conditions": [
+        "Testing frames have been selected under governing configuration or admitted work authority."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5501995e5fa70ff1ab307cf852168870",
+        "prior_2aa7efe612226c86a56903f07ffef6a4"
+      ]
+    },
+    {
+      "key": "prior_0fd3f57e814042cb9f8f92db6d918479",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUser-acceptance%20frame",
+          "start_line": 410,
+          "end_line": 412,
+          "quote": "| exclusions | source imports, private APIs, direct Product-state injection, test-only endpoints, hidden administrator capability, undeclared fixtures or substitutes, a test double at a boundary claimed as real or live, compatibility bypasses, and internal success substituted for the user outcome |\n| result | one core result bound to the exact user-outcome claim, with witnessed paths, counterexamples, residual user populations and invalidation conditions |\n| invalidation | a material change of Product, supported interface, user role, capability, configuration, dependency or substitution mode, data contract, runnable subject, acceptance meaning or ordinary path |"
+        }
+      ],
+      "statement": "UAT obeys applicable Product/requirement outcomes, supported-interface, identity, UX, safety, persistence and release law, RF-001–017 and EVALUATION §§1,2,3,6,7. It has bounded evaluation authority only: no new Product meaning or acceptance ownership. Exclude source imports, private APIs, state injection, test-only endpoints, hidden administrator power, undeclared fixtures/substitutes, doubles at claimed real/live boundaries, compatibility bypasses and internal success substituted for user outcome. Return one exact-claim core result with witnessed paths, counterexamples, residual users and invalidators. Material changes to Product, interface, role, capability, configuration, dependency/substitution mode, data contract, runnable subject, acceptance meaning or ordinary path invalidate it.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_9e6e1272a4d33627b22f146f2f8b9751"
+      ]
+    },
+    {
+      "key": "prior_f182d82b176d62f66b0c56cde7058af7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUser-acceptance%20frame",
+          "start_line": 420,
+          "end_line": 426,
+          "quote": "Where harnessed sandbox UAT is admitted (§2), a deterministic, fake,\nrecorded or injected external worker or transport limits the result to the\ncomposed Product relations actually exercised; it does not prove that the\nlive external boundary works. When a Product or release claim depends on\nreal external compute or transport, live sandbox UAT is mandatory for that\nclaim; unit, integration, semantic and end-to-end evidence that uses the\nsubstitute, and harnessed UAT green, are not sufficient (P6, P5)."
+        }
+      ],
+      "statement": "Deterministic, fake, recorded or injected workers/transports restrict harnessed UAT results to exercised composed relations and prove no live boundary. A Product/release claim depending on real external compute/transport requires live sandbox UAT for that claim; substitute-based unit, integration, semantic, end-to-end evidence and harnessed UAT success are insufficient.",
+      "uncertainty": "Section 2's admission conditions are outside the supplied source.",
+      "conditions": [
+        "Harnessed sandbox UAT is admitted, or a claim depends on real external compute or transport."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_9e6e1272a4d33627b22f146f2f8b9751"
+      ]
+    },
+    {
+      "key": "prior_b436359168d2b8bf3b9057c6d35643c7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FEnd-to-end%20frame",
+          "start_line": 442,
+          "end_line": 444,
+          "quote": "| exclusions | source-only substitutes for runnable-Product claims, direct invocation below the supported entry, test doubles at claimed real boundaries, test-only routing, hidden retries or repair, omitted persistence or fresh-process boundaries, and equal output without path evidence |\n| result | one core result bound to the exact end-to-end claim, with the exercised composition edges, unexercised material paths, counterexamples and residual combinations |\n| invalidation | a material change of artifact, install, dependency, configuration, interface, owner, path, lifecycle, persistence, recovery, projection, test semantics or evidence population |"
+        }
+      ],
+      "statement": "Governed by Product/accepted-design composition, exact-subject/assurance congruence, path singularity where required and lifecycle, authority, persistence, replay, recovery and release law. Observation may expose internals but cannot bypass, repair, replace or reinterpret the path. Exclude source-only runnable substitutes, below-entry calls, doubles at real boundaries, test routing, hidden retry/repair, omitted persistence/fresh-process boundaries and output without path evidence. Return an exact-claim core result with exercised edges, unexercised material paths, counterexamples and residual combinations. Material artifact/install/dependency/configuration/interface/owner/path/lifecycle/persistence/recovery/projection/test-semantics/evidence-population changes invalidate it. Expected output is necessary but insufficient; forbidden or obsolete paths falsify the claim. One process, many lines or an end-to-end label do not establish frame identity.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_74b38a1ed583949eef88dee3e98a862a"
+      ]
+    },
+    {
+      "key": "prior_5328bec6996a38bb5200c799b146c1f2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FIntegration%20frame",
+          "start_line": 465,
+          "end_line": 467,
+          "quote": "| exclusions | mocks or stubs that hide the claimed real contract, one-sided contract assertions, happy-path-only exchange, helper-call equivalence, flattened versions or states, and projection of a boundary result to the whole Product without a governing relation |\n| result | one core result for the declared integration claim, with covered combinations, counterexamples, omitted interactions and invalidation conditions |\n| invalidation | a material change of participant, interface, carrier, state, configuration, dependency, timing, failure, recovery or interaction population |"
+        }
+      ],
+      "statement": "Apply declared interface/composition law, complete participant admission, applicable atomicity/reconstruction and exact assurance boundaries. Boundary evaluation neither establishes an unevaluated Product outcome nor authorises substitution. Exclude mocks hiding real contracts, one-sided assertions, happy-path-only exchanges, helper equivalence, flattened versions/states and whole-Product projection without a governing relation. Return one integration core result with covered combinations, counterexamples, omissions and invalidators. Material participant/interface/carrier/state/configuration/dependency/timing/failure/recovery/population changes invalidate it.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_1c4c010033a4beec67d91c7c12d3f812"
+      ]
+    },
+    {
+      "key": "prior_eef31a34ab52452efd05c6e5fc8f09d1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUnit%20frame",
+          "start_line": 485,
+          "end_line": 485,
+          "quote": "| authority | bounded local evidence only; a unit result has no Product, installed, integration, user-acceptance, architecture, path-selection or release authority |"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUnit%20frame",
+          "start_line": 515,
+          "end_line": 519,
+          "quote": "No Product, user-outcome, installed-path, cross-module composition or\nrelease claim may be closed from unit evidence, whatever the test count,\nassertion count, source coverage, mutation score, runtime or historical\npass rate. Treating unit green as broader assurance is a frame error (P6,\nEVALUATION §1)."
+        }
+      ],
+      "statement": "Unit proof obeys DESIGN_MODULE ownership/proof law and accepted ontology, carriers, domain, sequence, state, algorithm and error relations. It excludes Product outcomes, cross-module composition, supported user paths, packaging/install, real external participants, orchestration topology, mocked-away interface behaviour, incidental branches/private layout, assertion counts and source coverage as broader assurance. Return one exact-law/module-population core result with counterexamples, residual combinations and invalidators. Material changes to ontology, carriers, boundary, law, algorithm, state space, numerical regime, implementation, oracle, generator or bounded population invalidate it. No unit metric or success closes Product, user, installed, composition or release claims or supplies architecture/path-selection authority.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_9873a2fcf1a72b9c6d82964e88b5d0b2",
+        "prior_f36832f6941f8683b920fbd70d2f5ad7"
+      ]
+    },
+    {
+      "key": "prior_b9ca3999fb551a1483ac71f2ccaf7b23",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUnit%20frame",
+          "start_line": 509,
+          "end_line": 513,
+          "quote": "This frame does not waive the module-derived unit lane. It binds the lane\nto module-owned law and the smallest congruent evidence population. Low\ninternal combinatorial complexity justifies a small lane, not omission and\nnot hundreds of implementation-shaped tests. Unit-test volume has no\nindependent closure value (P2)."
+        }
+      ],
+      "statement": "Every coded module requires the design-owned module-derived unit lane; public contracts are eligible. Complexity determines proportional size/strategy and the smallest congruent population, not omission or large implementation-shaped suites. Independent oracles often discriminate algebras, calculations, transformations, parsers, reducers, state machines, decision tables, admission/conservation relations and bounded algorithms especially well. Repeating implementation or incidental branches yields weak/circular evidence. Predominantly composition, orchestration, configuration, persistence, ownership or user-interaction complexity needs evidence at its actual integration/end-to-end/UAT boundary; mocking it does not create unit evidence.",
+      "uncertainty": "",
+      "conditions": [
+        "A module has code."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_9873a2fcf1a72b9c6d82964e88b5d0b2",
+        "prior_f36832f6941f8683b920fbd70d2f5ad7"
+      ]
+    },
+    {
+      "key": "prior_9481253eff88964e304168d10a5ffcab",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F8.%20Combinatorial%20coverage%20and%20testing%20value",
+          "start_line": 568,
+          "end_line": 575,
+          "quote": "The activated frame declares the finite interaction population and why its\ncovering set is adequate. Pairwise or other covering-array reduction is\nlawful only where the basis explains why the omitted higher-order\ninteractions cannot change the claim, or keeps them as residuals.\nHigh-consequence authority, persistence, concurrency, recovery, migration\nand historically failure-prone relations normally need explicit\nhigher-strength combinations (P5, P2; REFERENCE_FRAME §8, interaction and\nfailure coverage)."
+        }
+      ],
+      "statement": "Activated frames declare finite interaction populations and covering-set adequacy. Unit dimensions remain module-bounded; value normally rises with closed-domain internal complexity. Integration/end-to-end/UAT value can be multiplicative through composed pre/postconditions, authority, state, configuration, failure and recovery, but depends on interactions actually discriminated, not sunny-path interface count. Common Product factors include user role/capability, operation/composition, definition/owner/implementation/dependency, lifecycle/persisted state, configuration/version, process/continuation/retry/re-entry/recovery, success/refusal/malformed/partial-failure/rival cases, fresh process/replay/reconstruction/migration and visible outcome/projection. High-consequence authority, persistence, concurrency, recovery, migration and historically fragile relations normally need explicit higher-strength coverage. Code visitation metrics do not establish semantic combinations, authoritative selection, user coverage or rival-path absence.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_9998e713a60bf1ac244a0e611d7a518a",
+        "prior_37c6c0adb01d42ea37f40ece5db0dad2"
+      ]
+    },
+    {
+      "key": "prior_8ca2cf800e571c05d0fcc732b9b22a70",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F9.%20Legitimate%20path%20and%20technical-debt%20erasure",
+          "start_line": 584,
+          "end_line": 591,
+          "quote": "Every Product path claim needs two-sided evidence (P6, P3):\n\n1. required-path reachability: each required authoritative composition has\n   an exact witness in the deployed, installed or otherwise runnable\n   Product form through the supported ordinary path; and\n2. forbidden-path exclusion: each material superseded, duplicate,\n   fallback, bypass or otherwise forbidden production path is absent,\n   unreachable or refused at its declared boundary."
+        }
+      ],
+      "statement": "Every required authoritative composition needs an exact supported ordinary-path witness in the runnable Product. Every material superseded, duplicate, fallback, bypass or other forbidden production path must be absent, unreachable or refused at its declared boundary. Successor success proves no predecessor removal. No obsolete/bypass/fallback/rival path may remain reachable in scoped production closure; no obsolete assurance consumer may falsely prove closure or reintroduce removed production paths. A forbidden-path outcome falsifies the path claim.",
+      "uncertainty": "",
+      "conditions": [
+        "A Product path claim is made."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_a95cc4187253ab78a3b16b5c7c45e144",
+        "prior_3635e0d97a204bc786bfeff7cc2b76e4"
+      ]
+    },
+    {
+      "key": "prior_483cc88ad05fe0eb7c49c01025d59d2d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F9.%20Legitimate%20path%20and%20technical-debt%20erasure",
+          "start_line": 627,
+          "end_line": 630,
+          "quote": "A Product outcome reached through a forbidden path is a falsified path\nclaim, not a passing Product test. A negative-path test that mutates the\nexact subject without isolation, restoration and subject revalidation\ninvalidates its own assurance basis (P6, P3)."
+        }
+      ],
+      "statement": "Assurance includes checks that disabling the authoritative path prevents scenario success, restoring a rival produces refusal/detected counterexample, corrupting material interface/owner output is detected at its owning boundary, and removing an asserted obsolete path preserves accepted outcome except through the declared deletion relation. Negative tests mutating the exact subject without isolation, restoration and subject revalidation invalidate their own basis.",
+      "uncertainty": "",
+      "conditions": [
+        "Path-sensitive mutation or sabotage is proportionate and safe."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_3635e0d97a204bc786bfeff7cc2b76e4"
+      ]
+    },
+    {
+      "key": "prior_1b2ac30da0a6a2e4e4e615c88bf8675d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F10.%20Testing%20evidence%20composition",
+          "start_line": 641,
+          "end_line": 645,
+          "quote": "Each bound result states which\npredicate it establishes; a result over a necessary condition does not\nestablish the obligation, and the sufficiency of a conjunction is a claim\nof its own ([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation))\n(P6)."
+        }
+      ],
+      "statement": "A shared execution can yield distinct UAT outcome, end-to-end path, integration seam evidence and module-algebra counterexamples. Claims combine only through declared REFERENCE_FRAME §6 relations and FOUNDATIONS conjunction, with each predicate retained. Necessary-condition evidence does not establish the obligation; conjunction sufficiency is a separate claim. Default responsibilities remain user outcome, complete authoritative runnable path, material participant composition and proportionate module-law evidence respectively. UAT alone may leave path singularity open; end-to-end alone may leave user populations/combinations open; integration/unit cannot substitute for either. When all are required, conflicts and missing results remain visible to the decision owner and cannot be hidden by aggregate success.",
+      "uncertainty": "The imported conjunction law is referenced but not supplied in full.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5501995e5fa70ff1ab307cf852168870",
+        "prior_2aa7efe612226c86a56903f07ffef6a4"
+      ]
+    },
+    {
+      "key": "prior_22148c158cb713686fbfa92935c91f0e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F11.%20Assurance%20subject%20acquisition%20and%20evaluation",
+          "start_line": 675,
+          "end_line": 681,
+          "quote": "Where the acquired observation cannot\nseparate two admissible subjects on which the assessed predicate takes\nopposite truth values, the frame returns further evidence, a justified\nnarrower scope or `indeterminate`. The binding of the\nobservation itself needs support\n([FOUNDATIONS §4 Assertions and observation](FOUNDATIONS.md#assertions-and-observation),\nObservation sufficiency) (P1, P6)."
+        }
+      ],
+      "statement": "Harnesses, fixtures, expected-value builders, proof scripts, evaluators and assessors cannot reconstruct parallel owner state from raw payloads/events/logs/filenames/labels/implementation fragments and treat it as the Product. Observation bindings require support. If admissible subjects with opposite predicate truth remain observationally indistinguishable, seek further evidence, justify narrower scope or return indeterminate. The semantic oracle derives independently from Product, requirement and accepted design, not mandatory trust in implementation. Missing owner projections/observable seams remain named assurance/design gaps; harnesses cannot fill them with rival semantics.",
+      "uncertainty": "",
+      "conditions": [
+        "The assessed claim depends on owner-issued truth."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_4a758d8b16a2d0014a7ecd1bc24c03f7"
+      ]
+    },
+    {
+      "key": "prior_6ab91f4366633eda3c92a8d81c3cb1c7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F12.%20Counterexample%20localisation",
+          "start_line": 719,
+          "end_line": 728,
+          "quote": "One unique violated locus and a jointly established set\nmap to `satisfied`. Unresolved alternative frontiers map to\n`indeterminate`, naming the alternatives that further evidence must\ndecide between. The fourth form is the core value `indeterminate` itself,\nnaming the evidence a bounded frontier needs. The form travels with the\nvalue as the domain outcome, so a joint set stays distinct from a unique\nlocus and unresolved alternatives stay distinct from an unbounded\nfrontier. Purpose and material relation: a localisation combines with\nother results in the one core, and an unresolved causal explanation is\nnever read as an established one (P5, P1, P6)."
+        }
+      ],
+      "statement": "Exactly one frontier form is returned. Unique locus and jointly established minimal incomparable loci map to satisfied for the predicate that evidence establishes earliest violated loci; unresolved alternatives map to indeterminate naming alternatives, and unbounded frontier maps to indeterminate naming needed evidence. Preserve the domain form alongside the core value. Record subject, basis, frontier form/members, causal evidence, expected relations, observed counterexample and invalidated downstream claims. Do not choose an arbitrary owner from joint causes or convert alternatives into joint causes. Localisation grants no broader tests, compatibility repair, controller or upstream reinterpretation; scope/design change follows existing re-entry.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_75d7ebdc57547aefb3f31ca6c91db8e4"
+      ]
+    },
+    {
+      "key": "prior_559156728c4d119e6dd8afd94c0ef6a5",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame",
+          "start_line": 765,
+          "end_line": 767,
+          "quote": "| result and relations | each activated claim returns a core result with its exact evidence, coverage, causal findings and residuals; shared evidence is referenced once; mandatory claims compose only through a declared same-basis or lawful-translation conjunction (FOUNDATIONS §4 Conjunction of results) to the named decision consumer |\n| invalidation | a material change of contract, domain, participant, prompt or context, capability, callable path, configuration, translation, relevant workspace observation, lifecycle, oracle or evidence population invalidates the affected conclusions; unchanged valid evidence and owner rulings stay reusable |\n| qualification | the representative sensitivity and refusal cases below, bound to actual subjects, actor envelopes and independently stated expected relations; mechanical source checks supply no semantic or live-user qualification |"
+        }
+      ],
+      "statement": "Apply selected Product/requirement/design/interface law, REFERENCE_FRAME declaration/translation law, FOUNDATIONS conjunction and existing testing-owner law. Equal shape/output implies no equal meaning, provenance or authority. Owners retain semantic, operation, admission and reserved decisions; bounded evaluation grants construction only under an existing exact operation grant and returns closed results to the declared decision consumer. Evidence binds contracts/both sides, design relations plus unresolved realisation facts for design claims, or actual requests/context/responses, callables/configuration, owner validation, effects/observations and ordinary-caller outcomes for realised claims, with independent expectations and substitution limits. Access must not alter reviewed subjects; required independence is claim-relative. Exclude hidden context/privilege, rival contract truth, inferred authority, undeclared substitutes, private/test paths for ordinary claims, candidate-as-admission, fixture-as-user evidence and unsupported whole-Product/future claims. Each activated claim returns exact evidence, coverage, causal findings and residuals; shared evidence is referenced once and mandatory claims compose only through declared same-basis/lawful-translation conjunction. Material contract/domain/participant/prompt/context/capability/path/configuration/translation/workspace/lifecycle/oracle/population changes invalidate affected conclusions; unchanged valid evidence/rulings remain reusable. Mechanical source checks give no semantic or live-user qualification.",
+      "uncertainty": "",
+      "conditions": [
+        "The composite refinement is activated."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_edbbabc8b2dc4636bae4930b21b2d9bb"
+      ]
+    },
+    {
+      "key": "prior_71ea5193b224042ddb698669c9aff367",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FClaim%20boundaries",
+          "start_line": 780,
+          "end_line": 793,
+          "quote": "The activation selects claims from the work's applicability (ACTIVATION §1)\nand states the scope reason for each unselected claim; an unselected claim\nhas no result. Design-only work\ndoes not require unavailable runtime evidence and does not report runtime or\nUAT satisfaction. An unknown material condition keeps its dependent claim\nunresolved: the claim's result is never `satisfied` and names the\ncondition as what would decide it\n([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Standing); omission\ncannot close it. A full end-to-end usability claim\nneeds all four distinct results and their explicit conjunction\n([FOUNDATIONS §4 Conjunction of results](FOUNDATIONS.md#conjunction-of-results)),\nin which an unselected claim is uncovered coverage. Transport,\nparse, admission, semantic satisfaction, operation completion and user\nsuccess are not interchangeable (P5, P6)."
+        }
+      ],
+      "statement": "Activation selects applicable claims and records scope reasons for every unselected claim, which has no result. Design-only work can establish contract sufficiency without runtime, keeps realisability/context uncertainty explicit, requires no unavailable runtime evidence and claims no runtime/UAT satisfaction. Actual-composition claims acquire both sides/exchanges; design correspondence proves no implementation behaviour. Matching output on another path does not prove path realisation; internal or validator-aware fixture success does not prove usability. Unknown material conditions leave dependent claims unresolved, never satisfied, naming deciding conditions; omission does not close them. Full end-to-end usability requires four distinct results plus explicit conjunction; an unselected claim is uncovered. Transport, parse, admission, semantic satisfaction, operation completion and user success remain distinct.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_548e95b2ad0b13be8c12ff0b8188144c"
+      ]
+    },
+    {
+      "key": "prior_b2b07af384f391edf6ad3bc028b53f4e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+          "start_line": 801,
+          "end_line": 808,
+          "quote": "1. Bind the functional input domain, producer success postconditions,\n   consumer preconditions, permitted effects, refusals and observable exit.\n   Direct successful handoff requires the producer's guarantees to meet the\n   consumer's preconditions. An interface may instead emit candidates:\n   candidate output, later admission and semantic assessment stay distinct\n   declared stages. A normal model refusal or an inadmissible candidate does\n   not by itself falsify an adequately declared candidate interface; the\n   exact promised outcome and refusal behaviour are evaluated (P4a, P5)."
+        }
+      ],
+      "statement": "Reuse existing truth surfaces; add only missing cross-interface relations, without making schemas/prompts/adapters/indexes/tests contract owners. Bind functional inputs, producer success guarantees, consumer preconditions, effects, refusals and exit; direct success requires guarantees to meet preconditions. Candidate output, admission and semantic assessment remain declared distinct stages; normal refusal/inadmissible candidates alone do not falsify an adequate candidate contract. Supply material actor obligations/domains through actual context/interface or an exactly locatable lawfully resolvable source. Bind material LLM role, instructions, context, tools and model/transport configuration. Generic governance access neither supplies Product-specific contracts nor authorises hidden-rule inference. Deterministic owners expose computed facts by reuse/proven equivalent projection; semantic actors judge meaning within that domain, without inferring reserved rulings, eligibility, authority or admission from responses/labels.",
+      "uncertainty": "",
+      "conditions": [
+        "For every material seam."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_edbbabc8b2dc4636bae4930b21b2d9bb",
+        "prior_548e95b2ad0b13be8c12ff0b8188144c"
+      ]
+    },
+    {
+      "key": "prior_1f7089dd48c486660f00d260f790349b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+          "start_line": 827,
+          "end_line": 833,
+          "quote": "4. Observe the relevant current mutable workspace for each later\n   operation, and bind that observation separately from immutable\n   authority, artifacts, history and prior candidates. Changed support\n   invalidates dependent conclusions; unaffected accepted work stays\n   reusable. A snapshot does not replace the current subject, and a change\n   of actor alone is no reason to repeat still-valid work (P3, P4b;\n   ACTIVATION §7)."
+        }
+      ],
+      "statement": "Preserve domain/time meaning through serialisation, parsing, normalisation and adaptation. Translation binds source/target coordinates, preserved meaning, accepted loss, provenance, governing owner and refusal conditions. Distinguish proposed/admitted/assessed/completed, active input/history and current validity/available bytes; equal wire shape proves no translation. Bind current workspace observations separately from immutable authority, artifacts, history and candidates; changed support invalidates dependencies while unaffected accepted work remains reusable. Snapshots cannot replace current subjects; actor changes alone do not justify repeating valid work. Follow actual callable paths/effect owners through selected exit and required fresh observation; hidden fallback, injection, repaired output, private entry or undeclared retry cannot support ordinary-path claims. Evaluation gives pure functions no new event lifecycle.",
+      "uncertainty": "",
+      "conditions": [
+        "For every material seam and each later operation on a mutable workspace."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_edbbabc8b2dc4636bae4930b21b2d9bb"
+      ]
+    },
+    {
+      "key": "prior_083aefb645ddbce35914d5601c488325",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+          "start_line": 840,
+          "end_line": 849,
+          "quote": "6. Preserve diagnostic cause through wrappers and projections. Apply §12:\n   report the supported causal frontier, not merely the first log or clock\n   occurrence. Keep the originating seam, bounded field or path, expected\n   domain or basis, observed mismatch and evidence locator where available,\n   with downstream symptoms, successful work and the declared continuation\n   or block. Preserve joint causes, alternative frontiers and\n   indeterminacy; do not invent a unique cause. Product redaction rules\n   still govern sensitive content. Missing required diagnostic evidence\n   stays a named gap. Return the smallest supported owner or re-entry;\n   diagnosis grants no repair or retry (P5, P4b, P6)."
+        }
+      ],
+      "statement": "Preserve supported causal frontier through wrappers/projections, including available originating seam, bounded field/path, expected domain/basis, mismatch and evidence locator, downstream symptoms, successful work and declared continuation/block. Retain joint causes, alternatives and indeterminacy; invent no unique cause. Product redaction still applies; missing diagnostics remain named gaps. Return the smallest supported owner/re-entry; diagnosis authorises no repair/retry. Acquire facts from existing owner surfaces and use independent contract-derived oracles. Computed facts, contextual judgments and reserved owner rulings retain separate owners and validity scopes.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_edbbabc8b2dc4636bae4930b21b2d9bb",
+        "prior_75d7ebdc57547aefb3f31ca6c91db8e4",
+        "prior_4a758d8b16a2d0014a7ecd1bc24c03f7"
+      ]
+    },
+    {
+      "key": "prior_95022a71f2e77b1f7fa1ed6b42b41055",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+          "start_line": 856,
+          "end_line": 865,
+          "quote": "For an LLM-interface usability claim, clean-room LLM UAT is used, with the\nordinary supplied context and permitted tools and without private\nimplementation knowledge or fixture assistance. Expected outcomes are\nrecorded before responses are inspected. The sunny case and the ordinary\nambiguity and negative cases material to the claim are included.\nSubstitutes are disclosed; replayed or fabricated responses prove only\ntheir stated narrower relation, not live-provider usability. Responses are\nnot edited, and nothing is silently retried until green. Live claims need\nlive evidence under §2, not a new universal live-provider requirement\nduring design (P6, P5; EVALUATION §3, expectations before exposure)."
+        }
+      ],
+      "statement": "Use clean-room LLM UAT with ordinary context/permitted tools and no private implementation knowledge or fixture help. Record expectations before inspecting responses and include material sunny, ordinary ambiguity and negative cases. Disclose substitutes; replay/fabrication proves only declared narrower relations. Do not edit responses or silently retry to success. Live claims require live evidence under §2; this is no universal live-provider requirement during design.",
+      "uncertainty": "",
+      "conditions": [
+        "An LLM-interface usability claim is selected."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_548e95b2ad0b13be8c12ff0b8188144c",
+        "prior_edbbabc8b2dc4636bae4930b21b2d9bb"
+      ]
+    },
+    {
+      "key": "prior_ea837689e9c18791ae0472dc2b7b18ee",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+          "start_line": 867,
+          "end_line": 877,
+          "quote": "An early sunny thread can establish bounded evidence while the unexercised\nclaims stay open (the sequencing heuristic of SPEC_METHOD §8). This frame\nadds no exhaustive-hardening prerequisite, scenario quota, controller,\nruntime, generator, routine human approval, new ledger or automatic extra\nagent. Existing authority selects proportionate assurance and any further\noperation. The result returns, for each of the four claims, its core\nresult or the scope reason it was not selected, the exact\nexercised subject and path, the supported mismatch, retained work,\nsubstitutions, residuals and invalidators in the existing work carrier; it\nis neither acceptance nor a grant of the next action (P2, P6; ACTIVATION\n§6)."
+        }
+      ],
+      "statement": "Early sunny evidence can be bounded while unexercised claims remain open. The frame creates no exhaustive-hardening prerequisite, quota, controller, runtime, generator, routine human approval, ledger or automatic agent. Existing authority chooses proportionate assurance/further operations. Existing work carriers retain each of four claim results or nonselection reasons, exact subject/path, supported mismatch, retained work, substitutions, residuals and invalidators. This return is neither acceptance nor permission for the next action.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_edbbabc8b2dc4636bae4930b21b2d9bb"
+      ]
+    },
+    {
+      "key": "prior_ffc4ab48c59085404a080488bc5582b5",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FComputational%20whole-path%20evaluation",
+          "start_line": 893,
+          "end_line": 900,
+          "quote": "An identifiable complete-path result and its evidence return to the\ndeclared decision consumer; a collection of local successes cannot replace\nthat result. Design-only evidence establishes only the design claim; claims\nabout actual work need observations on the selected path. Valid unchanged\nresults are reused, and affected reassessment is activated on a material\nchange of path, basis or workload. This is a bounded composition of\nexisting frames, not a permanent actor, an extra frame family, a per-helper\nreview or a separate accounting ledger (P4b, P2)."
+        }
+      ],
+      "statement": "Qualification challenges declared workload/operational assumptions while preserving independent scope, freshness and effect checks serving distinct obligations. Return an identifiable complete-path result/evidence to the decision consumer; local successes cannot replace it. Design evidence establishes only design claims; actual work needs selected-path observations. Reuse unchanged valid results and activate affected reassessment for material path/basis/workload changes. No permanent actor, new frame family, per-helper review or separate ledger is created.",
+      "uncertainty": "",
+      "conditions": [
+        "Material computational composition or recurrence work."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_fe7db12377fdd46a49a3d55fed08adb1"
+      ]
+    },
+    {
+      "key": "prior_8af9d5fad94ce242ca3c8c63415bd01a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FQualification",
+          "start_line": 904,
+          "end_line": 907,
+          "quote": "These are representative source-contract discriminators: not an executed\ntrial, a universal test quota or whole-Product qualification. Each selected\ncase binds its own exact subject, oracle, evidence and claim scope (P6,\nP5; EVALUATION §7)."
+        }
+      ],
+      "statement": "Cases are representative source-contract discriminators, not executed trials, quotas or whole-Product qualification; each binds exact subject/oracle/evidence/scope. Discriminate: ordinary usability of empty and nonempty eligible domains, with hidden required rules defeating sufficiency despite correct refusal; legitimate candidate refusal/filtering versus inadequate interfaces or violated success guarantees, with variability alone not failure; owner-defined eligibility/lifecycle versus available/equal-looking historical or same-response references; temporal/admission mismatch despite valid matching shapes; lost units/default/identity/order despite validation; hidden-rule fixture success versus unproved ordinary usability; forbidden-path equal output as falsified realisation; refresh affected workspace evidence while keeping unaffected valid work; retain originating causal frontier/uncertainty rather than symptoms or invented causes; design-only contract closure without inferred runtime/UAT satisfaction.",
+      "uncertainty": "",
+      "conditions": [
+        "A representative qualification case is selected."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_edbbabc8b2dc4636bae4930b21b2d9bb",
+        "prior_548e95b2ad0b13be8c12ff0b8188144c"
+      ]
+    },
+    {
+      "key": "prior_17ffc1c606f4c8f7fc60bc0cda71db3a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 948,
+          "end_line": 956,
+          "quote": "When the\ndesign's co-evolution condition holds, the two chains may proceed together\nwithout making implementation semantic authority; design still owns the\nstructural HOW. Where the design is not decision-complete, the relation is\ndesign-gated at the smallest causally closed affected decision set and\nretained implementation follows its acceptance. An unchanged\n`realization_refactor` (SPEC_METHOD §4 Change classes) cites the accepted\nrelation and proves no material semantic-boundary delta; it does not\nrecreate the evidence (P2, P6)."
+        }
+      ],
+      "statement": "Evidence feedback cannot select/accept semantic answers. Assertion and execution provenance remain separate; agreement may share error and disagreement requires diagnosis. When the design's co-evolution condition holds, chains may proceed together without implementation semantic authority; design owns structural HOW. Incomplete design gates retained implementation at acceptance of the smallest causally closed affected decision set. For probabilistic/agentic construction, ACTIVATION §1 owns accepted-design handoff into bounded construction, assessment, disposition, checkpoint and continuation; the profile supplies governing-frame, transformation-admission, invariant-reconstruction, computational-realisation and module evidence, not a second protocol.",
+      "uncertainty": "The design co-evolution condition and referenced execution protocol are not supplied.",
+      "conditions": [
+        "A new or materially changed realisation boundary is governed by a design profile."
+      ],
+      "exceptions": [
+        "An unchanged realization_refactor cites the accepted relation and proves no material semantic-boundary delta without recreating evidence."
+      ],
+      "applies_to_keys": [
+        "prior_5a33a4d8c03287f415271883ababd0f6"
+      ]
+    },
+    {
+      "key": "prior_e1447cff9c3d4e226d8b018f49859e36",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+          "start_line": 968,
+          "end_line": 978,
+          "quote": "- the final implementation is traceable to the accepted ontology;\n- the final implementation is traceable to design and module boundary\n  assets;\n- unit tests are traceable to module ownership, not only to helper\n  layout;\n- implementation-first discoveries are reconciled into the ontology and\n  the design's domain, sequence and state evidence before promotion or\n  closure; and\n- implementation may not compensate for an unrealised declared\n  constructor by introducing a hidden controller or alternative authority\n  path."
+        }
+      ],
+      "statement": "Implementation must trace to accepted ontology, design and module assets; tests to module ownership. Reconcile implementation-first discoveries into ontology and domain/sequence/state evidence before promotion/closure; hidden controllers or alternative authority cannot compensate for unrealised constructors. Implementation-discovered tests must re-express closure proof against ownership; module boundaries enable common audit without outranking constitutional truth/ratified design. Minimum chain: constitutional WHAT; accepted ontology; target design; target module assets and ontology-derived carriers; accepted domain/sequence/state projections with axiom evaluation; implementation; tests from the same ontology/boundary. With reference realisation: constitutional WHAT; reference design; accepted target ontology plus reference mapping; target design mapping; target module assets/carriers; accepted domain/sequence/state projections with axiom evaluation; implementation/tests from the same ontology. Jumping from design/code to tests without reconstructing module boundaries yields too-weak proof.",
+      "uncertainty": "",
+      "conditions": [
+        "Design-profile completeness, promotion or closure is claimed."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5a33a4d8c03287f415271883ababd0f6",
+        "prior_f36832f6941f8683b920fbd70d2f5ad7"
+      ]
+    },
+    {
+      "key": "prior_453d61712f0e8102edd5b73e38e1f87d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+          "start_line": 1044,
+          "end_line": 1050,
+          "quote": "Canonical rule (P6): module-owned unit tests are authoritative for module\nproof; broader integration, scenario and sandbox lanes remain downstream\nproof families; transitional slice-gating tests may exist, but they do not\nreplace module-derived unit proof. If a module has code but no\nmodule-derived unit test lane, the module is not closure-ready under the\ndesign profile. What such a lane claims, and what it never closes, is\nthe unit frame of §7."
+        }
+      ],
+      "statement": "Tests should trace to accepted ontology and applicable entity/lifecycle/authority/function/effect/projection law, module design, active or equivalent carrier inventory, module-bounded domain/sequence/state projections and owned requirement families. They are not primarily authored from helper/private layout, incidental branches, temporary decomposition or mock convenience hiding contracts. Ask what ownership requires proving. Helper tests may exist but cannot be the canonical module proof. Broader integration/scenario/sandbox lanes remain downstream proof families, not substitutes. Transitional slice-gating does not replace the module lane; coded modules without it are not closure-ready. Design ownership does not extend to Product UAT/acceptance.",
+      "uncertainty": "",
+      "conditions": [
+        "Unit tests are under the design profile."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_f36832f6941f8683b920fbd70d2f5ad7"
+      ]
+    },
+    {
+      "key": "prior_e6d3c97522c9269a853e6ac6cbaa2ae6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation",
+          "start_line": 1078,
+          "end_line": 1089,
+          "quote": "Each lifecycle phase takes one of the three answers that\n[SPEC_METHOD §2 Operational lifecycle sufficiency](SPEC_METHOD.md#operational-lifecycle-sufficiency)\nowns, applied here to design evidence: answered by the active design,\nrequirement, release, deployment or telemetry surface; declared not\napplicable with a reason; or recorded as a named `Gap:` or `Unanswered:`\nitem, which in design evidence also names its owning follow-up. A phase\nlist without answers, not-applicable reasons or named gaps is not\ndesign-method evidence (P5, P6). The three are declared states of the\ndesign evidence for a phase under that section, not result values; a\nnamed gap is a residual\n([FOUNDATIONS §2](FOUNDATIONS.md#2-ontology)) that remains until its\nowning follow-up disposes it (P4b, P5)."
+        }
+      ],
+      "statement": "Design evidence states or points to upstream intent/requirements, build/realisation, assurance/proof, release/packaging, deployment/install, live use/invocation, telemetry/projection/monitoring, retirement/revocation/supersession/decommission and lifecycle decision owner/source truth/authority. Each phase is answered by an active owning surface, reasoned not-applicable, or named Gap:/Unanswered: with owning follow-up. These are evidence states, not core results; bare phase lists are insufficient and named gaps persist until owner disposition. Implementation/tests/artifacts/fixtures confirm only within declared authority and cannot invent lifecycle authority. Missing release/deployment/live-use/telemetry/retirement truth permits proceeding only with explicitly governed gaps; local convention, precedent, mutable state, prompts or fixtures cannot close them.",
+      "uncertainty": "",
+      "conditions": [
+        "For each governed boundary, before design-method closure."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_32452eb024ac40cc77301d8270aacad9"
+      ]
+    },
+    {
+      "key": "prior_0277d995888cfc3dee81e9c49665eedf",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+          "start_line": 35,
+          "end_line": 40,
+          "quote": "`a_c` claims no universal applicability, logical completeness,\nconsistency, decidability, soundness or category-theoretic status except\nwhere an exact, separately identified proof establishes that claim for a\ndeclared fragment, model or relation; for category-theoretic status that\nproof is the demonstration of\n[FOUNDATIONS §4](FOUNDATIONS.md#4-algebra), Formal fragment (P6)."
+        }
+      ],
+      "statement": "No universal applicability, completeness, consistency, decidability, soundness or category-theoretic status is claimed without the specified proof. Principles derive the calculus; subject interpretation and accepted-model encoding are distinct downstream relations. Interpretation/encoding cannot redefine it; a layer becomes a released Product only through separately authorised acceptance and release.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "An exact separately identified proof may establish a specified status for a declared fragment, model or relation; categorical status requires the referenced Formal fragment demonstration."
+      ],
+      "applies_to_keys": [
+        "prior_8710247991b836d7b07fd776cf748e2c",
+        "prior_7fd7c71247668ac4656ebb2663df6898"
+      ]
+    },
+    {
+      "key": "prior_dab30bcdeb26e008088821a5d3a2e718",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+          "start_line": 120,
+          "end_line": 124,
+          "quote": "Issuance of an exact `AxiomaticCalculusBasis` (§8) resolves the local routes\nabove to absolute semantic addresses inside the selected immutable package\nand records them under `derivation_basis.principle_refs`. Each address\nidentifies the actual clause it uses; a mutable authoring locator is not a\ndigest-bound derivation reference (P3)."
+        }
+      ],
+      "statement": "Imported concepts retain owners; FOUNDATIONS owns result values/conjunction consumed by AC-007/019, and models/carriers/interpretations gain no ownership. No implicit method representation, carrier or downstream implementation is needed to interpret the calculus. Equal-spelled F_D/F_P/F_H terms create no identity, import or equivalence. Basis issuance binds actual immutable clauses, not mutable locators. Models, carriers, tools and successful applications cannot amend source principles or calculus.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_3dab7b4ae60847a9b5f77b8991c041fa",
+        "prior_8710247991b836d7b07fd776cf748e2c"
+      ]
+    },
+    {
+      "key": "prior_1babd59b4d9e109dda4bbbc62f9adaa0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FScope",
+          "start_line": 143,
+          "end_line": 146,
+          "quote": "`a_c` does not choose the subject vocabulary, decide which source\ndeclarations are material, supply semantic acceptance, select a carrier,\nexecute a model or prove that one interpretation is uniquely correct (P2,\nP6)."
+        }
+      ],
+      "statement": "The calculus governs symbolic-model form: identities/types, exact relation endpoints, explicit constraints/latitude/residuals, typed traversals/judgments, closure/projection/overlay/transformation, subject preservation and separation of structural, semantic and authority claims. It chooses no vocabulary/materiality, provides no semantic acceptance, selects no carrier, executes no model and proves no unique interpretation.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_8710247991b836d7b07fd776cf748e2c"
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "prior_acd673c2a7015b40d95d333e46135c0b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+          "start_line": 225,
+          "end_line": 230,
+          "quote": "- a minimal fixture is checked into the source boundary;\n- a fixture manifest declares the external source, version and\n  acquisition or binding rule; or\n- the test is classified as harnessed sandbox, live sandbox, reference\n  comparison or optional local evidence rather than required semantic\n  closure."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_3bc1331fd561438b3abf435cbe8f3166"
+      ],
+      "allowed": [
+        "For needed external project evidence, check a minimal fixture into the source boundary.",
+        "Alternatively, declare external source, version and acquisition/binding rule in a fixture manifest.",
+        "Alternatively, classify the test as harnessed sandbox, live sandbox, reference comparison or optional local evidence rather than required semantic closure."
+      ],
+      "forbidden": [
+        "Using undeclared external fixture dependence for required semantic closure.",
+        "Reporting a missing fixture as a product semantic failure."
+      ]
+    },
+    {
+      "key": "prior_eca0dcd09429f1829c7e627976117ec8",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority",
+          "start_line": 238,
+          "end_line": 240,
+          "quote": "That authority may include scenario bundles,\nordered test-case sequences, negative or control cases and other explicit\nevidence cases appropriate to the kind of truth being proved"
+        }
+      ],
+      "applies_to_keys": [
+        "prior_12d92e8aac0a56903f7c6713bf136289"
+      ],
+      "allowed": [
+        "Written authority may use scenario bundles, ordered test-case sequences, negative/control cases and other explicit evidence cases suited to the kind of truth."
+      ],
+      "forbidden": [
+        "Replacing written traceable authority with informal confidence, ambient habit or an unlabelled corpus."
+      ]
+    },
+    {
+      "key": "prior_419bec8d8eda85ee63c6c1e71f08d142",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+          "start_line": 387,
+          "end_line": 390,
+          "quote": "The frames may overlap, and one execution may supply evidence to several of\nthem; every result stays bound to its own claim. A label such as `UAT`,\n`E2E`, `integration` or `unit` has no assurance value without the\ncorresponding frame declaration (P1, P6)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_5501995e5fa70ff1ab307cf852168870",
+        "prior_2aa7efe612226c86a56903f07ffef6a4"
+      ],
+      "allowed": [
+        "Frames may overlap and one execution may supply evidence to several frames through declared conjunction, translation, falsification and re-entry."
+      ],
+      "forbidden": [
+        "Widening a result beyond its own claim or treating overlap as hierarchy or decomposition."
+      ]
+    },
+    {
+      "key": "prior_9edbc4d059e57c8d771b2e22cab3af0a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUser-acceptance%20frame",
+          "start_line": 415,
+          "end_line": 418,
+          "quote": "It may be automated only when the\nautomation faithfully occupies the declared user frame and gains no path or\ncapability that user lacks. Automation can execute acceptance evidence; it\ncannot assume acceptance authority (P6; EVALUATION §5)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_9e6e1272a4d33627b22f146f2f8b9751"
+      ],
+      "allowed": [
+        "Automated UAT only when automation faithfully occupies the declared user frame with no path or capability unavailable to that user."
+      ],
+      "forbidden": [
+        "Automation assuming human or Product acceptance ownership."
+      ]
+    },
+    {
+      "key": "prior_2e10474d48337fc6e8c5c8fda2d8a055",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FIntegration%20frame",
+          "start_line": 469,
+          "end_line": 472,
+          "quote": "A substitute or test double may support a deliberately narrower claim only\nwhen its equivalence boundary and exclusions are explicit. Its result\ncannot be promoted to evidence that the real participant or Product\ncomposition was exercised (P6, EVALUATION §1)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_1c4c010033a4beec67d91c7c12d3f812"
+      ],
+      "allowed": [
+        "An admitted substitute/test double may support a deliberately narrower integration claim with explicit equivalence boundary and exclusions."
+      ],
+      "forbidden": [
+        "Promoting substitute results to proof that real participants or Product composition were exercised."
+      ]
+    },
+    {
+      "key": "prior_df01f713900396fe4811463c7189058b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F8.%20Combinatorial%20coverage%20and%20testing%20value",
+          "start_line": 537,
+          "end_line": 542,
+          "quote": "No universal scalar is required. A project may define one only through\nProduct, requirement or accepted-design authority, and keeps the\nunderlying coverage coordinates rather than flattening them into a score\n(P1, P6). A project-defined scalar is a quantified claim under\n[FOUNDATIONS §4 Quantified assurance](FOUNDATIONS.md#quantified-assurance)\nand keeps its model and limits explicit (P6)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F8.%20Combinatorial%20coverage%20and%20testing%20value",
+          "start_line": 569,
+          "end_line": 571,
+          "quote": "Pairwise or other covering-array reduction is\nlawful only where the basis explains why the omitted higher-order\ninteractions cannot change the claim, or keeps them as residuals."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_9998e713a60bf1ac244a0e611d7a518a"
+      ],
+      "allowed": [
+        "A project may define a scalar only under Product, requirement or accepted-design authority, retaining coverage coordinates and explicit quantified-assurance model/limits; no universal scalar is required.",
+        "Pairwise or other covering-array reduction only when the basis explains why omitted higher-order interactions cannot change the claim or retains them as residuals."
+      ],
+      "forbidden": [
+        "Flattening underlying coverage coordinates into a score.",
+        "Silently discarding potentially material higher-order interactions."
+      ]
+    },
+    {
+      "key": "prior_82c5dec1d39b7c06ad22108b86b49f18",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F9.%20Legitimate%20path%20and%20technical-debt%20erasure",
+          "start_line": 608,
+          "end_line": 613,
+          "quote": "A test-only seam is lawful when it is isolated from the Product\ndistribution, excluded from ordinary-path evidence and declared in the\nassurance subject. Its presence outside the production graph is not a\nproduction-path failure. A retained obsolete test or proof consumer stays\nan assurance defect when it can falsely establish the claim or reintroduce\nthe removed path (P6)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_3635e0d97a204bc786bfeff7cc2b76e4"
+      ],
+      "allowed": [
+        "A test-only seam isolated from Product distribution, excluded from ordinary-path evidence and declared in the assurance subject; its existence outside production closure is not a production-path failure."
+      ],
+      "forbidden": [
+        "Retained obsolete test/proof consumers falsely establishing claims or reintroducing removed paths; these remain assurance defects."
+      ]
+    },
+    {
+      "key": "prior_9513b6768e25dd79a583ce4b3a76db4a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F11.%20Assurance%20subject%20acquisition%20and%20evaluation",
+          "start_line": 683,
+          "end_line": 689,
+          "quote": "After lawful acquisition, an independently derived oracle may evaluate the\ngoverning claim. Generic assurance mechanics may compute bytes, digests,\nordering, equality, set membership, completeness and conjunction over\nowner-issued evidence. Those mechanics stay evidence evaluators: they\ncannot mint owner carriers, choose the current history, select the\nauthoritative path, interpret domain lifecycle or admission meaning, or\nbecome a runtime fallback (P6; EVALUATION §2)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_4a758d8b16a2d0014a7ecd1bc24c03f7"
+      ],
+      "allowed": [
+        "After lawful acquisition, independent oracles may evaluate claims and generic mechanics may compute bytes, digests, ordering, equality, set membership, completeness and conjunction over owner-issued evidence."
+      ],
+      "forbidden": [
+        "Minting owner carriers, choosing current history, selecting authoritative paths, interpreting domain lifecycle/admission meaning or becoming runtime fallback."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "prior_f0b81c3f24db29c87de63cf31572e1b2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line": 109,
+          "end_line": 109,
+          "quote": "The table accounts for §1 to §16."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line": 111,
+          "end_line": 113,
+          "quote": "Consumers of these rows, where an actor enters them (FOUNDATIONS §3\nFoundation to law, Consumers), one list per row, each consumer linked to\nits own locus:"
+        }
+      ],
+      "subject_key": "prior_ad2911520dc8ffb9419df0fede4f0e57",
+      "uncertainty": "ASSURANCE §§4–16 and most foundation/consumer targets are absent. The table references but does not enumerate several testing, localisation, interface, module and lifecycle inventories. Consumer lists at 115–128 identify application versus mere reference, including cases with no separate consumer; their detailed cross-file topology is not materialised.",
+      "consequence": "Retain every table row's stated claim, modality and source-owner distinction without fabricating inventories, mappings, evidence, consumer endpoints or complete application semantics."
+    },
+    {
+      "key": "prior_b20cc795230d5b90d3c2a73c9209d97e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line": 95,
+          "end_line": 95,
+          "quote": "a missing fixture means the evaluation was not performed, so it is reported as such, never as a product semantic failure."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+          "start_line": 118,
+          "end_line": 118,
+          "quote": "a missing fixture is reported as an evaluation not performed, in the core value of FOUNDATIONS §4 Results that this paragraph applies"
+        }
+      ],
+      "subject_key": "prior_1cfc131a76df6f85742a5443d4bf5f5e",
+      "uncertainty": "The consumer note mentions a core value for an evaluation not performed, whereas the supplied ACTIVATION rules expressly give unperformed evaluations no result. The note does not specify a value or a different predicate that would resolve this wording tension.",
+      "consequence": "Retain missing fixture as unperformed evaluation, with a governed fixture/lane diagnostic and no product semantic-failure inference. Do not assign it an invented core value."
+    },
+    {
+      "key": "prior_f68b9ddf131b24aaa1e987cc1cd79abd",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+          "start_line": 345,
+          "end_line": 350,
+          "quote": "and each activation is decided by ACTIVATION §1 (Applicability). The kind\nof runner does not select the frame; the evaluated claim, subject, path,\npopulation, oracle and falsification boundary do (P6, P2). Each frame's `invalidation` row,\nhere and in §13, lists named instances of the material input change or\nthe changed basis of\n[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse); it adds no"
+        }
+      ],
+      "subject_key": "prior_5501995e5fa70ff1ab307cf852168870",
+      "uncertainty": "ASSURANCE §§1–3, later §13 details beyond these supplied sections, P0–P6, FOUNDATIONS, REFERENCE_FRAME, ACTIVATION, EVALUATION, PRODUCT_DEFINITION, DESIGN_MODULE, SPEC_METHOD and RELEASE are cited without their complete governing clauses. Graph discovery cannot supply them.",
+      "consequence": "Retain only locally stated consequences; activation, applicability, live/harnessed admission, co-evolution, lifecycle and conjunction requirements cannot be fully reconstructed or treated as discharged from this excerpt."
+    },
+    {
+      "key": "prior_a483ef800cc2da9fd5eb45d34eaeab85",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+          "start_line": 100,
+          "end_line": 107,
+          "quote": "This member owns the calculus-specific definitions and specialisations of\n`a_c`. Its imported concepts keep their owners: in particular,\n[FOUNDATIONS Results](FOUNDATIONS.md#results) and\n[Conjunction of results](FOUNDATIONS.md#conjunction-of-results) own the result\nvalues and combination law consumed by AC-007 and AC-019. No calculus model,\ncarrier or interpretation becomes another owner of those laws. A consumer\nneeds no implicit representation of the method, particular carrier or\ndownstream implementation to interpret the calculus (P1, P6)."
+        }
+      ],
+      "subject_key": "prior_3dab7b4ae60847a9b5f77b8991c041fa",
+      "uncertainty": "FOUNDATIONS ontology/results/conjunction/principles, referenced IDENTITY and reference-frame laws, the exact AxiomaticCalculusBasis identity record, and full calculus §§5–10/AC-015–020 are not supplied. Table summaries establish only the meanings expressly stated here.",
+      "consequence": "Do not fabricate resolved clause identities, full imported definitions, generic functor contracts or conformance coverage. The source's calculus is not equated with the selected published interpretation basis."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F1.%20Verification%20layers%2FFoundation%20to%20law%3A%20assurance%20and%20testing",
+      "decision": "retained",
+      "keys": [
+        "prior_ad2911520dc8ffb9419df0fede4f0e57",
+        "prior_1cfc131a76df6f85742a5443d4bf5f5e",
+        "prior_93cd36570856f72013f141f0e0562b0b",
+        "prior_1c17d94aebc89ec5fec96a2ee6b78af1",
+        "prior_f0b81c3f24db29c87de63cf31572e1b2",
+        "prior_b20cc795230d5b90d3c2a73c9209d97e"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy",
+      "decision": "retained",
+      "keys": [
+        "prior_2e29eb63656a6092cdf8daa41beaada3",
+        "prior_433fbad86b733e2a1409c02021a25be1",
+        "prior_5044cc3afb1f1e211f22ec62765ef5ea",
+        "prior_8c3f3bf2694e89b5c877cf9bfe75a242"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F2.%20Testing%20strategy%20taxonomy%2FFixture%20and%20proof%20portability",
+      "decision": "retained",
+      "keys": [
+        "prior_3bc1331fd561438b3abf435cbe8f3166",
+        "prior_984f44328b8ff22b978be206672e8e52",
+        "prior_acd673c2a7015b40d95d333e46135c0b"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F3.%20Test%20authority",
+      "decision": "retained",
+      "keys": [
+        "prior_12d92e8aac0a56903f7c6713bf136289",
+        "prior_ef827f7709fbae8aa7a8fc67b6b9b176",
+        "prior_eca0dcd09429f1829c7e627976117ec8"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F4.%20Scenario%20bundle",
+      "decision": "retained",
+      "keys": [
+        "prior_a53692f0d555aea884937662d5230e55",
+        "prior_5da8d2ce630350a9754881a3d7989c25",
+        "prior_71fbadfc84c94fbba2786125bd21803d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F5.%20Installed%20dev%20proof",
+      "decision": "retained",
+      "keys": [
+        "prior_b0b4ff2640d207bee8d1ebe2ff5163f3",
+        "prior_7551d47b1944a843c562ddfc1e4faf82"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F6.%20Significant%20path%20coverage",
+      "decision": "retained",
+      "keys": [
+        "prior_f9c245e92a9e876a8878777f5d99ecff",
+        "prior_5da8d2ce630350a9754881a3d7989c25",
+        "prior_3bb2f2ed3c0876f49db01b235382acff"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set",
+      "decision": "retained",
+      "keys": [
+        "prior_5501995e5fa70ff1ab307cf852168870"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FTerms",
+      "decision": "retained",
+      "keys": [
+        "prior_2aa7efe612226c86a56903f07ffef6a4",
+        "prior_a95cc4187253ab78a3b16b5c7c45e144",
+        "prior_37c6c0adb01d42ea37f40ece5db0dad2",
+        "prior_d8ac4e776c0b3c790d6cbf4644160d3d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FThe%20set",
+      "decision": "retained",
+      "keys": [
+        "prior_5501995e5fa70ff1ab307cf852168870",
+        "prior_77c1b3be8e8855e5902f29849ad813ea",
+        "prior_876424bac1cfa84f69e396cbef8933c7",
+        "prior_881e7eb5c998828a93e226e4b9a4d4a6",
+        "prior_70670d5bd3792045923b0d8344895365",
+        "prior_9cfff93b30f99373281f0d72e5dc6bf7",
+        "prior_419bec8d8eda85ee63c6c1e71f08d142",
+        "prior_f68b9ddf131b24aaa1e987cc1cd79abd"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUser-acceptance%20frame",
+      "decision": "retained",
+      "keys": [
+        "prior_9e6e1272a4d33627b22f146f2f8b9751",
+        "prior_0fd3f57e814042cb9f8f92db6d918479",
+        "prior_f182d82b176d62f66b0c56cde7058af7",
+        "prior_9edbc4d059e57c8d771b2e22cab3af0a"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FEnd-to-end%20frame",
+      "decision": "retained",
+      "keys": [
+        "prior_74b38a1ed583949eef88dee3e98a862a",
+        "prior_2544a32587ee93cbf7f99a4c6fc8139d",
+        "prior_b436359168d2b8bf3b9057c6d35643c7"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FIntegration%20frame",
+      "decision": "retained",
+      "keys": [
+        "prior_1c4c010033a4beec67d91c7c12d3f812",
+        "prior_5328bec6996a38bb5200c799b146c1f2",
+        "prior_2e10474d48337fc6e8c5c8fda2d8a055"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F7.%20Product%20testing%20frame%20set%2FUnit%20frame",
+      "decision": "retained",
+      "keys": [
+        "prior_9873a2fcf1a72b9c6d82964e88b5d0b2",
+        "prior_eef31a34ab52452efd05c6e5fc8f09d1",
+        "prior_b9ca3999fb551a1483ac71f2ccaf7b23"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F8.%20Combinatorial%20coverage%20and%20testing%20value",
+      "decision": "retained",
+      "keys": [
+        "prior_9998e713a60bf1ac244a0e611d7a518a",
+        "prior_9481253eff88964e304168d10a5ffcab",
+        "prior_df01f713900396fe4811463c7189058b"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F9.%20Legitimate%20path%20and%20technical-debt%20erasure",
+      "decision": "retained",
+      "keys": [
+        "prior_3635e0d97a204bc786bfeff7cc2b76e4",
+        "prior_8ca2cf800e571c05d0fcc732b9b22a70",
+        "prior_483cc88ad05fe0eb7c49c01025d59d2d",
+        "prior_82c5dec1d39b7c06ad22108b86b49f18"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F10.%20Testing%20evidence%20composition",
+      "decision": "retained",
+      "keys": [
+        "prior_1b2ac30da0a6a2e4e4e615c88bf8675d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F11.%20Assurance%20subject%20acquisition%20and%20evaluation",
+      "decision": "retained",
+      "keys": [
+        "prior_4a758d8b16a2d0014a7ecd1bc24c03f7",
+        "prior_22148c158cb713686fbfa92935c91f0e",
+        "prior_9513b6768e25dd79a583ce4b3a76db4a"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F12.%20Counterexample%20localisation",
+      "decision": "retained",
+      "keys": [
+        "prior_75d7ebdc57547aefb3f31ca6c91db8e4",
+        "prior_6ab91f4366633eda3c92a8d81c3cb1c7"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame",
+      "decision": "retained",
+      "keys": [
+        "prior_edbbabc8b2dc4636bae4930b21b2d9bb",
+        "prior_559156728c4d119e6dd8afd94c0ef6a5"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FClaim%20boundaries",
+      "decision": "retained",
+      "keys": [
+        "prior_548e95b2ad0b13be8c12ff0b8188144c",
+        "prior_f37e1b069d6a6d1cd82ccb537943f57c",
+        "prior_71ea5193b224042ddb698669c9aff367"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+      "decision": "retained",
+      "keys": [
+        "prior_b2b07af384f391edf6ad3bc028b53f4e",
+        "prior_1f7089dd48c486660f00d260f790349b",
+        "prior_083aefb645ddbce35914d5601c488325",
+        "prior_95022a71f2e77b1f7fa1ed6b42b41055",
+        "prior_ea837689e9c18791ae0472dc2b7b18ee"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FComputational%20whole-path%20evaluation",
+      "decision": "retained",
+      "keys": [
+        "prior_fe7db12377fdd46a49a3d55fed08adb1",
+        "prior_3f6e37decba967bdd053a161b1de89b4",
+        "prior_ffc4ab48c59085404a080488bc5582b5"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FQualification",
+      "decision": "retained",
+      "keys": [
+        "prior_8af9d5fad94ce242ca3c8c63415bd01a"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F14.%20Design-to-module%20evidence%20route",
+      "decision": "retained",
+      "keys": [
+        "prior_5a33a4d8c03287f415271883ababd0f6",
+        "prior_17ffc1c606f4c8f7fc60bc0cda71db3a",
+        "prior_e1447cff9c3d4e226d8b018f49859e36"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F15.%20Module-derived%20unit%20tests",
+      "decision": "retained",
+      "keys": [
+        "prior_f36832f6941f8683b920fbd70d2f5ad7",
+        "prior_b8a062661878ad33902b0b08339cdaf4",
+        "prior_453d61712f0e8102edd5b73e38e1f87d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ASSURANCE.md#ASSURANCE%2F16.%20Module%20lifecycle%20confirmation",
+      "decision": "retained",
+      "keys": [
+        "prior_32452eb024ac40cc77301d8270aacad9",
+        "prior_e6d3c97522c9269a853e6ac6cbaa2ae6"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS",
+      "decision": "retained",
+      "keys": [
+        "prior_8710247991b836d7b07fd776cf748e2c"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position",
+      "decision": "retained",
+      "keys": [
+        "prior_8710247991b836d7b07fd776cf748e2c",
+        "prior_7fd7c71247668ac4656ebb2663df6898",
+        "prior_3529a53cf09dd7031d9aea81d2863916",
+        "prior_0277d995888cfc3dee81e9c49665eedf"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FDerivation%20provenance",
+      "decision": "retained",
+      "keys": [
+        "prior_3dab7b4ae60847a9b5f77b8991c041fa",
+        "prior_24da7e724352721050af0c3324c3b7a3",
+        "prior_dab30bcdeb26e008088821a5d3a2e718",
+        "prior_a483ef800cc2da9fd5eb45d34eaeab85"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FScope",
+      "decision": "retained",
+      "keys": [
+        "prior_1babd59b4d9e109dda4bbbc62f9adaa0"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F1.%20Position%2FFoundation%20to%20law",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    }
+  ],
+  "limitations": [
+    "Source-local semantic proposal; processing coverage and mechanical checks do not establish semantic completeness or acceptance."
+  ]
+}

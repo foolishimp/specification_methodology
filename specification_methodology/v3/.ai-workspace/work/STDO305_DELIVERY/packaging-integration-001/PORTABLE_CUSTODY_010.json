@@ -1,0 +1,153 @@
+{
+  "bytecode_observations": {
+    "bytes": 10066,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/common-integration-repair-010/bytecode-observation-custody/CUSTODY.json",
+    "sha256": "5a81588db8670d9e5816a7687738ea077a95c3b922fd8b31feb0c1a501f66bb0"
+  },
+  "current_result_sha256": "2b1cdd31cb95c9bb6d4a853af3b0f978962ea18fd1431d8c1fb1767bb246087a",
+  "current_runtime_identity_sha256": "8421a93dbd8f5160842f15235825163f06a0e0837e03ef7f46fad68b389b06bf",
+  "excluded_private_runtime_prefix": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-001/",
+  "excluded_unsplit_archives": [
+    {
+      "bytes": 124504532,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/cold-evidence.zip",
+      "sha256": "644be03686c376e604b057968503232421bbea5a21c47a9c6d50e98d10733fdc"
+    },
+    {
+      "bytes": 121837689,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/budget-evidence.zip",
+      "sha256": "cd3a973823ef8202e674830b435dc9682143f3f75546b690a235db7418d64d50"
+    },
+    {
+      "bytes": 122158583,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/omission-evidence.zip",
+      "sha256": "333f1bc517adfc6168aa8ade50b80456d22abe295cab7760daf7bd30c09d48bb"
+    },
+    {
+      "bytes": 124504535,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/cold008-evidence.zip",
+      "sha256": "053a2421eb731555e11bc1bbf0ee70fbf45b48eebb88aa5b0e523f3f0c5be34b"
+    }
+  ],
+  "kind": "stdo.common-portable-evidence-custody/2",
+  "maximum_selected_part_bytes": 67108864,
+  "peer_custody": {
+    "bytes": 3421833,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/evidence-custody-009/INDEX.json",
+    "sha256": "808aa39f0f801cea2708bad65abdd734bb00bc44103913e73eb08c91809ec110"
+  },
+  "predecessor": {
+    "bytes": 4608,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/PORTABLE_CUSTODY.json",
+    "sha256": "76efc8d9ca1ce4e7cc526f7547b085bd1361e62032b0a4dd5493a453afd776a9"
+  },
+  "raw_unavailable_control": {
+    "bytes": 2723,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/raw-unavailable-portability-001/RESULT.json",
+    "sha256": "f6fdc1bf3f7e2a162c585efbef9c9f92fb058d5cfbab860c8cac58547e7b805f"
+  },
+  "rule": "Stage exact descriptors/parts and ordinary retained manifest/result. Raw proof duplicates, private origins, runtime/toolchain caches and unsplit duplicate archives are excluded through explicit path custody. Generated readers/native copies retain identical transport bytes and may deduplicate as Git blobs.",
+  "standing": "All four exact transports closed, including accepted current runtime008; predecessor results remain their original subjects. No private origin files are selected.",
+  "transports": [
+    {
+      "archive_bytes": 124504532,
+      "archive_sha256": "644be03686c376e604b057968503232421bbea5a21c47a9c6d50e98d10733fdc",
+      "descriptor": {
+        "bytes": 9290,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/cold-transport/TRANSPORT.json",
+        "sha256": "d6b498df1c46e7e77072cd66d9188673eb2d28d1670728a0736bb84fc4352135"
+      },
+      "expanded_bytes": 579468243,
+      "manifest_sha256": "f7e2678197599f5701b8c245a660f98a0b2570dc14b0c1b75b16d2f936673ee7",
+      "parts": [
+        {
+          "bytes": 67108864,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/cold-transport/part-001.bin",
+          "sha256": "6186ea5a907dbc25855492eeb0f3c1b324237b02035dfc544c133a17f1fe22d3"
+        },
+        {
+          "bytes": 57395668,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/cold-transport/part-002.bin",
+          "sha256": "24185cb4af078e2c74a39b008058ee6f0add057001611c16d3156bbe4959b3ff"
+        }
+      ],
+      "recoverable_members": 61,
+      "result_sha256": "ca33a44b40d5c54c70ea2e7cbe9de73ddca2b05c9e00f457732ad020ebbc5fbf"
+    },
+    {
+      "archive_bytes": 121837689,
+      "archive_sha256": "cd3a973823ef8202e674830b435dc9682143f3f75546b690a235db7418d64d50",
+      "descriptor": {
+        "bytes": 9001,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/budget-transport/TRANSPORT.json",
+        "sha256": "bcb0669d5fffc7c909a9bf927930c040d2d9518fe214e20e7aef65eb65630994"
+      },
+      "expanded_bytes": 547931624,
+      "manifest_sha256": "bb7e27c43042f358f8c1e7992b84107c59035461bfcd75dba731b530ef841ddd",
+      "parts": [
+        {
+          "bytes": 67108864,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/budget-transport/part-001.bin",
+          "sha256": "6186ea5a907dbc25855492eeb0f3c1b324237b02035dfc544c133a17f1fe22d3"
+        },
+        {
+          "bytes": 54728825,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/budget-transport/part-002.bin",
+          "sha256": "8c936467ecb0f1879d80fa8441e6ca6d152e5f4509f7bbbd9eaced49f365f3f7"
+        }
+      ],
+      "recoverable_members": 59,
+      "result_sha256": "9954dbc2f58c03bf54159dc9d1082fdf4468f07d0420cac15009d3713620092c"
+    },
+    {
+      "archive_bytes": 122158583,
+      "archive_sha256": "333f1bc517adfc6168aa8ade50b80456d22abe295cab7760daf7bd30c09d48bb",
+      "descriptor": {
+        "bytes": 9143,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/omission-transport/TRANSPORT.json",
+        "sha256": "dba72a43411025ef7c6ff3e6e66c3bc64e2e96dc54fcfc5421f6eaa0ddfa27ec"
+      },
+      "expanded_bytes": 551353490,
+      "manifest_sha256": "fe4159a7f31015a726ff0bec7c78b9ee2aa8ad7c005cd0918b0c19d0942936ea",
+      "parts": [
+        {
+          "bytes": 67108864,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/omission-transport/part-001.bin",
+          "sha256": "6186ea5a907dbc25855492eeb0f3c1b324237b02035dfc544c133a17f1fe22d3"
+        },
+        {
+          "bytes": 55049719,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/omission-transport/part-002.bin",
+          "sha256": "e3a67fb584bb11f6e3b737486a2f11ba19a35d2549537e11c0bc2cb3ca6fbd8f"
+        }
+      ],
+      "recoverable_members": 60,
+      "result_sha256": "db0a2ffc346b4424e001d3535f0290d7bde8d151cc8c79229f8194e62e4d75d0"
+    },
+    {
+      "archive_bytes": 124504535,
+      "archive_sha256": "053a2421eb731555e11bc1bbf0ee70fbf45b48eebb88aa5b0e523f3f0c5be34b",
+      "descriptor": {
+        "bytes": 9290,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/cold008-transport/TRANSPORT.json",
+        "sha256": "7915cc1ecb124ad37341d41cde1c8145a30a34a5d8daa2b351d579fa5d9ce4e4"
+      },
+      "expanded_bytes": 579468242,
+      "manifest_sha256": "f7e2678197599f5701b8c245a660f98a0b2570dc14b0c1b75b16d2f936673ee7",
+      "parts": [
+        {
+          "bytes": 67108864,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/cold008-transport/part-001.bin",
+          "sha256": "6186ea5a907dbc25855492eeb0f3c1b324237b02035dfc544c133a17f1fe22d3"
+        },
+        {
+          "bytes": 57395671,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/archives/cold008-transport/part-002.bin",
+          "sha256": "a05ec0d1ca618f5cf23d2533a4ae4b00eb6f9a557abe0e8af54d517af83d158c"
+        }
+      ],
+      "recoverable_members": 61,
+      "result_sha256": "2b1cdd31cb95c9bb6d4a853af3b0f978962ea18fd1431d8c1fb1767bb246087a"
+    }
+  ]
+}

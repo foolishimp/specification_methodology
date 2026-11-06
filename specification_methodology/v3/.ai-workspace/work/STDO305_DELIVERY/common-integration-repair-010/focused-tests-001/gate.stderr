@@ -1,0 +1,27 @@
+.........E.............................................
+======================================================================
+ERROR: test_unknown_runtime_refuses_even_with_all_declared_files_present (test_stable_stack_release.FormalEvidenceTests.test_unknown_runtime_refuses_even_with_all_declared_files_present)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py", line 409, in test_unknown_runtime_refuses_even_with_all_declared_files_present
+    self.run_formal()
+  File "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py", line 378, in run_formal
+    transport.pack(self.root / 'bundle', self.root / 'proof.zip')
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmp2joxov78/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py", line 102, in pack
+    boundary().guard([output], [bundle], anchors=[Path(__file__).absolute()])
+    ^^^^^^^^^^
+  File "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmp2joxov78/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py", line 29, in boundary
+    exec(compile(path.read_bytes(), str(path), 'exec'), module.__dict__)
+                 ^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmp2joxov78/specification_methodology/v3/build_tenants/common-tools/payload_boundary.py'
+
+----------------------------------------------------------------------
+Ran 55 tests in 3.942s
+
+FAILED (errors=1)

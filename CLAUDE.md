@@ -6,18 +6,18 @@ This repository contains six peer source projects:
 is not a Product.
 
 `a_c/` independently realizes the axiomatic calculus, with Graphify as a build
-tenant. Use its local Product Definition and bootstrap. It adds no dependency
-to v3 or membership in the existing release-matched cohort.
+tenant. Use its local Product Definition and bootstrap. It participates in the explicitly selected 3.0.5 cohort; the declared relation preserves its own Product ownership.
 
 `stdo_skills/` owns shared skill requirements and independent Codex and Claude
 skill build tenants. Select `stdo_skills/stdo_skills.json` and its local bootstrap
-for the static installed STDO 3.0.1 basis. Its lifecycle is separate from the
-release-matched cohort.
+for the selected installed STDO 3.0.4 construction basis. It participates in the explicitly selected 3.0.5 cohort while retaining separate Product ownership.
 
 The Git checkout is `specification_methodology`. The STDO Specification
 Methodology product has two version lines side by side: STDO 2.* authoring
-belongs in `./specification_methodology/v2/`; v3.0.0 construction belongs in
-`./specification_methodology/v3/`. Each has its own Product Definition.
+belongs in `./specification_methodology/v2/`; v3 development belongs in
+`./specification_methodology/v3/`. That child now pins the released STDO 3.0.4
+builder and native tools; use its local bootstrap and
+[versioned guide](specification_methodology/v3/development/STDO_3_0_4.md). Each has its own Product Definition.
 
 Select the applicable child, load its local instructions and Product
 Definition, and preserve its exact authority and dependency boundaries.
@@ -38,12 +38,17 @@ Native skills:
 
 These skills route attention and grant no authority.
 
-Interpret an owner's STDO release request through
-[`Meaning Of A Release Request`](STACK_RELEASE.md#meaning-of-a-release-request).
+Read [the required 3.0.5 candidate membership](RELEASE_PRODUCTS.md),
+[the complete release procedure](STACK_RELEASE.md) and `stack_release.json`.
+An owner release request selects all five Products and every required current
+component through installed qualification, atomic publication and public
+readback. Historical graphs, reports and source-only archives do not satisfy
+current-candidate membership. All owned components use the exact cohort
+version; third-party dependencies retain their independent exact pins.
+Published cuts remain immutable. The 3.0.4 builder adoption does not change.
 
-For an explicitly selected coordinated STDO stack release, read
-`STACK_RELEASE.md` and `stack_release.json`. The exact normalized cohort version
-must match the STDO corpus, plugin, Axiom Indexer, STDO Representation, and
-generated `a_c.STDO` program/map. Run `scripts/check_stack_release.py` at the
-content, local-ref-graph, and remote gates. Any missing, stale, differently
-versioned, digest-incongruent, or partially published member stops release.
+Use `scripts/check_stack_release.py` at ready, content, local-ref, published
+and public gates. Missing, extra, stale, mismatched or tampered subjects and
+unproven required claims stop promotion. The Executive coordinates; a
+separately bound Writer performs file/Git effects, and required independent
+review assesses the exact subject without repairing it.

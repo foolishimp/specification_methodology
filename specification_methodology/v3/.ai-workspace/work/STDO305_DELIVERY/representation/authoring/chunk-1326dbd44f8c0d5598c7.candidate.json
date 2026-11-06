@@ -1,0 +1,1229 @@
+{
+  "concepts": [
+    {
+      "key": "prior_3bdd99fa9dea377d5c73a4146c7b7e45",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/claude-skills/refresh/SKILL.md#preamble",
+          "start_line": 2,
+          "end_line": 5,
+          "quote": "name: refresh\ndescription: Reload one explicitly selected STDO registry entry into context\nargument-hint: \"(--installed | --release <product-local-cut> | --candidate) [--doc <name>] [--list]\"\ndisable-model-invocation: true"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/claude-skills/refresh/SKILL.md#STDO%20Refresh%20For%20Claude",
+          "start_line": 13,
+          "end_line": 15,
+          "quote": "Claude invocation is `/spec:refresh`. This adapter adds no procedure or\nauthority and remains manual-only because a full registry entry materially\nexpands context."
+        }
+      ],
+      "label": "Claude refresh adapter",
+      "definition": "The Claude refresh adapter is named refresh, invokes as /spec:refresh, and reloads one explicitly selected STDO registry entry. Its argument interface is (--installed | --release <product-local-cut> | --candidate) [--doc <name>] [--list]. Model invocation is disabled.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_c80654beefe2552a98ab1258d238ff01",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection",
+          "start_line": 3,
+          "end_line": 5,
+          "quote": "Use this read-only procedure before every STDO workflow skill. It selects and\nverifies one Product basis; it grants no mutation, execution, review,\ndisposition, installation, or continuation authority."
+        }
+      ],
+      "label": "Product Basis Selection",
+      "definition": "Product Basis Selection is a read-only procedure preceding every STDO workflow skill. It selects and verifies one Product basis and grants no mutation, execution, review, disposition, installation or continuation authority.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_5f470cb500e8e3245082004482b762e6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FRead%20A%20Member%20From%20That%20Basis",
+          "start_line": 45,
+          "end_line": 47,
+          "quote": "After the selected basis has verified, resolve each required member through\nthat same immutable basis. A route consists of the member's package-relative\npath and, where needed, a heading anchor within it."
+        }
+      ],
+      "label": "Verified member acquisition",
+      "definition": "Member acquisition resolves a package-relative member path and, where needed, its heading anchor through the same immutable basis. Membership, bytes, installation location and anchors are checked independently of semantic fidelity and task sufficiency.",
+      "conditions": [
+        "The selected basis has verified."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_8fcb544c45e9cba3d183ecc9730c7830",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure",
+          "start_line": 3,
+          "end_line": 5,
+          "quote": "Reload one complete registry entry from exactly one selected STDO basis. An\nentry is a declared bundle, owning member or task frame of this method. This is a read-only context\nprojection; it does not create a partial constitution."
+        }
+      ],
+      "label": "STDO Refresh Procedure",
+      "definition": "Refresh is a read-only context projection reloading one complete registry entry from exactly one selected STDO basis. An entry is a declared bundle, owning member or task frame; projection creates no partial constitution.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_4ffe88cbcf074baec82f64f47b062fb6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FRegistry",
+          "start_line": 31,
+          "end_line": 46,
+          "quote": "| `frame` | `REFERENCE_FRAME.md`; `FOUNDATIONS.md` §2 and §4; `ACTIVATION.md` §1 to §4 and §7; `EVALUATION.md` §7 |\n| `frame-baseline` | `EXECUTIVE_BASELINE.md`; `ASSURANCE.md` §7 to §13; `EVALUATION.md` §4 |\n| `spec` | `SPEC_METHOD.md`; `ACTIVATION.md`; `PRODUCT_DEFINITION.md`; `ASSURANCE.md`; `EVALUATION.md`; `TICKETS.md`; `FOUNDATIONS.md` §2 and §3; `PROFILES.md` §2 and §3 |\n| `design` | `DESIGN_MODULE.md`; `ASSURANCE.md` §14 to §16; `ACTIVATION.md` §1, §4 and §6; `SPEC_METHOD.md` §2; `FOUNDATIONS.md` §4 |\n| `odd` | `ODD.md` |\n| `ux` | `UX.md`; `TICKETS.md` §3; `PROFILES.md` §2 |\n| `writing` | `WRITING_GUIDE.md` |\n| `posting` | `POSTING_GUIDE.md`; `SPEC_METHOD.md` §6 |\n| `ticket` | `TICKETS.md`; `ACTIVATION.md` §1; `SPEC_METHOD.md` §3 and §7 |\n| `release` | `RELEASE.md`; `FOUNDATIONS.md` §1 and §2; `PRODUCT_DEFINITION.md` §4; `EVALUATION.md` §5 |\n| `identity` | `IDENTITY.md`; `RELEASE.md` §1, §3 and §8; `DESIGN_MODULE.md` §12 |\n| `world` | `WORLD_MODEL.md`; `FOUNDATIONS.md` §3 |\n| `glossary` | `GLOSSARY.md`; `PROFILES.md` §2 |\n| `calculus` | `AXIOMATIC_CALCULUS.md` |\n| `traversal` | `TRAVERSAL_OCCURRENCE.md`; `AXIOMATIC_CALCULUS.md` §8 |\n| `library` | `README.md`; `PRODUCT_DEFINITION.md` §4 and §12; `RELEASE.md` §3 and §4 |"
+        }
+      ],
+      "label": "Refresh bundle registry",
+      "definition": "Ordered registry mappings are: frame → REFERENCE_FRAME.md; FOUNDATIONS.md §§2,4; ACTIVATION.md §§1–4,7; EVALUATION.md §7. frame-baseline → EXECUTIVE_BASELINE.md; ASSURANCE.md §§7–13; EVALUATION.md §4. spec → SPEC_METHOD.md; ACTIVATION.md; PRODUCT_DEFINITION.md; ASSURANCE.md; EVALUATION.md; TICKETS.md; FOUNDATIONS.md §§2,3; PROFILES.md §§2,3. design → DESIGN_MODULE.md; ASSURANCE.md §§14–16; ACTIVATION.md §§1,4,6; SPEC_METHOD.md §2; FOUNDATIONS.md §4. odd → ODD.md. ux → UX.md; TICKETS.md §3; PROFILES.md §2. writing → WRITING_GUIDE.md. posting → POSTING_GUIDE.md; SPEC_METHOD.md §6. ticket → TICKETS.md; ACTIVATION.md §1; SPEC_METHOD.md §§3,7. release → RELEASE.md; FOUNDATIONS.md §§1,2; PRODUCT_DEFINITION.md §4; EVALUATION.md §5. identity → IDENTITY.md; RELEASE.md §§1,3,8; DESIGN_MODULE.md §12. world → WORLD_MODEL.md; FOUNDATIONS.md §3. glossary → GLOSSARY.md; PROFILES.md §2. calculus → AXIOMATIC_CALCULUS.md. traversal → TRAVERSAL_OCCURRENCE.md; AXIOMATIC_CALCULUS.md §8. library → README.md; PRODUCT_DEFINITION.md §§4,12; RELEASE.md §§3,4. These identify acquisition targets, not verified contents.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b92b576573c2a95de829c22b4644adfc",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FOwner%20And%20Task%20Entries",
+          "start_line": 50,
+          "end_line": 55,
+          "quote": "The bundle names above remain available. `owner:<member>` selects one owning\nmember, using its exact filename without `.md`, such as\n`owner:FOUNDATIONS`, `owner:ACTIVATION` or `owner:WORLD_MODEL`. Accept only a\nmember listed in the verified standards inventory; the local\n[method entry](../../../standards/README.md) locates its scope. A full owner\nread has its own acquisition cost; select a task entry when it is sufficient."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FOwner%20And%20Task%20Entries",
+          "start_line": 59,
+          "end_line": 70,
+          "quote": "| `task:rf-task-a` | `frames/rf-task-a.md` |\n| `task:rf-task-b` | `frames/rf-task-b.md` |\n| `task:ac-task-a` | `frames/ac-task-a.md` |\n| `task:traversal-task-f` | `frames/traversal-task-f.md` |\n| `task:eb-task-d` | `frames/eb-task-d.md` |\n| `task:dm-task-d` | `frames/dm-task-d.md` |\n| `task:configuration` | `frames/configuration.md` |\n| `task:binding` | `frames/binding.md` |\n| `task:stale-summary` | `frames/stale-summary.md` |\n| `task:bootstrap` | `frames/bootstrap.md` |\n| `task:acceptance-release` | `frames/acceptance-release.md` |\n| `task:member-build-assess` | `frames/member-build-assess.md` |"
+        }
+      ],
+      "label": "Refresh owner and task entries",
+      "definition": "owner:<member> identifies one owning standards member by exact filename without .md. Task names map to frames/<suffix>.md for suffixes rf-task-a, rf-task-b, ac-task-a, traversal-task-f, eb-task-d, dm-task-d, configuration, binding, stale-summary, bootstrap, acceptance-release, and member-build-assess. Existing bundle names remain available.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_0e1bc82e2ce39b9c50e5931eb79ef30d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FEvaluate",
+          "start_line": 116,
+          "end_line": 121,
+          "quote": "- `satisfied`: no finding; triage is `not_applicable`;\n- `falsified`: findings carry complete triage or explicit field-level\n  indeterminate values;\n- `indeterminate` or `out_of_frame`: return the unresolved triage and basis;\n  and\n- `invalid_basis`: triage is `not_applicable`; return the basis re-entry."
+        }
+      ],
+      "label": "Review result domain",
+      "definition": "The review projection names five core result values: satisfied, falsified, indeterminate, out_of_frame and invalid_basis. They remain distinct from technical triage and Product disposition.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_5fec0f21265016ca449d4389511dce49",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION",
+          "start_line": 14,
+          "end_line": 25,
+          "quote": "It uses\nthe objects of [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology), the core result\nalgebra of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and the frame\nobject and the outcomes of `activate` of\n[REFERENCE_FRAME](REFERENCE_FRAME.md) (§5). It defines the step-level\nconcepts it introduces, among them the current state, the destination,\nthe transition, the configuration, the execution unit, acquisition, the\nrewrite step, the licensing law, the adequacy relation, the work state,\nthe actor's account, progress and churn, proportionality and the closed\nresult, and refines the\ncore for admission, activation and steps (§3); it redefines nothing those\nmembers own."
+        }
+      ],
+      "label": "ACTIVATION standard",
+      "definition": "ACTIVATION declares itself Tier 1 owner of bounded work: steps and their transitions, intake, execution unit, admission, applicability/exclusion, output, configuration and delegation; context construction, size/fit/acquisition/activation/evaluation/staleness; refined results and disposition; totality, refinement, hard stops, licensing and approximation; work state/restart/accounts; cost, proportionality and resource limits; and closed results, invalidation and reuse. It uses, without redefining, FOUNDATIONS objects and core results and REFERENCE_FRAME frame objects and activate outcomes.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_095b668d8b756b7fc08853511607dac3",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step",
+          "start_line": 29,
+          "end_line": 34,
+          "quote": "A step is the activation of one reference frame, or one declared active\nframe configuration, on an exact subject (REFERENCE_FRAME §1, §11). Its\ncontext is the projection of that activated frame to the actor; the corpus\nor the workspace is never the context (P0; RF-002). Intake, admission,\napplicability and activation are distinct relations inside the step even\nwhen one invocation performs all of them."
+        }
+      ],
+      "label": "Bounded step",
+      "definition": "A step activates one reference frame or declared active frame configuration on an exact subject. Its context is the activated frame's projection to the actor, never the corpus or workspace. Intake, admission, applicability and activation are distinct even within one invocation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_bf286579d4e585eb06b3157fadd71330",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+          "start_line": 119,
+          "end_line": 126,
+          "quote": "The current state is the material state of the workspace and\nits authoritative inputs, together with what is justifiably known about\nthat state, with the unknowns explicit. The work state of §5 records it:\nthe workspace, the governing basis, and the closed results and judgments\nthat still apply, with the residuals and the uncertainty over external\neffects as the explicit unknowns. An actor's context is an account of the\ncurrent state, not the state itself\n([§5](#the-workspace-and-an-actors-account)) (P3, P5)."
+        }
+      ],
+      "label": "Current state",
+      "definition": "Current state comprises material workspace state, authoritative inputs, justified knowledge and explicit unknowns. Work state records the workspace, governing basis, still-applicable closed results and judgments, residuals and external-effect uncertainty. An actor's context is an account of this state, not the state.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_757947ab4358af48fb6a8afcb14ab842",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+          "start_line": 128,
+          "end_line": 132,
+          "quote": "The destination is defined by constraints: the selected outcome with its\nacceptance conditions (Outcome U, [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology))\nand the governing obligations the work must keep. It names no single\nstate: its acceptance conditions admit several realised states. Its\nowning authority defines it (P2, P6)."
+        }
+      ],
+      "label": "Destination",
+      "definition": "The destination is the owning authority's constraint-defined selected outcome, acceptance conditions and obligations to preserve. It admits multiple realised states rather than naming one state. Construction denotes this destination by Z.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_3d3b5c6c2d3f3cc4fc6c364bdbb9d934",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+          "start_line": 134,
+          "end_line": 138,
+          "quote": "A transition is a bounded change from the current state to a next state,\ncarried out by one step. Where the work exceeds one activation's capacity,\nthe outer transformation towards the destination is refined into a series\nof bounded transitions under §4 Refinement, each carried out by its own\nstep; work that fits one activation is a single transition."
+        }
+      ],
+      "label": "Bounded transition",
+      "definition": "A transition is one step's bounded change from current to next state. Work fitting one activation is one transition; work exceeding it is refined into bounded transitions under the declared refinement law.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_32042b38168b865f15b179aa395cf70f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+          "start_line": 201,
+          "end_line": 206,
+          "quote": "This subsection states the construction relation for this corpus: how a\nselected construction binds its current state and destination, chooses\nits work, composes its steps, corrects itself and claims completion. This\nsection owns that relation. ACTIVATION §2 to §7, EVALUATION §1,\nSPEC_METHOD §4 and §8, EXECUTIVE_BASELINE and ODD apply it through their\nlocal bindings; none creates a competing determination (P6)."
+        }
+      ],
+      "label": "Construction relation",
+      "definition": "The construction relation binds current state A and destination predicate Z, selects work, composes steps, corrects discrepancies and grounds completion claims. Its three subject accounts are specification of required conditions, observations of what holds, and causal/predictive explanation of possible action effects. Strategy arranges admissible construction and assurance within resources; a composition boundary passes one step's output into the next starting state and differs from a categorical join. Feedback observes, compares, diagnoses, selects an authorized response, acts and observes again; homeostasis is correction toward required conditions without a convergence or adequacy guarantee.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_51712ba4356f75aa10803f984ec35302",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FIntake",
+          "start_line": 355,
+          "end_line": 357,
+          "quote": "A step is activated from an intake sufficient to reconstruct its governing\nrelations without conversation history, commentary or a prior actor's memory\n(P0, actor-change premise). The intake names:"
+        }
+      ],
+      "label": "Step intake",
+      "definition": "Intake is the reconstructable governing basis from which a step activates, independent of conversation history, commentary or prior-actor memory.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_878ed078b22fb1ce473fd0d2699d4e73",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FExecution%20unit",
+          "start_line": 393,
+          "end_line": 400,
+          "quote": "The execution unit is the smallest coherent causal dependency cone capable\nof delivering working behaviour while preserving every affected governing\nrelation. It need not coincide with one function, file, module, ticket\nfield or design document (P0, P4b). A seam whose far side can causally affect,\nor be affected by, the action is inside the cone unless the basis\nestablishes that it cannot participate. Unrelated incompleteness outside\nthe cone is recorded as repricing input and does not block the bounded\nclaim. The cone is the seed set Z of §2; the context is its projection."
+        }
+      ],
+      "label": "Execution unit",
+      "definition": "The execution unit is the smallest coherent causal dependency cone able to deliver working behaviour while preserving every affected governing relation. It need not align with a function, file, module, ticket field or design document. It is the seed set called Z for context construction in ACTIVATION §2, distinct in usage from construction's destination predicate Z.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_c175c5ee302c9e5c9c41a8555568a32f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FAdmission",
+          "start_line": 404,
+          "end_line": 408,
+          "quote": "Drafting a step's contract and admitting it are distinct relations, even\ninside one invocation that drafts, validates, admits and executes; no\nseparate turn, carrier or approval ceremony is implied by the distinction.\nA contract carries at minimum the states drafted, admitted, rejected and\nsuperseded ([TICKETS §5](TICKETS.md#execution-contract-admission))."
+        }
+      ],
+      "label": "Execution-contract admission",
+      "definition": "Execution-contract drafting and admission are distinct relations. Contracts carry at least drafted, admitted, rejected and superseded states. Admission validates a contract against its cited outcome, prerequisite or experiment basis; it does not admit that underlying basis.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "prior_0639ccda70f3067a34fe0c51bcf52cf0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/claude-skills/refresh/SKILL.md#STDO%20Refresh%20For%20Claude",
+          "start_line": 10,
+          "end_line": 11,
+          "quote": "Read and follow\n[`../../references/REFRESH.md`](../../references/REFRESH.md) completely."
+        }
+      ],
+      "kind": "delegates_procedure_to",
+      "meaning": "The adapter's described behavior is wholly supplied by REFRESH.md; the adapter adds no procedure or authority. Governing denotes the source's procedural dependency only.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_3bdd99fa9dea377d5c73a4146c7b7e45",
+      "target_key": "prior_8fcb544c45e9cba3d183ecc9730c7830",
+      "governing": true
+    },
+    {
+      "key": "prior_9f6a01ea627b6a09ee7ba00ea7045180",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FRead%20A%20Member%20From%20That%20Basis",
+          "start_line": 45,
+          "end_line": 47,
+          "quote": "After the selected basis has verified, resolve each required member through\nthat same immutable basis. A route consists of the member's package-relative\npath and, where needed, a heading anchor within it."
+        }
+      ],
+      "kind": "prerequisite_for",
+      "meaning": "Verified Product selection is a prerequisite for resolving required members from that same immutable basis; it supplies no additional effect authority.",
+      "conditions": [
+        "The selected Product basis has verified."
+      ],
+      "exceptions": [],
+      "source_key": "prior_c80654beefe2552a98ab1258d238ff01",
+      "target_key": "prior_5f470cb500e8e3245082004482b762e6",
+      "governing": true
+    },
+    {
+      "key": "prior_2365bf7c37a2fd741e55bbc9587939f7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FProcedure",
+          "start_line": 88,
+          "end_line": 91,
+          "quote": "2. Resolve the selected entry and each of its members and sections using\n   [Product Basis Selection](PRODUCT_BASIS.md#read-a-member-from-that-basis),\n   checking the manifest, member digest and anchor. Candidate mode uses the\n   explicitly selected package and carries no released-consumer standing."
+        }
+      ],
+      "kind": "uses_acquisition_rule",
+      "meaning": "Refresh explicitly uses Product Basis Selection's member identity and anchor procedure, subject to the stated candidate-mode distinction.",
+      "conditions": [],
+      "exceptions": [
+        "Candidate mode uses its explicitly selected package with no released-consumer standing."
+      ],
+      "source_key": "prior_8fcb544c45e9cba3d183ecc9730c7830",
+      "target_key": "prior_5f470cb500e8e3245082004482b762e6",
+      "governing": true
+    },
+    {
+      "key": "prior_63091ca1dcb838383de1e82cf97dd7e1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+          "start_line": 134,
+          "end_line": 135,
+          "quote": "A transition is a bounded change from the current state to a next state,\ncarried out by one step."
+        }
+      ],
+      "kind": "carried_out_by",
+      "meaning": "One step carries out a bounded transition; this descriptive link does not itself admit the step.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_3d3b5c6c2d3f3cc4fc6c364bdbb9d934",
+      "target_key": "prior_095b668d8b756b7fc08853511607dac3",
+      "governing": false
+    },
+    {
+      "key": "prior_25ee6645547734a8723b95cf90bc283a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+          "start_line": 138,
+          "end_line": 141,
+          "quote": "Each\ntransition binds the obligations it must preserve: the outer obligations\nof the destination and of the governing relations it affects, as far as\nthey apply to it."
+        }
+      ],
+      "kind": "preserves_applicable_obligations_of",
+      "meaning": "A transition must bind and preserve applicable outer destination obligations, together with affected governing-relation obligations.",
+      "conditions": [
+        "The destination's obligations apply to the transition."
+      ],
+      "exceptions": [],
+      "source_key": "prior_3d3b5c6c2d3f3cc4fc6c364bdbb9d934",
+      "target_key": "prior_757947ab4358af48fb6a8afcb14ab842",
+      "governing": true
+    },
+    {
+      "key": "prior_cc5ebd188ebff1956d0fd0cd1a413b0c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+          "start_line": 208,
+          "end_line": 215,
+          "quote": "Binding A and Z. A construction binds A, the current state of Transitions\nabove with its account, and Z, the destination as a predicate over\nrealised states that includes the acceptance conditions of the selected\noutcome. The account of A describes the material workspace state, the\nrelevant external observations acquired through the interfaces that own\nthem, what is justifiably known and the explicit unknowns; an actor's\nacquired account can be incomplete or stale, and the workspace, not the\naccount, is the subject (§5)."
+        }
+      ],
+      "kind": "requires_binding_of",
+      "meaning": "Construction binds actual current state A and its fallible account without replacing the workspace subject with the account.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_32042b38168b865f15b179aa395cf70f",
+      "target_key": "prior_bf286579d4e585eb06b3157fadd71330",
+      "governing": true
+    },
+    {
+      "key": "prior_96549665dabf5b4715b0c424966bb255",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+          "start_line": 208,
+          "end_line": 211,
+          "quote": "Binding A and Z. A construction binds A, the current state of Transitions\nabove with its account, and Z, the destination as a predicate over\nrealised states that includes the acceptance conditions of the selected\noutcome."
+        }
+      ],
+      "kind": "requires_binding_of",
+      "meaning": "Construction binds the outcome predicate Z with acceptance conditions; calculus lawfulness cannot select or establish that outcome.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_32042b38168b865f15b179aa395cf70f",
+      "target_key": "prior_757947ab4358af48fb6a8afcb14ab842",
+      "governing": true
+    },
+    {
+      "key": "prior_c0fcebaf9aea2b519a6066de7671c236",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FAdmission",
+          "start_line": 423,
+          "end_line": 427,
+          "quote": "Only an admitted contract activates a step: no\nresult, child completion, tool output, model response, shared actor or\nlateral handoff activates another step or authorises continuation by\nitself, and a profile that routes results names its instances of this\nrule."
+        }
+      ],
+      "kind": "necessary_condition_for",
+      "meaning": "Admitted contract is necessary for step activation; routing, returned results or shared actors alone cannot activate or authorize continuation.",
+      "conditions": [
+        "An exact contract is admitted under the stated admission law."
+      ],
+      "exceptions": [],
+      "source_key": "prior_c175c5ee302c9e5c9c41a8555568a32f",
+      "target_key": "prior_095b668d8b756b7fc08853511607dac3",
+      "governing": true
+    }
+  ],
+  "constraints": [
+    {
+      "key": "prior_2f42334e56485edb10f9ac7c8ebab113",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FProcedure",
+          "start_line": 38,
+          "end_line": 41,
+          "quote": "Zero definitions, multiple applicable definitions, failed verification, or any\nidentity, path, basis, manifest, installation, or validity mismatch stops the\ncalling skill before effects. Report the exact candidates or mismatch and the\nrequired re-entry; do not repair it implicitly."
+        }
+      ],
+      "statement": "State requested scope from the exact request and Product identities/claims; insufficient distinction leaves scope unresolved. Discover candidate definitions only within the authorized workspace search boundary. Filename/current directory/nearest file/nesting are discovery only, not selection or composition. Determine applicability from definition identity and owned what/how/ticketing/bounded-context/explicit-composition bindings; paths select only when explicitly scope-bound. Require exactly one: zero returns unresolved scope, multiple returns every remaining identity/path and requests disambiguation; never choose by proximity, familiarity, recency or label. Read-only status verification must report matching definition identity/path, immutable basis URI and manifest SHA-256, installed:true, valid:true and no failures. Do not sync/adopt/install, substitute mutable source or nearby Product. Return scope, identity/path, URI/cut, digest and result; only then may caller continue under its own authority/effect boundary. Any listed mismatch stops before effects and reports exact candidates/mismatch and re-entry without implicit repair.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_c80654beefe2552a98ab1258d238ff01"
+      ]
+    },
+    {
+      "key": "prior_22cc4a1bcc96864f59611fca934c9b5a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FRead%20A%20Member%20From%20That%20Basis",
+          "start_line": 63,
+          "end_line": 70,
+          "quote": "Resolve the member without its fragment, then locate the exact anchor in\nthose verified bytes; for example, `#7-closed-result-and-reuse` selects\nACTIVATION's reuse owner. A missing member, anchor, manifest mismatch or\ncontent mismatch leaves the route unresolved. Acquire no replacement from a\ncheckout, moving selector, later cut or neighbouring Product. A frame is a\nmember too: verify its own bytes and the local sources and section digests\nlisted in `standards/frames/FRAME_INPUTS.json` before treating it as current.\nThis identity check does not establish semantic fidelity or task sufficiency."
+        }
+      ],
+      "statement": "Use the verified definition's basis URI and manifest matching manifest_sha256. Require ACTIVATION.md in standards inventory and its resolved SHA-256 equal to the declared member digest; apply equivalent checks to every selected member. Returned URI must equal requested URI and path lie in the verified installation; path alone proves neither membership nor bytes. Resolve without fragment, then find exact anchor in verified bytes. Missing member/anchor or digest/content mismatch leaves the route unresolved; no checkout, moving-selector, later-cut or neighboring-Product replacement. For frames also verify local sources/section digests in FRAME_INPUTS.json before currency claims. Identity checking proves neither fidelity nor sufficiency. Return exact basis URI/manifest digest, member digest, selected anchor and unresolved dependencies for every acquired member; caller keeps its authority/effect boundary.",
+      "uncertainty": "",
+      "conditions": [
+        "The Product basis has verified."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_5f470cb500e8e3245082004482b762e6"
+      ]
+    },
+    {
+      "key": "prior_d51a7d6b8aef66a05aeee0c9c4607b69",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FRegistry",
+          "start_line": 24,
+          "end_line": 27,
+          "quote": "Each bundle loads its listed members in order. Owner and task entries\nselect narrower acquisition without changing the complete selected basis. A member listed without sections\nloads in full. A listed section loads in full with all its subsections, up\nto the next heading at its own level or shallower."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FOwner%20And%20Task%20Entries",
+          "start_line": 72,
+          "end_line": 74,
+          "quote": "Task frames own no determination. Check their current source bindings and\nacquire missing deciding owner sections under ACTIVATION §2; do not treat a\nroute as proof that the frame is sufficient for every task."
+        }
+      ],
+      "statement": "Load listed bundle members in order; unsectioned members in full and selected sections in full including subsections until the next heading of equal or shallower level. Narrower owner/task acquisition does not change the complete basis. Accept owner names only from verified standards inventory; the method entry locates scope. Select a task entry when sufficient because full-owner reads have cost. Task frames own no determination: check source currency and acquire missing deciding sections under ACTIVATION §2; route availability proves no universal sufficiency.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_4ffe88cbcf074baec82f64f47b062fb6",
+        "prior_b92b576573c2a95de829c22b4644adfc"
+      ]
+    },
+    {
+      "key": "prior_601d274c8132a08ea12213de3d9a9a6a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FProcedure",
+          "start_line": 88,
+          "end_line": 100,
+          "quote": "2. Resolve the selected entry and each of its members and sections using\n   [Product Basis Selection](PRODUCT_BASIS.md#read-a-member-from-that-basis),\n   checking the manifest, member digest and anchor. Candidate mode uses the\n   explicitly selected package and carries no released-consumer standing. Refuse\n   unknown names and any fallback to a different install, local copy,\n   mutable source, or nearby Product.\n3. For each listed member or section, in order, read and surface it in full\n   with its name, exact basis, resolved source, full content, and explicit\n   end marker.\n4. Conclude:\n\n   ```text\n   Active context: <name> from <basis>. The complete selected basis remains constitutional authority."
+        }
+      ],
+      "statement": "Resolve exactly one basis: installed requires one definition and verified URI/manifest; release resolves product-local cut via manager with possibly project-qualified Git transport and no moving-selector substitution. Candidate emits '[CANDIDATE] Mutable STDO authoring source loaded. This is not released consumer law.' Resolve entries/members/sections with manifest, digest and anchor checks; refuse unknown names and fallback to another install, local copy, mutable source or nearby Product. Surface every selected member/section in order and in full with name, exact basis, resolved source, full content and end marker. Conclude with the stated Active context message retaining complete-basis constitutional authority, read subject to candidate's explicit non-operative status. Multiple explicit calls may build multi-document context; daily skills should normally read the smallest relevant surface.",
+      "uncertainty": "The final authority wording is not explicitly specialized for candidate mode; its interaction is retained as a residual.",
+      "conditions": [],
+      "exceptions": [
+        "Explicit candidate mode uses the explicitly selected package and carries no released-consumer standing."
+      ],
+      "applies_to_keys": [
+        "prior_8fcb544c45e9cba3d183ecc9730c7830"
+      ]
+    },
+    {
+      "key": "prior_19b4c5a745c38c2a66b08e2cb2daf1de",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step",
+          "start_line": 36,
+          "end_line": 45,
+          "quote": "When construction is delegated to a probabilistic or agentic worker, the\nmethod governs the execution relation without prescribing the worker's\nmodel, prompt, tools, internal search, process topology, repository layout\nor orchestration runtime (P0; the work boundary of FOUNDATIONS §2). The\nnormative relation runs: accepted governing basis; bounded affected\nrelation set; selected computational relations; delegated execution and\ndecision authority; construction and self-review; independent live-surface\nassessment where required; one of accept, local repair, re-enter or reject\n(§3); the exact accepted checkpoint; the next already-authorised bounded\naction (§5)."
+        }
+      ],
+      "statement": "Govern the relation accepted basis → bounded affected relations → selected computational relations → delegated execution/decision authority → construction/self-review → independent live-surface assessment where required → accept/local repair/re-enter/reject → exact accepted checkpoint → next already-authorised bounded action. This does not prescribe worker model, prompt, tools, search, topology, layout or runtime.",
+      "uncertainty": "",
+      "conditions": [
+        "Construction is delegated to a probabilistic or agentic worker."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_095b668d8b756b7fc08853511607dac3"
+      ]
+    },
+    {
+      "key": "prior_43aacce1d3f718320440fc9987a05d82",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+          "start_line": 174,
+          "end_line": 182,
+          "quote": "Stops. Work that cannot continue ends in an explicit stop that names its\ncause: a step that cannot deliver its output stops with a value of\nconstruction availability other than `candidate_ready`, and a declared\nambiguity that halts the work or exceeds the step's authority stops it\nwith `blocked` or `escalated` (§3). A refused admission or activation\nstops the work without creating a step (§3 Admission and activation).\nThe work state (§5) retains the unresolved outcome, the residuals and the\nobligations still owed. A stop reaches no destination and discards none\nof these (P4b, P5)."
+        }
+      ],
+      "statement": "Each transition binds applicable destination/affected-relation obligations; intake binds destination or prerequisite, exact state subject/basis, affected relation set/invariants. Composition is permitted only by §4 Refinement. Discovery may add obligations or invalidate claims; reestablish or withdraw invalid claims before reliance. Work outside attention stays open with material dependencies. Destination revision requires owning authority/re-entry and proves nothing about the prior destination. Completion requires sufficient evidence that current state meets applicable destination/acceptance; acceptance is decision-owner disposition. Empty worklists, counts and absent recorded counterexamples are insufficient. Unable-to-deliver steps stop with non-candidate_ready availability; halting or over-authority ambiguity yields blocked or escalated; refused admission/activation creates no step. Every stop names cause and retains unresolved outcome, residuals and obligations, reaching no destination. Progress is outcome/evidence-relative, not item count; discovery can increase work while progress occurs. Existing intake/work-state carriers suffice.",
+      "uncertainty": "The complete availability and ambiguity algebras are deferred to unsupplied §3.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_3d3b5c6c2d3f3cc4fc6c364bdbb9d934",
+        "prior_bf286579d4e585eb06b3157fadd71330",
+        "prior_757947ab4358af48fb6a8afcb14ab842"
+      ]
+    },
+    {
+      "key": "prior_7a295baafc455033cb84f85eea832881",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+          "start_line": 218,
+          "end_line": 226,
+          "quote": "The applicable declared requirements and the declared calculi of the\ntenant's binding ([SPEC_METHOD §11](SPEC_METHOD.md#11-build-tenant-binding))\ngovern which transformations and compositions are lawful; the calculi\nselect no outcome. A\nlawful construction can remain incomplete or fail to reach Z, and\nlawfulness establishes neither delivery nor optimality. A proof about the\noutcome that rests on premises retains those premises and its scope. A\nselected construction may need to discover its path while performing and\nevaluating work (P2, P3, P6)."
+        }
+      ],
+      "statement": "Bind A to actual workspace and its acquired account, external observations through owning interfaces, justified knowledge and unknowns; account may be stale/incomplete and is not the subject. Bind Z to the owning Product's governing WHAT across Intent/Product/Specification, with descriptions refining it and multiple realizations possible. Declared requirements/calculi govern lawful transformations/compositions but choose no outcome; lawful construction may fail or remain incomplete and proves neither delivery nor optimality. Premise-based proof retains premises/scope; paths may be discovered during work. Keep required conditions, observations and predictive models distinct: none establishes another, and model applicability/adequacy needs its own claim. Strategy serves Z within resources including context/attention/time/effort/computation/communication, feedback delay, uncertainty, integration and rework; planning/checking/coordination also cost. Measures state units/boundaries/composition and distinguish estimates/assumptions/observations. Incomparable objectives use owning tradeoff criteria. Granted actor/realization selects strategy with material rationale in existing records; superiority claims state objectives/comparison/assumptions. Context limits holding, attention limits use, frame selects step material/contract, and destination stays Z across activations.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_32042b38168b865f15b179aa395cf70f"
+      ]
+    },
+    {
+      "key": "prior_068ecccf42756560828730d225febf60",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+          "start_line": 286,
+          "end_line": 296,
+          "quote": "Diagnosis distinguishes four causes: a defective realisation, an\ninadequate governing requirement or design, an inaccurate predictive\nmodel, and insufficient observation. A prediction error alone does not\ndecide whether the required outcome holds. A revised model does not erase\nthe counterexample or by itself repair the realisation. Diagnosis preserves unresolved\nalternatives and routes each supported repair to the owner of its cause;\nthe intake label supplies no repair class and no permission. Severity\ndescribes consequence; priority orders the response under the selected\noutcome, dependencies, resources and authority. A bug list projects\nexisting work state and creates no separate delivery or authority\nmechanism (P1, P2, P5, P6)."
+        }
+      ],
+      "statement": "Compose only compatible preconditions/effects/results/authority, preserving applicable outer obligations across decomposition/delegation/concurrency/recursion. Local success establishes end-to-end success only with coverage, compatibility and outcome evidence; chain obligations/categorical demonstrations retain FOUNDATIONS §4 ownership. Feedback follows observation/comparison/diagnosis/authorized response/action/reobservation; bugs use ordinary change intake/delivery. Diagnose defective realization, inadequate requirement/design, inaccurate model or insufficient observation separately; prediction error proves no outcome, model revision erases no counterexample and repairs no realization by itself. Preserve unresolved alternatives; supported repair belongs to cause owner, labels grant no class/permission. Severity concerns consequence, priority orders under outcome/dependencies/resources/authority; bug lists create no separate mechanism. Preservation, evidence-based progress, termination and outcome satisfaction require distinct support; formal induction/termination claims give premises/argument but no universal termination proof is prerequisite to bounded work. Continuing work needs supported purpose, possibly uncertainty reduction/hypothesis testing; repetition alone is not progress. Failure/missing information/uncertain effects/exhaustion use owned continuation/repair/recovery/re-entry/yield/stop; resume reacquires reality, preserves valid progress and resolves effects sufficiently before dependent action. Maintenance may continue under mandate; delivery needs completion conditions. Core evaluation preserves failure, coverage gaps and uncertainty; proof/checking/testing/use establish only scoped claims and required unavailable proof remains owed. Candidate, property proof and accepted delivery are separate. Completion needs sufficient Z evidence; exhaustion proves neither achievement nor impossibility, and changing Z leaves former counterexamples intact. Existing carriers suffice; relation adds no ledger, role sequence, runtime, general solver, fixed organization, convergence guarantee or categorical-universality theorem. Domain strategy/configuration/mechanisms/additional assurance retain their owners.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_32042b38168b865f15b179aa395cf70f"
+      ]
+    },
+    {
+      "key": "prior_d6efae8b809e23432cdeed4d1b89fb3c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FIntake",
+          "start_line": 372,
+          "end_line": 381,
+          "quote": "- the construction and assessment authority: the applicable frame-set,\n  semantic, evaluation, operation where material, and decision authority\n  (FOUNDATIONS §2, authority kinds), and the grant: the operations\n  permitted, the territory that may change, and the decisions reserved to\n  others (P6);\n- the available actor capability envelopes;\n- the conditions that make the result stale or out of scope, and the\n  conditions that require re-entry at an owning relation;\n- where the governed question is a cost claim, the allowance and how\n  spend will be measured (§6)."
+        }
+      ],
+      "statement": "Intake names governed selected outcome/admitted prerequisite/experiment; exact workspace subject/basis and acquirable inputs by identity/hash or input commit; evaluation/family and core or core-mapped result algebra; bounded affected relations/invariants; accepted transformation-admission relations; computational/common-library machinery and bindings; frame-set, semantic, evaluation, material operation and decision authorities with permitted operations, mutable territory and reserved decisions; actor envelopes; staleness/out-of-scope/owner-re-entry conditions; and applicable cost allowance/measurement. Implementation folklore is not a source. Where design profile applies, its conservation/admission-completeness/reconstruction/computational-projection laws supply affected set, admission relations, invariants and dispositions; intake consumes these without creating another design package.",
+      "uncertainty": "Referenced authority kinds, design laws and result refinements are not fully supplied.",
+      "conditions": [],
+      "exceptions": [
+        "Cost allowance and spend measurement are required where the governed question is a cost claim."
+      ],
+      "applies_to_keys": [
+        "prior_51712ba4356f75aa10803f984ec35302"
+      ]
+    },
+    {
+      "key": "prior_fbdbac5d5cd18262964a922c8c975e78",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FExecution%20unit",
+          "start_line": 396,
+          "end_line": 400,
+          "quote": "A seam whose far side can causally affect,\nor be affected by, the action is inside the cone unless the basis\nestablishes that it cannot participate. Unrelated incompleteness outside\nthe cone is recorded as repricing input and does not block the bounded\nclaim. The cone is the seed set Z of §2; the context is its projection."
+        }
+      ],
+      "statement": "Include both sides of any seam able to affect or be affected by the action unless basis establishes nonparticipation. Record unrelated incompleteness outside the cone as repricing input without blocking the bounded claim. Context is a projection of this cone.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "A causally relevant seam may be excluded only when the basis establishes it cannot participate."
+      ],
+      "applies_to_keys": [
+        "prior_878ed078b22fb1ce473fd0d2699d4e73"
+      ]
+    },
+    {
+      "key": "prior_6c5ef45849bc30da57280372375f1d9c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FAdmission",
+          "start_line": 429,
+          "end_line": 435,
+          "quote": "The admitted contract names one\ndurable result and evidence surface; every result, withheld closure and\nresidual obligation is recorded there before return, a conversation return\nalone is not durable evidence, and if no such surface is authorised and\navailable, admission refuses (P4b). Absent or rejected admission returns\nthe missing work authority without execution, as `admission_refused` with\nits cause ([§3 Admission and activation](#admission-and-activation))."
+        }
+      ],
+      "statement": "Execution begins only after deterministic admission or explicit exact-contract human override. Drafts, carriers, lanes and active labels cannot self-certify it. Admitted results identify mechanism/authority, exact contract identity/digest, decision/evidence including override; absent coordinates leave drafted or rejected, and prose is insufficient. Admission validates against but does not admit its cited basis. Drafting/admitting/retaining creates or renews no unadmitted authority. Only admitted contracts activate steps; results, child completion, tool/model outputs, shared actors and lateral handoffs alone activate nothing and authorize no continuation. No separate turn/carrier/approval ceremony is implied. Name one available authorized durable result/evidence surface and record every result, withheld closure and residual obligation before return; chat alone is insufficient and absent surface refuses admission. Missing/rejected admission returns admission_refused with cause and missing work authority without execution. TICKETS §5 owns carrier choice.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "An explicit human override of the exact contract is an alternative to deterministic admission."
+      ],
+      "applies_to_keys": [
+        "prior_c175c5ee302c9e5c9c41a8555568a32f",
+        "prior_095b668d8b756b7fc08853511607dac3"
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "prior_bab3fa913819f7c18dd1df600d621f39",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+          "start_line": 247,
+          "end_line": 254,
+          "quote": "Steel thread, phased (waterfall) delivery and iterative delivery are\npossible strategies, each with its own costs, feedback delays, integration risks and rework.\nThe selection belongs to the realisation and to the actor exercising the\nadmitted work authority; its material rationale is stated in existing\ndesign or work records, and a claim that one strategy is superior states\nthe objectives, comparison and assumptions it depends on. No exhaustive\noptimisation, universal numerical budget, scalar cost measure or preferred\nstrategy is imposed by this relation or its consumers (P2, P5, P6)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+          "start_line": 268,
+          "end_line": 271,
+          "quote": "independent actions may\nproceed concurrently where their dependencies, effects and authority\npermit. Local success supplies end-to-end success only when the required\ncoverage, composition compatibility and outcome evidence hold;"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+          "start_line": 301,
+          "end_line": 304,
+          "quote": "A formal induction or\ntermination claim supplies its premises and argument; no universal\ntermination proof is required before bounded work can begin, and where\nsuch a proof is absent the claim stays within the available evidence."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_32042b38168b865f15b179aa395cf70f"
+      ],
+      "allowed": [
+        "Select steel-thread, phased/waterfall, iterative or other admissible strategies under owning criteria and admitted work authority.",
+        "Proceed concurrently with independent actions where dependencies, effects and authority permit.",
+        "Begin bounded work without a universal termination proof while limiting claims to available evidence."
+      ],
+      "forbidden": [
+        "Claim strategy superiority without objectives, comparison and assumptions.",
+        "Impose exhaustive optimization, a universal numerical budget, scalar cost measure or preferred strategy as a requirement of this relation or its consumers.",
+        "Infer end-to-end success solely from local success."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "prior_b817a6d8d20392eb85c66785706ada9e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FRegistry",
+          "start_line": 44,
+          "end_line": 46,
+          "quote": "| `calculus` | `AXIOMATIC_CALCULUS.md` |\n| `traversal` | `TRAVERSAL_OCCURRENCE.md`; `AXIOMATIC_CALCULUS.md` §8 |\n| `library` | `README.md`; `PRODUCT_DEFINITION.md` §4 and §12; `RELEASE.md` §3 and §4 |"
+        }
+      ],
+      "subject_key": "prior_4ffe88cbcf074baec82f64f47b062fb6",
+      "uncertainty": "Most registry target bytes and all actual inventory membership/digests are absent. The subject's calculus/traversal entries do not establish their content or authority.",
+      "consequence": "Registry mappings retain every target and section range as acquisition data, without treating discovered targets as verified members, locally interpreted standards or the selected interpretation calculus."
+    },
+    {
+      "key": "prior_ab4e349776ab634e1f08b9ee9aad30da",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FProcedure",
+          "start_line": 85,
+          "end_line": 85,
+          "quote": "[CANDIDATE] Mutable STDO authoring source loaded. This is not released consumer law."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FProcedure",
+          "start_line": 100,
+          "end_line": 100,
+          "quote": "Active context: <name> from <basis>. The complete selected basis remains constitutional authority."
+        }
+      ],
+      "subject_key": "prior_601d274c8132a08ea12213de3d9a9a6a",
+      "uncertainty": "A generic final constitutional-authority message follows a candidate-mode non-operative warning without an explicit candidate-specific closing branch.",
+      "consequence": "Retain both literal messages; the explicit candidate non-operative condition prevents inferring released-consumer authority. No candidate-specific replacement closing text is invented."
+    },
+    {
+      "key": "prior_49facadedca5af8b96d4538a6740c63e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION",
+          "start_line": 14,
+          "end_line": 18,
+          "quote": "the closed result, its invalidators and reuse. It uses\nthe objects of [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology), the core result\nalgebra of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), and the frame\nobject and the outcomes of `activate` of\n[REFERENCE_FRAME](REFERENCE_FRAME.md) (§5)."
+        }
+      ],
+      "subject_key": "prior_5fec0f21265016ca449d4389511dce49",
+      "uncertainty": "FOUNDATIONS, REFERENCE_FRAME and ACTIVATION's later sections are not supplied; only the shown refinements can be interpreted. Full core-result composition, activate outcomes and the three invalidators cannot be reconstructed.",
+      "consequence": "ACTIVATION's ownership inventory is retained as a declared document role. Undefined later operations, algebras, invalidators, refinement laws and resource rules remain unresolved rather than operationally instantiated."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/claude-skills/refresh/SKILL.md#preamble",
+      "decision": "retained",
+      "keys": [
+        "prior_3bdd99fa9dea377d5c73a4146c7b7e45"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/claude-skills/refresh/SKILL.md#STDO%20Refresh%20For%20Claude",
+      "decision": "retained",
+      "keys": [
+        "prior_3bdd99fa9dea377d5c73a4146c7b7e45",
+        "prior_0639ccda70f3067a34fe0c51bcf52cf0"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FControl%20Intake",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FIssue",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FReceive",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FEvaluate%20The%20Return",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FReview%20Flow%20From%20The%20Selected%20Basis",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FHost%20Binding",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FCompact%20Source%20Acquisition",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FInvocation%20Examples",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/HOST_BINDING.md#Bind%20The%20Actual%20Host",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/HOST_BINDING.md#Bind%20The%20Actual%20Host%2FClaude%3A%20Explicit%20Session%20Tool%20Policy",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/HOST_BINDING.md#Bind%20The%20Actual%20Host%2FCodex%3A%20Declare%20The%20Remaining%20Boundary",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection",
+      "decision": "retained",
+      "keys": [
+        "prior_c80654beefe2552a98ab1258d238ff01"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FProcedure",
+      "decision": "retained",
+      "keys": [
+        "prior_2f42334e56485edb10f9ac7c8ebab113"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FRead%20A%20Member%20From%20That%20Basis",
+      "decision": "retained",
+      "keys": [
+        "prior_5f470cb500e8e3245082004482b762e6",
+        "prior_9f6a01ea627b6a09ee7ba00ea7045180",
+        "prior_22cc4a1bcc96864f59611fca934c9b5a"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure",
+      "decision": "retained",
+      "keys": [
+        "prior_8fcb544c45e9cba3d183ecc9730c7830"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FInputs",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FRegistry",
+      "decision": "retained",
+      "keys": [
+        "prior_4ffe88cbcf074baec82f64f47b062fb6",
+        "prior_d51a7d6b8aef66a05aeee0c9c4607b69",
+        "prior_b817a6d8d20392eb85c66785706ada9e"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FOwner%20And%20Task%20Entries",
+      "decision": "retained",
+      "keys": [
+        "prior_b92b576573c2a95de829c22b4644adfc",
+        "prior_d51a7d6b8aef66a05aeee0c9c4607b69"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/references/REFRESH.md#STDO%20Refresh%20Procedure%2FProcedure",
+      "decision": "retained",
+      "keys": [
+        "prior_2365bf7c37a2fd741e55bbc9587939f7",
+        "prior_601d274c8132a08ea12213de3d9a9a6a",
+        "prior_ab4e349776ab634e1f08b9ee9aad30da"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-help/SKILL.md#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FStart%20With%20Your%20Own%20Control%20Intake",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FChoose%20The%20Entry",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FSelect%20The%20Product%20Basis",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FRoute",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FEstablish%20The%20Basis",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-help/SKILL.md#STDO%20Help%2FReturn",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-help/agents/openai.yaml#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/SKILL.md#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FStart%20With%20Your%20Own%20Control%20Intake",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FChoose%20The%20Entry",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FSelect%20The%20Product%20Basis",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FActivate%20The%20Review",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FEvaluate",
+      "decision": "retained",
+      "keys": [
+        "prior_0e1bc82e2ce39b9c50e5931eb79ef30d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FReturn",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-review/agents/openai.yaml#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-status/SKILL.md#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status%2FStart%20With%20Your%20Own%20Control%20Intake",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status%2FChoose%20The%20Entry",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status%2FSelect%20The%20Product%20Basis",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status%2FProcedure",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-status/SKILL.md#STDO%20Status%2FReturn",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-status/agents/openai.yaml#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-ticket/SKILL.md#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket%2FStart%20With%20Your%20Own%20Control%20Intake",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket%2FChoose%20The%20Entry",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket%2FSelect%20The%20Product%20Basis",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket%2FProcedure",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-ticket/SKILL.md#STDO%20Ticket%2FReturn",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-ticket/agents/openai.yaml#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FStart%20With%20Your%20Own%20Control%20Intake",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FChoose%20The%20Entry",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FSelect%20The%20Product%20Basis",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FAcquire%20The%20Deciding%20Owners",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FClassify%20From%20The%20Available%20Evidence",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FEstablish%20The%20Work%20Basis",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FConstruct%20And%20Prove",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/SKILL.md#STDO%20Work%2FReturn",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/plugins/spec/skills/stdo-work/agents/openai.yaml#preamble",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION",
+      "decision": "retained",
+      "keys": [
+        "prior_5fec0f21265016ca449d4389511dce49",
+        "prior_49facadedca5af8b96d4538a6740c63e"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step",
+      "decision": "retained",
+      "keys": [
+        "prior_095b668d8b756b7fc08853511607dac3",
+        "prior_19b4c5a745c38c2a66b08e2cb2daf1de"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FTransitions",
+      "decision": "retained",
+      "keys": [
+        "prior_bf286579d4e585eb06b3157fadd71330",
+        "prior_757947ab4358af48fb6a8afcb14ab842",
+        "prior_3d3b5c6c2d3f3cc4fc6c364bdbb9d934",
+        "prior_63091ca1dcb838383de1e82cf97dd7e1",
+        "prior_25ee6645547734a8723b95cf90bc283a",
+        "prior_43aacce1d3f718320440fc9987a05d82"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FConstruction%20relation",
+      "decision": "retained",
+      "keys": [
+        "prior_32042b38168b865f15b179aa395cf70f",
+        "prior_cc5ebd188ebff1956d0fd0cd1a413b0c",
+        "prior_96549665dabf5b4715b0c424966bb255",
+        "prior_7a295baafc455033cb84f85eea832881",
+        "prior_068ecccf42756560828730d225febf60",
+        "prior_bab3fa913819f7c18dd1df600d621f39"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FIntake",
+      "decision": "retained",
+      "keys": [
+        "prior_51712ba4356f75aa10803f984ec35302",
+        "prior_d6efae8b809e23432cdeed4d1b89fb3c"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FExecution%20unit",
+      "decision": "retained",
+      "keys": [
+        "prior_878ed078b22fb1ce473fd0d2699d4e73",
+        "prior_fbdbac5d5cd18262964a922c8c975e78"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ACTIVATION.md#ACTIVATION%2F1.%20The%20step%2FAdmission",
+      "decision": "retained",
+      "keys": [
+        "prior_c175c5ee302c9e5c9c41a8555568a32f",
+        "prior_c0fcebaf9aea2b519a6066de7671c236",
+        "prior_6c5ef45849bc30da57280372375f1d9c"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    }
+  ],
+  "limitations": [
+    "Source-local semantic proposal; processing coverage and mechanical checks do not establish semantic completeness or acceptance."
+  ]
+}

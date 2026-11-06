@@ -1,6 +1,10 @@
 # Specification Methodology
 
-This source project constructs the next major release of Specification Methodology. One common specification governs the independent Codex and Claude realisations under `build_tenants/`. The installed STDO 2.5.1 RC2 release governs construction; the existing 2.* source and released products remain separate.
+This source project develops Specification Methodology. Its current builder is the exact installed **STDO 3.0.4** selected by [stdo_3.json](stdo_3.json), under the owner's [adoption instruction](.ai-workspace/work/STDO304_BUILDER_ADOPTION/INTAKE.json). [The versioned binding and guide](development/STDO_3_0_4.md) pins the released native workflow, compact source reader and bundled tools. The original two-tenant C3 reconstruction and its evidence retain their 2.5.1-rc.2 basis; the 2.* source and peer Products remain separate.
+
+[Products and components in the release](../../RELEASE_PRODUCTS.md) identifies
+the exact delivered membership and the representation/tool/skill currentness
+gaps that this builder adoption does not close.
 
 **STDO 3.0.4 is published as a normal standalone release and GitHub Latest.**
 The [release record](.ai-workspace/work/STDO304_DELIVERY/RELEASED.md) binds the
@@ -8,7 +12,7 @@ immutable tag, four public assets, exact fresh public installation and closed
 independent review. It includes the five native coordinated skills, source-reader
 repairs and review-flow amendment. The 111-file installation, 20 logical routes
 and 191-source materialization pass; existing native workflow limits remain.
-No shared installation or consumer basis was changed.
+That publication changed no shared installation or consumer basis. The later adoption above changes only this source project's builder selection.
 
 The 3.0.4 review-flow source is reviewed and accepted for that bounded release.
 The [new contract](.ai-workspace/work/STDO304_SKILLS/review-flow-001/CONTRACT.md)
@@ -48,8 +52,8 @@ a writable workspace. Publication changes no consumer's selected basis.
 
 1. Resolve [stdo_3.json](stdo_3.json), verify its exact installed basis and load its declared bootstrap entrypoint.
 2. Read [Intent](specification/INTENT.md), [Product](specification/PRODUCT.md) and the current selection in [Goals](specification/GOALS.md).
-3. Bind the applicable [reference frame](specification/REFERENCE_FRAME_BASIS.md) and work grant: [T-001](.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md) for the common definition, or [T-002](.ai-workspace/tickets/active/T-002-c3-successor-construction.md) and its tenant ticket for construction.
-4. For tenant work, follow the [tenant entry contract](build_tenants/README.md), including its selected input snapshot, isolation and admission requirements.
+3. Follow [the 3.0.4 workflow and tools guide](development/STDO_3_0_4.md), then bind the [current reference-frame configuration](specification/REFERENCE_FRAME_BASIS.md#activations-and-owners) and the exact work grant. The original T-001/T-002 C3 admissions retain their historical subjects; they do not activate new work.
+4. For tenant work, follow the [tenant entry contract](build_tenants/README.md), including the current-versus-historical scope and the selected input, isolation and admission requirements.
 
 Codex holds the common pen. Common acceptance and release selection remain the product owner's decisions. Current checkpoint and review state are recorded in Goals; neither this entry route nor a checkpoint commit starts tenant work.
 

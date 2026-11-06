@@ -1,0 +1,2588 @@
+{
+  "concepts": [
+    {
+      "key": "prior_cf938117a20c9f360db7b1eb4dac9fab",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F9.%20Build%20tenancy",
+          "start_line": 212,
+          "end_line": 215,
+          "quote": "§8 names the build tenant, the realisation relation and the terms of\nthe build-tenant binding as concepts of the context owned in SPEC_METHOD\n§11, and the multi-build-tenant work item as owned in TICKETS §4; their rows\ncite those owners and name §8 as relation clause (§2; P1, P3)."
+        }
+      ],
+      "label": "Build tenancy locators",
+      "definition": "Locator category urn:stdo:bounded-context:build-tenancy, declared by PRODUCT_DEFINITION.md#8-what-how-and-work-carriers. Build Tenant; Build-Tenant Binding, Calculus Binding, Execution Binding; Requirements Calculus, Computational Calculus, Execution Environment; Author Identity and Operation Kind locate SPEC_METHOD.md#11-build-tenant-binding as owner and PRODUCT_DEFINITION §8 as relation, with Author Identity/Operation Kind also related at FOUNDATIONS.md#authority-kinds. Build Tenancy/Multi-Build-Tenancy, Tenant Registry and Common Build-Tenant Surface locate PRODUCT_DEFINITION §8 directly with no relation clause. Multi-Build-Tenant Work Item locates TICKETS.md#multi-build-tenant-independence with PRODUCT_DEFINITION §8 as relation. The preamble also identifies the realisation relation as owned in SPEC_METHOD §11.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_473eda0822eebc7e5f88fcd08e187cbe",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F10.%20Recursive%20product",
+          "start_line": 240,
+          "end_line": 240,
+          "quote": "| `Product` | `urn:stdo:bounded-context:recursive-product-taxonomy` | [`FOUNDATIONS.md#product-lineage-objects`](FOUNDATIONS.md#product-lineage-objects) | none |"
+        }
+      ],
+      "label": "Recursive product locators",
+      "definition": "Locator category urn:stdo:bounded-context:recursive-product-taxonomy, declared and owned at FOUNDATIONS.md#product-lineage-objects. Entries are Substrate, Development Product, Source Project, Release Cut, Product, Install, Artifact and Product Definition. Additional relation locators are WORLD_MODEL.md#builder-project-specialisation for Source Project, RELEASE.md#2-release-identities for Release Cut, and PRODUCT_DEFINITION.md#1-overlay-and-layout-independence for Product Definition; the other entries have none. Product here is not identified with the separately indexed specialist frame family.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_36f76d2fa3e1bfb27c4bf85dea1a565f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F11.%20Product%20assurance",
+          "start_line": 253,
+          "end_line": 253,
+          "quote": "| `Unit Test` | `urn:stdo:bounded-context:product-assurance` | [`ASSURANCE.md#15-module-derived-unit-tests`](ASSURANCE.md#15-module-derived-unit-tests) | [`DESIGN_MODULE.md#9-module-taxonomy`](DESIGN_MODULE.md#9-module-taxonomy) |"
+        }
+      ],
+      "label": "Product assurance locators",
+      "definition": "Locator category urn:stdo:bounded-context:product-assurance, declared at ASSURANCE.md#2-testing-strategy-taxonomy. That clause owns Design/Module Conformance Test, UAT/Acceptance Test, Sandbox Test, Harnessed Sandbox UAT and Live Sandbox UAT, without relation clauses. Unit Test is separately owned at ASSURANCE.md#15-module-derived-unit-tests and related at DESIGN_MODULE.md#9-module-taxonomy.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7e8b77ba910a46afc24cda042893086e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F12.%20Ambiguity%20governance",
+          "start_line": 267,
+          "end_line": 268,
+          "quote": "| `Lawful Probabilistic Processing` | `urn:stdo:bounded-context:ambiguity-governance` | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) | none |\n| `Human Adjudication` | `urn:stdo:bounded-context:ambiguity-governance` | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) | none |"
+        }
+      ],
+      "label": "Ambiguity governance locators",
+      "definition": "Locator category urn:stdo:bounded-context:ambiguity-governance, declared by SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle. Lawful Probabilistic Processing and Human Adjudication both locate that owning clause and have no relation clause; their permissions and procedures are not defined here.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_13168a6a9ead3e5e0aa5ba8c2cd27cac",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F13.%20World%20model",
+          "start_line": 287,
+          "end_line": 287,
+          "quote": "| direction acceptance: `direction_verified`; `extraction_inadmissible`; `verification_failed`; `verification_inconclusive`; `representation_space_invalid` | `urn:stdo:bounded-context:world-model` | [`WORLD_MODEL.md#14-results-of-this-profile`](WORLD_MODEL.md#14-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |"
+        }
+      ],
+      "label": "World-model locators",
+      "definition": "Locator category urn:stdo:bounded-context:world-model, declared at WORLD_MODEL.md#2-role-and-imports. #6-units owns Builder Project, Published Domain Artifact, World Model Object, Markov Object, Treatment Surface, Covariance Edge, Adjoint Mapping, Composed World Model and Query Plane. Builder Project additionally relates at #builder-project-specialisation, Markov Object at #4-the-markov-object-construct; other unit entries have no relation clause. #14-results-of-this-profile owns outcome categories, all related to FOUNDATIONS.md#results: cut admissibility {cut_admissible, cut_inadmissible, discrimination_undecided}; direction acceptance {direction_verified, extraction_inadmissible, verification_failed, verification_inconclusive, representation_space_invalid}; overlay publication {published_verified, published_unverified}; overlay storage {storage_retained, storage_lossy}; null-peer discrimination {null_peer_discriminated, not_yet_lawful}; promotion gate {gate_met, gate_not_met}; saturation {saturated, not_saturated}. These lists do not supply their core mappings.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_9759f6d31491203f235aec45d8c16a04",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F15.%20Traversal%20occurrence",
+          "start_line": 329,
+          "end_line": 329,
+          "quote": "| stop and decision values split by cause: `refusal(constraint)`; `refusal(basis)`; `refused(constraint)`; `refused(basis)`; `partial_effect(not_attained)`; `partial_effect(undecided)`; `partial(not_attained)`; `partial(undecided)` | `urn:stdo:bounded-context:traversal-occurrence-profile` | [`TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds`](TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds) | [`AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal`](AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal); [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |"
+        }
+      ],
+      "label": "Traversal occurrence locators",
+      "definition": "Locator category urn:stdo:bounded-context:traversal-occurrence-profile, declared at TRAVERSAL_OCCURRENCE.md#position. Owner fragments in that member: Traversal Occurrence Profile/Sigma_occurrence → position, related at imported-calculus-boundary; Occurrence → occurrence-identity; Framework Event → candidate-judgment-event-and-relation-separation; Typed Lineage → causality-and-typed-lineage; Mutable Subject → mutable-subject-effect-relation; Event Frontier → event-frontier-and-projection; Traversal Occurrence Profile Basis → exact-profile-identity. Stop and decision values split by cause locate closed-constraint-judgment-residual-and-stop-kinds: refusal(constraint), refusal(basis), refused(constraint), refused(basis), partial_effect(not_attained), partial_effect(undecided), partial(not_attained), partial(undecided); their relation locators are AXIOMATIC_CALCULUS.md#ac-007-constraint-and-refusal and FOUNDATIONS.md#results. Remaining entries have no relation clause.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_a6fe8a828fd36e326960c62ade24fc8b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+          "start_line": 333,
+          "end_line": 340,
+          "quote": "This section indexes the concepts that a member defines outside every\nbounded context it declares. The source context of each is its owning\nmember\n([FOUNDATIONS §2 Imports between members](FOUNDATIONS.md#imports-between-members)),\nwhich the second column names in place of a bounded-context identity. A\nrow here declares no context; a context holds one of these concepts only\nby its own import, as §8 records for the concepts that REFERENCE_FRAME §1\nimports (§2; P1, P3)."
+        }
+      ],
+      "label": "Concepts outside declared bounded contexts",
+      "definition": "An index of concepts defined by a member outside every bounded context that member declares. The source context is the owning member; an index row declares no bounded context.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_49133917db2c94cb7000087a71f47c5e",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+          "start_line": 351,
+          "end_line": 351,
+          "quote": "| `Assurance Relations`; `Assertion Provenance`; `Execution Provenance`; `Observation Sufficiency`; `Impact Cover`; `Validity Dependency`; `Mandatory Gate` | FOUNDATIONS | [`FOUNDATIONS.md#assurance-relations`](FOUNDATIONS.md#assurance-relations) | [`ACTIVATION.md#7-closed-result-and-reuse`](ACTIVATION.md#7-closed-result-and-reuse); [`EVALUATION.md#1-claims`](EVALUATION.md#1-claims); [`ASSURANCE.md#3-test-authority`](ASSURANCE.md#3-test-authority); [`RELEASE.md#8-acceptance`](RELEASE.md#8-acceptance) |"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+          "start_line": 350,
+          "end_line": 350,
+          "quote": "| `Join` (four senses: categorical join; composition boundary; join of results; relation join) | FOUNDATIONS | [`FOUNDATIONS.md#1-vocabulary-of-standing`](FOUNDATIONS.md#1-vocabulary-of-standing) | [`CONFORMANCE.md#1-counterexample-cases`](CONFORMANCE.md#1-counterexample-cases) |"
+        }
+      ],
+      "label": "FOUNDATIONS concept inventory",
+      "definition": "FOUNDATIONS-owned indexed concepts: recovered, independent, derived and hypothesis, owned by Vocabulary of standing and linked to Commitments; algorithmic description, informational interpretation and computational realisation as accounts of a construction, linked to SPEC_METHOD Build-tenant binding; Import, Import Declaration, Adoption and Adoption Premise, owned by Imports between members and linked to PRODUCT_DEFINITION semantic resolution, PROFILES boundary and REFERENCE_FRAME imports; Material Family, Family Table, Instance Premise and Added Choice, owned by Foundation to law with no relation clause listed; Adopting Product, owned there and linked to Results; Supporting Evidence of a categorical claim, owned by the Algebra formal fragment and linked to EVALUATION conformance; Join in four senses—categorical join, composition boundary, join of results and relation join—owned by Vocabulary of standing and linked to CONFORMANCE counterexample cases; Assurance Relations, Assertion Provenance, Execution Provenance, Observation Sufficiency, Impact Cover, Validity Dependency and Mandatory Gate, owned by Assurance relations and linked to ACTIVATION closed-result reuse, EVALUATION claims, ASSURANCE test authority and RELEASE acceptance. These are locators, not supplied full definitions.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_3da2a4eb8c47933e4c6e745c16195ef2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+          "start_line": 357,
+          "end_line": 357,
+          "quote": "| `Truth Surface`; actor's account | ACTIVATION | [`ACTIVATION.md#the-workspace-and-an-actors-account`](ACTIVATION.md#the-workspace-and-an-actors-account) | [`ACTIVATION.md#transitions`](ACTIVATION.md#transitions) |"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+          "start_line": 356,
+          "end_line": 356,
+          "quote": "| `Rewrite Step`; `Licensing Law`; `Exact Step`; `Approximate Step`; `Adequacy Relation`; `End-to-End Bound` | ACTIVATION | [`ACTIVATION.md#refinement`](ACTIVATION.md#refinement) | none |"
+        }
+      ],
+      "label": "ACTIVATION concept inventory",
+      "definition": "ACTIVATION-owned indexed concepts: Current State, Destination and Transition at Transitions, linked to Work state and restart; Construction Relation, Strategy, Composition Boundary, Feedback and Diagnosis and the four causes at Construction relation, linked to SPEC_METHOD intake triage, EVALUATION claims and FOUNDATIONS construction synthesis; Configuration at Configuration, linked to FOUNDATIONS frame objects and RF-009; Acquisition, Derived Surface and deciding owner section at Context construction under an envelope, with no relation clause listed; Rewrite Step, Licensing Law, Exact Step, Approximate Step, Adequacy Relation and End-to-End Bound at Refinement, with no relation clause listed; Truth Surface and actor's account at The workspace and an actor's account, linked to Transitions.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_9c1b5668d40aed2d3b34a1013a682eb4",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+          "start_line": 358,
+          "end_line": 362,
+          "quote": "| `Equivalence Ladder`; semantic equivalence of realisations; `Computational Equivalence`; `Categorical Equivalence` | EVALUATION | [`EVALUATION.md#6-conformance-of-realisations`](EVALUATION.md#6-conformance-of-realisations) | [`FOUNDATIONS.md#4-algebra`](FOUNDATIONS.md#4-algebra); `Semantic Equivalence` of concepts in §5 is another concept |\n| `Adequate Attention`; `Actual-Use Evidence` | EVALUATION | [`EVALUATION.md#frame-qualification`](EVALUATION.md#frame-qualification) | [`ACTIVATION.md#2-context-construction-under-an-envelope`](ACTIVATION.md#2-context-construction-under-an-envelope) |\n| `Discriminator`; `Common Discriminators` | CONFORMANCE | [`CONFORMANCE.md#conformance`](CONFORMANCE.md#conformance) | [`CONFORMANCE.md#5-discriminator-coverage`](CONFORMANCE.md#5-discriminator-coverage) |\n| `Logical-Review Check` | CONFORMANCE | [`CONFORMANCE.md#5-discriminator-coverage`](CONFORMANCE.md#5-discriminator-coverage) | [`EVALUATION.md#4-review-results`](EVALUATION.md#4-review-results) |\n| profile import rule | PROFILES | [`PROFILES.md#1-the-boundary`](PROFILES.md#1-the-boundary) | [`FOUNDATIONS.md#imports-between-members`](FOUNDATIONS.md#imports-between-members) |"
+        }
+      ],
+      "label": "Assessment and profile concept inventory",
+      "definition": "EVALUATION owns Equivalence Ladder, semantic equivalence of realisations, Computational Equivalence and Categorical Equivalence at Conformance of realisations, linked to FOUNDATIONS Algebra; Semantic Equivalence of concepts in glossary §5 is explicitly another concept. EVALUATION also owns Adequate Attention and Actual-Use Evidence at Frame qualification, linked to ACTIVATION context construction. CONFORMANCE owns Discriminator and Common Discriminators at Conformance, linked to Discriminator coverage, and Logical-Review Check at Discriminator coverage, linked to EVALUATION review results. PROFILES owns the profile import rule at The boundary, linked to FOUNDATIONS imports.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_a2f107acde99288ef9dd2a88dd1b0877",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+          "start_line": 363,
+          "end_line": 368,
+          "quote": "| axiom verdict: `pass`; `fail`; `not_applicable` | DESIGN_MODULE | [`DESIGN_MODULE.md#cross-view-axiom-evaluation`](DESIGN_MODULE.md#cross-view-axiom-evaluation) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |\n| Ontology verdict and design verdict: `accepted` | DESIGN_MODULE | [`DESIGN_MODULE.md#gate-and-retrospective-work`](DESIGN_MODULE.md#gate-and-retrospective-work) | [`ACTIVATION.md#disposition`](ACTIVATION.md#disposition) |\n| surface review: `compliant`; `violation`; `design_module_incomplete` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |\n| replay proof: `replay_passes`; `replay_fails` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |\n| closure obligations: `closure_obligations_met`; `closure_unproven` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |\n| carrier admission: `carrier_admitted`; `carrier_missing` | UX | [`UX.md#15-results-of-this-profile`](UX.md#15-results-of-this-profile) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |"
+        }
+      ],
+      "label": "Indexed design and UX verdict domains",
+      "definition": "Separate indexed result domains: DESIGN_MODULE cross-view axiom verdict has pass, fail and not_applicable and relates to FOUNDATIONS Results; DESIGN_MODULE ontology and design verdicts use accepted at Gate and retrospective work and relate to ACTIVATION Disposition. UX Results of this profile owns four distinct domains, each linked to FOUNDATIONS Results: surface review {compliant, violation, design_module_incomplete}; replay proof {replay_passes, replay_fails}; closure obligations {closure_obligations_met, closure_unproven}; carrier admission {carrier_admitted, carrier_missing}. No evaluation is performed by listing them.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_13b6172ff45e0c256887788162a4e35c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F17.%20Labels%20with%20several%20senses",
+          "start_line": 372,
+          "end_line": 376,
+          "quote": "Some labels name different things in different clauses. Each row below\nlocates one sense with the clause that owns it; the label's meaning at an\noccurrence is the sense its owning clause gives, and the occurrence\nqualifies the label or states its predicate where it is used. Equal\nspelling across these rows establishes no equivalence (§1; P1, P3)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F17.%20Labels%20with%20several%20senses",
+          "start_line": 399,
+          "end_line": 399,
+          "quote": "| disposition | a planning choice for an evaluation in a basis inventory, not a coverage status | `templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`, Coverage And Residuals |"
+        }
+      ],
+      "label": "Clause-owned senses of shared labels",
+      "definition": "A sense locator rather than a definition catalogue. indeterminate: FOUNDATIONS Results core value when admissible evidence cannot decide; EVALUATION Result and triage projection payload class, not a result. not_applicable: EVALUATION triage class, not a result; RELEASE §9 successor disposition with bounded reason; SPEC_METHOD lifecycle phase declared inapplicable with reason; DESIGN_MODULE head/state-model and ACTIVATION §4 design-grounded exclusion/entity-lifecycle matrix entry; TRAVERSAL_OCCURRENCE judgment value. refusal/refused: REFERENCE_FRAME §5 method-function activation or translation refusal; AC-007 a_c constraint or basis refusal; TRAVERSAL_OCCURRENCE judgment decision and stop; ACTIVATION admission refusal of a work contract. gap: AC-007 stop with a core value; FOUNDATIONS conjunction gap without its own value. disposition: ACTIVATION boundary acceptance; RELEASE predecessor-claim successor disposition; TICKETS obligation repricing; PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE Coverage And Residuals planning choice for an evaluation, not coverage status. missing: absence of a closed result, FOUNDATIONS Results/Not performed. adoption: PRODUCT_DEFINITION §7 adoption of an available profile; SPEC_METHOD §6 shared method lesson adoption; RELEASE §4 consumer release-basis adoption. Closed/closed: POSTING_GUIDE §7 discussion state; TICKETS §4 ticket or sprint status.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_856015343871c433411a25f5b43fe66d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY",
+          "start_line": 23,
+          "end_line": 23,
+          "quote": "identity is P3's commitment and authority P6's."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY",
+          "start_line": 11,
+          "end_line": 13,
+          "quote": "Object (a subject with scoped identity of authority, kind and value),\nAuthority with its kinds, and Basis are defined once, and adds no\ndefinition to tier 1."
+        }
+      ],
+      "label": "IDENTITY member",
+      "definition": "Tier 1 member owning identity law: scoped uniqueness, type, stability, readable/opaque forms, hierarchy, engine/domain split, authority conservation, default-format overrides and publication, parsing, object/release boundary, minimum questions, examples and implementation consequences. It consumes FOUNDATIONS §2 Object, Authority and Basis without redefining them. AC-002 applies scoped identity to every calculus identity with a coordinate map; calculus-edition identity remains owned by AXIOMATIC_CALCULUS §8 and release names/forms by RELEASE. Clauses name their requiring P0–P6 principles; identity is P3's commitment and authority P6's.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_592f428587096675d25235df24f32725",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FScoped%20identity",
+          "start_line": 105,
+          "end_line": 105,
+          "quote": "identity = authority + kind + value"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position",
+          "start_line": 27,
+          "end_line": 29,
+          "quote": "Identity is scoped, typed, unique, and stable enough for the governed\npurpose. Identity is not a flat global string convention; it is made\nunique by hierarchy and type (P3)."
+        }
+      ],
+      "label": "Scoped object identity",
+      "definition": "Object identity is always scoped and typed, unique in its lawful scope and stable enough for its governed purpose. Its minimum semantic model is authority + kind + value, through which identity should be interpretable. It is not a universal naked-string convention.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_628ebb39e8881c3e537451819d0b33f2",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F4.%20Identity%20hierarchy",
+          "start_line": 198,
+          "end_line": 201,
+          "quote": "The important point is that `REQ-F-CAPABILITY` and `REQ-F-CAPABILITY-001`\nare not the same kind of identity, and that a runtime `run_id` and a\ndomain requirement identity do not belong to the same semantic category\neven if both serialise as strings (P3)."
+        }
+      ],
+      "label": "Identity hierarchy",
+      "definition": "A useful identity hierarchy is authority / kind / value / revision. Examples distinguish product-authority requirement REQ-F-CAPABILITY-001, product-authority requirement_family REQ-F-CAPABILITY, runtime-authority run UUID and release-authority release 1.0.0-rc.1. Family/member and runtime/domain identities remain different semantic kinds even when serialised as strings.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_66dfe66094c11997c7f30e2adfcebb0c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FBoundaries%20and%20sufficiency%20claims",
+          "start_line": 146,
+          "end_line": 151,
+          "quote": "An object's boundary, what belongs to the object and what its identity\ndoes not depend on, is a claim with a proof obligation\n([FOUNDATIONS §3](FOUNDATIONS.md#3-commitments), P3), not a property that\nits storage, schema or name establishes. A boundary claim names its\nobject, the evidence that supports it and the basis it holds on, and it\nholds only as far as that evidence goes (P3, P6)."
+        }
+      ],
+      "label": "Object boundary claim",
+      "definition": "An object's boundary states what belongs to it and what its identity does not depend on. It is an evidence- and basis-bounded claim with a proof obligation, not something established by storage, schema or name.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_56f840f046c75cbe5f578321eada0403",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FBoundaries%20and%20sufficiency%20claims",
+          "start_line": 151,
+          "end_line": 160,
+          "quote": "A claim that an\nobject's observed boundary state is sufficient for a task is a material\nsufficiency claim of\n[RF-003](REFERENCE_FRAME.md#rf-003-material-sufficiency), bounded by\nthat task: it is not completeness, and it does not establish that the\nboundary screens the object's interior from everything outside it. That\nstronger claim, a statistical Markov boundary, is a hypothesis\n([FOUNDATIONS §5](FOUNDATIONS.md#5-hypotheses)); no work relies on it as\nestablished, and a profile that uses such a construct states its\nepistemic status (P5)."
+        }
+      ],
+      "label": "Task sufficiency and Markov hypothesis",
+      "definition": "Material sufficiency under RF-003 is a claim that observed boundary state suffices for a particular task. Statistical Markov boundary is the stronger hypothesis that the boundary screens the interior from everything outside it. Task sufficiency establishes neither completeness nor that stronger claim.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_0fa83fdec596671a1df9bd98f5348022",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F5.%20Authority%20split%2FEngine-owned%20identity",
+          "start_line": 207,
+          "end_line": 210,
+          "quote": "The substrate or runtime may define default identities for runtime-owned\nobjects, such as runs, function calls, jobs, execution frames,\ncontinuations and events. For these, the engine may use opaque identities and engine-local\ngeneration rules."
+        }
+      ],
+      "label": "Engine-owned identity",
+      "definition": "Identity for runtime-owned objects, including runs, function calls, jobs, execution frames, continuations and events. The substrate/runtime may provide defaults, opaque forms and engine-local generation rules.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_006ca6488f42ba4e76c541e522c13142",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F5.%20Authority%20split%2FDomain-owned%20identity",
+          "start_line": 216,
+          "end_line": 221,
+          "quote": "Derived domains own the semantic identity grammar for their own\nconstitutional objects, such as requirements, requirement families,\nacceptance criteria, scenarios, ADRs or design decisions, and published\ndomain assets. The domain defines which identity kinds exist, how they\nare distinguished, what makes them unique, and how they are parsed or\nread."
+        }
+      ],
+      "label": "Domain-owned identity",
+      "definition": "Derived domains own semantic identity grammar for their constitutional objects, including requirements, requirement families, acceptance criteria, scenarios, ADRs/design decisions and published domain assets. The domain defines kinds, distinctions, uniqueness and parsing/reading.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_413efc4ed18e10f86b5c76f1f98556e0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F6.%20Authority%20identity%20and%20conservation%20%28STDO-UP-004%29",
+          "start_line": 226,
+          "end_line": 230,
+          "quote": "Authority is an identity-bearing semantic relation, not a display label,\ncapability string, actor identity or reachable code path. Its identity\npreserves owner, kind, governed subject, scope and governing basis (P6,\nP3; the Authority\nobject and its kinds are FOUNDATIONS §2)."
+        }
+      ],
+      "label": "Authority identity",
+      "definition": "Authority is an identity-bearing semantic relation preserving owner, kind, governed subject, scope and governing basis. It is not a display label, capability string, actor identity or reachable code path. FOUNDATIONS §2 owns Authority and its kinds.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_0ed41260452a87de6836fa5047cb79ce",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F6.%20Authority%20identity%20and%20conservation%20%28STDO-UP-004%29",
+          "start_line": 240,
+          "end_line": 245,
+          "quote": "Human authority may act directly or through an explicitly admitted\nbounded proxy. Proxy actor identity and human-authority identity remain\ndistinct; a profile's own surfaces may project the human-authority\nrelation under that profile's term (PROFILES). A proxy grant names its\ngrantor, actor, subject, scope, permitted and excluded decisions,\nvalidity, delegation rights, revocation and provenance (P6, P3)."
+        }
+      ],
+      "label": "Bounded proxy grant",
+      "definition": "A proxy grant names grantor, actor, subject, scope, permitted and excluded decisions, validity, delegation rights, revocation and provenance. Proxy actor identity remains distinct from human-authority identity.",
+      "conditions": [
+        "Human authority acts through an explicitly admitted bounded proxy."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_487b998011fc8bbf86f5688efd791a52",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F7.%20Default%20formats%20and%20overrides%2FDerived%20domain%20overrides",
+          "start_line": 262,
+          "end_line": 270,
+          "quote": "Default identity formats that a bound runtime realisation publishes are\nstarter conventions and convenience contracts, not universal doctrine;\nthey are lawful only so long as derived domains may override them (P3,\nP6). What such a realisation publishes, and for which surfaces, is\nrealisation law outside this member\n([DESIGN_MODULE §12](DESIGN_MODULE.md#identity-defaults-from-a-bound-runtime-realisation)).\n\nDerived domains may override identity format and structure for their own\nkinds."
+        }
+      ],
+      "label": "Domain identity override",
+      "definition": "A derived domain's published replacement of format or structure defaults supplied by its bound runtime realisation for the domain's own kinds. Defaults are starter conventions and convenience contracts; the realisation's actual default surfaces belong to DESIGN_MODULE §12 realisation law.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_0d44548345ed4f30503f0de96135ec17",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F8.%20Parsing",
+          "start_line": 312,
+          "end_line": 314,
+          "quote": "Regex extraction from prose is not a complete identity model. At most,\nregex may be a provisional extractor over a surface whose identity law is\nalready defined elsewhere (P3, P1)."
+        }
+      ],
+      "label": "Identity parsing",
+      "definition": "An identity reader/parser operating under published identity law. Regex over prose is at most a provisional extractor over a surface with identity law defined elsewhere; it is not a complete identity model.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_3cbeb196d9da340381b2cca3bb1e434d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F10.%20Minimum%20questions",
+          "start_line": 362,
+          "end_line": 363,
+          "quote": "If those questions cannot be answered, the identity surface is\nunder-defined (P3)."
+        }
+      ],
+      "label": "Identity surface",
+      "definition": "A surface defining or exposing identity, whose adequacy is tested by seven questions about owning authority, denoted kind, uniqueness scope, lifecycle stability, over-trust in readability, unambiguous parsing of families/members/aliases/revisions, and runtime/domain/release category.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_8b02973e1156879c7d2e0e2a6c603ecd",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 43,
+          "end_line": 47,
+          "quote": "This member is material family F8, identity. The table below shows which\nof its rules follow from which premises, in the format of\n[FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),\nwhich also states the standing of the consequences. Instance premises,\nwhich the commitments do not supply:"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 94,
+          "end_line": 95,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6)."
+        }
+      ],
+      "label": "F8 foundation-to-law derivation",
+      "definition": "F8 identity's authored foundation-to-law table distinguishes consequences from owned choices. Instance premises not supplied by commitments: (i) many object kinds with runtime/domain owners; (ii) serialised/readable forms read by people/parsers; (iii) release versions belong to releases, not every object. Premise/standing map: scoped/type/uniqueness P3 independent+i; stability P3 independent and P4b derived from P0/P2; boundaries P3/P6 independent, P5 derived from P0/P6 with P0 open-world premise+i; readability P3/P1 independent+ii; hierarchy P3+i,ii; authority split P3/P6+i; authority conservation P6/P3/P4b; defaults P3/P6; parsing P3/P1+ii; release boundary P3/P6+iii; minimum questions P3/P6; implementation policy P3/P1 independent and P0 recovered. Choice ownership remains with the stated owner: object owner for extra coordinates/kinds/form/visible segments; runtime for its generation/defaults; domain for semantic grammar, overrides and family need; WORLD_MODEL/RF-003 for their refinements; issuing authority for grants/decisions; IDENTITY for hierarchy model, grant fields, seven questions and enduring-repair policy; RELEASE for release forms. Examples add no decisions. Consumer applications add no authority beyond their owning rule.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b45635a1f0ea19b2701d9a88aa71857a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position",
+          "start_line": 49,
+          "end_line": 54,
+          "quote": "ODD, GTL and ABG name normative capability roles and a construction\nalgebra, not a required repository, package, vendor or concrete\nimplementation. ODD, Outcome-Driven Development, names the graph-native\nproduct-authoring profile. GTL, Graph Transformation Language, names the\nrole of the typed declarative graph language. ABG names the role of the\nsingular traversal-governance and runtime-truth authority (P1, P6)."
+        }
+      ],
+      "label": "GTL role",
+      "definition": "GTL, Graph Transformation Language, is the capability role of a typed declarative graph language and the language expression of ODD. It does not require a particular repository, package, vendor or implementation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7401bbbf535fd5e1e16b14036ff56999",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FABG",
+          "start_line": 600,
+          "end_line": 604,
+          "quote": "ABG owns traversal; dispatch; actor invocation; process supervision;\ngraph-call realisation; runtime facts; runtime event emission and replay;\nframes; continuations; retry and correction control; closure folds over\nruntime truth; re-entry after publish boundaries; lineage and provenance\n(P6)."
+        }
+      ],
+      "label": "ABG role",
+      "definition": "ABG is the singular traversal-governance and runtime-truth role. Its owned operations and facts include traversal, dispatch, actor invocation, process supervision, graph-call realisation, runtime facts, event emission/replay, frames, continuations, retry/correction control, closure folds, re-entry after publish boundaries, lineage and provenance. This describes source-defined authority, not an authority granted by this interpretation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_dfebaec0e3fc6f2d93521655089f3a54",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is",
+          "start_line": 556,
+          "end_line": 566,
+          "quote": "App\n= Bootstrap Surface\n+ Initialization Surface\n+ Domain Configuration\n+ Typed Domain Assets / Nodes\n+ GTL Function Catalog\n+ GTL Module\n+ Policy Hook Bindings\n+ ABG Runtime\n+ Projection / Query Surface\n+ Proof Surface"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FODD%20product",
+          "start_line": 608,
+          "end_line": 610,
+          "quote": "The ODD product owns domain asset meaning, graph-function meaning, the\npublished function catalogue, policy overlays, domain query projections,\nand closure and gap interpretation for its domain (P6, P1)."
+        }
+      ],
+      "label": "ODD domain product",
+      "definition": "Configured GTL/ABG domain product whose published graph functions construct typed domain assets. Its ten-part application boundary comprises Bootstrap Surface, Initialization Surface, Domain Configuration, Typed Domain Assets/Nodes, GTL Function Catalog, GTL Module, Policy Hook Bindings, ABG Runtime, Projection/Query Surface and Proof Surface. The product owns domain asset and graph-function meaning, catalogue, policy overlays, domain projections and domain closure/gap interpretation.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f4ab02ff3778dca8d3f25b278e550a77",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model",
+          "start_line": 275,
+          "end_line": 276,
+          "quote": "The product is expressed as a declared asset graph over the state\ntransitions relevant to the product's work (P0, P3)."
+        }
+      ],
+      "label": "Declared asset graph",
+      "definition": "Declared asset graph over state transitions relevant to the product's work; it is the product's process model and declared program space.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_845e0e60b60e69f173452f33a26b882d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FNodes",
+          "start_line": 280,
+          "end_line": 285,
+          "quote": "Nodes are durable truth surfaces or product assets; each names a bounded\nstate of truth. In one software-development ODD product the nodes include\n`intent`, `product`, `requirements`, `design`, `module_decomp`, `code`,\n`uat_testcases`, `integration_tests`, `bootloader` and build targets. Those\nnames are illustrative and product-local; the law is that nodes name\nbounded states (P3)."
+        }
+      ],
+      "label": "ODD node",
+      "definition": "Durable truth surface or product asset naming a bounded state of truth. Illustrative software-product names are intent, product, requirements, design, module_decomp, code, uat_testcases, integration_tests, bootloader and build targets; these names are product-local.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_4affde1b64c0d4f4480ba70fa8f30aea",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FVectors",
+          "start_line": 289,
+          "end_line": 292,
+          "quote": "Vectors are the lawful transitions between nodes and are the admissible\ntransitions of the product. Each vector declares its required upstream\nassets, its target asset, its governing evaluators and gates, and its\noutput contract (P4a, P6)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 313,
+          "end_line": 317,
+          "quote": "The vector declares the admissible external traversal space: required\nupstream assets; target asset or output contract; required context; role\nor capability expectation; governing evaluators and gates; provenance\nobligation; and the lawful stop, hold, gap, continuation or completion\nstates."
+        }
+      ],
+      "label": "ODD vector",
+      "definition": "A lawful admissible transition between nodes. Its declaration gives required upstream assets, target asset, governing evaluators/gates and output contract; the probabilistic-work boundary additionally declares required context, role/capability expectation, provenance obligation and lawful stop, hold, gap, continuation or completion states.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_dd4c6b532dec6f332c60a24617ffac0a",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FTraversal",
+          "start_line": 422,
+          "end_line": 425,
+          "quote": "The workflow is a traversal over the graph: bind the current target;\nlocate the next admissible vectors; traverse one vector; materialise the\nnext asset; prove the vector closed; continue until the selected target\ncloses. The graph is the declared program space of the product (P0, P5)."
+        }
+      ],
+      "label": "ODD graph traversal",
+      "definition": "Source-described workflow over the graph: bind current target, locate admissible vectors, traverse one vector, materialise next asset, prove that vector closed and continue until the selected target closes. One declared vector/edge traversal is the profile's bounded unit of probabilistic compute.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7041e57978eba9d41b7f61db1ca3b4ed",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 304,
+          "end_line": 311,
+          "quote": "Direction: from the step of\nFOUNDATIONS P0 to one declared ODD vector or edge traversal. Preserved\nmeaning: the step's selected context fits the actor's envelope, the\nactor's internal path within the step is its own, and the traversal is\nthe admissible external space. Narrowed scope: one declared vector or edge\ntraversal of a published graph. Invalidation: a change to FOUNDATIONS P0,\nto the vector's declaration or to the selected basis invalidates the\nbinding until it is evaluated again (P0, P1)."
+        }
+      ],
+      "label": "Referenced foundational bounded step",
+      "definition": "FOUNDATIONS P0's bounded step, referenced here as the source of ODD's binding: selected context fits the actor's envelope, internal path belongs to the actor, and traversal supplies admissible external space. Its full foundational definition is not supplied.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_eac7cf8a2799092be0571f0c747f7bb9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 327,
+          "end_line": 331,
+          "quote": "- `F_P` (`urn:stdo:concept:graph-native-odd:f-p`) is the shorthand for the\n  bounded probabilistic worker turn. It specialises substrate-neutral\n  lawful probabilistic processing: it keeps bounded non-human construction\n  under declared policy and narrows that meaning to one graph traversal\n  contract."
+        }
+      ],
+      "label": "ODD F_P",
+      "definition": "urn:stdo:concept:graph-native-odd:f-p: bounded probabilistic worker turn preserving bounded non-human construction under declared policy and narrowing it to one graph traversal contract.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f688644e4a37c1669dd925477341038c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 344,
+          "end_line": 348,
+          "quote": "- `F_H` (`urn:stdo:concept:graph-native-odd:f-h`) is the shorthand for\n  explicit human adjudication invoked under the traversal's declared\n  authority and ambiguity policy. It specialises the substrate-neutral\n  human-adjudication concept and grants a human no ambient traversal,\n  semantic or closure authority."
+        }
+      ],
+      "label": "ODD F_H",
+      "definition": "urn:stdo:concept:graph-native-odd:f-h: explicit human adjudication invoked under the traversal's declared authority and ambiguity policy. It grants no ambient traversal, semantic or closure authority.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_c4e137050be29b55e509bb3284c7bad0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 350,
+          "end_line": 358,
+          "quote": "The F_P\nspecialisation runs from\n`urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing` to\n`urn:stdo:concept:graph-native-odd:f-p`; the F_H specialisation runs from\n`urn:stdo:concept:ambiguity-governance:human-adjudication` to\n`urn:stdo:concept:graph-native-odd:f-h`. The source concepts and their\ncontext are owned by\n[SPEC_METHOD §5](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle); this\nprofile owns the targets in the graph-native ODD context (P1, P6)."
+        }
+      ],
+      "label": "Referenced lawful probabilistic processing",
+      "definition": "Referenced source concept urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing, owned with its context by SPEC_METHOD §5. Only its preserved meaning of bounded non-human construction under declared policy is supplied here.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_aeb8d30e922b74cb3478814dc61ad20c",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 354,
+          "end_line": 358,
+          "quote": "`urn:stdo:concept:ambiguity-governance:human-adjudication` to\n`urn:stdo:concept:graph-native-odd:f-h`. The source concepts and their\ncontext are owned by\n[SPEC_METHOD §5](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle); this\nprofile owns the targets in the graph-native ODD context (P1, P6)."
+        }
+      ],
+      "label": "Referenced human adjudication",
+      "definition": "Referenced substrate-neutral source concept urn:stdo:concept:ambiguity-governance:human-adjudication, owned with its context by SPEC_METHOD §5; the complete source definition is not supplied.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_8a952a4985c21b8548d5a4551258e042",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+          "start_line": 388,
+          "end_line": 393,
+          "quote": "Graph functions are named constructive programs that realise vectors. A\ngraph function may realise one outer vector directly, refine one outer\nvector into a small inner workflow, or act as a reusable higher-order\nlibrary function. The outer vector remains the constitutional contract;\nthe graph function is the constructive realisation of that contract (P4a,\nP0)."
+        }
+      ],
+      "label": "GraphFunction",
+      "definition": "Named constructive program realising a vector: directly, through a small inner workflow refining one outer vector, or as a reusable higher-order library function. The outer vector remains its constitutional callable contract.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_b4bfe7d8f52830a21e97ccd74cb89f5f",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+          "start_line": 396,
+          "end_line": 401,
+          "quote": "[ACTIVATION §4](ACTIVATION.md#4-totality-and-refinement) generalises the\nrefinement of one outer vector into an inner workflow to any realisation,\nlets a refinement carry an earlier output to a later step only through a\ndeclared adapter or specialised contract whose declared domain names it,\nand names [PROFILES §2](PROFILES.md#2-graph-execution), which indexes this\nprofile, as the keeper of the ODD binding."
+        }
+      ],
+      "label": "Referenced typed refinement",
+      "definition": "Referenced ACTIVATION §4 typed refinement allows earlier outputs to reach later steps only through a declared adapter or specialised contract whose declared domain names them. ODD binds it to a graph function refining one outer vector; the full general law is external.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_bf756d2b9147004f7d63d89815cb85ca",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+          "start_line": 410,
+          "end_line": 416,
+          "quote": "Narrowed scope: one published outer\nvector and its declared inner workflow, whose retained functions should\ndeclare `environment.requires`, `environment.provides` and\n`environment.carries` (§11.8); a later function's declared domain is its\n`environment.requires`, which may require any typed binding available in\nthe cumulative carried environment, not only the immediately previous\noutput."
+        }
+      ],
+      "label": "Cumulative carried environment",
+      "definition": "ODD §11.8's specialised cumulative carried environment, conserved as profile law rather than generalised into the core. A later function's declared domain is environment.requires and may require any typed binding available in the cumulative environment, not only the preceding output. Retained functions should declare environment.requires, environment.provides and environment.carries.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_a1ff9d15d7f9cef03b4fc72c204cdd04",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F4.%20Method%20library%20classes",
+          "start_line": 264,
+          "end_line": 271,
+          "quote": "Both the authoring library and an installed distribution contain three\nclasses of document. Method members are the constitutional method\nsurfaces, the members that [README](README.md#documents) names as method\nmembers: the tier 1 and tier 2 standards and, when a\nproject selects them, the tier 3 profiles. Guides (`*_GUIDE.md`) are operational guides and application standards\nthat refine application of the method. Templates (`*_TEMPLATE.md`) are\nreusable starter forms and examples and are convenience artifacts only.\nOnly method members are constitutional method surfaces (P6, P3)."
+        }
+      ],
+      "label": "Method library and document classes",
+      "definition": "The mutable source library authors a future method release; consumers select one complete immutable release distributed in the shared versioned STDO store. Both libraries contain method members, guides and templates. Only README-designated method members—tier 1, tier 2 and selected tier 3 profiles—are constitutional method surfaces. *_GUIDE.md documents refine application; *_TEMPLATE.md files are reusable starter forms/examples and convenience artifacts only.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_7b9b61c944808f060ef20bc9a9b82c30",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F6.%20Product%20boundary",
+          "start_line": 440,
+          "end_line": 443,
+          "quote": "The installed product owns the graph-native method and its\ntraversal-control substrate, the runtime and control surfaces, the command\nsurfaces, the release-managed methodology surfaces and the project\nscaffold templates (P6)."
+        }
+      ],
+      "label": "Installed ODD builder",
+      "definition": "The installed graph-native product supplies the method, runtime and carrier surfaces, owning traversal-control substrate, runtime/control/command surfaces, release-managed methodology and scaffold templates. It is distinct from the target project and, in self-hosting, from the next version under development.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_796a8085272464e74aa0b22d9354d8cb",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F6.%20Product%20boundary",
+          "start_line": 448,
+          "end_line": 457,
+          "quote": "- one `stdo_<label>.json` definition for each distinct product WHAT,\n  locating its constitutional, local and collective reference-frame\n  basis, realisation, work and composition surfaces;\n- its constitutional surfaces under SPEC_METHOD, where `GOALS.md`,\n  `INTENT.md`, `PRODUCT.md` and `requirements/` are the default\n  software-development scaffold and not mandatory names;\n- one or more realisation roots bound through `how.build_tenants`, where\n  `build_tenants/` is the default root name for software-development ODD\n  products and existing projects and other domain types may use their own\n  locations;"
+        }
+      ],
+      "label": "Target project",
+      "definition": "The project built with an installed ODD product owns its business domain; one stdo_<label>.json definition per distinct product WHAT locating constitutional, local/collective reference-frame basis, realisation, work and composition surfaces; constitutional surfaces; one or more how.build_tenants realisation roots; domain outputs and evidence. Software examples include design, code, tests, documents and proof surfaces; other domains name their own artifacts.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_84dcf51004fa90f680da8c7bf39066d9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F8.%20Responsibility%20layers%20and%20local%20binding",
+          "start_line": 478,
+          "end_line": 488,
+          "quote": "This profile governs structural responsibility layers and their required\npublication shape. It does not freeze one product's local asset names as\nuniversal ODD doctrine. A responsibility layer expresses one capability\nclass; the product binds that capability to its own local domain\nsemantics; the GTL carrier publishes the lawful transitions for that bound\ncapability (P1, P3).\n\nCapability classes may include bootstrap or intake, design,\nimplementation, qualification, release, operational transition and\nretrofit. They are responsibility-layer ideas, not mandatory universal\ninstance names (P1)."
+        }
+      ],
+      "label": "Responsibility layer",
+      "definition": "A structural responsibility layer expresses one capability class, which the product binds to local domain semantics and the GTL carrier exposes through lawful transitions. Examples are bootstrap/intake, design, implementation, qualification, release, operational transition and retrofit; they are not mandatory instance names.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_f410088881523b5ea81f03f38d542d3b",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F9.%20Method%20governance%20and%20audit",
+          "start_line": 540,
+          "end_line": 542,
+          "quote": "| compliant | satisfied | the move meets the law of the current profile |\n| non-compliant | falsified | the law of this profile that the move violates is the counterexample |\n| valid and worth incorporating | out_of_frame | the current profile does not declare the law the move needs; the outcome names that law, this profile as its owner and the update it requires, which is the reconfiguration pressure of out_of_frame ([FOUNDATIONS §4 Results](FOUNDATIONS.md#results), Out of frame or indeterminate) |"
+        }
+      ],
+      "label": "ODD method audit and outcome domain",
+      "definition": "Source-defined evaluation of a move against the current ODD profile. For the predicate 'the move complies with the current profile', compliant maps to satisfied; non-compliant maps to falsified with the violated law as counterexample; valid and worth incorporating maps to out_of_frame because current law lacks what the move needs. Incorporation names the needed law, profile owner and update, and is neither compliance nor failure.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_34566a52e8fcda8cee3d666e0e57e8ae",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5%20Current%20state%20is%20a%20projection%20over%20constructive%20history",
+          "start_line": 689,
+          "end_line": 692,
+          "quote": "Visible current state is a projection and does not replace runtime truth.\nThe ODD query lane may expose asset views, function catalogue views,\ncheckpoint overlays, provenance overlays and domain-specific\nexplainability overlays; it must not redefine ABG runtime facts (P3, P6)."
+        }
+      ],
+      "label": "ODD projection and query lane",
+      "definition": "Downstream read models over admitted carrier, runtime, event or source truth; visible current state is projected constructive history. Possible views include assets, catalogue, checkpoint/provenance overlays and domain explainability.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_68488250933586b7cf75d39d4f345fde",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FProduct%20specification%20%28software-development%20topology%29",
+          "start_line": 588,
+          "end_line": 590,
+          "quote": "The product definition's `what` bindings locate the authoritative WHAT;\n`specification/` is the default software-development location. It defines\nintent, product position, goals, requirements and scenarios (P6)."
+        }
+      ],
+      "label": "Product specification",
+      "definition": "Authoritative WHAT located by product-definition what bindings; specification/ is the default software-development location. It defines intent, product position, goals, requirements and scenarios.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_e8fba98a082000f2293a25bde2a6c895",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FProduct%20realisation%20%28software-development%20topology%29",
+          "start_line": 594,
+          "end_line": 596,
+          "quote": "The product definition's `how` bindings locate the authoritative HOW;\n`build_tenants/` is the default software-development location. It carries\ndesign, GTL publications, code, tests and local proof surfaces (P6)."
+        }
+      ],
+      "label": "Product realisation",
+      "definition": "Authoritative HOW located by product-definition how bindings; build_tenants/ is the default software-development location. It carries design, GTL publications, code, tests and local proof surfaces.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_66f74c8f29b280b5c3f16e2a8b3d89fe",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FQuery%20and%20service%20layers",
+          "start_line": 614,
+          "end_line": 617,
+          "quote": "Service or query layers may own transport, sessions, routing,\nbrowser-safe projection and API surfaces. They own neither runtime truth\nnor continuation truth. The real constructive carrier is never hidden\nbehind the word service (P6)."
+        }
+      ],
+      "label": "Service and query layers",
+      "definition": "Service/query layers may own transport, sessions, routing, browser-safe projection and APIs; they own neither runtime truth nor continuation truth.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_39e42e814d731b3e0b9630ddf1b8e191",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.3%20The%20function%20catalogue%20is%20published",
+          "start_line": 669,
+          "end_line": 672,
+          "quote": "The live line must publish a machine-readable function catalogue. At\nminimum each retained function should expose its name, inputs, outputs,\nintent, and public or helper role. A callable surface that exists only in\nprose or in prompt memory leaves the product under-built (P6, P3)."
+        }
+      ],
+      "label": "Function catalogue",
+      "definition": "Machine-readable catalogue of retained graph functions on the live line; recommended minimum fields are name, inputs, outputs, intent and public/helper role.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_81f6906b71f893b3c94e1dfc03ff9522",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.4%20The%20GTL%20module%20is%20the%20operative%20publication%20surface",
+          "start_line": 682,
+          "end_line": 685,
+          "quote": "Where a public carrier refines into inner executable structure, the live\ntraversal boundaries are published explicitly through lawful GTL boundary\nsurfaces such as `RefinementBoundary` or `CandidateFamily`. The outer\npublic carrier remains the callable contract (P4a, P3)."
+        }
+      ],
+      "label": "GTL module",
+      "definition": "Operative publication surface for public graph-function carriers, traversed graphs, typed node/vector surfaces and bound semantic jobs or equivalent outer callable contracts. Refined live inner boundaries have lawful GTL boundary surfaces such as RefinementBoundary or CandidateFamily.",
+      "conditions": [],
+      "exceptions": []
+    },
+    {
+      "key": "prior_a5d43a54e9b6c1b4035264da5197bcbd",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 79,
+          "end_line": 84,
+          "quote": "This member is material family F18, outcome-driven development. The table\nbelow shows which of its rules follow from which premises, in the format\nof [FOUNDATIONS §3 Foundation to law](FOUNDATIONS.md#foundation-to-law),\nwhich also states the standing of the consequences. Under\n[PROFILES §1](PROFILES.md#1-the-boundary) the family imports the families\nits rows rest on; their rules and choices keep their owners:"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 101,
+          "end_line": 111,
+          "quote": "Its instance premises hold where a product is built with this profile;\nthey are adopted with it and do not follow from the foundations (P1, P6):\n\n- I1: a selected Product outcome is admitted as external authority for\n  the work;\n- I2: the work changes a mutable workspace, beside which an immutable\n  ledger and event log record the admitted work;\n- I3: bounded probabilistic workers carry out the constructive actions,\n  and their reports and artifacts are observations;\n- I4: the product is built with an installed release of a method product,\n  which may be an earlier release of the product itself."
+        }
+      ],
+      "label": "F18 foundation-to-law derivation",
+      "definition": "F18's authored foundation-to-law table imports F1 frames/context, F2 transitions/steps/configuration, F3 results, F4 work-state/resumption/reuse, F6 claims/evidence/assessment/acceptance, F9 a_c, F10 constitutional chain/outcome/build tenants, F11 change/ambiguity, F12 project binding, F13 work carriers and F15 release/successor conservation; rules and choices retain their owners. Adopted instance premises, not foundational deductions: I1 externally admitted selected Product outcome; I2 mutable workspace beside immutable ledger/event log; I3 bounded probabilistic workers whose reports/artifacts are observations; I4 installed method-product release, possibly an earlier self release. The 25 rows distinguish derived consequences from profile/product/consumer/other-member choices. Standing includes P0 recovered; P1/P2/P3/P4a/P6 independent; P4b derived from P0/P2; P5 derived from P0/P6. Consumer applications decide nothing beyond rule owners. §1's opening, §16 failure patterns, §19 checklist and §20 compression add no independent law; §11 decides built correctness and §9 move compliance.",
+      "conditions": [
+        "A product is built with the ODD profile."
+      ],
+      "exceptions": []
+    },
+    {
+      "key": "prior_ccf788aa3cfe567da2d3eff370213cba",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 125,
+          "end_line": 125,
+          "quote": "the four functions `synthesize_model`, `eval_gap`, `evaluate_next` and `evaluate_action`, and the duty of a design, ticket, module or proof to name the one it implements or consumes"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 130,
+          "end_line": 130,
+          "quote": "the seven closure decisions, their causes, the two causes of a typed no-action and the default of graph following in A4"
+        }
+      ],
+      "label": "Referenced constructive evaluation and yield loop",
+      "definition": "Source-described constructive evaluation loop, referenced through §11.5D: separate authorities for synthesize_model, eval_gap, evaluate_next and evaluate_action; immutable ledger/event log admitting observations; closure fold; replay; lawful yield; selected-outcome-bounded action selection. Closure decisions form a closed sum type with seven decisions and cause-dependent core mappings; evaluate_next is total. The supplied table names only some states and does not supply the full operational algebra.",
+      "conditions": [],
+      "exceptions": []
+    }
+  ],
+  "relations": [
+    {
+      "key": "prior_f5136114f321e84269a3a472f61ac814",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F6.%20Authority%20identity%20and%20conservation%20%28STDO-UP-004%29",
+          "start_line": 243,
+          "end_line": 245,
+          "quote": "A proxy grant names its\ngrantor, actor, subject, scope, permitted and excluded decisions,\nvalidity, delegation rights, revocation and provenance (P6, P3)."
+        }
+      ],
+      "kind": "bounds_authority",
+      "meaning": "The grant constrains the represented proxy authority through its declared subject, scope, decisions, validity, delegation and revocation; it does not confer unrelated authority.",
+      "conditions": [
+        "The proxy is explicitly admitted and bounded."
+      ],
+      "exceptions": [],
+      "source_key": "prior_0ed41260452a87de6836fa5047cb79ce",
+      "target_key": "prior_413efc4ed18e10f86b5c76f1f98556e0",
+      "governing": true
+    },
+    {
+      "key": "prior_00da0796474a9e6a7531f014f8132c66",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F7.%20Default%20formats%20and%20overrides%2FDerived%20domain%20overrides",
+          "start_line": 269,
+          "end_line": 270,
+          "quote": "Derived domains may override identity format and structure for their own\nkinds. An override is lawful only if it preserves (P3):"
+        }
+      ],
+      "kind": "governs_format",
+      "meaning": "A lawful domain-published override governs format and structure for that domain's own identity kinds.",
+      "conditions": [
+        "The overridden kinds belong to the derived domain and all preservation/publication conditions hold."
+      ],
+      "exceptions": [],
+      "source_key": "prior_487b998011fc8bbf86f5688efd791a52",
+      "target_key": "prior_006ca6488f42ba4e76c541e522c13142",
+      "governing": true
+    },
+    {
+      "key": "prior_cab1ec7733972caf0edd5b55395db179",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FVectors",
+          "start_line": 289,
+          "end_line": 292,
+          "quote": "Vectors are the lawful transitions between nodes and are the admissible\ntransitions of the product. Each vector declares its required upstream\nassets, its target asset, its governing evaluators and gates, and its\noutput contract (P4a, P6)."
+        }
+      ],
+      "kind": "transition_between",
+      "meaning": "A vector links declared upstream assets to its target node/asset through an admissible transition. This category-level relation does not select or execute a concrete edge.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_4affde1b64c0d4f4480ba70fa8f30aea",
+      "target_key": "prior_845e0e60b60e69f173452f33a26b882d",
+      "governing": false
+    },
+    {
+      "key": "prior_bcb5caaa1193d2f3fb0301e262cf5adb",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 304,
+          "end_line": 311,
+          "quote": "Direction: from the step of\nFOUNDATIONS P0 to one declared ODD vector or edge traversal. Preserved\nmeaning: the step's selected context fits the actor's envelope, the\nactor's internal path within the step is its own, and the traversal is\nthe admissible external space. Narrowed scope: one declared vector or edge\ntraversal of a published graph. Invalidation: a change to FOUNDATIONS P0,\nto the vector's declaration or to the selected basis invalidates the\nbinding until it is evaluated again (P0, P1)."
+        }
+      ],
+      "kind": "declared_binding",
+      "meaning": "Direction is foundational bounded step to ODD edge traversal, preserving actor-owned internal path and externally bounded admissible space. PROFILES §2 indexes the binding; this is a described binding, not a traversal occurrence.",
+      "conditions": [
+        "One declared vector or edge traversal of a published graph.",
+        "The selected context fits the actor's envelope.",
+        "The binding has not been invalidated, or has been evaluated again after change."
+      ],
+      "exceptions": [
+        "Changes to FOUNDATIONS P0, vector declaration or selected basis invalidate the binding until re-evaluation."
+      ],
+      "source_key": "prior_7041e57978eba9d41b7f61db1ca3b4ed",
+      "target_key": "prior_dd4c6b532dec6f332c60a24617ffac0a",
+      "governing": true
+    },
+    {
+      "key": "prior_4017b7e5758fd54465a17101f370d214",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 350,
+          "end_line": 353,
+          "quote": "The F_P\nspecialisation runs from\n`urn:stdo:concept:ambiguity-governance:lawful-probabilistic-processing` to\n`urn:stdo:concept:graph-native-odd:f-p`;"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 360,
+          "end_line": 369,
+          "quote": "Both relations preserve the source meaning and authority, narrow scope to\na declared ODD traversal, and add graph-contract and runtime-control\ncoordinates. They exclude processing or adjudication outside that\ntraversal, refuse ambient worker or human authority, and have no implied\ninverse. Their source and target basis is the selected complete STDO\nrelease, their governed scope is ODD traversal, and this clause is their\nprovenance carrier. A change to either concept or context, to the basis,\nto the scope, to the preserved or narrowed meaning or to the control\ncontract invalidates the affected specialisation until it is evaluated\nagain (P1, P3, P6)."
+        }
+      ],
+      "kind": "declared_specialisation",
+      "meaning": "Source lawful probabilistic processing specialises directionally into ODD F_P, preserving bounded non-human construction under policy and source authority, narrowing to the traversal contract and adding graph-contract/runtime-control coordinates. It grants no ambient worker authority.",
+      "conditions": [
+        "Source and target basis are the selected complete STDO release.",
+        "Governed scope is one declared ODD traversal.",
+        "The supplied Probabilistic compute clause is the provenance carrier."
+      ],
+      "exceptions": [
+        "Processing outside the traversal is excluded.",
+        "There is no implied inverse.",
+        "A change to either concept/context, basis, scope, preserved/narrowed meaning or control contract invalidates the affected specialisation until re-evaluated."
+      ],
+      "source_key": "prior_c4e137050be29b55e509bb3284c7bad0",
+      "target_key": "prior_eac7cf8a2799092be0571f0c747f7bb9",
+      "governing": true
+    },
+    {
+      "key": "prior_4b929bd92e9a2ead6dad1b83ea7106ed",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 353,
+          "end_line": 358,
+          "quote": "the F_H specialisation runs from\n`urn:stdo:concept:ambiguity-governance:human-adjudication` to\n`urn:stdo:concept:graph-native-odd:f-h`. The source concepts and their\ncontext are owned by\n[SPEC_METHOD §5](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle); this\nprofile owns the targets in the graph-native ODD context (P1, P6)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 366,
+          "end_line": 369,
+          "quote": "A change to either concept or context, to the basis,\nto the scope, to the preserved or narrowed meaning or to the control\ncontract invalidates the affected specialisation until it is evaluated\nagain (P1, P3, P6)."
+        }
+      ],
+      "kind": "declared_specialisation",
+      "meaning": "Source human adjudication specialises directionally into ODD F_H, preserving source meaning/authority while narrowing invocation to declared traversal authority and ambiguity policy and adding graph/runtime-control coordinates. It grants no ambient human traversal, semantic or closure authority.",
+      "conditions": [
+        "Source and target basis are the selected complete STDO release.",
+        "Governed scope is one declared ODD traversal.",
+        "The supplied Probabilistic compute clause is the provenance carrier."
+      ],
+      "exceptions": [
+        "Adjudication outside the traversal is excluded.",
+        "There is no implied inverse.",
+        "A change to either concept/context, basis, scope, preserved/narrowed meaning or control contract invalidates the affected specialisation until re-evaluated."
+      ],
+      "source_key": "prior_aeb8d30e922b74cb3478814dc61ad20c",
+      "target_key": "prior_f688644e4a37c1669dd925477341038c",
+      "governing": true
+    },
+    {
+      "key": "prior_f907be66c4917c59efe0bb0d8bf7d717",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+          "start_line": 391,
+          "end_line": 393,
+          "quote": "The outer vector remains the constitutional contract;\nthe graph function is the constructive realisation of that contract (P4a,\nP0)."
+        }
+      ],
+      "kind": "governing_contract",
+      "meaning": "The outer vector governs its constructive graph-function realisation and remains the callable contract.",
+      "conditions": [
+        "The function realises the outer vector directly or through refinement."
+      ],
+      "exceptions": [],
+      "source_key": "prior_4affde1b64c0d4f4480ba70fa8f30aea",
+      "target_key": "prior_8a952a4985c21b8548d5a4551258e042",
+      "governing": true
+    },
+    {
+      "key": "prior_31591c3d84d1ea89565004b1b7295b63",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+          "start_line": 405,
+          "end_line": 407,
+          "quote": "Direction: from the typed refinement of ACTIVATION §4 to a graph\nfunction that refines one outer vector, with the §11.8 environment as its\nspecialised contract."
+        }
+      ],
+      "kind": "declared_binding",
+      "meaning": "General typed refinement binds directionally to an ODD graph function refining one outer vector through the profile-specific cumulative environment; this does not generalise §11.8 into the core.",
+      "conditions": [
+        "One published outer vector and its declared inner workflow.",
+        "The cumulative carried environment is the specialised contract.",
+        "Inner inputs satisfy their declared domains/preconditions and inner steps preserve the outer contract and applicable invariants."
+      ],
+      "exceptions": [
+        "Changes to ACTIVATION §4, ODD §11.8, the outer vector or a function environment declaration invalidate the binding until re-evaluated."
+      ],
+      "source_key": "prior_b4bfe7d8f52830a21e97ccd74cb89f5f",
+      "target_key": "prior_8a952a4985c21b8548d5a4551258e042",
+      "governing": true
+    },
+    {
+      "key": "prior_ef7fd6c4e356998b4a1bba39acb625fb",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FABG",
+          "start_line": 600,
+          "end_line": 604,
+          "quote": "ABG owns traversal; dispatch; actor invocation; process supervision;\ngraph-call realisation; runtime facts; runtime event emission and replay;\nframes; continuations; retry and correction control; closure folds over\nruntime truth; re-entry after publish boundaries; lineage and provenance\n(P6)."
+        }
+      ],
+      "kind": "owns_execution_governance",
+      "meaning": "ABG owns traversal control and runtime truth, including lifecycle, continuation, event/replay and closure responsibilities; product domain interpretation remains separately owned.",
+      "conditions": [
+        "The consumer has bound the ABG role for this traversal."
+      ],
+      "exceptions": [
+        "A different realisation requires explicitly ratified non-overlapping runtime scope."
+      ],
+      "source_key": "prior_7401bbbf535fd5e1e16b14036ff56999",
+      "target_key": "prior_dd4c6b532dec6f332c60a24617ffac0a",
+      "governing": true
+    },
+    {
+      "key": "prior_5bde76b23f98844933de81b83ec0665d",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FODD%20product",
+          "start_line": 608,
+          "end_line": 610,
+          "quote": "The ODD product owns domain asset meaning, graph-function meaning, the\npublished function catalogue, policy overlays, domain query projections,\nand closure and gap interpretation for its domain (P6, P1)."
+        }
+      ],
+      "kind": "owns_domain_meaning",
+      "meaning": "The product owns its graph-function semantics, independently of ABG runtime control and closure-fold ownership.",
+      "conditions": [],
+      "exceptions": [],
+      "source_key": "prior_dfebaec0e3fc6f2d93521655089f3a54",
+      "target_key": "prior_8a952a4985c21b8548d5a4551258e042",
+      "governing": true
+    }
+  ],
+  "constraints": [
+    {
+      "key": "prior_1b8526b8f627ba367270a80d73cdfc63",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+          "start_line": 337,
+          "end_line": 340,
+          "quote": "A\nrow here declares no context; a context holds one of these concepts only\nby its own import, as §8 records for the concepts that REFERENCE_FRAME §1\nimports (§2; P1, P3)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F17.%20Labels%20with%20several%20senses",
+          "start_line": 375,
+          "end_line": 379,
+          "quote": "Equal\nspelling across these rows establishes no equivalence (§1; P1, P3).\nPurpose and material relation: an actor that read one sense into another\nclause reconciled the two by itself; this index points each sense to its\nowner."
+        }
+      ],
+      "statement": "Indexing creates no context or import. A context holds an indexed concept only through its own import. Every label occurrence takes meaning from its owning clause and qualifies the label or states its predicate. Equal spelling establishes no equivalence, and an actor may not silently reconcile distinct senses. Listed result, triage, absence, stop, disposition and status meanings remain distinct.",
+      "uncertainty": "The owning clauses and import rules are mostly outside the supplied source.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_a6fe8a828fd36e326960c62ade24fc8b",
+        "prior_49133917db2c94cb7000087a71f47c5e",
+        "prior_3da2a4eb8c47933e4c6e745c16195ef2",
+        "prior_9c1b5668d40aed2d3b34a1013a682eb4",
+        "prior_a2f107acde99288ef9dd2a88dd1b0877",
+        "prior_13b6172ff45e0c256887788162a4e35c"
+      ]
+    },
+    {
+      "key": "prior_6ebce8f4dc21353dc32138ca75c10439",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FUniqueness",
+          "start_line": 118,
+          "end_line": 122,
+          "quote": "- no two live objects of the same kind may share the same identity within\n  the same authority scope;\n- aliasing across scopes remains explicit; and\n- serialisation preserves enough hierarchy to prevent accidental\n  collision."
+        }
+      ],
+      "statement": "Identity is unique within lawful scope: no two live objects of the same kind may share an identity within the same authority scope; cross-scope aliasing stays explicit; serialisation preserves sufficient hierarchy to prevent accidental collision. A naked string need not appear globally unique.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_592f428587096675d25235df24f32725"
+      ]
+    },
+    {
+      "key": "prior_969b8675a4a2f8bd8a3b36a5c83ff6bf",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FType",
+          "start_line": 126,
+          "end_line": 133,
+          "quote": "Identity is typed. Different kinds of thing should not be collapsed into\none undifferentiated identity space. Examples of distinct identity kinds\ninclude goal, intent, requirement, requirement_family,\nacceptance_criterion, scenario, design_decision, published_function,\ncarrier_surface, release, install, run, function_call, continuation and\nevent. The method does not treat a family identity as if it were a\nconcrete requirement identity, or a release version as if it were object\nidentity (P3)."
+        }
+      ],
+      "statement": "Identity is typed; different kinds should not collapse into an undifferentiated space. Illustrative kinds are goal, intent, requirement, requirement_family, acceptance_criterion, scenario, design_decision, published_function, carrier_surface, release, install, run, function_call, continuation and event. Family identity is not concrete requirement identity; release version is not object identity.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_592f428587096675d25235df24f32725",
+        "prior_628ebb39e8881c3e537451819d0b33f2"
+      ]
+    },
+    {
+      "key": "prior_fcee4639f49f2df0aa2fa55cc2f130ad",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FStability",
+          "start_line": 137,
+          "end_line": 142,
+          "quote": "Identity should remain stable for the governed lifecycle it serves. This\ndoes not mean every identity is immutable forever. It means identity is\nstable enough to support traceability, comparison, replay, publication\nand supersession. If an identity changes, the method should make the\nrelationship explicit rather than silently reusing the old identity for a\ndifferent object (P3, P4b)."
+        }
+      ],
+      "statement": "Identity should remain stable enough for its governed lifecycle to support traceability, comparison, replay, publication and supersession. If it changes, the method should explicitly relate old and new identity rather than silently reuse the old identity for another object.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Lifecycle stability does not require every identity to remain immutable forever."
+      ],
+      "applies_to_keys": [
+        "prior_592f428587096675d25235df24f32725"
+      ]
+    },
+    {
+      "key": "prior_16ee54c4effee94097cefa3650b14d94",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FBoundaries%20and%20sufficiency%20claims",
+          "start_line": 158,
+          "end_line": 165,
+          "quote": "no work relies on it as\nestablished, and a profile that uses such a construct states its\nepistemic status (P5). Purpose and material relation: this law was\ndecided only in the optional world-model profile, so a Product that does\nnot adopt that profile had no rule for boundary claims, and the common\nsingle ownership requirement, item 8, requires generic law to be\navailable without an optional profile; [WORLD_MODEL §4](WORLD_MODEL.md#4-the-markov-object-construct)\nrefines it."
+        }
+      ],
+      "statement": "A boundary claim names object, supporting evidence and basis and holds only as far as that evidence. Task sufficiency is task-bounded, not completeness; beyond-evidence claims remain undecided. No work relies on a statistical Markov boundary as established, and a profile using it states its epistemic status. Generic boundary law applies without adopting the optional world-model profile; WORLD_MODEL §4 refines it.",
+      "uncertainty": "RF-003, the hypothesis law and the WORLD_MODEL refinement are not supplied.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_66dfe66094c11997c7f30e2adfcebb0c",
+        "prior_56f840f046c75cbe5f578321eada0403"
+      ]
+    },
+    {
+      "key": "prior_3190abadc066b96e52c293ef11094ab0",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F4.%20Identity%20hierarchy",
+          "start_line": 183,
+          "end_line": 191,
+          "quote": "Identity should be made unique by hierarchy where appropriate. One useful\ngeneral model is:\n\n```text\nauthority / kind / value / revision\n```\n\nNot every serialisation needs all four visible segments, but the semantic\nmodel should be available (P3)."
+        }
+      ],
+      "statement": "Identity should be made unique through hierarchy where appropriate, and the semantic model should remain available even when serialisation omits visible segments.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "Hierarchy is recommended where appropriate, and not every serialisation needs all four visible segments."
+      ],
+      "applies_to_keys": [
+        "prior_592f428587096675d25235df24f32725",
+        "prior_628ebb39e8881c3e537451819d0b33f2"
+      ]
+    },
+    {
+      "key": "prior_6544f5ceb505252cdb38e98868d0bc79",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F5.%20Authority%20split%2FEngine-owned%20identity",
+          "start_line": 210,
+          "end_line": 212,
+          "quote": "Those rules should optimise for uniqueness, replay\nsafety and event-stream integrity. The engine should not impose\ndomain-specific semantic grammar on domain-owned objects (P3, P6)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F5.%20Authority%20split%2FDomain-owned%20identity",
+          "start_line": 221,
+          "end_line": 222,
+          "quote": "The runtime may transport those identities, but it should not\nsilently invent their meaning (P3, P6)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position",
+          "start_line": 38,
+          "end_line": 39,
+          "quote": "The engine should carry identity safely. The domain should define\nsemantic identity law for its own constitutional objects (P3, P6)."
+        }
+      ],
+      "statement": "The engine should safely carry identities and optimise its generation rules for uniqueness, replay safety and event-stream integrity. It should not impose semantic grammar on domain-owned objects. The domain should define its constitutional objects' semantic identity law; runtime transport is allowed but should not silently invent meaning.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_0fa83fdec596671a1df9bd98f5348022",
+        "prior_006ca6488f42ba4e76c541e522c13142"
+      ]
+    },
+    {
+      "key": "prior_f1713246fccd921a058aa03efda29dcd",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 64,
+          "end_line": 64,
+          "quote": "composition, delegation and projection restrict it or carry it faithfully and never widen it."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F6.%20Authority%20identity%20and%20conservation%20%28STDO-UP-004%29",
+          "start_line": 247,
+          "end_line": 255,
+          "quote": "A direct or proxied decision preserves its source, subject and basis,\nacting identity and mode, scope, change class, disposition and\nsupersession. Recording a ruling cannot widen it. What a proxy can never\ndecide is stated at\n[FOUNDATIONS §2 Authority kinds](FOUNDATIONS.md#authority-kinds); for\nauthority identity its instances are that proxy authority does not make\nimplementer self-review independent\n([EVALUATION §3](EVALUATION.md#3-independent-assessment)) and confers no\nunrelated runtime or domain authority (P6, P4b)."
+        }
+      ],
+      "statement": "Authority coordinates survive every carrier; composition, delegation and projection restrict or faithfully carry authority and never widen it. Capability, labels, reachability, actor identity and payload shape create none. Elevation, transfer, split, merge, proxy grant, revocation and retirement require explicit authority decisions with identifiable basis; a step-produced authority decision cannot be re-acquired as though newly supplied. Direct/proxied decisions preserve source, subject, basis, acting identity/mode, scope, change class, disposition and supersession. Recording cannot widen a ruling. Proxy authority neither makes implementer self-review independent nor grants unrelated runtime/domain authority.",
+      "uncertainty": "FOUNDATIONS owns the complete authority-carrier and proxy-prohibition law; only supplied instances and table consequences are retained.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_413efc4ed18e10f86b5c76f1f98556e0",
+        "prior_0ed41260452a87de6836fa5047cb79ce"
+      ]
+    },
+    {
+      "key": "prior_f5a7d1f1ed7a57f2ffde296a2002b4e6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F7.%20Default%20formats%20and%20overrides%2FDerived%20domain%20overrides",
+          "start_line": 269,
+          "end_line": 279,
+          "quote": "Derived domains may override identity format and structure for their own\nkinds. An override is lawful only if it preserves (P3):\n\n- scoped uniqueness;\n- explicit kind distinction;\n- deterministic parsing or reading;\n- non-aliasing between family and member identities; and\n- stable downstream traceability.\n\nOverrides are published in domain authority. They do not exist only as\nad hoc regex assumptions hidden in implementation code (P6, P3)."
+        }
+      ],
+      "statement": "Runtime defaults are lawful only while derived domains may override them. An override is lawful only if it preserves scoped uniqueness, explicit kind distinction, deterministic parsing/reading, family/member non-aliasing and stable downstream traceability. It is published in domain authority, not only hidden as implementation regex assumptions.",
+      "uncertainty": "",
+      "conditions": [
+        "A bound runtime publishes identity defaults or a derived domain overrides them."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_487b998011fc8bbf86f5688efd791a52"
+      ]
+    },
+    {
+      "key": "prior_29b9540b790345ab654b8da879d63aa9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F7.%20Default%20formats%20and%20overrides%2FOverride%20publication%20surface",
+          "start_line": 287,
+          "end_line": 293,
+          "quote": "At minimum, the domain should publish (P3, P6):\n\n- the identity kinds in scope;\n- the serialisation or readable form used for those kinds;\n- the scope or hierarchy that makes them unique; and\n- the distinction between grouping identities and concrete executable or\n  traceable identities."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F7.%20Default%20formats%20and%20overrides%2FOverride%20publication%20surface",
+          "start_line": 306,
+          "end_line": 308,
+          "quote": "The important rule is that identity overrides are visible in domain\nauthority, auditable, and recoverable without reverse-engineering regexes\nfrom implementation code (P6, P3)."
+        }
+      ],
+      "statement": "The override is published on a lawful domain-authority surface, visible, auditable and recoverable without reverse-engineering implementation regexes. At minimum the domain should publish scoped kinds, their serialisation/readable form, uniqueness scope/hierarchy and grouping versus concrete executable/traceable identity distinctions.",
+      "uncertainty": "",
+      "conditions": [
+        "A domain overrides defaults of its bound runtime realisation."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_487b998011fc8bbf86f5688efd791a52",
+        "prior_3cbeb196d9da340381b2cca3bb1e434d"
+      ]
+    },
+    {
+      "key": "prior_2438fabfbaa9da02436f9cdb8e1799f1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F8.%20Parsing",
+          "start_line": 316,
+          "end_line": 327,
+          "quote": "- a parser distinguishes concrete identity kinds from grouping labels;\n- family markers, display aliases and prose headings are not promoted\n  into executable or traceable object identities unless the governing\n  identity law says they are first-class identities of their own kind;\n  and\n- acceptance criteria, test cases and similar subordinate identities are\n  not collapsed into requirement identity merely because their readable\n  form is derived from a requirement token.\n\nIf a domain needs family identities, it should publish them explicitly as\n`requirement_family` identities rather than rely on string-shape\naccidents (P3)."
+        }
+      ],
+      "statement": "Parsers distinguish concrete identity kinds from grouping labels. They do not promote family markers, display aliases or prose headings into executable/traceable identities merely from matching shape. Acceptance criteria, tests and similar subordinate identities do not collapse into requirement identity because their readable form derives from a requirement token. A domain needing family identities should explicitly publish requirement_family identities.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [
+        "A family marker, display alias or prose heading may be first-class only when governing identity law declares it an identity of its own kind."
+      ],
+      "applies_to_keys": [
+        "prior_0d44548345ed4f30503f0de96135ec17",
+        "prior_006ca6488f42ba4e76c541e522c13142"
+      ]
+    },
+    {
+      "key": "prior_9a96e973784d4c08bba2de34d614afa1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F10.%20Minimum%20questions",
+          "start_line": 352,
+          "end_line": 363,
+          "quote": "1. What authority owns this identity?\n2. What kind of thing does this identity denote?\n3. What scope makes it unique?\n4. Is the identity stable enough for the governed lifecycle?\n5. Is the readable form only convenience, or is it being over-trusted?\n6. Can a parser distinguish families, members, aliases and revisions\n   without ambiguity?\n7. Is this an engine or runtime identity, a domain semantic identity, or\n   a release identity?\n\nIf those questions cannot be answered, the identity surface is\nunder-defined (P3)."
+        }
+      ],
+      "statement": "Ask all seven identity-surface questions: owner; kind; uniqueness scope; lifecycle stability; readability convenience versus over-trust; unambiguous family/member/alias/revision parsing; runtime/domain/release category. If they cannot be answered, the surface is under-defined.",
+      "uncertainty": "",
+      "conditions": [
+        "Defining or auditing an identity surface."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_3cbeb196d9da340381b2cca3bb1e434d"
+      ]
+    },
+    {
+      "key": "prior_0243ccc6636a6da115e82f2c52146818",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F12.%20Consequence%20for%20implementations",
+          "start_line": 393,
+          "end_line": 401,
+          "quote": "Implementations should prefer typed identity readers, explicit\nidentity-kind distinctions, and source-of-authority parsing contracts.\nThey should avoid broad regex mining as the real identity model, silent\ncoercion between family identities and concrete identities, and leaking\nengine identity grammar into domain semantics (P3, P1).\n\nIf a project currently relies on those patterns, the first lawful repair\nis to contain the immediate bug. The enduring repair is to publish\nexplicit identity law and move implementations onto it (P3, P0)."
+        }
+      ],
+      "statement": "Implementations should prefer typed readers, explicit kind distinctions and source-of-authority parsing contracts, and should avoid regex mining as the real model, silent family/concrete coercion and engine-grammar leakage into domain semantics. For a project relying on those patterns, the first lawful repair contains the immediate bug; the enduring repair publishes identity law and moves implementations onto it. This is the member's implementation policy, applied under project design authority.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_0d44548345ed4f30503f0de96135ec17",
+        "prior_3cbeb196d9da340381b2cca3bb1e434d"
+      ]
+    },
+    {
+      "key": "prior_fe28a79a719147ed8d286cb22fb57def",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 317,
+          "end_line": 321,
+          "quote": "ABG may govern, invoke, observe and classify the traversal; it\ndoes not own the worker's hidden constructive path. Whatever the traversal\nboundary does not constrain remains worker-internal HOW: hidden LLM\nreasoning, heuristic search, domain implementation strategy, tool-local\nexecution detail and product-specific business choice (P0, P6)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 119,
+          "end_line": 119,
+          "quote": "the worker cannot close the edge, emit runtime events, mutate ledgers or decide re-entry, because its output is a candidate until evaluated and its report is an observation, not authority"
+        }
+      ],
+      "statement": "The vector declares admissible external space; unconstrained internal solution path remains worker HOW. ABG may govern, invoke, observe and classify, but neither it nor the framework thereby executes or owns the domain's internal strategy. Worker output remains a candidate until evaluated and a report remains observation: the worker cannot close an edge, emit runtime events, mutate ledgers or decide re-entry. Neither worker nor human receives ambient authority from F_P/F_H classification.",
+      "uncertainty": "",
+      "conditions": [
+        "Work occurs within one declared ODD vector or edge traversal."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_4affde1b64c0d4f4480ba70fa8f30aea",
+        "prior_eac7cf8a2799092be0571f0c747f7bb9",
+        "prior_f688644e4a37c1669dd925477341038c",
+        "prior_7401bbbf535fd5e1e16b14036ff56999"
+      ]
+    },
+    {
+      "key": "prior_2d1f9dc4af744e908391a605b4ae61d1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+          "start_line": 407,
+          "end_line": 418,
+          "quote": "Preserved meaning: the outer vector stays the\ncallable contract; the inner steps conserve it and every applicable\ninvariant; and each inner function's input satisfies its declared domain\nand preconditions, as AC-016 requires. Narrowed scope: one published outer\nvector and its declared inner workflow, whose retained functions should\ndeclare `environment.requires`, `environment.provides` and\n`environment.carries` (§11.8); a later function's declared domain is its\n`environment.requires`, which may require any typed binding available in\nthe cumulative carried environment, not only the immediately previous\noutput. Invalidation: a change to ACTIVATION §4, to §11.8, to the outer\nvector or to a function's environment declaration invalidates the binding\nuntil it is evaluated again (P4a, P4b, P1)."
+        }
+      ],
+      "statement": "Inner steps conserve the outer callable contract and every applicable invariant; each input satisfies its declared domain and preconditions. Earlier outputs are read only through the declared adapter/environment contract, and each published inner boundary is governed by the loop as the outer boundary is. Retained functions should declare requires/provides/carries. Changes to ACTIVATION §4, §11.8, the outer vector or any function environment declaration invalidate the binding until re-evaluated.",
+      "uncertainty": "The full AC-016 and §11.8 laws are not supplied.",
+      "conditions": [
+        "A graph function refines a published outer vector into an inner workflow."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_8a952a4985c21b8548d5a4551258e042",
+        "prior_4affde1b64c0d4f4480ba70fa8f30aea",
+        "prior_bf756d2b9147004f7d63d89815cb85ca"
+      ]
+    },
+    {
+      "key": "prior_32256f5ce033f22e7326030b34f7c6a6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F6.%20Product%20boundary",
+          "start_line": 429,
+          "end_line": 438,
+          "quote": "The graph-native product and the project built with it are distinct. The\ninstalled product provides the method, the runtime and the carrier\nsurfaces; it does not provide the target project's business domain. The\ninstalled product must not assume prior knowledge of the target project's\ndomain (P6, P3).\n\nA clean install means: install the graph-native ODD product; author the\ntarget project's intent, product definition, requirements and realisation\nroot; traverse the product graph to build the target project's domain\noutputs (P0, P6)."
+        }
+      ],
+      "statement": "Installed builder and target project remain distinct. The installed product must not assume prior knowledge of the target domain. A source-defined clean install proceeds from installing the ODD product to authoring target intent, definition, requirements and realisation root, then traversing its graph to produce target-domain outputs. This sequence is represented, not performed.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_7b9b61c944808f060ef20bc9a9b82c30",
+        "prior_796a8085272464e74aa0b22d9354d8cb"
+      ]
+    },
+    {
+      "key": "prior_a77fa506f8de030c7cc6f3847a01b919",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F7.%20Self-host%20boundary",
+          "start_line": 464,
+          "end_line": 474,
+          "quote": "Self-hosting is lawful only while the installed product in use stays\ndistinct from the product under development. A released installed product\nmay help build the next version of itself, but the two must not collapse\ninto one mixed authority surface. The distinction is between the installed\nreleased builder and the in-development product being built, the same\nboundary one compiler release keeps when it builds the next (P6, P3).\n\nThe framework must preserve distinct territories, authority surfaces,\nruntime state, and project-owned specification and build-tenant surfaces. If\nautomation, runtime resolution or qualification silently merges those\nsurfaces, the framework violates this profile (P6, P3)."
+        }
+      ],
+      "statement": "Self-hosting is lawful only while released installed builder and in-development product remain distinct, with distinct territories, authority surfaces, runtime state and project-owned specification/build-tenant surfaces. Automation, runtime resolution or qualification that silently merges them violates the profile.",
+      "uncertainty": "",
+      "conditions": [
+        "The installed released product helps build a subsequent version of itself."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_7b9b61c944808f060ef20bc9a9b82c30",
+        "prior_796a8085272464e74aa0b22d9354d8cb"
+      ]
+    },
+    {
+      "key": "prior_7b9da11004b859b57d63097f51a26b29",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F8.%20Responsibility%20layers%20and%20local%20binding",
+          "start_line": 490,
+          "end_line": 500,
+          "quote": "In one concrete product each active layer should bind explicitly to local\ntyped assets or typed nodes, public graph-function carriers, the required\ncarried environment, proof or closure surfaces, and projection or query\nsurfaces. An audit should therefore distinguish clearly between shared\nODD structural law and local product semantic bindings (P3, P6).\n\nA product that copies another product's local asset names without\nsemantic need is not reusing the method; that is accidental doctrine\ntransfer. A product that declares a capability in prose but does not bind\nit into typed assets, graph functions and proof lanes has under-built that\ncapability (P1, P2)."
+        }
+      ],
+      "statement": "Each active layer should explicitly bind local typed assets/nodes, public graph-function carriers, required carried environment, proof/closure surfaces and projection/query surfaces; audits should distinguish shared law from local semantics. Copying another product's asset names without semantic need is accidental doctrine transfer, not method reuse. A prose-only capability lacking typed assets, graph functions and proof lanes is under-built.",
+      "uncertainty": "",
+      "conditions": [
+        "A capability layer is active in a concrete product."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_84dcf51004fa90f680da8c7bf39066d9",
+        "prior_dfebaec0e3fc6f2d93521655089f3a54"
+      ]
+    },
+    {
+      "key": "prior_b2e3be0d4f22b02ccf66366d829ea3d9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is",
+          "start_line": 572,
+          "end_line": 584,
+          "quote": "At\nthe universal layer this profile commits to the authority split (one WHAT\nsurface, one HOW relation, runtime owned by ABG, product owning domain\nmeaning) and not to directory names; existing projects and other ODD\nproduct types may use another layout that keeps the split (P6, P1).\n\nThe product definition's `reference_frame_bases` bindings carry the\nevaluation-frame meaning of [REFERENCE_FRAME](REFERENCE_FRAME.md). An ABG\nruntime `Frame`, attention frame, zoom frame or overlay frame stays an\nABG-owned runtime contract in WHAT and HOW; its name does not enrol it in\nthe project's collective evaluation frame set. A declared evaluation frame\nmay inspect such a runtime frame as its exact subject or coordinate\nwithout collapsing the two (P1, P3)."
+        }
+      ],
+      "statement": "Read ownership strictly: one WHAT surface, one HOW relation, ABG runtime ownership and product domain-meaning ownership; stdo_<label>.json binds actual locations. reference_frame_bases carries evaluation-frame meaning. ABG Frame/attention/zoom/overlay frames remain runtime contracts and are not enrolled as evaluation frames by name. An evaluation frame may inspect a runtime frame as exact subject or coordinate without collapsing their identities.",
+      "uncertainty": "REFERENCE_FRAME's full evaluation-frame definition is not supplied.",
+      "conditions": [],
+      "exceptions": [
+        "Existing projects and other ODD product types may use different layouts preserving the authority split."
+      ],
+      "applies_to_keys": [
+        "prior_dfebaec0e3fc6f2d93521655089f3a54",
+        "prior_68488250933586b7cf75d39d4f345fde",
+        "prior_e8fba98a082000f2293a25bde2a6c895",
+        "prior_7401bbbf535fd5e1e16b14036ff56999"
+      ]
+    },
+    {
+      "key": "prior_85e060370f3efcfd1063203ab63e7920",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.1%20Typed%20assets%20and%20nodes%20are%20explicit",
+          "start_line": 626,
+          "end_line": 630,
+          "quote": "The product works over explicit typed assets or typed nodes. It does not\nwork over one hidden project blob, one giant mutable workspace object or one\nundocumented service payload. Concrete assets must bind explicitly into\ntyped domain boundaries. Where an asset is a real produced or consumed boundary,\nits `asset_surface` is declared (P3)."
+        }
+      ],
+      "statement": "The product operates on explicit typed assets/nodes, not a hidden blob, giant mutable workspace object or undocumented service payload. Concrete assets must explicitly bind typed domain boundaries. Every actual produced/consumed boundary declares asset_surface.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_dfebaec0e3fc6f2d93521655089f3a54",
+        "prior_845e0e60b60e69f173452f33a26b882d"
+      ]
+    },
+    {
+      "key": "prior_c800611d14a51e06a8f3c630cb012e95",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2%20Graph%20functions%20are%20the%20primary%20constructive%20carrier",
+          "start_line": 634,
+          "end_line": 638,
+          "quote": "Every operative constructive step is carried by one named `GraphFunction`\nor one lawful graph-function composition. The real carrier is never left\ninside orchestration loops, bespoke Python pipeline runners, controller\nscripts, or service methods that only happen to call GTL-adjacent helpers\n(P0, P4a)."
+        }
+      ],
+      "statement": "Every operative constructive step has one named GraphFunction or one lawful graph-function composition. Its real carrier cannot remain hidden in orchestration loops, bespoke pipeline runners, controller scripts or service methods merely calling GTL-adjacent helpers.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_8a952a4985c21b8548d5a4551258e042",
+        "prior_dfebaec0e3fc6f2d93521655089f3a54",
+        "prior_66f74c8f29b280b5c3f16e2a8b3d89fe"
+      ]
+    },
+    {
+      "key": "prior_8c8f0068376299a9f2b6dd24b9b2d519",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2A%20Outcome-first%20realisation%20order",
+          "start_line": 642,
+          "end_line": 656,
+          "quote": "Because this profile makes an edge traversal the unit of compute, an ODD\nproduct must use that unit of compute to build its own operative framework\nbehaviour. The required order is: declare the outcome\ntraversal over typed assets; publish the declarative GTL/ABG carrier\nstructure; implement only the minimal imperative adapter code that remains\nnecessary (P0, P6).\n\nAn outcome traversal declares the governed movement before\nimplementation: source asset type; target asset type; edge traversal or\ngraph-function name; closure or evaluation obligation; lineage obligation;\nambiguity or gap obligation; allowed `F_D`, `F_P` and `F_H` bindings. The\ndeclarative carrier structure is GTL graph functions, typed nodes,\nvectors, operator bindings, evaluator bindings, carrier schemas, policy\ndeclarations, projection declarations and lineage ledger declarations\n(P0, P3)."
+        }
+      ],
+      "statement": "Use edge traversal to build operative framework behaviour, in order: declare outcome traversal over typed assets; publish declarative GTL/ABG carriers; implement only remaining necessary minimal imperative adapters. Before implementation declare source/target types, edge/function name, closure/evaluation, lineage, ambiguity/gap obligations and allowed F_D/F_P/F_H bindings. Declarative structure comprises graph functions, typed nodes/vectors, operator/evaluator bindings, carrier schemas, policy/projection declarations and lineage ledgers. Imperative-first behaviour later described in GTL is ODD-shaped but not yet ODD-built.",
+      "uncertainty": "",
+      "conditions": [
+        "Building operative ODD framework behaviour."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_dfebaec0e3fc6f2d93521655089f3a54",
+        "prior_4affde1b64c0d4f4480ba70fa8f30aea",
+        "prior_8a952a4985c21b8548d5a4551258e042",
+        "prior_81f6906b71f893b3c94e1dfc03ff9522"
+      ]
+    },
+    {
+      "key": "prior_516f470b439e7bc5b48e8980b3552c57",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.3%20The%20function%20catalogue%20is%20published",
+          "start_line": 669,
+          "end_line": 672,
+          "quote": "The live line must publish a machine-readable function catalogue. At\nminimum each retained function should expose its name, inputs, outputs,\nintent, and public or helper role. A callable surface that exists only in\nprose or in prompt memory leaves the product under-built (P6, P3)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.4%20The%20GTL%20module%20is%20the%20operative%20publication%20surface",
+          "start_line": 676,
+          "end_line": 680,
+          "quote": "The product must publish the public graph-function carriers, the graph or\ngraphs those carriers traverse, typed node and vector surfaces, and the\nsemantic jobs or equivalent outer callable contracts bound to the public\ncarrier. Callers are never bound directly to hidden inner vectors (P4a,\nP3)."
+        }
+      ],
+      "statement": "The live line must publish a machine-readable function catalogue; each retained function should expose at least name, inputs, outputs, intent and public/helper role. Prose/prompt-only callable surfaces leave the product under-built. Publish public carriers, traversed graphs, typed node/vector surfaces and bound semantic jobs/equivalent outer contracts. Publish live refined inner boundaries explicitly through lawful GTL surfaces; callers always bind the outer public contract, never hidden inner vectors.",
+      "uncertainty": "",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_39e42e814d731b3e0b9630ddf1b8e191",
+        "prior_81f6906b71f893b3c94e1dfc03ff9522",
+        "prior_8a952a4985c21b8548d5a4551258e042"
+      ]
+    },
+    {
+      "key": "prior_9a81c528871d81c068e977c18127c3d7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 127,
+          "end_line": 127,
+          "quote": "every closure decision and next-action selection is reproducible by replay from carriers that each reference their causal predecessors"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 126,
+          "end_line": 126,
+          "quote": "no edge closes from an artifact, a worker report, process success or liveness alone; closure is a fold over admitted evidence, the workspace counts only through the ledger, and an evaluator attends only to admitted ledger rows reachable through declared lineage"
+        }
+      ],
+      "statement": "Artifacts, reports, process success and liveness alone close no edge. Closure folds admitted evidence; workspace counts only through the ledger, and evaluation attends only to admitted ledger rows reachable through declared lineage. Every closure-relevant callout is admitted to immutable ledger/event log. Corrections append or supersede without rewriting and preserve corrected identity. Every closure decision and next-action selection is replay-reproducible from carriers naming causal predecessors. Model synthesis, gap discovery, next-action selection and action evaluation retain separate authorities; each design, ticket, module or proof names the function it implements or consumes.",
+      "uncertainty": "Ledger fields, replay inputs and detailed A0–A16 contracts are absent.",
+      "conditions": [
+        "Applying the source-described ODD constructive evaluation loop."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_ccf788aa3cfe567da2d3eff370213cba",
+        "prior_eac7cf8a2799092be0571f0c747f7bb9"
+      ]
+    },
+    {
+      "key": "prior_8b206fb7fb09173573d49b3ac0ff8085",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 129,
+          "end_line": 129,
+          "quote": "every action binds the current gap to exact target assets and obligations before invocation, and only published lawful actions are ranked"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 128,
+          "end_line": 128,
+          "quote": "such work returns control without failure classification, keeping the same edge and a replay-visible resume basis"
+        }
+      ],
+      "statement": "Each action binds current gap to exact target assets/obligations before invocation; only published lawful actions are ranked. The selected outcome bounds the loop. After a terminal condition, no further material work is selected without another admitted basis. Reprice requests constitutional re-entry and selects nothing. Lawful but undecided work yields control without failure classification, preserving the same edge and replay-visible resume basis; yield differs from retry, block and timeout. Edge closure is evidence toward Product acceptance, not acceptance.",
+      "uncertainty": "The supplied table does not enumerate terminal conditions, full yield protocol or all repricing relations.",
+      "conditions": [
+        "Selected-outcome-bounded work is evaluated for continuation or closure."
+      ],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_ccf788aa3cfe567da2d3eff370213cba",
+        "prior_dd4c6b532dec6f332c60a24617ffac0a"
+      ]
+    },
+    {
+      "key": "prior_3add900aa6d324c8b551be4d5e28e6b1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 130,
+          "end_line": 130,
+          "quote": "a closure decision answers the edge predicate and is not a disposition of ACTIVATION §3, which answers the acceptance predicate, so neither counts toward the other; selection data decides no predicate, so it maps to no core value, while each typed no-action decides that no published lawful action can be selected and maps by its cause, and a closure decision it follows keeps its own value for the edge predicate"
+        }
+      ],
+      "statement": "Closure decisions form a closed sum type and evaluate_next is total. Every closure decision and audit outcome maps to exactly one core value for a named predicate, including cause when cause decides the value. Closure concerns an edge predicate; ACTIVATION disposition concerns acceptance; neither counts toward the other. Selection data has no core value because it decides no predicate. Typed no-action decides that no published lawful action can be selected and maps by cause; any preceding closure decision retains its own edge-predicate value. Product owns priority policy.",
+      "uncertainty": "Seven closure decisions and the two no-action causes are referenced but not enumerated; no mappings beyond supplied audit mappings are invented.",
+      "conditions": [],
+      "exceptions": [],
+      "applies_to_keys": [
+        "prior_ccf788aa3cfe567da2d3eff370213cba",
+        "prior_f410088881523b5ea81f03f38d542d3b"
+      ]
+    },
+    {
+      "key": "prior_48aef1f78365210126a6b33c4abfc0bc",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 138,
+          "end_line": 138,
+          "quote": "negative evidence for a boundary exercises the supported authority path with that input invalidated and shows refusal before the prohibited effect"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 141,
+          "end_line": 141,
+          "quote": "a refined inner chain closes the enclosing carrier only when the enclosing contract still holds after fold-back and zoomed and unzoomed views agree"
+        }
+      ],
+      "statement": "Every automated move must be possible for an actor holding only declared surfaces; agentic artifacts take effect only through admission against deterministic criteria, and conformance evidence is not ratification. Negative evidence invalidates the real authority-bearing input on the supported path and demonstrates refusal before prohibited effect; manufactured refusal/event/gap/verdict proves nothing about that path, and source/package/install/runtime absence are distinct claims. Decisive proof uses an installable development form where one exists; isolation/proving-lane provisions remain recommendations. Refined inner chains close enclosing carriers only if outer contract survives fold-back and zoomed/unzoomed views agree. A live requirement without a proof witness keeps the enclosing carrier open until realised or owner-deferred/repriced out of the active branch. Scenario bundles should clarify boundary, assets, vectors, paths and closure evidence; products choose scenarios and appropriate witnesses.",
+      "uncertainty": "Full manual sequence, negative-test mechanism, installed-development rule and zoom/scenario clauses are outside the supplied excerpt.",
+      "conditions": [
+        "Applying the foundation table's manual, negative-proof, installed-development or refinement-convergence rules."
+      ],
+      "exceptions": [
+        "Dogfooding applies only to a product providing this profile's framework behaviour; installed-development decisive proof applies where an installable development form exists."
+      ],
+      "applies_to_keys": [
+        "prior_dfebaec0e3fc6f2d93521655089f3a54",
+        "prior_8a952a4985c21b8548d5a4551258e042",
+        "prior_7b9b61c944808f060ef20bc9a9b82c30"
+      ]
+    }
+  ],
+  "latitude": [
+    {
+      "key": "prior_492bc2fd0a13ff0d85c76bb5f54252ca",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position",
+          "start_line": 31,
+          "end_line": 36,
+          "quote": "- the same literal token may be lawful in different scopes when its\n  authority and kind differ;\n- one string format is not sufficient to define identity across all\n  products and runtime surfaces; and\n- a human-readable form may help recognition, but readability is\n  secondary to uniqueness and stable governed meaning."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F3.%20Readable%20and%20opaque%20identity",
+          "start_line": 175,
+          "end_line": 179,
+          "quote": "- a GUID is lawful even when it carries no human meaning;\n- a readable identity is lawful only if it still preserves uniqueness in\n  scope; and\n- no reader should infer that a readable identity is safer or more\n  authoritative than an opaque one merely because it looks meaningful."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_592f428587096675d25235df24f32725"
+      ],
+      "allowed": [
+        "Opaque GUID/UUID identity without human meaning.",
+        "Readable identity only while preserving scoped uniqueness.",
+        "Hybrid readable/opaque identity.",
+        "Reuse of a literal token in different scopes when authority and kind differ."
+      ],
+      "forbidden": [
+        "Treating one string format as sufficient across all products/runtime surfaces.",
+        "Inferring greater safety or authority merely from readability; the source states this as a should-not recommendation."
+      ]
+    },
+    {
+      "key": "prior_43819086a3272e57931e4ad5d685f4b1",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FScoped%20identity",
+          "start_line": 108,
+          "end_line": 110,
+          "quote": "Optional\nadditional coordinates may include parent scope, revision, publication\nversion and temporal coordinates (P3)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_592f428587096675d25235df24f32725"
+      ],
+      "allowed": [
+        "Additional coordinates may include parent scope, revision, publication version and temporal coordinates."
+      ],
+      "forbidden": []
+    },
+    {
+      "key": "prior_d7d6a6e6a536dfc002cf75323b9989ae",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F6.%20Authority%20identity%20and%20conservation%20%28STDO-UP-004%29",
+          "start_line": 240,
+          "end_line": 243,
+          "quote": "Human authority may act directly or through an explicitly admitted\nbounded proxy. Proxy actor identity and human-authority identity remain\ndistinct; a profile's own surfaces may project the human-authority\nrelation under that profile's term (PROFILES)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_413efc4ed18e10f86b5c76f1f98556e0",
+        "prior_0ed41260452a87de6836fa5047cb79ce"
+      ],
+      "allowed": [
+        "Human authority may act directly or through an explicitly admitted bounded proxy.",
+        "A profile may project the human-authority relation on its own surfaces under its own term."
+      ],
+      "forbidden": [
+        "Collapsing proxy actor identity into human-authority identity.",
+        "Widening a ruling by recording it.",
+        "Treating proxy self-review as independent or conferring unrelated runtime/domain authority."
+      ]
+    },
+    {
+      "key": "prior_7c40146fda5bfd9091fa7985425f5946",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F7.%20Default%20formats%20and%20overrides%2FOverride%20publication%20surface",
+          "start_line": 295,
+          "end_line": 304,
+          "quote": "Suitable publication surfaces include (P6, P3):\n\n- the product definition (conventionally `PRODUCT.md`) for the active\n  identity kinds and their governed role;\n- requirement surfaces for obligations around identity stability or\n  uniqueness;\n- design or ADR surfaces for parsing, serialisation or normalisation\n  rules; and\n- a dedicated identity registry surface, such as a project's own\n  `IDENTITY.md`, when the domain has enough complexity to justify one."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_487b998011fc8bbf86f5688efd791a52"
+      ],
+      "allowed": [
+        "Product definition, conventionally PRODUCT.md, for active identity kinds and governed role.",
+        "Requirement surfaces for stability/uniqueness obligations.",
+        "Design or ADR surfaces for parsing, serialisation or normalisation rules.",
+        "Dedicated project identity registry, such as IDENTITY.md, when domain complexity justifies it."
+      ],
+      "forbidden": [
+        "An override existing only as implementation-code inference or hidden regex assumptions."
+      ]
+    },
+    {
+      "key": "prior_db1bee36a452fd10ba89dd0771cabc47",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F11.%20Examples%2FLawful",
+          "start_line": 371,
+          "end_line": 379,
+          "quote": "- runtime event identities generated as UUIDs by a consumer-bound runtime\n  realisation;\n- requirement identities such as `REQ-F-CAPABILITY-001` when the domain\n  defines them as concrete `requirement` identities;\n- family identities such as `REQ-F-CAPABILITY` when the domain defines\n  them separately as `requirement_family`; and\n- acceptance-criterion identities such as `REQ-F-CAPABILITY-001-AC-01`\n  when the domain defines them as a separate `acceptance_criterion`\n  identity kind."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F11.%20Examples%2FUnlawful",
+          "start_line": 385,
+          "end_line": 389,
+          "quote": "- treating `REQ-F-CAPABILITY-*` or `REQ-F-CAPABILITY` as a concrete\n  requirement merely because a broad regex matched it;\n- using release version as the identity of every live source object; and\n- assuming a readable string is globally unique without its authority\n  and kind."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_592f428587096675d25235df24f32725",
+        "prior_0d44548345ed4f30503f0de96135ec17"
+      ],
+      "allowed": [
+        "Consumer-bound runtime realisation generates event UUIDs.",
+        "REQ-F-CAPABILITY-001 when domain law defines concrete requirement kind.",
+        "REQ-F-CAPABILITY when separately defined as requirement_family.",
+        "REQ-F-CAPABILITY-001-AC-01 when separately defined as acceptance_criterion."
+      ],
+      "forbidden": [
+        "Treating REQ-F-CAPABILITY-* or REQ-F-CAPABILITY as a concrete requirement merely because a broad regex matched.",
+        "Using release version as every live source object's identity.",
+        "Assuming readable-string global uniqueness without authority and kind."
+      ]
+    },
+    {
+      "key": "prior_ef8c4e09ed20baa54d59e50231f416a6",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F6.%20Product%20boundary",
+          "start_line": 451,
+          "end_line": 457,
+          "quote": "- its constitutional surfaces under SPEC_METHOD, where `GOALS.md`,\n  `INTENT.md`, `PRODUCT.md` and `requirements/` are the default\n  software-development scaffold and not mandatory names;\n- one or more realisation roots bound through `how.build_tenants`, where\n  `build_tenants/` is the default root name for software-development ODD\n  products and existing projects and other domain types may use their own\n  locations;"
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is",
+          "start_line": 575,
+          "end_line": 576,
+          "quote": "existing projects and other ODD\nproduct types may use another layout that keeps the split (P6, P1)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_796a8085272464e74aa0b22d9354d8cb",
+        "prior_dfebaec0e3fc6f2d93521655089f3a54",
+        "prior_68488250933586b7cf75d39d4f345fde",
+        "prior_e8fba98a082000f2293a25bde2a6c895"
+      ],
+      "allowed": [
+        "Existing projects and other domain types use their own constitutional and realisation locations.",
+        "GOALS.md, INTENT.md, PRODUCT.md, requirements/, specification/ and build_tenants/ are software-development defaults, not universal mandatory names.",
+        "Alternate layout retains one WHAT surface, one HOW relation, ABG runtime ownership and product domain meaning."
+      ],
+      "forbidden": [
+        "Substituting directory-name coincidence for the declared authority split."
+      ]
+    },
+    {
+      "key": "prior_adf3cf48718ef9b713153c5d595685cd",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2A%20Outcome-first%20realisation%20order",
+          "start_line": 658,
+          "end_line": 665,
+          "quote": "Imperative adapter code is lawful only where it transports or persists\nfacts: file or network IO; CLI or API transport; event persistence;\nruntime invocation; projection rendering; tool execution already admitted\nby a declared traversal. Imperative code must not own domain meaning,\nsemantic target movement, step selection, closure semantics, lineage truth\nor constructive workflow truth. Framework behaviour implemented\nimperatively first and only later described in GTL vocabulary is\nODD-shaped but not yet ODD-built (P6, P0)."
+        }
+      ],
+      "applies_to_keys": [
+        "prior_dfebaec0e3fc6f2d93521655089f3a54",
+        "prior_81f6906b71f893b3c94e1dfc03ff9522"
+      ],
+      "allowed": [
+        "Imperative adapters transport or persist facts through file/network IO, CLI/API transport, event persistence, runtime invocation, projection rendering or tool execution already admitted by a declared traversal."
+      ],
+      "forbidden": [
+        "Imperative ownership of domain meaning, semantic target movement, step selection, closure semantics, lineage truth or constructive workflow truth."
+      ]
+    }
+  ],
+  "residuals": [
+    {
+      "key": "prior_eef61d5f2765113f52df564ceb368867",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+          "start_line": 342,
+          "end_line": 343,
+          "quote": "| Indexed term | Source context | Owning concept clause | Relation clause |\n|---|---|---|---|"
+        }
+      ],
+      "subject_key": "prior_a6fe8a828fd36e326960c62ade24fc8b",
+      "uncertainty": "Most FOUNDATIONS, ACTIVATION, EVALUATION, CONFORMANCE, PROFILES, DESIGN_MODULE and UX owning clauses and referenced glossary §§2, 5 and 8 are not supplied.",
+      "consequence": "The inventories retain named terms, source owners, explicit distinctions and relation locators only. 'none' means no relation clause listed, not proof that no relationship exists. No full external definitions or result mappings are fabricated."
+    },
+    {
+      "key": "prior_219df7d6fb1a39fec3c630ed20d87add",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F17.%20Labels%20with%20several%20senses",
+          "start_line": 381,
+          "end_line": 381,
+          "quote": "| Label | Where this use occurs (locator, not a definition) | Owning clause |"
+        }
+      ],
+      "subject_key": "prior_13b6172ff45e0c256887788162a4e35c",
+      "uncertainty": "The section expressly supplies locators rather than definitions; most owning clauses and the referenced basis-inventory template are absent.",
+      "consequence": "The listed uses remain distinct clause-owned senses; no shared result algebra, admission rule or template workflow is inferred or executed from matching labels."
+    },
+    {
+      "key": "prior_b0143bab9f9fe7420809442402f96c47",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY",
+          "start_line": 15,
+          "end_line": 20,
+          "quote": "The identity\nof one calculus edition is\n[AXIOMATIC_CALCULUS §8](AXIOMATIC_CALCULUS.md#8-calculus-identity), which\nthis member does not restate. Release identity, its names and its forms are\nthe release law of [RELEASE](RELEASE.md); this member states only the\nboundary between it and object identity."
+        }
+      ],
+      "subject_key": "prior_856015343871c433411a25f5b43fe66d",
+      "uncertainty": "External owning definitions and laws are not provided; graph discovery cannot substitute for them.",
+      "consequence": "IDENTITY's stated law and owner boundaries are retained without restating absent Object/Authority/Basis definitions, calculus-edition identity, release forms, RF-003 or WORLD_MODEL refinement."
+    },
+    {
+      "key": "prior_7c6f641adf802c5ecbe9f0130a1b32a7",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 91,
+          "end_line": 92,
+          "quote": "- Row 11, the minimum questions: no separate consumer applies. The questions are asked by whoever defines or audits an identity surface, each applying a rule traced above; the seven questions are this member's choice, and no section of another member names them.\n- Row 12, the consequence for implementations: no separate consumer applies. The preference for typed readers and the two-step repair are a policy of this member for implementations; a project that repairs an implementation applies them under its own design authority, and no section of another member names this section."
+        }
+      ],
+      "subject_key": "prior_8b02973e1156879c7d2e0e2a6c603ecd",
+      "uncertainty": "The five-family representation does not fully materialise the table's pillar annotations and all clause-level consumer loci. Most underlying principle and consumer sections are unavailable.",
+      "consequence": "No proof of derivation or governing edge to an unavailable endpoint is asserted. Detailed routing can be re-entered at lines 58–69 and 81–92. Explicit negative routing remains meaningful: readability and release-boundary rows have only named local consumers; minimum questions and implementation policy have no separate consumer; RELEASE and SPEC_METHOD references do not imply application of the release-boundary row."
+    },
+    {
+      "key": "prior_3981582eccc22451ee481ec382596565",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F6.%20Authority%20identity%20and%20conservation%20%28STDO-UP-004%29",
+          "start_line": 243,
+          "end_line": 245,
+          "quote": "A proxy grant names its\ngrantor, actor, subject, scope, permitted and excluded decisions,\nvalidity, delegation rights, revocation and provenance (P6, P3)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 64,
+          "end_line": 64,
+          "quote": "the nine grant fields: this section"
+        }
+      ],
+      "subject_key": "prior_0ed41260452a87de6836fa5047cb79ce",
+      "uncertainty": "The derivation table says nine grant fields, while the prose separately names permitted and excluded decisions; it does not specify whether those share one field.",
+      "consequence": "All listed grant contents are preserved without imposing an invented nine-field schema or dropping a listed content item."
+    },
+    {
+      "key": "prior_69891765879f76a53a3e78fcc6ecc515",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 174,
+          "end_line": 175,
+          "quote": "Each consumer applies the rule and decides nothing the owning section does\nnot (P2, P6)."
+        },
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 192,
+          "end_line": 194,
+          "quote": "Whether a product is built correctly is decided by §11,\n  and whether a move complies by the audit of §9.\n- §20 is a compression of this member and owns no determination (§20)."
+        }
+      ],
+      "subject_key": "prior_a5d43a54e9b6c1b4035264da5197bcbd",
+      "uncertainty": "The 25-row table and consumer inventory at lines 116–170 exceed the compact relation projection. Many cited internal clauses and external sections are not supplied, including exact failure-pattern/checklist contents and their detailed application loci.",
+      "consequence": "All table topics' material rules are retained in concepts/constraints, but the exact row-by-row derivation proof, pillar assignment and full consumer network require source re-entry. Consumer references are applications, not new authority. The table's explicit no-separate-consumer statements are not converted into universal non-dependency claims."
+    },
+    {
+      "key": "prior_9b72eac523a422586e3226aab5de4605",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+          "start_line": 130,
+          "end_line": 130,
+          "quote": "the seven closure decisions, their causes, the two causes of a typed no-action and the default of graph following in A4"
+        }
+      ],
+      "subject_key": "prior_ccf788aa3cfe567da2d3eff370213cba",
+      "uncertainty": "§11.5D/A0–A16, its seven closure decisions, no-action causes, ledger fields, causal carrier schemas, replay inputs, terminal conditions and constitutional equation are not supplied. Five active families cannot instantiate their operational semantics.",
+      "consequence": "No complete closure algebra, evaluator, replay engine or transition system is constructed. Yield/retry/block/timeout, selection/no-action, edge closure and Product acceptance remain distinct. The known audit mappings are preserved; unknown closure mappings remain unresolved."
+    },
+    {
+      "key": "prior_2400fe534819e7d5231ccdc2a97ed229",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+          "start_line": 355,
+          "end_line": 358,
+          "quote": "The source concepts and their\ncontext are owned by\n[SPEC_METHOD §5](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle); this\nprofile owns the targets in the graph-native ODD context (P1, P6)."
+        }
+      ],
+      "subject_key": "prior_4017b7e5758fd54465a17101f370d214",
+      "uncertainty": "FOUNDATIONS P0, SPEC_METHOD §5 and PROFILES §§1–2 are referenced but absent; the selected complete STDO release is a subject-side binding condition, not independently established here.",
+      "consequence": "Source-to-target binding directions and supplied preservation/invalidation conditions are retained. Full semantic equivalence or lawfulness of the specialisations is not certified, and ODD shorthands are not identified with a_c functor kinds."
+    },
+    {
+      "key": "prior_cfe4e71e7ef2362366b715a213e6d7e9",
+      "grounding": [
+        {
+          "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+          "start_line": 401,
+          "end_line": 405,
+          "quote": "This profile declares the\ncumulative carried environment of\n[§11.8](#118-cumulative-environment-law-is-mandatory) as that specialised\ncontract; §11.8 is conserved as profile law and is not generalised into\nthe core."
+        }
+      ],
+      "subject_key": "prior_31591c3d84d1ea89565004b1b7295b63",
+      "uncertainty": "ACTIVATION §4, ODD §11.8 and AC-016 are absent; only their explicitly quoted binding consequences are available.",
+      "consequence": "The declared environment contract, outer-contract conservation and invalidation rules are retained, without inventing missing adapter semantics or evaluating any refinement."
+    }
+  ],
+  "dispositions": [
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F9.%20Build%20tenancy",
+      "decision": "retained",
+      "keys": [
+        "prior_cf938117a20c9f360db7b1eb4dac9fab"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F10.%20Recursive%20product",
+      "decision": "retained",
+      "keys": [
+        "prior_473eda0822eebc7e5f88fcd08e187cbe"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F11.%20Product%20assurance",
+      "decision": "retained",
+      "keys": [
+        "prior_36f76d2fa3e1bfb27c4bf85dea1a565f"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F12.%20Ambiguity%20governance",
+      "decision": "retained",
+      "keys": [
+        "prior_7e8b77ba910a46afc24cda042893086e"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F13.%20World%20model",
+      "decision": "retained",
+      "keys": [
+        "prior_13168a6a9ead3e5e0aa5ba8c2cd27cac"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F14.%20Graph-native%20ODD",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F15.%20Traversal%20occurrence",
+      "decision": "retained",
+      "keys": [
+        "prior_9759f6d31491203f235aec45d8c16a04"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F16.%20Concepts%20of%20members%20without%20a%20declared%20context",
+      "decision": "retained",
+      "keys": [
+        "prior_a6fe8a828fd36e326960c62ade24fc8b",
+        "prior_49133917db2c94cb7000087a71f47c5e",
+        "prior_3da2a4eb8c47933e4c6e745c16195ef2",
+        "prior_9c1b5668d40aed2d3b34a1013a682eb4",
+        "prior_a2f107acde99288ef9dd2a88dd1b0877",
+        "prior_1b8526b8f627ba367270a80d73cdfc63",
+        "prior_eef61d5f2765113f52df564ceb368867"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/GLOSSARY.md#GLOSSARY%2F17.%20Labels%20with%20several%20senses",
+      "decision": "retained",
+      "keys": [
+        "prior_13b6172ff45e0c256887788162a4e35c",
+        "prior_1b8526b8f627ba367270a80d73cdfc63",
+        "prior_219df7d6fb1a39fec3c630ed20d87add"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY",
+      "decision": "retained",
+      "keys": [
+        "prior_856015343871c433411a25f5b43fe66d",
+        "prior_b0143bab9f9fe7420809442402f96c47"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position",
+      "decision": "retained",
+      "keys": [
+        "prior_592f428587096675d25235df24f32725",
+        "prior_6544f5ceb505252cdb38e98868d0bc79",
+        "prior_492bc2fd0a13ff0d85c76bb5f54252ca"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F1.%20Position%2FFoundation%20to%20law",
+      "decision": "retained",
+      "keys": [
+        "prior_8b02973e1156879c7d2e0e2a6c603ecd",
+        "prior_f1713246fccd921a058aa03efda29dcd",
+        "prior_7c6f641adf802c5ecbe9f0130a1b32a7",
+        "prior_3981582eccc22451ee481ec382596565"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FScoped%20identity",
+      "decision": "retained",
+      "keys": [
+        "prior_592f428587096675d25235df24f32725",
+        "prior_43819086a3272e57931e4ad5d685f4b1"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FUniqueness",
+      "decision": "retained",
+      "keys": [
+        "prior_6ebce8f4dc21353dc32138ca75c10439"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FType",
+      "decision": "retained",
+      "keys": [
+        "prior_969b8675a4a2f8bd8a3b36a5c83ff6bf"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FStability",
+      "decision": "retained",
+      "keys": [
+        "prior_fcee4639f49f2df0aa2fa55cc2f130ad"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F2.%20Core%20law%2FBoundaries%20and%20sufficiency%20claims",
+      "decision": "retained",
+      "keys": [
+        "prior_66dfe66094c11997c7f30e2adfcebb0c",
+        "prior_56f840f046c75cbe5f578321eada0403",
+        "prior_16ee54c4effee94097cefa3650b14d94"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F3.%20Readable%20and%20opaque%20identity",
+      "decision": "retained",
+      "keys": [
+        "prior_492bc2fd0a13ff0d85c76bb5f54252ca"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F4.%20Identity%20hierarchy",
+      "decision": "retained",
+      "keys": [
+        "prior_628ebb39e8881c3e537451819d0b33f2",
+        "prior_3190abadc066b96e52c293ef11094ab0"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F5.%20Authority%20split",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F5.%20Authority%20split%2FEngine-owned%20identity",
+      "decision": "retained",
+      "keys": [
+        "prior_0fa83fdec596671a1df9bd98f5348022",
+        "prior_6544f5ceb505252cdb38e98868d0bc79"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F5.%20Authority%20split%2FDomain-owned%20identity",
+      "decision": "retained",
+      "keys": [
+        "prior_006ca6488f42ba4e76c541e522c13142",
+        "prior_6544f5ceb505252cdb38e98868d0bc79"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F6.%20Authority%20identity%20and%20conservation%20%28STDO-UP-004%29",
+      "decision": "retained",
+      "keys": [
+        "prior_413efc4ed18e10f86b5c76f1f98556e0",
+        "prior_0ed41260452a87de6836fa5047cb79ce",
+        "prior_f5136114f321e84269a3a472f61ac814",
+        "prior_f1713246fccd921a058aa03efda29dcd",
+        "prior_d7d6a6e6a536dfc002cf75323b9989ae",
+        "prior_3981582eccc22451ee481ec382596565"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F7.%20Default%20formats%20and%20overrides",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F7.%20Default%20formats%20and%20overrides%2FDerived%20domain%20overrides",
+      "decision": "retained",
+      "keys": [
+        "prior_487b998011fc8bbf86f5688efd791a52",
+        "prior_00da0796474a9e6a7531f014f8132c66",
+        "prior_f5a7d1f1ed7a57f2ffde296a2002b4e6"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F7.%20Default%20formats%20and%20overrides%2FOverride%20publication%20surface",
+      "decision": "retained",
+      "keys": [
+        "prior_29b9540b790345ab654b8da879d63aa9",
+        "prior_7c40146fda5bfd9091fa7985425f5946"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F8.%20Parsing",
+      "decision": "retained",
+      "keys": [
+        "prior_0d44548345ed4f30503f0de96135ec17",
+        "prior_2438fabfbaa9da02436f9cdb8e1799f1"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F9.%20Release%20version%20boundary",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F10.%20Minimum%20questions",
+      "decision": "retained",
+      "keys": [
+        "prior_3cbeb196d9da340381b2cca3bb1e434d",
+        "prior_9a96e973784d4c08bba2de34d614afa1"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F11.%20Examples",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F11.%20Examples%2FLawful",
+      "decision": "retained",
+      "keys": [
+        "prior_db1bee36a452fd10ba89dd0771cabc47"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F11.%20Examples%2FUnlawful",
+      "decision": "retained",
+      "keys": [
+        "prior_db1bee36a452fd10ba89dd0771cabc47"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/IDENTITY.md#IDENTITY%2F12.%20Consequence%20for%20implementations",
+      "decision": "retained",
+      "keys": [
+        "prior_0243ccc6636a6da115e82f2c52146818"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position",
+      "decision": "retained",
+      "keys": [
+        "prior_b45635a1f0ea19b2701d9a88aa71857a"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F1.%20Position%2FFoundation%20to%20law",
+      "decision": "retained",
+      "keys": [
+        "prior_a5d43a54e9b6c1b4035264da5197bcbd",
+        "prior_ccf788aa3cfe567da2d3eff370213cba",
+        "prior_fe28a79a719147ed8d286cb22fb57def",
+        "prior_9a81c528871d81c068e977c18127c3d7",
+        "prior_8b206fb7fb09173573d49b3ac0ff8085",
+        "prior_3add900aa6d324c8b551be4d5e28e6b1",
+        "prior_48aef1f78365210126a6b33c4abfc0bc",
+        "prior_69891765879f76a53a3e78fcc6ecc515",
+        "prior_9b72eac523a422586e3226aab5de4605"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F2.%20Method%20role",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F3.%20Method%20composition",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F4.%20Method%20library%20classes",
+      "decision": "retained",
+      "keys": [
+        "prior_a1ff9d15d7f9cef03b4fc72c204cdd04"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model",
+      "decision": "retained",
+      "keys": [
+        "prior_f4ab02ff3778dca8d3f25b278e550a77"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FNodes",
+      "decision": "retained",
+      "keys": [
+        "prior_845e0e60b60e69f173452f33a26b882d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FVectors",
+      "decision": "retained",
+      "keys": [
+        "prior_4affde1b64c0d4f4480ba70fa8f30aea",
+        "prior_cab1ec7733972caf0edd5b55395db179"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FProbabilistic%20compute",
+      "decision": "retained",
+      "keys": [
+        "prior_4affde1b64c0d4f4480ba70fa8f30aea",
+        "prior_7041e57978eba9d41b7f61db1ca3b4ed",
+        "prior_eac7cf8a2799092be0571f0c747f7bb9",
+        "prior_f688644e4a37c1669dd925477341038c",
+        "prior_c4e137050be29b55e509bb3284c7bad0",
+        "prior_aeb8d30e922b74cb3478814dc61ad20c",
+        "prior_bcb5caaa1193d2f3fb0301e262cf5adb",
+        "prior_4017b7e5758fd54465a17101f370d214",
+        "prior_4b929bd92e9a2ead6dad1b83ea7106ed",
+        "prior_fe28a79a719147ed8d286cb22fb57def",
+        "prior_2400fe534819e7d5231ccdc2a97ed229"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FGraph%20functions",
+      "decision": "retained",
+      "keys": [
+        "prior_8a952a4985c21b8548d5a4551258e042",
+        "prior_b4bfe7d8f52830a21e97ccd74cb89f5f",
+        "prior_bf756d2b9147004f7d63d89815cb85ca",
+        "prior_f907be66c4917c59efe0bb0d8bf7d717",
+        "prior_31591c3d84d1ea89565004b1b7295b63",
+        "prior_2d1f9dc4af744e908391a605b4ae61d1",
+        "prior_cfe4e71e7ef2362366b715a213e6d7e9"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F5.%20Graph%20model%2FTraversal",
+      "decision": "retained",
+      "keys": [
+        "prior_dd4c6b532dec6f332c60a24617ffac0a"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F6.%20Product%20boundary",
+      "decision": "retained",
+      "keys": [
+        "prior_7b9b61c944808f060ef20bc9a9b82c30",
+        "prior_796a8085272464e74aa0b22d9354d8cb",
+        "prior_32256f5ce033f22e7326030b34f7c6a6",
+        "prior_ef8c4e09ed20baa54d59e50231f416a6"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F7.%20Self-host%20boundary",
+      "decision": "retained",
+      "keys": [
+        "prior_a77fa506f8de030c7cc6f3847a01b919"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F8.%20Responsibility%20layers%20and%20local%20binding",
+      "decision": "retained",
+      "keys": [
+        "prior_84dcf51004fa90f680da8c7bf39066d9",
+        "prior_7b9da11004b859b57d63097f51a26b29"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F9.%20Method%20governance%20and%20audit",
+      "decision": "retained",
+      "keys": [
+        "prior_f410088881523b5ea81f03f38d542d3b"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is",
+      "decision": "retained",
+      "keys": [
+        "prior_dfebaec0e3fc6f2d93521655089f3a54",
+        "prior_b2e3be0d4f22b02ccf66366d829ea3d9",
+        "prior_ef8c4e09ed20baa54d59e50231f416a6"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FProduct%20specification%20%28software-development%20topology%29",
+      "decision": "retained",
+      "keys": [
+        "prior_68488250933586b7cf75d39d4f345fde"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FProduct%20realisation%20%28software-development%20topology%29",
+      "decision": "retained",
+      "keys": [
+        "prior_e8fba98a082000f2293a25bde2a6c895"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FABG",
+      "decision": "retained",
+      "keys": [
+        "prior_7401bbbf535fd5e1e16b14036ff56999",
+        "prior_ef7fd6c4e356998b4a1bba39acb625fb"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FODD%20product",
+      "decision": "retained",
+      "keys": [
+        "prior_dfebaec0e3fc6f2d93521655089f3a54",
+        "prior_5bde76b23f98844933de81b83ec0665d"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F10.%20What%20an%20ODD%20product%20is%2FQuery%20and%20service%20layers",
+      "decision": "retained",
+      "keys": [
+        "prior_66f74c8f29b280b5c3f16e2a8b3d89fe"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law",
+      "decision": "omitted",
+      "keys": [],
+      "reason": "Pending bounded LLM current-source authoring or explicit source-role disposition."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.1%20Typed%20assets%20and%20nodes%20are%20explicit",
+      "decision": "retained",
+      "keys": [
+        "prior_85e060370f3efcfd1063203ab63e7920"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2%20Graph%20functions%20are%20the%20primary%20constructive%20carrier",
+      "decision": "retained",
+      "keys": [
+        "prior_c800611d14a51e06a8f3c630cb012e95"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.2A%20Outcome-first%20realisation%20order",
+      "decision": "retained",
+      "keys": [
+        "prior_8c8f0068376299a9f2b6dd24b9b2d519",
+        "prior_adf3cf48718ef9b713153c5d595685cd"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.3%20The%20function%20catalogue%20is%20published",
+      "decision": "retained",
+      "keys": [
+        "prior_39e42e814d731b3e0b9630ddf1b8e191",
+        "prior_516f470b439e7bc5b48e8980b3552c57"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.4%20The%20GTL%20module%20is%20the%20operative%20publication%20surface",
+      "decision": "retained",
+      "keys": [
+        "prior_81f6906b71f893b3c94e1dfc03ff9522",
+        "prior_516f470b439e7bc5b48e8980b3552c57"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    },
+    {
+      "section_id": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5/source/standards/ODD.md#ODD%2F11.%20Core%20law%2F11.5%20Current%20state%20is%20a%20projection%20over%20constructive%20history",
+      "decision": "retained",
+      "keys": [
+        "prior_34566a52e8fcda8cee3d666e0e57e8ae"
+      ],
+      "reason": "Candidate prior semantics with exact refreshed grounds; pending LLM current-cone conservation judgment."
+    }
+  ],
+  "limitations": [
+    "Source-local semantic proposal; processing coverage and mechanical checks do not establish semantic completeness or acceptance."
+  ]
+}

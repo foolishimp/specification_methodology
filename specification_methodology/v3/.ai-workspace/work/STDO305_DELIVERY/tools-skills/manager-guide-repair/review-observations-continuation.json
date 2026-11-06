@@ -1,0 +1,161 @@
+{
+  "manager_in_project_record": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/stdo",
+  "observations": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/scripts/ac.py",
+        "project",
+        "submit",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit",
+        "--chunk",
+        "chunk-55b32994bb45381a8bad",
+        "--answer",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/fixture-answer.json",
+        "--author",
+        "independent-review-synthetic-route-fixture"
+      ],
+      "name": "explicit-submit",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"submitted\",\n  \"chunk\": \"chunk-55b32994bb45381a8bad\",\n  \"answer_sha256\": \"830178106c2142db060ee3f735b19dff5a5e1058fb8c05e9a579f3974a6cf2d5\"\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/scripts/ac.py",
+        "project",
+        "build",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit"
+      ],
+      "name": "explicit-build",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"profile\": \"a_c.project-build-result/1\",\n  \"status\": \"built\",\n  \"project_sha256\": \"eb66446d75b6da64f8dfc00a78a1e50e12d98909c080fd0cf7186a3b51e596e8\",\n  \"submissions_sha256\": \"afa3b0a3edd7d973efaf0112241abc3966975589ddf62d5ad4bc877e5183863a\",\n  \"subject_id\": \"urn:a-c:project:7a063290104214382a1c3f74746f17746cc7468352715bb633c8f806d51f79b0\",\n  \"method\": {\n    \"manifest_sha256\": \"c98d95d17378d5bb68583d8d78616eb382fb19c07d8a844c1bc074e0128b2729\",\n    \"uri\": \"stdo://releases/v3.0.5/\"\n  },\n  \"mode\": \"direct\",\n  \"upstream_trial\": null,\n  \"source_manifest_sha256\": \"70f2f26990031d76cafffc2c7b04f82b04686dfdeb0ae437cb404fb4019928ce\",\n  \"model\": {\n    \"id\": \"urn:a-c:generation:aa8ae46b3274c530d5597baa:model:753e306dee966af0f18781c7\",\n    \"sha256\": \"e23f6da7c71b3708880ac5b949ff65bcd72c93cbcc24347af4f4531da51e3707\"\n  },\n  \"artifacts\": {\n    \"model\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit/generation/proposal/model.json\",\n    \"carrier\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit/generation/proposal/carrier.json\",\n    \"coverage\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit/generation/proposal/coverage.json\",\n    \"explorer\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit/generation/proposal/explorer.html\"\n  },\n  \"files\": {\n    \"generation/proposal/carrier.json\": \"bf9f6aced071e9a651841911496782b70f9d0d2457a170cfe03814db962fbdb7\",\n    \"generation/proposal/coverage.json\": \"1c4a21a44813219b9cd34cb2abd2ac92c3998f32b20d8250709c0cbcbd36dde2\",\n    \"generation/proposal/explorer.html\": \"5542310f998a32a49ce09fc0fbb78c025d315b6c24cb2946b4c0c053ad59469c\",\n    \"generation/proposal/model.json\": \"82f2f88cfe7284653d4551986331dcc6e37e6cc6b33c7170737e0acbe077e7a9\",\n    \"generation/proposal/result.json\": \"3174e150ddff2df87c0f4f98bf28c6a1ca805316c0b23be44d431227ca2d9268\"\n  },\n  \"formal_gate\": {\n    \"status\": \"not_performed\"\n  },\n  \"claim\": \"Source-grounded proposal and checked carrier; source fidelity, semantic completeness and acceptance remain unassessed.\"\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/scripts/ac.py",
+        "project",
+        "status",
+        "--run",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit"
+      ],
+      "name": "explicit-status-built",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"built\",\n  \"run\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit\",\n  \"subject_id\": \"urn:a-c:project:7a063290104214382a1c3f74746f17746cc7468352715bb633c8f806d51f79b0\",\n  \"method\": {\n    \"manifest_sha256\": \"c98d95d17378d5bb68583d8d78616eb382fb19c07d8a844c1bc074e0128b2729\",\n    \"uri\": \"stdo://releases/v3.0.5/\"\n  },\n  \"pending\": [],\n  \"result\": {\n    \"artifacts\": {\n      \"carrier\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit/generation/proposal/carrier.json\",\n      \"coverage\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit/generation/proposal/coverage.json\",\n      \"explorer\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit/generation/proposal/explorer.html\",\n      \"model\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/run-explicit/generation/proposal/model.json\"\n    },\n    \"claim\": \"Source-grounded proposal and checked carrier; source fidelity, semantic completeness and acceptance remain unassessed.\",\n    \"files\": {\n      \"generation/proposal/carrier.json\": \"bf9f6aced071e9a651841911496782b70f9d0d2457a170cfe03814db962fbdb7\",\n      \"generation/proposal/coverage.json\": \"1c4a21a44813219b9cd34cb2abd2ac92c3998f32b20d8250709c0cbcbd36dde2\",\n      \"generation/proposal/explorer.html\": \"5542310f998a32a49ce09fc0fbb78c025d315b6c24cb2946b4c0c053ad59469c\",\n      \"generation/proposal/model.json\": \"82f2f88cfe7284653d4551986331dcc6e37e6cc6b33c7170737e0acbe077e7a9\",\n      \"generation/proposal/result.json\": \"3174e150ddff2df87c0f4f98bf28c6a1ca805316c0b23be44d431227ca2d9268\"\n    },\n    \"formal_gate\": {\n      \"status\": \"not_performed\"\n    },\n    \"method\": {\n      \"manifest_sha256\": \"c98d95d17378d5bb68583d8d78616eb382fb19c07d8a844c1bc074e0128b2729\",\n      \"uri\": \"stdo://releases/v3.0.5/\"\n    },\n    \"mode\": \"direct\",\n    \"model\": {\n      \"id\": \"urn:a-c:generation:aa8ae46b3274c530d5597baa:model:753e306dee966af0f18781c7\",\n      \"sha256\": \"e23f6da7c71b3708880ac5b949ff65bcd72c93cbcc24347af4f4531da51e3707\"\n    },\n    \"profile\": \"a_c.project-build-result/1\",\n    \"project_sha256\": \"eb66446d75b6da64f8dfc00a78a1e50e12d98909c080fd0cf7186a3b51e596e8\",\n    \"source_manifest_sha256\": \"70f2f26990031d76cafffc2c7b04f82b04686dfdeb0ae437cb404fb4019928ce\",\n    \"status\": \"built\",\n    \"subject_id\": \"urn:a-c:project:7a063290104214382a1c3f74746f17746cc7468352715bb633c8f806d51f79b0\",\n    \"submissions_sha256\": \"afa3b0a3edd7d973efaf0112241abc3966975589ddf62d5ad4bc877e5183863a\",\n    \"upstream_trial\": null\n  }\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace",
+        "--host",
+        "claude",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/selected store/releases/v3.0.5",
+        "--ac-root",
+        "/Users/jim/src/apps/specification_methodology/a_c",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/stdo",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "name": "claude-install",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"installed\",\n  \"host\": \"claude\",\n  \"receipt\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace/.claude/stdo-skills-3.0.5.receipt.json\",\n  \"receipt_sha256\": \"0d5e7c733057a114a81e100e63fb2f4da307af53685693e766f2b256d2bca124\",\n  \"files\": 33\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace/.claude/stdo-3.0.5/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace/.claude/stdo-3.0.5/CONFIG.json"
+      ],
+      "name": "claude-check-runtime",
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"verified\",\n  \"configuration\": {\n    \"ac_root\": \"/Users/jim/src/apps/specification_methodology/a_c\",\n    \"basis\": {\n      \"manifest_sha256\": \"c98d95d17378d5bb68583d8d78616eb382fb19c07d8a844c1bc074e0128b2729\",\n      \"uri\": \"stdo://releases/v3.0.5/\"\n    },\n    \"definition\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/Product.json\",\n    \"host\": \"claude\",\n    \"kind\": \"stdo-skills.runtime/1\",\n    \"manager_identity\": {\n      \"invocation\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/stdo\",\n      \"physical_path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/stdo\",\n      \"runtime_launcher\": {\n        \"manager\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/manager\",\n        \"manager_sha256\": \"22270c78bfa352658cad30073bd1825c49b325ab9dd95169827d5130fc14f850\",\n        \"manifest\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/selected store/releases/v3.0.5/manifest.json\",\n        \"manifest_sha256\": \"c98d95d17378d5bb68583d8d78616eb382fb19c07d8a844c1bc074e0128b2729\",\n        \"path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/stdo\",\n        \"sha256\": \"6f9e0eeb7edaca2b99d3e0eee6f7ab34a66585a3272a47201d04b853a7e9a356\",\n        \"store\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/selected store\"\n      },\n      \"sha256\": \"6f9e0eeb7edaca2b99d3e0eee6f7ab34a66585a3272a47201d04b853a7e9a356\"\n    },\n    \"manager_verification\": {\n      \"basis\": \"stdo://releases/v3.0.5/\",\n      \"definition\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/Product.json\",\n      \"definition_id\": \"urn:probe:anchor\",\n      \"failures\": [],\n      \"installed\": true,\n      \"manifest_sha256\": \"c98d95d17378d5bb68583d8d78616eb382fb19c07d8a844c1bc074e0128b2729\",\n      \"path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/selected store/releases/v3.0.5\",\n      \"runtime_launcher\": {\n        \"manager\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/manager\",\n        \"manager_sha256\": \"22270c78bfa352658cad30073bd1825c49b325ab9dd95169827d5130fc14f850\",\n        \"manifest\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/selected store/releases/v3.0.5/manifest.json\",\n        \"manifest_sha256\": \"c98d95d17378d5bb68583d8d78616eb382fb19c07d8a844c1bc074e0128b2729\",\n        \"path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/stdo\",\n        \"sha256\": \"6f9e0eeb7edaca2b99d3e0eee6f7ab34a66585a3272a47201d04b853a7e9a356\",\n        \"store\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/selected store\"\n      },\n      \"valid\": true\n    },\n    \"method_root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/selected store/releases/v3.0.5\",\n    \"method_selection_scope\": \"runtime-installation-anchor-only\",\n    \"operation_basis_rule\": \"resolve the nominated Product Definition; no adoption or override\",\n    \"provider_pins\": {\n      \"VERSION\": \"3da4414b24923430a97c932c0597fd5ebc9d126ae188181054b348d2a8559870\",\n      \"build_tenants/graphify/code/ac_code.py\": \"1c9a9b14de30f039727708da1c48ce4ba60effdd885b4a62392415c3673e0ed7\",\n      \"build_tenants/graphify/code/ac_explore.py\": \"c25a8182749b6ee552f2c4503cec26794ff91414c26a970d8ec9cd7d8e32c389\",\n      \"build_tenants/graphify/code/ac_formal_gate.py\": \"d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8\",\n      \"build_tenants/graphify/code/ac_fs_boundary.py\": \"93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b\",\n      \"build_tenants/graphify/code/ac_generate.py\": \"1d3c81f939bfa4eefe5535678ee56a65aa03bce05b9288b8284ccbfeedf9894e\",\n      \"build_tenants/graphify/code/ac_graph.py\": \"2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667\",\n      \"build_tenants/graphify/code/ac_grounding.py\": \"720fee34b7078387ced46b4180c88d574dfc02de36e0bcdc34d86f49a56fe343\",\n      \"build_tenants/graphify/code/ac_project.py\": \"8a87775e937b6f1641c82d650f900d0d0b6808706466ebf0a274c223193ba9c9\",\n      \"build_tenants/graphify/code/ac_repair.py\": \"00e442b9a13d8aab6af888b863ab62a53701238d36fa10397ae8022a1b05575d\",\n      \"build_tenants/graphify/code/ac_support.py\": \"f65efad15fd770075650ce0484df5b1cea14612047a82918d35fdc4f870deafa\",\n      \"build_tenants/graphify/code/ac_support_composition.py\": \"3b6c58d90280aa65fe5c1d8b9bb58a37a15376fcff1ef71e7f248f509df52625\",\n      \"build_tenants/graphify/code/ac_support_core.py\": \"1707b5ce1f02f215000e8aee4ec93008165cbd008c641094c8d41dab0cb24e1b\",\n      \"build_tenants/graphify/code/ac_support_effects.py\": \"a2ec2f0bcd73c6923e7bf93ebe8503bbc2a2df7d73b4b8649dbdee14ada8b3cf\",\n      \"build_tenants/graphify/code/ac_upstream.py\": \"13179a552f7dcaac35890da19e4fee674eb8933681723cddd78e7043a8f55888\",\n      \"build_tenants/graphify/code/code-requirements.txt\": \"f508937dfbfe84108aee664ddba1eb9577ebfc6007eb5b76a057378793218bca\",\n      \"build_tenants/graphify/code/generation/author.schema.json\": \"6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87\",\n      \"build_tenants/graphify/code/generation/author.txt\": \"11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc\",\n      \"build_tenants/graphify/code/generation/extraction.schema.json\": \"30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd\",\n      \"build_tenants/graphify/code/generation/isolation.txt\": \"3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1\",\n      \"build_tenants/graphify/code/generation/requirements.txt\": \"233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2\",\n      \"build_tenants/graphify/code/grounding_repair/patch.schema.json\": \"65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76\",\n      \"build_tenants/graphify/code/grounding_repair/repair.txt\": \"304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e\",\n      \"build_tenants/graphify/code/viewer/explorer.css\": \"8508f8d81b570d5d5d5eb81adc3895ae1073fcf640694ec229ec54aef61ea16a\",\n      \"build_tenants/graphify/code/viewer/explorer.html\": \"f6098541425badfb456982274107ce98bcf068b66b27db757b7bd20fe4e8beef\",\n      \"build_tenants/graphify/code/viewer/explorer.js\": \"4e0b821ba33e0c57a05ee44a200c839b47c1d14f777646ec1836aa7c915daf56\",\n      \"build_tenants/graphify/code/viewer/layered.css\": \"fb2f005f61947def6c6c2f66fc1b36e8d87a40876c2a4ad4ffe137c22a313474\",\n      \"build_tenants/graphify/code/viewer/layered.js\": \"134b082f87f15eca059432e07453ce27e5a963bd94c798ef32b1eafb9cdc8b80\",\n      \"build_tenants/graphify/code/viewer/vendor/3d-force-graph-1.80.1.min.js\": \"13088340aad408156064fd120c3bc3a47c93a3cc45b8f132d6284b20e2223be9\",\n      \"build_tenants/graphify/code/viewer/vendor/3d-force-graph-LICENSE\": \"7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded\",\n      \"build_tenants/graphify/code/viewer/vendor/THIRD_PARTY_NOTICES.txt\": \"5550725cb2e36431fc64242442a5e0fb94be7a2d93749c3f55cc99f2f68fee22\",\n      \"build_tenants/graphify/code/viewer/vendor/manifest.json\": \"c8d258151ce83b7864d6579fd27d2f4ac79049cab7966a0db0e8eca3a6bc883f\",\n      \"build_tenants/graphify/design/fd-method-stdo-3.0.5.json\": \"4c08017964cffb50308ba38ed80c15b7babca902f234950a5a92a9da5e7e22b6\",\n      \"build_tenants/lean/AC/Audit.lean\": \"bbe185b9e3550029328a19fbb927719450f6885720918cb45a60e5ba6131b647\",\n      \"build_tenants/lean/AC/Closure.lean\": \"d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f\",\n      \"build_tenants/lean/AC/Fixture.lean\": \"483293b34e35efd01883dd57a222eabfbba658c0c4d797b0bc54633192f236ea\",\n      \"build_tenants/lean/AC/GateProof.lean\": \"0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3\",\n      \"build_tenants/lean/AC/GateRuntime.lean\": \"6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f\",\n      \"build_tenants/lean/AC/Model.lean\": \"943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5\",\n      \"build_tenants/lean/AC/Projection.lean\": \"ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575\",\n      \"build_tenants/lean/AC/Run.lean\": \"12a07031acb8d1a4bdcedd3341a2d70633e57598aede87c97cfab67aedad9ab6\",\n      \"build_tenants/lean/AC/Structure.lean\": \"cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb\",\n      \"build_tenants/lean/AC/Toy.lean\": \"9cf4aaba1f9c98329b7fc2cefbd08042ef05dffe12148e1e6399363cfdf559b8\",\n      \"build_tenants/lean/lake-manifest.json\": \"8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34\",\n      \"build_tenants/lean/profiles/formal-gate-request.schema.json\": \"edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a\",\n      \"build_tenants/lean/profiles/generation-signature-v1.json\": \"db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8\",\n      \"build_tenants/lean/profiles/proof-support-v1.json\": \"7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363\",\n      \"build_tenants/lean/scripts/bootstrap.py\": \"7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7\",\n      \"build_tenants/lean/scripts/check.py\": \"cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb\",\n      \"build_tenants/lean/scripts/check_gate.py\": \"ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642\",\n      \"build_tenants/lean/scripts/formal_gate.py\": \"39a0527792ba6f9a08407e77350a7e68eb32ed8cea8950b8b1f5e52f8bdfabaa\",\n      \"build_tenants/lean/scripts/formal_reuse.py\": \"819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4\",\n      \"build_tenants/lean/scripts/formal_support.py\": \"20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6\",\n      \"build_tenants/lean/scripts/gate_codegen.py\": \"0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86\",\n      \"build_tenants/lean/scripts/generate_fixture.py\": \"ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4\",\n      \"build_tenants/lean/scripts/generation_profile.py\": \"7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace\",\n      \"build_tenants/lean/scripts/import_fixture.py\": \"5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a\",\n      \"build_tenants/lean/scripts/runtime_process.py\": \"dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018\",\n      \"build_tenants/lean/toolchain-lock.json\": \"ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b\",\n      \"scripts/ac.py\": \"195e76276774f5a5a82fbab48216b314bfa1d0e092c25419bd53c5bb9638b71a\",\n      \"scripts/bootstrap.py\": \"c5dd2c2a386a54c6e5a0b9bbcc1da537705a357bc7f29a6b3a4bc1512848d017\"\n    },\n    \"python\": \"/usr/local/bin/python3\",\n    \"python_identity\": {\n      \"invocation\": \"/usr/local/bin/python3\",\n      \"physical_path\": \"/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12\",\n      \"sha256\": \"a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539\"\n    },\n    \"stdo\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/anchor/stdo\",\n    \"version\": \"3.0.5\"\n  }\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/a_c/scripts/ac.py",
+        "project",
+        "prepare",
+        "--project",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/project",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/project/Product.json",
+        "--source",
+        "README.md",
+        "--out",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/claude-run-default"
+      ],
+      "name": "claude-documented-prepare",
+      "returncode": 2,
+      "stderr": "{\"status\": \"refused\", \"reason\": \"project method verification failed: wrong ambient manager selected\\n\"}\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace/.agents/stdo-3.0.5/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "name": "stale-stdo",
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Selected manager launcher changed\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace/.agents/stdo-3.0.5/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "name": "stale-manager",
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Selected underlying manager changed\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace/.agents/stdo-3.0.5/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-manager-7qx1q3sz/workspace/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "name": "stale-manifest.json",
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Selected manager store manifest changed\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    }
+  ]
+}

@@ -1,0 +1,819 @@
+--- predecessor/scripts/stable_release_evidence.py
++++ successor/scripts/stable_release_evidence.py
+@@ -77,6 +77,9 @@
+ def common_owner(view, name, api):
+     path = view.root.absolute() / (COMMON + name)
+     gate().require(local_file(str(path), api=api) == view.read_bytes(COMMON + name), 'current common owner differs from selected gate view')
++    if name in ('proof_evidence.py', 'tooling_runtime.py'):
++        helper = view.root.absolute() / (COMMON + 'payload_boundary.py')
++        gate().require(local_file(str(helper), api=api) == view.read_bytes(COMMON + 'payload_boundary.py'), 'current filesystem boundary differs from selected gate view')
+     spec = importlib.util.spec_from_file_location('stdo_current_' + name.replace('.', '_'), path)
+     module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
+     return module
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/README.md
++++ successor/specification_methodology/v3/build_tenants/common-tools/README.md
+@@ -39,8 +39,11 @@
+ implementation identities used for its original observations.
+ 
+ Run `python3 -B -m unittest discover -s . -p test_documentation.py` for focused
+-documentation and release-asset controls. These tests run against the sibling
+-`../common` payload. Browser/WebGL qualification and exact published-install
++documentation and release-asset controls. Historical controls obtain the exact
++published 3.0.4 native payload from commit
++`16bc30d215915a4b7b3ed2f13e52e14510ae1c9d`; they never substitute the mutable
++current `../common` payload. That immutable Git object must be available locally.
++Browser/WebGL qualification and exact published-install
+ readback remain distinct obligations.
+ 
+ The tooling distribution is built with `tooling.py build --repository ROOT
+@@ -80,6 +83,12 @@
+ `fixtures/`. Do not omit that directory when moving the registered tools.
+ `test_current_assets.py` exercises current selection, archive, source/model/view
+ bindings, and actual manager-launcher refusal controls. Set
+-`STDO_PROOF_CONTROL` to an explicitly retained toy reader for owner-evidence and
+-offline DOM integration tests; it is never current STDO-model proof. DOM tests
++`STDO_PROOF_CONTROL` to an explicitly retained reader for owner-evidence and
++offline DOM integration tests. The tests retain that artifact's exact model and
++runtime; a test result is not a new Lean verdict or semantic assessment. DOM tests
+ require `jsdom` through `NODE_PATH`; the anchor-schema test uses `jsonschema`.
++
++Installed proof and tooling bundles include the same `payload_boundary.py`.
++It recognizes their enclosing native logical routes by filesystem identity and
++checks every selected output before effects. Its loaders execute selected source
++without writing bytecode, including ordinary Python invocation without `-B`.
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/historical_test_payload.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/historical_test_payload.py
+@@ -0,0 +1,38 @@
++"""Read the immutable published 3.0.4 native payload for historical controls."""
++from functools import lru_cache
++import io
++from pathlib import Path, PurePosixPath
++import subprocess
++import tarfile
++import tempfile
++
++COMMIT = '16bc30d215915a4b7b3ed2f13e52e14510ae1c9d'
++PREFIX = 'specification_methodology/v3/'
++_TEMPORARY = []
++
++
++@lru_cache(maxsize=1)
++def published_payload():
++    repository = Path(__file__).resolve().parents[4]
++    observed = subprocess.run(['git', '--no-optional-locks', '-C', str(repository), 'rev-parse', COMMIT + '^{commit}'],
++                              capture_output=True, check=True).stdout.decode().strip()
++    if observed != COMMIT:
++        raise ValueError('immutable historical native commit differs')
++    raw = subprocess.run(['git', '--no-optional-locks', '-C', str(repository), 'archive', '--format=tar', COMMIT, PREFIX.rstrip('/')],
++                         capture_output=True, check=True).stdout
++    temporary = tempfile.TemporaryDirectory(prefix='stdo-published-304-tests-'); _TEMPORARY.append(temporary)
++    destination = Path(temporary.name).resolve()
++    with tarfile.open(fileobj=io.BytesIO(raw)) as archive:
++        for member in archive:
++            if member.isdir():
++                continue
++            if not member.isfile() or not member.name.startswith(PREFIX):
++                raise ValueError('unsupported historical payload member')
++            name = member.name[len(PREFIX):]
++            if not name or any(p in ('', '.', '..') for p in name.split('/')) or str(PurePosixPath(name)) != name:
++                raise ValueError('unsafe historical payload member')
++            target = destination / name; target.parent.mkdir(parents=True, exist_ok=True)
++            with target.open('xb') as stream:
++                stream.write(archive.extractfile(member).read())
++            target.chmod(member.mode & 0o777)
++    return destination
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/payload_boundary.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/payload_boundary.py
+@@ -0,0 +1,62 @@
++"""Filesystem-identity boundary shared by installed STDO output commands."""
++from __future__ import annotations
++
++import os
++from pathlib import Path
++
++
++def ordinary(value):
++    path = Path(value).absolute()
++    if '..' in path.parts or any(p.is_symlink() for p in (path, *path.parents)):
++        raise ValueError('redirected/traversing output boundary path')
++    return path
++
++
++def same(left, right):
++    return left.exists() and right.exists() and os.path.samefile(left, right)
++
++
++def native_roots(anchors):
++    """Recognize the installed logical routes by identity, never spelling.
++
++    The method contract places tooling and proof entrypoints at these routes.
++    Comparing each physical ancestor with its corresponding canonical route
++    handles aliases on a case-insensitive volume without conflating distinct
++    directories on a case-sensitive volume. Standalone bundles have no such
++    enclosing route and retain their ordinary input-directory boundary.
++    """
++    roots = []
++    routes = (Path('standards/tooling'), Path('standards/documentation/proofs'))
++    for anchor in anchors:
++        path = ordinary(anchor)
++        for node in (path, *path.parents):
++            if not node.is_dir():
++                continue
++            for route in routes:
++                depth = len(route.parts)
++                if len(node.parents) < depth:
++                    continue
++                candidate = node.parents[depth - 1]
++                if same(node, candidate / route) and not any(same(candidate, prior) for prior in roots):
++                    roots.append(candidate)
++    return roots
++
++
++def separate(output, protected):
++    output, protected = ordinary(output), ordinary(protected)
++    if output.is_relative_to(protected) or protected.is_relative_to(output):
++        raise ValueError('output overlaps protected input or immutable native installation')
++    for one, other in ((output, protected), (protected, output)):
++        if any(same(parent, other) for parent in (one, *one.parents)):
++            raise ValueError('output aliases protected input or immutable native installation')
++
++
++def guard(outputs, inputs=(), *, anchors=()):
++    """Validate the complete output set before any mkdir, copy or subprocess."""
++    outputs = [ordinary(p) for p in outputs]
++    inputs = [ordinary(p) for p in inputs]
++    roots = native_roots([Path(__file__).absolute(), *inputs, *anchors])
++    for output in outputs:
++        for protected in [*inputs, *roots]:
++            separate(output, protected)
++    return roots
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py
+@@ -4,6 +4,7 @@
+ 
+ import argparse
+ import hashlib
++import importlib.util
+ import io
+ import json
+ import os
+@@ -17,6 +18,16 @@
+ MAX_MEMBERS = 256
+ PART_BYTES = 64 * 1024 * 1024
+ MAX_COMPRESSED = 512 * 1024 * 1024
++
++
++def boundary():
++    path = Path(__file__).absolute().with_name('payload_boundary.py')
++    spec = importlib.util.spec_from_file_location('stdo_payload_boundary', path)
++    module = importlib.util.module_from_spec(spec)
++    # Source execution intentionally bypasses SourceFileLoader's .pyc writer.
++    # Ordinary documented Python invocation must keep the installation intact.
++    exec(compile(path.read_bytes(), str(path), 'exec'), module.__dict__)
++    return module
+ 
+ 
+ def require(condition, message):
+@@ -88,6 +99,7 @@
+ 
+ def pack(bundle, output):
+     bundle, output = ordinary(bundle), ordinary(output)
++    boundary().guard([output], [bundle], anchors=[Path(__file__).absolute()])
+     separate(output, bundle); require(not output.exists(), 'preserve existing evidence archive')
+     manifest_raw = regular(bundle / 'manifest.json'); result_raw = regular(bundle / 'result.json')
+     manifest = json.loads(manifest_raw)
+@@ -111,6 +123,7 @@
+ 
+ def split(archive_path, destination):
+     archive_path, destination = ordinary(archive_path), ordinary(destination)
++    boundary().guard([destination], [archive_path], anchors=[Path(__file__).absolute()])
+     separate(destination, archive_path); require(not destination.exists(), 'preserve existing evidence transport')
+     raw = regular(archive_path); meta, _ = inspect(raw)
+     parts = [(f'part-{i // PART_BYTES + 1:03}.bin', raw[i:i + PART_BYTES]) for i in range(0, len(raw), PART_BYTES)]
+@@ -170,6 +183,7 @@
+ 
+ def materialize_data(raw, destination, expected_sha, protected):
+     destination = ordinary(destination)
++    boundary().guard([destination], [protected], anchors=[Path(__file__).absolute()])
+     separate(destination, protected)
+     require(not destination.exists() and destination.parent.is_dir(), 'absent evidence destination/existing parent required')
+     meta, _ = inspect(raw, expected_sha)
+@@ -193,6 +207,7 @@
+ def current_request(raw, evidence, output, protected):
+     """Derive executable local paths; never replace the original request/verdict."""
+     evidence, output = ordinary(evidence), ordinary(output)
++    boundary().guard([output], [evidence, protected], anchors=[Path(__file__).absolute()])
+     separate(output, evidence); separate(output, protected)
+     require(not output.exists() and output.parent.is_dir(), 'absent request output/existing parent required')
+     verify_tree(raw, evidence)
+@@ -231,6 +246,13 @@
+     p = sub.add_parser('request'); p.add_argument('--evidence', type=Path, required=True); p.add_argument('--output', type=Path, required=True)
+     args = parser.parse_args()
+     try:
++        # Include the invoked installed entrypoint even when an explicit raw
++        # archive or transport lives elsewhere. Check before reading/computing.
++        if args.command in ('pack', 'split', 'materialize', 'request'):
++            output = args.output if args.command in ('pack', 'request') else args.destination
++            source = args.bundle if args.command == 'pack' else args.input if args.command == 'split' else args.archive or args.transport
++            inputs = [source] + ([args.evidence] if args.command == 'request' else [])
++            boundary().guard([output], inputs, anchors=[Path(__file__).absolute()])
+         if args.command == 'pack': result = pack(args.bundle, args.output)
+         elif args.command == 'split': result = split(args.input, args.destination)
+         elif args.archive is None:
+@@ -239,9 +261,7 @@
+                 catalog = json.loads(regular(args.transport.parent.parent / 'PROOFS.json'))
+                 expected = catalog['transport_sha256']
+             raw, meta, _ = read_transport(args.transport, expected)
+-            protected = args.transport.parent.parent if args.transport.parent.name == 'transport' else args.transport.parent
+-            if protected.name == 'proofs' and protected.parent.name == 'documentation' and protected.parent.parent.name == 'standards':
+-                protected = protected.parent.parent.parent
++            protected = args.transport.parent
+             if args.command == 'check': result = dict(meta, status='checked', transport_sha256=sha(regular(args.transport)))
+             elif args.command == 'verify-tree': result = dict(verify_tree(raw, args.destination), parts=meta['parts'], transport_sha256=sha(regular(args.transport)))
+             elif args.command == 'request': result = current_request(raw, args.evidence, args.output, protected)
+@@ -256,10 +276,7 @@
+                 inspect(regular(args.archive), expected)
+                 result = current_request(regular(args.archive), args.evidence, args.output, args.archive.parent)
+             else:
+-                # Native payload root is three levels above standards/documentation/proofs.
+                 protected = args.archive.parent
+-                if protected.name == 'proofs' and protected.parent.name == 'documentation' and protected.parent.parent.name == 'standards':
+-                    protected = protected.parent.parent.parent
+                 result = materialize(args.archive, args.destination, expected, protected_root=protected)
+         print(json.dumps(result, sort_keys=True)); return 0
+     except (OSError, ValueError, KeyError, TypeError, zipfile.BadZipFile, RuntimeError) as error:
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py
+@@ -61,7 +61,7 @@
+     pins = result["runtime_identity"]["pins"]
+     a.require(result["runtime_identity"]["sha256"] == a.canonical_sha(pins), "proof runtime identity differs")
+     a.require({p[len("machinery/"):] for p in files if p.startswith("machinery/")} == set(pins), "proof machinery closure differs")
+-    fixed = {"SELECTION.json", "source-freeze.json", "selected-request.json", "correspondence.md", "library-provenance.md", "materialize.py",
++    fixed = {"SELECTION.json", "source-freeze.json", "selected-request.json", "correspondence.md", "library-provenance.md", "materialize.py", "payload_boundary.py",
+              "inspection.json", "inspection-execution.json", "inspection-stderr.txt"}
+     a.require({p for p in files if not p.startswith(("machinery/", "evidence/", "transport/"))} - {"PROOFS.json", "index.html"} == fixed,
+               "current proof documentation closure differs")
+@@ -89,6 +89,7 @@
+     result, identity, archive = validate_evidence(files)
+     a.require(a.sha(files["transport/TRANSPORT.json"]) == selected["bundle_archive"]["sha256"], "selected proof transport differs")
+     a.require(files["materialize.py"] == Path(transport.__file__).read_bytes(), "installed proof materializer differs")
++    a.require(files['payload_boundary.py'] == Path(transport.__file__).with_name('payload_boundary.py').read_bytes(), 'installed proof filesystem boundary differs')
+     a.require(a.sha(files["source-freeze.json"]) == selected["source_freeze"]["sha256"] and
+               result["inputs"]["model"]["raw_sha256"] == selected["model"]["sha256"], "selected source/model bytes differ")
+     for key, path in (("result", "evidence/result.json"), ("request", "selected-request.json"),
+@@ -173,7 +174,8 @@
+     files = {"SELECTION.json": a.regular(selection_path), "source-freeze.json": a.pinned(root, selected["source_freeze"]),
+              "selected-request.json": a.pinned(root, selected["request"]), "correspondence.md": a.pinned(root, selected["correspondence"]),
+              "library-provenance.md": a.pinned(root, selected["library_provenance"]),
+-             "transport/TRANSPORT.json": descriptor_raw, "materialize.py": Path(transport.__file__).read_bytes()}
++             "transport/TRANSPORT.json": descriptor_raw, "materialize.py": Path(transport.__file__).read_bytes(),
++             "payload_boundary.py": Path(transport.__file__).with_name('payload_boundary.py').read_bytes()}
+     files.update({"transport/" + row["path"]: a.regular(archive_path.parent / row["path"]) for row in archive['parts']})
+     files.update({"evidence/" + n: raw for n, raw in recovered.items() if n.endswith((".lean", ".log")) or n in
+                  ("manifest.json", "result.json", "request.json", "replay-request.json", "supplied-views.json", "view-comparison.json")})
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/test_current_assets.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/test_current_assets.py
+@@ -1,4 +1,4 @@
+-"""Current packaging controls. A supplied proof control is explicitly a toy run."""
++"""Current packaging controls; retained evidence keeps its original model/runtime."""
+ import copy
+ import hashlib
+ import json
+@@ -205,19 +205,19 @@
+             docs.validate_inputs(files)
+ 
+ 
+-@unittest.skipUnless(os.environ.get("STDO_PROOF_CONTROL"), "supply the retained toy proof reader for actual evidence integration controls")
++@unittest.skipUnless(os.environ.get("STDO_PROOF_CONTROL"), "supply an exact retained proof reader for evidence integration controls")
+ class ActualRetainedProofControls(unittest.TestCase):
+     @classmethod
+     def setUpClass(cls):
+         cls.files = a.read_tree(Path(os.environ["STDO_PROOF_CONTROL"]))
+ 
+-    def test_actual_retained_owner_inspected_toy_has_exact_catalog(self):
++    def test_actual_retained_owner_inspected_model_has_exact_catalog(self):
+         result = proof.check_files(self.files)
+-        self.assertIn("toy", result["model"]["id"])
++        self.assertEqual(result["model"]["id"], json.loads(self.files['evidence/result.json'])['model']['id'])
+         self.assertEqual(result["status"], "checked")
+ 
+     def test_missing_compiled_artifact_unrelated_claim_and_changed_machinery_refuse(self):
+-        for path in ("transport/part-001.bin", "machinery/AC/Model.lean", "inspection.json"):
++        for path in ("transport/part-001.bin", "machinery/AC/Model.lean", "inspection.json", "payload_boundary.py"):
+             bad = dict(self.files); bad[path] += b"tamper"
+             with self.subTest(path=path), self.assertRaises((ValueError, json.JSONDecodeError)): proof.check_files(bad)
+         bad = dict(self.files); value = json.loads(bad["evidence/result.json"]); value["checked_claims"] = value["requested_claims"] = ["unrelated-trivial-claim"]
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/test_documentation.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/test_documentation.py
+@@ -11,9 +11,10 @@
+ import documentation as docs
+ import native_release as native
+ import package_tools
++from historical_test_payload import published_payload
+ 
+ V3 = Path(__file__).resolve().parents[2]
+-PACKAGE = V3 / "build_tenants/common"
++PACKAGE = published_payload()
+ 
+ 
+ class DocumentationTests(unittest.TestCase):
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/test_installed_boundary.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/test_installed_boundary.py
+@@ -0,0 +1,366 @@
++"""Public installed-output regressions; synthetic payloads assert no Lean result.
++
++Set STDO_BOUNDARY_EVIDENCE_ROOT to an absent directory to retain full fixtures,
++argv/stdout/stderr and native pre/post inventories. STDO_BOUNDARY_SOURCE_DIR can
++select an exact predecessor snapshot for the same falsification tests. No
++production module is imported and no bootstrap dependency is acquired.
++"""
++from __future__ import annotations
++
++import hashlib
++import io
++import json
++import os
++from pathlib import Path
++import shutil
++import stat
++import subprocess
++import sys
++import tempfile
++import unittest
++import zipfile
++
++HERE = Path(__file__).resolve().parent
++PROFILE = 'build_tenants/lean/profiles/proof-support-v1.json'
++
++
++def sha(raw):
++    return hashlib.sha256(raw).hexdigest()
++
++
++def encoded(value):
++    return (json.dumps(value, indent=2, sort_keys=True) + '\n').encode()
++
++
++def write(path, raw):
++    path.parent.mkdir(parents=True, exist_ok=True)
++    path.write_bytes(raw)
++
++
++def archive(files):
++    stream = io.BytesIO()
++    with zipfile.ZipFile(stream, 'w') as target:
++        for name, raw in sorted(files.items()):
++            info = zipfile.ZipInfo(name, (1980, 1, 1, 0, 0, 0))
++            info.create_system = 3
++            info.external_attr = 0o100644 << 16
++            target.writestr(info, raw, compress_type=zipfile.ZIP_DEFLATED, compresslevel=9)
++    return stream.getvalue()
++
++
++def tree(root):
++    """Include directories, modes, mtimes and bytes; omit read-only atime changes."""
++    rows = {}
++    for path in [root, *sorted(root.rglob('*'))]:
++        observed = path.lstat()
++        row = {'mode': stat.S_IMODE(observed.st_mode), 'mtime_ns': observed.st_mtime_ns}
++        if path.is_symlink():
++            row.update(kind='symlink', target=os.readlink(path))
++        elif path.is_dir():
++            row.update(kind='directory')
++        else:
++            row.update(kind='file', bytes=observed.st_size, sha256=sha(path.read_bytes()))
++        rows[path.relative_to(root).as_posix()] = row
++    return rows
++
++
++class PayloadFixture:
++    """Explicit public payload formats; bootstrap is a marker-only failing stub."""
++    def __init__(self, root, source):
++        self.root, self.source = root, source
++        root.mkdir(parents=True)
++        self.native = root / 'native'
++        self.proofs = self.native / 'standards/documentation/proofs'
++        self.tooling = self.native / 'standards/tooling'
++        self.standalone = root / 'standalone'
++        self.marker = root / 'bootstrap-invoked.marker'
++        self.raw = root / 'inputs/raw'
++        self.zip = root / 'inputs/archive/evidence.zip'
++        self.transport = root / 'inputs/transport/TRANSPORT.json'
++        self.tools = root / 'selected-tools'
++        self.calls = []
++        self.source_pins = {}
++        for original, destination in [('proof_evidence.py', 'materialize.py'), ('payload_boundary.py', 'payload_boundary.py')]:
++            if (source / original).exists():
++                raw = (source / original).read_bytes()
++                self.source_pins[original] = sha(raw)
++                write(self.proofs / destination, raw)
++                write(self.standalone / 'proofs' / destination, raw)
++        self.proof_files = self.make_proof()
++        for name, raw in self.proof_files.items():
++            write(self.raw / name, raw)
++        packed = archive(self.proof_files)
++        write(self.zip, packed)
++        descriptor = {'kind': 'stdo.formal-evidence-transport/1', 'archive_sha256': sha(packed),
++            'archive_bytes': len(packed), 'expanded_bytes': sum(map(len, self.proof_files.values())),
++            'manifest_sha256': sha(self.proof_files['manifest.json']), 'result_sha256': sha(self.proof_files['result.json']),
++            'members': {name: {'bytes': len(raw), 'sha256': sha(raw)} for name, raw in self.proof_files.items()},
++            'parts': [{'path': 'part-001.bin', 'bytes': len(packed), 'sha256': sha(packed)}]}
++        for parent in (self.transport.parent, self.proofs / 'transport'):
++            write(parent / 'TRANSPORT.json', encoded(descriptor))
++            write(parent / 'part-001.bin', packed)
++        write(self.proofs / 'PROOFS.json', encoded({'transport_sha256': sha(encoded(descriptor))}))
++        self.make_tools()
++        write(self.native / 'manifest.json', encoded({'fixture': 'synthetic native layout; not an installed release verdict'}))
++        write(self.native / 'plugins/sentinel.txt', b'whole native payload protection includes plugin siblings\n')
++        alias = root / 'NATIVE'
++        self.case_alias = alias.exists() and os.path.samefile(alias, self.native)
++        self.alias = alias
++        write(root / 'FIXTURE.json', encoded({'scope': 'Synthetic source/transport and marker bootstrap; no Lean or native host',
++            'source_directory': str(source), 'source_pins': self.source_pins,
++            'case_alias': {'supported': self.case_alias, 'canonical': str(self.native), 'alias': str(alias),
++                           'samefile': self.case_alias, 'canonical_resolve': str(self.native.resolve()),
++                           'alias_resolve': str(alias.resolve()) if self.case_alias else None}}))
++
++    @staticmethod
++    def make_proof():
++        files = {'input.json': b'{"synthetic":true}\n', 'supplied-views.json': b'[]\n',
++                 'GateModel.lean': b'-- transport fixture, never presented as a proof\n',
++                 'GateModel.olean': b'synthetic compiled carrier\x00'}
++        request = {'schema': 'a_c.formal-gate.request/1', 'input': {'format': 'model', 'path': '/construction/input.json', 'raw_sha256': sha(files['input.json'])},
++            'supplied_views': {'path': '/construction/views.json', 'raw_sha256': sha(files['supplied-views.json'])},
++            'selections': [], 'context_binding': None}
++        files['request.json'] = encoded(request)
++        members = {name: sha(raw) for name, raw in files.items()}
++        files['manifest.json'] = encoded({'schema': 'a_c.formal-gate.bundle/1', 'members': members})
++        files['result.json'] = encoded({'schema': 'a_c.formal-gate.result/1', 'status': 'verified',
++            'model': {'id': 'synthetic-boundary-fixture-only', 'sha256': sha(files['input.json'])}, 'selections': [], 'context_binding': None,
++            'inputs': {'input': {'retained_path': 'input.json', 'raw_sha256': sha(files['input.json'])},
++                       'model': {'raw_sha256': sha(files['input.json'])},
++                       'supplied_views': {'retained_path': 'supplied-views.json', 'raw_sha256': sha(files['supplied-views.json'])}},
++            'evidence': {'manifest_sha256': sha(files['manifest.json']), 'members': members}})
++        return files
++
++    def make_tools(self):
++        bootstrap = ('from pathlib import Path\nimport sys\n'
++                     'Path(' + repr(str(self.marker)) + ').write_text("selected fixture bootstrap invoked\\n")\n'
++                     'print("marker-only fixture; no Lean or downloads")\nraise SystemExit(23)\n').encode()
++        sources = {'a_c/VERSION': b'3.0.5\n', 'a_c/scripts/bootstrap.py': bootstrap,
++                   'a_c/' + PROFILE: encoded({'fixture': 'selected source profile only'}),
++                   'stdo_skills/VERSION': b'3.0.5\n', 'stdo_representation/VERSION': b'3.0.5\n',
++                   'axiom_indexer/VERSION': b'3.0.5\n'}
++        owners = {}
++        rows = []
++        for name, raw in sorted(sources.items()):
++            row = {'path': name, 'bytes': len(raw), 'sha256': sha(raw), 'git_mode': '100644'}
++            owners.setdefault(name.split('/')[0], {'version': '3.0.5', 'members': []})['members'].append(row)
++            rows.append({'archive_path': name, **{key: row[key] for key in ('bytes', 'sha256', 'git_mode')}})
++            write(self.tools / name, raw)
++        selection = encoded({'kind': 'stdo.current-tooling-selection/1', 'version': '3.0.5',
++                             'owners': owners, 'source_identity_sha256': '1' * 64})
++        files = {'README.md': b'Synthetic selected tooling; boundary tests only.\n', 'SELECTION.json': selection,
++                 'sources.zip': archive(sources)}
++        for original, name in [('tooling_materialize.py', 'materialize.py'), ('tooling_setup.py', 'setup.py'),
++                               ('tooling_runtime.py', 'runtime.py'), ('payload_boundary.py', 'payload_boundary.py')]:
++            if (self.source / original).exists():
++                files[name] = (self.source / original).read_bytes()
++                self.source_pins[original] = sha(files[name])
++        files['TOOLING.json'] = encoded({'kind': 'stdo.installed-tooling/2', 'distribution_version': '3.0.5',
++            'source_identity_sha256': '1' * 64, 'selection_sha256': sha(selection), 'sources': rows,
++            'source_inventory_sha256': sha(encoded(rows)),
++            'distribution_members': {name: {'bytes': len(raw), 'sha256': sha(raw)} for name, raw in files.items()}})
++        for parent in (self.tooling, self.standalone / 'tooling'):
++            for name, raw in files.items(): write(parent / name, raw)
++
++    def invoke(self, script, *arguments, no_bytecode=False):
++        # The documented command uses ordinary Python, without -B. Remove only
++        # the ambient bytecode override so import-time native writes are visible.
++        env = dict(os.environ)
++        env.pop('PYTHONDONTWRITEBYTECODE', None)
++        before = tree(self.native)
++        argv = [sys.executable, *(['-B'] if no_bytecode else []), str(script), *map(str, arguments)]
++        run = subprocess.run(argv, cwd=self.root, env=env, capture_output=True, timeout=30)
++        after = tree(self.native)
++        directory = self.root / 'observations' / str(len(self.calls) + 1).zfill(3)
++        write(directory / 'stdout', run.stdout); write(directory / 'stderr', run.stderr)
++        try: result = json.loads(run.stdout)
++        except (ValueError, UnicodeDecodeError): result = None
++        row = {'argv': argv, 'returncode': run.returncode, 'result': result, 'before': before, 'after': after,
++               'native_unchanged': before == after, 'bootstrap_invoked': self.marker.exists(),
++               'stdout_sha256': sha(run.stdout), 'stderr_sha256': sha(run.stderr)}
++        write(directory / 'execution.json', encoded(row))
++        self.calls.append(row)
++        return row
++
++    def proof_arguments(self, operation, output, *, transport=None):
++        transport = transport or self.transport
++        if operation == 'pack': return ['pack', '--bundle', self.raw, '--output', output]
++        if operation == 'split': return ['split', '--input', self.zip, '--destination', output]
++        prefix = ['--archive', self.zip, '--archive-sha256', sha(self.zip.read_bytes())] if operation.endswith('-raw') else [
++            '--transport', transport, '--transport-sha256', sha(transport.read_bytes())]
++        if operation.startswith('materialize'): return [*prefix, 'materialize', '--destination', output]
++        return [*prefix, 'request', '--evidence', self.raw, '--output', output]
++
++    def derive(self, destination, receipt, *, script=None, no_bytecode=False):
++        return self.invoke(script or self.tooling / 'setup.py', 'derive-runtime', '--tools', self.tools,
++                           '--destination', destination, '--receipt', receipt, no_bytecode=no_bytecode)
++
++    def prepare_runtime(self):
++        runtime, receipt = self.root / 'runtime', self.root / 'derivation.json'
++        result = self.derive(runtime, receipt, no_bytecode=True)
++        if result['returncode'] != 0:
++            raise AssertionError('Public fixture preparation failed: ' + str(result['result']))
++        return runtime, receipt
++
++
++class InstalledBoundaryTests(unittest.TestCase):
++    def setUp(self):
++        self.source = Path(os.environ.get('STDO_BOUNDARY_SOURCE_DIR', str(HERE))).resolve()
++        retained = os.environ.get('STDO_BOUNDARY_EVIDENCE_ROOT')
++        if retained:
++            self.root = Path(retained).absolute() / self._testMethodName
++            self.root.mkdir(parents=True, exist_ok=False)
++        else:
++            temporary = tempfile.TemporaryDirectory(prefix='stdo-installed-boundary-')
++            self.addCleanup(temporary.cleanup)
++            self.root = Path(temporary.name).resolve()
++
++    def fixture(self, label):
++        return PayloadFixture(self.root / label, self.source)
++
++    def assert_refused_unchanged(self, fixture, row, *outputs):
++        self.assertEqual(row['returncode'], 2, row['result'])
++        self.assertTrue(row['result'] and row['result']['status'] in ('refused', 'refused_or_incomplete'), row)
++        self.assertTrue(row['native_unchanged'], 'Native payload changed; inspect retained execution.json before/after')
++        self.assertFalse(fixture.marker.exists(), 'Bootstrap was invoked before boundary refusal')
++        for output in outputs: self.assertFalse(output.exists(), str(output))
++
++    def proof_native_cases(self, aliases):
++        for operation in ('pack', 'split', 'materialize-transport', 'materialize-raw', 'request-transport', 'request-raw'):
++            with self.subTest(operation=operation, case_alias=aliases):
++                fixture = self.fixture(operation)
++                if aliases and not fixture.case_alias: self.skipTest('Filesystem has no actual samefile case alias')
++                native = fixture.alias if aliases else fixture.native
++                script = native / ('STANDARDS/DOCUMENTATION/PROOFS/materialize.py' if aliases else 'standards/documentation/proofs/materialize.py')
++                transport = native / ('STANDARDS/DOCUMENTATION/PROOFS/TRANSPORT/TRANSPORT.json' if aliases else 'standards/documentation/proofs/transport/TRANSPORT.json')
++                output = native / ('forbidden-' + operation)
++                row = fixture.invoke(script, *fixture.proof_arguments(operation, output, transport=transport))
++                self.assert_refused_unchanged(fixture, row, output)
++
++    def test_proof_all_write_commands_refuse_whole_native_outputs(self):
++        self.proof_native_cases(False)
++
++    def test_proof_actual_case_aliases_refuse_including_raw_external_inputs(self):
++        self.proof_native_cases(True)
++
++    def test_documented_default_transport_and_B_invocations_have_no_import_effects(self):
++        for flag in (False, True):
++            with self.subTest(no_bytecode=flag):
++                fixture = self.fixture('B' if flag else 'ordinary')
++                output = fixture.native / 'not-allowed'
++                row = fixture.invoke(fixture.proofs / 'materialize.py', 'materialize', '--destination', output, no_bytecode=flag)
++                self.assert_refused_unchanged(fixture, row, output)
++
++    def test_proof_external_and_standalone_operations_preserve_native_and_originals(self):
++        for standalone in (False, True):
++            for operation in ('pack', 'split', 'materialize-transport', 'materialize-raw', 'request-transport', 'request-raw'):
++                with self.subTest(standalone=standalone, operation=operation):
++                    fixture = self.fixture(str(standalone) + '-' + operation)
++                    script = (fixture.standalone / 'proofs' if standalone else fixture.proofs) / 'materialize.py'
++                    original = tree(fixture.raw)
++                    output = fixture.root / 'outside-output'
++                    row = fixture.invoke(script, *fixture.proof_arguments(operation, output))
++                    self.assertEqual(row['returncode'], 0, row['result'])
++                    self.assertTrue(row['native_unchanged'])
++                    self.assertEqual(original, tree(fixture.raw))
++                    self.assertTrue(output.exists())
++                    if operation.startswith('materialize'):
++                        self.assertEqual({p.name: p.read_bytes() for p in output.iterdir()}, fixture.proof_files)
++                    elif operation.startswith('request'):
++                        value = json.loads(output.read_bytes())
++                        self.assertEqual(value['input']['path'], str(fixture.raw / 'input.json'))
++                        self.assertEqual(value['supplied_views']['path'], str(fixture.raw / 'supplied-views.json'))
++                    elif operation == 'pack':
++                        self.assertEqual(output.read_bytes(), fixture.zip.read_bytes())
++                    else:
++                        descriptor = json.loads((output / 'TRANSPORT.json').read_bytes())
++                        self.assertEqual(b''.join((output / part['path']).read_bytes() for part in descriptor['parts']), fixture.zip.read_bytes())
++
++    def test_runtime_destination_and_receipt_are_checked_together_before_effects(self):
++        # -B isolates the original storage defect from the separately observed
++        # module-loader side effect in ordinary documented invocation.
++        for aliases, no_bytecode in ((False, False), (True, False), (False, True), (True, True)):
++            for protected_slot in ('destination', 'receipt'):
++                with self.subTest(case_alias=aliases, protected_slot=protected_slot, no_bytecode=no_bytecode):
++                    fixture = self.fixture(str(aliases) + '-' + protected_slot + '-' + str(no_bytecode))
++                    if aliases and not fixture.case_alias: self.skipTest('Filesystem has no actual samefile case alias')
++                    native = fixture.alias if aliases else fixture.native
++                    script = native / ('STANDARDS/TOOLING/setup.py' if aliases else 'standards/tooling/setup.py')
++                    destination = (native if protected_slot == 'destination' else fixture.root) / 'derived-runtime'
++                    receipt = (native if protected_slot == 'receipt' else fixture.root) / 'derived-receipt.json'
++                    row = fixture.derive(destination, receipt, script=script, no_bytecode=no_bytecode)
++                    self.assert_refused_unchanged(fixture, row, destination, receipt)
++
++    def test_derive_and_materialize_external_or_standalone_still_work(self):
++        for standalone in (False, True):
++            with self.subTest(standalone=standalone):
++                fixture = self.fixture(str(standalone))
++                bundle = fixture.standalone / 'tooling' if standalone else fixture.tooling
++                destination = fixture.root / 'materialized-source'
++                row = fixture.invoke(bundle / 'materialize.py', 'materialize', '--destination', destination)
++                self.assertEqual(row['returncode'], 0, row['result'])
++                self.assertTrue(row['native_unchanged'])
++                fixture.tools = destination
++                runtime, receipt = fixture.root / 'derived', fixture.root / 'derived.json'
++                row = fixture.derive(runtime, receipt, script=bundle / 'setup.py')
++                self.assertEqual(row['returncode'], 0, row['result'])
++                self.assertTrue(row['native_unchanged'])
++                record = json.loads(receipt.read_bytes())
++                self.assertEqual(record['runtime_root'], str(runtime))
++                for name, selected in record['source_members'].items():
++                    self.assertEqual(sha((runtime / name).read_bytes()), selected['sha256'])
++
++    def test_bootstrap_native_output_or_runtime_refuses_before_marker(self):
++        for aliases, no_bytecode in ((False, False), (True, False), (False, True), (True, True)):
++            for protected_slot in ('output', 'runtime'):
++                with self.subTest(case_alias=aliases, protected_slot=protected_slot, no_bytecode=no_bytecode):
++                    fixture = self.fixture(str(aliases) + '-' + protected_slot + '-' + str(no_bytecode))
++                    if aliases and not fixture.case_alias: self.skipTest('Filesystem has no actual samefile case alias')
++                    runtime, receipt = fixture.prepare_runtime()
++                    native = fixture.alias if aliases else fixture.native
++                    script = native / ('STANDARDS/TOOLING/setup.py' if aliases else 'standards/tooling/setup.py')
++                    output = (native if protected_slot == 'output' else fixture.root) / 'bootstrap-evidence'
++                    if protected_slot == 'runtime':
++                        # A structurally complete retained prepared receipt can
++                        # nominate an unsafe runtime; setup must reject it before invocation.
++                        shutil.copytree(runtime, fixture.native / 'retained-runtime')
++                        record = json.loads(receipt.read_bytes())
++                        record['runtime_root'] = str(native / 'retained-runtime')
++                        receipt.write_bytes(encoded(record))
++                    row = fixture.invoke(script, 'bootstrap-lean', '--derivation', receipt,
++                        '--derivation-sha256', sha(receipt.read_bytes()), '--python', sys.executable, '--output', output,
++                        no_bytecode=no_bytecode)
++                    self.assert_refused_unchanged(fixture, row, output)
++
++    def test_external_bootstrap_invokes_only_marker_and_retains_its_deliberate_failure(self):
++        fixture = self.fixture('outside')
++        _, receipt = fixture.prepare_runtime()
++        output = fixture.root / 'bootstrap-evidence'
++        row = fixture.invoke(fixture.tooling / 'setup.py', 'bootstrap-lean', '--derivation', receipt,
++            '--derivation-sha256', sha(receipt.read_bytes()), '--python', sys.executable, '--output', output)
++        self.assertEqual(row['returncode'], 2)
++        self.assertIn('bootstrap incomplete', row['result']['reason'])
++        self.assertTrue(row['native_unchanged'])
++        self.assertEqual(fixture.marker.read_text(), 'selected fixture bootstrap invoked\n')
++        execution = json.loads((output / 'execution.json').read_bytes())
++        self.assertEqual(execution['returncode'], 23)
++        self.assertEqual(set(p.name for p in output.iterdir()), {'execution.json', 'stdout.txt', 'stderr.txt'})
++
++    def test_equal_ancestor_symlink_and_existing_outputs_preserve_preimage(self):
++        for relation in ('equal', 'ancestor', 'symlink', 'existing'):
++            with self.subTest(relation=relation):
++                fixture = self.fixture(relation)
++                output = fixture.native if relation == 'equal' else fixture.root if relation == 'ancestor' else fixture.native / 'sentinel-output'
++                if relation == 'symlink':
++                    link = fixture.root / 'linked-native'; link.symlink_to(fixture.native, target_is_directory=True)
++                    output = link / 'not-allowed'
++                if relation == 'existing': write(output, b'preexisting selected user bytes\n')
++                row = fixture.invoke(fixture.proofs / 'materialize.py', *fixture.proof_arguments('request-raw', output))
++                self.assertEqual(row['returncode'], 2)
++                self.assertTrue(row['native_unchanged'])
++                if relation == 'existing': self.assertEqual(output.read_bytes(), b'preexisting selected user bytes\n')
++                if relation == 'symlink': self.assertFalse(output.exists())
++
++
++if __name__ == '__main__':
++    unittest.main()
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/test_tooling.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/test_tooling.py
+@@ -12,8 +12,9 @@
+ 
+ import tooling
+ import tooling_materialize as materializer
++from historical_test_payload import published_payload
+ 
+-PACKAGE = Path(__file__).resolve().parents[2] / "build_tenants/common"
++PACKAGE = published_payload()
+ BUNDLE = PACKAGE / "standards/tooling"
+ 
+ 
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/tooling_current.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/tooling_current.py
+@@ -97,6 +97,7 @@
+     a.require(files["materialize.py"] == (HERE / "tooling_materialize.py").read_bytes(), "current materializer differs")
+     a.require(files["setup.py"] == (HERE / "tooling_setup.py").read_bytes(), "current setup differs")
+     a.require(files["runtime.py"] == (HERE / "tooling_runtime.py").read_bytes(), "current runtime derivation implementation differs")
++    a.require(files['payload_boundary.py'] == (HERE / 'payload_boundary.py').read_bytes(), 'current filesystem boundary differs')
+     a.require(files["README.md"] == guide(meta["distribution_version"]), "current tooling guide differs")
+     return {"kind": meta["kind"], "status": "checked", "version": meta["distribution_version"],
+             "source_identity_sha256": meta["source_identity_sha256"], "source_files": len(sources),
+@@ -124,6 +125,7 @@
+     files = {"sources.zip": archive.getvalue(), "materialize.py": (HERE / "tooling_materialize.py").read_bytes(),
+              "setup.py": (HERE / "tooling_setup.py").read_bytes(), "README.md": guide(selected["version"]),
+              "runtime.py": (HERE / "tooling_runtime.py").read_bytes(),
++             "payload_boundary.py": (HERE / "payload_boundary.py").read_bytes(),
+              "SELECTION.json": a.regular(selection_path)}
+     meta = {"kind": "stdo.installed-tooling/2", "distribution_version": selected["version"],
+             "source_identity_sha256": selected["source_identity_sha256"], "selection_sha256": selection_sha,
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/tooling_materialize.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/tooling_materialize.py
+@@ -57,7 +57,7 @@
+     require("TOOLING.json" in files, "required tooling member set differs")
+     meta = json.loads(files["TOOLING.json"])
+     current = meta.get("kind") == "stdo.installed-tooling/2"
+-    members = MEMBERS | {"SELECTION.json", "setup.py", "runtime.py"} if current else MEMBERS
++    members = MEMBERS | {"SELECTION.json", "setup.py", "runtime.py", "payload_boundary.py"} if current else MEMBERS
+     max_bytes, max_files = (512 * 1024 * 1024, 8192) if current else (MAX_BYTES, MAX_FILES)
+     require(set(files) == members, "required tooling member set differs")
+     if current:
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/tooling_runtime.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/tooling_runtime.py
+@@ -2,6 +2,7 @@
+ from __future__ import annotations
+ 
+ import json
++import importlib.util
+ import os
+ from pathlib import Path
+ import subprocess
+@@ -9,6 +10,14 @@
+ 
+ PROFILE = "build_tenants/lean/profiles/proof-support-v1.json"
+ GENERATED = tuple("build_tenants/lean/" + n + "/" for n in (".lake", ".cache", ".toolchain", ".bootstrap"))
++
++
++def boundary():
++    path = Path(__file__).absolute().with_name('payload_boundary.py')
++    spec = importlib.util.spec_from_file_location('stdo_payload_boundary', path)
++    module = importlib.util.module_from_spec(spec)
++    exec(compile(path.read_bytes(), str(path), 'exec'), module.__dict__)
++    return module
+ 
+ 
+ def separate(tool, output, protected):
+@@ -32,6 +41,7 @@
+ 
+ def derive(tool, bundle, tools_root, destination, receipt):
+     tools_root, destination, receipt = map(tool.ordinary_path, (tools_root, destination, receipt))
++    boundary().guard([destination, receipt], [bundle, tools_root], anchors=[Path(__file__).absolute()])
+     meta, rows = selected(tool, bundle, tools_root)
+     for protected in (bundle, tools_root):
+         separate(tool, destination, protected); separate(tool, receipt, protected)
+@@ -54,6 +64,7 @@
+     tool.require(record.get("kind") == "stdo.ac-runtime-derivation/1" and record.get("allowed_source_delta") == PROFILE and
+                  record.get("generated_roots") == list(GENERATED), "unsupported runtime derivation contract")
+     source, runtime = map(tool.ordinary_path, (record["source_root"], record["runtime_root"]))
++    boundary().guard([runtime], [source], anchors=[Path(__file__).absolute()])
+     separate(tool, runtime, source)
+     rows = record["source_members"]
+     tool.require(rows and PROFILE in rows, "runtime source closure missing")
+@@ -123,9 +134,11 @@
+ 
+ 
+ def bootstrap(tool, prepared, prepared_sha, python, output):
++    boundary().guard([output], [prepared], anchors=[Path(__file__).absolute()])
+     record = load(tool, prepared, prepared_sha); validate(tool, record)
+     tool.require(record["status"] == "prepared", "fresh prepared derivation required")
+     output = tool.ordinary_path(output); runtime = Path(record["runtime_root"])
++    boundary().guard([output, runtime], [Path(record['source_root'])], anchors=[Path(__file__).absolute()])
+     separate(tool, output, runtime); separate(tool, output, Path(record["source_root"]))
+     tool.require(not output.exists(), "preserve prior bootstrap evidence")
+     output.mkdir(parents=True, exist_ok=False)
+--- predecessor/specification_methodology/v3/build_tenants/common-tools/tooling_setup.py
++++ successor/specification_methodology/v3/build_tenants/common-tools/tooling_setup.py
+@@ -12,14 +12,18 @@
+ 
+ 
+ def materializer(bundle):
+-    spec = importlib.util.spec_from_file_location("stdo_materializer", bundle / "materialize.py")
+-    module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
++    path = bundle / 'materialize.py'
++    spec = importlib.util.spec_from_file_location("stdo_materializer", path)
++    module = importlib.util.module_from_spec(spec)
++    exec(compile(path.read_bytes(), str(path), 'exec'), module.__dict__)
+     return module
+ 
+ 
+ def runtime_tools(bundle):
+-    spec = importlib.util.spec_from_file_location("stdo_runtime_derivation", bundle / "runtime.py")
+-    module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
++    path = bundle / 'runtime.py'
++    spec = importlib.util.spec_from_file_location("stdo_runtime_derivation", path)
++    module = importlib.util.module_from_spec(spec)
++    exec(compile(path.read_bytes(), str(path), 'exec'), module.__dict__)
+     return module
+ 
+ 
+--- predecessor/tests/test_stable_stack_release.py
++++ successor/tests/test_stable_stack_release.py
+@@ -373,6 +373,8 @@
+         if all((self.root / 'bundle' / name).is_file() for name in self.bundle['members']):
+             helper = 'specification_methodology/v3/build_tenants/common-tools/proof_evidence.py'
+             put(self.root, helper, (ROOT / helper).read_bytes())
++            boundary = 'specification_methodology/v3/build_tenants/common-tools/payload_boundary.py'
++            put(self.root, boundary, (ROOT / boundary).read_bytes())
+             spec = importlib.util.spec_from_file_location('transport_control', self.root / helper)
+             transport = importlib.util.module_from_spec(spec); spec.loader.exec_module(transport)
+             transport.pack(self.root / 'bundle', self.root / 'proof.zip')

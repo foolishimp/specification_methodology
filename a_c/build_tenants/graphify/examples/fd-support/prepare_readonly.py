@@ -11,6 +11,7 @@ import hashlib
 import json
 from pathlib import Path
 import sys
+import subprocess
 from typing import cast
 
 CODE = Path(__file__).resolve().parents[2] / "code"
@@ -59,7 +60,7 @@ def _request(identity: str, operation: str, arguments: Object) -> Object:
     return {"schema": core.REQUEST, "id": identity, "operation": operation, "arguments": arguments}
 
 
-def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", definition_name: str = "stdo_a_c.json") -> Object:
+def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", definition_name: str = "stdo_a_c.json", method_installation: Path | None = None, stdo: str = "stdo") -> Object:
     """Create only a new operator-selected example directory."""
     output = output.absolute()
     product_root = product_root.resolve(strict=True)
@@ -72,18 +73,42 @@ def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", de
     definition_raw = (product_root / definition_name).read_bytes()
     definition = cast(Object, core.parse_json(definition_raw))
     product_id = cast(str, cast(Object, definition["product"])["definition_id"])
-    native = profile == "stdo-3.0.1"
-    if profile not in ("claude-rc9", "stdo-3.0.1"):
+    native305 = profile == "stdo-3.0.5"
+    native = profile in ("stdo-3.0.1", "stdo-3.0.5")
+    if profile not in ("claude-rc9", "stdo-3.0.1", "stdo-3.0.5"):
         raise ValueError("Select one explicit supported profile")
     tool_root = Path(__file__).resolve().parents[4]
-    profile_path = "build_tenants/graphify/design/fd-method-" + ("stdo-3.0.1" if native else "claude-rc9") + ".json"
+    profile_path = "build_tenants/graphify/design/fd-method-" + (profile if native else "claude-rc9") + ".json"
     profile_raw = (tool_root / profile_path).read_bytes()
-    profile_id = core.NATIVE_PROFILE_ID if native else core.PROFILE_ID
-    profile_sha = core.NATIVE_PROFILE_SHA256 if native else core.PROFILE_SHA256
-    if native and core.pointer(definition, "/constitution/stdo/basis") != {"uri": "stdo://releases/v3.0.1-rc.1/", "manifest_sha256": core.NATIVE_MANIFEST_SHA256}:
+    profile_id = core.NATIVE305_PROFILE_ID if native305 else core.NATIVE_PROFILE_ID if native else core.PROFILE_ID
+    profile_sha = core.NATIVE305_PROFILE_SHA256 if native305 else core.NATIVE_PROFILE_SHA256 if native else core.PROFILE_SHA256
+    if native and not native305 and core.pointer(definition, "/constitution/stdo/basis") != {"uri": "stdo://releases/v3.0.1-rc.1/", "manifest_sha256": core.NATIVE_MANIFEST_SHA256}:
         raise ValueError("Native setup requires the exact released 3.0.1 Product basis")
     if hashlib.sha256(profile_raw).hexdigest() != profile_sha:
-        raise ValueError("The selected source does not contain the exact supported Claude RC9 profile")
+        raise ValueError("The selected source does not contain the exact supported profile")
+    manager_observation: Object | None = None
+    if native305:
+        if method_installation is None:
+            raise ValueError("3.0.5 setup requires the exact verified method installation")
+        method_installation = method_installation.absolute()
+        if core._overlaps(output, method_installation):
+            raise ValueError("Setup output must not overlap the immutable method installation")
+        selected_basis = core.as_object(core.pointer(definition, "/constitution/stdo/basis"))
+        result = subprocess.run([stdo, "status", "--definition", str(product_root / definition_name), "--verify"], capture_output=True, text=True, timeout=60)
+        if result.returncode:
+            raise ValueError("Manager verification failed: " + (result.stderr or result.stdout))
+        manager_observation = core.as_object(core.parse_json(result.stdout.encode()))
+        if (selected_basis.get("uri") != "stdo://releases/v3.0.5/"
+                or manager_observation.get("basis") != selected_basis["uri"]
+                or manager_observation.get("manifest_sha256") != selected_basis.get("manifest_sha256")
+                or manager_observation.get("definition_id") != product_id
+                or manager_observation.get("valid") is not True
+                or manager_observation.get("installed") is not True
+                or manager_observation.get("failures")
+                or Path(core.text(manager_observation.get("path"))).resolve() != method_installation.resolve()):
+            raise ValueError("Manager did not verify the exact selected 3.0.5 Product installation")
+    elif method_installation is not None:
+        raise ValueError("Method installation startup binding is selected only by the 3.0.5 profile")
     design_path = "build_tenants/graphify/design/fd-support.md"
     design_raw = (tool_root / design_path).read_bytes()
     definition_ref = _source("product", definition_name, definition_raw)
@@ -141,6 +166,13 @@ def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", de
                    "max_history_records": 10000, "max_wait_ms": 1000},
         "authority_sources": [operator_ref],
     }
+    if native305:
+        core.as_object(policy["sources"])["installed-method"] = {
+            "path": str(method_installation), "kind": "workspace", "writable": False,
+            "read_scope": [{"path": name, "kind": "file"} for name in ("manifest.json", "LICENSE")]
+                + [{"path": name, "kind": "directory"} for name in ("standards", "plugins", "release")],
+        }
+        policy["method_installation"] = {"root": "installed-method"}
     requests: dict[str, Object] = {
         "describe.json": _request("readonly-describe-001", "tools.describe", {}),
         "read-product.json": _request("readonly-product-001", "source.read", {"source": definition_ref, "encoding": "utf8"}),
@@ -161,6 +193,9 @@ def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", de
     evidence_root.mkdir()
     (output / "control" / "OPERATOR.md").write_bytes(notice.encode("utf-8"))
     policy_raw = _write_json(output / "policy.json", policy)
+    if native305:
+        core.Runtime.from_policy(output / "policy.json", hashlib.sha256(policy_raw).hexdigest(), "executive")
+        _write_json(output / "method-verification.json", manager_observation)
     for name, request in requests.items():
         _write_json(output / "requests" / name, request)
     session: list[Object] = [
@@ -192,14 +227,16 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", required=True, type=Path, help="Fresh directory beneath an existing parent")
     parser.add_argument("--product-root", type=Path, default=Path(__file__).resolve().parents[4])
-    parser.add_argument("--profile", choices=("claude-rc9", "stdo-3.0.1"), default="claude-rc9")
+    parser.add_argument("--profile", choices=("claude-rc9", "stdo-3.0.1", "stdo-3.0.5"), default="claude-rc9")
     parser.add_argument("--definition-name", default="stdo_a_c.json", help="Product-relative exact definition path")
+    parser.add_argument("--method-installation", type=Path)
+    parser.add_argument("--stdo", default="stdo")
     args = parser.parse_args()
     try:
-        result = prepare(cast(Path, args.out), cast(Path, args.product_root), profile=args.profile, definition_name=args.definition_name)
+        result = prepare(cast(Path, args.out), cast(Path, args.product_root), profile=args.profile, definition_name=args.definition_name, method_installation=args.method_installation, stdo=args.stdo)
         print(core.canonical(result).decode("utf-8"))
         return 0
-    except (OSError, ValueError, core.SupportError, KeyError) as exc:
+    except (OSError, ValueError, core.SupportError, KeyError, subprocess.SubprocessError) as exc:
         print(f"Read-only setup refused: {exc}", file=sys.stderr)
         return 2
 

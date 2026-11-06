@@ -5,6 +5,12 @@ description: Convert source documents into a source-linked axiomatic program and
 
 # Axiomatize Corpus
 
+This is the 3.0.5 native interface. When an authoritative a_c model already
+exists, use the [model conversion contract](references/model-conversion.md)
+before ordinary program validation. Derive views from that same model; do not
+author an independent rival interpretation. Direct source-to-program authoring
+remains available when the caller selects that public surface.
+
 Read [the output contract](references/output-contract.md) and its
 [program schema](references/program.schema.json). Run the commands below from
 the Axiom Indexer repository root that contains `build_tenants/`.

@@ -1,0 +1,22 @@
+{
+  "kind": "stdo304.guide-repair-intake/1",
+  "predecessor_freeze_sha256": "f8b03f74ea82b90a0de84c2abf8e014ba6bb84eb287300614329d64402a16e18",
+  "guide_preimage_sha256": "0c4fc859e63de7b7152588c1c2d60306943346c07795d611423ea61f5509eda0",
+  "finding": {
+    "severity": 3,
+    "origin": "Executive /root relayed the independently produced review finding in the repair activation; this is not a newly authored independent review.",
+    "text": "development/STDO_3_0_4.md:94 fresh-tree block uses STDO_TOOLS assigned only in preceding existing-tree block. Skipping it => unbound variable; running preceding block first on absent tree => missing materialized tree and set-e exit. Both reproduced read-only. Installed adoption unaffected; all other bounded checks pass.",
+    "impact": "Material downstream fresh-checkout impact."
+  },
+  "authority": "Existing owner adoption instruction and Executive bounded repair activation",
+  "repair_scope": "Only the guide materialization branch: set destination before branching; materialize absent destination or verify existing destination; preserve refusal for malformed/dangling symlink destinations, without force/overwrite.",
+  "evidence_scope": "Preserve initial subject and finding; actual failing-before and passing-after branch runs in exclusive ignored v3/.stdo fixture; syntax/link/whitespace checks; successor exact freeze.",
+  "preserve": [
+    "Original REVIEW_FREEZE.json and all existing evidence",
+    "Other source files",
+    "Installed release",
+    "Pinned current source materialization",
+    "No commits or pushes"
+  ],
+  "review_boundary": "Separate bounded independent recheck and Executive disposition remain pending."
+}

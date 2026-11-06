@@ -4,6 +4,27 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
+The owner selects the **complete stable 3.0.5 release cohort**, including all
+five Products and required current tools, representation and host skills.
+[The admitted delivery contract](../.ai-workspace/work/STDO305_DELIVERY/CONTRACT.md)
+records scope, roles, dependency frontier and closure conditions;
+[COMPLETE_RELEASE](requirements/COMPLETE_RELEASE.md) binds the requirements.
+Release tooling is updated first. The complete source-current candidate is
+then built, qualified, independently reviewed and published with fresh public
+installation. This is selected work, not a statement that those gates pass.
+The 3.0.4 adoption below remains the current builder selection.
+
+The owner selects **3.0.4 as this source project's builder and released tooling**
+for the next pieces of work. [The adoption intake](../.ai-workspace/work/STDO304_BUILDER_ADOPTION/INTAKE.json)
+records the exact instruction; [the versioned binding](../development/STDO_3_0_4.md)
+locates the native skills, compact reader and 191-source tool bundle.
+[The adoption evidence](../.ai-workspace/work/STDO304_BUILDER_ADOPTION/README.md)
+records the manager plan and checks. This selection changes the current
+builder only. It accepts no new method meaning, qualifies no legacy operation,
+and changes no peer Product or historical C3 evidence.
+
+### Published 3.0.4 release
+
 **STDO 3.0.4 is published as a normal standalone release and GitHub Latest.**
 The [release record](../.ai-workspace/work/STDO304_DELIVERY/RELEASED.md) binds
 source A, publication carrier B2, native C, annotated tag, manifest and GitHub
@@ -11,7 +32,7 @@ release 432270412. Exact remote publication, four public downloads, the fresh
 111-file public installation, 20 routes and 191-source materialization pass.
 Independent public review is closed and the Executive accepts that bounded
 distribution result under the owner's release authority. Existing native
-workflow limits, the builder and all consumer basis selections remain unchanged.
+workflow limits remain. Publication itself changed no builder or consumer basis; the later source-project adoption is the current selection above.
 
 ### Accepted review-flow source
 
@@ -38,8 +59,7 @@ not an aggregate pass: two strict-envelope failures, separately verified R1
 recovery, a conditional R2 record and E1's unsupported authorization/grouping
 claim remain explicit. Source/candidate batching and family-independence limits
 withhold native independent-review qualification. No successor call ran. This
-is released meaning with bounded qualification; the builder and all consumer
-selections remain unchanged.
+is released meaning with bounded qualification. That release did not adopt itself for a consumer; the later source-project builder adoption is recorded above.
 
 ### Preceding coordinated-skills delivery
 

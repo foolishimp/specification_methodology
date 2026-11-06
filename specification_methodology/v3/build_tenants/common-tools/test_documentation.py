@@ -11,9 +11,10 @@ from unittest.mock import patch
 import documentation as docs
 import native_release as native
 import package_tools
+from historical_test_payload import published_payload
 
 V3 = Path(__file__).resolve().parents[2]
-PACKAGE = V3 / "build_tenants/common"
+PACKAGE = published_payload()
 
 
 class DocumentationTests(unittest.TestCase):
@@ -149,6 +150,7 @@ class DocumentationTests(unittest.TestCase):
             for name in ('documentation.py', 'package_tools.py', 'native_release.py', 'proof_reader.py',
                          'tooling.py', 'tooling_materialize.py', 'tooling-selection.json', 'tooling-guide.md'):
                 shutil.copyfile(Path(__file__).with_name(name), tools / name)
+            shutil.copytree(Path(__file__).with_name('fixtures'), tools / 'fixtures')
             package = root / 'build_tenants/common'
             shutil.copytree(PACKAGE, package)
             command = [sys.executable, '-I', '-B', str(tools / 'documentation.py'), 'check', str(package)]

@@ -1086,7 +1086,7 @@ def _verify_pin(pin: c.Object) -> Path:
 def _supervisor_binding(runtime: c.Runtime, ref: c.Object) -> c.Object:
     directory = Path(__file__).resolve().parent
     python = _pin(Path(sys.executable))
-    modules: list[c.JSON] = [_pin(directory / name) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py", "ac_formal_gate.py", "ac_graph.py")]
+    modules: list[c.JSON] = [_pin(directory / name) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py", "ac_formal_gate.py", "ac_graph.py", "ac_fs_boundary.py")]
     entry = directory / "ac_support.py"
     argv: list[c.JSON] = [python["path"], str(entry), "_supervise", "--policy", str(runtime.policy_path), "--policy-sha256", runtime.policy_sha256, "--principal", runtime.principal_id, "--attempt-id", ref["id"], "--attempt-sha256", ref["sha256"]]
     return {"python": python, "modules": modules, "argv_template": "fixed-private-entry-with-anchor", "startup": {"python": str(Path(sys.executable)), "policy": str(runtime.policy_path), "policy_sha256": runtime.policy_sha256, "principal": runtime.principal_id}, "argv": argv}
@@ -1096,7 +1096,7 @@ def _verify_supervisor(binding: c.Object, runtime: c.Runtime, ref: c.Object) -> 
     python = _verify_pin(c.as_object(binding["python"]))
     directory = Path(__file__).resolve().parent
     pins = [c.as_object(item) for item in c.as_list(binding["modules"])]
-    expected = {str((directory / name).resolve()) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py", "ac_formal_gate.py", "ac_graph.py")}
+    expected = {str((directory / name).resolve()) for name in ("ac_support.py", "ac_support_core.py", "ac_support_effects.py", "ac_support_composition.py", "ac_formal_gate.py", "ac_graph.py", "ac_fs_boundary.py")}
     if {c.text(item["path"]) for item in pins} != expected or len(pins) != len(expected):
         raise c.SupportError("dependency_changed", "Supervisor module population differs from the sealed shipped entry", [], [])
     for item in pins:

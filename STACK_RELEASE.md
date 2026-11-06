@@ -1,218 +1,98 @@
-# Specification Stack Coordinated Release
-
-## Boundary
-
-This is the owner-authorized coordination contract among three peer Products.
-The repository root remains non-Product coordination. Equal release versions
-do not merge Product meaning, member inventories, immutable tags, acceptance,
-or release authority.
-
-One exact **cohort version suffix** has form `<version>-rc.<n>`. Product cut
-names and refs add `v`; embedded plugin and index fields do not. For example,
-cut `v2.5.0-rc.4` and plugin version `2.5.0-rc.4` match after removing only the
-cut-name `v`.
+# Specification Stack coordinated release
 
 ## Meaning Of A Release Request
 
-In this repository, an owner's instruction to **release STDO** selects the
-complete multi-step release of the [required cohort](#complete-cohort), unless
-the owner explicitly narrows the requested operation. Dependency phases belong
-to that same request; they are not optional follow-ups requiring another user
-request merely because they cross peer Product boundaries. Explicitly narrowed
-work is not a completed STDO release.
+An owner's instruction to release STDO selects the complete candidate cohort
+and all of its build, test, dependency, installed qualification, tag, push,
+public artifact and readback phases, unless explicitly narrowed. A downstream
+phase already selected by that instruction does not require another request.
+Missing authority, a failed gate or a material unresolved decision remains a
+real stop; merely crossing a Product boundary is not one.
 
-`a_c` remains the calculus. Axiom Indexer, STDO Representation and the released
-`a_c.STDO` corpus are the concrete critical dependencies in this relation; their
-availability, matching labels or old release bytes do not establish a complete
-successor cohort.
+For the selected stable 3.0.5 release the cohort contains exactly five peer
+Products: Specification Methodology v3, STDO Representation, a_c Implementations
+(Graphify and Lean), Axiom Indexer and STDO Skills (Codex and Claude).
+[RELEASE_PRODUCTS.md](RELEASE_PRODUCTS.md) states all required components.
+`stack_release.json` binds their exact subjects, dependencies, current source
+and qualified claims under the `stable-five-product-v1` profile.
 
-The selected work includes:
+The root is coordination, not a Product. Equal versions do not merge Product
+meaning, inventories, tags, qualification or acceptance. Every owned Product
+and component uses the same stable version; third-party dependencies retain
+independent exact pins. Consumer adoption remains separately selected.
 
-- matching cohort versions and exact dependency bindings across all required
-  Products and assets;
-- affected semantic re-authoring of the Representation and `a_c.STDO` program,
-  source-digest rebinding, and regeneration of the logical map and affected
-  projections; changing digests alone does not qualify changed meaning;
-- matching native skills, plugin/distribution assets, release documentation and
-  links, complete member inventories and source routes;
-- proportionate qualification of the changed subjects and affected relations,
-  including required independent semantic, invariant and native-use checks;
-  valid unchanged evidence remains reusable on its exact basis; and
-- completion of the single [Coordinated Construction](#coordinated-construction)
-  procedure: exact staged commits A/B, annotated Product tags, selectors and
-  branches, checked atomic publication of `main` and the complete cohort ref
-  set, public verification and fresh reacquisition of the released subjects,
-  followed by final release/work records under its bookkeeping boundary.
+## Current candidate and immutable history
 
-The release request selects this whole work scope. Existing owner decisions,
-exact operation grants, invariant checks, qualification and refusal conditions
-still govern each effect and promotion. It does not permit skipping a gate,
-overwriting unrelated work, moving an immutable cut or inventing missing
-authority. A genuine missing decision or failed gate remains explicit; crossing
-an already selected dependency phase alone is not such a blocker.
+A status of `assembling` declares unfinished construction. Only a complete
+`candidate` may pass ready/content gates. No null field, placeholder, old
+snapshot, historical graph/report, label change or source-only archive proves
+required current membership or installed usability.
 
-Discussing or amending release instructions does not activate a release.
-A source-only amendment remains distinct from release execution. External
-consumer migration or adoption is outside default publication scope unless
-explicitly selected by its owner.
+The exact previous root manifest is preserved in
+`scripts/fixtures/stack_release-v2.5.1-rc.2.json`. Schema 1 remains the original
+three-Product RC profile and is verified by the historical checker path.
+Its frozen coordinates are interpreted against its original cut; it does not
+become the 3.0.5 candidate. All published cuts, including standalone 3.0.4,
+remain immutable and keep their original release status and evidence.
 
-## Complete Cohort
+## Source and dependency construction
 
-One complete cohort requires:
+1. Freeze semantic source S before dependent generation. Inventory every
+   authoritative standards member and native workflow contract. Classify
+   generated frames as routes to those owners. Explicitly exclude generated
+   documentation and tool archives from semantic identity, while retaining
+   them as mandatory native payload membership.
+2. Build current representation, executable tools, both host packages, proof
+   evidence and unified views from S. Bind exact source member digests and
+   intended `stdo://releases/v3.0.5/` URI. No generated payload embeds the
+   still-unknown enclosing native manifest digest.
+3. Freeze complete native A only after all required installed assets exist.
+   Create its local annotated Product tag, install and verify it, and bind
+   the native manifest. A includes current documentation/tooling; a native
+   cut missing those assets does not satisfy this release.
+4. Freeze external binding/carrier B with all five exact Product subjects,
+   S→native A→installed manifest, dependency edges, required qualification
+   evidence and publication expectations. This does not edit A. Every change
+   to a qualifying source or component invalidates the affected evidence.
 
-- exact Specification Methodology/STDO standards corpus;
-- exact distributed Claude and Codex `spec` plugin;
-- exact Axiom Indexer mechanics Product;
-- exact STDO Representation Product; and
-- released `a_c.STDO` axiomatic program and logical constraint map, plus an
-  exact source-corpus record containing every STDO standards member and digest.
+The cohort checker refuses an incomplete, extra, stale, mismatched, tampered
+or source-incongruent subject. A Lean source file or proof-reader page is not
+an executable verification result. Qualification names the actual candidate,
+execution environment, installed operation, limits and result; historical
+results retain their historical subjects.
 
-`stack_release.json` names these assets and every Product-local release ref.
-The checker recomputes each exact Product subject from its complete canonical
-native bundle, required local instruction references, discovery symlinks, and
-owned executable or selected program/map artifacts. It checks the declared
-member set and count against that closure, including symlink target bytes, as well as
-the STDO/plugin and semantic-index inventories and digests. It also binds the
-Representation dependency to the same-version Axiom ref and exact Product
-inventory, executable, program schema, and output contract. Presence or
-matching prose is not enough.
+## Promotion and publication
 
-The immutable RC4 subject retains seven Axiom and eight Representation members.
-RC5 includes the Representation frame-index guide in its nine-member inventory.
-RC6 conserves the seven-member Axiom mechanics and
-nine-member Representation boundary while rebinding the changed source and
-its authored index. Neither historical counts nor a recomputed smaller digest
-can excuse a missing native instruction file.
+Use `scripts/check_stack_release.py --phase ready` for complete constructed
+inputs and required evidence, then `--phase content --revision <B>` for the
+exact frozen candidate. Independent source-first assessment is a separately
+required claim, not inferred from those structural checks.
 
-The [RC7 release work](specification_methodology/v2/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
-records the completed RC7 cohort. Source and companion qualification,
-independent semantic/native review, internal frame binding, atomic publication
-and fresh public reacquisition are verified. `stack_release.json` retains its
-frozen commit-B candidate identity; the linked publication evidence records
-the completed transition. RC6 remains the immutable predecessor.
+Prepare all five annotated Product tags locally. This owner-selected cohort
+uses main plus those five immutable tags, with no extra branches. Another
+explicit cohort may select optional stable release branches. Stable tags already identify exact versions, so they are not reused
+as mutable version selectors. `--phase refs --revision <B>` checks the complete
+local graph, literal configured fetch/push endpoint, every expected remote
+direct object or required absence, and preserved immutable cuts. It emits
+an exact object-ID push vector and plan digest. Publish only that checked
+vector, in one `git push --atomic` with an explicit compare-and-swap lease for
+every mutable ref and create-only lease for every immutable tag. There is no
+unguarded force or sequential fallback. Drift requires a fresh frozen plan
+and repeated qualification, not an in-place waiver.
 
-The [2.5.1 RC1 release](specification_methodology/v2/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
-records the published matched cohort, verified public installation and retained
-Representation native qualification limits. T-288 and ABI delivery supply no
-release dependency. External consumer adoption remains unselected.
+`--phase published` checks all remote objects and preserved cuts.
+`--phase public --public-receipt <path> --public-receipt-sha256 <digest>`
+additionally checks a separately retained post-publication receipt, reacquires
+the exact public assets anonymously and checks fresh installed qualification
+from the published subjects. The external cohort manifest is itself a public
+asset; its own digest and later readback are outside its frozen contents, so
+they introduce no self-reference. A normal GitHub release
+becomes Latest only after required outputs and reviews pass. A later
+bookkeeping commit records final results without moving a cut. Partial
+publication withholds complete release status and needs explicit recovery;
+it is never represented as a completed atomic cohort.
 
-The [2.5.1 RC2 release](specification_methodology/v2/.ai-workspace/comments/codex/20260930_stdo_251_rc2/RELEASED.md)
-records the published triage clarification, targeted semantic/index update,
-bounded native assessment, atomic cohort publication and fresh public
-reacquisition. RC1 remains immutable; external consumer adoption is unselected.
-
-Since the side-by-side layout (2026-10-12) the STDO 2.* source lives at
-`specification_methodology/v2/` and v3.0.0 construction at
-`specification_methodology/v3/`. A product's `subtree` in `stack_release.json`
-remains the coordinate recorded against its frozen tag and is verified against
-that tag unchanged. Where the carrier revision holds the same product at a
-different path, `source_subtree` names that location and the checker reads
-carrier-revision content (release notes, native members) there. A future cohort
-cut from the new layout records the new path as its `subtree` directly and
-needs no `source_subtree`.
-
-## Coordinated Construction
-
-The first complete coordinated cohort was `v2.5.0-rc.4`; transitional RC3 index
-work remains historical evidence without child publication. Each successor
-selects one exact cohort cut and preserves all immutable predecessor records.
-
-Construction has two commits because the installed STDO manifest includes its
-annotated tag object:
-
-1. Freeze commit A containing the selected STDO, plugin, release note, and qualification
-   bytes.
-2. Create the selected annotated `specification_methodology/v<version>-rc.<n>` tag locally.
-   Do not push it.
-3. Install and verify that exact local tag. Record its manifest digest and Git
-   identities in `stack_release.json`.
-4. Generate and validate the same-version Axiom Indexer and STDO Representation assets from
-   that exact Install. Pin the literal repository endpoint in
-   `publication.repository_url`. Fetch that endpoint and record the expected
-   direct object ID or required absence for every destination ref in
-   `publication.expected_remote`. Also record every project-qualified
-   same-line immutable RC and any applicable preserved historical unqualified
-   RC in `publication.expected_version_lines`, with its direct tag object and
-   peeled commit. Freeze the child Products, endpoint, expectation sets, and
-   version-line digest in commit B with `cohort.status` set to `candidate`.
-5. Before child tags exist, qualify commit B content:
-
-   ```sh
-   python scripts/check_stack_release.py --phase content --revision HEAD
-   ```
-
-6. Create both annotated child cut tags and all three Product-local RC,
-   version-line selector, and release branches locally.
-7. Re-run the mandatory local-ref-graph gate. The configured fetch and push
-   endpoints must both equal the frozen literal URL. The target ordinal must be
-   greater than every observed immutable RC, and the existing selector must
-   resolve to the greatest lower cut:
-
-   ```sh
-   python scripts/check_stack_release.py --phase refs --revision HEAD
-   ```
-
-   `--remote` names only the configured alias whose fetch and push URLs are
-   checked. Network reads and the emitted push use the frozen literal URL.
-
-8. The successful ref gate emits the frozen repository URL, the observed
-   version-line digest, `remote_expectations_sha256`, a
-   `qualified_push_sha256` over the frozen revision, destination, expectations,
-   and source-object-to-destination refspecs, plus exact `push_argv`. Publish
-   only that checked argument vector in one atomic transport transaction. Full
-   source object IDs prevent a local ref move after qualification from changing
-   the published bytes. Every immutable cut tag uses an empty-expectation
-   create-only lease; every mutable ref uses its fetched direct-object-ID lease.
-   There is no unguarded force or sequential-push fallback. In shape, the
-   command is:
-
-   ```sh
-   git push --atomic \
-     --force-with-lease='<destination-ref>:<expected-oid-or-empty>' \
-     ... \
-     '<publication.repository_url>' \
-     '<qualified-source-oid>:<destination-ref>' ...
-   ```
-
-   A lease mismatch stops the release. Refetch, rebuild the expectation map in
-   a new commit-B candidate, and rerun content plus ref qualification.
-
-9. Verify the public topology and exact bytes:
-
-   ```sh
-   python scripts/check_stack_release.py \
-     --phase published --revision HEAD --remote origin
-   ```
-
-Post-publication ticket or release bookkeeping uses a later commit C and never
-moves an immutable tag.
-
-## Refusals
-
-Publication stops when:
-
-- a required Product, plugin, program, map, validation report, or source-corpus
-  record is absent;
-- normalized versions or exact source-cut identities differ;
-- the source-corpus member set or any digest differs from the tagged STDO cut;
-- program, map, or validation source routes name another cut or an unbound
-  source;
-- the Representation release record does not bind the generated member paths
-  and exact file digests;
-- a child tag is lightweight or a selector, RC branch, or release branch does
-  not target its Product cut;
-- the local checked ref graph differs from the push set;
-- the configured fetch or push endpoint differs from the frozen literal
-  repository URL;
-- a higher same-line RC exists, the target is not a strict ordinal advance, or
-  the current selector does not resolve to the greatest lower immutable cut;
-- a remote expectation is implicit, absent from the frozen map, or has drifted;
-- atomic push is unsupported; or
-- any remote cohort ref is missing or mismatched; or
-- after publication, the target is not the greatest same-line RC or its
-  selector and release branch do not identify it.
-
-Historically authorized backfill remains a recovery relation only. It must use
-the exact historical cut and same normalized suffix, cannot add bytes or move a
-tag, must verify a complete remote set, and never represents the original
-publication as atomic.
+The Executive coordinates within the owner's selected grant. A separately
+bound Writer performs effects; an independent Reviewer assesses the frozen
+subject without repairing it. Exact operation assignment, evidence and
+result consumption remain recorded in the current delivery carrier.
