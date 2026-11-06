@@ -1,0 +1,213 @@
+{
+  "category": "execution",
+  "claim": "current_claude_skills",
+  "configuration": {
+    "bytes": 36668,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/claude/.claude/stdo-3.0.5/CONFIG.json",
+    "sha256": "0d53244e3e6fe74d9bf24f4ffe19e9667206ffa63864e151b4f9fcd67e36c4f8"
+  },
+  "configuration_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/claude/.claude/stdo-3.0.5/CONFIG.json",
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools/stdo_skills/scripts/manage_skills.py",
+      "verify",
+      "--workspace",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/claude",
+      "--host",
+      "claude",
+      "--receipt-sha256",
+      "d00a89c8ad4b8a9de42622d934a6fed644ab47b81c8b35b2cbf7d6a2c0990f8f"
+    ],
+    "child_maxrss_native_units": 1054834688,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001",
+    "elapsed_seconds": 0.031608,
+    "ended_ns": 1793998481420338000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 4230,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/claude/.claude/stdo-skills-3.0.5.receipt.json",
+        "sha256": "d00a89c8ad4b8a9de42622d934a6fed644ab47b81c8b35b2cbf7d6a2c0990f8f"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 62,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-verify/stdout.txt",
+        "sha256": "129b42659aaa5d9029ae13e7af0ac58c40e4627ef5a09f51baaa42dd50d90b07"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-verify/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 62,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-verify/result.json",
+        "sha256": "72ed456b4438ee2a1ce66956f61baa5b873ef41e017ccce2861913bba7dfb8b8"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1793998481388730000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-verify/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 62,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-verify/stdout.txt",
+      "sha256": "129b42659aaa5d9029ae13e7af0ac58c40e4627ef5a09f51baaa42dd50d90b07"
+    },
+    "system_seconds": 0.006866999999999734,
+    "user_seconds": 0.022774999999999324
+  },
+  "host_workspace": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/claude",
+  "installation": {
+    "bytes": 106532,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/cohort/INSTALLATION.json",
+    "sha256": "3d3c8e844235d2a39d754e3d783566c131687eacaa62fd61a9bcd52ff8659beb"
+  },
+  "kind": "stdo.cohort-evidence/1",
+  "limits": "Actual public source-tools Skills verify/check-runtime against fresh explicit manager/store/runtime anchor passed. Fixed public component qualification only; no native LLM/Context rerun or consumer Product adoption.",
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/claude/.claude/stdo-skills-3.0.5.receipt.json",
+      "retained": {
+        "bytes": 4230,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/claude/.claude/stdo-skills-3.0.5.receipt.json",
+        "sha256": "d00a89c8ad4b8a9de42622d934a6fed644ab47b81c8b35b2cbf7d6a2c0990f8f"
+      }
+    }
+  ],
+  "original_execution": {
+    "bytes": 3962,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-verify/execution.json",
+    "sha256": "267287a8d72b46df336d3f685eecd29657535afcfcfef94f07c3f7282a91e460"
+  },
+  "producer": {
+    "bytes": 16552,
+    "path": "stdo_skills/scripts/manage_skills.py",
+    "sha256": "688c2ac7abfe55ca4d52cc29bbd51b4b68cfceee5f133d2f41c7b299cc4b24b4"
+  },
+  "receipt": {
+    "bytes": 4230,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/claude/.claude/stdo-skills-3.0.5.receipt.json",
+    "sha256": "d00a89c8ad4b8a9de42622d934a6fed644ab47b81c8b35b2cbf7d6a2c0990f8f"
+  },
+  "result": {
+    "bytes": 62,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-verify/result.json",
+    "sha256": "72ed456b4438ee2a1ce66956f61baa5b873ef41e017ccce2861913bba7dfb8b8"
+  },
+  "runtime": {
+    "bytes": 38177,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-check-runtime/result.json",
+    "sha256": "bd33ad396ea0abaf5ac00b87963c35d84067769955f18d00969f29f315033cc3"
+  },
+  "runtime_anchor": {
+    "bytes": 33473,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/anchors/claude/INSTALLATION.json",
+    "sha256": "07873ee356f2d9ae924656ab50ac4c3cd17ab51df8b8741782818cd5b64d715c"
+  },
+  "runtime_execution": {
+    "execution": {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/claude/.claude/stdo-3.0.5/CONFIG.json"
+      ],
+      "child_maxrss_native_units": 1054834688,
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001",
+      "elapsed_seconds": 0.829947,
+      "ended_ns": 1793998482267331000,
+      "environment": {
+        "additions": {},
+        "python": {
+          "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+          "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+          "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+          "version": "3.13.7"
+        }
+      },
+      "inputs": [
+        {
+          "bytes": 36668,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/claude/.claude/stdo-3.0.5/CONFIG.json",
+          "sha256": "0d53244e3e6fe74d9bf24f4ffe19e9667206ffa63864e151b4f9fcd67e36c4f8"
+        }
+      ],
+      "outputs": [
+        {
+          "bytes": 38177,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-check-runtime/stdout.txt",
+          "sha256": "78eb595bf5d195fb08985092064d70128f9089d5cba46392e80a4ba78c80a816"
+        },
+        {
+          "bytes": 0,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-check-runtime/stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 38177,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-check-runtime/result.json",
+          "sha256": "bd33ad396ea0abaf5ac00b87963c35d84067769955f18d00969f29f315033cc3"
+        }
+      ],
+      "returncode": 0,
+      "started_ns": 1793998481437384000,
+      "stderr": {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-check-runtime/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 38177,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-check-runtime/stdout.txt",
+        "sha256": "78eb595bf5d195fb08985092064d70128f9089d5cba46392e80a4ba78c80a816"
+      },
+      "system_seconds": 0.08149999999999968,
+      "user_seconds": 0.7409730000000003
+    },
+    "observed_input_paths": [
+      {
+        "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/claude/.claude/stdo-3.0.5/CONFIG.json",
+        "retained": {
+          "bytes": 36668,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/claude/.claude/stdo-3.0.5/CONFIG.json",
+          "sha256": "0d53244e3e6fe74d9bf24f4ffe19e9667206ffa63864e151b4f9fcd67e36c4f8"
+        }
+      }
+    ],
+    "producer": {
+      "bytes": 16552,
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "sha256": "688c2ac7abfe55ca4d52cc29bbd51b4b68cfceee5f133d2f41c7b299cc4b24b4"
+    },
+    "result": {
+      "bytes": 38177,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/claude-check-runtime/result.json",
+      "sha256": "bd33ad396ea0abaf5ac00b87963c35d84067769955f18d00969f29f315033cc3"
+    },
+    "schema": "stdo.execution-observation/1"
+  },
+  "schema": "stdo.execution-observation/1",
+  "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "status": "passed",
+  "subjects": {
+    "stdo_skills": "6fa286b22155b131d89daa7aa935d3a856578d0bded3c7a01e1b01655800b395"
+  }
+}

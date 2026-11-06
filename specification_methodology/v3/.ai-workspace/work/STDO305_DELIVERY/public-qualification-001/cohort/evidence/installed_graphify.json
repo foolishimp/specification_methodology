@@ -1,0 +1,225 @@
+{
+  "artifacts": {
+    "carrier.json": {
+      "bytes": 42191734,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/carrier.json",
+      "sha256": "c0bc5d26abbb3b456033ad1cff1cee38981459495be4de3e68d365415b767269"
+    },
+    "graph.json": {
+      "bytes": 37126766,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/graph.json",
+      "sha256": "f01b28cad899d7d07b063afbaa4e26a1824e4a9a365b62d958b5228fd4ee4ffe"
+    },
+    "model.json": {
+      "bytes": 8521879,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/model.json",
+      "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+    },
+    "runtime.json": {
+      "bytes": 1001,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/runtime.json",
+      "sha256": "3c9bfe9cdb678311288808f10eec974595146df7cebfa8a2bf4759d7e191198a"
+    },
+    "selections.json": {
+      "bytes": 742,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/selections.json",
+      "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+    },
+    "views.json": {
+      "bytes": 1446025,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/views.json",
+      "sha256": "5e3328851495682f0bc3b66cbc5a8ede16a4d10776e0231e51331e1f3d5aa148"
+    }
+  },
+  "category": "execution",
+  "claim": "installed_graphify",
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/runtime/a_c/build_tenants/graphify/code/ac_upstream.py",
+      "--model",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+      "--carrier",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/carrier.json",
+      "--selections",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-selections.json",
+      "--upstream",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/graphify",
+      "--runtime",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/RUNTIME.json",
+      "--output",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/graphify/current-roundtrip"
+    ],
+    "child_maxrss_native_units": 728416256,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001",
+    "elapsed_seconds": 17.450289,
+    "ended_ns": 1793998512626623000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 8521879,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+        "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+      },
+      {
+        "bytes": 42191734,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/carrier.json",
+        "sha256": "c0bc5d26abbb3b456033ad1cff1cee38981459495be4de3e68d365415b767269"
+      },
+      {
+        "bytes": 742,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-selections.json",
+        "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+      },
+      {
+        "bytes": 1001,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/dependencies/graphify/RUNTIME.json",
+        "sha256": "3c9bfe9cdb678311288808f10eec974595146df7cebfa8a2bf4759d7e191198a"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 99809,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/actual-upstream-roundtrip/stdout.txt",
+        "sha256": "ff36ff16e5cc892d81df5e201d1e5281509d52c67f5e8f5de53da3da355640ec"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/actual-upstream-roundtrip/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 42191734,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/carrier.json",
+        "sha256": "c0bc5d26abbb3b456033ad1cff1cee38981459495be4de3e68d365415b767269"
+      },
+      {
+        "bytes": 37126766,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/graph.json",
+        "sha256": "f01b28cad899d7d07b063afbaa4e26a1824e4a9a365b62d958b5228fd4ee4ffe"
+      },
+      {
+        "bytes": 8521879,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/model.json",
+        "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+      },
+      {
+        "bytes": 110807,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/result.json",
+        "sha256": "620b399c62c8ed65b0e71ce2ef4648a29f4052f1cc901ec684327dd62e5d535f"
+      },
+      {
+        "bytes": 1001,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/runtime.json",
+        "sha256": "3c9bfe9cdb678311288808f10eec974595146df7cebfa8a2bf4759d7e191198a"
+      },
+      {
+        "bytes": 742,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/selections.json",
+        "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+      },
+      {
+        "bytes": 1446025,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/graphify/current-roundtrip/views.json",
+        "sha256": "5e3328851495682f0bc3b66cbc5a8ede16a4d10776e0231e51331e1f3d5aa148"
+      },
+      {
+        "bytes": 110807,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/actual-upstream-roundtrip/result.json",
+        "sha256": "620b399c62c8ed65b0e71ce2ef4648a29f4052f1cc901ec684327dd62e5d535f"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1793998495176334000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/actual-upstream-roundtrip/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 99809,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/actual-upstream-roundtrip/stdout.txt",
+      "sha256": "ff36ff16e5cc892d81df5e201d1e5281509d52c67f5e8f5de53da3da355640ec"
+    },
+    "system_seconds": 0.414708,
+    "user_seconds": 16.481012
+  },
+  "installation": {
+    "bytes": 106532,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/cohort/INSTALLATION.json",
+    "sha256": "3d3c8e844235d2a39d754e3d783566c131687eacaa62fd61a9bcd52ff8659beb"
+  },
+  "kind": "stdo.cohort-evidence/1",
+  "limits": "Actual fresh public Graphify upstream build/export/load/decode and current projection operation passed with exact selected package/source/module/model/view identities. Large artifact refs are the original executed-output records; this assembly performs no bulk scan.",
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+      "retained": {
+        "bytes": 8521879,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+        "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/carrier.json",
+      "retained": {
+        "bytes": 42191734,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/carrier.json",
+        "sha256": "c0bc5d26abbb3b456033ad1cff1cee38981459495be4de3e68d365415b767269"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-selections.json",
+      "retained": {
+        "bytes": 742,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-selections.json",
+        "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/RUNTIME.json",
+      "retained": {
+        "bytes": 1001,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/dependencies/graphify/RUNTIME.json",
+        "sha256": "3c9bfe9cdb678311288808f10eec974595146df7cebfa8a2bf4759d7e191198a"
+      }
+    }
+  ],
+  "original_execution": {
+    "bytes": 8653,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/actual-upstream-roundtrip/execution.json",
+    "sha256": "9a2a03b0bbca33a7ea9150dc0b5e7875ead91f82037942b5a04b7c1184d81f38"
+  },
+  "output_directory": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/graphify/current-roundtrip",
+  "producer": {
+    "bytes": 7981,
+    "path": "a_c/build_tenants/graphify/code/ac_upstream.py",
+    "sha256": "13179a552f7dcaac35890da19e4fee674eb8933681723cddd78e7043a8f55888"
+  },
+  "result": {
+    "bytes": 110807,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/actual-upstream-roundtrip/result.json",
+    "sha256": "620b399c62c8ed65b0e71ce2ef4648a29f4052f1cc901ec684327dd62e5d535f"
+  },
+  "runtime": {
+    "bytes": 1001,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/dependencies/graphify/RUNTIME.json",
+    "sha256": "3c9bfe9cdb678311288808f10eec974595146df7cebfa8a2bf4759d7e191198a"
+  },
+  "runtime_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/RUNTIME.json",
+  "schema": "stdo.execution-observation/1",
+  "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "status": "passed",
+  "subjects": {
+    "a_c": "f50c6712c36df822a4c17d81b5a6c51287db73c042555935a6c7220e32c873c8"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import hashlib,json,pathlib,sys,zipfile,stdo_toolchain;w=pathlib.Path(sys.argv[1]);site=pathlib.Path(stdo_toolchain.__file__).parent.parent;z=zipfile.ZipFile(w);selected={n:z.read(n) for n in z.namelist() if n.startswith(\"stdo_toolchain/\") and not n.endswith(\"/\")};actual={p.relative_to(site).as_posix() for p in (site/\"stdo_toolchain\").rglob(\"*\") if p.is_file() and \"__pycache__\" not in p.parts};assert actual==set(selected);assert all((site/n).read_bytes()==b for n,b in selected.items());assert stdo_toolchain.__version__==\"3.0.5\";print(json.dumps({\"status\":\"verified\",\"version\":stdo_toolchain.__version__,\"site\":str(site),\"wheel_sha256\":hashlib.sha256(w.read_bytes()).hexdigest(),\"members\":{n:hashlib.sha256(b).hexdigest() for n,b in selected.items()}},sort_keys=True))",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/acquisition/assets/stdo_toolchain-3.0.5-py3-none-any.whl"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "environment_policy": {
+    "network_credentials": "No Authorization/cookie handler; public URL only; global/system Git credential configuration disabled.",
+    "set": {
+      "GIT_CONFIG_GLOBAL": "/dev/null",
+      "GIT_CONFIG_NOSYSTEM": "1",
+      "GIT_OPTIONAL_LOCKS": "0",
+      "GIT_TERMINAL_PROMPT": "0",
+      "PIP_CONFIG_FILE": "/dev/null",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "unset_names": [
+      "GH_TOKEN",
+      "GITHUB_TOKEN",
+      "GIT_ASKPASS",
+      "GIT_CONFIG_COUNT",
+      "PYTHONHOME",
+      "PYTHONPATH",
+      "SSH_ASKPASS",
+      "STDO_STORE"
+    ]
+  },
+  "operator_forms": {
+    "bytes": 53324,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/publication/OPERATION_TEMPLATES.json",
+    "sha256": "e062afe727c4fe00ff7c1ecb1735a44080c47c1e2f6d0f752667fabc2f6947ea"
+  },
+  "pid": 71111,
+  "started_ns": 1793997960305296000
+}

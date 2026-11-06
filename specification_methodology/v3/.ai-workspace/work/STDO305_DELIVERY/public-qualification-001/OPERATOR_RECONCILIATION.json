@@ -1,0 +1,30 @@
+{
+  "actual_install": {
+    "bytes": 978,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/manager-operations/native-public-install/result.json",
+    "sha256": "ea5c8a0fcda9e4425637fc53c7a71c3b252a6094e6a7228f64bb12ad1f8f39d3"
+  },
+  "actual_verify": {
+    "bytes": 29996,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/manager-operations/native-public-verify/result.json",
+    "sha256": "63a0bcf3779ce135de1bf3dd5abe550826bf734d5f45abfdfd11bb6fc2821dfc"
+  },
+  "attribution": "Executive /root explicitly authorized this bounded recorder-only reconciliation after inspecting the actual output and fixed owner predicate.",
+  "correction": "install uses status=installed; verify uses valid=true and failures=[] plus exact full manifest/cut/path/URI/digest. A status key is not part of the verify schema.",
+  "kind": "stdo.operator-result-schema-reconciliation/1",
+  "no_install_or_verify_rerun": true,
+  "no_source_or_gate_change": true,
+  "original_stop": {
+    "bytes": 213,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/STOPPED.json",
+    "sha256": "d0dffa04c89f528e0bbd96017073d8f6fe6bd06ea22235d99d0d6902c9278ade"
+  },
+  "owner": {
+    "bytes": 71319,
+    "path": "scripts/stable_release_evidence.py",
+    "sha256": "d172d03ff3c935e91e95ea30baaf8ab7ee7be2e0b14b3e757d51e7f65336b943"
+  },
+  "owner_coordinates": "manager_operation:209-216",
+  "recorded_ns": 1793998078997231000,
+  "status": "resolved_without_reexecution"
+}

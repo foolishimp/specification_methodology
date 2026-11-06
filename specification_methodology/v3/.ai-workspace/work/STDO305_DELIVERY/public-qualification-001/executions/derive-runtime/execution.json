@@ -1,0 +1,106 @@
+{
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/manager/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/store/releases/v3.0.5/standards/tooling/setup.py",
+      "derive-runtime",
+      "--tools",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools",
+      "--destination",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/runtime/a_c",
+      "--receipt",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/runtime/prepared.json"
+    ],
+    "child_maxrss_native_units": 346865664,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001",
+    "elapsed_seconds": 0.376557,
+    "ended_ns": 1793998277327499000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/manager/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 60295,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/store/releases/v3.0.5/standards/tooling/TOOLING.json",
+        "sha256": "528424ca39877a6b567734cd44e3bf699a89738dc6dc002b52744e2c4581b6b3"
+      },
+      {
+        "bytes": 354,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/source-materialization/result.json",
+        "sha256": "ed16ccec2f64b6b47e72129551dbe1304858d5e484c06b83c357d7e5b06dd8f9"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 307,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/derive-runtime/stdout.txt",
+        "sha256": "bc8268af66e36f939652da9da7fcaee5913d9635769dbbce10d31490e2229479"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/derive-runtime/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 30841,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/runtime/prepared.json",
+        "sha256": "1dea22b276c34556e85a9cd277ffbed4ca0664fad965f08c6f39a272d871ac9e"
+      },
+      {
+        "bytes": 307,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/derive-runtime/result.json",
+        "sha256": "a4e598683dda0b73292a2920d3e3255dcf89d5f6101ea0a43b6b70581cb1a87c"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1793998276950942000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/derive-runtime/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 307,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/derive-runtime/stdout.txt",
+      "sha256": "bc8268af66e36f939652da9da7fcaee5913d9635769dbbce10d31490e2229479"
+    },
+    "system_seconds": 0.05809900000000001,
+    "user_seconds": 0.26749
+  },
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/store/releases/v3.0.5/standards/tooling/TOOLING.json",
+      "retained": {
+        "bytes": 60295,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/store/releases/v3.0.5/standards/tooling/TOOLING.json",
+        "sha256": "528424ca39877a6b567734cd44e3bf699a89738dc6dc002b52744e2c4581b6b3"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/source-materialization/result.json",
+      "retained": {
+        "bytes": 354,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/source-materialization/result.json",
+        "sha256": "ed16ccec2f64b6b47e72129551dbe1304858d5e484c06b83c357d7e5b06dd8f9"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 13670,
+    "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+    "sha256": "ed91e16b48469d89a3551871dada90e605c9bdd32758c27124828d7e3b445cfc"
+  },
+  "result": {
+    "bytes": 307,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/derive-runtime/result.json",
+    "sha256": "a4e598683dda0b73292a2920d3e3255dcf89d5f6101ea0a43b6b70581cb1a87c"
+  },
+  "schema": "stdo.execution-observation/1"
+}

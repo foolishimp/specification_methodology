@@ -1,0 +1,75 @@
+{
+  "boundary_producer": {
+    "bytes": 2510,
+    "path": "specification_methodology/v3/build_tenants/common-tools/payload_boundary.py",
+    "sha256": "d01d30b9afcaf310c2ee0347a8c7424eda222a6acf58a48a244efdd15a85ec7c"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "pack",
+        "--bundle",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/formal/current-full",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/proof-retention/archives/full.zip"
+      ],
+      "id": "pack-full",
+      "input_binding": "Pending actual verified public full result/manifest and successful owner inspection. Bind before execution; no prior result substitute.",
+      "inputs": {
+        "actual_manifest": null,
+        "actual_result": null
+      },
+      "output": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/proof-retention/archives/full.zip",
+      "receipt_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/proof-retention/executions/pack-full"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "split",
+        "--input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/proof-retention/archives/full.zip",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/proof-retention/archives/full-transport"
+      ],
+      "id": "split-full",
+      "input_binding": "exact archive emitted by immediately prior successful pack; no replacement or retry",
+      "output": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/proof-retention/archives/full-transport",
+      "receipt_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/proof-retention/executions/split-full"
+    }
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "kind": "stdo.public-proof-transport-preparation/1",
+  "limits": "Small command preparation only. No archive/member/support scan or qualification performed.",
+  "postconditions": [
+    "Complete61-member public proof transport with exact ordered64MiB parts and distinct actual result/runtime/request.",
+    "Retain large intermediate ZIP locally as exact duplicate, exclude private local-origin hint.",
+    "Bind only completed current public installed_lean and candidate/source correspondence; no new proof."
+  ],
+  "preconditions": [
+    "Exactly one successful current public full proof and owner inspection, each exact result/ref bound in a closed execution plan.",
+    "Tools explicitly reports compiler/runtime/support slot clear; each output absent; no simultaneous heavy work.",
+    "Existing pack/split predicates unchanged; preserve failed observations and every original private/raw predecessor locally."
+  ],
+  "predecessor_operator_forms": {
+    "bytes": 8783,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/proof-retention/PACKAGING_PLAN.json",
+    "sha256": "ed454656b39046eedde109880d6bc1354cd5804dabe3d513d2916b9883aa4e33"
+  },
+  "producer": {
+    "bytes": 17655,
+    "path": "specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+    "sha256": "659518c6e0d9110dd073ae59d3d5fa6ba4471e622a75069e718c0ae8ec3e2fc6"
+  },
+  "python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "status": "prepared_unexecuted_pending_actual_proof_inspection_and_slot_clear"
+}

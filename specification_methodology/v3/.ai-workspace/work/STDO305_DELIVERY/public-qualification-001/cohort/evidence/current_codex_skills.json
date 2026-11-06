@@ -1,0 +1,213 @@
+{
+  "category": "execution",
+  "claim": "current_codex_skills",
+  "configuration": {
+    "bytes": 36660,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+    "sha256": "ed427402f25df517089dcc3f87c8836f1d30b44247d4099920f3fa799926d104"
+  },
+  "configuration_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools/stdo_skills/scripts/manage_skills.py",
+      "verify",
+      "--workspace",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/codex",
+      "--host",
+      "codex",
+      "--receipt-sha256",
+      "fc5be7286ca9d6b2a6a1052025461539b585cbf2d228f990a4912ef12289ea11"
+    ],
+    "child_maxrss_native_units": 468090880,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001",
+    "elapsed_seconds": 0.031862,
+    "ended_ns": 1793998471054939000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 4098,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/codex/.agents/stdo-skills-3.0.5.receipt.json",
+        "sha256": "fc5be7286ca9d6b2a6a1052025461539b585cbf2d228f990a4912ef12289ea11"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 61,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-verify/stdout.txt",
+        "sha256": "41c53b112f668f4ac204d18a92c7b7166547e51a283a4b181240978586dbceb0"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-verify/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 61,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-verify/result.json",
+        "sha256": "fe7b88c7d91042960172a09925176ac7add29bb216014b2ced9dce60f77193fa"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1793998471023077000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-verify/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 61,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-verify/stdout.txt",
+      "sha256": "41c53b112f668f4ac204d18a92c7b7166547e51a283a4b181240978586dbceb0"
+    },
+    "system_seconds": 0.0068749999999999645,
+    "user_seconds": 0.022855999999999987
+  },
+  "host_workspace": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/codex",
+  "installation": {
+    "bytes": 106532,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/cohort/INSTALLATION.json",
+    "sha256": "3d3c8e844235d2a39d754e3d783566c131687eacaa62fd61a9bcd52ff8659beb"
+  },
+  "kind": "stdo.cohort-evidence/1",
+  "limits": "Actual public source-tools Skills verify/check-runtime against fresh explicit manager/store/runtime anchor passed. Fixed public component qualification only; no native LLM/Context rerun or consumer Product adoption.",
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/codex/.agents/stdo-skills-3.0.5.receipt.json",
+      "retained": {
+        "bytes": 4098,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/codex/.agents/stdo-skills-3.0.5.receipt.json",
+        "sha256": "fc5be7286ca9d6b2a6a1052025461539b585cbf2d228f990a4912ef12289ea11"
+      }
+    }
+  ],
+  "original_execution": {
+    "bytes": 3951,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-verify/execution.json",
+    "sha256": "5a0f8c87ed2a53b3012f7288fc71dc3ffae031481f7a32a8cee5b7b3912b1bde"
+  },
+  "producer": {
+    "bytes": 16552,
+    "path": "stdo_skills/scripts/manage_skills.py",
+    "sha256": "688c2ac7abfe55ca4d52cc29bbd51b4b68cfceee5f133d2f41c7b299cc4b24b4"
+  },
+  "receipt": {
+    "bytes": 4098,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/codex/.agents/stdo-skills-3.0.5.receipt.json",
+    "sha256": "fc5be7286ca9d6b2a6a1052025461539b585cbf2d228f990a4912ef12289ea11"
+  },
+  "result": {
+    "bytes": 61,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-verify/result.json",
+    "sha256": "fe7b88c7d91042960172a09925176ac7add29bb216014b2ced9dce60f77193fa"
+  },
+  "runtime": {
+    "bytes": 38169,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-check-runtime/result.json",
+    "sha256": "457b5e3bba008b1f7eec9ccc32ab9f283e966e5d38652714a08215648acba0cd"
+  },
+  "runtime_anchor": {
+    "bytes": 33472,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/anchors/codex/INSTALLATION.json",
+    "sha256": "96c24183162235cf1bc1c76d50fa32f649811ddbea228655fde65add93f22e7b"
+  },
+  "runtime_execution": {
+    "execution": {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/codex/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "child_maxrss_native_units": 468090880,
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001",
+      "elapsed_seconds": 0.832396,
+      "ended_ns": 1793998471904616000,
+      "environment": {
+        "additions": {},
+        "python": {
+          "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+          "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+          "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+          "version": "3.13.7"
+        }
+      },
+      "inputs": [
+        {
+          "bytes": 36660,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+          "sha256": "ed427402f25df517089dcc3f87c8836f1d30b44247d4099920f3fa799926d104"
+        }
+      ],
+      "outputs": [
+        {
+          "bytes": 38169,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-check-runtime/stdout.txt",
+          "sha256": "c05174ff81b26bbac40e47bf3d977042cca9cd0d36049a773f03f1cb93f7e373"
+        },
+        {
+          "bytes": 0,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-check-runtime/stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 38169,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-check-runtime/result.json",
+          "sha256": "457b5e3bba008b1f7eec9ccc32ab9f283e966e5d38652714a08215648acba0cd"
+        }
+      ],
+      "returncode": 0,
+      "started_ns": 1793998471072220000,
+      "stderr": {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-check-runtime/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 38169,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-check-runtime/stdout.txt",
+        "sha256": "c05174ff81b26bbac40e47bf3d977042cca9cd0d36049a773f03f1cb93f7e373"
+      },
+      "system_seconds": 0.08204800000000012,
+      "user_seconds": 0.7398319999999998
+    },
+    "observed_input_paths": [
+      {
+        "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+        "retained": {
+          "bytes": 36660,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/codex/.agents/stdo-3.0.5/CONFIG.json",
+          "sha256": "ed427402f25df517089dcc3f87c8836f1d30b44247d4099920f3fa799926d104"
+        }
+      }
+    ],
+    "producer": {
+      "bytes": 16552,
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "sha256": "688c2ac7abfe55ca4d52cc29bbd51b4b68cfceee5f133d2f41c7b299cc4b24b4"
+    },
+    "result": {
+      "bytes": 38169,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/executions/codex-check-runtime/result.json",
+      "sha256": "457b5e3bba008b1f7eec9ccc32ab9f283e966e5d38652714a08215648acba0cd"
+    },
+    "schema": "stdo.execution-observation/1"
+  },
+  "schema": "stdo.execution-observation/1",
+  "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+  "status": "passed",
+  "subjects": {
+    "stdo_skills": "6fa286b22155b131d89daa7aa935d3a856578d0bded3c7a01e1b01655800b395"
+  }
+}

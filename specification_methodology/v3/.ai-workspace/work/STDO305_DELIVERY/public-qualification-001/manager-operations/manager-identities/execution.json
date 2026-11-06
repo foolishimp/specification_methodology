@@ -1,0 +1,53 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "elapsed_seconds": 0.039799666963517666,
+  "ended_ns": 1793997960304471000,
+  "environment_policy": {
+    "network_credentials": "No Authorization/cookie handler; public URL only; global/system Git credential configuration disabled.",
+    "set": {
+      "GIT_CONFIG_GLOBAL": "/dev/null",
+      "GIT_CONFIG_NOSYSTEM": "1",
+      "GIT_OPTIONAL_LOCKS": "0",
+      "GIT_TERMINAL_PROMPT": "0",
+      "PIP_CONFIG_FILE": "/dev/null",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    },
+    "unset_names": [
+      "GH_TOKEN",
+      "GITHUB_TOKEN",
+      "GIT_ASKPASS",
+      "GIT_CONFIG_COUNT",
+      "PYTHONHOME",
+      "PYTHONPATH",
+      "SSH_ASKPASS",
+      "STDO_STORE"
+    ]
+  },
+  "kind": "stdo.actual-public-operation/1",
+  "operation": "manager-identities",
+  "operator_forms": {
+    "bytes": 53324,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-binding-004/publication/OPERATION_TEMPLATES.json",
+    "sha256": "e062afe727c4fe00ff7c1ecb1735a44080c47c1e2f6d0f752667fabc2f6947ea"
+  },
+  "pid": 71110,
+  "returncode": 0,
+  "started_ns": 1793997960264672000,
+  "stderr": {
+    "bytes": 0,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/manager-operations/manager-identities/stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 1210,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/manager-operations/manager-identities/stdout",
+    "sha256": "ebce20ebe4d513e245e584c8313c57f8419eb518cedb85565f5b60014cb393e7"
+  }
+}

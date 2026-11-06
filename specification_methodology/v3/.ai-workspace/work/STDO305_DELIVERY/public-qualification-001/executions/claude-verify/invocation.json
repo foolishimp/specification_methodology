@@ -1,0 +1,40 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+    "-B",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/source-tools/stdo_skills/scripts/manage_skills.py",
+    "verify",
+    "--workspace",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/claude",
+    "--host",
+    "claude",
+    "--receipt-sha256",
+    "d00a89c8ad4b8a9de42622d934a6fed644ab47b81c8b35b2cbf7d6a2c0990f8f"
+  ],
+  "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001",
+  "environment_additions": {},
+  "inputs": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/hosts/claude/.claude/stdo-skills-3.0.5.receipt.json",
+      "retained": {
+        "bytes": 4230,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/observed/hosts/claude/.claude/stdo-skills-3.0.5.receipt.json",
+        "sha256": "d00a89c8ad4b8a9de42622d934a6fed644ab47b81c8b35b2cbf7d6a2c0990f8f"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 16552,
+    "path": "stdo_skills/scripts/manage_skills.py",
+    "sha256": "688c2ac7abfe55ca4d52cc29bbd51b4b68cfceee5f133d2f41c7b299cc4b24b4"
+  },
+  "python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001/dependencies/graphify/venv/bin/python",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "recovery": "Retain failed/partial outputs and reconcile before any further invocation.",
+  "schema": "stdo.execution-invocation/1",
+  "stdin": null
+}

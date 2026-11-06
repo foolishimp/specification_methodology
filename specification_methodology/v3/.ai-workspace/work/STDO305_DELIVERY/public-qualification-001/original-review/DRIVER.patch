@@ -1,0 +1,13 @@
+--- /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/recovery020/observe_installed_local004.py
++++ /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-final-bjdwbume/public001/observe_installed_public001.py
+@@ -2,8 +2,8 @@
+ import hashlib,importlib.metadata,json,platform,time,traceback
+ from urllib.parse import quote
+ from playwright.sync_api import sync_playwright
+-OUT=Path(__file__).resolve().parent/'browser-local004';OUT.mkdir(exist_ok=False)
+-WORK=Path('/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004')
++OUT=Path(__file__).resolve().parent/'browser-public001';OUT.mkdir(exist_ok=False)
++WORK=Path('/Users/jim/.local/share/stdo-qualification/v3.0.5/public-001')
+ PAGE=WORK/'source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/explorer.html'
+ DOC=WORK/'store/releases/v3.0.5/standards/documentation'
+ LANDING=DOC/'index.html';NATIVE=DOC/'constraint-explorer/index.html';PROOF=DOC/'proofs/index.html'
