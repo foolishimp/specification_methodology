@@ -1,0 +1,19 @@
+{
+  "kind": "independent.native-store015-recheck/1",
+  "subject_sha256": "c2f719ea113b6f76b9b2026a19df1bb4f390e265a99235bfdfedde9a90c71353",
+  "delta": "exactly temporary fixture Path.resolve()",
+  "source_refs_checked_before_after": 6,
+  "production_sha256": "3c0e1fffd5810f2a3dd5fa7fafe9ae4069a544f1be3d7643da9f86c49d3fa30a",
+  "test_sha256": "5e0cc973d4dd9d4b7c1bdd7d573b796847885a5cc610146cf011d20b402826c9",
+  "argv": [
+    "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_native_installed_store"
+  ],
+  "returncode": 0,
+  "stderr": "test_altered_and_extra_members_refuse (test_native_installed_store.InstalledStoreTests.test_altered_and_extra_members_refuse) ... ok\ntest_external_ordinary_store_passes (test_native_installed_store.InstalledStoreTests.test_external_ordinary_store_passes) ... ok\ntest_historical_internal_store_passes (test_native_installed_store.InstalledStoreTests.test_historical_internal_store_passes) ... ok\ntest_historical_relative_internal_store_passes (test_native_installed_store.InstalledStoreTests.test_historical_relative_internal_store_passes) ... ok\ntest_output_outside_base_still_refuses (test_native_installed_store.InstalledStoreTests.test_output_outside_base_still_refuses) ... ok\ntest_redirected_store_and_native_ancestors_refuse (test_native_installed_store.InstalledStoreTests.test_redirected_store_and_native_ancestors_refuse) ... ok\ntest_traversal_and_relative_stores_refuse (test_native_installed_store.InstalledStoreTests.test_traversal_and_relative_stores_refuse) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.535s\n\nOK\n",
+  "original_failure_preserved": "RECHECK.json"
+}

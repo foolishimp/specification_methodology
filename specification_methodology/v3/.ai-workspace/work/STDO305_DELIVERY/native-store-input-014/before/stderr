@@ -1,0 +1,25 @@
+test_altered_and_extra_members_refuse (test_native_installed_store.InstalledStoreTests.test_altered_and_extra_members_refuse) ... ok
+test_external_ordinary_store_passes (test_native_installed_store.InstalledStoreTests.test_external_ordinary_store_passes) ... FAIL
+test_historical_internal_store_passes (test_native_installed_store.InstalledStoreTests.test_historical_internal_store_passes) ... ok
+test_historical_relative_internal_store_passes (test_native_installed_store.InstalledStoreTests.test_historical_relative_internal_store_passes) ... ok
+test_output_outside_base_still_refuses (test_native_installed_store.InstalledStoreTests.test_output_outside_base_still_refuses) ... ok
+test_redirected_store_and_native_ancestors_refuse (test_native_installed_store.InstalledStoreTests.test_redirected_store_and_native_ancestors_refuse) ... ok
+test_traversal_and_relative_stores_refuse (test_native_installed_store.InstalledStoreTests.test_traversal_and_relative_stores_refuse) ... ok
+
+======================================================================
+FAIL: test_external_ordinary_store_passes (test_native_installed_store.InstalledStoreTests.test_external_ordinary_store_passes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/test_native_installed_store.py", line 114, in test_external_ordinary_store_passes
+    self.invoke(self.fixture(), success=True)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/test_native_installed_store.py", line 103, in invoke
+    self.assertEqual(process.returncode, 0, process.stderr.decode())
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1 != 0 : refused: outputs must be inside this native-release territory
+
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.487s
+
+FAILED (failures=1)

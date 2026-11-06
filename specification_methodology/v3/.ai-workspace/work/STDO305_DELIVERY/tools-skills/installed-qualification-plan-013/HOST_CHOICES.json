@@ -1,0 +1,162 @@
+{
+  "accepted_by": "Root conversation instruction",
+  "claims": "Help/catalog support is not account availability, backend resolution, actor execution or qualification. Retain requested and actual observed model separately. No credential values are read or recorded.",
+  "claude": {
+    "invocation": "/Users/jim/.local/bin/claude",
+    "physical": {
+      "bytes": 272984176,
+      "path": "/Users/jim/.local/share/claude/versions/2.1.306",
+      "sha256": "b5d795b7760032d79954b55a9cd1876dcf3a8dc9608fd6bb9f618593f69fd44b"
+    },
+    "requested_effort": "xhigh",
+    "requested_model": "opus",
+    "selection_kind": "Explicit CLI-supported alias; resolved full model unobserved until actual run"
+  },
+  "codex": {
+    "catalog_observation": {
+      "client_version": "0.167.0",
+      "fetched_at": "2026-11-06T11:42:55.493981Z",
+      "model": {
+        "display_name": "GPT-6-Astra",
+        "slug": "gpt-6-astra",
+        "supported_reasoning_levels": [
+          {
+            "description": "Fast responses with lighter reasoning",
+            "effort": "low"
+          },
+          {
+            "description": "Balances speed and reasoning depth for everyday tasks",
+            "effort": "medium"
+          },
+          {
+            "description": "Greater reasoning depth for complex problems",
+            "effort": "high"
+          },
+          {
+            "description": "Extra high reasoning depth for complex problems",
+            "effort": "xhigh"
+          },
+          {
+            "description": "Maximum reasoning depth for the hardest problems",
+            "effort": "max"
+          },
+          {
+            "description": "Maximum reasoning with automatic task delegation",
+            "effort": "ultra"
+          }
+        ],
+        "visibility": "list"
+      }
+    },
+    "invocation": "/Users/jim/bin/codex",
+    "physical": {
+      "bytes": 43,
+      "path": "/Users/jim/bin/codex",
+      "sha256": "94226c0923bf7a090cb3855e215e943e021ec0b0896f6de58ec85ea56d22c7a8"
+    },
+    "requested_effort": "xhigh",
+    "requested_model": "gpt-6-astra"
+  },
+  "local_introspection": [
+    {
+      "argv": [
+        "/Users/jim/bin/codex",
+        "--version"
+      ],
+      "returncode": 0,
+      "standing": "Local help/version parsing only; no native actor or model request.",
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/codex-version/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 18,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/codex-version/stdout.txt",
+        "sha256": "728b255fa6d47ac8019747aaf2876baaafacdb93dfba1e4697257224bbc75a5c"
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/bin/codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "--sandbox",
+        "workspace-write",
+        "--model",
+        "gpt-6-astra",
+        "-c",
+        "model_reasoning_effort=\"xhigh\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--help"
+      ],
+      "returncode": 0,
+      "standing": "Local help/version parsing only; no native actor or model request.",
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/codex-flags/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 4331,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/codex-flags/stdout.txt",
+        "sha256": "df0d864ca2076f7654288c6a1e3394e3eaa2ea8f15021df2524efdd90c70986c"
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/claude",
+        "--version"
+      ],
+      "returncode": 0,
+      "standing": "Local help/version parsing only; no native actor or model request.",
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/claude-version/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 22,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/claude-version/stdout.txt",
+        "sha256": "dc3d56549d7ae73a42ae7c663cd0656c0b9847e6beb1a98c63ba4efd92a3f785"
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/claude",
+        "--print",
+        "--output-format",
+        "stream-json",
+        "--verbose",
+        "--no-session-persistence",
+        "--setting-sources",
+        "project",
+        "--strict-mcp-config",
+        "--no-chrome",
+        "--permission-mode",
+        "dontAsk",
+        "--effort",
+        "xhigh",
+        "--model",
+        "opus",
+        "--help"
+      ],
+      "returncode": 0,
+      "standing": "Local help/version parsing only; no native actor or model request.",
+      "stderr": {
+        "bytes": 0,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/claude-flags/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 18928,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/claude-flags/stdout.txt",
+        "sha256": "d29e0acf766a864a95246de18e90a3c9e0d132226b13e603e94c09b5d52bf15b"
+      }
+    }
+  ],
+  "schema": "stdo305.explicit-native-host-selection/1"
+}

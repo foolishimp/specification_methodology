@@ -1,0 +1,532 @@
+{
+  "absent_preimages": [
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-001/native-index",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-execution-002"
+  ],
+  "actor": "Sole Git Writer /root/stdo305_release_tools",
+  "branch_preimage": "refs/heads/main",
+  "claim_boundary": "C binds complete accepted candidate source; A is local native cut with exact local installer/byte verification. Whole five-Product qualification, externalB, atomic publication and anonymous readback remain required and unclaimed.",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "add",
+        "-f",
+        "--pathspec-from-file=/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-plan-002/stage-paths.z",
+        "--pathspec-file-nul"
+      ],
+      "environment": {
+        "GIT_LITERAL_PATHSPECS": "1"
+      },
+      "id": "stage"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "id": "whitespace"
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "Assemble reviewed STDO 3.0.5 native release candidate"
+      ],
+      "id": "checkpoint-C",
+      "output_binding": "C=HEAD after successful commit; exact parent must equal head_preimage; staged set and blobs must equal PATHS plus control files"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+        "-m",
+        "venv",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager"
+      ],
+      "expected": "exit0",
+      "id": "external-manager-create",
+      "precondition": "exact selected wheelhouse/requirements and physical bootstrap Python pins match; no ambient dependency use"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+        "-m",
+        "pip",
+        "--disable-pip-version-check",
+        "install",
+        "--no-index",
+        "--find-links",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/runtime-preparation-001/wheels",
+        "--require-hashes",
+        "--no-deps",
+        "-r",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/runtime-preparation-001/requirements-macos-arm64-cp313.txt"
+      ],
+      "expected": "exit0",
+      "id": "external-manager-offline-install",
+      "precondition": "exact selected wheelhouse/requirements and physical bootstrap Python pins match; no ambient dependency use"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "expected": "exit0",
+      "id": "external-manager-dependency-check",
+      "precondition": "exact selected wheelhouse/requirements and physical bootstrap Python pins match; no ambient dependency use"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+      ],
+      "expected": "exit0; CPython3.13.7; manager3.0.5; exact21 pinned distributions including pip26.2.1",
+      "id": "external-manager-identities",
+      "precondition": "exact selected wheelhouse/requirements and physical bootstrap Python pins match; no ambient dependency use"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import hashlib,json,pathlib,sys,zipfile,stdo_toolchain;w=pathlib.Path(sys.argv[1]);site=pathlib.Path(stdo_toolchain.__file__).parent.parent;z=zipfile.ZipFile(w);selected={n:z.read(n) for n in z.namelist() if n.startswith(\"stdo_toolchain/\") and not n.endswith(\"/\")};actual={p.relative_to(site).as_posix() for p in (site/\"stdo_toolchain\").rglob(\"*\") if p.is_file() and \"__pycache__\" not in p.parts};assert actual==set(selected);assert all((site/n).read_bytes()==b for n,b in selected.items());assert stdo_toolchain.__version__==\"3.0.5\";print(json.dumps({\"status\":\"verified\",\"version\":stdo_toolchain.__version__,\"site\":str(site),\"wheel_sha256\":hashlib.sha256(w.read_bytes()).hexdigest(),\"members\":{n:hashlib.sha256(b).hexdigest() for n,b in selected.items()}},sort_keys=True))",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/dist/stdo_toolchain-3.0.5-py3-none-any.whl"
+      ],
+      "expected": "exit0; exact installed package population/content equals pinned source-matched wheel; retain actual invocation/physical executable hashes",
+      "id": "external-manager-source-match"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+        "--configuration-sha256",
+        "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+        "prepare",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--source-commit",
+        "${C}",
+        "--source-path",
+        "specification_methodology/v3/build_tenants/common",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001"
+      ],
+      "id": "native-prepare",
+      "output_binding": "source_sha256=SHA256(run/source.json); all171 payload rows must equal accepted INPUT_INVENTORY bytes/modes"
+    },
+    {
+      "argv": [
+        "git",
+        "read-tree",
+        "--empty"
+      ],
+      "environment": {
+        "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-001/native-index"
+      },
+      "id": "native-empty-index"
+    },
+    {
+      "argv": [
+        "git",
+        "update-index",
+        "-z",
+        "--index-info"
+      ],
+      "environment": {
+        "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-001/native-index"
+      },
+      "id": "native-populate-index",
+      "stdin_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001/native-index-info.z"
+    },
+    {
+      "argv": [
+        "git",
+        "write-tree"
+      ],
+      "environment": {
+        "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-001/native-index"
+      },
+      "id": "native-tree",
+      "output_binding": "native_tree=exact stdout tree object"
+    },
+    {
+      "argv": [
+        "git",
+        "commit-tree",
+        "${native_tree}",
+        "-p",
+        "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+        "-F",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001/native-commit-message.txt"
+      ],
+      "id": "native-commit-A",
+      "output_binding": "A=exact stdout commit object; sole parent selected native predecessor; main remains C"
+    },
+    {
+      "argv": [
+        "git",
+        "tag",
+        "-a",
+        "specification_methodology/v3.0.5",
+        "${A}",
+        "-F",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001/tag-message.txt"
+      ],
+      "id": "native-annotated-tag",
+      "precondition": "exact tag absent immediately before; never force/move an existing ref"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+        "--configuration-sha256",
+        "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+        "attest",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001",
+        "--source-sha256",
+        "${source_sha256}",
+        "--native-commit",
+        "${A}"
+      ],
+      "id": "native-attest",
+      "output_binding": "native_sha256=SHA256(run/native.json)"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/stdo",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/store",
+        "manifest",
+        "v3.0.5",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology"
+      ],
+      "id": "manager-manifest",
+      "stdout_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001/manifest-report.json",
+      "transport_mode": "local_prepublication"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+        "--configuration-sha256",
+        "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+        "seal",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001",
+        "--source-sha256",
+        "${source_sha256}",
+        "--native-sha256",
+        "${native_sha256}",
+        "--manifest-report",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001/manifest-report.json"
+      ],
+      "id": "native-seal",
+      "output_binding": "manifest_sha256=SHA256(run/stdo-v3.0.5-manifest.json); selection_sha256=SHA256(run/SOURCE_SELECTION.json)"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/stdo",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/store",
+        "install",
+        "v3.0.5",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--manifest-sha256",
+        "${manifest_sha256}"
+      ],
+      "id": "initial-local-install",
+      "stdout_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001/install-local.json",
+      "transport_mode": "local_prepublication"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/stdo",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/store",
+        "verify",
+        "v3.0.5",
+        "--manifest-sha256",
+        "${manifest_sha256}"
+      ],
+      "id": "initial-local-verify",
+      "output_binding": "valid=true,failures=[],exactA/native manifest and selected explicit store",
+      "stdout_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001/verify-local.json"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+        "--configuration-sha256",
+        "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+        "installed",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001",
+        "--selection-sha256",
+        "${selection_sha256}",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/store",
+        "--verify-report",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001/verify-local.json",
+        "--label",
+        "local"
+      ],
+      "id": "installed-byte-attest",
+      "output_binding": "exact172 installed files including manifest; no extra/member mismatch"
+    },
+    {
+      "id": "qualification-handoff",
+      "operation": "Retain verified A/native manifest and external manager/store identities, exact installed routes and source custody, then reactivate /root/stdo305_tools_skills via followup_task under Root assigned PLAN013 plus PATH_BINDING_002. Actual all runtime/software/proof/host roots external; portable receipts/current-request input remain in delivery as expressly prescribed by unchanged gate."
+    }
+  ],
+  "deleted_path_count": 9,
+  "exclusions": {
+    "bytes": 219384,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-plan-002/EXCLUSIONS.json",
+    "sha256": "73f8375d451b6d842a59f4bb01bf2a83fe0a1cb45a007a7be6b002a2b72143fc"
+  },
+  "execution_receipts": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-execution-002",
+  "external_qualification_workspace": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001",
+  "head_preimage": "43280f68471f9a1688ffd2b8f40b49e9878ec37e",
+  "index_preimage": {
+    "bytes": 35536152,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-plan-002/index-preimage.z",
+    "sha256": "a82c5058b6d0bbf37f64d08419dc561f8bf30cb80d537eb5bb5216a1ad7b2ac1"
+  },
+  "kind": "stdo.checkpoint-native-external-install-operation-plan/1",
+  "largest_payloads": [
+    {
+      "bytes": 67108864,
+      "git_blob": "611dfd1ce13bda4fd9e80ac6f9e0e3b0ddd66674",
+      "git_mode": "100644",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-documentation-011/proofs/transport/part-001.bin",
+      "sha256": "6186ea5a907dbc25855492eeb0f3c1b324237b02035dfc544c133a17f1fe22d3"
+    },
+    {
+      "bytes": 67108864,
+      "git_blob": "611dfd1ce13bda4fd9e80ac6f9e0e3b0ddd66674",
+      "git_mode": "100644",
+      "path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/transport/part-001.bin",
+      "sha256": "6186ea5a907dbc25855492eeb0f3c1b324237b02035dfc544c133a17f1fe22d3"
+    },
+    {
+      "bytes": 57395671,
+      "git_blob": "8e6679c5bbd843968d59d4877736fa7b8c13ce25",
+      "git_mode": "100644",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-documentation-011/proofs/transport/part-002.bin",
+      "sha256": "a05ec0d1ca618f5cf23d2533a4ae4b00eb6f9a557abe0e8af54d517af83d158c"
+    },
+    {
+      "bytes": 57395671,
+      "git_blob": "8e6679c5bbd843968d59d4877736fa7b8c13ce25",
+      "git_mode": "100644",
+      "path": "specification_methodology/v3/build_tenants/common/standards/documentation/proofs/transport/part-002.bin",
+      "sha256": "a05ec0d1ca618f5cf23d2533a4ae4b00eb6f9a557abe0e8af54d517af83d158c"
+    },
+    {
+      "bytes": 35536152,
+      "git_blob": "c09c7ef2b4c91a21ef993fa1ff830cd3fa7683ee",
+      "git_mode": "100644",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-plan-001/index-preimage.z",
+      "sha256": "a82c5058b6d0bbf37f64d08419dc561f8bf30cb80d537eb5bb5216a1ad7b2ac1"
+    },
+    {
+      "bytes": 29022456,
+      "git_blob": "570b8fbfce82b70439ce505e90f15231b8b6d15b",
+      "git_mode": "100644",
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-documentation-011/proofs/evidence/actual-runtime.log",
+      "sha256": "d8d63d39af9a2d6e1740a9c4bb832923f89c64d87fdad06d2e5d8dc4a60b35d2"
+    }
+  ],
+  "local_refs_preimage": "refs/heads/main 43280f68471f9a1688ffd2b8f40b49e9878ec37e\n",
+  "manager": {
+    "bootstrap_python": {
+      "invocation": "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "physical_path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+      "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+    },
+    "dependency_selection": {
+      "bytes": 8783,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/runtime-preparation-001/PORTABLE_SETUP.json",
+      "sha256": "a33fba05b8571595530fd1c0cc16752d3ffe277b459e7955c0870308b49bb526"
+    },
+    "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/stdo",
+    "python_invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/manager/bin/python",
+    "runtime_identity": "Generated only from successful exact offline setup and source-match operations; no copied old environment identity",
+    "version": "3.0.5"
+  },
+  "mandatory_preconditions": [
+    "Executive assigns this exact PLAN/NUL/PATHS digest.",
+    "HEAD/main/index and selected path bytes/modes/deletions match frozen preimages; default index initially has no staged diff.",
+    "All separately pinned171 native payload files, sourceS and accepted references still match; no generation repeats required.",
+    "Every staged path/blob/mode equals PATHS plus exact six control files; no extra path may enter C.",
+    "Native run, isolated index and external qualification workspace are absent at start, with ordinary existing ancestors; prior internal environment/store and nominated consumer definitions stay untouched.",
+    "Native tag absent immediately before creation; no force operation. Source and native relations are verified by registered attest/seal/installed consumers.",
+    "Stop on a meaningful failed check; retain exact command/output/effect observations. No public/released/qualified claim is inferred from this local cut.",
+    "Bounded native-store-input-014 recheck accepted before assignment; external manager exact wheel, lock and selected physical bootstrap Python must reproduce the installed package population."
+  ],
+  "native_parent": "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+  "native_payload": {
+    "bytes": 290059538,
+    "files": 171,
+    "installed_root": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-001/store/releases/v3.0.5",
+    "source_path": "specification_methodology/v3/build_tenants/common"
+  },
+  "native_run": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-001",
+  "path_inventory": {
+    "bytes": 233565,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-plan-002/PATHS.json",
+    "sha256": "e4457e1c98e9969357ac906c4f389feaa8dc27873fb488e01e780b7cd0008832"
+  },
+  "payload_path_count": 487,
+  "publication_effects": "None. Only local main checkpoint and one local immutable methodology tag; no push, public release, other Product tag, branch or nominated Product adoption. Later selected publication set remains main plus all five namespace tags.",
+  "qualification_contract": "Tools writer owns actual installed setup/native actor/full proof work under approved013; supplement both native proof commands with exact -I -B flags before execution. No per-host duplicate full proof.",
+  "reference_subjects": {
+    "abi011-original-review/REVIEW.json": {
+      "bytes": 2235,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/abi011-original-review/REVIEW.json",
+      "sha256": "82b41d5c22dd1f3f009cfac24cc5225bb7b4b3d6dc9317af4ed1b27a4560df02"
+    },
+    "common-integration-repair-010/original-recheck/RECHECK.json": {
+      "bytes": 3901,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/common-integration-repair-010/original-recheck/RECHECK.json",
+      "sha256": "03a4c2bea3ab55daca3f4883a1dd3beff668091bae9a5ea1e8250a65dc4b5c4d"
+    },
+    "manager/dist/stdo_toolchain-3.0.5-py3-none-any.whl": {
+      "bytes": 61512,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/dist/stdo_toolchain-3.0.5-py3-none-any.whl",
+      "sha256": "072bce2c47663b84d28c83d8cbdb7eec54cfd126ba08a2ab5a7a61d9687cc293"
+    },
+    "manager/runtime-preparation-001/PORTABLE_SETUP.json": {
+      "bytes": 8783,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/runtime-preparation-001/PORTABLE_SETUP.json",
+      "sha256": "a33fba05b8571595530fd1c0cc16752d3ffe277b459e7955c0870308b49bb526"
+    },
+    "native-preparation-config.json": {
+      "bytes": 990,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+      "sha256": "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353"
+    },
+    "native-store-input-014/SUBJECT.json": {
+      "bytes": 77494,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-store-input-014/SUBJECT.json",
+      "sha256": "bb2b5a9e27ded70e2a97278e6944b0d95e20659871b316869ab8556c4eafb2ab"
+    },
+    "native-store-input-015/SUBJECT.json": {
+      "bytes": 1700,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-store-input-015/SUBJECT.json",
+      "sha256": "c2f719ea113b6f76b9b2026a19df1bb4f390e265a99235bfdfedde9a90c71353"
+    },
+    "native-store-input-015/original-review/REVIEW.json": {
+      "bytes": 2637,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-store-input-015/original-review/REVIEW.json",
+      "sha256": "804f85a97fcd1aaa2d0ab8778eb6b7a2a4ea87e990a18c8c91a7146545d00b6d"
+    },
+    "packaging-integration-001/PORTABLE_CUSTODY_010.json": {
+      "bytes": 8245,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/PORTABLE_CUSTODY_010.json",
+      "sha256": "8f11443a53f3edc08007755f8f9c840f6fe79039e72e066b8841bd0994d5ada9"
+    },
+    "packaging-integration-001/native-payload-011/INPUT_INVENTORY.json": {
+      "bytes": 35936,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/native-payload-011/INPUT_INVENTORY.json",
+      "sha256": "041472ae5151d79b3ffbf66772bef64f9992dc24e78849696e4e9cbe60101793"
+    },
+    "packaging-integration-001/native-payload-011/INVARIANTS.json": {
+      "bytes": 1578,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/native-payload-011/INVARIANTS.json",
+      "sha256": "4574b679f4f8ae44bbf3406faab679d7cfbf05fce0c2d195bdc83b74555cac8e"
+    },
+    "packaging-integration-001/native-payload-011/VALIDATION.json": {
+      "bytes": 1428,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/native-payload-011/VALIDATION.json",
+      "sha256": "dc7a0e5f0c0cc5c17876e0fdad1087698f89db0542085cc575d3ff6f93017222"
+    },
+    "reader012-original-review/REVIEW.json": {
+      "bytes": 1409,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/reader012-original-review/REVIEW.json",
+      "sha256": "88497b69b071617f4b6a5b5396acf7c331e3b83723f86ebf1ef79b551e67f68a"
+    },
+    "registered-native-release-source": {
+      "bytes": 32671,
+      "path": "specification_methodology/v3/build_tenants/common-tools/native_release.py",
+      "sha256": "3c0e1fffd5810f2a3dd5fa7fafe9ae4069a544f1be3d7643da9f86c49d3fa30a"
+    },
+    "source-freeze-002.json": {
+      "bytes": 13889,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/source-freeze-002.json",
+      "sha256": "640141354a53504999c1c21757689f7a3ecf6cbe77c3f30804f8493a2928dc99"
+    },
+    "tools-skills/evidence-custody-009/INDEX.json": {
+      "bytes": 3421833,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/evidence-custody-009/INDEX.json",
+      "sha256": "808aa39f0f801cea2708bad65abdd734bb00bc44103913e73eb08c91809ec110"
+    },
+    "tools-skills/installed-qualification-plan-013/PATH_BINDING_002.json": {
+      "bytes": 6368,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/PATH_BINDING_002.json",
+      "sha256": "4cbc4ea67d874b595fecfd3ccfc53766121a24b770d78fdc4d5b3fdc1b335605"
+    },
+    "tools-skills/installed-qualification-plan-013/PLAN.json": {
+      "bytes": 24326,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/PLAN.json",
+      "sha256": "cf3fe25fad269ee4462204ebacbbb6d03cdcfce9c1de6c029593774e4d639b3d"
+    }
+  },
+  "remote_refs_observation": "15cbfbe2cac784860d6c948eca75ee9ecf5159f8\trefs/heads/main\n",
+  "selected_bytes": 621863079,
+  "stage_path_count": 493,
+  "stage_pathspec": {
+    "bytes": 77028,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-plan-002/stage-paths.z",
+    "sha256": "af2614071f7c1874881dd7ac064d478279c088dd11856757437308587dd128c5"
+  },
+  "status": "Prepared for exact Executive assignment;014/015 independently accepted; no Git/install effects",
+  "status_preimage": {
+    "bytes": 112796,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-plan-002/status-preimage.z",
+    "sha256": "5fdd54bd240cfa1badf39b2d46bccb568d1b96d13da2b730a551cb09ec4d0032"
+  },
+  "supersedes": {
+    "disposition": {
+      "bytes": 695,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-plan-001/SUPERSEDED.json",
+      "sha256": "3a8723d53a49aabb934c2522e81e347e34c9e25432f622553d37d5212475a7f4"
+    },
+    "plan": {
+      "bytes": 23247,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/checkpoint-c-native-plan-001/PLAN.json",
+      "sha256": "ac8965f7346143693c7441a7d72ad90566d669c37ddb53e02253b2d9eabbc78a"
+    }
+  },
+  "whitespace_policy": "Retain cached diff-check output. Existing sealed generated/historical/third-party evidence whitespace must remain byte-exact and may proceed with explicit classification as permitted in prior assignment; live authored-source whitespace errors stop before commit."
+}

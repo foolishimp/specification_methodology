@@ -1,0 +1,26 @@
+{
+  "kind": "independent.reader012-disposition/1",
+  "verdict": "satisfied",
+  "actionable_findings": [],
+  "subject_sha256": "2fcafa84d54e09ab48e5f2ff6e7d77ba0c1a1f6a27b7066e1e4035d65a224fbd",
+  "source_before_after": 2,
+  "dependencies_before_after": 5,
+  "evidence_before_after": 10,
+  "all_match": true,
+  "oracle_before_after": {
+    "PROOFS.json": "05b155370d642a078f9504ea960d5069445a7e607910c9361a96c5d9c168c17a",
+    "index.html": "10bf2932f9a5f02e0a8f1ed44e86cd9fe3cae7dc78320c1bbb6a87577aa43109"
+  },
+  "equivalence_reason": "The cached clean lines equal the previous repeated splitlines result. Ordered token positions partition each previously recounted prefix; the sum of disjoint LF counts preserves each exact old line number. Declaration/scoping/resolution/deduplication code is unchanged.",
+  "tests": {
+    "focused_tests": 3,
+    "skips": 0,
+    "independent_small_cases": 160,
+    "public_full_oracle_seconds": 3.232423875015229
+  },
+  "evidence": {
+    "path": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo305-review-reader012-wf7lq0uu/RECHECK.json",
+    "sha256": "d91b6e470afa383f634e91b0fb6311996613a35b1bab7160bfb809d23f6aa07e"
+  },
+  "scope": "Only source_catalog cost repair and test file. Current full PROOFS/index bytes conserved. No full old-cost benchmark, full historical build, Lean execution, native actor, repository/Git mutation or release acceptance."
+}

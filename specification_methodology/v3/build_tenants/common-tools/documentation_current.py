@@ -11,6 +11,32 @@ import tempfile
 import current_assets as a
 import proof_reader_current as proofs
 
+EXAMPLE_PUBLICATION = {
+    "commit": "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+    "qualified_ref": "refs/tags/specification_methodology/v3.0.4",
+    "tag_object": "e7bc3083bfb87ff6756a361cb14740dd9a9fedcd",
+    "path": "specification_methodology/v3/standards/documentation/code-explorer/index.html",
+    "git_blob": "e5daeddf8f6b6ceabbc2fbe9aa2729662f3ec0af",
+    "sha256": "26e8e1e93221781b7a25fc48ad457c7ea97275cd08dcadba91075cbf8b1be8c9",
+}
+
+
+def frozen_example(selected, raw):
+    item = selected.get("code_example", {})
+    a.require(set(item) == {"artifact", "publication", "role"}
+              and item["publication"] == EXAMPLE_PUBLICATION
+              and item["role"] == "frozen-example-only", "frozen ABI example selection differs")
+    a.require(a.sha(raw) == item["artifact"]["sha256"] == EXAMPLE_PUBLICATION["sha256"],
+              "published ABI example bytes differ")
+    data = viewer_data(raw)
+    a.require(data["title"] == "ABIogenesis — canonicalization code and traces", "frozen example subject differs")
+    return {"kind": "stdo.frozen-code-example/1", "role": "frozen-example-only",
+            "subject": "ABIogenesis T-019 canonicalization", "publication": EXAMPLE_PUBLICATION,
+            "artifact": {"path": "index.html", "bytes": len(raw), "sha256": a.sha(raw)},
+            "model": data["model"],
+            "limits": ["STDO 3.0.4 identifies publication custody of these unchanged example bytes.",
+                       "This is not current ABI qualification or a current STDO model/proof result."]}
+
 
 def guide(version):
     return f"""# STDO {version} documentation
@@ -45,6 +71,12 @@ retains its original provenance. The source-prose-to-model assessment is
 separate from Lean's structural model/projection result. Checking the reader
 verifies retained bytes and bindings; it does not execute a new Lean proof.
 
+The [frozen ABI code example](code-explorer/index.html) retains the exact
+ABIogenesis T-019 artifact published with STDO 3.0.4. Its
+[example identity](code-explorer/EXAMPLE.json) names that publication custody
+and original model. It is not current ABI qualification or current STDO
+model/proof evidence; the current readers above retain their own exact subjects.
+
 [Use the installed tools](../tooling/README.md) to materialize the four peer
 Product packages and set up Graphify, Lean and host bindings in writable
 locations. The native workflow stays intact inside its installed package.
@@ -77,6 +109,7 @@ body{{background:#101820;color:#e8eef0;font:17px/1.7 system-ui;margin:0}}main{{m
 <p>STDO {version} · INSTALLED DOCUMENTATION</p><h1>Follow the current method into source and proof.</h1><p>Explore one source-matched model through 3D, 2D, Layered and Files views. Read its exact structural proof and retained results.</p><div class="cards">
 <article><h2><a href="constraint-explorer/index.html">Current constraints →</a></h2><p>Search complete statements, follow labelled relationships and open their embedded source passages.</p><p class="scope">The selected semantic standards and native workflow contracts share one exact source inventory.</p></article>
 <article><h2><a href="proofs/index.html">Current model proofs →</a></h2><p>Inspect selected views, generated Lean source, theorem axioms, kernel and runtime results.</p><p class="scope">Finite model and projection results retain their premises. Prose fidelity and semantic acceptance are assessed separately.</p></article>
+<article><h2><a href="code-explorer/index.html">Frozen ABI code example →</a></h2><p>The exact ABIogenesis T-019 artifact published with STDO 3.0.4.</p><p class="scope">Publication custody of a retained example, not current ABI qualification or current STDO model/proof evidence. <a href="code-explorer/EXAMPLE.json">Exact example identity</a>.</p></article>
 <article><h2><a href="../tooling/README.md">Use the tools →</a></h2><p>Set up the exact a_c, Representation, Axiom Indexer and Codex/Claude Skills packages.</p><p class="scope">Materialize writable tools and select their controlled Graphify and Lean dependencies.</p></article></div>
 <footer><a href="README.md">Reading guide</a> · <a href="../README.md">Owning standards</a> · <a href="../../plugins/spec/references/GETTING_STARTED.md">Getting Started</a> · <a href="DOCUMENTATION.json">Exact inventory</a><p class="scope">Readers work offline. Layered and text remain available without WebGL. Use browser Back or open readers in separate tabs.</p></footer></main></body></html>""".encode()
 
@@ -113,13 +146,19 @@ def validate_inputs(files):
 
 
 def metadata(files):
+    a.require({"code-explorer/index.html", "code-explorer/EXAMPLE.json"} <= files.keys(),
+              "required frozen ABI example route or identity missing")
+    example = frozen_example(json.loads(files["SELECTION.json"]), files["code-explorer/index.html"])
+    a.require(files["code-explorer/EXAMPLE.json"] == a.encoded(example), "frozen example metadata differs")
     selected, freeze, identity = validate_inputs(files)
+    a.require(example["model"]["id"] != identity["id"], "frozen example cannot replace the current STDO model")
     return {"kind": "stdo.installed-documentation/2", "distribution_version": selected["version"],
             "role": "non-normative-documentation", "entrypoint": "index.html",
             "selection_sha256": a.sha(files["SELECTION.json"]),
             "source": {"source_identity_sha256": freeze["source_identity_sha256"], "source_freeze_sha256": a.sha(files["source-freeze.json"])},
             "model": identity, "viewer_sha256": a.sha(files["constraint-explorer/index.html"]),
             "proof_catalog_sha256": a.sha(files["proofs/PROOFS.json"]),
+            "retained_examples": [example],
             "members": a.inventory({p: raw for p, raw in files.items() if p != "DOCUMENTATION.json"})}
 
 
@@ -128,7 +167,7 @@ def check_files(files):
     version = expected["distribution_version"]
     a.require(files["DOCUMENTATION.json"] == a.encoded(expected), "current documentation metadata differs")
     a.require(files["README.md"] == guide(version) and files["index.html"] == landing(version), "current documentation navigation differs")
-    fixed = {"DOCUMENTATION.json", "SELECTION.json", "source-freeze.json", "model.json", "source-manifest.json", "constraint-explorer/index.html", "README.md", "index.html"}
+    fixed = {"DOCUMENTATION.json", "SELECTION.json", "source-freeze.json", "model.json", "source-manifest.json", "constraint-explorer/index.html", "README.md", "index.html", "code-explorer/index.html", "code-explorer/EXAMPLE.json"}
     a.require({p for p in files if not p.startswith("proofs/")} == fixed, "current documentation member closure differs")
     return {"kind": expected["kind"], "status": "checked", "version": version,
             "source_identity_sha256": expected["source"]["source_identity_sha256"], "model": expected["model"], "members": len(files)}
@@ -141,6 +180,13 @@ def build(repository, selection_path, selection_sha, output):
              "model.json": a.pinned(root, selected["model"]), "source-manifest.json": a.pinned(root, selected["source_manifest"]),
              "constraint-explorer/index.html": a.pinned(root, selected["viewer"]),
              "README.md": guide(selected["version"]), "index.html": landing(selected["version"])}
+    example_raw = a.pinned(root, selected["code_example"]["artifact"])
+    example = frozen_example(selected, example_raw)
+    original = subprocess.run(["git", "--no-optional-locks", "-C", str(root), "show",
+                               EXAMPLE_PUBLICATION["commit"] + ":" + EXAMPLE_PUBLICATION["path"]],
+                              capture_output=True, check=True).stdout
+    a.require(original == example_raw, "example differs from its immutable published source")
+    files.update({"code-explorer/index.html": example_raw, "code-explorer/EXAMPLE.json": a.encoded(example)})
     proof_catalog = root / a.name(selected["proof_catalog"]["path"])
     a.pinned(root, selected["proof_catalog"])
     a.disjoint(output, proof_catalog.parent)

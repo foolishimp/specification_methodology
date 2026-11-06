@@ -1,0 +1,417 @@
+{
+  "cache_custody": {
+    "allowed": "Pinned immutable compiler archive copied into the declared generated .toolchain root, with source/destination/hash/independent inode custody; owner bootstrap verifies it and extracts normally.",
+    "destination": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64.tar.zst",
+    "expected_sha256": "c0c6f34f35ba1dcc5c4a5fd106fefab9eb5e8469712624dd2c868d51b63177c2",
+    "observed_source_bytes": 570422530,
+    "source": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64.tar.zst",
+    "standing": "Existence and size observed; hash verification/copy/bootstrap not yet executed. No shared mutable files, hardlinks or old runtime verdict reuse; no fresh-machine network-onboarding claim."
+  },
+  "commands": [
+    {
+      "argv": [
+        "BOOTSTRAP_PYTHON",
+        "-B",
+        "NATIVE_ROOT/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/source-tools"
+      ],
+      "id": "source-materialization"
+    },
+    {
+      "argv": [
+        "BOOTSTRAP_PYTHON",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/source-tools/a_c/scripts/bootstrap.py",
+        "graphify",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/dependencies/graphify"
+      ],
+      "id": "graphify-bootstrap"
+    },
+    {
+      "argv": [
+        "BOOTSTRAP_PYTHON",
+        "-B",
+        "NATIVE_ROOT/standards/tooling/setup.py",
+        "derive-runtime",
+        "--tools",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/source-tools",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c",
+        "--receipt",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/prepared.json"
+      ],
+      "id": "derive-runtime"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "NATIVE_ROOT/standards/tooling/setup.py",
+        "bootstrap-lean",
+        "--derivation",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/prepared.json",
+        "--derivation-sha256",
+        "PREPARED_RECEIPT_SHA256",
+        "--python",
+        "GRAPHIFY_PYTHON",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/bootstrap"
+      ],
+      "heavy_slot": true,
+      "id": "bootstrap-lean"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c/build_tenants/lean/scripts/formal_gate.py",
+        "init-origin"
+      ],
+      "id": "formal-origin"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "NATIVE_ROOT/standards/documentation/proofs/materialize.py",
+        "materialize",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/construction-evidence"
+      ],
+      "id": "recover-construction-proof"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "NATIVE_ROOT/standards/documentation/proofs/materialize.py",
+        "request",
+        "--evidence",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/construction-evidence",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/request.json"
+      ],
+      "id": "portable-request"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c/build_tenants/lean/scripts/formal_gate.py",
+        "verify",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/request.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/current-full"
+      ],
+      "heavy_slot": true,
+      "id": "installed-full-current-verify"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c/build_tenants/lean/scripts/formal_gate.py",
+        "inspect-evidence",
+        "--bundle",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/current-full",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/request.json"
+      ],
+      "id": "installed-full-owner-inspection"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c/scripts/ac.py",
+        "formal-select",
+        "--lean-root",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c/build_tenants/lean",
+        "--python",
+        "GRAPHIFY_PYTHON",
+        "--timeout-seconds",
+        "900",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/checker.json"
+      ],
+      "id": "formal-checker-selection"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c/scripts/ac.py",
+        "upstream",
+        "--model",
+        "CURRENT_MODEL",
+        "--carrier",
+        "CURRENT_CARRIER",
+        "--selections",
+        "CURRENT_SELECTIONS",
+        "--upstream",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/dependencies/graphify/graphify",
+        "--runtime",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/dependencies/graphify/RUNTIME.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/graphify/current-roundtrip"
+      ],
+      "id": "actual-upstream-roundtrip"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "NATIVE_ROOT/standards/tooling/setup.py",
+        "host",
+        "--tools",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/source-tools",
+        "--anchor",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/anchors/codex",
+        "--method-root",
+        "NATIVE_ROOT",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/codex",
+        "--store",
+        "SELECTED_STORE",
+        "--stdo",
+        "VERIFIED_MANAGER",
+        "--python",
+        "GRAPHIFY_PYTHON",
+        "--host",
+        "codex",
+        "--manifest-sha256",
+        "NATIVE_MANIFEST_SHA256",
+        "--runtime-ac",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c",
+        "--derivation",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/bootstrap/derivation.json",
+        "--derivation-sha256",
+        "SUPPORTED_RECEIPT_SHA256"
+      ],
+      "id": "codex-host-setup"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-prep/prepare_native_inputs.py",
+        "--configuration",
+        "CODEX_CONFIG",
+        "--model",
+        "CURRENT_MODEL",
+        "--views",
+        "CURRENT_VIEWS",
+        "--formal-request",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/request.json",
+        "--formal-bundle",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/current-full",
+        "--checker",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/checker.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/codex/cases",
+        "--include-context"
+      ],
+      "id": "codex-prepare-case-inputs"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-prep/seed_uncertain.py",
+        "--case",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/codex/cases/uncertain/CASE.json"
+      ],
+      "id": "codex-actual-uncertain-prior"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "NATIVE_ROOT/standards/tooling/setup.py",
+        "host",
+        "--tools",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/source-tools",
+        "--anchor",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/anchors/claude",
+        "--method-root",
+        "NATIVE_ROOT",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/claude",
+        "--store",
+        "SELECTED_STORE",
+        "--stdo",
+        "VERIFIED_MANAGER",
+        "--python",
+        "GRAPHIFY_PYTHON",
+        "--host",
+        "claude",
+        "--manifest-sha256",
+        "NATIVE_MANIFEST_SHA256",
+        "--runtime-ac",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c",
+        "--derivation",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/bootstrap/derivation.json",
+        "--derivation-sha256",
+        "SUPPORTED_RECEIPT_SHA256"
+      ],
+      "id": "claude-host-setup"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-prep/prepare_native_inputs.py",
+        "--configuration",
+        "CLAUDE_CONFIG",
+        "--model",
+        "CURRENT_MODEL",
+        "--views",
+        "CURRENT_VIEWS",
+        "--formal-request",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/request.json",
+        "--formal-bundle",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/current-full",
+        "--checker",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/checker.json",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/claude/cases"
+      ],
+      "id": "claude-prepare-case-inputs"
+    },
+    {
+      "argv": [
+        "GRAPHIFY_PYTHON",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-prep/seed_uncertain.py",
+        "--case",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/claude/cases/uncertain/CASE.json"
+      ],
+      "id": "claude-actual-uncertain-prior"
+    },
+    {
+      "argv": [
+        "/Users/jim/bin/codex",
+        "exec",
+        "--ignore-user-config",
+        "--ephemeral",
+        "--skip-git-repo-check",
+        "--sandbox",
+        "workspace-write",
+        "--cd",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/codex",
+        "--model",
+        "gpt-6-astra",
+        "-c",
+        "model_reasoning_effort=\"xhigh\"",
+        "-c",
+        "approval_policy=\"never\"",
+        "--json",
+        "--output-last-message",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/codex/cases/codex-final.txt",
+        "-"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/codex",
+      "id": "codex-native-session",
+      "native_actor": true,
+      "standing": "Prepared only; use actual installed skills, retain full stream and final report, no fallback model or duplicate Lean run.",
+      "stdin": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/codex/cases/host-prompt.txt"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/claude",
+        "--print",
+        "--output-format",
+        "stream-json",
+        "--verbose",
+        "--no-session-persistence",
+        "--setting-sources",
+        "project",
+        "--settings",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/claude/cases/claude-settings.json",
+        "--strict-mcp-config",
+        "--mcp-config",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/claude/cases/empty-mcp.json",
+        "--no-chrome",
+        "--permission-mode",
+        "dontAsk",
+        "--allowedTools",
+        "Bash",
+        "Read",
+        "Write",
+        "Edit",
+        "Glob",
+        "Grep",
+        "Skill",
+        "--effort",
+        "xhigh",
+        "--model",
+        "opus"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/claude",
+      "id": "claude-native-session",
+      "native_actor": true,
+      "standing": "Prepared only; use actual installed skills, retain full stream and final report, no fallback model or duplicate Lean run.",
+      "stdin": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/claude/cases/host-prompt.txt"
+    }
+  ],
+  "current_context": {
+    "case": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/codex/cases/current-context/CASE.json",
+    "flow": "Actual context.assemble \u2192 contract.preflight \u2192 dispatch.start \u2192 dispatch.observe; compare complete delivered stdin bytes and exact ordered native-work view. Preserve actual supervisor/formal-use evidence.",
+    "model_raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e",
+    "negative_scope": "Separate explicitly adversarial context/preflight artifacts with an omitted real required record must not consume the positive proof. A separately copied stale proof report must refuse before recipient effect. Originals, grants and history remain unchanged; no extra full proof is implied by a refusal.",
+    "seed": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e17777d4ad97c92bf9f2402e9341ee1c",
+    "selected_records": 21
+  },
+  "host_boundaries": [
+    "Output and case effects remain beneath each disposable host workspace.",
+    "Distinct Product/policy/activation/grant identities for missing issuer, missing recipient and uncertain retry; no grant inheritance from admitted case.",
+    "Separate final Reviewer intake/closed return; no same-process context-isolation or Executive disposition claim.",
+    "Preserve inherited authentication without reading or recording credentials; no global configuration edits; ephemeral/no-session-persistence settings.",
+    "Requested model/effort and observed resolved model remain distinct."
+  ],
+  "host_choices": {
+    "bytes": 6301,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-plan-013/HOST_CHOICES.json",
+    "sha256": "a5d9b896bba4e911cf186952b08dbfe1b93551e62bd7b1cdc80d2cf4a3c2bfd6"
+  },
+  "paths": {
+    "ac_runtime": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/a_c",
+    "bootstrap_evidence": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/bootstrap",
+    "checker": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/checker.json",
+    "claude_anchor": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/anchors/claude",
+    "claude_workspace": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/claude",
+    "codex_anchor": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/anchors/codex",
+    "codex_workspace": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/hosts/codex",
+    "construction_evidence": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/construction-evidence",
+    "current_request": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/request.json",
+    "formal_full": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/formal/current-full",
+    "graphify_runtime": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/dependencies/graphify",
+    "prepared_runtime_receipt": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/runtime/prepared.json",
+    "run_root": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013",
+    "source_tools": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-013/source-tools"
+  },
+  "remaining_external_bindings": [
+    "Verified nativeA root and manifest digest",
+    "Exact selected manager and fresh store",
+    "Source materializer setup receipt and supported runtime derivation",
+    "Both actual installed host CONFIG paths",
+    "Exact current model/carrier/views/selection members from native tool payload",
+    "Final common execution-record schema and actual output references"
+  ],
+  "run_identity": "urn:stdo305:installed-qualification:013:local-001",
+  "runtime_binding": "Use verified immutable native A plus exact separately materialized source. Derive writable a_c runtime through owner setup; bootstrap its support normally. New support/currentness identity requires actual current-model proof. Skills/Graphify retain selected venv invocation; formal adapter explicitly selects its hermetic physical interpreter under its existing -I -S contract, both are recorded.",
+  "scheduling": "Notify Root immediately before any Lean/support heavy phase or native actor. Serialize these phases. No actual installation/qualification command runs until verified nativeA/store/manager inputs are handed off.",
+  "schema": "stdo305.installed-qualification-command-plan/1",
+  "selected_proof_counts": "One required installed full-current verify; one actual current Context preflight/delivery using Codex policy; native sessions inspect those results. Separately required public-readback execution is not performed or substituted here.",
+  "status": "prepared_unexecuted_awaiting_verified_nativeA"
+}

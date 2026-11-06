@@ -1,0 +1,49 @@
+{
+  "kind": "independent.stdo305-native-store-review/1",
+  "reviewer": "/root/stdo305_integration_review",
+  "scope": "read-only separately bound nonauthor review; synthetic public installed-attestation path only",
+  "subject014_sha256": "bb2b5a9e27ded70e2a97278e6944b0d95e20659871b316869ab8556c4eafb2ab",
+  "subject015_sha256": "c2f719ea113b6f76b9b2026a19df1bb4f390e265a99235bfdfedde9a90c71353",
+  "verdict": "satisfied for assigned scope; no remaining actionable finding",
+  "production_disposition": {
+    "path": "specification_methodology/v3/build_tenants/common-tools/native_release.py",
+    "lines": [
+      365,
+      395
+    ],
+    "sha256": "3c0e1fffd5810f2a3dd5fa7fafe9ae4069a544f1be3d7643da9f86c49d3fa30a",
+    "condition": "absolute ordinary external store is input; outputs remain BASE-confined; traversal and store/root ancestor redirects refuse; exact member and verifier predicates preserved",
+    "independent_execution": "7 focused tests / 12 public cases pass on resolved scratch fixtures, all store snapshots unchanged; historical absolute and relative stores pass; outside outputs and altered/extra members refuse"
+  },
+  "finding": {
+    "severity": 4,
+    "path": "specification_methodology/v3/build_tenants/common-tools/test_native_installed_store.py",
+    "line": 35,
+    "title": "default macOS temporary fixture aliases resolved source BASE",
+    "reproduction": "ordinary default-temp external positive returned refused: outputs must be inside this native-release territory",
+    "disposition": "discharged by015 exact one-line Path(temporary.name).resolve(); 7 ordinary default-temp tests pass in0.535s; original failing observation retained"
+  },
+  "currentness": "214 initial014 references matched; after root-authorized successor only test source changed; 8 live symlink fixture targets unchanged; all6 successor015 referenced inputs match before/after",
+  "limits": [
+    "Synthetic exact-byte two-file native-layout fixtures, not actual nativeA manager installation",
+    "No source edits, Git effects, heavy Lean, native actor or broad historical runs",
+    "Prior unaffected reviews preserved; no final release acceptance"
+  ],
+  "reports": [
+    {
+      "path": "RECHECK.json",
+      "bytes": 3146,
+      "sha256": "2a742c63469f0822fae614091c62c29a89f49c428b89ecf31d0863b0f2a05aec"
+    },
+    {
+      "path": "CURRENTNESS_014.json",
+      "bytes": 368,
+      "sha256": "295accbe60a45378ced2f253864931005b737295885f7bc1024c3059af688e93"
+    },
+    {
+      "path": "RECHECK_015.json",
+      "bytes": 1745,
+      "sha256": "6399cc353d1a43448f454a65221a9ca93995c9d4a31960d9cb82b06347c2e62b"
+    }
+  ]
+}

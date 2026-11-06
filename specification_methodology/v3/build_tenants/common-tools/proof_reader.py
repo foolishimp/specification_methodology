@@ -136,11 +136,11 @@ def statement(source: str, masked: str) -> str:
 
 
 def source_catalog(sources: dict[str, str]) -> tuple[list[dict], dict[str, list[str]]]:
-    declarations, imports, masked_files = [], {}, {}
+    declarations, imports, masked_lines = [], {}, {}
     for path, text in sources.items():
         masked = mask_noncode(text)
-        masked_files[path] = masked
         lines, clean = text.splitlines(keepends=True), masked.splitlines(keepends=True)
+        masked_lines[path] = clean
         offsets, offset = [], 0
         for line in lines:
             offsets.append(offset)
@@ -188,10 +188,10 @@ def source_catalog(sources: dict[str, str]) -> tuple[list[dict], dict[str, list[
     for name in by_name:
         suffixes.setdefault(name.rsplit(".", 1)[-1], []).append(name)
     for declaration in declarations:
-        text = masked_files[declaration["file"]]
-        lines = text.splitlines(keepends=True)
+        lines = masked_lines[declaration["file"]]
         body = "".join(lines[declaration["start_line"] - 1:declaration["end_line"]])
         references, seen = [], set()
+        line, cursor = declaration["start_line"], 0
         for match in TOKEN.finditer(body):
             token = match.group(0)
             candidate = token if token in by_name else None
@@ -203,7 +203,8 @@ def source_catalog(sources: dict[str, str]) -> tuple[list[dict], dict[str, list[
                 scope = scope.rpartition(".")[0]
             if not candidate and len(suffixes.get(token, [])) == 1:
                 candidate = suffixes[token][0]
-            line = declaration["start_line"] + body[:match.start()].count("\n")
+            line += body.count("\n", cursor, match.start())
+            cursor = match.start()
             key = (candidate, token, line)
             if candidate and candidate != declaration["id"] and key not in seen:
                 seen.add(key)

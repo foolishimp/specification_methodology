@@ -1,0 +1,156 @@
+{
+  "full_comparison": {
+    "catalog": {
+      "cpu_seconds": 2.790031,
+      "wall_seconds": 2.797192750032991
+    },
+    "catalog_bytes_equal": true,
+    "declarations": 12527,
+    "encode_catalog": {
+      "cpu_seconds": 0.20998600000000023,
+      "wall_seconds": 0.2108658328652382
+    },
+    "html_bytes_equal": true,
+    "lexical_source_catalog": {
+      "cpu_seconds": 1.907876,
+      "wall_seconds": 1.9124044589698315
+    },
+    "peak_rss_bytes_darwin": 912408576,
+    "references": 89214,
+    "render": {
+      "cpu_seconds": 0.11452600000000013,
+      "wall_seconds": 0.11483862483873963
+    },
+    "source_bytes": 15177421,
+    "source_files": 14
+  },
+  "oracle": {
+    "build_receipt": {
+      "bytes": 1163,
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current010-assembly-execution/proof.execution.json",
+      "sha256": "49bfe05b15d39d196e43c8489d04f09f33148103273dcf0d99da5f1b28ddb711"
+    },
+    "catalog": {
+      "bytes": 14636258,
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/PROOFS.json",
+      "sha256": "05b155370d642a078f9504ea960d5069445a7e607910c9361a96c5d9c168c17a"
+    },
+    "html": {
+      "bytes": 24782393,
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/index.html",
+      "sha256": "10bf2932f9a5f02e0a8f1ed44e86cd9fe3cae7dc78320c1bbb6a87577aa43109"
+    }
+  },
+  "prototype": {
+    "baseline_sha256": "90e0495ef423d35cef139bff94c7738268396725a3d96ca44b9fb4c794c46bc4",
+    "dependency_source_pins": {
+      "current_assets.py": "bf738522b83e2004881dc79aa907e9d9f55b4e0ae3cbeb1392b7bb41ba103ded",
+      "payload_boundary.py": "d01d30b9afcaf310c2ee0347a8c7424eda222a6acf58a48a244efdd15a85ec7c",
+      "proof_evidence.py": "659518c6e0d9110dd073ae59d3d5fa6ba4471e622a75069e718c0ae8ec3e2fc6",
+      "proof_reader_current.py": "44ea3f4f35b5428ce394571915ee1c66dc2cd3f395038434612879644f6c5f88"
+    },
+    "function": "source_catalog",
+    "prototype_sha256": "ab88b94ad392f93f80599c0fb9afab543476e8d419bf4978728c085afff39589",
+    "requested_comparison": "Full current010 catalog and HTML oracle; direct old/new six-library and finite lexical boundary cases; no full slow baseline rerun",
+    "scope": "Isolated performance prototype only; no production or test source edited",
+    "unchanged_prefix_sha256": "3af895d94db7ce822ad2006ba3603a77600b1d4194556b8d3348681c1979d029",
+    "unchanged_suffix_sha256": "b322ea2d6c7bd56b802ffa14cf1e1655446e5a66852bcfa13ccf71ddb0fb1300"
+  },
+  "python": {
+    "invocation": "/usr/local/bin/python3",
+    "physical": {
+      "bytes": 152096,
+      "path": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+      "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539"
+    },
+    "version": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]"
+  },
+  "schema": "stdo305.reader-performance-investigation/1",
+  "source_pins": [
+    {
+      "bytes": 7243,
+      "file": "library/AC/Closure.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/machinery/AC/Closure.lean",
+      "sha256": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f"
+    },
+    {
+      "bytes": 2033,
+      "file": "library/AC/GateProof.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/machinery/AC/GateProof.lean",
+      "sha256": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3"
+    },
+    {
+      "bytes": 3539,
+      "file": "library/AC/GateRuntime.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/machinery/AC/GateRuntime.lean",
+      "sha256": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f"
+    },
+    {
+      "bytes": 2894,
+      "file": "library/AC/Model.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/machinery/AC/Model.lean",
+      "sha256": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5"
+    },
+    {
+      "bytes": 8407,
+      "file": "library/AC/Projection.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/machinery/AC/Projection.lean",
+      "sha256": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575"
+    },
+    {
+      "bytes": 9730,
+      "file": "library/AC/Structure.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/machinery/AC/Structure.lean",
+      "sha256": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb"
+    },
+    {
+      "bytes": 11470670,
+      "file": "current/GateData.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/evidence/GateData.lean",
+      "sha256": "5c98ff5174d5eb2c0f490d287456b14358091951f0929f811df9ed2c10071553"
+    },
+    {
+      "bytes": 866128,
+      "file": "current/GateLocalNames.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/evidence/GateLocalNames.lean",
+      "sha256": "c98acbc18b496c98aaf51bbeeacd9fdc9c9651159179ebf7af85049c8814e791"
+    },
+    {
+      "bytes": 1146355,
+      "file": "current/GateExternalNames.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/evidence/GateExternalNames.lean",
+      "sha256": "fd06de4c664293aeaed4e25e7ebfa19a783655ebfbc14cef49f080e54e592678"
+    },
+    {
+      "bytes": 162545,
+      "file": "current/GateIdentities.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/evidence/GateIdentities.lean",
+      "sha256": "467091a5be5262ca09dd978429a45651c5dab6bb4c0c6c333e8d1308cdd1c829"
+    },
+    {
+      "bytes": 1478404,
+      "file": "current/GateBounds.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/evidence/GateBounds.lean",
+      "sha256": "252a444f97a68378313bc84382c60e120417965ec7210939151470d7b644974f"
+    },
+    {
+      "bytes": 430,
+      "file": "current/GateModel.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/evidence/GateModel.lean",
+      "sha256": "a107ba20966853cf3dc43a3e109588a186f36333f584605c63d99b3b9e2160d9"
+    },
+    {
+      "bytes": 18629,
+      "file": "current/GateViews.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/evidence/GateViews.lean",
+      "sha256": "14449a93e7a35485e9873511e3f1a8c52e56dbb6d76911c1d1e84f125557a20d"
+    },
+    {
+      "bytes": 414,
+      "file": "current/GateRun.lean",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/packaging-integration-001/current-proofs-010/evidence/GateRun.lean",
+      "sha256": "3aca46dd2a8de76afb0a9f568bff1c07a07deb02f5713f69515f9de63e28e69a"
+    }
+  ],
+  "standing": "Isolated prototype evidence only; production/checkpoint unchanged; no fresh Lean or release verdict."
+}

@@ -1,0 +1,44 @@
+{
+  "kind": "independent.abi011-recheck/1",
+  "subject_sha256": "99593792ae9ee587ba085414d88f19d134855f26f92a9b393fffcc16f7a90965",
+  "publication_local_tag_blob_and_sha_exact": true,
+  "render_exact_equal": true,
+  "render_seconds": 0.1600015419535339,
+  "renderer_members": 11,
+  "tests": {
+    "argv": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_frozen_code_example"
+    ],
+    "returncode": 0,
+    "stderr_sha256": "5f74dd1ec36d6a54a59dcb8df192d2d897c389d53c1f20ab8e01b244cca4475b"
+  },
+  "native_consumer": {
+    "argv": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/documentation.py",
+      "check",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common"
+    ],
+    "returncode": 0,
+    "result": {
+      "kind": "stdo.installed-documentation/2",
+      "status": "checked",
+      "version": "3.0.5",
+      "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+      "model": {
+        "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+        "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02",
+        "profile": "a_c.graphify.model/1"
+      },
+      "members": 73
+    },
+    "stdout_sha256": "08d92aedbd8e05abd3d47ae36d618c966120edf028293fd9401cba0db5b5a5ec"
+  },
+  "scope": "unchanged published ABI example custody and proposed native documentation consumer; no mutable ABI reads, full historical build, Lean, browser, native actor, repository mutation or release acceptance"
+}

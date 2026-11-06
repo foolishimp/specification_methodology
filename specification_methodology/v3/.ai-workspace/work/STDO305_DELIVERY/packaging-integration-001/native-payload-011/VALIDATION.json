@@ -1,0 +1,39 @@
+{
+  "checker": "registered native_release.validate_payload, selected stable3.0.5 configuration, unchanged predicates; timing-only in-process wrappers",
+  "configuration_sha256": "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+  "elapsed_seconds": 3.712806582916528,
+  "kind": "stdo.native-payload-validation/1",
+  "largest_member": {
+    "bytes": 67108864,
+    "git_mode": "100644",
+    "path": "standards/documentation/proofs/transport/part-001.bin",
+    "sha256": "6186ea5a907dbc25855492eeb0f3c1b324237b02035dfc544c133a17f1fe22d3"
+  },
+  "limits": "Candidate source/payload closure and retained evidence reproduction only; no native Git object, manager install, live host or public qualification.",
+  "member_count": 171,
+  "proof_reader_source_sha256": "ab88b94ad392f93f80599c0fb9afab543476e8d419bf4978728c085afff39589",
+  "stages": [
+    {
+      "seconds": 0.6780547918751836,
+      "stage": "full exact transport join/validation"
+    },
+    {
+      "seconds": 0.7333376668393612,
+      "stage": "current evidence consistency (includes transport)"
+    },
+    {
+      "seconds": 1.8855368751101196,
+      "stage": "lexical catalog"
+    },
+    {
+      "seconds": 0.10694316681474447,
+      "stage": "exact HTML reproduction"
+    },
+    {
+      "seconds": 3.0155221251770854,
+      "stage": "proof reader complete check (includes prior stages)"
+    }
+  ],
+  "status": "passed",
+  "total_bytes": 290059538
+}

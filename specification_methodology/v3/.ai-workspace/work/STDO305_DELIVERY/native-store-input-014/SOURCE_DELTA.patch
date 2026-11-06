@@ -1,0 +1,31 @@
+diff --git a/specification_methodology/v3/build_tenants/common-tools/native_release.py b/specification_methodology/v3/build_tenants/common-tools/native_release.py
+index bc92bbdcd..e2a3b41fc 100644
+--- a/specification_methodology/v3/build_tenants/common-tools/native_release.py
++++ b/specification_methodology/v3/build_tenants/common-tools/native_release.py
+@@ -362,11 +362,24 @@ def compare_files(actual, expected):
+     require(actual == expected, "file bytes differ")
+ 
+ 
++def installed_input_directory(value):
++    """Read an explicit ordinary installation input without widening outputs."""
++    path = Path(value)
++    require(".." not in path.parts, "installation input traversal refused")
++    # Retain the historical relative/internal spelling; external inputs must
++    # be selected by their absolute path.
++    path = path if path.is_absolute() else output_path(path)
++    for parent in (path, *path.parents):
++        require(not parent.is_symlink(), f"redirected installation input: {parent}")
++    require(path.is_dir(), "missing installation input directory")
++    return path
++
++
+ def installed(args):
+     run = output_path(args.run)
+     selection = read_json(run / "SOURCE_SELECTION.json", args.selection_sha256)
+-    store = output_path(args.store)
+-    root = store / "releases" / CUT
++    store = installed_input_directory(args.store)
++    root = installed_input_directory(store / "releases" / CUT)
+     report = read_json(args.verify_report)
+     manifest = (run / MANIFEST_NAME).read_bytes()
+     require(sha(manifest) == selection["native"]["manifest_sha256"], "canonical asset changed")

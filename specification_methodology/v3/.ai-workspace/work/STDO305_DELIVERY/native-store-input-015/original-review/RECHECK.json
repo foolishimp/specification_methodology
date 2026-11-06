@@ -1,0 +1,30 @@
+{
+  "kind": "independent.store014-public-controls/1",
+  "subject_sha256": "bb2b5a9e27ded70e2a97278e6944b0d95e20659871b316869ab8556c4eafb2ab",
+  "source_and_evidence_checked": 214,
+  "retained": {
+    "argv": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_native_installed_store"
+    ],
+    "returncode": 0,
+    "stderr": "test_altered_and_extra_members_refuse (test_native_installed_store.InstalledStoreTests.test_altered_and_extra_members_refuse) ... ok\ntest_external_ordinary_store_passes (test_native_installed_store.InstalledStoreTests.test_external_ordinary_store_passes) ... ok\ntest_historical_internal_store_passes (test_native_installed_store.InstalledStoreTests.test_historical_internal_store_passes) ... ok\ntest_historical_relative_internal_store_passes (test_native_installed_store.InstalledStoreTests.test_historical_relative_internal_store_passes) ... ok\ntest_output_outside_base_still_refuses (test_native_installed_store.InstalledStoreTests.test_output_outside_base_still_refuses) ... ok\ntest_redirected_store_and_native_ancestors_refuse (test_native_installed_store.InstalledStoreTests.test_redirected_store_and_native_ancestors_refuse) ... ok\ntest_traversal_and_relative_stores_refuse (test_native_installed_store.InstalledStoreTests.test_traversal_and_relative_stores_refuse) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.488s\n\nOK\n"
+  },
+  "default": {
+    "argv": [
+      "/Users/jim/.local/pipx/venvs/stdo-toolchain/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "-v",
+      "test_native_installed_store.InstalledStoreTests.test_external_ordinary_store_passes"
+    ],
+    "returncode": 1,
+    "stderr": "test_external_ordinary_store_passes (test_native_installed_store.InstalledStoreTests.test_external_ordinary_store_passes) ... FAIL\n\n======================================================================\nFAIL: test_external_ordinary_store_passes (test_native_installed_store.InstalledStoreTests.test_external_ordinary_store_passes)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/test_native_installed_store.py\", line 114, in test_external_ordinary_store_passes\n    self.invoke(self.fixture(), success=True)\n    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/test_native_installed_store.py\", line 103, in invoke\n    self.assertEqual(process.returncode, 0, process.stderr.decode())\n    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: 1 != 0 : refused: outputs must be inside this native-release territory\n\n\n----------------------------------------------------------------------\nRan 1 test in 0.043s\n\nFAILED (failures=1)\n"
+  },
+  "scope": "scratch-only public installed-attestation fixtures; no real nativeA or manager installation"
+}
