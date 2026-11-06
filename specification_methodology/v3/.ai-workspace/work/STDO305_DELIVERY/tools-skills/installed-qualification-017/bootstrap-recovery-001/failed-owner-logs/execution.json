@@ -1,0 +1,50 @@
+{
+  "schema": "a_c.bootstrap.execution/1",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "steps": [
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/scripts/bootstrap.py"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003",
+      "started_ns": 1793980936008670000,
+      "ended_ns": 1793981086129446000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "001.stdout.log",
+        "sha256": "16ac31496eccbcad56db631f53c0e52d63560b8b2bd8a3d4b11911bedf801422",
+        "bytes": 416
+      },
+      "stderr": {
+        "path": "001.stderr.log",
+        "sha256": "c3868ffbe724dde691f6bcf767fdc972d5ee1ba102905a24fe685b1cb4b238c9",
+        "bytes": 5988
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/scripts/formal_support.py",
+        "--output",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/profiles/proof-support-v1.json"
+      ],
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003",
+      "started_ns": 1793981086172222000,
+      "ended_ns": 1793981411261841000,
+      "exit_code": 1,
+      "stdout": {
+        "path": "002.stdout.log",
+        "sha256": "727c3c7f121f7f4b46a27e86d1d0f5db620d9fe9f5e7f11ebcc159c2421c8d17",
+        "bytes": 2083
+      },
+      "stderr": {
+        "path": "002.stderr.log",
+        "sha256": "ac7f1c996301ac938b18699859bbb2c27af7ed7c5efa3efe0c67a55dfd9dc8c1",
+        "bytes": 1904
+      }
+    }
+  ]
+}

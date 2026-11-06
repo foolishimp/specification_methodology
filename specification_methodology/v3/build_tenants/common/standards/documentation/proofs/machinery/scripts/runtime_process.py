@@ -12,11 +12,15 @@ class CleanupUnresolved(RuntimeError):
 def _alive(group):
     try:os.killpg(group,0);return True
     except ProcessLookupError:return False
+    except PermissionError as exc:
+        raise CleanupUnresolved(f'compiler process group probe denied: PGID={group}, errno={exc.errno}') from exc
 
 def _cleanup(process):
     for sig in (signal.SIGTERM,signal.SIGKILL):
         try:os.killpg(process.pid,sig)
         except ProcessLookupError:pass
+        except PermissionError as exc:
+            raise CleanupUnresolved(f'compiler process group signal {sig.name} denied: PGID={process.pid}, errno={exc.errno}') from exc
         try:process.wait(timeout=2)
         except subprocess.TimeoutExpired:pass
         until=time.monotonic()+2

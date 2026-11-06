@@ -1,0 +1,84 @@
+info: mathlib: materializing new dependency
+info: mathlib: fetching revision '56a005855ea17e0b0958f73ec801ae140b0a1679' from https://github.com/leanprover-community/mathlib4.git
+info: mathlib: checking out revision '56a005855ea17e0b0958f73ec801ae140b0a1679'
+info: plausible: materializing new dependency
+info: plausible: fetching revision 'dfa4f38190d07c37e315953e08b90fe2d95b3c24' from https://github.com/leanprover-community/plausible
+info: plausible: checking out revision 'dfa4f38190d07c37e315953e08b90fe2d95b3c24'
+info: LeanSearchClient: materializing new dependency
+info: LeanSearchClient: fetching revision 'd6b4c7be5be75ec4917c873ac50c756dc1436372' from https://github.com/leanprover-community/LeanSearchClient
+info: LeanSearchClient: checking out revision 'd6b4c7be5be75ec4917c873ac50c756dc1436372'
+info: importGraph: materializing new dependency
+info: importGraph: fetching revision 'a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93' from https://github.com/leanprover-community/import-graph
+info: importGraph: checking out revision 'a41f0e9a4dea23188ea9cc1c41ac9f8bbafe0b93'
+info: proofwidgets: materializing new dependency
+info: proofwidgets: fetching revision 'df72b022e558978a1c50264cfc4d7fec86fa8e04' from https://github.com/leanprover-community/ProofWidgets4
+info: proofwidgets: checking out revision 'df72b022e558978a1c50264cfc4d7fec86fa8e04'
+info: aesop: materializing new dependency
+info: aesop: fetching revision '4a174c490d8707121c4a9290800489f105d85e07' from https://github.com/leanprover-community/aesop
+info: aesop: checking out revision '4a174c490d8707121c4a9290800489f105d85e07'
+info: Qq: materializing new dependency
+info: Qq: fetching revision 'dce0ad79c486cb1fb504af04f953c3466b0c6db8' from https://github.com/leanprover-community/quote4
+info: Qq: checking out revision 'dce0ad79c486cb1fb504af04f953c3466b0c6db8'
+info: batteries: materializing new dependency
+info: batteries: fetching revision '66e469188fe07963e5cf666c7d4433f45b8131c5' from https://github.com/leanprover-community/batteries
+info: batteries: checking out revision '66e469188fe07963e5cf666c7d4433f45b8131c5'
+info: Cli: materializing new dependency
+info: Cli: fetching revision 'c24fe6078c630e89b489bffe59b3e20ac30d12c8' from https://github.com/leanprover/lean4-cli
+info: Cli: checking out revision 'c24fe6078c630e89b489bffe59b3e20ac30d12c8'
+✔ [4/42] Built Cache.Cli (1.7s)
+✔ [5/42] Built Cache.Lean (1.0s)
+✔ [6/42] Built Cache.Env (1.7s)
+✔ [7/42] Built Cache.Infra (992ms)
+✔ [8/42] Built Batteries.Tactic.OpenPrivate (3.1s)
+✔ [9/42] Built Cache.Cli:c.o (2.9s)
+✔ [10/42] Built Cache.Lean:c.o (2.8s)
+✔ [11/42] Built Cache.Env:c.o (2.2s)
+✔ [12/42] Built Cache.Infra:c.o (1.2s)
+✔ [13/42] Built Cache.Location (2.3s)
+✔ [14/42] Built Cache.Location:c.o (873ms)
+✔ [15/42] Built Batteries.Tactic.OpenPrivate:c.o (4.0s)
+✔ [16/42] Built Cache.IO (5.3s)
+✔ [17/42] Built Cache.Hashing (2.4s)
+✔ [18/42] Built Cache.Hashing:c.o (1.8s)
+✔ [19/42] Built Cache.IO:c.o (4.7s)
+✔ [20/42] Built Cache.Requests (4.0s)
+✔ [21/42] Built Cache.Marker (248ms)
+✔ [22/42] Built Cache.Marker:c.o (74ms)
+✔ [23/42] Built Cache.Upload.Curl (317ms)
+✔ [24/42] Built Cache.Upload.Rclone (336ms)
+✔ [25/42] Built Cache.Query (351ms)
+✔ [26/42] Built Cache.Upload.Curl:c.o (96ms)
+✔ [27/42] Built Cache.Upload.Rclone:c.o (113ms)
+✔ [28/42] Built Cache.Query:c.o (126ms)
+✔ [29/42] Built Cache.Upload.Azure (299ms)
+✔ [30/42] Built Cache.Upload.S3 (344ms)
+✔ [31/42] Built Cache.Warning (342ms)
+✔ [32/42] Built Cache.Requests:c.o (1.0s)
+✔ [33/42] Built Cache.Upload.Azure:c.o (77ms)
+✔ [34/42] Built Cache.Upload.S3:c.o (126ms)
+✔ [35/42] Built Cache.Warning:c.o (140ms)
+✔ [36/42] Built Cache.Upload.Defs (247ms)
+✔ [37/42] Built Cache.Upload.Defs:c.o (78ms)
+✔ [38/42] Built Cache.Upload (233ms)
+✔ [39/42] Built Cache.Upload:c.o (63ms)
+✔ [40/42] Built Cache.Main (466ms)
+✔ [41/42] Built Cache.Main:c.o (404ms)
+✔ [42/42] Built cache:exe (1.3s)
+Downloaded: 1 file(s) [attempted 1/623 = 0%, 992 KB/s][KDownloaded: 20 file(s) [attempted 20/623 = 3%, 12 KB/s][KDownloaded: 44 file(s) [attempted 44/623 = 7%, 314 KB/s][KDownloaded: 63 file(s) [attempted 63/623 = 10%, 186 KB/s][KDownloaded: 83 file(s) [attempted 83/623 = 13%, 142 KB/s][KDownloaded: 92 file(s) [attempted 92/623 = 14%, 120 KB/s][KDownloaded: 121 file(s) [attempted 121/623 = 19%, 62 KB/s][KDownloaded: 128 file(s) [attempted 128/623 = 20%, 105 KB/s][KDownloaded: 140 file(s) [attempted 140/623 = 22%, 221 KB/s][KDownloaded: 160 file(s) [attempted 160/623 = 25%, 290 KB/s][KDownloaded: 208 file(s) [attempted 208/623 = 33%, 309 KB/s][KDownloaded: 218 file(s) [attempted 218/623 = 34%, 813 KB/s][KDownloaded: 237 file(s) [attempted 237/623 = 38%, 14 KB/s][KDownloaded: 256 file(s) [attempted 256/623 = 41%, 278 KB/s][KDownloaded: 266 file(s) [attempted 266/623 = 42%, 328 KB/s][KDownloaded: 275 file(s) [attempted 275/623 = 44%, 164 KB/s][KDownloaded: 295 file(s) [attempted 295/623 = 47%, 120 KB/s][KDownloaded: 352 file(s) [attempted 352/623 = 56%, 3200 KB/s][KDownloaded: 362 file(s) [attempted 362/623 = 58%, 257 KB/s][KDownloaded: 372 file(s) [attempted 372/623 = 59%, 41 KB/s][KDownloaded: 391 file(s) [attempted 391/623 = 62%, 40 KB/s][KDownloaded: 401 file(s) [attempted 401/623 = 64%, 319 KB/s][KDownloaded: 418 file(s) [attempted 418/623 = 67%, 199 KB/s][KDownloaded: 430 file(s) [attempted 430/623 = 69%, 17 KB/s][KDownloaded: 439 file(s) [attempted 439/623 = 70%, 29 KB/s][KDownloaded: 449 file(s) [attempted 449/623 = 72%, 35 KB/s][KDownloaded: 487 file(s) [attempted 487/623 = 78%, 4 KB/s][KDownloaded: 516 file(s) [attempted 516/623 = 82%, 23 KB/s][KDownloaded: 536 file(s) [attempted 536/623 = 86%, 251 KB/s][KDownloaded: 555 file(s) [attempted 555/623 = 89%, 19 KB/s][KDownloaded: 593 file(s) [attempted 593/623 = 95%, 118 KB/s][KDownloaded: 623 file(s) [attempted 623/623 = 100%, 118 KB/s][K
+Still decompressing downloaded files...
+Traceback (most recent call last):
+  File "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/scripts/formal_support.py", line 230, in <module>
+    result=extend_scale(args.output,args.extend_scale) if args.extend_scale else extend_selected(args.output,args.extend_selected,args.prior_log,args.prior_root) if args.extend_selected else establish(args.output)
+                                                                                                                                                                                               ~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/scripts/formal_support.py", line 78, in establish
+    runtime_process.run([str(prefix/'bin/leanchecker'),'--fresh','AC.GateProof'],cwd=ROOT,env=env,stdout=None,check=True,timeout=300)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/scripts/runtime_process.py", line 37, in run
+    try:code=process.wait(timeout=timeout)
+             ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 1280, in wait
+    return self._wait(timeout=timeout)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/lib/python3.13/subprocess.py", line 2058, in _wait
+    raise TimeoutExpired(self.args, timeout)
+subprocess.TimeoutExpired: Command '['/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/leanchecker', '--fresh', 'AC.GateProof']' timed out after 300 seconds

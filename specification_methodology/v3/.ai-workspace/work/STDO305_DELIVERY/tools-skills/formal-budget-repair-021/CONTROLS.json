@@ -1,0 +1,82 @@
+{
+  "actual_public_selection": {
+    "bytes": 2923,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/source-proof/SELECTED_CHECKER.json",
+    "sha256": "0df9280bcd8612a0f2f892001e0da3e73804ba3694d6b060ff04c2da93372597"
+  },
+  "malformed_selector_values_refused": [
+    0,
+    -1,
+    true,
+    1.5,
+    "7200",
+    null
+  ],
+  "old_runtime_compatible": false,
+  "old_selection_refusal": {
+    "reason": "Selected checker entry or interpreter changed",
+    "status": "refused"
+  },
+  "old_selector": {
+    "bytes": 2923,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-020-preparation/SELECTED_CHECKER.json",
+    "sha256": "46978704746d67620b358ce1e9946d0743925e116b2e6310f9fc9dde48053848"
+  },
+  "operator_callsite_audit": [
+    {
+      "actual_process_wait_seconds": 7200,
+      "source": {
+        "bytes": 5019,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/source-proof/run_current_formal.py",
+        "sha256": "764a53f272b4f37e9e02ff2167b37ac6a7d9b761e15418e89dad14443b0cef96"
+      }
+    },
+    {
+      "actual_process_wait_seconds": 7200,
+      "source": {
+        "bytes": 6547,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/operators/run_current_full_supervised.py",
+        "sha256": "5d62cdf1b381493c3c195fb8f446f1bdf88878363287e37fc2252ede1499e528"
+      }
+    },
+    {
+      "actual_public_operation": "contract.preflight",
+      "source": {
+        "bytes": 13047,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/operators/current_context.py",
+        "sha256": "c3c9b901384564c752a70f795a93f9dee210e493c7d7eed1bcc86208f406eda2"
+      },
+      "timeout_seconds": 7500
+    },
+    {
+      "actual_public_operation": "dispatch.start",
+      "source": {
+        "bytes": 13047,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/operators/current_context.py",
+        "sha256": "c3c9b901384564c752a70f795a93f9dee210e493c7d7eed1bcc86208f406eda2"
+      },
+      "timeout_seconds": 7500
+    }
+  ],
+  "prohibited_output_absent": true,
+  "runtime_pin_delta": {
+    "scripts/formal_gate.py": {
+      "after": "4fb6daab9d1b9a14be797d1595f201e3dab1f1e5800d96babb130259b1234b2c",
+      "before": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2"
+    }
+  },
+  "schema": "stdo305.concrete-budget-controls/1",
+  "selection_execution": {
+    "bytes": 1888,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/selection.execution.json",
+    "sha256": "ca8558c1ba3d9288fd0c562cae7344943b08d183cf59feb70e88f88cd58113f6"
+  },
+  "skipped": 0,
+  "standing": "Three focused test methods include default/API override, forced incomplete and malformed limits. Actual public formal-select and old-selection refusal executed without a compiler. Operator callsite audit is static; full proof and installed/Context execution remain pending.",
+  "tests": [
+    "test_selected_default_and_api_override_reach_timeout_without_claims",
+    "test_malformed_limits_refuse_before_effect_or_compiler",
+    "test_resource_byte_limit_is_incomplete"
+  ],
+  "tests_run": 3
+}

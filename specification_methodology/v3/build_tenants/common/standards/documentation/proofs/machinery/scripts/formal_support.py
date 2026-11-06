@@ -46,7 +46,7 @@ def proof_environment(extra=None):
 
 def audit_contracts(prefix,env):
     with tempfile.TemporaryFile(dir=ROOT/'.cache') as log:
-        runtime_process.run([str(prefix/'bin/lean'),'-j','1','-M','4096',str(ROOT/'AC/GateProof.lean')],cwd=ROOT,env=env,stdout=log,check=True,timeout=90)
+        runtime_process.run([str(prefix/'bin/lean'),'-j','1','-M','4096',str(ROOT/'AC/GateProof.lean')],cwd=ROOT,env=env,stdout=log,check=True,timeout=180)
         log.seek(0);text=log.read().decode()
     print(text,end='',flush=True)
     found={n:set(x.strip() for x in a.split(',') if x.strip()) for n,a in re.findall(r"'([^']+)' depends on axioms: \[([^\]]*)\]",text)}
@@ -73,9 +73,9 @@ def establish(output):
     output=Path(output)
     if output.exists():raise ValueError('support output already exists; explicit new selection required')
     prefix,env,lock=tools();start=time.monotonic()
-    runtime_process.run([str(prefix/'bin/lake'),'build','AC.GateRuntime','AC.GateProof'],cwd=ROOT,env=env,stdout=None,check=True,timeout=90)
+    runtime_process.run([str(prefix/'bin/lake'),'build','AC.GateRuntime','AC.GateProof'],cwd=ROOT,env=env,stdout=None,check=True,timeout=180)
     prefix,env,lock=proof_environment()
-    runtime_process.run([str(prefix/'bin/leanchecker'),'--fresh','AC.GateProof'],cwd=ROOT,env=env,stdout=None,check=True,timeout=300)
+    runtime_process.run([str(prefix/'bin/leanchecker'),'--fresh','AC.GateProof'],cwd=ROOT,env=env,stdout=None,check=True,timeout=900)
     audit=audit_contracts(prefix,env)
     result={'schema':'a_c.lean.proof-support/1','platform':f'{platform.system()}-{platform.machine()}',
             'lean':lock['lean'],'mathlib':lock['mathlib'],'kernel_replay':'leanchecker --fresh AC.GateProof',

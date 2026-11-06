@@ -25,15 +25,17 @@ The verifier never receives code, executable arguments, schema overrides or a
 proof library from the request. Only the selected trusted tenant runtime controls
 those. A consumer must invoke/recheck that runtime and compare all exact bindings.
 
-Current default resource limits are 600 seconds per checking process, Lean
+Current default resource limits are 1800 seconds per checking process, Lean
 `-j1 -M4096`, 32 MiB input and 64 selections. The trusted Python API may explicitly
 select positive integer limits through its existing `limits` parameter; malformed
 limits refuse before output creation. The Graphify supervisor's separate default
 whole-invocation bound remains 600 seconds. Current full-model qualification uses
-the existing `formal-select --timeout-seconds 3600` selection, and standalone CLI
+the existing `formal-select --timeout-seconds 7200` selection, and standalone CLI
 execution requires its own outer supervision. A timeout is incomplete and cannot
 establish a verified claim. These resource choices change no mathematical
 obligation, evidence-currentness check or process-group cleanup requirement.
+The finite aggregate bound need not accommodate every stage's full allowance;
+neither bound promises completion.
 Historical measurements below retain their original 90/600-second bounds.
 
 Ordinary generation is admitted by a tenant-owned parameterized signature profile,

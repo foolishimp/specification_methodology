@@ -1,0 +1,148 @@
+{
+  "argv": [
+    "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "-I",
+    "-S",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_gate.py",
+    "verify",
+    "--request",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-request.json",
+    "--output",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-020/cold"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "input_boundary": "Unchanged exact1885-record current model and five actual supplied views21/17/11/5/15. No artifact reuse; public verify performs fresh dynamic proof, kernel replay and runtime.",
+  "inputs": [
+    {
+      "bytes": 1439,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-request.json",
+      "sha256": "32759755cf1d5370c5324a05c418b983b4cfffde125160af3e511ab87006ceee"
+    },
+    {
+      "bytes": 8521879,
+      "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+      "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+    },
+    {
+      "bytes": 1446025,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/supplied-views.json",
+      "sha256": "3710472f2528b4b3b2097c5ad4d413d3176a7e1e7f95f025210f43c38ddd0131"
+    }
+  ],
+  "launch_argv": [
+    "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "-I",
+    "-S",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-020-preparation/run_current_formal.py"
+  ],
+  "lean_process_limits": {
+    "memory_mb": 4096,
+    "threads": 1
+  },
+  "outer_timeout_seconds": 3600,
+  "output": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-020/cold",
+  "per_process_timeout_seconds": 600,
+  "predecessor_driver": {
+    "bytes": 5019,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-016-preparation/run_current_formal.py",
+    "sha256": "ac098773170d8a93330172480b6d945f789b21a38134fca139d8e028caf8bab0"
+  },
+  "producer": {
+    "bytes": 45863,
+    "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+    "sha256": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2"
+  },
+  "record_directory": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-020/cold-execution",
+  "required_files": [
+    {
+      "bytes": 1439,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/formal-request.json",
+      "sha256": "32759755cf1d5370c5324a05c418b983b4cfffde125160af3e511ab87006ceee"
+    },
+    {
+      "bytes": 8521879,
+      "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+      "sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+    },
+    {
+      "bytes": 1446025,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/representation/repair-002/supplied-views.json",
+      "sha256": "3710472f2528b4b3b2097c5ad4d413d3176a7e1e7f95f025210f43c38ddd0131"
+    },
+    {
+      "bytes": 45863,
+      "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+      "sha256": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2"
+    },
+    {
+      "bytes": 22488,
+      "path": "a_c/build_tenants/graphify/code/ac_formal_gate.py",
+      "sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8"
+    },
+    {
+      "bytes": 2923,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-020-preparation/SELECTED_CHECKER.json",
+      "sha256": "46978704746d67620b358ce1e9946d0743925e116b2e6310f9fc9dde48053848"
+    },
+    {
+      "bytes": 25513,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/support-budget-repair-020/FREEZE_002.json",
+      "sha256": "8f8bae3f262770723201b0a18280da6e66534833ca7979fa539e8940225b15eb"
+    },
+    {
+      "bytes": 1769,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-020-preparation/selection.execution.json",
+      "sha256": "82da96a61abc09b10994f43eeaa682e645c7c10ca35bf6e5debdaff34d9e0569"
+    }
+  ],
+  "runtime_identity": {
+    "pins": {
+      ".cache/formal-origin-v1/selection.json": "a6f7cce1d1654d43c4cc7c05445a39c090e3ff4b490bf7646d8870835ae1c8af",
+      "AC/Closure.lean": "d8c66f511c486eeaf40393733779148843e2ce075e2540cb41259ed9b23e011f",
+      "AC/GateProof.lean": "0359f5c3593c9e637758abb94cd0e1ca37d69b00a618c0049d39cd12c551d0f3",
+      "AC/GateRuntime.lean": "6714177025577839178623de17fa41feacdf7455519d62bd22028703b0d2d11f",
+      "AC/Model.lean": "943bd93abdcccb3cb084ab8e41196f8cac77629089e746c90d7da09ac90a22d5",
+      "AC/Projection.lean": "ac2a9ce8ed148400967519c724715f6ea491bceff960ed77249b5ff744692575",
+      "AC/Structure.lean": "cf7f586289dc20bfa3b35fe2a9c05f54d3865af7b412c289f07e25de950f56cb",
+      "lake-manifest.json": "8ccec766188ba32a956dd142439b4f08faa877512654162ae7cd2e35c1fdda34",
+      "lakefile.toml": "f22cba4f5f31d23815c62533bb9e6db49fc85e08e8bd707bd20d82497f9583f5",
+      "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+      "profiles/formal-gate-request.schema.json": "edb498b7af5dced9822055ee2e09938fffa5a22da33ea1ea9550d89dd90a233a",
+      "profiles/generation-signature-v1.json": "db4f0a4d41b575a1b06ecc75a0a56e3b4f26044830e5bff3624b2ae4f7a219a8",
+      "profiles/proof-support-v1.json": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+      "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
+      "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
+      "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
+      "scripts/formal_gate.py": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2",
+      "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
+      "scripts/formal_support.py": "10ec02e8297ddb02a2522457b26c71fd9c1b4e0d60985ce59e3d083afd5f2615",
+      "scripts/gate_codegen.py": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
+      "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
+      "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
+      "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
+      "scripts/runtime_process.py": "a32e8cdc66f05bd89876cd9bc1935912a94377007e75193d57fbe369b6259046",
+      "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
+    },
+    "sha256": "092de38979a2390b08e6e34764ffca068164801e491fa00274ad6f83f4c682be"
+  },
+  "schema": "stdo305.current-construction-proof-plan/1",
+  "selected_environment": {
+    "HOME": "/Users/jim",
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin"
+  },
+  "selection": {
+    "bytes": 2923,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-020-preparation/SELECTED_CHECKER.json",
+    "sha256": "46978704746d67620b358ce1e9946d0743925e116b2e6310f9fc9dde48053848"
+  },
+  "standing": "Root assigned exactly one successor020 public verify after accepted combined repair review. Prepared before process launch; no success or support renewal claim.",
+  "supervision_boundary": "Recorder uses separate regular stdout/stderr files and a private verifier process group; outer3600s timeout observes actual private descendants with unchanged ac_formal_gate._owned_groups then bounded TERM10s/KILL2s. Inner compiler groups retain reviewed current runtime_process cleanup. Any outer timeout or unresolved cleanup remains failure, never a manufactured verified result.",
+  "supervisor_helper": {
+    "bytes": 22488,
+    "path": "a_c/build_tenants/graphify/code/ac_formal_gate.py",
+    "sha256": "d37de63f2b809e7a02d88d560b29b4900e8cda6217cfbc32e5796f40065659b8"
+  },
+  "support_boundary": "Unchanged repository profile7198879c selects existing compiled support. The actual public verify must check all selected support/currentness itself. No separate support scan, support establishment, diagnostic or historical replay is selected."
+}

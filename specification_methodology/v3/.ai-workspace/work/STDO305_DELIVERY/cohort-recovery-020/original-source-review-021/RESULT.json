@@ -1,0 +1,39 @@
+{
+  "controls": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 0.4273404171690345,
+    "pass": true
+  },
+  "source_evidence_refs_stable": 31,
+  "production_delta": "Exactly one DEFAULT_LIMITS literal,600->1800",
+  "operator_static_checks": [
+    {
+      "path": "source-proof/run_current_formal.py",
+      "actual_wait_seconds": 7200,
+      "line": 34
+    },
+    {
+      "path": "operators/run_current_full_supervised.py",
+      "actual_wait_seconds": 7200,
+      "line": 22
+    },
+    {
+      "path": "operators/current_context.py",
+      "operation": "contract.preflight",
+      "timeout_seconds": 7500,
+      "line": 99
+    },
+    {
+      "path": "operators/current_context.py",
+      "operation": "dispatch.start",
+      "timeout_seconds": 7500,
+      "line": 196
+    }
+  ],
+  "selected_checker_sha256": "0df9280bcd8612a0f2f892001e0da3e73804ba3694d6b060ff04c2da93372597",
+  "portable_changed_rows_live_match": 5,
+  "limits": "Only three focused stub-based tests; operator propagation source inspection, no full proof, Context/native actor, compiler or support scan."
+}

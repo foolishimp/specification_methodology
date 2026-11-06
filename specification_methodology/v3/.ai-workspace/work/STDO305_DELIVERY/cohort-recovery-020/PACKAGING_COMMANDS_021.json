@@ -1,0 +1,282 @@
+{
+  "absent_destinations": [
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/archives/cold-successor.zip",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/archives/current-transport",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-proof-selection.json",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-proofs",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-documentation-selection.json",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-documentation",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-tooling",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/execution"
+  ],
+  "authority": "Root explicit source021 packaging assignment after successful proof/inspection and exclusive heavy slot; exact generated delta copy and one native validation included. No Git/native/tag/install/public effects.",
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "pack",
+        "--bundle",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-021/cold",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/archives/cold-successor.zip"
+      ],
+      "id": "pack-current021"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "split",
+        "--input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/archives/cold-successor.zip",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/archives/current-transport"
+      ],
+      "id": "split-current021"
+    },
+    {
+      "destination": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-proof-selection.json",
+      "fixed_fields": {
+        "inspector": {
+          "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+          "sha256": "4fb6daab9d1b9a14be797d1595f201e3dab1f1e5800d96babb130259b1234b2c"
+        },
+        "python": {
+          "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+          "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+        },
+        "result": {
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-021/cold/result.json",
+          "sha256": "5362b1433dd54df28dd140f4c4ccc47d5472d506e445daf5eb808c3936cb5109"
+        },
+        "standing": "Exact current021 successful construction proof and owner inspection under accepted020/021 source repairs; unchanged S/current repair-002 model/projections. Prior failures and verdicts retained separately."
+      },
+      "id": "bind-proof-selection",
+      "predecessor": {
+        "bytes": 2132,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proof-selection-019.json",
+        "sha256": "157d8607561c0655f64a64834cbdc991d34a5df30e9da934cb1b11ff1693d832"
+      }
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+        "build-current",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-proof-selection.json",
+        "--selection-sha256",
+        "${PROOF_SELECTION_SHA256}",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-proofs"
+      ],
+      "id": "build-current-reader"
+    },
+    {
+      "destination": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-documentation-selection.json",
+      "id": "bind-documentation-selection",
+      "predecessor": {
+        "bytes": 3900,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-documentation-selection-019.json",
+        "sha256": "fb4d39c475e88c9e53cc27d24a78778b67eca378847ef39c453085be8b7896da"
+      }
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/documentation.py",
+        "bundle-current",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-documentation-selection.json",
+        "--selection-sha256",
+        "${DOCUMENTATION_SELECTION_SHA256}",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-documentation"
+      ],
+      "id": "build-current-documentation"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/tooling.py",
+        "build",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-tooling-selection.json",
+        "--selection-sha256",
+        "91d319b724e6d9c34c4161000171d594c7124c1b10dd67dd3cbe15feaaa2d27b",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-tooling"
+      ],
+      "id": "build-current-tooling"
+    }
+  ],
+  "configuration": {
+    "bytes": 990,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+    "sha256": "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353"
+  },
+  "construction": {
+    "bytes": 8561,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-021/CURRENT_FORMAL.json",
+    "sha256": "f338afeec12b7d1c07451cb7927e30f2f384d8a96c3647f4478065daf0cd6a70"
+  },
+  "created_ns": 1793988238230076000,
+  "fixed_inputs": [
+    {
+      "bytes": 8561,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-021/CURRENT_FORMAL.json",
+      "sha256": "f338afeec12b7d1c07451cb7927e30f2f384d8a96c3647f4478065daf0cd6a70"
+    },
+    {
+      "bytes": 20157,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-021/cold/result.json",
+      "sha256": "5362b1433dd54df28dd140f4c4ccc47d5472d506e445daf5eb808c3936cb5109"
+    },
+    {
+      "bytes": 11247,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-021/cold-inspection.json",
+      "sha256": "e1f8d897a4e60aedafda661a37301ae6c9d906ef88a27077e85041f446a0c3f6"
+    },
+    {
+      "bytes": 19975,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-021/cold-execution/execution.json",
+      "sha256": "5dcff185b178816b8ba024ba0c8c89f65d4dfb9a680e1120ef1673b303b1a1d6"
+    },
+    {
+      "bytes": 5312,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-021/inspection/execution.json",
+      "sha256": "f8fa2d0d37f757ceccba25d066f5d8f77da11605bfbd51b3b9187bc54dd26034"
+    },
+    {
+      "bytes": 31873,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/PORTABLE.json",
+      "sha256": "2c3749b0babbe50eb1eae6da251493d58ecb9c80afab6e7b3b91238e3cb2aaa2"
+    },
+    {
+      "bytes": 11921,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/SOURCE_BINDING_021.json",
+      "sha256": "4a37d9ee11d29b828a89e41cb0c62fe90c055976099f643eccd8b5f3c0575b1b"
+    },
+    {
+      "bytes": 5031,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/original-source-review-021/REVIEW.json",
+      "sha256": "0382a1db26ed13a1a397f8ceacf7a90bc496d26731b300fb18a532083b1fc085"
+    },
+    {
+      "bytes": 9381,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/original-source-review/combined/REVIEW.json",
+      "sha256": "175c7bfeb5d7f4f0fb5931d983ae2af6be58905d2aaaf58bdcf40a56586e2fe6"
+    },
+    {
+      "bytes": 10355,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/execute_packaging.py",
+      "sha256": "49eb1a123d370c7533e2bc40366ab10d6c9b0f5960cdde3d66fa97a3f7e58736"
+    },
+    {
+      "bytes": 17655,
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+      "sha256": "659518c6e0d9110dd073ae59d3d5fa6ba4471e622a75069e718c0ae8ec3e2fc6"
+    },
+    {
+      "bytes": 32561,
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+      "sha256": "ab88b94ad392f93f80599c0fb9afab543476e8d419bf4978728c085afff39589"
+    },
+    {
+      "bytes": 20304,
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py",
+      "sha256": "44ea3f4f35b5428ce394571915ee1c66dc2cd3f395038434612879644f6c5f88"
+    },
+    {
+      "bytes": 17475,
+      "path": "specification_methodology/v3/build_tenants/common-tools/documentation.py",
+      "sha256": "1bb37666c0508fdd0cab4137d898f041840f293f54f41441139845f2c9814cdf"
+    },
+    {
+      "bytes": 15454,
+      "path": "specification_methodology/v3/build_tenants/common-tools/documentation_current.py",
+      "sha256": "da1a8e8df935b091fb799ab71ce8077bf24919cc3583fa9ea36c1fcd4a6cdc5c"
+    },
+    {
+      "bytes": 5498,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling.py",
+      "sha256": "a0b9bd0234d1bf070608239e7cfcc89a1a672d16d0d53f17f23259459fe36273"
+    },
+    {
+      "bytes": 8782,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_current.py",
+      "sha256": "da1edfae9de5ec9337ea809d503ac0e5b40802a0c61109e73bc8b41216868d47"
+    },
+    {
+      "bytes": 11635,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_materialize.py",
+      "sha256": "601fdb839266528db8999b1f04cf64bce0c41faf107f0f9311549c085d4f897e"
+    },
+    {
+      "bytes": 13670,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+      "sha256": "ed91e16b48469d89a3551871dada90e605c9bdd32758c27124828d7e3b445cfc"
+    },
+    {
+      "bytes": 11860,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_runtime.py",
+      "sha256": "0814857aebc6f66e98e2cf2c05ac450d61e70fbc9a8a15ca2881fd2d93dc0495"
+    },
+    {
+      "bytes": 2510,
+      "path": "specification_methodology/v3/build_tenants/common-tools/payload_boundary.py",
+      "sha256": "d01d30b9afcaf310c2ee0347a8c7424eda222a6acf58a48a244efdd15a85ec7c"
+    },
+    {
+      "bytes": 6001,
+      "path": "specification_methodology/v3/build_tenants/common-tools/current_assets.py",
+      "sha256": "bf738522b83e2004881dc79aa907e9d9f55b4e0ae3cbeb1392b7bb41ba103ded"
+    },
+    {
+      "bytes": 32671,
+      "path": "specification_methodology/v3/build_tenants/common-tools/native_release.py",
+      "sha256": "3c0e1fffd5810f2a3dd5fa7fafe9ae4069a544f1be3d7643da9f86c49d3fa30a"
+    }
+  ],
+  "kind": "stdo.assigned-current-packaging/1",
+  "limits": "Existing builders unchanged; no model/S/viewer/semantic regeneration, no retry on failure, no private origin in archives. Future payload review precedes transaction assignment.",
+  "native_preimage": {
+    "bytes": 46511,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/NATIVE_INPUT_INVENTORY.json",
+    "sha256": "ce5b5dd36440a3460b54ee05a39600bbf1d76fa43a8c9e41e36c51165f87e9df"
+  },
+  "proof_predecessor": {
+    "bytes": 2132,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/current-proof-selection-019.json",
+    "sha256": "157d8607561c0655f64a64834cbdc991d34a5df30e9da934cb1b11ff1693d832"
+  },
+  "python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "semantic_source": {
+    "bytes": 13889,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/source-freeze-002.json",
+    "sha256": "640141354a53504999c1c21757689f7a3ecf6cbe77c3f30804f8493a2928dc99"
+  },
+  "tooling_selection": {
+    "bytes": 78634,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-tooling-selection.json",
+    "sha256": "91d319b724e6d9c34c4161000171d594c7124c1b10dd67dd3cbe15feaaa2d27b"
+  },
+  "transport": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/archives/current-transport"
+}

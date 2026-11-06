@@ -1,0 +1,47 @@
+{
+  "driver": {
+    "bytes": 5019,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/source-proof/run_current_formal.py",
+    "sha256": "764a53f272b4f37e9e02ff2167b37ac6a7d9b761e15418e89dad14443b0cef96"
+  },
+  "fresh_subject_absent": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-021",
+  "launch_argv": [
+    "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "-I",
+    "-S",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/source-proof/run_current_formal.py"
+  ],
+  "observed_ns": 1793987005158814000,
+  "plan": {
+    "bytes": 8864,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/formal-budget-repair-021/source-proof/PLAN.json",
+    "sha256": "8025693110f63bf47ed627cb01d96c9a3969be2fb080dc4762dcf832e997f8b0"
+  },
+  "predecessor_incomplete": {
+    "bytes": 6010,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/current-formal-020/INCOMPLETE.json",
+    "sha256": "2af6221cd34dcafd854bb30a3301749a72e154a7c38e7efa68f8635281fc468d"
+  },
+  "prior_group_probes": [
+    {
+      "observed_ns": 1793987005105860000,
+      "outcome": "ProcessLookupError",
+      "pgid": 93430,
+      "probe": "os.killpg(pgid,0)"
+    },
+    {
+      "observed_ns": 1793987005105867000,
+      "outcome": "ProcessLookupError",
+      "pgid": 96377,
+      "probe": "os.killpg(pgid,0)"
+    }
+  ],
+  "resource_selection": {
+    "outer_seconds": 7200,
+    "per_stage_seconds": 1800
+  },
+  "runtime_identity": "0eb147c86f6d8d1abb1749281c3c70d188cad1fa8e07c27ae6a452532b446e26",
+  "schema": "stdo305.source-proof-successor-preinvocation/1",
+  "standing": "Root assigned one successor021 run; prior020 remains incomplete. Actual invocation follows this observation. No support establishment or historical replay selected."
+}

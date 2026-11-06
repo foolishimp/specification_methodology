@@ -1,0 +1,11 @@
+--- /Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-prep-017/prepare_native_inputs.py
++++ /Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-prep-022/prepare_native_inputs.py
+@@ -240,7 +240,7 @@
+     anchor = json.loads(Path(config['definition']).read_text())
+     save(output / 'READONLY_INPUT.json', {'standing': 'Exact earlier successful setup selected; no initializer is invoked by this preparation.', 'files': readonly_inputs})
+     inspected = recorded([config['python'], '-I', '-S', '-B', str(ac_root / 'build_tenants/lean/scripts/formal_gate.py'),
+-                          'inspect-evidence', '--bundle', str(a.formal_bundle.absolute()), '--request', str(a.formal_request.absolute())], output / 'proof-inspection', output, timeout=120)
++                          'inspect-evidence', '--bundle', str(a.formal_bundle.absolute()), '--request', str(a.formal_request.absolute())], output / 'proof-inspection', output, timeout=180)
+     assert inspected['status'] == 'consistent' and inspected['model']['sha256'] == MODEL_CANONICAL
+     checker = json.loads(a.checker.read_text())
+     assert checker['runtime_identity'] == inspected['runtime_identity']

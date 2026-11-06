@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "elapsed_seconds": 0.048846,
+  "ended_ns": 1793980211121118000,
+  "exit_code": 0,
+  "kind": "stdo.local-release-operation/1",
+  "operation": "external-manager-identities",
+  "plan": {
+    "bytes": 39751,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/PLAN.json",
+    "sha256": "5b7104c43bbc574307f81d8288e3a4d69e7357f07d12c073ac385081062d55bb"
+  },
+  "started_ns": 1793980211072271000,
+  "stderr": {
+    "bytes": 0,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-execution-019/external-manager-identities.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 1209,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-recovery-execution-019/external-manager-identities.stdout",
+    "sha256": "0e2870f140fa5c48d1d1abe17f58b687e4c1249d45324b21c48ed74a61fe3a13"
+  }
+}

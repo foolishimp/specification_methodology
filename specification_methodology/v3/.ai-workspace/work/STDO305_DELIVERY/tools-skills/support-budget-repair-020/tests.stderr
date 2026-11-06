@@ -1,0 +1,29 @@
+test_each_failed_stage_stops_before_inventory_and_profile_publication (test_formal_support_budget.SupportBudgetTests.test_each_failed_stage_stops_before_inventory_and_profile_publication) ... ok
+test_existing_profile_is_preserved_before_any_compiler_effect (test_formal_support_budget.SupportBudgetTests.test_existing_profile_is_preserved_before_any_compiler_effect) ... ok
+test_finite_allocations_keep_exact_fresh_replay_and_audit_sequence (test_formal_support_budget.SupportBudgetTests.test_finite_allocations_keep_exact_fresh_replay_and_audit_sequence) ... ok
+test_missing_or_forbidden_axiom_audit_never_publishes_support (test_formal_support_budget.SupportBudgetTests.test_missing_or_forbidden_axiom_audit_never_publishes_support) ... ok
+test_success_cannot_leave_an_inherited_background_child (test_runtime_process.RuntimeProcessTests.test_success_cannot_leave_an_inherited_background_child) ... ERROR
+test_timeout_terminates_actual_parent_and_grandchild (test_runtime_process.RuntimeProcessTests.test_timeout_terminates_actual_parent_and_grandchild) ... ok
+
+======================================================================
+ERROR: test_success_cannot_leave_an_inherited_background_child (test_runtime_process.RuntimeProcessTests.test_success_cannot_leave_an_inherited_background_child)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/tests/test_runtime_process.py", line 29, in test_success_cannot_leave_an_inherited_background_child
+    runtime_process.run([sys.executable,'-c',program,str(pidfile)],cwd=root,env=os.environ.copy(),stdout=log,timeout=3)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/runtime_process.py", line 42, in run
+    _cleanup(process)
+    ~~~~~~~~^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/runtime_process.py", line 23, in _cleanup
+    while _alive(process.pid) and time.monotonic()<until:time.sleep(.02)
+          ~~~~~~^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/runtime_process.py", line 13, in _alive
+    try:os.killpg(group,0);return True
+        ~~~~~~~~~^^^^^^^^^
+PermissionError: [Errno 1] Operation not permitted
+
+----------------------------------------------------------------------
+Ran 6 tests in 1.418s
+
+FAILED (errors=1)

@@ -1,0 +1,38 @@
+{
+  "rows": [
+    {
+      "argv": [
+        "/Users/jim/bin/codex",
+        "login",
+        "status"
+      ],
+      "authentication_status_reported_available": true,
+      "elapsed_seconds": 0.379254,
+      "ended_ns": 1793984599501142000,
+      "host": "codex",
+      "parsed_shape": "recognized logged-in status",
+      "raw_status_output_retained": false,
+      "returncode": 0,
+      "started_ns": 1793984599121888000
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/bin/claude",
+        "auth",
+        "status",
+        "--json"
+      ],
+      "authentication_status_reported_available": true,
+      "elapsed_seconds": 1.088136,
+      "ended_ns": 1793984600589328000,
+      "host": "claude",
+      "parsed_shape": "recognized loggedIn boolean",
+      "raw_status_output_retained": false,
+      "returncode": 0,
+      "started_ns": 1793984599501192000
+    }
+  ],
+  "schema": "stdo305.native-host-auth-preflight/1",
+  "selected_model_calls": 0,
+  "standing": "CLI-reported authentication availability only. No credential file/value read by this recorder, no raw authentication output retained, no model access/entitlement/quality or resolved-model claim."
+}

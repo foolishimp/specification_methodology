@@ -79,6 +79,18 @@ Proof execution requires the exact selected support as well as source. A separat
 authorized copy of already established support preserves its identity. Bootstrap
 alone does not establish that downloaded or rebuilt objects match that support
 map; selecting new support requires its own establishment and qualification.
+
+Current explicit fresh support establishment allows 180 seconds for the Lake
+build, 900 seconds for `leanchecker --fresh AC.GateProof`, and 180 seconds for
+the theorem/axiom audit. The shared audit helper also uses 180 seconds when
+called by the historical extension routes; their other limits and retained
+evidence are unchanged. The installed `setup.py bootstrap-lean` wrapper retains
+its 1800-second aggregate bound, leaving 540 seconds beyond those three inner
+allocations for dependency setup, inventories and cleanup. These are finite
+resource selections, not promised completion times. A failed stage publishes no
+support profile; aggregate timeout does not establish descendant settlement or
+authorize a retry. Preserve partial setup and reconcile before another attempt.
+
 After support setup, run from this Lean directory:
 
 ```sh
@@ -110,10 +122,12 @@ python3 -I -S -B scripts/formal_gate.py check-evidence --bundle "$AC_GATE_WORK/c
 ```
 
 Choose fresh, disjoint outputs with nonsymlinked ancestors. The default limits are
-32 MiB input, 64 selections, 600 seconds per checking process and Lean `-j1 -M4096`.
+32 MiB input, 64 selections, 1800 seconds per checking process and Lean `-j1 -M4096`.
 The Graphify supervisor's default whole-invocation bound remains 600 seconds.
-Current full-model qualification explicitly selects 3600 seconds through
-`formal-select --timeout-seconds 3600`; this does not alter the per-process limit.
+Current full-model qualification explicitly selects 7200 seconds through
+`formal-select --timeout-seconds 7200`; this does not alter the per-process limit.
+This finite aggregate bound can expire before every stage uses its full allowance;
+neither bound promises completion.
 A standalone CLI caller must supply its own outer supervision. Lean's `-M4096`
 setting is not a physical RSS cap.
 

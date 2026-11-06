@@ -1,0 +1,64 @@
+{
+  "argv": [
+    "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+    "build-current",
+    "--repository",
+    "/Users/jim/src/apps/specification_methodology",
+    "--selection",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-proof-selection.json",
+    "--selection-sha256",
+    "7e69264d4f4ccf556ff565b37f3eea766d7568eaa96f24f644d8728517538237",
+    "--output",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-proofs"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "elapsed_seconds": 29.269497,
+  "ended_ns": 1793988358145562000,
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHOME": "unset",
+    "PYTHONPATH": "unset",
+    "STDO_STORE": "unset"
+  },
+  "exit_code": 0,
+  "kind": "stdo.packaging-execution/1",
+  "operation": "build-current-reader",
+  "plan": {
+    "bytes": 15261,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/PACKAGING_COMMANDS_021.json",
+    "sha256": "06b73112dfb555fae1a7045f38a4cf704801d0a55ab9ab728df8a9af811f8219"
+  },
+  "python": {
+    "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7"
+  },
+  "result": {
+    "destination": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/current-proofs",
+    "kind": "stdo.current-proof-reader/1",
+    "members": 63,
+    "model": {
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+      "profile": "a_c.graphify.model/1",
+      "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+    },
+    "source_identity_sha256": "0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba",
+    "standing": "documentation custody/reproduction; no fresh Lean execution",
+    "status": "built",
+    "version": "3.0.5"
+  },
+  "started_ns": 1793988328876065000,
+  "stderr": {
+    "bytes": 0,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/execution/build-current-reader.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 635,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/execution/build-current-reader.stdout",
+    "sha256": "9dcb9a45ffb3d993b0a9076d698410654f6a86c13d7eaaa4c7193a9da7aed1f2"
+  }
+}

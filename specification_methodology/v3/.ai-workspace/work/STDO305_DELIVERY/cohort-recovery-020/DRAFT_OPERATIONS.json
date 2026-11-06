@@ -1,0 +1,359 @@
+{
+  "accepted_source_binding": {
+    "bytes": 4120,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/COMBINED_SOURCE_BINDING.json",
+    "sha256": "a19ad355878fc82b34567c649896843717693cdad1b50754e794fa8cc0441f04"
+  },
+  "base_head": "ec0c09474a1d42084ddd1ba2b97c9479affb0220",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "add",
+        "-f",
+        "--pathspec-from-file=/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/stage-paths.z",
+        "--pathspec-file-nul"
+      ],
+      "environment": {
+        "GIT_LITERAL_PATHSPECS": "1"
+      },
+      "id": "stage",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "id": "whitespace",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "git",
+        "commit",
+        "-m",
+        "Complete STDO 3.0.5 support orchestration recovery"
+      ],
+      "id": "checkpoint-C",
+      "output_binding": "C4=actual successful new HEAD; sole parentC3=ec0c09474a1d42084ddd1ba2b97c9479affb0220; exact frozen staged paths/blobs/modes only.",
+      "precondition": "Exact frozen final stage set and HEAD ec0c09474a1d42084ddd1ba2b97c9479affb0220; preserve current source/native preimages and private/raw exclusions.",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-m",
+        "venv",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager"
+      ],
+      "expected": "exit0",
+      "id": "external-manager-create",
+      "precondition": "exact selected wheelhouse/requirements and physical bootstrap Python pins match; no ambient dependency use",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-m",
+        "pip",
+        "--disable-pip-version-check",
+        "install",
+        "--no-index",
+        "--find-links",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/runtime-preparation-001/wheels",
+        "--require-hashes",
+        "--no-deps",
+        "-r",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/runtime-preparation-001/requirements-macos-arm64-cp313.txt"
+      ],
+      "expected": "exit0",
+      "id": "external-manager-offline-install",
+      "precondition": "exact selected wheelhouse/requirements and physical bootstrap Python pins match; no ambient dependency use",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "expected": "exit0",
+      "id": "external-manager-dependency-check",
+      "precondition": "exact selected wheelhouse/requirements and physical bootstrap Python pins match; no ambient dependency use",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+      ],
+      "expected": "exit0; CPython3.13.7; manager3.0.5; exact21 pinned distributions including pip26.2.1",
+      "id": "external-manager-identities",
+      "precondition": "exact selected wheelhouse/requirements and physical bootstrap Python pins match; no ambient dependency use",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-I",
+        "-B",
+        "-c",
+        "import hashlib,json,pathlib,sys,zipfile,stdo_toolchain;w=pathlib.Path(sys.argv[1]);site=pathlib.Path(stdo_toolchain.__file__).parent.parent;z=zipfile.ZipFile(w);selected={n:z.read(n) for n in z.namelist() if n.startswith(\"stdo_toolchain/\") and not n.endswith(\"/\")};actual={p.relative_to(site).as_posix() for p in (site/\"stdo_toolchain\").rglob(\"*\") if p.is_file() and \"__pycache__\" not in p.parts};assert actual==set(selected);assert all((site/n).read_bytes()==b for n,b in selected.items());assert stdo_toolchain.__version__==\"3.0.5\";print(json.dumps({\"status\":\"verified\",\"version\":stdo_toolchain.__version__,\"site\":str(site),\"wheel_sha256\":hashlib.sha256(w.read_bytes()).hexdigest(),\"members\":{n:hashlib.sha256(b).hexdigest() for n,b in selected.items()}},sort_keys=True))",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/dist/stdo_toolchain-3.0.5-py3-none-any.whl"
+      ],
+      "expected": "exit0; exact installed package population/content equals pinned source-matched wheel; retain actual invocation/physical executable hashes",
+      "id": "external-manager-source-match",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+        "--configuration-sha256",
+        "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+        "prepare",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--source-commit",
+        "${C}",
+        "--source-path",
+        "specification_methodology/v3/build_tenants/common",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004"
+      ],
+      "id": "native-prepare",
+      "output_binding": "source_sha256=actual SHA256(run/source.json); complete output population must equal final accepted native input inventory, whose count is not assumed before016 generation.",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "git",
+        "read-tree",
+        "--empty"
+      ],
+      "environment": {
+        "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-003/native-index"
+      },
+      "id": "native-empty-index",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "git",
+        "update-index",
+        "-z",
+        "--index-info"
+      ],
+      "environment": {
+        "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-003/native-index"
+      },
+      "id": "native-populate-index",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment",
+      "stdin_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/native-index-info.z"
+    },
+    {
+      "argv": [
+        "git",
+        "write-tree"
+      ],
+      "environment": {
+        "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-003/native-index"
+      },
+      "id": "native-tree",
+      "output_binding": "native_tree=exact stdout tree object",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "git",
+        "commit-tree",
+        "${native_tree}",
+        "-p",
+        "16bc30d215915a4b7b3ed2f13e52e14510ae1c9d",
+        "-F",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/native-commit-message.txt"
+      ],
+      "id": "native-commit-A",
+      "output_binding": "A4=exact stdout commit object; sole parent published native30416bc30d215915a4b7b3ed2f13e52e14510ae1c9d; main remainsC4.",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "git",
+        "var",
+        "GIT_COMMITTER_IDENT"
+      ],
+      "id": "native-tagger-identity",
+      "output_binding": "committer_ident=exact one-line successful stdout, retained as tagger identity.",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "git",
+        "mktag"
+      ],
+      "id": "native-annotated-tag-object",
+      "input_binding": "Pin newly prepared cut-004/tag-message.txt raw bytes after actual native prepare; require Frozen-Source-Commit actualC4, Frozen-Source-Path specification_methodology/v3/build_tenants/common, Frozen-Source-Tree actual selected C4 package tree, predecessor16bc30d215915a4b7b3ed2f13e52e14510ae1c9d; raw header object actualA4. Do not consume any predecessor cut annotation.",
+      "output_binding": "tag_object=exact successful stdout; raw input retained and recomputed SHA1 git tag object must equal output. No ref mutation yet.",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment",
+      "stdin_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/native-tag-object.txt",
+      "stdin_template": "object ${A}\ntype commit\ntag specification_methodology/v3.0.5\ntagger ${committer_ident}\n\n${exact bytes of newly prepared cut-004/tag-message.txt}"
+    },
+    {
+      "argv": [
+        "git",
+        "update-ref",
+        "refs/tags/specification_methodology/v3.0.5",
+        "${tag_object}",
+        "d40a147f5b2e5f5cd638c71646232e0d4df95249"
+      ],
+      "id": "native-candidate-tag-CAS",
+      "precondition": "Immediately refresh remote selected/historical refs; selected3.0.5 methodology tag must remain absent remotely and local ref exactly d40a147f5b2e5f5cd638c71646232e0d4df95249. Preserve exact A3 commit/tag/tree object custody and source bindings before the explicitly assigned unpublished-only CAS. No published ref may move.",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+        "--configuration-sha256",
+        "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+        "attest",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004",
+        "--source-sha256",
+        "${source_sha256}",
+        "--native-commit",
+        "${A}"
+      ],
+      "id": "native-attest",
+      "output_binding": "native_sha256=SHA256(run/native.json)",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/stdo",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store",
+        "manifest",
+        "v3.0.5",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology"
+      ],
+      "id": "manager-manifest",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment",
+      "stdout_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/manifest-report.json",
+      "transport_mode": "local_prepublication"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+        "--configuration-sha256",
+        "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+        "seal",
+        "--repo",
+        "/Users/jim/src/apps/specification_methodology",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004",
+        "--source-sha256",
+        "${source_sha256}",
+        "--native-sha256",
+        "${native_sha256}",
+        "--manifest-report",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/manifest-report.json"
+      ],
+      "id": "native-seal",
+      "output_binding": "manifest_sha256=SHA256(run/stdo-v3.0.5-manifest.json); selection_sha256=SHA256(run/SOURCE_SELECTION.json)",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/stdo",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store",
+        "install",
+        "v3.0.5",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--manifest-sha256",
+        "${manifest_sha256}"
+      ],
+      "id": "initial-local-install",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment",
+      "stdout_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/install-local.json",
+      "transport_mode": "local_prepublication"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/stdo",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store",
+        "verify",
+        "v3.0.5",
+        "--manifest-sha256",
+        "${manifest_sha256}"
+      ],
+      "id": "initial-local-verify",
+      "output_binding": "valid=true,failures=[],exactA/native manifest and selected explicit store",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment",
+      "stdout_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/verify-local.json"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+        "--configuration-sha256",
+        "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+        "installed",
+        "--run",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004",
+        "--selection-sha256",
+        "${selection_sha256}",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store",
+        "--verify-report",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/verify-local.json",
+        "--label",
+        "local"
+      ],
+      "id": "installed-byte-attest",
+      "output_binding": "Exact complete installed native population equals final sealed native manifest and selected bytes, including manifest; no missing/extra/member mismatch. Final count bound from actual016 payload.",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    },
+    {
+      "id": "qualification-handoff",
+      "operation": "Retain successful actual A4/manifest/source selection and fresh external local-004 exact manager/store bindings; followup_task Tools Writer with its exact later prepared qualification contracts and actual outputs under Root conditional scope. Preserve local001/local002/local003 and all proof/failure identities. No assumed host/profile/runtime success.",
+      "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+    }
+  ],
+  "created_ns": 1793985019366368000,
+  "expected_tree": null,
+  "kind": "stdo305.native-recovery-draft-operations/1",
+  "predecessor_template": {
+    "bytes": 18591,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-019/DRAFT_OPERATIONS.json",
+    "sha256": "d18950945e441f80dda1d6a7708ed34ad395a3279711312e63eb828dcb918b5c"
+  },
+  "standing": "Exact23 prospective existing-operation forms only. Source proof/inspection, generated payload review, final source inventory/index/HEAD preimages and Root concrete transaction assignment remain required; no effect assigned or performed."
+}

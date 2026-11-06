@@ -105,9 +105,9 @@ class FormalGateTests(unittest.TestCase):
         result=gate.verify(request_for(self.directory/'subject/model.json'),self.directory/'byte-limit',{'max_input_bytes':1})
         self.assertEqual(result['status'],'incomplete')
     def test_selected_default_and_api_override_reach_timeout_without_claims(self):
-        # Compiler timing is an explicit stub here. The separately retained
-        # current GateData diagnostic measures actual compilation at this bound.
-        for label,limits,expected in (('default',None,600),('api-override',{'timeout_seconds':7},7)):
+        # Compiler timing is an explicit stub here. Separate retained executions
+        # measure actual compilation; this control does not invoke Lean.
+        for label,limits,expected in (('default',None,1800),('api-override',{'timeout_seconds':7},7)):
             with self.subTest(selection=label):
                 output=self.directory/('selected-timeout-'+label)
                 def timed_out(command,**kwargs):
@@ -122,6 +122,23 @@ class FormalGateTests(unittest.TestCase):
                 self.assertEqual(result['reason'],'GateData exceeded selected time limit')
                 self.assertEqual(result['checked_claims'],[])
                 self.assertEqual(result['observations']['limits'],dict(gate.DEFAULT_LIMITS,timeout_seconds=expected))
+                self.assertEqual(json.loads((output/'result.json').read_text()),result)
+                self.assertFalse((output/'local-origin.json').exists())
+
+    def test_unsettled_group_denial_is_incomplete_without_verified_claims(self):
+        for operation in ('probe','signal SIGTERM'):
+            with self.subTest(operation=operation):
+                output=self.directory/('denied-group-'+operation.replace(' ','-'))
+                denied=PermissionError(1,'controlled post-launch group denial')
+                def unsettled(*args,**kwargs):
+                    raise gate.runtime_process.CleanupUnresolved(
+                        f'compiler process group {operation} denied: PGID=12345, errno=1') from denied
+                with patch.object(support,'check',return_value={'fixture':'selected-support-stub'}), \
+                     patch.object(gate.runtime_process,'run',side_effect=unsettled):
+                    result=gate.verify(request_for(self.directory/'subject/model.json'),output)
+                self.assertEqual(result['status'],'incomplete')
+                self.assertEqual(result['checked_claims'],[])
+                self.assertIn('PGID=12345, errno=1',result['reason'])
                 self.assertEqual(json.loads((output/'result.json').read_text()),result)
                 self.assertFalse((output/'local-origin.json').exists())
 

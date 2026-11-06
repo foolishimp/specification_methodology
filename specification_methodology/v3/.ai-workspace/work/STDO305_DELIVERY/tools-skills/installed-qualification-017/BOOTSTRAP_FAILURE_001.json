@@ -1,0 +1,177 @@
+{
+  "actual_execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/store/releases/v3.0.5/standards/tooling/setup.py",
+      "bootstrap-lean",
+      "--derivation",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/prepared.json",
+      "--derivation-sha256",
+      "184d365c6ac61b72dcbc887d7fc1d93c4bbd9ca42a0e11e1fe1ed50edea6542f",
+      "--python",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/dependencies/graphify/venv/bin/python",
+      "--output",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/bootstrap"
+    ],
+    "child_maxrss_native_units": 1380466688,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003",
+    "elapsed_seconds": 477.002897,
+    "ended_ns": 1793981411330573000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 30839,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/observed/runtime/prepared.json",
+        "sha256": "184d365c6ac61b72dcbc887d7fc1d93c4bbd9ca42a0e11e1fe1ed50edea6542f"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 203,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/executions/bootstrap-lean/stdout.txt",
+        "sha256": "518c537680f97eccb8d3ab36985d32d07f53bed96943733776c3383637040345"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/executions/bootstrap-lean/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 1107,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/observed/runtime/bootstrap/execution.json",
+        "sha256": "0f57e6d1e7f2abb55698ecc53ef0224cc0793d41e01db3e412d9a231d4aba348"
+      },
+      {
+        "bytes": 7892,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/observed/runtime/bootstrap/stderr.txt",
+        "sha256": "f54d96fbb5baea4446b3986859d84a74a77903796d71bc1d2af303e01c11bfbc"
+      },
+      {
+        "bytes": 3012,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/observed/runtime/bootstrap/stdout.txt",
+        "sha256": "5f3e0e1b0a3f9b3758bdef407744b72dbb8e1e1f0f28016224090cb29ef4d0af"
+      },
+      {
+        "bytes": 211,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/executions/bootstrap-lean/result.json",
+        "sha256": "5b13edff0dfb3919622fea2b843b2698fb79b00645c83b53e0abf8c2cc574f04"
+      }
+    ],
+    "returncode": 2,
+    "started_ns": 1793980934327676000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/executions/bootstrap-lean/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 203,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/executions/bootstrap-lean/stdout.txt",
+      "sha256": "518c537680f97eccb8d3ab36985d32d07f53bed96943733776c3383637040345"
+    },
+    "system_seconds": 54.045237,
+    "user_seconds": 211.947346
+  },
+  "cleanup": {
+    "claim": "Selected runtime_process.run re-raised TimeoutExpired only after _cleanup returned upon private process-group absence; a failure to settle would instead raise CleanupUnresolved. This is pinned-source plus actual-exception inference, not an independently recorded numeric PGID check.",
+    "process_snapshot_command": [
+      "ps",
+      "-axo",
+      "pid=,ppid=,pgid=,comm="
+    ],
+    "recorded_numeric_compiler_pgid": null,
+    "selected_current_workspace_or_compiler_processes": []
+  },
+  "failure": {
+    "command": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/.toolchain/lean-4.35.0-darwin_aarch64/bin/leanchecker",
+      "--fresh",
+      "AC.GateProof"
+    ],
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean",
+    "dependency_setup": "completed before support invocation",
+    "exception": "subprocess.TimeoutExpired",
+    "source_line": 78,
+    "stage": "formal_support.establish fixed generic proof replay",
+    "support_profile_created": false,
+    "timeout_seconds": 300
+  },
+  "handoff": {
+    "bytes": 8337,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/SELECTED_HANDOFF.json",
+    "sha256": "8fbbefa09eb50d4de5e45a678d5f734acb80c23366913fae4ee924465a678b17"
+  },
+  "not_started": [
+    "formal-origin",
+    "formal-checker-selection",
+    "Codex and Claude host setup",
+    "native initializer and MCP",
+    "current full-model proof",
+    "Context formal delivery",
+    "native Codex session",
+    "native Claude session"
+  ],
+  "observed_ns": 1793981728677249000,
+  "owner_execution": {
+    "bytes": 1107,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/observed/runtime/bootstrap/execution.json",
+    "sha256": "0f57e6d1e7f2abb55698ecc53ef0224cc0793d41e01db3e412d9a231d4aba348"
+  },
+  "owner_stderr": {
+    "bytes": 7892,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/observed/runtime/bootstrap/stderr.txt",
+    "sha256": "f54d96fbb5baea4446b3986859d84a74a77903796d71bc1d2af303e01c11bfbc"
+  },
+  "owner_stdout": {
+    "bytes": 3012,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/observed/runtime/bootstrap/stdout.txt",
+    "sha256": "5f3e0e1b0a3f9b3758bdef407744b72dbb8e1e1f0f28016224090cb29ef4d0af"
+  },
+  "post_failure_path_exists": {
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/anchors": false,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/formal/checker.json": false,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/formal/current-full": false,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/hosts": false,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/.cache/formal-origin-v1/selection.json": false,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/profiles/proof-support-v1.json": false
+  },
+  "public_execution": {
+    "bytes": 5109,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/executions/bootstrap-lean/execution.json",
+    "sha256": "61e2de99d69ae2b887d5cd1e60ede2fadf02b302642fdf56acd1eb906ab5328a"
+  },
+  "public_result": {
+    "bytes": 211,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/installed-qualification-017/executions/bootstrap-lean/result.json",
+    "sha256": "5b13edff0dfb3919622fea2b843b2698fb79b00645c83b53e0abf8c2cc574f04"
+  },
+  "recovery": "Retain immutable A3 and partial runtime and all original receipts. No retry, changed limit, source patch, support reuse, or dependent operation selected.",
+  "schema": "stdo305.runtime-bootstrap-failure/1",
+  "source_pins": {
+    "formal_gate.py": {
+      "bytes": 45863,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/scripts/formal_gate.py",
+      "sha256": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2"
+    },
+    "formal_support.py": {
+      "bytes": 16535,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/scripts/formal_support.py",
+      "sha256": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6"
+    },
+    "runtime_process.py": {
+      "bytes": 1881,
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-003/runtime/a_c/build_tenants/lean/scripts/runtime_process.py",
+      "sha256": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018"
+    }
+  },
+  "standing": "Actual failed support establishment; no installed formal or native-host qualification claim. All dependent operations stopped."
+}

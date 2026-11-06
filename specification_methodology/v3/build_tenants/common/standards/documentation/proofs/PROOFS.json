@@ -587392,9 +587392,9 @@
   ],
   "members": [
     {
-      "bytes": 2132,
+      "bytes": 2184,
       "path": "SELECTION.json",
-      "sha256": "157d8607561c0655f64a64834cbdc991d34a5df30e9da934cb1b11ff1693d832"
+      "sha256": "7e69264d4f4ccf556ff565b37f3eea766d7568eaa96f24f644d8728517538237"
     },
     {
       "bytes": 7357,
@@ -587504,7 +587504,7 @@
     {
       "bytes": 20157,
       "path": "evidence/result.json",
-      "sha256": "e02a84ee32ad9ce796e3807ec6c990aea0d3e022b7093defaa0cc8fcdf49e4e6"
+      "sha256": "5362b1433dd54df28dd140f4c4ccc47d5472d506e445daf5eb808c3936cb5109"
     },
     {
       "bytes": 1446025,
@@ -587519,7 +587519,7 @@
     {
       "bytes": 770,
       "path": "inspection-execution.json",
-      "sha256": "58f7b2b818993ba57d712c0073a45fadc178c11e2d78962ada2176fe34a10903"
+      "sha256": "3aa62e0b1fbe37d083caa0bbb4a5f20337eb3fa182f2e654396264e910277adc"
     },
     {
       "bytes": 0,
@@ -587529,7 +587529,7 @@
     {
       "bytes": 11247,
       "path": "inspection.json",
-      "sha256": "26b722c38fe3538f26a3f21735fd85f3e7677690c224cced67a02518e9aeca08"
+      "sha256": "e1f8d897a4e60aedafda661a37301ae6c9d906ef88a27077e85041f446a0c3f6"
     },
     {
       "bytes": 4270,
@@ -587617,9 +587617,9 @@
       "sha256": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642"
     },
     {
-      "bytes": 45863,
+      "bytes": 45864,
       "path": "machinery/scripts/formal_gate.py",
-      "sha256": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2"
+      "sha256": "4fb6daab9d1b9a14be797d1595f201e3dab1f1e5800d96babb130259b1234b2c"
     },
     {
       "bytes": 16556,
@@ -587627,9 +587627,9 @@
       "sha256": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4"
     },
     {
-      "bytes": 16535,
+      "bytes": 16537,
       "path": "machinery/scripts/formal_support.py",
-      "sha256": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6"
+      "sha256": "10ec02e8297ddb02a2522457b26c71fd9c1b4e0d60985ce59e3d083afd5f2615"
     },
     {
       "bytes": 17609,
@@ -587652,9 +587652,9 @@
       "sha256": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a"
     },
     {
-      "bytes": 1881,
+      "bytes": 2205,
       "path": "machinery/scripts/runtime_process.py",
-      "sha256": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018"
+      "sha256": "a32e8cdc66f05bd89876cd9bc1935912a94377007e75193d57fbe369b6259046"
     },
     {
       "bytes": 1607,
@@ -587684,7 +587684,7 @@
     {
       "bytes": 9290,
       "path": "transport/TRANSPORT.json",
-      "sha256": "ceffee95e35a737c4bed1fb5b2595f0b089c6571fe6718f0765dd15877e3466a"
+      "sha256": "442c29433b39c0ec95846305b6de16d4a01286d0c8eb92c9e739b5b85455004c"
     },
     {
       "bytes": 67108864,
@@ -587692,9 +587692,9 @@
       "sha256": "6186ea5a907dbc25855492eeb0f3c1b324237b02035dfc544c133a17f1fe22d3"
     },
     {
-      "bytes": 57395673,
+      "bytes": 57395678,
       "path": "transport/part-002.bin",
-      "sha256": "358ccceaec5856186fa94bf3bbeecbfe4699364343dc523f621e319e633b0e33"
+      "sha256": "782c095f459615268d2d1b0d7eafae4c93b31cb2f37c2da907c2165afe3cf3a7"
     }
   ],
   "model": {
@@ -587703,19 +587703,19 @@
     "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
   },
   "observations": {
-    "child_maxrss_native_units": 11634114560,
+    "child_maxrss_native_units": 14531051520,
     "current_dynamic_proof_invocations": 7,
     "current_kernel_replay_invocations": 1,
     "current_runtime_invocations": 1,
     "edges": 3704,
     "elapsed_scope": "checking only; excludes final bundle/origin publication; complete wall requires external process measurement",
-    "elapsed_seconds": 1351.3125194157474,
+    "elapsed_seconds": 773.1020495421253,
     "execution": "projectWithProof with exact freshly checked model/closure premises; per-selection equality to unchanged project is kernel-replayed; the raw checker is not reevaluated",
     "limits": {
       "max_input_bytes": 33554432,
       "max_selections": 64,
       "memory_mb": 4096,
-      "timeout_seconds": 600
+      "timeout_seconds": 1800
     },
     "proof_modules": [
       "GateData",
@@ -587732,72 +587732,72 @@
     "reuse": "none; fresh dynamic obligations; pinned established base support",
     "stages": [
       {
-        "seconds": 1.5266495421528816,
+        "seconds": 3.911376333795488,
         "stage": "acquire-import-reconstruct"
       },
       {
-        "seconds": 18.909104249905795,
+        "seconds": 45.287322708405554,
         "stage": "support-pins"
       },
       {
-        "seconds": 20.54511291719973,
+        "seconds": 48.43285962520167,
         "stage": "current-certificates"
       },
       {
         "exit_code": 0,
-        "seconds": 246.4897876251489,
+        "seconds": 346.29952279198915,
         "stage": "GateData"
       },
       {
         "exit_code": 0,
-        "seconds": 231.25370370829478,
+        "seconds": 49.38375679170713,
         "stage": "GateLocalNames"
       },
       {
         "exit_code": 0,
-        "seconds": 300.6680954582989,
+        "seconds": 65.52980429213494,
         "stage": "GateExternalNames"
       },
       {
         "exit_code": 0,
-        "seconds": 136.55447424994782,
+        "seconds": 31.858296541962773,
         "stage": "GateIdentities"
       },
       {
         "exit_code": 0,
-        "seconds": 172.62456974992529,
+        "seconds": 41.98295787489042,
         "stage": "GateBounds"
       },
       {
         "exit_code": 0,
-        "seconds": 6.254393874667585,
+        "seconds": 0.731907167006284,
         "stage": "GateModel"
       },
       {
         "exit_code": 0,
-        "seconds": 48.33922374993563,
+        "seconds": 29.96763883344829,
         "stage": "GateViews"
       },
       {
         "exit_code": 0,
-        "seconds": 79.45748241664842,
+        "seconds": 36.828007333911955,
         "stage": "dynamic-kernel-replay"
       },
       {
         "exit_code": 0,
-        "seconds": 78.41693558404222,
+        "seconds": 60.52226887503639,
         "stage": "actual-runtime"
       },
       {
-        "seconds": 0.3889992921613157,
+        "seconds": 0.34013233333826065,
         "stage": "output-view-correspondence"
       },
       {
-        "seconds": 6.872429834213108,
+        "seconds": 5.427017000038177,
         "stage": "support-pins-after"
       },
       {
-        "seconds": 0.0007942500524222851,
+        "seconds": 0.0011978750117123127,
         "stage": "origin-currentness"
       }
     ],
@@ -588016,7 +588016,7 @@
     }
   },
   "reference_scope": "Lexical source links, not kernel proof dependencies. Source-to-model prose fidelity is independently assessed.",
-  "result_sha256": "e02a84ee32ad9ce796e3807ec6c990aea0d3e022b7093defaa0cc8fcdf49e4e6",
+  "result_sha256": "5362b1433dd54df28dd140f4c4ccc47d5472d506e445daf5eb808c3936cb5109",
   "runtime_identity": {
     "pins": {
       ".cache/formal-origin-v1/selection.json": "a6f7cce1d1654d43c4cc7c05445a39c090e3ff4b490bf7646d8870835ae1c8af",
@@ -588035,19 +588035,19 @@
       "scripts/bootstrap.py": "7fc1038180d95d7a5c6ee8cecaea12f9f2534cc8d1af4933303c214cd5127fd7",
       "scripts/check.py": "cad730b6de699ab2d4b2e8a7235e7b18bd28a4c8b5853e3f7838265a32a60deb",
       "scripts/check_gate.py": "ebf41503202c17f0d5872b3b5700f33b6969d5bee61befac680540e6a9093642",
-      "scripts/formal_gate.py": "c84ade91ab388e220de5f0b8d972789e23fcfce14f615bf65e869a60c2b4bcd2",
+      "scripts/formal_gate.py": "4fb6daab9d1b9a14be797d1595f201e3dab1f1e5800d96babb130259b1234b2c",
       "scripts/formal_reuse.py": "819d22b902724387f96d26156f1030af30e8e4bc21c6ec3dccc165664bfd91c4",
-      "scripts/formal_support.py": "20a8010b47c3d330f4ba07b398413acc9ad77bea5c5f9ecf817963b948ca98f6",
+      "scripts/formal_support.py": "10ec02e8297ddb02a2522457b26c71fd9c1b4e0d60985ce59e3d083afd5f2615",
       "scripts/gate_codegen.py": "0a348c16aeaec6cb421aa56374218b9035a0f159b85eb789394d4f49f9096a86",
       "scripts/generate_fixture.py": "ae36a07ff8ae3106eca66f346cdd82eb3d476ec1b407c944ed32987273705ca4",
       "scripts/generation_profile.py": "7f65b5ff763cf2d7b9ab9ef7ae18584dd5a5590418e10d30e186f8261ff67ace",
       "scripts/import_fixture.py": "5a63b45523dcdbf69b87f39864f28f99ee58890e70c4b3073b057fb80a864d7a",
-      "scripts/runtime_process.py": "dac99212afddad9f6c0d42f13c4c1ad2faa4ab0fa8ea2e26f09dc3af3a904018",
+      "scripts/runtime_process.py": "a32e8cdc66f05bd89876cd9bc1935912a94377007e75193d57fbe369b6259046",
       "toolchain-lock.json": "ac1fc82fc9b6df1f955b6538a4c91cd9f246ae2f23a38e17e6b4ad9482a2c20b"
     },
-    "sha256": "a79596f2aad2e8133291751e489d5a118ad21438d84ca068c0f7fbe0d9a9a237"
+    "sha256": "0eb147c86f6d8d1abb1749281c3c70d188cad1fa8e07c27ae6a452532b446e26"
   },
-  "selection_sha256": "157d8607561c0655f64a64834cbdc991d34a5df30e9da934cb1b11ff1693d832",
+  "selection_sha256": "7e69264d4f4ccf556ff565b37f3eea766d7568eaa96f24f644d8728517538237",
   "selections": [
     {
       "budget_records": 21,
@@ -588214,8 +588214,8 @@
   ],
   "standing": "Retained successful exact model/view verification and owner consistency inspection. Reading/checking this page executes no Lean proof.",
   "transport": {
-    "archive_bytes": 124504537,
-    "archive_sha256": "55dc7c2ce1eb5cbcabf08f33f0830596449625871edb142311efea53fbe65c79",
+    "archive_bytes": 124504542,
+    "archive_sha256": "2b6b9cfeac22021d0135314f097cb90fd20107e18b46a0db0b10e6e37acebfa4",
     "expanded_bytes": 579468245,
     "kind": "stdo.formal-evidence-transport/1",
     "manifest_sha256": "f7e2678197599f5701b8c245a660f98a0b2570dc14b0c1b75b16d2f936673ee7",
@@ -588454,7 +588454,7 @@
       },
       "result.json": {
         "bytes": 20157,
-        "sha256": "e02a84ee32ad9ce796e3807ec6c990aea0d3e022b7093defaa0cc8fcdf49e4e6"
+        "sha256": "5362b1433dd54df28dd140f4c4ccc47d5472d506e445daf5eb808c3936cb5109"
       },
       "supplied-views.json": {
         "bytes": 1446025,
@@ -588472,13 +588472,13 @@
         "sha256": "6186ea5a907dbc25855492eeb0f3c1b324237b02035dfc544c133a17f1fe22d3"
       },
       {
-        "bytes": 57395673,
+        "bytes": 57395678,
         "path": "part-002.bin",
-        "sha256": "358ccceaec5856186fa94bf3bbeecbfe4699364343dc523f621e319e633b0e33"
+        "sha256": "782c095f459615268d2d1b0d7eafae4c93b31cb2f37c2da907c2165afe3cf3a7"
       }
     ],
-    "result_sha256": "e02a84ee32ad9ce796e3807ec6c990aea0d3e022b7093defaa0cc8fcdf49e4e6"
+    "result_sha256": "5362b1433dd54df28dd140f4c4ccc47d5472d506e445daf5eb808c3936cb5109"
   },
-  "transport_sha256": "ceffee95e35a737c4bed1fb5b2595f0b089c6571fe6718f0765dd15877e3466a",
+  "transport_sha256": "442c29433b39c0ec95846305b6de16d4a01286d0c8eb92c9e739b5b85455004c",
   "version": "3.0.5"
 }

@@ -1,0 +1,216 @@
+{
+  "changes": [
+    {
+      "after": {
+        "argv": [
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+          "-B",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+          "--configuration",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+          "--configuration-sha256",
+          "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+          "prepare",
+          "--repo",
+          "/Users/jim/src/apps/specification_methodology",
+          "--source-commit",
+          "${C}",
+          "--source-path",
+          "specification_methodology/v3/build_tenants/common",
+          "--run",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004"
+        ],
+        "id": "native-prepare",
+        "output_binding": "source_sha256=actual SHA256(run/source.json); complete171-file output population must equal accepted current021 native inventory and predicted source package tree.",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "before": {
+        "argv": [
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+          "-B",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+          "--configuration",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+          "--configuration-sha256",
+          "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+          "prepare",
+          "--repo",
+          "/Users/jim/src/apps/specification_methodology",
+          "--source-commit",
+          "${C}",
+          "--source-path",
+          "specification_methodology/v3/build_tenants/common",
+          "--run",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004"
+        ],
+        "id": "native-prepare",
+        "output_binding": "source_sha256=actual SHA256(run/source.json); complete output population must equal final accepted native input inventory, whose count is not assumed before016 generation.",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "id": "native-prepare"
+    },
+    {
+      "after": {
+        "argv": [
+          "git",
+          "read-tree",
+          "--empty"
+        ],
+        "environment": {
+          "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-004/native-index"
+        },
+        "id": "native-empty-index",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "before": {
+        "argv": [
+          "git",
+          "read-tree",
+          "--empty"
+        ],
+        "environment": {
+          "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-003/native-index"
+        },
+        "id": "native-empty-index",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "id": "native-empty-index"
+    },
+    {
+      "after": {
+        "argv": [
+          "git",
+          "update-index",
+          "-z",
+          "--index-info"
+        ],
+        "environment": {
+          "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-004/native-index"
+        },
+        "id": "native-populate-index",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment",
+        "stdin_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/native-index-info.z"
+      },
+      "before": {
+        "argv": [
+          "git",
+          "update-index",
+          "-z",
+          "--index-info"
+        ],
+        "environment": {
+          "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-003/native-index"
+        },
+        "id": "native-populate-index",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment",
+        "stdin_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/native-index-info.z"
+      },
+      "id": "native-populate-index"
+    },
+    {
+      "after": {
+        "argv": [
+          "git",
+          "write-tree"
+        ],
+        "environment": {
+          "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-004/native-index"
+        },
+        "id": "native-tree",
+        "output_binding": "native_tree=exact stdout tree object",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "before": {
+        "argv": [
+          "git",
+          "write-tree"
+        ],
+        "environment": {
+          "GIT_INDEX_FILE": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/local-qualification-003/native-index"
+        },
+        "id": "native-tree",
+        "output_binding": "native_tree=exact stdout tree object",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "id": "native-tree"
+    },
+    {
+      "after": {
+        "argv": [
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+          "-B",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+          "--configuration",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+          "--configuration-sha256",
+          "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+          "installed",
+          "--run",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004",
+          "--selection-sha256",
+          "${selection_sha256}",
+          "--store",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store",
+          "--verify-report",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/verify-local.json",
+          "--label",
+          "local"
+        ],
+        "id": "installed-byte-attest",
+        "output_binding": "Exact172 installed regular files equal sealed native manifest and selected171 payload bytes plus manifest; no missing/extra/member mismatch.",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "before": {
+        "argv": [
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/manager/bin/python",
+          "-B",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/native_release.py",
+          "--configuration",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json",
+          "--configuration-sha256",
+          "18885c62f93e9c384c9ade39fe00e4786342e82683859adb966ca5506ef71353",
+          "installed",
+          "--run",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004",
+          "--selection-sha256",
+          "${selection_sha256}",
+          "--store",
+          "/Users/jim/.local/share/stdo-qualification/v3.0.5/local-004/store",
+          "--verify-report",
+          "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-release/cut-004/verify-local.json",
+          "--label",
+          "local"
+        ],
+        "id": "installed-byte-attest",
+        "output_binding": "Exact complete installed native population equals final sealed native manifest and selected bytes, including manifest; no missing/extra/member mismatch. Final count bound from actual016 payload.",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "id": "installed-byte-attest"
+    },
+    {
+      "after": {
+        "id": "qualification-handoff",
+        "operation": "Retain successful actual A4/manifest/source selection and fresh external local-004 exact manager/store bindings, then followup_task Tools Writer under Root conditional prep022 scope with these actual bindings. Native/browser review closure and reserved heavy slot are execution preconditions for the later runtime route. Preserve local001/local002/local003 and every prior proof/failure identity; no host/profile/runtime success presumed.",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "before": {
+        "id": "qualification-handoff",
+        "operation": "Retain successful actual A4/manifest/source selection and fresh external local-004 exact manager/store bindings; followup_task Tools Writer with its exact later prepared qualification contracts and actual outputs under Root conditional scope. Preserve local001/local002/local003 and all proof/failure identities. No assumed host/profile/runtime success.",
+        "standing": "prepared_unexecuted_awaiting_exact_Executive_transaction_assignment"
+      },
+      "id": "qualification-handoff"
+    }
+  ],
+  "current_source_binding": {
+    "bytes": 11921,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/SOURCE_BINDING_021.json",
+    "sha256": "4a37d9ee11d29b828a89e41cb0c62fe90c055976099f643eccd8b5f3c0575b1b"
+  },
+  "kind": "stdo.prospective-command-binding-correction/1",
+  "predecessor_draft": {
+    "bytes": 18721,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020/DRAFT_OPERATIONS.json",
+    "sha256": "38e4083145217493ebe594e89fc751f52af52b3dee99a3b01bc1e55786bd3020"
+  },
+  "reason": "Inherited isolated index path003 is already used by A3; select absent004. Output descriptions bind completed source021 and current171/172 counts. New cut004 annotation still requires actualC4/tree and never a predecessor annotation. No operation or gate semantics changed; no effects performed."
+}
