@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import hashlib,json,pathlib,sys,zipfile,stdo_toolchain;w=pathlib.Path(sys.argv[1]);site=pathlib.Path(stdo_toolchain.__file__).parent.parent;z=zipfile.ZipFile(w);selected={n:z.read(n) for n in z.namelist() if n.startswith(\"stdo_toolchain/\") and not n.endswith(\"/\")};actual={p.relative_to(site).as_posix() for p in (site/\"stdo_toolchain\").rglob(\"*\") if p.is_file() and \"__pycache__\" not in p.parts};assert actual==set(selected);assert all((site/n).read_bytes()==b for n,b in selected.items());assert stdo_toolchain.__version__==\"3.0.5rc1\";print(json.dumps({\"status\":\"verified\",\"version\":stdo_toolchain.__version__,\"site\":str(site),\"wheel_sha256\":hashlib.sha256(w.read_bytes()).hexdigest(),\"members\":{n:hashlib.sha256(b).hexdigest() for n,b in selected.items()}},sort_keys=True))",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/downloads/stdo_toolchain-3.0.5rc1-py3-none-any.whl"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "environment_selection": {
+    "set": {
+      "GIT_TERMINAL_PROMPT": "0",
+      "PIP_DISABLE_PIP_VERSION_CHECK": "1",
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "PYTHONNOUSERSITE": "1"
+    },
+    "unset": [
+      "PYTHONPATH",
+      "PYTHONHOME",
+      "STDO_STORE",
+      "GH_TOKEN",
+      "GITHUB_TOKEN"
+    ]
+  },
+  "started_ns": 1794032632413812000
+}

@@ -1,0 +1,47 @@
+{
+  "absence_before": {
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/lean/.cache/mathlib": true,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/lean/.lake/packages": true,
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/lean/.toolchain": true,
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/cache-clone-001": true
+  },
+  "exact_delta": "--- original\n+++ public-qualification-copy\n@@ -17,7 +17,7 @@\n \n REPO = Path('/Users/jim/src/apps/specification_methodology')\n HERE = Path(__file__).resolve().parent\n-EVIDENCE = HERE.parent\n+EVIDENCE = HERE\n CACHES = ('.toolchain', '.lake/packages', '.cache/mathlib')\n LOCKS = ('toolchain-lock.json', 'lake-manifest.json', 'lean-toolchain')\n \n",
+  "kind": "stdo.rc-reset.public-cache-reconciliation/1",
+  "launch_argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/manager/bin/python",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/retry_cache_clone.py"
+  ],
+  "original_execution": {
+    "bytes": 5138,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/cache-clone/execution.json",
+    "sha256": "629fc685701ca19dbce670b03e4911855da2924e33e0c2eea9a7c6d158b52069"
+  },
+  "original_operator": {
+    "bytes": 14436,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/cache_clone.py",
+    "sha256": "ddd94e0c051742c9f88b0d5706a85741e38727585b19a2d8334edd50376be8af"
+  },
+  "original_stderr": {
+    "bytes": 1367,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/cache-clone/stderr.txt",
+    "sha256": "e25b78c4ee3b478c055aff55178e8bb625c3550e5acf645e124046e8da8bfa15"
+  },
+  "plan": {
+    "bytes": 3415,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/CACHE_PLAN_002.json",
+    "sha256": "3a47f2c4fb95f8a0ef67df9c787ac685cca18f2dcc762098ac31a756cef13ad1"
+  },
+  "runner": {
+    "bytes": 865,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/retry_cache_clone.py",
+    "sha256": "9bfa75e2723606d03b715c6198e669daea29f172da08f06e69a01eecaedb2e23"
+  },
+  "scope": "Qualification operator territory correction only: exact public evidence root replaces exact local Tools evidence root. All source/native/runtime/code/limits/third-party roots unchanged. Failed invocation created no cache/receipt destination. No repeat before Root disposition.",
+  "status": "prepared_unexecuted",
+  "successor_operator": {
+    "bytes": 14429,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/cache_clone_public.py",
+    "sha256": "32d1e5ce79a7e35f0361554448c5a65e5c51b242178069ae4320a7f252cd2b00"
+  }
+}

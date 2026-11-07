@@ -1,0 +1,56 @@
+{
+  "adaptation": "Original observed invocation, environment selection, return code and streams retained exactly. Result is actual JSON stdout; no new manager execution.",
+  "category": "execution",
+  "claim": "installed_manager",
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/manager/bin/stdo",
+      "--store",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store",
+      "verify",
+      "v3.0.5-rc.1",
+      "--manifest-sha256",
+      "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology",
+    "elapsed_seconds": 0.187201,
+    "ended_ns": 1794032656482260000,
+    "kind": "stdo.public-install-execution/1",
+    "returncode": 0,
+    "started_ns": 1794032656295060000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/manager-operations/native-public-verify/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdin": null,
+    "stdout": {
+      "bytes": 30378,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/manager-operations/native-public-verify/stdout.txt",
+      "sha256": "1584683882270d6329d80d010f255c3c3e87eea02a8b66902546cd4a909d0b5e"
+    }
+  },
+  "installation": {
+    "bytes": 111053,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/cohort/INSTALLATION.json",
+    "sha256": "7c757871be6f95d5215ba433657689dc73ad889c5cc751eb6b165c3307fa311f"
+  },
+  "kind": "stdo.cohort-evidence/1",
+  "limits": "Closed actual public001 observation only. Required final live currentness/ref and public gates remain separate; no adoption or universal host behavior claim.",
+  "original_execution": {
+    "bytes": 1123,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/manager-operations/native-public-verify/execution.json",
+    "sha256": "d43932ad38653145d34e7b8a9fe9493042e9ac2de17da28e1ba0f3d12b1793dd"
+  },
+  "result": {
+    "bytes": 30378,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/manager-operations/native-public-verify/stdout.txt",
+    "sha256": "1584683882270d6329d80d010f255c3c3e87eea02a8b66902546cd4a909d0b5e"
+  },
+  "schema": "stdo.execution-observation/1",
+  "source_identity_sha256": "c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06",
+  "status": "passed",
+  "subjects": {
+    "specification_methodology": "8326b0d736b37a96992ed15fa46bb9f620b2a19b176953992211d04f73e459c3"
+  }
+}

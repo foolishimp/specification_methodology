@@ -1,0 +1,26 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "elapsed_seconds": 0.046975,
+  "ended_ns": 1794032632413105000,
+  "kind": "stdo.public-install-execution/1",
+  "returncode": 0,
+  "started_ns": 1794032632366130000,
+  "stderr": {
+    "bytes": 0,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/manager-operations/external-manager-identities/stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdin": null,
+  "stdout": {
+    "bytes": 1221,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/manager-operations/external-manager-identities/stdout.txt",
+    "sha256": "2bf48eb7bb3d037a38f036ff69f7a0ce9e802c888bae0eff60a848f8562fd805"
+  }
+}

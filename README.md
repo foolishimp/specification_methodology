@@ -7,27 +7,24 @@ Methodology product has two source projects side by side under its
 the toolchain manager; `v3/` owns STDO 3 source and standalone native releases
 of the same product. Select a child Product before working on its source.
 
-## STDO 3.0.3 release
+## STDO 3.0.5 release
 
-**STDO 3.0.3 is published as a normal standalone release and GitHub Latest**,
-without an RC suffix: [download the release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.3),
-immutable tag `specification_methodology/v3.0.3`. The
-[installation instructions](specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md#new-project)
-acquire the distributed manager wheel and native manifest. All four assets were
-downloaded and verified, followed by a fresh isolated public installation,
-documentation resolution and checked source-tool extraction. The
-[release record](specification_methodology/v3/.ai-workspace/work/STDO303_DELIVERY/RELEASED.md)
-binds the exact identities, evidence and retained qualification limits.
+**STDO 3.0.5 is published as a normal release and GitHub Latest.**
+[Download the exact RC1 release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.5-rc.1), immutable tag
+`specification_methodology/v3.0.5-rc.1`. All five peer Products share that exact
+cut; their `v3.0.5` tags select the current cut on this public version line.
 
-The payload includes the methodology and `spec` plugin, a shared offline
-[documentation home](specification_methodology/v3/build_tenants/common/standards/documentation/README.md)
-for Constraints, the reviewed ABI code example and Lean proofs, plus the pinned
-[a_c/Skills source tools](specification_methodology/v3/build_tenants/common/standards/tooling/README.md).
-No separate representation supplement is needed. It does not select the older
-v2 matched cohort or migrate a_c/Skills construction bases. Installing a release
-and adopting it for a Product remain separate operations. Published
-[STDO 3.0.2](specification_methodology/v3/.ai-workspace/work/STDO302_DELIVERY/RELEASED.md)
-remains the immutable predecessor.
+The [installation guide](specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md#new-project)
+verifies the five public assets before bootstrapping the exact manager and
+native payload. Fresh public installation, current tool/host interfaces,
+Graphify, Lean structural proof, documentation and offline navigation passed.
+The [release record](specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/RELEASED.md)
+binds actual publication, public qualification and its limits.
+
+The former unadopted stable 3.0.5 cut is explicitly archived with its original
+objects and assets preserved. Other releases remain unchanged. This release
+does not adopt itself for a consumer: the v3 source project's builder remains
+the exact selected 3.0.4 basis.
 
 This repository co-locates six peer source projects:
 
@@ -67,16 +64,17 @@ Axiom Indexer and STDO Representation are attention and consistency tools.
 `a_c` is the calculus they apply. None replaces Source STDO or performs
 downstream semantic interpretation.
 
-The independent [`a_c/`](a_c/) source project realizes the selected published
-axiomatic calculus through its own build tenants. Its Graphify tenant does not
-depend on v3, Axiom Indexer or STDO Representation and is outside the existing
-release-matched cohort. This adds no dependency or member to those Products.
+The independent [`a_c/`](a_c/) source project realizes its selected axiomatic
+calculus through its own build tenants. The current five-Product RC cohort
+includes its exact selected Graphify and Lean components and records their
+release dependencies. That release selection does not change the source
+project's independently owned definition or construction basis.
 
 The independent [`stdo_skills/`](stdo_skills/) Product applies the static installed
 STDO 3.0.1 basis selected in its [Product Definition](stdo_skills/stdo_skills.json).
 Its two skill tenants share requirements while owning their host-specific designs
-and tuning. It has a separate lifecycle from the release-matched cohort; its
-[local bootstrap](stdo_skills/AGENTS.md) routes construction and tool use.
+and tuning. Its construction lifecycle remains independent while the current RC cohort
+selects its exact host packages; its [local bootstrap](stdo_skills/AGENTS.md) routes construction and tool use.
 
 Work from the applicable child root. From this root, inspect all Product
 Definitions without changing them:

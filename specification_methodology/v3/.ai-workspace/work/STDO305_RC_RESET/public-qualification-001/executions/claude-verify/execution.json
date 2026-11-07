@@ -1,0 +1,88 @@
+{
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/source-tools/stdo_skills/scripts/manage_skills.py",
+      "verify",
+      "--workspace",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/hosts/claude",
+      "--host",
+      "claude",
+      "--receipt-sha256",
+      "4c3d36942dc4837d6653981b71d2f8424c80c61fe21edfaf893880784cc8cbd1"
+    ],
+    "child_maxrss_native_units": 1080197120,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001",
+    "elapsed_seconds": 1.026018,
+    "ended_ns": 1794033152341304000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 2045,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/claude/.claude/stdo-skills-3.0.5-rc.1.receipt.json",
+        "sha256": "4c3d36942dc4837d6653981b71d2f8424c80c61fe21edfaf893880784cc8cbd1"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 62,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/claude-verify/stdout.txt",
+        "sha256": "978d313af26bec6579517e90a62c05aa38d885feaa73022f291b01fc6b85b3e4"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/claude-verify/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 62,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/claude-verify/result.json",
+        "sha256": "ae947afcb78a8fe8dc639d0819e89c0c7aad8930c981dc277c8203336b77b954"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1794033151315286000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/claude-verify/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 62,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/claude-verify/stdout.txt",
+      "sha256": "978d313af26bec6579517e90a62c05aa38d885feaa73022f291b01fc6b85b3e4"
+    },
+    "system_seconds": 0.09609299999999976,
+    "user_seconds": 0.8081189999999996
+  },
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/hosts/claude/.claude/stdo-skills-3.0.5-rc.1.receipt.json",
+      "retained": {
+        "bytes": 2045,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/claude/.claude/stdo-skills-3.0.5-rc.1.receipt.json",
+        "sha256": "4c3d36942dc4837d6653981b71d2f8424c80c61fe21edfaf893880784cc8cbd1"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 18668,
+    "path": "stdo_skills/scripts/manage_skills.py",
+    "sha256": "b1c8c61d3b49be767856d24dcfafae3719aa9f82dbc869a7ec5706151b37862a"
+  },
+  "result": {
+    "bytes": 62,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/claude-verify/result.json",
+    "sha256": "ae947afcb78a8fe8dc639d0819e89c0c7aad8930c981dc277c8203336b77b954"
+  },
+  "schema": "stdo.execution-observation/1"
+}

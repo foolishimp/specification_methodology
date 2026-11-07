@@ -9,9 +9,10 @@ five Products and required current tools, representation and host skills.
 [The current owner reset grant](../.ai-workspace/work/STDO305_RC_RESET/release-tools/ACTIVATION.json)
 records scope, roles, dependency frontier and closure conditions;
 [COMPLETE_RELEASE](requirements/COMPLETE_RELEASE.md) binds the requirements.
-Release tooling is updated first. The complete source-current candidate is
-then built, qualified, independently reviewed and published with fresh public
-installation. This is selected work, not a statement that those gates pass.
+The selected cohort is now released as normal GitHub Latest at the exact
+`v3.0.5-rc.1` cut. [The release record](../.ai-workspace/work/STDO305_RC_RESET/RELEASED.md)
+binds the completed local/public qualification, checked atomic publication,
+actual Latest readback and retained limits.
 The 3.0.4 adoption below remains the current builder selection.
 
 The owner selects **3.0.4 as this source project's builder and released tooling**
@@ -25,7 +26,7 @@ and changes no peer Product or historical C3 evidence.
 
 ### Published 3.0.4 release
 
-**STDO 3.0.4 is published as a normal standalone release and GitHub Latest.**
+**STDO 3.0.4 remains a published normal standalone release and the selected builder.**
 The [release record](../.ai-workspace/work/STDO304_DELIVERY/RELEASED.md) binds
 source A, publication carrier B2, native C, annotated tag, manifest and GitHub
 release 432270412. Exact remote publication, four public downloads, the fresh

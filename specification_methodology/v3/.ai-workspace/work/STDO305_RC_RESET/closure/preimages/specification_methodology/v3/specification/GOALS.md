@@ -1,0 +1,299 @@
+# Goals
+
+This file states the current work wave of this source project: what is being worked on now, and the state of each checkpoint. SELECTED means the product owner has chosen the item for current work. A checkpoint is one stage of the construction of the new release; [Checkpoints](PRODUCT.md#checkpoints) lists them.
+
+## Current Selection
+
+The owner selects the **complete 3.0.5-rc.1 release cohort on public version line 3.0.5**, including all
+five Products and required current tools, representation and host skills.
+[The current owner reset grant](../.ai-workspace/work/STDO305_RC_RESET/release-tools/ACTIVATION.json)
+records scope, roles, dependency frontier and closure conditions;
+[COMPLETE_RELEASE](requirements/COMPLETE_RELEASE.md) binds the requirements.
+Release tooling is updated first. The complete source-current candidate is
+then built, qualified, independently reviewed and published with fresh public
+installation. This is selected work, not a statement that those gates pass.
+The 3.0.4 adoption below remains the current builder selection.
+
+The owner selects **3.0.4 as this source project's builder and released tooling**
+for the next pieces of work. [The adoption intake](../.ai-workspace/work/STDO304_BUILDER_ADOPTION/INTAKE.json)
+records the exact instruction; [the versioned binding](../development/STDO_3_0_4.md)
+locates the native skills, compact reader and 191-source tool bundle.
+[The adoption evidence](../.ai-workspace/work/STDO304_BUILDER_ADOPTION/README.md)
+records the manager plan and checks. This selection changes the current
+builder only. It accepts no new method meaning, qualifies no legacy operation,
+and changes no peer Product or historical C3 evidence.
+
+### Published 3.0.4 release
+
+**STDO 3.0.4 is published as a normal standalone release and GitHub Latest.**
+The [release record](../.ai-workspace/work/STDO304_DELIVERY/RELEASED.md) binds
+source A, publication carrier B2, native C, annotated tag, manifest and GitHub
+release 432270412. Exact remote publication, four public downloads, the fresh
+111-file public installation, 20 routes and 191-source materialization pass.
+Independent public review is closed and the Executive accepts that bounded
+distribution result under the owner's release authority. Existing native
+workflow limits remain. Publication itself changed no builder or consumer basis; the later source-project adoption is the current selection above.
+
+### Accepted review-flow source
+
+**The owner-selected review-flow amendment is included in 3.0.4.**
+Its [contract](../.ai-workspace/work/STDO304_SKILLS/review-flow-001/CONTRACT.md),
+[requirements](requirements/REVIEW_FLOW.md) and
+[design](../build_tenants/common-design/REVIEW_FLOW.md) bind the approved
+screenshot A+B+C changes. This is a bounded requirement/design re-entry into
+EVALUATION, EXECUTIVE_BASELINE and TICKETS, with exact owner projections into
+the five native skills and frames. The review ratio, an additional capture
+landing hold and specific Product gates remain unselected. Source implementation
+and independent source assessment are complete. The Executive records
+`candidate_ready` for that assessment; the owner subsequently accepted the
+stated scope for release above. The
+[successor delta](../.ai-workspace/work/STDO304_SKILLS/review-flow-001/SOURCE_DELTA_02.json)
+binds the later 1 highest–5 lowest severity convention, severity-3 downstream
+assessment and narrow activation-readiness reminder. Material dependent impact
+normally calls for repair; supported local deferral needs a reason and owner.
+The [source review](../.ai-workspace/work/STDO304_SKILLS/review-flow-001/review/FINAL_REVIEW.md)
+is closed with no current actionable source finding. All 13 frames reproduce,
+five skill checks pass and the 110-member/6,131-reference package passes.
+The three original source-use calls remain evidence for their first candidate,
+not an aggregate pass: two strict-envelope failures, separately verified R1
+recovery, a conditional R2 record and E1's unsupported authorization/grouping
+claim remain explicit. Source/candidate batching and family-independence limits
+withhold native independent-review qualification. No successor call ran. This
+is released meaning with bounded qualification. That release did not adopt itself for a consumer; the later source-project builder adoption is recorded above.
+
+### Preceding coordinated-skills delivery
+
+**STDO 3.0.4 coordinated skills have completed bounded implementation, testing
+and independent review and are accepted for inclusion** under
+[T-007](../.ai-workspace/tickets/active/T-007-STDO-3.0.4-coordinated-skills.md).
+The [contract](../.ai-workspace/work/STDO304_SKILLS/CONTRACT.md) binds the five
+native plugin skills and their shared handoff route. The selected outcome is
+bounded issuing/receiving and closed returns while preserving direct work,
+existing authority and the Product's exact selected basis. The
+[return](../.ai-workspace/work/STDO304_SKILLS/RETURN.md) binds the current
+[reader repair delta](../.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/SOURCE_DELTA_02.json),
+`6f129f5e680b620bd20ad5d493586eb6326a0dcac1bff5eaca148f57941c45a6`,
+and its [superseding review](../.ai-workspace/work/STDO304_SKILLS/reader-unicode-repair-001/review/FINAL_REVIEW.md).
+The owner's Unicode S2 report was valid; independent review found an adjacent
+empty-ATX S2. Both are closed within this bounded repair, which the Executive
+accepts as `local_repair`. The original reader no-actionable/OP-02 conclusion
+is superseded for this defect, with its bytes and evidence preserved.
+Current checks pass: 35 helper tests, 78 tester and 138 reviewer CLI checks,
+110 package members/6,091 references and five skill checks. All 33 retained
+replay objects match: 32 native helper calls plus one labeled mechanical
+reproduction. There were no new native sessions. Actual Claude execution still
+belongs to revision 4 with direct skill-file loading and declared harness
+dispatch/recording. Earlier failures and other unqualified modes remain recorded.
+That bounded delivery remains selected for 3.0.4 with its declared host,
+source-syntax and coverage limits. Release preparation/publication and consumer
+adoption remain separate; publication is complete above. That delivery changed no
+standard law, installed basis or independent Skills Product basis. Its review
+does not qualify the later review-flow amendment above.
+
+### Published 3.0.3 predecessor
+
+**STDO 3.0.3 remains the published standalone predecessor**, including the
+selected tooling and offline readers
+under [T-006](../.ai-workspace/tickets/active/T-006-STDO-3.0.3-documentation.md).
+The [preparation return](../.ai-workspace/work/STDO303_DELIVERY/tooling-integration-001/README.md)
+binds 106 native payload files, the 191-file a_c/Skills source archive, explicit
+safe workspace materialization, a shared documentation home and fresh real
+installed-manager/public-tooling qualification. Constraints and the reviewed
+ABI code example retain their exact existing HTML; the Lean reader displays
+source-bound historical proof evidence. The final installed path passes all
+thirty selected operations, including stronger Skills source-route checking
+and physical-alias refusal, while keeping the installation unchanged.
+The [independent review](../.ai-workspace/work/STDO303_DELIVERY/pre-release-review-001/INDEPENDENT_REVIEW.md)
+is closed with no open actionable S0–S4 finding. The reviewed source is
+checkpointed at `b90789488237094ae2f29241c58ce71f12450a59`; the
+[immutable-source preparation](../.ai-workspace/work/STDO303_DELIVERY/PREPARED.md)
+binds the exact 106-file native payload and its four preparation records.
+The owner authorized completion of the release after the required checks.
+The [local native proof](../.ai-workspace/work/STDO303_DELIVERY/native-release/release-run-01/LOCAL_RETURN.md)
+now binds the native commit/tag, manifest, four assets and 107-file fresh
+installation. Atomic publication, normal GitHub release/assets and fresh
+public installation/readback are complete. The
+[release record](../.ai-workspace/work/STDO303_DELIVERY/RELEASED.md) binds native
+`07bdb34a2d472a3b5e678f60584fd02b24a388f4`, immutable tag
+`specification_methodology/v3.0.3` and manifest
+`f07e6681355023e30ad8cc4c2ebecaa520ee4e75da6e140ef5a160b31082178d`.
+The [independent public review](../.ai-workspace/work/STDO303_DELIVERY/public-release-review-001/INDEPENDENT_REVIEW.md)
+is closed with no open S0–S4 release-integrity finding. All 107 installed files,
+nine public entry resolutions and the 191-file extracted source tree match.
+
+This is a distribution relation to independently owned a_c and Skills tooling;
+it migrates no Product authority or basis. Actual browser/WebGL, fresh-machine
+Lean execution, new Skills host use and semantic/whole-method qualification
+remain separate. The earlier documentation repairs are already checkpointed
+and pushed on main at `c034593eea08`; their
+[independent review](../.ai-workspace/work/STDO303_DELIVERY/review-repairs-001/INDEPENDENT_REVIEW.md)
+remains historical evidence. This successor's source input is `9c9626ffd20ea88`.
+
+### Published predecessor
+
+**STDO 3.0.2 delivery is complete and published as a normal standalone release
+and GitHub Latest**, without an RC suffix. The owner's later release selection
+and the Executive's closed independent review, packaging and public-acquisition
+readback are recorded in [T-005](../.ai-workspace/tickets/active/T-005-product-composition-implementation.md#later-owner-release-selection-and-closure).
+The [release record](../.ai-workspace/work/STDO302_DELIVERY/RELEASED.md) binds
+native commit `23ca9c0929d7be8570edafaf30542e3daeb8dc1f`, the immutable tag,
+manifest, six verified assets, fresh public installation and 32-record supplement.
+
+Whole-method representation and practical qualification, host-use obligations
+including Claude Q05, and efficiency evidence retain their recorded open standing.
+The bounded supplement does not close them. The old v2 matched cohort is unchanged.
+Skills remains on installed 3.0.1 and a_c construction on 2.5.1; no global manager
+or consumer basis was changed. Release publication does not adopt a successor
+for either Product.
+
+### Earlier 3.0.1 delivery and retained obligations
+
+The owner selects STDO 3.0.1 delivery under
+[T-004](../.ai-workspace/tickets/active/T-004-STDO-3.0.1-delivery.md) and the
+[bounded common amendment](requirements/STDO_3_0_1.md). The first target is
+`3.0.1-rc.1`, constructed from exact published native `3.0.0-rc.1` in the
+isolated common tenant on `codex/stdo-3.0.1-delivery`. Source amendment,
+coherent native frames and metadata, source-matched supplemental
+representation, qualification and release preparation are selected. Native
+`3.0.1-rc.1` is now published at commit
+`fe4941f56a52ed3697a2b516d8d68948b0ea65d9`, manifest
+`60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`;
+fresh public installation is verified. This is a proper published immutable
+release; `rc.1` identifies the cut and does not require a later final release.
+The owner's [publication correction](../.ai-workspace/work/STDO301_DELIVERY/native-release/publication-correction-001/README.md)
+separates publication classification from qualification and consumer adoption.
+Four installed-use tasks support the
+bounded amendment predicates, with their recorded limitations. The separate
+Graphify representation remains incomplete after one completed chunk and one
+timeout. A separate concise-prompt trial also timed out on both calls at ten
+minutes without answers. All local processes are closed; no further calls are
+running. Representation recovery and artifact assessment remain selected under
+T-004; the owner has been asked to choose continued long-running generation or
+deferral after the timing feedback. Neither choice has been inferred.
+Construction does not satisfy independent review, inherited obligations or
+exact-cut acceptance. Older consumers and the installed builder keep their
+selected meanings. The version label promises no automatic patch compatibility.
+
+### Earlier common-candidate selection
+
+The owner selects construction of the standalone V3 `common/` candidate, with Codex holding the pen, under [T-003](../.ai-workspace/tickets/active/T-003-COMMON-standalone-v3-construction.md). The candidate takes the frozen Claude implementation and the unified enhancement register as construction inputs. It is complete in its own text; source history and decision records remain outside the package. The owner has authorised checkpoint commits and construction. Meaning changes remain proposed until their exact decisions and covering review are complete; release and adoption are not selected.
+
+The first construction checkpoint is `494451522072ec34381c644f1ccfa2331f2b1e27` on `tenant/common/standalone-v3`. The [common build handoff](../.ai-workspace/comments/codex/20261018T160429Z_COMMON_FIRST_BUILD_CHECKPOINT.md) identifies its isolated worktree, current evidence and pending decisions. This is a work-state projection, not acceptance of the candidate.
+
+### Earlier construction selections
+
+The product owner selects continuation of both lines toward v3.0.0 RC1: “ok i'm going to let you both continue to the RC1”. [RC1 continuation](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#rc1-continuation) records the Codex admission and dependency-ready repair, qualification and release preparation. This work-state selection preserves the ratified common requirements, independent tenant lines and exact acceptance/release conditions.
+
+GOAL-001: establish one common structure for the new release and review its foundations before any capability or document work. Achieved through C1.
+
+GOAL-002: each build tenant constructs its own candidate of the product on its own line, with named peer contributions under [Cross-Synthesis](PRODUCT.md#cross-synthesis). The candidate reconstructs the method from its [essential pillars](PRODUCT.md#foundational-reduction), supplies usable constraint surfaces in prose and a_c, demonstrates reduction at deciding consumers, and accounts for every material predecessor claim under STDO-UP-015. The work follows the installed 2.5.1-rc.2 Executive engagement, configured by the [C3 Construction Contract](PRODUCT.md#c3-construction-contract). Work authority: [T-002](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md).
+
+Current common input is ratified: [C3-I5-06](../.ai-workspace/tickets/active/T-002-c3-successor-construction.md#c3-i5-06-proposed-input-snapshot), source `4c340f7adec9f3c893e3e267b23e4cadeb357854`, under the product owner's “ocntinue” [decision](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#iteration-5-ratification). The common construction and assurance obligations and consolidated work map govern new I5 admissions. Both same-family working readbacks and Claude's cross-family readback support the common close-out; their exact subjects and limits remain recorded.
+
+Codex returns its completed I5 construction candidate under EC-CODEX-I5-01: package `b2ad4d99a9ab6873cded9ffdfbc416ef1e0e23a5`, full return `28d87ee807eb9e63cd4d6ea2836ff32491490776` on its own tenant branch. The [visible handoff](../.ai-workspace/comments/codex/20261016T165259Z_RETURN_CODEX_V3_I5_CONSTRUCTION.md) records the checks, scoped working reviews and remaining qualification. Claude's separate admission is not inferred. Existing I4 and earlier candidates, contracts and evidence retain their historical subjects; the new contract does not rewrite them. Candidate selection, predecessor replacements, remaining qualification and release decisions retain their owners. The iteration number is work history, not a Product version.
+
+| Checkpoint | Current state | Required result |
+|---|---|---|
+| C0 structure and bootstrap | CLOSED: set-up complete after focused reviews returned GO and the Executive combined their results | A source project separate from the 2.* line, with an exact scope; a usable common specification; and independent C1 entry contracts. |
+| C1 principles | CLOSED 2026-10-11: each tenant's principles accepted separately, recorded in [requirements/PRINCIPLES.md](requirements/PRINCIPLES.md#c1-disposition). Tenant principles may differ; the common specification is unchanged by them. | Independent, frozen principles attempts by each tenant; reviews that read the sources first; and the product owner's acceptance of each tenant's principles. |
+| C2 capabilities and conformance | Historical checkpoint CLOSED 2026-10-12 for the criteria, audiences and tasks then selected. The owner has authorised subsequent corrections for review; that date does not accept the amended contract. | Capability selection and common acceptance criteria, accepted by the product owner. |
+| Iteration 3 common specification | CLOSED under the owner instruction and satisfied independent source readback on `dc5dc27`. The named changed conditions below are part of that selected common revision. Historical construction preparation remains distinct. | I3-00 closes when the exact corrected source, satisfied independent readback and owner closure instruction are recorded together in T-001. No tenant acceptance follows from this closure. |
+| Iteration 4 common specification | RATIFIED 2026-10-15: C3-I4-03 at `3c4c503`, recorded at `a960032`. | The owner decision and review standing are recorded in T-001; each tenant admission binds this exact source. |
+| Iteration 5 common specification | RATIFIED: C3-I5-06 at `4c340f7`; owner decision and Low record dispositions in T-001. | One common construction and assurance model, reconciled review obligations, a complete work map for both independent successors, and an exact frozen input for ratification. |
+| C3 successor construction | SELECTED under GOAL-002. Current candidates and evidence retain their ticket-bound subjects. I5 common input is ratified; Codex returns a frozen construction candidate under EC-CODEX-I5-01. Complete qualification and owner decisions remain open; each line retains its separate admission. | Each tenant's own synthesised candidate, the six member criteria and integrated closure evidence, then the owner's comparison and choice. |
+| Categorical direction (step 1 of the Sequence in [Categorical Construction](PRODUCT.md#categorical-construction)) | The prior repairs received bounded source reviews through `a326249`. The configuration correction is checkpointed at `be78414`; its [frozen source review](../.ai-workspace/comments/codex/20261013T173035Z_REVIEW_V3_DERIVED_WORK_CONFIGURATIONS.md) returned no further changes required. It explains the local Executive's long-term delivery responsibility while admitting other configurations. The common update through `be78414` had that bounded review; subsequent workspace/context corrections are separately reviewed. The current direction is included in the selected I3 common closure above; the worked steel thread remains separately unselected. | Intent connects the current state and destination through bounded transitions, with categorical direction and axiomatic representation. Product defines [context management and derived configurations](PRODUCT.md#construction-and-context-management), [build-tenant binding](PRODUCT.md#build-tenant-binding), [categorical construction](PRODUCT.md#categorical-construction), the [single result algebra](PRODUCT.md#result-algebra), and the applicable demonstration standard. |
+| Categorical steel thread (step 2 of the same Sequence) | NOT_SELECTED. It follows acceptance of step 1. Its work carrier and limits are open. | The steel thread's minimum contract in [Categorical Construction](PRODUCT.md#categorical-construction), run under the installed release. |
+| RC1 delivery | SELECTED for continuation under the owner instruction above; candidate selection and prerequisite decisions remain explicit. External adoption remains unselected. | The exact accepted member set and dependencies, complete applicable qualification, RC1 materialization/publication and verified reacquisition under the release contract. |
+
+[T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md) records common checkpoint decisions; this file projects their current standing. The tenant C1 tickets, [Codex C1](../.ai-workspace/tickets/active/T-001-CODEX-principles.md) and [Claude C1](../.ai-workspace/tickets/backlog/T-001-CLAUDE-principles.md), retain their own lifecycle and territory.
+
+T-002 preserves the historical shared inputs and admissions, including the proposed standing recorded when each snapshot was created. The later owner decision ratifies C3-I4-03 without rewriting that snapshot. Current admissions and results are recorded separately in the tenant tickets. Ratification accepts no tenant member, predecessor replacement, candidate, merge, push, release or adoption.
+
+## Open Owner Decisions
+
+The open decisions are listed in [PRODUCT.md](PRODUCT.md#open-owner-decisions). Decided so far:
+
+- the initial audiences, tasks, assumed knowledge and per-member acceptance criteria on 2026-10-12; later amendments to the [C3 Construction Contract](PRODUCT.md#c3-construction-contract) retain the separate review standing above;
+- the release lineage: the product is the next major release of the existing Specification Methodology line ([PRODUCT.md](PRODUCT.md#product-identity-and-lineage));
+- the side-by-side `v2/` and `v3/` layout, as its own bounded change, which leaves identifiers unchanged.
+
+No installed identity or current cohort is changed.
+
+## Revision Record
+
+2026-10-16T16:52:59Z, Codex I5 construction return: exact package `b2ad4d99a9ab6873cded9ffdfbc416ef1e0e23a5` and return `28d87ee807eb9e63cd4d6ea2836ff32491490776` are checkpointed on the tenant branch. The admitted construction predicate and three bounded working reviews are satisfied, with their limits retained. Qualification, exact predecessor replacements, member acceptance, candidate choice and release remain open. This is work-state reporting; the governing common requirements and historical contracts are unchanged.
+
+2026-10-16T15:11:14Z, I5 ratification and Codex start: the owner ratifies exact source `4c340f7` after the pen's explicit request and directs continuation. The pen records the two Low readback dispositions, preserves every governing source byte and historical input, and admits Codex's successor construction on its own candidate and frozen donor. This work-state update supplies no member, replacement, merge or release acceptance.
+
+2026-10-16, consistency close-out return: source `4c340f7` receives two satisfied fresh nonauthor working readbacks with no in-scope findings. C3-I5-06 records 47 source pins; its descendant records the readbacks and mechanical checks. The binding review explicitly corrects an overbroad preservation expectation against the original grant without changing its frozen expectations. Current work standing advances to ready for exact-source ratification; governing source, prior admissions, tenant implementations and all reserved decisions retain their standing.
+
+2026-10-16, I5 consistency close-out: the owner starts the implementation plan with common closure first. The supported source evaluation distinguishes already-corrected findings, scoped bindings and summaries, and remaining Low clarifications. The correction gives A and Z an explicit owner, keeps acceptance conditions within Z, relates declared calculi and categorical versus composition terminology, routes criterion 5 to all three existing member tables, separates evidence kind from unresolved standing, and clarifies diagnosis and evidence reuse at their consumers. The work-entry page follows the active tenant tickets. The historical revision row saying packaging closes 'before C3' refers to C3 closure, as the current Product already requires; the historical text is retained. Formulas, case tables, the six criteria, P1–P6, historical inputs and existing admissions are preserved. This is reviewed-input preparation, not ratification or tenant implementation.
+
+2026-10-16, I5 assurance wording: the pen addresses the four Low findings in the cross-family review of C3-I5-04. The successor disambiguates symbols and the evidence-set definition, names the evidence-cannot-decide judgment consistently, adds Source and purpose, and corrects the shared entry. Its formulas and conditions, criteria, work duties and historical inputs retain their meaning. The common-model validation observation is qualified in commentary; no new trial or acceptance gate is selected.
+
+2026-10-16, I5 formal assurance: the owner extends I5 with parallel derivations of construction and assertions, mutual assurance, provenance and targeted testing. ASSURANCE owns formal preservation, observation sufficiency, risk-qualified combination and evidence validity after change. Intent, Product, requirements, frames, capabilities and conformance consume that owner. Criterion 4 is amended to bind assertion provenance and reuse to it; criterion 5 is amended with the applicable assurance discriminators. Integrated demonstrations and the existing work map carry the affected duties. These are additional common requirements prepared for exact-source ratification; the six-criterion structure, P1–P6 bodies, historical inputs and existing admissions are preserved. No universal proof prerequisite, numeric assurance threshold or tenant implementation is selected.
+
+2026-10-15, I5 review consolidation: the owner directs the common pen to combine I5 with both candidate reviews before two successor builds. The owning clauses clarify admitted discriminator basis, local categorical strategy, bug-as-feature/change work and homeostasis, consumer coverage, human/mixed procedural bindings, current publication routes and trial correctness versus benefit attribution. One qualification discriminator addresses control-based exclusion. T-002 carries all supported findings and remaining conservation, ports, fidelity, actual-use, reduction, packaging and integrated-review duties, including corrected stale review claims. Criterion 4 is amended to retain every applicable task judgment, distinguish correctness from benefit attribution and preserve observations when applicability or grading is revised. The six-criterion structure, P1–P6, pillars and reserved decisions remain. A future I5 admission binds the amended criterion; existing I4 contracts retain their admitted text. Source preparation supplies no tenant repair, ratification or admission.
+
+2026-10-15, I4 ratification: the product owner approves C3-I4-03 after the I3–I4 outline. The common requirements are selected for both synthesis lines. This entry advances work standing only; the ratified Product and requirement bytes are unchanged. T-001 retains the exact source, review limits and subsequent admission sequence.
+
+2026-10-15, final I4 comparison clarification: the readback at `73ad32e` confirms the prior fixes. F4 makes comparable coverage include the same criteria and discriminators, with the shared protocol governing actual use. T-002 records protocol disclosure after both candidate freezes, or an earlier hash followed by disclosure after those freezes. This successor changes no eligibility criterion and records no ratification or admission.
+
+2026-10-15, I4 review correction: Claude's review of C3-I4-01 reports no blocking defect. F1 binds one shared protocol in common territory to both candidates; F2 defines comparable coverage as the same obligations and material cases under that protocol; F3 uses the product-owner role consistently in the new work routing. The original source, review and input tuple remain historical. The successor requires affected readback and exact-commit ratification; neither has been inferred from the forwarded review.
+
+2026-10-15, I4 proposal: the owner's three-stage instruction selects common preparation, subsequent synthesis on each tenant's own line, and comparison for the product owner’s choice. The proposed Product changes replace historical candidate coordinates with ticket-bound inputs; set nonauthor coverage of ports and successor repairs; and define a matched comparison with a no-qualified-choice outcome. The requirements make semantic conservation and modal-force comparison explicit without selecting a wording style. Task coverage is distinguished from frame-file counts. Actor freshness, authorship and model family remain separate. The pillar list, result-preservation requirements, six criteria, context-fit condition, complete interpretation obligation and Development Isolation's authority and territory boundaries keep their meaning. The Porting reads clause now obtains its donor coordinate from the admitted ticket contract instead of the historical Product table. Actual-use resources and affected release/UX decisions stay open. These are proposed common conditions awaiting the ratification recorded in T-001, not changes accepted by historical C1/C2 or I3 closure.
+
+2026-10-14, round-3 closure selection: the owner selects the reviewed I3 common specification and its supported corrections through the instruction recorded in T-001. That selection includes the eleven named changes below and the result/data clarification already recorded in this section; it is not attributed to historical C1/C2 approval. The current source clarifications preserve that design: proposed versus accepted dispositions, all six mandatory criteria, result standing of partial reduction evidence, recorded comparison conditions, demonstrated categorical claims, context-fit evidence and the construction-only a_c dependency. Independent readback is pending. Its exact source and satisfied result must be recorded before I3-00 closes. This common decision supplies no particular tenant replacement relation or member acceptance.
+
+2026-10-14, round-2 closure: the owner instructs “do that close the round 2 findings” after selecting a checkpoint and asking to start both successor implementations. [T-001](../.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md#round-2-closure-and-next-tenant-inputs) records the operative instruction, the verbatim pillar inputs and the reasons for the table's editorial groupings. These are required contributions, not newly accepted independent axioms. Intent's edits align the same mission and route to one pillar table; the executive summary was separately requested and checkpointed at `ca8b9c3`.
+
+The following names the contract changes from the pre-review basis `a7eba66` through the round-2 repairs at `355aa86`, including the round-3 recording corrections. They amend historically accepted conditions for the selected construction. The latest owner instruction selects their common closure with the supported corrections and independent readback recorded above; the historical C1/C2 dates do not accept these later bytes.
+
+| Changed condition | Reason and standing |
+|---|---|
+| Criterion 1 permits all necessary carrying loci | A claim can need an owner plus domain bindings. Each locus must resolve; sharing is not forced where one owner suffices. |
+| Development Isolation, a local axiom: reviewer commentary ownership and an explicit owner-directed merge variance | Preserve each reviewer's authorship and the owner's actual visibility-merge instruction. Neither grants candidate acceptance or general peer-write authority. |
+| Guides and packaging are supporting responsibilities with binding scoped conventions | Distinguish the three method-law tiers from their formats and conventions without making those conventions optional. |
+| Single ownership items 2 and 4 cover packaging mechanics and faithful derived projections | Keep method meaning at its owner while permitting distinct representations. A projection must preserve permissions, obligations and uncertainty. |
+| Criterion 4 permits declared acquisition and isolates unselected instructions | Test the acquired frame in actual use. Round-2 closure states standalone successor use and distinguishes active context from cumulative acquisition; it imposes no directory as a proxy for isolation. |
+| Packaging dispositions close before C3, rather than only before an RC cut | A complete successor claim cannot leave part of its required inventory unresolved. This moves the closure condition earlier. |
+| Standalone identity and packaging choices precede dependent member or C3 acceptance, rather than only the RC cut | Prevent acceptance that relies on an undecided operative dependency. The released encoding basis and its acquisition are now explicit parts of that existing decision. |
+| The C3 Outcome and closure require the complete interpretation and independent fidelity assessment | These were added in the round-1 repair, not already present at `7c058ed`. A checked fragment cannot support the whole-method claim. |
+| Replacement authority, criterion conjunction, integrated reduction and independence | Preserve the original owner's decisions and the installed builder's evaluation semantics. The current correction gives one ticket acceptance record, one overall result with six criterion judgments, and separate construction checks. |
+| Construction assignments and reserved acceptance-review assignments | Each construction activation names the selected actor and its authority; the product owner retains acceptance-review assignments and the ported-part decision. A Codex work instruction does not bind or start the Claude line. |
+| Criterion 5 covers affected a_c interpretation and acquired views | Logical review must assess fidelity where a derived constraint surface supplies a member's determinations. Structural validity alone cannot substitute for the source-owned meaning. This is member-local; integrated coverage remains its separate closure obligation. |
+
+The author's corrections are evaluated by fresh nonauthor working reviews before the next common input is selected. Existing frozen reviews and contracts retain their original subjects. A separate construction admission permits each tenant to proceed; final common acceptance, changed-meaning acceptance, member acceptance and release remain their respective decisions.
+
+2026-10-14, iteration 3 consolidation and review repair: the owner's direction names the algebraic and computational calculi as separate pillars, alongside the remaining contributions, and describes a_c as logic compression that creates constraint surfaces. Common source `c78de0d`, clarified at `6c2debb`, develops that direction into requirements. The changed Mission expresses the same selected construction outcome; the pillar coverage does not replace C1's accepted premise decisions. Relative to the historical C2 contract, C3 Outcome includes reconstruction; criterion 3 identifies accepted replacement relations, criterion 4 requires exact frame/task evidence and independent expectations, and criterion 6 requires demonstrated reduction. The explicit complete-interpretation Outcome is added by the later round-1 repair, as recorded above. Profiles retain their additional domain policies; inherited filenames do not fix their boundaries. The result/data clarification keeps every material evaluation and decision evaluation in the single core algebra; it is no waiver for deciding outputs.
+
+The cross-family round-1 review at `afb6ad6` exposes missing acceptance and coverage conditions; the owner instructs evaluation and correction. The common repair makes replacement-meaning authority, the criterion conjunction, whole-candidate reduction, interpretation coverage/fidelity and independence explicit. It also clarifies ordinary acquisition and separates the builder's results from the successor's proposed algebra. These corrections and the revision of the work index were the draft submitted for round-2 review. The earlier input snapshot and the historical C1/C2 decisions retain their subjects. Neither reviewed comparison basis `a7eba66` nor a source checkpoint is relabelled an accepted common revision.
+
+2026-10-12: the product owner's finding that the Claude C3 build routed to the predecessor instead of restating it, and ran as one self-directed Writer with no Executive, ticket, triage or independent review. The product owner instructed the common WHAT be revised on a branch for review. This revision states the successor outcome in INTENT, pins the predecessor and adds the C3 Construction Contract, disposition grant and work-carrier rule in PRODUCT, adds C3 activation rows to the frame basis, aligns the requirements vocabulary to UP-015 and adds the predecessor-claims frontier. Nothing in it is selected until reviewed and merged.
+
+2026-10-12, later: Codex reviewed commit `db6abcd` and returned four changes required. Repaired on the same branch: Product identity and lineage stated per the product owner's decision (STDO Specification Methodology, target v3.0.0, continuing line, `stdo_3/` as construction scope, since moved to `specification_methodology/v3/`) in PRODUCT, INTENT and the machine-readable definition; the frontier extended to all 52 manifest members and the 19 auxiliary members (release files that are not standards); the Executive stripped of every write and the common pen made the single ticket Writer; UP-015's dispositions separated from the Product's own standalone successor requirement.
+
+2026-10-12: the product owner approved the next-steps plan and required execution under the STDO 2.5.1 Executive process. GOAL-002 selected; C2 closed by acceptance of the contract's criteria; C3 selected; T-002 and tenant duplicates drafted; the contract's work-carrier rule corrected to TICKET_METHOD's one tenant ticket plus run-scoped execution contracts. Actor binding remains the product owner's.
+
+2026-10-13: after the two cross-assessments, two direct comparisons and Codex's critique of the candidates at `31f28f9`, the product owner decided "consolidation wins over discipline", asked that the single result algebra be entrenched against drift, directed that the categorical strategy be incorporated with the current Claude v3 work as baseline, and then settled the construction lines: "i dont want a codex base if i had said that i was incorrect"; "i will allow each codebase to synthesis onto their own the best aspects of the other"; "we will do it in two steps 1. update the specifications -> product, requirements". This revision is the specification update. It adds the categorical direction and the demonstration standard, the single result algebra requirement and four conformance discriminators, writes the reading of "restated on the axioms" that the product owner selected for the comparison of the two candidates into the standalone successor requirement, and adds [Cross-Synthesis](PRODUCT.md#cross-synthesis): each tenant line keeps its own base and takes named parts of the other, with Porting reads in both directions. The question of unifying the RF-012 and AC-007 evaluation algebras (the previous release's two result vocabularies, for reference-frame evaluations and for a_c constraints), carried to C2 at C1 closure, had not been answered when C2 closed, and the C3 tier table said only "result algebra"; the single result algebra requirement closes that gap for both lines. The tenant synthesis follows it, under the tenant tickets once actors are bound. The product owner then had the Intent rewritten as a mission statement ("the intent is a clear statement of what we are doing, its the mission statement"; "articulate what we are trying to achieve fully, what the product is at a high level") without version or acronym, and selected the single ownership law, added with its requirement and a fifth conformance discriminator. The revision is drafted on `common/v3-direction-synthesis` and is not selected until reviewed and merged.
+
+2026-10-13, later: the product owner merged the revision to `main` at `1b8ad1b`. Codex's review of `e96be6f` returned GO with two clarifications: scope the demonstration standard's worked-join item (item 6), and remove stale C2 entry statements.
+
+2026-10-14: the product owner found the Intent "verbose giberish" and asked for "something tight, and real", giving the Mission sentence. The product owner then clarified: "what i objected to is floral language, or short hand references to products that implies you know what it is. You need to give sufficient context". The Intent, the Product and this file were rewritten so each term is explained where it first appears. The stale C2 statement was replaced with the current C3 state. Codex's two clarifications were applied, and the tenant entry contract, the v3 instruction files and both tenant tickets were brought to the cross-synthesis phase.
+
+2026-10-14, later: the product owner returned the common pen to Codex and instructed it to fix the revised specification. The [review of 698485d](../.ai-workspace/comments/codex/20261013T141923Z_REVIEW_V3_SPECIFICATION_INTENT_AND_SEMANTICS.md) identifies the affected meanings. T-001 records the repair grant. The common Writer clarified Intent, aligned the Product and requirement contracts, restored authentication and validity conditions, and corrected review placement and entry routing at `e38d45a`. Two fresh same-family source reviews returned no further changes required within their scopes, recorded in the [repair review](../.ai-workspace/comments/codex/20261013T145337Z_REVIEW_V3_COMMON_SPECIFICATION_REPAIR.md). Tenant bases, their source, and open C3 actor and port-review decisions remain unchanged. The repair is ready for owner sign-off before a new C3 input snapshot.
+
+2026-10-14, build-tenant clarification: the product owner states that a build tenant binds the requirements calculus to a computational calculus, which is bound to a real-world stack including a human process, and instructs the common pen to update the specification. T-001 records the wording and grant. The update places the binding obligation in one common requirement, broadens execution beyond machines, separates a_c representation from execution selection, and carries the relation into the Spec Method's C3 obligation and conformance cases. The five-layer reference design remains an example; the sum-and-histogram thread is unchanged. Tenant implementation and activation remain separate.
+
+2026-10-14, context and attention: the product owner supplies the discussion intended for the common pen while reading Product. It identifies finite context and attention as the drivers for reference frames, derives Worker, Reviewer and Executive responsibilities through those frames, and organises the method around defining A, defining Z and managing bounded transitions. T-001 records the owner's statements and the bounded amendment. The update restores material sufficiency and irrelevance exclusion to the C3 entry and relates its fresh-actor evidence to attention adequacy. Authority, independent assessment, historical C1 decisions, build-tenant binding and the release boundary retain their existing owners.
+
+2026-10-14, configuration clarification: the product owner explains that the named roles are emergent configurations, not an exhaustive foundation. The common correction derives allocation from task dependencies, actor limits and assurance needs, admits different and adaptive arrangements, and distinguishes adequate configuration from an optimality claim. The selected construction binding explains why its Executive maintains the longer-term outcome through sufficient bounded worker results. The installed construction process, principle bodies and tenant implementations remain unchanged.
+
+## Historical ABG Case Inputs
+
+ABG is ABIogenesis, a separate product that runs typed graph programs and records what happened at run time. These posts are available read-only as inputs for designing test cases if a later checkpoint selects such cases. When such cases are designed, fetch these posts again, check them against the hashes below, and record the exact versions used, together with the primary evidence they cite. They are historical case-design inputs, not evidence about any current runtime. No ABG work is selected here.
+
+| Historical source | Selected historical SHA256 |
+|---|---|
+| [March–September post-mortem](../../../../abiogenesis/.ai-workspace/comments/claude/20260920T041441Z_REVIEW_postmortem_march_to_september_week_by_week.md) | 478435ce71c5402c18224393e4b4d01220dffec9829de4f66af69ce67c5cd5cc |
+| [2 October RC1 handoff](../../../../abiogenesis/.ai-workspace/comments/codex/20261002_HANDOFF_ABG_5_RC1_STEEL_THREAD.md) | c9ea23d8bc67f0931bc2031b722934edda62e72477f8dff6c99b3fafa38cb35a |

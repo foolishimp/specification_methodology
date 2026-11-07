@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/cache_clone.py", line 224, in <module>
+    if __name__ == '__main__': main()
+                               ~~~~^^
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/cache_clone.py", line 222, in main
+    else: prime(args.plan, args.sha256)
+          ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/cache_clone.py", line 139, in prime
+    require(record.is_relative_to(EVIDENCE) and not record.exists(), 'fresh owned receipt directory required')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/cache_clone.py", line 25, in require
+    if not condition: raise ValueError(message)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: fresh owned receipt directory required

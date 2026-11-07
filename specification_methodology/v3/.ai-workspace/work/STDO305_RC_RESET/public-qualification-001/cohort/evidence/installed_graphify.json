@@ -1,0 +1,225 @@
+{
+  "artifacts": {
+    "carrier.json": {
+      "bytes": 42270982,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/carrier.json",
+      "sha256": "642e2f52068d81d3772cdf1ca9e4f8c45b475042b22901eaef203fed735ad923"
+    },
+    "graph.json": {
+      "bytes": 37205994,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/graph.json",
+      "sha256": "dc1616c56dc39f6908e7e4178dd9607ac0f8f5c532dffc528308cbbcf5ece05d"
+    },
+    "model.json": {
+      "bytes": 8568341,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/model.json",
+      "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+    },
+    "runtime.json": {
+      "bytes": 1021,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/runtime.json",
+      "sha256": "4dde7c67dc1e541d2ad3be7d0a13e936fb6742c0faeb956677d29ab82da30f4e"
+    },
+    "selections.json": {
+      "bytes": 742,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/selections.json",
+      "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+    },
+    "views.json": {
+      "bytes": 1447645,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/views.json",
+      "sha256": "75a66bd33b3882b82a3d1e7a3b2aa121bfacba089cbf6e2f70fe5a99bbd8b904"
+    }
+  },
+  "category": "execution",
+  "claim": "installed_graphify",
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/graphify/code/ac_upstream.py",
+      "--model",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+      "--carrier",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/carrier.json",
+      "--selections",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/formal-selections.json",
+      "--upstream",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/dependencies/graphify/graphify",
+      "--runtime",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/dependencies/graphify/RUNTIME.json",
+      "--output",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/graphify/current-roundtrip"
+    ],
+    "child_maxrss_native_units": 730726400,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001",
+    "elapsed_seconds": 18.422296,
+    "ended_ns": 1794033185852027000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 8568341,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+        "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      },
+      {
+        "bytes": 42270982,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/carrier.json",
+        "sha256": "642e2f52068d81d3772cdf1ca9e4f8c45b475042b22901eaef203fed735ad923"
+      },
+      {
+        "bytes": 742,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/formal-selections.json",
+        "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+      },
+      {
+        "bytes": 1021,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/dependencies/graphify/RUNTIME.json",
+        "sha256": "4dde7c67dc1e541d2ad3be7d0a13e936fb6742c0faeb956677d29ab82da30f4e"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 101606,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/actual-upstream-roundtrip/stdout.txt",
+        "sha256": "eb293a9525350dea4e66d31586395a3534201da2fc75cd0a9b0289e55440baef"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/actual-upstream-roundtrip/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 42270982,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/carrier.json",
+        "sha256": "642e2f52068d81d3772cdf1ca9e4f8c45b475042b22901eaef203fed735ad923"
+      },
+      {
+        "bytes": 37205994,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/graph.json",
+        "sha256": "dc1616c56dc39f6908e7e4178dd9607ac0f8f5c532dffc528308cbbcf5ece05d"
+      },
+      {
+        "bytes": 8568341,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/model.json",
+        "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      },
+      {
+        "bytes": 112604,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/result.json",
+        "sha256": "dea29fc720ac2c07a42efeace8fb7b2b48791764c56c62cb67f8e400e72bac96"
+      },
+      {
+        "bytes": 1021,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/runtime.json",
+        "sha256": "4dde7c67dc1e541d2ad3be7d0a13e936fb6742c0faeb956677d29ab82da30f4e"
+      },
+      {
+        "bytes": 742,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/selections.json",
+        "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+      },
+      {
+        "bytes": 1447645,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/graphify/current-roundtrip/views.json",
+        "sha256": "75a66bd33b3882b82a3d1e7a3b2aa121bfacba089cbf6e2f70fe5a99bbd8b904"
+      },
+      {
+        "bytes": 112604,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/actual-upstream-roundtrip/result.json",
+        "sha256": "dea29fc720ac2c07a42efeace8fb7b2b48791764c56c62cb67f8e400e72bac96"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1794033167429731000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/actual-upstream-roundtrip/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 101606,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/actual-upstream-roundtrip/stdout.txt",
+      "sha256": "eb293a9525350dea4e66d31586395a3534201da2fc75cd0a9b0289e55440baef"
+    },
+    "system_seconds": 0.35313100000000003,
+    "user_seconds": 17.716536
+  },
+  "installation": {
+    "bytes": 111053,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/cohort/INSTALLATION.json",
+    "sha256": "7c757871be6f95d5215ba433657689dc73ad889c5cc751eb6b165c3307fa311f"
+  },
+  "kind": "stdo.cohort-evidence/1",
+  "limits": "Closed actual public001 observation only. Required final live currentness/ref and public gates remain separate; no adoption or universal host behavior claim.",
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+      "retained": {
+        "bytes": 8568341,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+        "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/carrier.json",
+      "retained": {
+        "bytes": 42270982,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/carrier.json",
+        "sha256": "642e2f52068d81d3772cdf1ca9e4f8c45b475042b22901eaef203fed735ad923"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/formal-selections.json",
+      "retained": {
+        "bytes": 742,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/formal-selections.json",
+        "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/dependencies/graphify/RUNTIME.json",
+      "retained": {
+        "bytes": 1021,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/dependencies/graphify/RUNTIME.json",
+        "sha256": "4dde7c67dc1e541d2ad3be7d0a13e936fb6742c0faeb956677d29ab82da30f4e"
+      }
+    }
+  ],
+  "original_execution": {
+    "bytes": 8838,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/actual-upstream-roundtrip/execution.json",
+    "sha256": "774883723e872b0fcbeb8087325ec76bf41bf7628ace84238a93d54440019278"
+  },
+  "output_directory": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/graphify/current-roundtrip",
+  "producer": {
+    "bytes": 7991,
+    "path": "a_c/build_tenants/graphify/code/ac_upstream.py",
+    "sha256": "69fb0850088f9c317ae9416048ffd3157e63ad55216af3704a94edb09bddec4a"
+  },
+  "result": {
+    "bytes": 112604,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/actual-upstream-roundtrip/result.json",
+    "sha256": "dea29fc720ac2c07a42efeace8fb7b2b48791764c56c62cb67f8e400e72bac96"
+  },
+  "runtime": {
+    "bytes": 1021,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/dependencies/graphify/RUNTIME.json",
+    "sha256": "4dde7c67dc1e541d2ad3be7d0a13e936fb6742c0faeb956677d29ab82da30f4e"
+  },
+  "runtime_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/dependencies/graphify/RUNTIME.json",
+  "schema": "stdo.execution-observation/1",
+  "source_identity_sha256": "c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06",
+  "status": "passed",
+  "subjects": {
+    "a_c": "fa2ddf59673f40ede5352fd58c632e200b6f68bfb18715fa95a74789341f0610"
+  }
+}

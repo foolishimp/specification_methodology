@@ -1,0 +1,75 @@
+{
+  "hosts": {
+    "claude": {
+      "configuration": {
+        "bytes": 37528,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/claude/.claude/stdo-3.0.5-rc.1/CONFIG.json",
+        "sha256": "0f4ee8bf24dee9b88a572a0c72a355973ccdf50c2cfe853dab39d2152591d18e"
+      },
+      "method_verification": {
+        "bytes": 26187,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/claude/early-readonly/method-verification.json",
+        "sha256": "32ecda94339b040c8d3168cf928c4dfcf25afb404a282d89deb17d232d728dd9"
+      },
+      "policy": {
+        "bytes": 7379,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/claude/early-readonly/policy.json",
+        "sha256": "d8d6216aa5da50cbbaf136ceb2c5d3f2819ca0c4a8e7c02b305c5bc477f7d30a"
+      },
+      "receipt": {
+        "bytes": 2045,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/claude/.claude/stdo-skills-3.0.5-rc.1.receipt.json",
+        "sha256": "4c3d36942dc4837d6653981b71d2f8424c80c61fe21edfaf893880784cc8cbd1"
+      },
+      "setup": {
+        "bytes": 852,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/claude/early-readonly/SETUP.json",
+        "sha256": "a2f30a6be9fbd0249aaff227a81069411bfff4f8eece3c6ce590ef4be6e2d1b6"
+      },
+      "stdin": {
+        "bytes": 683,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/claude/early-readonly/mcp-session.jsonl",
+        "sha256": "84170fa7ea7502585b30de522162a5dd6384224a6e4df54f0e956316824bf135"
+      }
+    },
+    "codex": {
+      "configuration": {
+        "bytes": 37520,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/codex/.agents/stdo-3.0.5-rc.1/CONFIG.json",
+        "sha256": "28084e2981824b308633b204168c4eb79fb9b3af00627bdb8f51852f95674914"
+      },
+      "mcp_execution": {
+        "bytes": 5036,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/executions/codex-early-mcp/execution.json",
+        "sha256": "8a67d12f295776a7cb30c579ddd5cdd6a8171161bdd326c702087e95dfb7ea61"
+      },
+      "method_verification": {
+        "bytes": 26185,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/codex/early-readonly/method-verification.json",
+        "sha256": "ebf6f0dca1203ff37e44bf2270cbe67003951bdfda97d36b14c5fc86dc9a6122"
+      },
+      "policy": {
+        "bytes": 7375,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/codex/early-readonly/policy.json",
+        "sha256": "baad0e84545de0aac4caa209e7f4a6ac23c3debd73d92d5eb230e62bf600cfee"
+      },
+      "receipt": {
+        "bytes": 1913,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/codex/.agents/stdo-skills-3.0.5-rc.1.receipt.json",
+        "sha256": "34d0090fa3df04e785c120f3880902a5abda939a0a611df8d6e4d7e3d91cad4c"
+      },
+      "setup": {
+        "bytes": 850,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/codex/early-readonly/SETUP.json",
+        "sha256": "e4456a7a36d86c06ed2554d1dae64b61d89a2f31cdbf5840f7818aae5ebde33c"
+      },
+      "stdin": {
+        "bytes": 683,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/public-qualification-001/observed/hosts/codex/early-readonly/mcp-session.jsonl",
+        "sha256": "84170fa7ea7502585b30de522162a5dd6384224a6e4df54f0e956316824bf135"
+      }
+    }
+  },
+  "schema": "stdo305.actual-host-selections/1",
+  "standing": "Actual host setup/verify/check-runtime and both initializers succeeded; initialized Codex MCP source read succeeded before full proof. Native LLM sessions are outside this RC fixed-interface selection."
+}

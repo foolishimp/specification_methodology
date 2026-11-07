@@ -6,7 +6,15 @@ This source project develops Specification Methodology. Its current builder is t
 the exact delivered membership and the representation/tool/skill currentness
 gaps that this builder adoption does not close.
 
-**STDO 3.0.4 is published as a normal standalone release and GitHub Latest.**
+**STDO 3.0.5 is published as a normal release and GitHub Latest**, using
+the immutable [3.0.5-rc.1 cut](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.5-rc.1) and five corresponding Product selectors.
+The [current release record](.ai-workspace/work/STDO305_RC_RESET/RELEASED.md)
+binds all five assets, fresh public installation and the declared current
+component checks. The former stable 3.0.5 line is archived under the owner's
+explicit reset; its evidence remains preserved. This publication changes no
+consumer basis, and the builder selection above remains 3.0.4.
+
+**STDO 3.0.4 remains a published normal standalone release and the selected source-project builder.**
 The [release record](.ai-workspace/work/STDO304_DELIVERY/RELEASED.md) binds the
 immutable tag, four public assets, exact fresh public installation and closed
 independent review. It includes the five native coordinated skills, source-reader
