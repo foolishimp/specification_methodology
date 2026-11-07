@@ -1,0 +1,12 @@
+{
+  "kind": "stdo.independent-cache-metadata-join-check/1",
+  "status": "consistent",
+  "join_sha256": "d8500c948eba4617b102e06e9917eae8dc82b9a9f154423c552599e6c5539ff5",
+  "source_profile_sha256": "7198879c3dfefe52ee4c980b33990197cd338eb19ac4e84cce3dd26a4cd66363",
+  "clone_ledger_sha256": "6f6fe33e893df65c969340fa64d1814e7772fd44e2b5379b4fb9b47e5932975f",
+  "profile_members_matched": 30369,
+  "unprofiled_entries_separate": 19705,
+  "package_revisions": 9,
+  "limitations": "Pure retained metadata reconstruction only; no live source/cache/runtime file-tree scan, no proof standing from the clone, no success claim for active model proof.",
+  "reviewer_probe_correction": "Initial scratch assertion assumed all ledger paths have a slash-suffixed prefix; the declared root directory .toolchain is a legitimate ledger entry. Corrected scratch-only check explicitly includes the three declared roots."
+}

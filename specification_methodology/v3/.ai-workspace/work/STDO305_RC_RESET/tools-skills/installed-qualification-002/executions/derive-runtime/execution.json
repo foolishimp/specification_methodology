@@ -1,0 +1,106 @@
+{
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/manager/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/setup.py",
+      "derive-runtime",
+      "--tools",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools",
+      "--destination",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c",
+      "--receipt",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/prepared.json"
+    ],
+    "child_maxrss_native_units": 345030656,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002",
+    "elapsed_seconds": 0.407236,
+    "ended_ns": 1794029958294658000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/manager/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 61497,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/store/releases/v3.0.5-rc.1/standards/tooling/TOOLING.json",
+        "sha256": "a55860ab27da3fc56ab48ad2b6cc3cb62bed5494962181e52fc64c476021db6f"
+      },
+      {
+        "bytes": 363,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/source-materialization/result.json",
+        "sha256": "fc93793a9bba9d4cd8777526408637fd6b63c34d5c7aeb283a01ad932d8a31a6"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 315,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/stdout.txt",
+        "sha256": "44376de0c2b00da98556becc2680e69551b078138f82f04bb29d09b7ba101c15"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 30875,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/runtime/prepared.json",
+        "sha256": "97564a106ef25ca5b9d8e913cfad30d8d7edb511463afb8dda145725f5c74782"
+      },
+      {
+        "bytes": 315,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/result.json",
+        "sha256": "69938a70a2a575008ea18d921c22694cd126cb1e2760ec1ef9f5bb5fc1c5fb43"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1794029957887422000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 315,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/stdout.txt",
+      "sha256": "44376de0c2b00da98556becc2680e69551b078138f82f04bb29d09b7ba101c15"
+    },
+    "system_seconds": 0.06559800000000005,
+    "user_seconds": 0.29150200000000037
+  },
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/TOOLING.json",
+      "retained": {
+        "bytes": 61497,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/store/releases/v3.0.5-rc.1/standards/tooling/TOOLING.json",
+        "sha256": "a55860ab27da3fc56ab48ad2b6cc3cb62bed5494962181e52fc64c476021db6f"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/source-materialization/result.json",
+      "retained": {
+        "bytes": 363,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/source-materialization/result.json",
+        "sha256": "fc93793a9bba9d4cd8777526408637fd6b63c34d5c7aeb283a01ad932d8a31a6"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 13722,
+    "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+    "sha256": "d5411f3377faa010c2a25afebff6e52eb5c9e083e5cc9768d0c35ccca4ea8c74"
+  },
+  "result": {
+    "bytes": 315,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/result.json",
+    "sha256": "69938a70a2a575008ea18d921c22694cd126cb1e2760ec1ef9f5bb5fc1c5fb43"
+  },
+  "schema": "stdo.execution-observation/1"
+}

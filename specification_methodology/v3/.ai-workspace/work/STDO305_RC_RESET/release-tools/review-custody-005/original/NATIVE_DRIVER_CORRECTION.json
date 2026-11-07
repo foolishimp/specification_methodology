@@ -1,0 +1,7 @@
+{
+  "scope": "reviewer driver only",
+  "initial_assumption": "Installed mode equals source Git mode",
+  "owning_behavior": "store.py:307 deliberately chmods each installed file to0444",
+  "correction": "Require exact byte identity and installed0444 mode; source/native Git tree identity separately establishes original payload modes",
+  "finding": false
+}

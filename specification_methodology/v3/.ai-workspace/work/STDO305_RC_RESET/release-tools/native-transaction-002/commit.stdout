@@ -1,0 +1,33 @@
+[main 71844a9e9] Fix RC anchor selector and current source corpus binding
+ 37 files changed, 5239 insertions(+), 18 deletions(-)
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/CENSUS.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/FREEZE.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/NATIVE_INPUT_INVENTORY.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/OPERATOR_CORRECTION.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/PAYLOAD_VALIDATION.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/PREIMAGE.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/PRE_COPY_DELTA.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/REBUILD_EXECUTION.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/REBUILD_PLAN.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/TEST_INVOCATION.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/TEST_RESULT.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/before/specification_methodology/v3/build_tenants/common-tools/tooling_setup.py
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/before/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/source-corpus.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/rebuild.py
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/tests.stderr
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/tests.stdout
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/tooling-selection.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/tooling.stderr
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/tooling.stdout
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/OPERATIONS.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/PATHS.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/PLAN.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/SOURCE_SELECTION.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/execute_checkpoint.py
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/execute_native.py
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/predecessor/0c0ee702a7aab15129c208b05f0a2cfab3a3980a.tag
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/predecessor/64cf9cc8a380d429297416f7d1c19f95e513906d.commit
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/predecessor/CUSTODY.json
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/predecessor/a2aac252f6d57f8b8693a9dbbc78945f8ac074a3.tree
+ create mode 100644 specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/stage-paths.z
+ create mode 100644 specification_methodology/v3/build_tenants/common-tools/test_tooling_anchor.py

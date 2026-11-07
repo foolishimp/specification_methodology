@@ -1,0 +1,106 @@
+{
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+      "--policy",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/early-readonly/policy.json",
+      "--policy-sha256",
+      "6bdc43c64e31269b87e5df2ea7dad24681b8f66b816c49990c6532b8b9eb86fc",
+      "--principal",
+      "executive",
+      "mcp"
+    ],
+    "child_maxrss_native_units": 1072709632,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002",
+    "elapsed_seconds": 3.073548,
+    "ended_ns": 1794030232792605000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 7369,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/policy.json",
+        "sha256": "6bdc43c64e31269b87e5df2ea7dad24681b8f66b816c49990c6532b8b9eb86fc"
+      },
+      {
+        "bytes": 683,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/mcp-session.jsonl",
+        "sha256": "84170fa7ea7502585b30de522162a5dd6384224a6e4df54f0e956316824bf135"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 123114,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/stdout.txt",
+        "sha256": "d403634e9b86687e12354c43e593c7f94e65b15c757e35726430d1c1d42bd6c7"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 357915,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/result.json",
+        "sha256": "09ac45bda47ac474b8cb7f60e8965b70e3223a5b7549e9b90cc4cd9985404c86"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1794030229719057000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdin": {
+      "bytes": 683,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/mcp-session.jsonl",
+      "sha256": "84170fa7ea7502585b30de522162a5dd6384224a6e4df54f0e956316824bf135"
+    },
+    "stdout": {
+      "bytes": 123114,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/stdout.txt",
+      "sha256": "d403634e9b86687e12354c43e593c7f94e65b15c757e35726430d1c1d42bd6c7"
+    },
+    "system_seconds": 0.1242890000000001,
+    "user_seconds": 2.9401270000000013
+  },
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/early-readonly/policy.json",
+      "retained": {
+        "bytes": 7369,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/policy.json",
+        "sha256": "6bdc43c64e31269b87e5df2ea7dad24681b8f66b816c49990c6532b8b9eb86fc"
+      }
+    },
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/early-readonly/mcp-session.jsonl",
+      "retained": {
+        "bytes": 683,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/mcp-session.jsonl",
+        "sha256": "84170fa7ea7502585b30de522162a5dd6384224a6e4df54f0e956316824bf135"
+      }
+    }
+  ],
+  "producer": {
+    "bytes": 21708,
+    "path": "a_c/build_tenants/graphify/code/ac_support.py",
+    "sha256": "63b094f524fe431fde58035381fabffc9b97d836037abeef5bab3ad795ef0ca7"
+  },
+  "result": {
+    "bytes": 357915,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/result.json",
+    "sha256": "09ac45bda47ac474b8cb7f60e8965b70e3223a5b7549e9b90cc4cd9985404c86"
+  },
+  "schema": "stdo.execution-observation/1"
+}

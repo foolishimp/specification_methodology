@@ -1,0 +1,74 @@
+{
+  "kind": "stdo.independent-bounded-repair-review/1",
+  "reviewer": "/root/stdo305_integration_review",
+  "author": "/root/stdo305_release_tools",
+  "scope": "Frozen anchor selector and source-corpus.model correction; read-only source/actual consumer checks, scratch-only test artifacts. No release or installed-success acceptance.",
+  "freeze_sha256": "5dbd35f95bfd88fbec3970b9c5aa81a10f6b0d5bfddd67178faf7ae582f671bd",
+  "verdict": "satisfied",
+  "findings": [],
+  "discharged": [
+    {
+      "subject": "tooling_setup.anchor_definition",
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py:33",
+      "reason": "Canonical distribution version is already checked by the public materializer path. Only the discovery selector strips the -rc.N suffix. Exact immutable basis, schema, manifest and runtime version remain RC. Actual selected manager status --verify and Skills verified_method accept the corrected anchor; predecessor selector and base-cut schema controls refuse."
+    },
+    {
+      "subject": "source-corpus.model",
+      "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/source-corpus.json:27",
+      "reason": "Only the nested model member differs from the retained preimage. Current relative route resolves to actual b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7 model bytes and matching id/profile; canonical identity equals the already-reviewed 6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544. All source-corpus fields outside model are byte-equivalent JSON values."
+    }
+  ],
+  "actual_tests": {
+    "methods": 5,
+    "skips": 0,
+    "returncode": 0,
+    "seconds": 1.797449667006731,
+    "result": {
+      "path": "/tmp/stdo305-rc-reset-review-K0KuCT/anchor-repair-005/RESULT.json",
+      "sha256": "cb6dbd20c640358826c4486993f149a1b25596b41a65dca2445e9c39fd4a0e30",
+      "bytes": 3008
+    },
+    "stdout": {
+      "path": "/tmp/stdo305-rc-reset-review-K0KuCT/anchor-repair-005/tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "stderr": {
+      "path": "/tmp/stdo305-rc-reset-review-K0KuCT/anchor-repair-005/tests.stderr",
+      "sha256": "c54cfcf7b1773ba9577f95cc93f657da4cafc4150badf4e7f0a6af7e24713e11",
+      "bytes": 872
+    }
+  },
+  "currentness": {
+    "freeze_rows_checked_before_and_after": 9,
+    "unchanged_after": true,
+    "source_rows": [
+      {
+        "bytes": 13722,
+        "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+        "sha256": "d5411f3377faa010c2a25afebff6e52eb5c9e083e5cc9768d0c35ccca4ea8c74"
+      },
+      {
+        "bytes": 5676,
+        "path": "specification_methodology/v3/build_tenants/common-tools/test_tooling_anchor.py",
+        "sha256": "611e34fa50c17951121befd3511a62986091d74e86924ee83f6aae5c16e2995f"
+      },
+      {
+        "bytes": 25650,
+        "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/source-corpus.json",
+        "sha256": "bd374a3fe8f5fd30c165104c23e024cd0de5cc41eb47ac4a364d592cf62d08b3"
+      }
+    ]
+  },
+  "original_failure": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-001/HOST_SETUP_FAILURE.json",
+    "sha256": "24d1989d5d436a069db5aecd852d426dbb94166222e4f716a44ffa34a4dd77e1",
+    "bytes": 2918
+  },
+  "limits": [
+    "The original local-001 host setup remains failed/incomplete; this review does not overwrite or reinterpret it.",
+    "Actual repacked native installation, host setup and provider receipts remain successor obligations.",
+    "No model, map, proof, viewer, runtime algorithm, support or compiler execution was changed or repeated.",
+    "The independent focused tests use the existing actual RC installation read-only; they are not a fresh-machine installation qualification."
+  ]
+}

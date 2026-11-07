@@ -1,0 +1,1074 @@
+{
+  "kind": "stdo.independent-rc-native-successor-followthrough/1",
+  "assessor": "/root/stdo305_integration_review",
+  "verdict": "satisfied",
+  "findings": [],
+  "handoff_sha256": "c609ba3e1ea650c3dd9a563aaf9d32c1aa36ec684419ab607e17cf87d1c46e51",
+  "source_checkpoint": "71844a9e9b52df56c842f81afa44f050ec8424cf",
+  "native_commit": "b5b00b896d44804e0f5d615a9bc23a02345888b3",
+  "native_tag_object": "03fd654d28c72dca2c53588c6b243c50807526dc",
+  "native_manifest_sha256": "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+  "native_root": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1",
+  "source_native_tree": "45441bf6cb07e3ac521ce29be9f8c37fb0a39292",
+  "changed_native_members": [
+    "standards/tooling/SELECTION.json",
+    "standards/tooling/TOOLING.json",
+    "standards/tooling/setup.py",
+    "standards/tooling/sources.zip"
+  ],
+  "unchanged_native_members": 169,
+  "changed_archive_member": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/source-corpus.json",
+  "exact_archive_population": 243,
+  "actual_verify_receipt_sha256": "b1a1e976bacb2a88b6a966767e35653894b28db7425fe47c5cdb16b5029fb010",
+  "attestation_sha256": "5b7a2d8c9d8c896c3f1bded41c2246824ef1eb284604af561139e470d8547517",
+  "members": [
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/LICENSE",
+      "bytes": 11358,
+      "mode": "0o444",
+      "mtime_ns": 1794029866298195128
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/manifest.json",
+      "bytes": 28617,
+      "mode": "0o444",
+      "mtime_ns": 1794029866315057621
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/release/release-note.md",
+      "bytes": 3679,
+      "mode": "0o444",
+      "mtime_ns": 1794029866314596744
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/WRITING_GUIDE.md",
+      "bytes": 3990,
+      "mode": "0o444",
+      "mtime_ns": 1794029863217968570
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/CONFORMANCE.md",
+      "bytes": 55674,
+      "mode": "0o444",
+      "mtime_ns": 1794029862882482019
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/ASSURANCE.md",
+      "bytes": 87324,
+      "mode": "0o444",
+      "mtime_ns": 1794029862850085707
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md",
+      "bytes": 142205,
+      "mode": "0o444",
+      "mtime_ns": 1794029862834246427
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/UX.md",
+      "bytes": 56045,
+      "mode": "0o444",
+      "mtime_ns": 1794029863184851462
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/PROFILES.md",
+      "bytes": 7801,
+      "mode": "0o444",
+      "mtime_ns": 1794029863046737716
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/FOUNDATIONS.md",
+      "bytes": 131400,
+      "mode": "0o444",
+      "mtime_ns": 1794029862948966277
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/IDENTITY.md",
+      "bytes": 29087,
+      "mode": "0o444",
+      "mtime_ns": 1794029862982313885
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/GLOSSARY.md",
+      "bytes": 50348,
+      "mode": "0o444",
+      "mtime_ns": 1794029862965480351
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/DESIGN_MODULE.md",
+      "bytes": 175366,
+      "mode": "0o444",
+      "mtime_ns": 1794029862899431179
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/SPEC_METHOD.md",
+      "bytes": 148190,
+      "mode": "0o444",
+      "mtime_ns": 1794029863116903323
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/POSTING_GUIDE.md",
+      "bytes": 5503,
+      "mode": "0o444",
+      "mtime_ns": 1794029863014312154
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/ODD.md",
+      "bytes": 126573,
+      "mode": "0o444",
+      "mtime_ns": 1794029862998041872
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/EXECUTIVE_BASELINE.md",
+      "bytes": 165730,
+      "mode": "0o444",
+      "mtime_ns": 1794029862931367448
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/WORLD_MODEL.md",
+      "bytes": 82366,
+      "mode": "0o444",
+      "mtime_ns": 1794029863201748080
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/README.md",
+      "bytes": 26905,
+      "mode": "0o444",
+      "mtime_ns": 1794029863062786539
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/RELEASE.md",
+      "bytes": 64863,
+      "mode": "0o444",
+      "mtime_ns": 1794029863096174105
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/TICKETS.md",
+      "bytes": 100401,
+      "mode": "0o444",
+      "mtime_ns": 1794029863134765987
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/REFERENCE_FRAME.md",
+      "bytes": 103687,
+      "mode": "0o444",
+      "mtime_ns": 1794029863079712948
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md",
+      "bytes": 85568,
+      "mode": "0o444",
+      "mtime_ns": 1794029863030466852
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/TRAVERSAL_OCCURRENCE.md",
+      "bytes": 104364,
+      "mode": "0o444",
+      "mtime_ns": 1794029863150675309
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/EVALUATION.md",
+      "bytes": 91301,
+      "mode": "0o444",
+      "mtime_ns": 1794029862914845332
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/AXIOMATIC_CALCULUS.md",
+      "bytes": 92360,
+      "mode": "0o444",
+      "mtime_ns": 1794029862866199530
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/LICENSE",
+      "bytes": 11358,
+      "mode": "0o444",
+      "mtime_ns": 1794029865976546307
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/references/REFRESH.md",
+      "bytes": 5143,
+      "mode": "0o444",
+      "mtime_ns": 1794029866077391260
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/references/COORDINATED_HANDOFF.md",
+      "bytes": 22028,
+      "mode": "0o444",
+      "mtime_ns": 1794029866009746331
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/references/PRODUCT_BASIS.md",
+      "bytes": 3947,
+      "mode": "0o444",
+      "mtime_ns": 1794029866060827394
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/references/HOST_BINDING.md",
+      "bytes": 5732,
+      "mode": "0o444",
+      "mtime_ns": 1794029866043770859
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/references/GETTING_STARTED.md",
+      "bytes": 41046,
+      "mode": "0o444",
+      "mtime_ns": 1794029866026655407
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/scripts/read_basis.py",
+      "bytes": 11572,
+      "mode": "0o444",
+      "mtime_ns": 1794029866111227621
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/scripts/claude_tool_gate.py",
+      "bytes": 6300,
+      "mode": "0o444",
+      "mtime_ns": 1794029866094445587
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/.claude-plugin/plugin.json",
+      "bytes": 554,
+      "mode": "0o444",
+      "mtime_ns": 1794029865942320195
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/.codex-plugin/plugin.json",
+      "bytes": 1250,
+      "mode": "0o444",
+      "mtime_ns": 1794029865959974899
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/claude-skills/refresh/SKILL.md",
+      "bytes": 513,
+      "mode": "0o444",
+      "mtime_ns": 1794029865993199465
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-work/SKILL.md",
+      "bytes": 13369,
+      "mode": "0o444",
+      "mtime_ns": 1794029866264229892
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-review/SKILL.md",
+      "bytes": 8074,
+      "mode": "0o444",
+      "mtime_ns": 1794029866161993724
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-ticket/SKILL.md",
+      "bytes": 7866,
+      "mode": "0o444",
+      "mtime_ns": 1794029866230366323
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-help/SKILL.md",
+      "bytes": 5226,
+      "mode": "0o444",
+      "mtime_ns": 1794029866128665782
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-status/SKILL.md",
+      "bytes": 6315,
+      "mode": "0o444",
+      "mtime_ns": 1794029866196033085
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-work/agents/openai.yaml",
+      "bytes": 267,
+      "mode": "0o444",
+      "mtime_ns": 1794029866280591424
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-review/agents/openai.yaml",
+      "bytes": 290,
+      "mode": "0o444",
+      "mtime_ns": 1794029866178449340
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-ticket/agents/openai.yaml",
+      "bytes": 285,
+      "mode": "0o444",
+      "mtime_ns": 1794029866247302982
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-help/agents/openai.yaml",
+      "bytes": 278,
+      "mode": "0o444",
+      "mtime_ns": 1794029866145176232
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-status/agents/openai.yaml",
+      "bytes": 284,
+      "mode": "0o444",
+      "mtime_ns": 1794029866212711827
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/source-manifest.json",
+      "bytes": 16406,
+      "mode": "0o444",
+      "mtime_ns": 1794029865016888242
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/model.json",
+      "bytes": 8568341,
+      "mode": "0o444",
+      "mtime_ns": 1794029863412692320
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/index.html",
+      "bytes": 2566,
+      "mode": "0o444",
+      "mtime_ns": 1794029863385009446
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/README.md",
+      "bytes": 3612,
+      "mode": "0o444",
+      "mtime_ns": 1794029863250872218
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/source-freeze.json",
+      "bytes": 13899,
+      "mode": "0o444",
+      "mtime_ns": 1794029865000313167
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/SELECTION.json",
+      "bytes": 3941,
+      "mode": "0o444",
+      "mtime_ns": 1794029863266584163
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/DOCUMENTATION.json",
+      "bytes": 14580,
+      "mode": "0o444",
+      "mtime_ns": 1794029863234365227
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/TOOLING.json",
+      "bytes": 61497,
+      "mode": "0o444",
+      "mtime_ns": 1794029865813805408
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/runtime.py",
+      "bytes": 11860,
+      "mode": "0o444",
+      "mtime_ns": 1794029865863907925
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/README.md",
+      "bytes": 3110,
+      "mode": "0o444",
+      "mtime_ns": 1794029865780141174
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/setup.py",
+      "bytes": 13722,
+      "mode": "0o444",
+      "mtime_ns": 1794029865880647667
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/materialize.py",
+      "bytes": 11721,
+      "mode": "0o444",
+      "mtime_ns": 1794029865830570484
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/payload_boundary.py",
+      "bytes": 2510,
+      "mode": "0o444",
+      "mtime_ns": 1794029865847255100
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/SELECTION.json",
+      "bytes": 80621,
+      "mode": "0o444",
+      "mtime_ns": 1794029865796861540
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/sources.zip",
+      "bytes": 16392586,
+      "mode": "0o444",
+      "mtime_ns": 1794029865923600194
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/rf-task-a.md",
+      "bytes": 113789,
+      "mode": "0o444",
+      "mtime_ns": 1794029865254467310
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/FRAME_INPUTS.json",
+      "bytes": 105110,
+      "mode": "0o444",
+      "mtime_ns": 1794029865084936589
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/eb-task-d.md",
+      "bytes": 126093,
+      "mode": "0o444",
+      "mtime_ns": 1794029865204446835
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/dm-task-d.md",
+      "bytes": 100681,
+      "mode": "0o444",
+      "mtime_ns": 1794029865187319925
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/stale-summary.md",
+      "bytes": 97323,
+      "mode": "0o444",
+      "mtime_ns": 1794029865289903761
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/traversal-task-f.md",
+      "bytes": 106442,
+      "mode": "0o444",
+      "mtime_ns": 1794029865309511432
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/member-build-assess.md",
+      "bytes": 107415,
+      "mode": "0o444",
+      "mtime_ns": 1794029865221265952
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/binding.md",
+      "bytes": 98224,
+      "mode": "0o444",
+      "mtime_ns": 1794029865136359779
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/product-composition.md",
+      "bytes": 15977,
+      "mode": "0o444",
+      "mtime_ns": 1794029865237996944
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/configuration.md",
+      "bytes": 145724,
+      "mode": "0o444",
+      "mtime_ns": 1794029865170620600
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/acceptance-release.md",
+      "bytes": 69121,
+      "mode": "0o444",
+      "mtime_ns": 1794029865118212489
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/bootstrap.md",
+      "bytes": 94520,
+      "mode": "0o444",
+      "mtime_ns": 1794029865153526898
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/ac-task-a.md",
+      "bytes": 75112,
+      "mode": "0o444",
+      "mtime_ns": 1794029865101706706
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/frames/rf-task-b.md",
+      "bytes": 96378,
+      "mode": "0o444",
+      "mtime_ns": 1794029865272635475
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/schemas/product-definition.schema.json",
+      "bytes": 15455,
+      "mode": "0o444",
+      "mtime_ns": 1794029865342763249
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/schemas/installed-release-manifest.schema.json",
+      "bytes": 7222,
+      "mode": "0o444",
+      "mtime_ns": 1794029865326187549
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/examples/DETERMINISTIC_CONTRACTS.md",
+      "bytes": 13568,
+      "mode": "0o444",
+      "mtime_ns": 1794029865033596692
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/examples/deterministic_contracts.py",
+      "bytes": 11010,
+      "mode": "0o444",
+      "mtime_ns": 1794029865067895221
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/examples/PRODUCT_COMPOSITION.md",
+      "bytes": 9316,
+      "mode": "0o444",
+      "mtime_ns": 1794029865050927311
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/GOALS_TEMPLATE.md",
+      "bytes": 521,
+      "mode": "0o444",
+      "mtime_ns": 1794029865392240513
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/PRODUCT_DEFINITION_TEMPLATE.json",
+      "bytes": 3517,
+      "mode": "0o444",
+      "mtime_ns": 1794029865442539989
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/PRODUCT_COMPOSITION_CONTRACT_TEMPLATE.md",
+      "bytes": 2546,
+      "mode": "0o444",
+      "mtime_ns": 1794029865425441954
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/AGENTS_TEMPLATE.md",
+      "bytes": 1508,
+      "mode": "0o444",
+      "mtime_ns": 1794029865359035572
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/README.md",
+      "bytes": 6634,
+      "mode": "0o444",
+      "mtime_ns": 1794029865493225050
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+      "bytes": 12791,
+      "mode": "0o444",
+      "mtime_ns": 1794029865475934431
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/PRODUCT_TEMPLATE.md",
+      "bytes": 1267,
+      "mode": "0o444",
+      "mtime_ns": 1794029865458776187
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/INTENT_TEMPLATE.md",
+      "bytes": 371,
+      "mode": "0o444",
+      "mtime_ns": 1794029865409187131
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/CLAUDE_TEMPLATE.md",
+      "bytes": 1508,
+      "mode": "0o444",
+      "mtime_ns": 1794029865376133899
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/constraint-explorer/index.html",
+      "bytes": 19164032,
+      "mode": "0o444",
+      "mtime_ns": 1794029863367978619
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/correspondence.md",
+      "bytes": 8420,
+      "mode": "0o444",
+      "mtime_ns": 1794029863480816002
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/selected-request.json",
+      "bytes": 1462,
+      "mode": "0o444",
+      "mtime_ns": 1794029864529673634
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/index.html",
+      "bytes": 24876727,
+      "mode": "0o444",
+      "mtime_ns": 1794029863961836289
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/inspection-stderr.txt",
+      "bytes": 0,
+      "mode": "0o444",
+      "mtime_ns": 1794029863994906896
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/materialize.py",
+      "bytes": 17655,
+      "mode": "0o444",
+      "mtime_ns": 1794029864497476364
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/payload_boundary.py",
+      "bytes": 2510,
+      "mode": "0o444",
+      "mtime_ns": 1794029864513194018
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/PROOFS.json",
+      "bytes": 14644535,
+      "mode": "0o444",
+      "mtime_ns": 1794029863447399101
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/source-freeze.json",
+      "bytes": 13899,
+      "mode": "0o444",
+      "mtime_ns": 1794029864578760355
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/SELECTION.json",
+      "bytes": 2815,
+      "mode": "0o444",
+      "mtime_ns": 1794029863464868138
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/inspection-execution.json",
+      "bytes": 788,
+      "mode": "0o444",
+      "mtime_ns": 1794029863979661953
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/inspection.json",
+      "bytes": 11269,
+      "mode": "0o444",
+      "mtime_ns": 1794029864011612097
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/library-provenance.md",
+      "bytes": 4929,
+      "mode": "0o444",
+      "mtime_ns": 1794029864028175338
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/code-explorer/index.html",
+      "bytes": 12895180,
+      "mode": "0o444",
+      "mtime_ns": 1794029863315133298
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/code-explorer/EXAMPLE.json",
+      "bytes": 1133,
+      "mode": "0o444",
+      "mtime_ns": 1794029863283440947
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/source-documents/library-provenance.md.txt",
+      "bytes": 4270,
+      "mode": "0o444",
+      "mtime_ns": 1794029864562259781
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/source-documents/correspondence.md.txt",
+      "bytes": 7640,
+      "mode": "0o444",
+      "mtime_ns": 1794029864545657040
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/transport/part-002.bin",
+      "bytes": 58408167,
+      "mode": "0o444",
+      "mtime_ns": 1794029864980739579
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/transport/part-001.bin",
+      "bytes": 67108864,
+      "mode": "0o444",
+      "mtime_ns": 1794029864800673770
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/transport/TRANSPORT.json",
+      "bytes": 9290,
+      "mode": "0o444",
+      "mtime_ns": 1794029864595057928
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/request.json",
+      "bytes": 1462,
+      "mode": "0o444",
+      "mtime_ns": 1794029863863878224
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/supplied-views.json",
+      "bytes": 1448882,
+      "mode": "0o444",
+      "mtime_ns": 1794029863898297754
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/view-comparison.json",
+      "bytes": 258,
+      "mode": "0o444",
+      "mtime_ns": 1794029863915187163
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/result.json",
+      "bytes": 20174,
+      "mode": "0o444",
+      "mtime_ns": 1794029863879800212
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/replay-request.json",
+      "bytes": 1191,
+      "mode": "0o444",
+      "mtime_ns": 1794029863847510484
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateViews.log",
+      "bytes": 2140,
+      "mode": "0o444",
+      "mtime_ns": 1794029863743682850
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateIdentities.log",
+      "bytes": 1799,
+      "mode": "0o444",
+      "mtime_ns": 1794029863628963418
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateLocalNames.log",
+      "bytes": 1153,
+      "mode": "0o444",
+      "mtime_ns": 1794029863662228192
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateLocalNames.lean",
+      "bytes": 866128,
+      "mode": "0o444",
+      "mtime_ns": 1794029863646657956
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/actual-runtime.log",
+      "bytes": 29211440,
+      "mode": "0o444",
+      "mtime_ns": 1794029863797716635
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateModel.log",
+      "bytes": 87,
+      "mode": "0o444",
+      "mtime_ns": 1794029863694748755
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateBounds.lean",
+      "bytes": 1482884,
+      "mode": "0o444",
+      "mtime_ns": 1794029863498193621
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/dynamic-kernel-replay.log",
+      "bytes": 0,
+      "mode": "0o444",
+      "mtime_ns": 1794029863815120630
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateBounds.log",
+      "bytes": 131,
+      "mode": "0o444",
+      "mtime_ns": 1794029863514170818
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateExternalNames.log",
+      "bytes": 703,
+      "mode": "0o444",
+      "mtime_ns": 1794029863596136312
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateExternalNames.lean",
+      "bytes": 1168755,
+      "mode": "0o444",
+      "mtime_ns": 1794029863580387158
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateData.log",
+      "bytes": 0,
+      "mode": "0o444",
+      "mtime_ns": 1794029863563268997
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateRun.lean",
+      "bytes": 414,
+      "mode": "0o444",
+      "mtime_ns": 1794029863710620618
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/manifest.json",
+      "bytes": 5639,
+      "mode": "0o444",
+      "mtime_ns": 1794029863831859330
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateData.lean",
+      "bytes": 11530594,
+      "mode": "0o444",
+      "mtime_ns": 1794029863546410755
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateIdentities.lean",
+      "bytes": 162545,
+      "mode": "0o444",
+      "mtime_ns": 1794029863612294718
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateViews.lean",
+      "bytes": 18629,
+      "mode": "0o444",
+      "mtime_ns": 1794029863727750529
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/evidence/GateModel.lean",
+      "bytes": 430,
+      "mode": "0o444",
+      "mtime_ns": 1794029863678219972
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/lean-toolchain",
+      "bytes": 25,
+      "mode": "0o444",
+      "mtime_ns": 1794029864192200742
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/toolchain-lock.json",
+      "bytes": 1607,
+      "mode": "0o444",
+      "mtime_ns": 1794029864481774502
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/lake-manifest.json",
+      "bytes": 3158,
+      "mode": "0o444",
+      "mtime_ns": 1794029864159768971
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/lakefile.toml",
+      "bytes": 230,
+      "mode": "0o444",
+      "mtime_ns": 1794029864176300670
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/AC/Structure.lean",
+      "bytes": 9730,
+      "mode": "0o444",
+      "mtime_ns": 1794029864143567190
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/AC/GateProof.lean",
+      "bytes": 2033,
+      "mode": "0o444",
+      "mtime_ns": 1794029864076668014
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/AC/Closure.lean",
+      "bytes": 7243,
+      "mode": "0o444",
+      "mtime_ns": 1794029864060616900
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/AC/Model.lean",
+      "bytes": 2894,
+      "mode": "0o444",
+      "mtime_ns": 1794029864111739672
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/AC/Projection.lean",
+      "bytes": 8407,
+      "mode": "0o444",
+      "mtime_ns": 1794029864127730869
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/AC/GateRuntime.lean",
+      "bytes": 3539,
+      "mode": "0o444",
+      "mtime_ns": 1794029864095123055
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/bootstrap.py",
+      "bytes": 2961,
+      "mode": "0o444",
+      "mtime_ns": 1794029864298287511
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/generation_profile.py",
+      "bytes": 4157,
+      "mode": "0o444",
+      "mtime_ns": 1794029864430704189
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/check.py",
+      "bytes": 10459,
+      "mode": "0o444",
+      "mtime_ns": 1794029864314313541
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/gate_codegen.py",
+      "bytes": 17609,
+      "mode": "0o444",
+      "mtime_ns": 1794029864395590615
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/formal_reuse.py",
+      "bytes": 16556,
+      "mode": "0o444",
+      "mtime_ns": 1794029864361050543
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/formal_support.py",
+      "bytes": 16537,
+      "mode": "0o444",
+      "mtime_ns": 1794029864378610913
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/runtime_process.py",
+      "bytes": 2205,
+      "mode": "0o444",
+      "mtime_ns": 1794029864465087552
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/formal_gate.py",
+      "bytes": 45864,
+      "mode": "0o444",
+      "mtime_ns": 1794029864345209888
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/generate_fixture.py",
+      "bytes": 6992,
+      "mode": "0o444",
+      "mtime_ns": 1794029864414897327
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/check_gate.py",
+      "bytes": 5531,
+      "mode": "0o444",
+      "mtime_ns": 1794029864329799736
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/scripts/import_fixture.py",
+      "bytes": 37921,
+      "mode": "0o444",
+      "mtime_ns": 1794029864446798178
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/profiles/generation-signature-v1.json",
+      "bytes": 49920,
+      "mode": "0o444",
+      "mtime_ns": 1794029864224953972
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/profiles/proof-support-v1.json",
+      "bytes": 19319521,
+      "mode": "0o444",
+      "mtime_ns": 1794029864280845724
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/profiles/formal-gate-request.schema.json",
+      "bytes": 2538,
+      "mode": "0o444",
+      "mtime_ns": 1794029864208627982
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/machinery/.cache/formal-origin-v1/selection.json",
+      "bytes": 223,
+      "mode": "0o444",
+      "mtime_ns": 1794029864044597453
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/TENANT_REGISTRY_TEMPLATE.md",
+      "bytes": 1803,
+      "mode": "0o444",
+      "mtime_ns": 1794029865511289673
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/requirements/README_TEMPLATE.md",
+      "bytes": 838,
+      "mode": "0o444",
+      "mtime_ns": 1794029865745579977
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/requirements/STARTER_REQUIREMENTS_TEMPLATE.md",
+      "bytes": 363,
+      "mode": "0o444",
+      "mtime_ns": 1794029865762351052
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/docs/README_TEMPLATE.md",
+      "bytes": 188,
+      "mode": "0o444",
+      "mtime_ns": 1794029865729001694
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/common/README_TEMPLATE.md",
+      "bytes": 220,
+      "mode": "0o444",
+      "mtime_ns": 1794029865527901415
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/variant/README_TEMPLATE.md",
+      "bytes": 206,
+      "mode": "0o444",
+      "mtime_ns": 1794029865594420047
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/common/design/README_TEMPLATE.md",
+      "bytes": 754,
+      "mode": "0o444",
+      "mtime_ns": 1794029865544475697
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/common/design/adrs/ADR_TEMPLATE.md",
+      "bytes": 2002,
+      "mode": "0o444",
+      "mtime_ns": 1794029865560981230
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/common/design/adrs/README_TEMPLATE.md",
+      "bytes": 3279,
+      "mode": "0o444",
+      "mtime_ns": 1794029865577742847
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/variant/design/README_TEMPLATE.md",
+      "bytes": 2212,
+      "mode": "0o444",
+      "mtime_ns": 1794029865611339998
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/variant/design/fp/README_TEMPLATE.md",
+      "bytes": 353,
+      "mode": "0o444",
+      "mtime_ns": 1794029865678531383
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/variant/design/fp/INTENT_TEMPLATE.md",
+      "bytes": 432,
+      "mode": "0o444",
+      "mtime_ns": 1794029865661485099
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/variant/design/adrs/ADR_TEMPLATE.md",
+      "bytes": 1687,
+      "mode": "0o444",
+      "mtime_ns": 1794029865627785197
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/variant/design/adrs/README_TEMPLATE.md",
+      "bytes": 2889,
+      "mode": "0o444",
+      "mtime_ns": 1794029865644397563
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/variant/design/fp/edge-overrides/EDGE_OVERRIDE_TEMPLATE.json",
+      "bytes": 426,
+      "mode": "0o444",
+      "mtime_ns": 1794029865695153250
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/templates/build_tenants/variant/design/fp/edge-overrides/README_TEMPLATE.md",
+      "bytes": 220,
+      "mode": "0o444",
+      "mtime_ns": 1794029865712276160
+    }
+  ],
+  "limits": [
+    "Only four changed native bytes rehashed independently. Remaining169 bytes conserved by exact Git tree comparison and actual complete manager verification/attestation, not a repeated full byte scan.",
+    "Local prepublication installation only. Runtime/proof/host/public remain separate."
+  ]
+}

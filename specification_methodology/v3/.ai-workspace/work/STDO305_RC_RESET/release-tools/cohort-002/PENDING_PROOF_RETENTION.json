@@ -1,0 +1,36 @@
+{
+  "commands": [
+    [
+      "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+      "pack",
+      "--bundle",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/formal/current-full",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/proof-retention/archives/full.zip"
+    ],
+    [
+      "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+      "split",
+      "--input",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/proof-retention/archives/full.zip",
+      "--destination",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/proof-retention/archives/full-transport"
+    ]
+  ],
+  "entry_predicates": [
+    "actual installed full proof verified",
+    "owner inspection consistent",
+    "Tools exclusive slot released"
+  ],
+  "kind": "stdo.pending-closed-proof-transport/1",
+  "runner": {
+    "bytes": 4318,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/retain_proof.py",
+    "sha256": "7d2b97509f6b511a9cc5caf549ffb8c22a868ac921575ab093654c2da675ba2a"
+  },
+  "status": "prepared_unexecuted"
+}

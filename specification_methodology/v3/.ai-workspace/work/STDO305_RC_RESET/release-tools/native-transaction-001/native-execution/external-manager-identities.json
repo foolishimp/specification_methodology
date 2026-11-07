@@ -1,0 +1,40 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "elapsed_seconds": 0.047496,
+  "environment_selection": {
+    "PIP_DISABLE_PIP_VERSION_CHECK": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "executable": {
+    "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/manager/bin/python",
+    "physical_path": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+  },
+  "executed_argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/manager/bin/python",
+    "-I",
+    "-B",
+    "-c",
+    "import importlib.metadata,json,stdo_toolchain,sys;print(json.dumps({\"manager_version\":stdo_toolchain.__version__,\"manager_file\":stdo_toolchain.__file__,\"python\":sys.version,\"dependencies\":sorted([{ \"name\":d.metadata[\"Name\"],\"version\":d.version} for d in importlib.metadata.distributions()],key=lambda x:x[\"name\"])}))"
+  ],
+  "kind": "stdo.native-transaction-execution/1",
+  "operation": "external-manager-identities",
+  "returncode": 0,
+  "stderr": {
+    "bytes": 0,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-001/native-execution/external-manager-identities.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 1220,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-001/native-execution/external-manager-identities.stdout",
+    "sha256": "4b026267f890a9cbacb9aae94b27f6b2e8fb8c21b0e9b0982148ee679ae0789b"
+  }
+}

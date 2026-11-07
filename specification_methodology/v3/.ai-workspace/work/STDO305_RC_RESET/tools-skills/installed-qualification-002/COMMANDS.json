@@ -1,0 +1,400 @@
+{
+  "commands": [
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/manager/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/materialize.py",
+        "materialize",
+        "--destination",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools"
+      ],
+      "id": "source-materialization",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/manager/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools/a_c/scripts/bootstrap.py",
+        "graphify",
+        "--destination",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify"
+      ],
+      "id": "graphify-bootstrap",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/manager/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/setup.py",
+        "derive-runtime",
+        "--tools",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools",
+        "--destination",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c",
+        "--receipt",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/prepared.json"
+      ],
+      "id": "derive-runtime",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/setup.py",
+        "bootstrap-lean",
+        "--derivation",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/prepared.json",
+        "--derivation-sha256",
+        "PREPARED_RECEIPT_SHA256",
+        "--python",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "--output",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/bootstrap"
+      ],
+      "heavy_slot": true,
+      "id": "bootstrap-lean",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/build_tenants/lean/scripts/formal_gate.py",
+        "init-origin"
+      ],
+      "id": "formal-origin",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/scripts/ac.py",
+        "formal-select",
+        "--lean-root",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/build_tenants/lean",
+        "--python",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "--timeout-seconds",
+        "7200",
+        "--output",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/formal/checker.json"
+      ],
+      "id": "formal-checker-selection",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/setup.py",
+        "host",
+        "--tools",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools",
+        "--anchor",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/anchors/codex",
+        "--method-root",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1",
+        "--workspace",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store",
+        "--stdo",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/manager/bin/stdo",
+        "--python",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "--host",
+        "codex",
+        "--manifest-sha256",
+        "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+        "--runtime-ac",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c",
+        "--derivation",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/bootstrap/derivation.json",
+        "--derivation-sha256",
+        "SUPPORTED_RECEIPT_SHA256"
+      ],
+      "id": "codex-host-setup",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--workspace",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex",
+        "--host",
+        "codex",
+        "--receipt-sha256",
+        "ACTUAL_CODEX_RECEIPT_SHA256"
+      ],
+      "id": "codex-verify",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/.agents/stdo-3.0.5-rc.1/CONFIG.json"
+      ],
+      "id": "codex-check-runtime",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/tooling/setup.py",
+        "host",
+        "--tools",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools",
+        "--anchor",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/anchors/claude",
+        "--method-root",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1",
+        "--workspace",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/claude",
+        "--store",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store",
+        "--stdo",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/manager/bin/stdo",
+        "--python",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "--host",
+        "claude",
+        "--manifest-sha256",
+        "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+        "--runtime-ac",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c",
+        "--derivation",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/bootstrap/derivation.json",
+        "--derivation-sha256",
+        "SUPPORTED_RECEIPT_SHA256"
+      ],
+      "id": "claude-host-setup",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--workspace",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/claude",
+        "--host",
+        "claude",
+        "--receipt-sha256",
+        "ACTUAL_CLAUDE_RECEIPT_SHA256"
+      ],
+      "id": "claude-verify",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/claude/.claude/stdo-3.0.5-rc.1/CONFIG.json"
+      ],
+      "id": "claude-check-runtime",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+        "--out",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/early-readonly",
+        "--product-root",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/anchors/codex",
+        "--definition-name",
+        "stdo_runtime.json",
+        "--profile",
+        "stdo-3.0.5-rc.1",
+        "--method-installation",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1",
+        "--stdo",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/anchors/codex/stdo"
+      ],
+      "id": "codex-early-initializer",
+      "requires": "Compare selected literal python/ac_root/definition/stdo with actual CONFIG before invocation.",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+        "--out",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/claude/early-readonly",
+        "--product-root",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/anchors/claude",
+        "--definition-name",
+        "stdo_runtime.json",
+        "--profile",
+        "stdo-3.0.5-rc.1",
+        "--method-installation",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1",
+        "--stdo",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/anchors/claude/stdo"
+      ],
+      "id": "claude-early-initializer",
+      "requires": "Compare selected literal python/ac_root/definition/stdo with actual CONFIG before invocation.",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/build_tenants/graphify/code/ac_support.py",
+        "--policy",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/early-readonly/policy.json",
+        "--policy-sha256",
+        "ACTUAL_CODEX_EARLY_POLICY_SHA256",
+        "--principal",
+        "executive",
+        "mcp"
+      ],
+      "id": "codex-early-mcp",
+      "result_encoding": "Exact stdout JSONL response list; retain ids1/2/3, source bytes and method outcome owner.",
+      "status": "prepared_unexecuted",
+      "stdin": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/early-readonly/mcp-session.jsonl"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/materialize.py",
+        "materialize",
+        "--destination",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/construction-evidence"
+      ],
+      "id": "recover-construction-proof",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-I",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/store/releases/v3.0.5-rc.1/standards/documentation/proofs/materialize.py",
+        "request",
+        "--evidence",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/construction-evidence",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/formal/request.json"
+      ],
+      "id": "portable-request",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/build_tenants/graphify/code/ac_upstream.py",
+        "--model",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+        "--carrier",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/carrier.json",
+        "--selections",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/formal-selections.json",
+        "--upstream",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/graphify",
+        "--runtime",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/RUNTIME.json",
+        "--output",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/graphify/current-roundtrip"
+      ],
+      "id": "actual-upstream-roundtrip",
+      "status": "prepared_unexecuted"
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/build_tenants/lean/scripts/formal_gate.py",
+        "verify",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/formal/request.json",
+        "--output",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/formal/current-full"
+      ],
+      "heavy_slot": true,
+      "id": "installed-full-current-verify",
+      "outer_timeout_seconds": 7200,
+      "per_stage_timeout_seconds": 1800,
+      "status": "prepared_unexecuted",
+      "supervision": "Actual reviewed1800-second per-stage source default and7200-second whole-proof operator bound. Preserve every original outcome; private-descendant cleanup remains required. No automatic retry."
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-I",
+        "-S",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/runtime/a_c/build_tenants/lean/scripts/formal_gate.py",
+        "inspect-evidence",
+        "--bundle",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/formal/current-full",
+        "--request",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/formal/request.json"
+      ],
+      "id": "installed-full-owner-inspection",
+      "outer_timeout_seconds": 180,
+      "status": "prepared_unexecuted"
+    }
+  ],
+  "directory_actions": [
+    {
+      "before": "formal-checker-selection",
+      "operation": "mkdir",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/formal",
+      "required_preimage": "absent ordinary path"
+    },
+    {
+      "before": "codex-host-setup",
+      "operation": "mkdir(parents=True, exist_ok=False)",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex",
+      "required_preimage": "absent ordinary workspace; anchor absent"
+    },
+    {
+      "before": "claude-host-setup",
+      "operation": "mkdir(parents=True, exist_ok=False)",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/claude",
+      "required_preimage": "absent ordinary workspace; anchor absent"
+    },
+    {
+      "before": "portable-request",
+      "operation": "mkdir(parents=True, exist_ok=False)",
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/public-qualification-001/formal",
+      "required_preimage": "absent ordinary portable evidence path"
+    }
+  ],
+  "runtime_selection_rule": "Use actual fresh public runtime/profile/origin/checker identities. Source defaults1800 per concrete proof stage and180/900/180 fresh support sub-process bounds; bootstrap aggregate1800; full-model7200; inspection180. No inherited verdict/support profile. Public readback excludes local-only Context and LLM session duplication.",
+  "schema": "stdo.rc-reset.fixed-interface-commands/1",
+  "scope_limit": "Fixed current installed interfaces, cache-only thirdparty acquisition plus fresh support/origin/proof. No Context/LLM sessions.",
+  "status": "Actual verified native binding; receipt-dependent placeholders remain unexecuted until actual preceding outputs exist.",
+  "template": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/tools-skills/public-qualification-prep-001/COMMANDS.json",
+    "sha256": "2db9136ea6291351dda8f1f9be8a9eb3c4836b296f424aebad8058598e0c8ef0"
+  }
+}

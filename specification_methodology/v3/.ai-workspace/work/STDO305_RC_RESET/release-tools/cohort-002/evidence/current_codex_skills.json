@@ -1,0 +1,218 @@
+{
+  "category": "execution",
+  "claim": "current_codex_skills",
+  "configuration": {
+    "bytes": 37500,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/stdo-3.0.5-rc.1/CONFIG.json",
+    "sha256": "8814837dcc612c86a54f11ccad321c00179478e7297c410a8f22172eecfd6147"
+  },
+  "configuration_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/.agents/stdo-3.0.5-rc.1/CONFIG.json",
+  "execution": {
+    "argv": [
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+      "-B",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools/stdo_skills/scripts/manage_skills.py",
+      "verify",
+      "--workspace",
+      "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex",
+      "--host",
+      "codex",
+      "--receipt-sha256",
+      "28a7c7563d30c08aaa19e6545a5d30a186dbaf10e672c8489bb4f4e4c50e2ba8"
+    ],
+    "child_maxrss_native_units": 475136000,
+    "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002",
+    "elapsed_seconds": 0.953383,
+    "ended_ns": 1794030226681616000,
+    "environment": {
+      "additions": {},
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 1912,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/stdo-skills-3.0.5-rc.1.receipt.json",
+        "sha256": "28a7c7563d30c08aaa19e6545a5d30a186dbaf10e672c8489bb4f4e4c50e2ba8"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 61,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/stdout.txt",
+        "sha256": "3e0872838f817ae1935959c3018cd42492901ab5de34ffe0e8a4e858002f0e15"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 61,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/result.json",
+        "sha256": "eadb30e45423fa1aff7b0abb425151c8674a4650436a5faf9cc2b347b90e3042"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1794030225728233000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 61,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/stdout.txt",
+      "sha256": "3e0872838f817ae1935959c3018cd42492901ab5de34ffe0e8a4e858002f0e15"
+    },
+    "system_seconds": 0.08823100000000017,
+    "user_seconds": 0.7654420000000002
+  },
+  "host_workspace": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex",
+  "installation": {
+    "bytes": 112331,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/INSTALLATION.json",
+    "sha256": "9a4bedaf47f801010c901a264b1c2b13a3996ea9ad149f692382ad22b91909ad"
+  },
+  "kind": "stdo.cohort-evidence/1",
+  "limits": "Actual setup, owner verify/check-runtime and exact native launcher bindings for this host. No LLM session or blanket instruction-compliance claim.",
+  "observed_input_paths": [
+    {
+      "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/.agents/stdo-skills-3.0.5-rc.1.receipt.json",
+      "retained": {
+        "bytes": 1912,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/stdo-skills-3.0.5-rc.1.receipt.json",
+        "sha256": "28a7c7563d30c08aaa19e6545a5d30a186dbaf10e672c8489bb4f4e4c50e2ba8"
+      }
+    }
+  ],
+  "original_execution": {
+    "bytes": 4114,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/execution.json",
+    "sha256": "bd2109bc98c38a4751e294a2e6224132599dcbfdc7506b9a161c252f0e1746e2"
+  },
+  "producer": {
+    "bytes": 18668,
+    "path": "stdo_skills/scripts/manage_skills.py",
+    "sha256": "b1c8c61d3b49be767856d24dcfafae3719aa9f82dbc869a7ec5706151b37862a"
+  },
+  "receipt": {
+    "bytes": 1912,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/stdo-skills-3.0.5-rc.1.receipt.json",
+    "sha256": "28a7c7563d30c08aaa19e6545a5d30a186dbaf10e672c8489bb4f4e4c50e2ba8"
+  },
+  "result": {
+    "bytes": 61,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/result.json",
+    "sha256": "eadb30e45423fa1aff7b0abb425151c8674a4650436a5faf9cc2b347b90e3042"
+  },
+  "runtime": {
+    "bytes": 39039,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/result.json",
+    "sha256": "d4898a748262b3548c6a35b70f7edf3566b07aac95fc2cee31172ff449fdc8ae"
+  },
+  "runtime_anchor": {
+    "bytes": 33932,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/anchors/codex/INSTALLATION.json",
+    "sha256": "3431795c5df78c0e2b003e480a53ebf62d4c558ccfca67ca2c6f97aa52e1c268"
+  },
+  "runtime_execution": {
+    "execution": {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+        "-B",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/source-tools/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/.agents/stdo-3.0.5-rc.1/CONFIG.json"
+      ],
+      "child_maxrss_native_units": 475136000,
+      "cwd": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002",
+      "elapsed_seconds": 0.971678,
+      "ended_ns": 1794030227670772000,
+      "environment": {
+        "additions": {},
+        "python": {
+          "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+          "invocation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/dependencies/graphify/venv/bin/python",
+          "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+          "version": "3.13.7"
+        }
+      },
+      "inputs": [
+        {
+          "bytes": 37500,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/stdo-3.0.5-rc.1/CONFIG.json",
+          "sha256": "8814837dcc612c86a54f11ccad321c00179478e7297c410a8f22172eecfd6147"
+        }
+      ],
+      "outputs": [
+        {
+          "bytes": 39039,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/stdout.txt",
+          "sha256": "b9dbab1da823d5cd8f8a4828e94ae2747c7a36d671aff168a9a5a83a459e40db"
+        },
+        {
+          "bytes": 0,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "bytes": 39039,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/result.json",
+          "sha256": "d4898a748262b3548c6a35b70f7edf3566b07aac95fc2cee31172ff449fdc8ae"
+        }
+      ],
+      "returncode": 0,
+      "started_ns": 1794030226699094000,
+      "stderr": {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 39039,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/stdout.txt",
+        "sha256": "b9dbab1da823d5cd8f8a4828e94ae2747c7a36d671aff168a9a5a83a459e40db"
+      },
+      "system_seconds": 0.0900669999999999,
+      "user_seconds": 0.7837169999999993
+    },
+    "observed_input_paths": [
+      {
+        "actual_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/hosts/codex/.agents/stdo-3.0.5-rc.1/CONFIG.json",
+        "retained": {
+          "bytes": 37500,
+          "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/stdo-3.0.5-rc.1/CONFIG.json",
+          "sha256": "8814837dcc612c86a54f11ccad321c00179478e7297c410a8f22172eecfd6147"
+        }
+      }
+    ],
+    "original_execution": {
+      "bytes": 4061,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/execution.json",
+      "sha256": "afe1f0e22d3ff25adf0bac7e40253a78e6c8fd6129269b5cc6570fd46e5d7854"
+    },
+    "producer": {
+      "bytes": 18668,
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "sha256": "b1c8c61d3b49be767856d24dcfafae3719aa9f82dbc869a7ec5706151b37862a"
+    },
+    "result": {
+      "bytes": 39039,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/result.json",
+      "sha256": "d4898a748262b3548c6a35b70f7edf3566b07aac95fc2cee31172ff449fdc8ae"
+    },
+    "schema": "stdo.execution-observation/1"
+  },
+  "schema": "stdo.execution-observation/1",
+  "source_identity_sha256": "c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06",
+  "status": "passed",
+  "subjects": {
+    "stdo_skills": "f3fdcdd81d4814ffd9afd537b03a62d798f678390ad6eb6ddba4ccb5f15f39a4"
+  }
+}

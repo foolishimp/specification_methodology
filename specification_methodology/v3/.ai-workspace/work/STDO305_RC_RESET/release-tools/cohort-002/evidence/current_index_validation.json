@@ -1,0 +1,124 @@
+{
+  "category": "execution",
+  "claim": "current_index_validation",
+  "execution": {
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/axiom_indexer/build_tenants/core/code/ac.py",
+      "validate",
+      "--program",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/axiomatic-program.json",
+      "--bindings",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/bindings.json"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology",
+    "elapsed_seconds": 0.381384,
+    "ended_ns": 1794029928579847000,
+    "environment": {
+      "python": {
+        "executable_realpath": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "invocation": "/usr/local/bin/python3",
+        "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539",
+        "version": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 10182463,
+        "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/axiomatic-program.json",
+        "sha256": "a7d342f6526372aa5d07d816714042fecd212dc8e7272c3f578fd7ee099b57c7"
+      },
+      {
+        "bytes": 218,
+        "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/bindings.json",
+        "sha256": "051008a274b09384ee99c7a4d45d9d6d09818c3019138a3746972630bd5c10c8"
+      },
+      {
+        "bytes": 25650,
+        "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/source-corpus.json",
+        "sha256": "bd374a3fe8f5fd30c165104c23e024cd0de5cc41eb47ac4a364d592cf62d08b3"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 12057,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/axiom-008/index/stdout.json",
+        "sha256": "df4855b3c67004b37396b67fd01550a4042d1f3fe30a6ff9c33238b3665ba15f"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/axiom-008/index/stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1794029928198463000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/axiom-008/index/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 12057,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/axiom-008/index/stdout.json",
+      "sha256": "df4855b3c67004b37396b67fd01550a4042d1f3fe30a6ff9c33238b3665ba15f"
+    },
+    "system_seconds": 0.08148999999999999,
+    "user_seconds": 0.26209
+  },
+  "installation": {
+    "bytes": 112331,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/INSTALLATION.json",
+    "sha256": "9a4bedaf47f801010c901a264b1c2b13a3996ea9ad149f692382ad22b91909ad"
+  },
+  "installation_join_basis": "Same exact selected Product bytes. Original source execution and assessment retain their own subjects; they were not rerun in local002 and are not relabelled installed operations.",
+  "kind": "stdo.cohort-evidence/1",
+  "limits": [
+    "Actual source-side operation with program, bindings and qualification inventory captured before/after. Original execution fields are unchanged.",
+    "The owner resolves source files via bindings; source-corpus is an explicitly captured qualification inventory, not a direct command argument.",
+    "Same-byte map emission and its actual mtime effect are retained separately from read-only validation. No installed execution or semantic verdict is inferred."
+  ],
+  "original_execution": {
+    "bytes": 4549,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/axiom-008/index/execution.json",
+    "sha256": "0a58372ff5ae6bf9902567aab5331b52ff8d6f7bb0e31c0f0c6ee336b0debbdc"
+  },
+  "producer": {
+    "bytes": 38113,
+    "path": "axiom_indexer/build_tenants/core/code/ac.py",
+    "sha256": "5a2e0cb503cf598bbaea215270373b87a0928222be272f33d951550b0d16e6c8"
+  },
+  "qualification_input_roles": {
+    "direct_owner_argv": [
+      {
+        "bytes": 10182463,
+        "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/axiomatic-program.json",
+        "sha256": "a7d342f6526372aa5d07d816714042fecd212dc8e7272c3f578fd7ee099b57c7"
+      },
+      {
+        "bytes": 218,
+        "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/bindings.json",
+        "sha256": "051008a274b09384ee99c7a4d45d9d6d09818c3019138a3746972630bd5c10c8"
+      }
+    ],
+    "qualification_inventory": {
+      "bytes": 25650,
+      "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/source-corpus.json",
+      "sha256": "bd374a3fe8f5fd30c165104c23e024cd0de5cc41eb47ac4a364d592cf62d08b3"
+    },
+    "qualification_inventory_scope": "Captured and hashed by this recorder before and after each invocation. The owner resolves actual source files via bindings; no assertion that ac.py directly opens source-corpus.json."
+  },
+  "result": {
+    "bytes": 12057,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/axiom-008/index/stdout.json",
+    "sha256": "df4855b3c67004b37396b67fd01550a4042d1f3fe30a6ff9c33238b3665ba15f"
+  },
+  "schema": "stdo.execution-observation/1",
+  "source_identity_sha256": "c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06",
+  "status": "passed",
+  "subjects": {
+    "axiom_indexer": "869750c9db5a999566edbab2978b8a5e74b2e7e9100f65145862d0ed55119d24",
+    "stdo_representation": "bf6e5f8e2c88e1c99e7b5dd30d3c6247e31fcb0fd74eae9541193b2fce1fe46e"
+  }
+}

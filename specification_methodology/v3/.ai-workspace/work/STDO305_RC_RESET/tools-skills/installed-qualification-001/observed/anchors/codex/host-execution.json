@@ -1,0 +1,27 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/dependencies/graphify/venv/bin/python",
+    "-B",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/source-tools/stdo_skills/scripts/manage_skills.py",
+    "install",
+    "--package",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/source-tools/stdo_skills",
+    "--workspace",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/hosts/codex",
+    "--definition",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/anchors/codex/stdo_runtime.json",
+    "--method-root",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/store/releases/v3.0.5-rc.1",
+    "--ac-root",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/runtime/a_c",
+    "--host",
+    "codex",
+    "--stdo",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/anchors/codex/stdo",
+    "--python",
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/dependencies/graphify/venv/bin/python"
+  ],
+  "returncode": 2,
+  "stderr": "",
+  "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Method verification failed: {\\n  \\\"error\\\": \\\"Invalid STDO version line: '3.0.5-rc.1'\\\",\\n  \\\"runtime_launcher\\\": {\\n    \\\"path\\\": \\\"/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/anchors/codex/stdo\\\",\\n    \\\"sha256\\\": \\\"dd3758d5578e2f041bac8ff0f868e560206848735da3940ebae0127c535679b6\\\",\\n    \\\"manager\\\": \\\"/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/manager/bin/stdo\\\",\\n    \\\"manager_sha256\\\": \\\"6912f0718624ff50470894b85f41bed33965996a78a31aaa80df38189b22acae\\\",\\n    \\\"store\\\": \\\"/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/store\\\",\\n    \\\"manifest\\\": \\\"/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/store/releases/v3.0.5-rc.1/manifest.json\\\",\\n    \\\"manifest_sha256\\\": \\\"78efff991ac3afeb26c3ee71fc3e6c35e4ad9dd4dac78e62038ebf3b1c454635\\\"\\n  }\\n}\\n\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+}

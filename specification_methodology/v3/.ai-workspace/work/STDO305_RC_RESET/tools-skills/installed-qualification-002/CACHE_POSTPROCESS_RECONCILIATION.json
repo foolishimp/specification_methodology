@@ -1,0 +1,26 @@
+{
+  "actual_execution": {
+    "bytes": 6464,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/cache-clone/execution.json",
+    "sha256": "43d7c9a2d1e71e57035920a59b07df80ef5f4d69a07dfcaff591e02e8fca63b5"
+  },
+  "actual_result": {
+    "bytes": 1384,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/cache-clone-001/RESULT.json",
+    "sha256": "e6e0932935d575fd9aa2922a3a0e3c677f90350668a4e03fd940180e7ad70987"
+  },
+  "actual_stdout": {
+    "bytes": 345,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/cache-clone/stdout.txt",
+    "sha256": "4a515ead50359a2561b9f1856a7e1947dcdab3fc631bb25054dc780bd9560ddb"
+  },
+  "error": "Original recorder postcondition used result[status] on a CLI response containing a pinned result reference; KeyError occurred after actual cache process exited0. This statement transcribes the observed tool return, not a raw captured traceback.",
+  "kind": "stdo.operator-observation-reconciliation/1",
+  "original_operator": {
+    "bytes": 665,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/run_cache_clone.py",
+    "sha256": "387285063cfe079fae8f305f6ec2b36de10db117e1b3cd9c9ef84fef3aeebf3b"
+  },
+  "resolution": "Dereferenced and verified exact returned result path/hash/bytes; status cache-cloned. No clone or filesystem acquisition operation repeated.",
+  "scope": "Observation correction only; ordinary join/bootstrap/support still required."
+}

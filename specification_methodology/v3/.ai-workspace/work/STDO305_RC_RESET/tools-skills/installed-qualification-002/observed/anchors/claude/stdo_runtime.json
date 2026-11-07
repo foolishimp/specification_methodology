@@ -1,0 +1,95 @@
+{
+  "$schema": "stdo://releases/v3.0.5-rc.1/standards/schemas/product-definition.schema.json",
+  "composition": [],
+  "constitution": {
+    "additional_authorities": [
+      "./README.md"
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md"
+      ]
+    },
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/frames/bootstrap.md"
+      }
+    ],
+    "stdo": {
+      "basis": {
+        "manifest_sha256": "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+        "uri": "stdo://releases/v3.0.5-rc.1/"
+      },
+      "selector": "stdo://channels/3.0.5",
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      }
+    }
+  },
+  "how": {
+    "build_tenants": [
+      {
+        "design": [
+          "./README.md#implementation"
+        ],
+        "id": "urn:stdo:runtime-installation-anchor:64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c:installation",
+        "implementation": [
+          "./INSTALLATION.json"
+        ],
+        "root": "./"
+      }
+    ],
+    "common": [
+      "./README.md#implementation"
+    ]
+  },
+  "kind": "stdo.product-definition",
+  "local_constitution": {
+    "axioms": [],
+    "disambiguations": [],
+    "overrides": []
+  },
+  "product": {
+    "bounded_context": {
+      "definition": "./README.md#scope",
+      "id": "urn:stdo:runtime-installation-anchor:64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c:scope"
+    },
+    "definition_id": "urn:stdo:runtime-installation-anchor:64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+    "name": "STDO runtime installation anchor 3.0.5-rc.1",
+    "source_project": "./"
+  },
+  "reference_frame_bases": [
+    {
+      "applies_to": [
+        "urn:stdo:runtime-installation-anchor:64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c"
+      ],
+      "authority": [
+        "./README.md#scope"
+      ],
+      "uri": "./README.md#frame"
+    }
+  ],
+  "ticketing": {
+    "comments": {
+      "root": "./work/comments/"
+    },
+    "goals": "./README.md#intent",
+    "tickets": {
+      "lanes": {
+        "active": "./work/tickets/active/",
+        "backlog": "./work/tickets/backlog/",
+        "completed": "./work/tickets/completed/"
+      },
+      "root": "./work/tickets/"
+    }
+  },
+  "what": {
+    "intent": "./README.md#intent",
+    "product": "./README.md#scope",
+    "specification": [
+      "./README.md#requirements"
+    ]
+  }
+}

@@ -1,0 +1,982 @@
+{
+  "kind": "stdo.independent-closed-interface-join-check/1",
+  "assessor": "/root/stdo305_integration_review",
+  "status": "consistent",
+  "interfaces_sha256": "5b52116a5337d27ff1df7fb85540b16eaae845fe593a5199d79b1c3b89705be0",
+  "bindings_sha256": "0165147c47e92482f7b7d13d5a72ce027cd7ac71cd83a5f68f82c5381bc3c719",
+  "recorded_operations": [
+    "source-materialization",
+    "graphify-bootstrap",
+    "derive-runtime",
+    "cache-clone",
+    "bootstrap-lean",
+    "formal-origin",
+    "formal-checker-selection",
+    "codex-host-setup",
+    "codex-verify",
+    "codex-check-runtime",
+    "codex-early-initializer",
+    "codex-early-mcp",
+    "claude-host-setup",
+    "claude-verify",
+    "claude-check-runtime",
+    "claude-early-initializer",
+    "recover-construction-proof",
+    "portable-request",
+    "actual-upstream-roundtrip"
+  ],
+  "wrapper_execution_equal_to_original": [
+    "current_claude_skills",
+    "current_codex_skills",
+    "current_index_validation",
+    "current_proof_reader",
+    "installed_documentation",
+    "installed_graphify",
+    "installed_manager",
+    "source_current_map"
+  ],
+  "checked_metadata_refs": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/CLOSED_INTERFACES.json",
+      "sha256": "5b52116a5337d27ff1df7fb85540b16eaae845fe593a5199d79b1c3b89705be0",
+      "bytes": 20853
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/source-materialization/execution.json",
+      "sha256": "09f02d4f2778c8d620fd784673512ba6cbed4211cd2fd1189c86b273c94ae51d",
+      "bytes": 4889
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/store/releases/v3.0.5-rc.1/standards/tooling/TOOLING.json",
+      "sha256": "a55860ab27da3fc56ab48ad2b6cc3cb62bed5494962181e52fc64c476021db6f",
+      "bytes": 61497
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/source-materialization/stdout.txt",
+      "sha256": "f56fdceefa65010cff6881a8969eb88044c6c7966335b2f72a5a4214adbb1c15",
+      "bytes": 363
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/source-materialization/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/source-materialization/result.json",
+      "sha256": "fc93793a9bba9d4cd8777526408637fd6b63c34d5c7aeb283a01ad932d8a31a6",
+      "bytes": 363
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/graphify-bootstrap/execution.json",
+      "sha256": "d3805e5cc25b18b882d6e5940db6e3fb7900a0723ac8cc7b0027dbcaf7d9e2be",
+      "bytes": 4942
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/requirements-qualification.txt",
+      "sha256": "9be107b68f56e3b7d7c1d6e3ac297daeda8484a8af8ceae783aead8355a7b3b5",
+      "bytes": 278
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/generation/requirements.txt",
+      "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2",
+      "bytes": 214
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/code-requirements.txt",
+      "sha256": "f508937dfbfe84108aee664ddba1eb9577ebfc6007eb5b76a057378793218bca",
+      "bytes": 276
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/graphify-bootstrap/stdout.txt",
+      "sha256": "d283ec63b7202c3d0938804da3a482e7cbcbf22f4ab674115ce7e50fed10a190",
+      "bytes": 6119
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/graphify-bootstrap/stderr.txt",
+      "sha256": "1fe36e84d0b386997da95b7732664ec99d3f39aa6f7d1fdfbff73a45220481a8",
+      "bytes": 862
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/dependencies/graphify/RUNTIME.json",
+      "sha256": "09e6e57a0e18380b3f32833e385e6133c6b4c591ec750bf1793f4f2c3da68e78",
+      "bytes": 1018
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/execution.json",
+      "sha256": "3c0da63efb06ed59d896a57a696d4523f6d3ed1785a15585f8902a389c98de1f",
+      "bytes": 5357
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/stdout.txt",
+      "sha256": "44376de0c2b00da98556becc2680e69551b078138f82f04bb29d09b7ba101c15",
+      "bytes": 315
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/runtime/prepared.json",
+      "sha256": "97564a106ef25ca5b9d8e913cfad30d8d7edb511463afb8dda145725f5c74782",
+      "bytes": 30875
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/derive-runtime/result.json",
+      "sha256": "69938a70a2a575008ea18d921c22694cd126cb1e2760ec1ef9f5bb5fc1c5fb43",
+      "bytes": 315
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/cache-clone/execution.json",
+      "sha256": "43d7c9a2d1e71e57035920a59b07df80ef5f4d69a07dfcaff591e02e8fca63b5",
+      "bytes": 6464
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/CACHE_PLAN.json",
+      "sha256": "781ea036d79a498b83a6370f852a90aa2e671ea242fab1ad5108378789a0c29c",
+      "bytes": 3456
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/HANDOFF.json",
+      "sha256": "c609ba3e1ea650c3dd9a563aaf9d32c1aa36ec684419ab607e17cf87d1c46e51",
+      "bytes": 6901
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/cache-clone/stdout.txt",
+      "sha256": "4a515ead50359a2561b9f1856a7e1947dcdab3fc631bb25054dc780bd9560ddb",
+      "bytes": 345
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/cache-clone/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/cache-clone-001/INVOCATION.json",
+      "sha256": "6c87624d7423894973407aeca949fc9b8834522f8b5a279ca3d8074291aeb2b1",
+      "bytes": 1639
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/cache-clone-001/RESULT.json",
+      "sha256": "e6e0932935d575fd9aa2922a3a0e3c677f90350668a4e03fd940180e7ad70987",
+      "bytes": 1384
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/cache-clone/result.json",
+      "sha256": "dd842584076f3a2abc85428a4e7bce96f471a34c42cda1fc9040377513c4ab39",
+      "bytes": 369
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/bootstrap-lean/execution.json",
+      "sha256": "d60cabfbd6038e5b7f50a514f03c887450300455202e6928258e282c3a5789a7",
+      "bytes": 5767
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/bootstrap-lean/stdout.txt",
+      "sha256": "0f83165aa3988cb57742215db33d9dac7475e9028afc1af67319d744c08647ae",
+      "bytes": 427
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/bootstrap-lean/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/runtime/a_c/build_tenants/lean/profiles/proof-support-v1.json",
+      "sha256": "f35dcd22b148938f3d53690058cca3a77151bd90cf4da0c1d7ed60c31a2efec7",
+      "bytes": 4645972
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/runtime/bootstrap/derivation.json",
+      "sha256": "535b2a95644aff301f344636d90ccf8b6629ca406eb54fb4e3a91f3246718475",
+      "bytes": 33288
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/runtime/bootstrap/execution.json",
+      "sha256": "f4df14df8f6f6671d715d984a28045bb9d78bc73eb8372862a6d2a709358ca2d",
+      "bytes": 1132
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/runtime/bootstrap/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/runtime/bootstrap/stdout.txt",
+      "sha256": "84fc09ec708147265e9daf5f338246c22d5dfd4e8990f66c6a67b4a26819a1ec",
+      "bytes": 4329
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/bootstrap-lean/result.json",
+      "sha256": "3e938b73208b77c267111216a4da76724ccdb24f74ab6363c1646fd5a8d1b56f",
+      "bytes": 427
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/formal-origin/execution.json",
+      "sha256": "5df680db9ce4898df6cfaec8ea8f03b9028ae65937cdaead0fd10d1a45f81225",
+      "bytes": 3455
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/formal-origin/stdout.txt",
+      "sha256": "6e0bec5c2043edd767053319bbc5ddfd04b95562194b2d5a51f4488775d4c9ce",
+      "bytes": 231
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/formal-origin/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/runtime/a_c/build_tenants/lean/.cache/formal-origin-v1/selection.json",
+      "sha256": "687f709575138f12ece175ffc659dafddd1e65ea6ea08c3499a09a9b607e23ae",
+      "bytes": 223
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/formal-origin/result.json",
+      "sha256": "97ec949289e4c3086cefb1c8d58697d3999fe926b7241ba7a04b55c4d6c394cb",
+      "bytes": 241
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/formal-checker-selection/execution.json",
+      "sha256": "3ace66238a0abc5b7676aafa3adc67ffcd5e70d4a4d42432565db76a69e347df",
+      "bytes": 3800
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/formal-checker-selection/stdout.txt",
+      "sha256": "7e3485397707f4250c83b8f803943f52bfa8e39a9b942b2948537175cc97c2b6",
+      "bytes": 184
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/formal-checker-selection/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/formal/checker.json",
+      "sha256": "4d92b3b4a393797d685c9e16f95c431328888407ec2d1027ffe3c40871c36d80",
+      "bytes": 2950
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/formal-checker-selection/result.json",
+      "sha256": "267936b737b3ef361deaf9c52569d3e4d8c89cfb08989d4e04e00fecd42ad3dd",
+      "bytes": 190
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-host-setup/execution.json",
+      "sha256": "a7449d46a271dff8727967e3972a794e5babbd319c7556e97799451b1c612f1f",
+      "bytes": 9694
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-host-setup/stdout.txt",
+      "sha256": "645649c9c4535a4c21e898cda44c1704c63d3eb674662aed74eee8bc6ee55b8b",
+      "bytes": 716
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-host-setup/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/anchors/codex/INSTALLATION.json",
+      "sha256": "3431795c5df78c0e2b003e480a53ebf62d4c558ccfca67ca2c6f97aa52e1c268",
+      "bytes": 33932
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/anchors/codex/stdo_runtime.json",
+      "sha256": "ea3097c5826b7fc76876f41174b819ada32a475b6c9926df22c18ce39551bb58",
+      "bytes": 2550
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/anchors/codex/stdo",
+      "sha256": "c4a9e47d7c2772609a1a7460a969fdf23e3276d7973a828d1fb6757f11e07c6e",
+      "bytes": 2109
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/skills/stdo-help/SKILL.md",
+      "sha256": "ef4440b46ca2d7cbecda1aa853d6e52c2057ddd3f8ae02250b8500224fba1433",
+      "bytes": 654
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/skills/stdo-project/SKILL.md",
+      "sha256": "dec4fc59b9b7e21fea6afcfbb6496504077d50d880f82e4ae6eff8849b85e2ce",
+      "bytes": 2260
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/skills/stdo-project/references/code.md",
+      "sha256": "22ffb66044f2525ed64ecbdaeebc7ef39ff000d4a5e21b9d27333b2581722042",
+      "bytes": 795
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/skills/stdo-project/references/formal.md",
+      "sha256": "3f0c94a7239ffea193c89bcd3a4e08cde16cefa787d6c2c00e328bf19baeebaf",
+      "bytes": 1743
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/skills/stdo-project/references/project.md",
+      "sha256": "77905548e20b285dd3a4b792ddd9380a01e2f22ed3e840ec676d550b40d1c3c0",
+      "bytes": 2432
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/skills/stdo-review/SKILL.md",
+      "sha256": "8ffb38edf46c4df675b12efc03a366d4a18df4749e38a9279c56da347b7b774c",
+      "bytes": 669
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/skills/stdo-status/SKILL.md",
+      "sha256": "f4d649bf0c0c84648387078d1e33f45abd66934071d7eb253a3d09d25b5a200f",
+      "bytes": 679
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/skills/stdo-ticket/SKILL.md",
+      "sha256": "e9a38e396c19c9afa295e9f61e5c2a91b467391b50c0fce2913368663c86dad6",
+      "bytes": 660
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/skills/stdo-work/SKILL.md",
+      "sha256": "9cb80bf9778cb2abea0f58c691b2fe6a01ef2053406328a90878f1467793e377",
+      "bytes": 688
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/stdo-3.0.5-rc.1/CONFIG.json",
+      "sha256": "8814837dcc612c86a54f11ccad321c00179478e7297c410a8f22172eecfd6147",
+      "bytes": 37500
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/stdo-3.0.5-rc.1/manage_skills.py",
+      "sha256": "b1c8c61d3b49be767856d24dcfafae3719aa9f82dbc869a7ec5706151b37862a",
+      "bytes": 18668
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/.agents/stdo-skills-3.0.5-rc.1.receipt.json",
+      "sha256": "28a7c7563d30c08aaa19e6545a5d30a186dbaf10e672c8489bb4f4e4c50e2ba8",
+      "bytes": 1912
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-host-setup/result.json",
+      "sha256": "3b9d93611a68a2106c2237917d7f455f7480e8248d1b04d868be3e39ad2b6705",
+      "bytes": 716
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/execution.json",
+      "sha256": "bd2109bc98c38a4751e294a2e6224132599dcbfdc7506b9a161c252f0e1746e2",
+      "bytes": 4114
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/stdout.txt",
+      "sha256": "3e0872838f817ae1935959c3018cd42492901ab5de34ffe0e8a4e858002f0e15",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-verify/result.json",
+      "sha256": "eadb30e45423fa1aff7b0abb425151c8674a4650436a5faf9cc2b347b90e3042",
+      "bytes": 61
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/execution.json",
+      "sha256": "afe1f0e22d3ff25adf0bac7e40253a78e6c8fd6129269b5cc6570fd46e5d7854",
+      "bytes": 4061
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/stdout.txt",
+      "sha256": "b9dbab1da823d5cd8f8a4828e94ae2747c7a36d671aff168a9a5a83a459e40db",
+      "bytes": 39039
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-check-runtime/result.json",
+      "sha256": "d4898a748262b3548c6a35b70f7edf3566b07aac95fc2cee31172ff449fdc8ae",
+      "bytes": 39039
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-initializer/execution.json",
+      "sha256": "1e0d116d172625050dc177c36b206c771a7ba1e6c335fef6f1059819269c1fd0",
+      "bytes": 8015
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-initializer/stdout.txt",
+      "sha256": "ea5a32394e283cbbbe2128f181c39f789231ea556cd00e489acb34d68dcac9cd",
+      "bytes": 741
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-initializer/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/SETUP.json",
+      "sha256": "377c06f9d2809545f2b07169f799eadd69d4ca2bcbdf2c2b86f0eee370b54dd6",
+      "bytes": 848
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/control/OPERATOR.md",
+      "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794",
+      "bytes": 1010
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/mcp-session.jsonl",
+      "sha256": "84170fa7ea7502585b30de522162a5dd6384224a6e4df54f0e956316824bf135",
+      "bytes": 683
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/method-verification.json",
+      "sha256": "0b1f38feb32e07bb864b10f80a99b23ea59e9e94867255713d3de12739ad9da2",
+      "bytes": 26178
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/policy.json",
+      "sha256": "6bdc43c64e31269b87e5df2ea7dad24681b8f66b816c49990c6532b8b9eb86fc",
+      "bytes": 7369
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/requests/denied-preflight.json",
+      "sha256": "f34b981551c025d69782e71178603bdc3845348a4ddea8e3fb7d5c53fddacd06",
+      "bytes": 483
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/requests/describe.json",
+      "sha256": "a56241606b15a5788145df1ceff38bf9dfb63d17c810cd226fe7f8752756088f",
+      "bytes": 128
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/requests/observe.json",
+      "sha256": "ff058b5a53eeed80bb7634a9fe330c3331662ff86f0b357529e6b6125d71c23b",
+      "bytes": 257
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/codex/early-readonly/requests/read-product.json",
+      "sha256": "715ac262645af053546aa42ea94a47679ea87cf07c935ce6ce618655f5e29648",
+      "bytes": 404
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-initializer/result.json",
+      "sha256": "377c06f9d2809545f2b07169f799eadd69d4ca2bcbdf2c2b86f0eee370b54dd6",
+      "bytes": 848
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/execution.json",
+      "sha256": "518ada878d5114ffcdf6401fec2ea49005696f1c9a9134ccd931614ac92b7999",
+      "bytes": 5205
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/stdout.txt",
+      "sha256": "d403634e9b86687e12354c43e593c7f94e65b15c757e35726430d1c1d42bd6c7",
+      "bytes": 123114
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/codex-early-mcp/result.json",
+      "sha256": "09ac45bda47ac474b8cb7f60e8965b70e3223a5b7549e9b90cc4cd9985404c86",
+      "bytes": 357915
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-host-setup/execution.json",
+      "sha256": "f1b185e8215a33c8a6e07ec00634a0425603632d7fd2c611aa497c948ac87f62",
+      "bytes": 10027
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-host-setup/stdout.txt",
+      "sha256": "545db93c4dfd0ccb0ccd4d0bca8a3f783a83ebd372416b2bb5c9172660ae8611",
+      "bytes": 720
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-host-setup/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/anchors/claude/INSTALLATION.json",
+      "sha256": "0c6c888f02c5f217aaba6e7868b8aafec77c551672c62839da0135e7b4f87677",
+      "bytes": 33933
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/anchors/claude/stdo_runtime.json",
+      "sha256": "ea3097c5826b7fc76876f41174b819ada32a475b6c9926df22c18ce39551bb58",
+      "bytes": 2550
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/anchors/claude/stdo",
+      "sha256": "c4a9e47d7c2772609a1a7460a969fdf23e3276d7973a828d1fb6757f11e07c6e",
+      "bytes": 2109
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-help/SKILL.md",
+      "sha256": "ef4440b46ca2d7cbecda1aa853d6e52c2057ddd3f8ae02250b8500224fba1433",
+      "bytes": 654
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-project/SKILL.md",
+      "sha256": "5fac2a6cd8803803c078aa0c7220240b010d5a67dc81560d6d97474e424cb732",
+      "bytes": 2270
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-project/references/code.md",
+      "sha256": "22ffb66044f2525ed64ecbdaeebc7ef39ff000d4a5e21b9d27333b2581722042",
+      "bytes": 795
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-project/references/formal.md",
+      "sha256": "3f0c94a7239ffea193c89bcd3a4e08cde16cefa787d6c2c00e328bf19baeebaf",
+      "bytes": 1743
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-project/references/project.md",
+      "sha256": "77905548e20b285dd3a4b792ddd9380a01e2f22ed3e840ec676d550b40d1c3c0",
+      "bytes": 2432
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-refresh/SKILL.md",
+      "sha256": "a8e9531c686f85e17fd1774b77eea50f9f4876c1df70718a9d042f0affa32e1b",
+      "bytes": 652
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-review/SKILL.md",
+      "sha256": "8ffb38edf46c4df675b12efc03a366d4a18df4749e38a9279c56da347b7b774c",
+      "bytes": 669
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-status/SKILL.md",
+      "sha256": "f4d649bf0c0c84648387078d1e33f45abd66934071d7eb253a3d09d25b5a200f",
+      "bytes": 679
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-ticket/SKILL.md",
+      "sha256": "e9a38e396c19c9afa295e9f61e5c2a91b467391b50c0fce2913368663c86dad6",
+      "bytes": 660
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/skills/stdo-work/SKILL.md",
+      "sha256": "9cb80bf9778cb2abea0f58c691b2fe6a01ef2053406328a90878f1467793e377",
+      "bytes": 688
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/stdo-3.0.5-rc.1/CONFIG.json",
+      "sha256": "fef355dc55af71e6abf635b09491adb5724736b1e70c5c3a6e54b596ee614c72",
+      "bytes": 37508
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/stdo-3.0.5-rc.1/manage_skills.py",
+      "sha256": "b1c8c61d3b49be767856d24dcfafae3719aa9f82dbc869a7ec5706151b37862a",
+      "bytes": 18668
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/.claude/stdo-skills-3.0.5-rc.1.receipt.json",
+      "sha256": "ebe3249f6527d26275db2112ed06830f81a99aaa5d9905e964de10e012e98bf2",
+      "bytes": 2044
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-host-setup/result.json",
+      "sha256": "747edcf675bb7570722d153f0097233be9f412b6fdb943f430a8169882c03828",
+      "bytes": 720
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-verify/execution.json",
+      "sha256": "f1fb9991cd6e17ddeb1af365c86ecc567d8d688edc7dcbfd8a801ae1bef1b6e6",
+      "bytes": 4126
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-verify/stdout.txt",
+      "sha256": "978d313af26bec6579517e90a62c05aa38d885feaa73022f291b01fc6b85b3e4",
+      "bytes": 62
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-verify/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-verify/result.json",
+      "sha256": "ae947afcb78a8fe8dc639d0819e89c0c7aad8930c981dc277c8203336b77b954",
+      "bytes": 62
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-check-runtime/execution.json",
+      "sha256": "8b8606c4f9913c1375e5e6d02410a0f4e631ec7e485ed24a21203fadecf24715",
+      "bytes": 4073
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-check-runtime/stdout.txt",
+      "sha256": "340d41c803d561bd41705e4313f6aecd510c8d8e527843193bb549a258ab029b",
+      "bytes": 39047
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-check-runtime/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-check-runtime/result.json",
+      "sha256": "db7408428ee28f778242f83c0d7302055de3894157c3c450b2202a40c0e5ae78",
+      "bytes": 39047
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-early-initializer/execution.json",
+      "sha256": "9a3dfc5b4a1f421d3c9fd853a584d095fdf9c2ae51e9c31061c2bb8c4e633ce5",
+      "bytes": 8040
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-early-initializer/stdout.txt",
+      "sha256": "52837c813227bc9ecae677fabaccb80704a847a787bac4344e713bea22b21660",
+      "bytes": 743
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-early-initializer/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/early-readonly/SETUP.json",
+      "sha256": "685cffcbf9d3704a32d040e6ac9c33ddbfc2f695b0e800dafd41428aa3b885a3",
+      "bytes": 850
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/early-readonly/control/OPERATOR.md",
+      "sha256": "1c66b6dd374617a3f31e86604ea91fb36187588ed319fa3dddd97b0ccb379794",
+      "bytes": 1010
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/early-readonly/mcp-session.jsonl",
+      "sha256": "84170fa7ea7502585b30de522162a5dd6384224a6e4df54f0e956316824bf135",
+      "bytes": 683
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/early-readonly/method-verification.json",
+      "sha256": "6b58479645470897816dfd06059635575901d2773fa8015b7ae39ed7010a4523",
+      "bytes": 26180
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/early-readonly/policy.json",
+      "sha256": "1399883bb6cd215f89d7117bc86b4cec5e365d3695cf509c67c425cf3dd89f96",
+      "bytes": 7373
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/early-readonly/requests/denied-preflight.json",
+      "sha256": "f34b981551c025d69782e71178603bdc3845348a4ddea8e3fb7d5c53fddacd06",
+      "bytes": 483
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/early-readonly/requests/describe.json",
+      "sha256": "a56241606b15a5788145df1ceff38bf9dfb63d17c810cd226fe7f8752756088f",
+      "bytes": 128
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/early-readonly/requests/observe.json",
+      "sha256": "ff058b5a53eeed80bb7634a9fe330c3331662ff86f0b357529e6b6125d71c23b",
+      "bytes": 257
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/hosts/claude/early-readonly/requests/read-product.json",
+      "sha256": "715ac262645af053546aa42ea94a47679ea87cf07c935ce6ce618655f5e29648",
+      "bytes": 404
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/claude-early-initializer/result.json",
+      "sha256": "685cffcbf9d3704a32d040e6ac9c33ddbfc2f695b0e800dafd41428aa3b885a3",
+      "bytes": 850
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/recover-construction-proof/execution.json",
+      "sha256": "fdb6f7ba1b47a12274b06a74bb9b9ddfc8f112aba1d2eaa45834b1794549c285",
+      "bytes": 4681
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/archives/transport/TRANSPORT.json",
+      "sha256": "914e24ed0a3399e3c0e8dfaa7212f2395c4c1d4278206e04069a742dd1a6ec6f",
+      "bytes": 9290
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/recover-construction-proof/stdout.txt",
+      "sha256": "f2fa9f101ad6ae1dbd7e29ae5e15260104b22bf4aa6a1d30f252b5e5759ae07e",
+      "bytes": 8173
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/recover-construction-proof/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/construction-evidence/manifest.json",
+      "sha256": "62be44c736e5dd3c3355d81d8f448654990c819672640031fac5e33d2caef11d",
+      "bytes": 5639
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/construction-evidence/result.json",
+      "sha256": "aadcf6ca8808b63c130670ed2ea5685de8882bf948bf1d0e6c0d54cf19f4fa42",
+      "bytes": 20174
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/recover-construction-proof/result.json",
+      "sha256": "8076e017b4772706fc6c3244df357b5be2344ac0e70cdd936ec8c78629fdcee1",
+      "bytes": 9605
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/portable-request/execution.json",
+      "sha256": "a2f69d776e8c0b161b2630e1c340290a81d88e0592b8f779639e485c5ec4d2fb",
+      "bytes": 6735
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/construction-evidence/supplied-views.json",
+      "sha256": "16714ccf1e65a585942e827126c901fbecdf558b3c359c9b0437ff7d7f9ead4f",
+      "bytes": 1448882
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/portable-request/stdout.txt",
+      "sha256": "f05eeb3524cee9b5362cb2a39ac61b715efebcbf4861445cb3bd0e904943580f",
+      "bytes": 893
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/portable-request/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/formal/request.json",
+      "sha256": "b11ce547c7ebf30dc14c67dbbfd379eec3c2e018da5c5c5b69906f9810f64502",
+      "bytes": 1365
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/portable-request/result.json",
+      "sha256": "6ea7426d7d43227178e1be6172323ed2fdf5863572b2b711edf7d8a08af65e33",
+      "bytes": 925
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/actual-upstream-roundtrip/execution.json",
+      "sha256": "a9737adb46d0ccf1e02a14ac0c79965397e53eb80f59531952e4849b52510a4c",
+      "bytes": 9065
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/formal-selections.json",
+      "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f",
+      "bytes": 742
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/actual-upstream-roundtrip/stdout.txt",
+      "sha256": "ba3a8d2e9e146692d2b75c0499023f50e0010b62dcdc7b53101f942a19d24ea5",
+      "bytes": 101252
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/actual-upstream-roundtrip/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/graphify/current-roundtrip/result.json",
+      "sha256": "4575eacdc5a291bc08984704293d839beed15ec4b0498ce96426ace35644080e",
+      "bytes": 112250
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/graphify/current-roundtrip/runtime.json",
+      "sha256": "09e6e57a0e18380b3f32833e385e6133c6b4c591ec750bf1793f4f2c3da68e78",
+      "bytes": 1018
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/graphify/current-roundtrip/selections.json",
+      "sha256": "872d8fd0f6ad29ef6adf26f1f5de880d25938b6ed7f9ead15af6e5daefaaeb8f",
+      "bytes": 742
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/graphify/current-roundtrip/views.json",
+      "sha256": "75a66bd33b3882b82a3d1e7a3b2aa121bfacba089cbf6e2f70fe5a99bbd8b904",
+      "bytes": 1447645
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/actual-upstream-roundtrip/result.json",
+      "sha256": "4575eacdc5a291bc08984704293d839beed15ec4b0498ce96426ace35644080e",
+      "bytes": 112250
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/SELECTED_HANDOFF.json",
+      "sha256": "c609ba3e1ea650c3dd9a563aaf9d32c1aa36ec684419ab607e17cf87d1c46e51",
+      "bytes": 6901
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/MATERIALIZATION_CHECK.json",
+      "sha256": "bc2eee6b488342d4317d745d2a6ca64038933f90bfb987aa3291f83f74a1df39",
+      "bytes": 61867
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/CACHE_POSTPROCESS_RECONCILIATION.json",
+      "sha256": "5f4ac82c62fcea38083a12d62cc6cb067b47bdd9fa266ad363b4777e8bd4eebd",
+      "bytes": 1865
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/cache-clone-001/INVENTORY_JOIN.json",
+      "sha256": "d8500c948eba4617b102e06e9917eae8dc82b9a9f154423c552599e6c5539ff5",
+      "bytes": 10586
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/HOST_SELECTIONS.json",
+      "sha256": "a5d5c36061fcf125952b98e2cb7d6d3a3a7dd067489c468974551034e7742718",
+      "bytes": 4467
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/formal/runtime-identity.json",
+      "sha256": "d08fb30ebf03386284ef519732326915f99493f32da82b916542b00ccc83d433",
+      "bytes": 2564
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/formal/RUNTIME_CORRESPONDENCE.json",
+      "sha256": "cb5ad2c571fb53757e6649d7a4ca853d45aa9e5a04d80f0211f55efc8554dc7d",
+      "bytes": 808
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/CLOSED_BINDINGS_002.json",
+      "sha256": "0165147c47e92482f7b7d13d5a72ce027cd7ac71cd83a5f68f82c5381bc3c719",
+      "bytes": 4476
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/INSTALLATION.json",
+      "sha256": "9a4bedaf47f801010c901a264b1c2b13a3996ea9ad149f692382ad22b91909ad",
+      "bytes": 112331
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/current_3d_2d_layered.json",
+      "sha256": "8d61525291bb1929072a919deb60b03607ead3946f13ac22091eb829c8b2d132",
+      "bytes": 1769
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/current_claude_skills.json",
+      "sha256": "fe57d1940e54677fe97b060c535b02a1051ef5aa1630113abf76250e1daf7768",
+      "bytes": 11158
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/current_codex_skills.json",
+      "sha256": "f6be7df5c2f6ece427eaf87ccf58264ea1186b674b8194325f6e6f8cacdc7194",
+      "bytes": 11125
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/current_index_validation.json",
+      "sha256": "b3f3c395f7f3c8d39ab23f1d4f4efa6337fecde0b5839e729a4ec1e5a64887a5",
+      "bytes": 6185
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/axiom-008/index/execution.json",
+      "sha256": "0a58372ff5ae6bf9902567aab5331b52ff8d6f7bb0e31c0f0c6ee336b0debbdc",
+      "bytes": 4549
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/current_proof_reader-002.json",
+      "sha256": "d4f1648e5d40e68685ba97d2a2f5a627dfb4e4202bf55835fe2ba9a367e292f6",
+      "bytes": 5114
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/installed-owner-checks/current_proof_reader/execution.json",
+      "sha256": "3386bffb5aa4b63708d4377f924760f0f39abf64afcac380b9f64d8b90899a05",
+      "bytes": 3488
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/independent_semantic_review.json",
+      "sha256": "6cc60f7af5ea54894b62bd5c49e99161fac0e92374c6f23251ff559acbe9138d",
+      "bytes": 5588
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/installed_documentation.json",
+      "sha256": "0cacda5e36e30869e4916892c05c8317a3d7a389ca04cb71bac8aac73dc9fcaf",
+      "bytes": 4536
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/installed-owner-checks/installed_documentation/execution.json",
+      "sha256": "39ceec867e5b0c0d099be4277c8b037f834807460ae6da6e3f73573fdaaa6ef9",
+      "bytes": 3476
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/installed_graphify.json",
+      "sha256": "48d1fe81f14aebefbb603e2aed81d4d1914ce152bd1357c6c443dada1e902ecf",
+      "bytes": 12485
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/installed_manager.json",
+      "sha256": "4fef9345168f7e201a2147aaac75e0bf5928f188145d30aff2fc5057cafad265",
+      "bytes": 3414
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/native-transaction-002/native-execution/initial-local-verify.json",
+      "sha256": "b1a1e976bacb2a88b6a966767e35653894b28db7425fe47c5cdb16b5029fb010",
+      "bytes": 1807
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/installed_native_workflow.json",
+      "sha256": "33dddfdfa60e401f0e6dfe10e146406ca74bd498586b58d4a0aeb3d2869fb7f0",
+      "bytes": 8662
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/source_current_map.json",
+      "sha256": "a10e573029c70fb7cc997c0769c36c62ac549325c6f2b129d4fa6a0f5d808bd4",
+      "bytes": 6607
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/axiom-008/map/execution.json",
+      "sha256": "3edef87c85bec3dfcf298476768b01939c97437156dd91c7a4e912f340b4dd01",
+      "bytes": 4979
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/source_current_model.json",
+      "sha256": "de50fd519e9f1bc731df83c4a3138275e863aa06f7ab9fc3848a53e7f496c047",
+      "bytes": 25270
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/source_files_navigation.json",
+      "sha256": "da644f68266c4ed40aeeeda7254c48bb4a738eca10a7bfab6d8a1cb2a27b394e",
+      "bytes": 1771
+    }
+  ],
+  "large_refs_retained_without_new_rehash": [
+    {
+      "bytes": 16392586,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/store/releases/v3.0.5-rc.1/standards/tooling/sources.zip",
+      "sha256": "d2009afcaf0feb22867f4b2e8a1e2b65f8335d20cf01e92fd6d582bedb2eaea2"
+    },
+    {
+      "bytes": 50797235,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/cache-clone-001/members.jsonl",
+      "sha256": "6f6fe33e893df65c969340fa64d1814e7772fd44e2b5379b4fb9b47e5932975f"
+    },
+    {
+      "bytes": 8568341,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/construction-evidence/input.json",
+      "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+    },
+    {
+      "bytes": 8568341,
+      "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+      "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+    },
+    {
+      "bytes": 42270982,
+      "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/carrier.json",
+      "sha256": "642e2f52068d81d3772cdf1ca9e4f8c45b475042b22901eaef203fed735ad923"
+    },
+    {
+      "bytes": 42270982,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/graphify/current-roundtrip/carrier.json",
+      "sha256": "642e2f52068d81d3772cdf1ca9e4f8c45b475042b22901eaef203fed735ad923"
+    },
+    {
+      "bytes": 37205994,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/graphify/current-roundtrip/graph.json",
+      "sha256": "dc1616c56dc39f6908e7e4178dd9607ac0f8f5c532dffc528308cbbcf5ece05d"
+    },
+    {
+      "bytes": 8568341,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/observed/graphify/current-roundtrip/model.json",
+      "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+    }
+  ],
+  "limits": [
+    "No support/runtime tree scan, kernel or actor execution. Current proof excluded until closed.",
+    "Cache metadata and fresh-support execution are distinct; no cached support verdict transferred.",
+    "Source-side wrapper executions remain source-side and retain exact original execution fields."
+  ]
+}

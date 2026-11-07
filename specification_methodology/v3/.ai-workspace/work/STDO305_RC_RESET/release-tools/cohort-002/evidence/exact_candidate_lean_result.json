@@ -1,0 +1,429 @@
+{
+  "category": "execution",
+  "claim": "exact_candidate_lean_result",
+  "construction_handoff": {
+    "bytes": 14163,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/CURRENT_FORMAL.json",
+    "sha256": "274deb21f6d7c1463030694f2836f46c7ffd452d80a0b6276114cefc330765d9"
+  },
+  "execution": {
+    "argv": [
+      "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+      "-I",
+      "-S",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/lean/scripts/formal_gate.py",
+      "verify",
+      "--request",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/formal-request.json",
+      "--output",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold"
+    ],
+    "child_maxrss_native_units": 13292929024,
+    "cwd": "/Users/jim/src/apps/specification_methodology",
+    "elapsed_seconds": 391.445151,
+    "ended_ns": 1794026543078544000,
+    "environment": {
+      "python": {
+        "executable_realpath": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+        "version": "3.13.7"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 1462,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/formal-request.json",
+        "sha256": "03de7059475afbf689eb0d97bb778c4ed6f1329d25ba66de50e61a71c1600fe9"
+      },
+      {
+        "bytes": 1448882,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/supplied-views.json",
+        "sha256": "16714ccf1e65a585942e827126c901fbecdf558b3c359c9b0437ff7d7f9ead4f"
+      },
+      {
+        "bytes": 8568341,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+        "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 11376,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateBounds.ir",
+        "sha256": "c1ded6364858a21532d7b0d3d1b8f853f2552d363d5ce7e03afc15f969acb996"
+      },
+      {
+        "bytes": 176,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateBounds.ir.sig",
+        "sha256": "6f30da785554a7c7a7888098fc3d1cd0ece7ecbf635710277bae22d18843d903"
+      },
+      {
+        "bytes": 1482884,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateBounds.lean",
+        "sha256": "a6071e1904902342e385105fcea05baf328eff0f082c5f2086b21664cdea47b1"
+      },
+      {
+        "bytes": 131,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateBounds.log",
+        "sha256": "562c7c5980f8678ff89e93b5516df462443cef5b5139d94b0fa98208d29bc863"
+      },
+      {
+        "bytes": 687504,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateBounds.olean",
+        "sha256": "69e62504d96a85b808701bcf15654727d026609044ce7d23b2674a7bc81b730a"
+      },
+      {
+        "bytes": 28381696,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateBounds.olean.private",
+        "sha256": "e1a0413c16ff4aedd5e9e3763ae3477c6a92fc5965a1518e6133c3c3c2890240"
+      },
+      {
+        "bytes": 287600,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateBounds.olean.server",
+        "sha256": "8ebc7bb30b662de3da67dcf6abd316eab92304a49f8de9ab30bcb36b78b785fe"
+      },
+      {
+        "bytes": 23443112,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateData.ir",
+        "sha256": "5bc5b025b8131463436607bc061d65c98147662fd044c65a4d00b207732ac5f9"
+      },
+      {
+        "bytes": 176,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateData.ir.sig",
+        "sha256": "ef0f5154b1ae5adbcf4a0d57fd190ebd435d4e80a57a748669a5df689d43bab0"
+      },
+      {
+        "bytes": 11530594,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateData.lean",
+        "sha256": "b0b6bd72e2c2db002397d4c2f220cf6a2757b5209fd8cb1305901b469e90d8d2"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateData.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 18980648,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateData.olean",
+        "sha256": "099bb2a47e107fa99e9360c61b5dd0108df115aae2959943744f3bc246c6fc0e"
+      },
+      {
+        "bytes": 56025120,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateData.olean.private",
+        "sha256": "054e011dbd9a84953f6a71a76eb06a46e7d5be52bc5ec8964c1dec999fc6d39e"
+      },
+      {
+        "bytes": 1856144,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateData.olean.server",
+        "sha256": "e0489b1a042bb6fb019f21c478014c001d12393484640b19eaa826ed1fd82e68"
+      },
+      {
+        "bytes": 34950832,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateExternalNames.ir",
+        "sha256": "3cbb955da47e5e8691c9f2d91991c15629629b376556a17e854a6fcf0aff3567"
+      },
+      {
+        "bytes": 176,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateExternalNames.ir.sig",
+        "sha256": "60bb6fb7e45eebb178af0994cd4de606945bade1f83198e35b105f8e94d6f546"
+      },
+      {
+        "bytes": 1168755,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateExternalNames.lean",
+        "sha256": "de3c07e265817697e715e00a231b567c23ef5c6e2e40796e91920b3053364d7c"
+      },
+      {
+        "bytes": 703,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateExternalNames.log",
+        "sha256": "fdabef16c62d559f3a259458c7da7abf80eddccc22b99f39dd8bceb31df00e78"
+      },
+      {
+        "bytes": 4974008,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateExternalNames.olean",
+        "sha256": "5b2b4a9ebb902709ddcd816fc7668a04ffa53a0b96e001c34c71053812bc1c04"
+      },
+      {
+        "bytes": 167752080,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateExternalNames.olean.private",
+        "sha256": "d7ed60ca61a54f599b8e505d3199a5f54422fd8f41d8d2aa8b7f56e5bdc861a2"
+      },
+      {
+        "bytes": 252328,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateExternalNames.olean.server",
+        "sha256": "a79a45bee6656fb49db97e366621421f92641e2c966a3097feef541f386140a4"
+      },
+      {
+        "bytes": 3642520,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateIdentities.ir",
+        "sha256": "3362801a1515a2db97b37a0aa4e7e8aa3e418440b394db15f612e0df806225c2"
+      },
+      {
+        "bytes": 176,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateIdentities.ir.sig",
+        "sha256": "9ee9d29e8ad631db89be41b5c903fcd07b03d7dc0f4d412f0b654a1fe2a69561"
+      },
+      {
+        "bytes": 162545,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateIdentities.lean",
+        "sha256": "467091a5be5262ca09dd978429a45651c5dab6bb4c0c6c333e8d1308cdd1c829"
+      },
+      {
+        "bytes": 1799,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateIdentities.log",
+        "sha256": "0bb726123b06a438c8cac66b2562ae2ab43c21939de8a1a7cf79789816bd4c0f"
+      },
+      {
+        "bytes": 1872800,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateIdentities.olean",
+        "sha256": "ae7e3a3d96936407c7ac45d33f759108a1a177af9b05327a61d69b64da098863"
+      },
+      {
+        "bytes": 16242544,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateIdentities.olean.private",
+        "sha256": "c66db118d64bae2441e7116be6f910a491188352c850509ea20530ec776a09ce"
+      },
+      {
+        "bytes": 13832,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateIdentities.olean.server",
+        "sha256": "0a0cc77d2079faa7a86c03a9b2601c96b1ffd04fe14d097de845de74b1e5867b"
+      },
+      {
+        "bytes": 25201184,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateLocalNames.ir",
+        "sha256": "6df3d48178fe7b3d625d552d710d9455294228776175696b8714c16935711139"
+      },
+      {
+        "bytes": 176,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateLocalNames.ir.sig",
+        "sha256": "78e164976c4ef9fdbbd23becb78feb2f301bfebdf144b8a43530ec934bd9d88b"
+      },
+      {
+        "bytes": 866128,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateLocalNames.lean",
+        "sha256": "c98acbc18b496c98aaf51bbeeacd9fdc9c9651159179ebf7af85049c8814e791"
+      },
+      {
+        "bytes": 1153,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateLocalNames.log",
+        "sha256": "3bc917c3e95719e361856ba2ec2b22dc6ff3f8318348a2149022ee74c3fa93d0"
+      },
+      {
+        "bytes": 4952472,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateLocalNames.olean",
+        "sha256": "20cf6e65b70722b777a8ee31b6145e3caecd871188fcdae56950c69d6db08059"
+      },
+      {
+        "bytes": 112495416,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateLocalNames.olean.private",
+        "sha256": "f86272d956b7e523ef97f9210d5761ae102b719f635daeab22e48caa13176366"
+      },
+      {
+        "bytes": 446048,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateLocalNames.olean.server",
+        "sha256": "fa99ddb6f3fc1553fe4d606814a9fcd2191f0c37124d16e1a8c38c2394bad1dc"
+      },
+      {
+        "bytes": 1408,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateModel.ir",
+        "sha256": "d36c482cb4dde2ffa4b702dbff1697d381eca43c2a578391a33bd386fb130c5a"
+      },
+      {
+        "bytes": 176,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateModel.ir.sig",
+        "sha256": "a3cc15a301b053f068ac6525b37a4de73cab86c8906c4809e7ce8f1a79cf0b64"
+      },
+      {
+        "bytes": 430,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateModel.lean",
+        "sha256": "a107ba20966853cf3dc43a3e109588a186f36333f584605c63d99b3b9e2160d9"
+      },
+      {
+        "bytes": 87,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateModel.log",
+        "sha256": "a15a20e7d67eee818dddfaba79a448bbe8957f28eadc70e76ad792f0318a97ee"
+      },
+      {
+        "bytes": 3464,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateModel.olean",
+        "sha256": "79244f38704d50b333e5ec14dce43820eda274bcdfaeca16d83f48e4e86aa713"
+      },
+      {
+        "bytes": 2568,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateModel.olean.private",
+        "sha256": "83a1316e422cf9636a81a659bd0c575274da728bb69d0d741f08289e44aaf6b5"
+      },
+      {
+        "bytes": 576,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateModel.olean.server",
+        "sha256": "dee4edda370ff414b36a13685fdec5194a0af27a50d28db096d047e58f48b391"
+      },
+      {
+        "bytes": 414,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateRun.lean",
+        "sha256": "3aca46dd2a8de76afb0a9f568bff1c07a07deb02f5713f69515f9de63e28e69a"
+      },
+      {
+        "bytes": 51312,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateViews.ir",
+        "sha256": "339972b0880fd71dcef2e92c3419dcb8803057d5c32dc388f8a49b4384575e88"
+      },
+      {
+        "bytes": 176,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateViews.ir.sig",
+        "sha256": "a092dee3843e33a19cc22e3314bdbb65cbd2cc6087a1607e2b3a2da1fea5ceb3"
+      },
+      {
+        "bytes": 18629,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateViews.lean",
+        "sha256": "14449a93e7a35485e9873511e3f1a8c52e56dbb6d76911c1d1e84f125557a20d"
+      },
+      {
+        "bytes": 2140,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateViews.log",
+        "sha256": "d85eaa6120dd1a8dc828bc56542dd79590cf816998dbb1f404754a74cd16279b"
+      },
+      {
+        "bytes": 75584,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateViews.olean",
+        "sha256": "221687255ead31a9b8e91bf6b8c6d297208d3ef501634445dc78941dab81996b"
+      },
+      {
+        "bytes": 376624,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateViews.olean.private",
+        "sha256": "35977a333a902607d12b1af81fecf6f4b67542d852380a57816859c12e240f4f"
+      },
+      {
+        "bytes": 31928,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/GateViews.olean.server",
+        "sha256": "8284ccea113beca44b312f1edbb2bb579cdcf67d68b8a333e3f7d1eb14b0c8c0"
+      },
+      {
+        "bytes": 29211440,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/actual-runtime.log",
+        "sha256": "640d4db3cbd70f31071a078b22e7e237df032cc2ec80209fe430c3ccc68c0729"
+      },
+      {
+        "bytes": 18307390,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/certificates.json",
+        "sha256": "497aff019967b9f1097fa4a50706795f19b350de6b6b73e8bd994453446ea67b"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/dynamic-kernel-replay.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 8568341,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/input.json",
+        "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      },
+      {
+        "bytes": 5639,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/manifest.json",
+        "sha256": "62be44c736e5dd3c3355d81d8f448654990c819672640031fac5e33d2caef11d"
+      },
+      {
+        "bytes": 8568341,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/model.json",
+        "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      },
+      {
+        "bytes": 1191,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/replay-request.json",
+        "sha256": "f7fc0446bfad6cdc6ec2d56c85bb23cb36c723faf8c181b884a5646317e25fb6"
+      },
+      {
+        "bytes": 1462,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/request.json",
+        "sha256": "03de7059475afbf689eb0d97bb778c4ed6f1329d25ba66de50e61a71c1600fe9"
+      },
+      {
+        "bytes": 20174,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/result.json",
+        "sha256": "aadcf6ca8808b63c130670ed2ea5685de8882bf948bf1d0e6c0d54cf19f4fa42"
+      },
+      {
+        "bytes": 1448882,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/supplied-views.json",
+        "sha256": "16714ccf1e65a585942e827126c901fbecdf558b3c359c9b0437ff7d7f9ead4f"
+      },
+      {
+        "bytes": 258,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/view-comparison.json",
+        "sha256": "e4becf42b6b80b0e84e3bc8ed1a220c803afec9d45688434bbed80ae060b7ef9"
+      },
+      {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold-execution/stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 17040,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold-execution/stdout.json",
+        "sha256": "c6dd587e39d1032c61b4f53db58c8a6374fb2074f62242cf81311e6ecba62a51"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1794026151633393000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold-execution/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 17040,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold-execution/stdout.json",
+      "sha256": "c6dd587e39d1032c61b4f53db58c8a6374fb2074f62242cf81311e6ecba62a51"
+    },
+    "system_seconds": 92.931187,
+    "user_seconds": 394.806167
+  },
+  "installation": {
+    "bytes": 112331,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/INSTALLATION.json",
+    "sha256": "9a4bedaf47f801010c901a264b1c2b13a3996ea9ad149f692382ad22b91909ad"
+  },
+  "installed_verification": {
+    "bytes": 41231,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/evidence/installed_lean.json",
+    "sha256": "764b2dc0b751a710dbc66414d3e562dbe9c568f916dff3d69ee8ad4d178cc1e3"
+  },
+  "kind": "stdo.cohort-evidence/1",
+  "limits": "Original current RC construction proof and inspection retained with their actual source runtime and invocation. Separate installed_verification is the new local002 execution with only allowed profile/origin identity differences. Installation is a current-subject correspondence join, not relabelling source execution as installed. The preserved semantic assessment remains bounded to coordinate-conserved content.",
+  "original_execution": {
+    "bytes": 20301,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold-execution/execution.json",
+    "sha256": "13281c91cb71075827e9f8fe5eef7338d928850fbcd66ecd89c1d4f60a26fae2"
+  },
+  "original_owner_inspection": {
+    "execution": {
+      "bytes": 5411,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/inspection/execution.json",
+      "sha256": "78c3acbc862f74e80e41d8d764c1deddfca3c99a681601b2f81cef23f0d6321d"
+    },
+    "result": {
+      "bytes": 11269,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold-inspection.json",
+      "sha256": "ff85a0af54f71882e1b41ab689a381ec782ca09d68d14fbe88e24184509e923a"
+    }
+  },
+  "producer": {
+    "bytes": 45864,
+    "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+    "sha256": "4fb6daab9d1b9a14be797d1595f201e3dab1f1e5800d96babb130259b1234b2c"
+  },
+  "result": {
+    "bytes": 20174,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/result.json",
+    "sha256": "aadcf6ca8808b63c130670ed2ea5685de8882bf948bf1d0e6c0d54cf19f4fa42"
+  },
+  "schema": "stdo.execution-observation/1",
+  "source_identity_sha256": "c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06",
+  "status": "passed",
+  "subjects": {
+    "a_c": "fa2ddf59673f40ede5352fd58c632e200b6f68bfb18715fa95a74789341f0610",
+    "stdo_representation": "bf6e5f8e2c88e1c99e7b5dd30d3c6247e31fcb0fd74eae9541193b2fce1fe46e"
+  }
+}

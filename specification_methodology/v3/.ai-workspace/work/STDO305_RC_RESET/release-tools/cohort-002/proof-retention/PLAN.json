@@ -1,0 +1,57 @@
+{
+  "actual_manifest": {
+    "bytes": 5639,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/formal/current-full/manifest.json",
+    "sha256": "0fe3866a0d0e9d9a6d1fa5cac55e34fdbd33dec319d93f5d1327b4ba71c2f517"
+  },
+  "actual_result": {
+    "bytes": 20174,
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/formal/current-full/result.json",
+    "sha256": "87ae30c9b87af06edb6757c4597f7d3d055feddf489fe6b15dd5cefb16f8ff7e"
+  },
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "pack",
+        "--bundle",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-002/formal/current-full",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/proof-retention/archives/full.zip"
+      ],
+      "id": "pack"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "split",
+        "--input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/proof-retention/archives/full.zip",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/cohort-002/proof-retention/archives/full-transport"
+      ],
+      "id": "split"
+    }
+  ],
+  "inspection": {
+    "bytes": 9675,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/installed-full-owner-inspection/execution.json",
+    "sha256": "fa14bdd21cdddded337d7ee70a6a4e541f74464cd67d2dcaa41a4172b7d136e2"
+  },
+  "kind": "stdo.closed-proof-transport-plan/1",
+  "limits": "One existing pack/split pair on the actual successful installed proof. No proof rerun, source edit or old-verdict transfer. Full ZIP remains an excluded local duplicate; bounded parts are portable custody.",
+  "owner": {
+    "bytes": 17655,
+    "path": "specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+    "sha256": "659518c6e0d9110dd073ae59d3d5fa6ba4471e622a75069e718c0ae8ec3e2fc6"
+  },
+  "proof": {
+    "bytes": 24063,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-002/executions/installed-full-current-verify/execution.json",
+    "sha256": "e63032608b8e00d8d035a7c9d2efc0b1417946944e32a5546462f6c3fe904433"
+  }
+}

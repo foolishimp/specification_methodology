@@ -1,0 +1,51 @@
+{
+  "anchor_definition": {
+    "bytes": 2555,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-001/observed/anchors/codex/stdo_runtime.json",
+    "sha256": "e4e51a29c501786b227e8f9f440dcf1b6ab57ff480609ea965293bb4112136b9"
+  },
+  "anchor_installation": {
+    "bytes": 33932,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-001/observed/anchors/codex/INSTALLATION.json",
+    "sha256": "b3bfcf51a191c3f95b7f3b25d4cc0013657af16813a3895cb5541d32d309ab5f"
+  },
+  "candidate_minimum": "Correct common anchor producer channel selector to the base version line while retaining exact RC basis/schema/native selection. Requires Root disposition and common Writer; do not silently edit frozen native bytes or partial anchor.",
+  "diagnosis": {
+    "basis_preserved": "stdo://releases/v3.0.5-rc.1/",
+    "field": "constitution.stdo.selector",
+    "function": "anchor_definition",
+    "observed": "stdo://channels/3.0.5-rc.1",
+    "producer": {
+      "bytes": 13670,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+      "sha256": "ed91e16b48469d89a3551871dada90e605c9bdd32758c27124828d7e3b445cfc"
+    },
+    "reason": "Invalid STDO version line: '3.0.5-rc.1'",
+    "rejected_by": "actual installed manager product_definition._channel_version -> git_source.normalize_version_line",
+    "required_form": "stdo://channels/3.0.5"
+  },
+  "execution": {
+    "bytes": 5966,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-001/executions/codex-host-setup/execution.json",
+    "sha256": "6a7c626c17ee96c597115ac552b78eb5741f7431686ce4e79472bbf83750bdbf"
+  },
+  "inner_execution": {
+    "bytes": 2207,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-001/observed/anchors/codex/host-execution.json",
+    "sha256": "53ecc9a1b17145294e1140f730b94119de988b4356f3834b0ccecd35730bd88a"
+  },
+  "kind": "stdo.rc-reset.required-operation-failure/1",
+  "known_effects": [
+    "Separate Codex runtime anchor created with INSTALLATION/definition/launcher/manager-verification/host-execution records",
+    "Both selected disposable host workspace directories created; neither host installation completed",
+    "Fresh dependency setup/support/origin/checker already succeeded independently"
+  ],
+  "operation": "codex-host-setup",
+  "remaining": [
+    "Both host setup/verify/check-runtime/early initializer and Codex MCP",
+    "Construction transport recovery/current request/actual installed Graphify roundtrip",
+    "One fresh installed current proof and owner inspection"
+  ],
+  "settlement": "Synchronous public setup returned2; operator stopped. No compiler/native actor is active. No retry/rewrite performed.",
+  "status": "incomplete"
+}
