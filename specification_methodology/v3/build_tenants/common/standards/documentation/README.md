@@ -1,11 +1,11 @@
-# STDO 3.0.5 documentation
+# STDO 3.0.5-rc.1 documentation
 
 Open the [documentation home](index.html), the
 [current constraint explorer](constraint-explorer/index.html), or the
 [current Lean proof reader](proofs/index.html). These readers work offline.
 
 ```sh
-stdo resolve stdo://releases/v3.0.5/standards/documentation/index.html
+stdo resolve stdo://releases/v3.0.5-rc.1/standards/documentation/index.html
 ```
 
 Open the returned path in a browser. Choose **3D**, **2D** or **Layered** to
@@ -55,7 +55,7 @@ unchanged in the evidence. A new verification produces its own result and
 runtime identity; the retained construction verdict does not become an
 installed verdict. Output directories and the request must not already exist.
 
-The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5/stack-release-v3.0.5.json)
+The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1/stack-release-v3.0.5-rc.1.json)
 is the separately published binding of semantic source, current model, native
 installation, component inventories and qualification evidence. It is external
 to this payload so the release does not contain its own unknown digest.

@@ -1,0 +1,117 @@
+{
+  "kind": "stdo.independent-bounded-materializer-review/1",
+  "reviewer": "/root/stdo305_integration_review",
+  "author": "/root/stdo305_release_tools",
+  "subject_sha256": "4a10d33e606e7109b49e747158bbafabc90bf54d18de92789aa3660fff9cc7f6",
+  "source_sha256": "5c2c623a3e8a822687ef15354f4053607054a90cca26457ae65d11a2a261e6cd",
+  "conclusion": "satisfied for the narrow current-format version path",
+  "open_required_findings": [],
+  "change": "Only source_bytes current-format version regex and refusal text changed. Canonical stable and positive RC ordinals accepted; selection/owner exact version equality, legacy304 branch, archive and physical output boundary predicates remain unchanged.",
+  "controls": {
+    "methods": 2,
+    "public_calls": 12,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "details": "Both stable and RC check/materialize/verify succeed. Leading v, PEP440 spelling, RC0, zero-prefixed ordinal, zero-prefixed major and mixed owner version refuse before destination creation."
+  },
+  "pins_before": [
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_materialize.py",
+      "sha256": "5c2c623a3e8a822687ef15354f4053607054a90cca26457ae65d11a2a261e6cd",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_tooling_rc_version.py",
+      "sha256": "bb186fa9f0c6f136c9670b0b17e89fcf1602d1342b8540669ac5e62766e69cd5",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/source/tooling_materialize.py",
+      "sha256": "5c2c623a3e8a822687ef15354f4053607054a90cca26457ae65d11a2a261e6cd",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/source/test_tooling_rc_version.py",
+      "sha256": "bb186fa9f0c6f136c9670b0b17e89fcf1602d1342b8540669ac5e62766e69cd5",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/tests.stderr",
+      "sha256": "188404878a649da9f32f48b9b5c14ab0d72689f6f8e4406249621fe78c080c44",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/execution.json",
+      "sha256": "6e7f245bb2dd4dfc698c6c40236a7bfafa3534fc667d3d0e56646cfe4b73a27c",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/tooling_materialize.before.py",
+      "sha256": "601fdb839266528db8999b1f04cf64bce0c41faf107f0f9311549c085d4f897e",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/execution/tooling.json",
+      "sha256": "d40f6b3a942ed3b874e8cb7215e99cf4034644295e7e8e08b0948a94082be533",
+      "matches": true
+    }
+  ],
+  "pins_after": [
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_materialize.py",
+      "sha256": "5c2c623a3e8a822687ef15354f4053607054a90cca26457ae65d11a2a261e6cd",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_tooling_rc_version.py",
+      "sha256": "bb186fa9f0c6f136c9670b0b17e89fcf1602d1342b8540669ac5e62766e69cd5",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/source/tooling_materialize.py",
+      "sha256": "5c2c623a3e8a822687ef15354f4053607054a90cca26457ae65d11a2a261e6cd",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/source/test_tooling_rc_version.py",
+      "sha256": "bb186fa9f0c6f136c9670b0b17e89fcf1602d1342b8540669ac5e62766e69cd5",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/tests.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/tests.stderr",
+      "sha256": "188404878a649da9f32f48b9b5c14ab0d72689f6f8e4406249621fe78c080c44",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/execution.json",
+      "sha256": "6e7f245bb2dd4dfc698c6c40236a7bfafa3534fc667d3d0e56646cfe4b73a27c",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/materializer-review-004/tooling_materialize.before.py",
+      "sha256": "601fdb839266528db8999b1f04cf64bce0c41faf107f0f9311549c085d4f897e",
+      "matches": true
+    },
+    {
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/execution/tooling.json",
+      "sha256": "d40f6b3a942ed3b874e8cb7215e99cf4034644295e7e8e08b0948a94082be533",
+      "matches": true
+    }
+  ],
+  "limits": [
+    "Synthetic small public CLI fixtures; actual RC bundle materialization is later evidence.",
+    "No source or repository edits, Git effects, proof/compiler or support scan.",
+    "Completed reader/documentation/proof source remains unchanged; tooling and downstream native copies must use this new materializer pin."
+  ]
+}

@@ -1,4 +1,4 @@
-# STDO 3.0.5 installed tools
+# STDO 3.0.5-rc.1 installed tools
 
 The native release contains the current a_c implementation, Representation,
 Axiom Indexer and Codex/Claude Skills packages with exact file inventories.
@@ -46,7 +46,7 @@ setup: materialize the retained proof, generate a current request using its
 extracted model and views, then invoke the selected runtime's formal `verify`
 command. Original construction paths remain provenance only.
 
-The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5/stack-release-v3.0.5.json)
+The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1/stack-release-v3.0.5-rc.1.json)
 is the external binding of these components and the native installation.
 Materialization establishes source custody. Actual installed qualification,
 semantic review, and publication have separately recorded evidence.

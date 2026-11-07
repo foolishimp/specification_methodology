@@ -1,0 +1,266 @@
+{
+  "schema": "a_c.bootstrap.execution/1",
+  "python": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]",
+  "steps": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "venv",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/venv"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026639802637000,
+      "ended_ns": 1794026641060585000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "001.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "001.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "init",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/graphify"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026641060908000,
+      "ended_ns": 1794026641078375000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "002.stdout.log",
+        "sha256": "dc9ed1a71fd73cb1d39c7a19929ebb45a53aaa086b7bb7cee5bd885273ab76e7",
+        "bytes": 132
+      },
+      "stderr": {
+        "path": "002.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/graphify",
+        "remote",
+        "add",
+        "origin",
+        "https://github.com/Graphify-Labs/graphify.git"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026641078695000,
+      "ended_ns": 1794026641090431000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "003.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "003.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/graphify",
+        "fetch",
+        "--depth",
+        "1",
+        "origin",
+        "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026641090714000,
+      "ended_ns": 1794026643225274000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "004.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "004.stderr.log",
+        "sha256": "7db95a954de31d0c54746e1b1157d354d7754b2a5b78a7858d99216cf52df746",
+        "bytes": 123
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/graphify",
+        "checkout",
+        "--detach",
+        "fe085cedddde3a18554f8749b230bfe47f3dcce7"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026643225758000,
+      "ended_ns": 1794026643374977000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "005.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "005.stderr.log",
+        "sha256": "e484fef7f73871c4e1cba449b4d0d8b2fbdd80978bfbe7669f6b796ea099d53b",
+        "bytes": 94
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/graphify",
+        "rev-parse",
+        "HEAD"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026643375278000,
+      "ended_ns": 1794026643386099000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "006.stdout.log",
+        "sha256": "b2d4806fcdefa876d230238c9a61e9a387b9e260e2e7add07e0980ae44afe954",
+        "bytes": 41
+      },
+      "stderr": {
+        "path": "006.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/test_env/requirements-qualification.txt"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026643386404000,
+      "ended_ns": 1794026645121955000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "007.stdout.log",
+        "sha256": "598d82758160c157effca2674055a1b63f100bf4fc85a911eaf2e5bcbcc60603",
+        "bytes": 1751
+      },
+      "stderr": {
+        "path": "007.stderr.log",
+        "sha256": "34b087a5c3418c4881fef308458b725eb037ec6c114918819fd45a04c18c82e1",
+        "bytes": 209
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/generation/requirements.txt"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026645122376000,
+      "ended_ns": 1794026646592199000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "008.stdout.log",
+        "sha256": "46d414431c90934b27750377ebdacf26502905c5c09a5e417bc4066e3bcc5cad",
+        "bytes": 1076
+      },
+      "stderr": {
+        "path": "008.stderr.log",
+        "sha256": "34b087a5c3418c4881fef308458b725eb037ec6c114918819fd45a04c18c82e1",
+        "bytes": 209
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "-r",
+        "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/code-requirements.txt"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026646592583000,
+      "ended_ns": 1794026646892041000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "009.stdout.log",
+        "sha256": "f3a8afc9fd56e1479b2555f6c787a321eef48af8d1385b2bf77268f9c6c73b08",
+        "bytes": 1515
+      },
+      "stderr": {
+        "path": "009.stderr.log",
+        "sha256": "34b087a5c3418c4881fef308458b725eb037ec6c114918819fd45a04c18c82e1",
+        "bytes": 209
+      }
+    },
+    {
+      "argv": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/venv/bin/python",
+        "-m",
+        "pip",
+        "freeze",
+        "--all"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026646892573000,
+      "ended_ns": 1794026647015816000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "010.stdout.log",
+        "sha256": "fa0b8397f3e955a08a59a88b61ad7269e548cf2b2e3a5d4d946638cb4e98ffea",
+        "bytes": 253
+      },
+      "stderr": {
+        "path": "010.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "argv": [
+        "git",
+        "-C",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/construction-001/graphify/graphify",
+        "diff",
+        "--exit-code",
+        "HEAD"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "started_ns": 1794026647016281000,
+      "ended_ns": 1794026647092144000,
+      "exit_code": 0,
+      "stdout": {
+        "path": "011.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "path": "011.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ]
+}

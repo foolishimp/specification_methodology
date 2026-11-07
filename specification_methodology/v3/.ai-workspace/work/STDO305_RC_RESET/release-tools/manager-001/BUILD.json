@@ -1,0 +1,103 @@
+{
+  "acquisition": "Existing exact build/dependency wheels reused as immutable artifacts; no existing environment or manager installation reused.",
+  "constraints": {
+    "bytes": 354,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/dist/stdo-manager-constraints-v3.0.5-rc.1-python313.txt",
+    "sha256": "2051b5374e86548a1e85d3cee1c58d43c1c223c7071551ea3e65fa068cd49255"
+  },
+  "distributions": 21,
+  "operations": [
+    {
+      "argv": [
+        "/opt/homebrew/opt/python@3.13/bin/python3.13",
+        "-m",
+        "venv",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc1-manager-build-7o2pelda/venv"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 1.3257038341835141,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/venv.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/venv.stdout",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc1-manager-build-7o2pelda/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--find-links",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/manager/build-wheels",
+        "setuptools==75.8.0",
+        "wheel==0.45.1"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 0.6504108337685466,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/build-dependencies.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 517,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/build-dependencies.stdout",
+        "sha256": "29cfd04c1ea09abb76e7fe23afa01f23b3f1160940918c47476375b88fc96d1a"
+      }
+    },
+    {
+      "argv": [
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc1-manager-build-7o2pelda/venv/bin/python",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-index",
+        "--no-build-isolation",
+        "--no-deps",
+        "--wheel-dir",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/dist",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc1-manager-build-7o2pelda/source"
+      ],
+      "cwd": "/Users/jim/src/apps/specification_methodology",
+      "elapsed_seconds": 0.4971021660603583,
+      "returncode": 0,
+      "stderr": {
+        "bytes": 0,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/wheel.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "stdout": {
+        "bytes": 801,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/wheel.stdout",
+        "sha256": "e938bd151d73ff9cfaa5d14639b214da341839425f891215122d2d26b285319b"
+      }
+    }
+  ],
+  "package_sources": 13,
+  "runtime_archive": {
+    "bytes": 2999934,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/dist/stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip",
+    "sha256": "8bb46a56c0a032726eb5b7891d3c006c4c56e3de3b4da67eee87486a5c6ba8c5"
+  },
+  "runtime_members": 25,
+  "source_selection": {
+    "bytes": 3762,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/SELECTION.json",
+    "sha256": "99a3a6194b37658e6b2f2650e5cf8370c354a5fb8d598e48bb094a02390b878a"
+  },
+  "status": "built_and_source_matched",
+  "wheel": {
+    "bytes": 61557,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/manager-001/dist/stdo_toolchain-3.0.5rc1-py3-none-any.whl",
+    "sha256": "bd1b45c14ddf66ab1e661bdcbdaa35923d62a45df6309fe7c158a636b5357dd2"
+  }
+}

@@ -1,11 +1,15 @@
-# Native STDO 3.0.5 support
+# Native STDO 3.0.5-rc.1 support
 
 This current binding realizes the owner-selected cohort requirement under the
-[3.0.5 Product contract](../../../specification/RELEASE_3_0_5.md). Its exact
-[profile](fd-method-stdo-3.0.5.json) binds accepted source
-`0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba`.
-The construction builder is released 3.0.4. Legacy RC9 and native 3.0.1 profiles
+[3.0.5-rc.1 Product contract](../../../specification/RELEASE_3_0_5.md). Its exact
+[profile](fd-method-stdo-3.0.5-rc.1.json) binds accepted source
+`c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06`.
+The construction builder is released 3.0.4. Original 3.0.5, legacy RC9 and native 3.0.1 profiles
 retain their exact original identities; old trial evidence is not current proof.
+
+The RC reset preserves all 53 standards and 15 native contract member bytes from
+the reviewed 3.0.5 source freeze. Only target coordinates change. Historical
+profile/proof files retain their original subjects; this profile selects RC1.
 
 ## Source comparison and algorithm preservation
 
@@ -36,7 +40,7 @@ is obtained by actual new gate execution, never by renaming the original proof.
 
 ## Trusted installation boundary
 
-A 3.0.5 trusted policy additionally contains:
+A 3.0.5-rc.1 trusted policy additionally contains:
 
 ```json
 {"method_installation": {"root": "installed-method"}}
@@ -46,7 +50,7 @@ That name selects a registered read-only local source root. Its read scope must
 include `manifest.json`, `standards`, `plugins`, `release` and `LICENSE`. At
 startup and every public operation, including a long-lived MCP server, the
 runtime reacquires the exact selected Product Definition and profile, checks
-that the manifest SHA-256 equals the Product's immutable 3.0.5 basis, verifies
+that the manifest SHA-256 equals the Product's immutable 3.0.5-rc.1 basis, verifies
 the entire installed file population and each member digest, then compares all
 53 frozen standards and 15 native contracts with the supported profile. No
 persistent positive cache is introduced. Before creating an evidence store, startup also rejects overlap between the immutable method and evidence/result storage or effective writable source scopes. The shared `ac_fs_boundary.overlaps_existing` compares actual device/inode identities along both ancestor chains, including existing parents of future paths, so filesystem case aliases are identified without string case folding or probe writes. Parent aliases cannot turn a read-only declaration into writable storage, and inaccessible observations fail without effects. A changed manifest/member/owner or
@@ -69,7 +73,7 @@ A's own future manifest digest.
 
 ```sh
 python3 AC_ROOT/build_tenants/graphify/examples/fd-support/prepare_readonly.py \
-  --profile stdo-3.0.5 --product-root PROJECT --definition-name Product.json \
+  --profile stdo-3.0.5-rc.1 --product-root PROJECT --definition-name Product.json \
   --method-installation INSTALLED_305 --out NEW_SETUP
 ```
 

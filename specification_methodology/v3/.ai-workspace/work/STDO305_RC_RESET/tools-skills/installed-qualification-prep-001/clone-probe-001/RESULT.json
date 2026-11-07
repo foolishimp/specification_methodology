@@ -1,0 +1,95 @@
+{
+  "after_clone": {
+    "available_bytes": 7872450560,
+    "block_bytes": 4096,
+    "device": 16777231,
+    "free_bytes": 7872450560
+  },
+  "after_private_write": {
+    "available_bytes": 7872434176,
+    "block_bytes": 4096,
+    "device": 16777231,
+    "free_bytes": 7872434176
+  },
+  "argv": [
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/cache_clone.py",
+    "probe"
+  ],
+  "available_byte_deltas": {
+    "clone": 0,
+    "private_write": -16384
+  },
+  "before": {
+    "available_bytes": 7872450560,
+    "block_bytes": 4096,
+    "device": 16777231,
+    "free_bytes": 7872450560
+  },
+  "clone_after": {
+    "bytes": 1048576,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/clone-probe-001/clone.bin",
+    "sha256": "215860a21fc7ddc198eba8c3e9a4aa79413e62393c493f37bf81390ad08e9838"
+  },
+  "clone_call": {
+    "api": "clonefile(2)",
+    "copy_fallback": false,
+    "destination_identity": {
+      "allocated_bytes": 1048576,
+      "bytes": 1048576,
+      "ctime_ns": 1794027438167054119,
+      "device": 16777231,
+      "inode": 709389455,
+      "links": 1,
+      "mode": 420,
+      "mtime_ns": 1794027438166417825
+    },
+    "flags": 0,
+    "returncode": 0,
+    "source_identity": {
+      "allocated_bytes": 1048576,
+      "bytes": 1048576,
+      "ctime_ns": 1794027438166417825,
+      "device": 16777231,
+      "inode": 709389454,
+      "links": 1,
+      "mode": 420,
+      "mtime_ns": 1794027438166417825
+    }
+  },
+  "cloned_before_private_write": {
+    "bytes": 1048576,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/clone-probe-001/clone.bin",
+    "sha256": "fbbab289f7f94b25736c58be46a994c441fd02552cc6022352e3d86d2fab7c83"
+  },
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "destination_private_write_observed": true,
+  "ended_ns": 1794027438181980000,
+  "kind": "stdo.rc-reset.clone-capability/1",
+  "operator": {
+    "bytes": 14436,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/cache_clone.py",
+    "sha256": "ddd94e0c051742c9f88b0d5706a85741e38727585b19a2d8334edd50376be8af"
+  },
+  "platform": "macOS-26.7.1-arm64-arm-64bit-Mach-O",
+  "python": {
+    "invocation": "/opt/homebrew/opt/python@3.13/bin/python3.13",
+    "physical": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b",
+    "version": "3.13.7 (main, Aug 14 2025, 11:12:11) [Clang 17.0.0 (clang-1700.0.13.3)]"
+  },
+  "scope": "One 1MiB scratch file on this volume; no runtime cache has been copied. clonefile succeeded without fallback and the destination write preserved source bytes/identity. Free-space deltas are snapshots and may include concurrent filesystem activity; st_blocks is not a unique shared-block accounting.",
+  "source_after": {
+    "bytes": 1048576,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/clone-probe-001/source.bin",
+    "sha256": "fbbab289f7f94b25736c58be46a994c441fd02552cc6022352e3d86d2fab7c83"
+  },
+  "source_before": {
+    "bytes": 1048576,
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/installed-qualification-prep-001/clone-probe-001/source.bin",
+    "sha256": "fbbab289f7f94b25736c58be46a994c441fd02552cc6022352e3d86d2fab7c83"
+  },
+  "source_bytes_unchanged": true,
+  "source_identity_unchanged": true,
+  "started_ns": 1794027438166941000,
+  "status": "observed"
+}

@@ -1,0 +1,140 @@
+{
+  "subject_sha256": "211225aa054f0557faee8b6fa96eed3631fe239d1643caed7cd6dea3c5d7fb40",
+  "source_checkpoint": "32567ff27a6a2e86ebce7a4e949729881372a1ab",
+  "direct_refs": 22,
+  "native": {
+    "members": 173,
+    "bytes": 291448316,
+    "exact_delta": 36,
+    "unchanged": 137,
+    "source_members": 68,
+    "all_match": true
+  },
+  "manager": {
+    "source_commit": "32567ff27a6a2e86ebce7a4e949729881372a1ab",
+    "source_members": 16,
+    "package_sources": 13,
+    "wheel_version": "3.0.5rc1",
+    "release_version": "3.0.5-rc.1",
+    "runtime_wheels": 21,
+    "runtime_members": 25,
+    "all_match": true,
+    "acquisition": "Existing exact build/dependency wheels reused as immutable artifacts; no existing environment or manager installation reused."
+  },
+  "tooling": {
+    "members": 243,
+    "owners": {
+      "a_c": {
+        "version": "3.0.5-rc.1",
+        "members": 112
+      },
+      "axiom_indexer": {
+        "version": "3.0.5-rc.1",
+        "members": 8
+      },
+      "stdo_representation": {
+        "version": "3.0.5-rc.1",
+        "members": 106
+      },
+      "stdo_skills": {
+        "version": "3.0.5-rc.1",
+        "members": 17
+      }
+    },
+    "actual_source_archive_current": true,
+    "corrected_materializer_sha256": "5c2c623a3e8a822687ef15354f4053607054a90cca26457ae65d11a2a261e6cd"
+  },
+  "document_links": {
+    "source_custody_and_projection_exact": true,
+    "actual_git_targets": [
+      {
+        "document": "correspondence.md",
+        "commit": "32567ff27a6a2e86ebce7a4e949729881372a1ab",
+        "path": "a_c/specification/RELEASE_3_0_5.md",
+        "fragment": "",
+        "sha256": "ed05abf36c3961dc62cb83cdd32ca982b24432ef31c88bf91f23c95883b954fd"
+      },
+      {
+        "document": "correspondence.md",
+        "commit": "32567ff27a6a2e86ebce7a4e949729881372a1ab",
+        "path": "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5-rc.1.json",
+        "fragment": "",
+        "sha256": "9cc0be190584fa748ba33a4367f1cef0c93536e2fe88e044152c760c1dc96581"
+      },
+      {
+        "document": "correspondence.md",
+        "commit": "32567ff27a6a2e86ebce7a4e949729881372a1ab",
+        "path": "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md",
+        "fragment": "real-work-policy-operator-recipe",
+        "sha256": "cb9723533e781eaf28de9f26f411b6a0db65baac349e6df5847c7b4a897eef9d"
+      },
+      {
+        "document": "library-provenance.md",
+        "commit": "2ee0147ad06b58dbdf6dad4b874c363a035aab9e",
+        "path": "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CUSTODY.json",
+        "fragment": "",
+        "sha256": "401db86d69cd252452fda1b71d03c9805c51a1f361ce7c6319246e6aaf586ef2"
+      },
+      {
+        "document": "library-provenance.md",
+        "commit": "2ee0147ad06b58dbdf6dad4b874c363a035aab9e",
+        "path": "a_c/build_tenants/lean/fixtures/toy/CUSTODY.json",
+        "fragment": "",
+        "sha256": "1272732fc99c96473db7bb3e9e071d27349bebe6220a72ce30bc04fc27e35f1e"
+      }
+    ],
+    "current_checkpoint": "32567ff27a6a2e86ebce7a4e949729881372a1ab",
+    "historical_library_checkpoint": "2ee0147ad06b58dbdf6dad4b874c363a035aab9e",
+    "network_use": "None; target objects checked in Git. Browser offline observation remains separate."
+  },
+  "proof_transport": {
+    "archive_sha256": "ebdb8e2d7c9a566c72474013e32a4e38050961c3c4f3ee51a0308e2ba2a73b1c",
+    "members": 61,
+    "manifest_members": 59,
+    "parts": 2,
+    "exact_members_checked": true,
+    "result_sha256": "aadcf6ca8808b63c130670ed2ea5685de8882bf948bf1d0e6c0d54cf19f4fa42",
+    "runtime_sha256": "ae448cb658a96301a439215e42dbb11d8ef61115bd4c183f191c2883fd922466",
+    "model": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544"
+    },
+    "five_claims": [
+      "imported-model-well-formedness",
+      "whole-model-source-correspondence",
+      "declared-closure-and-projection",
+      "record-budget-result",
+      "supplied-graphify-view-correspondence"
+    ],
+    "observed_counts": [
+      7,
+      1,
+      1
+    ],
+    "limits": [
+      "Finite declared structural model/closure/projection only; no semantic acceptance.",
+      "Whole-model-source-correspondence covers only supplied or carrier-recovered model JSON; original prose/corpus-to-model F_P fidelity remains opaque and unproved.",
+      "Python profile/parser/generator and runtime serialization remain tested trusted bridges.",
+      "Python API imports and interpreter initialization remain trusted-host responsibilities; the CLI isolates helper loading after startup.",
+      "Context binding is metadata; consumer must check actual delivered bytes.",
+      "Crossing relations are checked source-derived metadata, not a Lean theorem."
+    ],
+    "source_scope": "Fresh dynamic construction obligations with pinned existing support; no installed proof claimed."
+  },
+  "documentation_join": {
+    "model": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "profile": "a_c.graphify.model/1",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544"
+    },
+    "source": {
+      "source_freeze_sha256": "76fab92d48a7907107ba717ecdb11c69963ae4ef2431874d4b9b2b6ed7228ff0",
+      "source_identity_sha256": "c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06"
+    },
+    "viewer_sha256": "caea5840aedea0573483b74d753d0c830442489a3b10af9fef22f182ef0c95a2",
+    "proof_catalog_sha256": "bf95a52844ca5705aafa33e07a9e321b42e905ec1a1d54dc6244cc80f9941ddd",
+    "proof_reader_sha256": "2cbb40b3c275a2e8eaa9a14fb8dc78cab02e463537ef077be0d185ba69f897c3",
+    "landing_sha256": "a6e4f79ad407bc207de1915f1725eeb1921e9b38ba7c97d227e2fd4960ed3dec"
+  },
+  "final_direct_refs_unchanged": true
+}

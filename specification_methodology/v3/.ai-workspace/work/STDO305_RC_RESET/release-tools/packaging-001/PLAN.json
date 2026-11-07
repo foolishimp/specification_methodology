@@ -1,0 +1,251 @@
+{
+  "absent": [
+    "archives",
+    "proof-selection.json",
+    "proofs",
+    "documentation-selection.json",
+    "documentation",
+    "tooling",
+    "execution"
+  ],
+  "authority": "Owner/Root existing7-operation packaging grant after reviewed source checkpoint and closed fresh construction proof+inspection/Graphify; exclusive heavy slot clear.",
+  "commands": [
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "pack",
+        "--bundle",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/archives/current.zip"
+      ],
+      "id": "pack"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+        "split",
+        "--input",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/archives/current.zip",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/archives/transport"
+      ],
+      "id": "split"
+    },
+    {
+      "id": "bind-proof"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+        "build-current",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/proof-selection.json",
+        "--selection-sha256",
+        "${PROOF_SHA}",
+        "--output",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/proofs"
+      ],
+      "id": "reader"
+    },
+    {
+      "id": "bind-docs"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/documentation.py",
+        "bundle-current",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/documentation-selection.json",
+        "--selection-sha256",
+        "${DOCS_SHA}",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/documentation"
+      ],
+      "id": "docs"
+    },
+    {
+      "argv": [
+        "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/tooling.py",
+        "build",
+        "--repository",
+        "/Users/jim/src/apps/specification_methodology",
+        "--selection",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/tooling-selection.json",
+        "--selection-sha256",
+        "27ebbbf34c8595fd0c2fe63c16d761d807ad45e5f17d99c915fd44076c51ab39",
+        "--destination",
+        "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/tooling"
+      ],
+      "id": "tooling"
+    }
+  ],
+  "configuration": {
+    "bytes": 1017,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/native-configuration.json",
+    "sha256": "e2dd4b9520a6bdc3034df2cfac0504605f57bf05a7ece4b335505fb4a2fc73a2"
+  },
+  "construction": {
+    "bytes": 14163,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/CURRENT_FORMAL.json",
+    "sha256": "274deb21f6d7c1463030694f2836f46c7ffd452d80a0b6276114cefc330765d9"
+  },
+  "fixed_inputs": [
+    {
+      "bytes": 14163,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/CURRENT_FORMAL.json",
+      "sha256": "274deb21f6d7c1463030694f2836f46c7ffd452d80a0b6276114cefc330765d9"
+    },
+    {
+      "bytes": 20174,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold/result.json",
+      "sha256": "aadcf6ca8808b63c130670ed2ea5685de8882bf948bf1d0e6c0d54cf19f4fa42"
+    },
+    {
+      "bytes": 11269,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/construction-proof-001/cold-inspection.json",
+      "sha256": "ff85a0af54f71882e1b41ab689a381ec782ca09d68d14fbe88e24184509e923a"
+    },
+    {
+      "bytes": 1462,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/formal-inputs/formal-request.json",
+      "sha256": "03de7059475afbf689eb0d97bb778c4ed6f1329d25ba66de50e61a71c1600fe9"
+    },
+    {
+      "bytes": 13899,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/source-freeze-rc1.json",
+      "sha256": "76fab92d48a7907107ba717ecdb11c69963ae4ef2431874d4b9b2b6ed7228ff0"
+    },
+    {
+      "bytes": 31774,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/PORTABLE_003.json",
+      "sha256": "15ff9aa3e7ccacaf7c435e36f48eb598b846200d4ce1f1d06ee6b73d4ecd703e"
+    },
+    {
+      "bytes": 8568341,
+      "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+      "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+    },
+    {
+      "bytes": 2565,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/proof-selection-template.json",
+      "sha256": "7e9a551954c522b5ed9aaafa9c89843f27f7881cbbc44a58a6c7c649773fee14"
+    },
+    {
+      "bytes": 3707,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/documentation-selection-template.json",
+      "sha256": "80a29836ee2d8b470d12b0ceb0cc4d7ec587324bf8941adbe03e0f90d47cadc1"
+    },
+    {
+      "bytes": 80346,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/tooling-selection.json",
+      "sha256": "27ebbbf34c8595fd0c2fe63c16d761d807ad45e5f17d99c915fd44076c51ab39"
+    },
+    {
+      "bytes": 1017,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/native-configuration.json",
+      "sha256": "e2dd4b9520a6bdc3034df2cfac0504605f57bf05a7ece4b335505fb4a2fc73a2"
+    },
+    {
+      "bytes": 17655,
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+      "sha256": "659518c6e0d9110dd073ae59d3d5fa6ba4471e622a75069e718c0ae8ec3e2fc6"
+    },
+    {
+      "bytes": 32561,
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+      "sha256": "ab88b94ad392f93f80599c0fb9afab543476e8d419bf4978728c085afff39589"
+    },
+    {
+      "bytes": 29194,
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py",
+      "sha256": "6dce3a39579e430a522cb09884b3d50349d447f4ee533492666b36405fac7d32"
+    },
+    {
+      "bytes": 17475,
+      "path": "specification_methodology/v3/build_tenants/common-tools/documentation.py",
+      "sha256": "1bb37666c0508fdd0cab4137d898f041840f293f54f41441139845f2c9814cdf"
+    },
+    {
+      "bytes": 15454,
+      "path": "specification_methodology/v3/build_tenants/common-tools/documentation_current.py",
+      "sha256": "da1a8e8df935b091fb799ab71ce8077bf24919cc3583fa9ea36c1fcd4a6cdc5c"
+    },
+    {
+      "bytes": 6028,
+      "path": "specification_methodology/v3/build_tenants/common-tools/current_assets.py",
+      "sha256": "5514f9822db11db74e031090e18201066525065dca71840b9aa6c513a40af83f"
+    },
+    {
+      "bytes": 5498,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling.py",
+      "sha256": "a0b9bd0234d1bf070608239e7cfcc89a1a672d16d0d53f17f23259459fe36273"
+    },
+    {
+      "bytes": 8988,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_current.py",
+      "sha256": "39bab5454146c49ff167ff0aa35f2a0b0e7a0f82bf984524bb872fd6b8789aab"
+    },
+    {
+      "bytes": 11635,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_materialize.py",
+      "sha256": "601fdb839266528db8999b1f04cf64bce0c41faf107f0f9311549c085d4f897e"
+    },
+    {
+      "bytes": 11860,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_runtime.py",
+      "sha256": "0814857aebc6f66e98e2cf2c05ac450d61e70fbc9a8a15ca2881fd2d93dc0495"
+    },
+    {
+      "bytes": 13670,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+      "sha256": "ed91e16b48469d89a3551871dada90e605c9bdd32758c27124828d7e3b445cfc"
+    },
+    {
+      "bytes": 2510,
+      "path": "specification_methodology/v3/build_tenants/common-tools/payload_boundary.py",
+      "sha256": "d01d30b9afcaf310c2ee0347a8c7424eda222a6acf58a48a244efdd15a85ec7c"
+    },
+    {
+      "bytes": 33349,
+      "path": "specification_methodology/v3/build_tenants/common-tools/native_release.py",
+      "sha256": "6abf0a90561c25c541c967bda16cd137394864ee2f9221139bfeb1130e1c32d8"
+    }
+  ],
+  "kind": "stdo.rc-native-packaging/1",
+  "limits": "No model/semantic/viewer regeneration, Git/index/tag/install/public effect in this packaging run.",
+  "native_preimage": {
+    "bytes": 36394,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/NATIVE_PREIMAGE.json",
+    "sha256": "5bbe21c0cf33f7bd6f9cf3391dc78d13997cb889519fabf830b80dcdeb039433"
+  },
+  "postconditions": [
+    "Preserve exact pre-copy byte/mode delta; copy generated auxiliary outputs only",
+    "Run existing configured full native payload validation once",
+    "All68 normative source and native contract bytes remain unchanged"
+  ],
+  "python": {
+    "invocation": "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "sha256": "a708f6e9f4803b806b29146c4e0feecfd9bf2d9eb60f3e15b850cd7cb56f200b"
+  },
+  "source_checkpoint": "32567ff27a6a2e86ebce7a4e949729881372a1ab",
+  "tooling_selection": {
+    "bytes": 80346,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/tooling-selection.json",
+    "sha256": "27ebbbf34c8595fd0c2fe63c16d761d807ad45e5f17d99c915fd44076c51ab39"
+  }
+}

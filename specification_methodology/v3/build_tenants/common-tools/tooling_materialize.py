@@ -61,7 +61,8 @@ def source_bytes(files):
     max_bytes, max_files = (512 * 1024 * 1024, 8192) if current else (MAX_BYTES, MAX_FILES)
     require(set(files) == members, "required tooling member set differs")
     if current:
-        require(re.fullmatch(r"[0-9]+\.[0-9]+\.[0-9]+", meta.get("distribution_version", "")), "stable tooling version required")
+        require(re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)(?:-rc\.[1-9][0-9]*)?", meta.get("distribution_version", "")),
+                "canonical stable or RC tooling version required")
         selected = json.loads(files["SELECTION.json"])
         require(selected.get("kind") == "stdo.current-tooling-selection/1" and
                 selected.get("version") == meta["distribution_version"] and

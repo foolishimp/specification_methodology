@@ -1,0 +1,42 @@
+import copy,hashlib,json,stat
+from pathlib import Path
+R=Path.cwd();W=R/'specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools';T=W.parent/'tools-skills';O=Path(__file__).resolve().parent;COMMON=R/'specification_methodology/v3/build_tenants/common';TOOLS=COMMON.parent/'common-tools';OLD=R/'specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/cohort-recovery-020';V='3.0.5-rc.1';C='32567ff27a6a2e86ebce7a4e949729881372a1ab';PY='/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13'
+sha=lambda b:hashlib.sha256(b).hexdigest()
+def load(p):return json.loads(p.read_bytes())
+def ref(p):
+ raw=p.read_bytes();return {'path':p.relative_to(R).as_posix(),'sha256':sha(raw),'bytes':len(raw)}
+def pin(p):return {k:v for k,v in ref(p).items() if k!='bytes'}
+def save(p,x):
+ p.write_text(json.dumps(x,indent=2,sort_keys=True)+'\n');return ref(p)
+def inventory(root):
+ rows=[]
+ for p in sorted(root.rglob('*')):
+  if p.is_dir():assert not p.is_symlink();continue
+  assert stat.S_ISREG(p.lstat().st_mode) and not p.is_symlink();raw=p.read_bytes();rows.append({'path':p.relative_to(root).as_posix(),'sha256':sha(raw),'bytes':len(raw),'git_mode':'100755' if p.stat().st_mode&0o111 else '100644'})
+ return rows
+freeze=load(W/'source-freeze-rc1.json');formal=load(T/'construction-proof-001/CURRENT_FORMAL.json');assert formal['result']['sha256']=='aadcf6ca'+formal['result']['sha256'][8:]
+model=R/'stdo_representation/build_tenants/a_c/representation'/('stdo-v'+V)
+request=R/json.loads((T/'construction-proof-001/cold/request.json').read_bytes())['input']['path'] if False else T/'construction-proof-001-preparation/request.json'
+# Select the actual retained request from the completed source-proof command.
+run=load(T/'construction-proof-001/cold-execution/execution.json');argv=run['execution']['argv'];request=Path(argv[argv.index('--request')+1]);assert request.is_relative_to(R)
+source_manifest=save(O/'source-manifest.json',{'kind':'stdo.coordinate-rebind.source-manifest/1','files':load(model/'source-inventory.json'),'standing':'Derived presentation inventory from the exact current68-file source copy; not a new ac_generate execution.','source_freeze':ref(W/'source-freeze-rc1.json')})
+proof=load(OLD/'current-proof-selection.json');proof.update(version=V,model=pin(model/'model.json'),source_freeze=pin(W/'source-freeze-rc1.json'),request=pin(request),result={k:v for k,v in formal['result'].items() if k!='bytes'},inspector=pin(R/'a_c/build_tenants/lean/scripts/formal_gate.py'),correspondence=pin(R/f'a_c/build_tenants/graphify/design/fd-support-stdo-{V}.md'),document_source_commit=C,document_targets=[pin(R/p) for p in ['a_c/specification/RELEASE_3_0_5.md',f'a_c/build_tenants/graphify/design/fd-method-stdo-{V}.json','a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md']],standing='Exact fresh RC coordinate-derived current model and five views; new actual construction proof/owner inspection. Prior authoring provenance and historical library custody remain separate.')
+proof.pop('bundle_archive');save(O/'proof-selection-template.json',proof)
+docs=load(OLD/'current-documentation-selection.json');docs.update(version=V,model=pin(model/'model.json'),source_freeze=pin(W/'source-freeze-rc1.json'),source_manifest={k:v for k,v in source_manifest.items() if k!='bytes'},source_copy_prefix=f'build_tenants/a_c/representation/stdo-v{V}/source',viewer=pin(model/'explorer.html'));docs.pop('proof_catalog');save(O/'documentation-selection-template.json',docs)
+old_tool=load(OLD/'current-tooling-selection.json');owners={}
+def row(path):
+ p=R/path;return {**ref(p),'git_mode':'100755' if p.stat().st_mode&0o111 else '100644'}
+owners['a_c']={'version':V,'members':[row(x['path']) for x in load(T/'PORTABLE_003.json')['files']]}
+for owner in ['axiom_indexer','stdo_representation']:
+ names=[x['path'].replace('stdo-v3.0.5/','stdo-v'+V+'/').replace('/releases/v3.0.5.md','/releases/v'+V+'.md') for x in old_tool['owners'][owner]['members']]
+ if owner=='stdo_representation':names+=['stdo_representation/scripts/rebind_source_coordinates.py',str((model/'source-inventory.json').relative_to(R))]
+ owners[owner]={'version':V,'members':[row(name) for name in sorted(set(names))]}
+manifest=R/f'stdo_skills/release/{V}/manifest.json';names=['stdo_skills/'+x['path'] for x in load(manifest)['files']]+[str(manifest.relative_to(R))];owners['stdo_skills']={'version':V,'members':[row(name) for name in sorted(set(names))]}
+assert {name:len(x['members']) for name,x in owners.items()}=={'a_c':112,'axiom_indexer':8,'stdo_representation':106,'stdo_skills':17}
+tooling=save(O/'tooling-selection.json',{'kind':'stdo.current-tooling-selection/1','version':V,'source_identity_sha256':freeze['source_identity_sha256'],'source_freeze':freeze,'owners':owners,'owner_inventories':{'a_c':pin(T/'PORTABLE_003.json'),'stdo_skills':pin(manifest),'representation':{'source':pin(T/'REBIND_FREEZE_004.json'),'wording_successor':pin(T/'REBIND_SOURCE_SUCCESSOR_005.json'),'selection':'Prior104 installed members rebound toRC, plus source-inventory and public finite rebind producer:106 current members, as selected by Tools owner.'}}})
+config=load(R/'specification_methodology/v3/.ai-workspace/work/STDO305_DELIVERY/native-preparation-config.json');config.update(version=V,cut='v'+V,source={**pin(W/'source-freeze-rc1.json'),'source_identity_sha256':freeze['source_identity_sha256']});config['native_preparation'].update(output_root=str((W.parent/'native-release').relative_to(R)),manager_wheel='stdo_toolchain-3.0.5rc1-py3-none-any.whl');configuration=save(O/'native-configuration.json',config)
+preimage=save(O/'NATIVE_PREIMAGE.json',{'source_checkpoint':C,'files':inventory(COMMON)})
+commands=[{'id':'pack','argv':[PY,'-B',str(TOOLS/'proof_evidence.py'),'pack','--bundle',str(T/'construction-proof-001/cold'),'--output',str(O/'archives/current.zip')]},{'id':'split','argv':[PY,'-B',str(TOOLS/'proof_evidence.py'),'split','--input',str(O/'archives/current.zip'),'--destination',str(O/'archives/transport')]},{'id':'bind-proof'},{'id':'reader','argv':[PY,'-B',str(TOOLS/'proof_reader.py'),'build-current','--repository',str(R),'--selection',str(O/'proof-selection.json'),'--selection-sha256','${PROOF_SHA}','--output',str(O/'proofs')]},{'id':'bind-docs'},{'id':'docs','argv':[PY,'-B',str(TOOLS/'documentation.py'),'bundle-current','--repository',str(R),'--selection',str(O/'documentation-selection.json'),'--selection-sha256','${DOCS_SHA}','--destination',str(O/'documentation')]},{'id':'tooling','argv':[PY,'-B',str(TOOLS/'tooling.py'),'build','--repository',str(R),'--selection',str(R/tooling['path']),'--selection-sha256',tooling['sha256'],'--destination',str(O/'tooling')]}]
+inputs=[ref(p) for p in [T/'construction-proof-001/CURRENT_FORMAL.json',R/formal['result']['path'],R/formal['inspection']['path'],request,W/'source-freeze-rc1.json',T/'PORTABLE_003.json',model/'model.json',O/'proof-selection-template.json',O/'documentation-selection-template.json',O/'tooling-selection.json',O/'native-configuration.json']]
+for name in ['proof_evidence.py','proof_reader.py','proof_reader_current.py','documentation.py','documentation_current.py','current_assets.py','tooling.py','tooling_current.py','tooling_materialize.py','tooling_runtime.py','tooling_setup.py','payload_boundary.py','native_release.py']:inputs.append(ref(TOOLS/name))
+plan={'kind':'stdo.rc-native-packaging/1','authority':'Owner/Root existing7-operation packaging grant after reviewed source checkpoint and closed fresh construction proof+inspection/Graphify; exclusive heavy slot clear.','source_checkpoint':C,'construction':ref(T/'construction-proof-001/CURRENT_FORMAL.json'),'fixed_inputs':inputs,'commands':commands,'configuration':configuration,'native_preimage':preimage,'tooling_selection':tooling,'python':{'invocation':PY,'sha256':sha(Path(PY).read_bytes())},'absent':['archives','proof-selection.json','proofs','documentation-selection.json','documentation','tooling','execution'],'postconditions':['Preserve exact pre-copy byte/mode delta; copy generated auxiliary outputs only','Run existing configured full native payload validation once','All68 normative source and native contract bytes remain unchanged'],'limits':'No model/semantic/viewer regeneration, Git/index/tag/install/public effect in this packaging run.'};p=save(O/'PLAN.json',plan);print(json.dumps({'plan':p,'tooling_members':sum(len(x['members']) for x in owners.values()),'native_preimage_files':len(load(O/'NATIVE_PREIMAGE.json')['files'])}))
