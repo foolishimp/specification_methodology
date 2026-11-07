@@ -1,0 +1,61 @@
+{
+  "case": "test_native_routes.NativeRouteTests.test_stable_predecessor_is_not_current_target_and_is_never_adopted",
+  "events": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "plan",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Host installation requires the exact selected 3.0.5-rc.1 Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "plan",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmptiiljgpx/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Host installation requires the exact selected 3.0.5-rc.1 Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    }
+  ],
+  "observations": {},
+  "scope": "Actual public CLI over controlled native/manager/provider inputs; no LLM or released-native qualification."
+}

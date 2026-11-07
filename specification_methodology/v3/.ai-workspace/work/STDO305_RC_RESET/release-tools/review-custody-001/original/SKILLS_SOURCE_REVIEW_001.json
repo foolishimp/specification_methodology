@@ -1,0 +1,66 @@
+{
+  "kind": "stdo.independent-bounded-source-review/1",
+  "reviewer": "/root/stdo305_integration_review",
+  "authors": [
+    "/root/stdo305_tools_skills"
+  ],
+  "subject": {
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/SOURCE_FREEZE_001.json",
+    "sha256": "2bc6a385272162e282c32e4d3ac6ba64d7e81aaa33798a0cf1cf6150788c12bd"
+  },
+  "scope": "RC target/profile/owned version binding and conservation of the already reviewed native host wrapper corrections. No current model, runtime proof, actual RC installation or release qualification.",
+  "disposition": "implementation supported except one S4 description correction; no runtime correctness defect reproduced",
+  "findings": [
+    {
+      "severity": 4,
+      "path": "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5-rc.1.json",
+      "line": 316,
+      "summary": "Current RC profile mapping.release still describes a stable immutable cut",
+      "evidence": "The frozen JSON retains mapping.release = Stable immutable cut and S\u2192complete payload\u2192A\u2192externalB ... while method.uri selects stdo://releases/v3.0.5-rc.1/. The selected contract has an immutable RC and a mutable version-line selector.",
+      "impact": "Misstates the publication profile in the current semantic correspondence; no runtime grant or wrong installation was admitted by the inspected path.",
+      "bounded_repair": "Name immutable RC cut and version selector accurately, then refresh profile/core/portable pins before successor runtime qualification. Normative source need not change."
+    }
+  ],
+  "checks": [
+    {
+      "case": "four independently executed focused public-path methods",
+      "outcome": "passed, zero skips",
+      "evidence": [
+        "skills-public-controls/execution.json",
+        "skills-public-controls/stdout",
+        "skills-public-controls/stderr",
+        "native-public-controls/execution.json",
+        "native-public-controls/stdout",
+        "native-public-controls/stderr"
+      ]
+    },
+    {
+      "case": "profile owner member relation",
+      "outcome": "53 standard plus15 native contract rows exactly equal new S; same owner bytes retained"
+    },
+    {
+      "case": "current Skills package",
+      "outcome": "all16 files match selected RC manifest; builder remains exact3.0.4; package/target/version all RC1"
+    },
+    {
+      "case": "source currentness",
+      "outcome": "39 direct frozen refs matched initially; all unchanged at return",
+      "evidence": [
+        "skills-initial-pins.json",
+        "skills-final-pins.json"
+      ]
+    }
+  ],
+  "preserved_prior_repairs": [
+    "Native frontmatter, including manual invocation metadata, is preserved except declared wrapper name.",
+    "Both hosts follow encoded canonical-native file URIs; the native dependency is reverified and owned-only removal is conserved.",
+    "The documented manager forwarding and nominated Product basis rule remain unchanged apart from RC installation anchor paths.",
+    "Empty native manifest member handling remains the accepted strict-string/base64 implementation."
+  ],
+  "limitations": [
+    "Controlled manager/native fixtures are not an actual installed RC qualification.",
+    "No native LLM host, compiler, Lean proof, full support scan, Git effect, or source repair was run.",
+    "The source rebind producer, its new grounding/derived outputs and release ref reset remain separate upcoming subjects.",
+    "The frozen old 3.0.5 package/profile/records remain historical; owner authorization permits resetting former 3.0.5 selectors and does not promise old-pin reacquisition."
+  ]
+}

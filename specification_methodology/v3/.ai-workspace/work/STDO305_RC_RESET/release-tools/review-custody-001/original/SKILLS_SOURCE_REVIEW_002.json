@@ -1,0 +1,40 @@
+{
+  "kind": "stdo.independent-source-successor-review/1",
+  "reviewer": "/root/stdo305_integration_review",
+  "subject_sha256": "7aa187911c6d0a84fe8310d898683673a865fe1da56c3b9569470e180bf4ae7f",
+  "predecessor_review_sha256": "9551651df21c41c3e2313b75ee17635a75c1001792a83cd6e7586737fe577465",
+  "disposition": "satisfied for bounded source scope; S4 wording discharged",
+  "delta": "Exact inverse replacement reproduces both frozen001 source hashes; source population otherwise identical. Portable file delta names the same two source files.",
+  "portable_delta": [
+    "a_c/build_tenants/graphify/code/ac_support_core.py",
+    "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5-rc.1.json"
+  ],
+  "execution": {
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "-m",
+      "unittest",
+      "test_ac_support_native305.Native305PublicTests.test_current_mcp_discovery_and_source_transport",
+      "test_ac_support_native305.Native305PublicTests.test_wrong_cut_manifest_member_and_missing_installation",
+      "-v"
+    ],
+    "returncode": 0,
+    "seconds": 0.3576965001411736,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "a8d49cd0112c790ef1745b0bbf6790f4a5bd6505c14921ab8714106b5754b572"
+  },
+  "current_source_refs": [
+    {
+      "bytes": 236202,
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "sha256": "697eade7ac06326456df6e9c60e4a89d3239a82d2167eaa1f7a4318b32d96dab"
+    },
+    {
+      "bytes": 13511,
+      "path": "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5-rc.1.json",
+      "sha256": "9cc0be190584fa748ba33a4367f1cef0c93536e2fe88e044152c760c1dc96581"
+    }
+  ],
+  "limits": "Prior unchanged-source review applies. No actual installed RC, current model/proof, publication or release acceptance is established."
+}

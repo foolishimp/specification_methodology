@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stable complete-cohort profile; shared primitives stay in check_stack_release.
+"""Complete five-Product stable and RC profiles; shared Git primitives stay in check_stack_release.
 
 This module reads evidence. It neither runs untrusted qualification commands nor
 performs Git writes. Successful structural checks do not manufacture a review.
@@ -20,6 +20,7 @@ sys.path.insert(0, str(__import__('pathlib').Path(__file__).resolve().parent))
 import stdo_source_freeze as source_freeze
 
 PROFILE = 'stable-five-product-v1'
+RC_PROFILE = 'rc-five-product-v1'
 PRODUCTS = {'specification_methodology', 'stdo_representation', 'a_c', 'axiom_indexer', 'stdo_skills'}
 COMPONENTS = {
     'native_plugin': ('specification_methodology', {'installed_native_workflow'}),
@@ -44,15 +45,40 @@ EDGES = {
     ('stdo_skills', 'a_c', 'exact_tool_routes'),
 }
 STABLE = re.compile(r'(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\Z')
+RC = re.compile(r'((?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*))-rc\.([1-9][0-9]*)\Z')
 HEX = re.compile(r'[0-9a-f]{64}\Z')
 OBJECT = re.compile(r'[0-9a-f]{40}\Z')
 ACCEPTED = {'passed', 'verified', 'valid', 'checked', 'satisfied'}
 ASSESSMENTS = {'independent_semantic_review', 'independent_release_review'}
+RESET_305_TAGS = {
+    'specification_methodology': '8eccce113086a15a042580c4c4158eea96ec17e2',
+    'a_c': '97b66da6d2a9a0d09c56eab74e2db869c18c1fbc',
+    'axiom_indexer': 'a6d6503d709dc0482b92446ff9ad60a5e630c579',
+    'stdo_representation': '9fe00c4b8805bd7879fd3c59d13db960c0fbc9ce',
+    'stdo_skills': 'a63b9ddb85113e58db3d7c1baa15ba4989446d54',
+}
 
 
 def require(condition, message):
     if not condition:
         raise ValueError(message)
+
+
+def is_rc(manifest):
+    return manifest.get('profile') == RC_PROFILE
+
+
+def manager_version(manifest):
+    """The only normalization admitted for Python package metadata is PEP 440 RC spelling."""
+    version = manifest['cohort']['version']
+    if is_rc(manifest):
+        match = RC.fullmatch(version)
+        require(match is not None, 'exact RC distribution version required')
+        normalized = match[1] + 'rc' + match[2]
+        require(manifest['components']['manager']['facts'].get('python_distribution_version') == normalized,
+                'explicit PEP 440 manager version mapping differs')
+        return normalized
+    return version
 
 
 def path(value):
@@ -173,9 +199,14 @@ def evidence(view, ref, claim, manifest, api):
 
 
 def check_shape(manifest):
-    require(manifest.get('kind') == 'specification-stack.release-matched-cohort' and manifest.get('schema_version') == 2 and manifest.get('profile') == PROFILE, 'unknown stable cohort profile')
+    require(manifest.get('kind') == 'specification-stack.release-matched-cohort' and manifest.get('schema_version') == 2 and manifest.get('profile') in (PROFILE, RC_PROFILE), 'unknown complete cohort profile')
     cohort = manifest['cohort']; version = cohort.get('version')
-    require(isinstance(version, str) and STABLE.fullmatch(version), 'stable exact semantic version required')
+    require(isinstance(version, str) and (RC if is_rc(manifest) else STABLE).fullmatch(version), 'exact version required for selected stable/RC profile')
+    if is_rc(manifest):
+        require(cohort.get('version_line') == RC.fullmatch(version)[1], 'RC version line differs')
+        manager_version(manifest)
+    else:
+        require('reset' not in manifest['publication'], 'reset exception is not a stable profile operation')
     require(cohort.get('cut') == 'v' + version and cohort.get('status') == 'candidate', 'complete candidate status/cut required; assembling is not ready')
     require(cohort.get('publication_mode') == 'atomic' and cohort.get('carrier_ref') == 'refs/heads/main', 'unsupported publication mode/carrier')
     require(set(manifest.get('products', {})) == PRODUCTS, 'cohort must declare exactly five Products')
@@ -184,6 +215,9 @@ def check_shape(manifest):
         require(product.get('namespace') == name and product.get('version') == version, 'Product namespace/version mismatch: ' + name)
         require(product.get('release_ref') == f'refs/tags/{name}/v{version}', 'wrong immutable Product ref: ' + name)
         require(product.get('release_branch') in (None, f'refs/heads/release/{name}/{version}'), 'wrong optional stable release branch: ' + name)
+        if is_rc(manifest):
+            require(product.get('selector_ref') == f'refs/tags/{name}/v{cohort["version_line"]}', 'wrong mutable Product selector: ' + name)
+            require(product.get('release_branch') is None, 'five-Product RC carrier uses main and tags only')
     for name, (owner, claims) in COMPONENTS.items():
         component = manifest['components'][name]
         require(component.get('owner') == owner and component.get('version') == version and set(component.get('required_claims', [])) == claims, 'component owner/version/claim mismatch: ' + name)
@@ -201,7 +235,7 @@ def native(view, manifest, semantic, api):
     installed = pinned(view, selected['manifest'], api)
     require(installed.get('kind') == 'stdo.installed-release-manifest', 'wrong native installed manifest')
     release = installed['release']; version = manifest['cohort']['version']
-    require(release['cut'] == 'v' + version and release.get('profile') == 'stable-v1' and release['qualified_ref'] == manifest['products']['specification_methodology']['release_ref'], 'native cut/profile differs')
+    require(release['cut'] == 'v' + version and release.get('profile') == (None if is_rc(manifest) else 'stable-v1') and release['qualified_ref'] == manifest['products']['specification_methodology']['release_ref'], 'native cut/profile differs')
     tag = api.annotated_ref(view.root, release['qualified_ref'], failures := [])
     require(not failures and tag == (release['tag_object'], release['commit']), 'native annotated tag identity differs')
     tagged = api.View(view.root, release['commit'])
@@ -213,7 +247,10 @@ def native(view, manifest, semantic, api):
     predecessor = manifest['native_preparation']['predecessor_native_commit']
     require(api.git(view.root, 'show', '-s', '--format=%P', release['commit']).stdout.strip().split() == [predecessor], 'native predecessor lineage differs')
     annotation = api.git(view.root, 'cat-file', '-p', release['qualified_ref']).stdout
-    require('STDO-Release-Profile: stable-v1' in annotation.splitlines(), 'native annotated tag lacks stable profile')
+    if is_rc(manifest):
+        require(not any(line.startswith('STDO-Release-Profile:') for line in annotation.splitlines()), 'RC annotation must not claim a stable release profile')
+    else:
+        require('STDO-Release-Profile: stable-v1' in annotation.splitlines(), 'native annotated tag lacks stable profile')
     provenance = pinned(view, selected['source_selection'], api)
     preparation = manifest['native_preparation']['configuration']
     configuration = pinned(view, preparation, api)
@@ -276,6 +313,7 @@ def owned_versions(view, manifest, api):
 
 def content(view, manifest, api):
     check_shape(manifest)
+    reset_record(view, manifest, api)
     semantic = source(view, manifest, api)
     for name, product in manifest['products'].items():
         subject(view, product['subject'], api)
@@ -318,7 +356,7 @@ def content(view, manifest, api):
 def manager(view, manifest, api):
     facts = manifest['components']['manager']['facts']
     raw = pinned(view, facts['wheel'], api, as_json=False)
-    version = manifest['cohort']['version']
+    version = manager_version(manifest)
     require(facts['wheel']['path'].endswith(f'/stdo_toolchain-{version}-py3-none-any.whl'), 'manager wheel name/version differs')
     root = path(facts['source_root'])
     expected = {}
@@ -342,6 +380,42 @@ def remote_refs(root, url, api):
     return dict((line.split('\t', 1)[1], line.split('\t', 1)[0]) for line in raw.splitlines())
 
 
+def reset_record(view, manifest, api):
+    """One owner-selected reset, not a general published-tag replacement option."""
+    ref = manifest['publication'].get('reset')
+    if ref is None:
+        return None
+    require(is_rc(manifest) and manifest['cohort']['cut'] == 'v3.0.5-rc.1', 'reset exception is limited to the unadopted 3.0.5 RC1 line')
+    value = pinned(view, ref, api)
+    require(value.get('kind') == 'stdo.unadopted-305-reset/1' and value.get('release_id') == 437012396,
+            'wrong bounded reset subject')
+    grant = pinned(view, value['authorization'], api)
+    require(grant.get('owner_statement') == 'its ok to reset correctly this is as yet unadopted and wont break anything'
+            and grant.get('contract', {}).get('cut') == 'v3.0.5-rc.1', 'exact owner reset grant missing')
+    previous = pinned(view, value['preimages'], api)
+    rows = previous.get('tag_objects', [])
+    require(len(rows) == len(PRODUCTS) and {row['ref']: row['object'] for row in rows} ==
+            {f'refs/tags/{name}/v3.0.5': oid for name, oid in RESET_305_TAGS.items()}, 'reset does not preserve the exact former five tags')
+    archives = {}
+    for row in rows:
+        name = row['ref'].split('/')[2]
+        expected = f'refs/tags/archive/stdo305-stable-reset-20261107/{name}/v3.0.5'
+        require(row['archive_ref'] == expected, 'wrong reset archive namespace')
+        raw = pinned(view, {'path': row['retained'], 'sha256': row['sha256']}, api, as_json=False)
+        require(api.git(view.root, 'cat-file', 'tag', row['object']).stdout.encode() == raw, 'retained former annotated tag object differs')
+        archives[expected] = row['object']
+    custody = pinned(view, value['assets'], api)
+    release = pinned(view, previous['release'], api)
+    require(custody.get('release_id') == release.get('id') == value['release_id'], 'superseded release custody differs')
+    expected_assets = {row['name']: (row['size'], row['digest']) for row in release['assets']}
+    require(len(expected_assets) == 5 and len(custody['assets']) == 5 and
+            {row['name']: (row['bytes'], 'sha256:' + row['sha256']) for row in custody['assets']} == expected_assets,
+            'all five superseded assets must remain byte-exact')
+    for row in custody['assets']:
+        require(len(pinned(view, row, api, as_json=False)) == row['bytes'], 'superseded asset size differs')
+    return {'archives': archives, 'former_selectors': {f'refs/tags/{name}/v3.0.5': oid for name, oid in RESET_305_TAGS.items()}}
+
+
 def push_sources(root, manifest, revision, api):
     carrier = api.git(root, 'rev-parse', revision + '^{commit}').stdout.strip()
     sources = {manifest['cohort']['carrier_ref']: carrier}
@@ -353,11 +427,69 @@ def push_sources(root, manifest, revision, api):
         identity = api.annotated_ref(root, product['release_ref'], failures)
         require(not failures and identity and identity[1] == target, 'local Product tag must be annotated at exact subject: ' + name)
         sources[product['release_ref']] = identity[0]
+        if is_rc(manifest):
+            annotation = api.git(root, 'cat-file', '-p', product['release_ref']).stdout.splitlines()
+            require('tag ' + product['release_ref'].removeprefix('refs/tags/') in annotation and
+                    not any(line.startswith('STDO-Release-Profile:') for line in annotation), 'RC cut annotation claims another name/profile')
+            selector = product['selector_ref']
+            identity = api.annotated_ref(root, selector, failures := [])
+            require(not failures and identity and identity[1] == target, 'local RC selector must be annotated at exact current cut: ' + name)
+            annotation = api.git(root, 'cat-file', '-p', selector).stdout.splitlines()
+            require('tag ' + selector.removeprefix('refs/tags/') in annotation and
+                    not any(line.startswith('STDO-Release-Profile:') for line in annotation), 'RC selector annotation claims another name/profile')
+            sources[selector] = identity[0]
         if product.get('release_branch') is not None:
             require(api.direct_ref_oid(root, product['release_branch']) == target, 'local release branch differs: ' + name)
             sources[product['release_branch']] = target
+    reset = reset_record(api.View(root, revision), manifest, api)
+    if reset:
+        for ref, oid in reset['archives'].items():
+            require(api.direct_ref_oid(root, ref) == oid, 'local reset archive differs from exact original tag object')
+            sources[ref] = oid
     require(api.direct_ref_oid(root, manifest['cohort']['carrier_ref']) == carrier, 'local carrier differs from frozen candidate')
     return sources
+
+
+def rc_version_lines(manifest, observed, sources, expectations, phase, reset, api):
+    line, ordinal = RC.fullmatch(manifest['cohort']['version']).groups(); ordinal = int(ordinal)
+    frozen = manifest['publication']['expected_version_lines']
+    require(set(frozen) == PRODUCTS, 'RC version-line snapshot must name all five Products')
+    for name, product in manifest['products'].items():
+        rows = []
+        for ref, oid in observed.items():
+            if ref.endswith('^{}'):
+                continue
+            number = api.rc_ref_ordinal(ref, name, line, include_unqualified=name == 'specification_methodology')
+            if number is not None:
+                rows.append({'ordinal': number, 'ref': ref, 'tag_object': oid, 'peeled_commit': observed.get(ref + '^{}')})
+        rows.sort(key=lambda r: (r['ordinal'], r['ref']))
+        prior = frozen[name]
+        require(isinstance(prior, list) and prior == sorted(prior, key=lambda r: (r['ordinal'], r['ref'])) and
+                len({r['ref'] for r in prior}) == len(prior), 'noncanonical RC version-line snapshot')
+        for row in prior:
+            require(type(row['ordinal']) is int and 0 < row['ordinal'] < ordinal and
+                    api.rc_ref_ordinal(row['ref'], name, line, include_unqualified=name == 'specification_methodology') == row['ordinal'] and
+                    OBJECT.fullmatch(row['tag_object']) and OBJECT.fullmatch(row['peeled_commit']) and
+                    row['tag_object'] != row['peeled_commit'], 'invalid or nonpreceding immutable RC snapshot')
+        for number in {r['ordinal'] for r in prior}:
+            require(len({(r['tag_object'], r['peeled_commit']) for r in prior if r['ordinal'] == number}) == 1,
+                    'same-ordinal historical RC aliases have conflicting identities')
+        expected = list(prior)
+        if phase != 'refs':
+            cut = product['release_ref']
+            expected.append({'ordinal': ordinal, 'ref': cut, 'tag_object': sources[cut], 'peeled_commit': observed.get(cut + '^{}')})
+        require(rows == sorted(expected, key=lambda r: (r['ordinal'], r['ref'])), 'remote RC version-line set or identity drifted')
+        selector = product['selector_ref']
+        if reset:
+            require(not prior and expectations[selector] == reset['former_selectors'][selector], 'reset selector must lease its exact former stable tag')
+        elif not prior:
+            require(expectations[selector] is None, 'selector exists without a preceding RC; explicit bounded reset required')
+        else:
+            require(OBJECT.fullmatch(str(expectations[selector])) is not None, 'existing RC selector requires an exact lease')
+            if phase == 'refs':
+                greatest = {r['peeled_commit'] for r in prior if r['ordinal'] == max(p['ordinal'] for p in prior)}
+                require(len(greatest) == 1 and observed.get(selector + '^{}') in greatest and
+                        observed.get(selector) != observed.get(selector + '^{}'), 'selector does not name the greatest preceding immutable RC')
 
 
 def ref_graph(root, manifest, revision, phase, remote, api):
@@ -375,11 +507,24 @@ def ref_graph(root, manifest, revision, phase, remote, api):
                   and ref.removesuffix('^{}') not in sources}
     require(set(preserved) == historical, 'preserved immutable snapshot omits or adds a release ref')
     version = manifest['cohort']['version']
-    require(not any(ref.startswith(f'refs/tags/{name}/v{version}-rc.') for ref in observed for name in PRODUCTS)
-            and not any(ref.startswith(f'refs/tags/v{version}-rc.') for ref in observed)
-            and not any(ref in observed for ref in (f'refs/tags/v{version}', f'refs/tags/v{version}^{{}}')), 'stable version collides with an existing RC or historical bare cut')
+    selectors = {p['selector_ref'] for p in manifest['products'].values()} if is_rc(manifest) else set()
+    reset = reset_record(api.View(root, revision), manifest, api)
+    if is_rc(manifest):
+        require(not any(ref in observed for ref in (f'refs/tags/v{manifest["cohort"]["version_line"]}', f'refs/tags/v{manifest["cohort"]["version_line"]}^{{}}')), 'RC line collides with historical unqualified selector')
+        rc_version_lines(manifest, observed, sources, expectations, phase, reset, api)
+        if phase == 'refs' and reset is None:
+            for selector in selectors:
+                oid = expectations[selector]
+                if oid is not None:
+                    annotation = api.git(root, 'cat-file', '-p', oid).stdout.splitlines()
+                    require(not any(line.startswith('STDO-Release-Profile:') for line in annotation),
+                            'ordinary RC advancement cannot replace a stable-profile selector')
+    else:
+        require(not any(ref.startswith(f'refs/tags/{name}/v{version}-rc.') for ref in observed for name in PRODUCTS)
+                and not any(ref.startswith(f'refs/tags/v{version}-rc.') for ref in observed)
+                and not any(ref in observed for ref in (f'refs/tags/v{version}', f'refs/tags/v{version}^{{}}')), 'stable version collides with an existing RC or historical bare cut')
     for ref in sources:
-        if ref.startswith('refs/tags/'):
+        if ref.startswith('refs/tags/') and ref not in selectors:
             require(expectations[ref] is None, 'immutable tag must have create-only expectation')
         else:
             require(expectations[ref] is None or OBJECT.fullmatch(expectations[ref]), 'invalid mutable remote expectation')
@@ -389,6 +534,8 @@ def ref_graph(root, manifest, revision, phase, remote, api):
         if phase != 'refs':
             expected_commit = api.annotated_ref(root, ref, failures := [])[1]
             require(not failures and observed.get(ref + '^{}') == expected_commit, 'remote Product tag is lightweight or has wrong peel: ' + name)
+            if is_rc(manifest):
+                require(observed.get(product['selector_ref'] + '^{}') == expected_commit, 'remote selector does not identify its exact current RC: ' + name)
     refspecs = [f'{sources[ref]}:{ref}' for ref in sorted(sources)]
     plan = {'revision': sources[manifest['cohort']['carrier_ref']], 'repository_url': url,
             'expected_remote': expectations, 'preserved_immutable_refs': preserved, 'refspecs': refspecs}
@@ -405,7 +552,7 @@ def required_public_assets(view, manifest, api):
     """
     pub = manifest['publication']; version = manifest['cohort']['version']
     expected = {'stdo-v' + version + '-manifest.json': manifest['native']['manifest'],
-                'stdo_toolchain-' + version + '-py3-none-any.whl': manifest['components']['manager']['facts']['wheel']}
+                'stdo_toolchain-' + manager_version(manifest) + '-py3-none-any.whl': manifest['components']['manager']['facts']['wheel']}
     for component in manifest['components'].values():
         for ref in component.get('public_assets', []):
             require(ref['name'] not in expected, 'duplicate selected public component asset')

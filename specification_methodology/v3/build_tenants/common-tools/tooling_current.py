@@ -23,6 +23,11 @@ REQUIRED = {
 }
 
 
+def required_members(version):
+    a.version(version)
+    return {owner: {name.replace("3.0.5", version) for name in members} for owner, members in REQUIRED.items()}
+
+
 def guide(version):
     return f"""# STDO {version} installed tools
 
@@ -85,7 +90,7 @@ def check_files(files):
     selected = json.loads(files["SELECTION.json"])
     freeze = a.source_freeze(a.encoded(selected["source_freeze"]), meta["distribution_version"])
     a.require(freeze["source_identity_sha256"] == meta["source_identity_sha256"], "tooling semantic source differs")
-    for owner, required in REQUIRED.items():
+    for owner, required in required_members(meta["distribution_version"]).items():
         a.require({owner + "/" + name for name in required} <= sources.keys(), "required Product entrypoint missing: " + owner)
         a.require(sources[owner + "/VERSION"].decode().strip() == meta["distribution_version"], "Product VERSION differs")
     lean = tomllib.loads(sources['a_c/build_tenants/lean/lakefile.toml'].decode())

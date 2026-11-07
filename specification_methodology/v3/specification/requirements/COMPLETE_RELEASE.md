@@ -1,7 +1,7 @@
 # Complete STDO release cohort
 
-The owner's selected 3.0.5 release delivers five peer Products at the exact
-stable version 3.0.5: Specification Methodology v3, STDO Representation,
+The owner's selected public version line 3.0.5 delivers five peer Products at
+the exact RC cut 3.0.5-rc.1: Specification Methodology v3, STDO Representation,
 a_c Implementations, Axiom Indexer and STDO Skills. Their ownership and
 acceptance remain separate. The root `stack_release.json` selects their
 complete candidate subjects and dependency edges; `STACK_RELEASE.md` owns
@@ -28,3 +28,11 @@ installed qualification, atomic complete-ref publication, public readback and
 fresh acquisition pass. Missing or failed required evidence withholds the
 dependent claim. No new consumer adoption is implied. The source project
 continues to use its selected released 3.0.4 builder during this construction.
+
+The owner explicitly authorized resetting the unadopted former stable 3.0.5
+line to immutable RC cuts plus moving version selectors. The exact grant,
+old tag objects and assets are retained in `STDO305_RC_RESET`. This exception
+changes no other release or Product adoption. All five owned versions carry
+the RC suffix; Python wheel metadata uses the checked PEP 440 spelling
+`3.0.5rc1`. Public title `STDO 3.0.5` and normal/Latest status describe the
+qualified fixed RC release, not a mutable exact-install identity.

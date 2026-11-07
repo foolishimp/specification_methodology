@@ -4,9 +4,9 @@ This file states the current work wave of this source project: what is being wor
 
 ## Current Selection
 
-The owner selects the **complete stable 3.0.5 release cohort**, including all
+The owner selects the **complete 3.0.5-rc.1 release cohort on public version line 3.0.5**, including all
 five Products and required current tools, representation and host skills.
-[The admitted delivery contract](../.ai-workspace/work/STDO305_DELIVERY/CONTRACT.md)
+[The current owner reset grant](../.ai-workspace/work/STDO305_RC_RESET/release-tools/ACTIVATION.json)
 records scope, roles, dependency frontier and closure conditions;
 [COMPLETE_RELEASE](requirements/COMPLETE_RELEASE.md) binds the requirements.
 Release tooling is updated first. The complete source-current candidate is

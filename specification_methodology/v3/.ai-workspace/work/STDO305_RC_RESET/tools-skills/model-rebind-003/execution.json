@@ -1,0 +1,31 @@
+{
+  "schema": "stdo.coordinate-rebind.execution/1",
+  "argv": [
+    "/usr/local/bin/python3",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/scripts/rebind_source_coordinates.py",
+    "--predecessor",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+    "--model-output",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+    "--predecessor-source-freeze",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/source-freeze.json",
+    "--source-freeze",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/source-freeze-rc1.json",
+    "--current-source-inventory",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source-inventory.json",
+    "--source-root",
+    "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source",
+    "--old-source-prefix",
+    "build_tenants/a_c/representation/stdo-v3.0.5/source/",
+    "--new-source-prefix",
+    "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/",
+    "--report",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/REBIND.json"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology",
+  "returncode": 0,
+  "elapsed_seconds": 0.39342308044433594,
+  "predecessor_execution": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-002/execution.json",
+  "delta": "Typed canonical JSON equality replaces Python numeric-coercing equality. Model output byte-identical; producer exactness and negative tests amended before freeze."
+}

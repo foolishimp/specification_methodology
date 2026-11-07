@@ -29,7 +29,7 @@ def put(root, name, value):
 
 
 def manifest():
-    value = json.loads((ROOT / 'stack_release.json').read_bytes())
+    value = json.loads((ROOT / 'scripts/fixtures/stack_release-v3.0.5.json').read_bytes())
     value['cohort']['status'] = 'candidate'
     value['third_party_dependencies'] = [{'name': 'independent-runtime', 'version': '4.24.0', 'sha256': 'e' * 64, 'provenance': 'test exact runtime'}]
     for name, product in value['products'].items():
@@ -536,7 +536,13 @@ class PublicReadbackTests(unittest.TestCase):
     def setUp(self):
         InstalledEvidenceTests.setUp(self)
         base = 'https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5/'
-        refs = [self.manifest['native']['manifest'], self.manifest['components']['manager']['facts']['wheel']]
+        # Select all required public inputs before testing downstream safeguards.
+        # These are isolated fixture bytes, never release qualification assets.
+        runtime_assets = [put(self.root, 'assets/manager-runtime-v3.0.5.zip', b'fixture offline runtime archive'),
+                          put(self.root, 'assets/manager-constraints-v3.0.5.txt', b'fixture-dependency==1.0\n')]
+        runtime_assets = [{**ref, 'name': Path(ref['path']).name} for ref in runtime_assets]
+        self.manifest['components']['manager']['public_assets'] = runtime_assets
+        refs = [self.manifest['native']['manifest'], self.manifest['components']['manager']['facts']['wheel'], *runtime_assets]
         self.assets = [{**ref, 'name': Path(ref['path']).name, 'url': base + Path(ref['path']).name} for ref in refs]
         self.manifest['publication']['assets'] = self.assets
         self.external = self.manifest['publication']['external_manifest_asset']
@@ -560,7 +566,7 @@ class PublicReadbackTests(unittest.TestCase):
     def test_anonymous_current_assets_do_not_substitute_for_all_component_results(self):
         with self.assertRaisesRegex(ValueError, 'missing required current component'):
             self.check()
-        self.assertEqual(self.requests.call_count, 3)
+        self.assertEqual(self.requests.call_count, 5)
         for call in self.requests.call_args_list:
             self.assertNotIn('Authorization', call.args[0].headers)
             self.assertNotIn('Cookie', call.args[0].headers)
@@ -569,6 +575,31 @@ class PublicReadbackTests(unittest.TestCase):
         self.manifest['publication']['assets'] = self.assets[1:]
         with self.assertRaisesRegex(ValueError, 'asset closure'): self.check([])
         self.assertEqual(self.requests.call_count, 0)
+
+    def test_runtime_zip_and_constraints_are_required_before_download(self):
+        for index in (2, 3):
+            with self.subTest(asset=self.assets[index]['name']):
+                self.manifest['publication']['assets'] = [row for n, row in enumerate(self.assets) if n != index]
+                with self.assertRaisesRegex(ValueError, 'asset closure'): self.check([])
+                self.assertEqual(self.requests.call_count, 0)
+        self.manifest['publication']['assets'] = self.assets
+
+    def test_runtime_zip_and_constraints_must_match_selected_identity(self):
+        for index in (2, 3):
+            with self.subTest(asset=self.assets[index]['name']):
+                digest = self.assets[index]['sha256']; self.assets[index]['sha256'] = '0' * 64
+                with self.assertRaisesRegex(ValueError, 'required exact current artifact'): self.check([])
+                self.assertEqual(self.requests.call_count, 0)
+                self.assets[index]['sha256'] = digest
+
+    def test_runtime_zip_and_constraints_require_exact_anonymous_bytes(self):
+        for index in (2, 3):
+            with self.subTest(asset=self.assets[index]['name']):
+                responses = [(self.root / asset['path']).read_bytes() for asset in self.assets]
+                responses[index] = b'tampered public asset'
+                with self.assertRaisesRegex(ValueError, 'fresh anonymous public asset differs'):
+                    self.check(responses)
+                self.assertEqual(self.requests.call_count, index + 1)
 
     def test_arbitrary_same_named_wheel_and_extra_asset_refuse(self):
         self.assets[1]['sha256'] = '0' * 64

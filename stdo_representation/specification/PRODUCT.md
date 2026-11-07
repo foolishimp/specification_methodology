@@ -1,10 +1,10 @@
 # STDO Representation Product
 
-Status: active source definition for the owner-selected 3.0.5 cohort. This
+Status: active source definition for the owner-selected 3.0.5-rc.1 cohort. This
 supersedes the prior present-tense 2.5.1 construction definition; its exact
 preimage is retained in the cohort work record. Historical released cuts,
 claims, decisions and evidence remain unchanged. The Product Definition pins
-installed STDO 3.0.4 as construction basis; represented Source STDO is 3.0.5.
+installed STDO 3.0.4 as construction basis; represented Source STDO is 3.0.5-rc.1.
 
 ## Product statement
 
@@ -35,7 +35,7 @@ representation; all current views derive from it and retain its identity.
 ## Version and release relation
 
 This Product, represented STDO, Axiom Indexer and the owner-selected a_c/Skills
-cohort outputs carry exact version 3.0.5. Third-party dependencies retain their
+cohort outputs carry exact version 3.0.5-rc.1. Third-party dependencies retain their
 actual pinned versions. Equal version text does not merge Products or owners.
 The semantic source freeze precedes generation; the complete native release
 manifest is bound by an external final cohort binding after generated payloads
@@ -45,7 +45,7 @@ required view, provider or proof evidence withholds release.
 ## Shared-source release profile
 
 Project namespace is `stdo_representation`; immutable release ref is
-`refs/tags/stdo_representation/v3.0.5`. Source root is `stdo_representation/`.
+`refs/tags/stdo_representation/v3.0.5-rc.1`. Source root is `stdo_representation/`.
 The release record inventories exact members and claims. A subtree tree,
 matching version or local candidate is not Product acceptance.
 
@@ -57,16 +57,16 @@ The provider owns public prepare/task/submit/build, source-grounding checks,
 model emission, carrier codecs, exploration and formal-gate mechanics. This
 Product owns selected STDO source, LLM answers, reuse judgments, frame choices
 and semantic residuals. Construction began from the exact released 3.0.4
-tool archive. The owner-authorized, hash-pinned current 3.0.5 candidate provider
+tool archive. The owner-authorized, hash-pinned current 3.0.5-rc.1 candidate provider
 extends only the explicit finite authoring-transaction envelope needed by this
 corpus, preserving validation and the released provider's refused attempt.
-Released consumers use the exact qualified 3.0.5 provider member set. Provider mechanics are not
+Released consumers use the exact qualified 3.0.5-rc.1 provider member set. Provider mechanics are not
 copied into this Product as independent implementations.
 
 ## Axiom Indexer Product dependency relation
 
 The directed dependency targets `urn:stdo:product-definition:axiom-indexer`
-through `../axiom_indexer/stdo_default.json`. Exact 3.0.5 Axiom owns generic
+through `../axiom_indexer/stdo_default.json`. Exact 3.0.5-rc.1 Axiom owns generic
 model-to-program conversion, source resolution, validation, map generation,
 explicit frame projection and exact joining. Representation owns no alternate
 resolver, canonicalizer, validator, projection engine or semantic compiler.
@@ -90,7 +90,10 @@ are never guessed from target paths or copied from historical cuts. The native
 `Axiom validate(program, bindings) -> map | diagnostics`.
 `Axiom project(program, map, explicit indexes) -> reference-only/materialized view | refusal`.
 
-Reusing previous semantic work requires exact source grounds, unchanged
+An exact coordinate-only release reset may reuse the authored model when the
+complete source corpus is byte-identical and a closed typed inverse comparison
+preserves every non-coordinate value. This is deterministic derivation, not
+new authoring or a new semantic acceptance. Reusing previous semantic work requires exact source grounds, unchanged
 governing meaning, valid dependent identities and an explicit LLM conservation
 judgment over any changed section or imported normative premise. New or
 changed semantics are freshly authored. Coverage is a processing account,
@@ -108,7 +111,7 @@ retain the caller's actual accepted configuration and operation grants.
 
 ## Product member set
 
-The 3.0.5 release inventory closes over current model/carrier, exact semantic
+The 3.0.5-rc.1 release inventory closes over current model/carrier, exact semantic
 corpus and coverage/residuals, derived Axiom program/map/index/projections,
 conversion evidence, selected current views, and the complete regular-file
 native skill bundle. Workspace discovery symlinks are not distributed members.
@@ -123,14 +126,14 @@ Mechanical proof checks exact corpus custody, reference closure, conversion
 preservation, deterministic map reproduction, congruent projections, and
 malformed/stale/missing-ref refusals. Fresh semantic discriminators cover
 3.0.1 F_D authority/termination/exhaustion, 3.0.2 recursive edge authority,
-3.0.4 issuer/recipient boundaries, review severity/currentness, and 3.0.5 cohort
+3.0.4 issuer/recipient boundaries, review severity/currentness, and 3.0.5-rc.1 cohort
 source closure. Root assigns independent semantic/native assessment. Actual
 Lean evidence is produced by the formal-gate owner and retains its exact scope.
 
 ## Product disposition authority
 
 `urn:stdo-representation:authority:product-owner` owns Product and frame
-acceptance. The owner selected full 3.0.5 cohort construction and release;
+acceptance. The owner selected full 3.0.5-rc.1 cohort construction and release;
 separate bounded Writer and release activations bind effects. Candidate
 construction, validation, proof, publication and external adoption remain
 distinct; none silently accepts method truth.

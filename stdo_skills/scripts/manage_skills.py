@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Install one STDO Skills 3.0.5 host binding beside one exact native owner."""
+"""Install one STDO Skills 3.0.5-rc.1 host binding beside one exact native owner."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -11,7 +11,7 @@ import stat
 import subprocess
 import sys
 
-VERSION = '3.0.5'
+VERSION = '3.0.5-rc.1'
 CORE = ('stdo-work', 'stdo-review', 'stdo-ticket', 'stdo-status', 'stdo-help')
 
 
@@ -55,9 +55,10 @@ def tree(root):
 
 def validate_package(package):
     package = Path(package).absolute()
-    raw = read(package / 'release/3.0.5/manifest.json')
+    raw = read(package / 'release/3.0.5-rc.1/manifest.json')
     manifest = json.loads(raw)
-    if manifest.get('version') != VERSION or manifest.get('kind') != 'stdo-skills.package/1':
+    if (manifest.get('version') != VERSION or manifest.get('kind') != 'stdo-skills.package/1'
+            or manifest.get('target') != 'stdo://releases/v' + VERSION + '/'):
         raise ValueError('Unsupported Skills package')
     declared = {row['path'] for row in manifest['files']}
     if len(declared) != len(manifest['files']):
@@ -80,8 +81,8 @@ def validate_package(package):
 def verified_method(definition, method_root, stdo):
     definition = Path(definition).absolute(); method_root = Path(method_root).absolute()
     selected = json.loads(read(definition))['constitution']['stdo']['basis']
-    if selected['uri'] != 'stdo://releases/v3.0.5/':
-        raise ValueError('Host installation requires the exact selected 3.0.5 Product basis')
+    if selected['uri'] != 'stdo://releases/v3.0.5-rc.1/':
+        raise ValueError('Host installation requires the exact selected 3.0.5-rc.1 Product basis')
     run = subprocess.run([stdo, 'status', '--definition', str(definition), '--verify'], capture_output=True, text=True, timeout=60)
     if run.returncode:
         raise ValueError('Method verification failed: ' + (run.stderr or run.stdout))
@@ -92,7 +93,7 @@ def verified_method(definition, method_root, stdo):
         raise ValueError('Manager verified a different method installation or Product')
     manifest_raw = read(method_root / 'manifest.json')
     manifest = json.loads(manifest_raw)
-    if sha(manifest_raw) != selected['manifest_sha256'] or manifest['release']['cut'] != 'v3.0.5':
+    if sha(manifest_raw) != selected['manifest_sha256'] or manifest['release']['cut'] != 'v3.0.5-rc.1':
         raise ValueError('Selected method root differs from the verified Product basis')
     plugin = manifest['auxiliary']['plugin']; native = method_root / plugin['installed_root']
     files = tree(native)
@@ -105,11 +106,11 @@ def verified_method(definition, method_root, stdo):
 def runtime_pins(ac_root):
     ac_root = Path(ac_root).absolute()
     if read(ac_root / 'VERSION').decode().strip() != VERSION:
-        raise ValueError('Selected a_c source package is not 3.0.5')
+        raise ValueError('Selected a_c source package is not 3.0.5-rc.1')
     selected = [ac_root / 'VERSION']
     for directory, suffix in [('scripts', '.py'), ('build_tenants/graphify/code', ''), ('build_tenants/lean/scripts', '.py'), ('build_tenants/lean/AC', '.lean'), ('build_tenants/lean/profiles', '.json')]:
         selected.extend(p for p in (ac_root / directory).rglob('*' + suffix) if p.is_file() and '__pycache__' not in p.parts)
-    selected.extend([ac_root / 'build_tenants/graphify/design/fd-method-stdo-3.0.5.json', ac_root / 'build_tenants/lean/toolchain-lock.json', ac_root / 'build_tenants/lean/lake-manifest.json'])
+    selected.extend([ac_root / 'build_tenants/graphify/design/fd-method-stdo-3.0.5-rc.1.json', ac_root / 'build_tenants/lean/toolchain-lock.json', ac_root / 'build_tenants/lean/lake-manifest.json'])
     return {p.relative_to(ac_root).as_posix(): sha(read(p)) for p in sorted(set(selected))}
 
 
@@ -156,6 +157,45 @@ def paths(workspace, host):
     return base, base / ('stdo-' + VERSION), base / ('stdo-skills-' + VERSION + '.receipt.json')
 
 
+def native_selection(method_root, basis):
+    root = Path(method_root).absolute()
+    raw = read(root / 'manifest.json')
+    if sha(raw) != basis['manifest_sha256']:
+        raise ValueError('Selected native manifest changed')
+    relative = json.loads(raw)['auxiliary']['plugin']['installed_root']
+    if Path(relative).is_absolute() or any(p in ('', '.', '..') for p in relative.split('/')):
+        raise ValueError('Unsafe canonical native plugin path')
+    return {'kind': 'stdo-skills.canonical-native/1',
+            'root': str((root / relative).resolve(strict=True)), 'basis': basis}
+
+
+def native_frontmatter(raw, name):
+    # Keep native invocation policy, argument hints, block scalars and any other
+    # metadata verbatim. Only the host-visible entry name is deliberately bound.
+    match = re.match(r'\A---\r?\n.*?\r?\n---(?:\r?\n|\Z)', raw.decode(), re.S)
+    if match is None:
+        raise ValueError('Native skill has no delimited frontmatter')
+    header = match.group(0)
+    for key in ('name', 'description'):
+        if len(re.findall(r'^' + key + r':', header, re.M)) != 1:
+            raise ValueError('Native skill must declare one ' + key)
+    header = re.sub(r'^name:[^\r\n]*', 'name: ' + name, header, count=1, flags=re.M)
+    return header if header.endswith('\n') else header + '\n'
+
+
+def verify_runtime_method(config):
+    selected_manager = config['manager_identity']
+    if manager_selection(config['stdo'], selected_manager['runtime_launcher']) != selected_manager:
+        raise ValueError('Selected manager executable changed')
+    basis, _, observed = verified_method(config['definition'], config['method_root'], config['stdo'])
+    if manager_selection(config['stdo'], observed.get('runtime_launcher')) != selected_manager:
+        raise ValueError('Fresh manager verification changed the selected launcher/store identity')
+    if basis != config['basis']:
+        raise ValueError('Selected method basis changed')
+    if 'native_workflow' in config and native_selection(config['method_root'], basis) != config['native_workflow']:
+        raise ValueError('Selected canonical native workflow changed')
+
+
 def prepared(package, workspace, host, definition, method_root, ac_root, stdo, python):
     manifest, package_sha = validate_package(package)
     selected_manager = manager_selection(stdo)
@@ -165,14 +205,16 @@ def prepared(package, workspace, host, definition, method_root, ac_root, stdo, p
         raise ValueError('Selected manager changed during installation verification')
     pins = runtime_pins(ac_root)
     base, bundle, receipt = paths(workspace, host)
-    files = {('stdo-' + VERSION + '/native/' + path): raw for path, raw in native.items()}
+    files = {}
+    workflow = native_selection(method_root, basis)
     interpreter = python_selection(python)
     configuration = {'kind': 'stdo-skills.runtime/1', 'version': VERSION, 'host': host, 'basis': basis,
                      'method_selection_scope': 'runtime-installation-anchor-only',
                      'operation_basis_rule': 'resolve the nominated Product Definition; no adoption or override',
                      'definition': str(Path(definition).absolute()), 'method_root': str(Path(method_root).absolute()),
                      'ac_root': str(Path(ac_root).absolute()), 'python': interpreter['invocation'], 'python_identity': interpreter, 'provider_pins': pins,
-                     'stdo': manager['invocation'], 'manager_identity': manager, 'manager_verification': observed}
+                     'stdo': manager['invocation'], 'manager_identity': manager, 'manager_verification': observed,
+                     'native_workflow': workflow}
     files['stdo-' + VERSION + '/CONFIG.json'] = encode(configuration)
     files['stdo-' + VERSION + '/manage_skills.py'] = read(Path(__file__))
     extension = Path(package) / 'build_tenants' / host / 'current/skills/stdo-project'
@@ -180,9 +222,9 @@ def prepared(package, workspace, host, definition, method_root, ac_root, stdo, p
         files['skills/stdo-project/' + path] = raw
     for name in (*CORE, *(('stdo-refresh',) if host == 'claude' else ())):
         native_path = 'claude-skills/refresh/SKILL.md' if name == 'stdo-refresh' else 'skills/' + name + '/SKILL.md'
-        body = native[native_path].decode()
-        desc = re.search(r'^description:\s*(.+)$', body, re.M).group(1)
-        wrapper = f'---\nname: {name}\ndescription: {desc}\n---\n\nRead and apply the exact [native workflow](../../stdo-{VERSION}/native/{native_path}). This host binding owns no alternate workflow or authority. Keep that file\'s relative references in its native package. Read [host runtime](../../stdo-{VERSION}/CONFIG.json) only when its public provider is needed.\n'
+        header = native_frontmatter(native[native_path], name)
+        target = (Path(workflow['root']) / native_path).as_uri()
+        wrapper = header + f'\nRead and apply the exact [native workflow]({target}). This host binding owns no alternate workflow or authority. Follow that file\'s relative references from its canonical installation. Read [host runtime](../../stdo-{VERSION}/CONFIG.json) only when its public provider is needed.\n'
         files['skills/' + name + '/SKILL.md'] = wrapper.encode()
     roots = ['stdo-' + VERSION] + sorted({'/'.join(path.split('/')[:2]) for path in files if path.startswith('skills/')})
     return base, receipt, files, roots, package_sha
@@ -225,7 +267,8 @@ def install(args):
         with target.open('xb') as out:
             out.write(raw)
     receipt = {'kind': 'stdo-skills.installation/1', 'version': VERSION, 'host': args.host, 'package_sha256': package_sha,
-               'roots': roots, 'files': {name: sha(raw) for name, raw in files.items()}}
+               'roots': roots, 'files': {name: sha(raw) for name, raw in files.items()},
+               'native_workflow': json.loads(files['stdo-' + VERSION + '/CONFIG.json'])['native_workflow']}
     raw = encode(receipt)
     with receipt_path.open('xb') as out:
         out.write(raw)
@@ -257,17 +300,15 @@ def main():
         actual = runtime_pins(config['ac_root'])
         if actual != config['provider_pins']:
             raise ValueError('Selected a_c provider changed; explicitly select a current installation')
-        selected_manager = config['manager_identity']
-        if manager_selection(config['stdo'], selected_manager['runtime_launcher']) != selected_manager:
-            raise ValueError('Selected manager executable changed')
-        basis, _, observed = verified_method(config['definition'], config['method_root'], config['stdo'])
-        if manager_selection(config['stdo'], observed.get('runtime_launcher')) != selected_manager:
-            raise ValueError('Fresh manager verification changed the selected launcher/store identity')
-        if basis != config['basis']:
-            raise ValueError('Selected method basis changed')
+        verify_runtime_method(config)
         result = {'status': 'verified', 'configuration': config}
     else:
         base, receipt_path, receipt = current(args.workspace, args.host, args.receipt_sha256)
+        if args.command == 'verify' and 'native_workflow' in receipt:
+            config = json.loads(read(base / ('stdo-' + VERSION) / 'CONFIG.json'))
+            if config.get('native_workflow') != receipt['native_workflow']:
+                raise ValueError('Canonical native workflow differs from ownership receipt')
+            verify_runtime_method(config)
         if args.command == 'remove':
             for directory in receipt['roots']:
                 shutil.rmtree(base / directory)

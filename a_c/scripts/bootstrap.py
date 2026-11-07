@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Explicit isolated setup for a_c 3.0.5; never changes global environments."""
+"""Explicit isolated setup for a_c 3.0.5-rc.1; never changes global environments."""
 from pathlib import Path
 import argparse
 import hashlib
@@ -64,7 +64,7 @@ def graphify(destination):
     packages = log.run([python, '-m', 'pip', 'freeze', '--all']).stdout
     package_file = destination / 'bootstrap-evidence/packages.txt'; package_file.write_bytes(packages)
     log.run(['git', '-C', upstream, 'diff', '--exit-code', 'HEAD'])
-    result = {'version': '3.0.5', 'status': 'installed', 'python': str(python), 'upstream': str(upstream), 'upstream_commit': observed,
+    result = {'version': '3.0.5-rc.1', 'status': 'installed', 'python': str(python), 'upstream': str(upstream), 'upstream_commit': observed,
               'bootstrap_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
               'execution': str(log.root / 'execution.json'), 'packages_sha256': hashlib.sha256(packages).hexdigest(),
               'requirements': {name: hashlib.sha256((tenant / name).read_bytes()).hexdigest() for name in ('test_env/requirements-qualification.txt', 'code/generation/requirements.txt', 'code/code-requirements.txt')}}
@@ -89,7 +89,7 @@ def lean(establish_support):
             support.unlink()
         # This is an explicit fresh local support establishment, not proof reuse.
         log.run([sys.executable, '-B', tenant / 'scripts/formal_support.py', '--output', support])
-    return {'version': '3.0.5', 'status': 'installed', 'lean_root': str(tenant),
+    return {'version': '3.0.5-rc.1', 'status': 'installed', 'lean_root': str(tenant),
             'execution': str(log.root / 'execution.json'),
             'toolchain_lock_sha256': hashlib.sha256((tenant / 'toolchain-lock.json').read_bytes()).hexdigest(),
             'proof_support': 'freshly_established' if establish_support else 'not_reestablished',
@@ -104,7 +104,7 @@ def main():
     formal = sub.add_parser('lean'); formal.add_argument('--establish-support', action='store_true')
     args = parser.parse_args()
     if args.command == 'check':
-        result = {'version': '3.0.5', 'python': sys.version, 'base_tools': 'available',
+        result = {'version': '3.0.5-rc.1', 'python': sys.version, 'base_tools': 'available',
                   'optional_setup': {'graphify': 'graphify --destination NEW_DIR', 'lean': 'lean --establish-support'},
                   'executables': {name: shutil.which(name) for name in ('stdo', 'git', 'curl', 'tar', 'zstd')}}
     elif args.command == 'graphify':

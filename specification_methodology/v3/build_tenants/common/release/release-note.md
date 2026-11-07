@@ -1,18 +1,19 @@
-# STDO 3.0.5
+# STDO 3.0.5-rc.1
 
-STDO 3.0.5 is the native `stable-v1` cut in the complete five-Product stable
-release. Its immutable tag is `specification_methodology/v3.0.5` and logical
-cut is `stdo://releases/v3.0.5/`. Its sole native predecessor is published
-3.0.4 commit `16bc30d215915a4b7b3ed2f13e52e14510ae1c9d`. Published cuts and
-existing Product selections remain unchanged.
+STDO 3.0.5-rc.1 is the fixed native RC cut in the complete five-Product
+`rc-five-product-v1` cohort on public version line STDO 3.0.5. Its immutable tag is `specification_methodology/v3.0.5-rc.1` and logical
+cut is `stdo://releases/v3.0.5-rc.1/`. Its sole native predecessor is published
+3.0.4 commit `16bc30d215915a4b7b3ed2f13e52e14510ae1c9d`. The owner-authorized reset preserves the former unadopted 3.0.5 objects, assets
+and evidence as historical custody. Other published cuts and Product selections
+remain unchanged.
 
 ## Complete release
 
 The cohort comprises Specification Methodology v3, STDO Representation,
 a_c Implementations (Graphify and Lean), Axiom Indexer and STDO Skills
-(Codex and Claude). All owned release components use 3.0.5; third-party
+(Codex and Claude). All owned release components use 3.0.5-rc.1 (Python manager metadata: 3.0.5rc1); third-party
 dependencies keep their independent exact pins. The separately published
-[five-Product manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5/stack-release-v3.0.5.json)
+[five-Product manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1/stack-release-v3.0.5-rc.1.json)
 binds semantic source, native installation, current component inventories,
 dependency edges and qualification evidence without a self-hash cycle.
 
@@ -28,20 +29,18 @@ bindings and actual local-model verification.
 ## Current source and evidence
 
 The representation selects semantic source identity
-`0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba`:
+`c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06`:
 53 standards and 15 native workflow contracts. The current 1,885-record model,
 Axiom program and map derive from that same source selection; generated frames
 and readers are derived routes, not duplicated semantic owners.
 
-The proof reader retains actual cold verification of the current model and
-five selected views under runtime
-`8421a93dbd8f5160842f15235825163f06a0e0837e03ef7f46fad68b389b06bf`,
-with all five requested obligations, seven dynamic proof invocations, one
-kernel replay, one runtime check and the 82-theorem axiom audit. Deterministic
-bounded transport parts recover every retained compiled artifact and the
-original result. They exclude private local-origin keys. Source-prose fidelity,
-bounded semantic reviews and installed runtime qualification retain separate
-claims and evidence; this is not a proof of all methodology prose.
+The proof reader identifies the actual current cold result and runtime in its
+`PROOFS.json` catalog. Its five structural obligations, generated proof sources,
+compiled evidence, kernel replay, runtime comparison and axiom audit retain
+exact identities and stated limits. Deterministic bounded transport parts
+recover every selected member; private local-origin keys are excluded.
+Source-prose fidelity, bounded semantic assessment and installed runtime
+qualification remain separate claims, not a proof of all methodology prose.
 
 ## Installation boundaries
 

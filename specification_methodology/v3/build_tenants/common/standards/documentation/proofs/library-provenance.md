@@ -1,3 +1,5 @@
+> Installed-facing link projection. [Exact source bytes](source-documents/library-provenance.md.txt) are retained separately; this presentation changes links only. External links name immutable source checkpoint `2ee0147ad06b58dbdf6dad4b874c363a035aab9e` and require network access. The proof reader and retained evidence remain available offline. Original current/historical scope and proof claims are unchanged.
+
 # Source-to-formal correspondence
 
 The exact owner is
@@ -21,7 +23,7 @@ that calculus or claim all of any neighboring law is formalised.
 The primary source selection is the published supplement's exact native
 `C23ca9c0929d7be8570edafaf30542e3daeb8dc1f` /
 `Mf7f3f824ee1ac3e048d1b1ea86ce3aae84866e2e9d5010fe5eda2e38e12f4477`.
-[Primary custody](../fixtures/stdo-3.0.2/CUSTODY.json) pins copied file bytes,
+[Primary custody](https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/build_tenants/lean/fixtures/stdo-3.0.2/CUSTODY.json) pins copied file bytes,
 source locator/checkpoint and canonical model identity. Model raw SHA-256 is
 `fc3114dd666218c387a64846b755a14979182f488de64ffff6a6d305a9698793`;
 canonical SHA-256 is
@@ -32,7 +34,7 @@ formal record payload back to exactly that source population member. Reference
 paths reach their exact source scalar, and complete schema checks determine
 whether each becomes a required pair or boundary occurrence.
 
-The [toy custody](../fixtures/toy/CUSTODY.json) separately pins an existing
+The [toy custody](https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/build_tenants/lean/fixtures/toy/CUSTODY.json) separately pins an existing
 application-neutral synthetic model, canonical SHA-256
 `d275eb906b8ac2871e6fd7415065c1dabf915242e8583fe3e202bc723a18dec3`.
 Its 14 records populate all eight families and test parallel/reversed/self

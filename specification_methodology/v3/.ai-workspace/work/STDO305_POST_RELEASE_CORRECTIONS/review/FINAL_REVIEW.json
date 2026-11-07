@@ -1,0 +1,244 @@
+{
+  "kind": "stdo.post-release-independent-review/1",
+  "assessor": "/root/stdo305_integration_review",
+  "authors": [
+    "/root/stdo305_tools_skills",
+    "/root/stdo305_release_tools"
+  ],
+  "executive_consumer": "/root",
+  "recorded_at": "2026-11-07T02:55:39.204246+00:00",
+  "preimage": "6edfffb2f8a35b244782749383fb19105d9227d9",
+  "subjects": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_POST_RELEASE_CORRECTIONS/skills/FREEZE.json",
+      "sha256": "60d8c9d2278e929e7f0355a5858ff30faca8b228c583f20739efe5841106bac0",
+      "bytes": 27554
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_POST_RELEASE_CORRECTIONS/release-docs/FREEZE.json",
+      "sha256": "6593cb1acdbe5f422857f2acc83d776d0e23bd445100234602e5002445192970",
+      "bytes": 23882
+    }
+  ],
+  "conclusion": "All four selected corrections are satisfied within their source and affected-consumer scope. No new actionable S1\u2013S5 finding. Recommended for bounded correction acceptance; no successor release qualification or publication is claimed.",
+  "severity_scale": "1 highest through 5 lowest; the four supplied S4 grades retain their original meaning",
+  "findings": [],
+  "open_required_findings": [],
+  "dispositions": [
+    {
+      "finding": "F1",
+      "original_severity": 4,
+      "disposition": "discharged",
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "line": 171,
+      "reason": "Full native frontmatter survives wrapper construction, including Claude refresh disable-model-invocation and argument-hint; only the intended namespaced entry name changes. Both host public routes and multiline/additional-field controls passed; malformed header refuses before host effects."
+    },
+    {
+      "finding": "F2",
+      "original_severity": 4,
+      "disposition": "discharged",
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "line": 225,
+      "reason": "Wrappers resolve to the verified canonical native skill rather than a relocated copy. The complete help/Getting Started chain, all nine formerly broken routes, spaces/special characters and fragments resolve. CONFIG and receipt bind native dependency; verify/check-runtime reject changed or missing dependency. Removal neither invokes nor deletes native dependencies and preserves unrelated files, including actual predecessor receipts."
+    },
+    {
+      "finding": "F3",
+      "original_severity": 4,
+      "disposition": "discharged for successor projection; published305 remains unchanged",
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py",
+      "line": 48,
+      "reason": "Five presentation links now select exact immutable C4 Git paths with the real recipe anchor. Exact source bytes are separately retained as .txt and separately hashed from their rendered projection. Reader navigation reaches the generated documents. The generated catalog preserves all prior proof/model/source/claim values; only projection and documented member identities differ. Original-format payloads still take the exact previous catalog/render check and explicitly receive no installed-link qualification; partial/tampered projected custody refuses."
+    },
+    {
+      "finding": "F4",
+      "original_severity": 4,
+      "disposition": "discharged",
+      "path": "tests/test_stable_stack_release.py",
+      "line": 541,
+      "reason": "The synthetic public fixture now selects native manifest, wheel, runtime ZIP and constraints before public-consumer checks. The seven earlier premature failures reach their intended safeguards. Additional absence, identity and anonymous-byte negatives cover each new asset. The production checker is byte-identical to the preimage."
+    }
+  ],
+  "independent_execution": {
+    "preimage_public_fixture": "Eight focused cases: seven reproduced premature asset-closure failures, one passed. This is preserved as failure evidence.",
+    "successor_skills": "Six focused public-CLI tests passed, zero skips; four-second scratch execution.",
+    "successor_proof_links_and_public_fixture": "Six document/source/link controls plus eleven public-consumer fixture cases passed, zero skips.",
+    "generated_consumer_comparison": "Compared actual new/old PROOFS.json and reader embedded data: all non-projection catalog fields, embedded Lean sources and HTML outside embedded data are identical. Original documents match their new custody files byte-for-byte; proof SELECTION is unchanged.",
+    "immutable_targets": "All five target Git objects and the recipe heading exist at C4; no HTTP availability claim."
+  },
+  "author_evidence_inspected": {
+    "skills": "Exact six-file freeze,90 retained evidence refs, actual real-public-native both-host plan/install/verify/installed-check-runtime/remove plus original-producer legacy removals;19-test author run remains separately attributed.",
+    "release_docs": "Exact eleven-file freeze,64 retained evidence refs, full58-test successor fixture log, seven document tests including the actual inherited-format transport/custody check, current-assets14 active passes/four opt-in skips and actual proof/documentation owner checks. Failed preparation attempts remain retained."
+  },
+  "currentness": {
+    "source_files_rechecked_at_close": [
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "sha256": "6a9f246d934783dd83a08b48aa1439ac3378ba2466c292c6fcbf92552ab9d1a3",
+        "bytes": 18549,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/stdo_skills/tests/test_install_305.py",
+        "sha256": "8f3fd4f8affcbec50c2fed81f614704ae263378ad57fa2ca1363fb7831fa16f8",
+        "bytes": 13445,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/stdo_skills/tests/test_native_routes.py",
+        "sha256": "5024a38298be505bcdc7d60b9e01763ba8bd23b7c68fee990830e487e4a7d36a",
+        "bytes": 14560,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/codex/current/DESIGN.md",
+        "sha256": "5c1e3ba5b949a8e6ccfec707d516706e7ed1d2522aa130feb59f7df6f6e2f57b",
+        "bytes": 2825,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/stdo_skills/build_tenants/claude/current/DESIGN.md",
+        "sha256": "cf19dfd6da7fa093081063d0c50a14700c6564f46434e041c115773d51ed67f8",
+        "bytes": 2809,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/INSTALLATION.md",
+        "sha256": "f340e5cbbd42222dc0b895fb73d189c26d81a97ed785ba19549fc37452e8fcff",
+        "bytes": 2493,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py",
+        "sha256": "68be9ac7e3fd8e5502c7368601f4f0010d54204b83630d6c084c13956b411375",
+        "bytes": 25208,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/test_proof_document_links.py",
+        "sha256": "6901f1ff151eeca3e8943f0c596002b16925dbda40fd78ca0ece5b09c03539d6",
+        "bytes": 6312,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py",
+        "sha256": "e3eedee100891d38e3aeb8a9c5f50cd116c387aed3f6827bb41410aa6253762b",
+        "bytes": 48302,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common/standards/documentation/DOCUMENTATION.json",
+        "sha256": "ce20385cc9843df22a75f46634ca998a0692b8d1b19925eb8cf362279d686e68",
+        "bytes": 14553,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common/standards/documentation/SELECTION.json",
+        "sha256": "8dfab03fe0d67bc6c80c11312ea76a7bf8e60e830157f040e5ac2a11a096e973",
+        "bytes": 3877,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common/standards/documentation/proofs/PROOFS.json",
+        "sha256": "19f85ce5473331d5621593fe77cd1be1d7e2086cfac1e635d9749fcc51995efe",
+        "bytes": 14639287,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common/standards/documentation/proofs/correspondence.md",
+        "sha256": "c6bd90584879152b8d17e02b4794268f1165991980a8e52120e8ad8750c49f01",
+        "bytes": 8137,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common/standards/documentation/proofs/index.html",
+        "sha256": "d6bad07c3625df01b518897b717cd581ed84979c09e4f2b91dc755c9b9c20823",
+        "bytes": 24784810,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common/standards/documentation/proofs/library-provenance.md",
+        "sha256": "1fdad4500fac1a09bd4326d1ca18d55af723374d4389ccbc814afb8e1895ae7f",
+        "bytes": 4929,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common/standards/documentation/proofs/source-documents/correspondence.md.txt",
+        "sha256": "7577212a31eb57baa64a9f9565c7681665a58a8edd44e3750a60da9e546c09a6",
+        "bytes": 7357,
+        "mode": 420
+      },
+      {
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common/standards/documentation/proofs/source-documents/library-provenance.md.txt",
+        "sha256": "14e7e97d4288af40cb63780a0993128629cab623e90d797f638650b6077cec98",
+        "bytes": 4270,
+        "mode": 420
+      }
+    ],
+    "protected": "Original305 Skills manifest9a6db638\u2026; stack manifest84a0c374\u2026; production release gate/evidence adapters, selected basis, proof selection and declared protected inputs retain exact hashes. Actual selected published native/plugin/proof-document bytes remain original; local native tag still8eccce11\u2026\u2192d1f13c53\u2026.",
+    "publication_observation": {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/PUBLISHED_IDENTITIES.json",
+      "sha256": "dc011d6fed83bc509f5ab0fdf1dfd34394d04b06e1e409f509c4e824995fd5cc",
+      "bytes": 2751
+    },
+    "no_remote_claim": "No fresh remote tag/asset download check was performed in this source-correction review."
+  },
+  "release_implications": [
+    "These corrected working sources and generated projections are not the already published3.0.5 release. Do not replace its tags, assets, native manifest or frozen qualification evidence.",
+    "Select a successor release identity before distribution, inventory the changed Skills installer/design and new installer guide, regenerate the affected Skills/tooling/native/cohort inventories, and bind the corrected proof producer, catalog, selection and two added source-custody files.",
+    "Retain unchanged mathematical/model evidence only with exact applicability; qualify the affected successor installed paths. This correction does not itself require a new mathematical proof merely for link projection or metadata transport, and supplies no whole-method/model/host-behavior claim."
+  ],
+  "limits": [
+    "No source/installed-file/Git mutation by Reviewer; all Reviewer outputs are under unique scratch.",
+    "No new Lean/compiler, whole release gate, native model session or browser run; the inherited-payload full custody check was consumed from the exact author evidence rather than repeated.",
+    "No automatic host selection/compliance qualification; metadata and deterministic routes only.",
+    "New evidence URLs require network as explicitly disclosed. Actual immutable Git contents/anchors were checked; external service availability was not.",
+    "Existing single-writer/check-then-use filesystem assumptions remain."
+  ],
+  "evidence": [
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/PREIMAGE_REVIEW.json",
+      "sha256": "a6e3108fefe3471393d7351989f340a786ee1f54ae0b17998a6466bae15b0ee3",
+      "bytes": 3107
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/PUBLISHED_PREIMAGE.json",
+      "sha256": "86c66844054834eab3c49a3ed8575e4fca63be7d193a95a259c5e0667a6dc1ca",
+      "bytes": 8883
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/PUBLIC_FIXTURE_PREIMAGE.json",
+      "sha256": "822ed3fec1884048806f43b5c3b55183abae95c0b71114cd0c3ec5724cf74bda",
+      "bytes": 6554
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/SKILLS_REVIEW.json",
+      "sha256": "8d580dea93ce669d92adbe4aa67aa57b6cc065a9194f650a09dfb44ec5cf8a78",
+      "bytes": 5226
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/SKILLS_TESTS.json",
+      "sha256": "1f3d4752d986a4d56b4ee0fb491d769e51738f9eca284d59cfd4fb3d40b9496a",
+      "bytes": 3462
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/DOCS_PUBLIC_TESTS.json",
+      "sha256": "e197f9c4ca4b732d9de548cc774cf7946404e3075a7a0c97350513c2762ddb0c",
+      "bytes": 6333
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/PROOF_LINK_TARGETS.json",
+      "sha256": "a881823ad89f057683989c71440013a3362f89af3794258b5e80be3858e06011",
+      "bytes": 1716
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/DERIVED_DOCUMENT_DELTA.json",
+      "sha256": "47d1168cb712f7558f245f11b4c258e03289eee2db67dc45b359af0d4541fbe8",
+      "bytes": 3939
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/PUBLISHED_IDENTITIES.json",
+      "sha256": "dc011d6fed83bc509f5ab0fdf1dfd34394d04b06e1e409f509c4e824995fd5cc",
+      "bytes": 2751
+    }
+  ]
+}

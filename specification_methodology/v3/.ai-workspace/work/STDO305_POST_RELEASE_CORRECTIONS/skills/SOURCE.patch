@@ -1,0 +1,470 @@
+--- before/stdo_skills/scripts/manage_skills.py
++++ after/stdo_skills/scripts/manage_skills.py
+@@ -156,6 +156,45 @@
+     return base, base / ('stdo-' + VERSION), base / ('stdo-skills-' + VERSION + '.receipt.json')
+ 
+ 
++def native_selection(method_root, basis):
++    root = Path(method_root).absolute()
++    raw = read(root / 'manifest.json')
++    if sha(raw) != basis['manifest_sha256']:
++        raise ValueError('Selected native manifest changed')
++    relative = json.loads(raw)['auxiliary']['plugin']['installed_root']
++    if Path(relative).is_absolute() or any(p in ('', '.', '..') for p in relative.split('/')):
++        raise ValueError('Unsafe canonical native plugin path')
++    return {'kind': 'stdo-skills.canonical-native/1',
++            'root': str((root / relative).resolve(strict=True)), 'basis': basis}
++
++
++def native_frontmatter(raw, name):
++    # Keep native invocation policy, argument hints, block scalars and any other
++    # metadata verbatim. Only the host-visible entry name is deliberately bound.
++    match = re.match(r'\A---\r?\n.*?\r?\n---(?:\r?\n|\Z)', raw.decode(), re.S)
++    if match is None:
++        raise ValueError('Native skill has no delimited frontmatter')
++    header = match.group(0)
++    for key in ('name', 'description'):
++        if len(re.findall(r'^' + key + r':', header, re.M)) != 1:
++            raise ValueError('Native skill must declare one ' + key)
++    header = re.sub(r'^name:[^\r\n]*', 'name: ' + name, header, count=1, flags=re.M)
++    return header if header.endswith('\n') else header + '\n'
++
++
++def verify_runtime_method(config):
++    selected_manager = config['manager_identity']
++    if manager_selection(config['stdo'], selected_manager['runtime_launcher']) != selected_manager:
++        raise ValueError('Selected manager executable changed')
++    basis, _, observed = verified_method(config['definition'], config['method_root'], config['stdo'])
++    if manager_selection(config['stdo'], observed.get('runtime_launcher')) != selected_manager:
++        raise ValueError('Fresh manager verification changed the selected launcher/store identity')
++    if basis != config['basis']:
++        raise ValueError('Selected method basis changed')
++    if 'native_workflow' in config and native_selection(config['method_root'], basis) != config['native_workflow']:
++        raise ValueError('Selected canonical native workflow changed')
++
++
+ def prepared(package, workspace, host, definition, method_root, ac_root, stdo, python):
+     manifest, package_sha = validate_package(package)
+     selected_manager = manager_selection(stdo)
+@@ -165,14 +204,16 @@
+         raise ValueError('Selected manager changed during installation verification')
+     pins = runtime_pins(ac_root)
+     base, bundle, receipt = paths(workspace, host)
+-    files = {('stdo-' + VERSION + '/native/' + path): raw for path, raw in native.items()}
++    files = {}
++    workflow = native_selection(method_root, basis)
+     interpreter = python_selection(python)
+     configuration = {'kind': 'stdo-skills.runtime/1', 'version': VERSION, 'host': host, 'basis': basis,
+                      'method_selection_scope': 'runtime-installation-anchor-only',
+                      'operation_basis_rule': 'resolve the nominated Product Definition; no adoption or override',
+                      'definition': str(Path(definition).absolute()), 'method_root': str(Path(method_root).absolute()),
+                      'ac_root': str(Path(ac_root).absolute()), 'python': interpreter['invocation'], 'python_identity': interpreter, 'provider_pins': pins,
+-                     'stdo': manager['invocation'], 'manager_identity': manager, 'manager_verification': observed}
++                     'stdo': manager['invocation'], 'manager_identity': manager, 'manager_verification': observed,
++                     'native_workflow': workflow}
+     files['stdo-' + VERSION + '/CONFIG.json'] = encode(configuration)
+     files['stdo-' + VERSION + '/manage_skills.py'] = read(Path(__file__))
+     extension = Path(package) / 'build_tenants' / host / 'current/skills/stdo-project'
+@@ -180,9 +221,9 @@
+         files['skills/stdo-project/' + path] = raw
+     for name in (*CORE, *(('stdo-refresh',) if host == 'claude' else ())):
+         native_path = 'claude-skills/refresh/SKILL.md' if name == 'stdo-refresh' else 'skills/' + name + '/SKILL.md'
+-        body = native[native_path].decode()
+-        desc = re.search(r'^description:\s*(.+)$', body, re.M).group(1)
+-        wrapper = f'---\nname: {name}\ndescription: {desc}\n---\n\nRead and apply the exact [native workflow](../../stdo-{VERSION}/native/{native_path}). This host binding owns no alternate workflow or authority. Keep that file\'s relative references in its native package. Read [host runtime](../../stdo-{VERSION}/CONFIG.json) only when its public provider is needed.\n'
++        header = native_frontmatter(native[native_path], name)
++        target = (Path(workflow['root']) / native_path).as_uri()
++        wrapper = header + f'\nRead and apply the exact [native workflow]({target}). This host binding owns no alternate workflow or authority. Follow that file\'s relative references from its canonical installation. Read [host runtime](../../stdo-{VERSION}/CONFIG.json) only when its public provider is needed.\n'
+         files['skills/' + name + '/SKILL.md'] = wrapper.encode()
+     roots = ['stdo-' + VERSION] + sorted({'/'.join(path.split('/')[:2]) for path in files if path.startswith('skills/')})
+     return base, receipt, files, roots, package_sha
+@@ -225,7 +266,8 @@
+         with target.open('xb') as out:
+             out.write(raw)
+     receipt = {'kind': 'stdo-skills.installation/1', 'version': VERSION, 'host': args.host, 'package_sha256': package_sha,
+-               'roots': roots, 'files': {name: sha(raw) for name, raw in files.items()}}
++               'roots': roots, 'files': {name: sha(raw) for name, raw in files.items()},
++               'native_workflow': json.loads(files['stdo-' + VERSION + '/CONFIG.json'])['native_workflow']}
+     raw = encode(receipt)
+     with receipt_path.open('xb') as out:
+         out.write(raw)
+@@ -257,17 +299,15 @@
+         actual = runtime_pins(config['ac_root'])
+         if actual != config['provider_pins']:
+             raise ValueError('Selected a_c provider changed; explicitly select a current installation')
+-        selected_manager = config['manager_identity']
+-        if manager_selection(config['stdo'], selected_manager['runtime_launcher']) != selected_manager:
+-            raise ValueError('Selected manager executable changed')
+-        basis, _, observed = verified_method(config['definition'], config['method_root'], config['stdo'])
+-        if manager_selection(config['stdo'], observed.get('runtime_launcher')) != selected_manager:
+-            raise ValueError('Fresh manager verification changed the selected launcher/store identity')
+-        if basis != config['basis']:
+-            raise ValueError('Selected method basis changed')
++        verify_runtime_method(config)
+         result = {'status': 'verified', 'configuration': config}
+     else:
+         base, receipt_path, receipt = current(args.workspace, args.host, args.receipt_sha256)
++        if args.command == 'verify' and 'native_workflow' in receipt:
++            config = json.loads(read(base / ('stdo-' + VERSION) / 'CONFIG.json'))
++            if config.get('native_workflow') != receipt['native_workflow']:
++                raise ValueError('Canonical native workflow differs from ownership receipt')
++            verify_runtime_method(config)
+         if args.command == 'remove':
+             for directory in receipt['roots']:
+                 shutil.rmtree(base / directory)
+--- before/stdo_skills/tests/test_install_305.py
++++ after/stdo_skills/tests/test_install_305.py
+@@ -16,10 +16,31 @@
+ m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+ 
+ 
++def candidate_package(destination):
++    """Explicit scratch source candidate; never refresh the published manifest."""
++    original = (ROOT / 'release/3.0.5/manifest.json').read_bytes()
++    manifest = json.loads(original)
++    changed = []
++    for row in manifest['files']:
++        raw = (ROOT / row['path']).read_bytes()
++        if m.sha(raw) != row['sha256']:
++            changed.append(row['path'])
++        target = destination / row['path']; target.parent.mkdir(parents=True, exist_ok=True)
++        target.write_bytes(raw); row.update(sha256=m.sha(raw), bytes=len(raw))
++    guide = ROOT / 'scripts/INSTALLATION.md'
++    if guide.exists():
++        raw = guide.read_bytes(); (destination / 'scripts/INSTALLATION.md').write_bytes(raw)
++        manifest['files'].append({'path': 'scripts/INSTALLATION.md', 'sha256': m.sha(raw), 'bytes': len(raw)})
++    manifest['candidate_test_fixture'] = {'published_manifest_sha256': m.sha(original), 'changed_source_rows': changed}
++    (destination / 'release/3.0.5/manifest.json').write_bytes(m.encode(manifest))
++    return destination
++
++
+ class Install305Tests(unittest.TestCase):
+     def setUp(self):
+         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
+         self.root = Path(self.temp.name).resolve(); self.workspace = self.root / 'workspace'; self.workspace.mkdir()
++        self.package = candidate_package(self.root / 'candidate-package')
+         self.method = self.root / 'method'; native = self.method / 'plugins/spec'; native.mkdir(parents=True)
+         source = REPO / 'specification_methodology/v3/build_tenants/common/plugins/spec'
+         for name, raw in m.tree(source).items():
+@@ -35,7 +56,7 @@
+         self.ac = self.root / 'ac'; self.ac.mkdir(); (self.ac / 'VERSION').write_text('3.0.5\n')
+         for name in ['build_tenants/graphify/design/fd-method-stdo-3.0.5.json', 'build_tenants/lean/toolchain-lock.json', 'build_tenants/lean/lake-manifest.json']:
+             p = self.ac / name; p.parent.mkdir(parents=True, exist_ok=True); p.write_text('{}\n')
+-        self.args = argparse.Namespace(command='install', package=ROOT, workspace=self.workspace, host='codex', definition=self.definition, method_root=self.method, ac_root=self.ac, stdo=str(self.manager), python=m.sys.executable)
++        self.args = argparse.Namespace(command='install', package=self.package, workspace=self.workspace, host='codex', definition=self.definition, method_root=self.method, ac_root=self.ac, stdo=str(self.manager), python=m.sys.executable)
+ 
+     def selected_store_launcher(self):
+         status = json.loads(subprocess.check_output([str(self.manager)], text=True))
+@@ -61,8 +82,9 @@
+         other = self.workspace / '.agents/skills/unrelated/SKILL.md'; other.parent.mkdir(parents=True); other.write_text('unrelated')
+         installed = m.install(self.args)
+         base, receipt, value = m.current(self.workspace, 'codex', installed['receipt_sha256'])
+-        for path in ['skills/stdo-work/SKILL.md', 'stdo-3.0.5/native/references/COORDINATED_HANDOFF.md', 'skills/stdo-project/references/formal.md']:
++        for path in ['skills/stdo-work/SKILL.md', 'stdo-3.0.5/CONFIG.json', 'skills/stdo-project/references/formal.md']:
+             self.assertTrue((base / path).is_file())
++        self.assertFalse((base / 'stdo-3.0.5/native').exists())
+         self.assertFalse((self.workspace / '.claude').exists())
+         config = json.loads((base / 'stdo-3.0.5/CONFIG.json').read_text())
+         self.assertEqual(config['method_selection_scope'], 'runtime-installation-anchor-only')
+--- before/stdo_skills/tests/test_native_routes.py
++++ after/stdo_skills/tests/test_native_routes.py
+@@ -0,0 +1,236 @@
++"""Public host installer paths; controlled native/manager fixtures, no model calls."""
++from pathlib import Path
++import json
++import os
++import re
++import shutil
++import subprocess
++import unittest
++from urllib.parse import unquote, urljoin, urlsplit
++
++import test_install_305 as installation
++
++m = installation.m
++
++
++def links(text):
++    return re.findall(r'\[[^\]]*\]\(([^)\n]+)\)', text)
++
++
++def local_target(source, destination):
++    resolved = urlsplit(urljoin(source.as_uri(), destination))
++    if resolved.scheme != 'file':
++        return None, None
++    return Path(unquote(resolved.path)), unquote(resolved.fragment)
++
++
++def anchors(text):
++    """ATX anchors used by the selected native Markdown, excluding code fences."""
++    result = set(); fence = None; counts = {}
++    for line in text.splitlines():
++        if line.startswith(('```', '~~~')):
++            marker = line[:3]; fence = None if fence == marker else marker
++        elif fence is None:
++            match = re.match(r'^#{1,6}\s+(.*?)\s*#*$', line)
++            if match:
++                base = re.sub(r'[^\w -]', '', match.group(1).lower()).replace(' ', '-')
++                count = counts.get(base, 0); counts[base] = count + 1
++                result.add(base if count == 0 else base + '-' + str(count))
++    return result
++
++
++class NativeRouteTests(unittest.TestCase):
++    def setUp(self):
++        self.fixture = installation.Install305Tests('test_plan_has_no_effect')
++        self.fixture.setUp(); self.addCleanup(self.fixture.doCleanups)
++        self.events = []; self.observations = {}
++        f = self.fixture
++        target = f.root / 'native method with spaces #percent% (3.0.5)'
++        f.method.rename(target); f.method = target; f.args.method_root = target
++        self.native = target / 'plugins/spec'
++        self.guide = self.native / 'references/GETTING_STARTED.md'
++        self.documentation = []
++        for link in links(self.guide.read_text()):
++            path, fragment = local_target(self.guide, link)
++            if path is not None and not path.exists():
++                self.assertTrue(path.is_relative_to(target / 'standards'))
++                path.parent.mkdir(parents=True, exist_ok=True)
++                heading = fragment.replace('-', ' ') if fragment else 'Controlled canonical documentation fixture'
++                path.write_text('# ' + heading + '\n')
++                self.documentation.append(path)
++        self.assertEqual(len(self.documentation), 9)
++        self.select_native()
++        self.addCleanup(self.retain_observations)
++
++    def select_native(self):
++        """A selected synthetic manager verifies the full fixture, including docs."""
++        f = self.fixture
++        native = m.tree(self.native)
++        standards = m.tree(f.method / 'standards')
++        manifest = {'release': {'cut': 'v3.0.5'},
++                    'auxiliary': {'plugin': {'installed_root': 'plugins/spec',
++                        'member_count': len(native), 'members': [{'path': k, 'sha256': m.sha(v)} for k, v in native.items()]}},
++                    'standards': {'installed_root': 'standards', 'member_count': len(standards),
++                        'members': [{'path': k, 'sha256': m.sha(v)} for k, v in standards.items()]}}
++        raw = m.encode(manifest); (f.method / 'manifest.json').write_bytes(raw)
++        definition = json.loads(f.definition.read_bytes())
++        definition['constitution']['stdo']['basis']['manifest_sha256'] = m.sha(raw)
++        f.definition.write_bytes(m.encode(definition))
++        self.manager_log = f.root / 'manager-calls.jsonl'
++        f.manager.write_text(
++            '#!/usr/bin/env python3\n'
++            'from pathlib import Path\nimport hashlib,json,sys\n'
++            'assert sys.argv[1] == "status" and sys.argv[-1] == "--verify"\n'
++            'definition=Path(sys.argv[sys.argv.index("--definition")+1])\n'
++            'basis=json.loads(definition.read_bytes())["constitution"]["stdo"]["basis"]\n'
++            'root=Path(' + repr(str(f.method)) + ')\n'
++            'log=Path(' + repr(str(self.manager_log)) + ')\n'
++            'with log.open("a") as out:out.write(json.dumps(sys.argv)+"\\n")\n'
++            'failures=[]\n'
++            'try:\n'
++            ' raw=(root/"manifest.json").read_bytes();manifest=json.loads(raw)\n'
++            ' if hashlib.sha256(raw).hexdigest()!=basis["manifest_sha256"]:failures.append("manifest")\n'
++            ' for group in (manifest["auxiliary"]["plugin"],manifest["standards"]):\n'
++            '  for row in group["members"]:\n'
++            '   path=root/group["installed_root"]/row["path"]\n'
++            '   if hashlib.sha256(path.read_bytes()).hexdigest()!=row["sha256"]:failures.append(str(path))\n'
++            'except (OSError,ValueError,KeyError):failures.append("missing or malformed installation")\n'
++            'print(json.dumps({"basis":basis["uri"],"manifest_sha256":basis["manifest_sha256"],'
++            '"installed":root.is_dir(),"valid":not failures,"failures":failures,"path":str(root),"definition":str(definition)}))\n')
++
++    def retain_observations(self):
++        destination = os.environ.get('STDO_SKILLS_NATIVE_CUSTODY')
++        if destination:
++            path = Path(destination); path.mkdir(parents=True, exist_ok=True)
++            value = {'case': self.id(), 'events': self.events, 'observations': self.observations,
++                     'scope': 'Actual public CLI over controlled native/manager/provider inputs; no LLM or released-native qualification.'}
++            with (path / (self._testMethodName + '.json')).open('xb') as out:
++                out.write(m.encode(value))
++
++    def cli(self, command, host='codex', receipt=None, expected=0, package=None):
++        f = self.fixture
++        args = ['--host', host, '--workspace', str(f.workspace)]
++        if command in ('plan', 'install'):
++            args += ['--package', str(package or f.package), '--definition', str(f.definition),
++                     '--method-root', str(f.method), '--ac-root', str(f.ac),
++                     '--stdo', str(f.manager), '--python', m.sys.executable]
++        elif command == 'check-runtime':
++            args = ['--configuration', str(m.paths(f.workspace, host)[1] / 'CONFIG.json')]
++        else:
++            args += ['--receipt-sha256', receipt]
++        argv = [m.sys.executable, '-B', str(installation.ROOT / 'scripts/manage_skills.py'), command, *args]
++        result = subprocess.run(argv, capture_output=True, text=True)
++        self.events.append({'argv': argv, 'returncode': result.returncode,
++                            'stdout': result.stdout, 'stderr': result.stderr})
++        self.assertEqual(result.returncode, expected, result.stdout + result.stderr)
++        return json.loads(result.stdout)
++
++    def snapshot(self, root=None):
++        return {k: m.sha(v) for k, v in m.tree(root or self.fixture.method).items()}
++
++    def test_both_public_routes_keep_canonical_links_metadata_and_safe_removal(self):
++        original = self.snapshot(); observations = []
++        for host in ('codex', 'claude'):
++            base, bundle, receipt_path = m.paths(self.fixture.workspace, host)
++            self.cli('plan', host); self.assertFalse(base.exists())
++            installed = self.cli('install', host); receipt = installed['receipt_sha256']
++            self.cli('verify', host, receipt); self.cli('check-runtime', host)
++            config = json.loads((bundle / 'CONFIG.json').read_bytes())
++            record = json.loads(receipt_path.read_bytes())
++            self.assertEqual(config['native_workflow'], record['native_workflow'])
++            self.assertEqual(config['native_workflow']['root'], str(self.native))
++            self.assertFalse((bundle / 'native').exists())
++            for name in (*m.CORE, *(('stdo-refresh',) if host == 'claude' else ())):
++                wrapper = base / 'skills' / name / 'SKILL.md'
++                body = wrapper.read_text(); destination = re.search(r'\[native workflow\]\(([^)]+)\)', body).group(1)
++                self.assertIn('%20', destination); self.assertIn('%23', destination)
++                path, fragment = local_target(wrapper, destination)
++                expected = self.native / ('claude-skills/refresh/SKILL.md' if name == 'stdo-refresh' else 'skills/' + name + '/SKILL.md')
++                self.assertEqual(path, expected); self.assertEqual(fragment, '')
++                self.assertEqual(body.split('---', 2)[1], re.sub(r'^name:[^\n]*', 'name: ' + name, path.read_text().split('---', 2)[1], flags=re.M))
++                for link in links(body):
++                    local, _ = local_target(wrapper, link)
++                    self.assertTrue(local.is_file(), (wrapper, link))
++            # Exercise the user's actual chain, then every local guide route.
++            help_path = self.native / 'skills/stdo-help/SKILL.md'
++            guide_link = next(x for x in links(help_path.read_text()) if 'GETTING_STARTED.md' in x)
++            guide, _ = local_target(help_path, guide_link); self.assertEqual(guide, self.guide)
++            resolved = []
++            for link in links(guide.read_text()):
++                target, fragment = local_target(guide, link)
++                if target is None: continue
++                self.assertTrue(target.is_file(), (link, target))
++                if fragment: self.assertIn(fragment, anchors(target.read_text()), (link, fragment))
++                resolved.append({'link': link, 'target': str(target), 'fragment': fragment})
++            observations.append({'host': host, 'local_getting_started_routes': resolved})
++            unrelated = base / 'skills/unrelated/SKILL.md'; unrelated.parent.mkdir(); unrelated.write_text('unrelated')
++            calls = self.manager_log.read_bytes()
++            self.cli('remove', host, receipt)
++            self.assertEqual(self.manager_log.read_bytes(), calls, 'Removal must not invoke the native dependency')
++            self.assertEqual(unrelated.read_text(), 'unrelated'); self.assertFalse(bundle.exists())
++            self.assertEqual(self.snapshot(), original)
++        self.observations.update(native_unchanged=original, routes=observations)
++
++    def test_complete_frontmatter_preserves_multiline_and_optional_invocation_fields(self):
++        source = self.native / 'skills/stdo-work/SKILL.md'
++        header = ('---\nname: stdo-work\ndescription: >-\n  A multiline native description\n  with a second line.\n'
++                  'argument-hint: "<value with spaces>"\ndisable-model-invocation: true\n'
++                  'user-invocable: false\nallowed-tools: Read, Write\nmodel: inherit\ncontext: fork\n'
++                  'agent: reviewer\nmetadata:\n  name: nested-name\n  custom: "yes"\nhooks:\n  Stop: []\n---\n')
++        source.write_text(header + '\n# Native body\n'); self.select_native()
++        for host in ('codex', 'claude'):
++            self.cli('plan', host); self.cli('install', host)
++            base, _, _ = m.paths(self.fixture.workspace, host)
++            self.assertTrue((base / 'skills/stdo-work/SKILL.md').read_bytes().startswith(header.encode()))
++
++    def test_malformed_native_frontmatter_refuses_plan_before_host_effects(self):
++        source = self.native / 'skills/stdo-work/SKILL.md'
++        for body in ('name: no-delimiter\ndescription: invalid\n',
++                     '---\nname: stdo-work\nname: duplicate\ndescription: invalid\n---\n'):
++            source.write_text(body); self.select_native()
++            for host in ('codex', 'claude'):
++                self.cli('plan', host, expected=2)
++                self.assertFalse(m.paths(self.fixture.workspace, host)[0].exists())
++
++    def test_canonical_changes_refuse_verification_but_never_block_owned_removal(self):
++        for host in ('codex', 'claude'):
++            installed = self.cli('install', host); receipt = installed['receipt_sha256']
++            base, bundle, _ = m.paths(self.fixture.workspace, host); owned = self.snapshot(base / ('stdo-' + m.VERSION))
++            for target in [self.documentation[0], self.native / 'skills/stdo-work/SKILL.md', self.fixture.method / 'manifest.json']:
++                original = target.read_bytes(); target.write_bytes(original + b'changed\n')
++                try:
++                    self.cli('verify', host, receipt, expected=2); self.cli('check-runtime', host, expected=2)
++                    self.assertEqual(self.snapshot(bundle), owned)
++                finally: target.write_bytes(original)
++            missing = self.fixture.root / ('held-' + host); self.fixture.method.rename(missing)
++            try:
++                native_before = self.snapshot(missing)
++                self.cli('verify', host, receipt, expected=2); self.cli('check-runtime', host, expected=2)
++                calls = self.manager_log.read_bytes(); self.cli('remove', host, receipt)
++                self.assertEqual(self.manager_log.read_bytes(), calls)
++                self.assertEqual(self.snapshot(missing), native_before)
++            finally: missing.rename(self.fixture.method)
++
++    def test_legacy_receipt_removal_stays_owned_file_only(self):
++        for host in ('codex', 'claude'):
++            self.cli('install', host)
++            base, bundle, receipt_path = m.paths(self.fixture.workspace, host)
++            config = json.loads((bundle / 'CONFIG.json').read_bytes()); del config['native_workflow']
++            (bundle / 'CONFIG.json').write_bytes(m.encode(config))
++            shutil.copytree(self.native, bundle / 'native')
++            receipt = json.loads(receipt_path.read_bytes()); del receipt['native_workflow']
++            receipt['files'] = {root + '/' + name: m.sha(raw) for root in receipt['roots'] for name, raw in m.tree(base / root).items()}
++            receipt_path.write_bytes(m.encode(receipt)); digest = m.sha(receipt_path.read_bytes())
++            before = self.snapshot(); calls = self.manager_log.read_bytes()
++            self.cli('verify', host, digest); self.cli('remove', host, digest)
++            self.assertEqual(self.manager_log.read_bytes(), calls); self.assertEqual(self.snapshot(), before)
++        self.observations['legacy_scope'] = 'Controlled prior-schema owned-copy receipts; separate actual pre-repair installs are retained in the task evidence.'
++
++    def test_changed_source_does_not_silently_refresh_published_package(self):
++        original = (installation.ROOT / 'release/3.0.5/manifest.json').read_bytes()
++        self.cli('plan', package=installation.ROOT, expected=2)
++        self.assertEqual((installation.ROOT / 'release/3.0.5/manifest.json').read_bytes(), original)
++        self.assertFalse(m.paths(self.fixture.workspace, 'codex')[0].exists())
++
++
++if __name__ == '__main__': unittest.main()
+--- before/stdo_skills/build_tenants/codex/current/DESIGN.md
++++ after/stdo_skills/build_tenants/codex/current/DESIGN.md
+@@ -6,6 +6,6 @@
+ 
+ The Codex extension uses the ordinary exec/file tools and current session authoring; explicit `$stdo-project` invocation. It invokes public a_c prepare/task/submit/build/status and formal gate interfaces from the selected runtime configuration, retaining actual JSON. It cannot require the other host merely to author a representation. Provider/runtime drift stops reuse; previous failures and unsupported operations remain visible. Native delegated work uses the selected core workflow and actual tools, not an invented nested transcript.
+ 
+-The shared installer implements exact package/installation custody only. It copies the verified native package and independent host extension, installs thin discovery wrappers, and records owned files. Update is verified removal of the selected owned bundle followed by an explicit new installation after preserving the old package/receipt; unexpected modifications refuse. Filesystem failures may be partial and must be reconciled before retry. This cooperative local mechanism is not an OS acquisition sandbox.
++The shared installer records exact package/installation custody. New host wrappers preserve native frontmatter except their explicitly bound names and link to the verified canonical native installation, keeping its relative references intact. It copies the independent host extension and records owned files plus that external native dependency. Verification rechecks the dependency; receipt-scoped removal deletes only owned host files even if the native installation is unavailable. The [current installer guide](../../../scripts/INSTALLATION.md) defines this corrected route and legacy receipt handling. Filesystem failures may be partial and must be reconciled before retry. This cooperative local mechanism is not an OS acquisition sandbox.
+ 
+ Current verification must exercise actual project representation plus formal read, absent issuer/recipient grants, uncertain-effect retry and reviewer severity return on this exact installed package. Native 3.0.5 source owns 1-highest–5-lowest review severity, retained alternate scales remain explicit, and severity never supplies priority or promotion authority. Tests over deterministic fixtures establish installation and contracts only; real host observations establish the bounded actor behavior. No prior host result is adopted as current.
+--- before/stdo_skills/build_tenants/claude/current/DESIGN.md
++++ after/stdo_skills/build_tenants/claude/current/DESIGN.md
+@@ -6,6 +6,6 @@
+ 
+ The Claude extension uses Bash/Read and the current session writer; explicit `/stdo-project` invocation. It invokes public a_c prepare/task/submit/build/status and formal gate interfaces from the selected runtime configuration, retaining actual JSON. It cannot require the other host merely to author a representation. Provider/runtime drift stops reuse; previous failures and unsupported operations remain visible. Native delegated work uses the selected core workflow and actual tools, not an invented nested transcript.
+ 
+-The shared installer implements exact package/installation custody only. It copies the verified native package and independent host extension, installs thin discovery wrappers, and records owned files. Update is verified removal of the selected owned bundle followed by an explicit new installation after preserving the old package/receipt; unexpected modifications refuse. Filesystem failures may be partial and must be reconciled before retry. This cooperative local mechanism is not an OS acquisition sandbox.
++The shared installer records exact package/installation custody. New host wrappers preserve native frontmatter except their explicitly bound names and link to the verified canonical native installation, keeping its relative references intact. It copies the independent host extension and records owned files plus that external native dependency. Verification rechecks the dependency; receipt-scoped removal deletes only owned host files even if the native installation is unavailable. The [current installer guide](../../../scripts/INSTALLATION.md) defines this corrected route and legacy receipt handling. Filesystem failures may be partial and must be reconciled before retry. This cooperative local mechanism is not an OS acquisition sandbox.
+ 
+ Current verification must exercise actual project representation plus formal read, absent issuer/recipient grants, uncertain-effect retry and reviewer severity return on this exact installed package. Native 3.0.5 source owns 1-highest–5-lowest review severity, retained alternate scales remain explicit, and severity never supplies priority or promotion authority. Tests over deterministic fixtures establish installation and contracts only; real host observations establish the bounded actor behavior. No prior host result is adopted as current.
+--- before/stdo_skills/scripts/INSTALLATION.md
++++ after/stdo_skills/scripts/INSTALLATION.md
+@@ -0,0 +1,40 @@
++# Current host installer
++
++This source corrects the published 3.0.5 host-wrapper generator. The published
++package, manifest and qualification records remain unchanged. A successor
++package must inventory these changed sources explicitly before distribution;
++the old package manifest must refuse this changed source tree.
++
++`manage_skills.py plan` and `install` consume an exactly inventoried Skills
++package, one host workspace, a runtime-anchor Product Definition, its verified
++native method root, the selected manager, a_c source root and Python invocation.
++Use the existing CLI options shown by `--help`. Plan has no host-file effects;
++install refuses existing owned destinations. Neither command adopts a method
++for a nominated Product or registers global host configuration.
++
++Native workflow wrappers preserve the native frontmatter, including descriptions,
++argument hints, invocation policy and other metadata. Only the wrapper name is
++bound explicitly (`refresh` becomes `stdo-refresh`). A native manual-only skill
++therefore remains manual-only. Deterministic metadata checks do not establish
++automatic-discovery reliability or model compliance.
++
++The wrapper's live workflow link is an escaped `file:` URI to the verified
++canonical native skill. Follow the native skill's relative references from that
++location. In particular, its Getting Started guide reaches the original
++standards, templates and offline readers. New installations do not make a
++relocated native plugin copy or rewrite native files. Paths containing spaces
++are encoded in the generated URI; native fragments retain their original meaning.
++
++CONFIG and the ownership receipt bind this canonical dependency separately from
++the owned host files. `verify` first checks the selected receipt and owned bytes,
++then re-verifies the exact manager, Product basis and native installation.
++`check-runtime` also checks the Python/provider pins. An absent, altered or
++redirected dependency withholds verification; no fallback or adoption occurs.
++Ordinary checks are current observations, not a filesystem lock against later
++changes.
++
++`remove` needs the caller-selected ownership-receipt digest and unchanged owned
++files. It does not require a working external native dependency and never deletes
++that dependency. Legacy receipts without a canonical-dependency field retain
++their original owned-copy verification/removal behavior. Preserve the old receipt
++and package before an explicit update; unrelated files remain outside ownership.

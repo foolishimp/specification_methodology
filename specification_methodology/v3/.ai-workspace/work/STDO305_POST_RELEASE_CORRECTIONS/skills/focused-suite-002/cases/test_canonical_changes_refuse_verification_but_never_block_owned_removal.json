@@ -1,0 +1,335 @@
+{
+  "case": "test_native_routes.NativeRouteTests.test_canonical_changes_refuse_verification_but_never_block_owned_removal",
+  "events": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "install",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"installed\",\n  \"host\": \"codex\",\n  \"receipt\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.agents/stdo-skills-3.0.5.receipt.json\",\n  \"receipt_sha256\": \"aca93f37240e3eb7a77210e1f110dabfe48dcbc543d78701a2ce5afbfe43bab7\",\n  \"files\": 11\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "aca93f37240e3eb7a77210e1f110dabfe48dcbc543d78701a2ce5afbfe43bab7"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "aca93f37240e3eb7a77210e1f110dabfe48dcbc543d78701a2ce5afbfe43bab7"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "aca93f37240e3eb7a77210e1f110dabfe48dcbc543d78701a2ce5afbfe43bab7"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "aca93f37240e3eb7a77210e1f110dabfe48dcbc543d78701a2ce5afbfe43bab7"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "remove",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "aca93f37240e3eb7a77210e1f110dabfe48dcbc543d78701a2ce5afbfe43bab7"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"removed\",\n  \"host\": \"codex\",\n  \"files\": 11\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "install",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"installed\",\n  \"host\": \"claude\",\n  \"receipt\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.claude/stdo-skills-3.0.5.receipt.json\",\n  \"receipt_sha256\": \"2bba40fe92e323158a5450e78650ab4c761562ac97992a5d305b73ffa90f029c\",\n  \"files\": 12\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "2bba40fe92e323158a5450e78650ab4c761562ac97992a5d305b73ffa90f029c"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.claude/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "2bba40fe92e323158a5450e78650ab4c761562ac97992a5d305b73ffa90f029c"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.claude/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "2bba40fe92e323158a5450e78650ab4c761562ac97992a5d305b73ffa90f029c"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.claude/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "2bba40fe92e323158a5450e78650ab4c761562ac97992a5d305b73ffa90f029c"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace/.claude/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Manager did not verify the exact selected Product basis\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "remove",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpbt824ed5/workspace",
+        "--receipt-sha256",
+        "2bba40fe92e323158a5450e78650ab4c761562ac97992a5d305b73ffa90f029c"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"removed\",\n  \"host\": \"claude\",\n  \"files\": 12\n}\n"
+    }
+  ],
+  "observations": {},
+  "scope": "Actual public CLI over controlled native/manager/provider inputs; no LLM or released-native qualification."
+}

@@ -1,0 +1,73 @@
+{
+  "category": "execution",
+  "claim": "owner_validation",
+  "execution": {
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+      "validate",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology",
+    "elapsed_seconds": 0.895886,
+    "ended_ns": 1794025521661627000,
+    "environment": {
+      "python": {
+        "executable_realpath": "/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+        "invocation": "/usr/local/bin/python3",
+        "sha256": "a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539",
+        "version": "3.12.8 (v3.12.8:2dc476bcb91, Dec  3 2024, 14:43:19) [Clang 13.0.0 (clang-1300.0.29.30)]"
+      }
+    },
+    "inputs": [
+      {
+        "bytes": 8568341,
+        "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+        "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      }
+    ],
+    "outputs": [
+      {
+        "bytes": 416,
+        "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/public/validate/stdout.json",
+        "sha256": "11787ccaf99475c624e4b33470a2cbdbadf151323c9a9ca375c4c553f0305335"
+      }
+    ],
+    "returncode": 0,
+    "started_ns": 1794025520765741000,
+    "stderr": {
+      "bytes": 0,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/public/validate/stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "stdout": {
+      "bytes": 416,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/public/validate/stdout.json",
+      "sha256": "11787ccaf99475c624e4b33470a2cbdbadf151323c9a9ca375c4c553f0305335"
+    }
+  },
+  "kind": "stdo.cohort-evidence/1",
+  "operation": "current_owner_result",
+  "producer": {
+    "bytes": 49166,
+    "path": "a_c/build_tenants/graphify/code/ac_graph.py",
+    "sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667"
+  },
+  "provenance": {
+    "derivation": "Repository-relative retained references; exact argv/environment/stdout unchanged. Captured stdout result is included as an observed stream output, separately from the producer-declared file outputs. No execution was repeated or inferred.",
+    "original_execution": {
+      "bytes": 2437,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/public/validate/execution.json",
+      "sha256": "68ae20127476bc9d847dfa95a42d6ce93ded0464c003eae970f521fd4f1136bd"
+    }
+  },
+  "result": {
+    "bytes": 416,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/public/validate/stdout.json",
+    "sha256": "11787ccaf99475c624e4b33470a2cbdbadf151323c9a9ca375c4c553f0305335"
+  },
+  "schema": "stdo.execution-observation/1",
+  "source_identity_sha256": "c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06",
+  "status": "passed"
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "stdo.post-release-correction.activation/1",
+  "recorded_utc": "2026-11-07T02:40:14.818767+00:00",
+  "actor": "/root/stdo305_release_tools",
+  "role": "Writer/Worker",
+  "executive": "/root",
+  "preimage_commit": "6edfffb2f8a35b244782749383fb19105d9227d9",
+  "purpose": "Correct F3 installed proof-document links and F4 public-readback fixture without changing published release truth. Quantify repeated gate validation without optimization.",
+  "basis": {
+    "definition": "specification_methodology/v3/stdo_3.json",
+    "release": "stdo://releases/v3.0.4/",
+    "verification": "Actual stdo status --definition stdo_3.json --verify returned installed=true, valid=true, failures=[] during intake.",
+    "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+  },
+  "authority": {
+    "kind": "Executive conversation assignment transcription",
+    "grant": "Root activates bounded post-release Writer/Worker for findings 3 and 4; exact current proof producer/renderer, derived proof documentation and necessary navigation/inventory, focused docs tests, tests/test_stable_stack_release.py, and this evidence directory.",
+    "presentation_disposition": "Preserve exact source custody separately from installed-facing projection with source/derived hashes. Current reader/nav/catalog/DOCUMENTATION may update; original selection/evidence/public B/3.0.5 manifests/assets remain unchanged. Validate immutable targets and anchors; disclose remote/offline boundary.",
+    "reviewer": "/root/stdo305_integration_review"
+  },
+  "change_class": "unreleased common HOW documentation presentation and test-fixture repair; production gate semantics unchanged",
+  "allowed_writes": [
+    "specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py",
+    "specification_methodology/v3/build_tenants/common-tools/test_*proof*",
+    "specification_methodology/v3/build_tenants/common/standards/documentation/proofs presentation/catalog/source-custody outputs",
+    "specification_methodology/v3/build_tenants/common/standards/documentation/DOCUMENTATION.json",
+    "tests/test_stable_stack_release.py",
+    "specification_methodology/v3/.ai-workspace/work/STDO305_POST_RELEASE_CORRECTIONS/release-docs/**"
+  ],
+  "preserve": [
+    "all published tags/assets and stack_release.json",
+    "all original frozen qualification records and SELECTION.json",
+    "source S/model/math/generation and builder 3.0.4",
+    "unrelated worktree and local caches"
+  ],
+  "prohibited": [
+    "Git/index/ref/publication/global install effects",
+    "version or builder changes",
+    "gate optimization",
+    "whole release regeneration"
+  ],
+  "evidence": [
+    "before/after fixture regression",
+    "exact source-to-shipped-to-installed trace",
+    "all five immutable targets/anchors and presentation-custody negative controls",
+    "affected docs/test checks",
+    "bounded validation count and prior timings with limits"
+  ],
+  "stop_conditions": [
+    "unexpected protected byte drift",
+    "required owner outside allowed territory",
+    "failed predicate requiring expanded scope"
+  ],
+  "return": "Exact changed source/evidence freeze for independent review and Executive disposition; no release claim.",
+  "intake_preimages": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 3632,
+      "sha256": "3643f5754f93bdcdc145858b65d50c2acc8e4985e19a5231127b0fa8af18a025"
+    },
+    {
+      "path": "specification_methodology/v3/AGENTS.md",
+      "bytes": 5353,
+      "sha256": "a41d77559dc5c3f94c907c1c8941bd7fd8dda641781d68da8250748994e6353e"
+    },
+    {
+      "path": "specification_methodology/v3/stdo_3.json",
+      "bytes": 5250,
+      "sha256": "44b361bc6744aee5887f75a886f5d81f1d33f80d2dcdc69209f810590e729b7a"
+    },
+    {
+      "path": "specification_methodology/v3/development/STDO_3_0_4.md",
+      "bytes": 7354,
+      "sha256": "ec737a1b933de8a4bf697bb2dce8753b49f89d1d16709027d1d5d443c83d6e18"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py",
+      "bytes": 20304,
+      "sha256": "44ea3f4f35b5428ce394571915ee1c66dc2cd3f395038434612879644f6c5f88"
+    },
+    {
+      "path": "tests/test_stable_stack_release.py",
+      "bytes": 46195,
+      "sha256": "3b23dc283202f39232124490dd56dca7e92b4055eb2dcab4d108fbed5e9c0532"
+    },
+    {
+      "path": "stack_release.json",
+      "bytes": 373168,
+      "sha256": "84a0c3747f8915592a2a1628fa8227f6891d8389737fdc0c5a0e8c806d5c3c4f"
+    }
+  ]
+}

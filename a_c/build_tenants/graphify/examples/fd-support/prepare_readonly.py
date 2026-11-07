@@ -73,9 +73,9 @@ def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", de
     definition_raw = (product_root / definition_name).read_bytes()
     definition = cast(Object, core.parse_json(definition_raw))
     product_id = cast(str, cast(Object, definition["product"])["definition_id"])
-    native305 = profile == "stdo-3.0.5"
-    native = profile in ("stdo-3.0.1", "stdo-3.0.5")
-    if profile not in ("claude-rc9", "stdo-3.0.1", "stdo-3.0.5"):
+    native305 = profile == "stdo-3.0.5-rc.1"
+    native = profile in ("stdo-3.0.1", "stdo-3.0.5-rc.1")
+    if profile not in ("claude-rc9", "stdo-3.0.1", "stdo-3.0.5-rc.1"):
         raise ValueError("Select one explicit supported profile")
     tool_root = Path(__file__).resolve().parents[4]
     profile_path = "build_tenants/graphify/design/fd-method-" + (profile if native else "claude-rc9") + ".json"
@@ -89,7 +89,7 @@ def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", de
     manager_observation: Object | None = None
     if native305:
         if method_installation is None:
-            raise ValueError("3.0.5 setup requires the exact verified method installation")
+            raise ValueError("3.0.5-rc.1 setup requires the exact verified method installation")
         method_installation = method_installation.absolute()
         if core._overlaps(output, method_installation):
             raise ValueError("Setup output must not overlap the immutable method installation")
@@ -98,7 +98,7 @@ def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", de
         if result.returncode:
             raise ValueError("Manager verification failed: " + (result.stderr or result.stdout))
         manager_observation = core.as_object(core.parse_json(result.stdout.encode()))
-        if (selected_basis.get("uri") != "stdo://releases/v3.0.5/"
+        if (selected_basis.get("uri") != "stdo://releases/v3.0.5-rc.1/"
                 or manager_observation.get("basis") != selected_basis["uri"]
                 or manager_observation.get("manifest_sha256") != selected_basis.get("manifest_sha256")
                 or manager_observation.get("definition_id") != product_id
@@ -106,9 +106,9 @@ def prepare(output: Path, product_root: Path, *, profile: str = "claude-rc9", de
                 or manager_observation.get("installed") is not True
                 or manager_observation.get("failures")
                 or Path(core.text(manager_observation.get("path"))).resolve() != method_installation.resolve()):
-            raise ValueError("Manager did not verify the exact selected 3.0.5 Product installation")
+            raise ValueError("Manager did not verify the exact selected 3.0.5-rc.1 Product installation")
     elif method_installation is not None:
-        raise ValueError("Method installation startup binding is selected only by the 3.0.5 profile")
+        raise ValueError("Method installation startup binding is selected only by the 3.0.5-rc.1 profile")
     design_path = "build_tenants/graphify/design/fd-support.md"
     design_raw = (tool_root / design_path).read_bytes()
     definition_ref = _source("product", definition_name, definition_raw)
@@ -227,7 +227,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", required=True, type=Path, help="Fresh directory beneath an existing parent")
     parser.add_argument("--product-root", type=Path, default=Path(__file__).resolve().parents[4])
-    parser.add_argument("--profile", choices=("claude-rc9", "stdo-3.0.1", "stdo-3.0.5"), default="claude-rc9")
+    parser.add_argument("--profile", choices=("claude-rc9", "stdo-3.0.1", "stdo-3.0.5-rc.1"), default="claude-rc9")
     parser.add_argument("--definition-name", default="stdo_a_c.json", help="Product-relative exact definition path")
     parser.add_argument("--method-installation", type=Path)
     parser.add_argument("--stdo", default="stdo")

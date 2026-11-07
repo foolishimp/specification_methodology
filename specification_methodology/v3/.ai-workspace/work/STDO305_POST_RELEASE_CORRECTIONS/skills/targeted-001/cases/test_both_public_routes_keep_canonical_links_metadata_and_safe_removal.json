@@ -1,0 +1,91 @@
+{
+  "case": "test_native_routes.NativeRouteTests.test_both_public_routes_keep_canonical_links_metadata_and_safe_removal",
+  "events": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "plan",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"planned\",\n  \"host\": \"codex\",\n  \"files\": 11,\n  \"roots\": [\n    \"stdo-3.0.5\",\n    \"skills/stdo-help\",\n    \"skills/stdo-project\",\n    \"skills/stdo-review\",\n    \"skills/stdo-status\",\n    \"skills/stdo-ticket\",\n    \"skills/stdo-work\"\n  ],\n  \"package_sha256\": \"0e8844e657e9e9f7bbed1a2312446852a3ca94f8c602ed14b68afd795859ae17\"\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "install",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"installed\",\n  \"host\": \"codex\",\n  \"receipt\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/workspace/.agents/stdo-skills-3.0.5.receipt.json\",\n  \"receipt_sha256\": \"41414071d700db75d73f634d97a8e802fdb2c68acbd74d3d68833412578128ec\",\n  \"files\": 11\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/workspace",
+        "--receipt-sha256",
+        "41414071d700db75d73f634d97a8e802fdb2c68acbd74d3d68833412578128ec"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"verified\",\n  \"host\": \"codex\",\n  \"files\": 11\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/workspace/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"verified\",\n  \"configuration\": {\n    \"ac_root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/ac\",\n    \"basis\": {\n      \"manifest_sha256\": \"828ef67e8e1ec5e0f5f81dd882a33b8c04f80eca4d0af8b6f6664e9c9d19943c\",\n      \"uri\": \"stdo://releases/v3.0.5/\"\n    },\n    \"definition\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/workspace/Product.json\",\n    \"host\": \"codex\",\n    \"kind\": \"stdo-skills.runtime/1\",\n    \"manager_identity\": {\n      \"invocation\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/manager\",\n      \"physical_path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/manager\",\n      \"runtime_launcher\": null,\n      \"sha256\": \"c1790040675d3f6370a035aa416f47a2881466f7c759fa22dcfcffafa4057eab\"\n    },\n    \"manager_verification\": {\n      \"basis\": \"stdo://releases/v3.0.5/\",\n      \"definition\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/workspace/Product.json\",\n      \"failures\": [],\n      \"installed\": true,\n      \"manifest_sha256\": \"828ef67e8e1ec5e0f5f81dd882a33b8c04f80eca4d0af8b6f6664e9c9d19943c\",\n      \"path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/native method with spaces #percent% (3.0.5)\",\n      \"valid\": true\n    },\n    \"method_root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/native method with spaces #percent% (3.0.5)\",\n    \"method_selection_scope\": \"runtime-installation-anchor-only\",\n    \"native_workflow\": {\n      \"basis\": {\n        \"manifest_sha256\": \"828ef67e8e1ec5e0f5f81dd882a33b8c04f80eca4d0af8b6f6664e9c9d19943c\",\n        \"uri\": \"stdo://releases/v3.0.5/\"\n      },\n      \"kind\": \"stdo-skills.canonical-native/1\",\n      \"root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/native method with spaces #percent% (3.0.5)/plugins/spec\"\n    },\n    \"operation_basis_rule\": \"resolve the nominated Product Definition; no adoption or override\",\n    \"provider_pins\": {\n      \"VERSION\": \"3da4414b24923430a97c932c0597fd5ebc9d126ae188181054b348d2a8559870\",\n      \"build_tenants/graphify/design/fd-method-stdo-3.0.5.json\": \"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\",\n      \"build_tenants/lean/lake-manifest.json\": \"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\",\n      \"build_tenants/lean/toolchain-lock.json\": \"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\"\n    },\n    \"python\": \"/usr/local/bin/python3\",\n    \"python_identity\": {\n      \"invocation\": \"/usr/local/bin/python3\",\n      \"physical_path\": \"/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12\",\n      \"sha256\": \"a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539\"\n    },\n    \"stdo\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpk8x7he5k/manager\",\n    \"version\": \"3.0.5\"\n  }\n}\n"
+    }
+  ],
+  "observations": {},
+  "scope": "Actual public CLI over controlled native/manager/provider inputs; no LLM or released-native qualification."
+}

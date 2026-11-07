@@ -1,0 +1,131 @@
+{
+  "case": "test_native_routes.NativeRouteTests.test_legacy_receipt_removal_stays_owned_file_only",
+  "events": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "install",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"installed\",\n  \"host\": \"codex\",\n  \"receipt\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace/.agents/stdo-skills-3.0.5.receipt.json\",\n  \"receipt_sha256\": \"2db0614d1e57619771fc19fddfc6c5d42a7faef5598f1a198e9ea7f3f2eb1051\",\n  \"files\": 11\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace",
+        "--receipt-sha256",
+        "0a4555629e5009fc1ae6a8ef745ee8829d83257c234938e1191a8ba31516338e"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"verified\",\n  \"host\": \"codex\",\n  \"files\": 32\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "remove",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace",
+        "--receipt-sha256",
+        "0a4555629e5009fc1ae6a8ef745ee8829d83257c234938e1191a8ba31516338e"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"removed\",\n  \"host\": \"codex\",\n  \"files\": 32\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "install",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"installed\",\n  \"host\": \"claude\",\n  \"receipt\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace/.claude/stdo-skills-3.0.5.receipt.json\",\n  \"receipt_sha256\": \"254043a3964b5362cecde92734c8b2dce105777d9ceae262ed6bc8e371172fc9\",\n  \"files\": 12\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace",
+        "--receipt-sha256",
+        "5d96395ae264c91ee3afe13d9ac6c2dffe2dc3f3aec1b2e2b3c9a1ff2041308b"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"verified\",\n  \"host\": \"claude\",\n  \"files\": 33\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "remove",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphzsh0sy1/workspace",
+        "--receipt-sha256",
+        "5d96395ae264c91ee3afe13d9ac6c2dffe2dc3f3aec1b2e2b3c9a1ff2041308b"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"removed\",\n  \"host\": \"claude\",\n  \"files\": 33\n}\n"
+    }
+  ],
+  "observations": {
+    "legacy_scope": "Controlled prior-schema owned-copy receipts; separate actual pre-repair installs are retained in the task evidence."
+  },
+  "scope": "Actual public CLI over controlled native/manager/provider inputs; no LLM or released-native qualification."
+}

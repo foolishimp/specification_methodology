@@ -1,0 +1,502 @@
+[
+  {
+    "cone": "F_D, totality, evaluation, exhaustion and sufficiency",
+    "sources": [
+      "standards/AXIOMATIC_CALCULUS.md",
+      "standards/ACTIVATION.md",
+      "standards/FOUNDATIONS.md",
+      "standards/examples/DETERMINISTIC_CONTRACTS.md"
+    ],
+    "changed_meaning": "Replace evaluation-only generic F_D; keep deterministic construction, totality, explicit authority, predicate-relative exhaustion and continuation-sensitive sufficiency distinct.",
+    "keys": [
+      "common_fd",
+      "fd_eligibility_results",
+      "fd_evaluation_preserves_subject",
+      "exhaustion_preserves_result_distinctions",
+      "sufficiency_preserves_distinguishing_facts"
+    ],
+    "counterexamples": [
+      {
+        "input": "A terminating clock-dependent routine omits the clock from its basis",
+        "required": "F_D eligibility is not established; dependency contract violation is not cured by a deterministic label."
+      },
+      {
+        "input": "A sort mutates its input then reports the result sorted",
+        "required": "That proves the post-state predicate only; it is not unchanged-subject evaluation of the original."
+      },
+      {
+        "input": "Budget expires before sortedness is known but a closed report is returned",
+        "required": "Report availability may be satisfied; sortedness remains indeterminate."
+      },
+      {
+        "input": "Candidate digest equal, one assessment unperformed and another indeterminate",
+        "required": "Retain different continuation and standing facts."
+      }
+    ],
+    "record_ids": {
+      "common_fd": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a8cafeeacc2f8bc2deda01690eaaf31b",
+      "fd_eligibility_results": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:0016b176dc386a2ff2bb8aef0a1b5de5",
+      "fd_evaluation_preserves_subject": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:7715fec956660f5223e30edda07d78cd",
+      "exhaustion_preserves_result_distinctions": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:34acd3909e2bab07ae79cfb64247edc0",
+      "sufficiency_preserves_distinguishing_facts": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1d9d7a97edc9454994d42a4d6005b694"
+    }
+  },
+  {
+    "cone": "recursive Product composition and issuer/recipient authority",
+    "sources": [
+      "standards/PRODUCT_DEFINITION.md"
+    ],
+    "changed_meaning": "Explicit directed per-activation authority and information eligibility, standalone entry, material joins and currentness across depth/sharing.",
+    "keys": [
+      "product_identity_and_join",
+      "edge_contract_fields",
+      "no_transitive_grant_union",
+      "context_derivation_and_exposure",
+      "frontier_cycles_and_replacement",
+      "exact_source_and_material_change"
+    ],
+    "counterexamples": [
+      {
+        "input": "A→B and B→C exist; A requests C directly",
+        "required": "Check A’s actual grant and eligibility; no transitive permission."
+      },
+      {
+        "input": "Same leaf reached through a second route after forbidden exposure",
+        "required": "No union of grants and no cleansing of exposure."
+      },
+      {
+        "input": "Every component test passes but quantity units disagree at the join",
+        "required": "Composed outcome is not established."
+      },
+      {
+        "input": "A Product is entered alone with its own complete dependencies",
+        "required": "Do not demand its parent context absent a declared prerequisite."
+      }
+    ],
+    "record_ids": {
+      "product_identity_and_join": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:f154f9cde47886c10fbd42ffc5a191eb",
+      "edge_contract_fields": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a292c2e2f91c08e7bb15dc8fbb39062d",
+      "no_transitive_grant_union": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1772737a5815b2798326f45cd9051c97",
+      "context_derivation_and_exposure": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:96c5964ba764a6795da51c9c9cb72e72",
+      "frontier_cycles_and_replacement": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:50f3c26fec60a291bfb20925a8ddab54",
+      "exact_source_and_material_change": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:f226fa69dcfcfcd76be346ab3d60e777"
+    }
+  },
+  {
+    "cone": "review severity, report effects, QA and currentness",
+    "sources": [
+      "standards/EXECUTIVE_BASELINE.md",
+      "standards/EVALUATION.md",
+      "standards/TICKETS.md"
+    ],
+    "changed_meaning": "Selected severity convention and optional priority policy remain separate; granted landing, closure and release have distinct gates; report-only mutation does not confer repair authority; recheck is condition-driven.",
+    "keys": [
+      "severity_anchors_and_three",
+      "triage_roles_and_policy",
+      "landing_and_downstream_currentness",
+      "review_recheck_triggers",
+      "finding_report_effect_boundary"
+    ],
+    "counterexamples": [
+      {
+        "input": "Severity 3 has unknown downstream blast radius",
+        "required": "Do not call the issue contained; retain assessment uncertainty and route material impact."
+      },
+      {
+        "input": "Granted candidate landing with pending QA",
+        "required": "Pending review alone is no landing hold; required review still affects dependent closure/release."
+      },
+      {
+        "input": "Reviewer is allowed to write report R",
+        "required": "Only R is authorized; no candidate repair or priority/disposition follows."
+      },
+      {
+        "input": "A repair has exact reproduction and suite evidence, with no recheck trigger",
+        "required": "Do not require another review automatically; verification is still not independent review."
+      }
+    ],
+    "record_ids": {
+      "severity_anchors_and_three": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:33c9bfe60b1957ced00291ea6a3d730c",
+      "triage_roles_and_policy": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:cde3a0bd29cebd3a9378726078009ccc",
+      "landing_and_downstream_currentness": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:398698aa5495d85a5ad36479a8ca57a6",
+      "review_recheck_triggers": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:b8abf3c4dcae036cda33885639544f34",
+      "finding_report_effect_boundary": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:634ec16a1e1fc53db0bc5fcf70167e34"
+    }
+  },
+  {
+    "cone": "stable release, exact current source closure and deterministic migration",
+    "sources": [
+      "standards/RELEASE.md",
+      "standards/PRODUCT_DEFINITION.md",
+      "standards/schemas/installed-release-manifest.schema.json"
+    ],
+    "changed_meaning": "Stable-v1 is an explicitly marked immutable cut on a fresh line, alongside preserved historical RC rules. Current cohort derivation freezes all authoritative source then binds completed native payload externally. F_D migration requires actual eligibility.",
+    "keys": [
+      "stable_identity_fail_closed",
+      "adoption_exact_plan",
+      "source_freeze_then_derived_payload",
+      "native_then_external_binding",
+      "fd_migration_dispositions"
+    ],
+    "counterexamples": [
+      {
+        "input": "A historical bare version selector is presented as stable",
+        "required": "Refuse profile reinterpretation; preserve historical identity."
+      },
+      {
+        "input": "Native workflow owner omitted from S to avoid a digest cycle",
+        "required": "Source freeze is incomplete; include it and regenerate affected payload."
+      },
+      {
+        "input": "Old graph and new version label without current grounds",
+        "required": "Not a current source-matched representation."
+      },
+      {
+        "input": "Legacy deterministic helper has no termination argument or chosen remedy",
+        "required": "Unresolved classification, no automatic common F_D or F_P."
+      }
+    ],
+    "record_ids": {
+      "stable_identity_fail_closed": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:7eb3d14668a66acf4824d576dc5be6ad",
+      "adoption_exact_plan": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:b764f549b80df601ac3e0246fd4a0f36",
+      "source_freeze_then_derived_payload": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:ee30f0b1075b8138c78bda3e7ec514b4",
+      "native_then_external_binding": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d02591e735c7ae61ddf5c9449948429d",
+      "fd_migration_dispositions": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bea34e3623d1af6ddbebd548f5388998"
+    }
+  },
+  {
+    "cone": "native control intake and host acquisition",
+    "sources": [
+      "plugins/spec/references/COORDINATED_HANDOFF.md",
+      "plugins/spec/references/HOST_BINDING.md",
+      "plugins/spec/skills/stdo-work/SKILL.md",
+      "plugins/spec/skills/stdo-review/SKILL.md"
+    ],
+    "changed_meaning": "Own control first for every actor; issuer and recipient authority differ; packet is admitted-clause projection, not new procedure; actual host limits and effects govern continuation.",
+    "keys": [
+      "own_intake_before_subject",
+      "issuer_packet_bindings",
+      "issuer_outputs_and_dispatch",
+      "recipient_verification_and_return",
+      "return_reliance_and_continuation",
+      "actual_host_enforcement_uninstantiated",
+      "native_work_requires_control"
+    ],
+    "counterexamples": [
+      {
+        "input": "Issuer can see source X but recipient excludes X; issuer inlines a summary",
+        "required": "Recipient eligibility still governs; summary cannot cleanse prohibited source."
+      },
+      {
+        "input": "Recipient gets a packet with unknown grant digest",
+        "required": "Verify controls first and return missing binding without subject reads."
+      },
+      {
+        "input": "Tool command prints excluded filenames and redaction happens afterward",
+        "required": "Contradiction before dispatch; later redaction does not undo acquisition."
+      },
+      {
+        "input": "Actor timeout after an effectful operation",
+        "required": "Effect remains unknown; reconcile before retry."
+      }
+    ],
+    "record_ids": {
+      "own_intake_before_subject": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:79e0b9d751458cd38e955d1b4a1e2889",
+      "issuer_packet_bindings": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:5def4ae0bd1038ee029105208cbb54a2",
+      "issuer_outputs_and_dispatch": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:814e0ce702aa1648a05b59502de64dbf",
+      "recipient_verification_and_return": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a56fc9f56e5409b738c8f59c2d09eb21",
+      "return_reliance_and_continuation": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:6d77d124f18fdb7af546f68428efbb56",
+      "actual_host_enforcement_uninstantiated": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:3aefacf2fe0b450b760b5bca67a02c82",
+      "native_work_requires_control": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:8518f243ea746ac5dc74561a36001990"
+    }
+  },
+  {
+    "cone": "Repair S3: host adapter applicability",
+    "sources": [
+      "plugins/spec/references/HOST_BINDING.md",
+      "plugins/spec/references/COORDINATED_HANDOFF.md"
+    ],
+    "changed_meaning": "Bounded correction of the falsified predecessor under unchanged source S; see exact before/after fields and preserved cases in repair-001.",
+    "keys": [
+      "claude_host_boundary"
+    ],
+    "record_ids": {
+      "claude_host_boundary": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:225cc175cf584eef5d5d3da8821bf6a7"
+    },
+    "counterexamples": [
+      {
+        "id": "S3-direct-sufficient-tools",
+        "input": {
+          "host": "Claude",
+          "admitted": true,
+          "selected_Product_tools_sufficient": true,
+          "strict_boundary_selected": false,
+          "Claude_policy_hook_installed": false
+        },
+        "required": "The absence of the optional Claude adapter does not invalidate this direct task; use the already-selected sufficient Product tools."
+      },
+      {
+        "id": "S3-selected-strict-adapter",
+        "input": {
+          "host": "Claude",
+          "strict_boundary_selected": true,
+          "Claude_adapter_selected": true,
+          "required_policy_hook_missing": true
+        },
+        "required": "The selected adapter claim remains unsupported without its actual binding; no ordinary prompt or actor label supplies it."
+      }
+    ]
+  },
+  {
+    "cone": "Repair S4: pending migration alternatives",
+    "sources": [
+      "standards/RELEASE.md"
+    ],
+    "changed_meaning": "Bounded correction of the falsified predecessor under unchanged source S; see exact before/after fields and preserved cases in repair-001.",
+    "keys": [
+      "fd_migration_dispositions"
+    ],
+    "record_ids": {
+      "fd_migration_dispositions": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bea34e3623d1af6ddbebd548f5388998"
+    },
+    "counterexamples": [
+      {
+        "id": "S4-gap-remediation-only",
+        "input": {
+          "new_kind_eligibility_established": false,
+          "termination_proof_gap_identified": true,
+          "remediation_identified": true,
+          "bounded_successor_selected": false
+        },
+        "required": "pending-identified, with only exact lawful legacy standing and no successor F_D claim"
+      },
+      {
+        "id": "S4-selected-bounded-successor",
+        "input": {
+          "new_kind_eligibility_established": false,
+          "bounded_successor_selected": true,
+          "successor_remediation_obligation_identified": true,
+          "legacy_termination_proof_established": false
+        },
+        "required": "pending-identified for the separately declared successor; its contract does not retrospectively prove the legacy operation total"
+      },
+      {
+        "id": "S4-no-remediation-or-successor",
+        "input": {
+          "new_kind_eligibility_established": false,
+          "identified_gap_remediation": false,
+          "selected_bounded_successor": false
+        },
+        "required": "unresolved successor classification, neither common F_D nor automatic F_P"
+      }
+    ]
+  },
+  {
+    "cone": "Repair S4: supplied owners and retained independent limits",
+    "sources": [
+      "standards/ACTIVATION.md",
+      "standards/FOUNDATIONS.md"
+    ],
+    "changed_meaning": "Bounded correction of the falsified predecessor under unchanged source S; see exact before/after fields and preserved cases in repair-001.",
+    "keys": [
+      "prior_43aacce1d3f718320440fc9987a05d82",
+      "prior_ee54a35b161f7a01b98adb1fe788e2c8"
+    ],
+    "record_ids": {
+      "prior_43aacce1d3f718320440fc9987a05d82": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:5f0c2c26417f92f722617f981b728a66",
+      "prior_ee54a35b161f7a01b98adb1fe788e2c8": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:0cdfa38e802b13e04ed4835001f27d06"
+    },
+    "counterexamples": [
+      {
+        "id": "S4-activation-owner-present",
+        "input": {
+          "supplied_owner": "standards/ACTIVATION.md",
+          "supplied_section": "3. Step results and disposition"
+        },
+        "required": "Do not report this supplied source as absent; concrete task evidence remains a separate question."
+      },
+      {
+        "id": "S4-result-algebra-owner-present",
+        "input": {
+          "supplied_owner": "standards/FOUNDATIONS.md",
+          "supplied_sections": [
+            "Results",
+            "Conjunction of results"
+          ]
+        },
+        "required": "Do not report the supplied algebra and conjunction as absent; recording laws is not performing an evaluation."
+      }
+    ]
+  },
+  {
+    "cone": "Finite reviewer-selected uncertainty class repair",
+    "sources": [
+      "standards/ACTIVATION.md",
+      "standards/ASSURANCE.md",
+      "standards/AXIOMATIC_CALCULUS.md",
+      "standards/CONFORMANCE.md",
+      "standards/DESIGN_MODULE.md",
+      "standards/EVALUATION.md",
+      "standards/EXECUTIVE_BASELINE.md",
+      "standards/FOUNDATIONS.md",
+      "standards/IDENTITY.md",
+      "standards/ODD.md",
+      "standards/PRODUCT_DEFINITION.md",
+      "standards/REFERENCE_FRAME.md",
+      "standards/SPEC_METHOD.md",
+      "standards/TICKETS.md",
+      "standards/TRAVERSAL_OCCURRENCE.md",
+      "standards/UX.md",
+      "standards/WORLD_MODEL.md"
+    ],
+    "changed_meaning": "Resolve exactly 31 false static-source absence fields and preserve the instance/proof/semantic limit in exactly 11 mixed fields under unchanged sourceS.",
+    "keys": [
+      "prior_d6efae8b809e23432cdeed4d1b89fb3c",
+      "prior_27a1d4fcf6d84dedbc06b72c7e57a2e6",
+      "prior_93cd36570856f72013f141f0e0562b0b",
+      "prior_ef827f7709fbae8aa7a8fc67b6b9b176",
+      "prior_00531a07612cbece29660d1a1407b43b",
+      "prior_3ae0fd2275dfb35514c8ea0436ec864e",
+      "prior_1d484a940190d107b663de97a84c2d8e",
+      "prior_753ee939a83aa72be258cae0482da5d3",
+      "prior_26798f845a0e65ef33d8be6702ae4c99",
+      "prior_753baaff60c88ef40bed775c0c4c6a2f",
+      "prior_6864ea383512c4ce64c21e80b00f35a2",
+      "prior_1413d6b4bed3f4cfa7e2226694225411",
+      "prior_5aed54c0690e67be3b33143e4c30ccd5",
+      "prior_7e5853a8f74dcbf6b25c4ab455ca8ef6",
+      "prior_3ae4349154a238306134ba5a46015bb9",
+      "prior_faea489c17c8647588549da9859b7250",
+      "prior_086807b13a61703225864a05f1c08132",
+      "prior_fe98e06fec1e3ee2cc232529db0a3d68",
+      "prior_0200585f9317720f9a7934c53d277ac5",
+      "prior_fc9cce78019b80f96eb89327c8253735",
+      "prior_3440722dd836b4e0c89176eddaba34d1",
+      "prior_9a81c528871d81c068e977c18127c3d7",
+      "prior_3add900aa6d324c8b551be4d5e28e6b1",
+      "prior_e6c28515fab54d1546139bb7d8cdb4bc",
+      "prior_1af950f0c333c333ffc3ec34265c2a40",
+      "prior_d4f4cf0fbc11c136dc4b8c18567cb83a",
+      "prior_0b3775d4561863199b0e282a4729c584",
+      "prior_ada670a35c42e3e337876d3d22f42952",
+      "prior_3bd1f7fa7ba8463c5f76845a49eac0de",
+      "prior_f33a71885e9404e2196fe0a963185f30",
+      "prior_0bc3b2171a6f4c0bfb3b00051d32cede",
+      "prior_5e1f079cefae95891733503796b73556",
+      "prior_fe68f70d8f59e774e342317d562f05f6",
+      "prior_77343a3d5fd10f227cbb32e38e00e12a",
+      "prior_9021eac9e6e98b448e33d10e64882ff5",
+      "prior_e13a7add448389cd2ae3bc57b1e36a63",
+      "prior_efa832cfabb5bfc3cc21ed6c8f386c61",
+      "prior_64a5a63086d9bef75b170a8d0c4c5208",
+      "prior_87673ea216f1bf2d4e3e4d3cc77989a8",
+      "prior_bb790d5b5e9ac86b1c3fc329e73b2d63",
+      "prior_c13043ee8d03febdce26cb6801fb6db9",
+      "prior_0628cbc6c78dde67e3475f6e042531a5"
+    ],
+    "record_ids": {
+      "prior_d6efae8b809e23432cdeed4d1b89fb3c": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:bb04a535f80da33867f10b6b22cd1ee7",
+      "prior_27a1d4fcf6d84dedbc06b72c7e57a2e6": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5",
+      "prior_93cd36570856f72013f141f0e0562b0b": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:7083dca710c48c8306a91cba516829c9",
+      "prior_ef827f7709fbae8aa7a8fc67b6b9b176": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e5e5e9d3c25814cf5ad343973acea624",
+      "prior_00531a07612cbece29660d1a1407b43b": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:5db6a0ce3748e683612ab0c0d7c909a4",
+      "prior_3ae0fd2275dfb35514c8ea0436ec864e": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:07cc84f93a898609cd0e22a1b02121b2",
+      "prior_1d484a940190d107b663de97a84c2d8e": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e37b70803094684aab043291b29a4bdc",
+      "prior_753ee939a83aa72be258cae0482da5d3": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:3ac97d13970a6e676ddc84d49050d84d",
+      "prior_26798f845a0e65ef33d8be6702ae4c99": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:76f2e7f1fc94922e5d20b78453da48a5",
+      "prior_753baaff60c88ef40bed775c0c4c6a2f": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:776abb105f314beb2c23462ec910719e",
+      "prior_6864ea383512c4ce64c21e80b00f35a2": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:038c8fd745b578c0ea1c5f49468a948f",
+      "prior_1413d6b4bed3f4cfa7e2226694225411": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a375d4cace33ead96d3813d562f8c0e4",
+      "prior_5aed54c0690e67be3b33143e4c30ccd5": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:164ed3d79929aef212af4c8154975d0f",
+      "prior_7e5853a8f74dcbf6b25c4ab455ca8ef6": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:0e997b7f5a65662d4a85e11cdd3085fe",
+      "prior_3ae4349154a238306134ba5a46015bb9": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:fc8c5ee561cba2335096a1be812fd286",
+      "prior_faea489c17c8647588549da9859b7250": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:f20130ed041a8cc59597f57e3f05463f",
+      "prior_086807b13a61703225864a05f1c08132": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e591cf92403f99056e34fb421c03bef5",
+      "prior_fe98e06fec1e3ee2cc232529db0a3d68": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e0c65dc4638e64afc86e6c87248c6b24",
+      "prior_0200585f9317720f9a7934c53d277ac5": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:cb12833f2f07e4bb73a3e403584818c3",
+      "prior_fc9cce78019b80f96eb89327c8253735": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:72db86bbd8588a720ab8c9c1b8b9ccbb",
+      "prior_3440722dd836b4e0c89176eddaba34d1": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:93508785683deeb8c61e7a1a227948aa",
+      "prior_9a81c528871d81c068e977c18127c3d7": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e336c5d9cd98ae933da2e60cd4fec3f2",
+      "prior_3add900aa6d324c8b551be4d5e28e6b1": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:62ba73741ec72a30a708db6b0bfe140b",
+      "prior_e6c28515fab54d1546139bb7d8cdb4bc": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:39a52715203ea836fb377befbb84d2bb",
+      "prior_1af950f0c333c333ffc3ec34265c2a40": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:351d34fcc331c55d3687692c9af0c3b7",
+      "prior_d4f4cf0fbc11c136dc4b8c18567cb83a": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:869dd1f6366007e45e4c4aefbfa083e7",
+      "prior_0b3775d4561863199b0e282a4729c584": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:016e47ae07b98b44e53db044f9abdeb7",
+      "prior_ada670a35c42e3e337876d3d22f42952": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1992899963d19e0948e7107c9030f27a",
+      "prior_3bd1f7fa7ba8463c5f76845a49eac0de": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1604157e1d9672f736a40a13da2bbeb9",
+      "prior_f33a71885e9404e2196fe0a963185f30": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:0d82b22fdb28755900b2e8736f20399f",
+      "prior_0bc3b2171a6f4c0bfb3b00051d32cede": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:835d0a2b72a64b79d10c951e5a84c584",
+      "prior_5e1f079cefae95891733503796b73556": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:65c01a8755e1ec18d69a6164b31668d6",
+      "prior_fe68f70d8f59e774e342317d562f05f6": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1de50ebb9efc3802f97520416e9d7f57",
+      "prior_77343a3d5fd10f227cbb32e38e00e12a": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:29d6552293a8d8d8336fce070befaa8e",
+      "prior_9021eac9e6e98b448e33d10e64882ff5": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:379a26e02ef52ea2eedc66f9883f501b",
+      "prior_e13a7add448389cd2ae3bc57b1e36a63": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:5d7ec79570f21dc0eb47cc8234124270",
+      "prior_efa832cfabb5bfc3cc21ed6c8f386c61": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d4194395569814a2a73371a6c2d38737",
+      "prior_64a5a63086d9bef75b170a8d0c4c5208": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:af73c801d27949aa7e4d8590501f16bb",
+      "prior_87673ea216f1bf2d4e3e4d3cc77989a8": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d7eee8637c5f10a5cb959d84b9a1fe9f",
+      "prior_bb790d5b5e9ac86b1c3fc329e73b2d63": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:eb0ad19d268a74f62e643e88f5fe78bf",
+      "prior_c13043ee8d03febdce26cb6801fb6db9": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:c9e3bf2c4afdfc50f2386861592a966c",
+      "prior_0628cbc6c78dde67e3475f6e042531a5": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d208720729d40d8ebc56e5ca8d08e621"
+    },
+    "counterexamples": [
+      {
+        "constraint_index": 453,
+        "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:016e47ae07b98b44e53db044f9abdeb7",
+        "before": "The full signal list and eight-question order are referenced but absent.",
+        "after": "",
+        "available_owner_routes": [
+          "REFERENCE_FRAME.md:842-882"
+        ],
+        "limit_preserved": "",
+        "required_decision": "The supplied static owner cannot be described as absent; any named concrete instance, proof or semantic limit remains.",
+        "Writer_before_assessment": "falsified for source-availability claim, as independently reported in the retained ledger",
+        "Writer_after_assessment": "corrected in exact built field; independent targeted recheck pending"
+      },
+      {
+        "constraint_index": 594,
+        "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:29d6552293a8d8d8336fce070befaa8e",
+        "before": "Full inherited record definitions and the profile's finite reference-domain table are absent.",
+        "after": "",
+        "available_owner_routes": [
+          "AXIOMATIC_CALCULUS.md:335-470",
+          "AXIOMATIC_CALCULUS.md:705-1094",
+          "TRAVERSAL_OCCURRENCE.md:245-517"
+        ],
+        "limit_preserved": "",
+        "required_decision": "The supplied static owner cannot be described as absent; any named concrete instance, proof or semantic limit remains.",
+        "Writer_before_assessment": "falsified for source-availability claim, as independently reported in the retained ledger",
+        "Writer_after_assessment": "corrected in exact built field; independent targeted recheck pending"
+      },
+      {
+        "constraint_index": 118,
+        "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e37b70803094684aab043291b29a4bdc",
+        "before": "Detailed checking, adequacy and task-qualification contracts are delegated to absent owners.",
+        "after": "A concrete mechanical checking contract remains separately selected. The supplied normative owners establish neither actual-use qualification nor an adequacy proof.",
+        "available_owner_routes": [
+          "AXIOMATIC_CALCULUS.md:1438-1458",
+          "EVALUATION.md:141-189",
+          "EVALUATION.md:616-672"
+        ],
+        "limit_preserved": "A concrete mechanical checking contract is separately selected; no actual-use qualification or adequacy proof is established by the normative owners.",
+        "required_decision": "The supplied static owner cannot be described as absent; any named concrete instance, proof or semantic limit remains.",
+        "Writer_before_assessment": "falsified for source-availability claim, as independently reported in the retained ledger",
+        "Writer_after_assessment": "corrected in exact built field; independent targeted recheck pending"
+      },
+      {
+        "constraint_index": 640,
+        "record_id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:af73c801d27949aa7e4d8590501f16bb",
+        "before": "Full §13 and §15 are absent; no implementation's compliance is evaluated.",
+        "after": "No implementation's compliance is evaluated. The statement retains the source's distinct realisation tests and its fail-closed selection.",
+        "available_owner_routes": [
+          "UX.md:685-726",
+          "UX.md:757-826"
+        ],
+        "limit_preserved": "No concrete implementation compliance is evaluated; preserve the explicitly retained source-test distinction.",
+        "required_decision": "The supplied static owner cannot be described as absent; any named concrete instance, proof or semantic limit remains.",
+        "Writer_before_assessment": "falsified for source-availability claim, as independently reported in the retained ledger",
+        "Writer_after_assessment": "corrected in exact built field; independent targeted recheck pending"
+      }
+    ],
+    "bounds": "No other authored fields, retained excerpt/ownership outliers or residuals change. No selected view population changes."
+  }
+]

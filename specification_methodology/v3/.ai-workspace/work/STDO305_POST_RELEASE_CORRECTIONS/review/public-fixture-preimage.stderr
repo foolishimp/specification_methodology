@@ -1,0 +1,104 @@
+test_actual_single_product_and_old_store_cannot_be_relabelled_fresh (bounded_public_fixture_preimage.PublicReadbackTests.test_actual_single_product_and_old_store_cannot_be_relabelled_fresh) ... FAIL
+test_actual_zero_native_install_identity_cannot_be_relabelled_current (bounded_public_fixture_preimage.PublicReadbackTests.test_actual_zero_native_install_identity_cannot_be_relabelled_current) ... FAIL
+test_anonymous_current_assets_do_not_substitute_for_all_component_results (bounded_public_fixture_preimage.PublicReadbackTests.test_anonymous_current_assets_do_not_substitute_for_all_component_results) ... FAIL
+test_arbitrary_same_named_wheel_and_extra_asset_refuse (bounded_public_fixture_preimage.PublicReadbackTests.test_arbitrary_same_named_wheel_and_extra_asset_refuse) ... FAIL
+test_external_manifest_does_not_contain_its_own_digest (bounded_public_fixture_preimage.PublicReadbackTests.test_external_manifest_does_not_contain_its_own_digest) ... FAIL
+test_local_install_cannot_be_promoted_as_public_receipt (bounded_public_fixture_preimage.PublicReadbackTests.test_local_install_cannot_be_promoted_as_public_receipt) ... FAIL
+test_missing_native_manifest_asset_refuses_before_download (bounded_public_fixture_preimage.PublicReadbackTests.test_missing_native_manifest_asset_refuses_before_download) ... ok
+test_staged_file_does_not_excuse_wrong_public_bytes (bounded_public_fixture_preimage.PublicReadbackTests.test_staged_file_does_not_excuse_wrong_public_bytes) ... FAIL
+
+======================================================================
+FAIL: test_actual_single_product_and_old_store_cannot_be_relabelled_fresh (bounded_public_fixture_preimage.PublicReadbackTests.test_actual_single_product_and_old_store_cannot_be_relabelled_fresh)
+----------------------------------------------------------------------
+ValueError: required public native/manager/component asset closure differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py", line 587, in test_actual_single_product_and_old_store_cannot_be_relabelled_fresh
+    with self.assertRaisesRegex(ValueError, 'all Products'): self.check()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "all Products" does not match "required public native/manager/component asset closure differs"
+
+======================================================================
+FAIL: test_actual_zero_native_install_identity_cannot_be_relabelled_current (bounded_public_fixture_preimage.PublicReadbackTests.test_actual_zero_native_install_identity_cannot_be_relabelled_current)
+----------------------------------------------------------------------
+ValueError: required public native/manager/component asset closure differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py", line 598, in test_actual_zero_native_install_identity_cannot_be_relabelled_current
+    with self.assertRaisesRegex(ValueError, 'actual result differs'): self.check()
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "actual result differs" does not match "required public native/manager/component asset closure differs"
+
+======================================================================
+FAIL: test_anonymous_current_assets_do_not_substitute_for_all_component_results (bounded_public_fixture_preimage.PublicReadbackTests.test_anonymous_current_assets_do_not_substitute_for_all_component_results)
+----------------------------------------------------------------------
+ValueError: required public native/manager/component asset closure differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py", line 561, in test_anonymous_current_assets_do_not_substitute_for_all_component_results
+    with self.assertRaisesRegex(ValueError, 'missing required current component'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "missing required current component" does not match "required public native/manager/component asset closure differs"
+
+======================================================================
+FAIL: test_arbitrary_same_named_wheel_and_extra_asset_refuse (bounded_public_fixture_preimage.PublicReadbackTests.test_arbitrary_same_named_wheel_and_extra_asset_refuse)
+----------------------------------------------------------------------
+ValueError: required public native/manager/component asset closure differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py", line 575, in test_arbitrary_same_named_wheel_and_extra_asset_refuse
+    with self.assertRaisesRegex(ValueError, 'required exact current artifact'): self.check([])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "required exact current artifact" does not match "required public native/manager/component asset closure differs"
+
+======================================================================
+FAIL: test_external_manifest_does_not_contain_its_own_digest (bounded_public_fixture_preimage.PublicReadbackTests.test_external_manifest_does_not_contain_its_own_digest)
+----------------------------------------------------------------------
+ValueError: required public native/manager/component asset closure differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py", line 603, in test_external_manifest_does_not_contain_its_own_digest
+    with self.assertRaisesRegex(ValueError, 'exact frozen B'): self.check([])
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "exact frozen B" does not match "required public native/manager/component asset closure differs"
+
+======================================================================
+FAIL: test_local_install_cannot_be_promoted_as_public_receipt (bounded_public_fixture_preimage.PublicReadbackTests.test_local_install_cannot_be_promoted_as_public_receipt)
+----------------------------------------------------------------------
+ValueError: required public native/manager/component asset closure differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py", line 609, in test_local_install_cannot_be_promoted_as_public_receipt
+    with self.assertRaisesRegex(ValueError, 'local prepublication acquisition cannot establish public'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "local prepublication acquisition cannot establish public" does not match "required public native/manager/component asset closure differs"
+
+======================================================================
+FAIL: test_staged_file_does_not_excuse_wrong_public_bytes (bounded_public_fixture_preimage.PublicReadbackTests.test_staged_file_does_not_excuse_wrong_public_bytes)
+----------------------------------------------------------------------
+ValueError: required public native/manager/component asset closure differs
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/tests/test_stable_stack_release.py", line 581, in test_staged_file_does_not_excuse_wrong_public_bytes
+    with self.assertRaisesRegex(ValueError, 'fresh anonymous public asset differs'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "fresh anonymous public asset differs" does not match "required public native/manager/component asset closure differs"
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.079s
+
+FAILED (failures=7)

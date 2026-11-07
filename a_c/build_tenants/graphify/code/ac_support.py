@@ -24,7 +24,7 @@ from ac_support_core import JSON, Object
 
 
 PROTOCOL_VERSION = "2025-11-25"
-SERVER_VERSION = "3.0.5"
+SERVER_VERSION = "3.0.5-rc.1"
 RESPONSE_SCHEMA = "a_c.fd-support.response/1"
 # Only the pre-policy protocol guard uses this bound. Once a trusted policy is
 # loaded, its explicit max_message_bytes is the selected transport bound.

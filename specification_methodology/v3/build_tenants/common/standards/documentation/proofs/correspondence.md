@@ -1,8 +1,10 @@
+> Installed-facing link projection. [Exact source bytes](source-documents/correspondence.md.txt) are retained separately; this presentation changes links only. External links name immutable source checkpoint `2ee0147ad06b58dbdf6dad4b874c363a035aab9e` and require network access. The proof reader and retained evidence remain available offline. Original current/historical scope and proof claims are unchanged.
+
 # Native STDO 3.0.5 support
 
 This current binding realizes the owner-selected cohort requirement under the
-[3.0.5 Product contract](../../../specification/RELEASE_3_0_5.md). Its exact
-[profile](fd-method-stdo-3.0.5.json) binds accepted source
+[3.0.5 Product contract](https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/specification/RELEASE_3_0_5.md). Its exact
+[profile](https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5.json) binds accepted source
 `0f4d2d5f77c5a635a553a8517787f1f52bf3e43a1dd150a940360e878ea4f1ba`.
 The construction builder is released 3.0.4. Legacy RC9 and native 3.0.1 profiles
 retain their exact original identities; old trial evidence is not current proof.
@@ -76,7 +78,7 @@ python3 AC_ROOT/build_tenants/graphify/examples/fd-support/prepare_readonly.py \
 Setup uses actual `stdo status --verify`, then emits read-only configuration and
 public requests. It registers no work grant or executor. Existing legitimate
 work policies add the same installation binding to their actual owner/grants;
-the [native admission recipe](fd-support-stdo-3.0.1.md#real-work-policy-operator-recipe)
+the [native admission recipe](https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md#real-work-policy-operator-recipe)
 retains its mechanism, authority and source-acquisition requirements, with this
 new exact target instead of its historical 3.0.1 selection. `tools.describe`
 returns actual supported operations; native `results.conjoin` is refused.

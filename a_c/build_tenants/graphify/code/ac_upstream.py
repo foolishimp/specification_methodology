@@ -31,7 +31,7 @@ def run(model_path, carrier_path, selections_path, upstream, runtime_path, outpu
     for path in (model_path,carrier_path,selections_path,runtime_path,upstream):
         gen.require(not overlaps_existing(output, Path(path)), 'Output overlaps an input')
     runtime = gen._decode(inputs['runtime'])
-    gen.require(runtime.get('version')=='3.0.5' and runtime.get('status')=='installed', 'Unsupported installed runtime')
+    gen.require(runtime.get('version')=='3.0.5-rc.1' and runtime.get('status')=='installed', 'Unsupported installed runtime')
     invocation = Path(sys.executable).absolute()
     gen.require(runtime.get('python')==str(invocation) and sys.prefix!=sys.base_prefix, 'Invoke the selected private runtime Python, preserving its virtualenv path')
     gen.require(Path(runtime.get('upstream','')).resolve()==upstream.resolve() and runtime.get('upstream_commit')==gen.UPSTREAM_COMMIT, 'Runtime selects a different upstream')
@@ -84,7 +84,7 @@ def run(model_path, carrier_path, selections_path, upstream, runtime_path, outpu
         if path.is_file() and (path.is_relative_to(upstream.resolve()) or path.is_relative_to(Path(sys.prefix).resolve()) or path.is_relative_to(Path(__file__).parent.resolve())):
             loaded_modules[name] = {'path':str(path),'sha256':digest(path.read_bytes())}
     gen.verify_upstream(upstream)
-    result = {'schema':'a_c.graphify.current-roundtrip/1','status':'verified','version':'3.0.5',
+    result = {'schema':'a_c.graphify.current-roundtrip/1','status':'verified','version':'3.0.5-rc.1',
               'model':{'id':model.document['id'],'raw_sha256':digest(inputs['model']),'canonical_sha256':model.sha256},
               'carrier_raw_sha256':digest(inputs['carrier']),'selections':selections,'views_sha256':digest(read(output/'views.json')),
               'upstream_trial':{'commit':gen.UPSTREAM_COMMIT,'nodes':loaded.number_of_nodes(),'edges':loaded.number_of_edges(),'decoded_model_sha256':recovered.sha256},

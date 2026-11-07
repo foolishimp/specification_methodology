@@ -1,0 +1,107 @@
+{
+  "kind": "stdo.bounded-independent-correction-review/1",
+  "assessor": "/root/stdo305_integration_review",
+  "author": "/root/stdo305_tools_skills",
+  "subject": {
+    "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_POST_RELEASE_CORRECTIONS/skills/FREEZE.json",
+    "sha256": "60d8c9d2278e929e7f0355a5858ff30faca8b228c583f20739efe5841106bac0",
+    "bytes": 27554
+  },
+  "conclusion": "satisfied within the two selected correction obligations",
+  "severity_scale": "1 highest to 5 lowest",
+  "findings": [],
+  "discharged": [
+    {
+      "id": "F1",
+      "original_severity": 4,
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "line": 171,
+      "basis": "The complete native frontmatter, including refresh manual-only and argument-hint and other multiline metadata, is copied exactly except the deliberately namespaced wrapper name. Public CLI and explicit malformed-frontmatter refusal controls passed."
+    },
+    {
+      "id": "F2",
+      "original_severity": 4,
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "line": 225,
+      "basis": "Both host wrappers reference the verified canonical native file URI. The installed-help to Getting Started to all local targets and fragments path resolves under spaces and URL-sensitive characters; no relocated native copy is emitted. CONFIG/receipt bind native identity, verification rechecks it, and removal remains owned-file-only including legacy receipts."
+    }
+  ],
+  "source_before_after": [
+    {
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "bytes": 18549,
+      "mode": 420,
+      "sha256": "6a9f246d934783dd83a08b48aa1439ac3378ba2466c292c6fcbf92552ab9d1a3"
+    },
+    {
+      "path": "stdo_skills/tests/test_install_305.py",
+      "bytes": 13445,
+      "mode": 420,
+      "sha256": "8f3fd4f8affcbec50c2fed81f614704ae263378ad57fa2ca1363fb7831fa16f8"
+    },
+    {
+      "path": "stdo_skills/tests/test_native_routes.py",
+      "bytes": 14560,
+      "mode": 420,
+      "sha256": "5024a38298be505bcdc7d60b9e01763ba8bd23b7c68fee990830e487e4a7d36a"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/current/DESIGN.md",
+      "bytes": 2825,
+      "mode": 420,
+      "sha256": "5c1e3ba5b949a8e6ccfec707d516706e7ed1d2522aa130feb59f7df6f6e2f57b"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/current/DESIGN.md",
+      "bytes": 2809,
+      "mode": 420,
+      "sha256": "cf19dfd6da7fa093081063d0c50a14700c6564f46434e041c115773d51ed67f8"
+    },
+    {
+      "path": "stdo_skills/scripts/INSTALLATION.md",
+      "bytes": 2493,
+      "mode": 420,
+      "sha256": "f340e5cbbd42222dc0b895fb73d189c26d81a97ed785ba19549fc37452e8fcff"
+    },
+    {
+      "path": "stdo_skills/release/3.0.5/manifest.json",
+      "bytes": 3122,
+      "mode": 420,
+      "sha256": "9a6db638b5173b964d340bb896c73a3c8887649e502b56286ce861635f7eccae"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/SKILLS_TESTS.json",
+      "sha256": "1f3d4752d986a4d56b4ee0fb491d769e51738f9eca284d59cfd4fb3d40b9496a",
+      "bytes": 3462
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/skills-native-routes.stderr",
+      "sha256": "d25935ac1909ed107c2ffb189e911b18c7984d55587fde31a5aecdf165e5043f",
+      "bytes": 1172
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_POST_RELEASE_CORRECTIONS/skills/RESULT.json",
+      "sha256": "b6121cb95ecb3384eecf6b9204d9549c4497c1de460bf04c9260750e4aef5810",
+      "bytes": 4998
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_POST_RELEASE_CORRECTIONS/skills/after/RESULT.json",
+      "sha256": "13c75cb04bdc8b2453de7b82866100a9060602e99b428e8ed9a80224e551906f",
+      "bytes": 90177
+    }
+  ],
+  "executed": "Six focused NativeRouteTests, all passed with zero skips in 4.271 seconds; actual public CLI over isolated synthetic manager/native fixtures.",
+  "inspected": "All six frozen source/design/test/guide files, all90 retained evidence identities, exact real-public-native plan/install/verify/installed-check-runtime/remove witnesses for both hosts and original-producer legacy removal custody. Author19-test evidence remains separately attributed.",
+  "release_implications": [
+    "Published3.0.5 package inventory and native installation are unchanged; corrected source intentionally refuses that old package declaration.",
+    "Before distribution select a successor release identity, regenerate the owning Skills package inventory including INSTALLATION.md, then derived tooling/archive/native/cohort inventories and affected installed-path qualification. No published305 tag, payload or evidence should be rewritten."
+  ],
+  "limits": [
+    "No fresh Codex/Claude model session, automatic discovery behavior or generic instruction compliance was qualified.",
+    "No new Lean, full method/model review or public release qualification.",
+    "Existing cooperative single-writer and check-then-use assumptions remain.",
+    "All Reviewer writes confined to scratch; repository and published installations were read-only."
+  ]
+}

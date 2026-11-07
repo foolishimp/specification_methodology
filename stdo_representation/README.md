@@ -1,29 +1,32 @@
 # STDO Representation
 
-The current 3.0.5 Product supplies one source-linked a_c model, its checked
+The current 3.0.5-rc.1 Product supplies one source-linked a_c model, its checked
 carrier and coverage, the exact STDO corpus, derived Axiom program/map and
 bounded projections, and the shared Codex/Claude native skill.
-[The release record](releases/v3.0.5.md) identifies this subject; the external
+[The release record](releases/v3.0.5-rc.1.md) identifies this subject; the external
 cohort binding records final native, publication and acceptance identities.
 
-The model was authored through public a_c prepare/task/submit/build against
-the frozen 53 standards and 15 native workflow contracts. Its 1,885 records
+The original model was authored through public a_c prepare/task/submit/build
+against the frozen 53 standards and 15 native workflow contracts. This RC
+successor preserves those exact source bytes and authored meanings through an
+explicit coordinate-only rebind, with an inverse equality witness. It is not a
+fresh authoring invocation. Its 1,885 records
 include 42 explicit residuals. All 896 source sections have processing
 dispositions; 24 empty headings are omitted. These counts describe coverage,
 not semantic completeness or acceptance.
 
 Start with [Quickstart](QUICKSTART.md) and the
 [native skill](skills/stdo-representation/SKILL.md). The current source and
-model are in `build_tenants/a_c/representation/stdo-v3.0.5/`; the derived
+model are in `build_tenants/a_c/representation/stdo-v3.0.5-rc.1/`; the derived
 program, map and five frame indexes are in
-`build_tenants/axiom_indexer/representation/stdo-v3.0.5/`.
+`build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/`.
 
 The indexes cover native work/control intake, deterministic processing,
 Product composition, finding reports and source-closed release. Each points
 to an actual source-owned Worker or Reviewer frame. Applicability, operation
 authority and actual task evidence remain the caller's responsibility.
 
-The exact 3.0.5 Axiom provider preserves every model record, field and identity
+The exact 3.0.5-rc.1 Axiom provider preserves every model record, field and identity
 through reversible conversion. Reference-only and materialized projections
 have the same declared supporting closure. Current a_c viewers and real
 formal verification consume this same model; their evidence retains its
@@ -32,7 +35,7 @@ declared scope. This is not a proof of all STDO meaning or a new executor.
 The source project's [Product Definition](stdo_representation.json) pins
 installed STDO 3.0.4 as construction methodology. The current provider candidate
 was explicitly pinned for the supported larger authoring transaction; the
-represented source and all owned release outputs are 3.0.5. A caller's method
+represented source and all owned release outputs are 3.0.5-rc.1. A caller's method
 adoption is a separate relation.
 
 [Goals](specification/GOALS.md), [Intent](specification/INTENT.md),

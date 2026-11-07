@@ -1,0 +1,33 @@
+{
+  "accepted_design": "Full native frontmatter is projected unchanged except the host entry name. Wrappers link to canonical native files and retain original relative-reference context. New installs omit the relocated copy. Receipt/CONFIG identify the canonical dependency; verify/check-runtime revalidate it, while remove is local receipt-scoped and remains usable if the dependency is missing or changed.",
+  "activation_sha256": "f221243742550973aa334cadb27ae80fc4d1516e7037be1a189dd500e4ed0ba7",
+  "additional_current_design_preimages": [
+    {
+      "bytes": 2592,
+      "path": "stdo_skills/build_tenants/codex/current/DESIGN.md",
+      "sha256": "42eda83f57164914d8c578f8910c66b1ac33c7220a6f9c0c71d945bc9920593e"
+    },
+    {
+      "bytes": 2576,
+      "path": "stdo_skills/build_tenants/claude/current/DESIGN.md",
+      "sha256": "1497ebcdacc2da3acfb6d91624cbaee21cc5b247c6072a90cab50df40626aa4f"
+    }
+  ],
+  "decision_owner": "/root",
+  "pin_effect": "The checked-in release/3.0.5/manifest.json and all public/frozen records stay unchanged. Scratch candidate packages will explicitly recompute only their own selected changed source rows; successor packaging remains unperformed.",
+  "requirement_drift": "None selected: SK-01/02/04/10/11 and native metadata/reference semantics remain the same.",
+  "schema": "stdo.post-release-correction.design-binding/1",
+  "source_delta": [
+    "manage_skills.py generator/currentness binding",
+    "focused public CLI tests",
+    "current tenant DESIGN.md copying-clause correction",
+    "new current installer guide scripts/INSTALLATION.md"
+  ],
+  "test_frontier": [
+    "actual pre-repair public path c69f735e2cdf0e9757812d136ecca58974d929e8ce1246bce278cd2bc7c05e5b",
+    "both host public plan/install/verify/check-runtime/remove",
+    "canonical path spaces and fragments; all nine former missing targets",
+    "metadata including description block scalars and native invocation fields",
+    "native dependency missing/tampered and legacy receipt safe removal"
+  ]
+}

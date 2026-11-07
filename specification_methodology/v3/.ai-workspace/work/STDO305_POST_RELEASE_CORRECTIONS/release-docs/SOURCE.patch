@@ -1,0 +1,182 @@
+diff --git a/specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py b/specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py
+index b69e79394..79e167ba4 100644
+--- a/specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py
++++ b/specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py
+@@ -24,6 +24,61 @@ TITLES = {"imported-model-well-formedness": "Is the supplied finite model well f
+           "record-budget-result": "Does each declared budget return the prescribed result?",
+           "supplied-graphify-view-correspondence": "Do the supplied views match these projections?"}
+ 
++# The source checkpoint is immutable publication custody, not a new proof or
++# semantic assessment. Source-relative Markdown links need a different base in
++# the installed layout; retain their exact originals separately.
++DOCUMENT_SOURCE_COMMIT = "2ee0147ad06b58dbdf6dad4b874c363a035aab9e"
++DOCUMENT_SOURCE_URL = "https://github.com/foolishimp/specification_methodology/blob/" + DOCUMENT_SOURCE_COMMIT + "/"
++DOCUMENT_SOURCE_PINS = {
++    "correspondence": {"path": "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.5.md",
++                       "sha256": "7577212a31eb57baa64a9f9565c7681665a58a8edd44e3750a60da9e546c09a6"},
++    "library_provenance": {"path": "a_c/build_tenants/lean/design/SOURCE_CORRESPONDENCE.md",
++                           "sha256": "14e7e97d4288af40cb63780a0993128629cab623e90d797f638650b6077cec98"},
++}
++DOCUMENT_LINKS = {
++    "correspondence.md": ("correspondence", [
++        ("../../../specification/RELEASE_3_0_5.md", "a_c/specification/RELEASE_3_0_5.md"),
++        ("fd-method-stdo-3.0.5.json", "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5.json"),
++        ("fd-support-stdo-3.0.1.md#real-work-policy-operator-recipe",
++         "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md#real-work-policy-operator-recipe")]),
++    "library-provenance.md": ("library_provenance", [
++        ("../fixtures/stdo-3.0.2/CUSTODY.json", "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CUSTODY.json"),
++        ("../fixtures/toy/CUSTODY.json", "a_c/build_tenants/lean/fixtures/toy/CUSTODY.json")]),
++}
++
++
++def project_document(name, raw):
++    key = DOCUMENT_LINKS[name][0]
++    a.require(a.sha(raw) == DOCUMENT_SOURCE_PINS[key]["sha256"], "immutable source documentation differs: " + name)
++    text = raw.decode()
++    for relative, target in DOCUMENT_LINKS[name][1]:
++        token = "](" + relative + ")"
++        a.require(text.count(token) == 1, "source documentation link differs: " + relative)
++        text = text.replace(token, "](" + DOCUMENT_SOURCE_URL + target + ")")
++    note = ("> Installed-facing link projection. [Exact source bytes](source-documents/" + name + ".txt) "
++            "are retained separately; this presentation changes links only. External links name immutable source checkpoint `" +
++            DOCUMENT_SOURCE_COMMIT + "` and require network access. The proof reader and retained evidence remain available offline. "
++            "Original current/historical scope and proof claims are unchanged.\n\n")
++    return (note + text).encode()
++
++
++def project_documents(files):
++    for name in DOCUMENT_LINKS:
++        files["source-documents/" + name + ".txt"] = files[name]
++        files[name] = project_document(name, files[name])
++
++
++def source_document_files(files):
++    """Recover the exact pre-projection inputs; never relabel rendered bytes."""
++    original = dict(files)
++    for name in DOCUMENT_LINKS:
++        path = "source-documents/" + name + ".txt"
++        a.require(path in original, "exact source documentation custody missing: " + name)
++        raw = original.pop(path)
++        a.require(files[name] == project_document(name, raw), "installed documentation projection differs: " + name)
++        original[name] = raw
++    return original
++
+ 
+ def validate_evidence(files):
+     archive_raw, archive, recovered = transport.join(files["transport/TRANSPORT.json"], lambda name: files["transport/" + name], visible=True)
+@@ -82,7 +137,7 @@ def validate_evidence(files):
+     return result, identity, archive
+ 
+ 
+-def catalog(files):
++def _source_catalog(files):
+     selected = json.loads(files["SELECTION.json"])
+     version = a.version(selected["version"])
+     freeze = a.source_freeze(files["source-freeze.json"], version)
+@@ -120,6 +175,30 @@ def catalog(files):
+     return value, source_files
+ 
+ 
++def catalog(files):
++    # Retained payloads predate this presentation layer. Their exact catalog
++    # remains checkable; that does not claim their source-relative links work
++    # from an installed location. New builds always project the documents.
++    if not any(p.startswith("source-documents/") for p in files):
++        return _source_catalog(files)
++    original = source_document_files(files)
++    value, sources = _source_catalog(original)
++    selected = json.loads(files["SELECTION.json"])
++    for key, ref in DOCUMENT_SOURCE_PINS.items():
++        a.require(selected[key] == ref, "immutable source documentation selection differs: " + key)
++    value["documentation_projection"] = {
++        "kind": "stdo.proof-document-link-projection/1",
++        "source_commit": DOCUMENT_SOURCE_COMMIT,
++        "limits": "Only Markdown link presentation changes; immutable remote targets require network access. No new proof or semantic verdict.",
++        "documents": [{"source": selected[key], "retained_path": "source-documents/" + name + ".txt",
++                       "presentation": {"path": name, "sha256": a.sha(files[name])},
++                       "links": [{"source_relative": relative, "target": DOCUMENT_SOURCE_URL + target}
++                                 for relative, target in links]}
++                      for name, (key, links) in DOCUMENT_LINKS.items()]}
++    value["members"] = a.inventory({p: raw for p, raw in files.items() if p not in ("PROOFS.json", "index.html")})
++    return value, sources
++
++
+ APP = r"""'use strict';(()=>{
+ const d=JSON.parse(document.getElementById('proof-data').textContent),c=d.catalog,$=id=>document.getElementById(id);
+ const el=(tag,text)=>{let n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n};
+@@ -157,6 +236,7 @@ def check_files(files):
+     a.require({r["path"] for r in value["members"]} | {"PROOFS.json", "index.html"} == set(files), "current proof reader population differs")
+     return {"kind": value["kind"], "status": "checked", "version": value["version"],
+             "source_identity_sha256": value["source_identity_sha256"], "model": value["model"], "members": len(files),
++            "documentation_links": "immutable-source-projection" if "documentation_projection" in value else "retained-source-relative; installed targets not qualified",
+             "standing": "documentation custody/reproduction; no fresh Lean execution"}
+ 
+ 
+@@ -198,6 +278,7 @@ def build(repository, selection_path, selection_sha, output):
+     files["inspection-execution.json"] = a.encoded({"argv": command, "returncode": process.returncode,
+                                                   "stdout_sha256": a.sha(process.stdout), "stderr_sha256": a.sha(process.stderr)})
+     files["inspection-stderr.txt"] = process.stderr
++    project_documents(files)
+     value, sources = catalog(files)
+     files.update({"PROOFS.json": a.encoded(value), "index.html": render(value, sources)})
+     checked = check_files(files)
+diff --git a/tests/test_stable_stack_release.py b/tests/test_stable_stack_release.py
+index 06c3b6b4a..6e364b782 100644
+--- a/tests/test_stable_stack_release.py
++++ b/tests/test_stable_stack_release.py
+@@ -536,7 +536,13 @@ class PublicReadbackTests(unittest.TestCase):
+     def setUp(self):
+         InstalledEvidenceTests.setUp(self)
+         base = 'https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5/'
+-        refs = [self.manifest['native']['manifest'], self.manifest['components']['manager']['facts']['wheel']]
++        # Select all required public inputs before testing downstream safeguards.
++        # These are isolated fixture bytes, never release qualification assets.
++        runtime_assets = [put(self.root, 'assets/manager-runtime-v3.0.5.zip', b'fixture offline runtime archive'),
++                          put(self.root, 'assets/manager-constraints-v3.0.5.txt', b'fixture-dependency==1.0\n')]
++        runtime_assets = [{**ref, 'name': Path(ref['path']).name} for ref in runtime_assets]
++        self.manifest['components']['manager']['public_assets'] = runtime_assets
++        refs = [self.manifest['native']['manifest'], self.manifest['components']['manager']['facts']['wheel'], *runtime_assets]
+         self.assets = [{**ref, 'name': Path(ref['path']).name, 'url': base + Path(ref['path']).name} for ref in refs]
+         self.manifest['publication']['assets'] = self.assets
+         self.external = self.manifest['publication']['external_manifest_asset']
+@@ -560,7 +566,7 @@ class PublicReadbackTests(unittest.TestCase):
+     def test_anonymous_current_assets_do_not_substitute_for_all_component_results(self):
+         with self.assertRaisesRegex(ValueError, 'missing required current component'):
+             self.check()
+-        self.assertEqual(self.requests.call_count, 3)
++        self.assertEqual(self.requests.call_count, 5)
+         for call in self.requests.call_args_list:
+             self.assertNotIn('Authorization', call.args[0].headers)
+             self.assertNotIn('Cookie', call.args[0].headers)
+@@ -570,6 +576,31 @@ class PublicReadbackTests(unittest.TestCase):
+         with self.assertRaisesRegex(ValueError, 'asset closure'): self.check([])
+         self.assertEqual(self.requests.call_count, 0)
+ 
++    def test_runtime_zip_and_constraints_are_required_before_download(self):
++        for index in (2, 3):
++            with self.subTest(asset=self.assets[index]['name']):
++                self.manifest['publication']['assets'] = [row for n, row in enumerate(self.assets) if n != index]
++                with self.assertRaisesRegex(ValueError, 'asset closure'): self.check([])
++                self.assertEqual(self.requests.call_count, 0)
++        self.manifest['publication']['assets'] = self.assets
++
++    def test_runtime_zip_and_constraints_must_match_selected_identity(self):
++        for index in (2, 3):
++            with self.subTest(asset=self.assets[index]['name']):
++                digest = self.assets[index]['sha256']; self.assets[index]['sha256'] = '0' * 64
++                with self.assertRaisesRegex(ValueError, 'required exact current artifact'): self.check([])
++                self.assertEqual(self.requests.call_count, 0)
++                self.assets[index]['sha256'] = digest
++
++    def test_runtime_zip_and_constraints_require_exact_anonymous_bytes(self):
++        for index in (2, 3):
++            with self.subTest(asset=self.assets[index]['name']):
++                responses = [(self.root / asset['path']).read_bytes() for asset in self.assets]
++                responses[index] = b'tampered public asset'
++                with self.assertRaisesRegex(ValueError, 'fresh anonymous public asset differs'):
++                    self.check(responses)
++                self.assertEqual(self.requests.call_count, index + 1)
++
+     def test_arbitrary_same_named_wheel_and_extra_asset_refuse(self):
+         self.assets[1]['sha256'] = '0' * 64
+         with self.assertRaisesRegex(ValueError, 'required exact current artifact'): self.check([])

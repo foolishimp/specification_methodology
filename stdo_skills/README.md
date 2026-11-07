@@ -1,6 +1,10 @@
 # STDO Skills
 
-Current delivery: the [3.0.5 contract](specification/RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+Current release target is exact `3.0.5-rc.1`, using installed STDO 3.0.4 as construction basis. Use the [current installation guide](scripts/INSTALLATION.md) and [RC package commands](release/3.0.5-rc.1/README.md). Both hosts consume the verified canonical native owner and expose `stdo-project`; nominated Product bases remain unchanged.
+
+## Historical tenant development material
+
+The following earlier tenant entrypoints, package versions and evidence retain their original subjects. They are not the current RC installation route.
 
 Both tenants now include a nominated-project representation workflow. Ask:
 “Build an a_c representation of `/path/to/my-project`.” Explicit entries are

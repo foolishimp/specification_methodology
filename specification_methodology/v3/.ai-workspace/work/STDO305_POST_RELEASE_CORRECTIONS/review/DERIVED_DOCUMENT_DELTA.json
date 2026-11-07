@@ -1,0 +1,86 @@
+{
+  "kind": "stdo.independent-derived-document-delta/1",
+  "preimage": "6edfffb2f8a35b244782749383fb19105d9227d9",
+  "proof_catalog_other_fields_exact": true,
+  "proof_member_changed": [
+    "correspondence.md",
+    "library-provenance.md"
+  ],
+  "proof_member_added": [
+    "source-documents/correspondence.md.txt",
+    "source-documents/library-provenance.md.txt"
+  ],
+  "proof_member_removed": [],
+  "proof_renderer_outside_embedded_data_exact": true,
+  "embedded_lean_sources_exact": true,
+  "original_document_bytes_exact": [
+    {
+      "document": "correspondence.md",
+      "source_sha256": "7577212a31eb57baa64a9f9565c7681665a58a8edd44e3750a60da9e546c09a6",
+      "presentation_sha256": "c6bd90584879152b8d17e02b4794268f1165991980a8e52120e8ad8750c49f01"
+    },
+    {
+      "document": "library-provenance.md",
+      "source_sha256": "14e7e97d4288af40cb63780a0993128629cab623e90d797f638650b6077cec98",
+      "presentation_sha256": "1fdad4500fac1a09bd4326d1ca18d55af723374d4389ccbc814afb8e1895ae7f"
+    }
+  ],
+  "original_proof_selection_exact": true,
+  "projection": {
+    "documents": [
+      {
+        "links": [
+          {
+            "source_relative": "../../../specification/RELEASE_3_0_5.md",
+            "target": "https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/specification/RELEASE_3_0_5.md"
+          },
+          {
+            "source_relative": "fd-method-stdo-3.0.5.json",
+            "target": "https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5.json"
+          },
+          {
+            "source_relative": "fd-support-stdo-3.0.1.md#real-work-policy-operator-recipe",
+            "target": "https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md#real-work-policy-operator-recipe"
+          }
+        ],
+        "presentation": {
+          "path": "correspondence.md",
+          "sha256": "c6bd90584879152b8d17e02b4794268f1165991980a8e52120e8ad8750c49f01"
+        },
+        "retained_path": "source-documents/correspondence.md.txt",
+        "source": {
+          "path": "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.5.md",
+          "sha256": "7577212a31eb57baa64a9f9565c7681665a58a8edd44e3750a60da9e546c09a6"
+        }
+      },
+      {
+        "links": [
+          {
+            "source_relative": "../fixtures/stdo-3.0.2/CUSTODY.json",
+            "target": "https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/build_tenants/lean/fixtures/stdo-3.0.2/CUSTODY.json"
+          },
+          {
+            "source_relative": "../fixtures/toy/CUSTODY.json",
+            "target": "https://github.com/foolishimp/specification_methodology/blob/2ee0147ad06b58dbdf6dad4b874c363a035aab9e/a_c/build_tenants/lean/fixtures/toy/CUSTODY.json"
+          }
+        ],
+        "presentation": {
+          "path": "library-provenance.md",
+          "sha256": "1fdad4500fac1a09bd4326d1ca18d55af723374d4389ccbc814afb8e1895ae7f"
+        },
+        "retained_path": "source-documents/library-provenance.md.txt",
+        "source": {
+          "path": "a_c/build_tenants/lean/design/SOURCE_CORRESPONDENCE.md",
+          "sha256": "14e7e97d4288af40cb63780a0993128629cab623e90d797f638650b6077cec98"
+        }
+      }
+    ],
+    "kind": "stdo.proof-document-link-projection/1",
+    "limits": "Only Markdown link presentation changes; immutable remote targets require network access. No new proof or semantic verdict.",
+    "source_commit": "2ee0147ad06b58dbdf6dad4b874c363a035aab9e"
+  },
+  "limits": [
+    "Compared source/catalog/HTML without replaying proof/archive verification.",
+    "External URL targets validated separately from local immutable Git objects; no fresh HTTP availability claim."
+  ]
+}

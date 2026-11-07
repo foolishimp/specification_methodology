@@ -1,8 +1,8 @@
 # Explicit current frame-index use
 
-Verify the exact 3.0.5 model/program/map, source freeze and Axiom Product
+Verify the exact 3.0.5-rc.1 model/program/map, source freeze and Axiom Product
 inventory from the release record. The program and map are under
-`build_tenants/axiom_indexer/representation/stdo-v3.0.5/`. They derive from the
+`build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/`. They derive from the
 same current a_c model; the conversion receipt binds preservation. Never edit
 a generated view to bypass a refusal or make a second authored model.
 

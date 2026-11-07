@@ -1,0 +1,34 @@
+{
+  "case": "test_native_routes.NativeRouteTests.test_changed_source_does_not_silently_refresh_published_package",
+  "events": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "plan",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpimbytrcz/workspace",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpimbytrcz/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpimbytrcz/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpimbytrcz/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpimbytrcz/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 2,
+      "stderr": "",
+      "stdout": "{\"status\": \"refused_or_incomplete\", \"error\": \"Skills package member differs: build_tenants/claude/current/DESIGN.md\", \"recovery\": \"Retain current files/receipt; reconcile partial effects before retry.\"}\n"
+    }
+  ],
+  "observations": {},
+  "scope": "Actual public CLI over controlled native/manager/provider inputs; no LLM or released-native qualification."
+}

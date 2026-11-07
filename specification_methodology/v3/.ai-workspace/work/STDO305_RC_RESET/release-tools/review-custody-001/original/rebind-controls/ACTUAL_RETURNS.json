@@ -1,0 +1,159 @@
+[
+  {
+    "execution": {
+      "bytes": 26967,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-004/execution.json",
+      "sha256": "c34de65e4da5ee467a27f79bec7c7f9072a9883fbb5c087a1faa8212f4c0fee4"
+    },
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/scripts/rebind_source_coordinates.py",
+      "--predecessor",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/model.json",
+      "--model-output",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-004/emitted-model.json",
+      "--predecessor-source-freeze",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5/source-freeze.json",
+      "--source-freeze",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/source-freeze-rc1.json",
+      "--current-source-inventory",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source-inventory.json",
+      "--source-root",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source",
+      "--old-source-prefix",
+      "build_tenants/a_c/representation/stdo-v3.0.5/source/",
+      "--new-source-prefix",
+      "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/",
+      "--report",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-004/REBIND.json"
+    ],
+    "returncode": 0,
+    "result": {
+      "kind": "stdo-representation.coordinate-rebind/1",
+      "status": "rebound",
+      "current_model": {
+        "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+        "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+        "raw_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      },
+      "coordinate_map_sha256": "25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "source_members_equal": 68,
+      "inverse_equal": true
+    },
+    "produced_outputs": [
+      {
+        "bytes": 8568341,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-004/emitted-model.json",
+        "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      },
+      {
+        "bytes": 4607547,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-004/REBIND.json",
+        "sha256": "89ea8cd786939432cfb0ba837862c11e04b9950b0662de9d1d594299b7e59bc8"
+      },
+      {
+        "bytes": 502,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-004/stdout.json",
+        "sha256": "ab55c8da776f5786ef6937b4ba8aaadcba5b78541f95903f7fe18ebc4482a4d0"
+      },
+      {
+        "bytes": 0,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-004/stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  {
+    "execution": {
+      "bytes": 2871,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/public/carrier/execution.json",
+      "sha256": "965d12e4d3940fd96cd3308394784fda133e4cda0572bea0c0f69ca5a7f5fdd8"
+    },
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+      "materialize",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/carrier.json"
+    ],
+    "returncode": 0,
+    "result": {
+      "claim": "no issuer-authority proof or carrier admission",
+      "model": {
+        "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+        "profile": "a_c.graphify.model/1",
+        "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544"
+      },
+      "status": "proposal-view"
+    },
+    "produced_outputs": [
+      {
+        "bytes": 42270982,
+        "path": "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/carrier.json",
+        "sha256": "642e2f52068d81d3772cdf1ca9e4f8c45b475042b22901eaef203fed735ad923"
+      }
+    ]
+  },
+  {
+    "execution": {
+      "bytes": 2929,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/public/decode/execution.json",
+      "sha256": "7c46fcafef7491dbab8b360bd2d68d0cc5ed5d8d76bd4b27d508ff372e4550d3"
+    },
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+      "decode",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/carrier.json",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/decoded-model.json"
+    ],
+    "returncode": 0,
+    "result": {
+      "model": {
+        "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+        "profile": "a_c.graphify.model/1",
+        "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544"
+      },
+      "status": "decoded"
+    },
+    "produced_outputs": [
+      {
+        "bytes": 8568341,
+        "path": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/decoded-model.json",
+        "sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+      }
+    ]
+  },
+  {
+    "execution": {
+      "bytes": 2437,
+      "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/tools-skills/model-rebind-003/public/validate/execution.json",
+      "sha256": "68ae20127476bc9d847dfa95a42d6ce93ded0464c003eae970f521fd4f1136bd"
+    },
+    "argv": [
+      "/usr/local/bin/python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology/a_c/build_tenants/graphify/code/ac_graph.py",
+      "validate",
+      "/Users/jim/src/apps/specification_methodology/stdo_representation/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/model.json"
+    ],
+    "returncode": 0,
+    "result": {
+      "claim": "declared fragment only; no semantic acceptance or full calculus validity",
+      "model": {
+        "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+        "profile": "a_c.graphify.model/1",
+        "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544"
+      },
+      "records": 1885,
+      "references": 15630,
+      "status": "structurally-checked"
+    },
+    "produced_outputs": []
+  }
+]

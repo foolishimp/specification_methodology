@@ -26,13 +26,13 @@ governing sources.
 
 ## Read The Installed Documentation
 
-STDO 3.0.5 installs its [documentation home](../../../standards/documentation/index.html),
+STDO 3.0.5-rc.1 installs its [documentation home](../../../standards/documentation/index.html),
 [3D/2D/Layered constraint explorer](../../../standards/documentation/constraint-explorer/index.html)
 and [current Lean proof reader](../../../standards/documentation/proofs/index.html)
 with the ordinary method payload. Resolve the installed entry:
 
 ```sh
-stdo resolve stdo://releases/v3.0.5/standards/documentation/index.html
+stdo resolve stdo://releases/v3.0.5-rc.1/standards/documentation/index.html
 ```
 
 Open the returned `path` in a browser. Search constraints, read their complete
@@ -50,7 +50,7 @@ Use the owning installed standards for method decisions.
 
 The [bundled tooling guide](../../../standards/tooling/README.md) exposes the
 current a_c, Representation, Axiom Indexer and both host Skills packages.
-The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5/stack-release-v3.0.5.json)
+The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1/stack-release-v3.0.5-rc.1.json)
 is their external binding to this native installation. Generated readers do not
 contain their own final release manifest digest.
 
@@ -209,7 +209,9 @@ selected method basis.
 
 ### New Project
 
-The STDO 3.0.5 release contains five Products at the same owned version. Acquire
+The normal public release titled STDO 3.0.5 selects the immutable cut
+3.0.5-rc.1. Its five Products carry that exact owned version; the Python manager
+uses the equivalent PEP 440 spelling 3.0.5rc1. Acquire
 the exact manager, native manifest and dependency selection from its release
 assets. The native method tag contains the method and tools payload; the
 manager is a separate Python package. Git and Python 3.13 are prerequisites for
@@ -223,41 +225,49 @@ wheel acquisition requires its own observations.
 
 ```sh
 set -eu
-STDO_CUT='v3.0.5'
-STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5'
-STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-3.0.5"
-STDO_STORE_ROOT="$HOME/.local/share/stdo-store-3.0.5"
+STDO_CUT='v3.0.5-rc.1'
+STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1'
+STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-3.0.5-rc.1"
+STDO_STORE_ROOT="$HOME/.local/share/stdo-store-3.0.5-rc.1"
 STDO_DOWNLOAD_DIR="$(mktemp -d)"
-for asset in stdo_toolchain-3.0.5-py3-none-any.whl stdo-v3.0.5-manifest.json stdo-manager-runtime-v3.0.5-macos-arm64-cp313.zip stdo-manager-constraints-v3.0.5-python313.txt; do
+curl --fail --location --output "$STDO_DOWNLOAD_DIR/release.json" \
+  'https://api.github.com/repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.5-rc.1'
+for asset in stdo_toolchain-3.0.5rc1-py3-none-any.whl stdo-v3.0.5-rc.1-manifest.json stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip stdo-manager-constraints-v3.0.5-rc.1-python313.txt stack-release-v3.0.5-rc.1.json; do
   curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset" "$STDO_ASSETS/$asset"
-  curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset.sha256" "$STDO_ASSETS/$asset.sha256"
 done
 python3.13 - "$STDO_DOWNLOAD_DIR" <<'PYVERIFY'
 from pathlib import Path
-import hashlib, sys
+import hashlib, json, sys
 root = Path(sys.argv[1])
-for name in ('stdo_toolchain-3.0.5-py3-none-any.whl', 'stdo-v3.0.5-manifest.json',
-             'stdo-manager-runtime-v3.0.5-macos-arm64-cp313.zip',
-             'stdo-manager-constraints-v3.0.5-python313.txt'):
-    fields = (root / (name + '.sha256')).read_text().split()
-    if len(fields) != 2 or fields[1] != name or fields[0] != hashlib.sha256((root/name).read_bytes()).hexdigest():
-        raise SystemExit('release asset checksum mismatch: ' + name)
+release = json.loads((root / 'release.json').read_bytes())
+if release.get('tag_name') != 'specification_methodology/v3.0.5-rc.1' or release.get('draft') is not False or release.get('prerelease') is not False:
+    raise SystemExit('wrong fixed RC release or publication status')
+names = {'stdo_toolchain-3.0.5rc1-py3-none-any.whl', 'stdo-v3.0.5-rc.1-manifest.json',
+         'stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip',
+         'stdo-manager-constraints-v3.0.5-rc.1-python313.txt', 'stack-release-v3.0.5-rc.1.json'}
+assets = release.get('assets', [])
+if len(assets) != len(names) or {a['name'] for a in assets} != names:
+    raise SystemExit('release asset population differs')
+for asset in assets:
+    raw = (root / asset['name']).read_bytes()
+    if len(raw) != asset['size'] or asset.get('digest') != 'sha256:' + hashlib.sha256(raw).hexdigest():
+        raise SystemExit('release asset checksum mismatch: ' + asset['name'])
 PYVERIFY
 test ! -e "$STDO_MANAGER_ENV"
-python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-manager-runtime-v3.0.5-macos-arm64-cp313.zip" "$STDO_DOWNLOAD_DIR/runtime"
+python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip" "$STDO_DOWNLOAD_DIR/runtime"
 python3.13 -m venv "$STDO_MANAGER_ENV"
 "$STDO_MANAGER_ENV/bin/python" -m pip install --no-index --find-links "$STDO_DOWNLOAD_DIR/runtime/wheels" --require-hashes --no-deps -r "$STDO_DOWNLOAD_DIR/runtime/requirements-macos-arm64-cp313.txt"
 "$STDO_MANAGER_ENV/bin/python" -m pip check
 stdo() { "$STDO_MANAGER_ENV/bin/stdo" --store "$STDO_STORE_ROOT" "$@"; }
 stdo --version
-STDO_MANIFEST="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.5-manifest.json")"
+STDO_MANIFEST="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.5-rc.1-manifest.json")"
 stdo install "$STDO_CUT" --repository https://github.com/foolishimp/specification_methodology.git --manifest-sha256 "$STDO_MANIFEST"
 stdo verify "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
 ```
 
 A failed download, checksum, dependency installation or exact-cut verification
-stops this sequence. Checksums establish transport integrity; the selected
-release record supplies the exact identity. The external five-Product manifest
+stops this sequence. The fixed-tag GitHub release API supplies the exact asset
+SHA-256 and size over verified HTTPS; no unshipped checksum sidecars are assumed. The external five-Product manifest
 records the complete component and qualification closure. Installation does
 not adopt this basis for an existing Product. Complete the declared runtime and
 host setup below to execute the optional Graphify and Lean dependencies.
@@ -423,7 +433,7 @@ provides the frame-basis declaration.
 
 ### Install The Shared Skills
 
-The 3.0.5 installation includes all five native skills under `plugins/spec/`.
+The 3.0.5-rc.1 installation includes all five native skills under `plugins/spec/`.
 The current Skills Product supplies Codex and Claude discovery bindings and the
 `stdo-project` extension over that same native workflow owner. The complete
 setup below installs these bindings; direct use of the native plugin remains
@@ -431,7 +441,7 @@ available. First verify the exact cut, then locate its plugin through the manage
 
 ```sh
 STDO_PLUGIN_ROOT="$(
-  stdo resolve stdo://releases/v3.0.5/plugins/spec/.codex-plugin/plugin.json |
+  stdo resolve stdo://releases/v3.0.5-rc.1/plugins/spec/.codex-plugin/plugin.json |
     python3 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)'
 )"
 ```
@@ -448,48 +458,27 @@ path) and follow that skill for the admitted task. The shared references and
 scripts remain relative to that installed plugin root. This is explicit file
 loading, not a claim that the host registered a plugin.
 
-For registered Codex invocation, copy the complete verified plugin into a new
-local marketplace, outside the immutable release. The following creates a new
-directory and refuses to overwrite an existing one:
+For Codex discovery, use the [current host binding installer](#install-tools-and-both-host-bindings)
+below. Its wrappers resolve the verified canonical native files and retain
+that dependency in their installation receipt. Do not copy the plugin alone
+into a marketplace: its owning standards and relative references belong to
+the complete installed release. This guide does not qualify a relocated
+marketplace layout.
 
-```sh
-set -eu
-STDO_NATIVE_MARKETPLACE="$HOME/.local/share/stdo-native-3.0.5"
-test ! -e "$STDO_NATIVE_MARKETPLACE"
-mkdir -p "$STDO_NATIVE_MARKETPLACE/.agents/plugins" "$STDO_NATIVE_MARKETPLACE/plugins"
-cp -R "$STDO_PLUGIN_ROOT" "$STDO_NATIVE_MARKETPLACE/plugins/spec"
-cat > "$STDO_NATIVE_MARKETPLACE/.agents/plugins/marketplace.json" <<'JSON'
-{
-  "name": "stdo-native-3-0-5",
-  "plugins": [{
-    "name": "spec",
-    "source": {"source": "local", "path": "./plugins/spec"},
-    "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
-    "category": "Productivity"
-  }]
-}
-JSON
-codex plugin marketplace add "$STDO_NATIVE_MARKETPLACE"
-codex plugin add spec@stdo-native-3-0-5
-```
+Required context/acquisition limits still need the explicit
+[host binding](HOST_BINDING.md); discovery supplies no new authority or
+isolation guarantee.
 
-This follows [OpenAI's local-marketplace route](https://developers.openai.com/plugins/build/plugins).
-Restart or open a new host session as required, identify its actual loaded
-copy and perform [the member comparison](#verify-the-hosts-plugin-copy) before
-relying on it. The setup commands are installation guidance, not additional
-native workflow qualification. Required context/acquisition limits still need
-the explicit [host binding](HOST_BINDING.md); registration supplies no new
-authority or isolation guarantee.
+Both hosts consume the same workflow skill bytes. With the Claude plugin or
+the installed Codex Skills binding selected, use:
 
-Both hosts consume the same workflow skill bytes. Once registered, use:
-
-| Say | Portable skill | Claude | Codex |
+| Say | Portable skill | Claude plugin | Codex Skills |
 |---|---|---|---|
-| `stdo help` | `stdo-help` | `/spec:stdo-help` | `$spec:stdo-help` |
-| `stdo ticket` | `stdo-ticket` | `/spec:stdo-ticket` | `$spec:stdo-ticket` |
-| `stdo work` | `stdo-work` | `/spec:stdo-work` | `$spec:stdo-work` |
-| `stdo review` | `stdo-review` | `/spec:stdo-review` | `$spec:stdo-review` |
-| `stdo status` | `stdo-status` | `/spec:stdo-status` | `$spec:stdo-status` |
+| `stdo help` | `stdo-help` | `/spec:stdo-help` | `$stdo-help` |
+| `stdo ticket` | `stdo-ticket` | `/spec:stdo-ticket` | `$stdo-ticket` |
+| `stdo work` | `stdo-work` | `/spec:stdo-work` | `$stdo-work` |
+| `stdo review` | `stdo-review` | `/spec:stdo-review` | `$stdo-review` |
+| `stdo status` | `stdo-status` | `/spec:stdo-status` | `$stdo-status` |
 
 Natural-language invocation remains valid. In chat, `stdo status` requests
 Product/work status through the skill. In a shell, `stdo status --definition
@@ -503,9 +492,9 @@ The materialized Product source stays exact; the separate a_c runtime may change
 only its declared proof-support profile during controlled Lean setup.
 
 ```sh
-STDO_METHOD_ROOT="$(stdo resolve stdo://releases/v3.0.5/standards/FOUNDATIONS.md | python3.13 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)')"
+STDO_METHOD_ROOT="$(stdo resolve stdo://releases/v3.0.5-rc.1/standards/FOUNDATIONS.md | python3.13 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)')"
 STDO_TOOLING_ROOT="$STDO_METHOD_ROOT/standards/tooling"
-STDO_RUNTIME_BASE="$HOME/.local/share/stdo-runtime-3.0.5"
+STDO_RUNTIME_BASE="$HOME/.local/share/stdo-runtime-3.0.5-rc.1"
 test ! -e "$STDO_RUNTIME_BASE"
 mkdir -p "$STDO_RUNTIME_BASE"
 python3.13 "$STDO_TOOLING_ROOT/materialize.py" materialize --destination "$STDO_RUNTIME_BASE/tools"

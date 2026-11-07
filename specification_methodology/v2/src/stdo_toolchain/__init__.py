@@ -3,4 +3,4 @@
 from .errors import StdoError
 
 __all__ = ["StdoError"]
-__version__ = "3.0.5"
+__version__ = "3.0.5rc1"

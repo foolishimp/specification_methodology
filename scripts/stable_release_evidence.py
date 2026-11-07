@@ -1,4 +1,4 @@
-"""Claim-specific consumers for the stable cohort. No caller-defined predicates.
+"""Claim-specific consumers for complete cohorts. No caller-defined predicates.
 
 Execution transcripts are retained observations, not attestations of process
 origin. Their adequacy is independently reviewed. This consumer additionally
@@ -251,7 +251,7 @@ def installation(view, ref, manifest, api):
     semantic = s.pinned(view, manifest['source'], api)
     for row in semantic['members'] + semantic['native_contracts']:
         s.require(expected.get(row['path']) == row['sha256'], 'installed native is not the selected semantic source')
-    s.require(value['manager'].get('version') == manifest['cohort']['version'], 'installed manager version differs')
+    s.require(value['manager'].get('version') == s.manager_version(manifest), 'installed manager version differs')
     # The wheel/source check in the content gate establishes what must be installed.
     manager_files = manifest['components']['manager']['facts']['source_root'].rstrip('/') + '/'
     source_rows = [row for name, row in expected_files.items() if name.startswith(manager_files) and name.endswith('.py')]
@@ -262,7 +262,7 @@ def installation(view, ref, manifest, api):
         capture_output=True, timeout=30)
     loaded = json.loads(probe.stdout)
     init = manager_files + '__init__.py'
-    s.require(probe.returncode == 0 and loaded == {'version': manifest['cohort']['version'], 'file': value['files'][init]},
+    s.require(probe.returncode == 0 and loaded == {'version': s.manager_version(manifest), 'file': value['files'][init]},
               'actual installed manager runtime does not load the selected current source')
     fresh_verify = subprocess.run([interpreter, '-I', '-B', '-m', 'stdo_toolchain.cli', '--store', value['store'],
         'verify', manifest['cohort']['cut'], '--manifest-sha256', manifest['native']['manifest']['sha256']],
@@ -385,7 +385,7 @@ def native_mcp(view, record, host_record, manifest, api, installed):
     source = {'engine': 'workspace-regular-file', 'root': 'product', 'path': Path(config['definition']).name,
               'object': None, 'selector': None, 'sha256': api.sha256(definition)}
     s.require(policy['product']['definition'] == source and observed['definition_id'] == json.loads(definition)['product']['definition_id'], 'native MCP reads another Product definition')
-    profile_path = 'a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5.json'
+    profile_path = 'a_c/build_tenants/graphify/design/fd-method-stdo-' + manifest['cohort']['version'] + '.json'
     profile = local_file(installed_path(installed, profile_path), root=workspace, api=api)
     s.require(policy['method_profile']['sha256'] == api.sha256(profile) and policy['method_profile']['id'] == json.loads(profile)['id'], 'native MCP policy uses another method profile')
     request = {'schema': 'a_c.fd-support.request/1', 'id': 'readonly-product-001', 'operation': 'source.read', 'arguments': {'source': source, 'encoding': 'utf8'}}
@@ -753,6 +753,9 @@ def installed_formal(view, record, manifest, api, installed):
 
 def representation(view, record, claim, manifest, api):
     s = gate(); facts, identity = model_facts(view, manifest, api)
+    if claim == 'source_current_model' and record.get('operation') == 'coordinate_rebind':
+        import rc_rebind_evidence
+        return rc_rebind_evidence.verify(view, record, manifest, api)
     if claim == 'source_current_model':
         run_relative = s.path(facts['build_run'])
         run = str(view.root.absolute() / run_relative)

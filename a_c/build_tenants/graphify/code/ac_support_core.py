@@ -56,8 +56,8 @@ NATIVE_PROFILE_SHA256 = 'a886047e50b8a45c3b47addea0f0809dca2a6c54ac35948df5e0189
 NATIVE_MANIFEST_SHA256 = '60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8'
 NATIVE_FOUNDATIONS_SHA256 = '92fe2f3c09a59b4e9a732463a41d4a45d7efd693648159621e03c75f7127eac5'
 BUILDER_SHA256 = "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782"
-NATIVE305_PROFILE_ID = "urn:a-c:fd-support:method:stdo-3.0.5:executive:1"
-NATIVE305_PROFILE_SHA256 = "4c08017964cffb50308ba38ed80c15b7babca902f234950a5a92a9da5e7e22b6"
+NATIVE305_PROFILE_ID = "urn:a-c:fd-support:method:stdo-3.0.5-rc.1:executive:1"
+NATIVE305_PROFILE_SHA256 = "9cc0be190584fa748ba33a4367f1cef0c93536e2fe88e044152c760c1dc96581"
 NATIVE305_FOUNDATIONS_SHA256 = "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e"
 FS_BOUNDARY_SHA256 = "93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b"
 CURRENT_BUILDER_SHA256 = "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
@@ -591,7 +591,7 @@ class Runtime:
         if selected_profile["id"] == NATIVE305_PROFILE_ID:
             verify_native_installation(runtime)
         elif "method_installation" in policy:
-            raise SupportError("unsupported_contract", "Installed target binding requires the 3.0.5 profile")
+            raise SupportError("unsupported_contract", "Installed target binding requires the 3.0.5-rc.1 profile")
         read_source(runtime, as_object(runtime.principal["role_binding"]))
         if "composition" in policy:
             runtime = replace(runtime, _composition=composition.load(runtime, as_object(policy["composition"])))
@@ -637,8 +637,8 @@ def verify_native_installation(runtime: Runtime) -> Object:
     product = parse_json(base64.b64decode(text(read_source(runtime, product_ref)["content_base64"])))
     basis = as_object(pointer(product, "/constitution/stdo/basis"), "Product method basis")
     exact_keys(basis, ("uri", "manifest_sha256"), label="Product method basis")
-    if basis["uri"] != "stdo://releases/v3.0.5/":
-        raise SupportError("basis_stale", "3.0.5 profile requires the exact 3.0.5 Product cut")
+    if basis["uri"] != "stdo://releases/v3.0.5-rc.1/":
+        raise SupportError("basis_stale", "3.0.5-rc.1 profile requires the exact 3.0.5-rc.1 Product cut")
     validate_schema(basis["manifest_sha256"], as_object(as_object(CONTENT_SCHEMAS["$defs"])["Sha256"]))
 
     def acquire(path: str, sha256: JSON) -> bytes:
@@ -655,8 +655,8 @@ def verify_native_installation(runtime: Runtime) -> Object:
     manifest = as_object(parse_json(acquire("manifest.json", basis["manifest_sha256"])))
     if (manifest.get("kind") != "stdo.installed-release-manifest"
             or manifest.get("schema_version") != 1
-            or as_object(manifest.get("release")).get("cut") != "v3.0.5"):
-        raise SupportError("basis_stale", "Installed manifest is not the selected STDO 3.0.5 cut")
+            or as_object(manifest.get("release")).get("cut") != "v3.0.5-rc.1"):
+        raise SupportError("basis_stale", "Installed manifest is not the selected STDO 3.0.5-rc.1 cut")
     expected: Object = {"manifest.json": basis["manifest_sha256"]}
 
     def add(path: str, sha256: JSON) -> None:

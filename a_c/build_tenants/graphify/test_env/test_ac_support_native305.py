@@ -1,4 +1,4 @@
-"""3.0.5 public contracts against synthetic installed cuts; no F_P qualification."""
+"""3.0.5-rc.1 public contracts against synthetic installed cuts; no F_P qualification."""
 from pathlib import Path
 import copy
 import hashlib
@@ -26,7 +26,7 @@ class Native305PublicTests(unittest.TestCase):
 
     def setUp(self):
         legacy.PublicRetryTests.setUp(self)
-        profile_path = self.code.parent / 'design/fd-method-stdo-3.0.5.json'
+        profile_path = self.code.parent / 'design/fd-method-stdo-3.0.5-rc.1.json'
         profile = json.loads(profile_path.read_text())
         self.profile = profile
         (self.f.authorities / 'profile.json').write_bytes(profile_path.read_bytes())
@@ -40,10 +40,10 @@ class Native305PublicTests(unittest.TestCase):
             self.assertEqual(hashlib.sha256(raw).hexdigest(), row['sha256'])
             path = self.installation / row['path']; path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(raw)
         (self.installation / 'LICENSE').write_text('synthetic installed-cut control\n')
-        (self.installation / 'release').mkdir(); (self.installation / 'release/release-note.md').write_text('synthetic 3.0.5 control\n')
+        (self.installation / 'release').mkdir(); (self.installation / 'release/release-note.md').write_text('synthetic 3.0.5-rc.1 control\n')
         standards = [{'path': row['member'], 'sha256': row['sha256']} for row in profile['members']]
         plugin = [{'path': row['path'].removeprefix('plugins/spec/'), 'sha256': row['sha256']} for row in profile['native_contracts']]
-        self.manifest = {'kind': 'stdo.installed-release-manifest', 'schema_version': 1, 'release': {'cut': 'v3.0.5'},
+        self.manifest = {'kind': 'stdo.installed-release-manifest', 'schema_version': 1, 'release': {'cut': 'v3.0.5-rc.1'},
             'standards': {'installed_root': 'standards', 'member_count': len(standards), 'members': standards},
             'auxiliary': {'plugin': {'installed_root': 'plugins/spec', 'member_count': len(plugin), 'members': plugin},
                           'license': {'path': 'LICENSE', 'sha256': c._sha((self.installation / 'LICENSE').read_bytes())},
@@ -57,7 +57,7 @@ class Native305PublicTests(unittest.TestCase):
     def bind_manifest(self):
         (self.installation / 'manifest.json').write_bytes(c.canonical(self.manifest))
         definition = json.loads((self.f.workspace / 'Product.json').read_text())
-        definition['constitution'] = {'stdo': {'basis': {'uri': 'stdo://releases/v3.0.5/', 'manifest_sha256': c._sha((self.installation / 'manifest.json').read_bytes())}}}
+        definition['constitution'] = {'stdo': {'basis': {'uri': 'stdo://releases/v3.0.5-rc.1/', 'manifest_sha256': c._sha((self.installation / 'manifest.json').read_bytes())}}}
         self.f.definition = self.f.write('Product.json', definition)
         self.f.policy['product']['definition'] = self.f.definition
         self._select_policy()
@@ -87,18 +87,19 @@ class Native305PublicTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr.decode())
         replies = [json.loads(line) for line in result.stdout.splitlines()]
         self.assertEqual([reply['id'] for reply in replies], [1, 2, 3])
+        self.assertEqual(replies[0]['result']['serverInfo']['version'], '3.0.5-rc.1')
         self.assertNotIn('results.conjoin', [tool['name'] for tool in replies[1]['result']['tools']])
         returned = replies[2]['result']['structuredContent']; self._ok(returned)
         self.assertEqual(returned['operation_outcome']['source_parent']['sha256'], c.NATIVE305_FOUNDATIONS_SHA256)
         self.assertEqual(returned['result']['value']['content'], 'one\ntwo\nthree\n')
 
     def test_wrong_cut_manifest_member_and_missing_installation(self):
-        for variant in ('wrong_cut', 'wrong_manifest', 'changed_member', 'missing_selection'):
+        for variant in ('wrong_cut', 'predecessor_cut', 'wrong_manifest', 'changed_member', 'missing_selection'):
             with self.subTest(variant=variant):
                 saved_policy = copy.deepcopy(self.f.policy)
                 original = (self.installation / 'LICENSE').read_bytes()
-                if variant == 'wrong_cut':
-                    value = json.loads((self.f.workspace / 'Product.json').read_text()); value['constitution']['stdo']['basis']['uri'] = 'stdo://releases/v3.0.4/'
+                if variant in ('wrong_cut', 'predecessor_cut'):
+                    value = json.loads((self.f.workspace / 'Product.json').read_text()); value['constitution']['stdo']['basis']['uri'] = 'stdo://releases/v3.0.4/' if variant == 'wrong_cut' else 'stdo://releases/v3.0.5/'
                     self.f.policy['product']['definition'] = self.f.write('Product.json', value)
                 elif variant == 'wrong_manifest':
                     value = json.loads((self.f.workspace / 'Product.json').read_text()); value['constitution']['stdo']['basis']['manifest_sha256'] = '0' * 64

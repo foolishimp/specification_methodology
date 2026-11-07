@@ -34,8 +34,8 @@ def digest(value):
 
 
 def version(value):
-    require(isinstance(value, str) and re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", value),
-            "exact stable distribution version required")
+    require(isinstance(value, str) and re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)(?:-rc\.[1-9][0-9]*)?", value),
+            "exact stable or RC distribution version required")
     return value
 
 

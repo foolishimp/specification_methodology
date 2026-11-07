@@ -1,10 +1,24 @@
 # Current model construction and view relation
 
-This design realizes REQ-P-CURRENT-MODEL for the owner-selected 3.0.5 cohort.
+This design realizes REQ-P-CURRENT-MODEL for the owner-selected 3.0.5-rc.1 cohort.
 The old a_c prototype and the old Axiom-only program remain historical inputs.
 Neither is silently adopted as current representation.
 
-## Public flow
+## RC coordinate reset
+
+The owner-selected RC reset preserves all 68 semantic source members. The
+reviewed predecessor authoring and semantic assessments retain their original
+subjects. `scripts/rebind_source_coordinates.py` permits only the enumerated
+source-section/grounding coordinates and their dependent inventory, disposition
+and source-reentry hashes; the new model identity derives from that exact map.
+Typed canonical inverse equality must recover the complete prior model, including
+record order, statements, edges, statuses, residuals and original author provenance.
+A changed semantic field or source byte requires ordinary semantic re-entry.
+Current carrier, explorer, program/map, projections and formal evidence are
+regenerated for the rebound subject. No original proof or author invocation is
+relabeled.
+
+## Original public authoring flow
 
 1. Verify semantic freeze S and copy its exact members into the Representation
    tenant's immutable source snapshot. Preserve the complete inventory and
@@ -12,7 +26,7 @@ Neither is silently adopted as current representation.
 2. Freeze this Product Definition and invoke the pinned `ac_project.py`
    `prepare` in direct mode over explicit snapshot sources. The released 3.0.4
    provider's 19-task attempt and explicit-envelope refusal are retained. The
-   owner-authorized current 3.0.5 provider extends the explicit finite cap to
+   owner-authorized 3.0.5 provider extends the explicit finite cap to
    3,000,000 characters, preserving defaults and complete validation. Its exact
    29-file pin set binds the actual succeeding public run. Direct mode uses
    no optional Graphify installation and claims no Graphify trial.
@@ -26,7 +40,7 @@ Neither is silently adopted as current representation.
 4. Public build emits the single model/carrier/coverage and source-linked
    explorer. No selected formal checker is implied; the formal owner consumes
    the exact model separately and records actual Lean evidence.
-5. Exact Axiom 3.0.5 mechanics convert the model with caller-declared source and
+5. Exact Axiom 3.0.5 mechanics converted the model with caller-declared source and
    frame bindings, then validate/map/project. Conversion retains a reversible
    encoding of declared record and model metadata while exposing the same
    semantic statements and references as bounded native index entries.

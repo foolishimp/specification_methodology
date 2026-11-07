@@ -9,16 +9,18 @@ phase already selected by that instruction does not require another request.
 Missing authority, a failed gate or a material unresolved decision remains a
 real stop; merely crossing a Product boundary is not one.
 
-For the selected stable 3.0.5 release the cohort contains exactly five peer
+For the selected 3.0.5-rc.1 cut on public version line 3.0.5, the cohort contains exactly five peer
 Products: Specification Methodology v3, STDO Representation, a_c Implementations
 (Graphify and Lean), Axiom Indexer and STDO Skills (Codex and Claude).
 [RELEASE_PRODUCTS.md](RELEASE_PRODUCTS.md) states all required components.
 `stack_release.json` binds their exact subjects, dependencies, current source
-and qualified claims under the `stable-five-product-v1` profile.
+and qualified claims under the `rc-five-product-v1` profile. The
+`stable-five-product-v1` checker remains available for its original subjects.
 
 The root is coordination, not a Product. Equal versions do not merge Product
 meaning, inventories, tags, qualification or acceptance. Every owned Product
-and component uses the same stable version; third-party dependencies retain
+and component uses the same exact RC version (the manager wheel's PEP 440
+spelling is checked explicitly); third-party dependencies retain
 independent exact pins. Consumer adoption remains separately selected.
 
 ## Current candidate and immutable history
@@ -32,8 +34,13 @@ The exact previous root manifest is preserved in
 `scripts/fixtures/stack_release-v2.5.1-rc.2.json`. Schema 1 remains the original
 three-Product RC profile and is verified by the historical checker path.
 Its frozen coordinates are interpreted against its original cut; it does not
-become the 3.0.5 candidate. All published cuts, including standalone 3.0.4,
-remain immutable and keep their original release status and evidence.
+become the current candidate. The former stable five-Product manifest is also
+preserved exactly at `scripts/fixtures/stack_release-v3.0.5.json`.
+All other published cuts, including standalone 3.0.4, remain unchanged.
+The owner-authorized reset of the unadopted 3.0.5 line is the only exception:
+its five old annotated tag objects are preserved under create-only archival
+refs, and all five original asset bytes and qualification records remain
+historical. No compatibility bridge or global store migration is selected.
 
 ## Source and dependency construction
 
@@ -44,7 +51,7 @@ remain immutable and keep their original release status and evidence.
    them as mandatory native payload membership.
 2. Build current representation, executable tools, both host packages, proof
    evidence and unified views from S. Bind exact source member digests and
-   intended `stdo://releases/v3.0.5/` URI. No generated payload embeds the
+   intended `stdo://releases/v3.0.5-rc.1/` URI. No generated payload embeds the
    still-unknown enclosing native manifest digest.
 3. Freeze complete native A only after all required installed assets exist.
    Create its local annotated Product tag, install and verify it, and bind
@@ -68,10 +75,14 @@ inputs and required evidence, then `--phase content --revision <B>` for the
 exact frozen candidate. Independent source-first assessment is a separately
 required claim, not inferred from those structural checks.
 
-Prepare all five annotated Product tags locally. This owner-selected cohort
-uses main plus those five immutable tags, with no extra branches. Another
-explicit cohort may select optional stable release branches. Stable tags already identify exact versions, so they are not reused
-as mutable version selectors. `--phase refs --revision <B>` checks the complete
+Prepare all five annotated immutable RC Product tags and five annotated
+version selectors locally. This owner-selected cohort uses main and these
+tags, with no extra branches. Its initial reset additionally archives the
+five exact former stable tag objects. Fixed RC and archive refs are
+create-only; each selector is leased against its recorded former object.
+Ordinary later RC cuts require a selector at the greatest preceding RC.
+The reset exception is restricted to the exact former 3.0.5 objects and
+cannot authorize replacing another cut. `--phase refs --revision <B>` checks the complete
 local graph, literal configured fetch/push endpoint, every expected remote
 direct object or required absence, and preserved immutable cuts. It emits
 an exact object-ID push vector and plan digest. Publish only that checked
@@ -96,3 +107,16 @@ The Executive coordinates within the owner's selected grant. A separately
 bound Writer performs effects; an independent Reviewer assesses the frozen
 subject without repairing it. Exact operation assignment, evidence and
 result consumption remain recorded in the current delivery carrier.
+
+The normal GitHub release is attached to the immutable
+`specification_methodology/v3.0.5-rc.1` tag, titled `STDO 3.0.5`, with
+`prerelease=false`. Its assets and install instructions name that exact cut.
+The former release is retained with its original assets, explicitly marked
+superseded and bound to its archived tag object. The selector is a discovery
+route; an adopted Product Definition still pins an exact RC URI and manifest.
+
+For this transaction, a successful `refs(B)` execution also executes the
+ready/content predicates through the checker's unconditional content path.
+That explicit operator consolidation does not claim separate ready/content
+commands or skip any predicate. Published and public gates still recheck
+their selected live inputs and effects.

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Portable a_c 3.0.5 command router; each tenant owns its command contract."""
+"""Portable a_c 3.0.5-rc.1 command router; each tenant owns its command contract."""
 from pathlib import Path
 import os
 import sys
@@ -16,11 +16,11 @@ COMMANDS = {
     'bootstrap': 'scripts/bootstrap.py',
 }
 if len(sys.argv) < 2 or sys.argv[1] in ('-h', '--help'):
-    print('a_c 3.0.5: ' + ', '.join(COMMANDS))
+    print('a_c 3.0.5-rc.1: ' + ', '.join(COMMANDS))
     print('Usage: python3 /path/to/a_c/scripts/ac.py COMMAND [tenant arguments]')
     raise SystemExit(0)
 if sys.argv[1] == '--version':
-    print('3.0.5')
+    print('3.0.5-rc.1')
     raise SystemExit(0)
 entry = COMMANDS.get(sys.argv[1])
 if entry is None:

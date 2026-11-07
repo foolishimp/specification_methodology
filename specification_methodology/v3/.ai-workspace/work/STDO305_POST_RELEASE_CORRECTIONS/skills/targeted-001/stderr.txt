@@ -1,0 +1,20 @@
+test_both_public_routes_keep_canonical_links_metadata_and_safe_removal (test_native_routes.NativeRouteTests.test_both_public_routes_keep_canonical_links_metadata_and_safe_removal) ... FAIL
+test_canonical_changes_refuse_verification_but_never_block_owned_removal (test_native_routes.NativeRouteTests.test_canonical_changes_refuse_verification_but_never_block_owned_removal) ... ok
+test_changed_source_does_not_silently_refresh_published_package (test_native_routes.NativeRouteTests.test_changed_source_does_not_silently_refresh_published_package) ... ok
+test_complete_frontmatter_preserves_multiline_and_optional_invocation_fields (test_native_routes.NativeRouteTests.test_complete_frontmatter_preserves_multiline_and_optional_invocation_fields) ... ok
+test_legacy_receipt_removal_stays_owned_file_only (test_native_routes.NativeRouteTests.test_legacy_receipt_removal_stays_owned_file_only) ... ok
+test_malformed_native_frontmatter_refuses_plan_before_host_effects (test_native_routes.NativeRouteTests.test_malformed_native_frontmatter_refuses_plan_before_host_effects) ... ok
+
+======================================================================
+FAIL: test_both_public_routes_keep_canonical_links_metadata_and_safe_removal (test_native_routes.NativeRouteTests.test_both_public_routes_keep_canonical_links_metadata_and_safe_removal)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology/stdo_skills/tests/test_native_routes.py", line 162, in test_both_public_routes_keep_canonical_links_metadata_and_safe_removal
+    if fragment: self.assertIn(fragment, anchors(target.read_text()), (link, fragment))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'product-definition-overlay' not found in {'controlled-canonical-documentation-fixture'} : ('../../../standards/templates/README.md#product-definition-overlay', 'product-definition-overlay')
+
+----------------------------------------------------------------------
+Ran 6 tests in 4.152s
+
+FAILED (failures=1)

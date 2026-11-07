@@ -1,0 +1,65 @@
+{
+  "kind": "stdo.bounded-independent-review-preimage/1",
+  "assessor": "/root/stdo305_integration_review",
+  "subject_revision": "6edfffb2f8a35b244782749383fb19105d9227d9",
+  "status": "four reported preimage defects independently reproduced; correction review pending frozen successor",
+  "severity_scale": "1 highest through 5 lowest; supplied S4 grades retained",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": 4,
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "line": 185,
+      "observation": "Actual public001 Claude refresh wrapper keeps only name and description; canonical native source has argument-hint and disable-model-invocation: true."
+    },
+    {
+      "id": "F2",
+      "severity": 4,
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "line": 167,
+      "observation": "Both actual installed host copies preserve native source bytes but relocate GETTING_STARTED.md; nine relative standards destinations no longer exist, while all nine canonical native destinations exist."
+    },
+    {
+      "id": "F3",
+      "severity": 4,
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py",
+      "line": 175,
+      "observation": "Producer copies source correspondence/provenance unchanged into a different layout; actual published reader navigation reaches two docs with five nonexistent relative evidence links."
+    },
+    {
+      "id": "F4",
+      "severity": 4,
+      "path": "tests/test_stable_stack_release.py",
+      "line": 539,
+      "observation": "The fixture selects only native manifest and wheel, omitting currently selected component assets. Seven of eight focused public-readback cases fail at initial asset closure before their intended safeguards."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/PREIMAGE.json",
+      "sha256": "f81ca2f76c0934247bec9aa779740c9b25fa56e44ad1fc6b3dab7e92032b44a9",
+      "bytes": 1584
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/PUBLISHED_PREIMAGE.json",
+      "sha256": "86c66844054834eab3c49a3ed8575e4fca63be7d193a95a259c5e0667a6dc1ca",
+      "bytes": 8883
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/PUBLIC_FIXTURE_PREIMAGE.json",
+      "sha256": "822ed3fec1884048806f43b5c3b55183abae95c0b71114cd0c3ec5724cf74bda",
+      "bytes": 6554
+    },
+    {
+      "path": "/tmp/stdo305-postrelease-review-zahzj5/public-fixture-preimage.stderr",
+      "sha256": "b8b6d693049b38df20c3fe6236c3f0f16000eb70059130dcc013a6e914cbedd3",
+      "bytes": 8334
+    }
+  ],
+  "limits": [
+    "No source or installation edits; all written outputs confined to this scratch.",
+    "Read only actual public001 files; did not rerun release, Lean, native model sessions, installer or broad suite.",
+    "PublicReadbackTests uses its explicitly synthetic manager/store and mocked download boundary; this is regression evidence, not public qualification.",
+    "Published 3.0.5 remains immutable. Final source acceptance is pending independently reviewed successor implementation and inventory implications."
+  ]
+}

@@ -16,30 +16,51 @@ spec = importlib.util.spec_from_file_location('install305', ROOT / 'scripts/mana
 m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
 
 
+def candidate_package(destination):
+    """Explicit scratch source candidate; never refresh the published manifest."""
+    original = (ROOT / 'release/3.0.5-rc.1/manifest.json').read_bytes()
+    manifest = json.loads(original)
+    changed = []
+    for row in manifest['files']:
+        raw = (ROOT / row['path']).read_bytes()
+        if m.sha(raw) != row['sha256']:
+            changed.append(row['path'])
+        target = destination / row['path']; target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(raw); row.update(sha256=m.sha(raw), bytes=len(raw))
+    guide = ROOT / 'scripts/INSTALLATION.md'
+    if guide.exists() and not any(row['path'] == 'scripts/INSTALLATION.md' for row in manifest['files']):
+        raw = guide.read_bytes(); (destination / 'scripts/INSTALLATION.md').write_bytes(raw)
+        manifest['files'].append({'path': 'scripts/INSTALLATION.md', 'sha256': m.sha(raw), 'bytes': len(raw)})
+    manifest['candidate_test_fixture'] = {'published_manifest_sha256': m.sha(original), 'changed_source_rows': changed}
+    (destination / 'release/3.0.5-rc.1/manifest.json').write_bytes(m.encode(manifest))
+    return destination
+
+
 class Install305Tests(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(); self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name).resolve(); self.workspace = self.root / 'workspace'; self.workspace.mkdir()
+        self.package = candidate_package(self.root / 'candidate-package')
         self.method = self.root / 'method'; native = self.method / 'plugins/spec'; native.mkdir(parents=True)
         source = REPO / 'specification_methodology/v3/build_tenants/common/plugins/spec'
         for name, raw in m.tree(source).items():
             path = native / name; path.parent.mkdir(parents=True, exist_ok=True); path.write_bytes(raw)
         files = m.tree(native)
-        manifest = {'release': {'cut': 'v3.0.5'}, 'auxiliary': {'plugin': {'installed_root': 'plugins/spec', 'member_count': len(files), 'members': [{'path': k, 'sha256': m.sha(v)} for k, v in files.items()]}}}
+        manifest = {'release': {'cut': 'v3.0.5-rc.1'}, 'auxiliary': {'plugin': {'installed_root': 'plugins/spec', 'member_count': len(files), 'members': [{'path': k, 'sha256': m.sha(v)} for k, v in files.items()]}}}
         (self.method / 'manifest.json').write_bytes(m.encode(manifest)); digest = m.sha((self.method / 'manifest.json').read_bytes())
         self.definition = self.workspace / 'Product.json'
-        self.definition.write_bytes(m.encode({'constitution': {'stdo': {'basis': {'uri': 'stdo://releases/v3.0.5/', 'manifest_sha256': digest}}}}))
+        self.definition.write_bytes(m.encode({'constitution': {'stdo': {'basis': {'uri': 'stdo://releases/v3.0.5-rc.1/', 'manifest_sha256': digest}}}}))
         self.manager = self.root / 'manager'
-        status = {'basis': 'stdo://releases/v3.0.5/', 'manifest_sha256': digest, 'installed': True, 'valid': True, 'failures': [], 'path': str(self.method), 'definition': str(self.definition)}
+        status = {'basis': 'stdo://releases/v3.0.5-rc.1/', 'manifest_sha256': digest, 'installed': True, 'valid': True, 'failures': [], 'path': str(self.method), 'definition': str(self.definition)}
         self.manager.write_text('#!/usr/bin/env python3\nprint(' + repr(json.dumps(status)) + ')\n'); self.manager.chmod(0o755)
-        self.ac = self.root / 'ac'; self.ac.mkdir(); (self.ac / 'VERSION').write_text('3.0.5\n')
-        for name in ['build_tenants/graphify/design/fd-method-stdo-3.0.5.json', 'build_tenants/lean/toolchain-lock.json', 'build_tenants/lean/lake-manifest.json']:
+        self.ac = self.root / 'ac'; self.ac.mkdir(); (self.ac / 'VERSION').write_text('3.0.5-rc.1\n')
+        for name in ['build_tenants/graphify/design/fd-method-stdo-3.0.5-rc.1.json', 'build_tenants/lean/toolchain-lock.json', 'build_tenants/lean/lake-manifest.json']:
             p = self.ac / name; p.parent.mkdir(parents=True, exist_ok=True); p.write_text('{}\n')
-        self.args = argparse.Namespace(command='install', package=ROOT, workspace=self.workspace, host='codex', definition=self.definition, method_root=self.method, ac_root=self.ac, stdo=str(self.manager), python=m.sys.executable)
+        self.args = argparse.Namespace(command='install', package=self.package, workspace=self.workspace, host='codex', definition=self.definition, method_root=self.method, ac_root=self.ac, stdo=str(self.manager), python=m.sys.executable)
 
     def selected_store_launcher(self):
         status = json.loads(subprocess.check_output([str(self.manager)], text=True))
-        store = self.root / 'selected store'; target = store / 'releases/v3.0.5'
+        store = self.root / 'selected store'; target = store / 'releases/v3.0.5-rc.1'
         target.parent.mkdir(parents=True); self.method.rename(target); self.method = target
         self.args.method_root = target; status['path'] = str(target)
         self.manager.write_text('#!/usr/bin/env python3\nimport sys\nassert sys.argv[1:3] == ' + repr(['--store', str(store)]) + '\nprint(' + repr(json.dumps(status)) + ')\n')
@@ -61,10 +82,11 @@ class Install305Tests(unittest.TestCase):
         other = self.workspace / '.agents/skills/unrelated/SKILL.md'; other.parent.mkdir(parents=True); other.write_text('unrelated')
         installed = m.install(self.args)
         base, receipt, value = m.current(self.workspace, 'codex', installed['receipt_sha256'])
-        for path in ['skills/stdo-work/SKILL.md', 'stdo-3.0.5/native/references/COORDINATED_HANDOFF.md', 'skills/stdo-project/references/formal.md']:
+        for path in ['skills/stdo-work/SKILL.md', 'stdo-3.0.5-rc.1/CONFIG.json', 'skills/stdo-project/references/formal.md']:
             self.assertTrue((base / path).is_file())
+        self.assertFalse((base / 'stdo-3.0.5-rc.1/native').exists())
         self.assertFalse((self.workspace / '.claude').exists())
-        config = json.loads((base / 'stdo-3.0.5/CONFIG.json').read_text())
+        config = json.loads((base / 'stdo-3.0.5-rc.1/CONFIG.json').read_text())
         self.assertEqual(config['method_selection_scope'], 'runtime-installation-anchor-only')
         for directory in value['roots']:
             shutil.rmtree(base / directory)
@@ -83,7 +105,7 @@ class Install305Tests(unittest.TestCase):
     def test_collision_refuses_before_writing(self):
         path = self.workspace / '.agents/skills/stdo-work'; path.mkdir(parents=True)
         with self.assertRaises(ValueError): m.install(self.args)
-        self.assertFalse((self.workspace / '.agents/stdo-3.0.5').exists())
+        self.assertFalse((self.workspace / '.agents/stdo-3.0.5-rc.1').exists())
 
     def test_changed_owned_file_and_receipt_refuse(self):
         installed = m.install(self.args)
@@ -168,7 +190,7 @@ class Install305Tests(unittest.TestCase):
         value = json.loads(self.definition.read_text())
         value['constitution']['stdo']['basis'] = {'uri': 'stdo://releases/v3.0.4/', 'manifest_sha256': 'a' * 64}
         self.definition.write_bytes(m.encode(value)); original = self.definition.read_bytes()
-        with self.assertRaisesRegex(ValueError, 'exact selected 3.0.5'):
+        with self.assertRaisesRegex(ValueError, 'exact selected 3.0.5-rc.1'):
             m.install(self.args)
         self.assertEqual(self.definition.read_bytes(), original)
         self.assertFalse((self.workspace / '.agents').exists())

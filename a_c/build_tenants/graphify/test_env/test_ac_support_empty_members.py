@@ -75,7 +75,7 @@ class EmptyNativeMembersTests(unittest.TestCase):
         manager.chmod(0o755)
         output = self.root / 'initialized'
         initialized = self.command('initializer', [self.python, '-B', self.code.parent / 'examples/fd-support/prepare_readonly.py',
-            '--out', output, '--profile', 'stdo-3.0.5', '--product-root', self.f.workspace,
+            '--out', output, '--profile', 'stdo-3.0.5-rc.1', '--product-root', self.f.workspace,
             '--definition-name', 'Product.json', '--method-installation', self.installation, '--stdo', manager])
         self.assertEqual(initialized.returncode, 0, initialized.stderr.decode())
         setup = json.loads(initialized.stdout)

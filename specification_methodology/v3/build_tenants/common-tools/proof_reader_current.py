@@ -24,6 +24,113 @@ TITLES = {"imported-model-well-formedness": "Is the supplied finite model well f
           "record-budget-result": "Does each declared budget return the prescribed result?",
           "supplied-graphify-view-correspondence": "Do the supplied views match these projections?"}
 
+# The source checkpoint is immutable publication custody, not a new proof or
+# semantic assessment. Source-relative Markdown links need a different base in
+# the installed layout; retain their exact originals separately.
+DOCUMENT_SOURCE_COMMIT = "2ee0147ad06b58dbdf6dad4b874c363a035aab9e"
+DOCUMENT_SOURCE_URL = "https://github.com/foolishimp/specification_methodology/blob/" + DOCUMENT_SOURCE_COMMIT + "/"
+DOCUMENT_SOURCE_PINS = {
+    "correspondence": {"path": "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.5.md",
+                       "sha256": "7577212a31eb57baa64a9f9565c7681665a58a8edd44e3750a60da9e546c09a6"},
+    "library_provenance": {"path": "a_c/build_tenants/lean/design/SOURCE_CORRESPONDENCE.md",
+                           "sha256": "14e7e97d4288af40cb63780a0993128629cab623e90d797f638650b6077cec98"},
+}
+DOCUMENT_LINKS = {
+    "correspondence.md": ("correspondence", [
+        ("../../../specification/RELEASE_3_0_5.md", "a_c/specification/RELEASE_3_0_5.md"),
+        ("fd-method-stdo-3.0.5.json", "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5.json"),
+        ("fd-support-stdo-3.0.1.md#real-work-policy-operator-recipe",
+         "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md#real-work-policy-operator-recipe")]),
+    "library-provenance.md": ("library_provenance", [
+        ("../fixtures/stdo-3.0.2/CUSTODY.json", "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CUSTODY.json"),
+        ("../fixtures/toy/CUSTODY.json", "a_c/build_tenants/lean/fixtures/toy/CUSTODY.json")]),
+}
+
+
+def document_profile(files):
+    selected = json.loads(files.get("SELECTION.json", b"{}"))
+    profile = {name: {"key": key, "source": DOCUMENT_SOURCE_PINS[key], "commit": DOCUMENT_SOURCE_COMMIT, "links": links}
+               for name, (key, links) in DOCUMENT_LINKS.items()}
+    version = selected.get("version", "3.0.5")
+    if "-rc." not in version:
+        return profile
+    a.version(version)
+    commit = selected.get("document_source_commit", "")
+    a.require(re.fullmatch(r"[0-9a-f]{40}", commit), "RC documentation requires an actual immutable source checkpoint")
+    source = selected["correspondence"]
+    a.require(source["path"] == f"a_c/build_tenants/graphify/design/fd-support-stdo-{version}.md", "current RC correspondence path differs")
+    a.digest(source["sha256"])
+    line = version.split("-rc.", 1)[0]
+    links = [(f"../../../specification/RELEASE_{line.replace('.', '_')}.md", f"a_c/specification/RELEASE_{line.replace('.', '_')}.md"),
+             (f"fd-method-stdo-{version}.json", f"a_c/build_tenants/graphify/design/fd-method-stdo-{version}.json"),
+             DOCUMENT_LINKS["correspondence.md"][1][2]]
+    targets = selected["document_targets"]
+    a.require(len(targets) == 3 and {r["path"] for r in targets} == {target.split("#", 1)[0] for _, target in links},
+              "current documentation target selection differs")
+    for ref in targets:
+        a.name(ref["path"]); a.digest(ref["sha256"])
+    a.require(selected["library_provenance"] == DOCUMENT_SOURCE_PINS["library_provenance"], "historical library custody differs")
+    profile["correspondence.md"] = {"key": "correspondence", "source": source, "commit": commit, "links": links}
+    return profile
+
+
+def project_document(name, raw, profile=None):
+    profile = (profile or document_profile({}))[name]
+    a.require(a.sha(raw) == profile["source"]["sha256"], "immutable source documentation differs: " + name)
+    url = "https://github.com/foolishimp/specification_methodology/blob/" + profile["commit"] + "/"
+    text = raw.decode()
+    for relative, target in profile["links"]:
+        token = "](" + relative + ")"
+        a.require(text.count(token) == 1, "source documentation link differs: " + relative)
+        text = text.replace(token, "](" + url + target + ")")
+    note = ("> Installed-facing link projection. [Exact source bytes](source-documents/" + name + ".txt) "
+            "are retained separately; this presentation changes links only. External links name immutable source checkpoint `" +
+            profile["commit"] + "` and require network access. The proof reader and retained evidence remain available offline. "
+            "Original current/historical scope and proof claims are unchanged.\n\n")
+    return (note + text).encode()
+
+
+def project_documents(files):
+    profile = document_profile(files)
+    for name in DOCUMENT_LINKS:
+        files["source-documents/" + name + ".txt"] = files[name]
+        files[name] = project_document(name, files[name], profile)
+
+
+def source_document_files(files):
+    """Recover the exact pre-projection inputs; never relabel rendered bytes."""
+    original = dict(files)
+    profile = document_profile(files)
+    for name in DOCUMENT_LINKS:
+        path = "source-documents/" + name + ".txt"
+        a.require(path in original, "exact source documentation custody missing: " + name)
+        raw = original.pop(path)
+        a.require(files[name] == project_document(name, raw, profile), "installed documentation projection differs: " + name)
+        original[name] = raw
+    return original
+
+
+def validate_document_sources(repository, files):
+    """Producer check of exact Git objects and current selected Product bytes."""
+    selected = json.loads(files["SELECTION.json"])
+    targets = {ref["path"]: ref for ref in selected.get("document_targets", [])}
+    def read(commit, path):
+        a.name(path)
+        process = subprocess.run(["git", "--no-optional-locks", "-C", str(repository), "show", commit + ":" + path], capture_output=True, timeout=30)
+        a.require(process.returncode == 0, "immutable documentation target is unavailable: " + path)
+        return process.stdout
+    for name, profile in document_profile(files).items():
+        a.require(read(profile["commit"], profile["source"]["path"]) == files[name], "source document differs at selected immutable checkpoint")
+        for _, target in profile["links"]:
+            path, _, fragment = target.partition("#")
+            raw = read(profile["commit"], path)
+            if name == "correspondence.md" and "-rc." in selected["version"]:
+                a.require(raw == a.pinned(repository, targets[path]), "immutable current target differs from selected Product source")
+            if fragment:
+                headings = re.findall(r"^#{1,6}\s+(.+?)\s*#*\s*$", raw.decode(), re.M)
+                anchors = {re.sub(r"[^\w\- ]", "", h.lower()).replace(" ", "-") for h in headings}
+                a.require(fragment in anchors, "immutable documentation fragment is unavailable: " + target)
+
 
 def validate_evidence(files):
     archive_raw, archive, recovered = transport.join(files["transport/TRANSPORT.json"], lambda name: files["transport/" + name], visible=True)
@@ -82,7 +189,7 @@ def validate_evidence(files):
     return result, identity, archive
 
 
-def catalog(files):
+def _source_catalog(files):
     selected = json.loads(files["SELECTION.json"])
     version = a.version(selected["version"])
     freeze = a.source_freeze(files["source-freeze.json"], version)
@@ -118,6 +225,36 @@ def catalog(files):
              "declarations": declarations,
              "members": a.inventory({p: raw for p, raw in files.items() if p not in ("PROOFS.json", "index.html")})}
     return value, source_files
+
+
+def catalog(files):
+    # Retained payloads predate this presentation layer. Their exact catalog
+    # remains checkable; that does not claim their source-relative links work
+    # from an installed location. New builds always project the documents.
+    if not any(p.startswith("source-documents/") for p in files):
+        a.require(json.loads(files["SELECTION.json"])["version"] == "3.0.5",
+                  "current RC documentation requires projected links and exact source custody")
+        return _source_catalog(files)
+    original = source_document_files(files)
+    value, sources = _source_catalog(original)
+    selected = json.loads(files["SELECTION.json"])
+    profile = document_profile(files)
+    for row in profile.values():
+        a.require(selected[row["key"]] == row["source"], "immutable source documentation selection differs: " + row["key"])
+    value["documentation_projection"] = {
+        "kind": "stdo.proof-document-link-projection/1",
+        "source_commit": profile["correspondence.md"]["commit"],
+        "limits": "Only Markdown link presentation changes; immutable remote targets require network access. No new proof or semantic verdict.",
+        "documents": [{"source": selected[key], "retained_path": "source-documents/" + name + ".txt",
+                       "presentation": {"path": name, "sha256": a.sha(files[name])},
+                       "links": [{"source_relative": relative, "target": "https://github.com/foolishimp/specification_methodology/blob/" + profile[name]["commit"] + "/" + target}
+                                 for relative, target in profile[name]["links"]]}
+                      for name, (key, _) in DOCUMENT_LINKS.items()]}
+    if "-rc." in selected["version"]:
+        value["documentation_projection"]["document_commits"] = {name: row["commit"] for name, row in profile.items()}
+        value["documentation_projection"]["current_targets"] = selected["document_targets"]
+    value["members"] = a.inventory({p: raw for p, raw in files.items() if p not in ("PROOFS.json", "index.html")})
+    return value, sources
 
 
 APP = r"""'use strict';(()=>{
@@ -157,6 +294,7 @@ def check_files(files):
     a.require({r["path"] for r in value["members"]} | {"PROOFS.json", "index.html"} == set(files), "current proof reader population differs")
     return {"kind": value["kind"], "status": "checked", "version": value["version"],
             "source_identity_sha256": value["source_identity_sha256"], "model": value["model"], "members": len(files),
+            "documentation_links": "immutable-source-projection" if "documentation_projection" in value else "retained-source-relative; installed targets not qualified",
             "standing": "documentation custody/reproduction; no fresh Lean execution"}
 
 
@@ -198,6 +336,8 @@ def build(repository, selection_path, selection_sha, output):
     files["inspection-execution.json"] = a.encoded({"argv": command, "returncode": process.returncode,
                                                   "stdout_sha256": a.sha(process.stdout), "stderr_sha256": a.sha(process.stderr)})
     files["inspection-stderr.txt"] = process.stderr
+    validate_document_sources(root, files)
+    project_documents(files)
     value, sources = catalog(files)
     files.update({"PROOFS.json": a.encoded(value), "index.html": render(value, sources)})
     checked = check_files(files)

@@ -1,0 +1,91 @@
+{
+  "actor": "/root/stdo305_tools_skills",
+  "after": {
+    "bytes": 90177,
+    "mode": 420,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_POST_RELEASE_CORRECTIONS/skills/after/RESULT.json",
+    "sha256": "13c75cb04bdc8b2453de7b82866100a9060602e99b428e8ed9a80224e551906f"
+  },
+  "before": {
+    "bytes": 25389,
+    "mode": 420,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_POST_RELEASE_CORRECTIONS/skills/before/RESULT.json",
+    "sha256": "c69f735e2cdf0e9757812d136ecca58974d929e8ce1246bce278cd2bc7c05e5b"
+  },
+  "changed": [
+    "stdo_skills/scripts/manage_skills.py",
+    "stdo_skills/tests/test_install_305.py",
+    "stdo_skills/tests/test_native_routes.py",
+    "stdo_skills/build_tenants/codex/current/DESIGN.md",
+    "stdo_skills/build_tenants/claude/current/DESIGN.md",
+    "stdo_skills/scripts/INSTALLATION.md"
+  ],
+  "consumer": "/root",
+  "effects": "Only six allowed source files, new task evidence and controlled scratch host installs/fixtures; no Git writes, tag/release/publication, basis adoption, global configuration or prior release-evidence edits.",
+  "finding1": "All native frontmatter is preserved, including Claude refresh argument-hint and disable-model-invocation. Only host wrapper name is deliberately rewritten.",
+  "finding2": "New wrappers use escaped canonical native file URIs; the unused relocated copy is omitted. Exact native dependency is in CONFIG and receipt, rechecked by verify/check-runtime. Removal validates only owned host bytes and preserves native/unrelated files even if the external dependency is missing.",
+  "limits": [
+    "Metadata preservation and link/fragment/currentness/removal are deterministic observed properties; automatic invocation behavior, discovery reliability and model compliance were not tested.",
+    "Controlled native/manager fixtures cover paths with spaces/special characters and corruption/absence; real published native bytes were never changed.",
+    "Existing single-writer/check-then-use filesystem assumptions remain; no new transactional or OS-isolation claim."
+  ],
+  "packaging_debt": [
+    "Changed manage_skills.py and both current DESIGN.md files deliberately invalidate their rows in the untouched published3.0.5 Skills manifest.",
+    "The new current installer guide needs deliberate successor package inclusion. Scratch regression manifests explicitly identify themselves as candidate fixtures and do not amend release records.",
+    "A future release needs a separately selected successor version, Skills inventory, derived tooling/archive and cohort membership/qualification. This repair does not modify any published3.0.5 payload or installed released host."
+  ],
+  "real_native_scope": "Actual published native9304727d\u2026 and selected public001 manager/runtime used read-only; both public host paths and actual old-producer receipt removal passed. No live LLM/Lean or global installation.",
+  "schema": "stdo.post-release-correction.result/1",
+  "standing": "Bounded candidate repair and focused verification complete; required independent review/Executive disposition pending. No release, adoption or host behavioral qualification is issued.",
+  "test_outcome": "19 focused tests passed, zero skips. Original targeted-001 fixture-anchor failure retained; corrected fixture declaration changed no product code.",
+  "tests": {
+    "bytes": 509,
+    "mode": 420,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_POST_RELEASE_CORRECTIONS/skills/focused-suite-002/execution.json",
+    "sha256": "b38521873e379537cf1643a08dee8dfc88e95cb84267872a307982b308edb22f"
+  },
+  "unchanged_upstream": [
+    {
+      "bytes": 4778,
+      "mode": 420,
+      "path": "stdo_skills/stdo_skills.json",
+      "sha256": "117e2c2286ca2723179d0dfd6adaad53e2bc1c0d32cf002592c8647b8c223790"
+    },
+    {
+      "bytes": 4527,
+      "mode": 420,
+      "path": "stdo_skills/specification/GOALS.md",
+      "sha256": "97b4a8f2b5320125b78e3f1c187d49a45fd2fc131bab9d8e77d65c3a16c233e0"
+    },
+    {
+      "bytes": 820,
+      "mode": 420,
+      "path": "stdo_skills/specification/INTENT.md",
+      "sha256": "c6c8d5083ce154fa5f1782b4a789c4ff96b65a18eabc28339c79857b131ad895"
+    },
+    {
+      "bytes": 7577,
+      "mode": 420,
+      "path": "stdo_skills/specification/PRODUCT.md",
+      "sha256": "d1c1530c1e7de29f1f0d42ea67d5505b25f215d64cf55a7067cf8c5e40ceec77"
+    },
+    {
+      "bytes": 9706,
+      "mode": 420,
+      "path": "stdo_skills/specification/requirements/README.md",
+      "sha256": "a7bf4606464d60ae69f3b13f3024376bb4944a1d17d92f04fe758fe1bcf74bfe"
+    },
+    {
+      "bytes": 4362,
+      "mode": 420,
+      "path": "stdo_skills/specification/RELEASE_3_0_5.md",
+      "sha256": "aad8a38fce7e09e2d394e9f1fdb79bb0a2e9a203dcb38caa5970b6c85fb414ba"
+    },
+    {
+      "bytes": 3122,
+      "mode": 420,
+      "path": "stdo_skills/release/3.0.5/manifest.json",
+      "sha256": "9a6db638b5173b964d340bb896c73a3c8887649e502b56286ce861635f7eccae"
+    }
+  ]
+}

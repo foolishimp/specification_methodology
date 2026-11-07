@@ -43,21 +43,24 @@ SCOPE = "standalone methodology, plugin and installed offline documentation and 
 
 
 def configure(manifest_path, expected_sha256):
-    """Select a digest-bound stable cohort without copying this implementation.
+    """Select a digest-bound stable or RC cohort without copying this implementation.
 
     Omission retains the historical 3.0.4 preparation profile. The selected
     cohort controls only version, native lineage, output territory and asset
     names; complete publication remains the root cohort checker's operation.
     """
-    global BASE, CUT, TAG, VERSION, MANAGER_WHEEL, PREDECESSOR, REMOTE, MANIFEST_NAME, STANDING, COHORT, PREFIX, SCOPE
+    global BASE, CUT, TAG, VERSION, PROFILE, MANAGER_WHEEL, PREDECESSOR, REMOTE, MANIFEST_NAME, STANDING, COHORT, PREFIX, SCOPE
     require(expected_sha256 is not None, "cohort manifest digest required")
     value = read_json(manifest_path, expected_sha256)
     preparation = value.get("kind") == "stdo.native-preparation-config/1"
-    require(preparation or (value.get("schema_version") == 2 and value.get("profile") == "stable-five-product-v1"), "unsupported native cohort profile")
+    require(preparation or (value.get("schema_version") == 2 and value.get("profile") in ("stable-five-product-v1", "rc-five-product-v1")), "unsupported native cohort profile")
     if preparation:
         require(set(value) == {"kind", "version", "cut", "source", "repository_url", "native_preparation"}, "native preparation configuration contains unselected fields")
     version = value["version"] if preparation else value["cohort"]["version"]
-    require(re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)", version), "native stable version required")
+    require(re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)(?:-rc\.[1-9][0-9]*)?", version), "exact native stable or RC version required")
+    rc = "-rc." in version
+    require(preparation or value["profile"] == ("rc-five-product-v1" if rc else "stable-five-product-v1"), "native version/profile differs")
+    PROFILE = None if rc else "stable-v1"
     require((value["cut"] if preparation else value["cohort"]["cut"]) == "v" + version, "cohort cut/version differs")
     options = value["native_preparation"]
     repository = HERE.parents[3]
@@ -71,11 +74,12 @@ def configure(manifest_path, expected_sha256):
     VERSION, CUT = version, "v" + version
     TAG = f"refs/tags/{NAMESPACE}/{CUT}"
     MANAGER_WHEEL = options["manager_wheel"]
-    require(MANAGER_WHEEL == f"stdo_toolchain-{version}-py3-none-any.whl", "manager component version differs")
+    python_version = version.replace("-rc.", "rc")
+    require(MANAGER_WHEEL == f"stdo_toolchain-{python_version}-py3-none-any.whl", "manager component version differs (PEP 440 mapping)")
     REMOTE = value["repository_url"] if preparation else value["publication"]["repository_url"]
     require(REMOTE.startswith("https://") and not any(c.isspace() for c in REMOTE), "literal HTTPS publication endpoint required")
     MANIFEST_NAME = f"stdo-{CUT}-manifest.json"
-    STANDING = "complete_stable_cohort_native_preparation"
+    STANDING = "complete_rc_cohort_native_preparation" if rc else "complete_stable_cohort_native_preparation"
     SCOPE = options["scope"]
     require(isinstance(SCOPE, str) and SCOPE and "\n" not in SCOPE, "invalid native scope statement")
     COHORT = {("configuration_sha256" if preparation else "manifest_sha256"): expected_sha256,
@@ -207,7 +211,8 @@ def validate_payload(rows, data):
         require(path.startswith(("standards/", "plugins/spec/")) or path in ("LICENSE", "release/release-note.md"), "payload extra: " + path)
     paths = {row["path"] for row in rows}
     declaration = data.get("release/release-note.md", b"").decode("utf-8")
-    require(declaration.splitlines()[:1] == ["# STDO " + VERSION] and "`stable-v1`" in declaration and "`specification_methodology/" + CUT + "`" in declaration, "release declaration differs from stable cut/profile")
+    declared_profile = "rc-five-product-v1" if PROFILE is None else PROFILE
+    require(declaration.splitlines()[:1] == ["# STDO " + VERSION] and "`" + declared_profile + "`" in declaration and "`specification_methodology/" + CUT + "`" in declaration, "release declaration differs from selected cut/profile")
     required = {"LICENSE", "release/release-note.md", "standards/README.md",
                 "plugins/spec/.claude-plugin/plugin.json", "plugins/spec/.codex-plugin/plugin.json"}
     require(required <= paths, "missing required native payload member")
@@ -229,9 +234,9 @@ def source_inventory(repo, source_commit, source_path):
 
 
 def tag_message(selected):
-    label = "standalone stable release" if COHORT is None else "complete cohort native stable release"
+    label = "standalone stable release" if COHORT is None else ("complete cohort native RC cut" if PROFILE is None else "complete cohort native stable release")
     return (f"STDO {CUT}: {label}\n\n"
-            "STDO-Release-Profile: stable-v1\n"
+            + ("STDO-Release-Profile: stable-v1\n" if PROFILE is not None else "") +
             f"Frozen-Source-Commit: {selected['commit']}\n"
             f"Frozen-Source-Path: {selected['package_path']}\n"
             f"Frozen-Source-Tree: {selected['package_tree']}\n"
@@ -255,7 +260,7 @@ def prepare(args):
     message = (f"STDO {CUT} {label}\n\n"
                f"Frozen-Source-Commit: {args.source_commit}\nFrozen-Source-Path: {args.source_path}\n"
                f"Frozen-Source-Tree: {tree}\nPredecessor-Native-Commit: {PREDECESSOR}\n"
-               "Profile: stable-v1; no automatic consumer adoption\n")
+               f"Profile: {PROFILE or 'RC cut'}; no automatic consumer adoption\n")
     result = save_json(run / "source.json", value)
     save(run / "native-index-info.z", info)
     save(run / "native-commit-message.txt", message.encode())
@@ -307,13 +312,15 @@ def expected_manifest(source, native):
     standards, plugins = members("standards/"), members("plugins/spec/")
     by_path = {row["path"]: row for row in source["files"]}
     release = {key: native[key] for key in ("cut", "commit", "tag_object", "tree", "standards_tree", "qualified_ref")}
-    release.update(profile=PROFILE, project_release_namespace=NAMESPACE, project_subtree_root=PREFIX, project_subtree_tree=native["package_tree"])
+    release.update(project_release_namespace=NAMESPACE, project_subtree_root=PREFIX, project_subtree_tree=native["package_tree"])
+    if PROFILE is not None:
+        release['profile'] = PROFILE
     digest = sha("".join(f"{row['sha256']}  specification/standards/{row['path']}\n" for row in standards).encode())
     return {"kind": "stdo.installed-release-manifest", "schema_version": 1, "release": release,
             "standards": {"source_root": "specification/standards", "installed_root": "standards", "member_count": len(standards), "member_set_sha256": digest, "members": standards},
             "auxiliary": {"plugin": {"source_root": "plugins/spec", "installed_root": "plugins/spec", "member_count": len(plugins), "members": plugins},
                           "license": {"path": "LICENSE", "sha256": by_path["LICENSE"]["sha256"]},
-                          "release_note": {"source_path": f"releases/{CUT}.md", "installed_path": "release/release-note.md", "sha256": by_path["release/release-note.md"]["sha256"]}}}
+                          "release_note": {"source_path": f"releases/{CUT.split('-rc.', 1)[0]}.md", "installed_path": "release/release-note.md", "sha256": by_path["release/release-note.md"]["sha256"]}}}
 
 
 def seal(args):

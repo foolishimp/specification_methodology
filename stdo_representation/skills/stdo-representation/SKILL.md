@@ -5,7 +5,7 @@ description: Use the current source-linked STDO model, logical constraint index 
 
 # Use STDO Representation
 
-Work from the exact Representation Product root. Read `releases/v3.0.5.md`
+Work from the exact Representation Product root. Read `releases/v3.0.5-rc.1.md`
 and the bound current inventory. A repository symlink, matching version or
 historical snapshot does not establish a released current Product. An explicitly
 selected candidate uses its existing construction grant and exact candidate
@@ -16,26 +16,27 @@ work grant independently. Representation's construction basis and represented
 source do not adopt a method for that caller or admit its work.
 
 1. Preserve the authority relation: exact Source STDO owns meaning; the current
-   a_c model is one declared LLM-authored representation; the Axiom Program,
+   a_c model preserves one declared LLM-authored representation through an
+   explicitly checked source-coordinate rebind; the Axiom Program,
    Logical Constraint Map and projections derive from that unchanged model.
    Verify the source freeze, model, conversion-preservation and provider
    identities from the release record before relying on them.
 2. Current paths are:
 
    ```text
-   build_tenants/a_c/representation/stdo-v3.0.5/
+   build_tenants/a_c/representation/stdo-v3.0.5-rc.1/
      model.json
      carrier.json
      coverage.json
      source/
-   build_tenants/axiom_indexer/representation/stdo-v3.0.5/
+   build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/
      axiomatic-program.json
      logical-constraint-map.json
    ```
 
    Use the exact same-version Axiom Product dependency. Its immutable ref is
-   `refs/tags/axiom_indexer/v3.0.5`; verify actual member and executable hashes.
-   Bind logical `stdo://releases/v3.0.5/` source routes to the exact Install or
+   `refs/tags/axiom_indexer/v3.0.5-rc.1`; verify actual member and executable hashes.
+   Bind logical `stdo://releases/v3.0.5-rc.1/` source routes to the exact Install or
    explicitly selected frozen source. Physical path spelling grants nothing.
 3. Start with the map's declared indexes and source routes. Select only material
    frames yourself; show each frame URI, purpose, index identity and scope.

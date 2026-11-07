@@ -1,12 +1,15 @@
 # REQ-P-CURRENT-MODEL — One current representation and derived views
 
-Status: active 3.0.5 requirement re-entry under the owner-selected full cohort.
+Status: active 3.0.5-rc.1 requirement re-entry under the owner-selected full cohort.
 Supersedes the old Axiom-only canonical-source restriction in MAP-008 and the
 old fixed-version bindings; their historical release claims remain unchanged.
 
-1. The canonical authored artifact is one source-semantic a_c proposal for the
-   exact 3.0.5 semantic freeze. Public a_c prepare/task/submit/build retains the
-   exact definition, corpus, tasks, answers, author provenance and checks.
+1. The canonical artifact is one source-semantic a_c proposal for the exact
+   3.0.5-rc.1 semantic freeze. This source-identical RC reset may derive it by
+   the verified finite coordinate rebind, preserving the complete authored
+   meaning and original authoring custody. The predecessor public a_c
+   prepare/task/submit/build retains its exact definition, corpus, tasks,
+   answers, author provenance and checks; the rebind is a separate operation.
 2. An LLM authors operative meaning and judges semantic reuse. Mechanical
    parsing, counts, source equality or unchanged quotes alone cannot establish
    faithful interpretation. Reuse also assesses changed normative premises and

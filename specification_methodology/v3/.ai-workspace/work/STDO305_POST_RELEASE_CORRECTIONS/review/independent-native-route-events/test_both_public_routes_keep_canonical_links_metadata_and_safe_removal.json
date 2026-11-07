@@ -1,0 +1,495 @@
+{
+  "case": "test_native_routes.NativeRouteTests.test_both_public_routes_keep_canonical_links_metadata_and_safe_removal",
+  "events": [
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "plan",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"planned\",\n  \"host\": \"codex\",\n  \"files\": 11,\n  \"roots\": [\n    \"stdo-3.0.5\",\n    \"skills/stdo-help\",\n    \"skills/stdo-project\",\n    \"skills/stdo-review\",\n    \"skills/stdo-status\",\n    \"skills/stdo-ticket\",\n    \"skills/stdo-work\"\n  ],\n  \"package_sha256\": \"0e8844e657e9e9f7bbed1a2312446852a3ca94f8c602ed14b68afd795859ae17\"\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "install",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"installed\",\n  \"host\": \"codex\",\n  \"receipt\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/.agents/stdo-skills-3.0.5.receipt.json\",\n  \"receipt_sha256\": \"997e7799deebd0b0aa546b483479b7fdf70183a2d99f6c4eb90fdc16aa6c84a1\",\n  \"files\": 11\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace",
+        "--receipt-sha256",
+        "997e7799deebd0b0aa546b483479b7fdf70183a2d99f6c4eb90fdc16aa6c84a1"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"verified\",\n  \"host\": \"codex\",\n  \"files\": 11\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/.agents/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"verified\",\n  \"configuration\": {\n    \"ac_root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/ac\",\n    \"basis\": {\n      \"manifest_sha256\": \"a707b32a1515425bfa165d5f4bb560651c49d488ec85e0ac7e1b8a244357bdcf\",\n      \"uri\": \"stdo://releases/v3.0.5/\"\n    },\n    \"definition\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/Product.json\",\n    \"host\": \"codex\",\n    \"kind\": \"stdo-skills.runtime/1\",\n    \"manager_identity\": {\n      \"invocation\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager\",\n      \"physical_path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager\",\n      \"runtime_launcher\": null,\n      \"sha256\": \"fea37c24156f25819ce255e3ed257d8d6e512f891003afb46672661a633ded6e\"\n    },\n    \"manager_verification\": {\n      \"basis\": \"stdo://releases/v3.0.5/\",\n      \"definition\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/Product.json\",\n      \"failures\": [],\n      \"installed\": true,\n      \"manifest_sha256\": \"a707b32a1515425bfa165d5f4bb560651c49d488ec85e0ac7e1b8a244357bdcf\",\n      \"path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)\",\n      \"valid\": true\n    },\n    \"method_root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)\",\n    \"method_selection_scope\": \"runtime-installation-anchor-only\",\n    \"native_workflow\": {\n      \"basis\": {\n        \"manifest_sha256\": \"a707b32a1515425bfa165d5f4bb560651c49d488ec85e0ac7e1b8a244357bdcf\",\n        \"uri\": \"stdo://releases/v3.0.5/\"\n      },\n      \"kind\": \"stdo-skills.canonical-native/1\",\n      \"root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec\"\n    },\n    \"operation_basis_rule\": \"resolve the nominated Product Definition; no adoption or override\",\n    \"provider_pins\": {\n      \"VERSION\": \"3da4414b24923430a97c932c0597fd5ebc9d126ae188181054b348d2a8559870\",\n      \"build_tenants/graphify/design/fd-method-stdo-3.0.5.json\": \"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\",\n      \"build_tenants/lean/lake-manifest.json\": \"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\",\n      \"build_tenants/lean/toolchain-lock.json\": \"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\"\n    },\n    \"python\": \"/usr/local/bin/python3\",\n    \"python_identity\": {\n      \"invocation\": \"/usr/local/bin/python3\",\n      \"physical_path\": \"/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12\",\n      \"sha256\": \"a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539\"\n    },\n    \"stdo\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager\",\n    \"version\": \"3.0.5\"\n  }\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "remove",
+        "--host",
+        "codex",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace",
+        "--receipt-sha256",
+        "997e7799deebd0b0aa546b483479b7fdf70183a2d99f6c4eb90fdc16aa6c84a1"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"removed\",\n  \"host\": \"codex\",\n  \"files\": 11\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "plan",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"planned\",\n  \"host\": \"claude\",\n  \"files\": 12,\n  \"roots\": [\n    \"stdo-3.0.5\",\n    \"skills/stdo-help\",\n    \"skills/stdo-project\",\n    \"skills/stdo-refresh\",\n    \"skills/stdo-review\",\n    \"skills/stdo-status\",\n    \"skills/stdo-ticket\",\n    \"skills/stdo-work\"\n  ],\n  \"package_sha256\": \"0e8844e657e9e9f7bbed1a2312446852a3ca94f8c602ed14b68afd795859ae17\"\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "install",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace",
+        "--package",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/candidate-package",
+        "--definition",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/Product.json",
+        "--method-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)",
+        "--ac-root",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/ac",
+        "--stdo",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager",
+        "--python",
+        "/usr/local/bin/python3"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"installed\",\n  \"host\": \"claude\",\n  \"receipt\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/.claude/stdo-skills-3.0.5.receipt.json\",\n  \"receipt_sha256\": \"316049a4faa7670393e558377e2f0a04b64f54cf48a9bda3510a68a9f5cd9448\",\n  \"files\": 12\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "verify",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace",
+        "--receipt-sha256",
+        "316049a4faa7670393e558377e2f0a04b64f54cf48a9bda3510a68a9f5cd9448"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"verified\",\n  \"host\": \"claude\",\n  \"files\": 12\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/.claude/stdo-3.0.5/CONFIG.json"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"verified\",\n  \"configuration\": {\n    \"ac_root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/ac\",\n    \"basis\": {\n      \"manifest_sha256\": \"a707b32a1515425bfa165d5f4bb560651c49d488ec85e0ac7e1b8a244357bdcf\",\n      \"uri\": \"stdo://releases/v3.0.5/\"\n    },\n    \"definition\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/Product.json\",\n    \"host\": \"claude\",\n    \"kind\": \"stdo-skills.runtime/1\",\n    \"manager_identity\": {\n      \"invocation\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager\",\n      \"physical_path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager\",\n      \"runtime_launcher\": null,\n      \"sha256\": \"fea37c24156f25819ce255e3ed257d8d6e512f891003afb46672661a633ded6e\"\n    },\n    \"manager_verification\": {\n      \"basis\": \"stdo://releases/v3.0.5/\",\n      \"definition\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace/Product.json\",\n      \"failures\": [],\n      \"installed\": true,\n      \"manifest_sha256\": \"a707b32a1515425bfa165d5f4bb560651c49d488ec85e0ac7e1b8a244357bdcf\",\n      \"path\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)\",\n      \"valid\": true\n    },\n    \"method_root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)\",\n    \"method_selection_scope\": \"runtime-installation-anchor-only\",\n    \"native_workflow\": {\n      \"basis\": {\n        \"manifest_sha256\": \"a707b32a1515425bfa165d5f4bb560651c49d488ec85e0ac7e1b8a244357bdcf\",\n        \"uri\": \"stdo://releases/v3.0.5/\"\n      },\n      \"kind\": \"stdo-skills.canonical-native/1\",\n      \"root\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec\"\n    },\n    \"operation_basis_rule\": \"resolve the nominated Product Definition; no adoption or override\",\n    \"provider_pins\": {\n      \"VERSION\": \"3da4414b24923430a97c932c0597fd5ebc9d126ae188181054b348d2a8559870\",\n      \"build_tenants/graphify/design/fd-method-stdo-3.0.5.json\": \"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\",\n      \"build_tenants/lean/lake-manifest.json\": \"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\",\n      \"build_tenants/lean/toolchain-lock.json\": \"ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356\"\n    },\n    \"python\": \"/usr/local/bin/python3\",\n    \"python_identity\": {\n      \"invocation\": \"/usr/local/bin/python3\",\n      \"physical_path\": \"/Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12\",\n      \"sha256\": \"a7f5b535d61d1c7326824204ac80f045a97a652abb154421e2c74fcc365a3539\"\n    },\n    \"stdo\": \"/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/manager\",\n    \"version\": \"3.0.5\"\n  }\n}\n"
+    },
+    {
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/scripts/manage_skills.py",
+        "remove",
+        "--host",
+        "claude",
+        "--workspace",
+        "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/workspace",
+        "--receipt-sha256",
+        "316049a4faa7670393e558377e2f0a04b64f54cf48a9bda3510a68a9f5cd9448"
+      ],
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "{\n  \"status\": \"removed\",\n  \"host\": \"claude\",\n  \"files\": 12\n}\n"
+    }
+  ],
+  "observations": {
+    "native_unchanged": {
+      "manifest.json": "a707b32a1515425bfa165d5f4bb560651c49d488ec85e0ac7e1b8a244357bdcf",
+      "plugins/spec/.claude-plugin/plugin.json": "e840840ac399326acbd61a887207e4f36c56a7bf0f923214f8916a92f6435d88",
+      "plugins/spec/.codex-plugin/plugin.json": "6eb859bd1a3c1ba51ecbfce0acab8ac18e2a367f1d3504871da8d9c1d12100fd",
+      "plugins/spec/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "plugins/spec/claude-skills/refresh/SKILL.md": "2931f409f8179624035fbc2638e596afe4daca27909064bd731271d651d1a493",
+      "plugins/spec/references/COORDINATED_HANDOFF.md": "e06139911583717a1d18994aee314db3aa29a0b5ebab61f3c6cfd11e37030e00",
+      "plugins/spec/references/GETTING_STARTED.md": "c430a3d5c827bb1dd8d8a91db8e1137a4c42cc9780871e6007c526b00a12d476",
+      "plugins/spec/references/HOST_BINDING.md": "4365cf2aad65c17ea26afb96267e4f85c912bd45494ebe6bfb1ddfe87d75d7b0",
+      "plugins/spec/references/PRODUCT_BASIS.md": "d4d1528af1af32e6951cc42e83ce8c55f0b95cfd3594e85a85493ef871ea1979",
+      "plugins/spec/references/REFRESH.md": "1db71eddb3e797b84d4092197ccda5ce1f888f035626059d9ba74a21e28028ea",
+      "plugins/spec/scripts/claude_tool_gate.py": "d36b78356f4cc7ae47556fccf703332c7581bc970aeb1a61a486f7a058cc3574",
+      "plugins/spec/scripts/read_basis.py": "df7730a1f661a8be7a3144feff474f83197987ebfd1cce4063aa9c5504e75c41",
+      "plugins/spec/skills/stdo-help/SKILL.md": "8a488add6bbba99dae6173adfcef4f949df264624620f52adb15e20b5144f931",
+      "plugins/spec/skills/stdo-help/agents/openai.yaml": "af3add1ac0464524f1fbb33dd63c49787c1c905e883a3cbd0d48a8075474a20e",
+      "plugins/spec/skills/stdo-review/SKILL.md": "b90b3a2014d7891e25b40c11e5f3638accb9f3408cb3f0cf3922d26f17bc57df",
+      "plugins/spec/skills/stdo-review/agents/openai.yaml": "e736f9789012d0365e5dec0973cd394a48009aa06548b83cea5912643eb7d9d4",
+      "plugins/spec/skills/stdo-status/SKILL.md": "23122f6bf8e78d6167fc0e45d24f17421459172ddc41e8ccb6b35a4873b29407",
+      "plugins/spec/skills/stdo-status/agents/openai.yaml": "b8a9e5843fcb27d5a774ae34ebabe91b039d1999af1b4efd57dcdc5a16383e37",
+      "plugins/spec/skills/stdo-ticket/SKILL.md": "c37e615dbf280ef5a134f604932f5e709c5012968d73ae9362eb47dbab65719b",
+      "plugins/spec/skills/stdo-ticket/agents/openai.yaml": "0ca0733a5bf692cf9b9318c1eb1a64d66262b60b2357b59e24fa4d6dfc4d0d99",
+      "plugins/spec/skills/stdo-work/SKILL.md": "9dc06e03fd6f64483fa485ed55f35e414fefae472bb69aa930ecef9335585b35",
+      "plugins/spec/skills/stdo-work/agents/openai.yaml": "88995a63dc11355deb2f72948a84702f555cc52a4398843f391c7901c0bf7d3f",
+      "standards/documentation/README.md": "987473c3cfda5fa3e081d1f3ed0f427c4015f8b8f0011541984de1f751e0a1fc",
+      "standards/documentation/code-explorer/EXAMPLE.json": "987473c3cfda5fa3e081d1f3ed0f427c4015f8b8f0011541984de1f751e0a1fc",
+      "standards/documentation/code-explorer/index.html": "987473c3cfda5fa3e081d1f3ed0f427c4015f8b8f0011541984de1f751e0a1fc",
+      "standards/documentation/constraint-explorer/index.html": "987473c3cfda5fa3e081d1f3ed0f427c4015f8b8f0011541984de1f751e0a1fc",
+      "standards/documentation/index.html": "987473c3cfda5fa3e081d1f3ed0f427c4015f8b8f0011541984de1f751e0a1fc",
+      "standards/documentation/proofs/index.html": "987473c3cfda5fa3e081d1f3ed0f427c4015f8b8f0011541984de1f751e0a1fc",
+      "standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md": "987473c3cfda5fa3e081d1f3ed0f427c4015f8b8f0011541984de1f751e0a1fc",
+      "standards/templates/README.md": "9b9c9c14d03209c4ad5e496341f928c57853aa34e1c40202f0b993549c176443",
+      "standards/tooling/README.md": "987473c3cfda5fa3e081d1f3ed0f427c4015f8b8f0011541984de1f751e0a1fc"
+    },
+    "routes": [
+      {
+        "host": "codex",
+        "local_getting_started_routes": [
+          {
+            "fragment": "1-get-ready-to-work",
+            "link": "#1-get-ready-to-work",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "2-iterate-requirements",
+            "link": "#2-iterate-requirements",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "3-start-code-development-and-testing",
+            "link": "#3-start-code-development-and-testing",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "4-monitor-and-help-triage",
+            "link": "#4-monitor-and-help-triage",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "coordinate-work-and-review",
+            "link": "#coordinate-work-and-review",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "common-stops",
+            "link": "#common-stops",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "read-the-installed-documentation",
+            "link": "#read-the-installed-documentation",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "owning-references",
+            "link": "#owning-references",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/index.html",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/index.html"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/constraint-explorer/index.html",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/constraint-explorer/index.html"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/proofs/index.html",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/proofs/index.html"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/README.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/README.md"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/tooling/README.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/tooling/README.md"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/code-explorer/index.html",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/code-explorer/index.html"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/code-explorer/EXAMPLE.json",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/code-explorer/EXAMPLE.json"
+          },
+          {
+            "fragment": "",
+            "link": "COORDINATED_HANDOFF.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/COORDINATED_HANDOFF.md"
+          },
+          {
+            "fragment": "compact-source-acquisition",
+            "link": "COORDINATED_HANDOFF.md#compact-source-acquisition",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/COORDINATED_HANDOFF.md"
+          },
+          {
+            "fragment": "",
+            "link": "HOST_BINDING.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/HOST_BINDING.md"
+          },
+          {
+            "fragment": "host-binding",
+            "link": "COORDINATED_HANDOFF.md#host-binding",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/COORDINATED_HANDOFF.md"
+          },
+          {
+            "fragment": "read-a-member-from-that-basis",
+            "link": "PRODUCT_BASIS.md#read-a-member-from-that-basis",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/PRODUCT_BASIS.md"
+          },
+          {
+            "fragment": "product-definition-overlay",
+            "link": "../../../standards/templates/README.md#product-definition-overlay",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/templates/README.md"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md"
+          },
+          {
+            "fragment": "verify-the-hosts-plugin-copy",
+            "link": "#verify-the-hosts-plugin-copy",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "",
+            "link": "HOST_BINDING.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/HOST_BINDING.md"
+          }
+        ]
+      },
+      {
+        "host": "claude",
+        "local_getting_started_routes": [
+          {
+            "fragment": "1-get-ready-to-work",
+            "link": "#1-get-ready-to-work",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "2-iterate-requirements",
+            "link": "#2-iterate-requirements",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "3-start-code-development-and-testing",
+            "link": "#3-start-code-development-and-testing",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "4-monitor-and-help-triage",
+            "link": "#4-monitor-and-help-triage",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "coordinate-work-and-review",
+            "link": "#coordinate-work-and-review",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "common-stops",
+            "link": "#common-stops",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "read-the-installed-documentation",
+            "link": "#read-the-installed-documentation",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "owning-references",
+            "link": "#owning-references",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/index.html",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/index.html"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/constraint-explorer/index.html",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/constraint-explorer/index.html"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/proofs/index.html",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/proofs/index.html"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/README.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/README.md"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/tooling/README.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/tooling/README.md"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/code-explorer/index.html",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/code-explorer/index.html"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/documentation/code-explorer/EXAMPLE.json",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/documentation/code-explorer/EXAMPLE.json"
+          },
+          {
+            "fragment": "",
+            "link": "COORDINATED_HANDOFF.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/COORDINATED_HANDOFF.md"
+          },
+          {
+            "fragment": "compact-source-acquisition",
+            "link": "COORDINATED_HANDOFF.md#compact-source-acquisition",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/COORDINATED_HANDOFF.md"
+          },
+          {
+            "fragment": "",
+            "link": "HOST_BINDING.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/HOST_BINDING.md"
+          },
+          {
+            "fragment": "host-binding",
+            "link": "COORDINATED_HANDOFF.md#host-binding",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/COORDINATED_HANDOFF.md"
+          },
+          {
+            "fragment": "read-a-member-from-that-basis",
+            "link": "PRODUCT_BASIS.md#read-a-member-from-that-basis",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/PRODUCT_BASIS.md"
+          },
+          {
+            "fragment": "product-definition-overlay",
+            "link": "../../../standards/templates/README.md#product-definition-overlay",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/templates/README.md"
+          },
+          {
+            "fragment": "",
+            "link": "../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md"
+          },
+          {
+            "fragment": "verify-the-hosts-plugin-copy",
+            "link": "#verify-the-hosts-plugin-copy",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/GETTING_STARTED.md"
+          },
+          {
+            "fragment": "",
+            "link": "HOST_BINDING.md",
+            "target": "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmplcrqre6o/native method with spaces #percent% (3.0.5)/plugins/spec/references/HOST_BINDING.md"
+          }
+        ]
+      }
+    ]
+  },
+  "scope": "Actual public CLI over controlled native/manager/provider inputs; no LLM or released-native qualification."
+}

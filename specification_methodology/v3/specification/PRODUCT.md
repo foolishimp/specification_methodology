@@ -14,7 +14,15 @@ Under the [standalone successor requirement](requirements/README.md#standalone-s
 
 Each rule has one owning section, under [Method Structure](#method-structure) and the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
-The selected distribution increment, STDO 3.0.4, is published under the owner's
+The current distribution selection is the complete five-Product
+[3.0.5-rc.1 cohort](requirements/COMPLETE_RELEASE.md), on public version line
+STDO 3.0.5, under the owner-authorized reset of the unadopted former stable
+3.0.5 line. The exact grant and historical custody are retained in
+[the reset activation](../.ai-workspace/work/STDO305_RC_RESET/release-tools/ACTIVATION.json).
+This selects delivery work, not a claim that publication is complete. The
+source project's adopted builder remains 3.0.4.
+
+The preceding distribution increment, STDO 3.0.4, is published under the owner's
 [release selection](../.ai-workspace/work/STDO304_DELIVERY/SELECTION.md); the
 [release record](../.ai-workspace/work/STDO304_DELIVERY/RELEASED.md) binds its
 exact publication, public installation and closed independent review.
