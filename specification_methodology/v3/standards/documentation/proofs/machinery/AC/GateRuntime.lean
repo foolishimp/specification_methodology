@@ -1,12 +1,10 @@
 module
-public import AC.Fixture
-public import AC.Toy
-meta import AC.Fixture
-meta import AC.Toy
+public import AC.Projection
+public import AC.Structure
+public import AC.GateProof
 public import Lean.Data.Json.Basic
-
 @[expose] public section
-namespace AC
+namespace AC.GateRuntime
 open Lean
 
 def familyName : Family → String
@@ -54,29 +52,23 @@ def projectionJson (m : Model) (p : Projection) : Json := Json.mkObj [
   ("excludedResiduals", Json.arr (p.excludedResiduals.map recordJson).toArray),
   ("invalidation", toJson p.invalidation)]
 
-def runSelection (m : Model) (selection : Finset Nat × List Nat × Nat) : Except String Json := do
-  let (seeds, trace, budget) := selection
-  let projection ← project m seeds trace budget
-  match project m seeds trace (budget - 1) with
-  | .ok _ => .error "underbudget operation unexpectedly succeeded"
-  | .error reason =>
-    if reason != "insufficient record budget; required closure is not truncated" then
-      .error reason
-    else .ok (Json.mkObj [("budget", toJson budget),
-      ("underbudgetRefusal", toJson reason), ("projection", projectionJson m projection)])
 
-end AC
+def modelJson (m : Model) : Json := Json.mkObj [
+  ("identity", toJson m.identity), ("rawSha256", toJson m.rawSha256),
+  ("canonicalSha256", toJson m.canonicalSha256), ("envelope", toJson m.envelope),
+  ("records", Json.arr (m.records.map recordJson).toArray),
+  ("references", Json.arr (m.references.map referenceJson).toArray),
+  ("externalResolutions", Json.arr (m.externalResolutions.map externalJson).toArray),
+  ("edges", toJson (m.edges.map fun e => [e.1, e.2])), ("invalidation", toJson m.invalidation)]
 
-def main : IO UInt32 := do
-  let computed : Except String Lean.Json := do
-    let mainFixture ← AC.Fixture.selections.mapM (AC.runSelection AC.Fixture.model)
-    let toyFixture ← AC.Toy.selections.mapM (AC.runSelection AC.Toy.model)
-    pure (Lean.Json.mkObj [("stdo302", Lean.Json.arr mainFixture.toArray),
-      ("toy", Lean.Json.arr toyFixture.toArray)])
-  match computed with
-  | .error reason =>
-    IO.eprintln reason
-    return 2
-  | .ok results =>
-    IO.println (Lean.Json.compress results)
-    return 0
+def selectionResultJson (m : Model) (result : Except String Projection) : Json :=
+  match result with
+  | .ok p => Json.mkObj [("status", toJson "verified"), ("projection", projectionJson m p)]
+  | .error reason => Json.mkObj [("status", toJson "refused"), ("reason", toJson reason)]
+
+/-- Original unchecked entry point; its runtime checker cost is unchanged. -/
+def gateSelectionJson (m : Model) (s : Finset Nat × List Nat × Nat) : Json :=
+  let (seeds, trace, budget) := s
+  selectionResultJson m (project m seeds trace budget)
+
+end AC.GateRuntime

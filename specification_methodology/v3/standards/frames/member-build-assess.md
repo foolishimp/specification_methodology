@@ -636,7 +636,7 @@ assessor and decision owner; [EXECUTIVE_BASELINE](../EXECUTIVE_BASELINE.md)
 binds its Reviewer and Executive instance (P6).
 
 
-Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=b5aedcbfc68c6a168bc4c220828146f94b181a3c0fc3925405259890f6fe6886
+Source: RELEASE.md#9-successor-baseline-conservation-stdo-up-015 sha256=eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628
 
 ## 9. Successor baseline conservation (STDO-UP-015)
 
@@ -1011,7 +1011,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=b5aedcbfc68c6a168bc4c220828146f94b181a3c0fc3925405259890f6fe6886 rows=2/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
+Source: RELEASE.md#foundation-to-law-release-and-successor-conservation sha256=eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628 rows=2/12 selected by the anchors this frame carries; the consumers paragraph of 12 items is omitted
 
 ### Foundation to law: release and successor conservation
 

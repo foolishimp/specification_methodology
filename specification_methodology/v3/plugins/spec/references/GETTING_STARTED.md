@@ -26,29 +26,39 @@ governing sources.
 
 ## Read The Installed Documentation
 
-STDO 3.0.4 installs its [documentation home](../../../standards/documentation/index.html)
-and [3D/2D/Layered constraint explorer](../../../standards/documentation/constraint-explorer/index.html)
+STDO 3.0.5-rc.1 installs its [documentation home](../../../standards/documentation/index.html),
+[3D/2D/Layered constraint explorer](../../../standards/documentation/constraint-explorer/index.html)
+and [current Lean proof reader](../../../standards/documentation/proofs/index.html)
 with the ordinary method payload. Resolve the installed entry:
 
 ```sh
-stdo resolve stdo://releases/v3.0.4/standards/documentation/index.html
+stdo resolve stdo://releases/v3.0.5-rc.1/standards/documentation/index.html
 ```
 
 Open the returned `path` in a browser. Search constraints, read their complete
 statements and source passages, and follow labelled connections with a reading
 trail. Use Files to discover records by source path and switch the middle view
-without losing the selected information. Layered works without WebGL. No
-Graphify, Lean or Node installation is needed for this offline reader.
-The [reading guide](../../../standards/documentation/README.md) explains access
-and controls. Its represented common source is the historical 35fb4824 cut,
-not the complete current 3.0.4 corpus; use the owning installed standards for
-current method decisions.
+without losing the selection. Layered works without WebGL. No Graphify, Lean
+or Node installation is needed to read these offline files.
 
-The same home offers the [ABI code example](../../../standards/documentation/code-explorer/index.html)
-and [Lean proof reader](../../../standards/documentation/proofs/index.html).
-To build your own representation, use the [bundled tooling guide](../../../standards/tooling/README.md).
-Its materializer creates an explicit writable workspace; installed release
-files remain immutable and optional execution dependencies are selected separately.
+The [reading guide](../../../standards/documentation/README.md) binds the current
+model to all 68 selected semantic source members, including native workflow
+contracts. The proof reader retains the actual finite-model and selected-view
+verification, its sources, complete compiled evidence and limits. Prose fidelity,
+semantic acceptance and installed runtime verification remain separate claims.
+Use the owning installed standards for method decisions.
+
+The [bundled tooling guide](../../../standards/tooling/README.md) exposes the
+current a_c, Representation, Axiom Indexer and both host Skills packages.
+The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1/stack-release-v3.0.5-rc.1.json)
+is their external binding to this native installation. Generated readers do not
+contain their own final release manifest digest.
+
+The [frozen ABI code example](../../../standards/documentation/code-explorer/index.html)
+retains the exact ABIogenesis T-019 artifact published with STDO 3.0.4. Its
+[example identity](../../../standards/documentation/code-explorer/EXAMPLE.json)
+records that custody; it is not current ABI qualification or current STDO
+model/proof evidence.
 
 ## The Operating Loop
 
@@ -199,45 +209,68 @@ selected method basis.
 
 ### New Project
 
-For the standalone STDO 3.0.4 release, acquire the separately distributed
-manager wheel and installed-manifest assets from that exact release. The native
-method tag contains the payload, not the manager's Python package. Python 3.11+
-and Git are prerequisites. The following installs the manager into an explicit
-user-selected virtual environment; it does not replace a global manager:
+The normal public release titled STDO 3.0.5 selects the immutable cut
+3.0.5-rc.1. Its five Products carry that exact owned version; the Python manager
+uses the equivalent PEP 440 spelling 3.0.5rc1. Acquire
+the exact manager, native manifest and dependency selection from its release
+assets. The native method tag contains the method and tools payload; the
+manager is a separate Python package. Git and Python 3.13 are prerequisites for
+the following qualified manager recipe. It uses a new explicit environment and
+store, preserving any existing manager and Product basis.
+
+The complete offline manager archive selects macOS arm64 and CPython 3.13.
+On another platform, use the same exact dependency versions from the published
+constraints file as explained in that archive's README; platform-specific
+wheel acquisition requires its own observations.
 
 ```sh
 set -eu
-STDO_CUT='v3.0.4'
-STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.4'
-STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-0.1.6"
+STDO_CUT='v3.0.5-rc.1'
+STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1'
+STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-3.0.5-rc.1"
+STDO_STORE_ROOT="$HOME/.local/share/stdo-store-3.0.5-rc.1"
 STDO_DOWNLOAD_DIR="$(mktemp -d)"
-for asset in stdo_toolchain-0.1.6-py3-none-any.whl stdo-v3.0.4-manifest.json; do
+curl --fail --location --output "$STDO_DOWNLOAD_DIR/release.json" \
+  'https://api.github.com/repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.5-rc.1'
+for asset in stdo_toolchain-3.0.5rc1-py3-none-any.whl stdo-v3.0.5-rc.1-manifest.json stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip stdo-manager-constraints-v3.0.5-rc.1-python313.txt stack-release-v3.0.5-rc.1.json; do
   curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset" "$STDO_ASSETS/$asset"
-  curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset.sha256" "$STDO_ASSETS/$asset.sha256"
 done
-python3 - "$STDO_DOWNLOAD_DIR" <<'PYVERIFY'
+python3.13 - "$STDO_DOWNLOAD_DIR" <<'PYVERIFY'
 from pathlib import Path
-import hashlib, sys
+import hashlib, json, sys
 root = Path(sys.argv[1])
-for name in ('stdo_toolchain-0.1.6-py3-none-any.whl', 'stdo-v3.0.4-manifest.json'):
-    fields = (root / (name + '.sha256')).read_text().split()
-    if len(fields) != 2 or fields[1] != name or fields[0] != hashlib.sha256((root/name).read_bytes()).hexdigest():
-        raise SystemExit('release asset checksum mismatch: ' + name)
+release = json.loads((root / 'release.json').read_bytes())
+if release.get('tag_name') != 'specification_methodology/v3.0.5-rc.1' or release.get('draft') is not False or release.get('prerelease') is not False:
+    raise SystemExit('wrong fixed RC release or publication status')
+names = {'stdo_toolchain-3.0.5rc1-py3-none-any.whl', 'stdo-v3.0.5-rc.1-manifest.json',
+         'stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip',
+         'stdo-manager-constraints-v3.0.5-rc.1-python313.txt', 'stack-release-v3.0.5-rc.1.json'}
+assets = release.get('assets', [])
+if len(assets) != len(names) or {a['name'] for a in assets} != names:
+    raise SystemExit('release asset population differs')
+for asset in assets:
+    raw = (root / asset['name']).read_bytes()
+    if len(raw) != asset['size'] or asset.get('digest') != 'sha256:' + hashlib.sha256(raw).hexdigest():
+        raise SystemExit('release asset checksum mismatch: ' + asset['name'])
 PYVERIFY
-python3 -m venv "$STDO_MANAGER_ENV"
-"$STDO_MANAGER_ENV/bin/python" -m pip install --force-reinstall "$STDO_DOWNLOAD_DIR/stdo_toolchain-0.1.6-py3-none-any.whl"
-stdo() { "$STDO_MANAGER_ENV/bin/stdo" "$@"; }
+test ! -e "$STDO_MANAGER_ENV"
+python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip" "$STDO_DOWNLOAD_DIR/runtime"
+python3.13 -m venv "$STDO_MANAGER_ENV"
+"$STDO_MANAGER_ENV/bin/python" -m pip install --no-index --find-links "$STDO_DOWNLOAD_DIR/runtime/wheels" --require-hashes --no-deps -r "$STDO_DOWNLOAD_DIR/runtime/requirements-macos-arm64-cp313.txt"
+"$STDO_MANAGER_ENV/bin/python" -m pip check
+stdo() { "$STDO_MANAGER_ENV/bin/stdo" --store "$STDO_STORE_ROOT" "$@"; }
 stdo --version
-STDO_MANIFEST="$(python3 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.4-manifest.json")"
-stdo install "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
+STDO_MANIFEST="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.5-rc.1-manifest.json")"
+stdo install "$STDO_CUT" --repository https://github.com/foolishimp/specification_methodology.git --manifest-sha256 "$STDO_MANIFEST"
 stdo verify "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
 ```
 
-A failed download, checksum, manager installation or exact-cut verification stops
-this sequence. Published assets and their checksums establish transport integrity;
-use the exact release record as the selected source identity. Existing RC cuts
-remain available through their own released manager/acquisition records. This
-standalone route does not select the coordinated cohort of RELEASE §7.
+A failed download, checksum, dependency installation or exact-cut verification
+stops this sequence. The fixed-tag GitHub release API supplies the exact asset
+SHA-256 and size over verified HTTPS; no unshipped checksum sidecars are assumed. The external five-Product manifest
+records the complete component and qualification closure. Installation does
+not adopt this basis for an existing Product. Complete the declared runtime and
+host setup below to execute the optional Graphify and Lean dependencies.
 
 Resolve and copy the Product Definition and Project Reference-Frame Basis
 templates from that same installed cut:
@@ -400,14 +433,15 @@ provides the frame-basis declaration.
 
 ### Install The Shared Skills
 
-The standalone 3.0.4 installation includes all five native skills under
-`plugins/spec/`. They are separate from the independently owned a_c/Skills
-sources in `standards/tooling/sources.zip`. First install and verify the exact
-cut as above, then locate its plugin through the manager:
+The 3.0.5-rc.1 installation includes all five native skills under `plugins/spec/`.
+The current Skills Product supplies Codex and Claude discovery bindings and the
+`stdo-project` extension over that same native workflow owner. The complete
+setup below installs these bindings; direct use of the native plugin remains
+available. First verify the exact cut, then locate its plugin through the manager:
 
 ```sh
 STDO_PLUGIN_ROOT="$(
-  stdo resolve stdo://releases/v3.0.4/plugins/spec/.codex-plugin/plugin.json |
+  stdo resolve stdo://releases/v3.0.5-rc.1/plugins/spec/.codex-plugin/plugin.json |
     python3 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)'
 )"
 ```
@@ -424,52 +458,83 @@ path) and follow that skill for the admitted task. The shared references and
 scripts remain relative to that installed plugin root. This is explicit file
 loading, not a claim that the host registered a plugin.
 
-For registered Codex invocation, copy the complete verified plugin into a new
-local marketplace, outside the immutable release. The following creates a new
-directory and refuses to overwrite an existing one:
+For Codex discovery, use the [current host binding installer](#install-tools-and-both-host-bindings)
+below. Its wrappers resolve the verified canonical native files and retain
+that dependency in their installation receipt. Do not copy the plugin alone
+into a marketplace: its owning standards and relative references belong to
+the complete installed release. This guide does not qualify a relocated
+marketplace layout.
 
-```sh
-set -eu
-STDO_NATIVE_MARKETPLACE="$HOME/.local/share/stdo-native-3.0.4"
-test ! -e "$STDO_NATIVE_MARKETPLACE"
-mkdir -p "$STDO_NATIVE_MARKETPLACE/.agents/plugins" "$STDO_NATIVE_MARKETPLACE/plugins"
-cp -R "$STDO_PLUGIN_ROOT" "$STDO_NATIVE_MARKETPLACE/plugins/spec"
-cat > "$STDO_NATIVE_MARKETPLACE/.agents/plugins/marketplace.json" <<'JSON'
-{
-  "name": "stdo-native-3-0-4",
-  "plugins": [{
-    "name": "spec",
-    "source": {"source": "local", "path": "./plugins/spec"},
-    "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
-    "category": "Productivity"
-  }]
-}
-JSON
-codex plugin marketplace add "$STDO_NATIVE_MARKETPLACE"
-codex plugin add spec@stdo-native-3-0-4
-```
+Required context/acquisition limits still need the explicit
+[host binding](HOST_BINDING.md); discovery supplies no new authority or
+isolation guarantee.
 
-This follows [OpenAI's local-marketplace route](https://developers.openai.com/plugins/build/plugins).
-Restart or open a new host session as required, identify its actual loaded
-copy and perform [the member comparison](#verify-the-hosts-plugin-copy) before
-relying on it. The setup commands are installation guidance, not additional
-native workflow qualification. Required context/acquisition limits still need
-the explicit [host binding](HOST_BINDING.md); registration supplies no new
-authority or isolation guarantee.
+Both hosts consume the same workflow skill bytes. With the Claude plugin or
+the installed Codex Skills binding selected, use:
 
-Both hosts consume the same workflow skill bytes. Once registered, use:
-
-| Say | Portable skill | Claude | Codex |
+| Say | Portable skill | Claude plugin | Codex Skills |
 |---|---|---|---|
-| `stdo help` | `stdo-help` | `/spec:stdo-help` | `$spec:stdo-help` |
-| `stdo ticket` | `stdo-ticket` | `/spec:stdo-ticket` | `$spec:stdo-ticket` |
-| `stdo work` | `stdo-work` | `/spec:stdo-work` | `$spec:stdo-work` |
-| `stdo review` | `stdo-review` | `/spec:stdo-review` | `$spec:stdo-review` |
-| `stdo status` | `stdo-status` | `/spec:stdo-status` | `$spec:stdo-status` |
+| `stdo help` | `stdo-help` | `/spec:stdo-help` | `$stdo-help` |
+| `stdo ticket` | `stdo-ticket` | `/spec:stdo-ticket` | `$stdo-ticket` |
+| `stdo work` | `stdo-work` | `/spec:stdo-work` | `$stdo-work` |
+| `stdo review` | `stdo-review` | `/spec:stdo-review` | `$stdo-review` |
+| `stdo status` | `stdo-status` | `/spec:stdo-status` | `$stdo-status` |
 
 Natural-language invocation remains valid. In chat, `stdo status` requests
 Product/work status through the skill. In a shell, `stdo status --definition
 ...` remains the toolchain command for installed-basis health.
+
+### Install Tools And Both Host Bindings
+
+Continue with the verified manager/store variables above. All generated runtime,
+request, receipt and host files belong outside the immutable installed release.
+The materialized Product source stays exact; the separate a_c runtime may change
+only its declared proof-support profile during controlled Lean setup.
+
+```sh
+STDO_METHOD_ROOT="$(stdo resolve stdo://releases/v3.0.5-rc.1/standards/FOUNDATIONS.md | python3.13 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)')"
+STDO_TOOLING_ROOT="$STDO_METHOD_ROOT/standards/tooling"
+STDO_RUNTIME_BASE="$HOME/.local/share/stdo-runtime-3.0.5-rc.1"
+test ! -e "$STDO_RUNTIME_BASE"
+mkdir -p "$STDO_RUNTIME_BASE"
+python3.13 "$STDO_TOOLING_ROOT/materialize.py" materialize --destination "$STDO_RUNTIME_BASE/tools"
+python3.13 "$STDO_RUNTIME_BASE/tools/a_c/scripts/bootstrap.py" graphify --destination "$STDO_RUNTIME_BASE/graphify"
+STDO_RUNTIME_PYTHON="$STDO_RUNTIME_BASE/graphify/venv/bin/python"
+python3.13 "$STDO_TOOLING_ROOT/setup.py" derive-runtime --tools "$STDO_RUNTIME_BASE/tools" --destination "$STDO_RUNTIME_BASE/a_c-runtime" --receipt "$STDO_RUNTIME_BASE/derivation-prepared.json"
+STDO_DERIVATION_SHA="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_RUNTIME_BASE/derivation-prepared.json")"
+python3.13 "$STDO_TOOLING_ROOT/setup.py" bootstrap-lean --derivation "$STDO_RUNTIME_BASE/derivation-prepared.json" --derivation-sha256 "$STDO_DERIVATION_SHA" --python "$STDO_RUNTIME_PYTHON" --output "$STDO_RUNTIME_BASE/lean-bootstrap"
+STDO_DERIVATION="$STDO_RUNTIME_BASE/lean-bootstrap/derivation.json"
+STDO_DERIVATION_SHA="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DERIVATION")"
+for host in codex claude; do
+  mkdir "$STDO_RUNTIME_BASE/$host-workspace"
+  python3.13 "$STDO_TOOLING_ROOT/setup.py" host --host "$host" --tools "$STDO_RUNTIME_BASE/tools" --runtime-ac "$STDO_RUNTIME_BASE/a_c-runtime" --derivation "$STDO_DERIVATION" --derivation-sha256 "$STDO_DERIVATION_SHA" --anchor "$STDO_RUNTIME_BASE/$host-anchor" --workspace "$STDO_RUNTIME_BASE/$host-workspace" --method-root "$STDO_METHOD_ROOT" --store "$STDO_STORE_ROOT" --stdo "$STDO_MANAGER_ENV/bin/stdo" --python "$STDO_RUNTIME_PYTHON" --manifest-sha256 "$STDO_MANIFEST"
+done
+```
+
+Graphify and Lean bootstrap retain their exact third-party pins and execution
+receipts. Each host gets an explicit runtime-installation anchor and a manager
+launcher fixed to this store. Enter the selected host workspace and load its
+installed skill instructions. Keep the returned `stdo` launcher and forward it
+through the documented project commands; an ambient manager or store does not
+supply that binding. The nominated construction Product still uses its own
+Definition, basis and work grant.
+
+To verify the current model using this installed runtime, recover the complete
+retained proof bundle and create a separate request with local input paths:
+
+```sh
+STDO_PROOF_ROOT="$STDO_METHOD_ROOT/standards/documentation/proofs"
+python3.13 "$STDO_PROOF_ROOT/materialize.py" materialize --destination "$STDO_RUNTIME_BASE/evidence"
+python3.13 "$STDO_PROOF_ROOT/materialize.py" request --evidence "$STDO_RUNTIME_BASE/evidence" --output "$STDO_RUNTIME_BASE/current-request.json"
+"$STDO_RUNTIME_PYTHON" -I -S -B "$STDO_RUNTIME_BASE/a_c-runtime/build_tenants/lean/scripts/formal_gate.py" verify --request "$STDO_RUNTIME_BASE/current-request.json" --output "$STDO_RUNTIME_BASE/current-verification"
+```
+
+The original construction request/result remain unchanged as provenance. This
+command creates a new actual verification under the installed runtime identity.
+Use the installed `a_c/scripts/ac.py` Graphify, Axiom Indexer and host extension
+routes with explicitly selected model, view, source and runtime inputs. Setup
+success and proof success retain their respective exact scopes; neither adopts
+or authorizes work in a nominated Product.
 
 ## 2. Iterate Requirements
 

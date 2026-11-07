@@ -54,17 +54,40 @@ def ordinary_path(path):
 
 def source_bytes(files):
     """Validate every archive member before exposing bytes or writing a target."""
-    require(set(files) == MEMBERS, "required tooling member set differs")
+    require("TOOLING.json" in files, "required tooling member set differs")
     meta = json.loads(files["TOOLING.json"])
-    require(meta.get("kind") == "stdo.installed-tooling/1" and meta.get("distribution_version") == VERSION,
-            "tooling distribution contract differs")
-    require(meta.get("source_commit") == SOURCE_COMMIT, "tooling source selection differs")
-    for name in ("sources.zip", "materialize.py", "README.md"):
+    current = meta.get("kind") == "stdo.installed-tooling/2"
+    members = MEMBERS | {"SELECTION.json", "setup.py", "runtime.py", "payload_boundary.py"} if current else MEMBERS
+    max_bytes, max_files = (512 * 1024 * 1024, 8192) if current else (MAX_BYTES, MAX_FILES)
+    require(set(files) == members, "required tooling member set differs")
+    if current:
+        require(re.fullmatch(r"(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)\.(?:0|[1-9][0-9]*)(?:-rc\.[1-9][0-9]*)?", meta.get("distribution_version", "")),
+                "canonical stable or RC tooling version required")
+        selected = json.loads(files["SELECTION.json"])
+        require(selected.get("kind") == "stdo.current-tooling-selection/1" and
+                selected.get("version") == meta["distribution_version"] and
+                sha(files["SELECTION.json"]) == meta["selection_sha256"], "tooling selection differs")
+        require(set(selected["owners"]) == {"a_c", "stdo_skills", "stdo_representation", "axiom_indexer"}, "required tool Product closure differs")
+        expected = []
+        for owner, unit in sorted(selected["owners"].items()):
+            require(unit["version"] == meta["distribution_version"] and unit["members"], "tool Product version or inventory differs")
+            for row in unit["members"]:
+                require(row["path"].startswith(owner + "/"), "tool member crosses Product boundary")
+                expected.append({"archive_path": row["path"], "bytes": row["bytes"], "sha256": row["sha256"], "git_mode": row["git_mode"]})
+        expected.sort(key=lambda row: row["archive_path"])
+        require(meta["sources"] == expected and meta["source_identity_sha256"] == selected["source_identity_sha256"], "tool source closure differs from selection")
+        require(sha(encoded(expected)) == meta["source_inventory_sha256"], "tool inventory commitment differs")
+    else:
+        require(meta.get("kind") == "stdo.installed-tooling/1" and meta.get("distribution_version") == VERSION,
+                "tooling distribution contract differs")
+        require(meta.get("source_commit") == SOURCE_COMMIT, "tooling source selection differs")
+        require(sha(encoded(meta["sources"])) == SOURCE_INVENTORY_SHA256, "source inventory commitment differs")
+    require(set(meta["distribution_members"]) == members - {"TOOLING.json"}, "tool distribution inventory differs")
+    for name in members - {"TOOLING.json"}:
         require(meta["distribution_members"][name] == {"bytes": len(files[name]), "sha256": sha(files[name])},
                 "tooling distribution digest differs: " + name)
     rows = meta["sources"]
-    require(sha(encoded(rows)) == SOURCE_INVENTORY_SHA256, "source inventory commitment differs")
-    require(isinstance(rows, list) and 0 < len(rows) <= MAX_FILES, "invalid source inventory size")
+    require(isinstance(rows, list) and 0 < len(rows) <= max_files, "invalid source inventory size")
     expected, folded = {}, set()
     for row in rows:
         name = safe_path(row["archive_path"])
@@ -72,9 +95,9 @@ def source_bytes(files):
         require(name not in expected and key not in folded, "duplicate source inventory path")
         require(row["git_mode"] in ("100644", "100755") and re.fullmatch(r"[a-f0-9]{64}", row["sha256"]) is not None,
                 "invalid source inventory identity")
-        require(type(row["bytes"]) is int and 0 <= row["bytes"] <= MAX_BYTES, "invalid source member size")
+        require(type(row["bytes"]) is int and 0 <= row["bytes"] <= max_bytes, "invalid source member size")
         expected[name] = row; folded.add(key)
-    require(sum(row["bytes"] for row in rows) <= MAX_BYTES, "source inventory exceeds bound")
+    require(sum(row["bytes"] for row in rows) <= max_bytes, "source inventory exceeds bound")
     require(rows == sorted(rows, key=lambda row: row["archive_path"]), "source inventory order differs")
     for name in expected:
         require(not any(str(parent) in expected for parent in PurePosixPath(name).parents), "file/directory source collision")
@@ -109,7 +132,8 @@ def read_bundle(root):
 
 def check(root):
     meta, sources = source_bytes(read_bundle(root))
-    return {"status": "checked", "version": VERSION, "source_commit": SOURCE_COMMIT,
+    return {"status": "checked", "version": meta["distribution_version"],
+            **({"source_commit": meta["source_commit"]} if "source_commit" in meta else {"source_identity_sha256": meta["source_identity_sha256"]}),
             "source_files": len(sources), "source_bytes": sum(map(len, sources.values())),
             "archive_sha256": meta["distribution_members"]["sources.zip"]["sha256"]}
 
@@ -164,7 +188,8 @@ def materialize(bundle, destination):
     except BaseException:
         shutil.rmtree(destination)
         raise
-    result.update(status="materialized", source_commit=SOURCE_COMMIT,
+    result.update(status="materialized", version=meta["distribution_version"],
+                  **({"source_commit": meta["source_commit"]} if "source_commit" in meta else {"source_identity_sha256": meta["source_identity_sha256"]}),
                   notice="Source custody only; select dependencies, work and authority explicitly.")
     return result
 

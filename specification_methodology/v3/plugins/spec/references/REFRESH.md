@@ -10,8 +10,10 @@ Exactly one basis mode is required:
 
 - `--installed`: discover the applicable Product Definition and use its pinned,
   verified installed basis;
-- `--release <product-local-cut>`: resolve immutable product-local cut
-  `v<version>-rc.<n>` through the STDO manager; or
+- `--release <product-local-cut>`: resolve an exact immutable product-local
+  stable cut `v<major>.<minor>.<patch>` under `stable-v1`, or an RC cut
+  `v<version>-rc.<n>`, through the STDO manager. A moving version-line selector
+  is not an exact cut and does not supply Product basis authority; or
 - `--candidate`: load mutable methodology source and label it non-operative.
 
 Optional `--doc <name>` selects one registry entry. `--list` prints the
