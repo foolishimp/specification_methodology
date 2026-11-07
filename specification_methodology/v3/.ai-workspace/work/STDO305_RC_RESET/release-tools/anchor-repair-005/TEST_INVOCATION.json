@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/manager/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "-v",
+    "test_tooling_anchor"
+  ],
+  "cwd": "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools",
+  "environment_additions": {
+    "STDO_TEST_ANCHOR_MANAGER": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/manager/bin/stdo",
+    "STDO_TEST_ANCHOR_MANIFEST": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/store/releases/v3.0.5-rc.1/manifest.json",
+    "STDO_TEST_ANCHOR_STORE": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/local-001/store"
+  },
+  "source_pins": [
+    {
+      "bytes": 13722,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+      "sha256": "d5411f3377faa010c2a25afebff6e52eb5c9e083e5cc9768d0c35ccca4ea8c74"
+    },
+    {
+      "bytes": 5676,
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_tooling_anchor.py",
+      "sha256": "611e34fa50c17951121befd3511a62986091d74e86924ee83f6aae5c16e2995f"
+    },
+    {
+      "bytes": 25650,
+      "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/source-corpus.json",
+      "sha256": "bd374a3fe8f5fd30c165104c23e024cd0de5cc41eb47ac4a364d592cf62d08b3"
+    }
+  ]
+}

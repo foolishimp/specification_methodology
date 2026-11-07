@@ -1,0 +1,73 @@
+{
+  "files": [
+    {
+      "bytes": 13722,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+      "sha256": "d5411f3377faa010c2a25afebff6e52eb5c9e083e5cc9768d0c35ccca4ea8c74"
+    },
+    {
+      "bytes": 8988,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_current.py",
+      "sha256": "39bab5454146c49ff167ff0aa35f2a0b0e7a0f82bf984524bb872fd6b8789aab"
+    },
+    {
+      "bytes": 11721,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_materialize.py",
+      "sha256": "5c2c623a3e8a822687ef15354f4053607054a90cca26457ae65d11a2a261e6cd"
+    },
+    {
+      "bytes": 11860,
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_runtime.py",
+      "sha256": "0814857aebc6f66e98e2cf2c05ac450d61e70fbc9a8a15ca2881fd2d93dc0495"
+    },
+    {
+      "bytes": 25849,
+      "path": "specification_methodology/v2/src/stdo_toolchain/product_definition.py",
+      "sha256": "7c2d81ea1d3cff5769a0a5f1cdb2ca7d4bf37890262090cab071215343c2a077"
+    },
+    {
+      "bytes": 25167,
+      "path": "specification_methodology/v2/src/stdo_toolchain/git_source.py",
+      "sha256": "64b1a7f3c1a179cfea56303ecf900378fc0152ea0767018498c5914f9251ce50"
+    },
+    {
+      "bytes": 18668,
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "sha256": "b1c8c61d3b49be767856d24dcfafae3719aa9f82dbc869a7ec5706151b37862a"
+    }
+  ],
+  "findings": [
+    "Only current channel constructor is tooling_setup.anchor_definition; historical3.0.3 fixture excluded from current path.",
+    "Runtime version remains exact RC and is not a selector.",
+    "Source-corpus change is confined to nested model path/raw hash/canonical identity; source/member/proof/model bytes remain unchanged."
+  ],
+  "kind": "stdo.rc-anchor-path-census/1",
+  "path": [
+    "tooling_current -> installed setup.py",
+    "tooling_materialize canonical distribution version",
+    "tooling_setup.anchor_definition: base channel line plus exact immutable basis/schema",
+    "manage_skills.verified_method -> real manager status --definition --verify",
+    "product_definition.load_binding/_channel_version/_basis_cut -> git_source.normalize_version_line/normalize_cut",
+    "Skills exact selected native manifest/plugin and provider checks"
+  ],
+  "source_corpus_model": {
+    "after": {
+      "identity": {
+        "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+        "profile": "a_c.graphify.model/1",
+        "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544"
+      },
+      "path": "../../../a_c/representation/stdo-v3.0.5-rc.1/model.json",
+      "raw_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7"
+    },
+    "before": {
+      "identity": {
+        "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:model:98bf9c022526d85ba5e79409",
+        "profile": "a_c.graphify.model/1",
+        "sha256": "ceea71dd812d9168ee173d279383e7d557333601c2aa05244cea79afce703a02"
+      },
+      "path": "../../../a_c/representation/stdo-v3.0.5/model.json",
+      "raw_sha256": "0efcfe8ce9fb8c8abad1db75ee53982b50460d3048ff7060eb3c94ef5b472a2e"
+    }
+  }
+}

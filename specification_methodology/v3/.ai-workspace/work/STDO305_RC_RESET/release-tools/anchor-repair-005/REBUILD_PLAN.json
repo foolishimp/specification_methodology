@@ -1,0 +1,49 @@
+{
+  "argv": [
+    "/opt/homebrew/Cellar/python@3.13/3.13.7/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "-B",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/build_tenants/common-tools/tooling.py",
+    "build",
+    "--repository",
+    "/Users/jim/src/apps/specification_methodology",
+    "--selection",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/tooling-selection.json",
+    "--selection-sha256",
+    "97356fff157e2765a093d834973b95843a1d53ec5c350c1623f04a6b7f962562",
+    "--destination",
+    "/Users/jim/src/apps/specification_methodology/specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/tooling"
+  ],
+  "kind": "stdo.affected-tooling-rebuild/1",
+  "predecessor_selection": {
+    "bytes": 80346,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/packaging-001/tooling-selection.json",
+    "sha256": "27ebbbf34c8595fd0c2fe63c16d761d807ad45e5f17d99c915fd44076c51ab39"
+  },
+  "selected_source_delta": [
+    {
+      "after": {
+        "bytes": 25650,
+        "git_mode": "100644",
+        "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/source-corpus.json",
+        "sha256": "bd374a3fe8f5fd30c165104c23e024cd0de5cc41eb47ac4a364d592cf62d08b3"
+      },
+      "before": {
+        "bytes": 25623,
+        "git_mode": "100644",
+        "path": "stdo_representation/build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/source-corpus.json",
+        "sha256": "2b35284a49c3461aa1e8d040db1d1803fad192cf207558e36f531f3c38b7da14"
+      }
+    }
+  ],
+  "selection": {
+    "bytes": 80621,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/tooling-selection.json",
+    "sha256": "97356fff157e2765a093d834973b95843a1d53ec5c350c1623f04a6b7f962562"
+  },
+  "source_freeze": {
+    "bytes": 2539,
+    "path": "specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/release-tools/anchor-repair-005/FREEZE.json",
+    "sha256": "5dbd35f95bfd88fbec3970b9c5aa81a10f6b0d5bfddd67178faf7ae582f671bd"
+  },
+  "unchanged": "All model/map/proof/reader/documentation/manager/S inputs remain selected byte-exact; only one transported source and setup.py change."
+}

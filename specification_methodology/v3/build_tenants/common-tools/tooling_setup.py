@@ -30,11 +30,12 @@ def runtime_tools(bundle):
 def anchor_definition(version, manifest_sha, repository):
     identity = "urn:stdo:runtime-installation-anchor:" + manifest_sha
     basis = {"uri": f"stdo://releases/v{version}/", "manifest_sha256": manifest_sha}
+    version_line = version.split("-rc.", 1)[0]
     return {"$schema": basis["uri"] + "standards/schemas/product-definition.schema.json",
         "kind": "stdo.product-definition",
         "product": {"definition_id": identity, "name": "STDO runtime installation anchor " + version,
                     "source_project": "./", "bounded_context": {"id": identity + ":scope", "definition": "./README.md#scope"}},
-        "constitution": {"stdo": {"source": {"repository": repository}, "selector": "stdo://channels/" + version, "basis": basis},
+        "constitution": {"stdo": {"source": {"repository": repository}, "selector": "stdo://channels/" + version_line, "basis": basis},
                          "additional_authorities": ["./README.md"],
                          "entrypoints": [{"basis": "#/constitution/stdo/basis", "uri": "standards/frames/bootstrap.md"}],
                          "agent_bootstrap": {"entrypoint": "#/constitution/entrypoints/0", "targets": ["./AGENTS.md"]}},
