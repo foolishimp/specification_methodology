@@ -1,0 +1,136 @@
+[
+  {
+    "family": "objects",
+    "record": {
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:faa788ac50d78e52dfcf9ae40faad101",
+      "value": {
+        "conditions": [],
+        "definition": "The source describes five refinements of its core result algebra: admission and activation asks whether a step may begin; construction availability asks whether a candidate is available; disposition asks whether a candidate is accepted at its declared boundary; ambiguity outcome asks whether a declared ambiguity is resolved on the exact basis; effects asks whether an intended effect occurred. These answer different questions from the step's evaluations.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 962,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition",
+            "start_line": 958
+          }
+        ],
+        "label": "Five predicate-bound result refinements"
+      }
+    }
+  },
+  {
+    "family": "objects",
+    "record": {
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:271f840aa804d3c443506687118dc1d7",
+      "value": {
+        "conditions": [
+          "An effectful step has an intended external effect."
+        ],
+        "definition": "Effect outcomes concern attainment of the declared intended outcome: completed, not_effected or completion_unknown. Whether the effect has ended is a separate question, required conjunctively for completed and otherwise recorded as an unresolved end when applicable. Uncertain completion includes completion_unknown and not_effected with an unestablished end.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1118,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+            "start_line": 1116
+          },
+          {
+            "end_line": 1151,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+            "start_line": 1149
+          }
+        ],
+        "label": "External effect outcome and end"
+      }
+    }
+  },
+  {
+    "family": "relations",
+    "record": {
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:baf950ab4a00f06fe0296ad7c71fefb8",
+      "qualifiers": {
+        "conditions": [
+          "Completion is unknown, or not_effected has an unestablished end."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1152,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+            "start_line": 1151
+          }
+        ],
+        "kind": "recovery_precondition",
+        "meaning": "An uncertain effect requires work-state reconciliation before repetition or dependent action, sufficiently for that action."
+      },
+      "source": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:271f840aa804d3c443506687118dc1d7",
+      "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:b70a01141351575f4d3a2c29af27ae28"
+    }
+  },
+  {
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:faa788ac50d78e52dfcf9ae40faad101"
+      ],
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:0cdfa38e802b13e04ed4835001f27d06",
+      "latitude_ref": [],
+      "predicate": {
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 943,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition",
+            "start_line": 941
+          },
+          {
+            "end_line": 966,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition",
+            "start_line": 964
+          }
+        ],
+        "statement": "Every performed evaluation returns exactly one core value with predicate and domain outcome; an unperformed evaluation has no result. Every refinement value maps to exactly one core value for its own named predicate, which travels with it. Satisfied under one predicate cannot satisfy another. Consumers must not treat refused activation as step stop, availability as fitness or acceptance, carried ambiguity as resolution, or unknown effect as no effect. Profile refinements likewise map each value to one core value and add none.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance"
+    }
+  },
+  {
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:271f840aa804d3c443506687118dc1d7"
+      ],
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:47353fc31e517e6691fe48823051e794",
+      "latitude_ref": [],
+      "predicate": {
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1124,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+            "start_line": 1124
+          },
+          {
+            "end_line": 1144,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F3.%20Step%20results%20and%20disposition%2FEffects",
+            "start_line": 1142
+          }
+        ],
+        "statement": "Use admitted evidence about the subject. completed → satisfied requires full intended effect and established end. not_effected → falsified requires evidence that the declared outcome is unattained and no later completion can attain it: examples include no effect beginning, an effect ending short, a bounded interval closing partly undone, or prior action destroying what the outcome needs; name any part that occurred. completion_unknown → indeterminate when neither other value is established, including lost response without observed counterexample or full effect observed while it may still act; name the deciding observation. Lost response, absent record or no context trace is not evidence of not_effected. End is established by subject evidence that action ceased or never began; if an effect began without established end, record the needed observation separately. End does not decide not_effected: a closed incomplete interval can falsify outcome while action continues. Counterexample and end residual remain independent. Before repetition or dependent action, reconcile uncertain completion sufficiently for that action; not_effected with unknown end licenses neither absence assumptions nor repetition.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance"
+    }
+  }
+]

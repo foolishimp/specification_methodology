@@ -1,0 +1,147 @@
+{
+  "schema": "stdo.context-generation.arm-freeze/1",
+  "arm": "prose",
+  "source_mode": "prose-first",
+  "created_utc": "2026-11-07T16:07:29.581137+00:00",
+  "status": "frozen; no further generated-context edits",
+  "selected_input_freeze": {
+    "path": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/preparation/FREEZE.json",
+    "sha256": "ef89677365e8caeba649242e40b464db35bca8c388cbe5668dc57d28257944d2"
+  },
+  "method_identity": {
+    "uri": "stdo://releases/v3.0.5-rc.1/",
+    "root": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1",
+    "manifest_sha256": "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+    "native_commit_supplied": "b5b00b896d44804e0f5d615a9bc23a02345888b3",
+    "model_used": null
+  },
+  "generation_order": [
+    "S1",
+    "S2",
+    "S3"
+  ],
+  "files": [
+    {
+      "path": "S1/acquisition.json",
+      "bytes": 18779,
+      "sha256": "cb19c0f2e17e80a28e398f51785fd0a71eaa82fea6201d07c590fbf7b3aec850"
+    },
+    {
+      "path": "S1/constraint-map.json",
+      "bytes": 11901,
+      "sha256": "36737dce0c0cc46ff3e7668c42205b87629672ba25910b2663eb35c166cd0630"
+    },
+    {
+      "path": "S1/executive.md",
+      "bytes": 8970,
+      "sha256": "0a9100173b4e168113785bbfcba1ab5dcfcf013dd9a683f551aefc794b5dcfe8"
+    },
+    {
+      "path": "S1/reviewer.md",
+      "bytes": 6534,
+      "sha256": "7c739648300796294f1bd7b4c150b908604de268ea41a819421968196c8d23d9"
+    },
+    {
+      "path": "S1/worker.md",
+      "bytes": 7742,
+      "sha256": "ae5521251f88377ffdd500850808e194a79fa316a104b3495702a78192eeb40f"
+    },
+    {
+      "path": "S2/acquisition.json",
+      "bytes": 27314,
+      "sha256": "7ebe0aa6e2984297f49fd7c5d51f77344245b49c5df122909fff37b2fce78e72"
+    },
+    {
+      "path": "S2/constraint-map.json",
+      "bytes": 20329,
+      "sha256": "89e89ba80e9d26e6301d3f3e4d7558fbbccb70c38e91bd767a02fca42fee9738"
+    },
+    {
+      "path": "S2/executive.md",
+      "bytes": 12152,
+      "sha256": "7b41d34e73fcc60f8bf981b9a2e8a6d9fc33ac0edb45ca8095f26c79d729d067"
+    },
+    {
+      "path": "S2/reviewer.md",
+      "bytes": 9279,
+      "sha256": "363d44ec302099b71c64233ca2027a3a3c46da2245ef695d34a965028b9774d2"
+    },
+    {
+      "path": "S2/worker.md",
+      "bytes": 9136,
+      "sha256": "2c09d66f6d6740faf7866e3362b62b0dfd74c67137fcf8ac19b9c2fd184a5b0d"
+    },
+    {
+      "path": "S3/acquisition.json",
+      "bytes": 35945,
+      "sha256": "9d3eba8fae9a2e2505671ac824697ba0cfbee0745ae209afe9419831112c3cf7"
+    },
+    {
+      "path": "S3/constraint-map.json",
+      "bytes": 32147,
+      "sha256": "8e0a0d298269fb34d89ff0f6d3338c44caf9a39f74e68a40b1a44524a17ced66"
+    },
+    {
+      "path": "S3/executive.md",
+      "bytes": 17613,
+      "sha256": "24b284acf3664a948ae4f99ce0391fcf535a6c520cf7ad8c794e4abaed22bf77"
+    },
+    {
+      "path": "S3/reviewer.md",
+      "bytes": 12113,
+      "sha256": "c96a8397be8b0f2ff9c6a0469dcb9aef01b71392e0b9462ce8f2b3ac58671f82"
+    },
+    {
+      "path": "S3/worker.md",
+      "bytes": 11938,
+      "sha256": "0c071965f7f5ce7eb5839e8bf7c440723a20fe487e8664a625f569612fde7ab6"
+    }
+  ],
+  "total_generated_case_files": 15,
+  "total_generated_case_bytes": 241892,
+  "verification": [
+    {
+      "scenario": "S1",
+      "exact_five_files": true,
+      "graph_nodes": 14,
+      "graph_edges": 13,
+      "graph_fact_reference_coverage": "12/12",
+      "graph_endpoints_and_shapes_valid": true,
+      "recorded_output_byte_counts_match": true,
+      "qualified_source_table_present": true
+    },
+    {
+      "scenario": "S2",
+      "exact_five_files": true,
+      "graph_nodes": 24,
+      "graph_edges": 23,
+      "graph_fact_reference_coverage": "24/24",
+      "graph_endpoints_and_shapes_valid": true,
+      "recorded_output_byte_counts_match": true,
+      "qualified_source_table_present": true
+    },
+    {
+      "scenario": "S3",
+      "exact_five_files": true,
+      "graph_nodes": 36,
+      "graph_edges": 36,
+      "graph_fact_reference_coverage": "42/42",
+      "graph_endpoints_and_shapes_valid": true,
+      "recorded_output_byte_counts_match": true,
+      "qualified_source_table_present": true
+    }
+  ],
+  "verification_scope": "Structural consistency, complete fact-ID reference population, file hashes/sizes and output schema only. No independent semantic assessment, native activation, scenario execution or consumer-performance measurement.",
+  "acquisition_manifest_policy": "Each case acquisition.json records cumulative invocation-ordered provenance, with prior cached acquisitions explicitly non-additive and incremental new bytes for S2/S3. S3 is the session-complete ledger. All physical paths/hashes name actual selected sources or generated files; fictional coordinates are not asserted as observed hashes.",
+  "limits_and_quality_doubts": [
+    "Same session and fixed S1/S2/S3 order retain common source and prior-case carryover; no experimental isolation claim.",
+    "Host automatically supplied system/developer instructions, broad tools and a memory summary with STDO-related background. No memory file, other arm, private scoring checklist or old pilot was read; exposure was disclosed to Root before scenarios.",
+    "Common BASIS and manifest navigation exposed representation locators and freeze exposed private-checklist identity metadata; no representation/model/index content or private rubric body was acquired.",
+    "One large source-return attempt was truncated. Needed owner sections were reacquired in smaller reads. Complete acquisition byte/cost/timing totals are unavailable; recorded source-body totals are lower bounds, not attention measurements.",
+    "Source intake included some owner explanatory crosswalk material and release-profile detail beyond the concise laws used; acquisition costs remain recorded rather than hidden.",
+    "Interpretive doubt retained for evaluation: Worker test-command authority is treated as unresolved where fixtures grant file edits but give explicit in-memory-check authority only to Reviewer. The local construction frontier remains selected; no new command grant is invented.",
+    "Executive-specific source guidance is used for proposed role bindings without claiming an unstated formal profile-adoption receipt. Missing fictional Product/control, actor-family/capability or priority bindings remain explicit.",
+    "The same generator authored all three role-shaped documents; Reviewer instructions require future independent expectation derivation, and these documents are not independent assessments.",
+    "No semantic comparison results have been read and no post-comparison repair is permitted."
+  ]
+}

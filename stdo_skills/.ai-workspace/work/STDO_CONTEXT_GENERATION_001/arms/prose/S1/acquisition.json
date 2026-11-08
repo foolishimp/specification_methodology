@@ -1,0 +1,392 @@
+{
+  "schema": "stdo.context-generation.acquisition/1",
+  "scenario": "S1",
+  "assigned_mode": "prose-first",
+  "scenario_order": 1,
+  "skills": [
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-work/SKILL.md",
+      "sha256": "9dc06e03fd6f64483fa485ed55f35e414fefae472bb69aa930ecef9335585b35"
+    },
+    {
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-review/SKILL.md",
+      "sha256": "b90b3a2014d7891e25b40c11e5f3638accb9f3408cb3f0cf3922d26f17bc57df"
+    }
+  ],
+  "method_identity": {
+    "uri": "stdo://releases/v3.0.5-rc.1/",
+    "root": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1",
+    "manifest_sha256": "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+    "native_commit_supplied": "b5b00b896d44804e0f5d615a9bc23a02345888b3",
+    "model_used": null
+  },
+  "supplied_preverified_identity": {
+    "source": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/BASIS.json",
+    "installation_verification": "Previously verified public-001 installation; not rerun.",
+    "source_builder_basis": "stdo://releases/v3.0.4/ unchanged; generation uses declared experiment basis."
+  },
+  "checks_performed": [
+    "Skill hashes computed and matched supplied expected hashes.",
+    "Selected manifest SHA-256 locally matched BASIS.json.",
+    "Selected owner file SHA-256 values locally matched selected manifest.",
+    "Selected freeze SHA-256 and shared/S1 input hashes and bytes locally matched."
+  ],
+  "checks_not_performed": [
+    "Product-definition status --verify",
+    "manager resolve receipts",
+    "fictional admission/activation",
+    "scenario source/test execution",
+    "native Skill UI activation",
+    "representation queries",
+    "independent downstream assessment"
+  ],
+  "acquisitions": [
+    {
+      "order": 1,
+      "category": "common_skill",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-work/SKILL.md",
+      "selector": "full file",
+      "purpose": "Apply exact requested native work procedure.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 13369,
+      "query": "cat <source>",
+      "sha256": "9dc06e03fd6f64483fa485ed55f35e414fefae472bb69aa930ecef9335585b35",
+      "parallel_group": "initial-skills"
+    },
+    {
+      "order": 2,
+      "category": "common_skill",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-review/SKILL.md",
+      "selector": "full file",
+      "purpose": "Apply exact requested review procedure.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 8074,
+      "query": "cat <source>",
+      "sha256": "b90b3a2014d7891e25b40c11e5f3638accb9f3408cb3f0cf3922d26f17bc57df",
+      "parallel_group": "initial-skills"
+    },
+    {
+      "order": 3,
+      "category": "common_skill_reference",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/references/PRODUCT_BASIS.md",
+      "selector": "full file",
+      "purpose": "Bind selection/verification and no-authority distinction.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 3947,
+      "query": "cat <source>",
+      "sha256": "d4d1528af1af32e6951cc42e83ce8c55f0b95cfd3594e85a85493ef871ea1979"
+    },
+    {
+      "order": 4,
+      "category": "common_skill_reference",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/references/COORDINATED_HANDOFF.md",
+      "selector": "ATX heading matches",
+      "purpose": "Select relevant handoff/reference sections.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": null,
+      "query": "rg -n '^#{1,4} ' <source>",
+      "bytes_unavailable_reason": "Metadata projection was not byte-measured."
+    },
+    {
+      "order": 5,
+      "category": "metadata",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec",
+      "selector": "four exact skill/reference files",
+      "purpose": "Observe file sizes without treating whole file size as partial acquisition.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 0,
+      "query": "wc -c <work> <review> <PRODUCT_BASIS> <COORDINATED_HANDOFF>",
+      "body_content_returned": false
+    },
+    {
+      "order": 6,
+      "category": "common_skill_reference",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/references/COORDINATED_HANDOFF.md",
+      "selector": "lines 1-331",
+      "purpose": "Control intake, issue/receive, return, review flow, host and compact acquisition guidance.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 21158,
+      "query": "sed -n '1,331p' <source>",
+      "sha256": "e06139911583717a1d18994aee314db3aa29a0b5ebab61f3c6cfd11e37030e00",
+      "selection_sha256": "bc102c0379a4e384887988b7a833ade2e3df729488ba4e00ec5239f81cf75ff0"
+    },
+    {
+      "order": 7,
+      "category": "metadata",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec",
+      "selector": "exact four previously acquired skill/reference files",
+      "purpose": "Compute observed hashes and selected byte sizes.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 0,
+      "query": "Python Path.read_bytes; SHA-256; selected lines for handoff",
+      "body_content_returned": false
+    },
+    {
+      "order": 8,
+      "category": "common_input",
+      "source": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/COMMON.md",
+      "selector": "full file",
+      "purpose": "Read shared control/freeze or assigned scenario.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 2793,
+      "query": "cat <source>",
+      "sha256": "80506576f115f0be64ed99942ed0bf7cd21d0d33ebec7986424c4914cd22aba7",
+      "parallel_group": "shared-inputs"
+    },
+    {
+      "order": 9,
+      "category": "common_input",
+      "source": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/OUTPUT_CONTRACT.md",
+      "selector": "full file",
+      "purpose": "Read shared control/freeze or assigned scenario.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 4095,
+      "query": "cat <source>",
+      "sha256": "9372b3d2ba3ffc7746bdbaa1bdc6104d2c86a4b14c95316e17483d8a3f1405c1",
+      "parallel_group": "shared-inputs"
+    },
+    {
+      "order": 10,
+      "category": "common_input",
+      "source": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/BASIS.json",
+      "selector": "full file",
+      "purpose": "Read shared control/freeze or assigned scenario.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 2504,
+      "query": "cat <source>",
+      "sha256": "4a085147515c73273ca3a41674c1356f362132210bd20d58a355853415e8c012",
+      "parallel_group": "shared-inputs"
+    },
+    {
+      "order": 11,
+      "category": "common_input",
+      "source": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/preparation/FREEZE.json",
+      "selector": "full file",
+      "purpose": "Read shared control/freeze or assigned scenario.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 2490,
+      "query": "cat <source>",
+      "sha256": "ef89677365e8caeba649242e40b464db35bca8c388cbe5668dc57d28257944d2",
+      "parallel_group": "shared-inputs"
+    },
+    {
+      "order": 12,
+      "category": "scenario_input",
+      "source": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md",
+      "selector": "full file",
+      "purpose": "Read shared control/freeze or assigned scenario.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 3963,
+      "query": "cat <source>",
+      "sha256": "acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4",
+      "parallel_group": null
+    },
+    {
+      "order": 13,
+      "category": "verification_metadata",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/manifest.json",
+      "selector": "top keys plus first 4500 characters of standards metadata",
+      "purpose": "Confirm actual selected manifest identity and discover manifest structure.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 0,
+      "query": "Python JSON/SHA-256; print top keys and standards metadata prefix",
+      "file_bytes_read_for_verification": 28617,
+      "sha256": "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+      "returned_metadata_bytes": null,
+      "limitation": "Overbroad navigation prefix exposed member names including representation locators, not representation/model/index contents."
+    },
+    {
+      "order": 14,
+      "category": "method_navigation",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards",
+      "selector": "raw heading catalogs for ACTIVATION, REFERENCE_FRAME, EVALUATION, FOUNDATIONS",
+      "purpose": "Select exact prose owner ranges; hashes matched manifest.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 0,
+      "query": "Python verify SHA-256 then enumerate column-zero ATX headings",
+      "returned_metadata_bytes": 8871,
+      "warning": "Raw catalog includes headings in examples; final selectors use explicit line ranges."
+    },
+    {
+      "order": 15,
+      "category": "method_attempt",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards",
+      "selector": "ACTIVATION 402-488,619-901,1681-1749; REFERENCE_FRAME 933-1011; EVALUATION 190-336; FOUNDATIONS 732-938",
+      "purpose": "Initial batch of relevant owner selections.",
+      "tool": "exec_command",
+      "status": "output_truncated",
+      "source_body_bytes_returned": null,
+      "query": "Python verified file slices printed in one exec result",
+      "known_full_returned_bytes": null,
+      "limitation": "Tool result was truncated; not treated as a complete acquired source. Required ranges were reacquired below; unneeded Foundation crosswalk tail was not used."
+    },
+    {
+      "order": 16,
+      "category": "method_prose",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md",
+      "selector": "lines 693-901",
+      "purpose": "Acquire deciding owner for context, authority, result/reuse or review.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 13338,
+      "query": "Python exact byte-line slice printed as text",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "selection_sha256": "b87dd3d4f7f7213e4e11bdb2181d0c871e393bf802fcd7976d42a45fd7d4dfe4",
+      "fallback": false
+    },
+    {
+      "order": 17,
+      "category": "method_prose",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md",
+      "selector": "lines 1681-1749",
+      "purpose": "Acquire deciding owner for context, authority, result/reuse or review.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 4057,
+      "query": "Python exact byte-line slice printed as text",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "selection_sha256": "65d2435bbfa386121d2de9806fe4d910d63e0e4889bd1373a4dab676690a4dd4",
+      "fallback": false
+    },
+    {
+      "order": 18,
+      "category": "method_prose",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/REFERENCE_FRAME.md",
+      "selector": "lines 933-1011",
+      "purpose": "Acquire deciding owner for context, authority, result/reuse or review.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 3239,
+      "query": "Python exact byte-line slice printed as text",
+      "sha256": "4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64",
+      "selection_sha256": "31b5712cf01b721e258e587b42db633914012353c3fb5e4163f31918347ba71b",
+      "fallback": false
+    },
+    {
+      "order": 19,
+      "category": "method_prose",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EVALUATION.md",
+      "selector": "lines 190-336",
+      "purpose": "Acquire deciding owner for context, authority, result/reuse or review.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 9610,
+      "query": "Python exact byte-line slice printed as text",
+      "sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485",
+      "selection_sha256": "c34c86269ee8a10058e7ab47456244ec9c35efcc1c0f62f2ffe24ac48cd5b6d7",
+      "fallback": false
+    },
+    {
+      "order": 20,
+      "category": "method_prose",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/FOUNDATIONS.md",
+      "selector": "lines 732-805",
+      "purpose": "Acquire deciding owner for context, authority, result/reuse or review.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 4131,
+      "query": "Python exact byte-line slice printed as text",
+      "sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e",
+      "selection_sha256": "4bbe7e5391901032c9d1979149df85c722a94b7621c0d431fb352b9ea58536b7",
+      "fallback": false
+    },
+    {
+      "order": 21,
+      "category": "method_prose",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md",
+      "selector": "lines 402-488",
+      "purpose": "Acquire deciding owner for context, authority, result/reuse or review.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 5658,
+      "query": "Python exact byte-line slice printed as text",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "selection_sha256": "c69e3f9dc5bfd69bd541d890617cb8e704559c5b4b86e3b5306952584341c009",
+      "fallback": false
+    },
+    {
+      "order": 22,
+      "category": "method_prose",
+      "source": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md",
+      "selector": "lines 619-692",
+      "purpose": "Acquire deciding owner for context, authority, result/reuse or review.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 4425,
+      "query": "Python exact byte-line slice printed as text",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "selection_sha256": "875211dabbdc5d788db40f2e2cb5e86a3395642e460cd09fbefea4cabfd0a2ed",
+      "fallback": false
+    },
+    {
+      "order": 23,
+      "category": "verification_metadata",
+      "source": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001",
+      "selector": "selected FREEZE plus COMMON, OUTPUT_CONTRACT, BASIS and S1",
+      "purpose": "Check selected freeze and already acquired input bytes/hashes before writing.",
+      "tool": "exec_command",
+      "status": "completed",
+      "source_body_bytes_returned": 0,
+      "query": "Python SHA-256/byte equality assertions against selected freeze",
+      "body_content_returned": false,
+      "checked_sha256": "ef89677365e8caeba649242e40b464db35bca8c388cbe5668dc57d28257944d2"
+    }
+  ],
+  "fallback_sources": [],
+  "failed_reads": [
+    {
+      "order": 15,
+      "kind": "truncated_return",
+      "resolution": "Reacquired needed smaller exact ranges; did not infer omitted content."
+    }
+  ],
+  "limitations": [
+    "Invocation order is recorded; parallel common reads have no measured completion order.",
+    "Common skill/input context is loaded once in the session; future cases may reuse it without additive acquisition credit.",
+    "System/developer instructions, broad tool catalog and memory summary were involuntarily supplied. No memory file was opened or relied on as task authority.",
+    "Three cases share one session in S1, S2, S3 order; carryover is not isolated.",
+    "No actual consumer attention, implementation success, efficiency or qualification follows from these artifacts."
+  ],
+  "metrics": {
+    "known_source_body_bytes_returned_lower_bound": 106851,
+    "complete_total_unavailable_reason": "Truncated attempt and some metadata outputs were not byte-measured. Full file bytes used only for hashing are excluded from body-return count.",
+    "known_heading_metadata_bytes": 8871,
+    "acquisition_record_count": 23,
+    "source_command_invocations_through_owner_reads": 18,
+    "source_command_count_note": "Records 16-18 share one command, 19-20 share one, 21-22 share one; the final write command also rechecks selected input hashes.",
+    "generated_output_file_bytes": {
+      "reviewer.md": 6534,
+      "executive.md": 8970,
+      "worker.md": 7742,
+      "constraint-map.json": 11901,
+      "acquisition.json": 18779
+    },
+    "observed_elapsed_time_seconds": null,
+    "observed_elapsed_time_reason": "No task start/end interval was instrumented; individual tool timings are not task elapsed time.",
+    "tokens": null,
+    "cost": null,
+    "attention": null,
+    "unavailable_fields": [
+      "complete returned bytes",
+      "elapsed time",
+      "tokens",
+      "cost",
+      "internal attention",
+      "downstream performance"
+    ]
+  }
+}

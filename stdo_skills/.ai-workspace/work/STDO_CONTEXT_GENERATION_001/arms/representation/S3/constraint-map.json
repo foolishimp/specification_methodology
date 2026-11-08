@@ -1,0 +1,1044 @@
+{
+  "schema": "stdo.context-generation.constraint-map/1",
+  "scenario": "S3",
+  "nodes": [
+    {
+      "id": "S3-01",
+      "kind": "scenario_fact",
+      "text": "The fictional owner requests a bounded next step toward AtlasSuite 6.2 integration and release preparation. Every Product in this scenario selects the released methodology basis in BASIS.json. This exercise supplies facts for context generation, not permission to execute against any real filesystem or service.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-01"
+      ]
+    },
+    {
+      "id": "S3-02",
+      "kind": "scenario_fact",
+      "text": "The composition is recursive: AtlasSuite consumes ServiceApp and ReportApp; ServiceApp consumes RulesEngine; ReportApp also consumes RulesEngine; RulesEngine consumes CodecLeaf. CodecLeaf is the declared leaf for this selected computation.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-02"
+      ]
+    },
+    {
+      "id": "S3-03",
+      "kind": "scenario_fact",
+      "text": "The two RulesEngine build tenants are Python and TypeScript. They implement one shared RulesEngine requirement set and have independently owned realization designs and code territories.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-03"
+      ]
+    },
+    {
+      "id": "S3-04",
+      "kind": "scenario_fact",
+      "text": "The selected composition has a diamond through RulesEngine. AtlasSuite needs consistent provider identity along both consumers. Products remain independently owned and have their own standalone acceptance and release decisions.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-04"
+      ]
+    },
+    {
+      "id": "S3-05",
+      "kind": "scenario_fact",
+      "text": "The accepted composition contract is COMP-6. Its exported interface set identifies every direct consumer/provider edge named above, the selected artifact, required predicates, and the recipient roles to which export access is granted. Its identity is a scenario assertion, not an actually verified installation.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-05"
+      ]
+    },
+    {
+      "id": "S3-06",
+      "kind": "scenario_fact",
+      "text": "AtlasSuite currently adopts immutable RulesEngine 6.1 through ServiceApp and ReportApp. The release-preparation request concerns a 6.2 candidate and does not change either adopted pin.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-06"
+      ]
+    },
+    {
+      "id": "S3-07",
+      "kind": "scenario_fact",
+      "text": "CodecLeaf’s released interface 3.0 is the dependency of RulesEngine 6.1. CodecLeaf has a new source candidate leaf-r9 for prospective interface 3.1. No 3.1 Product release exists yet.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-07"
+      ]
+    },
+    {
+      "id": "S3-08",
+      "kind": "scenario_fact",
+      "text": "Accepted requirement CL-R7 at leaf-r9 distinguishes a missing constraint limit from zero: missing means unavailable, while zero means an explicit zero allowance. It forbids substituting zero for missing.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-08"
+      ]
+    },
+    {
+      "id": "S3-09",
+      "kind": "scenario_fact",
+      "text": "RulesEngine requirement RE-R12 requires both tenant implementations to preserve that distinction through their result and diagnostic output. ServiceApp and ReportApp rely on the distinction when deciding whether to continue or request input.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-09"
+      ]
+    },
+    {
+      "id": "S3-10",
+      "kind": "scenario_fact",
+      "text": "Accepted design RE-D8 separates each tenant adapter from the unchanged rule evaluator. The adaptation may be prepared against the exported leaf-r9 contract as a candidate; composed qualification additionally requires the selected provider artifact and identified consumer candidates.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-10"
+      ]
+    },
+    {
+      "id": "S3-11",
+      "kind": "scenario_fact",
+      "text": "Python source py-r22 is current. Its adapter substitutes zero for a missing limit. TypeScript source ts-r17 is current and carries a separate unavailable branch, but no current cross-tenant comparison has been performed.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-11"
+      ]
+    },
+    {
+      "id": "S3-12",
+      "kind": "scenario_fact",
+      "text": "The prior Python review PY-R6 assessed py-r22 against exported leaf-r8 semantics before CL-R7 changed. Python candidate bytes are unchanged; the dependency’s required meaning is not.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-12"
+      ]
+    },
+    {
+      "id": "S3-13",
+      "kind": "scenario_fact",
+      "text": "The current source-selected finding PY-F3 is severity 3 on the selected 1-highest to 5-lowest scale. It reports that the missing-to-zero substitution affects both ServiceApp continuations and ReportApp eligibility output; no demonstrated local containment is recorded.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-13"
+      ]
+    },
+    {
+      "id": "S3-14",
+      "kind": "scenario_fact",
+      "text": "An older review uses S0–S4 and calls a documentation typo S3. Its scale identity and bounded subject are retained; it is not a regrading of PY-F3.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-14"
+      ]
+    },
+    {
+      "id": "S3-15",
+      "kind": "scenario_fact",
+      "text": "The retained project representation rep-r8 was built from leaf-r8, py-r22 and ts-r17 before CL-R7. Its source manifest and map identity are available as scenario facts. The map still describes the earlier missing-limit meaning.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-15"
+      ]
+    },
+    {
+      "id": "S3-16",
+      "kind": "scenario_fact",
+      "text": "The retained Lean receipt proof-r8 establishes structural closure and record-preserving projection for rep-r8 and its selected view. It names that exact model; it does not mention leaf-r9 or a source-prose fidelity assessment.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-16"
+      ]
+    },
+    {
+      "id": "S3-17",
+      "kind": "scenario_fact",
+      "text": "A new representation rep-r9 is requested but not yet generated, reviewed or checked. No currentness certificate connects rep-r8’s changed leaf-meaning record to CL-R7. Unchanged unrelated records may have useful historical content but have no automatic scope extension.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-17"
+      ]
+    },
+    {
+      "id": "S3-18",
+      "kind": "scenario_fact",
+      "text": "The current approved source export /fictional/codec-leaf/exports/interface-3.1.md at leaf-r9 contains the full missing-versus-zero requirement and examples. Both tenant adapter Workers have a direct read grant for that export through their respective RulesEngine-to-CodecLeaf work edges.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-18"
+      ]
+    },
+    {
+      "id": "S3-19",
+      "kind": "scenario_fact",
+      "text": "The CodecLeaf owner separately allows the Executive to inspect /fictional/codec-leaf/private/diagnostic-trace.md to diagnose the transition. That grant is recipient-specific and does not authorize redistribution of the private trace.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-19"
+      ]
+    },
+    {
+      "id": "S3-20",
+      "kind": "scenario_fact",
+      "text": "The proposed Python Worker Context contains a pasted paragraph from that private trace with retained provenance to its original path. The Python Worker has neither a private-path provider edge nor an export grant for that paragraph. Public interface-3.1.md does not contain it.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-20"
+      ]
+    },
+    {
+      "id": "S3-21",
+      "kind": "scenario_fact",
+      "text": "The Python Worker has access to /fictional/rules-engine/build_tenants/python/src/adapter.py, its local tests, accepted Python design, shared requirements and approved provider exports. It may edit only that adapter, /fictional/rules-engine/build_tenants/python/tests/test_adapter.py and /fictional/rules-engine/work/PY-23/RETURN.md.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-21"
+      ]
+    },
+    {
+      "id": "S3-22",
+      "kind": "scenario_fact",
+      "text": "The Python Worker is a clean-room consumer of TypeScript behavior: it may read the approved exported truth table but not TypeScript implementation, internal traces or prior model conversations. The TypeScript-to-Python truth-table edge covers only /fictional/rules-engine/exports/typescript/truth-table.json at table-17.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-22"
+      ]
+    },
+    {
+      "id": "S3-23",
+      "kind": "scenario_fact",
+      "text": "The TypeScript owner has authorized a separate read-only comparison of ts-r17 against CL-R7 and table-17. No TypeScript edit grant or Python-to-TypeScript implementation-read grant has been supplied.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-23"
+      ]
+    },
+    {
+      "id": "S3-24",
+      "kind": "scenario_fact",
+      "text": "The root Executive may read RulesEngine shared requirements, COMP-6, current exported interfaces, own-product design/evidence and the private leaf trace under its named grant. It may issue the admitted Python adapter work but may not edit any Product or invent missing edge grants.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-24"
+      ]
+    },
+    {
+      "id": "S3-25",
+      "kind": "scenario_fact",
+      "text": "The independent RulesEngine reviewer has a separate grant to read the exact Python candidate, approved interfaces, requirement CL-R7 and RE-R12, PY-R6 and PY-F3, and the exported TypeScript truth table. It may run in-memory checks and write /fictional/rules-engine/work/PY-23/REVIEW.md; it may not edit the candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-25"
+      ]
+    },
+    {
+      "id": "S3-26",
+      "kind": "scenario_fact",
+      "text": "The reviewer did not author the Python candidate or accepted design. An earlier assistant that authored the candidate is available, but changing its role label does not change that exposure history.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-26"
+      ]
+    },
+    {
+      "id": "S3-27",
+      "kind": "scenario_fact",
+      "text": "The approved local Python check population includes missing limit, explicit zero, positive finite limit, preserved diagnostics and unchanged evaluator inputs. The requirement is about those meanings and resulting continuation data, not the number of passing tests.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-27"
+      ]
+    },
+    {
+      "id": "S3-28",
+      "kind": "scenario_fact",
+      "text": "The owner has admitted Python contract PY-23 for a candidate adapter repair against CL-R7 and RE-D8, with the exact edit/read territory above. Its result returns to the RulesEngine Executive. It grants no provider-source edits, model regeneration, dependency adoption, publication or network operation.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-28"
+      ]
+    },
+    {
+      "id": "S3-29",
+      "kind": "scenario_fact",
+      "text": "The CodecLeaf source owner is a different actor. Its current grant permits preparing leaf-r9 documentation, but the byte-stable provider artifact needed for final composed qualification has not yet been produced and accepted.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-29"
+      ]
+    },
+    {
+      "id": "S3-30",
+      "kind": "scenario_fact",
+      "text": "The ServiceApp owner has a draft adaptation contract SA-12 dependent on an identified RulesEngine candidate and interface. It has not been admitted. Read access to its exported reliance contract exists; source mutation authority does not.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-30"
+      ]
+    },
+    {
+      "id": "S3-31",
+      "kind": "scenario_fact",
+      "text": "The ReportApp owner has admitted a read-only impact assessment RA-7 against its exported eligibility predicate. Its implementation is not exposed to either RulesEngine tenant, and its own acceptance/adoption decision remains with that owner.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-31"
+      ]
+    },
+    {
+      "id": "S3-32",
+      "kind": "scenario_fact",
+      "text": "AtlasSuite’s existing integration report INT-61 binds released RulesEngine 6.1, not the 6.2 candidate. Its unchanged installation observations remain historical evidence for 6.1. There is no observed 6.2 composed runtime result.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-32"
+      ]
+    },
+    {
+      "id": "S3-33",
+      "kind": "scenario_fact",
+      "text": "An earlier publication-like attempt PUB-4 uploaded a candidate archive toward /fictional/remote/atlas-candidates/6.2. The client disconnected after its last observed message said upload accepted. There is no completion receipt, remote-object digest or observation that the upload did not occur.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-33"
+      ]
+    },
+    {
+      "id": "S3-34",
+      "kind": "scenario_fact",
+      "text": "The PUB-4 parent process is no longer running. The retained record says nothing about a helper’s completion or the destination’s final state. No reconciliation or rollback evidence has been acquired.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-34"
+      ]
+    },
+    {
+      "id": "S3-35",
+      "kind": "scenario_fact",
+      "text": "A separate reconciliation-operator grant permits querying only the candidate object’s identity, digest and presence and writing /fictional/atlas-suite/work/PUB-4/RECONCILIATION.md. That actor has not run. The grant permits no upload, deletion or retry.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-35"
+      ]
+    },
+    {
+      "id": "S3-36",
+      "kind": "scenario_fact",
+      "text": "The release operator has not been granted publication or tag movement for AtlasSuite 6.2. A message saying prepare for release is the current owner request. No supplied contract authorizes replacing an existing immutable public cut.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-36"
+      ]
+    },
+    {
+      "id": "S3-37",
+      "kind": "scenario_fact",
+      "text": "The AtlasSuite cohort manifest proposal includes CodecLeaf’s selected artifact, RulesEngine shared contract and both tenant artifacts, ServiceApp and ReportApp candidate dependencies, the current representation, current structural evidence and user documentation. Several member identities are still unresolved.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-37"
+      ]
+    },
+    {
+      "id": "S3-38",
+      "kind": "scenario_fact",
+      "text": "The owner requires both tenant-local claims and the composed consumer predicates before declaring this cohort ready. A local Python repair can return as a bounded candidate before those later conditions are established.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-38"
+      ]
+    },
+    {
+      "id": "S3-39",
+      "kind": "scenario_fact",
+      "text": "The Product acceptance decision belongs to the corresponding owner, publication to a separately authorized release operator, and each installed consumer’s adoption to its owner. No common actor grant for all three decisions has been supplied.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-39"
+      ]
+    },
+    {
+      "id": "S3-40",
+      "kind": "scenario_fact",
+      "text": "The durable carrier for this selected work is /fictional/atlas-suite/work/COMP-6/LEDGER.md with per-Product result links. The Executive can propose updates in its returned context documents; actual ledger mutation is not part of this generation task.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-40"
+      ]
+    },
+    {
+      "id": "S3-41",
+      "kind": "scenario_fact",
+      "text": "Current live material includes leaf-r9, py-r22, ts-r17, CL-R7, RE-D8, COMP-6 and the stated grants. The old representation, old reviews, old proof and PUB-4 observations remain available with their own subjects and unresolved consequences. No unstated successful refresh, grant extension or reconciliation may be assumed.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-41"
+      ]
+    },
+    {
+      "id": "S3-42",
+      "kind": "scenario_fact",
+      "text": "The requested immediate output is a small dependency-ready frontier with exact next Worker and conditional Reviewer contexts, together with the blocked downstream obligations and the observations that would change their disposition. Completing the entire dependency/release graph in one Worker is not requested.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-42"
+      ]
+    },
+    {
+      "id": "M-frontier",
+      "kind": "method_fact",
+      "text": "Select smallest dependency-ready work while retaining material blocked successors and per-owner grants.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:854ba9ebd487ee034f295210ca6ddf3a"
+      ]
+    },
+    {
+      "id": "M-access",
+      "kind": "method_fact",
+      "text": "Cross-Product edges confer only exact actor/purpose acquisition and effects; shared paths do not union grants.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:ceb3153a383d5158244d9eb1007f200c"
+      ]
+    },
+    {
+      "id": "M-clean",
+      "kind": "method_fact",
+      "text": "Recipient eligibility governs private material and derivations; neither summary nor same-actor freshness erases prior exposure.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:96c5964ba764a6795da51c9c9cb72e72"
+      ]
+    },
+    {
+      "id": "M-reuse",
+      "kind": "method_fact",
+      "text": "Changed dependency/basis invalidates affected reliance without erasing independent historical survivors.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5"
+      ]
+    },
+    {
+      "id": "M-structure",
+      "kind": "method_fact",
+      "text": "Structural conformance, semantic fidelity and semantic acceptance are distinct claims.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:54a7f1f94b6b748d5344e0a8adcdfb70"
+      ]
+    },
+    {
+      "id": "M-effect",
+      "kind": "method_fact",
+      "text": "Completion_unknown and unestablished effect end require sufficient reconciliation before repeat/dependent action.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:47353fc31e517e6691fe48823051e794",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:baf950ab4a00f06fe0296ad7c71fefb8"
+      ]
+    },
+    {
+      "id": "M-severity",
+      "kind": "method_fact",
+      "text": "Severity 3 requires downstream/blast-radius assessment; unknown reach is not containment and material impact normally supports repair.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:33c9bfe60b1957ced00291ea6a3d730c"
+      ]
+    },
+    {
+      "id": "M-review",
+      "kind": "method_fact",
+      "text": "Independent assessment uses non-authorship, actual evidence/capability/family policy; Reviewer cannot repair or decide priority/publication.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1367a360c53ba1b053dedacb082887b0",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9c15107e315077f7ca89572a5a5ecdbf"
+      ]
+    },
+    {
+      "id": "M-work",
+      "kind": "method_fact",
+      "text": "Exact inherited write authority and return boundary restrict construction; candidate_ready is not acceptance.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a1b22e933a120bf64a62b705eed525c6"
+      ]
+    },
+    {
+      "id": "D-python",
+      "kind": "context_decision",
+      "text": "Select the admitted local PY-23 adapter candidate against current approved leaf-r9 semantics, conditional on eligible packet/actor and actual activation bindings.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-08",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-09",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-10",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-18",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-21",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-27",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-28",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:854ba9ebd487ee034f295210ca6ddf3a"
+      ]
+    },
+    {
+      "id": "D-clean-packet",
+      "kind": "context_decision",
+      "text": "Reject the proposed private-trace paragraph; replace from approved full interface and truth-table sources before dispatch. If already exposed, retain exposure and use an eligible actor/owner scope decision.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-18",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-19",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-20",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-22",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:96c5964ba764a6795da51c9c9cb72e72"
+      ]
+    },
+    {
+      "id": "I-stale",
+      "kind": "inference",
+      "text": "CL-R7 changed material leaf meaning: PY-R6/rep-r8 cannot establish the current Python claim; proof-r8 remains exact old-map structural evidence, with no rep-r9 currentness/fidelity extension.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-08",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-12",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-15",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-16",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-17",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:54a7f1f94b6b748d5344e0a8adcdfb70"
+      ]
+    },
+    {
+      "id": "D-source-reentry",
+      "kind": "context_decision",
+      "text": "Use approved current interface-3.1.md directly for local repair; rep-r9 generation/current checks remain separate downstream work outside PY-23.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-17",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-18",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-28"
+      ]
+    },
+    {
+      "id": "D-repair",
+      "kind": "context_decision",
+      "text": "Select the authorized repair given PY-F3 downstream materiality, retain severity 3 and separate priority; do not equate the old S0-S4 typo S3.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-13",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-14",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:33c9bfe60b1957ced00291ea6a3d730c"
+      ]
+    },
+    {
+      "id": "D-review",
+      "kind": "context_decision",
+      "text": "Prepare non-author independent RulesEngine assessment of exact Python candidate with permitted evidence and REVIEW.md write only; retain missing actor-family policy as unresolved.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-25",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-26",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1367a360c53ba1b053dedacb082887b0",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9c15107e315077f7ca89572a5a5ecdbf"
+      ]
+    },
+    {
+      "id": "D-ts-readonly",
+      "kind": "context_decision",
+      "text": "Keep separately authorized TypeScript comparison as an unperformed read-only assessment; no TypeScript edits or Python implementation-read edge follows.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-23"
+      ]
+    },
+    {
+      "id": "D-ra-readonly",
+      "kind": "context_decision",
+      "text": "Keep admitted RA-7 as separate unperformed exported-predicate impact assessment with ReportApp-owned decision; no tenant implementation exposure.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-31"
+      ]
+    },
+    {
+      "id": "D-provider-held",
+      "kind": "context_decision",
+      "text": "Final composition awaits an identified byte-stable provider artifact produced and accepted by CodecLeaf owner; doc preparation does not supply it.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-07",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-29"
+      ]
+    },
+    {
+      "id": "D-service-held",
+      "kind": "context_decision",
+      "text": "SA-12 remains unadmitted and depends on identified RulesEngine candidate/interface; reliance export access is not mutation authority.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-30"
+      ]
+    },
+    {
+      "id": "D-pub-hold",
+      "kind": "context_decision",
+      "text": "PUB-4 completion and effect end remain unknown. Separate operator may only query identity/digest/presence and record reconciliation; no upload/delete/retry.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-33",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-34",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-35",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:47353fc31e517e6691fe48823051e794"
+      ]
+    },
+    {
+      "id": "D-cohort-held",
+      "kind": "context_decision",
+      "text": "Cohort readiness awaits resolved consistent diamond identities, both tenant claims and composed consumer predicates, current representation/structural evidence and documentation. Local candidate may return first.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-04",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-32",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-37",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-38"
+      ]
+    },
+    {
+      "id": "D-release-held",
+      "kind": "context_decision",
+      "text": "Acceptance, publication and each adoption remain separate owner/operator decisions; no publication/tag movement or immutable-cut replacement grant exists.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-06",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-36",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-39"
+      ]
+    },
+    {
+      "id": "D-ledger-proposal",
+      "kind": "context_decision",
+      "text": "Return per-Product links to Executives and propose COMP-6 ledger updates; actual generation mutates none of the fictional carriers.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-28",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-35",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-40",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-42"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "S3-08",
+      "to": "D-python",
+      "type": "governs_local_work",
+      "reason": "Current semantics, accepted design and exact grant define the bounded adapter candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-08"
+      ]
+    },
+    {
+      "from": "S3-09",
+      "to": "D-python",
+      "type": "governs_local_work",
+      "reason": "Current semantics, accepted design and exact grant define the bounded adapter candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-09"
+      ]
+    },
+    {
+      "from": "S3-10",
+      "to": "D-python",
+      "type": "governs_local_work",
+      "reason": "Current semantics, accepted design and exact grant define the bounded adapter candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-10"
+      ]
+    },
+    {
+      "from": "S3-18",
+      "to": "D-python",
+      "type": "governs_local_work",
+      "reason": "Current semantics, accepted design and exact grant define the bounded adapter candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-18"
+      ]
+    },
+    {
+      "from": "S3-21",
+      "to": "D-python",
+      "type": "governs_local_work",
+      "reason": "Current semantics, accepted design and exact grant define the bounded adapter candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-21"
+      ]
+    },
+    {
+      "from": "S3-27",
+      "to": "D-python",
+      "type": "governs_local_work",
+      "reason": "Current semantics, accepted design and exact grant define the bounded adapter candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-27"
+      ]
+    },
+    {
+      "from": "S3-28",
+      "to": "D-python",
+      "type": "governs_local_work",
+      "reason": "Current semantics, accepted design and exact grant define the bounded adapter candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-28"
+      ]
+    },
+    {
+      "from": "M-frontier",
+      "to": "D-python",
+      "type": "selects_local_frontier",
+      "reason": "Later unready composition/publication conditions do not require expanding PY-23.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:854ba9ebd487ee034f295210ca6ddf3a"
+      ]
+    },
+    {
+      "from": "S3-20",
+      "to": "D-clean-packet",
+      "type": "violates_information_eligibility",
+      "reason": "Private-origin paragraph lacks the recipient edge/export grant.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-19",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-20"
+      ]
+    },
+    {
+      "from": "M-clean",
+      "to": "D-clean-packet",
+      "type": "requires_exposure_preservation",
+      "reason": "Provenance is not permission; deletion or freshness cannot erase actual exposure.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:96c5964ba764a6795da51c9c9cb72e72"
+      ]
+    },
+    {
+      "from": "D-clean-packet",
+      "to": "D-python",
+      "type": "precedes_activation",
+      "reason": "Only an eligible packet/actor may receive the selected local work.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-18",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-20",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-22",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:96c5964ba764a6795da51c9c9cb72e72"
+      ]
+    },
+    {
+      "from": "M-access",
+      "to": "D-clean-packet",
+      "type": "forbids_access_union",
+      "reason": "Executive private access is recipient-specific.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:ceb3153a383d5158244d9eb1007f200c"
+      ]
+    },
+    {
+      "from": "S3-12",
+      "to": "I-stale",
+      "type": "binds_old_basis",
+      "reason": "Review used leaf-r8 semantics despite unchanged candidate bytes.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-12"
+      ]
+    },
+    {
+      "from": "S3-15",
+      "to": "I-stale",
+      "type": "binds_old_meaning",
+      "reason": "rep-r8 predates CL-R7.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-15"
+      ]
+    },
+    {
+      "from": "S3-16",
+      "to": "I-stale",
+      "type": "limits_proof_scope",
+      "reason": "Old proof establishes structural projection for only the named old map.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-16"
+      ]
+    },
+    {
+      "from": "M-reuse",
+      "to": "I-stale",
+      "type": "invalidates_affected_reliance",
+      "reason": "Changed material dependency or bound basis removes current reliance.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5"
+      ]
+    },
+    {
+      "from": "M-structure",
+      "to": "I-stale",
+      "type": "separates_structural_and_semantic_claims",
+      "reason": "Structural success does not prove source fidelity/current meaning.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:54a7f1f94b6b748d5344e0a8adcdfb70"
+      ]
+    },
+    {
+      "from": "I-stale",
+      "to": "D-source-reentry",
+      "type": "requires_current_authority",
+      "reason": "The approved current source export supplies missing-limit law for the local claim.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-18"
+      ]
+    },
+    {
+      "from": "D-source-reentry",
+      "to": "D-python",
+      "type": "supplies_current_semantics",
+      "reason": "Local work is allowed against the exported candidate contract without model regeneration.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-10",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-18",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-28"
+      ]
+    },
+    {
+      "from": "S3-13",
+      "to": "D-repair",
+      "type": "supports_repair",
+      "reason": "Finding affects both dependent consumers without shown containment.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-13"
+      ]
+    },
+    {
+      "from": "S3-14",
+      "to": "D-repair",
+      "type": "preserves_scale_identity",
+      "reason": "Old S0-S4 typo is not current severity 3.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-14"
+      ]
+    },
+    {
+      "from": "M-severity",
+      "to": "D-repair",
+      "type": "requires_blast_radius_assessment",
+      "reason": "Severity 3 downstream impact is explicit and priority remains a separate decision.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:33c9bfe60b1957ced00291ea6a3d730c"
+      ]
+    },
+    {
+      "from": "D-repair",
+      "to": "D-python",
+      "type": "selects_authorized_response",
+      "reason": "PY-23 supplies the bounded repair grant; severity alone creates no grant.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-13",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-28"
+      ]
+    },
+    {
+      "from": "D-python",
+      "to": "D-review",
+      "type": "supplies_exact_candidate",
+      "reason": "Review awaits the exact returned subject.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-25",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-28"
+      ]
+    },
+    {
+      "from": "M-review",
+      "to": "D-review",
+      "type": "conditions_independence",
+      "reason": "Non-authorship and actual evidence/family conditions must hold.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9c15107e315077f7ca89572a5a5ecdbf"
+      ]
+    },
+    {
+      "from": "S3-23",
+      "to": "D-ts-readonly",
+      "type": "limits_effects",
+      "reason": "Separate comparison is read-only and unperformed.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-23"
+      ]
+    },
+    {
+      "from": "S3-31",
+      "to": "D-ra-readonly",
+      "type": "limits_evidence_and_owner",
+      "reason": "RA-7 does not expose implementation or transfer acceptance/adoption.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-31"
+      ]
+    },
+    {
+      "from": "S3-29",
+      "to": "D-provider-held",
+      "type": "withholds_provider_artifact",
+      "reason": "Documentation grant is not a produced accepted provider artifact.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-29"
+      ]
+    },
+    {
+      "from": "S3-30",
+      "to": "D-service-held",
+      "type": "withholds_mutation",
+      "reason": "Draft contract/read export does not supply admitted source mutation.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-30"
+      ]
+    },
+    {
+      "from": "S3-33",
+      "to": "D-pub-hold",
+      "type": "leaves_outcome_unknown",
+      "reason": "Upload accepted without receipt/digest is not known completion.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-33"
+      ]
+    },
+    {
+      "from": "S3-34",
+      "to": "D-pub-hold",
+      "type": "leaves_end_unknown",
+      "reason": "Stopped parent does not establish helper or destination end.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-34"
+      ]
+    },
+    {
+      "from": "S3-35",
+      "to": "D-pub-hold",
+      "type": "bounds_reconciliation",
+      "reason": "Permitted query/recording does not allow retry, upload or deletion.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-35"
+      ]
+    },
+    {
+      "from": "M-effect",
+      "to": "D-pub-hold",
+      "type": "requires_reconciliation",
+      "reason": "Unknown completion/end must be resolved enough for the particular dependent action.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:47353fc31e517e6691fe48823051e794",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:baf950ab4a00f06fe0296ad7c71fefb8"
+      ]
+    },
+    {
+      "from": "D-review",
+      "to": "D-cohort-held",
+      "type": "retains_required_successor",
+      "reason": "This local or owner-specific result cannot be assumed satisfied by the Python candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-25",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-38"
+      ]
+    },
+    {
+      "from": "D-ts-readonly",
+      "to": "D-cohort-held",
+      "type": "retains_required_successor",
+      "reason": "This local or owner-specific result cannot be assumed satisfied by the Python candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-23",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-38"
+      ]
+    },
+    {
+      "from": "D-ra-readonly",
+      "to": "D-cohort-held",
+      "type": "retains_required_successor",
+      "reason": "This local or owner-specific result cannot be assumed satisfied by the Python candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-31",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-38"
+      ]
+    },
+    {
+      "from": "D-provider-held",
+      "to": "D-cohort-held",
+      "type": "retains_required_successor",
+      "reason": "This local or owner-specific result cannot be assumed satisfied by the Python candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-29",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-38"
+      ]
+    },
+    {
+      "from": "D-service-held",
+      "to": "D-cohort-held",
+      "type": "retains_required_successor",
+      "reason": "This local or owner-specific result cannot be assumed satisfied by the Python candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-30",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-38"
+      ]
+    },
+    {
+      "from": "D-source-reentry",
+      "to": "D-cohort-held",
+      "type": "retains_required_successor",
+      "reason": "This local or owner-specific result cannot be assumed satisfied by the Python candidate.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-17",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-37"
+      ]
+    },
+    {
+      "from": "S3-04",
+      "to": "D-cohort-held",
+      "type": "requires_diamond_consistency",
+      "reason": "Both consumer paths must bind consistent RulesEngine provider identity.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-04"
+      ]
+    },
+    {
+      "from": "S3-37",
+      "to": "D-cohort-held",
+      "type": "requires_member_identities",
+      "reason": "Proposal has unresolved cohort artifacts, representation/evidence and documentation.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-37"
+      ]
+    },
+    {
+      "from": "S3-32",
+      "to": "D-cohort-held",
+      "type": "limits_runtime_support",
+      "reason": "INT-61 supports 6.1 only, with no observed 6.2 composed runtime.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-32"
+      ]
+    },
+    {
+      "from": "D-cohort-held",
+      "to": "D-release-held",
+      "type": "precedes_readiness_claim",
+      "reason": "Readiness prerequisites do not establish publication/adoption.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-38",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-39"
+      ]
+    },
+    {
+      "from": "D-pub-hold",
+      "to": "D-release-held",
+      "type": "blocks_dependent_remote_action",
+      "reason": "PUB-4 cannot be retried or relied on before sufficient reconciliation plus authority.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-33",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-34",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-35",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:47353fc31e517e6691fe48823051e794"
+      ]
+    },
+    {
+      "from": "S3-36",
+      "to": "D-release-held",
+      "type": "withholds_publication_grant",
+      "reason": "Prepare-for-release is not publication/tag movement or immutable-cut replacement.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-36"
+      ]
+    },
+    {
+      "from": "S3-39",
+      "to": "D-release-held",
+      "type": "separates_decision_owners",
+      "reason": "Acceptance, operator publication and consumer adoption have distinct grants.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-39"
+      ]
+    },
+    {
+      "from": "D-python",
+      "to": "D-ledger-proposal",
+      "type": "returns_per_product",
+      "reason": "PY-23 result goes to RulesEngine Executive and is linked through COMP-6.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-28",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-40"
+      ]
+    },
+    {
+      "from": "D-review",
+      "to": "D-ledger-proposal",
+      "type": "returns_assessment",
+      "reason": "Reviewer returns to RulesEngine Executive without mutating ledger.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-25",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-40"
+      ]
+    },
+    {
+      "from": "D-pub-hold",
+      "to": "D-ledger-proposal",
+      "type": "retains_uncertain_effect",
+      "reason": "Reconciliation observations and remaining end uncertainty stay visible.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-35",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S3.md@sha256:c042d4fef9a4f4a670409c4da4135d1cbed2c91f79f4f3f29a17524aaae98e6a#S3-40"
+      ]
+    },
+    {
+      "from": "M-work",
+      "to": "D-ledger-proposal",
+      "type": "ends_bounded_work",
+      "reason": "A candidate return does not grant the next effect or acceptance.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a1b22e933a120bf64a62b705eed525c6"
+      ]
+    }
+  ],
+  "limitations": [
+    "Explanatory graph of proposed contexts, not formal verification, admission, execution, review, acceptance or dispatch.",
+    "Model projection conserves only declared governing closure; no semantic-fidelity or complete-method guarantee follows, and absent edges do not remove obligations.",
+    "Scenario coordinates are fictional fixture facts; no fictional paths were accessed.",
+    "All cases share this generator session in S1, S2, S3 order; later cases have carryover. Host context and general shell are not isolated by an enforced acquisition gate."
+  ]
+}

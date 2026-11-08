@@ -1,0 +1,280 @@
+{
+  "schema": "stdo.context-generation.constraint-map/1",
+  "scenario": "S1",
+  "nodes": [
+    {
+      "id": "S-LAW",
+      "kind": "scenario_fact",
+      "text": "Finite unique-ID graph; unchanged requirement/design; full whole-record closure independent of standing; input preservation, sorted deduplication, whole-graph dangling validation, refusal precedence, valid cycles/empty roots.",
+      "source_refs": [
+        "S1-01",
+        "S1-02",
+        "S1-04",
+        "S1-05",
+        "S1-06",
+        "S1-07",
+        "S1-08"
+      ]
+    },
+    {
+      "id": "S-CURRENT",
+      "kind": "scenario_fact",
+      "text": "Owner reports unresolved omission and budget slicing at seed-r7; only narrow old smoke exists, with no successor candidate or review.",
+      "source_refs": [
+        "S1-03",
+        "S1-09"
+      ]
+    },
+    {
+      "id": "S-GRANT",
+      "kind": "scenario_fact",
+      "text": "Writer scope permits named reads, two-file repair, focused in-memory checks and run-8 durable return; other project, Git, network, installation/publication excluded.",
+      "source_refs": [
+        "S1-10"
+      ]
+    },
+    {
+      "id": "S-FRAME",
+      "kind": "scenario_fact",
+      "text": "One direct Writer is permitted; independent review and durable ticket are not required for this run-local result; three documents are requested only for inspection.",
+      "source_refs": [
+        "S1-11"
+      ]
+    },
+    {
+      "id": "S-RETURN",
+      "kind": "scenario_fact",
+      "text": "Owner receives exact candidate, paths, actual observations and uncertainty at run-8/RETURN.md; no external effects or release/adoption request.",
+      "source_refs": [
+        "S1-12"
+      ]
+    },
+    {
+      "id": "M-ADMISSION",
+      "kind": "method_fact",
+      "text": "Drafting is separate from admission; exact mechanism, authority, contract identity, decision, evidence and authorized durable result are required before execution. Missing applicability premises are not false.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 402-488"
+      ]
+    },
+    {
+      "id": "M-DIRECT",
+      "kind": "method_fact",
+      "text": "Sufficient direct constructor authority needs no extra coordinating appointment; only applicable review/acceptance conditions remain required.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 619-692"
+      ]
+    },
+    {
+      "id": "M-REUSE",
+      "kind": "method_fact",
+      "text": "Exact-subject evidence keeps its scope; material input change, changed basis or declared revising observation invalidates affected results before reliance.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 1681-1749"
+      ]
+    },
+    {
+      "id": "M-REVIEW",
+      "kind": "method_fact",
+      "text": "Independent expectations precede candidate exposure; no own-authorship assessment; results and triage remain separate from disposition.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EVALUATION.md sha256:b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 lines 190-336"
+      ]
+    },
+    {
+      "id": "I-EVIDENCE-GAP",
+      "kind": "inference",
+      "text": "From the owner diagnosis and limited smoke coverage, successor correctness remains unestablished; the diagnosis is not a generated observation.",
+      "source_refs": [
+        "S1-03",
+        "S1-09",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 1681-1749"
+      ]
+    },
+    {
+      "id": "I-PROOF",
+      "kind": "inference",
+      "text": "From the governing edge cases and old smoke limits, focused falsifiers must cover full closure, validation precedence, record/input preservation, cycles and exact budgets.",
+      "source_refs": [
+        "S1-02",
+        "S1-04",
+        "S1-05",
+        "S1-06",
+        "S1-07",
+        "S1-08",
+        "S1-09"
+      ]
+    },
+    {
+      "id": "D-WRITER",
+      "kind": "context_decision",
+      "text": "Select a direct Writer repair frontier; keep exact fictional Product/control/admission receipts pending, without inventing a ticket or another authorization round.",
+      "source_refs": [
+        "S1-10",
+        "S1-11",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 402-488",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 619-692"
+      ]
+    },
+    {
+      "id": "D-RETURN",
+      "kind": "context_decision",
+      "text": "Require the bounded evidence-rich run return, withhold unestablished claims and stop; no next-stage authority follows.",
+      "source_refs": [
+        "S1-12",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 402-488",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 1681-1749"
+      ]
+    },
+    {
+      "id": "D-REVIEW",
+      "kind": "context_decision",
+      "text": "Reviewer is inactive; a future optional assessment needs exact candidate, assessment/evidence grant, independence binding, scale and result route.",
+      "source_refs": [
+        "S1-09",
+        "S1-11",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EVALUATION.md sha256:b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 lines 190-336"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "S-LAW",
+      "to": "D-WRITER",
+      "type": "constrains",
+      "reason": "The repair preserves the entire unchanged requirement and accepted design.",
+      "source_refs": [
+        "S1-01",
+        "S1-04",
+        "S1-05",
+        "S1-06",
+        "S1-07",
+        "S1-08"
+      ]
+    },
+    {
+      "from": "S-GRANT",
+      "to": "D-WRITER",
+      "type": "bounds_authority",
+      "reason": "Only the supplied Writer territory and operations can be projected.",
+      "source_refs": [
+        "S1-10"
+      ]
+    },
+    {
+      "from": "S-FRAME",
+      "to": "D-WRITER",
+      "type": "supports_selection",
+      "reason": "Direct construction is expressly permitted for this local run.",
+      "source_refs": [
+        "S1-11",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 619-692"
+      ]
+    },
+    {
+      "from": "M-DIRECT",
+      "to": "D-WRITER",
+      "type": "prevents_unnecessary_activation",
+      "reason": "Role-document availability alone does not require coordination or review.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 619-692"
+      ]
+    },
+    {
+      "from": "M-ADMISSION",
+      "to": "D-WRITER",
+      "type": "requires_before_execution",
+      "reason": "A proposed context is not evidence of fictional admission.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 402-488"
+      ]
+    },
+    {
+      "from": "S-CURRENT",
+      "to": "I-EVIDENCE-GAP",
+      "type": "limits_evidence",
+      "reason": "Old smoke and owner diagnosis do not establish successor behavior.",
+      "source_refs": [
+        "S1-03",
+        "S1-09"
+      ]
+    },
+    {
+      "from": "I-EVIDENCE-GAP",
+      "to": "D-RETURN",
+      "type": "withholds_claim",
+      "reason": "Return uncertainty until actual repair/proof supports the exact candidate.",
+      "source_refs": [
+        "S1-09",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 1681-1749"
+      ]
+    },
+    {
+      "from": "S-LAW",
+      "to": "I-PROOF",
+      "type": "grounds_obligation",
+      "reason": "Focused checks derive from the full contract including excluded-domain boundaries.",
+      "source_refs": [
+        "S1-02",
+        "S1-04",
+        "S1-05",
+        "S1-06",
+        "S1-07",
+        "S1-08"
+      ]
+    },
+    {
+      "from": "I-PROOF",
+      "to": "D-RETURN",
+      "type": "requires_evidence",
+      "reason": "Proposed checks are not performed evidence.",
+      "source_refs": [
+        "S1-12",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 402-488"
+      ]
+    },
+    {
+      "from": "M-REUSE",
+      "to": "D-RETURN",
+      "type": "invalidates_on_change",
+      "reason": "Affected claims must be withdrawn before reliance when an invalidator occurs.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d lines 1681-1749"
+      ]
+    },
+    {
+      "from": "S-FRAME",
+      "to": "D-REVIEW",
+      "type": "keeps_inactive",
+      "reason": "The current frontier has no independent-review obligation.",
+      "source_refs": [
+        "S1-11"
+      ]
+    },
+    {
+      "from": "M-REVIEW",
+      "to": "D-REVIEW",
+      "type": "conditions_future_activation",
+      "reason": "Any later independent assessment needs its own exact binding and independent expectations.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EVALUATION.md sha256:b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 lines 190-336"
+      ]
+    },
+    {
+      "from": "D-RETURN",
+      "to": "S-RETURN",
+      "type": "returns_to",
+      "reason": "The owner consumes the named durable result, after which the Writer stops.",
+      "source_refs": [
+        "S1-12"
+      ]
+    }
+  ],
+  "limitations": [
+    "Interpretive context graph, not formal verification or execution.",
+    "Scenario paths/identities and grants are fictional supplied facts, not live receipts.",
+    "No representation/model/index content was acquired. Shared BASIS and manifest navigation exposed representation locators only.",
+    "First scenario in shared session; host-supplied instructions and memory summary were involuntarily present. No memory file, private checklist, other arm or prior pilot was read.",
+    "Real prior installation verification is supplied; selected manifest/member hashes are locally checked. Exact fictional Product/admission/actor bindings remain pending."
+  ]
+}

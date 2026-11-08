@@ -1,0 +1,30 @@
+# S1: inactive proposed Reviewer context
+
+Status: inactive and conditional. S1-11 imposes no independent-review condition; a direct Writer's self-review is sufficient evidence for the owner's bounded decision where applicable. No candidate or review yet exists. This document does not create an assessment grant, ticket or mandatory gate. [S1-09, S1-11; REVIEW]
+
+If the owner later grants review of the exact successor candidate returned in `/fictional/seed-context/work/run-8/RETURN.md`, apply released `stdo-review`. First bind its candidate identity/checkpoint, Product Definition and exact basis, claim, permitted evidence population, capability, selected severity policy and return/write grant. These later review coordinates are unavailable now. The existing Writer grant is not a Reviewer grant. Until they are supplied, do not inspect a fictional candidate or write a report. [S1-10–S1-12; REVIEW]
+
+The claim would be that the candidate satisfies S1-02 and S1-04–S1-08 under unchanged requirement and `D-seed-2`: complete finite transitive closure, whole records once sorted by ID, standing-independent retention, input preservation, exact success/refusal shape, globally checked dangling references, refusal precedence, valid cycles/duplicate paths and empty-root behavior. Malformed types and duplicate record IDs remain excluded. Derive an expectation set from the governing requirements/design before candidate inspection. The supplied diagnosis and illustrative A/B/C graph are inputs, not a requested verdict. Independently seek counterexamples including unselected dangling links and simultaneous refusal causes. [S1-02–S1-08; released stdo-review / Choose The Entry and Evaluate]
+
+Acquire the exact authorized source, candidate, test source and actual observations directly; a Worker summary does not replace evidence. The old smoke proves only its resolved-leaf case at `seed-r7`. Assess input/effect semantics and retained alternatives across this local function's complete path. [S1-09; WORK; REUSE]
+
+This generator has seen the brief and authored the proposed contexts; it has performed no assessment. A later Reviewer must disclose its actual prior exposure and authorship. Required independence needs a non-author, independently acquired evidence/expectations and the governing actor-family policy; a fresh session or role label is insufficient, and absent a stated policy two same-model-family activations are not semantically independent. Reporting defects alone is not authorship; adopted repair/design wording is. [INDEPENDENCE]
+
+If lawfully activated, the candidate remains read-only. No repair, priority assignment, acceptance, publication or next activation follows. Return to the owner through the then-named authorized review channel; no review-result path or report write is currently granted. Use a closed `satisfied`, `falsified`, `indeterminate`, `out_of_frame` or `invalid_basis` evaluation with exact subject/basis, claim, scope/exclusions, evidence, findings/counterexamples, residuals, uncertainty and re-entry. Each finding identifies a violated property, supported entry/state and causal path; use only the Product-selected severity scale, leaving unavailable fields explicit. `satisfied` and `invalid_basis` have triage `not_applicable`; falsified findings have supported triage or field-level indeterminacy. Preserve unperformed coverage and stop. Material candidate/basis/evidence/independence changes invalidate affected reliance. No verdict is prescribed here. [REVIEW; REUSE; released stdo-review / Return]
+
+Fixture: `/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md`, SHA-256 `acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4`. `S1-nn` denotes its numbered facts. All project coordinates are fictional, not accessed files or measured hashes.
+
+Method: `stdo://releases/v3.0.5-rc.1/`, manifest SHA-256 `64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c`. Method selection/current installation is supplied by `inputs/BASIS.json`; no new full installation verification is claimed. The source Product builder remains on v3.0.4.
+
+Representation G: `/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json`, model identity `urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27`, raw SHA-256 `b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7` (checked). In this document, `R(x)` means the exact record `urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:x` in G. Grounding below is the representation's source locator under `build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/`; it is not a separate prose read.
+
+Released skills actually read: `/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-work/SKILL.md`, SHA-256 `9dc06e03fd6f64483fa485ed55f35e414fefae472bb69aa930ecef9335585b35`; and `/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-review/SKILL.md`, SHA-256 `b90b3a2014d7891e25b40c11e5f3638accb9f3408cb3f0cf3922d26f17bc57df`.
+
+| Rule alias | Exact representation record and grounding |
+|---|---|
+| CONE | R(9695e2acf8bb27dff78b9086d7d9b062); standards/ACTIVATION.md §1 / Execution unit, lines 393–400 |
+| WORK | R(a1b22e933a120bf64a62b705eed525c6); standards/EXECUTIVE_BASELINE.md §9, lines 1022, 1031–1032 |
+| DIRECT | R(d208720729d40d8ebc56e5ca8d08e621); standards/templates/AGENTS_TEMPLATE.md / STDO Bootstrap, lines 8–14; condition: accepted configuration permits one sufficient capable Writer |
+| REVIEW | R(1367a360c53ba1b053dedacb082887b0); standards/EXECUTIVE_BASELINE.md §10, lines 1052, 1071–1072; no universal review requirement |
+| INDEPENDENCE | R(9c15107e315077f7ca89572a5a5ecdbf); standards/EVALUATION.md §3, lines 242–244, 259–260 |
+| REUSE | R(177ffff4a573bab836e660497fabaed5); standards/ACTIVATION.md §7, lines 1712, 1739–1740 |

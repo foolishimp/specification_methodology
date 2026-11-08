@@ -1,0 +1,627 @@
+[
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:4028a006cecc4c533b897df2e8d4f076"
+      ],
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:33c9bfe60b1957ced00291ea6a3d730c",
+      "judgment_kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+      "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+      "latitude_ref": [],
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "predicate": {
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 499,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/EXECUTIVE_BASELINE.md",
+            "quote": "#### Selected 1–5 severity convention\n\nThe severity convention selected for this review flow is **1 highest to 5\nlowest**. The Reviewer grades the consequence of the demonstrated defect if\nit manifests, using these qualitative anchors. The Product-owned frame basis\nbinds the convention and its Product-specific evidence criteria: affected\nclaims, users/paths, consequence, dependencies and supported containment (P6).\n\n| Severity | Consequence anchor |\n|---|---|\n| 1 | Critical loss of the governed outcome or of essential safety, authority or integrity across its affected scope. |\n| 2 | Major failure of essential behaviour, with substantial affected users, paths or dependencies and no adequate ordinary containment. |\n| 3 | Material but bounded failure whose disposition depends on its downstream impact and wider blast radius. |\n| 4 | Limited local failure with supported containment or a practical workaround and little effect outside that local scope. |\n| 5 | Minor actionable defect with minimal functional consequence for the declared outcome. |\n\nSeverity 3 requires an explicit assessment of downstream dependencies and\nblast radius. Material impact on dependent work normally calls for repair;\ncontained local impact may be deferred with a recorded reason and responsible\nowner. The Executive makes that disposition from the evidence and its grant,\npreserving the Reviewer's grade; a departure from the normal repair response\nalso records its reason. Unknown dependent impact is not evidence of\ncontainment. Mandatory claims, hard stops and acceptance conditions still\ndetermine boundary effects under EVALUATION §5. Severity 3 is not priority P3,\nand no severity value automatically supplies priority, a block or permission\nto defer (P6, P2).\n\nAn older or alternative Product-selected scale keeps its identity and evidence\ncriteria. Selecting this convention is explicit; any translation is declared\nand justified rather than inferred from matching numbers. Historical findings\nretain the scale and grade under which they were assessed. A no-finding result\ncarries no severity grade; it is not severity 5 (EVALUATION §4; P3, P6).",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FTechnical%20triage%2C%20severity%2C%20priority%20and%20boundary%20effect%2FSelected%201%E2%80%935%20severity%20convention",
+            "start_line": 468
+          }
+        ],
+        "statement": "Apply the selected consequence anchors: 1 critical loss of governed outcome or essential safety, authority or integrity; 2 major essential-behavior failure with substantial affected users, paths or dependencies and no adequate ordinary containment; 3 material but bounded failure whose disposition depends on downstream impact and wider blast radius; 4 limited local failure with supported containment or practical workaround and little external effect; 5 minor actionable defect with minimal functional consequence. Severity 3 requires explicit blast-radius and downstream-impact assessment; unknown reach is not containment. Material dependent impact normally calls for repair; contained deferral or departure needs a recorded reason and responsible owner. A review with no findings carries no severity grade, including no severity 5.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ]
+    },
+    "references": [
+      {
+        "path": [
+          "applies_to",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:4028a006cecc4c533b897df2e8d4f076",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "judgment_kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/EXECUTIVE_BASELINE.md#EXECUTIVE_BASELINE%2F5.%20Profile%20terms%2FTechnical%20triage%2C%20severity%2C%20priority%20and%20boundary%20effect%2FSelected%201%E2%80%935%20severity%20convention",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "refusal"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  },
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:4ef849d51faa1d226d9c338f900be035"
+      ],
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:cc08fc400c1973e4d3234ecb0d2b92ee",
+      "judgment_kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+      "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+      "latitude_ref": [],
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "predicate": {
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 245,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/references/COORDINATED_HANDOFF.md",
+            "quote": "## Review Flow From The Selected Basis\n\nAcquire the selected basis's `EVALUATION` §5, `TICKETS` §4 and §7, and, where\nadopted, `EXECUTIVE_BASELINE` §5 and §12. Use their actual clauses. A loaded\n3.0.4 skill cannot amend an older Product-selected method or silently adopt\nthe candidate's review cadence or optional priority policy.\n\nWhere that basis contains **Landing, closure and release**, **Declared Product\nacceptance gates**, **QA cadence and repair rechecks**, and **Review findings\nand bug items**, route the next decision as follows:\n\n1. Name which decision is requested: authorized candidate landing, work\n   closure, or release. Keep its actual conditions separate. A pending review\n   alone is not a landing hold; no operation, access or hard-stop waiver follows.\n2. Bind the exact QA subject, coverage, size and reason. Use the owning recheck\n   triggers; do not automatically request a new review after every repair or\n   set a review ratio. Keep test verification distinct from required independent\n   review, and retain any uncovered subject.\n3. Return unchanged Reviewer severity. The Executive decides priority and\n   ownership directly when clear, or delegates bounded grouping/proposals to a\n   triage Worker when volume warrants it; that Worker changes no assessment.\n   If the basis selects the 1 highest–5 lowest convention, apply its qualitative\n   anchors and explicit severity-3 downstream/blast-radius assessment. Material\n   dependent impact normally calls for repair; contained local deferral needs\n   a reason and owner. Keep severity 3 distinct from priority P3 and retain old\n   or alternative scales on their own identities.\n4. If findings need a durable carrier, use `stdo-ticket` under the exact report\n   or item-update grant. Bind report ID/path, source linkage and visibility\n   before the effect. No findings means no bug report; sufficient direct work\n   gains no redundant ticket. A Reviewer records only its granted report and\n   makes no candidate repair. The reviewed work item's ledger holds decisions\n   and repair/verification provenance, not a new copy of the assessment.\n5. For provisional downstream use, retain exact dependencies and uncertainty.\n   Check only explicitly declared Product gates; a later material finding\n   invalidates affected dependent results before further reliance. Keep other\n   valid work. If a policy or boundary decision is genuinely missing, return\n   that material choice rather than inventing numeric meanings or a gate.\n\nExample: a granted Writer lands candidate C while its selected QA runs. QA\nreports finding F in the named restricted report R. The Executive retains F's\nseverity, assigns priority and links item B on the reviewed work carrier. A\nrepair returns C2 with its failing-before/passing-after reproduction and\ndeclared suite evidence. The Executive applies the selected recheck conditions:\ntests may verify B when no independent recheck is required; otherwise B awaits\nthat exact report. Neither outcome by itself authorizes release or adopts C2\nat an explicitly gated downstream boundary.",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FReview%20Flow%20From%20The%20Selected%20Basis",
+            "start_line": 200
+          }
+        ],
+        "statement": "Acquire actual selected-basis EVALUATION, TICKETS and adopted Executive clauses. A loaded newer skill cannot amend an older Product method or adopt its priority policy. Where the basis contains the current rules, preserve separate landing/closure/release conditions, exact QA coverage and recheck triggers, unchanged Reviewer severity, Executive priority/ownership, exact report-write visibility grants and downstream provisional dependencies. No findings means no report; a sufficient direct carrier needs no redundant ticket.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ]
+    },
+    "references": [
+      {
+        "path": [
+          "applies_to",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:4ef849d51faa1d226d9c338f900be035",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "judgment_kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/references/COORDINATED_HANDOFF.md#Coordinated%20Skill%20Handoff%2FReview%20Flow%20From%20The%20Selected%20Basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "refusal"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  },
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:ab3073f9f0478efc40930f0df76d88be"
+      ],
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:96c5964ba764a6795da51c9c9cb72e72",
+      "judgment_kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+      "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+      "latitude_ref": [],
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "predicate": {
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 962,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/PRODUCT_DEFINITION.md",
+            "quote": "### PC-05 — Context construction and clean-room conditions\n\nAn actor's selected context must satisfy both permission and adequacy for its\nengagement. Permission covers the source information and permitted derivations,\nnot only paths or filenames. The boundary identifies eligible source classes,\nexports and tool outputs, material provenance, intended use, later acquisitions\nand the effect of prior exposure. An allowed file location or a fresh summary\ndoes not sanitize prohibited information.\n\nA target owner may authorize an export, but clean-room eligibility additionally\nrequires that the engagement's information policy admits that export and its\nprovenance. The actual delivered/acquired material must be recorded to the extent\nrequired by the claim. An uncertain or prohibited exposure follows the declared\nhold/re-entry rule; it cannot be repaired by deleting its receipt or relabeling\nthe same actor fresh. Prior actor knowledge and external acquisition channels are\npart of the declared limits.\n\nAdequacy retains the distinctions required for the task's decisions and\ncontinuations, including unresolved obligations, result standing, currentness and\nauthority. If the permitted material is insufficient, acquire an authorized\nextension, narrow the task with the owner, use a suitable actor or return the\nunresolved outcome. Permission is not evidence of sufficiency, and a budget is\nnot permission to omit a deciding condition. This applies [FOUNDATIONS Observation sufficiency](FOUNDATIONS.md#assurance-relations)\nand its scoped preservation law; it supplies no general optimal context selector (P1, P2, P6).",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F9.%20Recursive%20discovery%20and%20explicit%20composition%2FPC-05%20%E2%80%94%20Context%20construction%20and%20clean-room%20conditions",
+            "start_line": 939
+          }
+        ],
+        "statement": "Construct context under both information eligibility and claim sufficiency. Policy governs permitted derivations, summaries, exports, prior exposure and onward use as well as paths. Source-owner export approval does not settle recipient engagement eligibility. A summary or second route does not cleanse prohibited information. A newly isolated process or same-actor fresh session cannot erase earlier material exposure; retain the exposure fact and withdraw affected independence/clean-room claims or obtain an eligible actor/scope decision.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ]
+    },
+    "references": [
+      {
+        "path": [
+          "applies_to",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:ab3073f9f0478efc40930f0df76d88be",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "judgment_kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/PRODUCT_DEFINITION.md#PRODUCT_DEFINITION%2F9.%20Recursive%20discovery%20and%20explicit%20composition%2FPC-05%20%E2%80%94%20Context%20construction%20and%20clean-room%20conditions",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "refusal"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  },
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "objects",
+    "record": {
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:f5d84094fc62a366ed949fcbcb0af838",
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ],
+      "sort": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:sort:authored-concept",
+      "value": {
+        "conditions": [
+          "The selected basis has verified."
+        ],
+        "definition": "Member acquisition resolves a package-relative member path and, where needed, its heading anchor through the same immutable basis. Membership, bytes, installation location and anchors are checked independently of semantic fidelity and task sufficiency.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 47,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/references/PRODUCT_BASIS.md",
+            "quote": "After the selected basis has verified, resolve each required member through\nthat same immutable basis. A route consists of the member's package-relative\npath and, where needed, a heading anchor within it.",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FRead%20A%20Member%20From%20That%20Basis",
+            "start_line": 45
+          }
+        ],
+        "label": "Verified member acquisition"
+      }
+    },
+    "references": [
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "sort"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:sort:authored-concept",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "value",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/references/PRODUCT_BASIS.md#Product%20Basis%20Selection%2FRead%20A%20Member%20From%20That%20Basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  },
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "objects",
+    "record": {
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:54a7f1f94b6b748d5344e0a8adcdfb70",
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ],
+      "sort": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:sort:authored-concept",
+      "value": {
+        "conditions": [],
+        "definition": "Structural conformance covers closed syntax, types, identities, references, bases and mechanically decidable predicates. Semantic fidelity covers interpretation meaning and materiality. Semantic acceptance is a separately recorded authority judgment.",
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1168,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/AXIOMATIC_CALCULUS.md",
+            "quote": "structural conformance of a model covers its closed syntax, types,\nidentities, references, bases and mechanically decidable predicates, and\nthe semantic fidelity of an interpretation covers its meaning and\nmateriality (P1, P6).",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-018%20Structural%20and%20semantic%20separation",
+            "start_line": 1165
+          },
+          {
+            "end_line": 1149,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/AXIOMATIC_CALCULUS.md",
+            "quote": "Semantic acceptance remains a separately recorded authority judgment (P6,\nP1).",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+            "start_line": 1148
+          }
+        ],
+        "label": "Structural, semantic and acceptance assessments"
+      }
+    },
+    "references": [
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "sort"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:sort:authored-concept",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "value",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models%2FAC-018%20Structural%20and%20semantic%20separation",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "value",
+          "grounding",
+          "1",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/AXIOMATIC_CALCULUS.md#AXIOMATIC_CALCULUS%2F6.%20Interpretation%20and%20models",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  },
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:c0f1f576bfb954ed4cba8cebdd6dbafa"
+      ],
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9fe4eca32ccaed1776dd2235836b40f0",
+      "judgment_kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+      "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+      "latitude_ref": [],
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "predicate": {
+        "conditions": [
+          "Once immutable publication member bytes exist."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1527,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/TRAVERSAL_OCCURRENCE.md",
+            "quote": "The list is free of duplicates and sorted by ascending unsigned\nUTF-16 code units.",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature",
+            "start_line": 1526
+          }
+        ],
+        "statement": "occurrence_signature_clause_refs is a nonempty duplicate-free list sorted by ascending unsigned UTF-16 code units, containing exactly absolute publication member URIs with fragments #authority-and-adoption, #candidate-judgment-event-and-relation-separation, #causality-and-typed-lineage, #closed-constraint-judgment-residual-and-stop-kinds, #closed-event-kind-population, #closed-relation-families, #closed-semantic-object-sorts, #event-frontier-and-projection, #mutable-subject-effect-relation and #occurrence-identity. These collectively define closed sorts, fields, domains, relations, constraints, judgments, residuals, stops and functor refs. profile_member_sha256 equals publication member digest. The calculus clause resolves exact inherited signature schema/record law in its exact publication. Relative paths, mutable source URIs, missing fragments, duplicates or references outside the two exact publication members refuse the signature.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ]
+    },
+    "references": [
+      {
+        "path": [
+          "applies_to",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:c0f1f576bfb954ed4cba8cebdd6dbafa",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "judgment_kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/TRAVERSAL_OCCURRENCE.md#TRAVERSAL_OCCURRENCE%2FExact%20profile%20identity%2FClosed%20profile%20signature",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "refusal"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  }
+]

@@ -1,0 +1,507 @@
+[
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:8be01073b32fadf070e619044434028b"
+      ],
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9c15107e315077f7ca89572a5a5ecdbf",
+      "judgment_kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+      "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+      "latitude_ref": [],
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "predicate": {
+        "conditions": [],
+        "exceptions": [
+          "A reporter may assess a later repair only when its existing assessment grant, authorship relation and evidence independence permit.",
+          "Same-model-family activations count as independent only if the claim's governing basis declares that policy."
+        ],
+        "grounding": [
+          {
+            "end_line": 244,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/EVALUATION.md",
+            "quote": "A person\nwho authored an adopted repair cannot supply its required independent\nassessment by calling that authorship a finding",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+            "start_line": 242
+          },
+          {
+            "end_line": 260,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/EVALUATION.md",
+            "quote": "the default where it is not\nstated is that they are not independent.",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+            "start_line": 259
+          }
+        ],
+        "statement": "Reporting defects, counterexamples or already-required behaviour alone is not authorship. Adopted wording, design or policy, including particular repair directions, is authorship of that contribution; calling it a finding does not restore independence. Finding a defect grants no review authority. Reading the same governing sources is allowed, but a fresh context grants neither independence nor authority; self-review remains construction output. Received contributions retain their author's identity wherever carried, and that author's reading is not independent acceptance. Independence across actor families must be declared; absent a stated policy, two activations of one model family are not independent for semantic judgment.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ]
+    },
+    "references": [
+      {
+        "path": [
+          "applies_to",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:8be01073b32fadf070e619044434028b",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "judgment_kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "1",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/EVALUATION.md#EVALUATION%2F3.%20Independent%20assessment",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "refusal"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  },
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:8ffeef2e7fab6a5625491d28ec6be578"
+      ],
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:187b3942b8ff8aa4134baa065da8cefa",
+      "judgment_kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+      "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+      "latitude_ref": [],
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "predicate": {
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 21,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/skills/stdo-review/SKILL.md",
+            "quote": "## Start With Your Own Control Intake\n\nRead the exact own contract or intake named in the request before any general\nsearch or project read. Bind your own permitted inputs, exclusions and return\nroute, then apply [Control Intake](../../references/COORDINATED_HANDOFF.md#control-intake).\nThis applies to issuer, recipient and direct work. Use named control routes;\ndo not start with directory inventories, memory searches or neighbouring\nprompts. A Worker’s access never becomes its issuer’s access. Check the actual\nhost boundary before relying on excluded information staying unavailable.",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FStart%20With%20Your%20Own%20Control%20Intake",
+            "start_line": 13
+          },
+          {
+            "end_line": 46,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/skills/stdo-review/SKILL.md",
+            "quote": "## Choose The Entry\n\nIf receiving a coordinated packet, apply\n[Receive](../../references/COORDINATED_HANDOFF.md#receive) before general\ndiscovery or candidate reads, then execute the review below within its grant.\n\nA coordinating issuer uses [Issue](../../references/COORDINATED_HANDOFF.md#issue)\nwith `EXECUTIVE_BASELINE` §12 step 5B and §19's Reviewer additions. Bind the\nexact claim, candidate, evidence population, severity scale and required\nauthorship/evidence independence. Let the Reviewer derive expectations from\ngoverning source before candidate exposure (`EVALUATION` §3). Label supplied\nhypotheses or counterexamples as inputs; they neither prescribe the verdict\nnor replace independent assessment. Do not hide relevant evidence to create\nan appearance of independence.\n\nPartition only when each Reviewer has a sufficient complete slice and the\ndeclared conjunction covers the required claim, including interactions.\nLocal green slices do not prove an unassessed whole path. Evaluate returned\nresults through [the shared return procedure](../../references/COORDINATED_HANDOFF.md#evaluate-the-return);\nretain Reviewer severity and assign priority/disposition only under the\nissuer's separate grant. The issuer does not perform a second review merely\nby issuing this one. Apply [the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis)\nfor coverage, proportional sizing and any recheck; do not copy the optional\ncandidate policy onto an older basis. Otherwise enter the Reviewer path below.",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FChoose%20The%20Entry",
+            "start_line": 23
+          }
+        ],
+        "statement": "Apply own control intake before ordinary discovery or procedure. Choose direct, issuer or recipient entry from the actual bound frame and grant; role or skill wording grants nothing. Coordinate only where the admitted relation requires it. Issuer remains coordinator; recipient verifies controls before subject reads; a sufficient direct invocation proceeds within its existing authority.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ]
+    },
+    "references": [
+      {
+        "path": [
+          "applies_to",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:8ffeef2e7fab6a5625491d28ec6be578",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "judgment_kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FStart%20With%20Your%20Own%20Control%20Intake",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "1",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/plugins/spec/skills/stdo-review/SKILL.md#STDO%20Review%2FChoose%20The%20Entry",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "refusal"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  },
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:3c2b6d89ddf314906f84c480fc1fff41",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:f0fab68b83d11aab1963df78d50fdcea"
+      ],
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a36f78affdbd4370f2c155b5db43e760",
+      "judgment_kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+      "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+      "latitude_ref": [],
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "predicate": {
+        "conditions": [
+          "An LLM-interface usability claim is selected."
+        ],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 865,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ASSURANCE.md",
+            "quote": "For an LLM-interface usability claim, clean-room LLM UAT is used, with the\nordinary supplied context and permitted tools and without private\nimplementation knowledge or fixture assistance. Expected outcomes are\nrecorded before responses are inspected. The sunny case and the ordinary\nambiguity and negative cases material to the claim are included.\nSubstitutes are disclosed; replayed or fabricated responses prove only\ntheir stated narrower relation, not live-provider usability. Responses are\nnot edited, and nothing is silently retried until green. Live claims need\nlive evidence under §2, not a new universal live-provider requirement\nduring design (P6, P5; EVALUATION §3, expectations before exposure).",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+            "start_line": 856
+          }
+        ],
+        "statement": "Use clean-room LLM UAT with ordinary context/permitted tools and no private implementation knowledge or fixture help. Record expectations before inspecting responses and include material sunny, ordinary ambiguity and negative cases. Disclose substitutes; replay/fabrication proves only declared narrower relations. Do not edit responses or silently retry to success. Live claims require live evidence under §2; this is no universal live-provider requirement during design.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ]
+    },
+    "references": [
+      {
+        "path": [
+          "applies_to",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:3c2b6d89ddf314906f84c480fc1fff41",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "applies_to",
+          "1"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:f0fab68b83d11aab1963df78d50fdcea",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "judgment_kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ASSURANCE.md#ASSURANCE%2F13.%20End-to-end%20interface%20integration%20frame%2FObligations",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "refusal"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  },
+  {
+    "parent": {
+      "id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+      "sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+      "profile": "a_c.graphify.model/1"
+    },
+    "family": "constraints",
+    "record": {
+      "applies_to": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:2084c7cfbc77288da5fb12fd0ea028dd"
+      ],
+      "basis": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+      "context": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+      "id": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5",
+      "judgment_kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+      "kind": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+      "latitude_ref": [],
+      "owner": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+      "predicate": {
+        "conditions": [],
+        "exceptions": [],
+        "grounding": [
+          {
+            "end_line": 1712,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "quote": "Invalidation withdraws the result from direct reliance",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+            "start_line": 1712
+          },
+          {
+            "end_line": 1740,
+            "path": "build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md",
+            "quote": "A reused judgment does not\nsatisfy a separately required independent judgment",
+            "section": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+            "start_line": 1739
+          }
+        ],
+        "statement": "An unchanged consumer may reuse a result after checking exact applicability. Affectedness is described as dependencies D*(t) meeting impact cover I(Δ). Before reliance, invalidate results affected by material subject/input/evidence change capable of changing value, any changed bound basis coordinate, or occurrence of a declared revising observation. This applies even if subject bytes are unchanged, while preserving predecessor/successor links and demonstrably independent survivors. Invalidation withdraws direct reliance; retain_applicable separately governs retaining evidence on a new basis, and changed coordinates alone establish neither truth nor falsity. Source/task/actor condition changes are basis changes if bound there, otherwise material input changes; role/conversation/resumption changes alone invalidate nothing unless required actor conditions change. Domain triggers instantiate these three kinds, never a parallel list. Judgment continuity names basis/evidence; Return A Closed Result names inputs/observation. Reuse cannot satisfy a separately required independent judgment; an independent assessor acquires its own evidence and gives its own judgment, subject to the permission for shared valid mechanical evidence. Frame revision-coordinate need belongs to REFERENCE_FRAME §10, touched-result validity to this reuse law.",
+        "uncertainty": ""
+      },
+      "refusal": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+      "scope": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus"
+      ]
+    },
+    "references": [
+      {
+        "path": [
+          "applies_to",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:2084c7cfbc77288da5fb12fd0ea028dd",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "basis"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:basis",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "context"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:context:source-first-proposal",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "judgment_kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:judgment-kind:external-semantic-review",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "kind"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:constraint-kind:authored-source-statement",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "owner"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:actor:f-p-author",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "0",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "predicate",
+          "grounding",
+          "1",
+          "section"
+        ],
+        "target": "urn:a-c:project:8ae07eeca101a93be143e873f9d12ab43e316ef0359058c0c9fa71380880d2d5/source/build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/standards/ACTIVATION.md#ACTIVATION%2F7.%20Closed%20result%20and%20reuse",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "refusal"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:stop:no-execution-or-acceptance",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      },
+      {
+        "path": [
+          "scope",
+          "0"
+        ],
+        "target": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:scope:source-corpus",
+        "domain": "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:reference-domain:declared"
+      }
+    ],
+    "claim": "typed structural references only"
+  }
+]

@@ -1,0 +1,419 @@
+{
+  "schema": "stdo.context-generation.acquisition/1",
+  "scenario": "S1",
+  "assigned_mode": "current-representation-first",
+  "actual_skill": {
+    "canonical_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-work/SKILL.md",
+    "sha256": "9dc06e03fd6f64483fa485ed55f35e414fefae472bb69aa930ecef9335585b35",
+    "codex_wrapper_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/hosts/codex/.agents/skills/stdo-work/SKILL.md",
+    "codex_wrapper_sha256": "411f81868ca94a315c6a87a90a0a93c598ce8a1d2b475df3ab9864b4a9db5f17"
+  },
+  "review_skill": {
+    "canonical_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-review/SKILL.md",
+    "sha256": "b90b3a2014d7891e25b40c11e5f3638accb9f3408cb3f0cf3922d26f17bc57df"
+  },
+  "method": {
+    "uri": "stdo://releases/v3.0.5-rc.1/",
+    "manifest_sha256": "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+    "native_commit": "b5b00b896d44804e0f5d615a9bc23a02345888b3",
+    "root": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1",
+    "verification_basis": "Previously verified public-001 installation and pilot evidence; no new full verification or proof run is selected."
+  },
+  "representation": {
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json",
+    "raw_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7",
+    "canonical_sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+    "model_id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+    "identity_source": "Reused exact previous public-001 selection; no regenerated representation.",
+    "public_graph_cli": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/scripts/ac.py",
+    "supported_pure_operations": [
+      "graph find",
+      "graph inspect",
+      "graph project"
+    ],
+    "display_rule": "Readable returned records/grounding may omit mechanical metadata from display if the complete queried artifact is retained and the transformation is reported."
+  },
+  "acquisitions": [
+    {
+      "category": "common_skill",
+      "tool": "exec_command cat",
+      "purpose": "required released skill/control-reference guidance",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-work/SKILL.md",
+      "member": "plugins/spec/skills/stdo-work/SKILL.md",
+      "sha256": "9dc06e03fd6f64483fa485ed55f35e414fefae472bb69aa930ecef9335585b35",
+      "selected_bytes": 13369,
+      "displayed_source_bytes": 13369,
+      "display_scope": "complete source, previously displayed through exec tool; transport envelope excluded"
+    },
+    {
+      "category": "common_skill",
+      "tool": "exec_command cat",
+      "purpose": "required released skill/control-reference guidance",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-review/SKILL.md",
+      "member": "plugins/spec/skills/stdo-review/SKILL.md",
+      "sha256": "b90b3a2014d7891e25b40c11e5f3638accb9f3408cb3f0cf3922d26f17bc57df",
+      "selected_bytes": 8074,
+      "displayed_source_bytes": 8074,
+      "display_scope": "complete source, previously displayed through exec tool; transport envelope excluded"
+    },
+    {
+      "category": "common_skill",
+      "tool": "exec_command cat",
+      "purpose": "required released skill/control-reference guidance",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/references/PRODUCT_BASIS.md",
+      "member": "plugins/spec/references/PRODUCT_BASIS.md",
+      "sha256": "d4d1528af1af32e6951cc42e83ce8c55f0b95cfd3594e85a85493ef871ea1979",
+      "selected_bytes": 3947,
+      "displayed_source_bytes": 3947,
+      "display_scope": "complete source, previously displayed through exec tool; transport envelope excluded"
+    },
+    {
+      "category": "common_skill",
+      "tool": "exec_command cat",
+      "purpose": "required released skill/control-reference guidance",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/references/COORDINATED_HANDOFF.md",
+      "member": "plugins/spec/references/COORDINATED_HANDOFF.md",
+      "sha256": "e06139911583717a1d18994aee314db3aa29a0b5ebab61f3c6cfd11e37030e00",
+      "selected_bytes": 22028,
+      "displayed_source_bytes": 22028,
+      "display_scope": "complete source, previously displayed through exec tool; transport envelope excluded"
+    },
+    {
+      "category": "common_skill",
+      "tool": "exec_command cat",
+      "purpose": "required released skill/control-reference guidance",
+      "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/references/HOST_BINDING.md",
+      "member": "plugins/spec/references/HOST_BINDING.md",
+      "sha256": "4365cf2aad65c17ea26afb96267e4f85c912bd45494ebe6bfb1ddfe87d75d7b0",
+      "selected_bytes": 5732,
+      "displayed_source_bytes": 5732,
+      "display_scope": "complete source, previously displayed through exec tool; transport envelope excluded"
+    },
+    {
+      "category": "tool_guidance",
+      "tool": "exec_command help/rg/sed",
+      "source_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/scripts/ac.py",
+      "ranges": [
+        "graph --help",
+        "graph find --help",
+        "graph inspect --help",
+        "graph project --help",
+        "dispatch imports matching graph"
+      ],
+      "selected_source_bytes": null,
+      "purpose": "discover permitted public operations; byte total unavailable for earlier tool returns"
+    },
+    {
+      "category": "tool_guidance",
+      "tool": "exec_command rg/sed",
+      "source_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+      "ranges": [
+        "lines 680-860",
+        "lines 1-95",
+        "function-name search"
+      ],
+      "selected_source_bytes": null,
+      "purpose": "public pure API and projection closure mechanics, no model semantic admission"
+    },
+    {
+      "category": "representation_identity",
+      "tool": "Python hashlib/json metadata extraction",
+      "source_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json",
+      "raw_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7",
+      "file_bytes_read": 8568341,
+      "display": "identity and top-level type/count metadata only",
+      "displayed_bytes": null,
+      "purpose": "confirm exact supplied model; no complete model display"
+    },
+    {
+      "category": "common_input",
+      "tool": "exec_command cat; then byte/hash verification",
+      "source_path": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/COMMON.md",
+      "sha256": "80506576f115f0be64ed99942ed0bf7cd21d0d33ebec7986424c4914cd22aba7",
+      "range": "complete file",
+      "selected_source_bytes": 2793,
+      "displayed_source_bytes": 2793,
+      "purpose": "shared instructions, contract, supplied basis and frozen selection",
+      "cost_allocation": "once in session; reused after S1"
+    },
+    {
+      "category": "common_input",
+      "tool": "exec_command cat; then byte/hash verification",
+      "source_path": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/OUTPUT_CONTRACT.md",
+      "sha256": "9372b3d2ba3ffc7746bdbaa1bdc6104d2c86a4b14c95316e17483d8a3f1405c1",
+      "range": "complete file",
+      "selected_source_bytes": 4095,
+      "displayed_source_bytes": 4095,
+      "purpose": "shared instructions, contract, supplied basis and frozen selection",
+      "cost_allocation": "once in session; reused after S1"
+    },
+    {
+      "category": "common_input",
+      "tool": "exec_command cat; then byte/hash verification",
+      "source_path": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/BASIS.json",
+      "sha256": "4a085147515c73273ca3a41674c1356f362132210bd20d58a355853415e8c012",
+      "range": "complete file",
+      "selected_source_bytes": 2504,
+      "displayed_source_bytes": 2504,
+      "purpose": "shared instructions, contract, supplied basis and frozen selection",
+      "cost_allocation": "once in session; reused after S1"
+    },
+    {
+      "category": "common_input",
+      "tool": "exec_command cat; then byte/hash verification",
+      "source_path": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/preparation/FREEZE.json",
+      "sha256": "ef89677365e8caeba649242e40b464db35bca8c388cbe5668dc57d28257944d2",
+      "range": "complete file",
+      "selected_source_bytes": 2490,
+      "displayed_source_bytes": 2490,
+      "purpose": "shared instructions, contract, supplied basis and frozen selection",
+      "cost_allocation": "once in session; reused after S1"
+    },
+    {
+      "category": "scenario_input",
+      "tool": "exec_command cat",
+      "source_path": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md",
+      "sha256": "acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4",
+      "range": "complete file",
+      "selected_source_bytes": 3963,
+      "displayed_source_bytes": 3963,
+      "purpose": "supplied fictional scenario facts"
+    },
+    {
+      "category": "representation_method",
+      "operation": "find",
+      "installed_public_function": "ac_graph.find",
+      "implementation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+      "implementation_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "model": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json",
+      "raw_model_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7",
+      "raw_model_bytes": 8568341,
+      "inputs": [
+        "one sufficient context",
+        "smallest coherent",
+        "first changed layer",
+        "three invalidators",
+        "independently derive",
+        "direct Writer"
+      ],
+      "raw_output": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-find.raw.json",
+      "raw_output_bytes": 4975,
+      "selected_display": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-find.display.json",
+      "displayed_bytes": 3421,
+      "transport_envelope_excluded": true,
+      "claim_limit": "typed structure and declared closure are not semantic fidelity, admission, or task completeness"
+    },
+    {
+      "category": "representation_method",
+      "operation": "inspect",
+      "installed_public_function": "ac_graph.inspect",
+      "implementation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+      "implementation_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "model": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json",
+      "raw_model_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7",
+      "raw_model_bytes": 8568341,
+      "inputs": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9695e2acf8bb27dff78b9086d7d9b062",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:fd5da157f45fe784af69df528d73f01e",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:3a7cf7e8c9a9a2bcb12a44f1696d5013",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d208720729d40d8ebc56e5ca8d08e621",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:91a9b3718861dfa69dc3a05f6fa67920"
+      ],
+      "raw_output": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-inspect-core.raw.json",
+      "raw_output_bytes": 32483,
+      "selected_display": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-inspect-core.display.json",
+      "displayed_bytes": 30943,
+      "transport_envelope_excluded": true,
+      "claim_limit": "typed structure and declared closure are not semantic fidelity, admission, or task completeness"
+    },
+    {
+      "category": "representation_method",
+      "operation": "project",
+      "installed_public_function": "ac_graph.project",
+      "implementation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+      "implementation_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "model": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json",
+      "raw_model_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7",
+      "raw_model_bytes": 8568341,
+      "inputs": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9695e2acf8bb27dff78b9086d7d9b062",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:fd5da157f45fe784af69df528d73f01e",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d208720729d40d8ebc56e5ca8d08e621"
+      ],
+      "raw_output": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-project.raw.json",
+      "raw_output_bytes": 360387,
+      "selected_display": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-project.display.json",
+      "displayed_bytes": 672,
+      "transport_envelope_excluded": true,
+      "claim_limit": "typed structure and declared closure are not semantic fidelity, admission, or task completeness"
+    },
+    {
+      "category": "representation_method",
+      "operation": "inspect",
+      "installed_public_function": "ac_graph.inspect",
+      "implementation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+      "implementation_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "model": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json",
+      "raw_model_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7",
+      "raw_model_bytes": 8568341,
+      "inputs": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:604ebc178c75196aadd9bb78945fc26c",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a1b22e933a120bf64a62b705eed525c6",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:fc3d55a43da1db42ecfeed5bf0b435f6",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:46dd2048b0ff88d5e7d029c2aec84a43",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9dabf5babd237d34f35680800d13f8d3",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1367a360c53ba1b053dedacb082887b0",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:e304be3a784f95ff821ac331944b5612"
+      ],
+      "raw_output": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-inspect-governing.raw.json",
+      "raw_output_bytes": 44536,
+      "selected_display": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-inspect-governing.display.json",
+      "displayed_bytes": 19381,
+      "transport_envelope_excluded": true,
+      "display_transform": "omit parent audit envelope and repeated coordinate metadata; preserve exact semantic fields and grounding path/section/lines; embedded duplicate source quotes retained in raw only",
+      "claim_limit": "typed structure and declared closure are not semantic fidelity, admission, or task completeness"
+    },
+    {
+      "category": "representation_method",
+      "operation": "find",
+      "installed_public_function": "ac_graph.find",
+      "implementation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+      "implementation_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "model": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json",
+      "raw_model_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7",
+      "raw_model_bytes": 8568341,
+      "inputs": [
+        "Authorship independence",
+        "Evidence independence",
+        "expectations before",
+        "invalidated when",
+        "material input changes"
+      ],
+      "raw_output": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/common-find-review-reuse.raw.json",
+      "raw_output_bytes": 2636,
+      "selected_display": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/common-find-review-reuse.display.json",
+      "displayed_bytes": 1341,
+      "transport_envelope_excluded": true,
+      "display_transform": "omit parent audit envelope and repeated coordinate metadata; preserve exact semantic fields and grounding path/section/lines; embedded duplicate source quotes retained in raw only",
+      "claim_limit": "typed structure and declared closure are not semantic fidelity, admission, or task completeness"
+    },
+    {
+      "category": "representation_method",
+      "operation": "inspect",
+      "installed_public_function": "ac_graph.inspect",
+      "implementation": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/build_tenants/graphify/code/ac_graph.py",
+      "implementation_sha256": "2f5de4d600e13904dc8cba3791ebdd83fe6ebb0c339654c86392baf9c2bd3667",
+      "model": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json",
+      "raw_model_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7",
+      "raw_model_bytes": 8568341,
+      "inputs": [
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9c15107e315077f7ca89572a5a5ecdbf",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:187b3942b8ff8aa4134baa065da8cefa",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a36f78affdbd4370f2c155b5db43e760",
+        "urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5"
+      ],
+      "raw_output": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/common-inspect-review-reuse.raw.json",
+      "raw_output_bytes": 27328,
+      "selected_display": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/common-inspect-review-reuse.display.json",
+      "displayed_bytes": 11305,
+      "transport_envelope_excluded": true,
+      "display_transform": "omit parent audit envelope and repeated coordinate metadata; preserve exact semantic fields and grounding path/section/lines; embedded duplicate source quotes retained in raw only",
+      "claim_limit": "typed structure and declared closure are not semantic fidelity, admission, or task completeness"
+    },
+    {
+      "category": "representation_discovery_display",
+      "tool": "Python field selection from retained projection",
+      "source_path": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-project.raw.json",
+      "selected_display": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/s1-projection-catalog.display.json",
+      "displayed_bytes": 22963,
+      "purpose": "discover exact included identities/grounding; 140-character statement prefixes are discovery only and not normative substitutes"
+    },
+    {
+      "category": "mechanical_identity_check",
+      "tool": "Python hashlib/json exact identities",
+      "source_path": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/arms/representation/evidence/freeze-check.json",
+      "sha256": "4392e0a167cd88e17e3f0a54a5c1b20b7cf6595ec12900d9d869fcfeb8352a69",
+      "purpose": "Actual input, skill, raw/canonical model identity checks; no private checklist acquired",
+      "semantic_display": "identity metadata only",
+      "note": "All three fixture files were read mechanically for hashes; later scenario semantics were displayed only in S1,S2,S3 order. These hash bytes are not additive model-context populations."
+    }
+  ],
+  "source_fallbacks": [],
+  "failed_reads": [],
+  "query_misses": [
+    {
+      "query": "Authorship independence",
+      "meaning": "literal find had no matches; no absence-of-obligation inference"
+    },
+    {
+      "query": "invalidated when",
+      "meaning": "literal find had no matches; no absence-of-obligation inference"
+    }
+  ],
+  "supplied_preverified_identity": {
+    "basis_json": "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/BASIS.json",
+    "installation_and_manifest": "supplied prior public-001 verification only; not re-executed",
+    "freeze_sha256": "ef89677365e8caeba649242e40b464db35bca8c388cbe5668dc57d28257944d2"
+  },
+  "checks_actually_performed": [
+    "Raw model SHA-256 matched exact granted value.",
+    "Installed public validate(model) succeeded before find/inspect/project; this checks declared fragment structure only.",
+    "Common skill SHA-256 values matched BASIS.json.",
+    "Named common and scenario file hashes matched the selected freeze; no private checklist was read."
+  ],
+  "actual_execution": "Only these context/evidence artifacts written; no fictional work, native Skill UI activation, real admission, dispatch, provider, Git, network, build or proof execution.",
+  "host_and_order_limits": {
+    "involuntary": "Developer memory summary/guidance, general host instructions, broad tool roster and environment metadata were injected before task intake. No memory file was read, no neighboring arm or excluded source sought.",
+    "enforcement": "instruction-bounded; unrestricted shell capability; no demonstrated exact-file gate; no clean isolation claim",
+    "skill_mode": "read released skill files; no native Skill UI activation or actual admission",
+    "scenario_order": [
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "current_case": "S1",
+    "independence": "one generator session; no independent assessment performed"
+  },
+  "metrics": {
+    "new_scenario_input_bytes": 3963,
+    "common_skill_reference_source_bytes_once": 53150,
+    "common_input_source_bytes_once": 11882,
+    "method_raw_output_bytes": 472345,
+    "method_displayed_bytes": 67063,
+    "model_file_bytes_per_load": 8568341,
+    "model_load_count_for_recorded_operations": 6,
+    "public_operation_calls": 28,
+    "tool_batches_for_recorded_operations": 6,
+    "full_input_file_display_count": 5,
+    "generated_output_file_bytes": {
+      "reviewer.md": 6066,
+      "executive.md": 7041,
+      "acquisition.json": 26002,
+      "worker.md": 6683,
+      "constraint-map.json": 25442
+    },
+    "observed_elapsed_time": null,
+    "token_count": null,
+    "monetary_cost": null,
+    "attention": null,
+    "unavailable": [
+      "Whole-turn elapsed time was not instrumented.",
+      "No tokenizer, model cost or reader attention measurement was exposed.",
+      "Early help/implementation reads have no retained exact source-byte measurement; known byte totals are bounded partial totals.",
+      "Bookkeeping hashing and artifact assembly may reread already acquired bytes; no syscall-level complete read count was instrumented."
+    ],
+    "interpretation": "Source bytes, repeated raw model loads, mechanical returned bytes, selected display bytes and generated output bytes are separate proxies; none measures actual Worker attention or execution efficiency.",
+    "graph_find_calls": 11,
+    "graph_inspect_calls": 16,
+    "graph_project_calls": 1,
+    "additional_selected_projection_display_bytes": 22963,
+    "known_displayed_source_and_selected_method_bytes": 159021,
+    "known_total_scope": "A lower-bound total of instrumented full source displays and selected representation output displays; early tool-guidance/identity metadata displays are unavailable. Raw mechanical output is counted separately. Cached prior-case displays are not added again."
+  },
+  "actual_skill_invocation": {
+    "mode": "Read canonical released Skill files and references, then applied procedure to simulation",
+    "native_skill_ui": false,
+    "wrapper": "Wrapper paths/hashes in supplied BASIS metadata were not read or invoked."
+  },
+  "acquisition_order_note": "Array is in logical intake/acquisition order. The initial independent tool reads shared batches and overlapped; their within-batch ordering is not a measured chronology. The projection field displays appear after the model operations that produced them."
+}

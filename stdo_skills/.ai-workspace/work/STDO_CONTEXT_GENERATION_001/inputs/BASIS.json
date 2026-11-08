@@ -1,0 +1,40 @@
+{
+  "schema": "stdo.context-generation.basis/1",
+  "source_product_builder": {
+    "uri": "stdo://releases/v3.0.4/",
+    "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b",
+    "adoption_changed": false
+  },
+  "experiment_method": {
+    "uri": "stdo://releases/v3.0.5-rc.1/",
+    "manifest_sha256": "64c026667abba933d289317793dbe80b5f9ab822a9870307795584402e460e1c",
+    "native_commit": "b5b00b896d44804e0f5d615a9bc23a02345888b3",
+    "root": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1",
+    "verification_basis": "Previously verified public-001 installation and pilot evidence; no new full verification or proof run is selected."
+  },
+  "skill": {
+    "canonical_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-work/SKILL.md",
+    "sha256": "9dc06e03fd6f64483fa485ed55f35e414fefae472bb69aa930ecef9335585b35",
+    "codex_wrapper_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/hosts/codex/.agents/skills/stdo-work/SKILL.md",
+    "codex_wrapper_sha256": "411f81868ca94a315c6a87a90a0a93c598ce8a1d2b475df3ab9864b4a9db5f17"
+  },
+  "representation": {
+    "path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json",
+    "raw_sha256": "b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7",
+    "canonical_sha256": "6be53084229a3e8552a4495b470a82844f62f9d2b7abcace6975dbe4e0066544",
+    "model_id": "urn:a-c:coordinate-rebind:model:25c5d17918e649e4866d0f0981475ee4377616593cd8c14363b62e30fae5af27",
+    "identity_source": "Reused exact previous public-001 selection; no regenerated representation.",
+    "public_graph_cli": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/runtime/a_c/scripts/ac.py",
+    "supported_pure_operations": [
+      "graph find",
+      "graph inspect",
+      "graph project"
+    ],
+    "display_rule": "Readable returned records/grounding may omit mechanical metadata from display if the complete queried artifact is retained and the transformation is reported."
+  },
+  "actual_scope": "context generation only; source and installations immutable",
+  "review_skill": {
+    "canonical_path": "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/plugins/spec/skills/stdo-review/SKILL.md",
+    "sha256": "b90b3a2014d7891e25b40c11e5f3638accb9f3408cb3f0cf3922d26f17bc57df"
+  }
+}

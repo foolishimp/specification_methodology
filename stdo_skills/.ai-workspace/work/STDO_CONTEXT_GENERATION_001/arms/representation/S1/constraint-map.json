@@ -1,0 +1,386 @@
+{
+  "schema": "stdo.context-generation.constraint-map/1",
+  "scenario": "S1",
+  "nodes": [
+    {
+      "id": "S1-01",
+      "kind": "scenario_fact",
+      "text": "The fictional owner asks for a repair candidate for /fictional/seed-context/candidate/context_select.py in source cut seed-r7. The method selected by its Product is the released basis in BASIS.json; this is an implementation repair with unchanged requirement and accepted design.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-01"
+      ]
+    },
+    {
+      "id": "S1-02",
+      "kind": "scenario_fact",
+      "text": "The function is select_context(records, roots, budget). The admitted domain is a finite list of uniquely identified records, a list of root IDs and a nonnegative integer budget. Records have a nonempty string id and a requires list of IDs; other JSON-compatible fields are opaque payload. Malformed types and duplicate record IDs are outside this task.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-02"
+      ]
+    },
+    {
+      "id": "S1-03",
+      "kind": "scenario_fact",
+      "text": "The current helper computes reachable records but drops records whose standing is unresolved, then slices the result to budget and reports complete. The owner supplied this diagnosis as a starting observation, not an observed repair or passing test.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-03"
+      ]
+    },
+    {
+      "id": "S1-04",
+      "kind": "scenario_fact",
+      "text": "The requirement is the complete finite transitive dependency closure of the roots, with each whole record retained once and results sorted by id. A required record remains required regardless of its standing value. Inputs must remain unchanged.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-04"
+      ]
+    },
+    {
+      "id": "S1-05",
+      "kind": "scenario_fact",
+      "text": "Success has exactly {status: complete, records: [...]}. If the full distinct closure exceeds budget, the result is exactly {status: refused, reason: budget_exceeded, records: []}. No partial successful result meets the requirement.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-05"
+      ]
+    },
+    {
+      "id": "S1-06",
+      "kind": "scenario_fact",
+      "text": "Unknown roots and dangling dependencies are explicit refusals with reasons unknown_root and dangling_reference. Dangling validation covers the entire supplied graph, including unselected records. Refusal precedence is unknown_root, then dangling_reference, then budget_exceeded.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-06"
+      ]
+    },
+    {
+      "id": "S1-07",
+      "kind": "scenario_fact",
+      "text": "Valid cycles and duplicate paths are allowed. Empty roots with budget zero yield complete with an empty list when the entire graph is valid. The illustrative graph A requires B and C, with C unresolved, needs all three records and a budget of at least three.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-07"
+      ]
+    },
+    {
+      "id": "S1-08",
+      "kind": "scenario_fact",
+      "text": "Accepted design D-seed-2 uses a finite visited set and a work queue, then materializes complete records. It does not change the source record meanings or make an assessment decision. No requirement or design repricing is requested.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-08"
+      ]
+    },
+    {
+      "id": "S1-09",
+      "kind": "scenario_fact",
+      "text": "The retained smoke result covers only one resolved root with no dependencies at seed-r7. It supplies no observation of the failing unresolved-dependency or budget cases; no successor candidate or independent review exists.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-09"
+      ]
+    },
+    {
+      "id": "S1-10",
+      "kind": "scenario_fact",
+      "text": "The fictional owner grant permits a separately bound Writer to read this brief, /fictional/seed-context/specification/requirements.md, /fictional/seed-context/design/D-seed-2.md, and the two candidate files, and edit only candidate/context_select.py and candidate/test_context_select.py. Focused in-memory Python checks and writing the run result to /fictional/seed-context/work/run-8/RETURN.md are permitted. No other project, Git, network, installation or publication operation is granted.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-10"
+      ]
+    },
+    {
+      "id": "S1-11",
+      "kind": "scenario_fact",
+      "text": "The accepted project frame permits one direct Writer for this pure local repair; it imposes no independent-review condition or durable ticket for a run-local result. The owner nevertheless requests proposed Executive, Worker and Reviewer context documents for inspection in this exercise. They are not instructions to activate every proposed role.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-11"
+      ]
+    },
+    {
+      "id": "S1-12",
+      "kind": "scenario_fact",
+      "text": "The target return is the exact repair candidate identity, changed paths, observed checks and remaining uncertainty, to the owner through run-8/RETURN.md. This scope ends within that run. There are no external effects to reconcile and no request to release or adopt a product.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-12"
+      ]
+    },
+    {
+      "id": "M-cone",
+      "kind": "method_fact",
+      "text": "Select the smallest causally closed execution cone; relevant far-side seams stay included.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9695e2acf8bb27dff78b9086d7d9b062",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:604ebc178c75196aadd9bb78945fc26c"
+      ]
+    },
+    {
+      "id": "M-work",
+      "kind": "method_fact",
+      "text": "Mutation requires exact inherited authority; candidate_ready is not acceptance and return ends delegated work.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a1b22e933a120bf64a62b705eed525c6"
+      ]
+    },
+    {
+      "id": "M-direct",
+      "kind": "method_fact",
+      "text": "Direct Writer needs accepted-configuration permission and a sufficient capable context; identity/authority bindings remain required.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d208720729d40d8ebc56e5ca8d08e621"
+      ]
+    },
+    {
+      "id": "M-review",
+      "kind": "method_fact",
+      "text": "No universal review requirement; Reviewer is assessment-only under its own grant.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1367a360c53ba1b053dedacb082887b0"
+      ]
+    },
+    {
+      "id": "M-reuse",
+      "kind": "method_fact",
+      "text": "Invalidate affected support on material input/evidence/subject change, changed bound basis, or revising observation; preserve independent valid survivors.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5"
+      ]
+    },
+    {
+      "id": "M-independence",
+      "kind": "method_fact",
+      "text": "Independent semantic judgment requires non-authorship, evidence independence and governing actor-family policy.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9c15107e315077f7ca89572a5a5ecdbf"
+      ]
+    },
+    {
+      "id": "D-frontier",
+      "kind": "context_decision",
+      "text": "Select one proposed separately bound direct Writer for the local implementation repair and focused in-memory proof; concrete activation bindings remain pending.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-01",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-02",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-04",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-05",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-06",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-07",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-08",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-10",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-11",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d208720729d40d8ebc56e5ca8d08e621"
+      ]
+    },
+    {
+      "id": "I-evidence",
+      "kind": "inference",
+      "text": "From S1-03 and S1-09, diagnosis and old leaf smoke cannot establish the successor closure/budget/global-validation claims.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-03",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-09",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5"
+      ]
+    },
+    {
+      "id": "D-review-inactive",
+      "kind": "context_decision",
+      "text": "Reviewer context remains inactive; an exact later grant, subject/evidence/result route and applicable independence policy are required for activation.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-09",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-11",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1367a360c53ba1b053dedacb082887b0"
+      ]
+    },
+    {
+      "id": "D-return",
+      "kind": "context_decision",
+      "text": "Return exact repair candidate and observations to owner via run-8/RETURN.md; no acceptance, release, adoption or durable ticket inferred.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-11",
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-12",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a1b22e933a120bf64a62b705eed525c6"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "S1-02",
+      "to": "D-frontier",
+      "type": "governs",
+      "reason": "The supplied domain, requirement and design predicate must remain satisfied by the bounded repair.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-02"
+      ]
+    },
+    {
+      "from": "S1-04",
+      "to": "D-frontier",
+      "type": "governs",
+      "reason": "The supplied domain, requirement and design predicate must remain satisfied by the bounded repair.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-04"
+      ]
+    },
+    {
+      "from": "S1-05",
+      "to": "D-frontier",
+      "type": "governs",
+      "reason": "The supplied domain, requirement and design predicate must remain satisfied by the bounded repair.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-05"
+      ]
+    },
+    {
+      "from": "S1-06",
+      "to": "D-frontier",
+      "type": "governs",
+      "reason": "The supplied domain, requirement and design predicate must remain satisfied by the bounded repair.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-06"
+      ]
+    },
+    {
+      "from": "S1-07",
+      "to": "D-frontier",
+      "type": "governs",
+      "reason": "The supplied domain, requirement and design predicate must remain satisfied by the bounded repair.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-07"
+      ]
+    },
+    {
+      "from": "S1-08",
+      "to": "D-frontier",
+      "type": "governs",
+      "reason": "The supplied domain, requirement and design predicate must remain satisfied by the bounded repair.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-08"
+      ]
+    },
+    {
+      "from": "S1-10",
+      "to": "D-frontier",
+      "type": "conditions_selection",
+      "reason": "The proposed frontier inherits only the permitted capable direct-Writer scope.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-10"
+      ]
+    },
+    {
+      "from": "S1-11",
+      "to": "D-frontier",
+      "type": "conditions_selection",
+      "reason": "The proposed frontier inherits only the permitted capable direct-Writer scope.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-11"
+      ]
+    },
+    {
+      "from": "M-direct",
+      "to": "D-frontier",
+      "type": "conditions_selection",
+      "reason": "The proposed frontier inherits only the permitted capable direct-Writer scope.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:d208720729d40d8ebc56e5ca8d08e621"
+      ]
+    },
+    {
+      "from": "M-cone",
+      "to": "D-frontier",
+      "type": "conditions_selection",
+      "reason": "The proposed frontier inherits only the permitted capable direct-Writer scope.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9695e2acf8bb27dff78b9086d7d9b062"
+      ]
+    },
+    {
+      "from": "S1-03",
+      "to": "I-evidence",
+      "type": "limits_support",
+      "reason": "Supplied observation or prior narrow smoke is not successor proof.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-03"
+      ]
+    },
+    {
+      "from": "S1-09",
+      "to": "I-evidence",
+      "type": "limits_support",
+      "reason": "Supplied observation or prior narrow smoke is not successor proof.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-09"
+      ]
+    },
+    {
+      "from": "M-reuse",
+      "to": "I-evidence",
+      "type": "governs_validity",
+      "reason": "Exact applicability is required before reusing evidence.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5"
+      ]
+    },
+    {
+      "from": "S1-11",
+      "to": "D-review-inactive",
+      "type": "makes_inactive",
+      "reason": "The accepted frame requires no independent review.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-11"
+      ]
+    },
+    {
+      "from": "M-review",
+      "to": "D-review-inactive",
+      "type": "limits_activation",
+      "reason": "A proposed review does not create its own authority.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:1367a360c53ba1b053dedacb082887b0"
+      ]
+    },
+    {
+      "from": "M-independence",
+      "to": "D-review-inactive",
+      "type": "conditions_future_activation",
+      "reason": "Any later independent claim needs its actual non-author and evidence policy.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:9c15107e315077f7ca89572a5a5ecdbf"
+      ]
+    },
+    {
+      "from": "D-frontier",
+      "to": "D-return",
+      "type": "returns_to",
+      "reason": "The bounded repair ends at the named owner return.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-12"
+      ]
+    },
+    {
+      "from": "S1-12",
+      "to": "D-return",
+      "type": "sets_consumer_and_stop",
+      "reason": "Run-local candidate/evidence goes to owner, with no release/adoption.",
+      "source_refs": [
+        "/Users/jim/src/apps/specification_methodology/stdo_skills/.ai-workspace/work/STDO_CONTEXT_GENERATION_001/inputs/S1.md@sha256:acd89137b657a7d0025ae98133721fcd3f3f91dd3c4aa99e0d133a9a38a774a4#S1-12"
+      ]
+    },
+    {
+      "from": "M-work",
+      "to": "D-return",
+      "type": "withholds_acceptance",
+      "reason": "Candidate readiness and self-review confer no acceptance.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:a1b22e933a120bf64a62b705eed525c6"
+      ]
+    },
+    {
+      "from": "M-reuse",
+      "to": "D-return",
+      "type": "invalidates_affected_reliance",
+      "reason": "Changes to bound subject/basis/evidence or revising observations require affected result refresh.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/formal/current-full/model.json@sha256:b40ecc595d1a58ad96a9ba0be4942e015123224adee1832a58a6c3b53f21eeb7#urn:a-c:generation:ba37e2825e4e3c758a5cfaec:record:177ffff4a573bab836e660497fabaed5"
+      ]
+    }
+  ],
+  "limitations": [
+    "Explanatory graph of proposed contexts, not formal verification, admission, execution, review, acceptance or dispatch.",
+    "Model projection conserves only declared governing closure; no semantic-fidelity or complete-method guarantee follows, and absent edges do not remove obligations.",
+    "Scenario coordinates are fictional fixture facts; no fictional paths were accessed.",
+    "All cases share this generator session in S1, S2, S3 order; later cases have carryover. Host context and general shell are not isolated by an enforced acquisition gate."
+  ]
+}

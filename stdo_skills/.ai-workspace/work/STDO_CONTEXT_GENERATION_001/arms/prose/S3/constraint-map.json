@@ -1,0 +1,753 @@
+{
+  "schema": "stdo.context-generation.constraint-map/1",
+  "scenario": "S3",
+  "nodes": [
+    {
+      "id": "S-COMP",
+      "kind": "scenario_fact",
+      "text": "AtlasSuite consumes ServiceApp/ReportApp, both consume RulesEngine, which consumes leaf CodecLeaf. COMP-6 binds role-specific direct edges; diamond provider identity must agree; tenants and Products retain independent ownership.",
+      "source_refs": [
+        "S3-01",
+        "S3-02",
+        "S3-03",
+        "S3-04",
+        "S3-05"
+      ]
+    },
+    {
+      "id": "S-LAW",
+      "kind": "scenario_fact",
+      "text": "CL-R7 distinguishes unavailable missing limit from explicit zero; RE-R12 preserves results/diagnostics; accepted RE-D8 changes adapters, not evaluator, and allows source-export candidate preparation.",
+      "source_refs": [
+        "S3-08",
+        "S3-09",
+        "S3-10"
+      ]
+    },
+    {
+      "id": "S-LOCAL",
+      "kind": "scenario_fact",
+      "text": "py-r22 substitutes zero; ts-r17 has unavailable branch but no current comparison; approved local checks cover missing/zero/positive/diagnostics/evaluator inputs.",
+      "source_refs": [
+        "S3-11",
+        "S3-27"
+      ]
+    },
+    {
+      "id": "S-OLD-PY",
+      "kind": "scenario_fact",
+      "text": "PY-R6 binds unchanged py-r22 to old leaf-r8 meaning; changed dependency meaning is not covered.",
+      "source_refs": [
+        "S3-12"
+      ]
+    },
+    {
+      "id": "S-SEVERITY",
+      "kind": "scenario_fact",
+      "text": "PY-F3 is severity 3 on 1-highest/5-lowest with ServiceApp and ReportApp impact and no demonstrated containment; older typo S3 belongs to S0-S4 and another subject.",
+      "source_refs": [
+        "S3-13",
+        "S3-14"
+      ]
+    },
+    {
+      "id": "S-STALE",
+      "kind": "scenario_fact",
+      "text": "rep-r8 predates CL-R7; proof-r8 establishes only its structural/view claim, not leaf-r9 currentness or source fidelity; rep-r9 is absent and no reacceptance certificate exists.",
+      "source_refs": [
+        "S3-15",
+        "S3-16",
+        "S3-17"
+      ]
+    },
+    {
+      "id": "S-EXPOSURE",
+      "kind": "scenario_fact",
+      "text": "Both tenant Workers may read full leaf-r9 export; only Executive may read private trace and cannot redistribute; proposed Python packet contains an ineligible private-trace paragraph.",
+      "source_refs": [
+        "S3-18",
+        "S3-19",
+        "S3-20"
+      ]
+    },
+    {
+      "id": "S-PY-GRANT",
+      "kind": "scenario_fact",
+      "text": "PY-23 is admitted with Python adapter/tests/design/requirements/approved-export reads and three exact writes; only table-17 is the TS behavior edge. No provider edits, model regeneration, adoption, publication or network.",
+      "source_refs": [
+        "S3-21",
+        "S3-22",
+        "S3-28"
+      ]
+    },
+    {
+      "id": "S-EXEC",
+      "kind": "scenario_fact",
+      "text": "Executive has named control/export/own-evidence/private-trace access and may issue admitted Python work, but no Product edits or invented edges.",
+      "source_refs": [
+        "S3-24"
+      ]
+    },
+    {
+      "id": "S-REVIEW",
+      "kind": "scenario_fact",
+      "text": "Non-author Reviewer has exact candidate/law/export/receipt/table read set, in-memory checks and PY-23/REVIEW.md write; earlier author cannot gain independence by role rename.",
+      "source_refs": [
+        "S3-25",
+        "S3-26"
+      ]
+    },
+    {
+      "id": "S-DOWNSTREAM",
+      "kind": "scenario_fact",
+      "text": "TS comparison read-only; provider owner can prepare docs but final artifact absent/unaccepted; SA-12 draft/unadmitted with no source mutation; RA-7 impact assessment admitted/read-only and implementation unexposed.",
+      "source_refs": [
+        "S3-23",
+        "S3-29",
+        "S3-30",
+        "S3-31"
+      ]
+    },
+    {
+      "id": "S-OLD-INTEGRATION",
+      "kind": "scenario_fact",
+      "text": "INT-61 remains observed installation evidence for released 6.1 only; no current 6.2 composed runtime result exists.",
+      "source_refs": [
+        "S3-32"
+      ]
+    },
+    {
+      "id": "S-REMOTE",
+      "kind": "scenario_fact",
+      "text": "PUB-4 upload accepted before disconnect, no final receipt/digest/absence, parent exited but helper/destination unresolved; query-only reconciliation operator has not run and may not upload/delete/retry.",
+      "source_refs": [
+        "S3-33",
+        "S3-34",
+        "S3-35"
+      ]
+    },
+    {
+      "id": "S-RELEASE",
+      "kind": "scenario_fact",
+      "text": "6.1 adoption and CodecLeaf 3.0 dependency remain; 3.1/6.2 are prospective candidates, no publication/tag grant or immutable-cut replacement; Product acceptance/publication/adoption owners differ.",
+      "source_refs": [
+        "S3-06",
+        "S3-07",
+        "S3-36",
+        "S3-39"
+      ]
+    },
+    {
+      "id": "S-COHORT",
+      "kind": "scenario_fact",
+      "text": "Cohort requires provider/shared contract/both tenants/consumer candidates/current representation/structural evidence/docs; identities unresolved; both local and composed predicates required while Python may return earlier.",
+      "source_refs": [
+        "S3-37",
+        "S3-38"
+      ]
+    },
+    {
+      "id": "S-RETURN",
+      "kind": "scenario_fact",
+      "text": "COMP-6 ledger has per-Product links; generation only proposes changes. Current source/grants coexist with bounded old evidence and unresolved consequences; requested output is one next frontier, not whole graph execution.",
+      "source_refs": [
+        "S3-40",
+        "S3-41",
+        "S3-42"
+      ]
+    },
+    {
+      "id": "M-EDGE",
+      "kind": "method_fact",
+      "text": "Every directed relation retains actor/purpose/operation/return authority; shared leaves do not union grants and work chooses a dependency-ready frontier.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md sha256:7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 PC-03-PC-07 lines 895-995",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/TICKETS.md sha256:86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67 Multi-build-tenant independence lines 340-386"
+      ]
+    },
+    {
+      "id": "M-CLEAN",
+      "kind": "method_fact",
+      "text": "Permission covers source/derivation/provenance and prior exposure; allowed paths/summaries or fresh labels cannot sanitize prohibited content; adequate context still requires actual boundary binding.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md sha256:7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 PC-05 lines 939-963"
+      ]
+    },
+    {
+      "id": "M-CURRENT",
+      "kind": "method_fact",
+      "text": "A derived surface is stale when a named material source changes; currentness requires regeneration or explicit reacceptance, and source identity alone proves neither fidelity nor sufficiency.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d Staleness lines 902-937"
+      ]
+    },
+    {
+      "id": "M-REUSE",
+      "kind": "method_fact",
+      "text": "Changed dependency invalidates affected reliance even with unchanged subject bytes; retain historical/narrow evidence only with supported applicability.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/FOUNDATIONS.md sha256:7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e Change impact and evidence reuse lines 1378-1462"
+      ]
+    },
+    {
+      "id": "M-TRIAGE",
+      "kind": "method_fact",
+      "text": "Severity-3 downstream impact must be assessed; material dependency effects normally call for repair, not automatic priority/P3 or a regrading of another scale.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EXECUTIVE_BASELINE.md sha256:ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff Technical triage/selected severity lines 407-500"
+      ]
+    },
+    {
+      "id": "M-REVIEW",
+      "kind": "method_fact",
+      "text": "Derive expectations before exact candidate exposure; no own-authorship assessment; actual evidence/family conditions and result/triage remain distinct from disposition.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EVALUATION.md sha256:b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 Independent assessment/results lines 190-336"
+      ]
+    },
+    {
+      "id": "M-EFFECT",
+      "kind": "method_fact",
+      "text": "Completion and effect-end need subject evidence; timeout/actor exit do not prove absence or completion, and uncertain effects reconcile before dependent action/repetition.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d Effects 1114-1163; work state/restart 1370-1457"
+      ]
+    },
+    {
+      "id": "M-CLOSURE",
+      "kind": "method_fact",
+      "text": "Every applicable obligation needs valid exact evidence; local result and review events do not satisfy missing composed conditions.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/TICKETS.md sha256:86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67 Condition-based closure/reuse lines 1234-1276"
+      ]
+    },
+    {
+      "id": "M-RELEASE",
+      "kind": "method_fact",
+      "text": "Declared cohort keeps complete exact members and distinct authorities; preparation, acceptance, publication and adoption are different conditions; old immutable releases retain identity.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/RELEASE.md sha256:eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628 Adoption 428-483; cohort 552-618; acceptance 693-734"
+      ]
+    },
+    {
+      "id": "I-PY",
+      "kind": "inference",
+      "text": "From CL-R7 change and PY-R6 old basis, prior semantic acceptance is inapplicable to the current requirement despite py-r22 byte identity.",
+      "source_refs": [
+        "S3-08",
+        "S3-12",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/FOUNDATIONS.md sha256:7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e Change impact and evidence reuse lines 1378-1462"
+      ]
+    },
+    {
+      "id": "I-REP",
+      "kind": "inference",
+      "text": "From old model inputs/proof subject and missing successor, structural proof does not establish current semantic fidelity; local source-export repair remains possible.",
+      "source_refs": [
+        "S3-15",
+        "S3-16",
+        "S3-17",
+        "S3-18",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d Staleness lines 902-937"
+      ]
+    },
+    {
+      "id": "D-PACKET",
+      "kind": "context_decision",
+      "text": "Reject contaminated executable packet; draft replacement solely from authorized sources; actual eligibility/prior exposure/host boundary must be resolved before dispatch.",
+      "source_refs": [
+        "S3-18",
+        "S3-19",
+        "S3-20",
+        "S3-22",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md sha256:7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 PC-05 lines 939-963"
+      ]
+    },
+    {
+      "id": "D-PY",
+      "kind": "context_decision",
+      "text": "Select local admitted Python repair after valid packet/actor binding; preserve evaluator and return candidate before later provider/cohort readiness, without actual execution.",
+      "source_refs": [
+        "S3-10",
+        "S3-21",
+        "S3-27",
+        "S3-28",
+        "S3-38"
+      ]
+    },
+    {
+      "id": "D-REPAIR",
+      "kind": "context_decision",
+      "text": "Recommend/select admitted local repair for materially dependent PY-F3; retain original severity/scale and leave priority/cutoff/disposition to the actual owner policy.",
+      "source_refs": [
+        "S3-13",
+        "S3-14",
+        "S3-28",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EXECUTIVE_BASELINE.md sha256:ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff Technical triage/selected severity lines 407-500"
+      ]
+    },
+    {
+      "id": "D-REVIEW",
+      "kind": "context_decision",
+      "text": "Condition review on exact Python candidate and permitted independent capable actor; scope to local predicates and named report; no preset verdict.",
+      "source_refs": [
+        "S3-25",
+        "S3-26",
+        "S3-27",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EVALUATION.md sha256:b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 Independent assessment/results lines 190-336"
+      ]
+    },
+    {
+      "id": "D-LATER",
+      "kind": "context_decision",
+      "text": "Retain independent provider, TS comparison, SA-12 admission and RA-7 assessment obligations and exact owner returns; no tenant/consumer grant union.",
+      "source_refs": [
+        "S3-23",
+        "S3-29",
+        "S3-30",
+        "S3-31",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md sha256:7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 PC-03-PC-07 lines 895-995"
+      ]
+    },
+    {
+      "id": "D-RECONCILE",
+      "kind": "context_decision",
+      "text": "Keep PUB-4 completion_unknown and end-unestablished. Separate operator may only query/record; if insufficient to settle next-dependent precondition, return residual rather than inspect/retry without grant.",
+      "source_refs": [
+        "S3-33",
+        "S3-34",
+        "S3-35",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d Effects 1114-1163; work state/restart 1370-1457"
+      ]
+    },
+    {
+      "id": "D-COHORT",
+      "kind": "context_decision",
+      "text": "Withhold 6.2 cohort readiness pending exact member/diamond/provider identity, both tenant/local/composed evidence, current representation/proof/docs and settled relevant publication state.",
+      "source_refs": [
+        "S3-04",
+        "S3-10",
+        "S3-29",
+        "S3-32",
+        "S3-37",
+        "S3-38",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/TICKETS.md sha256:86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67 Condition-based closure/reuse lines 1234-1276"
+      ]
+    },
+    {
+      "id": "D-RELEASE",
+      "kind": "context_decision",
+      "text": "No publication/tag/replacement/adoption authority is inferred from release preparation; preserve 6.1 pins and Product-specific decision owners.",
+      "source_refs": [
+        "S3-06",
+        "S3-36",
+        "S3-39",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/RELEASE.md sha256:eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628 Adoption 428-483; cohort 552-618; acceptance 693-734"
+      ]
+    },
+    {
+      "id": "D-RETURN",
+      "kind": "context_decision",
+      "text": "Python and Reviewer return separately to RulesEngine Executive; allowed per-Product projections feed COMP-6 ledger without actual generator/Executive mutation or automatic successor activation.",
+      "source_refs": [
+        "S3-28",
+        "S3-40",
+        "S3-42",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/TICKETS.md sha256:86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67 Condition-based closure/reuse lines 1234-1276"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "from": "S-COMP",
+      "to": "D-COHORT",
+      "type": "preserves_dependency_identity",
+      "reason": "Both diamond paths need consistent selected provider identities and separately valid edge grants.",
+      "source_refs": [
+        "S3-02",
+        "S3-04",
+        "S3-05",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md sha256:7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 PC-03-PC-07 lines 895-995"
+      ]
+    },
+    {
+      "from": "M-EDGE",
+      "to": "D-COHORT",
+      "type": "preserves_dependency_identity",
+      "reason": "Both diamond paths need consistent selected provider identities and separately valid edge grants.",
+      "source_refs": [
+        "S3-02",
+        "S3-04",
+        "S3-05",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md sha256:7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 PC-03-PC-07 lines 895-995"
+      ]
+    },
+    {
+      "from": "S-LAW",
+      "to": "D-PY",
+      "type": "constrains_frontier",
+      "reason": "Current source law and exact local grant bound the adapter repair and proof population.",
+      "source_refs": [
+        "S3-08",
+        "S3-09",
+        "S3-10",
+        "S3-21",
+        "S3-27",
+        "S3-28"
+      ]
+    },
+    {
+      "from": "S-PY-GRANT",
+      "to": "D-PY",
+      "type": "constrains_frontier",
+      "reason": "Current source law and exact local grant bound the adapter repair and proof population.",
+      "source_refs": [
+        "S3-08",
+        "S3-09",
+        "S3-10",
+        "S3-21",
+        "S3-27",
+        "S3-28"
+      ]
+    },
+    {
+      "from": "S-LOCAL",
+      "to": "D-PY",
+      "type": "constrains_frontier",
+      "reason": "Current source law and exact local grant bound the adapter repair and proof population.",
+      "source_refs": [
+        "S3-08",
+        "S3-09",
+        "S3-10",
+        "S3-21",
+        "S3-27",
+        "S3-28"
+      ]
+    },
+    {
+      "from": "S-EXPOSURE",
+      "to": "D-PACKET",
+      "type": "rejects_information_route",
+      "reason": "Private-trace access belongs to Executive, not Worker; pasted content lacks its own edge.",
+      "source_refs": [
+        "S3-18",
+        "S3-19",
+        "S3-20"
+      ]
+    },
+    {
+      "from": "M-CLEAN",
+      "to": "D-PACKET",
+      "type": "requires_actual_eligibility",
+      "reason": "Removing text cannot undo prior exposure; actual host/inheritance must satisfy the selected boundary.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md sha256:7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 PC-05 lines 939-963"
+      ]
+    },
+    {
+      "from": "D-PACKET",
+      "to": "D-PY",
+      "type": "requires_before_dispatch",
+      "reason": "Local work has a grant but needs a sufficient eligible recipient packet and actual binding.",
+      "source_refs": [
+        "S3-20",
+        "S3-22",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md sha256:7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 PC-05 lines 939-963"
+      ]
+    },
+    {
+      "from": "S-EXEC",
+      "to": "D-PACKET",
+      "type": "does_not_transfer_authority",
+      "reason": "Wider Executive reads permit no redistribution or missing Worker grant.",
+      "source_refs": [
+        "S3-19",
+        "S3-24",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/PRODUCT_DEFINITION.md sha256:7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523 PC-03-PC-07 lines 895-995"
+      ]
+    },
+    {
+      "from": "S-OLD-PY",
+      "to": "I-PY",
+      "type": "invalidates_affected_assessment",
+      "reason": "PY-R6 selected old leaf meaning; unchanged candidate bytes do not preserve semantic applicability.",
+      "source_refs": [
+        "S3-12",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/FOUNDATIONS.md sha256:7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e Change impact and evidence reuse lines 1378-1462"
+      ]
+    },
+    {
+      "from": "M-REUSE",
+      "to": "I-PY",
+      "type": "conditions_retained_evidence",
+      "reason": "Historical evidence survives in original scope; current reliance requires preservation support.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/FOUNDATIONS.md sha256:7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e Change impact and evidence reuse lines 1378-1462"
+      ]
+    },
+    {
+      "from": "S-STALE",
+      "to": "I-REP",
+      "type": "limits_structural_proof",
+      "reason": "proof-r8 is bound to rep-r8 only; rep-r9/currentness/fidelity evidence does not exist.",
+      "source_refs": [
+        "S3-15",
+        "S3-16",
+        "S3-17"
+      ]
+    },
+    {
+      "from": "M-CURRENT",
+      "to": "I-REP",
+      "type": "requires_current_source",
+      "reason": "Use deciding source law until regeneration or justified reacceptance establishes currentness.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d Staleness lines 902-937"
+      ]
+    },
+    {
+      "from": "I-REP",
+      "to": "D-PY",
+      "type": "allows_source_based_local_work",
+      "reason": "Approved leaf-r9 export contains the local requirement; regeneration is not PY-23 authority or prerequisite.",
+      "source_refs": [
+        "S3-10",
+        "S3-18",
+        "S3-28"
+      ]
+    },
+    {
+      "from": "I-REP",
+      "to": "D-COHORT",
+      "type": "withholds_successor_evidence",
+      "reason": "Old model/proof cannot fill current representation/structural/fidelity obligations.",
+      "source_refs": [
+        "S3-16",
+        "S3-17",
+        "S3-37",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d Staleness lines 902-937"
+      ]
+    },
+    {
+      "from": "S-SEVERITY",
+      "to": "D-REPAIR",
+      "type": "supports_bounded_repair",
+      "reason": "Downstream impacts are material and no containment is demonstrated.",
+      "source_refs": [
+        "S3-13"
+      ]
+    },
+    {
+      "from": "M-TRIAGE",
+      "to": "D-REPAIR",
+      "type": "separates_assessment_from_priority",
+      "reason": "Severity 3 is not P3; older S3 scale/subject is preserved independently.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EXECUTIVE_BASELINE.md sha256:ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff Technical triage/selected severity lines 407-500"
+      ]
+    },
+    {
+      "from": "D-REPAIR",
+      "to": "D-PY",
+      "type": "selects_authorized_response",
+      "reason": "Existing PY-23 repair grant covers the local response only.",
+      "source_refs": [
+        "S3-28"
+      ]
+    },
+    {
+      "from": "S-REVIEW",
+      "to": "D-REVIEW",
+      "type": "bounds_assessment",
+      "reason": "Only non-author recipient, authorized evidence/checks and named report are permitted.",
+      "source_refs": [
+        "S3-25",
+        "S3-26"
+      ]
+    },
+    {
+      "from": "M-REVIEW",
+      "to": "D-REVIEW",
+      "type": "requires_independent_expectations",
+      "reason": "No actual verdict, family independence or capability is supplied by role labels.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EVALUATION.md sha256:b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 Independent assessment/results lines 190-336"
+      ]
+    },
+    {
+      "from": "D-PY",
+      "to": "D-REVIEW",
+      "type": "supplies_exact_subject",
+      "reason": "Candidate identity must be bound; Worker return does not activate Reviewer automatically.",
+      "source_refs": [
+        "S3-25",
+        "S3-28",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EVALUATION.md sha256:b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 Independent assessment/results lines 190-336"
+      ]
+    },
+    {
+      "from": "S-DOWNSTREAM",
+      "to": "D-LATER",
+      "type": "retains_owner_conditions",
+      "reason": "Read-only grants, missing provider artifact and draft SA-12 remain distinct.",
+      "source_refs": [
+        "S3-23",
+        "S3-29",
+        "S3-30",
+        "S3-31"
+      ]
+    },
+    {
+      "from": "D-LATER",
+      "to": "D-COHORT",
+      "type": "requires_later_results",
+      "reason": "Exact provider/consumer candidates and both tenant claims are material cohort prerequisites.",
+      "source_refs": [
+        "S3-10",
+        "S3-37",
+        "S3-38"
+      ]
+    },
+    {
+      "from": "S-OLD-INTEGRATION",
+      "to": "D-COHORT",
+      "type": "does_not_establish_new_runtime",
+      "reason": "6.1 historical installation evidence supplies no 6.2 composed observation.",
+      "source_refs": [
+        "S3-32"
+      ]
+    },
+    {
+      "from": "S-REMOTE",
+      "to": "D-RECONCILE",
+      "type": "requires_subject_observation",
+      "reason": "Upload-accepted and parent exit leave final object and helper/end state unknown.",
+      "source_refs": [
+        "S3-33",
+        "S3-34",
+        "S3-35"
+      ]
+    },
+    {
+      "from": "M-EFFECT",
+      "to": "D-RECONCILE",
+      "type": "forbids_blind_retry",
+      "reason": "Neither completion_unknown nor unestablished end can be treated as safe absence/completion.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d Effects 1114-1163; work state/restart 1370-1457"
+      ]
+    },
+    {
+      "from": "D-RECONCILE",
+      "to": "D-COHORT",
+      "type": "withholds_dependent_remote_claim",
+      "reason": "No cohort/publication assertion may rely on unsettled PUB-4 effects.",
+      "source_refs": [
+        "S3-33",
+        "S3-34",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d Effects 1114-1163; work state/restart 1370-1457"
+      ]
+    },
+    {
+      "from": "D-RECONCILE",
+      "to": "D-PY",
+      "type": "does_not_block_independent_local_work",
+      "reason": "PY-23 source repair uses current authorized exports and no remote operation.",
+      "source_refs": [
+        "S3-18",
+        "S3-28",
+        "S3-38",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/ACTIVATION.md sha256:56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d Effects 1114-1163; work state/restart 1370-1457"
+      ]
+    },
+    {
+      "from": "S-COHORT",
+      "to": "D-COHORT",
+      "type": "requires_complete_claim_set",
+      "reason": "All declared current member identities and local/composed predicates remain required.",
+      "source_refs": [
+        "S3-37",
+        "S3-38"
+      ]
+    },
+    {
+      "from": "M-CLOSURE",
+      "to": "D-COHORT",
+      "type": "withholds_unsatisfied_conjunction",
+      "reason": "A local pass or review occurrence cannot discharge absent required results.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/TICKETS.md sha256:86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67 Condition-based closure/reuse lines 1234-1276"
+      ]
+    },
+    {
+      "from": "S-RELEASE",
+      "to": "D-RELEASE",
+      "type": "retains_separate_authority",
+      "reason": "Prepare-for-release supplies no tag/publication/adoption permission.",
+      "source_refs": [
+        "S3-06",
+        "S3-36",
+        "S3-39"
+      ]
+    },
+    {
+      "from": "M-RELEASE",
+      "to": "D-RELEASE",
+      "type": "conserves_immutable_cut_and_adoption",
+      "reason": "Accepted/published/delivered facts do not silently move consumer pins.",
+      "source_refs": [
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/RELEASE.md sha256:eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628 Adoption 428-483; cohort 552-618; acceptance 693-734"
+      ]
+    },
+    {
+      "from": "D-COHORT",
+      "to": "D-RELEASE",
+      "type": "necessary_not_sufficient",
+      "reason": "Even cohort readiness would not manufacture publication or consumer-adoption grants.",
+      "source_refs": [
+        "S3-36",
+        "S3-39",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/RELEASE.md sha256:eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628 Adoption 428-483; cohort 552-618; acceptance 693-734"
+      ]
+    },
+    {
+      "from": "D-PY",
+      "to": "D-RETURN",
+      "type": "returns_to_owner",
+      "reason": "PY-23 result belongs to RulesEngine Executive with exact evidence/residuals.",
+      "source_refs": [
+        "S3-28"
+      ]
+    },
+    {
+      "from": "D-REVIEW",
+      "to": "D-RETURN",
+      "type": "returns_to_decision_owner",
+      "reason": "Reviewer writes its granted report and returns without repairing or disposing.",
+      "source_refs": [
+        "S3-25",
+        "/Users/jim/.local/share/stdo-qualification/v3.0.5-rc.1/public-001/store/releases/v3.0.5-rc.1/standards/EVALUATION.md sha256:b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485 Independent assessment/results lines 190-336"
+      ]
+    },
+    {
+      "from": "S-RETURN",
+      "to": "D-RETURN",
+      "type": "bounds_durable_projection",
+      "reason": "Per-Product links feed COMP-6; actual ledger writes are excluded from generation.",
+      "source_refs": [
+        "S3-40",
+        "S3-41",
+        "S3-42"
+      ]
+    }
+  ],
+  "limitations": [
+    "Interpretive graph, not formal verification, native activation or scenario execution.",
+    "Fictional Product/control/artifact identities and grants are stipulated only; currentness assertions are not live receipts.",
+    "Generator never read fictional private trace or old representation/proof; their status is a supplied fact.",
+    "Actual recipient exposure, host clean-room enforcement, Product definition paths, complete priority/cutoff policy, actor-family and some operation bindings are unobserved.",
+    "Same session in S1/S2/S3 order; previous common/source/scenario context remains.",
+    "Host supplied memory summary and broad tools; no memory file, private evaluation checklist, other arm or old pilot was acquired.",
+    "No universal stable/RC publication profile or STDO-specific cohort member set is invented for AtlasSuite."
+  ]
+}
