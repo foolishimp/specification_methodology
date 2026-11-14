@@ -46,6 +46,20 @@ Read and apply
 execution contract or changing any surface. Continue only from its exactly-one
 verified selection; that selection grants no work or mutation authority.
 
+Resolve the accepted frame basis's default-flow selection through
+[the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis).
+Bind the present claim as incremental QA, bounded repair/work closure, or a
+named acceptance/qualification/release boundary. Follow its causal triage,
+owner re-entry and stopping route without importing newer law or inventing
+local workflow. Preserve direct sufficient Writer entry.
+
+Apply [Work Carrier And Context Continuity](../../references/COORDINATED_HANDOFF.md#work-carrier-and-context-continuity)
+before constructing or resuming task context. Bind the current work record and
+its actual evidence, preserve valid completed work, and return step-produced
+facts and continuation state through the existing granted result/update route.
+The owning laws are TICKETS carrier-to-execution and ACTIVATION context/restart;
+the skill and any guide only project them.
+
 ## Acquire The Deciding Owners
 
 Enter through the verified definition's declared bootstrap entrypoint. Then
@@ -83,6 +97,14 @@ edit violates an unchanged Public requirement, reject or repair the candidate
 inside the existing grant. Re-enter the requirement owner when the selected
 outcome needs changed governing meaning. Candidate bytes cannot choose that
 outcome or enlarge the grant.
+
+Diagnose discrepancies against the four causes in `ACTIVATION` feedback and
+diagnosis: defective realisation, inadequate requirement/design, inaccurate
+predictive model, or insufficient observation. Repeated repairs or growing
+complexity also require `REFERENCE_FRAME` diagnostic order, including frame,
+basis, capability and evidence. Re-enter the supported cause's owner; retain
+uncertain alternatives and the next bounded discriminator. A changed outcome
+or scope needs its owner and updated admission before dependent effects.
 
 ## Establish The Work Basis
 

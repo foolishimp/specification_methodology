@@ -1,94 +1,145 @@
 # Using STDO
 
-This guide is the practical entrypoint for a person or LLM entering an
-STDO-governed project. It answers five questions:
+Start with the Product outcome you need and the evidence that would establish
+it. Resolve the exact method and existing work grant, then use the smallest
+sufficient work or review path. This guide and the skills route attention;
+the selected installed standards and Product-owned authority decide.
 
-1. How do I get ready to work?
-2. How do I iterate requirements?
-3. What authorizes code development and testing?
-4. How do I monitor progress and help triage?
-5. How do I issue work to another actor without writing a replacement brief?
-
-This guide and its companion skills are non-deciding interaction projections.
-The project's exact installed STDO cut and Product-owned authority remain the
-governing sources.
+This guide belongs to the exact native 3.1.0-rc.1 cut. It includes the
+adoptable SDLC default and separate Skills/Purpose Context setup. An existing
+Product retains its selected complete method and frame basis until its own
+authorized adoption. The fixed bootstrap below is for a Product explicitly
+selecting this release.
 
 ## Contents
 
+- [The Operating Loop](#the-operating-loop)
+- [Keep The Ticket And Context In Step](#keep-the-ticket-and-context-in-step)
 - [Get Ready To Work](#1-get-ready-to-work)
+- [Install Current Host Bindings](#install-current-host-bindings)
+- [Choose And Consume Task Context](#choose-and-consume-task-context)
+- [New Project: Fixed Release Bootstrap](#new-project)
 - [Iterate Requirements](#2-iterate-requirements)
 - [Start Code Development And Testing](#3-start-code-development-and-testing)
 - [Monitor And Help Triage](#4-monitor-and-help-triage)
 - [Coordinate Work And Review](#coordinate-work-and-review)
-- [Common Stops](#common-stops)
 - [Read The Installed Documentation](#read-the-installed-documentation)
+- [Common Stops](#common-stops)
 - [Owning References](#owning-references)
-
-## Read The Installed Documentation
-
-STDO 3.0.5-rc.1 installs its [documentation home](../../../standards/documentation/index.html),
-[3D/2D/Layered constraint explorer](../../../standards/documentation/constraint-explorer/index.html)
-and [current Lean proof reader](../../../standards/documentation/proofs/index.html)
-with the ordinary method payload. Resolve the installed entry:
-
-```sh
-stdo resolve stdo://releases/v3.0.5-rc.1/standards/documentation/index.html
-```
-
-Open the returned `path` in a browser. Search constraints, read their complete
-statements and source passages, and follow labelled connections with a reading
-trail. Use Files to discover records by source path and switch the middle view
-without losing the selection. Layered works without WebGL. No Graphify, Lean
-or Node installation is needed to read these offline files.
-
-The [reading guide](../../../standards/documentation/README.md) binds the current
-model to all 68 selected semantic source members, including native workflow
-contracts. The proof reader retains the actual finite-model and selected-view
-verification, its sources, complete compiled evidence and limits. Prose fidelity,
-semantic acceptance and installed runtime verification remain separate claims.
-Use the owning installed standards for method decisions.
-
-The [bundled tooling guide](../../../standards/tooling/README.md) exposes the
-current a_c, Representation, Axiom Indexer and both host Skills packages.
-The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1/stack-release-v3.0.5-rc.1.json)
-is their external binding to this native installation. Generated readers do not
-contain their own final release manifest digest.
-
-The [frozen ABI code example](../../../standards/documentation/code-explorer/index.html)
-retains the exact ABIogenesis T-019 artifact published with STDO 3.0.4. Its
-[example identity](../../../standards/documentation/code-explorer/EXAMPLE.json)
-records that custody; it is not current ABI qualification or current STDO
-model/proof evidence.
 
 ## The Operating Loop
 
-Keep these distinct:
+Bind the actual claim before work: incremental QA, bounded repair/work closure,
+or a named Product acceptance, qualification or release. A local test result
+supports its tested predicate; it does not establish a larger boundary.
 
-- an immutable STDO cut defines the selected method;
-- `stdo_<label>.json` selects that cut and locates the Product's actual
-  authority, realization, and work carriers;
-- the project owns its Goals, Intent, Product, requirements, design, code,
-  tickets, decisions, and evidence; and
-- skills route common requests without becoming another method, workflow
-  engine, prompt engine, or source of truth.
+The [SDLC default](../../../standards/SDLC_DEFAULTS.md) projects existing law:
 
-```text
-request
-  -> verify the exact basis and current outcome
-  -> triage, select the smallest work carrier, and admit a run contract
-  -> re-enter at the first changed layer
-  -> update constitutional truth and accepted design when required
-  -> construct code and tests when authorized
-  -> return an exact candidate
-  -> independently review when required
-  -> Product-owned disposition and checkpoint
-  -> status, evidence, and the next authorized action
-```
+1. **Work and check.** Use the existing admitted carrier and a sufficient direct
+   Writer where the accepted frame basis permits it. Derive the smallest
+   adequate falsifier from the requirement and accepted design.
+2. **Diagnose a discrepancy.** Use observations to distinguish the causes
+   below; preserve uncertainty when the evidence cannot decide.
+3. **Re-enter its owner.** Admit any changed requirement, design, model, outcome
+   or territory before dependent work. Reuse the existing carrier when it
+   still covers the work; an unrelated finding does not enlarge the grant.
+4. **Verify the affected claims.** Reconcile the changed owners, implementation,
+   tests and displaced paths. Check the applicability of retained evidence;
+   rerun or reassess what the change invalidates.
+5. **Continue or close within the grant.** Close only when applicable conditions
+   are satisfied, required judgments exist and no active non-closure condition
+   remains. Return the exact result and residuals at the activation boundary.
 
-STDO constrains governed relations. It does not prescribe an actor count,
-repository layout, prompt construction engine, internal decomposition, search
-procedure, or tool sequence where those choices cannot change a governed
-semantic, authority, evidence, safety, or release property.
+| Supported cause | Next route |
+|---|---|
+| Defective realisation under adequate unchanged law | Repair the realised surface and verify no upstream drift. |
+| Inadequate requirement or design | Re-enter the first inadequate owner; derive downstream work from its admitted change. |
+| Inaccurate predictive model | Re-enter its owner with the failed prediction and observation; reassess dependent claims. |
+| Insufficient observation | Obtain the missing admissible evidence or retain `indeterminate` and withhold the dependent claim. |
+
+Repeated failure, increasing repair cost or a capability limit calls for the
+[frame diagnostic order](../../../standards/REFERENCE_FRAME.md#diagnostic-order):
+check frame family, exact subject/basis, actor capability and evidence before
+adding variables, joins or frames. The observation does not itself authorize
+another code patch or a requirement change.
+
+For a basis adopting the
+[Executive QA cadence](../../../standards/EXECUTIVE_BASELINE.md#qa-cadence-and-repair-rechecks),
+a mechanically decidable repair may close on its failing-before/passing-after
+reproduction, declared suite and other applicable conditions. An independent
+bounded recheck remains required when the boundary requires or claims
+independence, the repair concerns a hard stop or material capture fidelity,
+there is no reproducing test, or selected review left coverage incomplete.
+Other accepted configurations retain their own conditions. No fresh review,
+coordinator, ticket or numeric policy follows merely from making a repair.
+
+A review binds one exact claim, subject, coverage population, exclusions and
+stopping condition. Return finite findings and gaps; a later material finding
+receives a new bounded disposition. Reviewer severity and causal confidence
+are evidence. Product priority, boundary effect and `accept`, `local_repair`,
+`re_enter` or `reject` remain the authorized decision owner's responsibility.
+The [worked cases](../../../standards/examples/SDLC_DEFAULTS.md) explain these
+routes; they are not actual-use evidence.
+
+The [frame-basis template](../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection)
+proposes this default ready for adoption. An existing Product selects it through
+its authorized frame-basis change, binding exact projection identity and the
+operative method. Merely finding this guide or installing a skill selects
+nothing. Preserve the Product's accepted alternatives, optional profiles,
+explicit gates and policy choices. Follow the
+[selected review flow](COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis)
+against the actual basis; do not import newer law into an older installation.
+
+## Keep The Ticket And Context In Step
+
+The constitutional application belongs to
+[TICKETS carrier-to-execution](../../../standards/TICKETS.md#5-from-carrier-to-execution),
+with generic context/restart owned by ACTIVATION. The selected default frames
+project those owners; native Skills apply them. This guide explains their use
+and is not the authority that makes them binding.
+
+The [ticket record](../../../standards/TICKETS.md#ticket-records) is the durable
+source of truth for its unit of work. After the actor's own named control intake,
+resolve the current ticket through the Product Definition and use its admitted
+scope, linked sources and evidence to reconstruct the next task. The ticket owns
+its work state; governing specifications own meaning and current workspace
+evidence decides what has actually happened. An active label is not execution
+admission, and a ticket claim cannot overrule contrary evidence.
+
+Keep continuation information in the existing ticket and its linked records:
+outcome and scope, basis and grant, closure criteria, current checkpoint,
+applicable decisions and owner rulings, observed verification, surviving
+obligations, uncertain effects and the next already-authorized action/owner.
+Record facts and evidence rather than replacing them with a passing summary.
+Use existing fields and qualified links instead of duplicating every source or
+log. A Reviewer returns its granted report; the authorized Writer performs any
+ticket-state update. Where the selected work law permits a sufficient sprint
+entry or run contract, no redundant durable ticket is required.
+
+[Context construction](../../../standards/ACTIVATION.md#2-context-construction-under-an-envelope)
+projects the material needed for the next decision. Use the matching Purpose
+Context index and follow deciding source/evidence references when the derived
+surface is stale or insufficient. References must be accessible and retain the
+consumer's required distinctions; names and hashes alone are not meaning.
+Keep irrelevant corpus material out without dropping coupled obligations.
+Measure fit before acquisition where the selected envelope declares a context
+capacity, naming the measured boundary and unmeasured host inputs. If material
+does not fit, refine or sequence the work, use a preserving compression or the
+applicable envelope/actor re-entry. Recover clipped windows; do not treat a
+saved file or truncated response as complete receipt.
+
+[Work state and restart](../../../standards/ACTIVATION.md#5-work-state-and-restart)
+require step-produced facts and results to survive the actor. Persist those facts,
+decisions, evidence links, residuals and effect uncertainty through the granted
+work-record update before returning or handing off. A handoff points to the
+current ticket and linked results; it does not become a rival status authority.
+The next actor reacquires relevant actual state, checks invalidators and reopens
+only affected support. Resolve uncertain effects before a dependent retry.
+
+The [actor's account](../../../standards/ACTIVATION.md#the-workspace-and-an-actors-account)
+is disposable. Replacing a context does not reset the workspace, erase valid work
+or require replaying the full conversation. Purpose Context supplies reusable
+constraints within this cycle; it does not replace the durable work record.
 
 ## Coordinate Work And Review
 
@@ -140,18 +191,19 @@ Locate the one Product Definition that applies to the requested Product scope.
 Directory nesting does not imply governance. Require exactly one applicable
 `stdo_<label>.json`.
 
-Start read-only:
+Start read-only, setting `STDO_DEFINITION` to the actual selected file:
 
 ```sh
-stdo status --definition <path-to-definition> --verify
+STDO_DEFINITION='/absolute/path/to/stdo_definition.json'
+stdo status --definition "$STDO_DEFINITION" --verify
 ```
 
 If the selected cut is absent and installation is authorized, synchronize that
 exact pinned basis and verify it again:
 
 ```sh
-stdo sync --definition <path-to-definition>
-stdo status --definition <path-to-definition> --verify
+stdo sync --definition "$STDO_DEFINITION"
+stdo status --definition "$STDO_DEFINITION" --verify
 ```
 
 `sync` may install bytes. It never follows the moving selector or edits the
@@ -207,32 +259,147 @@ to resolve the actual method members and anchors before following a skill's
 route. Neither a plugin installation nor a skill name changes the Product's
 selected method basis.
 
+### Install Current Host Bindings
+
+Obtain an independently selected **STDO Skills release distribution** and
+its pinned **Purpose Context** Product. In that Skills distribution, read
+`scripts/INSTALLATION.md` for package/host setup and `GETTING_STARTED.md` for
+first use. These are distribution-relative paths: an installed native plugin
+does not assume a sibling source checkout. In the source repository only,
+the corresponding paths begin `stdo_skills/`.
+
+The installer also retains those guides at its receipt-owned workspace
+location. Follow that installed `GETTING_STARTED.md` for the selected
+independent Product setup, including when a native release contains an older
+first-use guide.
+
+The Skills installer binds the selected Product Definition, actual native
+method root, manager/store, interpreter and Purpose Context public manifest.
+Use its `plan`, then `install` with the same selected inputs for `codex` or
+`claude`, retaining the returned receipt path and digest. Its receipt owns
+subsequent verification/removal; use that exact installer and receipt. The
+independent installation guide provides the complete commands and refusal
+conditions. Installing a host adapter neither changes the Product's
+constitution nor replaces the selected native workflow text.
+
+The five core bindings enter that verified native plugin. `stdo-context` follows
+the independent Purpose Context skill. Add the separately pinned visual Product
+only when visual documentation is wanted; that option supplies `stdo-project`.
+Current context use needs no Graphify or Lean. Historical combined `setup.py`
+and formal-support routes in the 3.0.5-rc.1 archive are not this installer.
+Existing historical installs keep their original receipts and owner tools.
+
+### Use The Selected Native Skills
+
+Resolve the plugin from the **verified Product basis**, substituting its exact
+URI below. Preserve the complete release layout and the plugin's relative
+references:
+
+```sh
+STDO_BASIS_URI='stdo://releases/<selected-immutable-cut>/'
+STDO_PLUGIN_ROOT="$(
+  stdo resolve "${STDO_BASIS_URI}plugins/spec/.codex-plugin/plugin.json" |
+    python3 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)'
+)"
+```
+
+For explicit native use, load the resolved `skills/stdo-work/SKILL.md` or the
+other applicable skill and follow its relative references. This file-loading
+route does not require host registration. A selected Claude plugin can be
+loaded with `claude --plugin-dir "$STDO_PLUGIN_ROOT"`. Codex discovery bindings
+are supplied by the independent Skills installer above. A skill name or version
+string alone does not establish which bytes the host loaded.
+
+| Outcome needed | Native skill | Claude plugin | Codex Skills binding |
+|---|---|---|---|
+| Next lawful step or missing binding | `stdo-help` | `/spec:stdo-help` | `$stdo-help` |
+| Authorized durable carrier change | `stdo-ticket` | `/spec:stdo-ticket` | `$stdo-ticket` |
+| Admitted construction, repair or verification | `stdo-work` | `/spec:stdo-work` | `$stdo-work` |
+| Scoped QA or named boundary assessment | `stdo-review` | `/spec:stdo-review` | `$stdo-review` |
+| Read-only Product/work status and triage | `stdo-status` | `/spec:stdo-status` | `$stdo-status` |
+
+The native work/review source exposes the adoptable SDLC default.
+An older native install retains its original text and basis; a context query
+cannot replace those files or establish their deployment. Required acquisition
+or isolation constraints still need the declared [host binding](HOST_BINDING.md).
+
+In chat, `stdo status` requests Product/work status through the skill. In a
+shell, `stdo status --definition ... --verify` checks installed-basis health.
+
+### Choose And Consume Task Context
+
+After Skills installation, run its actual `stdo-context` provider's `describe`
+command with the selected interpreter. For example, using a Codex workspace:
+
+```sh
+/absolute/selected/python3 -B /absolute/workspace/.agents/skills/stdo-context/scripts/provider.py describe
+```
+
+For Claude the entry is under `.claude/skills/`. Read the returned physical
+`skill` path and its references from that Purpose Context Product. Its public
+manifest pin comes from the independently selected dependency, not from hashing
+an arbitrary replacement. Forward public API arguments through that provider's
+`context -- ...` route, following the canonical skill's exact command recipes.
+
+Choose an index by **purpose and exact source**:
+
+| Decision | Purpose and selection |
+|---|---|
+| Work, incremental QA, causal triage, repair, named boundary or evidence reuse | `sdlc-workflow/1`, selecting the catalog entry that binds the exact native 3.1.0-rc.1 source. Read the returned skill's `references/sdlc-workflow.md`. |
+| Pure/local Python 3.12 realization refactoring under adopted DESIGN_MODULE | `python-pure-refactor/2`, selecting the entry matching the actual released basis and query. Historical entries retain their separate bindings. |
+
+The release-matched index records its actual native manifest and exact source
+members. Its semantic target is separate from the caller's operative
+constitution and the context/Skills Products' construction basis. The Python
+purpose is not coverage for the workflow purpose, and a matching release label
+alone does not establish query applicability.
+
+Follow the canonical `indexes` → `bind` → `select` → `consume` → `check` recipe.
+Create a query from the actual outcome, task, grant, source selection, adopted
+default/profile, finding/repair/review facts and requested boundary. Missing,
+null or ill-typed facts remain unknown; example values cannot supply adoption,
+authority or a future successful verification. Bind the actual recipient byte
+budget and read the complete delivered body before relying on its constraints.
+
+Use an applicable independently selected exact-query assessment when required.
+A changed query, including its identity, inherits no verdict. Where existing
+authority permits experimental use, an explicit trial binding retains its
+uncovered standing; it does not bypass a required assessment. If no matching
+index, binding or coverage is available, re-enter the deciding source and retain
+the limitation. Source-first independent review derives expectations before
+opening candidate-derived indexes or judgments.
+
+Return from context acquisition to the native work/review route with the actual
+rules, unresolved facts and source re-entry points. Context coverage does not
+prove the repair, close a task or decide release. Changed source, purpose,
+facts or default selection requires affected binding/assessment refresh;
+retain unrelated evidence whose validity still holds.
+
 ### New Project
 
-The normal public release titled STDO 3.0.5 selects the immutable cut
-3.0.5-rc.1. Its five Products carry that exact owned version; the Python manager
-uses the equivalent PEP 440 spelling 3.0.5rc1. Acquire
-the exact manager, native manifest and dependency selection from its release
-assets. The native method tag contains the method and tools payload; the
-manager is a separate Python package. Git and Python 3.13 are prerequisites for
-the following qualified manager recipe. It uses a new explicit environment and
-store, preserving any existing manager and Product basis.
+This is the **fixed 3.1.0-rc.1 release bootstrap** for a new Product that
+explicitly selects this release. It installs the exact native method and
+acquires the separate Product distribution. Existing Products use their actual
+basis and an explicit migration plan.
 
-The complete offline manager archive selects macOS arm64 and CPython 3.13.
-On another platform, use the same exact dependency versions from the published
-constraints file as explained in that archive's README; platform-specific
-wheel acquisition requires its own observations.
+The normal public release titled STDO 3.1.0 selects immutable cut 3.1.0-rc.1.
+Its six separately owned Products use that suffix; the Python manager uses
+PEP 440 spelling 3.1.0rc1. The following manager recipe selects Git, macOS arm64
+and CPython 3.13. It creates a new explicit environment, store and Product
+directory. Other platforms use the exact constraints with their own compatible
+wheel acquisition and verification; the listed archive does not qualify them.
 
 ```sh
 set -eu
-STDO_CUT='v3.0.5-rc.1'
-STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1'
-STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-3.0.5-rc.1"
-STDO_STORE_ROOT="$HOME/.local/share/stdo-store-3.0.5-rc.1"
+STDO_CUT='v3.1.0-rc.1'
+STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1'
+STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-3.1.0-rc.1"
+STDO_STORE_ROOT="$HOME/.local/share/stdo-store-3.1.0-rc.1"
+STDO_PRODUCTS_ROOT="$HOME/.local/share/stdo-products-3.1.0-rc.1"
 STDO_DOWNLOAD_DIR="$(mktemp -d)"
 curl --fail --location --output "$STDO_DOWNLOAD_DIR/release.json" \
-  'https://api.github.com/repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.0.5-rc.1'
-for asset in stdo_toolchain-3.0.5rc1-py3-none-any.whl stdo-v3.0.5-rc.1-manifest.json stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip stdo-manager-constraints-v3.0.5-rc.1-python313.txt stack-release-v3.0.5-rc.1.json; do
+  'https://api.github.com/repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.1.0-rc.1'
+for asset in stdo_toolchain-3.1.0rc1-py3-none-any.whl stdo-v3.1.0-rc.1-manifest.json stdo-manager-runtime-v3.1.0-rc.1-macos-arm64-cp313.zip stdo-manager-constraints-v3.1.0-rc.1-python313.txt stdo-products-v3.1.0-rc.1.zip cohort-release-v3.1.0-rc.1.json; do
   curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset" "$STDO_ASSETS/$asset"
 done
 python3.13 - "$STDO_DOWNLOAD_DIR" <<'PYVERIFY'
@@ -240,11 +407,12 @@ from pathlib import Path
 import hashlib, json, sys
 root = Path(sys.argv[1])
 release = json.loads((root / 'release.json').read_bytes())
-if release.get('tag_name') != 'specification_methodology/v3.0.5-rc.1' or release.get('draft') is not False or release.get('prerelease') is not False:
+if release.get('tag_name') != 'specification_methodology/v3.1.0-rc.1' or release.get('draft') is not False or release.get('prerelease') is not False:
     raise SystemExit('wrong fixed RC release or publication status')
-names = {'stdo_toolchain-3.0.5rc1-py3-none-any.whl', 'stdo-v3.0.5-rc.1-manifest.json',
-         'stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip',
-         'stdo-manager-constraints-v3.0.5-rc.1-python313.txt', 'stack-release-v3.0.5-rc.1.json'}
+names = {'stdo_toolchain-3.1.0rc1-py3-none-any.whl', 'stdo-v3.1.0-rc.1-manifest.json',
+         'stdo-manager-runtime-v3.1.0-rc.1-macos-arm64-cp313.zip',
+         'stdo-manager-constraints-v3.1.0-rc.1-python313.txt',
+         'stdo-products-v3.1.0-rc.1.zip', 'cohort-release-v3.1.0-rc.1.json'}
 assets = release.get('assets', [])
 if len(assets) != len(names) or {a['name'] for a in assets} != names:
     raise SystemExit('release asset population differs')
@@ -253,24 +421,36 @@ for asset in assets:
     if len(raw) != asset['size'] or asset.get('digest') != 'sha256:' + hashlib.sha256(raw).hexdigest():
         raise SystemExit('release asset checksum mismatch: ' + asset['name'])
 PYVERIFY
-test ! -e "$STDO_MANAGER_ENV"
-python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-manager-runtime-v3.0.5-rc.1-macos-arm64-cp313.zip" "$STDO_DOWNLOAD_DIR/runtime"
+test ! -e "$STDO_MANAGER_ENV" && test ! -L "$STDO_MANAGER_ENV"
+test ! -e "$STDO_PRODUCTS_ROOT" && test ! -L "$STDO_PRODUCTS_ROOT"
+python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-manager-runtime-v3.1.0-rc.1-macos-arm64-cp313.zip" "$STDO_DOWNLOAD_DIR/runtime"
 python3.13 -m venv "$STDO_MANAGER_ENV"
 "$STDO_MANAGER_ENV/bin/python" -m pip install --no-index --find-links "$STDO_DOWNLOAD_DIR/runtime/wheels" --require-hashes --no-deps -r "$STDO_DOWNLOAD_DIR/runtime/requirements-macos-arm64-cp313.txt"
 "$STDO_MANAGER_ENV/bin/python" -m pip check
 stdo() { "$STDO_MANAGER_ENV/bin/stdo" --store "$STDO_STORE_ROOT" "$@"; }
 stdo --version
-STDO_MANIFEST="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.0.5-rc.1-manifest.json")"
+STDO_MANIFEST="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.1.0-rc.1-manifest.json")"
 stdo install "$STDO_CUT" --repository https://github.com/foolishimp/specification_methodology.git --manifest-sha256 "$STDO_MANIFEST"
 stdo verify "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
+python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-products-v3.1.0-rc.1.zip" "$STDO_PRODUCTS_ROOT"
 ```
 
 A failed download, checksum, dependency installation or exact-cut verification
-stops this sequence. The fixed-tag GitHub release API supplies the exact asset
-SHA-256 and size over verified HTTPS; no unshipped checksum sidecars are assumed. The external five-Product manifest
-records the complete component and qualification closure. Installation does
-not adopt this basis for an existing Product. Complete the declared runtime and
-host setup below to execute the optional Graphify and Lean dependencies.
+stops this sequence. The fixed-tag GitHub release API supplies exact asset
+SHA-256 and size over verified HTTPS. The cohort record declares the complete
+Product membership and dependency graph. Its inventories and the public
+manifests in the extracted Product directories bind the exact selected bytes;
+follow the archive's installation guide before host installation.
+
+The archive root contains `purpose_context/`, `stdo_skills/`, `a_c/`,
+`stdo_representation/` and `axiom_indexer/`, plus its release inventory and
+guide. Keep this extracted source at its selected durable location. Read
+`$STDO_PRODUCTS_ROOT/stdo_skills/scripts/INSTALLATION.md` and
+`$STDO_PRODUCTS_ROOT/stdo_skills/GETTING_STARTED.md`, then follow the independent
+[host binding setup](#install-current-host-bindings) with the actual native
+method, manager/store and Purpose Context public pin. No Graphify or Lean
+setup is needed for context use. Installation does not adopt this method or
+default for an existing Product.
 
 Resolve and copy the Product Definition and Project Reference-Frame Basis
 templates from that same installed cut:
@@ -426,115 +606,12 @@ stdo bootstrap --definition stdo_default.json --dry-run
 stdo bootstrap --definition stdo_default.json
 ```
 
-The packaged [Product Definition template guide](../../../standards/templates/README.md#product-definition-overlay)
-explains the fields and their required bindings; the
-[Project Reference-Frame Basis template](../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md)
-provides the frame-basis declaration.
-
-### Install The Shared Skills
-
-The 3.0.5-rc.1 installation includes all five native skills under `plugins/spec/`.
-The current Skills Product supplies Codex and Claude discovery bindings and the
-`stdo-project` extension over that same native workflow owner. The complete
-setup below installs these bindings; direct use of the native plugin remains
-available. First verify the exact cut, then locate its plugin through the manager:
-
-```sh
-STDO_PLUGIN_ROOT="$(
-  stdo resolve stdo://releases/v3.0.5-rc.1/plugins/spec/.codex-plugin/plugin.json |
-    python3 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)'
-)"
-```
-
-For a Claude Code session, load that directory directly:
-
-```sh
-claude --plugin-dir "$STDO_PLUGIN_ROOT"
-```
-
-For Codex, direct use needs no marketplace: ask the actor to read the exact
-`$STDO_PLUGIN_ROOT/skills/stdo-work/SKILL.md` (substitute its resolved absolute
-path) and follow that skill for the admitted task. The shared references and
-scripts remain relative to that installed plugin root. This is explicit file
-loading, not a claim that the host registered a plugin.
-
-For Codex discovery, use the [current host binding installer](#install-tools-and-both-host-bindings)
-below. Its wrappers resolve the verified canonical native files and retain
-that dependency in their installation receipt. Do not copy the plugin alone
-into a marketplace: its owning standards and relative references belong to
-the complete installed release. This guide does not qualify a relocated
-marketplace layout.
-
-Required context/acquisition limits still need the explicit
-[host binding](HOST_BINDING.md); discovery supplies no new authority or
-isolation guarantee.
-
-Both hosts consume the same workflow skill bytes. With the Claude plugin or
-the installed Codex Skills binding selected, use:
-
-| Say | Portable skill | Claude plugin | Codex Skills |
-|---|---|---|---|
-| `stdo help` | `stdo-help` | `/spec:stdo-help` | `$stdo-help` |
-| `stdo ticket` | `stdo-ticket` | `/spec:stdo-ticket` | `$stdo-ticket` |
-| `stdo work` | `stdo-work` | `/spec:stdo-work` | `$stdo-work` |
-| `stdo review` | `stdo-review` | `/spec:stdo-review` | `$stdo-review` |
-| `stdo status` | `stdo-status` | `/spec:stdo-status` | `$stdo-status` |
-
-Natural-language invocation remains valid. In chat, `stdo status` requests
-Product/work status through the skill. In a shell, `stdo status --definition
-...` remains the toolchain command for installed-basis health.
-
-### Install Tools And Both Host Bindings
-
-Continue with the verified manager/store variables above. All generated runtime,
-request, receipt and host files belong outside the immutable installed release.
-The materialized Product source stays exact; the separate a_c runtime may change
-only its declared proof-support profile during controlled Lean setup.
-
-```sh
-STDO_METHOD_ROOT="$(stdo resolve stdo://releases/v3.0.5-rc.1/standards/FOUNDATIONS.md | python3.13 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)')"
-STDO_TOOLING_ROOT="$STDO_METHOD_ROOT/standards/tooling"
-STDO_RUNTIME_BASE="$HOME/.local/share/stdo-runtime-3.0.5-rc.1"
-test ! -e "$STDO_RUNTIME_BASE"
-mkdir -p "$STDO_RUNTIME_BASE"
-python3.13 "$STDO_TOOLING_ROOT/materialize.py" materialize --destination "$STDO_RUNTIME_BASE/tools"
-python3.13 "$STDO_RUNTIME_BASE/tools/a_c/scripts/bootstrap.py" graphify --destination "$STDO_RUNTIME_BASE/graphify"
-STDO_RUNTIME_PYTHON="$STDO_RUNTIME_BASE/graphify/venv/bin/python"
-python3.13 "$STDO_TOOLING_ROOT/setup.py" derive-runtime --tools "$STDO_RUNTIME_BASE/tools" --destination "$STDO_RUNTIME_BASE/a_c-runtime" --receipt "$STDO_RUNTIME_BASE/derivation-prepared.json"
-STDO_DERIVATION_SHA="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_RUNTIME_BASE/derivation-prepared.json")"
-python3.13 "$STDO_TOOLING_ROOT/setup.py" bootstrap-lean --derivation "$STDO_RUNTIME_BASE/derivation-prepared.json" --derivation-sha256 "$STDO_DERIVATION_SHA" --python "$STDO_RUNTIME_PYTHON" --output "$STDO_RUNTIME_BASE/lean-bootstrap"
-STDO_DERIVATION="$STDO_RUNTIME_BASE/lean-bootstrap/derivation.json"
-STDO_DERIVATION_SHA="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DERIVATION")"
-for host in codex claude; do
-  mkdir "$STDO_RUNTIME_BASE/$host-workspace"
-  python3.13 "$STDO_TOOLING_ROOT/setup.py" host --host "$host" --tools "$STDO_RUNTIME_BASE/tools" --runtime-ac "$STDO_RUNTIME_BASE/a_c-runtime" --derivation "$STDO_DERIVATION" --derivation-sha256 "$STDO_DERIVATION_SHA" --anchor "$STDO_RUNTIME_BASE/$host-anchor" --workspace "$STDO_RUNTIME_BASE/$host-workspace" --method-root "$STDO_METHOD_ROOT" --store "$STDO_STORE_ROOT" --stdo "$STDO_MANAGER_ENV/bin/stdo" --python "$STDO_RUNTIME_PYTHON" --manifest-sha256 "$STDO_MANIFEST"
-done
-```
-
-Graphify and Lean bootstrap retain their exact third-party pins and execution
-receipts. Each host gets an explicit runtime-installation anchor and a manager
-launcher fixed to this store. Enter the selected host workspace and load its
-installed skill instructions. Keep the returned `stdo` launcher and forward it
-through the documented project commands; an ambient manager or store does not
-supply that binding. The nominated construction Product still uses its own
-Definition, basis and work grant.
-
-To verify the current model using this installed runtime, recover the complete
-retained proof bundle and create a separate request with local input paths:
-
-```sh
-STDO_PROOF_ROOT="$STDO_METHOD_ROOT/standards/documentation/proofs"
-python3.13 "$STDO_PROOF_ROOT/materialize.py" materialize --destination "$STDO_RUNTIME_BASE/evidence"
-python3.13 "$STDO_PROOF_ROOT/materialize.py" request --evidence "$STDO_RUNTIME_BASE/evidence" --output "$STDO_RUNTIME_BASE/current-request.json"
-"$STDO_RUNTIME_PYTHON" -I -S -B "$STDO_RUNTIME_BASE/a_c-runtime/build_tenants/lean/scripts/formal_gate.py" verify --request "$STDO_RUNTIME_BASE/current-request.json" --output "$STDO_RUNTIME_BASE/current-verification"
-```
-
-The original construction request/result remain unchanged as provenance. This
-command creates a new actual verification under the installed runtime identity.
-Use the installed `a_c/scripts/ac.py` Graphify, Axiom Indexer and host extension
-routes with explicitly selected model, view, source and runtime inputs. Setup
-success and proof success retain their respective exact scopes; neither adopts
-or authorizes work in a nominated Product.
+Read the Product Definition and frame-basis template guides from that same
+installed cut when completing this release-specific setup. The installed
+[frame template](../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection)
+proposes the SDLC default for adoption. Complete and bind that selection through
+the Product's authorized frame basis; copying or installing it does not supply
+that owner decision.
 
 ## 2. Iterate Requirements
 
@@ -772,6 +849,27 @@ Status may propose a likely change class and re-entry point. It does not
 silently create a ticket, widen a release boundary, reprioritize the Product,
 or apply disposition.
 
+## Read The Installed Documentation
+
+The [installed reading page](../../../standards/documentation/index.html)
+and [reading guide](../../../standards/documentation/README.md) route this
+exact native method, default and independent Product setup. Resolve the page:
+
+```sh
+stdo resolve stdo://releases/v3.1.0-rc.1/standards/documentation/index.html
+```
+
+For optional current visual documentation, select Representation Tools through
+the independent Skills installer's visual option and follow `stdo-project`.
+Use each visual Product's exact native binding, source inventory and declared
+coverage. A generated view is explanatory and cannot replace the method owners.
+
+The immutable 3.0.5-rc.1 release retains its large generated explorers, ABI
+example, combined runtime and proof reader. Those payloads are absent from this
+native package and retain their original source/results. Acquire that historical
+cut only when its original subject and dependencies are intended. A historical
+graph, proof or source archive supplies no changed-source qualification.
+
 ## Common Stops
 
 | Condition | Response |
@@ -785,6 +883,8 @@ or apply disposition.
 | code and test disagree | reconcile through governing authority |
 | independent review is required (the boundaries TICKETS §7 names) | stabilise one exact review subject as EVALUATION §3 Protocol states (frozen before material reference exposure where method qualification requires it; otherwise an immutable identity or an equivalent exact-subject relation sufficient for the claim) and activate Reviewer |
 | a finding is adjacent to the current claim | return it as triage input; do not automatically block |
+| context source, purpose or query does not match | withhold that index use; follow the exact owning-source route and retain the gap |
+| context facts or declared review coverage remain unknown | preserve the unknown and withhold only the dependent claim |
 | requested effect exceeds the grant | refuse and return to Product-owned decision authority |
 
 ## Owning References

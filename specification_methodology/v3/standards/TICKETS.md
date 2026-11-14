@@ -728,6 +728,21 @@ Execution and closure use the same admitted categorisation, criteria,
 proof surface and non-closure conditions. The resulting state still flows
 through proof, gap analysis and repricing (P6, P2).
 
+The selected carrier is also the work reference for context construction and
+continuation: bind its current question, subject and basis, result and evidence
+references, and surviving obligations. Apply
+[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) to that
+bounded acquisition, [§5](ACTIVATION.md#5-work-state-and-restart) to current
+work state, the disposable actor account and resumption, and
+[§7](ACTIVATION.md#7-closed-result-and-reuse) to closed results and reuse.
+The ticket retains its [work-state authority](#one-truth-state-projection-and-drift-refusal-up-009);
+an actor's account cannot replace the carrier, governing sources or current
+evidence. Preserve results, step-produced facts and owner rulings through
+the named result and evidence surface under existing admission and
+[continuity](#recorded-judgment-and-owner-ruling-continuity) law. This applies
+those owners to the selected carrier; it creates no additional carrier
+requirement and confers no ticket-state authority (P0, P3, P4b, P6).
+
 ### Execution contract admission
 
 The runtime execution flow should treat a ticket, a sprint entry or a

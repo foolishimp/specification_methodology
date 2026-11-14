@@ -9,15 +9,13 @@ current state under explicit uncertainty.
 
 ## Routes
 
-The [installed documentation](documentation/index.html) includes an offline
-[3D/2D/Layered constraint explorer](documentation/constraint-explorer/index.html) and
-[reading guide](documentation/README.md). The current representation binds the
-exact semantic-source inventory named by the cohort. The owning standards
-below decide method questions; the generated view supplies navigation and
-its stated evidence boundary, not an independent source of method authority.
-It also includes the [ABI code example](documentation/code-explorer/index.html),
-[Lean proof reader](documentation/proofs/index.html), and
-[bundled tool setup](tooling/README.md) for an explicit writable workspace.
+The [installed reading page](documentation/index.html) and
+[guide](documentation/README.md) route the exact native method, adoptable SDLC
+default and independently packaged context/Skills Products. Optional visual
+documentation is supplied by Representation Tools and STDO Representation;
+it retains its declared source and coverage. The owning standards below decide
+method questions. Historical combined runtime and proof payloads remain on
+their original immutable release and supply no current-source verdict.
 
 | You want to | Read, in order |
 |---|---|
@@ -28,6 +26,7 @@ It also includes the [ABI code example](documentation/code-explorer/index.html),
 | migrate a core interface or reset a constitutional line | [SPEC_METHOD §7](SPEC_METHOD.md), then [TICKETS §6](TICKETS.md#6-implementation-migration) for the ticket's declaration and checklist |
 | prove a realisation | [EVALUATION §1–2](EVALUATION.md) for what a proof names, [§6](EVALUATION.md#6-conformance-of-realisations) for conformance and the equivalence ladder, then [ASSURANCE](ASSURANCE.md) for verification layers, the testing taxonomy, test authority, scenario bundles, installed proof and path coverage |
 | interpret a subject as a model, project a frame from it, or encode an accepted model | [AXIOMATIC_CALCULUS §2–4](AXIOMATIC_CALCULUS.md) for the signature, records and laws, [§6–8](AXIOMATIC_CALCULUS.md#6-interpretation-and-models) for interpretation, the three layers and identity, then [EVALUATION §2](EVALUATION.md) for the structural and semantic split of its review |
+| select ordinary SDLC QA, causal triage, re-entry and bounded verification defaults | [SDLC default guidance](SDLC_DEFAULTS.md#selected-default-flow), selected through the [Project frame-basis template](templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection); linked method owners retain authority |
 | do a bounded piece of work | [ACTIVATION §1](ACTIVATION.md#1-the-step) for the transition, the intake, the admission and the configuration, [§2](ACTIVATION.md#2-context-construction-under-an-envelope) for the context you acquire and its size measurement, [§3](ACTIVATION.md#3-step-results-and-disposition) for the step's results, which map into the core of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), [REFERENCE_FRAME §11](REFERENCE_FRAME.md#11-the-activation-packet) for the packet you are activated on, then [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) for where your change re-enters |
 | declare, audit or revise a project's frame set | [REFERENCE_FRAME §4, §8 and §10](REFERENCE_FRAME.md), then [EVALUATION §7](EVALUATION.md) to qualify a frame |
 | resume work someone else left | [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) for work state and resumption, with [the workspace and an actor's account](ACTIVATION.md#the-workspace-and-an-actors-account), [§7](ACTIVATION.md#7-closed-result-and-reuse) for reuse, then [TICKETS §7](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) for recorded judgment and owner rulings |

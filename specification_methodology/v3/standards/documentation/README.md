@@ -1,61 +1,49 @@
-# STDO 3.0.5-rc.1 documentation
+# Read and use STDO 3.1
 
-Open the [documentation home](index.html), the
-[current constraint explorer](constraint-explorer/index.html), or the
-[current Lean proof reader](proofs/index.html). These readers work offline.
+The [installed reading page](index.html) routes the native **3.1.0-rc.1**
+method. Start with [the method index](../README.md) or
+[Getting Started](../../plugins/spec/references/GETTING_STARTED.md).
+The exact installed standards own meaning; this guide adds no rule, adoption
+or work authority.
 
-```sh
-stdo resolve stdo://releases/v3.0.5-rc.1/standards/documentation/index.html
-```
+## Work and context
 
-Open the returned path in a browser. Choose **3D**, **2D** or **Layered** to
-view the same model, selection and reading trail. Search by statement, select
-a record to read its full content and caveats, then follow labelled relations.
-Use **Files**, **Show in files** and **Back to file** to follow embedded source
-passages. Layered and text work without WebGL. No service or tool installation
-is needed to read these files.
+Resolve the Product's exact installed basis and existing grant. Follow the
+[SDLC default](../SDLC_DEFAULTS.md) when the Product has selected it, and use
+the native work/review skills with their relative references intact.
+The [frame-basis template](../templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection)
+offers that selection for authorized adoption. Guidance availability and host
+installation do not select a default for an existing Product.
 
-The explorer embeds the complete selected semantic source: standards plus
-native workflow contracts. Its model and source inventory are exact inputs,
-bound in [DOCUMENTATION.json](DOCUMENTATION.json). Generated frames and these
-documentation files are derived routes rather than additional semantic owners.
-Use the [owning installed standards](../README.md) and
-[Getting Started](../../plugins/spec/references/GETTING_STARTED.md) for method
-decisions. A graph edge does not by itself prove an implication.
+Purpose Context owns context construction and purpose indexes. STDO Skills
+owns the receipt-based host bindings. Obtain their matching separately
+inventoried directories from
+[the Product archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/stdo-products-v3.1.0-rc.1.zip),
+verified through [the release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.1)
+and its [cohort record](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/cohort-release-v3.1.0-rc.1.json).
+Follow `stdo_skills/scripts/INSTALLATION.md` and `stdo_skills/GETTING_STARTED.md`
+inside that archive. An installed native method assumes no sibling checkout.
 
-The proof reader exposes actual verification of this exact finite model and
-its selected views, generated proof source, compiled artifacts, theorem axiom
-audit, runtime identities, logs and explicit limits. Its reusable library
-retains its original provenance. The source-prose-to-model assessment is
-separate from Lean's structural model/projection result. Checking the reader
-verifies retained bytes and bindings; it does not execute a new Lean proof.
+Choose the context purpose and index matching the actual native source and
+query. `sdlc-workflow/1` and `python-pure-refactor/2` serve different decisions;
+the Product catalog and exact applicability determine the selection. Retain
+unknown facts, uncovered obligations, source re-entry and assessment limits.
+Context coverage does not establish task success or release acceptance.
 
-The [frozen ABI code example](code-explorer/index.html) retains the exact
-ABIogenesis T-019 artifact published with STDO 3.0.4. Its
-[example identity](code-explorer/EXAMPLE.json) names that publication custody
-and original model. It is not current ABI qualification or current STDO
-model/proof evidence; the current readers above retain their own exact subjects.
+## Optional visual documentation
 
-[Use the installed tools](../tooling/README.md) to materialize the four peer
-Product packages and set up Graphify, Lean and host bindings in writable
-locations. The native workflow stays intact inside its installed package.
+Representation Tools, STDO Representation and Axiom Indexer remain separate
+Products in the same explicit release cohort. Use their own guides and exact
+public manifests. The Skills installer's optional visual binding supplies the
+`stdo-project` route. Visual documents explain their selected source and
+coverage; they do not replace governing clauses or prove prose semantics.
+Context use requires no visual representation or Lean installation.
 
-After the declared Lean setup, run the following with new writable output
-locations. Use the selected runtime's Python and formal owner executable:
+## Historical material
 
-```sh
-python3 proofs/materialize.py materialize --destination /absolute/new/evidence
-python3 proofs/materialize.py request --evidence /absolute/new/evidence --output /absolute/current-request.json
-/absolute/runtime-python -I -S -B /absolute/runtime-a_c/build_tenants/lean/scripts/formal_gate.py verify --request /absolute/current-request.json --output /absolute/new/verification
-```
-
-The request command verifies the extracted bytes and substitutes only local
-model/view paths. The original request, including construction paths, remains
-unchanged in the evidence. A new verification produces its own result and
-runtime identity; the retained construction verdict does not become an
-installed verdict. Output directories and the request must not already exist.
-
-The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1/stack-release-v3.0.5-rc.1.json)
-is the separately published binding of semantic source, current model, native
-installation, component inventories and qualification evidence. It is external
-to this payload so the release does not contain its own unknown digest.
+The [3.0.5-rc.1 release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.5-rc.1)
+retains its combined tooling, generated explorers, ABI example, Lean sources,
+proof reader, results and original receipts. Acquire that exact historical cut
+for those subjects. These runtime and proof payloads are intentionally absent
+from the current native package; they are not current-source evidence.
+The [release note](../../release/release-note.md) records the successor boundary.

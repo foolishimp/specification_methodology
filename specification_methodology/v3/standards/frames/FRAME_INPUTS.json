@@ -1324,10 +1324,10 @@
     {
       "id": "stale-summary",
       "path": "standards/frames/stale-summary.md",
-      "task": "Resume interrupted work as a new session from a retained summary that disagrees with the current workspace: keep or correct each summary line, give results for migration, review, batch completion and hand-off predicates, say which retained work survives a changed dependency, and give the next action within the grant and what waits.",
-      "bytes": 97323,
-      "sha256": "2814c304aa6dd7124287a80156fe2d38395b071af1cd660b0701b6da2a31e8e1",
-      "scope": "The owning sections for transitions, context construction with acquisition, construction availability, effects, work state, resumption and the workspace as truth surface against an actor's account, closed results and reuse, review-verdict traceability, recorded judgment continuity, condition-based closure and reuse, one-truth state projection, and the core result algebra with its conjunction.",
+      "task": "Resume interrupted work in a new session from the selected ticket, sprint entry or run contract and current material state, reconciling a retained summary that disagrees with the workspace: keep or correct each summary line, give results for migration, review, batch completion and hand-off predicates, say which retained work survives a changed dependency, and give the next action within the grant and what waits.",
+      "bytes": 105704,
+      "sha256": "147096ea768d84c727890445788d5df44f9fab7af42cf29d6c6fdac8dda4b937",
+      "scope": "The owning sections for enduring ticket records and carrier selection; transitions, context construction with acquisition, construction availability, effects, work state, resumption and the workspace as truth surface against an actor's account; closed results and reuse, review-verdict traceability, recorded judgment continuity, condition-based closure and reuse, one-truth state projection, and the core result algebra with its conjunction.",
       "binds": [
         {
           "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment",
@@ -1353,6 +1353,18 @@
         }
       ],
       "routes": [
+        {
+          "owner": "standards/TICKETS.md",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+          "anchor": "ticket-records",
+          "section_sha256": "3aa3e0f935cd4290f1d96d90578065a1333d5540a510822113381fc372e465b4"
+        },
+        {
+          "owner": "standards/TICKETS.md",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+          "anchor": "carrier-selection",
+          "section_sha256": "4c7d1b12ae2b558ebcdb523f01e2cd8589c2550557f13b0266de7a91aa05597c"
+        },
         {
           "owner": "standards/ACTIVATION.md",
           "owner_sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
@@ -1391,25 +1403,25 @@
         },
         {
           "owner": "standards/TICKETS.md",
-          "owner_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
           "anchor": "execution-and-verification-authority-separation-up-007",
           "section_sha256": "1c3a94a3c83e769658d633172e58ff43d9e2f5f8738549726fe3e1f38e9b0376"
         },
         {
           "owner": "standards/TICKETS.md",
-          "owner_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
           "anchor": "recorded-judgment-and-owner-ruling-continuity",
           "section_sha256": "a4d9b8e04f0ca62538f6450df06f54b15ec2047f6442d9a765f484fe934d8617"
         },
         {
           "owner": "standards/TICKETS.md",
-          "owner_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
           "anchor": "condition-based-closure-and-reuse",
           "section_sha256": "0a2cce28b1ba79c864157e0c98ccb38caee7f37f297a2dd4940a71964fc36987"
         },
         {
           "owner": "standards/TICKETS.md",
-          "owner_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
           "anchor": "one-truth-state-projection-and-drift-refusal-up-009",
           "section_sha256": "f357c47475b889816fa54923f6dab1ac20693f0e64c6e859bd9d60c58c67af73"
         },
@@ -1434,14 +1446,14 @@
         },
         {
           "owner": "standards/TICKETS.md",
-          "owner_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
           "anchor": "foundation-to-law-work-carriers",
           "section_sha256": "6108b2d78f0794b645b32f39261dd53ebd5818091b3ad3cf165abb1e03c9f39e",
           "rows": {
             "mode": "frame-anchors",
-            "selected": 3,
+            "selected": 5,
             "total": 11,
-            "excerpt_sha256": "e0b56e67c4b588aa23932865a7459ea1ba665ec426202d98a5e9fc095a03bd82",
+            "excerpt_sha256": "531575e9242ca720ec3726ac8876fb54383adb570b159ac73aafd2e3150e0c60",
             "consumers_omitted": 11
           }
         }
@@ -1450,10 +1462,10 @@
     {
       "id": "bootstrap",
       "path": "standards/frames/bootstrap.md",
-      "task": "Enter this method for a task not yet specified: say what the method is, bind the exact basis and the one applicable product definition, say how a reference frame is activated for a step and what the step may and may not do before its contract is admitted, give the core result values, and acquire the deciding owner sections for the task.",
-      "bytes": 94520,
-      "sha256": "9fb337b2c8462e9d6788f52f11ca75199253a3a66a10774bc05a9798a772e502",
-      "scope": "The owning sections for the method's canonical statement; the product lineage objects; the product definition's required relations, recursive discovery and the one constitutional surface with its staleness binding; the authority kinds, the frame tuple and the activation packet; the step's intake and admission; context construction with the size measurement, acquisition, activation and evaluation; and the core result algebra.",
+      "task": "Enter this method for a task not yet specified: say what the method is, bind the exact basis and the one applicable product definition, identify the smallest lawful work carrier when entering execution, say how a reference frame is activated and what the step may and may not do before its contract is admitted, give the core result values, and acquire the deciding owner sections for the task and any resumption.",
+      "bytes": 102009,
+      "sha256": "7f8741bfaeb03aba16e231fac461024b27dd469b6250471690b81c6bc8ee8f65",
+      "scope": "The owning sections for the method's canonical statement; the product lineage objects; the product definition's required relations, recursive discovery and the one constitutional surface with its staleness binding; the authority kinds, frame tuple and activation packet; ticket records and carrier selection; the step's intake and admission; context construction with size measurement, acquisition, activation and evaluation; and the core result algebra. Resumption and continuity bind their owners below for acquisition when material.",
       "binds": [
         {
           "text": "This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment",
@@ -1461,6 +1473,27 @@
           "owner_sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
           "anchor": "construction-relation",
           "section_sha256": "6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da"
+        },
+        {
+          "text": "When entry resumes work, acquire current material state and reconcile uncertain effects before a repetition or dependent action; the disposable actor account cannot override current evidence",
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+          "anchor": "5-work-state-and-restart",
+          "section_sha256": "90095da7fe254f4a91588870665c8cf0f5000f2c41c6fbfa250ef7d8f9020faa"
+        },
+        {
+          "text": "Before relying on a retained result, check its exact applicability and invalidators; a new session alone invalidates nothing and reuse does not supply a required independent judgment",
+          "owner": "standards/ACTIVATION.md",
+          "owner_sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+          "anchor": "7-closed-result-and-reuse",
+          "section_sha256": "de77417f5ad05583b300f6ef1a77b7b9fcbaf1837207e187bb00086a411e0c01"
+        },
+        {
+          "text": "Preserve reusable judgments and original owner rulings with their owning work through the existing named result and evidence surface under the applicable effect grant",
+          "owner": "standards/TICKETS.md",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+          "anchor": "recorded-judgment-and-owner-ruling-continuity",
+          "section_sha256": "a4d9b8e04f0ca62538f6450df06f54b15ec2047f6442d9a765f484fe934d8617"
         }
       ],
       "routes": [
@@ -1517,6 +1550,18 @@
           "owner_sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
           "anchor": "intake",
           "section_sha256": "7f6e6e2ca37cd177cdd23d13dbf025cb6db5f411e256e9463a9a9912db809354"
+        },
+        {
+          "owner": "standards/TICKETS.md",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+          "anchor": "ticket-records",
+          "section_sha256": "3aa3e0f935cd4290f1d96d90578065a1333d5540a510822113381fc372e465b4"
+        },
+        {
+          "owner": "standards/TICKETS.md",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+          "anchor": "carrier-selection",
+          "section_sha256": "4c7d1b12ae2b558ebcdb523f01e2cd8589c2550557f13b0266de7a91aa05597c"
         },
         {
           "owner": "standards/ACTIVATION.md",
@@ -1589,7 +1634,7 @@
       "path": "standards/frames/acceptance-release.md",
       "task": "Decide whether an assessed candidate or an exact release cut is accepted: read the review results, decide whether any finding blocks promotion, apply one disposition with its core value, check closure by condition, and check the acceptance criteria and successor dispositions of a release.",
       "bytes": 69121,
-      "sha256": "e233845d76abe8fdff7fbdf5e92e5927dbfa1f4df7f5539ae9ba21ac7976d54e",
+      "sha256": "ff88a8d4e0c2d331a3d32c79740026256002d18d19e53e2fccdc9c65fe3b3d5e",
       "scope": "The owning sections for review results and triage, acceptance and when a finding blocks promotion, the four dispositions, the core result algebra and its conjunction, condition-based closure, release acceptance criteria, and successor baseline conservation.",
       "binds": [
         {
@@ -1648,7 +1693,7 @@
         },
         {
           "owner": "standards/TICKETS.md",
-          "owner_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
           "anchor": "condition-based-closure-and-reuse",
           "section_sha256": "0a2cce28b1ba79c864157e0c98ccb38caee7f37f297a2dd4940a71964fc36987"
         },
@@ -1705,7 +1750,7 @@
         },
         {
           "owner": "standards/TICKETS.md",
-          "owner_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67",
+          "owner_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
           "anchor": "foundation-to-law-work-carriers",
           "section_sha256": "6108b2d78f0794b645b32f39261dd53ebd5818091b3ad3cf165abb1e03c9f39e",
           "rows": {

@@ -51,6 +51,12 @@ Read and apply
 mutating ticket state. Continue only from its exactly-one verified selection;
 that selection grants no ticket-state authority.
 
+Apply [Work Carrier And Context Continuity](../../references/COORDINATED_HANDOFF.md#work-carrier-and-context-continuity)
+to the authorized state update. The ticket remains the durable work record,
+linking admitted scope, current checkpoint, decisions, actual evidence, residuals
+and the next authorized action. Preserve source/evidence authority and recorded
+uncertainty; a generated context or summary cannot silently change that state.
+
 ## Procedure
 
 1. From the verified definition and installed basis, read Goals, Intent,

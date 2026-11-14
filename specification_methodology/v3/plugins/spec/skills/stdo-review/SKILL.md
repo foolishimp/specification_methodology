@@ -1,6 +1,6 @@
 ---
 name: stdo-review
-description: Independently evaluate one exact STDO-governed candidate, or issue that assessment to a separate Reviewer. Use for STDO candidate, release, qualification or governed-boundary review. Do not invoke for generic review.
+description: Independently evaluate one exact STDO-governed claim, or issue that assessment to a separate Reviewer. Use for ordinary incremental STDO QA and for named candidate, release, qualification or governed-boundary assessment, within the selected claim's scope. Do not invoke for generic non-STDO review.
 ---
 
 # STDO Review
@@ -51,6 +51,19 @@ Read and apply
 [`PRODUCT_BASIS.md`](../../references/PRODUCT_BASIS.md) before activating review.
 Continue only from its exactly-one verified selection. That selection supplies
 no artifact-write grant.
+
+Resolve any adopted SDLC default through
+[the selected review flow](../../references/COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis).
+Bind this review's exact claim and stopping condition. Incremental QA, repair
+verification and named acceptance/release assessment have different scopes;
+none substitutes for a required claim or authorizes review expansion.
+
+Use [Work Carrier And Context Continuity](../../references/COORDINATED_HANDOFF.md#work-carrier-and-context-continuity)
+to recover the admitted claim and current evidence within your own permitted
+inputs. Derive expectations before candidate-derived material where required.
+Return the exact assessment and residuals through the assigned report surface;
+the work-state Writer owns any ticket update. Private context or a stale summary
+cannot replace the governing source, ticket's admitted claim or current evidence.
 
 ## Activate The Review
 
@@ -107,8 +120,18 @@ no artifact-write grant.
   a finding blocks promotion.
 - Distinguish repair of a nonconforming candidate under unchanged law from an
   intentional governing change. A failure alone does not require repricing.
+- Diagnose the supported cause using the selected `ACTIVATION` and
+  `SPEC_METHOD` owners: realisation, requirement/design, predictive model or
+  observation. If complexity or repeated failure exceeds the frame's fit,
+  return the capability/evidence gap through `REFERENCE_FRAME` diagnostic
+  order. Do not prescribe unsupported code or specification changes.
 - Check satisfied closure conditions; your review event cannot establish them
   or create an additional closing ceremony.
+- Apply the selected basis's bounded recheck conditions. Tests may already
+  close a permitted repair; required independent rechecks still need their
+  exact assessment. Retain valid unchanged support, declare uncovered scope,
+  and return later or unrelated findings for a new bounded disposition instead
+  of extending the current review indefinitely.
 
 Keep the result projection total over the core values of `FOUNDATIONS.md`
 section 4, Results:

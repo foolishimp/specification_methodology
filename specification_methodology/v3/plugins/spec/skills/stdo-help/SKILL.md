@@ -47,7 +47,8 @@ guidance. This skill remains read-only.
 
 - Ticket creation or update: `stdo-ticket`.
 - Authorized requirements, design, code, or test work: `stdo-work`.
-- Independent exact-candidate evaluation: `stdo-review`.
+- Scoped incremental QA or named candidate, acceptance, qualification or release
+  assessment: `stdo-review`, under the selected claim and required independence.
 - Product progress, monitoring, or triage help: `stdo-status`.
 - Full owning-member reload of one registry entry: use Claude's manual-only
   `refresh` where available, or resolve and read the exact installed members

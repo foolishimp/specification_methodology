@@ -1,12 +1,15 @@
 # Reference frame bootstrap
 
-Task: Enter this method for a task not yet specified: say what the method is, bind the exact basis and the one applicable product definition, say how a reference frame is activated for a step and what the step may and may not do before its contract is admitted, give the core result values, and acquire the deciding owner sections for the task.
+Task: Enter this method for a task not yet specified: say what the method is, bind the exact basis and the one applicable product definition, identify the smallest lawful work carrier when entering execution, say how a reference frame is activated and what the step may and may not do before its contract is admitted, give the core result values, and acquire the deciding owner sections for the task and any resumption.
 
-Purpose: The owning sections for the method's canonical statement; the product lineage objects; the product definition's required relations, recursive discovery and the one constitutional surface with its staleness binding; the authority kinds, the frame tuple and the activation packet; the step's intake and admission; context construction with the size measurement, acquisition, activation and evaluation; and the core result algebra.
+Purpose: The owning sections for the method's canonical statement; the product lineage objects; the product definition's required relations, recursive discovery and the one constitutional surface with its staleness binding; the authority kinds, frame tuple and activation packet; ticket records and carrier selection; the step's intake and admission; context construction with size measurement, acquisition, activation and evaluation; and the core result algebra. Resumption and continuity bind their owners below for acquisition when material.
 
 Binds:
 
 - This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- When entry resumes work, acquire current material state and reconcile uncertain effects before a repetition or dependent action; the disposable actor account cannot override current evidence ([../ACTIVATION.md#5-work-state-and-restart](../ACTIVATION.md#5-work-state-and-restart); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=90095da7fe254f4a91588870665c8cf0f5000f2c41c6fbfa250ef7d8f9020faa)
+- Before relying on a retained result, check its exact applicability and invalidators; a new session alone invalidates nothing and reuse does not supply a required independent judgment ([../ACTIVATION.md#7-closed-result-and-reuse](../ACTIVATION.md#7-closed-result-and-reuse); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=de77417f5ad05583b300f6ef1a77b7b9fcbaf1837207e187bb00086a411e0c01)
+- Preserve reusable judgments and original owner rulings with their owning work through the existing named result and evidence surface under the applicable effect grant ([../TICKETS.md#recorded-judgment-and-owner-ruling-continuity](../TICKETS.md#recorded-judgment-and-owner-ruling-continuity); member sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748; section sha256=a4d9b8e04f0ca62538f6450df06f54b15ec2047f6442d9a765f484fe934d8617)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -41,14 +44,16 @@ Routes, in order:
 7. [FOUNDATIONS.md#the-frame-tuple](../FOUNDATIONS.md#the-frame-tuple)
 8. [REFERENCE_FRAME.md#11-the-activation-packet](../REFERENCE_FRAME.md#11-the-activation-packet)
 9. [ACTIVATION.md#intake](../ACTIVATION.md#intake)
-10. [ACTIVATION.md#admission](../ACTIVATION.md#admission)
-11. [ACTIVATION.md#2-context-construction-under-an-envelope](../ACTIVATION.md#2-context-construction-under-an-envelope)
-12. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
-13. [PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method](../PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method)
-14. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
-15. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
+10. [TICKETS.md#ticket-records](../TICKETS.md#ticket-records)
+11. [TICKETS.md#carrier-selection](../TICKETS.md#carrier-selection)
+12. [ACTIVATION.md#admission](../ACTIVATION.md#admission)
+13. [ACTIVATION.md#2-context-construction-under-an-envelope](../ACTIVATION.md#2-context-construction-under-an-envelope)
+14. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
+15. [PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method](../PRODUCT_DEFINITION.md#foundation-to-law-binding-a-project-to-the-method)
+16. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
+17. [SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding](../SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding)
 
-Size of this frame: 94520 bytes.
+Size of this frame: 102009 bytes.
 
 Source: SPEC_METHOD.md#canonical-statement sha256=06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e
 
@@ -692,6 +697,94 @@ computational-realisation projection laws supply the affected set, the
 admission relations, the invariants and the computational dispositions;
 this section consumes those laws and creates no second design package
 ([DESIGN_MODULE](../DESIGN_MODULE.md)).
+
+
+Source: TICKETS.md#ticket-records sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
+
+### Ticket records
+
+Tickets are the enduring work records. Each ticket is one durable record,
+one markdown file being the default carrier; the source of truth for that
+unit of work; durable across sessions; and typed, so that bugs and features
+share one system. A ticket is used when work needs independent durable
+identity: feature work, bug tracking, spikes and chores (P3, P4b).
+
+
+Source: TICKETS.md#carrier-selection sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
+
+### Carrier selection
+
+Every execution governed by this method uses one run-scoped execution
+contract. The required lifetime of the work or obligation selects the
+smallest lawful source carrier: first establish the applicable upstream
+work authority, then select the first matching row below. For work inside
+an admitted sprint the local carrier boundary is that sprint; otherwise it
+is the current run (P2, P4b, P6).
+
+| Condition | Execution-contract source | Durable-ticket decision |
+|---|---|---|
+| no applicable upstream work authority exists | no execution contract is admitted | do not create a ticket as substitute authority; stop or re-enter |
+| applicable authority exists and an existing admitted ticket covers the exact work | derive the run-scoped contract from that ticket | reuse it; do not create another ticket |
+| applicable authority exists, no exact admitted ticket covers the work, and the work or an open obligation needs independent state beyond the local carrier boundary | one durable ticket plus the run-scoped contract | create or update the ticket only under ticket-state authority |
+| applicable authority exists, no exact admitted ticket covers the work, and the work stays inside one admitted sprint with no state required after sprint close | the sprint manifest plus one manifest-local iteration entry | do not create a durable ticket |
+| applicable authority exists, no exact admitted ticket or sprint covers the work, and the work ends in the current run with no independent surviving state | an intake-drafted run-scoped contract | do not create a durable ticket |
+
+"Ticket-shaped" describes the categorisation, closure criteria, proof
+surface, non-closure conditions and the other required execution-contract
+fields (§4, Required fields). It creates no durable ticket identity and no
+ticket-lane state (P3).
+
+Absence of a durable ticket neither requires nor authorises creating one.
+An exact product-authorised work instruction may supply the upstream work
+authority for a one-run contract; a generic request or a model-widened
+scope cannot. A durable ticket is created or updated only when the table
+requires surviving state and the actor holds ticket-state authority. An
+explicit instruction from ticket-state authority to create a durable record
+selects that durability; it does not admit an execution contract or widen
+its upstream work authority (P6, P2).
+
+The step side of admission is [ACTIVATION §1](../ACTIVATION.md#admission) and
+is defined there once: drafting versus admission inside one invocation, the
+condition under which execution may begin, what admission may never be
+inferred from (including ticket or sprint presence, lane placement and
+`active` status), the coordinates an admitted result carries, the recording
+of every result, withheld closure and residual obligation before return,
+and refusal when no durable result and evidence surface is available. This
+member adds the carrier side (P6, P4b). The admission mechanism and the
+durable result and evidence surface are the ones the product definition
+binds. When that surface is the ticket or the sprint manifest, the admitted
+result with its coordinates is recorded there. A carrier's lane, status or
+prose that asserts admission without those coordinates is not admission
+evidence, and the contract it describes remains drafted or rejected.
+
+When admission is absent or rejected, ACTIVATION §1 returns the missing
+work authority without execution. Before that return, an obligation that
+must survive the run is carried as follows (P4b, P6): it becomes a
+sprint-local entry when its lifetime stays inside the admitted sprint;
+otherwise it is recorded as a durable ticket, only under ticket-state
+authority; where that authority is absent, it is retained in the
+contract's named durable result and evidence surface or in an
+already-authorised enclosing carrier, closure is marked withheld on
+ticket-state authority, and the required re-entry is returned.
+
+Execution and closure use the same admitted categorisation, criteria,
+proof surface and non-closure conditions. The resulting state still flows
+through proof, gap analysis and repricing (P6, P2).
+
+The selected carrier is also the work reference for context construction and
+continuation: bind its current question, subject and basis, result and evidence
+references, and surviving obligations. Apply
+[ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) to that
+bounded acquisition, [§5](../ACTIVATION.md#5-work-state-and-restart) to current
+work state, the disposable actor account and resumption, and
+[§7](../ACTIVATION.md#7-closed-result-and-reuse) to closed results and reuse.
+The ticket retains its [work-state authority](../TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009);
+an actor's account cannot replace the carrier, governing sources or current
+evidence. Preserve results, step-produced facts and owner rulings through
+the named result and evidence surface under existing admission and
+[continuity](../TICKETS.md#recorded-judgment-and-owner-ruling-continuity) law. This applies
+those owners to the selected carrier; it creates no additional carrier
+requirement and confers no ticket-state authority (P0, P3, P4b, P6).
 
 
 Source: ACTIVATION.md#admission sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
