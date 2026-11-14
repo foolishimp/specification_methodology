@@ -1,0 +1,1679 @@
+{
+  "kind": "stdo.release-cohort/1",
+  "profile": "rc-six-product-v1",
+  "version": "3.1.0-rc.1",
+  "public_version": "3.1.0",
+  "repository": "https://github.com/foolishimp/specification_methodology.git",
+  "native": {
+    "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+    "cut": "v3.1.0-rc.1",
+    "project_release_namespace": "specification_methodology",
+    "project_subtree_root": "specification_methodology/v3",
+    "project_subtree_tree": "31aab3cebc56ec308afb3c7312cd4b6d3315043e",
+    "qualified_ref": "refs/tags/specification_methodology/v3.1.0-rc.1",
+    "standards_tree": "78f97d798fabacf0b76c2e2e6a19d7257a75198d",
+    "tag_object": "fca8d5e97cf2e945196aecdc33908bb190efdca5",
+    "tree": "0ceecf8a106dff4c7b616849167757405f819610"
+  },
+  "source": {
+    "checkpoint": "0a981a020d10cfdb301bb206264acee5679c43ab",
+    "carrier": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+    "native_source_subtree": "specification_methodology/v3/build_tenants/common",
+    "native_source_tree": "31aab3cebc56ec308afb3c7312cd4b6d3315043e"
+  },
+  "products": [
+    {
+      "namespace": "specification_methodology",
+      "root": "specification_methodology/v3",
+      "definition_id": "urn:stdo:product-definition:stdo-3",
+      "commit_role": "native-A",
+      "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+      "subtree_tree": "31aab3cebc56ec308afb3c7312cd4b6d3315043e",
+      "definition": {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": "specification_methodology/v3/stdo_3.json",
+        "sha256": "833874bacacea07ae6c70ab6e786d0ea2096865ad79daaf8e6daf9b6677eff4b",
+        "construction_basis": "stdo://releases/v3.0.4/"
+      },
+      "distribution": {
+        "asset": "stdo-v3.1.0-rc.1-manifest.json",
+        "manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa",
+        "native_members": 94
+      }
+    },
+    {
+      "namespace": "purpose_context",
+      "root": "purpose_context",
+      "definition_id": "urn:stdo:product-definition:purpose-context",
+      "commit_role": "source-B",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "subtree_tree": "8d20ba4da8ac574344f0ab4e6769c82ed51dd266",
+      "definition": {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": "purpose_context/stdo_purpose_context.json",
+        "sha256": "a7d9c58a1d2a057a4358ebb4bd3fcb8e34081438df6c5fcfc0581e756c0243c8",
+        "construction_basis": "stdo://releases/v3.0.4/"
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.1.zip",
+        "root": "purpose_context",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 4291,
+            "sha256": "f33aeae690104115c1ee89023a2901a9c5ca12b886ba62a9d5832b82795ab03e"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 209,
+            "sha256": "5654a1debcc3657a6b91893231934d81c4620cd91c6922dd94cb738a6fc44aa2"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 9777,
+            "sha256": "c93e1a34fc59b7bc8cc385d3caece3b224616670ef627371f60171b9fdf0a537"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4662,
+            "sha256": "96c33fc1fd534dd1f6aea8daa43c25c230a2d7997fe18489a41f3c3344d8ce12"
+          },
+          {
+            "path": "RELEASE.md",
+            "bytes": 3074,
+            "sha256": "9d37ea4e60dae7317b58afec7eee9ad4a5043cf32fea24423b072783481d4f14"
+          },
+          {
+            "path": "SOURCE_RELATION.json",
+            "bytes": 22748,
+            "sha256": "2fcaba0344e51eb48fec2b07aa27fbe0dac0975d3cde682d8c1d700cc89c8038"
+          },
+          {
+            "path": "authoring/release-targets/3.1.0-rc.1.json",
+            "bytes": 3139,
+            "sha256": "c53ea7f5275b6429dc42a5a9fd6d41a60b707f186e7ea998552520900eb0f245"
+          },
+          {
+            "path": "authoring/sdlc-workflow/PURPOSE.json",
+            "bytes": 3492,
+            "sha256": "8ecba436caa12381da0c4b29f479358bc71e0e45fdae449ea1939bbcacdd1795"
+          },
+          {
+            "path": "authoring/sdlc-workflow/QUERY-TEMPLATE.json",
+            "bytes": 99,
+            "sha256": "f21693cc7952a96a893d4855ae27eed19688627746c8765e8d9af5da4211f2b6"
+          },
+          {
+            "path": "authoring/sdlc-workflow/RULES.json",
+            "bytes": 55275,
+            "sha256": "427dda923fb5f9167583a74850a7fc3a66176e4d1b6b0d8e7a664eb3a0b16e9c"
+          },
+          {
+            "path": "authoring/sdlc-workflow/SOURCE-CLOSURE.json",
+            "bytes": 3740,
+            "sha256": "da81436615f57237b351ab54697dfddd85c8b370375df89c0bf9589fed4b38ff"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/adjacent-finding.json",
+            "bytes": 752,
+            "sha256": "f0494203c53268215311c28f4210c43ff78e2637145a39c3071cf500f6af402a"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/boundary-assessment.json",
+            "bytes": 776,
+            "sha256": "ce63027862e13657345e8a184b7571e1cb935256313c692710f0d3d839e9dac0"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/causal-reentry.json",
+            "bytes": 753,
+            "sha256": "1d971a68f0e7d3387b9ab631c13596ba7f27d53e194976f0bb88d7c8d7aa70d9"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/first-capability-limit.json",
+            "bytes": 877,
+            "sha256": "7388e9f7c4fcfb10c869c872584648f1b78447f0c0c2c04cc039d209fa9ec1e7"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/incomplete-evidence.json",
+            "bytes": 759,
+            "sha256": "dcbe9dbff86dcfcaaed1f488bb97791a1d62799ad1ae5be64fb9e7a9c47a213f"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/ordinary-repair.json",
+            "bytes": 755,
+            "sha256": "4a783f12d5d114482f7c5b869d71ba43c458482f3b491b2f1e4295dfb7139890"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/valid-support-reuse.json",
+            "bytes": 758,
+            "sha256": "c4a4db7fb6b57044682418517fb1f3c11c22a73c3e96fca5d48538348b3f3149"
+          },
+          {
+            "path": "design/DESIGN.md",
+            "bytes": 11102,
+            "sha256": "ccdff9ebb9ff28d9f8ff3bded9e443685aa5d259f853e90d714e5a77adea06c5"
+          },
+          {
+            "path": "scripts/package_release.py",
+            "bytes": 5156,
+            "sha256": "70d14a4ed4dd99902aefdef33dd62f3b1b94a06f06aeab51319ddaa0b06c69b1"
+          },
+          {
+            "path": "scripts/rebuild_release_indexes.py",
+            "bytes": 17341,
+            "sha256": "eedc8b1248799911a271b51883d961103987f91c1050f574950e06b9a23bb7f5"
+          },
+          {
+            "path": "scripts/rebuild_sdlc_index.py",
+            "bytes": 10684,
+            "sha256": "2d38f6a77be784e4e84df1435b8ae154c098098a4c7cae88865718ca52e79f69"
+          },
+          {
+            "path": "skills/stdo-context/SKILL.md",
+            "bytes": 9412,
+            "sha256": "b82c32ee123abfc4277923f1834576a4d928611e4631cfe0036491d57adeca05"
+          },
+          {
+            "path": "skills/stdo-context/indexes/CATALOG.json",
+            "bytes": 12238,
+            "sha256": "9aa5067ff179305f820768482cd241a2517275b7c78c40550f76c7beaefa19d6"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-python-pure-refactor-v2/INDEX.json",
+            "bytes": 163085,
+            "sha256": "4c9ebc086689dac83f39c20b4d3bda144241cb963387b268973766f09fbad1b5"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-python-pure-refactor-v2/PROVENANCE.json",
+            "bytes": 7905,
+            "sha256": "d63f89c7c07cf19fbf723dcd42c4044f1ef4230d27e1cbc5f1c483f75ad7e9ec"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-python-pure-refactor-v2/PURPOSE.json",
+            "bytes": 6506,
+            "sha256": "36a742550d2cde02df0d6296c56db25d6d3713766875fdad8c636b5e33e1fea3"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-python-pure-refactor-v2/SOURCE-DELTA.json",
+            "bytes": 33588,
+            "sha256": "49794291a38f72c9ffe4dfcf9a34a824e33eef0f01bc5d72f71b25e513438bb7"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-python-pure-refactor-v2/SOURCES.json",
+            "bytes": 3228,
+            "sha256": "66ae1b0ddce5d39cee3f38b8ef0f919ae4aad1df18e9470c17a3822c1a9f3fa1"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-sdlc-workflow-v1/INDEX.json",
+            "bytes": 51533,
+            "sha256": "fe82297b1ce249cd5345ce50087720a2c2b0f57760184a2702a06d51e76725b5"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-sdlc-workflow-v1/PROVENANCE.json",
+            "bytes": 6678,
+            "sha256": "2f9eed923bfb89f46c2416bb4ab9f2b9d6778ed560b0b8406b818b5843fa693c"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-sdlc-workflow-v1/PURPOSE.json",
+            "bytes": 3536,
+            "sha256": "04fff05db176e8304f64ce0e8abd8300e45827a4723696baf6f676fbd0795b35"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-sdlc-workflow-v1/SOURCE-DELTA.json",
+            "bytes": 21680,
+            "sha256": "5cf12b4a1b24cbfc782fd941b8653a42beff3a237cfcee343465c413b2cc81bc"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-sdlc-workflow-v1/SOURCES.json",
+            "bytes": 2373,
+            "sha256": "f295d213d978fb75ba0af4520b11dcc868816f8db6248b70ba5c74632c2d3c8c"
+          },
+          {
+            "path": "skills/stdo-context/references/authoring.md",
+            "bytes": 3730,
+            "sha256": "215f5ae233ca03b5acb99273eff2872e2d1a4b49d54158ec5a56c2a760eb3737"
+          },
+          {
+            "path": "skills/stdo-context/references/index.schema.json",
+            "bytes": 7659,
+            "sha256": "537784a980f5d8267bbeae271eebd04757ff9f2f241d30166d7f2d4c1f4c5ec6"
+          },
+          {
+            "path": "skills/stdo-context/references/method-targets.md",
+            "bytes": 3292,
+            "sha256": "ab35590e062a0af4b0415d9399182f5f40035efe7f1763f9e783e3bdcbb8c0c2"
+          },
+          {
+            "path": "skills/stdo-context/references/python-pure-refactor.md",
+            "bytes": 9987,
+            "sha256": "d9941cbfc17692fecece270a587c2709f2014e177dcb37406ba3cd30e95420f0"
+          },
+          {
+            "path": "skills/stdo-context/references/sdlc-workflow.md",
+            "bytes": 12048,
+            "sha256": "f5b2c80ebb5951791d497621388819c9105b97514c1c7a0839433528c40dc2cc"
+          },
+          {
+            "path": "skills/stdo-context/scripts/context.py",
+            "bytes": 15436,
+            "sha256": "11de6b6eb18480daa63f27679d48e238131cbfa733e11ae0993fa83f077730ee"
+          },
+          {
+            "path": "skills/stdo-context/scripts/context_catalog.py",
+            "bytes": 14487,
+            "sha256": "df532546092d082d7e1e2bc2a5219a6d1ba96b0ca2e3d8cab834d605be07622a"
+          },
+          {
+            "path": "skills/stdo-context/scripts/context_core.py",
+            "bytes": 22847,
+            "sha256": "f690a4c09688fcd45df2befba9d71cb9eb7264bd0057621e8128c344b6ab3143"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 3746,
+            "sha256": "83dd1c2e240eb904815bed3a637a3b8d97365701f20838244b34a872285e79d2"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 1764,
+            "sha256": "f940e0e7e034f99c49eac41783308f0d2b855ace0634ad4b1741fc0d6a895e4b"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 9029,
+            "sha256": "ee1133a2dd3c1b1e1ee4f271028eca302527058743d98c05bbd0ddf55d2360b7"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 5422,
+            "sha256": "bfe1c456f69f7258fdad20a868c4cb52596ee3e9b3a913c00bc7e5e8e6f8f8ca"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 4936,
+            "sha256": "e1e2dad0c1d622d3212f89006cc2a3f50c75c35e1016c6f16ddfe8937c4266f2"
+          },
+          {
+            "path": "specification/requirements/SDLC-WORKFLOW.md",
+            "bytes": 7616,
+            "sha256": "5afba547f7e91fafe4af9c4b475ef936ee94ac1a6587465be4fe4e5419772cf7"
+          },
+          {
+            "path": "stdo_purpose_context.json",
+            "bytes": 2905,
+            "sha256": "a7d9c58a1d2a057a4358ebb4bd3fcb8e34081438df6c5fcfc0581e756c0243c8"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "c93e1a34fc59b7bc8cc385d3caece3b224616670ef627371f60171b9fdf0a537",
+        "member_count": 49
+      }
+    },
+    {
+      "namespace": "stdo_skills",
+      "root": "stdo_skills",
+      "definition_id": "urn:stdo:product-definition:stdo-skills",
+      "commit_role": "source-B",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "subtree_tree": "9f9d252494c5e595093287d8e62ee89adce51946",
+      "definition": {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": "stdo_skills/stdo_skills.json",
+        "sha256": "638397e839f8a39d0ddb5b0c5bbdcab12094d5bad5b4d9c520a83b984cd8bf97",
+        "construction_basis": "stdo://releases/v3.0.4/"
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.1.zip",
+        "root": "stdo_skills",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 1640,
+            "sha256": "fdd747815a545675f77f76b18d2bd2fd523ea9938d4de3fe8c83e6b1cb09a474"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 1555,
+            "sha256": "df8ec2abb5e96e3342e47122cfd872af7e141b56bbba8521012b5622ab2655cc"
+          },
+          {
+            "path": "GETTING_STARTED.md",
+            "bytes": 10618,
+            "sha256": "7032acc5d9d0a09abc0c449b012db5a30577e8464ff13a5a762f50275608da00"
+          },
+          {
+            "path": "INVENTORY.json",
+            "bytes": 6602,
+            "sha256": "8e0f4492e4d57c3cd04543fbc8ee054c7dbcb0b4d8c87b8328efc4add5e57771"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4508,
+            "sha256": "6f85b62f704eae95a0f4788930a91a9210ce984fdf3953af2e2a362817fe3ee6"
+          },
+          {
+            "path": "RELEASE.md",
+            "bytes": 3525,
+            "sha256": "19818b72d43a0df646c43abd4314be1ccee8293361e734abc8aa3d877336fd1c"
+          },
+          {
+            "path": "build_tenants/README.md",
+            "bytes": 648,
+            "sha256": "1738a13504d6c572d40ee33e3f74ba9781b20401551711799ff89622f6d228ef"
+          },
+          {
+            "path": "build_tenants/claude/README.md",
+            "bytes": 704,
+            "sha256": "41d0a9b312e7c2e69042301fa6ecf97b8ab9e6e92982821489129f9232111833"
+          },
+          {
+            "path": "build_tenants/claude/current/DESIGN.md",
+            "bytes": 781,
+            "sha256": "db03deba7dbb5f02cb17ecbd91a008eb47687ca85c71a39511d087a13ab606cb"
+          },
+          {
+            "path": "build_tenants/claude/current/skills/stdo-project/SKILL.md",
+            "bytes": 1380,
+            "sha256": "2237dc3901d1b3505e711676042a25ce77372ed94f9a7a273c4065f16e4a4111"
+          },
+          {
+            "path": "build_tenants/claude/current/skills/stdo-project/references/code.md",
+            "bytes": 677,
+            "sha256": "63903db316f4e65cf9f47f4adc9f7dbe06c1634f753b00a32a2987c76fc5e622"
+          },
+          {
+            "path": "build_tenants/claude/current/skills/stdo-project/references/project.md",
+            "bytes": 984,
+            "sha256": "109198ac76a3facbf42fbecc31014ba454c530cf9e7225f5126d33cd43d40d16"
+          },
+          {
+            "path": "build_tenants/codex/README.md",
+            "bytes": 622,
+            "sha256": "24afb4a20bf12bd4dd8e3578d9d88e4255bba1419f539f18839c17193a57f176"
+          },
+          {
+            "path": "build_tenants/codex/current/DESIGN.md",
+            "bytes": 779,
+            "sha256": "4ebb06b172b2ca26e6faa9e2901d20766ae1f8bbd5aef17fe45b9c85d3f086ff"
+          },
+          {
+            "path": "build_tenants/codex/current/skills/stdo-project/SKILL.md",
+            "bytes": 1380,
+            "sha256": "2237dc3901d1b3505e711676042a25ce77372ed94f9a7a273c4065f16e4a4111"
+          },
+          {
+            "path": "build_tenants/codex/current/skills/stdo-project/references/code.md",
+            "bytes": 677,
+            "sha256": "63903db316f4e65cf9f47f4adc9f7dbe06c1634f753b00a32a2987c76fc5e622"
+          },
+          {
+            "path": "build_tenants/codex/current/skills/stdo-project/references/project.md",
+            "bytes": 984,
+            "sha256": "109198ac76a3facbf42fbecc31014ba454c530cf9e7225f5126d33cd43d40d16"
+          },
+          {
+            "path": "scripts/INSTALLATION.md",
+            "bytes": 8406,
+            "sha256": "870da2f91358cabf67f2e8e5309229803148ab190353b80e8e2e188d2378493f"
+          },
+          {
+            "path": "scripts/manage_skills.py",
+            "bytes": 18076,
+            "sha256": "d150556b60b67467f26cc66fdc2e09ae9f5e4351313bafb8cf90ebecef3163ae"
+          },
+          {
+            "path": "scripts/package.py",
+            "bytes": 5229,
+            "sha256": "da3e475e2e85cec5184ce76065d1ccad10dad181c199de8c70323e1137bfad71"
+          },
+          {
+            "path": "skills/stdo-context/BINDING.json",
+            "bytes": 75,
+            "sha256": "c293148fe010645681a981cf660f0b144a3d66f999f995f107227be6f42bfeea"
+          },
+          {
+            "path": "skills/stdo-context/SKILL.md",
+            "bytes": 4765,
+            "sha256": "7f5aef26f56880c6754086af6a01cdd75e2731dc36f49427bc7e66ae5cef2143"
+          },
+          {
+            "path": "skills/stdo-context/scripts/provider.py",
+            "bytes": 4622,
+            "sha256": "45d7eb587ef4257f45b44201dc33954b958b25778153ca1f6d904a31b69043f6"
+          },
+          {
+            "path": "specification/DESIGN.md",
+            "bytes": 3733,
+            "sha256": "cb7b1e277623fee068bb8106d8d6b71263b88d7a022fc3e5f537134cb5c788d5"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 2329,
+            "sha256": "c04856c0137ad852c0e591528068dc0af09d1412d31427e6b15e0ab22e75e3b1"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 797,
+            "sha256": "8f350c005614db78a584c7de73d684ff6d0e289ac8b64c9cc223fb4f7633da0d"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 5858,
+            "sha256": "3a6a72ef58e6227c20571fe141c9d73d6437728639dfa4ec2ddc803cb9710f37"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 3986,
+            "sha256": "4a9aade0265b59a8bf3f250b1857c0bd7e7ceead2f53c53b5ef7eedc0be5cfec"
+          },
+          {
+            "path": "specification/SOURCE_OWNERS.md",
+            "bytes": 950,
+            "sha256": "c8446fe900a00f2673b820d6094f4cb068aa9fad73b601275fc6a1c66e24d08e"
+          },
+          {
+            "path": "specification/composition/DEPENDENCIES.json",
+            "bytes": 627,
+            "sha256": "25e639faf55c6251b463ac78e32dd529b81d89cb6f7cfa40f19d83b33e37ac76"
+          },
+          {
+            "path": "specification/composition/PRODUCTS.md",
+            "bytes": 1576,
+            "sha256": "6e9ff183bd88b265b952b5993cc06b0fed5fc65355cfd00f2038378938a5899c"
+          },
+          {
+            "path": "specification/requirements/PURPOSE-INDEX-CONSUMPTION.md",
+            "bytes": 5908,
+            "sha256": "a843365899e6cf8ea75b6bbd2841b15b1bd6ef015f32228eb5197fdee06f5a80"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 3662,
+            "sha256": "38bfcfa5c4c8a89c7f29c2db488955d56622d4c673333673c256a0c794b33c68"
+          },
+          {
+            "path": "specification/requirements/SCENARIOS.md",
+            "bytes": 5165,
+            "sha256": "8b78121f3bc78bbb39336778b8d87b0f33d7e2f334838384301ec1977335da12"
+          },
+          {
+            "path": "stdo_skills.json",
+            "bytes": 4000,
+            "sha256": "638397e839f8a39d0ddb5b0c5bbdcab12094d5bad5b4d9c520a83b984cd8bf97"
+          }
+        ],
+        "identity_path": "INVENTORY.json",
+        "identity_sha256": "8e0f4492e4d57c3cd04543fbc8ee054c7dbcb0b4d8c87b8328efc4add5e57771",
+        "member_count": 35
+      }
+    },
+    {
+      "namespace": "a_c",
+      "root": "a_c",
+      "definition_id": "urn:stdo:product-definition:a-c-implementations",
+      "commit_role": "source-B",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "subtree_tree": "0608b768d2e32f37b6db6fa61bbeed6d982fd3c5",
+      "definition": {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": "a_c/stdo_a_c.json",
+        "sha256": "cc53f590a7fd577021f626c52b18c6aad1e7304b0dd9e7478887c1d5b49e9a36",
+        "construction_basis": "stdo://releases/v3.0.4/"
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.1.zip",
+        "root": "a_c",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 2610,
+            "sha256": "c00a50960c3a92ea449515a5894ea8d60fb2c3fe044d11f9f43588c33664b8dd"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 2610,
+            "sha256": "c00a50960c3a92ea449515a5894ea8d60fb2c3fe044d11f9f43588c33664b8dd"
+          },
+          {
+            "path": "INSTALLATION.md",
+            "bytes": 1713,
+            "sha256": "8b745cc6a2346b4b42cd827d48eef21474bf73156bd7eea7a702f80de64d6976"
+          },
+          {
+            "path": "MIGRATION-3.1.md",
+            "bytes": 1986,
+            "sha256": "8b0b10c402ec073ddddc1da42c694a2ca6a129e49e8a66babf8bbc13151e7d98"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 6457,
+            "sha256": "40b6e19214f40ba10ed38d90b11f98f0e62ecad6ef2e9b2ccf758ed9607f74af"
+          },
+          {
+            "path": "README.md",
+            "bytes": 1437,
+            "sha256": "72db2f6eebbc69df6f8f11e0c9fa0b6d8deee8ada7a448d3931a64405b8a858c"
+          },
+          {
+            "path": "VERSION",
+            "bytes": 11,
+            "sha256": "6d8a34718ea306c7e03719b8700d219b2eab836651286368ec957e1eb9f2ba5a"
+          },
+          {
+            "path": "build_tenants/README.md",
+            "bytes": 453,
+            "sha256": "bc2433d2c093b02ab53cf56ce02f9acddb9b22b42095b197cc0f5f7d0996f7d4"
+          },
+          {
+            "path": "build_tenants/graphify/README.md",
+            "bytes": 409,
+            "sha256": "f23f50a9b38583bcce41bcbdc760b61875da691aa73a4cfbfa3f6b717aaa5f03"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_code.py",
+            "bytes": 43911,
+            "sha256": "4d12be85a2ee3bff2e2630816a43d240b14de38c2407a5570267ec043f0e69df"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_explore.py",
+            "bytes": 9794,
+            "sha256": "6e4c80a71e69180c9af28aa1ea8aa1e779128971b21ab2c4232d86ccd56151ef"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_fs_boundary.py",
+            "bytes": 1621,
+            "sha256": "93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_generate.py",
+            "bytes": 83597,
+            "sha256": "6730ae99c1b98663ec4f056aac890bcc867bf57b94103ae0e9fcb97cee515f2f"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_graph.py",
+            "bytes": 52129,
+            "sha256": "d133fe1dd6d6581f88d94a35023d3e4ee494e61a1a4af2e6197641c2743de4cf"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_grounding.py",
+            "bytes": 22891,
+            "sha256": "9593457967ca45853f29b8e6bb8378bad49914f3983f877860f7efbe034f0fb0"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_project.py",
+            "bytes": 21280,
+            "sha256": "7bdb08310892963b3c22891a50b841ce232dbfb7920c474323d800fafdd8cfb8"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_repair.py",
+            "bytes": 36733,
+            "sha256": "a8d91ee11561092e656d11647f47cb1494ccdad50849a65bdb21c77e697d65f6"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_upstream.py",
+            "bytes": 7991,
+            "sha256": "69fb0850088f9c317ae9416048ffd3157e63ad55216af3704a94edb09bddec4a"
+          },
+          {
+            "path": "build_tenants/graphify/code/code-requirements.txt",
+            "bytes": 276,
+            "sha256": "f508937dfbfe84108aee664ddba1eb9577ebfc6007eb5b76a057378793218bca"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/author.schema.json",
+            "bytes": 11148,
+            "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/author.txt",
+            "bytes": 4240,
+            "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/extraction.schema.json",
+            "bytes": 4818,
+            "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/isolation.txt",
+            "bytes": 696,
+            "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/requirements.txt",
+            "bytes": 214,
+            "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2"
+          },
+          {
+            "path": "build_tenants/graphify/code/grounding_repair/patch.schema.json",
+            "bytes": 2037,
+            "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76"
+          },
+          {
+            "path": "build_tenants/graphify/code/grounding_repair/repair.txt",
+            "bytes": 2231,
+            "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/explorer.css",
+            "bytes": 13494,
+            "sha256": "2cfa511fa05d81c1c0d26126b3b47014030a211367b7a30b7b39d46681c9f95f"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/explorer.html",
+            "bytes": 5517,
+            "sha256": "cb37641587297deaa3431eb5b557944e7fd80272e845ffb3643a5f70b2cfd8ec"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/explorer.js",
+            "bytes": 37927,
+            "sha256": "980c41adb0ec3401d22fd4c3c8054545d01ba356c92379e74fad275e71883649"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/layered.css",
+            "bytes": 2632,
+            "sha256": "fb2f005f61947def6c6c2f66fc1b36e8d87a40876c2a4ad4ffe137c22a313474"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/layered.js",
+            "bytes": 12223,
+            "sha256": "134b082f87f15eca059432e07453ce27e5a963bd94c798ef32b1eafb9cdc8b80"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/3d-force-graph-1.80.1.min.js",
+            "bytes": 1389954,
+            "sha256": "13088340aad408156064fd120c3bc3a47c93a3cc45b8f132d6284b20e2223be9"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/3d-force-graph-LICENSE",
+            "bytes": 1072,
+            "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/THIRD_PARTY_NOTICES.txt",
+            "bytes": 38944,
+            "sha256": "5550725cb2e36431fc64242442a5e0fb94be7a2d93749c3f55cc99f2f68fee22"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/manifest.json",
+            "bytes": 576,
+            "sha256": "c8d258151ce83b7864d6579fd27d2f4ac79049cab7966a0db0e8eca3a6bc883f"
+          },
+          {
+            "path": "build_tenants/graphify/design/README.md",
+            "bytes": 1198,
+            "sha256": "1a3e05ee404fd8a7974e913c1b6268b4d2cd7a58eaebe28001a072496bf1bca1"
+          },
+          {
+            "path": "build_tenants/graphify/test_env/requirements-qualification.txt",
+            "bytes": 278,
+            "sha256": "9be107b68f56e3b7d7c1d6e3ac297daeda8484a8af8ceae783aead8355a7b3b5"
+          },
+          {
+            "path": "releases/v3.1.0-rc.1.md",
+            "bytes": 1065,
+            "sha256": "3f9c1c8f289106c1dbcb410e6c19a638388ce41bfb9a917d3cc86b5a5769607d"
+          },
+          {
+            "path": "scripts/ac.py",
+            "bytes": 1118,
+            "sha256": "61214865a7b87c759f4069969038cbff8a91fcf61eae7844bc79bcb66d935f7f"
+          },
+          {
+            "path": "scripts/bootstrap.py",
+            "bytes": 5126,
+            "sha256": "1574501ff5b9990bac11bbfdbe9897791079a85b8d6c59093d5613c31a4a356a"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 1252,
+            "sha256": "15a64ecd0638a790bd8d8c2b82c198a4b73b3275f0f499608176aae9ed01232a"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 930,
+            "sha256": "dc2790eb8e812d638935a819b64128467a0025d227b521f1f4c93669874aac72"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 2101,
+            "sha256": "360871cd968cb36fbbe90f10e6b9a497c6b21417f2c7540d1ae06ad89b291d23"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 1436,
+            "sha256": "403267c60a5d3cd18011d9af638f228704ccfbdb8ba48998d6d36e9b68e0c49a"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 1282,
+            "sha256": "89deb1f54881adc2600e1a2bdbf707bbeb5c1422a67e318e171342a475570364"
+          },
+          {
+            "path": "specification/requirements/code-realization.md",
+            "bytes": 4417,
+            "sha256": "096c4c0a6f5cbd380f860e78dd031614674a2b9ab4bf176f9fd48b02e52bcff2"
+          },
+          {
+            "path": "specification/requirements/project-use.md",
+            "bytes": 1225,
+            "sha256": "ca5fa75d647e7669c12b7864e29f9291e8c6f72bcf9c3e6dee878b8fd21ac6a7"
+          },
+          {
+            "path": "stdo_a_c.json",
+            "bytes": 3191,
+            "sha256": "cc53f590a7fd577021f626c52b18c6aad1e7304b0dd9e7478887c1d5b49e9a36"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "40b6e19214f40ba10ed38d90b11f98f0e62ecad6ef2e9b2ccf758ed9607f74af",
+        "member_count": 48
+      }
+    },
+    {
+      "namespace": "stdo_representation",
+      "root": "stdo_representation",
+      "definition_id": "urn:stdo:product-definition:stdo-representation",
+      "commit_role": "source-B",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "subtree_tree": "46d58f37d15f5dde7c6c386870993cb6df63aa60",
+      "definition": {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": "stdo_representation/stdo_representation.json",
+        "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739",
+        "construction_basis": "stdo://releases/v3.0.4/"
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.1.zip",
+        "root": "stdo_representation",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 2604,
+            "sha256": "69b093a5ced6d2db62f925457a298c5826c48e1aea7ad146b9763467e5a60ada"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 2604,
+            "sha256": "69b093a5ced6d2db62f925457a298c5826c48e1aea7ad146b9763467e5a60ada"
+          },
+          {
+            "path": "INSTALLATION.md",
+            "bytes": 1825,
+            "sha256": "871bd0422b5f042b224162c1a595d2d9c4bf15d8112c486e8d3e0122aeeb481b"
+          },
+          {
+            "path": "MIGRATION-3.1.md",
+            "bytes": 2017,
+            "sha256": "2f5facd4a782c850abea78af484e304c81efe72c394d56fab3c49615d3dc74a6"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 13631,
+            "sha256": "d8a46da4e3fcce75ef9e761fe172d3e8ba583d2fd973c447a9fb324388b950f7"
+          },
+          {
+            "path": "QUICKSTART.md",
+            "bytes": 1925,
+            "sha256": "71b8bcf2671a002366fb73581e3975ac4d3d211da993e0600ef10ca19acea5aa"
+          },
+          {
+            "path": "README.md",
+            "bytes": 1161,
+            "sha256": "a5bd552724e83d34cd8e506e05eb37ab611d18857f747ab7690237bfe2d9f7ec"
+          },
+          {
+            "path": "VERSION",
+            "bytes": 11,
+            "sha256": "6d8a34718ea306c7e03719b8700d219b2eab836651286368ec957e1eb9f2ba5a"
+          },
+          {
+            "path": "build_tenants/a_c/design/CURRENT_MODEL.md",
+            "bytes": 1185,
+            "sha256": "0d333c7adaa26693bef3abc0d9de18934c6d6e1b56a0f24a76a5ad5489575459"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/COVERAGE.md",
+            "bytes": 3981,
+            "sha256": "f885f831f64f5f2a49f65656728c9a05e9d55005bc80cd5263f20e5ab7add6ed"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/GENERATION.json",
+            "bytes": 2271,
+            "sha256": "3b97d6bd7b66a2dba513e97f01ff877ca68757ac753ccb1ed46dcedf27b7b410"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/README.md",
+            "bytes": 4268,
+            "sha256": "85a7bc50c8cf9f92fa1eda46915a232a7ce805cb78a3b83261af8a13e31506be"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/SOURCE_BINDING.json",
+            "bytes": 13299,
+            "sha256": "9d3d6060cb98ac799bcf9baf38ddc3d1981de5cfc97626cdec2d5768af8320ed"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/authoring/ANSWER.json",
+            "bytes": 399571,
+            "sha256": "48cd271b5bb4f4a7b46da5503cea4ed43973f3f84165c44d8ef65b5733392259"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/authoring/TASK.json",
+            "bytes": 461427,
+            "sha256": "c336e6f6b97730acc1f0546b7e69b0e2b5b7321e5ee379c65b47c394f01b6e3c"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/PROVIDER.json",
+            "bytes": 621,
+            "sha256": "7fefcb7f5c767df3620c23b823cf9a24d1326e10dfaf55a9ee437c59895330e7"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/bindings.json",
+            "bytes": 176,
+            "sha256": "b8843de4d4bb3f19feb85f09c17c06645fa412ecd1e015da9c691637acd5c9d0"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/conversion-config.json",
+            "bytes": 1025,
+            "sha256": "772cb36ef27b4e255ecc08cb90ac93ae9cabec7da80ea4ea6dfc8d7d0555fc09"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/conversion-receipt.json",
+            "bytes": 566,
+            "sha256": "0feeade4a688232ee5ad1dccbff586db5e02a4b787d5eef400eea0a79dee4362"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/map.json",
+            "bytes": 1117778,
+            "sha256": "d06099af8487fb6e9bc792f6971b114526f5cd3869ee61eb4b1b575c360f993a"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/program.json",
+            "bytes": 1072635,
+            "sha256": "d6c4e2ebfed7c45d3b51fd363677d7554d15c5b886d6c70438ec81ae5ad5dafe"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/restored-model.json",
+            "bytes": 925947,
+            "sha256": "5c1ef1485ec7f470c42dada810f15fe4d66200a7140a14eb1d185c0fd8bb51cb"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/selected-projection.json",
+            "bytes": 20398,
+            "sha256": "2639f6d786a740d54ad819b46bcc3cd59f7f616c1f7825a6501bd26496aef360"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/validation.json",
+            "bytes": 1057,
+            "sha256": "20f40d5e1883076e8fe924e94f6bd8986018be68b96663822e66f2eda1af27f9"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/01-prepare.json",
+            "bytes": 1506,
+            "sha256": "473b13b0eaefffbaf1fe12920c6fc2070b978d1c495a754f2bc7787d799323b8"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/02-task.json",
+            "bytes": 517081,
+            "sha256": "8a9403395def7a06bded0e1f98a02f543a70230a932d65bbbe05d6b5fc157ec8"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/03-submit.json",
+            "bytes": 887,
+            "sha256": "e2e331be942d0e067fc8e360890ebfe300b1efe0092845fe30d7ad1307606337"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/04-build.json",
+            "bytes": 2763,
+            "sha256": "ba8546e59730c067fe544f94654253667a2bffa7b27e50cc5fb7805419eae301"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/05-status.json",
+            "bytes": 3307,
+            "sha256": "e5293e8b4f81786dc2e5813ea511968631bdc00cc8ab1c4ab3df42bd54c71bc9"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/06-reuse.json",
+            "bytes": 2764,
+            "sha256": "ae88192671d00ed2f08d336d7095175524dd0f252637d24e5e86bb2e31b33214"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/BUILD.json",
+            "bytes": 2265,
+            "sha256": "86a5fd798786e1f386730d87c3bc995987c35c6a2dd143c163d3d7aa883f0373"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/PROJECT.json",
+            "bytes": 3729,
+            "sha256": "251c6866807fde4104ad038b8ce08bc7d49880989ef3ed3a57445aba73b848a9"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/answers/chunk-e24656fb6771a719aa6a.json",
+            "bytes": 411818,
+            "sha256": "086f61ef71bae7c409e48834880497993556589fdb07b0b993967c71697103ce"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/chunks.json",
+            "bytes": 314010,
+            "sha256": "6d8684c95b2b1641be789d6e99b8db7b72e45edc0c2347ee6cffcadc27fcccd3"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/ACTIVATION.md",
+            "bytes": 142205,
+            "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/SDLC_DEFAULTS.md",
+            "bytes": 11713,
+            "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/TICKETS.md",
+            "bytes": 101437,
+            "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/plan.json",
+            "bytes": 2204,
+            "sha256": "5ec27bbc0bf863a033b51f7b0418bb3cf1fec7d7e89a5ae665a40a8ca6f74efb"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/carrier.json",
+            "bytes": 5735238,
+            "sha256": "903d0070618b4bbbc1166ef1bf9d0511d84ee68e239c371aab90dc9a9c36657d"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/coverage.json",
+            "bytes": 87222,
+            "sha256": "3994b04f229e6020690efdd6d40e81cb8be235aceb1b658c7f31825eb1130e8a"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/explorer.html",
+            "bytes": 3562244,
+            "sha256": "2ab25f47a5f99575c7c93bfff3a57a3241d22925dbfb69068fdf1c9b453007e5"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/model.json",
+            "bytes": 925947,
+            "sha256": "5c1ef1485ec7f470c42dada810f15fe4d66200a7140a14eb1d185c0fd8bb51cb"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/result.json",
+            "bytes": 943,
+            "sha256": "85e892faf24f8d135211408128b894d632056dc9c02dd38b7a0f7aeea7b5f3ab"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/source-manifest.json",
+            "bytes": 1443,
+            "sha256": "14a547910aa81f7823afc6827b8e79f37542df41d81df74fdfef5697925a5842"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/method-verification.json",
+            "bytes": 14759,
+            "sha256": "8aa5e39f211dbcb45f564bf622c3e7ce393aa5669fbe8f5ce87fba3951d48064"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/product-definition.json",
+            "bytes": 4484,
+            "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/source-manifest.json",
+            "bytes": 1443,
+            "sha256": "14a547910aa81f7823afc6827b8e79f37542df41d81df74fdfef5697925a5842"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/manifest.json",
+            "bytes": 15471,
+            "sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/ACTIVATION.md",
+            "bytes": 142205,
+            "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/AXIOMATIC_CALCULUS.md",
+            "bytes": 92360,
+            "sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/SDLC_DEFAULTS.md",
+            "bytes": 11713,
+            "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/TICKETS.md",
+            "bytes": 101437,
+            "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748"
+          },
+          {
+            "path": "build_tenants/axiom_indexer/README.md",
+            "bytes": 412,
+            "sha256": "d8eb6cb753b8a102a3fe9bdfc17d2438ee18296b300ab0411bc5ddd2e87105f0"
+          },
+          {
+            "path": "releases/v3.1.0-rc.1.md",
+            "bytes": 1234,
+            "sha256": "2fe63fdb6c6284e7f791c69b3f27c523530b0896fb9147d0b71a0cb4bfa6b9c8"
+          },
+          {
+            "path": "scripts/build_31_visual.py",
+            "bytes": 12427,
+            "sha256": "f9f67e7600d8ef041a79eba60b5e8590d61e3be95ad225acc719c2d2ae6be4ba"
+          },
+          {
+            "path": "scripts/visual_31_annotations.json",
+            "bytes": 43192,
+            "sha256": "045038c18fe7c52265c7d299f35051af55aa11c1304c7daf4a4a7bf9e940eee5"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 1116,
+            "sha256": "2894e33dd71be6b30503bbee518099b0cc689962dc99e6efa575aa40361ca7e4"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 573,
+            "sha256": "5c77021a3da47024365b3bf48d4ab96392fdf4db0d4d224ab2144ee65b7640c8"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 2493,
+            "sha256": "80d53d5948b60782b0cd56789535c8ef3ec244f3c35a2a0abf361dd925609e0b"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 1419,
+            "sha256": "3ad10b92414735debbf3bebec6f0da09c520b52225a00b237e2749ffacb90de5"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 664,
+            "sha256": "827fd08360a9444f4dcab6c1577c2b9341e7c68bda147127ae6b8050d4ecee62"
+          },
+          {
+            "path": "specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
+            "bytes": 326,
+            "sha256": "5522fd151defd126b1474fdc7216d4f17786c490c2da36dd77060408890ffc68"
+          },
+          {
+            "path": "specification/requirements/REQ-P-CANDIDATE-VALIDATION.md",
+            "bytes": 449,
+            "sha256": "80a18d022dced000115d8544ff8f7ad9ebc5fa6e7113dc50fdc4d85a1b114fda"
+          },
+          {
+            "path": "specification/requirements/REQ-P-CURRENT-MODEL.md",
+            "bytes": 430,
+            "sha256": "107111ce83ec7bfd1a085041fc8d521ded23d329e13d1440e7fced21a1c6dcea"
+          },
+          {
+            "path": "specification/requirements/REQ-P-DOGFOOD-VERIFICATION.md",
+            "bytes": 354,
+            "sha256": "474ecacc1d56b0fd3257a7587ddb5998854c7b845b0f74b47a62ce7f01c76570"
+          },
+          {
+            "path": "specification/requirements/REQ-P-STDO-AUTHORING-MAP.md",
+            "bytes": 347,
+            "sha256": "49eecbecafee7f1999046b61b1bfe19a5531052ad932f9aac987ae8a23149d36"
+          },
+          {
+            "path": "stdo_representation.json",
+            "bytes": 4484,
+            "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "d8a46da4e3fcce75ef9e761fe172d3e8ba583d2fd973c447a9fb324388b950f7",
+        "member_count": 67
+      }
+    },
+    {
+      "namespace": "axiom_indexer",
+      "root": "axiom_indexer",
+      "definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "commit_role": "source-B",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "subtree_tree": "13180f4671e24fdee0c823031c96947be265db9a",
+      "definition": {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": "axiom_indexer/stdo_default.json",
+        "sha256": "553e099f2d7158ca5787a093f78e82aa633a66d67afa357525343a5bb0989b07",
+        "construction_basis": "stdo://releases/v3.0.4/"
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.1.zip",
+        "root": "axiom_indexer",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 2620,
+            "sha256": "e2db54d049cc384f1f4070365d07357d26249dfa0b4e8df8454390c00951c648"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 2620,
+            "sha256": "e2db54d049cc384f1f4070365d07357d26249dfa0b4e8df8454390c00951c648"
+          },
+          {
+            "path": "INSTALLATION.md",
+            "bytes": 1084,
+            "sha256": "dbc36f23c7e5b4ed2497d6eca44fed583e7eac1e93dbe8a9b5de8ba903e62118"
+          },
+          {
+            "path": "MIGRATION-3.1.md",
+            "bytes": 1999,
+            "sha256": "b10b8d021eab8a7e4f39576cce668e3c6c029308389a04a5d9481b375502b94f"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 1067,
+            "sha256": "9d9bbe03ebd31ea7d114ef4c56dd1929e9107cd12ceb12dd4ecaa4fbc9f5dbed"
+          },
+          {
+            "path": "README.md",
+            "bytes": 1072,
+            "sha256": "fd177a29561ccf86f226981579329943923f2e3eb51dffc04c37fb1a3ec73571"
+          },
+          {
+            "path": "VERSION",
+            "bytes": 11,
+            "sha256": "6d8a34718ea306c7e03719b8700d219b2eab836651286368ec957e1eb9f2ba5a"
+          },
+          {
+            "path": "build_tenants/core/README.md",
+            "bytes": 475,
+            "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d"
+          },
+          {
+            "path": "build_tenants/core/code/README.md",
+            "bytes": 475,
+            "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d"
+          },
+          {
+            "path": "build_tenants/core/code/ac.py",
+            "bytes": 36605,
+            "sha256": "e89ba6cf4011f22ea42c05e5ecd4512f8ecbc5ce507d6b3550aa7d26926e4027"
+          },
+          {
+            "path": "build_tenants/core/code/ac_model.py",
+            "bytes": 11858,
+            "sha256": "a8baaeb06e45957d486ecf2977294ac49b481762d65812330018127e60c27ad2"
+          },
+          {
+            "path": "build_tenants/core/design/README.md",
+            "bytes": 475,
+            "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d"
+          },
+          {
+            "path": "releases/v3.1.0-rc.1.md",
+            "bytes": 972,
+            "sha256": "114cf23fc1b2bc1176ee86c2d838dab1f41754b3c81ba70c916ef6f6c4d2f052"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 658,
+            "sha256": "9d434d18fb65431e5568ada8537c096f319e6a6c06583035ee78532a9131027d"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 546,
+            "sha256": "169e83216d0c22c8fac7002b7a86a5c240df53389929a98f8fca4bf15a822907"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 1402,
+            "sha256": "d4a4b2f853420af9c27c4405ad7387ef8d503a7638cbce43e97c0d2229640fc7"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 1442,
+            "sha256": "aa1a32d8a5a055e14513fe1ad70f7d70a0ea05cc02e13fae80e933a56e11c35e"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 549,
+            "sha256": "7adb0e859283bb75d2ef0001af88ff54a3938940f64299d37366740c7508da63"
+          },
+          {
+            "path": "specification/requirements/REQ-P-MODEL-CONVERSION.md",
+            "bytes": 1663,
+            "sha256": "f196a3035f1148d3a9348533bcd65fb8cb358227f894f8af7d334a5853d011d9"
+          },
+          {
+            "path": "specification/requirements/REQ-P-PROGRAM.md",
+            "bytes": 242,
+            "sha256": "1ea0debf07c485a9ae80f4d6c278d962f63e2c724f1f4400d59c5dc8baba210b"
+          },
+          {
+            "path": "specification/requirements/REQ-P-PROJECTION.md",
+            "bytes": 262,
+            "sha256": "8dc8669ed540b79209103b91f45e277d892d506ed6e4f215ba4a5c7fb6b67238"
+          },
+          {
+            "path": "specification/requirements/REQ-P-RESOLUTION.md",
+            "bytes": 256,
+            "sha256": "e3e6c8c36ffd9702d70582e0a4a53294e55d8d752418a6c160637c887922e178"
+          },
+          {
+            "path": "specification/requirements/REQ-P-VALIDATION.md",
+            "bytes": 246,
+            "sha256": "8c6a1c639a64c7c1737df145718d65fa7915a96fb297fc9bd0d98b052757f797"
+          },
+          {
+            "path": "stdo_default.json",
+            "bytes": 3322,
+            "sha256": "553e099f2d7158ca5787a093f78e82aa633a66d67afa357525343a5bb0989b07"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "9d9bbe03ebd31ea7d114ef4c56dd1929e9107cd12ceb12dd4ecaa4fbc9f5dbed",
+        "member_count": 24
+      }
+    }
+  ],
+  "assets": [
+    {
+      "name": "stdo-manager-constraints-v3.1.0-rc.1-python313.txt",
+      "bytes": 354,
+      "sha256": "2051b5374e86548a1e85d3cee1c58d43c1c223c7071551ea3e65fa068cd49255"
+    },
+    {
+      "name": "stdo-manager-runtime-v3.1.0-rc.1-macos-arm64-cp313.zip",
+      "bytes": 3000311,
+      "sha256": "7ef447eaf3162dfd8e85e8064e85ef1e355963c1d3796043801f5f8feb428e4a"
+    },
+    {
+      "name": "stdo-products-v3.1.0-rc.1.zip",
+      "bytes": 2537255,
+      "sha256": "368ce20d1bdeacaa8731cfcd65e92f6b64845d3f75fc8ad761a584016057c976"
+    },
+    {
+      "name": "stdo-v3.1.0-rc.1-manifest.json",
+      "bytes": 15471,
+      "sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa"
+    },
+    {
+      "name": "stdo_toolchain-3.1.0rc1-py3-none-any.whl",
+      "bytes": 61594,
+      "sha256": "7bafef68217b97d5ab4d33ba88b3565f845ec389226f06e55556f4fd7bd1de95"
+    }
+  ],
+  "asset_digest_policy": "This cohort asset is excluded from its own digest inventory. GitHub API asset digest and post-publication readback bind its bytes.",
+  "refs": [
+    {
+      "destination": "refs/heads/main",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": "cfe5c1f226ef8123ef3019b7b31e288a07b62b91"
+    },
+    {
+      "destination": "refs/tags/specification_methodology/v3.1.0-rc.1",
+      "object": "fca8d5e97cf2e945196aecdc33908bb190efdca5",
+      "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/specification_methodology/v3.1.0",
+      "object": "9bdc0ab48411145ed988e0475906825fb446889d",
+      "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/rc/specification_methodology/3.1.0",
+      "object": "c1e0faaa8437c169031a476343c764614135cd93",
+      "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/release/specification_methodology/3.1.0",
+      "object": "c1e0faaa8437c169031a476343c764614135cd93",
+      "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/purpose_context/v3.1.0-rc.1",
+      "object": "195000abd674d4615b3e29c2172d0cf8175718df",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/purpose_context/v3.1.0",
+      "object": "c033074d80a67367676374162096e9bcb3c2f2ea",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/rc/purpose_context/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/release/purpose_context/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/stdo_skills/v3.1.0-rc.1",
+      "object": "d553a566c4d2df7fb3a4160467125f81486cfed7",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/stdo_skills/v3.1.0",
+      "object": "291b1c04980d162b6a1a3b8502296400a1378958",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/rc/stdo_skills/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/release/stdo_skills/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/a_c/v3.1.0-rc.1",
+      "object": "03da41ccf478a96ba8629f4e2aee8223aac10b8d",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/a_c/v3.1.0",
+      "object": "a2fb41ac834518b90992a25980522f657c70fd87",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/rc/a_c/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/release/a_c/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/stdo_representation/v3.1.0-rc.1",
+      "object": "c932ae2912d49b7ad652d092ebe84a2bc45a1315",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/stdo_representation/v3.1.0",
+      "object": "4ba278353e9b7929abc0416ea5076f55307087f8",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/rc/stdo_representation/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/release/stdo_representation/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/axiom_indexer/v3.1.0-rc.1",
+      "object": "398d388e510e310ddc9d14a686c86da1a0e68599",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/axiom_indexer/v3.1.0",
+      "object": "318aa1d4f021736eb2adad4d72d8d391c2c0d623",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/rc/axiom_indexer/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/heads/release/axiom_indexer/3.1.0",
+      "object": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+      "immutable": false,
+      "expected_remote": ""
+    }
+  ],
+  "ref_graph_sha256": "55b8f31620d2ac0825e8df5c76674c460028faf00a8bd0964c54bc5d051033b1",
+  "qualification": {
+    "declared_prepublication_claims": "supported with recorded residuals",
+    "post_tag_review": "pending",
+    "evidence": [
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/PREPUBLICATION.md",
+        "sha256": "3e008709d9f40ea0e318e7f479434c5e216f3e5684927cb942069fb2a4a9a7c7"
+      },
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/NATIVE_BINDING.json",
+        "sha256": "9a910078ffbf30f370d812d4a365bc255a129b38e578d78fb7e234a8f69a1260"
+      },
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/FINAL_REPORT.md",
+        "sha256": "8e832f1e93e1f1ac3ec216df125ab3668b7fdb733bb87bb336ff704a5e4af68f"
+      },
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/assessed-local/RESULT.json",
+        "sha256": "8e6cff9d26e84e958fdce1695612f877fc8a98b2aeb0157c39b00519d0fa1ce4"
+      },
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/assessment/final/context/RESULT.json",
+        "sha256": "d8a3243ff3ea12dda0a96425fd263408738cd2188a70562ca76277ee00f31907"
+      },
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/assessment/final/context/assessments/python.json",
+        "sha256": "498186f50e53493931920ada5a800e0e07984b042040e877ce78f72a56cfd07e"
+      },
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/assessment/final/context/assessments/sdlc.json",
+        "sha256": "47007b188e77771c30e4db932f5ffb6dc2c8697212bcd417df665180d6d6b714"
+      },
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/assessment/final/visual-recheck/RESULT.json",
+        "sha256": "2a079661172a263c4bbdeb45dde0034418701e58288f82312adef5f43b50f53e"
+      },
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/packaged-visual/browser-002/RESULT.json",
+        "sha256": "ee18d98449a49ad63f52490be3d1b42f52ade393b0f332e471194d7e14bde1e4"
+      },
+      {
+        "commit": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+        "path": ".ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/visual/repair-001/RESULT.json",
+        "sha256": "fd9b4b60f729748476448e8773870cf073ee56e2b0f170dcfdb6dd4b6df82ec9"
+      }
+    ],
+    "public_verification": "Separate postpublication closure linked from the GitHub release body",
+    "limits": [
+      "Exact two context queries only; no arbitrary-query coverage or code-success claim.",
+      "Installed layouts and explicit invocation only; no automatic host pickup claim.",
+      "Three-owner visual documentation under RELEASE section8; complete native inventory, explicit residuals; no complete historical whole-method semantic-stack claim.",
+      "Ticket3-case reuse applicable; nine-case older SDLC decision-support reuse partial.",
+      "Optional Graphify/bootstrap, general non-STDO fidelity, formal/Lean and whole-method/C3 claims excluded.",
+      "Human exact-cut acceptance and consumer adoption are separate."
+    ]
+  },
+  "publication_contract": {
+    "authority": "Owner approval2026-11-15 to build and release3.1; ACTIVATION.md and RELEASE.md in source carrier",
+    "atomic_refs": 25,
+    "immutable_tags_create_only": true,
+    "mutable_destinations_explicit_leases": true,
+    "github_normal_release": true,
+    "existing_consumers_adopted": false
+  },
+  "dependency_edges": [
+    {
+      "from": "purpose_context",
+      "to": "specification_methodology",
+      "relation_kind": "indexed-source input; not Product composition",
+      "selection": {
+        "uri": "stdo://releases/v3.1.0-rc.1/",
+        "manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa",
+        "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+        "tag_object": "fca8d5e97cf2e945196aecdc33908bb190efdca5"
+      },
+      "index_ids": [
+        "stdo-3.1.0-rc.1-python-pure-refactor-v2",
+        "stdo-3.1.0-rc.1-sdlc-workflow-v1"
+      ],
+      "contracts": [
+        "purpose_context/specification/PRODUCT.md",
+        "purpose_context/specification/requirements/README.md"
+      ],
+      "effect": "Exact source/purpose/query matching; no meaning or work-state authority transferred."
+    },
+    {
+      "from": "stdo_skills",
+      "to": "specification_methodology",
+      "relation_kind": "explicit native workflow binding",
+      "selection": {
+        "uri": "stdo://releases/v3.1.0-rc.1/",
+        "manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa",
+        "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+        "tag_object": "fca8d5e97cf2e945196aecdc33908bb190efdca5"
+      },
+      "required": true,
+      "contract": "stdo_skills/INVENTORY.json release.native_method",
+      "effect": "Installed wrappers preserve selected native workflow ownership."
+    },
+    {
+      "from": "stdo_skills",
+      "to": "purpose_context",
+      "relation_kind": "required Product composition",
+      "selection": {
+        "version": "3.1.0-rc.1",
+        "public_manifest_sha256": "c93e1a34fc59b7bc8cc385d3caece3b224616670ef627371f60171b9fdf0a537",
+        "scope": "portable distribution"
+      },
+      "source_public_manifest_sha256": "396ffa87ca05f6a621e0b0e556d641284e88fe9488b5c5b5b15038a790d810e7",
+      "contract": "stdo_skills/specification/composition/DEPENDENCIES.json",
+      "required": true
+    },
+    {
+      "from": "stdo_skills",
+      "to": "a_c",
+      "relation_kind": "optional visual Product composition",
+      "selection": {
+        "version": "3.1.0-rc.1",
+        "public_manifest_sha256": "40b6e19214f40ba10ed38d90b11f98f0e62ecad6ef2e9b2ccf758ed9607f74af"
+      },
+      "contract": "stdo_skills/specification/composition/DEPENDENCIES.json",
+      "required_for_context": false
+    },
+    {
+      "from": "stdo_representation",
+      "to": "specification_methodology",
+      "relation_kind": "represented-source input",
+      "selection": {
+        "uri": "stdo://releases/v3.1.0-rc.1/",
+        "manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa",
+        "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+        "tag_object": "fca8d5e97cf2e945196aecdc33908bb190efdca5"
+      },
+      "scope": [
+        "standards/ACTIVATION.md",
+        "standards/SDLC_DEFAULTS.md",
+        "standards/TICKETS.md"
+      ],
+      "complete_native_inventory_retained": true,
+      "contract": "stdo_representation/build_tenants/a_c/representation/stdo-v3.1.0-rc.1/SOURCE_BINDING.json"
+    },
+    {
+      "from": "stdo_representation",
+      "to": "a_c",
+      "relation_kind": "selected visual generation Product composition",
+      "selection": {
+        "version": "3.1.0-rc.1",
+        "public_manifest_sha256": "40b6e19214f40ba10ed38d90b11f98f0e62ecad6ef2e9b2ccf758ed9607f74af"
+      },
+      "contract": "stdo_representation/specification/PRODUCT.md#a-c-provider-relation",
+      "construction_selected": true
+    },
+    {
+      "from": "stdo_representation",
+      "to": "axiom_indexer",
+      "relation_kind": "selected mechanical conversion/validation/projection Product composition",
+      "selection": {
+        "version": "3.1.0-rc.1",
+        "public_manifest_sha256": "9d9bbe03ebd31ea7d114ef4c56dd1929e9107cd12ceb12dd4ecaa4fbc9f5dbed"
+      },
+      "contract": "stdo_representation/specification/PRODUCT.md#axiom-indexer-product-dependency-relation",
+      "construction_selected": true,
+      "live_runtime_required_for_standalone_viewer": false
+    }
+  ],
+  "constructor_basis": {
+    "applies_to": "all six Product Definitions",
+    "uri": "stdo://releases/v3.0.4/",
+    "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b",
+    "standing": "Construction basis only; separate from indexed/represented/runtime source selections."
+  },
+  "inactive_historical_dependency": {
+    "from": "specification_methodology",
+    "to": "axiom_indexer",
+    "relation": "urn:stdo-3:relation:a-c-mechanical-evaluation-dependency",
+    "contract": "specification_methodology/v3/specification/requirements/A_C_DEPENDENCY.md",
+    "contract_sha256": "74f871daa019ce3f12f7cbee2ce9b69c4fb4f9d58f510c83b8101c884afc12cc",
+    "selected_for_this_release": false,
+    "activation_policy": "Requires its separately selected evaluation and exact installed dependency; this cohort neither activates nor rebinds it.",
+    "mechanical_ref": "refs/tags/axiom_indexer/v2.5.1-rc.2",
+    "tag_object": "9bff233c3f0e7d80f63307fa3b12800dd3db681c",
+    "commit": "9a9c479776ffd974fbcafcf48341980918209aef",
+    "inventory_sha256": "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1",
+    "theory": {
+      "uri": "stdo://releases/v2.5.1-rc.2/",
+      "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+      "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+    }
+  }
+}

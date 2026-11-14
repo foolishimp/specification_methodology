@@ -1,0 +1,28 @@
+[
+  {
+    "name": "native-resolve",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/public-readback/manager/bin/stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/public-readback/store",
+      "resolve",
+      "stdo://releases/v3.1.0-rc.1/standards/TICKETS.md"
+    ],
+    "exit": 0,
+    "expectation_met": true
+  },
+  {
+    "name": "wrong-manifest-refused",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/public-readback/manager/bin/stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/public-readback/store",
+      "verify",
+      "v3.1.0-rc.1",
+      "--manifest-sha256",
+      "0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "exit": 1,
+    "expectation_met": true
+  }
+]

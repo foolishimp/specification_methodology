@@ -1,0 +1,94 @@
+{
+  "kind": "stdo.final-dependency-readback/1",
+  "at_utc": "2026-11-14T16:29:01.719850+00:00",
+  "cohort_sha256": "4ed4c88175f643ec390de63320f702ef5367982f09dbc6470ac3787fdca43a4e",
+  "native": "c1e0faaa8437c169031a476343c764614135cd93",
+  "carrier": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+  "ref_graph_sha256": "55b8f31620d2ac0825e8df5c76674c460028faf00a8bd0964c54bc5d051033b1",
+  "products": [
+    {
+      "product": "specification_methodology",
+      "definition_sha256": "833874bacacea07ae6c70ab6e786d0ea2096865ad79daaf8e6daf9b6677eff4b",
+      "construction_basis_verified": true
+    },
+    {
+      "product": "purpose_context",
+      "definition_sha256": "a7d9c58a1d2a057a4358ebb4bd3fcb8e34081438df6c5fcfc0581e756c0243c8",
+      "construction_basis_verified": true
+    },
+    {
+      "product": "stdo_skills",
+      "definition_sha256": "638397e839f8a39d0ddb5b0c5bbdcab12094d5bad5b4d9c520a83b984cd8bf97",
+      "construction_basis_verified": true
+    },
+    {
+      "product": "a_c",
+      "definition_sha256": "cc53f590a7fd577021f626c52b18c6aad1e7304b0dd9e7478887c1d5b49e9a36",
+      "construction_basis_verified": true
+    },
+    {
+      "product": "stdo_representation",
+      "definition_sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739",
+      "construction_basis_verified": true
+    },
+    {
+      "product": "axiom_indexer",
+      "definition_sha256": "553e099f2d7158ca5787a093f78e82aa633a66d67afa357525343a5bb0989b07",
+      "construction_basis_verified": true
+    }
+  ],
+  "typed_edges": 7,
+  "contract_reads": [
+    {
+      "edge": "purpose_context -> specification_methodology",
+      "path": "purpose_context/specification/PRODUCT.md",
+      "sha256": "ee1133a2dd3c1b1e1ee4f271028eca302527058743d98c05bbd0ddf55d2360b7",
+      "origin": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "edge": "purpose_context -> specification_methodology",
+      "path": "purpose_context/specification/requirements/README.md",
+      "sha256": "e1e2dad0c1d622d3212f89006cc2a3f50c75c35e1016c6f16ddfe8937c4266f2",
+      "origin": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "edge": "stdo_skills -> specification_methodology",
+      "path": "stdo_skills/INVENTORY.json",
+      "sha256": "8e0f4492e4d57c3cd04543fbc8ee054c7dbcb0b4d8c87b8328efc4add5e57771",
+      "origin": "actual companion ZIP"
+    },
+    {
+      "edge": "stdo_skills -> purpose_context",
+      "path": "stdo_skills/specification/composition/DEPENDENCIES.json",
+      "sha256": "d07b519565d681aa25e2f30d626336d88236f6fc3ac274926b8084a3c37dea28",
+      "origin": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "edge": "stdo_skills -> a_c",
+      "path": "stdo_skills/specification/composition/DEPENDENCIES.json",
+      "sha256": "d07b519565d681aa25e2f30d626336d88236f6fc3ac274926b8084a3c37dea28",
+      "origin": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "edge": "stdo_representation -> specification_methodology",
+      "path": "stdo_representation/build_tenants/a_c/representation/stdo-v3.1.0-rc.1/SOURCE_BINDING.json",
+      "sha256": "9d3d6060cb98ac799bcf9baf38ddc3d1981de5cfc97626cdec2d5768af8320ed",
+      "origin": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "edge": "stdo_representation -> a_c",
+      "path": "stdo_representation/specification/PRODUCT.md",
+      "sha256": "80d53d5948b60782b0cd56789535c8ef3ec244f3c35a2a0abf361dd925609e0b",
+      "origin": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "edge": "stdo_representation -> axiom_indexer",
+      "path": "stdo_representation/specification/PRODUCT.md",
+      "sha256": "80d53d5948b60782b0cd56789535c8ef3ec244f3c35a2a0abf361dd925609e0b",
+      "origin": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    }
+  ],
+  "inactive_dependency_contract_sha256": "74f871daa019ce3f12f7cbee2ce9b69c4fb4f9d58f510c83b8101c884afc12cc",
+  "subject_changes_since_identity_readback": "Only external cohort dependency/basis declarations added; B, ref graph and Product/assets unchanged.",
+  "operator": "OpenAI/Codex nonauthor readback; not the independent semantic verdict"
+}
