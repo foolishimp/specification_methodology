@@ -49,6 +49,54 @@ their historical basis below. Their reuse under 3.0.4 needs task-specific
 applicability and any required deterministic-operation classification; no
 blanket compatibility, renewed qualification or new method acceptance follows.
 
+## Selected SDLC Default
+
+The [2026-11-14 owner admission](../../../.ai-workspace/work/SDLC_DEFAULTS_2026-11-14/ACTIVATION.md)
+and its [ticket/context continuation](../../../.ai-workspace/work/TICKET_CONTEXT_CONSTITUTION_2026-11-14/ACTIVATION.md)
+select the existing-law [SDLC default projection](../build_tenants/common/standards/SDLC_DEFAULTS.md#selected-default-flow)
+for current work in this Product. Its exact SHA-256 is recorded below. The
+projection's deciding owners are resolved in this Product's verified
+`stdo://releases/v3.0.4/` basis, not by promoting mutable source into installed
+law. This selection changes no installed method, historical C3 basis, Product
+gate or numeric policy. A material projection change needs refreshed identity,
+applicability and its owning adoption decision before reliance.
+
+Projection SHA-256: `a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8`.
+
+This authorized continuation supersedes the selected projection
+`47d851a4ed1c6b1a97ed67759d5217415470cdf16d5843ad5d44d3a0480003a3`.
+Its explicit work-reference, context and resumption bindings apply installed
+TICKETS §1/§2/§5/§7 and ACTIVATION §2/§5/§7 without changing their law.
+The development clarification in TICKETS §5 is an application of those owners,
+not a replacement installed basis. No new carrier, effect grant, generic
+measurement gate or Executive mandate follows from selecting the projection.
+
+Use a sufficient direct Writer under the existing exact admission when one
+capable context covers the bounded outcome. Coordinate only across a material
+dependency, authority, capability or attention boundary. Keep the separate
+Executive/Writer/Reviewer responsibilities above and required independent
+review of changed common meaning. The existing admitted carrier is the result
+surface; select a ticket only under the installed carrier rules.
+
+For each bounded continuation, bind that carrier's current question,
+subject/basis and grant, result/evidence references, surviving obligations,
+permitted Writer and next authorized action or owner re-entry. Acquire current
+material state and the needed owners within the selected envelope; reconcile
+uncertain effects and invalidators before reliance. Preserve the result and
+facts needed by the next actor through the existing durable surface. A private
+conversation or retained summary is a disposable account, not its authority.
+
+Each activation distinguishes incremental QA, bounded repair/work closure and
+named acceptance/qualification/release claims. Apply the projection's four
+causal routes, frame/capability diagnosis, changed-scope owner re-entry,
+evidence reuse and bounded stopping. For this adopted Executive basis, use
+installed §12 QA cadence and its four independent recheck triggers. Mechanical
+tests may close a repair when those triggers and other required conditions do
+not require more. Technical severity remains evidence; the Product owner or
+authorized Executive retains priority, boundary effect and disposition.
+Unspecified numeric thresholds stay unselected. A later material finding
+receives a new bounded disposition; it does not extend the old activation.
+
 ## Historical C3 Scope
 
 The remainder preserves the original reconstruction configuration on

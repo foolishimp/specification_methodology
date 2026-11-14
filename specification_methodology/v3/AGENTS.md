@@ -1,5 +1,11 @@
 # STDO 3 Source Instructions
 
+Current source distribution navigation is [development/TOOLS.md](development/TOOLS.md).
+The former common-tools constructor family is historical and archived. It is not
+a current implementation or a successor release gate. The exact installed native
+method and its owning standards retain their existing selection and authority.
+
+
 This scope is the peer source project located by [stdo_3.json](stdo_3.json). Read its exact installed STDO basis, [Product](specification/PRODUCT.md), [Goals](specification/GOALS.md), [frame basis](specification/REFERENCE_FRAME_BASIS.md) and applicable work grant before effects.
 
 Jim owns the common WHAT. Codex holds its construction pen under [T-001](.ai-workspace/tickets/active/T-001-common-definition-and-checkpoints.md). Common changes receive review independent of their author before Jim accepts them; checkpoint commits provide review visibility. Reviews are written under `.ai-workspace/comments/<reviewer>/`. Working principles and tentative capability questions do not alter the installed builder law or become accepted through presence.

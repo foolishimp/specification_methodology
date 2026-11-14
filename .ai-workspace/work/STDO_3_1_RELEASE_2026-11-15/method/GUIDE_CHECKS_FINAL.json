@@ -1,0 +1,95 @@
+{
+  "kind": "stdo31-native-guide-checks/1",
+  "guide_sha256": "bd251a414519c35a5713f848b4b92c9ca57835dd9ce9d4e966ccb4ca356a5243",
+  "checks": [
+    {
+      "kind": "shell-syntax",
+      "script": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/method/snippet-check-02/shell-01.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "kind": "shell-syntax",
+      "script": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/method/snippet-check-02/shell-02.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "kind": "shell-syntax",
+      "script": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/method/snippet-check-02/shell-03.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "kind": "shell-syntax",
+      "script": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/method/snippet-check-02/shell-04.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "kind": "shell-syntax",
+      "script": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/method/snippet-check-02/shell-05.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "kind": "shell-syntax",
+      "script": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/method/snippet-check-02/shell-06.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "kind": "shell-syntax",
+      "script": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/method/snippet-check-02/shell-07.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "kind": "shell-syntax",
+      "script": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/method/snippet-check-02/shell-08.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "kind": "shell-syntax",
+      "script": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/method/snippet-check-02/shell-09.sh",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "kind": "asset-verifier-fixture",
+      "case": "complete-six-asset-population",
+      "expected_exit": 0,
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "kind": "asset-verifier-fixture",
+      "case": "missing-member",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "release asset population differs\n"
+    },
+    {
+      "kind": "asset-verifier-fixture",
+      "case": "wrong-release-status",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "wrong fixed RC release or publication status\n"
+    },
+    {
+      "kind": "asset-verifier-fixture",
+      "case": "tampered-download",
+      "expected_exit": 1,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "release asset checksum mismatch: stdo_toolchain-3.1.0rc1-py3-none-any.whl\n"
+    }
+  ],
+  "passed": true,
+  "asset_fixture_evidence_reused": "unchanged extracted verifier bytes; snippet-check-01",
+  "standing": "syntax and bounded asset-verifier fixtures only; no public download, dependency install, migration or host qualification"
+}

@@ -574,7 +574,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: TICKETS.md#condition-based-closure-and-reuse sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
+Source: TICKETS.md#condition-based-closure-and-reuse sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
 
 ### Condition-based closure and reuse
 
@@ -896,7 +896,7 @@ The table accounts for §1 to §9 and for FOUNDATIONS §2 Product lineage
 objects. §10 records open questions and decides nothing.
 
 
-Source: TICKETS.md#foundation-to-law-work-carriers sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67 rows=1/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
+Source: TICKETS.md#foundation-to-law-work-carriers sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748 rows=1/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
 
 ### Foundation to law: work carriers
 

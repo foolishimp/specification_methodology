@@ -5,10 +5,10 @@ for `urn:stdo:product-definition:stdo-3`. [stdo_3.json](../stdo_3.json) remains
 the sole current method selection. This guide binds launch paths and source
 provenance; it adds no method law or work grant.
 
-See [Products and components in an STDO release](../../../RELEASE_PRODUCTS.md)
-for the single release-composition table, ownership and currentness gaps.
-The historical representation and older source bundles are not automatically
-current 3.0.4 implementations.
+For current source tools use [the independent Product navigation](TOOLS.md).
+The native method binding below remains current. The immutable 3.0.4 source
+archive is historical material and does not supply today's Purpose Context or
+Skills development implementation.
 
 ## Exact binding
 
@@ -79,7 +79,11 @@ file-loading route is documented by the installed
 registration. An actor's skill name alone does not identify its loaded bytes.
 The installed skill and its relative package are the workflow authority route.
 
-## Materialize and use the released sources
+## Historical released source materialization
+
+The following recipe preserves the original immutable 3.0.4 archive for historical
+inspection/reproduction only. Its old support/Lean/Skills routes are not current
+Product entrypoints. Current tools use [TOOLS.md](TOOLS.md).
 
 Python 3.11 or later is required by the materializer. Resolve and verify the
 release as above, then run this block from the Product root. It sets the

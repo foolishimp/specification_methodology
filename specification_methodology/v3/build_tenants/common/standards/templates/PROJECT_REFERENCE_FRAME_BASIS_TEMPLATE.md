@@ -26,6 +26,35 @@ Availability does not establish adoption. Adoption does not activate a frame.
 The authorities above own this concrete basis; the selected methods and
 profiles retain their own meaning.
 
+## SDLC Default Selection
+
+Proposed selection for an ordinary software Product: adopt
+[SDLC_DEFAULTS](../SDLC_DEFAULTS.md#selected-default-flow), the existing-law
+projection from the current work reference through bounded context,
+incremental QA, causal triage, owner/carrier re-entry, bounded verification and
+durable continuation. Completing and admitting this declaration selects that
+default unless the adopting authority records an explicit alternative below;
+an unadmitted template selects nothing. It requires no new Product-local
+workflow law and does not itself select the optional Executive configuration.
+
+- selected projection: `standards/SDLC_DEFAULTS.md` in the exact method basis
+  above, or `<exact separately admitted projection and digest>`;
+- existing-law owners: the projection's exact linked owners in that basis;
+- alternative or refinement, if selected: `<identity, owner and affected scope,
+  or none; retain the default otherwise>`;
+- Product-specific policy values and explicit gates: bind only those this
+  Product selects in Technical Triage And Promotion Policy below;
+- direct Writer use: permitted when one capable context and admitted grant
+  suffice and no applicable independence/coordination condition requires more;
+- disposition owner and authorized return surface: `<existing Product owner
+  or adopted coordinator, and existing carrier>`.
+
+Bind each step's exact incremental claim separately from any named acceptance,
+qualification or release claim. Use the selected default's causal and stopping
+routes; do not treat a new finding as authority to enlarge the grant. Defaults
+on another or newer method basis require compatibility and authorized
+selection; a link cannot amend the operative installed law.
+
 ## Product-Role And Composition Map
 
 Record each material role separately:
@@ -40,6 +69,32 @@ Record each material role separately:
 
 Shared actors, repositories, implementations, files, outputs, or tool access
 do not merge these roles or create a composition edge.
+
+## Work Reference And Continuation
+
+- selected ticket, sprint entry or run contract, its exact identity, lifetime
+  and authoritative binding: `<existing carrier under TICKETS §5>`;
+- current admitted work and original owner instruction, subject/basis, grant
+  and surviving obligations: `<exact references>`;
+- durable result and evidence surface, retained closed results and their
+  applicability/invalidators: `<existing authorized surface and references>`;
+- next bounded decision or action, missing condition and owning re-entry:
+  `<current continuation reference>`;
+- permitted Writer and exact carrier/result effects; return route for actors
+  without those effects: `<actor, grant, territory and result consumer>`;
+- resumption acquisition and uncertain-effect reconciliation routes:
+  `<current material subject and evidence references>`.
+
+These bindings apply [TICKETS §5](../TICKETS.md#carrier-selection) and
+[§7 continuity](../TICKETS.md#recorded-judgment-and-owner-ruling-continuity),
+and [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope),
+[§5](../ACTIVATION.md#5-work-state-and-restart) and
+[§7](../ACTIVATION.md#7-closed-result-and-reuse). The selected ticket retains
+its work-state authority; current material evidence corrects a retained
+account. Record the result and facts needed for lawful continuation through
+the granted surface before return. No prior private conversation is required.
+Preserve a sufficient non-ticket carrier; these fields create no new carrier,
+per-tool record, effect grant or mandatory coordination.
 
 ## Current Inputs And Bounded Attention
 

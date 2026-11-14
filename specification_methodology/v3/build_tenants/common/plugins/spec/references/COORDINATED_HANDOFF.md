@@ -46,6 +46,38 @@ subject merely because its Worker may do so.
    skill. Read additional sources only for a material question and through
    the admitted routes. The skill's general workflow never widens this intake.
 
+## Work Carrier And Context Continuity
+
+Apply the selected basis's [TICKETS carrier-to-execution law](../../../standards/TICKETS.md#5-from-carrier-to-execution)
+and [ACTIVATION context/restart law](../../../standards/ACTIVATION.md#2-context-construction-under-an-envelope).
+After your own control intake, bind the current ticket or other sufficient
+authorized work carrier, admitted contract, exact subject/basis and result route.
+The ticket owns its unit's durable work state; its linked governing sources and
+actual evidence retain their own authority. A summary, index, chat or handoff is
+an account, not a competing work-state surface. Do not substitute an active
+label for admission or read material your own grant excludes.
+
+Construct the context for the next dependent decision from that current record,
+the actual subject and eligible source/evidence. Retain qualified accessible
+references; acquire deciding owners when a derived context is insufficient or
+stale. Measure the selected acquisition boundary before reading when the envelope
+declares a capacity, and keep unmeasured host inputs explicit. Recover clipped
+windows, refine or lawfully compress rather than silently omit coupled obligations.
+Preserve source-first independence before candidate-derived material when required.
+
+Before returning, the actor records its granted result and step-produced facts
+on the named durable surface. The authorized work-state Writer updates the owning
+carrier with applicable decisions/evidence, residuals, effect uncertainty and
+next authorized action/owner. A Reviewer writes only its granted assessment;
+no universal new artifact or per-command ticket update follows.
+
+On resumption, reacquire relevant current state, check invalidators and reopen
+only affected support under [ACTIVATION work state and restart](../../../standards/ACTIVATION.md#5-work-state-and-restart).
+A lost private context resets no work. Reconcile uncertain effects before retry
+or dependent action; a missing chat record is no evidence of an absent effect.
+Reuse a sufficient sprint/run carrier when that is what the selected work law
+admits. This reference adds no ticket, write authority or workflow gate.
+
 ## Issue
 
 1. **Select the authorized unit.** Verify the current outcome, checkpoint,
@@ -199,6 +231,14 @@ unchanged status observation (`ACTIVATION` §1 Roles and delegation; §7).
 
 ## Review Flow From The Selected Basis
 
+First resolve the accepted Project Reference-Frame Basis's default-flow
+selection. When it selects `standards/SDLC_DEFAULTS.md`, acquire that exact
+projection and its material deciding owners; check its identity and freshness.
+Keep incremental QA, a bounded repair verification and a named acceptance or
+release assessment as separate claims. If an older selected cut has no such
+projection, use its actual owning clauses below; the skill supplies no adoption
+or amendment. A separately admitted projection still cannot change those laws.
+
 Acquire the selected basis's `EVALUATION` §5, `TICKETS` §4 and §7, and, where
 adopted, `EXECUTIVE_BASELINE` §5 and §12. Use their actual clauses. A loaded
 3.0.4 skill cannot amend an older Product-selected method or silently adopt
@@ -234,6 +274,22 @@ and bug items**, route the next decision as follows:
    invalidates affected dependent results before further reliance. Keep other
    valid work. If a policy or boundary decision is genuinely missing, return
    that material choice rather than inventing numeric meanings or a gate.
+
+For a discrepancy, use `ACTIVATION` feedback/diagnosis and `SPEC_METHOD`
+universal intake: distinguish defective realisation, inadequate requirement or
+design, inaccurate predictive model and insufficient observation. Repeated
+failure or unbounded context growth also enters `REFERENCE_FRAME` diagnostic
+order, including capability and evidence before inventing another frame.
+Return the supported cause to its owner and the smallest lawful re-entry;
+retain unresolved alternatives. Changed scope needs its owning admission, and
+adjacent findings keep a separate disposition. Neither condition authorizes
+an automatic patch, specification rewrite or ticket creation.
+
+For the selected repair pass, tests may close mechanically decidable repairs
+only where the adopted basis permits. Its required independent recheck
+conditions remain effective. Reuse demonstrably valid support, withhold
+missing coverage and stop at the bounded return. A later material finding
+starts a new bounded disposition; it does not reopen all prior reviews.
 
 Example: a granted Writer lands candidate C while its selected QA runs. QA
 reports finding F in the named restricted report R. The Executive retains F's

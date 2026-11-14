@@ -2,11 +2,64 @@
 
 This source project develops Specification Methodology. Its current builder is the exact installed **STDO 3.0.4** selected by [stdo_3.json](stdo_3.json), under the owner's [adoption instruction](.ai-workspace/work/STDO304_BUILDER_ADOPTION/INTAKE.json). [The versioned binding and guide](development/STDO_3_0_4.md) pins the released native workflow, compact source reader and bundled tools. The original two-tenant C3 reconstruction and its evidence retain their 2.5.1-rc.2 basis; the 2.* source and peer Products remain separate.
 
-[Products and components in the release](../../RELEASE_PRODUCTS.md) identifies
-the exact delivered membership and the representation/tool/skill currentness
-gaps that this builder adoption does not close.
+Current source packages follow the separate [development tool owners](development/TOOLS.md).
+The previous five-Product distribution constructors are archived; they do not
+construct or qualify the current six-Product source arrangement. The publication
+records below describe their original released subjects, not current source bytes.
+The owner now selects **3.1.0-rc.1 on public line 3.1.0** under the
+[release relation](specification/requirements/RELEASE_3_1.md) and
+[activation](../../.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/ACTIVATION.md).
+The exact installed 3.0.4 builder remains this source Product's construction
+basis. The native package carries compact current reading routes; independently
+inventoried Products carry context, host binding and optional visual capabilities.
 
-**STDO 3.0.5 is published as a normal release and GitHub Latest**, using
+## Start with the outcome
+
+1. Resolve [stdo_3.json](stdo_3.json), verify its exact installed basis and enter
+   the [3.0.4 native workflow](development/STDO_3_0_4.md). Read current
+   [Goals](specification/GOALS.md), [Intent](specification/INTENT.md) and
+   [Product](specification/PRODUCT.md) for the requested outcome and existing grant.
+2. Use the [selected SDLC default](specification/REFERENCE_FRAME_BASIS.md#selected-sdlc-default):
+   work → incremental QA → causal triage → owner re-entry → affected verification
+   → continue or close. The [guide](build_tenants/common/standards/SDLC_DEFAULTS.md)
+   and [worked cases](build_tenants/common/standards/examples/SDLC_DEFAULTS.md)
+   distinguish ordinary repair closure from named acceptance, qualification and
+   release. A sufficient direct Writer needs no added coordinator or ticket;
+   applicable independent-review conditions still hold.
+3. For host setup, follow the independent [Skills installation](../../stdo_skills/scripts/INSTALLATION.md)
+   and [first-use guide](../../stdo_skills/GETTING_STARTED.md). Select Purpose
+   Context's `sdlc-workflow/1` for workflow decisions, or the exact applicable
+   `python-pure-refactor/2` entry for its narrower construction constraints.
+   Supply actual query facts, consume and check the delivered context, then
+   return to the native work/review skill and Product-owned decision.
+4. For tenant work, use the [tenant entry contract](build_tenants/README.md).
+   Existing C3 admissions retain their historical subjects; they do not start
+   new tenant work.
+
+The [current native Getting Started source](build_tenants/common/plugins/spec/references/GETTING_STARTED.md)
+explains the work loop and separate setup choices. The new default and native
+work/review guidance are selected for 3.1 with preserved bounded development
+[delivery evidence](../../.ai-workspace/work/SDLC_DEFAULTS_2026-11-14/DELIVERY.md).
+This Product explicitly selected the default projection in its frame basis;
+the [template](build_tenants/common/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection)
+offers it for another Product's authorized adoption. Finding the guide or
+installing Skills does not adopt it. Release-matched workflow/refactoring
+indexes bind the actual final native 3.1.0-rc.1 cut through Purpose Context's
+catalog. Preserved development and earlier release entries retain their own
+exact sources and query-assessment standing. The installed 3.0.4 construction
+basis is separate from an index's semantic target.
+
+Skills installation, exact-query context coverage, actual task success and
+release qualification each need their own evidence. Reuse valid support after
+checking its applicability; refresh affected bindings when source, purpose,
+facts or default selection changes. Visual documentation is optional.
+
+Codex holds the common pen. Common acceptance and release selection remain the
+product owner's decisions; current checkpoint and review state are in Goals.
+
+## Historical publications
+
+**Historical publication: STDO 3.0.5 was published as a normal release and GitHub Latest**, using
 the immutable [3.0.5-rc.1 cut](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.5-rc.1) and five corresponding Product selectors.
 The [current release record](.ai-workspace/work/STDO305_RC_RESET/RELEASED.md)
 binds all five assets, fresh public installation and the declared current
@@ -34,7 +87,7 @@ is closed, with no current actionable source finding. The Executive records
 `candidate_ready` for that review subject; the owner has now accepted its
 disclosed scope for release. The three
 original native trials had mixed outcomes, including two strict-return failures
-and an unsupported authorization claim; no successor actor ran. This is reviewed
+and an unsupported authorization claim; no successor actor ran. This reviewed
 meaning is now released; publication adds no new actor qualification.
 
 The preceding coordinated-skills delivery is accepted for inclusion.
@@ -55,15 +108,6 @@ ABI code example, Lean proof source/results and the source-tooling guide.
 Resolve it with `stdo resolve stdo://releases/v3.0.3/standards/documentation/index.html`.
 Tool sources are bundled; optional runtime support requires explicit setup in
 a writable workspace. Publication changes no consumer's selected basis.
-
-## Start
-
-1. Resolve [stdo_3.json](stdo_3.json), verify its exact installed basis and load its declared bootstrap entrypoint.
-2. Read [Intent](specification/INTENT.md), [Product](specification/PRODUCT.md) and the current selection in [Goals](specification/GOALS.md).
-3. Follow [the 3.0.4 workflow and tools guide](development/STDO_3_0_4.md), then bind the [current reference-frame configuration](specification/REFERENCE_FRAME_BASIS.md#activations-and-owners) and the exact work grant. The original T-001/T-002 C3 admissions retain their historical subjects; they do not activate new work.
-4. For tenant work, follow the [tenant entry contract](build_tenants/README.md), including the current-versus-historical scope and the selected input, isolation and admission requirements.
-
-Codex holds the common pen. Common acceptance and release selection remain the product owner's decisions. Current checkpoint and review state are recorded in Goals; neither this entry route nor a checkpoint commit starts tenant work.
 
 ## Historical Inputs
 

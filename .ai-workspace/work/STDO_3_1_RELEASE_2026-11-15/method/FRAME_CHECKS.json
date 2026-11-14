@@ -1,0 +1,31 @@
+[
+  {
+    "name": "frame-tests",
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      "specification_methodology/v3/.ai-workspace/common-build/frame-tools/test_generate_frames.py"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-release",
+    "exit_code": 0,
+    "stdout_sha256": "d21e7d3d7c17f50b96bd77406aa10b21ec53d2b941bb6cce433aeb646b75475c",
+    "stderr_sha256": "ac9b4dfb437a33fda8039ca21d026d99bd8d9fbcb8305d4a07b2531ef2f83c7d"
+  },
+  {
+    "name": "frame-reproduction",
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      "specification_methodology/v3/.ai-workspace/common-build/frame-tools/generate_frames.py",
+      "--root",
+      "specification_methodology/v3/build_tenants/common",
+      "--check"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-release",
+    "exit_code": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

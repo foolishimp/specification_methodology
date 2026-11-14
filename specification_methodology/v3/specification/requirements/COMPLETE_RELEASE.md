@@ -1,5 +1,14 @@
 # Complete STDO release cohort
 
+Historical subject: the original five-Product 3.0.5 release contract below remains
+preserved for that exact released cohort. It does not select current development
+scope or require retired support/Lean components in successor source. Current
+source packaging follows [the separate Product navigation](../../development/TOOLS.md).
+The old coordinated procedure is retained in the repository's
+[exact archived guide](../../../../.ai-workspace/work/PURPOSE_CONTEXT_ALIGNMENT_2026-11-12/skills-writer/preimages/STACK_RELEASE.md).
+No original release criterion is retrospectively declared satisfied or removed.
+
+
 The owner's selected public version line 3.0.5 delivers five peer Products at
 the exact RC cut 3.0.5-rc.1: Specification Methodology v3, STDO Representation,
 a_c Implementations, Axiom Indexer and STDO Skills. Their ownership and

@@ -1,60 +1,67 @@
-# STDO 3.0.5-rc.1
+# STDO 3.1.0-rc.1
 
-STDO 3.0.5-rc.1 is the fixed native RC cut in the complete five-Product
-`rc-five-product-v1` cohort on public version line STDO 3.0.5. Its immutable tag is `specification_methodology/v3.0.5-rc.1` and logical
-cut is `stdo://releases/v3.0.5-rc.1/`. Its sole native predecessor is published
-3.0.4 commit `16bc30d215915a4b7b3ed2f13e52e14510ae1c9d`. The owner-authorized reset preserves the former unadopted 3.0.5 objects, assets
-and evidence as historical custody. Other published cuts and Product selections
-remain unchanged.
+This is the fixed native RC subject on public version line **STDO 3.1.0**.
+Its immutable tag is `specification_methodology/v3.1.0-rc.1`, its logical cut
+is `stdo://releases/v3.1.0-rc.1/`, and its moving version selector is
+`specification_methodology/v3.1.0`. Normal GitHub release status does not turn
+that selector into a stable immutable cut. The sole native predecessor is
+3.0.5-rc.1 commit `b5b00b896d44804e0f5d615a9bc23a02345888b3`.
 
-## Complete release
+## Release subject
 
-The cohort comprises Specification Methodology v3, STDO Representation,
-a_c Implementations (Graphify and Lean), Axiom Indexer and STDO Skills
-(Codex and Claude). All owned release components use 3.0.5-rc.1 (Python manager metadata: 3.0.5rc1); third-party
-dependencies keep their independent exact pins. The separately published
-[five-Product manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1/stack-release-v3.0.5-rc.1.json)
-binds semantic source, native installation, current component inventories,
-dependency edges and qualification evidence without a self-hash cycle.
+The explicit release-matched cohort contains six separately owned Products:
+Specification Methodology, Purpose Context, STDO Skills, Representation Tools,
+STDO Representation and Axiom Indexer. Owned versions use `3.1.0-rc.1`;
+the Python manager uses `3.1.0rc1`. The
+[cohort record](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/cohort-release-v3.1.0-rc.1.json)
+binds their exact namespaces, members, dependencies, native manifest, public
+assets and bounded evidence. Native commit/tag A precedes derived exact-cut
+bindings and Product carrier B; the complete ref set publishes atomically.
 
-The ordinary native installation includes the shared workflow plugin, current
-[offline documentation](../standards/documentation/index.html), unified
-3D/2D/Layered explorer with source/files navigation, current proof reader and
-[installable tooling](../standards/tooling/README.md). The exact manager wheel
-and dependency setup assets are separately distributed. Follow
-[Getting Started](../plugins/spec/references/GETTING_STARTED.md#new-project)
-for pinned manager installation, controlled Graphify/Lean setup, both host
-bindings and actual local-model verification.
+The native installation contains the constitutional standards, templates,
+default guidance, generated frames, workflow plugin and compact
+[reading page](../standards/documentation/index.html). The separate
+[Product archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/stdo-products-v3.1.0-rc.1.zip)
+contains Purpose Context, Skills and the visual Products. The manager wheel,
+runtime dependency archive and constraints remain separate public assets.
+Follow [Getting Started](../plugins/spec/references/GETTING_STARTED.md#new-project)
+for the fixed native installation and independent host bindings.
 
-## Current source and evidence
+## Source changes and conservation
 
-The representation selects semantic source identity
-`c0f3bd303d4c107a0f2483c3ad6b4d201ac6363869bfd9b2b38a4378f22bdb06`:
-53 standards and 15 native workflow contracts. The current 1,885-record model,
-Axiom program and map derive from that same source selection; generated frames
-and readers are derived routes, not duplicated semantic owners.
+The adopted SDLC default connects work, incremental QA, causal triage, lawful
+owner/carrier re-entry, affected verification and bounded continuation or
+closure. The TICKETS carrier application connects the current work question,
+subject/basis, evidence and surviving obligations to existing context/restart
+and reuse owners. ACTIVATION's generic law remains unchanged. Default frames,
+the frame-basis template, native work/review/ticket/help guidance and first-use
+documentation project those owners without creating new authority.
 
-The proof reader identifies the actual current cold result and runtime in its
-`PROOFS.json` catalog. Its five structural obligations, generated proof sources,
-compiled evidence, kernel replay, runtime comparison and axiom audit retain
-exact identities and stated limits. Deterministic bounded transport parts
-recover every selected member; private local-origin keys are excluded.
-Source-prose fidelity, bounded semantic assessment and installed runtime
-qualification remain separate claims, not a proof of all methodology prose.
+Purpose Context now owns reusable context construction; Skills consumes its
+exact public manifest. Visual documentation is optional. Retired combined
+context/formal-support/Lean routes, large generated model/explorer payloads,
+proof reader and source-tooling bundles are intentionally absent from this
+native package. The exact 3.0.5-rc.1 release preserves those sources, assets,
+proof results, examples and receipts for their original subjects. They are not
+relabelled as current evidence or required for context use.
 
-## Installation boundaries
+## Use, migration and evidence limits
 
-Exact materialized Product source stays immutable. Explicit runtime derivation
-and controlled support establishment retain the only selected profile change;
-installed proof results bind those actual runtime bytes. Native proof and setup
-commands refuse output inside the entire installed release, including physical
-filesystem aliases. Ordinary Python invocation does not write helper bytecode
-there. Both host bindings preserve the native workflow owner and an explicit
-manager/store launcher; they do not adopt a basis for nominated Products.
+Existing consumers retain their complete installed method, selected default
+and host receipts until an explicit consumer adoption or migration. Select the
+actual native cut, Purpose Context index and Skills dependency; verify their
+manifests and retain the installer receipt. The default becomes operative only
+through its Product-owned selection. Historical runtime use remains governed
+by its original contract.
 
-Published historical graphs, library fixtures, negative controls and prior
-release reports keep their original identities. They do not replace current
-candidate membership or a current proof verdict. The external release manifest
-records component and local installation evidence; a separate public readback
-receipt binds that exact manifest. The
-[licence](../LICENSE) and selected third-party notices continue to apply.
+The source/default transition has finite development observations and separate
+assessment subjects. The current cohort record binds applicable reuse, new
+exact-cut checks and residuals. Package identity, frame reproduction, installed
+verification, exact-query coverage and native task behavior support their own
+claims. They do not establish general context sufficiency, automatic host
+triggering, a proof of every prose rule or whole-method effectiveness. Common
+source authorship supplies no independent semantic verdict; final acceptance
+of an exact cut remains the Product authority's decision.
+
+Publication changes no global installation or consumer basis. The
+[licence](../LICENSE) and independently selected third-party notices apply.

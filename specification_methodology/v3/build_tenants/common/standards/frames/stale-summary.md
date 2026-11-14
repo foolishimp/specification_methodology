@@ -1,8 +1,8 @@
 # Reference frame stale-summary
 
-Task: Resume interrupted work as a new session from a retained summary that disagrees with the current workspace: keep or correct each summary line, give results for migration, review, batch completion and hand-off predicates, say which retained work survives a changed dependency, and give the next action within the grant and what waits.
+Task: Resume interrupted work in a new session from the selected ticket, sprint entry or run contract and current material state, reconciling a retained summary that disagrees with the workspace: keep or correct each summary line, give results for migration, review, batch completion and hand-off predicates, say which retained work survives a changed dependency, and give the next action within the grant and what waits.
 
-Purpose: The owning sections for transitions, context construction with acquisition, construction availability, effects, work state, resumption and the workspace as truth surface against an actor's account, closed results and reuse, review-verdict traceability, recorded judgment continuity, condition-based closure and reuse, one-truth state projection, and the core result algebra with its conjunction.
+Purpose: The owning sections for enduring ticket records and carrier selection; transitions, context construction with acquisition, construction availability, effects, work state, resumption and the workspace as truth surface against an actor's account; closed results and reuse, review-verdict traceability, recorded judgment continuity, condition-based closure and reuse, one-truth state projection, and the core result algebra with its conjunction.
 
 Binds:
 
@@ -34,21 +34,111 @@ sufficient for its task.
 
 Routes, in order:
 
-1. [ACTIVATION.md#transitions](../ACTIVATION.md#transitions)
-2. [ACTIVATION.md#2-context-construction-under-an-envelope](../ACTIVATION.md#2-context-construction-under-an-envelope)
-3. [ACTIVATION.md#construction-availability](../ACTIVATION.md#construction-availability)
-4. [ACTIVATION.md#effects](../ACTIVATION.md#effects)
-5. [ACTIVATION.md#5-work-state-and-restart](../ACTIVATION.md#5-work-state-and-restart)
-6. [ACTIVATION.md#7-closed-result-and-reuse](../ACTIVATION.md#7-closed-result-and-reuse)
-7. [TICKETS.md#execution-and-verification-authority-separation-up-007](../TICKETS.md#execution-and-verification-authority-separation-up-007)
-8. [TICKETS.md#recorded-judgment-and-owner-ruling-continuity](../TICKETS.md#recorded-judgment-and-owner-ruling-continuity)
-9. [TICKETS.md#condition-based-closure-and-reuse](../TICKETS.md#condition-based-closure-and-reuse)
-10. [TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009](../TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009)
-11. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
-12. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
-13. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
+1. [TICKETS.md#ticket-records](../TICKETS.md#ticket-records)
+2. [TICKETS.md#carrier-selection](../TICKETS.md#carrier-selection)
+3. [ACTIVATION.md#transitions](../ACTIVATION.md#transitions)
+4. [ACTIVATION.md#2-context-construction-under-an-envelope](../ACTIVATION.md#2-context-construction-under-an-envelope)
+5. [ACTIVATION.md#construction-availability](../ACTIVATION.md#construction-availability)
+6. [ACTIVATION.md#effects](../ACTIVATION.md#effects)
+7. [ACTIVATION.md#5-work-state-and-restart](../ACTIVATION.md#5-work-state-and-restart)
+8. [ACTIVATION.md#7-closed-result-and-reuse](../ACTIVATION.md#7-closed-result-and-reuse)
+9. [TICKETS.md#execution-and-verification-authority-separation-up-007](../TICKETS.md#execution-and-verification-authority-separation-up-007)
+10. [TICKETS.md#recorded-judgment-and-owner-ruling-continuity](../TICKETS.md#recorded-judgment-and-owner-ruling-continuity)
+11. [TICKETS.md#condition-based-closure-and-reuse](../TICKETS.md#condition-based-closure-and-reuse)
+12. [TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009](../TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009)
+13. [FOUNDATIONS.md#results](../FOUNDATIONS.md#results)
+14. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
+15. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 97323 bytes.
+Size of this frame: 105704 bytes.
+
+Source: TICKETS.md#ticket-records sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
+
+### Ticket records
+
+Tickets are the enduring work records. Each ticket is one durable record,
+one markdown file being the default carrier; the source of truth for that
+unit of work; durable across sessions; and typed, so that bugs and features
+share one system. A ticket is used when work needs independent durable
+identity: feature work, bug tracking, spikes and chores (P3, P4b).
+
+
+Source: TICKETS.md#carrier-selection sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
+
+### Carrier selection
+
+Every execution governed by this method uses one run-scoped execution
+contract. The required lifetime of the work or obligation selects the
+smallest lawful source carrier: first establish the applicable upstream
+work authority, then select the first matching row below. For work inside
+an admitted sprint the local carrier boundary is that sprint; otherwise it
+is the current run (P2, P4b, P6).
+
+| Condition | Execution-contract source | Durable-ticket decision |
+|---|---|---|
+| no applicable upstream work authority exists | no execution contract is admitted | do not create a ticket as substitute authority; stop or re-enter |
+| applicable authority exists and an existing admitted ticket covers the exact work | derive the run-scoped contract from that ticket | reuse it; do not create another ticket |
+| applicable authority exists, no exact admitted ticket covers the work, and the work or an open obligation needs independent state beyond the local carrier boundary | one durable ticket plus the run-scoped contract | create or update the ticket only under ticket-state authority |
+| applicable authority exists, no exact admitted ticket covers the work, and the work stays inside one admitted sprint with no state required after sprint close | the sprint manifest plus one manifest-local iteration entry | do not create a durable ticket |
+| applicable authority exists, no exact admitted ticket or sprint covers the work, and the work ends in the current run with no independent surviving state | an intake-drafted run-scoped contract | do not create a durable ticket |
+
+"Ticket-shaped" describes the categorisation, closure criteria, proof
+surface, non-closure conditions and the other required execution-contract
+fields (§4, Required fields). It creates no durable ticket identity and no
+ticket-lane state (P3).
+
+Absence of a durable ticket neither requires nor authorises creating one.
+An exact product-authorised work instruction may supply the upstream work
+authority for a one-run contract; a generic request or a model-widened
+scope cannot. A durable ticket is created or updated only when the table
+requires surviving state and the actor holds ticket-state authority. An
+explicit instruction from ticket-state authority to create a durable record
+selects that durability; it does not admit an execution contract or widen
+its upstream work authority (P6, P2).
+
+The step side of admission is [ACTIVATION §1](../ACTIVATION.md#admission) and
+is defined there once: drafting versus admission inside one invocation, the
+condition under which execution may begin, what admission may never be
+inferred from (including ticket or sprint presence, lane placement and
+`active` status), the coordinates an admitted result carries, the recording
+of every result, withheld closure and residual obligation before return,
+and refusal when no durable result and evidence surface is available. This
+member adds the carrier side (P6, P4b). The admission mechanism and the
+durable result and evidence surface are the ones the product definition
+binds. When that surface is the ticket or the sprint manifest, the admitted
+result with its coordinates is recorded there. A carrier's lane, status or
+prose that asserts admission without those coordinates is not admission
+evidence, and the contract it describes remains drafted or rejected.
+
+When admission is absent or rejected, ACTIVATION §1 returns the missing
+work authority without execution. Before that return, an obligation that
+must survive the run is carried as follows (P4b, P6): it becomes a
+sprint-local entry when its lifetime stays inside the admitted sprint;
+otherwise it is recorded as a durable ticket, only under ticket-state
+authority; where that authority is absent, it is retained in the
+contract's named durable result and evidence surface or in an
+already-authorised enclosing carrier, closure is marked withheld on
+ticket-state authority, and the required re-entry is returned.
+
+Execution and closure use the same admitted categorisation, criteria,
+proof surface and non-closure conditions. The resulting state still flows
+through proof, gap analysis and repricing (P6, P2).
+
+The selected carrier is also the work reference for context construction and
+continuation: bind its current question, subject and basis, result and evidence
+references, and surviving obligations. Apply
+[ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) to that
+bounded acquisition, [§5](../ACTIVATION.md#5-work-state-and-restart) to current
+work state, the disposable actor account and resumption, and
+[§7](../ACTIVATION.md#7-closed-result-and-reuse) to closed results and reuse.
+The ticket retains its [work-state authority](../TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009);
+an actor's account cannot replace the carrier, governing sources or current
+evidence. Preserve results, step-produced facts and owner rulings through
+the named result and evidence surface under existing admission and
+[continuity](../TICKETS.md#recorded-judgment-and-owner-ruling-continuity) law. This applies
+those owners to the selected carrier; it creates no additional carrier
+requirement and confers no ticket-state authority (P0, P3, P4b, P6).
+
 
 Source: ACTIVATION.md#transitions sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
 
@@ -731,7 +821,7 @@ proof when loss of incidental process state is a material counterexample:
 the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
-Source: TICKETS.md#execution-and-verification-authority-separation-up-007 sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
+Source: TICKETS.md#execution-and-verification-authority-separation-up-007 sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
 
 ### Execution and verification authority separation (UP-007)
 
@@ -792,7 +882,7 @@ traceability; ACTIVATION §1 and SPEC_METHOD §8 own the execution semantics
 (P2, P6).
 
 
-Source: TICKETS.md#recorded-judgment-and-owner-ruling-continuity sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
+Source: TICKETS.md#recorded-judgment-and-owner-ruling-continuity sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
 
 ### Recorded judgment and owner-ruling continuity
 
@@ -883,7 +973,7 @@ delivery, and a superseded, deferred or withdrawn state cannot erase
 unresolved obligations or evidence (P5, P1, P6).
 
 
-Source: TICKETS.md#condition-based-closure-and-reuse sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
+Source: TICKETS.md#condition-based-closure-and-reuse sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
 
 ### Condition-based closure and reuse
 
@@ -929,7 +1019,7 @@ landing merely because review is open. Keep the linked Bug items and their
 verification provenance current; a report's existence closes none of them.
 
 
-Source: TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009 sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67
+Source: TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009 sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
 
 ### One-truth state projection and drift refusal (UP-009)
 
@@ -1242,7 +1332,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: TICKETS.md#foundation-to-law-work-carriers sha256=86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67 rows=3/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
+Source: TICKETS.md#foundation-to-law-work-carriers sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748 rows=5/11 selected by the anchors this frame carries; the consumers paragraph of 11 items is omitted
 
 ### Foundation to law: work carriers
 
@@ -1262,6 +1352,8 @@ commitments in FOUNDATIONS §3 states it.
 
 | Premises, with standing | Consequence that follows | Rule in this member that states it | Added domain or policy choice, and its owner | Pillar |
 |---|---|---|---|---|
+| P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P3 (independent); P2 (independent); P6 (independent); P0 (recovered); instance: lifetimes | By P0 an actor's context does not outlive its run, and by P4b a step-produced fact that is not recorded is lost, so an obligation that must outlive the run is recorded on a carrier whose lifetime covers it before the run returns. By P2 nothing is added that the outcome does not need, so every execution runs under one run-scoped contract drawn from the smallest such carrier (an admitted ticket, a sprint entry or the run itself), and a durable ticket is created only for state that must survive; by P6 creating one needs ticket-state authority. | [Carrier selection](../TICKETS.md#carrier-selection); §1 [Goals](../TICKETS.md#goals), [Ticket records](../TICKETS.md#ticket-records), [Execution contracts](../TICKETS.md#execution-contracts) | the carrier kinds and the selection table, which apply this order to named lifetimes: a policy of this member; where each carrier lives: the product definition ([PRODUCT_DEFINITION §8](../PRODUCT_DEFINITION.md#8-what-how-and-work-carriers)) | 1, 8, 9 |
+| P6 (independent); P2 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P3 (independent); instance: lifetimes | By P6 work needs an admitted authority, and a record's presence or prose creates none, so work executes only under admitted upstream work authority, and a carrier's presence, lane, status or prose is neither the admission of a contract nor the admission of a growth basis. By P3 execution and closure bind one exact basis, so both read the same admitted contract, which shows what counts as completion and what still counts as failure. | [Carrier selection](../TICKETS.md#carrier-selection); [Execution contract admission](../TICKETS.md#execution-contract-admission); [Evaluation criteria and non-closure conditions](../TICKETS.md#evaluation-criteria-and-non-closure-conditions) | the contract's minimum fields: this member; the admission mechanism and the result and evidence surface: the product definition. The step side of admission is law at [ACTIVATION §1](../ACTIVATION.md#admission), not a choice | 1, 8, 9 |
 | P6 (independent); P3 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P2 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P0 (recovered); instance: several surfaces, carriers vary | By P3 one state binds one authority and basis, and by P6 a projection is not authority, so work state has one authority chain: goals own the work wave, the ticket owns its state and milestone authority its milestones, and a board, comment, index or summary is a projection that answers one question. By P5 contradictory authorities cannot both be read as satisfied, so contradiction among them blocks closure; by P4b a milestone's acceptance establishes only its own claim. A comment is a post: provisional until its content is adopted into the owning surface, with its own discussion state. Another carrier is lawful only as an explicit rebinding with no rival left. | [One-truth state projection and drift refusal (UP-009)](../TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009); §1 [Comments](../TICKETS.md#comments), [Milestones and phase-scoped truth (UP-006)](../TICKETS.md#milestones-and-phase-scoped-truth-up-006); §2 [Default layout](../TICKETS.md#default-layout), [Bindings and projections](../TICKETS.md#bindings-and-projections), [Carrier substitution](../TICKETS.md#carrier-substitution); §4 [Status](../TICKETS.md#status), [Lanes](../TICKETS.md#lanes); §9 [Relationship to other surfaces](../TICKETS.md#relationship-to-other-surfaces); [POSTING_GUIDE §2](../POSTING_GUIDE.md#2-boundary), [§7](../POSTING_GUIDE.md#7-discussion-state-and-mutability), [§9](../POSTING_GUIDE.md#9-ratification) | the default layout, the lanes and the minimum status sets: domain choices of this member, which a project may extend; a rebinding of ticket authority: the product definition; the post categories, structure and discussion states: [POSTING_GUIDE](../POSTING_GUIDE.md) | 1, 6, 9 |
 | P6 (independent); P1 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable); P5 (derived from P0 and P6, with P0's open-world premise); P0 (recovered); P2 (independent); P3 (independent) | By P6 authority to author is not independent authority to verify. By P1 and P3 a verdict means only the claim it binds, so a review verdict is bounded by its claim and traceable to it. By P0 and P4b a judgment or ruling must survive a change of actor, so it is recorded once, in its original terms, and reused while it applies; by P5 changed evidence invalidates what it affects. | §7 [Execution and verification authority separation (UP-007)](../TICKETS.md#execution-and-verification-authority-separation-up-007), [Recorded judgment and owner-ruling continuity](../TICKETS.md#recorded-judgment-and-owner-ruling-continuity) | the four repricing dispositions and the predicate and refinement for a material repricing decision: this member. The assessment protocol and the reuse law are [EVALUATION §3](../EVALUATION.md#3-independent-assessment) and [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse), not choices | 7, 9 |
 | P6 (independent); P5 (derived from P0 and P6, with P0's open-world premise); P2 (independent); P4b (derived from P0 and P2, with P0's premise that step-produced facts are not re-acquirable) | By P5 a claim is satisfied only by valid evidence for each obligation, under the conjunction of FOUNDATIONS §4, so a work claim is complete only when every applicable obligation is satisfied and no non-closure condition remains. By P6 review evaluates and does not decide, so its occurrence is not the closing event; by P6 a test's expected result needs work authority, so it comes from admitted work authority, never from the implementation. | §7 [Condition-based closure and reuse](../TICKETS.md#condition-based-closure-and-reuse), [Test case authority](../TICKETS.md#test-case-authority) | the five-step reconciliation order: this member. The conjunction and the general test law are [FOUNDATIONS §4](../FOUNDATIONS.md#conjunction-of-results) and [ASSURANCE §3](../ASSURANCE.md#3-test-authority), not choices | 3, 9 |

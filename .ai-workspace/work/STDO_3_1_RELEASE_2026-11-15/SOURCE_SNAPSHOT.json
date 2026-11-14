@@ -1,0 +1,2364 @@
+{
+  "source": "/Users/jim/src/apps/specification_methodology",
+  "source_head": "b4b6095dfe56fd491fc774a7980111d2e0d41077",
+  "destination": "/Users/jim/src/apps/specification_methodology-3.1-release",
+  "branch": "release-prep/stdo-3.1.0-rc.1",
+  "standing": "isolated current Product source overlay; no commit or release",
+  "excluded": "untracked work/evidence directories and caches remain at original source; selected portable evidence may be added later explicitly",
+  "files": [
+    {
+      "path": ".agents/skills/axiomatize-corpus",
+      "operation": "deleted"
+    },
+    {
+      "path": ".agents/skills/stdo-context",
+      "operation": "symlink",
+      "target": "../../stdo_skills/skills/stdo-context"
+    },
+    {
+      "path": ".agents/skills/stdo-representation",
+      "operation": "deleted"
+    },
+    {
+      "path": ".claude/skills/axiomatize-corpus",
+      "operation": "deleted"
+    },
+    {
+      "path": ".claude/skills/stdo-context",
+      "operation": "symlink",
+      "target": "../../stdo_skills/skills/stdo-context"
+    },
+    {
+      "path": ".claude/skills/stdo-representation",
+      "operation": "deleted"
+    },
+    {
+      "path": "AGENTS.md",
+      "operation": "copied",
+      "sha256": "6fa10af0a000d9cc73effe2c3eb7c9872dd0f4afa850407ca4fc1d9cce0038b6",
+      "bytes": 2334
+    },
+    {
+      "path": "CLAUDE.md",
+      "operation": "copied",
+      "sha256": "6fa10af0a000d9cc73effe2c3eb7c9872dd0f4afa850407ca4fc1d9cce0038b6",
+      "bytes": 2334
+    },
+    {
+      "path": "DEVELOPMENT.md",
+      "operation": "copied",
+      "sha256": "d6f00f3848d734ac390624d9b53dd0aef4a170350b04b5a57e0c26abe1989129",
+      "bytes": 5315
+    },
+    {
+      "path": "DEVELOPMENT_PRODUCTS.json",
+      "operation": "copied",
+      "sha256": "a359251f6197ea5344b99cba3a10a9989c3240f27766d7a0098a4a642d8e936a",
+      "bytes": 3167
+    },
+    {
+      "path": "README.md",
+      "operation": "copied",
+      "sha256": "06870c659476d922d05dfd0ddb6d2f1523a6f52dd625f734ea3eef651ba91107",
+      "bytes": 5915
+    },
+    {
+      "path": "RELEASE_PRODUCTS.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "STACK_RELEASE.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/AGENTS.md",
+      "operation": "copied",
+      "sha256": "850b7675ca68c2744242d6e38705efeec200802a1417461adda200e5432a89c0",
+      "bytes": 2705
+    },
+    {
+      "path": "a_c/CLAUDE.md",
+      "operation": "copied",
+      "sha256": "850b7675ca68c2744242d6e38705efeec200802a1417461adda200e5432a89c0",
+      "bytes": 2705
+    },
+    {
+      "path": "a_c/PUBLIC_MANIFEST.json",
+      "operation": "copied",
+      "sha256": "51432f8c740e1c06f909241b148c70807278683ec6192efb4d30c13bc2d80537",
+      "bytes": 6213
+    },
+    {
+      "path": "a_c/README.md",
+      "operation": "copied",
+      "sha256": "c8de38811d9e1c5ae8b596674cc179af64b7782e7a21159ddbfe0e0baa0d1879",
+      "bytes": 1806
+    },
+    {
+      "path": "a_c/VERSION",
+      "operation": "copied",
+      "sha256": "69dced1fc82b64513842ce628727ee18744ebe7cecbd16ed47c753b76873f9be",
+      "bytes": 12
+    },
+    {
+      "path": "a_c/build_tenants/README.md",
+      "operation": "copied",
+      "sha256": "bc2433d2c093b02ab53cf56ce02f9acddb9b22b42095b197cc0f5f7d0996f7d4",
+      "bytes": 453
+    },
+    {
+      "path": "a_c/build_tenants/graphify/README.md",
+      "operation": "copied",
+      "sha256": "e6db14d6f0be9f3cbdd60d2cf77ea711e361bc7ecdc6764043209f80fc497387",
+      "bytes": 403
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_code.py",
+      "operation": "copied",
+      "sha256": "4d12be85a2ee3bff2e2630816a43d240b14de38c2407a5570267ec043f0e69df",
+      "bytes": 43911
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_explore.py",
+      "operation": "copied",
+      "sha256": "6e4c80a71e69180c9af28aa1ea8aa1e779128971b21ab2c4232d86ccd56151ef",
+      "bytes": 9794
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_formal_gate.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_generate.py",
+      "operation": "copied",
+      "sha256": "6730ae99c1b98663ec4f056aac890bcc867bf57b94103ae0e9fcb97cee515f2f",
+      "bytes": 83597
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_graph.py",
+      "operation": "copied",
+      "sha256": "d133fe1dd6d6581f88d94a35023d3e4ee494e61a1a4af2e6197641c2743de4cf",
+      "bytes": 52129
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_grounding.py",
+      "operation": "copied",
+      "sha256": "9593457967ca45853f29b8e6bb8378bad49914f3983f877860f7efbe034f0fb0",
+      "bytes": 22891
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_project.py",
+      "operation": "copied",
+      "sha256": "7bdb08310892963b3c22891a50b841ce232dbfb7920c474323d800fafdd8cfb8",
+      "bytes": 21280
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_repair.py",
+      "operation": "copied",
+      "sha256": "a8d91ee11561092e656d11647f47cb1494ccdad50849a65bdb21c77e697d65f6",
+      "bytes": 36733
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support_composition.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support_core.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/ac_support_effects.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/explorer.css",
+      "operation": "copied",
+      "sha256": "2cfa511fa05d81c1c0d26126b3b47014030a211367b7a30b7b39d46681c9f95f",
+      "bytes": 13494
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/explorer.html",
+      "operation": "copied",
+      "sha256": "cb37641587297deaa3431eb5b557944e7fd80272e845ffb3643a5f70b2cfd8ec",
+      "bytes": 5517
+    },
+    {
+      "path": "a_c/build_tenants/graphify/code/viewer/explorer.js",
+      "operation": "copied",
+      "sha256": "980c41adb0ec3401d22fd4c3c8054545d01ba356c92379e74fad275e71883649",
+      "bytes": 37927
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/README.md",
+      "operation": "copied",
+      "sha256": "c3d08bb30bef29dfffc77ae06ccd7fe657282919f3a585d578011ea332f87e20",
+      "bytes": 1115
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/code-realization.md",
+      "operation": "copied",
+      "sha256": "ec49240115001b8fde904016ef8c0f4f3f16b95375cdc631d3fc02b266367c92",
+      "bytes": 482
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/constraint-explorer.md",
+      "operation": "copied",
+      "sha256": "92598b67894292ae3324a4d6da6f423ca0273ebddaa8bba4e6baeb17a1df68da",
+      "bytes": 5973
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-composition.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-method-claude-rc9.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.1.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5-rc.1.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-method-stdo-3.0.5.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.5-rc.1.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-support-stdo-3.0.5.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/fd-support.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/formal-gate.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/design/project-build.md",
+      "operation": "copied",
+      "sha256": "c0c35da8bfbfa4dc36043f864eb618811b42e624f405289966efcdea8cf507af",
+      "bytes": 479
+    },
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-composition.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-support/LIFECYCLE_QUICKSTART.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-support/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-support/actor_cli.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/examples/fd-support/prepare_readonly.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/qualify_formal_gate.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/support_fixtures/local_actor.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_code.py",
+      "operation": "copied",
+      "sha256": "983c14f42fe02cfdfcdba61231b71608e9d9893f64f29344860be0d5f39ec086",
+      "bytes": 30089
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_formal_gate.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_formal_origin_paths.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_generate.py",
+      "operation": "copied",
+      "sha256": "854af80c7be197db2e47405a6d2c52bf3624a8642baf5347f96298449128477d",
+      "bytes": 46097
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_graph.py",
+      "operation": "copied",
+      "sha256": "ba6a5aa30be94557a0fe5222ef2f08f5ebb910f5d72617c915e97fbf5b1d6c7a",
+      "bytes": 33815
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_grounding.py",
+      "operation": "copied",
+      "sha256": "d228a712d8a2aaeb35e9730a8409eb29d17869e6ea6f1ff800ca4d12b72a061c",
+      "bytes": 22634
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_project.py",
+      "operation": "copied",
+      "sha256": "71c1865240c1632959f2e270298e341dd0c5a683b18cdbdfc90dadd3c19666b6",
+      "bytes": 12491
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_project_origin.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_composition.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_core.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_effects.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_empty_members.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_environment_passthrough.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_interfaces.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_native301.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_native301_conjunction.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_ac_support_native305.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/graphify/test_env/test_explorer_code.cjs",
+      "operation": "copied",
+      "sha256": "89d50704b4ba306d116f2fef13dbfb5c8dd229e83f1b49af79237c4b689192e8",
+      "bytes": 17962
+    },
+    {
+      "path": "a_c/build_tenants/lean/.gitignore",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/Audit.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/Closure.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/Fixture.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/GateProof.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/GateRuntime.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/Model.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/Projection.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/Run.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/Structure.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/AC/Toy.lean",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/design/BOUNDARIES.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/design/FORMAL_GATE.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/design/IMPORTER.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/design/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/design/SOURCE_CORRESPONDENCE.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/design/formal-inspection.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CARRIER.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/fixtures/stdo-3.0.2/CUSTODY.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/fixtures/stdo-3.0.2/GRAPHIFY_EXTRACTION.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/fixtures/stdo-3.0.2/MODEL.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/fixtures/toy/CUSTODY.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/fixtures/toy/MODEL.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/lake-manifest.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/lakefile.toml",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/lean-toolchain",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/profiles/formal-gate-request.schema.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/profiles/generation-signature-v1.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/profiles/proof-support-v1.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/bootstrap.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/check.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/check_gate.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/formal_gate.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/formal_reuse.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/formal_support.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/gate_codegen.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/generate_fixture.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/generation_profile.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/import_fixture.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/scripts/runtime_process.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/tests/test_adapter.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/tests/test_formal_gate.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/tests/test_formal_inspection.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/tests/test_formal_reuse.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/tests/test_formal_support_budget.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/tests/test_gate_codegen.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/tests/test_runtime_process.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/build_tenants/lean/toolchain-lock.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/scripts/ac.py",
+      "operation": "copied",
+      "sha256": "78325f8c7338b837e648aa2a919c4b0536a1d7e965b87f5c4f4955918f1adc6b",
+      "bytes": 1078
+    },
+    {
+      "path": "a_c/scripts/bootstrap.py",
+      "operation": "copied",
+      "sha256": "1574501ff5b9990bac11bbfdbe9897791079a85b8d6c59093d5613c31a4a356a",
+      "bytes": 5126
+    },
+    {
+      "path": "a_c/specification/GOALS.md",
+      "operation": "copied",
+      "sha256": "dc0b87f6d0a9dbe639e602ecc0d8df92a0680ad12a3c41c467bc096594289cc8",
+      "bytes": 1239
+    },
+    {
+      "path": "a_c/specification/INTENT.md",
+      "operation": "copied",
+      "sha256": "dc2790eb8e812d638935a819b64128467a0025d227b521f1f4c93669874aac72",
+      "bytes": 930
+    },
+    {
+      "path": "a_c/specification/PRODUCT.md",
+      "operation": "copied",
+      "sha256": "78b27b2525c99f8dbb273aba646282e0b67d52175961d2681dee54b6ec36c8a2",
+      "bytes": 1954
+    },
+    {
+      "path": "a_c/specification/REFERENCE_FRAME_BASIS.md",
+      "operation": "copied",
+      "sha256": "a63ac9012ef1e29e523c901ac1d1fb76dc31c075f2d88b466784e28421962950",
+      "bytes": 1038
+    },
+    {
+      "path": "a_c/specification/RELEASE_3_0_5.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/specification/requirements/README.md",
+      "operation": "copied",
+      "sha256": "89deb1f54881adc2600e1a2bdbf707bbeb5c1422a67e318e171342a475570364",
+      "bytes": 1282
+    },
+    {
+      "path": "a_c/specification/requirements/code-realization.md",
+      "operation": "copied",
+      "sha256": "096c4c0a6f5cbd380f860e78dd031614674a2b9ab4bf176f9fd48b02e52bcff2",
+      "bytes": 4417
+    },
+    {
+      "path": "a_c/specification/requirements/fd-composition.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/specification/requirements/fd-source-owner-map.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/specification/requirements/fd-stdo-3.0.1-binding.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/specification/requirements/fd-support-tools.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/specification/requirements/fd-support-verification.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/specification/requirements/formalisation.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "a_c/specification/requirements/project-use.md",
+      "operation": "copied",
+      "sha256": "ca5fa75d647e7669c12b7864e29f9291e8c6f72bcf9c3e6dee878b8fd21ac6a7",
+      "bytes": 1225
+    },
+    {
+      "path": "a_c/stdo_a_c.json",
+      "operation": "copied",
+      "sha256": "cc53f590a7fd577021f626c52b18c6aad1e7304b0dd9e7478887c1d5b49e9a36",
+      "bytes": 3191
+    },
+    {
+      "path": "axiom_indexer/.agents/skills/axiomatize-corpus",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/.claude/skills/axiomatize-corpus",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/AGENTS.md",
+      "operation": "copied",
+      "sha256": "e865145a4eaf002d8e5131555e8dbc3d2d4d692688fd8dc8cbff30eca041370a",
+      "bytes": 2715
+    },
+    {
+      "path": "axiom_indexer/CLAUDE.md",
+      "operation": "copied",
+      "sha256": "e865145a4eaf002d8e5131555e8dbc3d2d4d692688fd8dc8cbff30eca041370a",
+      "bytes": 2715
+    },
+    {
+      "path": "axiom_indexer/README.md",
+      "operation": "copied",
+      "sha256": "a20a4bdd77bd7ba45daa4d750c4c4fea4b53c4b905fbd674bf94e288dbce9a71",
+      "bytes": 974
+    },
+    {
+      "path": "axiom_indexer/VERSION",
+      "operation": "copied",
+      "sha256": "69dced1fc82b64513842ce628727ee18744ebe7cecbd16ed47c753b76873f9be",
+      "bytes": 12
+    },
+    {
+      "path": "axiom_indexer/build_tenants/core/README.md",
+      "operation": "copied",
+      "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d",
+      "bytes": 475
+    },
+    {
+      "path": "axiom_indexer/build_tenants/core/code/README.md",
+      "operation": "copied",
+      "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d",
+      "bytes": 475
+    },
+    {
+      "path": "axiom_indexer/build_tenants/core/code/ac.py",
+      "operation": "copied",
+      "sha256": "e89ba6cf4011f22ea42c05e5ecd4512f8ecbc5ce507d6b3550aa7d26926e4027",
+      "bytes": 36605
+    },
+    {
+      "path": "axiom_indexer/build_tenants/core/code/test_ac.py",
+      "operation": "copied",
+      "sha256": "f43bfa356e90d2eb608a1436de223464681d522c1a1434d8a2d0b7036ad6256b",
+      "bytes": 32341
+    },
+    {
+      "path": "axiom_indexer/build_tenants/core/design/README.md",
+      "operation": "copied",
+      "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d",
+      "bytes": 475
+    },
+    {
+      "path": "axiom_indexer/scripts/check_constitution.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/scripts/test_check_constitution.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/skills/axiomatize-corpus/SKILL.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/skills/axiomatize-corpus/agents/openai.yaml",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/skills/axiomatize-corpus/references/model-conversion.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/skills/axiomatize-corpus/references/output-contract.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/skills/axiomatize-corpus/references/program.schema.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/specification/GOALS.md",
+      "operation": "copied",
+      "sha256": "d3b1212dadee10837877f7f495f7e2ef179ba85334cf907325abdadb510c613f",
+      "bytes": 597
+    },
+    {
+      "path": "axiom_indexer/specification/INTENT.md",
+      "operation": "copied",
+      "sha256": "169e83216d0c22c8fac7002b7a86a5c240df53389929a98f8fca4bf15a822907",
+      "bytes": 546
+    },
+    {
+      "path": "axiom_indexer/specification/PRODUCT.md",
+      "operation": "copied",
+      "sha256": "c4f8a9f573f1e9463ed2e2afe9441377fad1776f12b158f9f091760e2bf32df3",
+      "bytes": 1270
+    },
+    {
+      "path": "axiom_indexer/specification/REFERENCE_FRAME_BASIS.md",
+      "operation": "copied",
+      "sha256": "c9eec8b240e7200078c5d9ec4565ff887dc9b16fd8d9762a53b6dfa1f69578a8",
+      "bytes": 1044
+    },
+    {
+      "path": "axiom_indexer/specification/requirements/README.md",
+      "operation": "copied",
+      "sha256": "7adb0e859283bb75d2ef0001af88ff54a3938940f64299d37366740c7508da63",
+      "bytes": 549
+    },
+    {
+      "path": "axiom_indexer/specification/requirements/REQ-P-AUTHORING.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/specification/requirements/REQ-P-JOINING.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/specification/requirements/REQ-P-MODEL-CONVERSION.md",
+      "operation": "copied",
+      "sha256": "f196a3035f1148d3a9348533bcd65fb8cb358227f894f8af7d334a5853d011d9",
+      "bytes": 1663
+    },
+    {
+      "path": "axiom_indexer/specification/requirements/REQ-P-PROGRAM.md",
+      "operation": "copied",
+      "sha256": "1ea0debf07c485a9ae80f4d6c278d962f63e2c724f1f4400d59c5dc8baba210b",
+      "bytes": 242
+    },
+    {
+      "path": "axiom_indexer/specification/requirements/REQ-P-PROJECTION.md",
+      "operation": "copied",
+      "sha256": "8dc8669ed540b79209103b91f45e277d892d506ed6e4f215ba4a5c7fb6b67238",
+      "bytes": 262
+    },
+    {
+      "path": "axiom_indexer/specification/requirements/REQ-P-RELEASE-COUPLING.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "axiom_indexer/specification/requirements/REQ-P-RESOLUTION.md",
+      "operation": "copied",
+      "sha256": "e3e6c8c36ffd9702d70582e0a4a53294e55d8d752418a6c160637c887922e178",
+      "bytes": 256
+    },
+    {
+      "path": "axiom_indexer/specification/requirements/REQ-P-VALIDATION.md",
+      "operation": "copied",
+      "sha256": "8c6a1c639a64c7c1737df145718d65fa7915a96fb297fc9bd0d98b052757f797",
+      "bytes": 246
+    },
+    {
+      "path": "axiom_indexer/stdo_default.json",
+      "operation": "copied",
+      "sha256": "553e099f2d7158ca5787a093f78e82aa633a66d67afa357525343a5bb0989b07",
+      "bytes": 3322
+    },
+    {
+      "path": "purpose_context/AGENTS.md",
+      "operation": "copied",
+      "sha256": "b36ca81bd4f7252f46d6daa3a622a93e1135cbd22bb99ed6638deddf4b33024b",
+      "bytes": 4019
+    },
+    {
+      "path": "purpose_context/CLAUDE.md",
+      "operation": "copied",
+      "sha256": "5654a1debcc3657a6b91893231934d81c4620cd91c6922dd94cb738a6fc44aa2",
+      "bytes": 209
+    },
+    {
+      "path": "purpose_context/PUBLIC_MANIFEST.json",
+      "operation": "copied",
+      "sha256": "edd42f7c25b5fdb4bbda71a8d5fc05d9bfdb957c1b8162c966d9f2432ef69097",
+      "bytes": 14277
+    },
+    {
+      "path": "purpose_context/README.md",
+      "operation": "copied",
+      "sha256": "f4a7ff5bf44d335995ad53319da9b7eb7dc704b67754aedc65a22719b9fa3ece",
+      "bytes": 4524
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/PURPOSE.json",
+      "operation": "copied",
+      "sha256": "8ecba436caa12381da0c4b29f479358bc71e0e45fdae449ea1939bbcacdd1795",
+      "bytes": 3492
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/QUERY-TEMPLATE.json",
+      "operation": "copied",
+      "sha256": "f21693cc7952a96a893d4855ae27eed19688627746c8765e8d9af5da4211f2b6",
+      "bytes": 99
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/RULES.json",
+      "operation": "copied",
+      "sha256": "427dda923fb5f9167583a74850a7fc3a66176e4d1b6b0d8e7a664eb3a0b16e9c",
+      "bytes": 55275
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/SOURCE-CLOSURE.json",
+      "operation": "copied",
+      "sha256": "da81436615f57237b351ab54697dfddd85c8b370375df89c0bf9589fed4b38ff",
+      "bytes": 3740
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/queries/adjacent-finding.json",
+      "operation": "copied",
+      "sha256": "f0494203c53268215311c28f4210c43ff78e2637145a39c3071cf500f6af402a",
+      "bytes": 752
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/queries/boundary-assessment.json",
+      "operation": "copied",
+      "sha256": "ce63027862e13657345e8a184b7571e1cb935256313c692710f0d3d839e9dac0",
+      "bytes": 776
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/queries/causal-reentry.json",
+      "operation": "copied",
+      "sha256": "1d971a68f0e7d3387b9ab631c13596ba7f27d53e194976f0bb88d7c8d7aa70d9",
+      "bytes": 753
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/queries/first-capability-limit.json",
+      "operation": "copied",
+      "sha256": "7388e9f7c4fcfb10c869c872584648f1b78447f0c0c2c04cc039d209fa9ec1e7",
+      "bytes": 877
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/queries/incomplete-evidence.json",
+      "operation": "copied",
+      "sha256": "dcbe9dbff86dcfcaaed1f488bb97791a1d62799ad1ae5be64fb9e7a9c47a213f",
+      "bytes": 759
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/queries/ordinary-repair.json",
+      "operation": "copied",
+      "sha256": "4a783f12d5d114482f7c5b869d71ba43c458482f3b491b2f1e4295dfb7139890",
+      "bytes": 755
+    },
+    {
+      "path": "purpose_context/authoring/sdlc-workflow/queries/valid-support-reuse.json",
+      "operation": "copied",
+      "sha256": "c4a4db7fb6b57044682418517fb1f3c11c22a73c3e96fca5d48538348b3f3149",
+      "bytes": 758
+    },
+    {
+      "path": "purpose_context/design/DESIGN.md",
+      "operation": "copied",
+      "sha256": "7f106324a1122c2430b9c3b52dfa3e64a0b93aae47e745697696cb2b48b1e0fd",
+      "bytes": 9511
+    },
+    {
+      "path": "purpose_context/scripts/port_ci02_index.py",
+      "operation": "copied",
+      "sha256": "003d4412be22b558fe93e9ac3fad397a2988cfb838de198cdf8fc7ffca46bca7",
+      "bytes": 8608
+    },
+    {
+      "path": "purpose_context/scripts/rebuild_sdlc_index.py",
+      "operation": "copied",
+      "sha256": "2d38f6a77be784e4e84df1435b8ae154c098098a4c7cae88865718ca52e79f69",
+      "bytes": 10684
+    },
+    {
+      "path": "purpose_context/scripts/test_sdlc_index.py",
+      "operation": "copied",
+      "sha256": "49a528114c5a10ee745da738f2e6ddb6e75efee72d72167582ae7c5965a48b3d",
+      "bytes": 11164
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/SKILL.md",
+      "operation": "copied",
+      "sha256": "67df81b1754399c767235dbc795dced7eb7d771e0ecc7fa4f9f2e72306e190c3",
+      "bytes": 9371
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/CATALOG.json",
+      "operation": "copied",
+      "sha256": "7b9611a875ba865ccac64ae02adf57a8916a83f21b3b4bd46b98c435908d3e43",
+      "bytes": 20119
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-p1/INDEX.json",
+      "operation": "copied",
+      "sha256": "385215f696a013420f478b7b996b5e3e1d5f8601888759946cbf36dd14504597",
+      "bytes": 93824
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-p1/PROVENANCE.json",
+      "operation": "copied",
+      "sha256": "156c02723374d77b6fea73dbf11ebae7aafc505f64afe473ca133b7b57b6b764",
+      "bytes": 11563
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-p1/PURPOSE.json",
+      "operation": "copied",
+      "sha256": "05d2351822ab4c25a0ff1c1965a488cfa53ad3e6223a391085d6c925d1f2e835",
+      "bytes": 1797
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-p1/SOURCES.json",
+      "operation": "copied",
+      "sha256": "20125a09c8ed061a1180cf9153171d901ac0421d0678358a81fb6b2bc424b384",
+      "bytes": 1085
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-v2/COVERAGE-STANDING.json",
+      "operation": "copied",
+      "sha256": "605a8c892395566b6f6dbbd785ff08e68f13f927c86f0b709f29b5e22c3c9fbe",
+      "bytes": 9031
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-v2/GAP-DISPOSITIONS.json",
+      "operation": "copied",
+      "sha256": "6366c0c269f8bb0f6741b10ae03ec5411f70ddcb83c1e6e2f1d5867f12078d85",
+      "bytes": 84016
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-v2/INDEX.json",
+      "operation": "copied",
+      "sha256": "100202be194c1576ad5186adc69896a317057a0ae7b0a00b49c06ea70fab5385",
+      "bytes": 162521
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-v2/PROVENANCE.json",
+      "operation": "copied",
+      "sha256": "528d8df2661732431afc1a780735d1e54798a203c2995eaae54cacf597f01b38",
+      "bytes": 23291
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-v2/PURPOSE.json",
+      "operation": "copied",
+      "sha256": "12c2d6375f50d8499d40b8494a7241d5bbd3493f89ab8a956396e7d1d29dba39",
+      "bytes": 6501
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-v2/REVIEW-DISPOSITIONS.json",
+      "operation": "copied",
+      "sha256": "1ef7d989c60d296c659fa8a01be1956b32a777b785d2e5edeefc0ecbe229ceb6",
+      "bytes": 71629
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.4-python-pure-refactor-v2/SOURCES.json",
+      "operation": "copied",
+      "sha256": "558a9c7628cd83f14dd0f430b1381ac6d101e1fc8484304a896eb50f89e4c540",
+      "bytes": 3218
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.5-rc.1-python-pure-refactor-v2/COVERAGE-STANDING.json",
+      "operation": "copied",
+      "sha256": "f3a2a9e76d5bdabfb0520026f746dbedc78859147edb027f6cd3ec385f61ea1b",
+      "bytes": 10859
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.5-rc.1-python-pure-refactor-v2/INDEX.json",
+      "operation": "copied",
+      "sha256": "fb591cf8471dabb249a90500e0909aff9f37eb2d4999470a9e9ba88f29ca518e",
+      "bytes": 162521
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.5-rc.1-python-pure-refactor-v2/PROVENANCE.json",
+      "operation": "copied",
+      "sha256": "7da26028b19e28f1600b25bb7235f2748af1e8e909289a2e239f46e5993bca58",
+      "bytes": 5082
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.5-rc.1-python-pure-refactor-v2/PURPOSE.json",
+      "operation": "copied",
+      "sha256": "d81becd0b5298938dece3b9cef1b328fc08d05c5d7ac1010ab6917bffd7c3b07",
+      "bytes": 6506
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.5-rc.1-python-pure-refactor-v2/SOURCE-DELTA.json",
+      "operation": "copied",
+      "sha256": "cb8b5fa83648eb939764f5f294bca1175a4d5f4c2677f10aefb62b0028c4b7c1",
+      "bytes": 135732
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.5-rc.1-python-pure-refactor-v2/SOURCE-IMPACT.md",
+      "operation": "copied",
+      "sha256": "ce2194a84a5e95069aa17a191fd26f5aa3ae56eef0cabf046fc5dff5b8721f87",
+      "bytes": 3653
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-3.0.5-rc.1-python-pure-refactor-v2/SOURCES.json",
+      "operation": "copied",
+      "sha256": "84aa0c29c41734ade7195b92bc55f956f79b6fd411805e7206a4cb7d63e747bb",
+      "bytes": 3228
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/INDEX.json",
+      "operation": "copied",
+      "sha256": "a20b77a6ae31cd1e5f0a33cda83e64fc3e447f22b0591c9eb03f45e943e7c723",
+      "bytes": 51500
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/PROVENANCE.json",
+      "operation": "copied",
+      "sha256": "7be6c8443b4b44f68b53a57cfd987113f92e57ead2e52429049780418711ba9d",
+      "bytes": 7379
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/PURPOSE.json",
+      "operation": "copied",
+      "sha256": "8ecba436caa12381da0c4b29f479358bc71e0e45fdae449ea1939bbcacdd1795",
+      "bytes": 3492
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/SOURCES.json",
+      "operation": "copied",
+      "sha256": "d07f0943f3dbd07f07b374e56bc7460ca19956b475d868a2d63a230ffe1b6ecd",
+      "bytes": 2399
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/manifest.json",
+      "operation": "copied",
+      "sha256": "3ab245bef1447bcddf50ab42ff1c6adf681cfeae6dec93920f7dd94f0f6e5249",
+      "bytes": 2072
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/ACTIVATION.md",
+      "operation": "copied",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "bytes": 142205
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/ASSURANCE.md",
+      "operation": "copied",
+      "sha256": "5f6740a39355314ea2a9227a8795ea68cdafb2c4c3e9b25e1d9e626eb43f27ca",
+      "bytes": 87324
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/EVALUATION.md",
+      "operation": "copied",
+      "sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485",
+      "bytes": 91301
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/EXECUTIVE_BASELINE.md",
+      "operation": "copied",
+      "sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff",
+      "bytes": 165730
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/FOUNDATIONS.md",
+      "operation": "copied",
+      "sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e",
+      "bytes": 131400
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/IDENTITY.md",
+      "operation": "copied",
+      "sha256": "c70399311010a8835b00d2a887a2451f11f66f631d6217d8df4be41751a59c08",
+      "bytes": 29087
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/PRODUCT_DEFINITION.md",
+      "operation": "copied",
+      "sha256": "7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523",
+      "bytes": 85568
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/REFERENCE_FRAME.md",
+      "operation": "copied",
+      "sha256": "4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64",
+      "bytes": 103687
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/RELEASE.md",
+      "operation": "copied",
+      "sha256": "eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628",
+      "bytes": 64863
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/SDLC_DEFAULTS.md",
+      "operation": "copied",
+      "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8",
+      "bytes": 11713
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/SPEC_METHOD.md",
+      "operation": "copied",
+      "sha256": "06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e",
+      "bytes": 148190
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/TICKETS.md",
+      "operation": "copied",
+      "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+      "bytes": 101437
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/references/authoring.md",
+      "operation": "copied",
+      "sha256": "215f5ae233ca03b5acb99273eff2872e2d1a4b49d54158ec5a56c2a760eb3737",
+      "bytes": 3730
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/references/index.schema.json",
+      "operation": "copied",
+      "sha256": "537784a980f5d8267bbeae271eebd04757ff9f2f241d30166d7f2d4c1f4c5ec6",
+      "bytes": 7659
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/references/method-targets.md",
+      "operation": "copied",
+      "sha256": "9ed3b9ad181152ef87e7b479d8633f33eb8a7f5bff21de080addf8e2974051e8",
+      "bytes": 4135
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/references/python-pure-refactor.md",
+      "operation": "copied",
+      "sha256": "2014bc9ff4f5a885f841c7d5cbec8874e4da9a2da325a363ecb799f5c72e2191",
+      "bytes": 9564
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/references/sdlc-workflow.md",
+      "operation": "copied",
+      "sha256": "012399be91694c979c63c4883bd13a9e3747c2fc92cac934efcc42444510293c",
+      "bytes": 11120
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/scripts/context.py",
+      "operation": "copied",
+      "sha256": "11de6b6eb18480daa63f27679d48e238131cbfa733e11ae0993fa83f077730ee",
+      "bytes": 15436
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/scripts/context_catalog.py",
+      "operation": "copied",
+      "sha256": "df532546092d082d7e1e2bc2a5219a6d1ba96b0ca2e3d8cab834d605be07622a",
+      "bytes": 14487
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/scripts/context_core.py",
+      "operation": "copied",
+      "sha256": "f690a4c09688fcd45df2befba9d71cb9eb7264bd0057621e8128c344b6ab3143",
+      "bytes": 22847
+    },
+    {
+      "path": "purpose_context/specification/GOALS.md",
+      "operation": "copied",
+      "sha256": "a8a89d888c12c78a83619250e1be17d4c6ad49f6cb1cd38fa2bac46acf5bb409",
+      "bytes": 3363
+    },
+    {
+      "path": "purpose_context/specification/INTENT.md",
+      "operation": "copied",
+      "sha256": "f940e0e7e034f99c49eac41783308f0d2b855ace0634ad4b1741fc0d6a895e4b",
+      "bytes": 1764
+    },
+    {
+      "path": "purpose_context/specification/PRODUCT.md",
+      "operation": "copied",
+      "sha256": "cdee9c4d84b235914f6fedb8f1bd7a56a5d62a0557dac5c701fd7aceec5b1671",
+      "bytes": 7899
+    },
+    {
+      "path": "purpose_context/specification/REFERENCE_FRAME_BASIS.md",
+      "operation": "copied",
+      "sha256": "bfe1c456f69f7258fdad20a868c4cb52596ee3e9b3a913c00bc7e5e8e6f8f8ca",
+      "bytes": 5422
+    },
+    {
+      "path": "purpose_context/specification/requirements/README.md",
+      "operation": "copied",
+      "sha256": "e1e2dad0c1d622d3212f89006cc2a3f50c75c35e1016c6f16ddfe8937c4266f2",
+      "bytes": 4936
+    },
+    {
+      "path": "purpose_context/specification/requirements/SDLC-WORKFLOW.md",
+      "operation": "copied",
+      "sha256": "5afba547f7e91fafe4af9c4b475ef936ee94ac1a6587465be4fe4e5419772cf7",
+      "bytes": 7616
+    },
+    {
+      "path": "purpose_context/stdo_purpose_context.json",
+      "operation": "copied",
+      "sha256": "a7d9c58a1d2a057a4358ebb4bd3fcb8e34081438df6c5fcfc0581e756c0243c8",
+      "bytes": 2905
+    },
+    {
+      "path": "scripts/STABLE_RELEASE_PROFILE.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "scripts/check_development_source.py",
+      "operation": "copied",
+      "sha256": "f8ba50f0e4f776ff102a8a27a1b859b765559a65511f78903290a4079f0a4af1",
+      "bytes": 4151
+    },
+    {
+      "path": "scripts/check_stack_release.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "scripts/fixtures/stack_release-v2.5.1-rc.2.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "scripts/fixtures/stack_release-v3.0.5.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "scripts/rc_rebind_evidence.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "scripts/stable_release_evidence.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "scripts/stable_stack_release.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "scripts/stdo_source_freeze.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/AGENTS.md",
+      "operation": "copied",
+      "sha256": "ece3eacf66f8c7d3f6ad89ecc485b92bb0531e0c4df41b6f570fc4a799467d5c",
+      "bytes": 5684
+    },
+    {
+      "path": "specification_methodology/v3/CLAUDE.md",
+      "operation": "copied",
+      "sha256": "ece3eacf66f8c7d3f6ad89ecc485b92bb0531e0c4df41b6f570fc4a799467d5c",
+      "bytes": 5684
+    },
+    {
+      "path": "specification_methodology/v3/README.md",
+      "operation": "copied",
+      "sha256": "a25f38f02a4625cd71b75d96f291ad6937369551509c7b2a3d6ae82b4b1e3eba",
+      "bytes": 8512
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-design/README.md",
+      "operation": "copied",
+      "sha256": "6b5c9598f54aeefb8341ade6ebb8da8eaa7b3b38b9bdc615fb2b19a30c7813e4",
+      "bytes": 2803
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-design/installed-documentation.md",
+      "operation": "copied",
+      "sha256": "53137762866b53ca5d7331f7460bc76bc1e0e103f1403b3c1b7f5acfec2a329a",
+      "bytes": 4528
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-design/installed-tooling.md",
+      "operation": "copied",
+      "sha256": "1d31030ca74f561ec6d50bfe985cdc6b70360d548464f72e3053684b0399b8dd",
+      "bytes": 4220
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-design/proof-reader.md",
+      "operation": "copied",
+      "sha256": "31b3ae21bf696a315e2e6030c8bd748e0b3ff6ef3de99ca8479a7c3701acf7ad",
+      "bytes": 3720
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/current_assets.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/documentation.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/documentation_current.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/fixtures/abi-code-example-v3.0.4.html",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/fixtures/proof_reader-v3.0.4.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/fixtures/tooling_materialize-v3.0.4.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/historical_test_payload.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/native_release.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/package_tools.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/payload_boundary.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_evidence.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/proof_reader_current.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/qualify_documentation.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/qualify_tooling.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_current_assets.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_documentation.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_frozen_code_example.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_installed_boundary.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_native_installed_store.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_proof_document_links.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_proof_evidence.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_proof_reader.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_proof_reader_performance.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_skill_source_reader.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_tooling.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_tooling_anchor.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/test_tooling_rc_version.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling-guide.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling-selection.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_current.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_materialize.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_runtime.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common-tools/tooling_setup.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/plugins/spec/references/COORDINATED_HANDOFF.md",
+      "operation": "copied",
+      "sha256": "ee81658a74245550979987829a9ca959943f8d44f566a77c89fa4baeed28989f",
+      "bytes": 25794
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md",
+      "operation": "copied",
+      "sha256": "15b103b159f11a26987841637bb7a7d8c01ad734fe62296319edbd4546eb2956",
+      "bytes": 48151
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-help/SKILL.md",
+      "operation": "copied",
+      "sha256": "2a2d1a431774278c022d61c247a63b2f50505bbffc2ddac6929313df66fea79d",
+      "bytes": 5331
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-review/SKILL.md",
+      "operation": "copied",
+      "sha256": "a694b9d03d8f7b171e37da47ba2493d4aafa53c537c6baafa33e0afae27d44a9",
+      "bytes": 9759
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-ticket/SKILL.md",
+      "operation": "copied",
+      "sha256": "71755bc6bc91bf21bc6cb0320959f097cd5060f615b731673ec168be9e90c465",
+      "bytes": 8305
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/plugins/spec/skills/stdo-work/SKILL.md",
+      "operation": "copied",
+      "sha256": "b7ed03fee86ffd2995d215b204071840d6cab44cbfda779b9da348131b5a7708",
+      "bytes": 14837
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/README.md",
+      "operation": "copied",
+      "sha256": "35c243deddd9a61e244f89af9a087d551561873d127bc17e7d753ff4ca495f12",
+      "bytes": 27226
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/SDLC_DEFAULTS.md",
+      "operation": "copied",
+      "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8",
+      "bytes": 11713
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/TICKETS.md",
+      "operation": "copied",
+      "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+      "bytes": 101437
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/documentation/README.md",
+      "operation": "copied",
+      "sha256": "4d54b65e8c05c931fafa168d3a911528d991ec9bd80c36fd187b2895464f5643",
+      "bytes": 4365
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/examples/SDLC_DEFAULTS.md",
+      "operation": "copied",
+      "sha256": "0a755316a78b1f53982671618a4172b32cbaafbcfa818b61ad1a77e624e7d606",
+      "bytes": 6420
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/FRAME_INPUTS.json",
+      "operation": "copied",
+      "sha256": "66a2f33cf325de8391d827c883e50dfb4a876e9ef478310d840ab3d0bc792ec5",
+      "bytes": 108128
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/acceptance-release.md",
+      "operation": "copied",
+      "sha256": "ff88a8d4e0c2d331a3d32c79740026256002d18d19e53e2fccdc9c65fe3b3d5e",
+      "bytes": 69121
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/bootstrap.md",
+      "operation": "copied",
+      "sha256": "7f8741bfaeb03aba16e231fac461024b27dd469b6250471690b81c6bc8ee8f65",
+      "bytes": 102009
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/frames/stale-summary.md",
+      "operation": "copied",
+      "sha256": "147096ea768d84c727890445788d5df44f9fab7af42cf29d6c6fdac8dda4b937",
+      "bytes": 105704
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md",
+      "operation": "copied",
+      "sha256": "d5afbc7572615e343f3600ed21c0d5edf0cce9116af9d33b7c7817fee3577f35",
+      "bytes": 16115
+    },
+    {
+      "path": "specification_methodology/v3/build_tenants/common/standards/tooling/README.md",
+      "operation": "copied",
+      "sha256": "64a95e68d1cb07e9ac20349a68e4c78cb59a0a3022ddc38f663ce143ea144f45",
+      "bytes": 3919
+    },
+    {
+      "path": "specification_methodology/v3/development/STDO_3_0_4.md",
+      "operation": "copied",
+      "sha256": "6cf555eb940adbfc038d5ff2fc8495d0f3636975054f82ef2de3726a00028a06",
+      "bytes": 7587
+    },
+    {
+      "path": "specification_methodology/v3/development/TOOLS.md",
+      "operation": "copied",
+      "sha256": "2cc058dfa12ffc90500c8f0a1380feb29ae11db979b349493253299ac85cb022",
+      "bytes": 4320
+    },
+    {
+      "path": "specification_methodology/v3/specification/GOALS.md",
+      "operation": "copied",
+      "sha256": "30516938ad2726986530527b459cb9e024962ef44fcb529136467c16f36d1d80",
+      "bytes": 45865
+    },
+    {
+      "path": "specification_methodology/v3/specification/PRODUCT.md",
+      "operation": "copied",
+      "sha256": "e06f7d704c58397e843cfd1a8720ba878e050c6bab6c5ec8d90317b092b604fc",
+      "bytes": 73697
+    },
+    {
+      "path": "specification_methodology/v3/specification/REFERENCE_FRAME_BASIS.md",
+      "operation": "copied",
+      "sha256": "b1274c0af2f827c50f5d32e86f4f3284d4a46b38f02000a390a0bb6cb8954383",
+      "bytes": 15167
+    },
+    {
+      "path": "specification_methodology/v3/specification/requirements/COMPLETE_RELEASE.md",
+      "operation": "copied",
+      "sha256": "7e3af64cfffa67365b2e84bf2fbf34fa2631a739849f027ab17d2bba87d5dd72",
+      "bytes": 3018
+    },
+    {
+      "path": "specification_methodology/v3/specification/requirements/README.md",
+      "operation": "copied",
+      "sha256": "7e0dd0f3f3935cf6c9fe5f76c6980c663911e5e84f2ed307b1af286af657b6f3",
+      "bytes": 41714
+    },
+    {
+      "path": "specification_methodology/v3/specification/requirements/SDLC_DEFAULTS.md",
+      "operation": "copied",
+      "sha256": "efcf195f7f3185a503b372639292b06a7da54fd617b295983079849c57151059",
+      "bytes": 6279
+    },
+    {
+      "path": "specification_methodology/v3/stdo_3.json",
+      "operation": "copied",
+      "sha256": "833874bacacea07ae6c70ab6e786d0ea2096865ad79daaf8e6daf9b6677eff4b",
+      "bytes": 5239
+    },
+    {
+      "path": "stdo_representation/.agents/skills/stdo-context",
+      "operation": "symlink",
+      "target": "../../../stdo_skills/skills/stdo-context"
+    },
+    {
+      "path": "stdo_representation/.agents/skills/stdo-representation",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/.claude/skills/stdo-context",
+      "operation": "symlink",
+      "target": "../../../stdo_skills/skills/stdo-context"
+    },
+    {
+      "path": "stdo_representation/.claude/skills/stdo-representation",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/AGENTS.md",
+      "operation": "copied",
+      "sha256": "141d5f05a521007b47e434fb90ebe2e1ecb6e23e3c514beb685ecbb69372b0eb",
+      "bytes": 2699
+    },
+    {
+      "path": "stdo_representation/CLAUDE.md",
+      "operation": "copied",
+      "sha256": "141d5f05a521007b47e434fb90ebe2e1ecb6e23e3c514beb685ecbb69372b0eb",
+      "bytes": 2699
+    },
+    {
+      "path": "stdo_representation/QUICKSTART.md",
+      "operation": "copied",
+      "sha256": "0b90dfd3ee4345e95ff34ae2d0d813e81c35d51d23af269fb5af9935b3e355ef",
+      "bytes": 943
+    },
+    {
+      "path": "stdo_representation/README.md",
+      "operation": "copied",
+      "sha256": "22c2b547180583b75d039a1b33d688a9b566108c9f83ae7355c9a40bca391f37",
+      "bytes": 879
+    },
+    {
+      "path": "stdo_representation/VERSION",
+      "operation": "copied",
+      "sha256": "69dced1fc82b64513842ce628727ee18744ebe7cecbd16ed47c753b76873f9be",
+      "bytes": 12
+    },
+    {
+      "path": "stdo_representation/build_tenants/README.md",
+      "operation": "copied",
+      "sha256": "7a4b760bfc297ccc30b384317b670971708cd1070e580742b21e6aedc3c3fbf5",
+      "bytes": 401
+    },
+    {
+      "path": "stdo_representation/build_tenants/a_c/design/CURRENT_MODEL.md",
+      "operation": "copied",
+      "sha256": "f2bb55e4602165212353a81e2ad10e45212629910218fbf1b414983099793408",
+      "bytes": 769
+    },
+    {
+      "path": "stdo_representation/build_tenants/axiom_indexer/FRAME_INDEX_PROJECTIONS.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/axiom_indexer/README.md",
+      "operation": "copied",
+      "sha256": "d8eb6cb753b8a102a3fe9bdfc17d2438ee18296b300ab0411bc5ddd2e87105f0",
+      "bytes": 412
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/package-lock.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/package.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/scripts/run-tests.mjs",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/axiom_index.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/canonical.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/cli.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/construct.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/contracts.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/encoding.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/evidence.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/index.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/io.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/projection.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/semantics.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/src/validation.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/test/axiom_index.test.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/test/canonical.test.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/test/carrier.test.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/test/io.test.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/test/test_runner.test.ts",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/code/tsconfig.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/design/GTL_AXIOM_INDEX_PROFILE.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/design/GTL_BASIS.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/design/GTL_REPRESENTATION_PROFILE.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/gtl/design/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/json_schema/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/json_schema/design/JSON_SCHEMA_BASIS.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/json_schema/design/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/README.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/contract/v_compile.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/profile/axiomatic-calculus-basis.candidate.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/profile/stdo-core-frame.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/profile/stdo-signature.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/prompt/v_compile.txt",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/schema/candidate.schema.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/scripts/acquire_basis.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/scripts/evaluate_candidate.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/build_tenants/semantic_compile/scripts/test_evaluate_candidate.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/scripts/check_constitution.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/scripts/finalize_stdo_gtl_product.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/scripts/prepare_stdo_gtl_candidate.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/scripts/test_check_constitution.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/scripts/test_finalization.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/scripts/test_frozen_gtl_tenant.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/skills/stdo-representation/SKILL.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/skills/stdo-representation/agents/openai.yaml",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/skills/stdo-representation/references/claude.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/skills/stdo-representation/references/codex.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/skills/stdo-representation/references/frame-index-use.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/specification/GOALS.md",
+      "operation": "copied",
+      "sha256": "8b0e81155b23e023f6292b057d017934379e7187e1f9d79fbf77940e1dbc93c6",
+      "bytes": 832
+    },
+    {
+      "path": "stdo_representation/specification/INTENT.md",
+      "operation": "copied",
+      "sha256": "5c77021a3da47024365b3bf48d4ab96392fdf4db0d4d224ab2144ee65b7640c8",
+      "bytes": 573
+    },
+    {
+      "path": "stdo_representation/specification/PRODUCT.md",
+      "operation": "copied",
+      "sha256": "ed90b99752291dfbba2650cdd56947c62f5ab527797fdbc0ab94e32ecad7ef73",
+      "bytes": 2107
+    },
+    {
+      "path": "stdo_representation/specification/REFERENCE_FRAME_BASIS.md",
+      "operation": "copied",
+      "sha256": "0aa1d4cefb1147403c8d04cb566f86107ca2ab636cf04605b9a8318adf1a9c63",
+      "bytes": 1021
+    },
+    {
+      "path": "stdo_representation/specification/requirements/README.md",
+      "operation": "copied",
+      "sha256": "827fd08360a9444f4dcab6c1577c2b9341e7c68bda147127ae6b8050d4ecee62",
+      "bytes": 664
+    },
+    {
+      "path": "stdo_representation/specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
+      "operation": "copied",
+      "sha256": "5522fd151defd126b1474fdc7216d4f17786c490c2da36dd77060408890ffc68",
+      "bytes": 326
+    },
+    {
+      "path": "stdo_representation/specification/requirements/REQ-P-CANDIDATE-VALIDATION.md",
+      "operation": "copied",
+      "sha256": "80a18d022dced000115d8544ff8f7ad9ebc5fa6e7113dc50fdc4d85a1b114fda",
+      "bytes": 449
+    },
+    {
+      "path": "stdo_representation/specification/requirements/REQ-P-CURRENT-MODEL.md",
+      "operation": "copied",
+      "sha256": "107111ce83ec7bfd1a085041fc8d521ded23d329e13d1440e7fced21a1c6dcea",
+      "bytes": 430
+    },
+    {
+      "path": "stdo_representation/specification/requirements/REQ-P-DOGFOOD-VERIFICATION.md",
+      "operation": "copied",
+      "sha256": "474ecacc1d56b0fd3257a7587ddb5998854c7b845b0f74b47a62ce7f01c76570",
+      "bytes": 354
+    },
+    {
+      "path": "stdo_representation/specification/requirements/REQ-P-NATIVE-FRAME-USE.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_representation/specification/requirements/REQ-P-STDO-AUTHORING-MAP.md",
+      "operation": "copied",
+      "sha256": "49eecbecafee7f1999046b61b1bfe19a5531052ad932f9aac987ae8a23149d36",
+      "bytes": 347
+    },
+    {
+      "path": "stdo_representation/stdo_representation.json",
+      "operation": "copied",
+      "sha256": "a1acf8af0806c65e6a1ee7e5022f148ac6234b01a5feebbd7b2a4ca958b9c2e5",
+      "bytes": 7057
+    },
+    {
+      "path": "stdo_skills/AGENTS.md",
+      "operation": "copied",
+      "sha256": "df8ec2abb5e96e3342e47122cfd872af7e141b56bbba8521012b5622ab2655cc",
+      "bytes": 1555
+    },
+    {
+      "path": "stdo_skills/CLAUDE.md",
+      "operation": "copied",
+      "sha256": "df8ec2abb5e96e3342e47122cfd872af7e141b56bbba8521012b5622ab2655cc",
+      "bytes": 1555
+    },
+    {
+      "path": "stdo_skills/GETTING_STARTED.md",
+      "operation": "copied",
+      "sha256": "bf32d54a769453d2660c6baf9c195c468b9675eeebaf925c837b37b7369265f6",
+      "bytes": 10435
+    },
+    {
+      "path": "stdo_skills/README.md",
+      "operation": "copied",
+      "sha256": "c799a02c99c5eb24c6e71566788d93fb019e0ff826aafc66aa8e71676bff7de7",
+      "bytes": 4377
+    },
+    {
+      "path": "stdo_skills/VERSION",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/README.md",
+      "operation": "copied",
+      "sha256": "1738a13504d6c572d40ee33e3f74ba9781b20401551711799ff89622f6d228ef",
+      "bytes": 648
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/INSTALL.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/INVENTORY.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/README.md",
+      "operation": "copied",
+      "sha256": "41d0a9b312e7c2e69042301fa6ecf97b8ab9e6e92982821489129f9232111833",
+      "bytes": 704
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/current/DESIGN.md",
+      "operation": "copied",
+      "sha256": "db03deba7dbb5f02cb17ecbd91a008eb47687ca85c71a39511d087a13ab606cb",
+      "bytes": 781
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/current/skills/stdo-project/SKILL.md",
+      "operation": "copied",
+      "sha256": "2237dc3901d1b3505e711676042a25ce77372ed94f9a7a273c4065f16e4a4111",
+      "bytes": 1380
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/current/skills/stdo-project/references/code.md",
+      "operation": "copied",
+      "sha256": "63903db316f4e65cf9f47f4adc9f7dbe06c1634f753b00a32a2987c76fc5e622",
+      "bytes": 677
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/current/skills/stdo-project/references/formal.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/current/skills/stdo-project/references/project.md",
+      "operation": "copied",
+      "sha256": "109198ac76a3facbf42fbecc31014ba454c530cf9e7225f5126d33cd43d40d16",
+      "bytes": 984
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/design/DESIGN.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/skills/stdo-continuation/SKILL.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/skills/stdo-delegate-review/SKILL.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/skills/stdo-release-install/SKILL.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/skills/stdo-release-install/references/maintenance.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/skills/stdo-release-install/scripts/manage_install.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/skills/stdo-tool-operations/SKILL.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/skills/stdo-tool-operations/references/composition.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/skills/stdo-tool-operations/references/representation.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/skills/stdo-workspace-change/SKILL.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/tests/check_package.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/claude/tests/test_repair.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/README.md",
+      "operation": "copied",
+      "sha256": "24afb4a20bf12bd4dd8e3578d9d88e4255bba1419f539f18839c17193a57f176",
+      "bytes": 622
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/current/DESIGN.md",
+      "operation": "copied",
+      "sha256": "4ebb06b172b2ca26e6faa9e2901d20766ae1f8bbd5aef17fe45b9c85d3f086ff",
+      "bytes": 779
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/current/skills/stdo-project/SKILL.md",
+      "operation": "copied",
+      "sha256": "2237dc3901d1b3505e711676042a25ce77372ed94f9a7a273c4065f16e4a4111",
+      "bytes": 1380
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/current/skills/stdo-project/references/code.md",
+      "operation": "copied",
+      "sha256": "63903db316f4e65cf9f47f4adc9f7dbe06c1634f753b00a32a2987c76fc5e622",
+      "bytes": 677
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/current/skills/stdo-project/references/formal.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/current/skills/stdo-project/references/project.md",
+      "operation": "copied",
+      "sha256": "109198ac76a3facbf42fbecc31014ba454c530cf9e7225f5126d33cd43d40d16",
+      "bytes": 984
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/design/DESIGN.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/inventory.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/SKILL.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/references/basis.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/references/composition.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/references/delegation.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/references/qualification.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/references/recovery.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/references/release-install.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/references/representation.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/references/tools.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/skills/stdo-work/source-routes.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/tests/test_source_routes.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/build_tenants/codex/tests/verify_package.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/scripts/INSTALLATION.md",
+      "operation": "copied",
+      "sha256": "1fdb804b54f5e778a4b195ead99190a9bfb430b22e7755f5136e49f84e72e322",
+      "bytes": 6850
+    },
+    {
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "operation": "copied",
+      "sha256": "0387ceecb719af985ff82ea9cc5b0147a31a7db97523e18457df3eaaf1e890dc",
+      "bytes": 15406
+    },
+    {
+      "path": "stdo_skills/scripts/package.py",
+      "operation": "copied",
+      "sha256": "8df8633da34e7b24fc1ffb0179aa2e10ebae2ac9b3c26912bb3602a01525fe5c",
+      "bytes": 1941
+    },
+    {
+      "path": "stdo_skills/scripts/package_305.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/skills/stdo-context/BINDING.json",
+      "operation": "copied",
+      "sha256": "c293148fe010645681a981cf660f0b144a3d66f999f995f107227be6f42bfeea",
+      "bytes": 75
+    },
+    {
+      "path": "stdo_skills/skills/stdo-context/SKILL.md",
+      "operation": "copied",
+      "sha256": "7f5aef26f56880c6754086af6a01cdd75e2731dc36f49427bc7e66ae5cef2143",
+      "bytes": 4765
+    },
+    {
+      "path": "stdo_skills/skills/stdo-context/scripts/provider.py",
+      "operation": "copied",
+      "sha256": "0ebb7cb6af1eb321dc3389479d4f0af826e294ea4ddc9a1da08359f9de232fe0",
+      "bytes": 4589
+    },
+    {
+      "path": "stdo_skills/specification/DESIGN.md",
+      "operation": "copied",
+      "sha256": "ce16af65943314d8e7cdeba133fd50abb399354d00c5601bc784d649b59dd858",
+      "bytes": 2854
+    },
+    {
+      "path": "stdo_skills/specification/GOALS.md",
+      "operation": "copied",
+      "sha256": "5caa523327b004eb231bc7683ddf169c848eeecab30f26da217eea8ac5e78e7f",
+      "bytes": 2292
+    },
+    {
+      "path": "stdo_skills/specification/INTENT.md",
+      "operation": "copied",
+      "sha256": "8f350c005614db78a584c7de73d684ff6d0e289ac8b64c9cc223fb4f7633da0d",
+      "bytes": 797
+    },
+    {
+      "path": "stdo_skills/specification/PRODUCT.md",
+      "operation": "copied",
+      "sha256": "e5551b326ccb6906011fdcc124f0486669d3b049938b9042dd6767c8c288ece6",
+      "bytes": 5714
+    },
+    {
+      "path": "stdo_skills/specification/REFERENCE_FRAME_BASIS.md",
+      "operation": "copied",
+      "sha256": "4a9aade0265b59a8bf3f250b1857c0bd7e7ceead2f53c53b5ef7eedc0be5cfec",
+      "bytes": 3986
+    },
+    {
+      "path": "stdo_skills/specification/RELEASE_3_0_5.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/specification/SOURCE_OWNERS.md",
+      "operation": "copied",
+      "sha256": "c8446fe900a00f2673b820d6094f4cb068aa9fad73b601275fc6a1c66e24d08e",
+      "bytes": 950
+    },
+    {
+      "path": "stdo_skills/specification/composition/A_C_REPRESENTATION.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/specification/composition/A_C_SUPPORT.md",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/specification/composition/DEPENDENCIES.json",
+      "operation": "copied",
+      "sha256": "dca635c4222a6e8081ba44d7a13c0d1a30a3e3321c36a2f6d326a101d3a5751d",
+      "bytes": 627
+    },
+    {
+      "path": "stdo_skills/specification/composition/PRODUCTS.md",
+      "operation": "copied",
+      "sha256": "5879de2deccb441c0e0066aba2503b2625a23c5b2cf59558f638cfd336b88c44",
+      "bytes": 1571
+    },
+    {
+      "path": "stdo_skills/specification/composition/REPRESENTATION_MANIFEST.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/specification/composition/SOURCE_MANIFEST.json",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/specification/requirements/PURPOSE-INDEX-CONSUMPTION.md",
+      "operation": "copied",
+      "sha256": "a843365899e6cf8ea75b6bbd2841b15b1bd6ef015f32228eb5197fdee06f5a80",
+      "bytes": 5908
+    },
+    {
+      "path": "stdo_skills/specification/requirements/README.md",
+      "operation": "copied",
+      "sha256": "4d81f57064a634dccdad68fec353907e3b5e9c7db562cd99f123aa47e3c05b4a",
+      "bytes": 3560
+    },
+    {
+      "path": "stdo_skills/specification/requirements/SCENARIOS.md",
+      "operation": "copied",
+      "sha256": "8b78121f3bc78bbb39336778b8d87b0f33d7e2f334838384301ec1977335da12",
+      "bytes": 5165
+    },
+    {
+      "path": "stdo_skills/stdo_skills.json",
+      "operation": "copied",
+      "sha256": "638397e839f8a39d0ddb5b0c5bbdcab12094d5bad5b4d9c520a83b984cd8bf97",
+      "bytes": 4000
+    },
+    {
+      "path": "stdo_skills/tests/test_install_305.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/tests/test_native_routes.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "stdo_skills/tests/test_project_manager_route.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "tests/stable_formal_recorded_control.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "tests/test_axiom_release_evidence.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "tests/test_rc_five_product_release.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "tests/test_rc_rebind_evidence.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "tests/test_representation_evidence.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "tests/test_stable_stack_release.py",
+      "operation": "deleted"
+    },
+    {
+      "path": "tests/test_stack_release.py",
+      "operation": "deleted"
+    }
+  ]
+}

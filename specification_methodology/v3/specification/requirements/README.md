@@ -1,5 +1,10 @@
 # Common Requirements
 
+The current [adoptable SDLC defaults](SDLC_DEFAULTS.md) require a selected
+default QA, causal triage, lawful re-entry and bounded verification route,
+with explicit qualification obligations. This source increment changes no
+installed construction basis or historical acceptance record.
+
 The common requirements bind both build tenants' candidates. This file holds the requirements that come from this Product. The other files hold the rest:
 
 - [COMPLETE_RELEASE](COMPLETE_RELEASE.md): selected stable 3.0.5 five-Product cohort, source-current derived assets, installable tools and complete publication gates.

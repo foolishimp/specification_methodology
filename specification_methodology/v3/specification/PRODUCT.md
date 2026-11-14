@@ -14,13 +14,19 @@ Under the [standalone successor requirement](requirements/README.md#standalone-s
 
 Each rule has one owning section, under [Method Structure](#method-structure) and the [single ownership requirement](requirements/README.md#single-ownership-requirement).
 
-The current distribution selection is the complete five-Product
-[3.0.5-rc.1 cohort](requirements/COMPLETE_RELEASE.md), on public version line
-STDO 3.0.5, under the owner-authorized reset of the unadopted former stable
-3.0.5 line. The exact grant and historical custody are retained in
-[the reset activation](../.ai-workspace/work/STDO305_RC_RESET/release-tools/ACTIVATION.json).
-This selects delivery work, not a claim that publication is complete. The
-source project's adopted builder remains 3.0.4.
+The complete five-Product [3.0.5-rc.1 cohort](requirements/COMPLETE_RELEASE.md)
+is a historical distribution subject on public version line STDO 3.0.5.
+Its owner reset grant and custody remain in
+[the reset activation](../.ai-workspace/work/STDO305_RC_RESET/release-tools/ACTIVATION.json),
+and its publication status is recorded in the original release evidence.
+Current source development follows the separately owned
+[Product tool packages](../development/TOOLS.md), including the independent
+Purpose Context Product and Skills consumption. The owner now selects the
+[six-Product 3.1 release relation](requirements/RELEASE_3_1.md) under its exact
+[activation](../../../.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/ACTIVATION.md).
+Native source, context and visual dependencies retain separate identities;
+qualification follows the current frozen subjects and actual evidence. The
+adopted construction builder remains exact STDO 3.0.4.
 
 The preceding distribution increment, STDO 3.0.4, is published under the owner's
 [release selection](../.ai-workspace/work/STDO304_DELIVERY/SELECTION.md); the
@@ -68,11 +74,26 @@ Runtimes that execute applications built with the method are outside the product
 
 Example applications, such as Hello World and Data Mapper, are test subjects outside the product. So is the sum-and-histogram example used by the steel thread. Their particular features never become general method rules because they were used once.
 
-The product changes nothing in the 2.* line: not its source project, its releases, its companion products or the selection of versions released together. The companion products are the Axiom Indexer; the STDO Representation, which publishes the method's canonical a_c map, linking each axiom to its source text; and the plugin, which carries the method's skills for coding agents.
+The 2.* standards and historical release lines retain their own identities.
+The shared manager source is physically under `specification_methodology/v2`;
+its current packaging version follows the explicit 3.1 release relation without
+changing those historical standards or releases. The native plugin carries
+method skills, while the separately owned context and visual Products retain
+the responsibilities and exact dependencies declared by the current cohort.
 
 Construction proceeds through numbered checkpoints, C0 to C3, described under [Checkpoints](#checkpoints). The two candidate build tenants are described under [Source Project Construction](#source-project-construction).
 
 ## Current Development Basis
+
+The owner-selected [SDLC defaults increment](requirements/SDLC_DEFAULTS.md)
+supplies an adoptable existing-law projection, worked cases and native
+work/review entry routes. The [local frame basis](REFERENCE_FRAME_BASIS.md#selected-sdlc-default)
+selects that projection for current source work. Incremental QA, causal
+diagnosis and bounded repair verification preserve named acceptance/release
+conditions, optional profiles, sufficient direct Writer entry and Product
+policy ownership. The [admitted cross-Product work](../../../.ai-workspace/work/SDLC_DEFAULTS_2026-11-14/ACTIVATION.md)
+owns that source change. The later [release requirement](requirements/RELEASE_3_1.md)
+selects publication without adopting the successor for any consumer.
 
 The owner now selects `stdo://releases/v3.0.4/`, manifest SHA-256
 `102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b`,

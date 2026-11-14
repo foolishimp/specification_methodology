@@ -3,8 +3,11 @@
 design/CROSS_SYNTHESIS.md part 5, the RW1 F14 sections, byte-identical
 regeneration, the frame layout and link rebasing.
 
-Run: python3 -I qualification/instruments/test_generate_frames.py
+Run from the v3 source root:
+  python3 -I -B .ai-workspace/common-build/frame-tools/test_generate_frames.py
+  python3 -I -B .ai-workspace/common-build/frame-tools/test_generate_frames.py --root PATH
 """
+import argparse
 import hashlib
 import importlib.util
 import json
@@ -12,11 +15,18 @@ from pathlib import Path
 import posixpath
 import re
 import shutil
+import sys
 import tempfile
 import unittest
 
 HERE = Path(__file__).resolve().parent
-TENANT = HERE.parents[1]
+arguments = argparse.ArgumentParser(add_help=False)
+arguments.add_argument('--root', type=Path,
+                       default=HERE.parents[2] / 'build_tenants/common')
+selected, unittest_arguments = arguments.parse_known_args()
+TENANT = selected.root.resolve()
+if not (TENANT / 'standards/frames/FRAME_INPUTS.json').is_file():
+    raise SystemExit(f'frame test corpus is missing its manifest: {TENANT}')
 
 
 def load(name, path):
@@ -27,7 +37,37 @@ def load(name, path):
 
 
 gf = load('generate_frames', HERE / 'generate_frames.py')
-bs = load('bounded_step', HERE / 'bounded_step.py')
+
+# Frozen comparison only: the two parsing operations formerly imported from
+# bounded_step.py (SHA-256 f92ca26b3e4fda953d8732f0665861d54a9121df67451ea90f981555c6ffe81d).
+# The old actor runner is neither a dependency nor an invoked test capability.
+HISTORICAL_HEADING = re.compile(r'^(#{1,6})\s+(.+?)\s*#*\s*$')
+
+
+def historical_slug(title):
+    base = re.sub(r'[^\w\- ]', '', title.strip().lower(), flags=re.UNICODE)
+    return re.sub(r'[\s\-]+', '-', base).strip('-')
+
+
+# Current GFM-style identifiers retain both spaces around the removed em dash.
+# The old actor parser collapsed them. Preserve the public current anchors;
+# record these exact differences rather than claiming universal compatibility.
+HISTORICAL_ANCHOR_DIFFERENCES = {
+    ('PRODUCT_DEFINITION.md', 'pc-01--recursive-product-boundaries'):
+        'pc-01-recursive-product-boundaries',
+    ('PRODUCT_DEFINITION.md', 'pc-02--independent-entry-and-the-integrated-outcome'):
+        'pc-02-independent-entry-and-the-integrated-outcome',
+    ('PRODUCT_DEFINITION.md', 'pc-03--the-edges-contract-and-authority-record'):
+        'pc-03-the-edges-contract-and-authority-record',
+    ('PRODUCT_DEFINITION.md', 'pc-04--recursive-authority-and-information-eligibility'):
+        'pc-04-recursive-authority-and-information-eligibility',
+    ('PRODUCT_DEFINITION.md', 'pc-05--context-construction-and-clean-room-conditions'):
+        'pc-05-context-construction-and-clean-room-conditions',
+    ('PRODUCT_DEFINITION.md', 'pc-06--readiness-cycles-and-replacement'):
+        'pc-06-readiness-cycles-and-replacement',
+    ('PRODUCT_DEFINITION.md', 'pc-07--change-evidence-and-reliance'):
+        'pc-07-change-evidence-and-reliance',
+}
 
 
 def sha256(data: bytes) -> str:
@@ -114,15 +154,23 @@ class SlugRule(unittest.TestCase):
         self.assertEqual(gf.slug('11. The activation packet'), '11-the-activation-packet')
         self.assertEqual(gf.slug('The workspace and an actor\'s account'), 'the-workspace-and-an-actors-account')
         self.assertEqual(gf.slug('`code` <b>tag</b> x'), 'code-tag-x')
+        self.assertEqual(gf.slug('PC-01 — Recursive Product boundaries'),
+                         'pc-01--recursive-product-boundaries')
 
-    def test_agrees_with_bounded_step_on_every_member_heading(self):
-        for path in sorted((TENANT / 'standards').glob('*.md')):
+    def test_historical_heading_compatibility_has_only_declared_differences(self):
+        members = sorted((TENANT / 'standards').glob('*.md'))
+        self.assertTrue(members, 'the selected current corpus must not be empty')
+        differences = {}
+        for path in members:
             m = gf.load_member(TENANT, f'standards/{path.name}')
             for index, _, title, anchor in m.headings:
                 line = gf.bare(m.lines[index])
-                other = bs.HEADING.match(line)
+                other = HISTORICAL_HEADING.match(line)
                 self.assertIsNotNone(other, f'{path.name}:{index + 1}')
-                self.assertEqual(anchor, bs.slug_of(other.group(2)), f'{path.name}:{index + 1}')
+                old_anchor = historical_slug(other.group(2))
+                if anchor != old_anchor:
+                    differences[(path.name, anchor)] = old_anchor
+        self.assertEqual(differences, HISTORICAL_ANCHOR_DIFFERENCES)
 
 
 class FencedCode(unittest.TestCase):
@@ -417,7 +465,7 @@ class F14Sections(unittest.TestCase):
 
 
 class TenantFrames(unittest.TestCase):
-    """The frame inputs of this tenant build within the limit and route the result algebra."""
+    """Full task frames route results; the composition excerpt retains its narrow owner."""
 
     def test_frames(self):
         inputs = TENANT / gf.INPUTS_RELATIVE
@@ -429,7 +477,15 @@ class TenantFrames(unittest.TestCase):
         for entry in manifest['frames']:
             self.assertLessEqual(entry['bytes'], gf.MAX_FRAME_BYTES)
             routes = [(r['owner'], r['anchor']) for r in entry['routes']]
-            self.assertIn(('standards/FOUNDATIONS.md', 'results'), routes)
+            if entry['id'] == 'product-composition':
+                # Added in the released composition increment after this suite's
+                # original twelve full task frames. Its declared scope is an
+                # owner excerpt, not a standalone complete task/evaluation frame.
+                self.assertEqual(routes, [(
+                    'standards/PRODUCT_DEFINITION.md',
+                    '9-recursive-discovery-and-explicit-composition')])
+            else:
+                self.assertIn(('standards/FOUNDATIONS.md', 'results'), routes)
             data = outputs[TENANT / entry['path']]
             sources = re.findall(rb'^Source: (\S+)#(\S+) sha256=([0-9a-f]{64})(?: rows=\d+/\d+ [^\n]*)?$', data, re.M)
             self.assertEqual([(Path(o).name, a) for o, a in routes],
@@ -744,11 +800,18 @@ class Bindings(unittest.TestCase):
         finally:
             tree.close()
 
-    def test_tenant_frames_all_bind_the_construction_relation(self):
+    def test_current_frames_bind_their_declared_shared_relations(self):
         manifest = json.loads((TENANT / 'standards/frames/FRAME_INPUTS.json').read_text())
         for fr in manifest['frames']:
             owners = {(b.get('owner'), b.get('anchor')) for b in fr.get('binds') or []}
-            self.assertIn(('standards/ACTIVATION.md', 'construction-relation'), owners, fr['id'])
+            if fr['id'] == 'product-composition':
+                self.assertEqual(owners, {
+                    ('standards/ACTIVATION.md', 'refinement'),
+                    ('standards/FOUNDATIONS.md', 'assurance-relations'),
+                    ('standards/FOUNDATIONS.md', 'change-impact-and-evidence-reuse'),
+                })
+            else:
+                self.assertIn(('standards/ACTIVATION.md', 'construction-relation'), owners, fr['id'])
 
 
 class ConsumerItems(unittest.TestCase):
@@ -791,4 +854,4 @@ class ConsumerItems(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main(argv=[sys.argv[0], *unittest_arguments], verbosity=2)

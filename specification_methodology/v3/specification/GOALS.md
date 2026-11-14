@@ -2,7 +2,35 @@
 
 This file states the current work wave of this source project: what is being worked on now, and the state of each checkpoint. SELECTED means the product owner has chosen the item for current work. A checkpoint is one stage of the construction of the new release; [Checkpoints](PRODUCT.md#checkpoints) lists them.
 
-## Current Selection
+## Current source distribution selection
+
+The owner selects build and publication of **3.1.0-rc.1 on public line 3.1.0**
+under the [release activation](../../../.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/ACTIVATION.md)
+and [current release relation](requirements/RELEASE_3_1.md). Six separately
+owned Products form the explicit cohort. Native A precedes exact-cut dependent
+assets and B; publication is atomic with public acquisition/readback. Construction
+uses the selected installed 3.0.4 basis, while the exact native predecessor
+remains 3.0.5-rc.1. The release work records its own bounded evidence and
+residuals; historical acceptance/results do not silently transfer.
+
+The owner selects the [SDLC defaults requirements](requirements/SDLC_DEFAULTS.md)
+under the [2026-11-14 admission](../../../.ai-workspace/work/SDLC_DEFAULTS_2026-11-14/ACTIVATION.md):
+an adopted default QA → causal triage → owner/carrier re-entry → verification
+route with drift control and bounded review termination. The work retains
+the exact 3.0.4 builder and preserved 3.0.5-rc.1 source predecessor. Independent
+assessment and actual-use evidence determine the changed development subject's
+bounded standing. The later release grant above selects the successor; it
+does not relabel those observations as new exact-cut evidence.
+
+The 2026-11-12 owner direction separates Purpose Context, Skills consumption and
+visual documentation. [Current development tools](../development/TOOLS.md) route
+to independently inventoried Products. The former common-tools distribution and
+proof constructors are archived intact. The current six-Product constructor
+and its qualification follow the separate release grant above. This routing change does not edit method law, common
+native payloads, released archives or installed components. STDO 3.0.4 remains the
+selected construction basis.
+
+## Historical release selection
 
 The owner selects the **complete 3.0.5-rc.1 release cohort on public version line 3.0.5**, including all
 five Products and required current tools, representation and host skills.
