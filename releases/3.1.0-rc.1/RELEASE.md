@@ -48,6 +48,14 @@ completeness. Historical 3.0.5 model/proof artifacts are not relabelled as 3.1.
 Lean, proof execution, registry authority and the retired context-support
 runtime are outside the new delivered capability. See [migration](MIGRATION.md).
 
+Under RELEASE §8, visual qualification is expressly narrowed to the selected
+ACTIVATION, SDLC_DEFAULTS and TICKETS documentation, with the complete native
+member inventory retained and unrepresented meaning declared. This successor
+does not claim the complete whole-method semantic stack described by the
+historical five-Product RELEASE §7 profile. The owner's visual-only retirement
+and new Purpose Context Product selection define this six-Product successor;
+the exact dependency, complete-ref and atomic-publication duties of §7 remain.
+
 ## Construction and qualification
 
 The exact native predecessor is `specification_methodology/v3.0.5-rc.1`,

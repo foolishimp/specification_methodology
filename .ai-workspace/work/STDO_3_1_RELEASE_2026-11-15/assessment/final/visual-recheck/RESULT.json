@@ -1,0 +1,110 @@
+{
+  "kind": "stdo.final-visual-independent-recheck/1",
+  "status": "supported",
+  "subject": {
+    "native_A_commit": "c1e0faaa8437c169031a476343c764614135cd93",
+    "native_tag_object": "fca8d5e97cf2e945196aecdc33908bb190efdca5",
+    "installed_manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa",
+    "model_identity": "urn:a-c:generation:c8b565861ea509feddf2ebd4:model:5e1b2b5f8f9ed32537efefe0",
+    "model_canonical_sha256": "784aa60f81eb2e9c4612ce0062a1e34c459088615692d672a0834021edfacde3",
+    "model_file_sha256": "5c1ef1485ec7f470c42dada810f15fe4d66200a7140a14eb1d185c0fd8bb51cb",
+    "stdo_representation_public_manifest_sha256": "d8a46da4e3fcce75ef9e761fe172d3e8ba583d2fd973c447a9fb324388b950f7",
+    "explorer_sha256": "2ab25f47a5f99575c7c93bfff3a57a3241d22925dbfb69068fdf1c9b453007e5",
+    "recheck_population": "12 changed records (0e726b79, 74980192, 8ac7ef58, b2725b81, c8e46679, 75d9d582, 1c1b407b, 2de0fd46, f7933543, b7e39de5, e1ef9d99, 178e4545) plus F8/F9 evidence and the RELEASE.md section-8 narrowing wording",
+    "predecessor_subject_history": "model 10f810f0.../bf696c10..., manifest f1e13206...; prior verdict retained as history, not relabelled",
+    "assessor": "Claude-family (host metadata claude-opus-5-5 authoritative); single author; no tools used; advisor tool exposed but not called per instruction; no total-context isolation claimed"
+  },
+  "actor": {
+    "model": "claude-opus-5-5",
+    "session_id": "ed7a45b8-1e0b-400a-89c0-a0470332d95b",
+    "claude_code_version": "2.1.323"
+  },
+  "execution": {
+    "exit_code": 0,
+    "duration_ms": 144673,
+    "num_turns": 1,
+    "stop_reason": "end_turn",
+    "observed_tool_uses": 0
+  },
+  "finding_dispositions": {
+    "F1": {
+      "disposition": "repaired",
+      "basis": "8ac7ef58 exceptions emptied; remaining condition is a source applicability trigger; non-invalidation rule only in separate a66cf400"
+    },
+    "F2": {
+      "disposition": "repaired",
+      "basis": "nonclaims/obligations moved from qualifier fields to meaning/statement in f7933543, e1ef9d99, 178e4545, b2725b81, c8e46679; remaining qualifiers on 178e4545 and 8ac7ef58 are genuine source conditions/defeaters"
+    },
+    "F3": {
+      "disposition": "repaired",
+      "basis": "c8e46679 now states acquire-observation OR retain indeterminate, grounded on SDLC 114-119 plus line 112"
+    },
+    "F4": {
+      "disposition": "repaired",
+      "basis": "0e726b79 gains SDLC 68-74 ground entailing summary/index clause; b7e39de5 gains ACTIVATION 1381-1388 ground, restores 'uncertain', 'before any repetition' and 'the carrier', drops added 'summary'"
+    },
+    "F5": {
+      "disposition": "repaired",
+      "basis": "74980192 states 'only when ... and' necessary condition and the generic-request/model-widened-scope exclusion"
+    },
+    "F6": {
+      "disposition": "repaired",
+      "basis": "2de0fd46 states disposability ground; 75d9d582 forbids missing-trace-as-no-effect/not-done/ended, grounded on ACTIVATION 1485-1492"
+    },
+    "F7": {
+      "disposition": "repaired",
+      "basis": "1c1b407b definition includes 'linked sections remain the single deciding owners'"
+    },
+    "F8": {
+      "disposition": "retained_disclosed",
+      "severity": "low",
+      "basis": "94 empty re_entry arrays explicitly declared in COVERAGE.md with textual/grounding/SOURCE_BINDING re-entry route and no automatic cross-owner closure claim"
+    },
+    "F9": {
+      "disposition": "closed_with_limit",
+      "basis": "browser-final-004 records explorer sha256 2ab25f47... before and after observation, equal to FINAL-HASHES and INPUT_READBACK explorer digest, with model 784aa60f...; manifest d8a46da4 membership of that digest is operator-asserted, not recomputed"
+    }
+  },
+  "remaining_findings": [
+    {
+      "id": "F8",
+      "severity": "low",
+      "status": "open_disclosed",
+      "issue": "structured re_entry arrays empty; cross-owner residual 30ac9621 lacks in-model owner coordinates"
+    },
+    {
+      "id": "O1",
+      "severity": "observation",
+      "record": "178e4545",
+      "issue": "meaning omits source 'J is not O'; pre-existing, not introduced; no inversion"
+    },
+    {
+      "id": "O2",
+      "severity": "observation",
+      "record": "75d9d582",
+      "issue": "ACTIVATION 1485-1492 ground also attached to allowed_variation, which it does not support; provenance over-attachment only"
+    },
+    {
+      "id": "O3",
+      "severity": "observation",
+      "record": "a66cf400 (unchanged, outside batch)",
+      "issue": "second exception is a nonclaim-like limit; cannot be read to relax any rule; not a reopened finding"
+    }
+  ],
+  "limits": [
+    "digests, 306/12/294 equality, native/provider unchanged and manifest membership of the explorer digest are operator/Writer-supplied, not recomputed",
+    "changed top-level model 'id' and 'interpretation' values not supplied or assessed",
+    "new line coordinates checked by relative counting only (SDLC 68-74 and 112 against prior anchors; ACTIVATION 1381-1388, 1460-1469 and 1485-1492 mutually consistent; 1707-1716 by quote length only); absolute ACTIVATION offsets not independently anchored",
+    "browser evidence is a Writer observation over file:// on the candidate worktree on one host; packaged/installed/public reruns (R3/R5), jsdom lane and screenshots not performed or seen",
+    "native RELEASE section 7/8 text, cohort record and manifest d8a46da4 not supplied",
+    "no general UX, non-STDO visual, Graphify, formal/Lean, whole-method or host-pickup predicates assessed",
+    "release, owner acceptance, publication and B exact-ref closure remain later and are not decided here",
+    "single-author assessment over a Codex-selected packet"
+  ],
+  "g01_assessment": {
+    "prior": "unknown at cohort level (no explicit section-8 narrowing wording)",
+    "current": "wording ambiguity resolved: RELEASE.md explicitly narrows visual qualification under section 8 to the three selected members and disclaims the historical section-7 whole-method stack while retaining section-7 dependency/ref/atomic-publication duties",
+    "not_assessed": "lawfulness and authority of the narrowing under native RELEASE section 8 (member text not supplied); cohort record"
+  },
+  "report_sha256": "d1fe2d947279a3b548378043ee96ae07e54ea0e822bb7aca922bfa8b327f911b"
+}

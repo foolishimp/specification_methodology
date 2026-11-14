@@ -83,9 +83,9 @@
     $('structure-control').hidden = $('trace-control').hidden = false;
   }
   const layerNames = {required: 'Retention dependency', relation: 'Authored relation', reference: 'Typed reference',
-    structure: 'Code observation', trace: 'Proposed trace'};
+    structure: 'Code observation', trace: 'Proposed trace', logical: 'Logical annotation'};
   const linkColors = {relation: '#b8a0e0', required: '#779a9c', reference: '#455669',
-    structure: '#6fb8e3', trace: '#e6be79'};
+    structure: '#6fb8e3', trace: '#e6be79', logical: '#e7bd84'};
   const short = (s, n = 100) => s.length > n ? s.slice(0, n - 1) + '…' : s;
   const prettyKey = s => s.replace(/_/g, ' ').replace(/^./, c => c.toUpperCase());
   const neighbours = new Map(data.nodes.map(n => [n.id, []]));
@@ -107,6 +107,10 @@
       if (!sourceFiles.has(g.path)) sourceFiles.set(g.path, new Map());
       const firstLine = files.get(g.path);
       files.set(g.path, firstLine === undefined ? g.start_line : Math.min(firstLine, g.start_line));
+    }
+    for (const route of node.source_routes || []) {
+      if (!sourceFiles.has(route.path)) sourceFiles.set(route.path, new Map());
+      if (!files.has(route.path)) files.set(route.path, null);
     }
     recordFiles.set(node.id, files);
     for (const [path, line] of files) sourceFiles.get(path).set(node.id, line);
@@ -337,7 +341,7 @@
     }
     const reference = references && typeof value === 'string' && (neighbours.get(selected) || []).find(l =>
       l.layer === 'reference' && l.source === selected && l.target === value &&
-      l.path.length === path.length && l.path.every((p, i) => p === path[i]));
+      Array.isArray(l.path) && l.path.length === path.length && l.path.every((p, i) => p === path[i]));
     if (reference && nodes.has(value)) {
       const button = el('button', nodes.get(value).label, 'identity-button');
       button.title = value;
@@ -356,7 +360,9 @@
     const source = data.sources[g.path];
     if (!source) return;
     $('source-title').textContent = g.path + (g.start_line ? ':' + g.start_line + '–' + g.end_line : '');
+    if (g.selector) $('source-title').textContent += ' · selector: ' + g.selector;
     $('source-digest').textContent = 'Embedded file SHA-256: ' + source.sha256;
+    if (g.owner) $('source-digest').textContent += ' · declaration owner: ' + g.owner + ' · selector preserved as text; no inferred line range';
     $('source-text').replaceChildren();
     source.text.split('\n').forEach((line, i) => {
       const row = el('span', String(i + 1).padStart(4, ' ') + '  ' + line);
@@ -399,7 +405,14 @@
       button.dataset.link = link.id;
       button.dataset.layer = link.layer;
       button.append(el('small', edgeDescription(link, selected)), el('span', target.label, 'target-label'));
-      if (link.reasons) button.append(el('span', link.reasons.map(r => r.label + (r.path ? ' · ' + r.path.join('/') : '')).join('; '), 'edge-detail'));
+      if (link.reasons) {
+        const details = link.reasons.map(r => [
+          typeof r.label === 'string' ? r.label : (typeof r.kind === 'string' ? r.kind : ''),
+          Array.isArray(r.path) ? r.path.join('/') : '',
+          typeof r.detail === 'string' ? r.detail : ''
+        ].filter(Boolean).join(' · ')).filter(Boolean);
+        if (details.length) button.append(el('span', details.join('; '), 'edge-detail'));
+      }
       button.onclick = () => follow(link);
       section.append(button);
       if (['structure', 'trace'].includes(link.layer)) {
@@ -444,7 +457,7 @@
         const reveal = el('button', 'Show in files');
         reveal.setAttribute('aria-label', 'Show in files · ' + path);
         reveal.onclick = () => chooseFile(path, true);
-        row.append(el('span', path + ':' + line, 'source-path'), reveal); sources.append(row);
+        row.append(el('span', path + (line === null ? ' · selector route' : ':' + line), 'source-path'), reveal); sources.append(row);
       }
       pane.append(sources);
     }
@@ -476,6 +489,17 @@
     addConnections(refs, 'References', links.filter(l => l.layer === 'reference'));
     pane.append(refs);
     appendGroundings(pane, getGroundings(record));
+    if ((node.source_routes || []).length) {
+      const routes = el('section'); routes.append(el('h3', 'Registry source routes'));
+      for (const route of node.source_routes) {
+        const button = el('button', 'Open selected source · ' + route.path, 'source-link');
+        button.onclick = () => openSource(route);
+        routes.append(button, el('p', 'Selector: ' + route.selector),
+          el('p', 'Owner: ' + route.owner + ' · SHA-256: ' + route.sha256, 'source-path'),
+          el('p', route.selector_status, 'muted'));
+      }
+      pane.append(routes);
+    }
     const raw = el('details');
     raw.append(el('summary', 'Exact record · identity, owner, scope and all fields'), el('pre', exactJSON(record)));
     pane.append(raw);
@@ -630,11 +654,11 @@
     const c = codeOverlay.counts;
     panel.append(el('p', c.nodes + ' nodes · ' + c.structure_links + ' structural links · ' + c.trace_links + ' proposed traces · ' + c.unresolved_nodes + ' unresolved code references', 'muted'));
     panel.append(el('p', codeOverlay.coverage.source_files + ' selected code/test files · ' + codeOverlay.coverage.unresolved_mappings + ' unresolved mappings', 'muted'));
-    panel.append(el('p', 'Code observations and proposed traces. Test sources have no execution result; the overlay has no Lean verdict.', 'overlay-standing'));
+    panel.append(el('p', 'Code observations and proposed traces. Test sources have no execution result; the overlay supplies no execution verdict.', 'overlay-standing'));
     const scope = el('button', 'Overlay identity and scope');
     scope.onclick = () => { $('about-dialog').showModal(); about.scrollIntoView({block: 'start'}); };
     panel.append(scope);
-    about.append(el('h3', 'Separate code overlay'), el('p', 'The native model identity and proof scope above are unchanged. Overlay observations and proposed mappings are separate from native authored relations and retention dependencies.'));
+    about.append(el('h3', 'Separate code overlay'), el('p', 'The native model identity above is unchanged. Overlay observations and proposed mappings are separate from native authored relations and retention dependencies.'));
     for (const [key, value] of Object.entries(codeOverlay.standing)) about.append(el('h4', prettyKey(key)), el('p', value));
     about.append(el('pre', exactJSON(codeOverlay)));
   }

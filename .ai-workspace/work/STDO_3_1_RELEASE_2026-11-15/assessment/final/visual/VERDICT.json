@@ -1,0 +1,95 @@
+{
+  "subject": {
+    "native_A_commit": "c1e0faaa8437c169031a476343c764614135cd93",
+    "native_tag_object": "fca8d5e97cf2e945196aecdc33908bb190efdca5",
+    "installed_manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa",
+    "model_canonical_sha256": "10f810f04d4fcf99424ea99631f461e108ee8030ce8145915eb5b9dbe8d14851",
+    "model_file_sha256": "bf696c10177ffc393a3ae0279b3717fccb42d06d6092afd626d8efa245bc022f",
+    "stdo_representation_public_manifest_sha256": "f1e132063af09d266c9aef908ea778253d22ede665c1bcf6762d33b4d8e124e8",
+    "population": "24 authored annotations + 93 navigation/residual sections over ACTIVATION (56109ffa), SDLC_DEFAULTS (a04335fe), TICKETS (2e601f70)",
+    "assessor": "Claude-family (host metadata authoritative); single author; advisor tool exposed but not called; no total-context isolation claimed"
+  },
+  "status": "supported",
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "moderate",
+      "record": "8ac7ef58 (reuse_preserves_independence)",
+      "issue": "exceptions field holds an adjacent non-invalidation rule, not a source exception; defeater reading would relax independence contrary to SDLC_DEFAULTS and TICKETS",
+      "falsifier": "a_c profile defines exceptions as free-form limits, or source text making a new role or conversation an exception to required independence (none found)"
+    },
+    {
+      "id": "F2",
+      "severity": "low-moderate",
+      "records": "f7933543, e1ef9d99, 178e4545, b2725b81, c8e46679",
+      "issue": "qualifier fields hold nonclaims or obligations; README overstates them as source-specific conditions and exceptions"
+    },
+    {
+      "id": "F3",
+      "severity": "low-moderate",
+      "record": "c8e46679",
+      "issue": "drops 'acquire the missing admissible observation' alternative; keeps only retain-indeterminate"
+    },
+    {
+      "id": "F4",
+      "severity": "low",
+      "records": "0e726b79, b7e39de5",
+      "issue": "clauses not supported by their cited quotes (sourced from SDLC 73-74 and 98-105); b7e39de5 exception drops 'the carrier'"
+    },
+    {
+      "id": "F5",
+      "severity": "low",
+      "record": "74980192",
+      "issue": "'govern' weakens 'only when ... and' necessary condition; omits generic-request and model-widened-scope exclusion"
+    },
+    {
+      "id": "F6",
+      "severity": "low",
+      "records": "2de0fd46, 75d9d582",
+      "issue": "'disposable' stated without its recording-before-return ground; latitude forbids only the unresolved-to-completed error, not missing-trace-as-no-effect"
+    },
+    {
+      "id": "F7",
+      "severity": "low",
+      "record": "1c1b407b",
+      "issue": "omits 'linked sections remain the single deciding owners'"
+    },
+    {
+      "id": "F8",
+      "severity": "low",
+      "records": "all 94 residuals",
+      "issue": "re_entry arrays empty; cross-owner residual 30ac9621 lacks structured owner coordinates in-model"
+    },
+    {
+      "id": "F9",
+      "severity": "low",
+      "subject": "browser-final-003",
+      "issue": "browser observation bound to explorer by path, not digest",
+      "falsifier": "observation-time explorer.html digest equal to the STDO Representation manifest member"
+    }
+  ],
+  "supported_claims": [
+    "93/93 source headings (29/6/58) represented as navigation sections with residual dispositions; fenced-code pseudo-headings correctly excluded",
+    "record arithmetic and selected byte total consistent",
+    "all 24 annotation statements and definitions materially faithful; all 6 authored relation directions correct; no authority or execution claim",
+    "TICKETS \u00a75 represented as an application of ACTIVATION \u00a72/\u00a75/\u00a77 with no added carrier requirement",
+    "scope, nonclaims, historical non-rebinding and calculus-coordinate separation honestly declared",
+    "V-04 / G-01 satisfied as a declared-scope fresh A-bound model, with this assessment as the independent fidelity standing"
+  ],
+  "unperformed_or_excluded": [
+    "a_c model/1 profile field semantics for conditions and exceptions (decides F1 severity)",
+    "whether release \u00a77 accepts three-member coverage without explicit \u00a78 cohort narrowing (cohort record not supplied)",
+    "independent revalidation of omitted owner/context/kind scaffolding",
+    "manifest-membership recomputation of the three member digests against A",
+    "screenshots, packaged/installed/public explorer reading, jsdom harness lane",
+    "non-STDO visual path, Graphify, whole-method, formal and host-pickup claims (excluded by source)",
+    "release, owner acceptance and publication verdicts"
+  ],
+  "evidence_limits": [
+    "digests and pass counts are operator/Writer-supplied; not recomputed",
+    "line coordinates spot-checked on SDLC_DEFAULTS only",
+    "browser checks were Writer observations on the candidate worktree over file:// on one host, sampling one record per family",
+    "predecessor conservation covers nine top-level files only",
+    "single-author assessment over a Codex-selected packet"
+  ]
+}

@@ -58,19 +58,9 @@
   },
   "reference_frame_bases": [
     {
-      "uri": "./specification/RELEASE_3_0_5.md#current-construction-frame",
-      "authority": [
-        "./specification/PRODUCT.md#construction-authority"
-      ],
-      "applies_to": [
-        "urn:stdo:product-definition:stdo-skills"
-      ]
-    },
-    {
       "uri": "./specification/REFERENCE_FRAME_BASIS.md",
       "authority": [
-        "./specification/PRODUCT.md#construction-authority",
-        "./.ai-workspace/work/COMPOSITION_01/operator-successor-05/OWNER.json"
+        "./specification/PRODUCT.md#construction-authority"
       ],
       "applies_to": [
         "urn:stdo:product-definition:stdo-skills"
@@ -86,28 +76,29 @@
   },
   "how": {
     "common": [
-      "./.ai-workspace/work/T001/operator/OWNER.json",
-      "./.ai-workspace/work/T001/operator/successor-1/OWNER.json"
+      "./specification/DESIGN.md",
+      "./skills/stdo-context/",
+      "./scripts/"
     ],
     "build_tenants": [
       {
         "id": "urn:stdo-skills:build-tenant:codex",
         "root": "./build_tenants/codex/",
         "design": [
-          "./build_tenants/codex/design/"
+          "./build_tenants/codex/current/DESIGN.md"
         ],
         "implementation": [
-          "./build_tenants/codex/skills/"
+          "./build_tenants/codex/current/skills/"
         ]
       },
       {
         "id": "urn:stdo-skills:build-tenant:claude",
         "root": "./build_tenants/claude/",
         "design": [
-          "./build_tenants/claude/design/"
+          "./build_tenants/claude/current/DESIGN.md"
         ],
         "implementation": [
-          "./build_tenants/claude/skills/"
+          "./build_tenants/claude/current/skills/"
         ]
       }
     ]
@@ -131,27 +122,21 @@
   },
   "composition": [
     {
-      "product_definition": "../a_c/stdo_a_c.json",
-      "target_definition_id": "urn:stdo:product-definition:a-c-implementations",
-      "relation": "specification/composition/A_C_REPRESENTATION.md#selected-representation-build",
+      "product_definition": "../purpose_context/stdo_purpose_context.json",
+      "target_definition_id": "urn:stdo:product-definition:purpose-context",
+      "relation": "./specification/composition/PRODUCTS.md#purpose-context",
       "contracts": [
-        "../a_c/specification/requirements/project-use.md",
-        "../a_c/build_tenants/graphify/design/project-build.md",
-        "../a_c/specification/requirements/code-realization.md",
-        "../a_c/build_tenants/graphify/design/code-realization.md",
-        "specification/composition/REPRESENTATION_MANIFEST.json"
+        "../purpose_context/PUBLIC_MANIFEST.json",
+        "./specification/composition/DEPENDENCIES.json"
       ]
     },
     {
       "product_definition": "../a_c/stdo_a_c.json",
       "target_definition_id": "urn:stdo:product-definition:a-c-implementations",
-      "relation": "specification/composition/A_C_SUPPORT.md#skills-ac-support",
+      "relation": "./specification/composition/PRODUCTS.md#optional-visual-documentation",
       "contracts": [
-        "../a_c/specification/requirements/fd-stdo-3.0.1-binding.md",
-        "../a_c/build_tenants/graphify/design/fd-support-stdo-3.0.1.md",
-        "../a_c/build_tenants/graphify/design/fd-support.md",
-        "../a_c/build_tenants/graphify/design/fd-composition.md",
-        "specification/composition/SOURCE_MANIFEST.json"
+        "../a_c/PUBLIC_MANIFEST.json",
+        "./specification/composition/DEPENDENCIES.json"
       ]
     }
   ]

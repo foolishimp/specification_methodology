@@ -3,7 +3,7 @@
   "kind": "stdo.product-definition",
   "product": {
     "definition_id": "urn:stdo:product-definition:a-c-implementations",
-    "name": "Axiomatic Calculus Implementations",
+    "name": "Representation Tools",
     "source_project": "./",
     "bounded_context": {
       "id": "urn:a-c-implementations:bounded-context:realization",
@@ -66,26 +66,9 @@
   },
   "reference_frame_bases": [
     {
-      "uri": "./specification/RELEASE_3_0_5.md#current-construction-frame",
-      "authority": [
-        "./specification/PRODUCT.md#product-disposition-authority"
-      ],
-      "applies_to": [
-        "urn:stdo:product-definition:a-c-implementations"
-      ]
-    },
-    {
       "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
       "authority": [
-        "./specification/PRODUCT.md#product-disposition-authority",
-        "./.ai-workspace/tickets/active/T-001-graphify-realization.md#owner-instruction",
-        "./.ai-workspace/tickets/active/T-007-executive-lifecycle-tooling.md#owner-instruction",
-        "./.ai-workspace/tickets/active/T-008-fd-tenant-implementation.md#owner-instruction",
-        "./.ai-workspace/tickets/active/T-011-lean-formalisation.md#owner-instruction",
-        "./.ai-workspace/tickets/active/T-012-reusable-formal-gate.md#owner-instruction",
-        "./.ai-workspace/tickets/active/T-013-practical-formal-gate.md#owner-instruction",
-        "./.ai-workspace/tickets/active/T-015-user-project-product.md#owner-instruction",
-        "./.ai-workspace/tickets/active/T-016-project-build-entry.md#owner-instruction"
+        "./specification/PRODUCT.md#product-disposition-authority"
       ],
       "applies_to": [
         "urn:stdo:product-definition:a-c-implementations"
@@ -113,19 +96,6 @@
         "implementation": [
           "./build_tenants/graphify/code/",
           "./build_tenants/graphify/test_env/"
-        ]
-      },
-      {
-        "id": "urn:a-c-implementations:build-tenant:lean",
-        "root": "./build_tenants/lean/",
-        "design": [
-          "./build_tenants/lean/design/"
-        ],
-        "implementation": [
-          "./build_tenants/lean/AC/",
-          "./build_tenants/lean/scripts/",
-          "./build_tenants/lean/tests/",
-          "./build_tenants/lean/fixtures/"
         ]
       }
     ]

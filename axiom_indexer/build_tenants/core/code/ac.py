@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate, index and project authored programs; join caller-supplied text."""
+"""Validate, index and visually project exact source-linked programs."""
 
 from __future__ import annotations
 
@@ -755,24 +755,6 @@ def project_program(
     return projection_report(program, logical_map, selected, []), copy.deepcopy(result)
 
 
-def join_sections(sections: Any) -> str:
-    if not isinstance(sections, list):
-        raise ValueError("invalid_sections")
-    parts: list[str] = []
-    for section in sections:
-        if not isinstance(section, dict) or set(section) != {"label", "text"}:
-            raise ValueError("invalid_section")
-        label = section["label"]
-        text = section["text"]
-        if not isinstance(label, str) or not isinstance(text, str):
-            raise ValueError("invalid_section")
-        parts.append(label + "\n" + text)
-    result = "\n\n".join(parts)
-    try:
-        result.encode("utf-8")
-    except UnicodeEncodeError as exc:
-        raise ValueError("invalid_section_encoding") from exc
-    return result
 
 
 def write_json(path: Path | None, value: Any) -> None:
@@ -928,9 +910,6 @@ def main() -> int:
     validate_parser.add_argument("--bindings", type=Path, required=True)
     validate_parser.add_argument("--output", type=Path)
     validate_parser.add_argument("--emit-map", type=Path)
-    join_parser = subparsers.add_parser("join")
-    join_parser.add_argument("--input", type=Path, required=True)
-    join_parser.add_argument("--output", type=Path)
     project_parser = subparsers.add_parser("project")
     project_parser.add_argument("--program", type=Path, required=True)
     project_parser.add_argument("--map", type=Path, required=True)
@@ -942,25 +921,6 @@ def main() -> int:
 
     if args.command == "project":
         return project_cli(args)
-
-    if args.command == "join":
-        if args.output is not None and path_alias(args.input, args.output):
-            print("join_error:input_output_path_alias", file=sys.stderr)
-            return 2
-        try:
-            sections = load_json(args.input)
-            joined = join_sections(sections)
-        except (
-            OSError,
-            UnicodeDecodeError,
-            json.JSONDecodeError,
-            DuplicateKeyError,
-            ValueError,
-        ) as exc:
-            print(f"join_error:{exc}", file=sys.stderr)
-            return 2
-        write_text(args.output, joined)
-        return 0
 
     inputs = [args.program, args.bindings]
     outputs = [path for path in (args.output, args.emit_map) if path]

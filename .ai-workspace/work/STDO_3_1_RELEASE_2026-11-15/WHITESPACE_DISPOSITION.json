@@ -1,0 +1,24 @@
+{
+  "kind": "stdo.frozen-byte-whitespace-disposition/1",
+  "full_diff_check": "SOURCE_B_WHITESPACE.txt",
+  "finding_paths": 25,
+  "disposition": "Retain exact frozen source/evidence bytes. All25 warnings are in source snapshots, retained raw evidence, or unchanged core runtime. New/changed authoring and release code pass scoped whitespace check.",
+  "unchanged_core": {
+    "path": "purpose_context/skills/stdo-context/scripts/context_core.py",
+    "sha256": "f690a4c09688fcd45df2befba9d71cb9eb7264bd0057621e8128c344b6ab3143",
+    "original_equal": true
+  },
+  "scoped_argv": [
+    "git",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    ".",
+    ":(exclude).ai-workspace/**",
+    ":(exclude)purpose_context/skills/stdo-context/indexes/**",
+    ":(exclude)stdo_representation/build_tenants/a_c/representation/stdo-v3.1.0-rc.1/**",
+    ":(exclude)purpose_context/skills/stdo-context/scripts/context_core.py"
+  ],
+  "scoped_exit": 0
+}

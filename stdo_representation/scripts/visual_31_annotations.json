@@ -1,0 +1,510 @@
+{
+  "profile": "stdo-representation.bounded-authored-annotations/1",
+  "source_cut": "v3.1.0-rc.1",
+  "scope": "Complete source-section navigation for ACTIVATION.md, SDLC_DEFAULTS.md and TICKETS.md, plus these selected SDLC/work-carrier/context annotations. Navigation coverage is not semantic coverage.",
+  "limitations": [
+    "All declared sections receive residual dispositions: their structure and source location are represented, while body meaning is not comprehensively modeled.",
+    "Only the explicitly listed authored annotations assert selected body meanings. They require independent source-first assessment for their exact subject.",
+    "The remaining native members and referenced owners are unrepresented meaning, not missing requirements inferred false or satisfied.",
+    "No operational judgments, traversals or transformations are instantiated. No Lean/formal claim, context selection, workflow execution or code-correctness claim is made.",
+    "Governing flags on the authored relations describe retention dependencies in this model; they grant no authority to a reader or tool.",
+    "Historical 3.0.5 models and semantic verdicts are not reused or rebound."
+  ],
+  "annotations": [
+    {
+      "family": "concepts",
+      "record": {
+        "key": "sdlc_guidance",
+        "label": "Selectable SDLC guidance",
+        "definition": "A selectable projection of existing method law for ordinary software work, linking the work reference and bounded context to QA, diagnosis, re-entry, verification and continuation. The linked sections remain the single deciding owners. It creates no new result, actor, workflow engine, permission or mandatory Executive configuration.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "This is a selectable projection of existing method law for ordinary software\nwork. It connects the current work reference and bounded context to QA,\ndiagnosis, re-entry, verification and durable continuation;\nthe linked sections remain the single deciding owners. It adds no result,\nactor, workflow engine, permission or mandatory Executive configuration."
+        }
+      ]
+    },
+    {
+      "family": "concepts",
+      "record": {
+        "key": "selected_frame_basis",
+        "label": "Accepted Project Reference-Frame Basis",
+        "definition": "The Product-owned basis selects this guidance with its exact source and governing cut while retaining Product policy values, explicit gates and accepted alternatives.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "Select this guidance in the accepted Project Reference-Frame Basis, binding\nits exact source identity and the governing method cut. The\n[basis template](templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection)\nproposes it ready for adoption. An existing Product may select it through its\nown authorized basis change; merely installing or finding it selects nothing.\nKeep the Product's policy values, explicit gates and accepted alternatives.\nNo numeric priority cutoff, review ratio or additional gate is supplied here."
+        }
+      ]
+    },
+    {
+      "family": "concepts",
+      "record": {
+        "key": "work_reference",
+        "label": "Selected work carrier",
+        "definition": "The selected ticket, sprint entry or run contract is the work reference for its current question, exact subject and basis, result/evidence references and surviving obligations. It supplies no new authority by being present.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "TICKETS.md",
+          "quote": "The selected carrier is also the work reference for context construction and\ncontinuation: bind its current question, subject and basis, result and evidence\nreferences, and surviving obligations. Apply\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) to that\nbounded acquisition, [§5](ACTIVATION.md#5-work-state-and-restart) to current\nwork state, the disposable actor account and resumption, and\n[§7](ACTIVATION.md#7-closed-result-and-reuse) to closed results and reuse.\nThe ticket retains its [work-state authority](#one-truth-state-projection-and-drift-refusal-up-009);\nan actor's account cannot replace the carrier, governing sources or current\nevidence. Preserve results, step-produced facts and owner rulings through\nthe named result and evidence surface under existing admission and\n[continuity](#recorded-judgment-and-owner-ruling-continuity) law. This applies\nthose owners to the selected carrier; it creates no additional carrier\nrequirement and confers no ticket-state authority (P0, P3, P4b, P6)."
+        },
+        {
+          "file": "TICKETS.md",
+          "quote": "Absence of a durable ticket neither requires nor authorises creating one.\nAn exact product-authorised work instruction may supply the upstream work\nauthority for a one-run contract; a generic request or a model-widened\nscope cannot. A durable ticket is created or updated only when the table\nrequires surviving state and the actor holds ticket-state authority. An\nexplicit instruction from ticket-state authority to create a durable record\nselects that durability; it does not admit an execution contract or widen\nits upstream work authority (P6, P2)."
+        }
+      ]
+    },
+    {
+      "family": "concepts",
+      "record": {
+        "key": "bounded_context",
+        "label": "Bounded context acquisition",
+        "definition": "Acquisition of the deciding owners and current material subject for the next bounded decision. Qualified references must preserve the consuming contract, standing, provenance, active obligations and invalidators; a typed pointer alone proves no sufficiency.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "ACTIVATION.md",
+          "quote": "Qualified-reference guidance. Under\n[AC-003](AXIOMATIC_CALCULUS.md#ac-003-reference-closure) and\n[AC-011](AXIOMATIC_CALCULUS.md#ac-011-projection), a reference can supply\nsufficient context when its accessible target and qualifications preserve\nthe consuming contract. Check the required subject and basis, assessment\nstanding, provenance, active obligation and version, and invalidators, rather\nthan candidate identity alone. A typed annotation supplies no evidence of\nsufficiency by itself. Preserve the required body or a qualified resolvable\nreference; no mandatory carrier or registry follows (P1, P3, P6)."
+        },
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "Acquire the deciding owners and current material subject needed by the next\nbounded decision. An accessible qualified reference must preserve the\nconsumer's subject/basis, assessment standing, provenance, active obligations\nand invalidators. If a derived surface is stale or insufficient, re-enter the\nexact owning sections. Where the selected envelope declares context capacity,\nrecord the required measurement, capacity and comparison before reading.\nWithout complete active inputs or a supported upper bound, complete-fit\njudgment remains unresolved unless a measured excess falsifies it. Where no\ncapacity is declared, no measurement gate is added. Source:\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)."
+        }
+      ]
+    },
+    {
+      "family": "concepts",
+      "record": {
+        "key": "work_state",
+        "label": "Persistent current work state",
+        "definition": "The workspace and authoritative inputs persist across activations. Their current material state decides what the work has and has not done.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "ACTIVATION.md",
+          "quote": "The workspace and its authoritative inputs persist across activations and\nare the continuing truth surface of the work: the surface whose current\nmaterial state decides what the work has and has not done. An actor's\ncontext is an account of that state. It is bounded, because it is a\nprojection of the state (§2); revisable, because an observation can\ncorrect it; and disposable, because a step records its closed results and\nstep-produced facts before it returns (§1 Admission; P4b). An account is\nnever a second truth surface, and no later activation needs a prior\nactor's context: its intake reconstructs the governing relations without\nit (§1 Intake) (P0, P3, P6)."
+        }
+      ]
+    },
+    {
+      "family": "concepts",
+      "record": {
+        "key": "actor_account",
+        "label": "Disposable actor account",
+        "definition": "An actor context is a bounded and revisable account of work state, disposable because a step records its closed results and step-produced facts before it returns. It is not a second truth surface and the next activation need not inherit it.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "ACTIVATION.md",
+          "quote": "The workspace and its authoritative inputs persist across activations and\nare the continuing truth surface of the work: the surface whose current\nmaterial state decides what the work has and has not done. An actor's\ncontext is an account of that state. It is bounded, because it is a\nprojection of the state (§2); revisable, because an observation can\ncorrect it; and disposable, because a step records its closed results and\nstep-produced facts before it returns (§1 Admission; P4b). An account is\nnever a second truth surface, and no later activation needs a prior\nactor's context: its intake reconstructs the governing relations without\nit (§1 Intake) (P0, P3, P6)."
+        }
+      ]
+    },
+    {
+      "family": "concepts",
+      "record": {
+        "key": "closed_result",
+        "label": "Closed result and provenance",
+        "definition": "A closed result identifies its frame/activation, subject, basis, evaluation, actor, evidence, verdict, residual uncertainty and invalidation conditions. Handoff sufficiency is relative to the consuming decision.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "ACTIVATION.md",
+          "quote": "A closed result identifies the frame and its activation, the subject, the\nbasis, the evaluation, the actor, the evidence, the verdict, the residual\nuncertainty and the invalidation conditions (the minimal shape is\nREFERENCE_FRAME §13). The frame's internal working context need not be\ntransferred when the closed result and its provenance are sufficient for\nthe consuming decision; it may still be attached, for audit or otherwise,\nwithout changing the result. Independent evaluations may share valid\nmechanical evidence under the declared independence conditions of\n[EVALUATION §3](EVALUATION.md#3-independent-assessment), which owns that\npermission (P4b, P0)."
+        }
+      ]
+    },
+    {
+      "family": "concepts",
+      "record": {
+        "key": "owner_ruling",
+        "label": "Recorded owner ruling",
+        "definition": "An owner ruling retains its original wording, owner, exact subject and basis, permitted scope/effects, conditions and source, separately from agent interpretation.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "TICKETS.md",
+          "quote": "A direct or lawfully proxied owner ruling is recorded in its original\nwording, with its owner, exact subject and basis, permitted scope and\neffects, conditions and source, separately from agent interpretation. Later\nwork consumes that same ruling while it applies; it neither widens the\nruling nor requests unchanged authority again. New ambiguity or a\nmaterially changed decision returns only the affected question to its\nowner. J is not O, and recording either cannot create admission,\nacceptance, effects or continuation beyond the original grant (P6, P3)."
+        }
+      ]
+    },
+    {
+      "family": "relations",
+      "record": {
+        "key": "basis_selects_sdlc",
+        "source_key": "selected_frame_basis",
+        "target_key": "sdlc_guidance",
+        "kind": "selects_guidance",
+        "meaning": "An accepted Product frame basis selects exact SDLC guidance and governing method cut.",
+        "governing": true,
+        "conditions": [
+          "Selection occurs through the Product's authorized basis change."
+        ],
+        "exceptions": [
+          "Merely installing or finding guidance selects nothing."
+        ]
+      },
+      "grounds": [
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "Select this guidance in the accepted Project Reference-Frame Basis, binding\nits exact source identity and the governing method cut. The\n[basis template](templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection)\nproposes it ready for adoption. An existing Product may select it through its\nown authorized basis change; merely installing or finding it selects nothing.\nKeep the Product's policy values, explicit gates and accepted alternatives.\nNo numeric priority cutoff, review ratio or additional gate is supplied here."
+        }
+      ]
+    },
+    {
+      "family": "relations",
+      "record": {
+        "key": "carrier_routes_context",
+        "source_key": "work_reference",
+        "target_key": "bounded_context",
+        "kind": "applies_context_owner",
+        "meaning": "The selected carrier applies ACTIVATION section 2 to bounded acquisition using its exact current work bindings: bind the current question, subject and basis, result/evidence references and surviving obligations. This application creates no additional carrier requirement and confers no ticket-state authority.",
+        "governing": true,
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "TICKETS.md",
+          "quote": "The selected carrier is also the work reference for context construction and\ncontinuation: bind its current question, subject and basis, result and evidence\nreferences, and surviving obligations. Apply\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) to that\nbounded acquisition, [§5](ACTIVATION.md#5-work-state-and-restart) to current\nwork state, the disposable actor account and resumption, and\n[§7](ACTIVATION.md#7-closed-result-and-reuse) to closed results and reuse.\nThe ticket retains its [work-state authority](#one-truth-state-projection-and-drift-refusal-up-009);\nan actor's account cannot replace the carrier, governing sources or current\nevidence. Preserve results, step-produced facts and owner rulings through\nthe named result and evidence surface under existing admission and\n[continuity](#recorded-judgment-and-owner-ruling-continuity) law. This applies\nthose owners to the selected carrier; it creates no additional carrier\nrequirement and confers no ticket-state authority (P0, P3, P4b, P6)."
+        }
+      ]
+    },
+    {
+      "family": "relations",
+      "record": {
+        "key": "carrier_routes_restart",
+        "source_key": "work_reference",
+        "target_key": "work_state",
+        "kind": "applies_restart_owner",
+        "meaning": "The selected carrier applies ACTIVATION section 5 to current work state, the disposable actor account and resumption. Resume from current material state, recover applicable progress, re-check reused-result invalidators and reopen only affected support. Reconcile uncertain external effects sufficiently for the next dependent action before any repetition or dependent action; resumption does not imply idempotence. An actor's account cannot replace the carrier, governing sources or current evidence.",
+        "governing": true,
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "TICKETS.md",
+          "quote": "The selected carrier is also the work reference for context construction and\ncontinuation: bind its current question, subject and basis, result and evidence\nreferences, and surviving obligations. Apply\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) to that\nbounded acquisition, [§5](ACTIVATION.md#5-work-state-and-restart) to current\nwork state, the disposable actor account and resumption, and\n[§7](ACTIVATION.md#7-closed-result-and-reuse) to closed results and reuse.\nThe ticket retains its [work-state authority](#one-truth-state-projection-and-drift-refusal-up-009);\nan actor's account cannot replace the carrier, governing sources or current\nevidence. Preserve results, step-produced facts and owner rulings through\nthe named result and evidence surface under existing admission and\n[continuity](#recorded-judgment-and-owner-ruling-continuity) law. This applies\nthose owners to the selected carrier; it creates no additional carrier\nrequirement and confers no ticket-state authority (P0, P3, P4b, P6)."
+        },
+        {
+          "file": "ACTIVATION.md",
+          "quote": "Resumption is re-entry of the same method over the current work state,\nstarting from the current material state, by a possibly different actor.\nIt recovers applicable progress, re-checks the invalidators of each reused\nresult (§7), reopens only affected support, and reconciles uncertain\nexternal effects, sufficiently for the next dependent action, before any\nrepetition or dependent action. Resumption does not imply idempotence: an\naction whose external effect may have occurred is not repeated blindly;\nthe lawful next moves are reconciliation, yield or stop."
+        }
+      ]
+    },
+    {
+      "family": "relations",
+      "record": {
+        "key": "carrier_routes_reuse",
+        "source_key": "work_reference",
+        "target_key": "closed_result",
+        "kind": "applies_reuse_owner",
+        "meaning": "The selected carrier applies ACTIVATION section 7 to closed results and reuse and preserves results, step-produced facts and owner rulings on the named result/evidence surface under existing admission and continuity law. Check exact applicability before reliance. This application creates no additional carrier requirement and confers no ticket-state authority.",
+        "governing": true,
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "TICKETS.md",
+          "quote": "The selected carrier is also the work reference for context construction and\ncontinuation: bind its current question, subject and basis, result and evidence\nreferences, and surviving obligations. Apply\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) to that\nbounded acquisition, [§5](ACTIVATION.md#5-work-state-and-restart) to current\nwork state, the disposable actor account and resumption, and\n[§7](ACTIVATION.md#7-closed-result-and-reuse) to closed results and reuse.\nThe ticket retains its [work-state authority](#one-truth-state-projection-and-drift-refusal-up-009);\nan actor's account cannot replace the carrier, governing sources or current\nevidence. Preserve results, step-produced facts and owner rulings through\nthe named result and evidence surface under existing admission and\n[continuity](#recorded-judgment-and-owner-ruling-continuity) law. This applies\nthose owners to the selected carrier; it creates no additional carrier\nrequirement and confers no ticket-state authority (P0, P3, P4b, P6)."
+        },
+        {
+          "file": "ACTIVATION.md",
+          "quote": "A closed result is reused by an unchanged consumer that checks exact\napplicability; a role, conversation or resumption change alone invalidates\nnothing. An invalidator invalidates the affected result before reliance,\neven where the subject's own bytes are unchanged, preserving its\npredecessor/successor relation and any demonstrably independent surviving\nresults. Invalidation withdraws the result from direct reliance; whether\nits evidence is retained on the new basis is decided by `retain_applicable`\nof FOUNDATIONS §4 Change impact and evidence reuse, and the changed\ncoordinate alone establishes neither that the claim fails nor that it\nholds. The invalidators are three:"
+        }
+      ]
+    },
+    {
+      "family": "relations",
+      "record": {
+        "key": "current_state_corrects_account",
+        "source_key": "work_state",
+        "target_key": "actor_account",
+        "kind": "corrects_account",
+        "meaning": "Current material evidence corrects a contrary cached belief, retained summary or prior result; undecidable facts remain explicit unknowns.",
+        "governing": true,
+        "conditions": [
+          "Reconciliation stays within the actor's grant."
+        ],
+        "exceptions": [
+          "When needed operations, territory or decisions exceed the grant, stop with re_entry_requested(authority) naming the owner."
+        ]
+      },
+      "grounds": [
+        {
+          "file": "ACTIVATION.md",
+          "quote": "Acquisition ([§2](#2-context-construction-under-an-envelope)) observes the\ncurrent subject and its authoritative inputs. Where they materially\ndisagree with a cached belief, a retained summary or a prior result, the\nactor reconciles the disagreement: current evidence corrects the account,\nand what the evidence cannot decide stays an explicit unknown. A stored\nbelief, a summary or a successful prior result never overrules contrary\ncurrent evidence. A prior result is relied on only after its\napplicability and invalidators are checked against the current subject\nand inputs (§7). The actor corrects its account within its grant; where\nresolving the disagreement needs an operation, a territory or a decision\noutside the grant, the step stops with `re_entry_requested(authority)`,\nnaming the owner of what it needs (§3 Construction availability) (P5,\nP6)."
+        }
+      ]
+    },
+    {
+      "family": "relations",
+      "record": {
+        "key": "owner_ruling_bounds_continuation",
+        "source_key": "owner_ruling",
+        "target_key": "work_reference",
+        "kind": "bounds_continuation",
+        "meaning": "Later work consumes the original ruling while it applies, without widening it or requesting unchanged authority again. Recording a ruling or judgment cannot create admission, acceptance, effects or continuation beyond the original grant.",
+        "governing": true,
+        "conditions": [
+          "Exact subject, basis, permitted scope/effects and conditions remain applicable."
+        ],
+        "exceptions": [
+          "New ambiguity or a materially changed decision returns only the affected question to the owner."
+        ]
+      },
+      "grounds": [
+        {
+          "file": "TICKETS.md",
+          "quote": "A direct or lawfully proxied owner ruling is recorded in its original\nwording, with its owner, exact subject and basis, permitted scope and\neffects, conditions and source, separately from agent interpretation. Later\nwork consumes that same ruling while it applies; it neither widens the\nruling nor requests unchanged authority again. New ambiguity or a\nmaterially changed decision returns only the affected question to its\nowner. J is not O, and recording either cannot create admission,\nacceptance, effects or continuation beyond the original grant (P6, P3)."
+        }
+      ]
+    },
+    {
+      "family": "constraints",
+      "record": {
+        "key": "context_fit_is_conditional",
+        "applies_to_keys": [
+          "bounded_context"
+        ],
+        "statement": "Where the selected envelope declares context capacity, record the required measurement, capacity and comparison before reading. Complete-fit judgment remains unresolved without complete active inputs or a supported upper bound, unless measured excess falsifies it.",
+        "uncertainty": "Bounded authored annotation; exact source and referenced owners decide applicability.",
+        "conditions": [
+          "The selected envelope declares context capacity."
+        ],
+        "exceptions": [
+          "Where no capacity is declared, no measurement gate is added."
+        ]
+      },
+      "grounds": [
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "Acquire the deciding owners and current material subject needed by the next\nbounded decision. An accessible qualified reference must preserve the\nconsumer's subject/basis, assessment standing, provenance, active obligations\nand invalidators. If a derived surface is stale or insufficient, re-enter the\nexact owning sections. Where the selected envelope declares context capacity,\nrecord the required measurement, capacity and comparison before reading.\nWithout complete active inputs or a supported upper bound, complete-fit\njudgment remains unresolved unless a measured excess falsifies it. Where no\ncapacity is declared, no measurement gate is added. Source:\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)."
+        }
+      ]
+    },
+    {
+      "family": "constraints",
+      "record": {
+        "key": "context_reenters_stale_source",
+        "applies_to_keys": [
+          "bounded_context"
+        ],
+        "statement": "A stale or insufficient derived surface requires re-entry to the exact owning sections; a summary or index supplies no work-state authority, governing meaning or current material evidence by itself.",
+        "uncertainty": "Bounded authored annotation; exact source and referenced owners decide applicability.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "Acquire the deciding owners and current material subject needed by the next\nbounded decision. An accessible qualified reference must preserve the\nconsumer's subject/basis, assessment standing, provenance, active obligations\nand invalidators. If a derived surface is stale or insufficient, re-enter the\nexact owning sections. Where the selected envelope declares context capacity,\nrecord the required measurement, capacity and comparison before reading.\nWithout complete active inputs or a supported upper bound, complete-fit\njudgment remains unresolved unless a measured excess falsifies it. Where no\ncapacity is declared, no measurement gate is added. Source:\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope)."
+        },
+        {
+          "file": "TICKETS.md",
+          "quote": "The selected carrier is also the work reference for context construction and\ncontinuation: bind its current question, subject and basis, result and evidence\nreferences, and surviving obligations. Apply\n[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) to that\nbounded acquisition, [§5](ACTIVATION.md#5-work-state-and-restart) to current\nwork state, the disposable actor account and resumption, and\n[§7](ACTIVATION.md#7-closed-result-and-reuse) to closed results and reuse.\nThe ticket retains its [work-state authority](#one-truth-state-projection-and-drift-refusal-up-009);\nan actor's account cannot replace the carrier, governing sources or current\nevidence. Preserve results, step-produced facts and owner rulings through\nthe named result and evidence surface under existing admission and\n[continuity](#recorded-judgment-and-owner-ruling-continuity) law. This applies\nthose owners to the selected carrier; it creates no additional carrier\nrequirement and confers no ticket-state authority (P0, P3, P4b, P6)."
+        },
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "The selected ticket is the enduring reference for its unit of work, under\n[TICKETS records](TICKETS.md#ticket-records) and\n[one-truth state](TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009).\nRetain a sufficient sprint or run carrier where\n[carrier selection](TICKETS.md#carrier-selection) permits it. Work-state\nauthority, governing meaning and current material evidence remain distinct;\na context summary or index supplies none of them by itself."
+        }
+      ]
+    },
+    {
+      "family": "constraints",
+      "record": {
+        "key": "ticket_absence_does_not_authorize_creation",
+        "applies_to_keys": [
+          "work_reference"
+        ],
+        "statement": "Absence of a durable ticket neither requires nor authorizes creating one. A durable ticket is created or updated only when the carrier-selection table requires surviving state and the actor holds ticket-state authority. An exact Product-authorized work instruction may supply upstream authority for a one-run contract; a generic request or model-widened scope cannot. An explicit instruction from ticket-state authority selects durability but does not admit an execution contract or widen upstream work authority.",
+        "uncertainty": "Bounded authored annotation; exact source and referenced owners decide applicability.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "TICKETS.md",
+          "quote": "Absence of a durable ticket neither requires nor authorises creating one.\nAn exact product-authorised work instruction may supply the upstream work\nauthority for a one-run contract; a generic request or a model-widened\nscope cannot. A durable ticket is created or updated only when the table\nrequires surviving state and the actor holds ticket-state authority. An\nexplicit instruction from ticket-state authority to create a durable record\nselects that durability; it does not admit an execution contract or widen\nits upstream work authority (P6, P2)."
+        }
+      ]
+    },
+    {
+      "family": "constraints",
+      "record": {
+        "key": "record_result_before_return",
+        "applies_to_keys": [
+          "closed_result"
+        ],
+        "statement": "Before return, a permitted Writer records the closed result, needed step-produced facts, evidence, unresolved work, original rulings and lawful next action or owner re-entry in the existing named durable result/evidence surface.",
+        "uncertainty": "Bounded authored annotation; exact source and referenced owners decide applicability.",
+        "conditions": [
+          "The actor holds the necessary Writer effects."
+        ],
+        "exceptions": [
+          "An actor without those effects returns to the permitted Writer; Executive performs no file or Git mutation in that role. No second state ledger or per-tool log is added."
+        ]
+      },
+      "grounds": [
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "Before return, a permitted Writer records the closed result, step-produced\nfacts needed later, evidence, unresolved work, original owner rulings and the\nnext authorized action or owner re-entry in the existing named durable\nresult/evidence surface. Keep references with the owning work. This projection\nadds no second state ledger or per-tool logging requirement. An actor without those effects\nreturns to the permitted Writer; Executive still performs no file or Git\nmutation in that role. Sources:\n[ACTIVATION admission](ACTIVATION.md#admission),\n[closed results](ACTIVATION.md#7-closed-result-and-reuse),\n[TICKETS continuity](TICKETS.md#recorded-judgment-and-owner-ruling-continuity)."
+        }
+      ]
+    },
+    {
+      "family": "constraints",
+      "record": {
+        "key": "invalidate_affected_reuse",
+        "applies_to_keys": [
+          "closed_result"
+        ],
+        "statement": "Check exact applicability before reuse. Material input change, changed basis or a declared revising observation invalidates the affected result before reliance; retain its predecessor/successor relation and demonstrably independent surviving results.",
+        "uncertainty": "Bounded authored annotation; exact source and referenced owners decide applicability.",
+        "conditions": [
+          "The change can alter the result, or changes a bound basis coordinate, or is the declared revising observation."
+        ],
+        "exceptions": [
+          "Role, conversation or resumption change alone invalidates nothing. Changed coordinates alone establish neither claim failure nor success."
+        ]
+      },
+      "grounds": [
+        {
+          "file": "ACTIVATION.md",
+          "quote": "A closed result is reused by an unchanged consumer that checks exact\napplicability; a role, conversation or resumption change alone invalidates\nnothing. An invalidator invalidates the affected result before reliance,\neven where the subject's own bytes are unchanged, preserving its\npredecessor/successor relation and any demonstrably independent surviving\nresults. Invalidation withdraws the result from direct reliance; whether\nits evidence is retained on the new basis is decided by `retain_applicable`\nof FOUNDATIONS §4 Change impact and evidence reuse, and the changed\ncoordinate alone establishes neither that the claim fails nor that it\nholds. The invalidators are three:\n\n- a material input change: a change to the result's subject or to an\n  input it rests on, including the admissible evidence that bears on its\n  predicate; newly acquired or changed admissible evidence is such a\n  change when it is material to the result as\n  [FOUNDATIONS §2](FOUNDATIONS.md#2-ontology) defines material, that is,\n  when it could change the result's value;\n- a changed basis: a change to any coordinate of the basis the result\n  binds (FOUNDATIONS §2, Basis);\n- a declared revising observation: an observation that the result or\n  judgment itself names as one that would revise it, once it occurs."
+        }
+      ]
+    },
+    {
+      "family": "constraints",
+      "record": {
+        "key": "reuse_preserves_independence",
+        "applies_to_keys": [
+          "closed_result"
+        ],
+        "statement": "Required independent assessment may consume valid computed facts, but its assessor acquires sufficient exact evidence and supplies its own judgment under the actual independence condition. Reusing the author's judgment cannot satisfy it.",
+        "uncertainty": "Bounded authored annotation; exact source and referenced owners decide applicability.",
+        "conditions": [
+          "Independent assessment is required by the actual governing boundary."
+        ],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "TICKETS.md",
+          "quote": "Later roles and resumed runs recover the result and check its\napplicability rather than re-author unchanged judgment. Reuse and\ninvalidation are\n[ACTIVATION §7](ACTIVATION.md#7-closed-result-and-reuse): changed material\ninputs, a declared revising observation or a changed basis invalidate\nthe affected result, preserving the original result and its successor\nrelation and keeping only demonstrably independent results, and a new\nrole or conversation alone invalidates nothing. For a recorded judgment\nthe material inputs include its supporting computed facts and evidence,\nand its declared revising observation is the one the record states;\nreassessment covers what the change affects. The result may reference\ncurrent C outputs; reuse cannot silently turn unknown facts into\nestablished premises (P4b, P5). Required independent assessment may consume valid C, but\nits assessor acquires sufficient exact evidence and supplies its own\njudgment under the actual independence condition; reusing the author's J\ncannot satisfy that condition (P6; EVALUATION §3)."
+        }
+      ]
+    },
+    {
+      "family": "constraints",
+      "record": {
+        "key": "local_qa_has_bounded_claim",
+        "applies_to_keys": [
+          "sdlc_guidance"
+        ],
+        "statement": "Incremental QA checks the admitted step against its requirement/design and the smallest adequate falsifier, naming observed predicate, subject, oracle, coverage and residuals. A local pass supports that bounded predicate and no unnamed Product acceptance, qualification or release claim. Preserve selected gates and mandatory conditions.",
+        "uncertainty": "Bounded authored annotation; exact source and referenced owners decide applicability.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "2. **Construct and perform incremental QA.** Check the admitted step against\n   its requirement/design and the smallest adequate falsifier. State the\n   observed predicate, subject, oracle, coverage and residuals. A local pass\n   supports that bounded predicate; it supplies no unnamed Product acceptance,\n   qualification or release claim. Preserve selected gates and mandatory\n   conditions. Sources: [ASSURANCE](ASSURANCE.md),\n   [EVALUATION §1](EVALUATION.md#1-claims) and\n   [EVALUATION §5](EVALUATION.md#landing-closure-and-release)."
+        }
+      ]
+    },
+    {
+      "family": "constraints",
+      "record": {
+        "key": "triage_distinguishes_four_causes",
+        "applies_to_keys": [
+          "sdlc_guidance"
+        ],
+        "statement": "Causal triage distinguishes defective realization under adequate unchanged law, inadequate requirement/design, inaccurate predictive model and insufficient observation. Use evidence that distinguishes causes over the same exact subject and basis. Their lawful routes remain different. A failed candidate alone does not establish inadequate governing law. For insufficient observation, acquire the missing admissible observation through its authorized route, or retain indeterminate and withhold the dependent claim. Repetition of the same uninformative check supplies no missing evidence.",
+        "uncertainty": "Bounded authored annotation; exact source and referenced owners decide applicability.",
+        "conditions": [],
+        "exceptions": []
+      },
+      "grounds": [
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "| Supported cause | Lawful next action |\n|---|---|\n| Defective realisation under adequate unchanged law | Repair the realised surface within its grant; assert and verify no upstream drift. |\n| Inadequate governing requirement or design | Return to the first inadequate owner; admit its changed truth, then derive affected downstream work and evidence. A failed candidate alone does not establish this cause. |\n| Inaccurate predictive model | Return to the model's owner, identify the failed prediction and supported replacement/intervention, then re-evaluate the dependent claims. Do not relabel an outcome mismatch as a code defect without evidence. |\n| Insufficient observation | Acquire the missing admissible observation through its authorized route, or retain `indeterminate` and withhold the dependent claim. Repetition of the same uninformative check supplies no missing evidence. |"
+        },
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "Use evidence that distinguishes causes over the same exact subject and basis:"
+        }
+      ]
+    },
+    {
+      "family": "latitude",
+      "record": {
+        "key": "resume_preserves_valid_progress",
+        "applies_to_keys": [
+          "work_reference"
+        ],
+        "allowed": [
+          "Resume from current material state, correct a contrary account and reopen only affected support after exact applicability/invalidator checks.",
+          "Handoff sufficient closed results and references without the prior actor's private conversation."
+        ],
+        "forbidden": [
+          "Retry or take a dependent action before reconciling uncertain external effects.",
+          "Treat unresolved completion as established completion.",
+          "Treat a missing trace in an actor context, memory or summary as evidence that work was not done, that an external effect did not occur, or that it ended."
+        ]
+      },
+      "grounds": [
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "Resume from current material state, correct a contrary retained account,\ncheck exact applicability and invalidators, and reopen only affected support.\nReconcile uncertain external effects before a retry or dependent action;\nunresolved completion remains unresolved. Handoff needs sufficient closed\nresults and references, not the prior actor's private conversation. Sources:\n[ACTIVATION state and restart](ACTIVATION.md#5-work-state-and-restart),\n[actor account](ACTIVATION.md#the-workspace-and-an-actors-account) and\n[reuse](ACTIVATION.md#7-closed-result-and-reuse)."
+        },
+        {
+          "file": "ACTIVATION.md",
+          "quote": "Discarding an actor's private context resets nothing: the workspace, the\napplicable valid work and the outstanding obligations remain as the work\nstate records them. A missing trace in a context, a memory or a summary is\nno evidence about the subject. It shows neither that work was not done\nnor that an external effect did not occur, nor that it ended; an effect\nof uncertain completion keeps the value `completion_unknown`, or its end\nstays not established beside its `not_effected` value, until evidence\nabout the subject decides it (§3 Effects) (P5)."
+        }
+      ]
+    },
+    {
+      "family": "residuals",
+      "record": {
+        "key": "unmodeled_governing_dependencies",
+        "subject_key": "bounded_context",
+        "uncertainty": "This visual selects three complete native members for navigation and a finite set of annotations. Referenced owners such as FOUNDATIONS, AXIOMATIC_CALCULUS, REFERENCE_FRAME, EVALUATION and SPEC_METHOD are not semantically distilled here. The Axiom calculus copy is conversion provenance only.",
+        "consequence": "Re-enter the exact native cut and applicable owners before making a governing decision; this graph is not a purpose context index or a substitute constitution."
+      },
+      "grounds": [
+        {
+          "file": "ACTIVATION.md",
+          "quote": "Qualified-reference guidance. Under\n[AC-003](AXIOMATIC_CALCULUS.md#ac-003-reference-closure) and\n[AC-011](AXIOMATIC_CALCULUS.md#ac-011-projection), a reference can supply\nsufficient context when its accessible target and qualifications preserve\nthe consuming contract. Check the required subject and basis, assessment\nstanding, provenance, active obligation and version, and invalidators, rather\nthan candidate identity alone. A typed annotation supplies no evidence of\nsufficiency by itself. Preserve the required body or a qualified resolvable\nreference; no mandatory carrier or registry follows (P1, P3, P6)."
+        },
+        {
+          "file": "SDLC_DEFAULTS.md",
+          "quote": "This is a selectable projection of existing method law for ordinary software\nwork. It connects the current work reference and bounded context to QA,\ndiagnosis, re-entry, verification and durable continuation;\nthe linked sections remain the single deciding owners. It adds no result,\nactor, workflow engine, permission or mandatory Executive configuration."
+        }
+      ]
+    }
+  ]
+}

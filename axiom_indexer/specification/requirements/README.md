@@ -1,23 +1,10 @@
-# Axiom Indexer Requirements
+# Mechanical visual requirements
 
-The Product has seven requirement families:
+Retain [program identity](REQ-P-PROGRAM.md), [source resolution](REQ-P-RESOLUTION.md),
+[validation](REQ-P-VALIDATION.md), [visual projection](REQ-P-PROJECTION.md) and
+[model conversion](REQ-P-MODEL-CONVERSION.md).
 
-| Family | Owns |
-|---|---|
-| `REQ-P-AUTHORING` | LLM semantic compression and residual honesty |
-| `REQ-P-PROGRAM` | the symbolic axiomatic-program contract |
-| `REQ-P-RESOLUTION` | URI late binding and source re-entry |
-| `REQ-P-VALIDATION` | small deterministic checks and diagnostics |
-| `REQ-P-PROJECTION` | exact frame-index selection, declared closure and two congruent views |
-| `REQ-P-JOINING` | exact LLM-supplied labeled-text joining |
-| `REQ-P-RELEASE-COUPLING` | exact Source STDO and Axiom cut alignment |
-
-The LLM authors meaning and selects request frames, labels, text, and order.
-Code resolves, validates, instantiates, projects, reports, and joins. GTL, automatic
-frame selection, carrier admission, and semantic acceptance remain deferred.
-Release publication adds no Product requirement family; the installed STDO
-Release Method and the selected release record govern each point-in-time cut.
-The release-coupling family owns the permanent cross-release identity and
-dependency relation, not publication operations.
-
-[REQ-P-MODEL-CONVERSION](REQ-P-MODEL-CONVERSION.md) owns the 3.0.5 exact model-to-program boundary.
+Agent authoring/joining, registry-context projection and the former five-Product
+release coupling are withdrawn from current requirements. Their exact source
+is archived; withdrawal is not satisfaction. Historical released contracts and
+qualification evidence remain tied to their original subjects.

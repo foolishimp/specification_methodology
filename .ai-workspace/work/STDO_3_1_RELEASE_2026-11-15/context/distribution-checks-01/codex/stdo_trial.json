@@ -1,0 +1,109 @@
+{
+  "$schema": "stdo://releases/v3.1.0-rc.1/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:trial:release-3.1-context-use",
+    "name": "STDO release context use fixture",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:stdo:trial:release-context-pure-helper",
+      "definition": "./PRODUCT.md"
+    }
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/3.1.0",
+      "basis": {
+        "uri": "stdo://releases/v3.1.0-rc.1/",
+        "manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa"
+      }
+    },
+    "additional_authorities": [
+      "./INTENT.md",
+      "./PRODUCT.md"
+    ],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/frames/bootstrap.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/EXECUTIVE_BASELINE.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./FRAME_BASIS.md",
+      "authority": [
+        "./PRODUCT.md"
+      ],
+      "applies_to": [
+        "urn:stdo:trial:release-3.1-context-use"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./INTENT.md",
+    "product": "./PRODUCT.md",
+    "specification": [
+      "./REQUIREMENTS.md"
+    ]
+  },
+  "how": {
+    "common": [
+      "./DESIGN.md"
+    ],
+    "build_tenants": [
+      {
+        "id": "urn:stdo:trial:release-context-python",
+        "root": "./",
+        "design": [
+          "./DESIGN.md"
+        ],
+        "implementation": [
+          "./subject.py",
+          "./test_subject.py"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./WORK_CONTRACT.md",
+    "tickets": {
+      "root": "./.ai-workspace/tickets/",
+      "lanes": {
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "active": "./.ai-workspace/tickets/active/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    }
+  },
+  "composition": []
+}

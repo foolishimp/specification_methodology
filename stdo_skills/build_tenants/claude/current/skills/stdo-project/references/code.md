@@ -1,5 +1,11 @@
-# Code and test-source tracing
+# Code and test source exploration
 
-Use `python AC_ROOT/scripts/ac.py code --help` and the selected provider's public `prepare → task → build → status` workflow. Bind a source-matched native base, exact nominated code paths and the pinned Graphify checkout/parser environment. Read the real task/schema and author caller-attributed semantic mappings in this host session. Provider extraction owns structural observations; the mapping owns the F_P interpretation.
+Inspect `visual -- code --help` through the adapter and follow its selected public
+contract for explicit source, code and test inputs. Preserve the nominated
+Product/source identities and existing effect grant. Generate and open the actual
+visual projection, then inspect its source links and unresolved mappings.
 
-A trace to a test file is source navigation, not test execution or proof of requirement satisfaction. Report the actual mapping/checking and residuals. A required unsupported formal or composition route stops its dependent claim. Do not modify the base model, pretend an old overlay is current, or infer tests passed from links.
+Static code/test mappings are documentation evidence, not executed test results
+or a proof of correctness. Report which inputs were traced, actual output paths,
+checks performed and unknown relations. Task constraints belong to Purpose Context;
+this visual branch does not author a rival index or trigger formal verification.

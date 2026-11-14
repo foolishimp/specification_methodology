@@ -1,0 +1,3874 @@
+{
+  "added_rule_ids": [],
+  "index_envelope_changes": [
+    "corpus_sha256",
+    "input_view_sha256",
+    "purpose_sha256"
+  ],
+  "predecessor": {
+    "corpus_sha256": "7c98e6da1b47c5faab437be71fa561779bf833a9e9330a22dbbf37eb9bb2cef1",
+    "index_id": "stdo-3.0.4-python-pure-refactor-v2",
+    "index_raw_sha256": "100202be194c1576ad5186adc69896a317057a0ae7b0a00b49c06ea70fab5385",
+    "index_sha256": "f810ef668efde93cf19d5fcb915b31be429fb9b226a760a436b0f5bfb1b5d199",
+    "purpose_sha256": "da63a8eb25a71a6277a9d8bf9e628c5d03911d17b19f78ac8ad3724939c7c1d1"
+  },
+  "profile": "purpose-context.method-rebinding-delta/1",
+  "purpose_delta": {
+    "after_description": "Construct the applicable STDO 3.0.5-rc.1 method constraints for a pure/local Python 3.12 realization refactor under adopted DESIGN_MODULE, including its conditional ODD and UX obligations. Preserve the original family of changes to realization structure within accepted design; the request authorizes no change to public semantics or admitted domains, authority, or effects. This purpose evaluates coverage of governing method constraints before construction, not whether a particular candidate has complied with them. Concrete Product meaning, accepted design, domains, authority grants and evidence must still be acquired and applied by the task; source-complete conditional proof obligations are not claims that their future predicates already hold. Missing applicable governing law or an undecided permission actually requested remains a coverage gap. No profile is excluded merely because the implementation is pure/local. Other Product-specific or separately adopted profile law must enter through the task's exact authority packet; this index neither substitutes for it nor qualifies all STDO or every undiscovered relation. The exact source closure and independently assessed query, not this description, bound a supported coverage claim.",
+    "before_description": "Construct the applicable STDO 3.0.4 method constraints for a pure/local Python 3.12 realization refactor under adopted DESIGN_MODULE, including its conditional ODD and UX obligations. Preserve the original family of changes to realization structure within accepted design; the request authorizes no change to public semantics or admitted domains, authority, or effects. This purpose evaluates coverage of governing method constraints before construction, not whether a particular candidate has complied with them. Concrete Product meaning, accepted design, domains, authority grants and evidence must still be acquired and applied by the task; source-complete conditional proof obligations are not claims that their future predicates already hold. Missing applicable governing law or an undecided permission actually requested remains a coverage gap. No profile is excluded merely because the implementation is pure/local. Other Product-specific or separately adopted profile law must enter through the task's exact authority packet; this index neither substitutes for it nor qualifies all STDO or every undiscovered relation. The exact source closure and independently assessed query, not this description, bound a supported coverage claim.",
+    "facts_equal": true,
+    "id_unchanged": true,
+    "meaning_change": "Selected release identity only; family and declared fact meanings retained.",
+    "only_changed_field": "description"
+  },
+  "reference_changes": [
+    {
+      "after": {
+        "end_line": 825,
+        "source_id": "standards/RELEASE.md",
+        "start_line": 795
+      },
+      "before": {
+        "end_line": 796,
+        "source_id": "standards/RELEASE.md",
+        "start_line": 766
+      },
+      "bytes_equal": true,
+      "rule_id": "C13",
+      "text_sha256": "fed557813d7c11c2ab33b3254d76cb39e87dd02c724f50989d426069ffcfa85a"
+    },
+    {
+      "after": {
+        "end_line": 783,
+        "source_id": "standards/RELEASE.md",
+        "start_line": 735
+      },
+      "before": {
+        "end_line": 754,
+        "source_id": "standards/RELEASE.md",
+        "start_line": 706
+      },
+      "bytes_equal": true,
+      "rule_id": "C15",
+      "text_sha256": "4a8702fde6126eea65cee16424c0c01a8ddee9d0f561cb7323e20abf7caa5db6"
+    }
+  ],
+  "removed_rule_ids": [],
+  "rule_count": 113,
+  "rule_semantic_field_changes": [],
+  "rules": [
+    {
+      "after_sha256": "e01f1320b7f2448179a7cdc08e2b2f6e77f286b6330bd2d00a37017973ab54f6",
+      "before_sha256": "e01f1320b7f2448179a7cdc08e2b2f6e77f286b6330bd2d00a37017973ab54f6",
+      "changed_fields": [],
+      "id": "S01",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a2556f3ece9b81649a8a2234d970eb161d3cd4e2dc5bc1ad4e3f1376d25c8a2b",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 269,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 207
+          },
+          "before": {
+            "end_line": 269,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 207
+          },
+          "bytes_equal": true,
+          "text_sha256": "fe492a678c2813cfb6407e56c0369bec337396bbe9d1a7a5d72ce741c664f70b"
+        },
+        {
+          "after": {
+            "end_line": 459,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 443
+          },
+          "before": {
+            "end_line": 459,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 443
+          },
+          "bytes_equal": true,
+          "text_sha256": "9b7197c3be6736529ff123ffa2ed2cfabfd9f89977526b9a86efc09e96c6ae07"
+        }
+      ]
+    },
+    {
+      "after_sha256": "7675a9d47fa4b8c09bb5476fdf4ec00e01ab2a902efae64f8133887de477ddf2",
+      "before_sha256": "7675a9d47fa4b8c09bb5476fdf4ec00e01ab2a902efae64f8133887de477ddf2",
+      "changed_fields": [],
+      "id": "S02",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a3d4752c89e7ffba21f678fd1d8d339171a7223c731698b9d668c11dc5ad6063",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 889,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 819
+          },
+          "before": {
+            "end_line": 889,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 819
+          },
+          "bytes_equal": true,
+          "text_sha256": "d507343389a7a3c29561fda56b938f59376b28396de8413ac0359b853236992e"
+        }
+      ]
+    },
+    {
+      "after_sha256": "c82e1be28ceb712af0f26c7451049e7d28d8a7693ac60270c2a3db0ad88b62a0",
+      "before_sha256": "c82e1be28ceb712af0f26c7451049e7d28d8a7693ac60270c2a3db0ad88b62a0",
+      "changed_fields": [],
+      "id": "S03",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "b95e2abde11c30cde54121c4c9ed459d3b6e6ca7e518ea8ae0a93a9b1d5193a2",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 901,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 869
+          },
+          "before": {
+            "end_line": 901,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 869
+          },
+          "bytes_equal": true,
+          "text_sha256": "b5c236d21155779d46afd5d9b53eecce123e06b777f5910cbb540b568a17655b"
+        }
+      ]
+    },
+    {
+      "after_sha256": "ee9f73d6edde3cf78711b38f9c0902f514bbca85175eb2a772583ff9caedecd8",
+      "before_sha256": "ee9f73d6edde3cf78711b38f9c0902f514bbca85175eb2a772583ff9caedecd8",
+      "changed_fields": [],
+      "id": "S04",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "b88cf195e3efc48851b8ea7a55b1e118de0a0fa3dcc123d5434a0a128bbfc853",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 966,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 903
+          },
+          "before": {
+            "end_line": 966,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 903
+          },
+          "bytes_equal": true,
+          "text_sha256": "28d5457164d7dfd5f2bc8ae3ef3a040ea40404f476add61778dd33580d878a4b"
+        }
+      ]
+    },
+    {
+      "after_sha256": "001d372a05d474b0862e95eed1cb9ddda1e67787f487777ecbef5ce00719aa67",
+      "before_sha256": "001d372a05d474b0862e95eed1cb9ddda1e67787f487777ecbef5ce00719aa67",
+      "changed_fields": [],
+      "id": "S05",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "d27073ae71142833251158a513d81300414ed76d3ef4deb98fefd64a1b42d91c",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1008,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 968
+          },
+          "before": {
+            "end_line": 1008,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 968
+          },
+          "bytes_equal": true,
+          "text_sha256": "900abcb5532529de0a85778e8383fa208de8bb45c24a649a073a429d8e27c5b3"
+        }
+      ]
+    },
+    {
+      "after_sha256": "e77b46807b1e47ea993d3d010773d1348a801dbb8b1d71eb834148f3e7530c11",
+      "before_sha256": "e77b46807b1e47ea993d3d010773d1348a801dbb8b1d71eb834148f3e7530c11",
+      "changed_fields": [],
+      "id": "S06",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "8aaf9f4b0a863aa3977c1ed8e2cd5bb37a06d731b66fc1af284394c1235d38c2",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 601,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 562
+          },
+          "before": {
+            "end_line": 601,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 562
+          },
+          "bytes_equal": true,
+          "text_sha256": "6510a159c32d15ee73573ac1d92d8500c36e4ba5264135c077976d63d4ee8043"
+        },
+        {
+          "after": {
+            "end_line": 1039,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1010
+          },
+          "before": {
+            "end_line": 1039,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1010
+          },
+          "bytes_equal": true,
+          "text_sha256": "c8b1d19431349e82034c27412c64cbc8efee1f2af5a5b960b3f1ed5c88c51629"
+        }
+      ]
+    },
+    {
+      "after_sha256": "cd493f8c432cf4f1b8c0937894d6871cfb11199a5dccab3858bcc8a602421397",
+      "before_sha256": "cd493f8c432cf4f1b8c0937894d6871cfb11199a5dccab3858bcc8a602421397",
+      "changed_fields": [],
+      "id": "S07",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "7047c03d5af094be5f618af063616707156904e9163be8921f7ae007b0717dc4",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 618,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 603
+          },
+          "before": {
+            "end_line": 618,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 603
+          },
+          "bytes_equal": true,
+          "text_sha256": "c6976fa965d71139b7e40c91202b5644f359875ee35b2306995f26e8b749915b"
+        }
+      ]
+    },
+    {
+      "after_sha256": "c9c61cd2bb79f65640732a8bc1322f54ecf630191762743183d69bc9b5d00eb3",
+      "before_sha256": "c9c61cd2bb79f65640732a8bc1322f54ecf630191762743183d69bc9b5d00eb3",
+      "changed_fields": [],
+      "id": "S08",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "b3df3141231ec2537813de61089160f32d5a9ebac224ce17fc71b505e93b79d1",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 663,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 620
+          },
+          "before": {
+            "end_line": 663,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 620
+          },
+          "bytes_equal": true,
+          "text_sha256": "eb58b8ba94ffef810d77cced8f97d0e2eae2bdf0a32e924552218ddd237c263d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "c6d8d7f43b1f837a4d3a97229c93c4b693bef0fb3cc13f4b927845d642f035fd",
+      "before_sha256": "c6d8d7f43b1f837a4d3a97229c93c4b693bef0fb3cc13f4b927845d642f035fd",
+      "changed_fields": [],
+      "id": "S09",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "cf34dd2558a7a86fad4d1e6162d6ec9a53814cf78ca18580cdbfc69673aa4476",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1238,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1180
+          },
+          "before": {
+            "end_line": 1238,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1180
+          },
+          "bytes_equal": true,
+          "text_sha256": "ba5437df29b2a5770b44bb09246c238ec0a3fb0a9725f478c5aa12b126f29424"
+        }
+      ]
+    },
+    {
+      "after_sha256": "e550771021640bfe9a5ff852e7b923207b0031cf38581a873472d4fb9b386ab9",
+      "before_sha256": "e550771021640bfe9a5ff852e7b923207b0031cf38581a873472d4fb9b386ab9",
+      "changed_fields": [],
+      "id": "S10",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "ccd5859670de8c5ff974007f76cf04d30e429f8db391413a624eb97146ebed00",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 479,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 461
+          },
+          "before": {
+            "end_line": 479,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 461
+          },
+          "bytes_equal": true,
+          "text_sha256": "d859d4b534d8c4acd7775de62149e3ba2c2d70f4624778781718fd68bebf2b50"
+        }
+      ]
+    },
+    {
+      "after_sha256": "77706d331facf4131e3cd6a6aec4740f3988b0d2b8266fd394621f64575fcaba",
+      "before_sha256": "77706d331facf4131e3cd6a6aec4740f3988b0d2b8266fd394621f64575fcaba",
+      "changed_fields": [],
+      "id": "D01",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "f853f71fdc818294c037e2de21bc9875f97fa8cc71e66ed82c053fe0f9b41524",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 42,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 28
+          },
+          "before": {
+            "end_line": 42,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 28
+          },
+          "bytes_equal": true,
+          "text_sha256": "acf9baeee602dd7257d3cb60f70cbac02fcc82ec1d5f02cb9956e13cd1208142"
+        },
+        {
+          "after": {
+            "end_line": 2438,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2380
+          },
+          "before": {
+            "end_line": 2438,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2380
+          },
+          "bytes_equal": true,
+          "text_sha256": "fe4f6ea2d981096c9ecd31590cf399794867a52bcb0d2d7b5255b244bf98614d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "ad0f3b06acc95aafcb7fef10acd77ccbdc1ba2b12b3eeda9d74825e1d86483d6",
+      "before_sha256": "ad0f3b06acc95aafcb7fef10acd77ccbdc1ba2b12b3eeda9d74825e1d86483d6",
+      "changed_fields": [],
+      "id": "D02",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "bd65169fdc563ef4023d9ada0aeb03c653edcbc00bd470a6a24cba046cdcd326",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 363,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 310
+          },
+          "before": {
+            "end_line": 363,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 310
+          },
+          "bytes_equal": true,
+          "text_sha256": "807310621f895ee4353914f5ede984d9c84196086ab21f81f447362fda805096"
+        }
+      ]
+    },
+    {
+      "after_sha256": "d39896c70c8655ba92f22934e0e1a6bb38a38cfc22ddba902facd613bc2cff5d",
+      "before_sha256": "d39896c70c8655ba92f22934e0e1a6bb38a38cfc22ddba902facd613bc2cff5d",
+      "changed_fields": [],
+      "id": "D03",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "f2abe2fa579c6adb87df088fefb1dc2c78411999414fced492e04e7c62c1abfd",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 337,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 330
+          },
+          "before": {
+            "end_line": 337,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 330
+          },
+          "bytes_equal": true,
+          "text_sha256": "dd5d73d47fed62697eba87f52d97eafe9518d3aadfb1262235823b8e46250fbd"
+        }
+      ]
+    },
+    {
+      "after_sha256": "cabf70e3d75ee00e869de688a41ddb423e53689fc439ee2952670f072bace916",
+      "before_sha256": "cabf70e3d75ee00e869de688a41ddb423e53689fc439ee2952670f072bace916",
+      "changed_fields": [],
+      "id": "D04",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "597f45cb24f15c0668f38920947a14c2427d65783851e34a2357ac5e184e8847",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 375,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 351
+          },
+          "before": {
+            "end_line": 375,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 351
+          },
+          "bytes_equal": true,
+          "text_sha256": "db56608d0768393df0901804b77fccf4020d80718aa34c93fe96178170376884"
+        },
+        {
+          "after": {
+            "end_line": 2284,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2280
+          },
+          "before": {
+            "end_line": 2284,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2280
+          },
+          "bytes_equal": true,
+          "text_sha256": "d14591aa27e87f8a1df482efc13f82ef9be597f637690861cd1b5847d534573d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "dcee3b36dbe7f6bb595f677419ee4aaf9e324bb7a6ebfb765f3f523004ee1b47",
+      "before_sha256": "dcee3b36dbe7f6bb595f677419ee4aaf9e324bb7a6ebfb765f3f523004ee1b47",
+      "changed_fields": [],
+      "id": "D05",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "34a531a80f809aa2a59f5b42a272657996e8141725e45c46020a6a8f8a047bc6",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 405,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 379
+          },
+          "before": {
+            "end_line": 405,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 379
+          },
+          "bytes_equal": true,
+          "text_sha256": "52f872413a02a4837e26a1416a7521f8fdc25db5cada8fb96d1862757d408d24"
+        },
+        {
+          "after": {
+            "end_line": 1112,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1090
+          },
+          "before": {
+            "end_line": 1112,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1090
+          },
+          "bytes_equal": true,
+          "text_sha256": "b350955fd541d167c41d29cbb0357a7051cdf0fdbbdf785556e39739a3ad37b7"
+        },
+        {
+          "after": {
+            "end_line": 1188,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1156
+          },
+          "before": {
+            "end_line": 1188,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1156
+          },
+          "bytes_equal": true,
+          "text_sha256": "1b864a6e0eb0e8b5a3a99fae8d7fcdcf5d61cb1012ff4b97a40fa9a4b2533717"
+        },
+        {
+          "after": {
+            "end_line": 1784,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1774
+          },
+          "before": {
+            "end_line": 1784,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1774
+          },
+          "bytes_equal": true,
+          "text_sha256": "a754edc933f22c5d0f8672901ba89d90dd0ee6aa31494102cebeadb30fc77f7d"
+        },
+        {
+          "after": {
+            "end_line": 479,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 461
+          },
+          "before": {
+            "end_line": 479,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 461
+          },
+          "bytes_equal": true,
+          "text_sha256": "d859d4b534d8c4acd7775de62149e3ba2c2d70f4624778781718fd68bebf2b50"
+        }
+      ]
+    },
+    {
+      "after_sha256": "bd0b9e77925a0af0f7b9c7e55d5f4d15bac536831830ab400818f5b1262a818c",
+      "before_sha256": "bd0b9e77925a0af0f7b9c7e55d5f4d15bac536831830ab400818f5b1262a818c",
+      "changed_fields": [],
+      "id": "D06",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "3ffcadf08d71b3d86b3677c5744ec8d6cd16f5d69891f5a7da3d5b8aa5ffd9b7",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1784,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1774
+          },
+          "before": {
+            "end_line": 1784,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1774
+          },
+          "bytes_equal": true,
+          "text_sha256": "a754edc933f22c5d0f8672901ba89d90dd0ee6aa31494102cebeadb30fc77f7d"
+        },
+        {
+          "after": {
+            "end_line": 405,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 379
+          },
+          "before": {
+            "end_line": 405,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 379
+          },
+          "bytes_equal": true,
+          "text_sha256": "52f872413a02a4837e26a1416a7521f8fdc25db5cada8fb96d1862757d408d24"
+        }
+      ]
+    },
+    {
+      "after_sha256": "38e83ac04540381b1d69c678d3146032d6176a466529cc63f2fbbe2371b389a4",
+      "before_sha256": "38e83ac04540381b1d69c678d3146032d6176a466529cc63f2fbbe2371b389a4",
+      "changed_fields": [],
+      "id": "D07",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "88887f5e4b3d1852611c182bd6d434986689e1e4dd136876184699d97d4eab79",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1803,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1786
+          },
+          "before": {
+            "end_line": 1803,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1786
+          },
+          "bytes_equal": true,
+          "text_sha256": "3596c4a5305ec4e5730bdc79ab00f2ab05c61851d4736d9616a02ef17044038f"
+        },
+        {
+          "after": {
+            "end_line": 2286,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2285
+          },
+          "before": {
+            "end_line": 2286,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2285
+          },
+          "bytes_equal": true,
+          "text_sha256": "883850b978d7fc8d1de77935e18921776d646e3e5b6720c0bc84fbf6e8b43412"
+        }
+      ]
+    },
+    {
+      "after_sha256": "0e3509a777bb2208d4bea7c0eacd65248952d914792c2ec0d09b5ab1a0dcb303",
+      "before_sha256": "0e3509a777bb2208d4bea7c0eacd65248952d914792c2ec0d09b5ab1a0dcb303",
+      "changed_fields": [],
+      "id": "D08",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "4e2fa68477f30ca04795876ab39f67fc00c82a9de8024a4aff0ddc9e92f9fc43",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 431,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 407
+          },
+          "before": {
+            "end_line": 431,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 407
+          },
+          "bytes_equal": true,
+          "text_sha256": "b47b0ec4c219782037e10c8c44d98a45ab9589cc756bf4f161c4927c1678d582"
+        }
+      ]
+    },
+    {
+      "after_sha256": "3ee19ccc9ee16156a703ae6bb299d858a034c2b5fb266b51ed9cd95fb819fb79",
+      "before_sha256": "3ee19ccc9ee16156a703ae6bb299d858a034c2b5fb266b51ed9cd95fb819fb79",
+      "changed_fields": [],
+      "id": "D09",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "d7edc3fbe9c8b8bc19b94acf012697ff4f7bef0a934cbecee9555e2c4af1aa40",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 437,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 433
+          },
+          "before": {
+            "end_line": 437,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 433
+          },
+          "bytes_equal": true,
+          "text_sha256": "50f5925e562fd16f1561d50f2b7689c3f3fff87444e0196b54ab6c98e68a48c0"
+        }
+      ]
+    },
+    {
+      "after_sha256": "951c47f9f61d6d55435ace6dfecb57184746c22edeb950abbaadbef351aefd4e",
+      "before_sha256": "951c47f9f61d6d55435ace6dfecb57184746c22edeb950abbaadbef351aefd4e",
+      "changed_fields": [],
+      "id": "D10",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "e5b7e35ced09fbcc3e82b7a8863da35336aad744ba1948c6e9739f7db35d3798",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1013,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 987
+          },
+          "before": {
+            "end_line": 1013,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 987
+          },
+          "bytes_equal": true,
+          "text_sha256": "8309199c687fe9c35cb18233a1fe1072000585fa746dc5c244a151ba016f09bf"
+        }
+      ]
+    },
+    {
+      "after_sha256": "536ad9b9cd016dfb62cd7ce283563aad9d46863993b0a0e3f91404594a030aa4",
+      "before_sha256": "536ad9b9cd016dfb62cd7ce283563aad9d46863993b0a0e3f91404594a030aa4",
+      "changed_fields": [],
+      "id": "D11",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a5a2af26b60e670344f350d62db7771719e2515f31c6383f89daba500cc57d34",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1062,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1015
+          },
+          "before": {
+            "end_line": 1062,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1015
+          },
+          "bytes_equal": true,
+          "text_sha256": "1b08656ba5d9aa39548c33f324829e9672b86fce7ddaef551786365b66f7c1f6"
+        }
+      ]
+    },
+    {
+      "after_sha256": "2f0602d972679dab71b8c12a27ba6fa7daaa43e5ddce6251ad3316d0761c749d",
+      "before_sha256": "2f0602d972679dab71b8c12a27ba6fa7daaa43e5ddce6251ad3316d0761c749d",
+      "changed_fields": [],
+      "id": "D12",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a412a04c3ad05c704df74bbc2a54f356dc14206c4446cbe260154630d25fdd97",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1154,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1090
+          },
+          "before": {
+            "end_line": 1154,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1090
+          },
+          "bytes_equal": true,
+          "text_sha256": "0bdca3ebf2654a3b374f4875972c8c8a6c8abd7f42ea4c2a30d4be5786a6dca1"
+        }
+      ]
+    },
+    {
+      "after_sha256": "826b4eed46c565c4484db3f8e0ce849b267cbeea4deaae3d477f5c467008e581",
+      "before_sha256": "826b4eed46c565c4484db3f8e0ce849b267cbeea4deaae3d477f5c467008e581",
+      "changed_fields": [],
+      "id": "D13",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "054dce383e4d1e9daf08d6c9c827947abae1ab6ceaf29a8ff85d212dbf827780",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1224,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1156
+          },
+          "before": {
+            "end_line": 1224,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1156
+          },
+          "bytes_equal": true,
+          "text_sha256": "7059e48fb6c5829c9b1ee010777c0144c64b4b2a1fe20397f0ee1795d07dc3a5"
+        }
+      ]
+    },
+    {
+      "after_sha256": "94a93c5f3a0cde2786076fbc899b7291b1a1d661553ce24e9f47bd8f1363c53a",
+      "before_sha256": "94a93c5f3a0cde2786076fbc899b7291b1a1d661553ce24e9f47bd8f1363c53a",
+      "changed_fields": [],
+      "id": "D14",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "c22bc36795971b7acaf4c02db0716d10f729f9a0a75de96773ca34807ec61423",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1267,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1226
+          },
+          "before": {
+            "end_line": 1267,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1226
+          },
+          "bytes_equal": true,
+          "text_sha256": "69d4376f3dc4d31ab73786bb8a4749c354c1064253f8021926d83ddfb0b5f169"
+        }
+      ]
+    },
+    {
+      "after_sha256": "12ac44fdaf877c94d38611f409ba308bca53e7835114f7487910447449cfbf5f",
+      "before_sha256": "12ac44fdaf877c94d38611f409ba308bca53e7835114f7487910447449cfbf5f",
+      "changed_fields": [],
+      "id": "D15",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "383a252cdcb2c5e824de01370e6db4bfb10b342632adeafbfd3cdb46f8dd3fad",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1841,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1805
+          },
+          "before": {
+            "end_line": 1841,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1805
+          },
+          "bytes_equal": true,
+          "text_sha256": "20cefec978b77b514bd152ca807b2f3015bf4e916e18c1022f7738b229a92a40"
+        },
+        {
+          "after": {
+            "end_line": 2284,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2269
+          },
+          "before": {
+            "end_line": 2284,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2269
+          },
+          "bytes_equal": true,
+          "text_sha256": "f7583b7df0c2d31b723c351dcd4f148410d3c4b737e96302a2577d62c02451d2"
+        },
+        {
+          "after": {
+            "end_line": 2299,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2287
+          },
+          "before": {
+            "end_line": 2299,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2287
+          },
+          "bytes_equal": true,
+          "text_sha256": "22ea02216ceb2831085774af2981f4de50f67bc0ed75bfa07497dbf4e557bd47"
+        }
+      ]
+    },
+    {
+      "after_sha256": "6e1be4fbb6fe5930ad8df4c0960e4d48027c3de9e5ad0a8b039e86345a39fab6",
+      "before_sha256": "6e1be4fbb6fe5930ad8df4c0960e4d48027c3de9e5ad0a8b039e86345a39fab6",
+      "changed_fields": [],
+      "id": "D16",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "7a64bef9fcb3e6a7ef6a6355f5a9ddd86db92f5343c9023997cd6b80ffa0d17a",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 2040,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2030
+          },
+          "before": {
+            "end_line": 2040,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2030
+          },
+          "bytes_equal": true,
+          "text_sha256": "05669991a84d3ea8fff2c81a974b0b17e3856a771ffa0f00eaaa3d55103356de"
+        },
+        {
+          "after": {
+            "end_line": 1862,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1843
+          },
+          "before": {
+            "end_line": 1862,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1843
+          },
+          "bytes_equal": true,
+          "text_sha256": "94937fae49bf294c12ef62d52566479f45c96694e997907f9031982035ad64fb"
+        }
+      ]
+    },
+    {
+      "after_sha256": "8f240aea498bfb8d3f0b941836ea72499629968d3a9e202030dd39df76c36ad7",
+      "before_sha256": "8f240aea498bfb8d3f0b941836ea72499629968d3a9e202030dd39df76c36ad7",
+      "changed_fields": [],
+      "id": "D17",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "04f45fc9593d0c94c26779a68c56ffee0af7ef3118121ab6b8aee92ee3c36056",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 2053,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2042
+          },
+          "before": {
+            "end_line": 2053,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2042
+          },
+          "bytes_equal": true,
+          "text_sha256": "13ec7a1a92c9ff8ad1b943788125f80ef34f4c6712557443aa67a1b7d674b7ba"
+        }
+      ]
+    },
+    {
+      "after_sha256": "7845da89fa5afc7d303c5e13fead1b9d180190af014caf403d06d714c7fd25fb",
+      "before_sha256": "7845da89fa5afc7d303c5e13fead1b9d180190af014caf403d06d714c7fd25fb",
+      "changed_fields": [],
+      "id": "D18",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "b31c4b9ed728729e77b44d7775a0934210ce3daa08765f250d2a9cc2f70a9f75",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1902,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1864
+          },
+          "before": {
+            "end_line": 1902,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1864
+          },
+          "bytes_equal": true,
+          "text_sha256": "d81a7eacdeace987683d1dc80297aaf5e574cb08d4ced3a34e71c9469852a3f1"
+        }
+      ]
+    },
+    {
+      "after_sha256": "061ee8a15591b7c7111dd05de98c38cc1e2dbe8fc04f668c7868ced36f9e5d08",
+      "before_sha256": "061ee8a15591b7c7111dd05de98c38cc1e2dbe8fc04f668c7868ced36f9e5d08",
+      "changed_fields": [],
+      "id": "D19",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "de488d86e205d4f56f133708b2b2efb6dc00a1f409de3f729db7af046a5adf53",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1942,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1904
+          },
+          "before": {
+            "end_line": 1942,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1904
+          },
+          "bytes_equal": true,
+          "text_sha256": "64564365dd5ad5d25a4f4cdb442c3cece3bbc5933c57c663373bc4628f12946e"
+        }
+      ]
+    },
+    {
+      "after_sha256": "4f84ae988985b0ef27ff91859d9a2c5d8bc8f71de96f3e136cf2369451bb3d98",
+      "before_sha256": "4f84ae988985b0ef27ff91859d9a2c5d8bc8f71de96f3e136cf2369451bb3d98",
+      "changed_fields": [],
+      "id": "D20",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "92124092afd70bde171760933140cb135a7bc77537ddf1e0aadcebe2c897a107",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 483,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 439
+          },
+          "before": {
+            "end_line": 483,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 439
+          },
+          "bytes_equal": true,
+          "text_sha256": "51a8f9eb786b51953258cc7af4281c596b612d081fd75a336ab8f74b5f62d40e"
+        }
+      ]
+    },
+    {
+      "after_sha256": "803d8476baa85892b1d956583cf6f05efe6db811b07a9d65f73052d9b2741be2",
+      "before_sha256": "803d8476baa85892b1d956583cf6f05efe6db811b07a9d65f73052d9b2741be2",
+      "changed_fields": [],
+      "id": "D21",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "474d991a0f81f7a970517558876523453b88fa7dba8ea9923ef3ffbda96777d0",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 611,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 497
+          },
+          "before": {
+            "end_line": 611,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 497
+          },
+          "bytes_equal": true,
+          "text_sha256": "a08760add12660eb70c39a7eb7bb63ff4b91c8d1767f444e0a4d3bf1c70a3db6"
+        }
+      ]
+    },
+    {
+      "after_sha256": "69f3165cc18759fd49817567f6b67050f95525f5efed4eac8da4a394d64af06b",
+      "before_sha256": "69f3165cc18759fd49817567f6b67050f95525f5efed4eac8da4a394d64af06b",
+      "changed_fields": [],
+      "id": "D22",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "2ee96345f9e8261c158fd1967c653c17c30fa05f8cec945b5910a1e4bac9b5cd",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 566,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 516
+          },
+          "before": {
+            "end_line": 566,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 516
+          },
+          "bytes_equal": true,
+          "text_sha256": "6996d094ce6bdf3f615e46c3e9bfeec9f8e63dd355c7c616fecdd05efd137b4c"
+        }
+      ]
+    },
+    {
+      "after_sha256": "5047771b309d99e72277a331031290cdd807cc8b859854d3205e0fea5a38d919",
+      "before_sha256": "5047771b309d99e72277a331031290cdd807cc8b859854d3205e0fea5a38d919",
+      "changed_fields": [],
+      "id": "D23",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "28baa595149161053e7d335cfeceb55a05f2b2576a97b18c8fb178b1fd9b18fd",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 649,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 613
+          },
+          "before": {
+            "end_line": 649,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 613
+          },
+          "bytes_equal": true,
+          "text_sha256": "6380922b6e4f5be08ce81af0ef714d3b2b8bf535ee6e14a129ee2627d65ab08b"
+        }
+      ]
+    },
+    {
+      "after_sha256": "c3cfb5b511ee5aa8ca88fa2dd75e10ee0323ec500c6a2f91042e9b59cfc09f54",
+      "before_sha256": "c3cfb5b511ee5aa8ca88fa2dd75e10ee0323ec500c6a2f91042e9b59cfc09f54",
+      "changed_fields": [],
+      "id": "D24",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "7d2de4c4f22d31c4013be87d50a69dd32897963e3c24b75ad9a6be3232a65a90",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1409,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1339
+          },
+          "before": {
+            "end_line": 1409,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1339
+          },
+          "bytes_equal": true,
+          "text_sha256": "3d0010da5ece18fa0e7c6de9c0097dada02e2d975256cced3e11803bdeb0b671"
+        }
+      ]
+    },
+    {
+      "after_sha256": "cc7b5a493c742fb3fde95e390aa298a0348b635fa4b2be6025f4337961f46ae5",
+      "before_sha256": "cc7b5a493c742fb3fde95e390aa298a0348b635fa4b2be6025f4337961f46ae5",
+      "changed_fields": [],
+      "id": "D25",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "4645815a77de626631764edaf8e33fb8668019fb161bb4146fde86cdb4f48194",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1572,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1567
+          },
+          "before": {
+            "end_line": 1572,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1567
+          },
+          "bytes_equal": true,
+          "text_sha256": "5e89b5858b7335ffdfe876835e35690a44ede5772e7f951b999a019c04e6f57a"
+        },
+        {
+          "after": {
+            "end_line": 1998,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1975
+          },
+          "before": {
+            "end_line": 1998,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1975
+          },
+          "bytes_equal": true,
+          "text_sha256": "64e87cfbd500a90c16d6ae8e49710332ff5f59f8dc0fdeb596540e44eada3746"
+        }
+      ]
+    },
+    {
+      "after_sha256": "4c73d4ed89968a04445ac2efc81daecaedd2299df08576b6df618be0c86cc990",
+      "before_sha256": "4c73d4ed89968a04445ac2efc81daecaedd2299df08576b6df618be0c86cc990",
+      "changed_fields": [],
+      "id": "D26",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "83c45b0599706c6972f60e07711e110d9574ac88567190ec6396a3d948e12391",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1320,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1297
+          },
+          "before": {
+            "end_line": 1320,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1297
+          },
+          "bytes_equal": true,
+          "text_sha256": "257c6c7fb01dff36340222f24b197ae5470973875b8e09faf9178f40cccf988d"
+        },
+        {
+          "after": {
+            "end_line": 1599,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1543
+          },
+          "before": {
+            "end_line": 1599,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1543
+          },
+          "bytes_equal": true,
+          "text_sha256": "e6aa9ab35d6bbfcf1b10ede2be1d40a920e97f2247b10d76d93fa0974dff3e11"
+        }
+      ]
+    },
+    {
+      "after_sha256": "07a815a680c0561cd2564dfd49d8e1db7de651e2d0880404b5b56c48be0449ad",
+      "before_sha256": "07a815a680c0561cd2564dfd49d8e1db7de651e2d0880404b5b56c48be0449ad",
+      "changed_fields": [],
+      "id": "D27",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "75a11025c59a526d283963ccadc168f36b006646e7f1835bcc03e14bd63a2acc",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1088,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1064
+          },
+          "before": {
+            "end_line": 1088,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1064
+          },
+          "bytes_equal": true,
+          "text_sha256": "daddf0b1aac3e146887f7d4a309714e7219dc91a58a4b8c213709abb92eff4e4"
+        },
+        {
+          "after": {
+            "end_line": 1295,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1269
+          },
+          "before": {
+            "end_line": 1295,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1269
+          },
+          "bytes_equal": true,
+          "text_sha256": "fe2b228a35181b27d43be2e9eae90155de92ae2d1eb7a53a4dcd49ea8eb7672d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "6befe80fb9a4a174fe57c258564dc9c3e9b92ea9ff6d022087e95b9046cb0174",
+      "before_sha256": "6befe80fb9a4a174fe57c258564dc9c3e9b92ea9ff6d022087e95b9046cb0174",
+      "changed_fields": [],
+      "id": "D28",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "8af61f2129c9e242af8127e31bc4674cd0f1fe1b1d0052d8947e023f36ead6ff",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 723,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 682
+          },
+          "before": {
+            "end_line": 723,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 682
+          },
+          "bytes_equal": true,
+          "text_sha256": "54b3b9657cf7ac27bc72ff1845106da262070af175125ac4b7e0c1eb5539fede"
+        },
+        {
+          "after": {
+            "end_line": 800,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 790
+          },
+          "before": {
+            "end_line": 800,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 790
+          },
+          "bytes_equal": true,
+          "text_sha256": "d3bdb315bf00083e788c53cdc744ca1eda1aef6bd950bc418d88ef62a3cccbe6"
+        }
+      ]
+    },
+    {
+      "after_sha256": "c8e95097421a0e2d6e0cb19388c4fe6d8dc8ad39339909c567cd3b8506f89cf4",
+      "before_sha256": "c8e95097421a0e2d6e0cb19388c4fe6d8dc8ad39339909c567cd3b8506f89cf4",
+      "changed_fields": [],
+      "id": "D29",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a543015b0039e1478d8e96e8e51734ac5cd8baf0219eab08ba9edd5f0af5df0c",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 788,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 725
+          },
+          "before": {
+            "end_line": 788,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 725
+          },
+          "bytes_equal": true,
+          "text_sha256": "e402ebc727cf51313c61f1253a7cd816ec6541adea48944c4eeb91b42c5f1431"
+        },
+        {
+          "after": {
+            "end_line": 800,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 767
+          },
+          "before": {
+            "end_line": 800,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 767
+          },
+          "bytes_equal": true,
+          "text_sha256": "23afb89701d57a5cf5fec1e7643dab7eaf6ecbba36d48e37db7491be4c4d4a24"
+        }
+      ]
+    },
+    {
+      "after_sha256": "4d719384540920ea27cfa3fdaa8277cadafc3e074b3380b92c6fab6aa5f83a24",
+      "before_sha256": "4d719384540920ea27cfa3fdaa8277cadafc3e074b3380b92c6fab6aa5f83a24",
+      "changed_fields": [],
+      "id": "D30",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "04ea3ed18ead0936fca6784b40b7b9942a24912aaf5ee6fc92c27a4d2c80e1b0",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 680,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 669
+          },
+          "before": {
+            "end_line": 680,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 669
+          },
+          "bytes_equal": true,
+          "text_sha256": "895ff86d12df81dff91f057be55e15fa74e9d88caafb773e89e62e07f0627e67"
+        },
+        {
+          "after": {
+            "end_line": 832,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 802
+          },
+          "before": {
+            "end_line": 832,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 802
+          },
+          "bytes_equal": true,
+          "text_sha256": "5f85bb87ab80cb48a9f0b32435a2efa273da6f758f5c1986326cd4f80faed132"
+        }
+      ]
+    },
+    {
+      "after_sha256": "76e957eaf1251df36d1821aecfc704df283e465083937294eae4300dd72e248f",
+      "before_sha256": "76e957eaf1251df36d1821aecfc704df283e465083937294eae4300dd72e248f",
+      "changed_fields": [],
+      "id": "D31",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "f2b856bf7fa5acdb76c9d784bdd3170e29419b9fe3d4f0c018ecc53f521e373a",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1674,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1601
+          },
+          "before": {
+            "end_line": 1674,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1601
+          },
+          "bytes_equal": true,
+          "text_sha256": "48b05baaeb6acf41c271cab2c1a1e68fcf452c2fc16848ed112b7dfcca7c49a3"
+        }
+      ]
+    },
+    {
+      "after_sha256": "3136a718040bf8f28255331d2d56fc75db3ed7cee9b0552dfd5059e516cfb756",
+      "before_sha256": "3136a718040bf8f28255331d2d56fc75db3ed7cee9b0552dfd5059e516cfb756",
+      "changed_fields": [],
+      "id": "D32",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "94d1ea3867edc21f02d6918a7ace474da7a4fc398193d3ecd4e0443b51b99eb3",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1693,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1655
+          },
+          "before": {
+            "end_line": 1693,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1655
+          },
+          "bytes_equal": true,
+          "text_sha256": "a36290d0231f6934d3ef141403e434257e0eaa394790982f7ad26841eb4b9fe9"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b85533d432dd05af0fd7b7fc2ea5addeb65720d3303c37b4cc3145f1d5b36df0",
+      "before_sha256": "b85533d432dd05af0fd7b7fc2ea5addeb65720d3303c37b4cc3145f1d5b36df0",
+      "changed_fields": [],
+      "id": "D33",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "6a9e4df0838dd8323c8a4b804853ec30d092bdd6598bf2e193cdcae5fd6202f1",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1653,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1642
+          },
+          "before": {
+            "end_line": 1653,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1642
+          },
+          "bytes_equal": true,
+          "text_sha256": "9d898dec190c27de73b0ea15e2b10c93bb15847ad1b8c3e9d0e56d5516fe1471"
+        }
+      ]
+    },
+    {
+      "after_sha256": "cce1f79a05d4112d8dbbdcd7d456a9083c5f4eefc16dc1907e1d18d72ec25f62",
+      "before_sha256": "cce1f79a05d4112d8dbbdcd7d456a9083c5f4eefc16dc1907e1d18d72ec25f62",
+      "changed_fields": [],
+      "id": "D34",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "012a8b1672acb3ca9f6229efba1b509c06099d9846acdc208a45a47bf352d7b7",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 870,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 834
+          },
+          "before": {
+            "end_line": 870,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 834
+          },
+          "bytes_equal": true,
+          "text_sha256": "43a785fea5d0ad81f8ba6d0b0428a672830df3b47d0007b1a5b70bfd8576c0c9"
+        }
+      ]
+    },
+    {
+      "after_sha256": "65a1df27601972f54ac100675dbe11b8199678a566896941d5220c6321e25657",
+      "before_sha256": "65a1df27601972f54ac100675dbe11b8199678a566896941d5220c6321e25657",
+      "changed_fields": [],
+      "id": "D35",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "70c7f8c9b2f0eff06874bee4035bcc1e9fc8d162573d0c3ac17e2f0eb9c2aabb",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 948,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 872
+          },
+          "before": {
+            "end_line": 948,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 872
+          },
+          "bytes_equal": true,
+          "text_sha256": "2d542c398d7c58fcb019306eec2629ee41fa3f4c9b9931223a239deeb2c29302"
+        }
+      ]
+    },
+    {
+      "after_sha256": "daf8af2b25a78b272dd9f492a75089359dbf5f613a1f2e0cb29d220b87c7e4b1",
+      "before_sha256": "daf8af2b25a78b272dd9f492a75089359dbf5f613a1f2e0cb29d220b87c7e4b1",
+      "changed_fields": [],
+      "id": "D36",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "286beea4e00c8aa5d24f178799e7a3c5c8c212b2824f80567313c5d94b23c36a",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 985,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 950
+          },
+          "before": {
+            "end_line": 985,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 950
+          },
+          "bytes_equal": true,
+          "text_sha256": "d622f881e71ded16c5a6c8729365edab556208b940632da7ec98a7d0bb80a778"
+        }
+      ]
+    },
+    {
+      "after_sha256": "d666fc7f3bb9e2ace7e14991ff41ab0aecd816bf02823029359dd7e7a43497f7",
+      "before_sha256": "d666fc7f3bb9e2ace7e14991ff41ab0aecd816bf02823029359dd7e7a43497f7",
+      "changed_fields": [],
+      "id": "D37",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "d8d69fc8c0142467b3a464f3a1c043cedf32a6324dc30a6e4e514e5149af60b8",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 2028,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1944
+          },
+          "before": {
+            "end_line": 2028,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1944
+          },
+          "bytes_equal": true,
+          "text_sha256": "fc7ae7823341968aec2f4f70c052dfca8b757b0c5d5baee8128e748f3e7bacf9"
+        }
+      ]
+    },
+    {
+      "after_sha256": "656a28d235a04c7c67e3c47e3a6436522a09225c19e56f2e8fbd8268c9b9ae78",
+      "before_sha256": "656a28d235a04c7c67e3c47e3a6436522a09225c19e56f2e8fbd8268c9b9ae78",
+      "changed_fields": [],
+      "id": "A01",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "d1f0a7c78c03f7ea34a72f52266d99e732ed8aeec9822ca1cd1cdbbd0d65e3f7",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1012,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 922
+          },
+          "before": {
+            "end_line": 1012,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 922
+          },
+          "bytes_equal": true,
+          "text_sha256": "d4c91b5027d7572e388a62ea59deb88aa12ad245aaa4f59f152859e190b7e672"
+        }
+      ]
+    },
+    {
+      "after_sha256": "9582c74d676928590a1489049f9bee01b1a0e12aeab66d207ae2fbe5ac06ba12",
+      "before_sha256": "9582c74d676928590a1489049f9bee01b1a0e12aeab66d207ae2fbe5ac06ba12",
+      "changed_fields": [],
+      "id": "A02",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "5b3d7e9cd907f6a9e9110dace306e3f2923b9de7e76b58a047b02b1fe68b81d3",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1050,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 1014
+          },
+          "before": {
+            "end_line": 1050,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 1014
+          },
+          "bytes_equal": true,
+          "text_sha256": "558f40fabcdf4d93b57eb53e4ec61fbea4ed0a9671007933b7325739a30d21ce"
+        },
+        {
+          "after": {
+            "end_line": 513,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 492
+          },
+          "before": {
+            "end_line": 513,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 492
+          },
+          "bytes_equal": true,
+          "text_sha256": "346f2597cd23daa31e6eac901935eb39394f18b1900e0182b81f43b253bc48ca"
+        }
+      ]
+    },
+    {
+      "after_sha256": "24a72ae0a617ba397953822e759b3762a442c7d18d4c2dfd9a123e2ff18b222e",
+      "before_sha256": "24a72ae0a617ba397953822e759b3762a442c7d18d4c2dfd9a123e2ff18b222e",
+      "changed_fields": [],
+      "id": "A03",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "2edf62f9cdcc2cbf008f85737aff8b90d5795a4861baaa0ed8ee89bc3fe44dae",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 519,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 474
+          },
+          "before": {
+            "end_line": 519,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 474
+          },
+          "bytes_equal": true,
+          "text_sha256": "2d3d9584832c343df541cfc3aac0f5f5cbf95f0273f2a439422d79e51acaa878"
+        }
+      ]
+    },
+    {
+      "after_sha256": "d890ca78142ca7912372c359fb6b06d0e139e33be81ab09d200ea84678b4070a",
+      "before_sha256": "d890ca78142ca7912372c359fb6b06d0e139e33be81ab09d200ea84678b4070a",
+      "changed_fields": [],
+      "id": "A04",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a97c11800e938af88765aa292ae7629022b0070449c2b747a64d7344684a5197",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 234,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 133
+          },
+          "before": {
+            "end_line": 234,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 133
+          },
+          "bytes_equal": true,
+          "text_sha256": "eaf0a6ec36ca2d1284f54d5edc46ab899e590c3e2020d43dc371ac4def07e6e6"
+        }
+      ]
+    },
+    {
+      "after_sha256": "e32276b6d0c635175326567a670c284929fb0bcbb1418fb244f171fb69e59636",
+      "before_sha256": "e32276b6d0c635175326567a670c284929fb0bcbb1418fb244f171fb69e59636",
+      "changed_fields": [],
+      "id": "A05",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "c44c1398e99e8c92fb6968f25f062bc49b89898fb27669bb794368175c8e0c7b",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 304,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 236
+          },
+          "before": {
+            "end_line": 304,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 236
+          },
+          "bytes_equal": true,
+          "text_sha256": "624257c538c84100b325085975413a6d2b132c1cde126e9d52119e9032ec66b1"
+        }
+      ]
+    },
+    {
+      "after_sha256": "12b070938a3c2f5023089bfe4dc1ecb3468c414c1ee945fb74ebb3fb29f97924",
+      "before_sha256": "12b070938a3c2f5023089bfe4dc1ecb3468c414c1ee945fb74ebb3fb29f97924",
+      "changed_fields": [],
+      "id": "A06",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "942b35412ad5d9e0a0c730aa868e20111cd85398d1e0f95df100756decee02ec",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 580,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 521
+          },
+          "before": {
+            "end_line": 580,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 521
+          },
+          "bytes_equal": true,
+          "text_sha256": "e77d300e0c4959482b6d0e733963626e3fb39b731fbe45556978404d4bbb870f"
+        }
+      ]
+    },
+    {
+      "after_sha256": "9c861d16a3ad611a7862788b5d73ae45b6fb13f3e028a8ef04f5e0ee95054546",
+      "before_sha256": "9c861d16a3ad611a7862788b5d73ae45b6fb13f3e028a8ef04f5e0ee95054546",
+      "changed_fields": [],
+      "id": "A07",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "5395da161534109011eb8e9e81d77b78d5586bed2eba691bf0b70b80fa052da2",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 630,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 582
+          },
+          "before": {
+            "end_line": 630,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 582
+          },
+          "bytes_equal": true,
+          "text_sha256": "477f38f80a5fa3fd92c15802f7e038c6ca686cc7e9123554d31ca78faf46549f"
+        }
+      ]
+    },
+    {
+      "after_sha256": "71c1d832018cde6b52e031111aa46de9bdec13acd007036b8eb833baee46cd42",
+      "before_sha256": "71c1d832018cde6b52e031111aa46de9bdec13acd007036b8eb833baee46cd42",
+      "changed_fields": [],
+      "id": "A08",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "962c3353b98ad410131ca1fcbb54208ddc58c10abf651052d5301d2fb97ae535",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 697,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 664
+          },
+          "before": {
+            "end_line": 697,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 664
+          },
+          "bytes_equal": true,
+          "text_sha256": "349d86a528ad6384a528cecb728846d494a2fea0bb771f98d463df9e48a68362"
+        }
+      ]
+    },
+    {
+      "after_sha256": "7106f7969b117983104cd6eafe95786badcc4973cae8120814e47caa7a3b66ef",
+      "before_sha256": "7106f7969b117983104cd6eafe95786badcc4973cae8120814e47caa7a3b66ef",
+      "changed_fields": [],
+      "id": "A09",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "9f5f649d6b86d9ce2c8f8415b4ead21103a5f5c5d07d9296e780b7e8c44a7e54",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 900,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 879
+          },
+          "before": {
+            "end_line": 900,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 879
+          },
+          "bytes_equal": true,
+          "text_sha256": "346efa0469180050b58f0c4968e10110439618c6359799602a3bee5b2f17fcd4"
+        }
+      ]
+    },
+    {
+      "after_sha256": "9ef3f273b9216e06bd085546ea705dd5f66d8e942569e6f0e45abf259bf6c411",
+      "before_sha256": "9ef3f273b9216e06bd085546ea705dd5f66d8e942569e6f0e45abf259bf6c411",
+      "changed_fields": [],
+      "id": "A10",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "d77b12cbe41194978dac89ffabb63669f6010c9d126e70c879bffebe910887aa",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1099,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 1052
+          },
+          "before": {
+            "end_line": 1099,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 1052
+          },
+          "bytes_equal": true,
+          "text_sha256": "de8510483651ae24131201e42a022a66054ab6e0ae0f8e4543780097893c419d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "4422c9c7bc82d28a682dbbf760bc791345d04afc0780d22ea3f30148ee48c4a1",
+      "before_sha256": "4422c9c7bc82d28a682dbbf760bc791345d04afc0780d22ea3f30148ee48c4a1",
+      "changed_fields": [],
+      "id": "A11",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "0fd843eb95860fe6dbe4e63bf2b461a785a6041b69157676bf4e562116a43de3",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 739,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 699
+          },
+          "before": {
+            "end_line": 739,
+            "source_id": "standards/ASSURANCE.md",
+            "start_line": 699
+          },
+          "bytes_equal": true,
+          "text_sha256": "b66f318bcb63b2e09a4d3cd90a543232a4fa0392c0a4ce2cbcb3e59d24a715ea"
+        }
+      ]
+    },
+    {
+      "after_sha256": "d5952417ad61bd0a340e9a56bfca0e2210d2c31765c4cd7742f1ca884318db6c",
+      "before_sha256": "d5952417ad61bd0a340e9a56bfca0e2210d2c31765c4cd7742f1ca884318db6c",
+      "changed_fields": [],
+      "id": "E01",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "49e7e20599b32d5e76ed805975b50931ccd3d2be61b4e9dc98610c154cd9df6f",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 57,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 11
+          },
+          "before": {
+            "end_line": 57,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 11
+          },
+          "bytes_equal": true,
+          "text_sha256": "638fff10531014b7cddfa847f745d85a22f247a0e1ee3c852051a69da7e2c024"
+        }
+      ]
+    },
+    {
+      "after_sha256": "038f47ace49e57f8bfbc6d9525f084a3dd6ed67a052e0b437adf2cea81aabef0",
+      "before_sha256": "038f47ace49e57f8bfbc6d9525f084a3dd6ed67a052e0b437adf2cea81aabef0",
+      "changed_fields": [],
+      "id": "E02",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "84f9427ad54aa21ad9641d89772810db26af7982a05946785b91505f327363dd",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 188,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 141
+          },
+          "before": {
+            "end_line": 188,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 141
+          },
+          "bytes_equal": true,
+          "text_sha256": "a1337f5b800c4320e0f5bdfba7896c368f99f8ff1360f5b646dcf1e9901e9749"
+        }
+      ]
+    },
+    {
+      "after_sha256": "8a23d9f57f477b85a9d78819c7bd05b0002968a8f1f63548e8169a5062d1b62b",
+      "before_sha256": "8a23d9f57f477b85a9d78819c7bd05b0002968a8f1f63548e8169a5062d1b62b",
+      "changed_fields": [],
+      "id": "E03",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "864dc9a1c0217ffd54d65845d6f4b7b0d5b58e0de1597da0b2cb1dac1a3087e2",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 260,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 190
+          },
+          "before": {
+            "end_line": 260,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 190
+          },
+          "bytes_equal": true,
+          "text_sha256": "f1dd2e510d22f5428764835759bb86c761c7c6f7cf4b9a042a0cb907af98522a"
+        }
+      ]
+    },
+    {
+      "after_sha256": "c544e6c8da66ef11bfe0f7ff48296735d3fb0f5cba1444277a026783947953cf",
+      "before_sha256": "c544e6c8da66ef11bfe0f7ff48296735d3fb0f5cba1444277a026783947953cf",
+      "changed_fields": [],
+      "id": "E04",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "cac59f251e4ad0565f33e5fc6332512491cd18e09d5c0373d9f92c3d3f594893",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 279,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 262
+          },
+          "before": {
+            "end_line": 279,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 262
+          },
+          "bytes_equal": true,
+          "text_sha256": "fb1e00aca9bbb3a8820d4f6084d3fb9a8c27d21f0b330682f050dd8ff71cfec4"
+        },
+        {
+          "after": {
+            "end_line": 387,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 337
+          },
+          "before": {
+            "end_line": 387,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 337
+          },
+          "bytes_equal": true,
+          "text_sha256": "6f71cb9931da1b1beaa9cd51a1e4ffcb68ebc0a23283032f09b3260d33e259df"
+        }
+      ]
+    },
+    {
+      "after_sha256": "7754513d8d3635b3730b9054446784fc498fdaa47977ef700ac32aad7b928c22",
+      "before_sha256": "7754513d8d3635b3730b9054446784fc498fdaa47977ef700ac32aad7b928c22",
+      "changed_fields": [],
+      "id": "E05",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "e41ea1201f4180c9ebcd4f5456f77c98faad5174c45d1b8d99619a0b5d0a8689",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 443,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 406
+          },
+          "before": {
+            "end_line": 443,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 406
+          },
+          "bytes_equal": true,
+          "text_sha256": "baae486c670fbd50c725bddcb77602ef07f20870c02b47182bdc246381c1cb79"
+        }
+      ]
+    },
+    {
+      "after_sha256": "ba3f09eeb6daec9edb344873c82a15d428219819f1034024875222f992700877",
+      "before_sha256": "ba3f09eeb6daec9edb344873c82a15d428219819f1034024875222f992700877",
+      "changed_fields": [],
+      "id": "E06",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "c3c079b0255142362203fb88c19db3a9fd4fb38db935f2190bacbab82da3ff40",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 485,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 445
+          },
+          "before": {
+            "end_line": 485,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 445
+          },
+          "bytes_equal": true,
+          "text_sha256": "725a85362cbe6d42f45671629a83967b72b42db8fb358bbef450d085b6099b54"
+        },
+        {
+          "after": {
+            "end_line": 516,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 506
+          },
+          "before": {
+            "end_line": 516,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 506
+          },
+          "bytes_equal": true,
+          "text_sha256": "435169a9b8fec7d13f788f3515ba9eca3ff72c3bd65a8da79c79c0ba8bb5767e"
+        }
+      ]
+    },
+    {
+      "after_sha256": "722a13241ff69ef582945d3d4ad90012d6f77082efd40fa82221608ccc981c7b",
+      "before_sha256": "722a13241ff69ef582945d3d4ad90012d6f77082efd40fa82221608ccc981c7b",
+      "changed_fields": [],
+      "id": "E07",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "7a8d9a9c321bd6c12c891a47b8f9ec69b1506da5adef460004b442ae090d61e4",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 504,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 487
+          },
+          "before": {
+            "end_line": 504,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 487
+          },
+          "bytes_equal": true,
+          "text_sha256": "28ff7a57293554dd1d578681beebe6343a20fcc69a6b15dcdf2509bea485cea8"
+        }
+      ]
+    },
+    {
+      "after_sha256": "872937e16315225aa29b0d29f4eeea47649db5a3323489895adfc747832dad2e",
+      "before_sha256": "872937e16315225aa29b0d29f4eeea47649db5a3323489895adfc747832dad2e",
+      "changed_fields": [],
+      "id": "S14",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "7baa95cc5c9b987e216ac5a959eade79f49b4828f6dc485d6762e741878adf79",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1619,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1596
+          },
+          "before": {
+            "end_line": 1619,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1596
+          },
+          "bytes_equal": true,
+          "text_sha256": "80dc38bcaaf913275be28b29d3d7fb7f14b542af5817e16b975efec49db10e04"
+        }
+      ]
+    },
+    {
+      "after_sha256": "407e99c0194acdd260ddb3758568f40efaf6f06d48b90c5389c328bbb4bea7af",
+      "before_sha256": "407e99c0194acdd260ddb3758568f40efaf6f06d48b90c5389c328bbb4bea7af",
+      "changed_fields": [],
+      "id": "S15",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "98cf6d9472edd635aa907c941a2fc5a81a4d7065185b02659b13b6f6e6a872ef",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1522,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1497
+          },
+          "before": {
+            "end_line": 1522,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1497
+          },
+          "bytes_equal": true,
+          "text_sha256": "fd7b36316c45554e1e521a615e5980982f0bf9e13d784141028a1c8f401ab3a9"
+        }
+      ]
+    },
+    {
+      "after_sha256": "e43d23b6f39f9cab959b639fceebb99361fc0669e87ae55accac7034b3b0b36a",
+      "before_sha256": "e43d23b6f39f9cab959b639fceebb99361fc0669e87ae55accac7034b3b0b36a",
+      "changed_fields": [],
+      "id": "S16",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "7f5ac855b8b46f7a70203c5400182be66942aad2ab53ceb3ac744ad926fb576f",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1681,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1621
+          },
+          "before": {
+            "end_line": 1681,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 1621
+          },
+          "bytes_equal": true,
+          "text_sha256": "d1702a7b0a0c446c2df6b521e83b59938ca6f4a22be7d53c054e40760b83e0c0"
+        }
+      ]
+    },
+    {
+      "after_sha256": "32243456538d6672f4cbb2d6e6695e46a5d8cdd6992ac16968aa5d0133b707e2",
+      "before_sha256": "32243456538d6672f4cbb2d6e6695e46a5d8cdd6992ac16968aa5d0133b707e2",
+      "changed_fields": [],
+      "id": "C01",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "901f97c8ea9dcb844c393b0aa6d71a4ee7b180d8645dad924d070f24e0cc4fe3",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 57,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 11
+          },
+          "before": {
+            "end_line": 57,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 11
+          },
+          "bytes_equal": true,
+          "text_sha256": "638fff10531014b7cddfa847f745d85a22f247a0e1ee3c852051a69da7e2c024"
+        },
+        {
+          "after": {
+            "end_line": 188,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 175
+          },
+          "before": {
+            "end_line": 188,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 175
+          },
+          "bytes_equal": true,
+          "text_sha256": "52023eca5774e7c7457cfc18a56d4cabd648ecddb68eb6855e6414c4a239fb54"
+        },
+        {
+          "after": {
+            "end_line": 789,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 732
+          },
+          "before": {
+            "end_line": 789,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 732
+          },
+          "bytes_equal": true,
+          "text_sha256": "a2314effd4d0706f7544d6c9f238257c455e75d4d71606f55be7ab067df78e4d"
+        },
+        {
+          "after": {
+            "end_line": 488,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 353
+          },
+          "before": {
+            "end_line": 488,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 353
+          },
+          "bytes_equal": true,
+          "text_sha256": "aa856ea6346c3c4370ed949373c5cca2fe258672319cdc602aa1e8607f07a99d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "5033ad85860ea9098bbfd1a40ae3f80080e8f719926433e68fcb02ba56f79c91",
+      "before_sha256": "5033ad85860ea9098bbfd1a40ae3f80080e8f719926433e68fcb02ba56f79c91",
+      "changed_fields": [],
+      "id": "C02",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "3d3b74f6662d28d5944ad2ba672bcc87525c75b9307ebd93df259b7077f4917d",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 409,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 353
+          },
+          "before": {
+            "end_line": 409,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 353
+          },
+          "bytes_equal": true,
+          "text_sha256": "b1c708894da34fc91a9b8533bda1e0b29657146bd9681822234d76115ffa821e"
+        },
+        {
+          "after": {
+            "end_line": 691,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 619
+          },
+          "before": {
+            "end_line": 691,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 619
+          },
+          "bytes_equal": true,
+          "text_sha256": "4167f2253f8a39dd31409a17cb938aa2d6c514aa272ab9dafd3050e7e00ab048"
+        },
+        {
+          "after": {
+            "end_line": 159,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 96
+          },
+          "before": {
+            "end_line": 159,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 96
+          },
+          "bytes_equal": true,
+          "text_sha256": "82d442b13bfaf7d81004d6e2dde7d8819fb5a40b2bd762d2c6ac907c638bb4a5"
+        }
+      ]
+    },
+    {
+      "after_sha256": "674c695bb77de6533b2cc7b219afff696e321942cddca490a5e305fc8bd963ba",
+      "before_sha256": "674c695bb77de6533b2cc7b219afff696e321942cddca490a5e305fc8bd963ba",
+      "changed_fields": [],
+      "id": "C03",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "b39bd8359d06053698594a6eb8d9de9d3a5fcb723a33c47330d5c3a81a1430e1",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 488,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 410
+          },
+          "before": {
+            "end_line": 488,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 410
+          },
+          "bytes_equal": true,
+          "text_sha256": "a901d107995f66d2daa0e5f996de350dd095a1197dfd5a13ecbec58c5d1e9287"
+        },
+        {
+          "after": {
+            "end_line": 730,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 672
+          },
+          "before": {
+            "end_line": 730,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 672
+          },
+          "bytes_equal": true,
+          "text_sha256": "3eae38729d34a0dbcc91ba75d277ada16315beffddecb88ea6ddd8f78b5352cc"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b80ed029803e2638b23928657ef814a9dc63823fd8040c753e522d09b4ccf519",
+      "before_sha256": "b80ed029803e2638b23928657ef814a9dc63823fd8040c753e522d09b4ccf519",
+      "changed_fields": [],
+      "id": "C04",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "7cd799259971e11c46f004253034a85009ee78b04bb9a60ee197a25fc91408e2",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 730,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 672
+          },
+          "before": {
+            "end_line": 730,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 672
+          },
+          "bytes_equal": true,
+          "text_sha256": "3eae38729d34a0dbcc91ba75d277ada16315beffddecb88ea6ddd8f78b5352cc"
+        }
+      ]
+    },
+    {
+      "after_sha256": "840ad12048695836af5485d01c1424c2dacd636cace63bed45fc8a709e703ece",
+      "before_sha256": "840ad12048695836af5485d01c1424c2dacd636cace63bed45fc8a709e703ece",
+      "changed_fields": [],
+      "id": "C05",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a8af93eebe161a642bccef184702e4214d592c6803a79d26b8999f20e5ff761e",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 159,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 96
+          },
+          "before": {
+            "end_line": 159,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 96
+          },
+          "bytes_equal": true,
+          "text_sha256": "82d442b13bfaf7d81004d6e2dde7d8819fb5a40b2bd762d2c6ac907c638bb4a5"
+        },
+        {
+          "after": {
+            "end_line": 257,
+            "source_id": "standards/IDENTITY.md",
+            "start_line": 224
+          },
+          "before": {
+            "end_line": 257,
+            "source_id": "standards/IDENTITY.md",
+            "start_line": 224
+          },
+          "bytes_equal": true,
+          "text_sha256": "fc24255eebe37bdcec19cfdeced5a684f2d205ff090da22a8394a17431e55adb"
+        }
+      ]
+    },
+    {
+      "after_sha256": "a54d8e2d09d33d332b9e20d17490e7a875ed42ebdf940c77ca3016383cc3fea0",
+      "before_sha256": "a54d8e2d09d33d332b9e20d17490e7a875ed42ebdf940c77ca3016383cc3fea0",
+      "changed_fields": [],
+      "id": "C06",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a7579df4d4bb9a7a835ad7e0d0215f2b6963fe2abda94b4c84f0348fd513b1b1",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 789,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 732
+          },
+          "before": {
+            "end_line": 789,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 732
+          },
+          "bytes_equal": true,
+          "text_sha256": "a2314effd4d0706f7544d6c9f238257c455e75d4d71606f55be7ab067df78e4d"
+        },
+        {
+          "after": {
+            "end_line": 999,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 939
+          },
+          "before": {
+            "end_line": 999,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 939
+          },
+          "bytes_equal": true,
+          "text_sha256": "ae4689791efe1fe74d7156ff014cbcfde8a6354d8e7610cce2cc46fb5bb45bae"
+        },
+        {
+          "after": {
+            "end_line": 57,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 11
+          },
+          "before": {
+            "end_line": 57,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 11
+          },
+          "bytes_equal": true,
+          "text_sha256": "638fff10531014b7cddfa847f745d85a22f247a0e1ee3c852051a69da7e2c024"
+        }
+      ]
+    },
+    {
+      "after_sha256": "5c9dcf45d4a8dbff1d58bd040079082e6ba4d9390e30cb74a73ddaf1da0dfcd2",
+      "before_sha256": "5c9dcf45d4a8dbff1d58bd040079082e6ba4d9390e30cb74a73ddaf1da0dfcd2",
+      "changed_fields": [],
+      "id": "C07",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "156264dfc8eba7d57fc8795d219fd7d37b734ebd77d20f14d813605728000210",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1748,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1681
+          },
+          "before": {
+            "end_line": 1748,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1681
+          },
+          "bytes_equal": true,
+          "text_sha256": "93e8859fa24fc7a98c5bf254b1093592b6af872175263d90abbcd04c017aa333"
+        },
+        {
+          "after": {
+            "end_line": 1458,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 1378
+          },
+          "before": {
+            "end_line": 1458,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 1378
+          },
+          "bytes_equal": true,
+          "text_sha256": "688afd56d18e30256bfc4807e7fe0bf5bbcb53d27404209fc146cc98855c4f29"
+        },
+        {
+          "after": {
+            "end_line": 1412,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 1397
+          },
+          "before": {
+            "end_line": 1412,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 1397
+          },
+          "bytes_equal": true,
+          "text_sha256": "8eb440851cf0c4ece5766c7d45a4293437d78c91d3cfa375a2b90608583d6602"
+        }
+      ]
+    },
+    {
+      "after_sha256": "c105b135a2c8986fce3da54fbc1d92127121b30fc0bc471812b641ac1ce6f300",
+      "before_sha256": "c105b135a2c8986fce3da54fbc1d92127121b30fc0bc471812b641ac1ce6f300",
+      "changed_fields": [],
+      "id": "C08",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a22d1fe982cc747bd34e0b0d16422e66cf33fcdfcc2db78aeac32e5cce838602",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1163,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1114
+          },
+          "before": {
+            "end_line": 1163,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1114
+          },
+          "bytes_equal": true,
+          "text_sha256": "5256dd7b7399fdeb0176decb43623660821eb5ff038867b2193f8b7922e73e29"
+        },
+        {
+          "after": {
+            "end_line": 1422,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1370
+          },
+          "before": {
+            "end_line": 1422,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1370
+          },
+          "bytes_equal": true,
+          "text_sha256": "1acf9e57a1181eda3054d15998092f93e22f6dc978770231f122a354a01407a3"
+        }
+      ]
+    },
+    {
+      "after_sha256": "240fa57c22bd7b7057e6f91f21d888d321651d2e16db374211cbc2ba605b2c4a",
+      "before_sha256": "240fa57c22bd7b7057e6f91f21d888d321651d2e16db374211cbc2ba605b2c4a",
+      "changed_fields": [],
+      "id": "C09",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "ad1a4e51947d55fbbb12f38e7d3b42211ea4300334ac1e243f33d6ed0ce6ad78",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1208,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1164
+          },
+          "before": {
+            "end_line": 1208,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1164
+          },
+          "bytes_equal": true,
+          "text_sha256": "be2799e9beedd44ceb4604dd6ce9c653866827e5601a85075ec5faba2f02c742"
+        },
+        {
+          "after": {
+            "end_line": 889,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 819
+          },
+          "before": {
+            "end_line": 889,
+            "source_id": "standards/SPEC_METHOD.md",
+            "start_line": 819
+          },
+          "bytes_equal": true,
+          "text_sha256": "d507343389a7a3c29561fda56b938f59376b28396de8413ac0359b853236992e"
+        }
+      ]
+    },
+    {
+      "after_sha256": "61653396eb3b3941326861a43a0612a3282620ed3d63a6ac9f4851ed7f9806f5",
+      "before_sha256": "61653396eb3b3941326861a43a0612a3282620ed3d63a6ac9f4851ed7f9806f5",
+      "changed_fields": [],
+      "id": "C10",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "ea9efd9e9143e48896c1f2c6771b8674bfb5d7475c9a5362e2657a54371d2724",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 776,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 693
+          },
+          "before": {
+            "end_line": 776,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 693
+          },
+          "bytes_equal": true,
+          "text_sha256": "f2f41c6a8ae3d75272ac58f9deb239d9e5be11b6d1dd15b6597dc25fedeb5d38"
+        },
+        {
+          "after": {
+            "end_line": 327,
+            "source_id": "standards/REFERENCE_FRAME.md",
+            "start_line": 273
+          },
+          "before": {
+            "end_line": 327,
+            "source_id": "standards/REFERENCE_FRAME.md",
+            "start_line": 273
+          },
+          "bytes_equal": true,
+          "text_sha256": "fbf471c35afb693640f11a076f5651e1f60bcc1166f3cdd65c20445f8f0f5454"
+        },
+        {
+          "after": {
+            "end_line": 838,
+            "source_id": "standards/REFERENCE_FRAME.md",
+            "start_line": 820
+          },
+          "before": {
+            "end_line": 838,
+            "source_id": "standards/REFERENCE_FRAME.md",
+            "start_line": 820
+          },
+          "bytes_equal": true,
+          "text_sha256": "7c3d0da7e5c38eafc4e6114b6ecaff9a92402ab4ab6ede709b8a6b1604312ffa"
+        },
+        {
+          "after": {
+            "end_line": 697,
+            "source_id": "standards/AXIOMATIC_CALCULUS.md",
+            "start_line": 644
+          },
+          "before": {
+            "end_line": 697,
+            "source_id": "standards/AXIOMATIC_CALCULUS.md",
+            "start_line": 644
+          },
+          "bytes_equal": true,
+          "text_sha256": "0ca942e531312a0bcdf8993cb2c5fba4e86b75294981cdcd66106b6d632985a4"
+        }
+      ]
+    },
+    {
+      "after_sha256": "dc29c8b149049ffdb12c4c9efb0cd27ec63a7947834be6cacc038d76b89db20d",
+      "before_sha256": "dc29c8b149049ffdb12c4c9efb0cd27ec63a7947834be6cacc038d76b89db20d",
+      "changed_fields": [],
+      "id": "C11",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "1c11072dee6d06bd8d2b1ddc97c04dd30384225078b09ffdb131f1616ce87e56",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 283,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 225
+          },
+          "before": {
+            "end_line": 283,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 225
+          },
+          "bytes_equal": true,
+          "text_sha256": "b66bcdfcc3ac6f90d54fa9c339600e9900514a719da72da1a258ac0f7541ace1"
+        },
+        {
+          "after": {
+            "end_line": 545,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 479
+          },
+          "before": {
+            "end_line": 545,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 479
+          },
+          "bytes_equal": true,
+          "text_sha256": "19fcc0f534fa813dcc0ac2670ce5154a964a4517d656d5519a98e7f7ce320fe5"
+        },
+        {
+          "after": {
+            "end_line": 688,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 637
+          },
+          "before": {
+            "end_line": 688,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 637
+          },
+          "bytes_equal": true,
+          "text_sha256": "ca5e41f28e74d19502188ed8c1d035fa59a34ca6e7ef0ac9ec9819f296be3829"
+        },
+        {
+          "after": {
+            "end_line": 51,
+            "source_id": "standards/PROFILES.md",
+            "start_line": 1
+          },
+          "before": {
+            "end_line": 51,
+            "source_id": "standards/PROFILES.md",
+            "start_line": 1
+          },
+          "bytes_equal": true,
+          "text_sha256": "02757885c8464a87ed450336553f39e3d62d5faa0118c8c4844d023f6aaeab9a"
+        }
+      ]
+    },
+    {
+      "after_sha256": "77f711603823ded02113fd4f7e8c12f2c503d031141b2a7a9f2bfe2c89218c8d",
+      "before_sha256": "77f711603823ded02113fd4f7e8c12f2c503d031141b2a7a9f2bfe2c89218c8d",
+      "changed_fields": [],
+      "id": "C12",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "0dca4d91b8dbeee450a97a7532e6800eeee032906837d6be40e96fb805b05e0b",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1163,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 1110
+          },
+          "before": {
+            "end_line": 1163,
+            "source_id": "standards/FOUNDATIONS.md",
+            "start_line": 1110
+          },
+          "bytes_equal": true,
+          "text_sha256": "a9438dc4e6131ad1ab2dd8ac7ebfcd632f8dc62c87bad2e25bb8f7ec6c7901e7"
+        },
+        {
+          "after": {
+            "end_line": 1115,
+            "source_id": "standards/AXIOMATIC_CALCULUS.md",
+            "start_line": 1095
+          },
+          "before": {
+            "end_line": 1115,
+            "source_id": "standards/AXIOMATIC_CALCULUS.md",
+            "start_line": 1095
+          },
+          "bytes_equal": true,
+          "text_sha256": "0845d6d195805cc9a8e6ac9da395e97a1e3c484fa60ee610e834ae9faad0849a"
+        },
+        {
+          "after": {
+            "end_line": 1284,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1209
+          },
+          "before": {
+            "end_line": 1284,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1209
+          },
+          "bytes_equal": true,
+          "text_sha256": "e2cf6a63a9931c63de8f6b3d587b326947e043e6524b8bb4d0f2d1169534a3b6"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b822cfade9387529c9029d53ac2502ca3fe396a1b63539b59dc0af150a868a04",
+      "before_sha256": "dc7684d47a9896ebb7a4a3a41f6fc786512c36c34138f4b593fc1d2fbc3dff06",
+      "changed_fields": [
+        "source_refs"
+      ],
+      "id": "C13",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "59bd2da63cd12c5d986f35e1af8d048547d885609a94dd9a55ff1d8463326d1c",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1063,
+            "source_id": "standards/AXIOMATIC_CALCULUS.md",
+            "start_line": 934
+          },
+          "before": {
+            "end_line": 1063,
+            "source_id": "standards/AXIOMATIC_CALCULUS.md",
+            "start_line": 934
+          },
+          "bytes_equal": true,
+          "text_sha256": "744826341087076770836b02249edcb827d4fc9bda631319d571d4b68138ecc6"
+        },
+        {
+          "after": {
+            "end_line": 825,
+            "source_id": "standards/RELEASE.md",
+            "start_line": 795
+          },
+          "before": {
+            "end_line": 796,
+            "source_id": "standards/RELEASE.md",
+            "start_line": 766
+          },
+          "bytes_equal": true,
+          "text_sha256": "fed557813d7c11c2ab33b3254d76cb39e87dd02c724f50989d426069ffcfa85a"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b900056ea48ba0769417042e8e5c6389ebbd08bc9e4c9bc121393ee639e45765",
+      "before_sha256": "b900056ea48ba0769417042e8e5c6389ebbd08bc9e4c9bc121393ee639e45765",
+      "changed_fields": [],
+      "id": "C14",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "d646c5d77d642887fdffebae3561387211d471a4e71f21e6f619c6c664a8e3e4",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 691,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 619
+          },
+          "before": {
+            "end_line": 691,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 619
+          },
+          "bytes_equal": true,
+          "text_sha256": "4167f2253f8a39dd31409a17cb938aa2d6c514aa272ab9dafd3050e7e00ab048"
+        },
+        {
+          "after": {
+            "end_line": 1145,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 1088
+          },
+          "before": {
+            "end_line": 1145,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 1088
+          },
+          "bytes_equal": true,
+          "text_sha256": "1c3a94a3c83e769658d633172e58ff43d9e2f5f8738549726fe3e1f38e9b0376"
+        },
+        {
+          "after": {
+            "end_line": 1276,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 1234
+          },
+          "before": {
+            "end_line": 1276,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 1234
+          },
+          "bytes_equal": true,
+          "text_sha256": "0a2cce28b1ba79c864157e0c98ccb38caee7f37f297a2dd4940a71964fc36987"
+        },
+        {
+          "after": {
+            "end_line": 260,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 227
+          },
+          "before": {
+            "end_line": 260,
+            "source_id": "standards/EVALUATION.md",
+            "start_line": 227
+          },
+          "bytes_equal": true,
+          "text_sha256": "9646504b80cbb9d07d0873fb17fa3ec16115263e35d0070d04954a18d75ff71f"
+        }
+      ]
+    },
+    {
+      "after_sha256": "306e053e922f3624143131240afc750bfd81f3a9be84c3c55ce12d27b00a45f2",
+      "before_sha256": "630fc811b3daf0e6cc6fc01474dd9321135b54f9d5c92f0309b4ca953881da0c",
+      "changed_fields": [
+        "source_refs"
+      ],
+      "id": "C15",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "4ff0f334e442b096f5439a0183b80b4bf5d4cd7f125d8322da215b84878c2ed6",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 783,
+            "source_id": "standards/RELEASE.md",
+            "start_line": 735
+          },
+          "before": {
+            "end_line": 754,
+            "source_id": "standards/RELEASE.md",
+            "start_line": 706
+          },
+          "bytes_equal": true,
+          "text_sha256": "4a8702fde6126eea65cee16424c0c01a8ddee9d0f561cb7323e20abf7caa5db6"
+        },
+        {
+          "after": {
+            "end_line": 283,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 225
+          },
+          "before": {
+            "end_line": 283,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 225
+          },
+          "bytes_equal": true,
+          "text_sha256": "b66bcdfcc3ac6f90d54fa9c339600e9900514a719da72da1a258ac0f7541ace1"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b34eb669483de170fc737cad1fc2c7b13f63e5f6f3a514bfb729db17fe57a19a",
+      "before_sha256": "b34eb669483de170fc737cad1fc2c7b13f63e5f6f3a514bfb729db17fe57a19a",
+      "changed_fields": [],
+      "id": "C16",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "df0c8b8137909f20e5d195389ced7616dedbb71e8e18452ae01fde5b431802fe",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1591,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1519
+          },
+          "before": {
+            "end_line": 1591,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1519
+          },
+          "bytes_equal": true,
+          "text_sha256": "f42c6d3eb2ff5730ddadcae2d6ff0e3a4bd38052b5a3bf599332c714649124b7"
+        },
+        {
+          "after": {
+            "end_line": 1422,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1392
+          },
+          "before": {
+            "end_line": 1422,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1392
+          },
+          "bytes_equal": true,
+          "text_sha256": "d160d7274532fdd6a5dc046038f82f3e78633771f4b9dae8f5557bcc2d8d65aa"
+        }
+      ]
+    },
+    {
+      "after_sha256": "0d6202d79d1cd641093ee6f633d2f1db0b0a6d77ad62ffd4c34c5ad3db79efe8",
+      "before_sha256": "0d6202d79d1cd641093ee6f633d2f1db0b0a6d77ad62ffd4c34c5ad3db79efe8",
+      "changed_fields": [],
+      "id": "C17",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "909df4c1d6e9b857b6b0b22a731d2e54331e5068f6c6f94ab62b9e8cbf85890f",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 933,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 903
+          },
+          "before": {
+            "end_line": 933,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 903
+          },
+          "bytes_equal": true,
+          "text_sha256": "2a030f06afc7b69555d7aedaeeb4eea4585e3cfc29c26bd7fa773860f3f38a7a"
+        },
+        {
+          "after": {
+            "end_line": 1942,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1904
+          },
+          "before": {
+            "end_line": 1942,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1904
+          },
+          "bytes_equal": true,
+          "text_sha256": "64564365dd5ad5d25a4f4cdb442c3cece3bbc5933c57c663373bc4628f12946e"
+        }
+      ]
+    },
+    {
+      "after_sha256": "d8a69b6d4f2449f39bcead7aa161c4d7898b0ebabf1cdd1c30e252ee15f1e9fa",
+      "before_sha256": "d8a69b6d4f2449f39bcead7aa161c4d7898b0ebabf1cdd1c30e252ee15f1e9fa",
+      "changed_fields": [],
+      "id": "C18",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "4b30bcd4b35b1090c0b2889935c006b0402d775a40cf0bb50579434e9dfb3f3e",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 185,
+            "source_id": "standards/EXECUTIVE_BASELINE.md",
+            "start_line": 147
+          },
+          "before": {
+            "end_line": 185,
+            "source_id": "standards/EXECUTIVE_BASELINE.md",
+            "start_line": 147
+          },
+          "bytes_equal": true,
+          "text_sha256": "ad2017584e6d7cc0bb2dd6e2e8917b334d4554cb758fafb41a1aed115a4c8fe8"
+        },
+        {
+          "after": {
+            "end_line": 1041,
+            "source_id": "standards/EXECUTIVE_BASELINE.md",
+            "start_line": 1006
+          },
+          "before": {
+            "end_line": 1041,
+            "source_id": "standards/EXECUTIVE_BASELINE.md",
+            "start_line": 1006
+          },
+          "bytes_equal": true,
+          "text_sha256": "4a6a52320740f0ffd47cf6844d05d87c7883f7be349207e02964f6da6efa8afc"
+        },
+        {
+          "after": {
+            "end_line": 1603,
+            "source_id": "standards/EXECUTIVE_BASELINE.md",
+            "start_line": 1549
+          },
+          "before": {
+            "end_line": 1603,
+            "source_id": "standards/EXECUTIVE_BASELINE.md",
+            "start_line": 1549
+          },
+          "bytes_equal": true,
+          "text_sha256": "673dffcec5e0a294ca74efe549319672e5f94947fb68cda5cc44eab7c0423509"
+        }
+      ]
+    },
+    {
+      "after_sha256": "1ead12899451df8453de583ba03ceb3164e84b6e9ebffc82fa36dfa60e326499",
+      "before_sha256": "1ead12899451df8453de583ba03ceb3164e84b6e9ebffc82fa36dfa60e326499",
+      "changed_fields": [],
+      "id": "C19",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "93f51143dbebc1afa01f46a7f446290986ac7bef8994e5e772a0dd5174d604dc",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1724,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1695
+          },
+          "before": {
+            "end_line": 1724,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1695
+          },
+          "bytes_equal": true,
+          "text_sha256": "5082920db45ebc8039e0fd0d0b92bf1f414cf9aba3f4cdbbcd21d5ec24d65bb5"
+        },
+        {
+          "after": {
+            "end_line": 2454,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2422
+          },
+          "before": {
+            "end_line": 2454,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2422
+          },
+          "bytes_equal": true,
+          "text_sha256": "a51e45c643af0fb9510e812d76e8d7b2bcd2668fadce5ae82cae5ae3263d4691"
+        },
+        {
+          "after": {
+            "end_line": 131,
+            "source_id": "standards/PROFILES.md",
+            "start_line": 53
+          },
+          "before": {
+            "end_line": 131,
+            "source_id": "standards/PROFILES.md",
+            "start_line": 53
+          },
+          "bytes_equal": true,
+          "text_sha256": "dbf4d4956f19ccc2b217105a379d14e3963c1908d7b15954c63cc7ea7db285be"
+        },
+        {
+          "after": {
+            "end_line": 688,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 637
+          },
+          "before": {
+            "end_line": 688,
+            "source_id": "standards/PRODUCT_DEFINITION.md",
+            "start_line": 637
+          },
+          "bytes_equal": true,
+          "text_sha256": "ca5e41f28e74d19502188ed8c1d035fa59a34ca6e7ef0ac9ec9819f296be3829"
+        }
+      ]
+    },
+    {
+      "after_sha256": "426df4a2015779a288d810964cae7e4b5c7579a2a729342653c910831351bc65",
+      "before_sha256": "426df4a2015779a288d810964cae7e4b5c7579a2a729342653c910831351bc65",
+      "changed_fields": [],
+      "id": "C20",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "8d52035b1b38c9edb0164aea35bbadc2db4d386a34f1156b97a207f6460f7e30",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1368,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1286
+          },
+          "before": {
+            "end_line": 1368,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1286
+          },
+          "bytes_equal": true,
+          "text_sha256": "4c0184606fcea085c6e496c9986514a43a1160cb0382b7b6d43c71317a473e67"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b6e2eaec54650b598262aab15b27420e1530fc8a4709547ae6d9e31e1d1032a9",
+      "before_sha256": "b6e2eaec54650b598262aab15b27420e1530fc8a4709547ae6d9e31e1d1032a9",
+      "changed_fields": [],
+      "id": "C21",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a8815e52f662ccdcfb5490a6046740e992717510fe0ff428284c72d2c1b35c24",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 324,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 179
+          },
+          "before": {
+            "end_line": 324,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 179
+          },
+          "bytes_equal": true,
+          "text_sha256": "905cda66f4b267f08fffc67bdb207a32072177d5f77bab4ffc3b8a906f3438b7"
+        }
+      ]
+    },
+    {
+      "after_sha256": "4774777478b2c08a828f147081c5f994caf0d25e67d1c2b848356e2436706b28",
+      "before_sha256": "4774777478b2c08a828f147081c5f994caf0d25e67d1c2b848356e2436706b28",
+      "changed_fields": [],
+      "id": "O01",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "6211f6f25e038006726bf445b526e9d862d6badddb0ac8cf2ff95bd7581eb7a2",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 701,
+            "source_id": "standards/ODD.md",
+            "start_line": 619
+          },
+          "before": {
+            "end_line": 701,
+            "source_id": "standards/ODD.md",
+            "start_line": 619
+          },
+          "bytes_equal": true,
+          "text_sha256": "f27c8f15c4739474dfbaa5d4f2701a7bc2eff2b84dd232d70272c53652853297"
+        },
+        {
+          "after": {
+            "end_line": 795,
+            "source_id": "standards/ODD.md",
+            "start_line": 773
+          },
+          "before": {
+            "end_line": 795,
+            "source_id": "standards/ODD.md",
+            "start_line": 773
+          },
+          "bytes_equal": true,
+          "text_sha256": "a0ae56417f93900a672e2c3558e74101c918ae72e599de56f23f774c16219085"
+        }
+      ]
+    },
+    {
+      "after_sha256": "dea70b82ea004697c058f95b34af381babb2d5d9f67634b2608a952b0a747664",
+      "before_sha256": "dea70b82ea004697c058f95b34af381babb2d5d9f67634b2608a952b0a747664",
+      "changed_fields": [],
+      "id": "O02",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "94f50cbe60128ee0d4ced62f14f85a2b015acd3dc7be016d87585c13219fd4ff",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 772,
+            "source_id": "standards/ODD.md",
+            "start_line": 700
+          },
+          "before": {
+            "end_line": 772,
+            "source_id": "standards/ODD.md",
+            "start_line": 700
+          },
+          "bytes_equal": true,
+          "text_sha256": "b1fa4b1a999a11da132b8db74e6556270307d159276a1f3de30d00a1fb79afc0"
+        }
+      ]
+    },
+    {
+      "after_sha256": "2451a15303cd04c6d58674e02d8e6737d3f4de3139e8642e5156c6d648b2fe5f",
+      "before_sha256": "2451a15303cd04c6d58674e02d8e6737d3f4de3139e8642e5156c6d648b2fe5f",
+      "changed_fields": [],
+      "id": "O03",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "b57e28fa43258d83710be8be5e6d878f71f8e96fdcd16bc5465be038c999d8da",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 890,
+            "source_id": "standards/ODD.md",
+            "start_line": 796
+          },
+          "before": {
+            "end_line": 890,
+            "source_id": "standards/ODD.md",
+            "start_line": 796
+          },
+          "bytes_equal": true,
+          "text_sha256": "e9fbb913574f249579427487a40f60d2c66f231e817e45f4fdcd340f335268f4"
+        },
+        {
+          "after": {
+            "end_line": 1101,
+            "source_id": "standards/ODD.md",
+            "start_line": 1067
+          },
+          "before": {
+            "end_line": 1101,
+            "source_id": "standards/ODD.md",
+            "start_line": 1067
+          },
+          "bytes_equal": true,
+          "text_sha256": "dc7e2f8677520ec0a2185112b12e99ef37b15f53966b626974d954e82befa8ad"
+        }
+      ]
+    },
+    {
+      "after_sha256": "31b9da43b1b34e8cce24b699f6552995c64fcb8558af9914ec15cd6867aa7e2a",
+      "before_sha256": "31b9da43b1b34e8cce24b699f6552995c64fcb8558af9914ec15cd6867aa7e2a",
+      "changed_fields": [],
+      "id": "O04",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "819df592cbf5334af0ad95fa98fdb13133f5413de2c8807686659da591987e84",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 825,
+            "source_id": "standards/ODD.md",
+            "start_line": 809
+          },
+          "before": {
+            "end_line": 825,
+            "source_id": "standards/ODD.md",
+            "start_line": 809
+          },
+          "bytes_equal": true,
+          "text_sha256": "67c5ff48186143f2fad8cc3861f51f2986981277b62700adb09ec4b9790ec300"
+        },
+        {
+          "after": {
+            "end_line": 1066,
+            "source_id": "standards/ODD.md",
+            "start_line": 988
+          },
+          "before": {
+            "end_line": 1066,
+            "source_id": "standards/ODD.md",
+            "start_line": 988
+          },
+          "bytes_equal": true,
+          "text_sha256": "b93491b907fb2b2849f0063520dafdaee0ae7b0105b1a5ca92d9781924911b6f"
+        }
+      ]
+    },
+    {
+      "after_sha256": "efdacb51a34121a54e608261d4d153f248ec88550fac7f5b7b2084b0ba52523b",
+      "before_sha256": "efdacb51a34121a54e608261d4d153f248ec88550fac7f5b7b2084b0ba52523b",
+      "changed_fields": [],
+      "id": "O05",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "fbf7191fab058a12660cfe8e8917331b654ce30740b873414e7cee3df55a855c",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 987,
+            "source_id": "standards/ODD.md",
+            "start_line": 899
+          },
+          "before": {
+            "end_line": 987,
+            "source_id": "standards/ODD.md",
+            "start_line": 899
+          },
+          "bytes_equal": true,
+          "text_sha256": "cbe6fd083c2b9afdf40e69634188d178625c58a7c29344302a58840a4734a4a0"
+        },
+        {
+          "after": {
+            "end_line": 1115,
+            "source_id": "standards/ODD.md",
+            "start_line": 1084
+          },
+          "before": {
+            "end_line": 1115,
+            "source_id": "standards/ODD.md",
+            "start_line": 1084
+          },
+          "bytes_equal": true,
+          "text_sha256": "a30a70a2730b1b16e774af6ee9901aba7bea826cd1074c618c8aad31db1d83f1"
+        }
+      ]
+    },
+    {
+      "after_sha256": "3e3419db40c82ad6b513af004ae736997e818c6b7b7b4f030a15a2b3e1a3d8cf",
+      "before_sha256": "3e3419db40c82ad6b513af004ae736997e818c6b7b7b4f030a15a2b3e1a3d8cf",
+      "changed_fields": [],
+      "id": "O06",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "cca959351d4e29b782ad3eeaf32cd087ae3093c5599ebe1111f48713cd2b38b1",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1230,
+            "source_id": "standards/ODD.md",
+            "start_line": 1103
+          },
+          "before": {
+            "end_line": 1230,
+            "source_id": "standards/ODD.md",
+            "start_line": 1103
+          },
+          "bytes_equal": true,
+          "text_sha256": "a69295b11711fd5a251483892352f9f7dba57389e7dc77e89a012de41d2cbc1e"
+        }
+      ]
+    },
+    {
+      "after_sha256": "3ad08488700d2464e7a83c2e2bff525c12ea2dab0b8a69e8585aff23755e1b4d",
+      "before_sha256": "3ad08488700d2464e7a83c2e2bff525c12ea2dab0b8a69e8585aff23755e1b4d",
+      "changed_fields": [],
+      "id": "O07",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "06d7e1e0d350a970e014465a3ca793dd4fc1dfd0c21962477b74e12fa9b50706",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1066,
+            "source_id": "standards/ODD.md",
+            "start_line": 1007
+          },
+          "before": {
+            "end_line": 1066,
+            "source_id": "standards/ODD.md",
+            "start_line": 1007
+          },
+          "bytes_equal": true,
+          "text_sha256": "5183c42edc2b349fb6f242a22fe03faa146c6a5a4f8106f5b418cd1063bf73a9"
+        },
+        {
+          "after": {
+            "end_line": 1256,
+            "source_id": "standards/ODD.md",
+            "start_line": 1231
+          },
+          "before": {
+            "end_line": 1256,
+            "source_id": "standards/ODD.md",
+            "start_line": 1231
+          },
+          "bytes_equal": true,
+          "text_sha256": "d05472cb1f5e53d55e0d902e419cb169c10e1e2192fa45dc16ee0ccbbacda724"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b8564752b373aef9bc39781a800e74b9db58278050626b1758a75603232567fc",
+      "before_sha256": "b8564752b373aef9bc39781a800e74b9db58278050626b1758a75603232567fc",
+      "changed_fields": [],
+      "id": "O08",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "21ca21784f117bbbdbfada08c6db9bd7623cd53672730efc840901e07de16d9e",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1434,
+            "source_id": "standards/ODD.md",
+            "start_line": 1258
+          },
+          "before": {
+            "end_line": 1434,
+            "source_id": "standards/ODD.md",
+            "start_line": 1258
+          },
+          "bytes_equal": true,
+          "text_sha256": "25fc33325aabf2726177ec4002f4bace3fc24cbe5ed8012e9ec9aaad390b8a8d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "3e032011a2dbe8b356562324f005725bfe2e8bf8a7e02da26b29e036e768389a",
+      "before_sha256": "3e032011a2dbe8b356562324f005725bfe2e8bf8a7e02da26b29e036e768389a",
+      "changed_fields": [],
+      "id": "O09",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "55dd3dafef7d9331a36b85b24c63f778bfa7f05b05a33fb2c1b77c4d531b38d6",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 426,
+            "source_id": "standards/ODD.md",
+            "start_line": 386
+          },
+          "before": {
+            "end_line": 426,
+            "source_id": "standards/ODD.md",
+            "start_line": 386
+          },
+          "bytes_equal": true,
+          "text_sha256": "c5de43728f359851db5559cc4b7ac4f94bb826a65ec6252f4dbf33f41d4892bd"
+        },
+        {
+          "after": {
+            "end_line": 1452,
+            "source_id": "standards/ODD.md",
+            "start_line": 1436
+          },
+          "before": {
+            "end_line": 1452,
+            "source_id": "standards/ODD.md",
+            "start_line": 1436
+          },
+          "bytes_equal": true,
+          "text_sha256": "484edd999f71f8474da4569ee89f8c72445fc73cbd01608ae1fec686dfdf705e"
+        },
+        {
+          "after": {
+            "end_line": 1668,
+            "source_id": "standards/ODD.md",
+            "start_line": 1585
+          },
+          "before": {
+            "end_line": 1668,
+            "source_id": "standards/ODD.md",
+            "start_line": 1585
+          },
+          "bytes_equal": true,
+          "text_sha256": "2b9161dab63dfdccfb882101c44cbce2d908ccb343f1387572da3182af38fb1d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "e02b2f49ae14e3dfca8d743598fb64dea10c2e5f05e8225494568e0c04dfd816",
+      "before_sha256": "e02b2f49ae14e3dfca8d743598fb64dea10c2e5f05e8225494568e0c04dfd816",
+      "changed_fields": [],
+      "id": "O10",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "865f04e9b0faea19991a0f9892ae0ab4a2bfe429c556e3ce254d49208224d8dd",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1584,
+            "source_id": "standards/ODD.md",
+            "start_line": 1453
+          },
+          "before": {
+            "end_line": 1584,
+            "source_id": "standards/ODD.md",
+            "start_line": 1453
+          },
+          "bytes_equal": true,
+          "text_sha256": "e2cb4382faaa4f138f9543bfb7a3b21293734d6d5bf181d85db16da54b43a29d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "59b6fb7b595115dd107d7a1dfef79b37913fb804cd4181a03ec5d9a89f052aaf",
+      "before_sha256": "59b6fb7b595115dd107d7a1dfef79b37913fb804cd4181a03ec5d9a89f052aaf",
+      "changed_fields": [],
+      "id": "U01",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "e30a6f6e092378a0a73a60c1df123f0b77796ec62272ea8f6fe25232161907d8",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 85,
+            "source_id": "standards/UX.md",
+            "start_line": 65
+          },
+          "before": {
+            "end_line": 85,
+            "source_id": "standards/UX.md",
+            "start_line": 65
+          },
+          "bytes_equal": true,
+          "text_sha256": "695b99229b7154731dcdb67638a82e077d8bfb8aa7760521c9a01d3a36f62cd5"
+        },
+        {
+          "after": {
+            "end_line": 619,
+            "source_id": "standards/UX.md",
+            "start_line": 568
+          },
+          "before": {
+            "end_line": 619,
+            "source_id": "standards/UX.md",
+            "start_line": 568
+          },
+          "bytes_equal": true,
+          "text_sha256": "f0399e00795720f1b412685dbae81b9843e2c4e30a7ac3176d3878d430054d29"
+        }
+      ]
+    },
+    {
+      "after_sha256": "4e829422b4a4d26713097327916c665fa8835e3d7675c011e2fa2c1154b3211f",
+      "before_sha256": "4e829422b4a4d26713097327916c665fa8835e3d7675c011e2fa2c1154b3211f",
+      "changed_fields": [],
+      "id": "U02",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "b0846ae618e4443023379f1f444e2d435a315310109003743446642c29fb5813",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 369,
+            "source_id": "standards/UX.md",
+            "start_line": 241
+          },
+          "before": {
+            "end_line": 369,
+            "source_id": "standards/UX.md",
+            "start_line": 241
+          },
+          "bytes_equal": true,
+          "text_sha256": "8b7aefdb5740050ed78886bf17c33e98a7ebdcc3a06c00566414261b773b7f1a"
+        }
+      ]
+    },
+    {
+      "after_sha256": "0355c055e5b9418d83a6de4adc8ac6e6b63bb463cb9b4eeb4651258a8499af39",
+      "before_sha256": "0355c055e5b9418d83a6de4adc8ac6e6b63bb463cb9b4eeb4651258a8499af39",
+      "changed_fields": [],
+      "id": "U03",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "66ef3cca36114aa92379243b44d20e250de9bddd3d2ee47073434c61f74b7633",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 397,
+            "source_id": "standards/UX.md",
+            "start_line": 320
+          },
+          "before": {
+            "end_line": 397,
+            "source_id": "standards/UX.md",
+            "start_line": 320
+          },
+          "bytes_equal": true,
+          "text_sha256": "570da3dc4070df3d4a45cbb0ef8199b50fcee838701bcd2b39d0d60f870890e5"
+        }
+      ]
+    },
+    {
+      "after_sha256": "6ce7ae4481742e5dfd0e5ac886b4004fbb4067b278162794ef5d4ab74fc29c8c",
+      "before_sha256": "6ce7ae4481742e5dfd0e5ac886b4004fbb4067b278162794ef5d4ab74fc29c8c",
+      "changed_fields": [],
+      "id": "U04",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "98d00038b7a666aca0ae0f66cfee43f0aa234735986ff6b234ed14ddcd17faae",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 240,
+            "source_id": "standards/UX.md",
+            "start_line": 212
+          },
+          "before": {
+            "end_line": 240,
+            "source_id": "standards/UX.md",
+            "start_line": 212
+          },
+          "bytes_equal": true,
+          "text_sha256": "c3a66f942b0749e20d7878082ed33c3e763ddab3107a39f041ffc6a8cc8c285b"
+        },
+        {
+          "after": {
+            "end_line": 436,
+            "source_id": "standards/UX.md",
+            "start_line": 398
+          },
+          "before": {
+            "end_line": 436,
+            "source_id": "standards/UX.md",
+            "start_line": 398
+          },
+          "bytes_equal": true,
+          "text_sha256": "5d7bfa21b81815ea924be3817a283ddee66a10d239f535d288b2636747200f7b"
+        }
+      ]
+    },
+    {
+      "after_sha256": "6e78d9f83067bbfab874e033db1bcd0e0bbf57493999c3ac9f58ae46657999ae",
+      "before_sha256": "6e78d9f83067bbfab874e033db1bcd0e0bbf57493999c3ac9f58ae46657999ae",
+      "changed_fields": [],
+      "id": "U05",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "4cf5811cab3aa951afe14164e5b4cfbdd50d06083039015eb7761f4e8756f4ad",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 499,
+            "source_id": "standards/UX.md",
+            "start_line": 437
+          },
+          "before": {
+            "end_line": 499,
+            "source_id": "standards/UX.md",
+            "start_line": 437
+          },
+          "bytes_equal": true,
+          "text_sha256": "c2a04a17b0437c010346f074b636070a50aacb1c03cb291db4bcbf3a6edcb709"
+        }
+      ]
+    },
+    {
+      "after_sha256": "5e2eb9cae7e775e4842003716a000bd568b113b529db5319f755eb66c109616a",
+      "before_sha256": "5e2eb9cae7e775e4842003716a000bd568b113b529db5319f755eb66c109616a",
+      "changed_fields": [],
+      "id": "U06",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "cdb243a6737efd9bd80685a810e617cecdf6579093064722b69b14ef4df852e9",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 545,
+            "source_id": "standards/UX.md",
+            "start_line": 500
+          },
+          "before": {
+            "end_line": 545,
+            "source_id": "standards/UX.md",
+            "start_line": 500
+          },
+          "bytes_equal": true,
+          "text_sha256": "a4cb32b7f6482431a6a6dbf62022f1616f04ab4c579a948a0f2ee24c1b4d036b"
+        }
+      ]
+    },
+    {
+      "after_sha256": "5bd7745333dea36c8654670ea69f29a454053ac23fe4c72135b6f785a69c958d",
+      "before_sha256": "5bd7745333dea36c8654670ea69f29a454053ac23fe4c72135b6f785a69c958d",
+      "changed_fields": [],
+      "id": "U07",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "0eb9e7de775bcbaae278d4cac839c1954d2e8e19d227a1b18f00a1b6185b735c",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 591,
+            "source_id": "standards/UX.md",
+            "start_line": 546
+          },
+          "before": {
+            "end_line": 591,
+            "source_id": "standards/UX.md",
+            "start_line": 546
+          },
+          "bytes_equal": true,
+          "text_sha256": "d8057bf2366e2f687e3872f5820486378c696e403d02302098875d80d8a9f68d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "4636c5d55c46445fb602a5848d688c21eb8eb6e70c03eb9e00ddab73990bc313",
+      "before_sha256": "4636c5d55c46445fb602a5848d688c21eb8eb6e70c03eb9e00ddab73990bc313",
+      "changed_fields": [],
+      "id": "U08",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "c68f029b130a2ed55ac06fc8cc209a8005645f8fbc90362656453492abe107de",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 684,
+            "source_id": "standards/UX.md",
+            "start_line": 620
+          },
+          "before": {
+            "end_line": 684,
+            "source_id": "standards/UX.md",
+            "start_line": 620
+          },
+          "bytes_equal": true,
+          "text_sha256": "fac4183c082300bb1e6e814d255c4f759e8048367dc2b38fb876cd39aabbf938"
+        },
+        {
+          "after": {
+            "end_line": 324,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 234
+          },
+          "before": {
+            "end_line": 324,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 234
+          },
+          "bytes_equal": true,
+          "text_sha256": "8329b5d011a1e2563293397715121cf4f799cedf468276dd8c2e50ccaec5d47b"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b9644d3aa13d13bc07f122f7d4c924a45d387d1952a94242e6aa63d7d517d843",
+      "before_sha256": "b9644d3aa13d13bc07f122f7d4c924a45d387d1952a94242e6aa63d7d517d843",
+      "changed_fields": [],
+      "id": "U09",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "16523efe29cd9c11c93d0d5e264243c27fef23b7fe96719628e632ac9f98c473",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 826,
+            "source_id": "standards/UX.md",
+            "start_line": 727
+          },
+          "before": {
+            "end_line": 826,
+            "source_id": "standards/UX.md",
+            "start_line": 727
+          },
+          "bytes_equal": true,
+          "text_sha256": "094b25e7ecd28bd7083f161dfd9ce6a5c3ddcb484bb6888151485d0f3bbbee58"
+        }
+      ]
+    },
+    {
+      "after_sha256": "5a594f193c96524b85088bb6ab31d06c00993b1f9c1af0050f8fe73cc2fb4677",
+      "before_sha256": "5a594f193c96524b85088bb6ab31d06c00993b1f9c1af0050f8fe73cc2fb4677",
+      "changed_fields": [],
+      "id": "C22",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "f5845b7d952f4b284d78097c1d19d5336983c7d5485c96abdf25ca649b05d2ba",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 172,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 116
+          },
+          "before": {
+            "end_line": 172,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 116
+          },
+          "bytes_equal": true,
+          "text_sha256": "3ff2fa9c2029f1c16eda8aaa5ce210c47853f945d7ece48a5b30f1a2d703d3bf"
+        },
+        {
+          "after": {
+            "end_line": 1047,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1005
+          },
+          "before": {
+            "end_line": 1047,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 1005
+          },
+          "bytes_equal": true,
+          "text_sha256": "d422feba788630cea72b1e1c4478a9cfc4846dc7ce75c19f4d3e9aa75270d711"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b7321cdb97224a6861991ec93e42d1d5ba851567a2a290072ef9044631175e75",
+      "before_sha256": "b7321cdb97224a6861991ec93e42d1d5ba851567a2a290072ef9044631175e75",
+      "changed_fields": [],
+      "id": "C23",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "a338574f8c500e82e1e78448c3fccbfde2c3027190505b9841cf3cee2d244a52",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1232,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 1146
+          },
+          "before": {
+            "end_line": 1232,
+            "source_id": "standards/TICKETS.md",
+            "start_line": 1146
+          },
+          "bytes_equal": true,
+          "text_sha256": "80e204cc490afa6858db0627d8090cc323585d099e4770d73ba6be50dfee4f5d"
+        }
+      ]
+    },
+    {
+      "after_sha256": "0be7038cf9561525e462c7f129b5fa682e1d6c77ca9b1793df03b10bcef30b2d",
+      "before_sha256": "0be7038cf9561525e462c7f129b5fa682e1d6c77ca9b1793df03b10bcef30b2d",
+      "changed_fields": [],
+      "id": "C24",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "2e25af89c677b38a8fac44112c8cdd09a4627d578d9ff55edcdb036e7d3eef86",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1047,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 968
+          },
+          "before": {
+            "end_line": 1047,
+            "source_id": "standards/ACTIVATION.md",
+            "start_line": 968
+          },
+          "bytes_equal": true,
+          "text_sha256": "061d7764dc4331e970983bcb780a3b2f6bf4a0028be7a256b0cf9a9f5e51c6b9"
+        },
+        {
+          "after": {
+            "end_line": 577,
+            "source_id": "standards/REFERENCE_FRAME.md",
+            "start_line": 513
+          },
+          "before": {
+            "end_line": 577,
+            "source_id": "standards/REFERENCE_FRAME.md",
+            "start_line": 513
+          },
+          "bytes_equal": true,
+          "text_sha256": "f628a938f69746c55d7b92b9646c5e7de8cb5a93381e954249fb3d8ac4e26d88"
+        }
+      ]
+    },
+    {
+      "after_sha256": "68bb9470c91416d171b43a521cbf1daad2f94f8d4a3ebebf5399fa0a8f8d17a9",
+      "before_sha256": "68bb9470c91416d171b43a521cbf1daad2f94f8d4a3ebebf5399fa0a8f8d17a9",
+      "changed_fields": [],
+      "id": "D38",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "b86a62785028105b93dc63587afdaf1927b41def5c454f0d863135fad6b22570",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 1765,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1726
+          },
+          "before": {
+            "end_line": 1765,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 1726
+          },
+          "bytes_equal": true,
+          "text_sha256": "c532208671883ddf522223cb6a62e5a252ae27db052bc9e0ef2b6dc953eaf5c5"
+        }
+      ]
+    },
+    {
+      "after_sha256": "b36386e0ca5cc556532e3b8f549f5c482763bff44c9e24b0919d5c3651efcdeb",
+      "before_sha256": "b36386e0ca5cc556532e3b8f549f5c482763bff44c9e24b0919d5c3651efcdeb",
+      "changed_fields": [],
+      "id": "D39",
+      "semantic_fields_equal": true,
+      "semantic_fields_sha256": "59e97ca34acfa2e57cd8f9c918c866771728c5fd562040743c8917069fb03004",
+      "source_grounds": [
+        {
+          "after": {
+            "end_line": 309,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 303
+          },
+          "before": {
+            "end_line": 309,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 303
+          },
+          "bytes_equal": true,
+          "text_sha256": "206b13ae3236b9c95010ae409bf7f2061f90012cb915e60f0f859e5c2b6270ee"
+        },
+        {
+          "after": {
+            "end_line": 2340,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2064
+          },
+          "before": {
+            "end_line": 2340,
+            "source_id": "standards/DESIGN_MODULE.md",
+            "start_line": 2064
+          },
+          "bytes_equal": true,
+          "text_sha256": "57ff3c9d03089f9515ff87bca72ef83e5d1d49c87f458efa8f57a5a6bb784c5d"
+        }
+      ]
+    }
+  ],
+  "scope_disposition": {
+    "path": "SOURCE-IMPACT.md",
+    "sha256": "ce2194a84a5e95069aa17a191fd26f5aa3ae56eef0cabf046fc5dff5b8721f87"
+  },
+  "selected_source_members": [
+    {
+      "bytes_equal": true,
+      "id": "standards/DESIGN_MODULE.md",
+      "new_bytes": 175366,
+      "new_sha256": "741b798ea2e71797bd884817eb6903ae1a1431c97a989ab5741ffa315a3bd1e2",
+      "old_bytes": 175366,
+      "old_sha256": "741b798ea2e71797bd884817eb6903ae1a1431c97a989ab5741ffa315a3bd1e2"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/SPEC_METHOD.md",
+      "new_bytes": 148190,
+      "new_sha256": "06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e",
+      "old_bytes": 148190,
+      "old_sha256": "06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/ASSURANCE.md",
+      "new_bytes": 87324,
+      "new_sha256": "5f6740a39355314ea2a9227a8795ea68cdafb2c4c3e9b25e1d9e626eb43f27ca",
+      "old_bytes": 87324,
+      "old_sha256": "5f6740a39355314ea2a9227a8795ea68cdafb2c4c3e9b25e1d9e626eb43f27ca"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/EVALUATION.md",
+      "new_bytes": 91301,
+      "new_sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485",
+      "old_bytes": 91301,
+      "old_sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/ACTIVATION.md",
+      "new_bytes": 142205,
+      "new_sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "old_bytes": 142205,
+      "old_sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/FOUNDATIONS.md",
+      "new_bytes": 131400,
+      "new_sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e",
+      "old_bytes": 131400,
+      "old_sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/TICKETS.md",
+      "new_bytes": 100401,
+      "new_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67",
+      "old_bytes": 100401,
+      "old_sha256": "86fefd277ab513b3f22d8e827967d18c4a7ee41558a6daf896c9ad60c9240e67"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/IDENTITY.md",
+      "new_bytes": 29087,
+      "new_sha256": "c70399311010a8835b00d2a887a2451f11f66f631d6217d8df4be41751a59c08",
+      "old_bytes": 29087,
+      "old_sha256": "c70399311010a8835b00d2a887a2451f11f66f631d6217d8df4be41751a59c08"
+    },
+    {
+      "bytes_equal": false,
+      "id": "standards/RELEASE.md",
+      "new_bytes": 64863,
+      "new_sha256": "eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628",
+      "old_bytes": 62982,
+      "old_sha256": "b5aedcbfc68c6a168bc4c220828146f94b181a3c0fc3925405259890f6fe6886"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/PRODUCT_DEFINITION.md",
+      "new_bytes": 85568,
+      "new_sha256": "7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523",
+      "old_bytes": 85568,
+      "old_sha256": "7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/REFERENCE_FRAME.md",
+      "new_bytes": 103687,
+      "new_sha256": "4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64",
+      "old_bytes": 103687,
+      "old_sha256": "4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/AXIOMATIC_CALCULUS.md",
+      "new_bytes": 92360,
+      "new_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+      "old_bytes": 92360,
+      "old_sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/PROFILES.md",
+      "new_bytes": 7801,
+      "new_sha256": "076d5c17a06d372ed1efdc7909f9dc93c3193513ff233c48df2915810ffeffa4",
+      "old_bytes": 7801,
+      "old_sha256": "076d5c17a06d372ed1efdc7909f9dc93c3193513ff233c48df2915810ffeffa4"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/ODD.md",
+      "new_bytes": 126573,
+      "new_sha256": "06fe72e2fe11f0b63464a85fefbf29506ee81230ecc7ff4792d930abe574fbb9",
+      "old_bytes": 126573,
+      "old_sha256": "06fe72e2fe11f0b63464a85fefbf29506ee81230ecc7ff4792d930abe574fbb9"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/UX.md",
+      "new_bytes": 56045,
+      "new_sha256": "236df084b51620fcc16c042db745448540777f7dab40c92cd946e7375a4815a0",
+      "old_bytes": 56045,
+      "old_sha256": "236df084b51620fcc16c042db745448540777f7dab40c92cd946e7375a4815a0"
+    },
+    {
+      "bytes_equal": true,
+      "id": "standards/EXECUTIVE_BASELINE.md",
+      "new_bytes": 165730,
+      "new_sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff",
+      "old_bytes": 165730,
+      "old_sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff"
+    }
+  ],
+  "source_coverage_equal": true,
+  "standing": "Reproducible author conservation claim for independent assessment; equality controls do not establish semantic completeness.",
+  "successor": {
+    "corpus_sha256": "0606bba1203fb7681b4311fa14210403132a65bfc270cfa1f04939d8724cd7eb",
+    "index_id": "stdo-3.0.5-rc.1-python-pure-refactor-v2",
+    "index_raw_sha256": "fb591cf8471dabb249a90500e0909aff9f37eb2d4999470a9e9ba88f29ca518e",
+    "index_sha256": "b0c49539583baa3b29e77864b619e50c67da49027880d61cf4367b8068c614cb",
+    "purpose_sha256": "85578b9b036c90c174f5f73faf346e4b2688c34ddf925bfa36f3ecbec58590a1",
+    "view_sha256": "28e44e42f120513184186ec79be7d3536238bca50294766002f4a50dfc085443"
+  },
+  "unresolved_equal": true
+}

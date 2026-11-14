@@ -1,114 +1,57 @@
 # Project reference-frame basis
 
-Current delivery: the [3.0.5 contract](RELEASE_3_0_5.md) selects released 3.0.4 as builder and all five Products in one 3.0.5 cohort. Earlier basis/qualification statements below retain their historical scope unless explicitly carried forward by current evidence.
+Identity: `urn:stdo-skills:frame-basis:sdlc-defaults:1`.
+Construction basis: exact STDO 3.0.4 selected by [Product Definition](../stdo_skills.json).
+Scope: the owner's 2026-11-12 Product alignment and 2026-11-13 governing-context
+coverage completion and latest-method index correction, plus the approved
+2026-11-14 SDLC default and workflow-context delivery. The indexed corpus is selected separately from this
+Product's unchanged construction basis.
 
-Identity: `urn:stdo-skills:frame-basis:initial:1`.
-Status: selected for bounded construction by Root at common inventory
-`a6d348b8385ea453ce29362fb9d74559304b1b91743b3c9ea31a83a9f02b5f2d`,
-recorded in [operator/DECISIONS.md](../.ai-workspace/work/T001/operator/DECISIONS.md).
-This status projection changes no frame criteria or original frozen source.
-Product acceptance and release remain separate.
-
-## Method, outcome and authority
-
-The complete method is STDO v3.0.1-rc.1, manifest
-`60356364a412dbde8cffe68fe0eda4e2749b0162acce93495534eee13b223df8`.
-Read the exact installed REFERENCE_FRAME and ACTIVATION owners. This configuration
-applies the Executive/Worker/Reviewer relations of EXECUTIVE_BASELINE §§6, 8–10,
-12 and 16 to the owner's selected dogfood construction, while retaining the
-sufficient direct Writer branch. It makes no claim of completed profile
-qualification or automatic applicability of every available specialist frame.
-
-The governed mutable source is this `stdo_skills/` Product. The outcome is two
-usable skill tenants satisfying the common requirements and assessed on the
-finite declared tasks. Jim owns Product acceptance and release. Root's bounded
-construction decisions and exact user instruction are in [T-001](../.ai-workspace/tickets/active/T-001-skills-dogfood.md).
-An actor label supplies no effect grant or admission. The initial construction
-interpretation and subsequent admission obligation remain explicit there.
-
-## Frames and coordinates
-
-T-003 selects a bounded cross-Product construction using the a_c project-build
-contract and local filesystem Writer mechanism. Its ticket binds the exact
-territory and source-as-data operation. Target-method source identity does not
-change the Skills builder or issue another profile's lifecycle admission.
-Independent review assesses the public command-to-artifact path and native
-host observations, retaining prior qualification gaps separately.
-
-| Frame | Evaluation and material attention | Authority, evidence and return |
+| Frame | Attention and responsibility | Return and boundary |
 |---|---|---|
-| Executive `skills.executive/1` | Exact Product outcome, dependency-ready frontier, current candidate identities, closed returns, tool compatibility and remaining claims | Select only authorized bounded actions; no mutation in this frame; consumes source-bound returns and records decisions through a granted Writer |
-| Worker `skills.worker/1` | Exact requirement/design, affected producers/consumers, selected host/tool contracts, operation territory and proof predicates | Construct only within grant; self-review and return exact candidate, performed/unperformed evaluations, effects, residuals and invalidators to Executive |
-| Reviewer `skills.reviewer/1` | Source-derived expected behavior, exact frozen candidate and actual-path evidence, exposure history and test semantics | Independent assessment, not repair or promotion; return findings, severity, evidence, affected claims and uncertainty to Executive |
-| Direct Writer `skills.direct-writer/1` | One sufficient local outcome, existing basis and effect grant, current preimage and focused proof | No coordination or independent review added solely from task existence; admission and exact territory still required; return to declared consumer |
+| Executive | Exact Product outcome, dependency frontier, frozen subjects and existing authority | Coordinates and consumes closed results; does not perform Writer effects |
+| Writer / Worker | Exact source territory, preimages, contracts, actual operations and checks | Constructs within grant; retains failed/unperformed checks and residuals |
+| Independent reviewer | Source-derived obligations, exact closed candidate and actual-path evidence | Assesses without repair or self-assessment; reports limits and invalidators |
+| Direct Writer | One sufficient local outcome with existing basis and effect grant | No mandatory orchestration invented merely because a task exists |
 
-Each activation names frame/revision, exact evaluation/result algebra, subject and
-basis, material invariants, authorities, evidence/tools, capability/context
-envelope, exclusions, dependencies, consumer and stop/re-entry conditions, as
-REFERENCE_FRAME §11 requires. File identities use content hashes or exact commits;
-host/model settings and tool/profile versions are material coordinates. Results
-use ACTIVATION's work/result refinements with named predicates, not an invented
-local pass algebra.
+Each activation binds outcome, source and subject identities, territory, authority,
+material invariants, tools, consumer and stop/re-entry conditions. Preserve unknown
+applicability and original-source access. An index or handoff routes attention;
+it cannot replace the deciding source or grant mutation/acceptance authority.
 
-No actor receives the entire repository merely because it is available. The
-Executive selects the deciding frontier. Workers acquire the causal cone needed
-for their own change; Reviewers acquire sources independently. Measured task
-context, actor capability and remaining unknowns accompany each activation.
+Current evidence must identify the exact package and dependencies, host path,
+performed/unperformed predicates and changed subjects. Historical T-001/T-003,
+composition and 3.0.5 records remain on their original bases. Their completion or
+admission does not qualify these changed source bytes. Product acceptance and
+release remain separate from construction and bounded local checks.
 
-## Known evaluation inventory and coverage
+## Selected SDLC default
 
-| Evaluation | Source and dependency | Current disposition |
-|---|---|---|
-| E01 Exact static method and definition | Product selection; manager verification | Exact installed pin verified; common selection and stable Product owner binding recorded |
-| E02 Common outcome and requirement adequacy | Intent, Product, SK-01..12 | Selected for construction; actual source-first Claude static review reports no actionable S0–S2 in its acquired scope |
-| E03 Tool contract compatibility | SK-04; exact a_c and manager implementations | Native binding implemented and used; 103 affected checks pass; results.conjoin unsupported and retained S3 discovery limitation |
-| E04 Codex realization binding | E02, E03; tenant design and host contract | Implemented; exact package and evidence indexed in DELIVERY.md |
-| E05 Claude realization binding | E02, E03; tenant design and host contract | Implemented; exact package and evidence indexed in DELIVERY.md |
-| E06 Actual host discovery and task behavior | E04/E05; Q01..12 and independent oracle | Finite actual-host evidence retained; Claude repair-2 lifecycle and Codex Q05 independently supported; mandatory Claude Q05 on declared CLI transport remains open |
-| E07 Independent candidate assessment | Frozen source and E06 evidence | Actual cross-family static assessment plus nonauthor host/lifecycle readbacks; Claude transport-boundary and closed failure-capsule readbacks retained; no completed Claude candidate review |
-| E08 Delivery disposition and residuals | Current results for E01..07 | Initial dogfood packages implemented with bounded evidence; full qualification withheld by Claude Q05 gap; Jim retains acceptance/release |
+The [owner-admitted work](../../.ai-workspace/work/SDLC_DEFAULTS_2026-11-14/ACTIVATION.md)
+selects the shared [SDLC default projection](../../specification_methodology/v3/build_tenants/common/standards/SDLC_DEFAULTS.md#selected-default-flow)
+for this Product. Selected projection SHA-256:
+`a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8`.
+Its existing-law owners are resolved against the verified installed 3.0.4
+constitution. The projection is guidance, not a second constitution. A material
+change needs refreshed identity and adoption applicability before reliance.
 
-Material interface, configuration, lifecycle, authority, recovery, proof and
-usability concerns are covered through these evaluations and their causal seams.
-The exact deployed skill package, actual host invocation and tool response form
-the ordinary proof path. Hosted-service availability, general optimal context
-selection, statistical model reliability and quantified benefit remain explicit
-residuals until separately tested. No generic frame family is declared satisfied
-merely because this table names a nearby concern.
+The default applies bounded work, QA, causal triage, owner re-entry and verification
+to the exact claim. Use the sufficient direct Writer path above and coordinate
+material boundaries. Reviewer severity informs the decision owner; findings do
+not themselves enlarge the grant, assign priority or create another review gate.
+The adopted Executive configuration retains its selected repair/recheck rules,
+separate landing/closure/release conditions, resource limits and valid-evidence
+reuse. Product-specific thresholds and explicit gates remain declared choices.
 
-## Conjunction, invalidation and decisions
+For workflow constraints, Skills uses the separately selected SDLC purpose index
+and original-source routes. A development-source binding does not replace this
+installed constitution. Unknown applicability and missing required evidence
+withhold their dependent claims while preserving unrelated authorized progress.
 
-For a claimed capability, all applicable required predicates must have current
-support on compatible subjects/bases. Unknown applicability remains unresolved;
-contradictory results require disposition, not majority voting. No implicit
-translation joins different method or host coordinates. Root may retain valid
-unaffected evidence and activates only the affected new evaluation after change.
-
-Invalidate affected reliance after source/tool/profile/host change, changed
-authority or scope, a counterexample, failed custody, or a context projection
-that loses a required future distinction. An uncertain effect is reconciled
-before retry. Failed construction re-enters the governing owner actually shown
-to be insufficient; it does not automatically reopen all upstream design.
-
-Review severity is S0 catastrophic irreversible harm or systemic unauthorized
-effects; S1 major authority/basis violation or broadly unusable core outcome;
-S2 reproducible material functional/semantic failure in a supported ordinary
-path; S3 bounded defect with a practical workaround or limited consequence;
-S4 minor clarity/usability issue without demonstrated material outcome failure.
-The reviewer supplies the effect and evidence supporting that grade. Root assigns
-work priority and decides the effect on the selected delivery claim separately.
-A failed mandatory predicate or unresolved authority/effect condition withholds
-its dependent claim regardless of severity; unrelated observations do not block
-it. An initial common candidate or a successful test is not owner acceptance.
-
-A nonauthor native subagent in the same model family supplies nonauthor evidence
-with a semantic-independence limitation. It does not establish cross-family
-independence. The frozen common/tool/Codex candidate received an actual fresh Claude review;
-its exposure, selected population and actual resolved model remain in the
-[retained return](../.ai-workspace/work/T001/operator/protected-evidence/objects/b56b4ebdb38d47bd27d35637fd16e79b1120a18e78322b27bcfde397b248b19a.json).
-Later host readbacks and localized Codex-authored Claude repairs retain their own
-independence limits and do not expand that review's claim.
-
-Durable activation, result, decision and residual records live under T-001's work
-surface. A fresh actor can reconstruct the frontier from those records and exact
-source; chat memory and hidden reasoning are not required evidence.
+The owner's [four-layer continuation](../../.ai-workspace/work/TICKET_CONTEXT_CONSTITUTION_2026-11-14/ACTIVATION.md)
+selects this exact corrected projection. TICKETS applies constitutional context
+and continuation law through the sufficient carrier; ACTIVATION remains its
+generic owner. The source clarification conserves the installed construction
+basis's existing duties. The default, consuming Skills and index carry those
+duties; the guide remains nondeciding. No other Product or installation is
+migrated by this local selection.

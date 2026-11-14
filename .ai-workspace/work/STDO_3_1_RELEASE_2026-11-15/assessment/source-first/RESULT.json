@@ -1,0 +1,111 @@
+{
+  "kind": "stdo.release-assessment.source-first-stage/1",
+  "status": "source_expectations_recorded; candidate_assessment_not_performed",
+  "recorded_at_utc": "2026-11-14T15:26:36.990175+00:00",
+  "scope": "Authorized six-Product 3.1.0-rc.1 release qualification expectations; no candidate verdict",
+  "construction_basis": {
+    "uri": "stdo://releases/v3.0.4/",
+    "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+  },
+  "actor": {
+    "family": "Claude",
+    "model": "claude-opus-5-5",
+    "provider": "firstParty",
+    "session_id": "560d319d-7fc9-45c3-8a82-b2eb8c0ad8d1",
+    "cli_version": "2.1.323"
+  },
+  "execution": {
+    "exit_code": 0,
+    "terminal_reason": "completed",
+    "stop_reason": "end_turn",
+    "duration_ms": 308474,
+    "num_turns": 1,
+    "tool_uses": [],
+    "permission_denials": [],
+    "subagents_spawned": 0
+  },
+  "host_observations": {
+    "requested_safe_mode": true,
+    "requested_builtin_tools": [],
+    "init_tools": [],
+    "init_mcp_servers": [],
+    "init_plugins": [
+      {
+        "name": "spec",
+        "path": "/Users/jim/.claude/plugins/cache/specification_stack/spec/2.5.0-rc.6",
+        "source": "spec@specification_stack",
+        "version": "2.5.0-rc.6"
+      },
+      {
+        "name": "cc-plugin-agents-md",
+        "path": "builtin",
+        "source": "cc-plugin-agents-md@builtin"
+      },
+      {
+        "name": "cc-plugin-telemetry",
+        "path": "builtin",
+        "source": "cc-plugin-telemetry@builtin"
+      },
+      {
+        "name": "cc-plugin-privacy",
+        "path": "builtin",
+        "source": "cc-plugin-privacy@builtin"
+      },
+      {
+        "name": "cc-plugin-plugin-authoring",
+        "path": "builtin",
+        "source": "cc-plugin-plugin-authoring@builtin"
+      }
+    ],
+    "reviewer_reported_additional_tool": "advisor capability visible to model; reviewer explicitly reports no call",
+    "residual": "No asserted clean-room or complete tool-inventory enforcement. Fresh no-resume session and supplied system/source packet are recorded; host/context metadata limits remain explicit."
+  },
+  "source_expectations": {
+    "release_predicates": 17,
+    "matrix_sections": [
+      "native",
+      "ticket-context",
+      "purpose-context",
+      "skills",
+      "visual-only",
+      "cross-product",
+      "migration"
+    ],
+    "candidate_predicate_results": []
+  },
+  "next_boundary": "Root supplies frozen A/B identities, final claims/migration dispositions, authorship map, final indexes/queries and applicable evidence; exact candidate assessment remains unperformed.",
+  "evidence": {
+    "SOURCE_PACKET.md": {
+      "sha256": "720dccd55688baee792b7a96af4d4dd6e082d035aeaaeef249141311d4827ff5",
+      "bytes": 572222
+    },
+    "SOURCE_MANIFEST.json": {
+      "sha256": "4706230c142d13c5aa3aafd835af5aaabccfaa8e59d8b1b2e8ae5a4869cf3ab5",
+      "bytes": 45453
+    },
+    "INVOCATION.json": {
+      "sha256": "d09c5b339c4c67bc71da74a24c08d9340742c96d29a5689993b09a7c21e050fa",
+      "bytes": 1880
+    },
+    "CLI_VERSION.txt": {
+      "sha256": "6ed611782bb054b29144b6975023a2729b4fa967ef871fc679e712686473e31b",
+      "bytes": 22
+    },
+    "AUTH_STATUS.json": {
+      "sha256": "07c14084f299f1ed743f37334ad7f8ce7ca1341f5da5ba2017c7328209cafb21",
+      "bytes": 238
+    },
+    "claude.stdout.jsonl": {
+      "sha256": "503dea6ae2bc87523746a4e1bc3a9ca0ad80f546aa59fe9d611af7d3abe23104",
+      "bytes": 177162
+    },
+    "claude.stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "CLAUDE_EXPECTATIONS.md": {
+      "sha256": "67aad938b407a4a6616df679d87efe2dd02287a70d6a082a34d03419ba54e4d2",
+      "bytes": 33354
+    }
+  }
+}

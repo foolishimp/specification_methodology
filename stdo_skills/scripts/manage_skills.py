@@ -1,18 +1,22 @@
 #!/usr/bin/env python3
-"""Install one STDO Skills 3.0.5-rc.1 host binding beside one exact native owner."""
+"""Install an exact Skills package over its independently selected Products."""
 from pathlib import Path
 import argparse
 import hashlib
+import importlib.util
 import json
 import os
 import re
 import shutil
-import stat
 import subprocess
 import sys
 
-VERSION = '3.0.5-rc.1'
 CORE = ('stdo-work', 'stdo-review', 'stdo-ticket', 'stdo-status', 'stdo-help')
+BUNDLE = 'stdo-skills-dev'
+RECEIPT = 'stdo-skills-dev.receipt.json'
+RELEASE_BUNDLE = 'stdo-skills'
+RELEASE_RECEIPT = 'stdo-skills.receipt.json'
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def sha(raw):
@@ -20,305 +24,280 @@ def sha(raw):
 
 
 def encode(value):
-    return (json.dumps(value, sort_keys=True, indent=2) + '\n').encode()
+    return (json.dumps(value, indent=2, sort_keys=True) + '\n').encode()
 
 
 def read(path):
     path = Path(path)
-    for parent in (path, *path.parents):
-        if parent.is_symlink():
-            raise ValueError('Symlink path is unsupported: ' + str(parent))
-    if not stat.S_ISREG(path.stat().st_mode):
-        raise ValueError('Expected a regular file: ' + str(path))
+    if any(p.is_symlink() for p in (path, *path.parents)) or not path.is_file():
+        raise ValueError('Expected regular file without symlink ancestors: ' + str(path))
     return path.read_bytes()
 
 
 def tree(root):
     root = Path(root)
     if root.is_symlink() or not root.is_dir():
-        raise ValueError('Expected a real directory: ' + str(root))
+        raise ValueError('Expected real source directory: ' + str(root))
     result = {}
-    directories = set()
     for current, dirs, files in os.walk(root, followlinks=False):
-        directories.update((Path(current) / name).relative_to(root).as_posix() for name in dirs)
         for name in dirs:
             if (Path(current) / name).is_symlink():
-                raise ValueError('Symlink directory is unsupported')
+                raise ValueError('Symlink directory in owned tree')
         for name in files:
-            path = Path(current) / name
-            result[path.relative_to(root).as_posix()] = read(path)
-    expected_dirs = {parent.as_posix() for name in result for parent in Path(name).parents if str(parent) != "."}
-    if directories != expected_dirs:
-        raise ValueError("Uninventoried empty directory in selected tree")
+            p = Path(current) / name
+            result[p.relative_to(root).as_posix()] = read(p)
     return result
 
 
+def provider(package):
+    path = Path(package) / 'skills/stdo-context/scripts/provider.py'
+    spec = importlib.util.spec_from_file_location('skills_product_binding', path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def validate_package(package):
-    package = Path(package).absolute()
-    raw = read(package / 'release/3.0.5-rc.1/manifest.json')
-    manifest = json.loads(raw)
-    if (manifest.get('version') != VERSION or manifest.get('kind') != 'stdo-skills.package/1'
-            or manifest.get('target') != 'stdo://releases/v' + VERSION + '/'):
-        raise ValueError('Unsupported Skills package')
-    declared = {row['path'] for row in manifest['files']}
+    package = Path(package).resolve(strict=True)
+    raw = read(package / 'INVENTORY.json'); manifest = json.loads(raw)
+    if manifest.get('kind') not in {'stdo-skills.development-package/1', 'stdo-skills.release-package/1'}:
+        raise ValueError('Expected an explicitly inventoried Skills package')
+    if manifest.get('product_definition_id') != 'urn:stdo:product-definition:stdo-skills':
+        raise ValueError('Package Product identity differs')
+    if manifest['kind'] == 'stdo-skills.release-package/1':
+        release_identity(manifest['release'])
+    declared = {x['path']: x for x in manifest['files']}
     if len(declared) != len(manifest['files']):
         raise ValueError('Duplicate package member')
-    for host in ('codex', 'claude'):
-        prefix = 'build_tenants/' + host + '/current'
-        actual = {prefix + '/' + name for name in tree(package / prefix)}
-        if actual != {name for name in declared if name.startswith(prefix + '/')}:
-            raise ValueError('Host package population differs from its inventory')
-    for row in manifest['files']:
-        path = row['path']
-        if Path(path).is_absolute() or any(p in ('', '.', '..') for p in path.split('/')):
-            raise ValueError('Unsafe package path')
-        value = read(package / path)
-        if sha(value) != row['sha256'] or len(value) != row['bytes']:
-            raise ValueError('Skills package member differs: ' + path)
-    return manifest, sha(raw)
+    actual = tree(package); actual.pop('INVENTORY.json')
+    if set(actual) != set(declared):
+        raise ValueError('Package population differs from its exact inventory')
+    for name, data in actual.items():
+        if sha(data) != declared[name]['sha256'] or len(data) != declared[name]['bytes']:
+            raise ValueError('Package member changed: ' + name)
+    required = {'scripts/manage_skills.py', 'skills/stdo-context/SKILL.md',
+                'skills/stdo-context/BINDING.json', 'skills/stdo-context/scripts/provider.py',
+                'specification/composition/DEPENDENCIES.json'}
+    if not required <= set(actual):
+        raise ValueError('Incomplete Skills adapter package')
+    return package, manifest, sha(raw)
 
 
-def verified_method(definition, method_root, stdo):
-    definition = Path(definition).absolute(); method_root = Path(method_root).absolute()
+def release_identity(value):
+    version = value['version']; method = value['native_method']
+    if not isinstance(version, str) or not re.fullmatch(r'\d+\.\d+\.\d+(?:-rc\.\d+)?', version):
+        raise ValueError('Invalid exact Skills release version')
+    if method['uri'] != 'stdo://releases/v' + version + '/' or not re.fullmatch(r'[0-9a-f]{64}', method['manifest_sha256']):
+        raise ValueError('Release package native binding differs')
+    return value
+
+
+def executable(path):
+    path = Path(shutil.which(str(path)) or path).absolute()
+    if not path.is_file() or not os.access(path, os.X_OK):
+        raise ValueError('Selected executable unavailable: ' + str(path))
+    return {'invocation': str(path), 'sha256': sha(path.resolve(strict=True).read_bytes())}
+
+
+def native_method(definition, method_root, stdo):
+    definition = Path(definition).resolve(strict=True); root = Path(method_root).resolve(strict=True)
     selected = json.loads(read(definition))['constitution']['stdo']['basis']
-    if selected['uri'] != 'stdo://releases/v3.0.5-rc.1/':
-        raise ValueError('Host installation requires the exact selected 3.0.5-rc.1 Product basis')
-    run = subprocess.run([stdo, 'status', '--definition', str(definition), '--verify'], capture_output=True, text=True, timeout=60)
-    if run.returncode:
-        raise ValueError('Method verification failed: ' + (run.stderr or run.stdout))
-    observed = json.loads(run.stdout)
-    if observed.get('basis') != selected['uri'] or observed.get('manifest_sha256') != selected['manifest_sha256'] or observed.get('installed') is not True or observed.get('valid') is not True or observed.get('failures'):
-        raise ValueError('Manager did not verify the exact selected Product basis')
-    if Path(observed.get('path', '')).resolve() != method_root.resolve() or Path(observed.get('definition', '')).resolve() != definition.resolve():
-        raise ValueError('Manager verified a different method installation or Product')
-    manifest_raw = read(method_root / 'manifest.json')
-    manifest = json.loads(manifest_raw)
-    if sha(manifest_raw) != selected['manifest_sha256'] or manifest['release']['cut'] != 'v3.0.5-rc.1':
-        raise ValueError('Selected method root differs from the verified Product basis')
-    plugin = manifest['auxiliary']['plugin']; native = method_root / plugin['installed_root']
-    files = tree(native)
-    expected = {row['path']: row['sha256'] for row in plugin['members']}
-    if len(expected) != plugin['member_count'] or set(files) != set(expected) or any(sha(raw) != expected[name] for name, raw in files.items()):
-        raise ValueError('Native skill population or bytes differ from verified installation')
-    return selected, files, observed
-
-
-def runtime_pins(ac_root):
-    ac_root = Path(ac_root).absolute()
-    if read(ac_root / 'VERSION').decode().strip() != VERSION:
-        raise ValueError('Selected a_c source package is not 3.0.5-rc.1')
-    selected = [ac_root / 'VERSION']
-    for directory, suffix in [('scripts', '.py'), ('build_tenants/graphify/code', ''), ('build_tenants/lean/scripts', '.py'), ('build_tenants/lean/AC', '.lean'), ('build_tenants/lean/profiles', '.json')]:
-        selected.extend(p for p in (ac_root / directory).rglob('*' + suffix) if p.is_file() and '__pycache__' not in p.parts)
-    selected.extend([ac_root / 'build_tenants/graphify/design/fd-method-stdo-3.0.5-rc.1.json', ac_root / 'build_tenants/lean/toolchain-lock.json', ac_root / 'build_tenants/lean/lake-manifest.json'])
-    return {p.relative_to(ac_root).as_posix(): sha(read(p)) for p in sorted(set(selected))}
-
-
-def python_selection(invocation):
-    # A venv symlink's invocation directory determines sys.prefix and packages.
-    # Keep that spelling; physical identity is a separate currentness check.
-    invocation = Path(invocation).absolute()
-    if not invocation.is_file() or not os.access(invocation, os.X_OK):
-        raise ValueError('Selected Python invocation is not executable')
-    physical = invocation.resolve(strict=True)
-    return {'invocation': str(invocation), 'physical_path': str(physical), 'sha256': sha(read(physical))}
-
-
-def manager_selection(invocation, launcher=None):
-    invocation = Path(shutil.which(str(invocation)) or invocation).absolute()
-    if not invocation.is_file() or not os.access(invocation, os.X_OK):
-        raise ValueError('Selected manager invocation is not executable')
-    physical = invocation.resolve(strict=True)
-    identity = {'invocation': str(invocation), 'physical_path': str(physical),
-                'sha256': sha(read(physical)), 'runtime_launcher': launcher}
-    if launcher is not None:
-        expected = {'path', 'sha256', 'manager', 'manager_sha256', 'store', 'manifest', 'manifest_sha256'}
-        if not isinstance(launcher, dict) or set(launcher) != expected:
-            raise ValueError('Malformed selected manager launcher identity')
-        if any(not isinstance(launcher[key], str) or not Path(launcher[key]).is_absolute()
-               for key in ('path', 'manager', 'store', 'manifest')):
-            raise ValueError('Selected manager launcher paths must be absolute')
-        if launcher['path'] != str(invocation) or sha(read(invocation)) != launcher['sha256']:
-            raise ValueError('Selected manager launcher changed')
-        if sha(read(launcher['manager'])) != launcher['manager_sha256']:
-            raise ValueError('Selected underlying manager changed')
-        store = Path(launcher['store'])
-        if not store.is_dir() or store.resolve(strict=True) != store:
-            raise ValueError('Selected manager store changed')
-        if Path(launcher['manifest']) != store / 'releases' / ('v' + VERSION) / 'manifest.json':
-            raise ValueError('Selected launcher manifest does not belong to its store')
-        if sha(read(launcher['manifest'])) != launcher['manifest_sha256']:
-            raise ValueError('Selected manager store manifest changed')
-    return identity
-
-
-def paths(workspace, host):
-    base = Path(workspace).absolute() / ('.agents' if host == 'codex' else '.claude')
-    return base, base / ('stdo-' + VERSION), base / ('stdo-skills-' + VERSION + '.receipt.json')
-
-
-def native_selection(method_root, basis):
-    root = Path(method_root).absolute()
+    manager = executable(stdo)
+    call = subprocess.run([manager['invocation'], 'status', '--definition', str(definition), '--verify'], capture_output=True, text=True, timeout=60)
+    if call.returncode:
+        raise ValueError('Selected method verification failed: ' + (call.stderr or call.stdout))
+    observed = json.loads(call.stdout)
+    if observed.get('basis') != selected['uri'] or observed.get('manifest_sha256') != selected['manifest_sha256'] or observed.get('valid') is not True or observed.get('installed') is not True or observed.get('failures'):
+        raise ValueError('Manager did not verify the selected exact method')
+    if Path(observed.get('path', '')).resolve() != root or Path(observed.get('definition', '')).resolve() != definition:
+        raise ValueError('Manager returned another installation or Product')
     raw = read(root / 'manifest.json')
-    if sha(raw) != basis['manifest_sha256']:
-        raise ValueError('Selected native manifest changed')
-    relative = json.loads(raw)['auxiliary']['plugin']['installed_root']
-    if Path(relative).is_absolute() or any(p in ('', '.', '..') for p in relative.split('/')):
-        raise ValueError('Unsafe canonical native plugin path')
-    return {'kind': 'stdo-skills.canonical-native/1',
-            'root': str((root / relative).resolve(strict=True)), 'basis': basis}
+    if sha(raw) != selected['manifest_sha256']:
+        raise ValueError('Native method manifest differs')
+    manifest = json.loads(raw); plugin = manifest['auxiliary']['plugin']
+    relative = plugin['installed_root']
+    if Path(relative).is_absolute() or any(x in ('', '.', '..') for x in relative.split('/')):
+        raise ValueError('Unsafe native plugin location')
+    native = root / relative; files = tree(native)
+    declared = {x['path']: x['sha256'] for x in plugin['members']}
+    if len(declared) != plugin['member_count'] or set(files) != set(declared) or any(sha(v) != declared[k] for k, v in files.items()):
+        raise ValueError('Native plugin population or content differs')
+    launcher = observed.get('runtime_launcher')
+    if launcher:
+        for field, digest in [('manager', 'manager_sha256'), ('manifest', 'manifest_sha256')]:
+            if sha(Path(launcher[field]).read_bytes()) != launcher[digest]:
+                raise ValueError('Selected manager/store dependency changed')
+    return {'basis': selected, 'definition': str(definition), 'definition_sha256': sha(read(definition)),
+            'method_root': str(root), 'native_root': str(native), 'manager': manager,
+            'runtime_launcher': launcher}, files
 
 
-def native_frontmatter(raw, name):
-    # Keep native invocation policy, argument hints, block scalars and any other
-    # metadata verbatim. Only the host-visible entry name is deliberately bound.
+def native_header(raw, name):
     match = re.match(r'\A---\r?\n.*?\r?\n---(?:\r?\n|\Z)', raw.decode(), re.S)
-    if match is None:
-        raise ValueError('Native skill has no delimited frontmatter')
+    if not match:
+        raise ValueError('Native skill lacks frontmatter')
     header = match.group(0)
-    for key in ('name', 'description'):
-        if len(re.findall(r'^' + key + r':', header, re.M)) != 1:
-            raise ValueError('Native skill must declare one ' + key)
+    if any(len(re.findall(r'^' + key + r':', header, re.M)) != 1 for key in ['name', 'description']):
+        raise ValueError('Ambiguous native skill metadata')
     header = re.sub(r'^name:[^\r\n]*', 'name: ' + name, header, count=1, flags=re.M)
-    return header if header.endswith('\n') else header + '\n'
+    return header + ('' if header.endswith('\n') else '\n')
 
 
-def verify_runtime_method(config):
-    selected_manager = config['manager_identity']
-    if manager_selection(config['stdo'], selected_manager['runtime_launcher']) != selected_manager:
-        raise ValueError('Selected manager executable changed')
-    basis, _, observed = verified_method(config['definition'], config['method_root'], config['stdo'])
-    if manager_selection(config['stdo'], observed.get('runtime_launcher')) != selected_manager:
-        raise ValueError('Fresh manager verification changed the selected launcher/store identity')
-    if basis != config['basis']:
-        raise ValueError('Selected method basis changed')
-    if 'native_workflow' in config and native_selection(config['method_root'], basis) != config['native_workflow']:
-        raise ValueError('Selected canonical native workflow changed')
+def prepared(args):
+    package, manifest, package_sha = validate_package(args.package)
+    if read(package / 'scripts/manage_skills.py') != Path(__file__).read_bytes():
+        raise ValueError('Invoke the selected package installer')
+    dependency = json.loads(read(package / 'specification/composition/DEPENDENCIES.json'))
+    components = {}
+    for name, selected_root in [('purpose_context', args.purpose_context), ('visual', args.visual_root)]:
+        if selected_root is None:
+            continue
+        spec = dependency['components'].get(name)
+        if spec is None:
+            raise ValueError('Component is not declared by this package: ' + name)
+        components[name] = {**spec, 'root': str(Path(selected_root).resolve(strict=True))}
+    release = manifest.get('release') if manifest['kind'] == 'stdo-skills.release-package/1' else None
+    bundle = RELEASE_BUNDLE if release else BUNDLE
+    configuration = {'kind': 'stdo-skills.release-runtime/1' if release else 'stdo-skills.development-runtime/1', 'components': components,
+                     'python': executable(args.python), 'host': args.host,
+                     'standing': 'Exact installed binding; publication, semantic coverage and host behavior are separate evidence.' if release else 'development installation; no release or automatic host qualification'}
+    if release:
+        configuration['release'] = release
+    binding = provider(package)
+    for name in components:
+        binding.component(configuration, name, package / 'INVENTORY.json')
+    method, native = native_method(args.definition, args.method_root, args.stdo)
+    if release and method['basis'] != release['native_method']:
+        raise ValueError('Selected Product native basis differs from release package')
+    configuration['native_method'] = method
+    files = {bundle + '/CONFIG.json': encode(configuration), bundle + '/manage_skills.py': read(package / 'scripts/manage_skills.py')}
+    for guide in ['GETTING_STARTED.md', 'RELEASE.md', 'scripts/INSTALLATION.md']:
+        files[bundle + '/' + guide] = read(package / guide)
+    for name, raw in tree(package / 'skills/stdo-context').items():
+        files['skills/stdo-context/' + name] = raw
+    files['skills/stdo-context/BINDING.json'] = encode({'configuration': '../../' + bundle + '/CONFIG.json'})
+    if args.visual_root:
+        for name, raw in tree(package / 'build_tenants' / args.host / 'current/skills/stdo-project').items():
+            files['skills/stdo-project/' + name] = raw
+    for name in (*CORE, *(('stdo-refresh',) if args.host == 'claude' else ())):
+        relative = 'claude-skills/refresh/SKILL.md' if name == 'stdo-refresh' else 'skills/' + name + '/SKILL.md'
+        header = native_header(native[relative], name)
+        target = (Path(method['native_root']) / relative).as_uri()
+        body = '\nFollow the exact [native workflow](' + target + ') and its canonical relative references. It owns intake, grants, assessment, handoff and recovery; this host binding creates no alternate lifecycle.\n'
+        body += '\nFor relevant task constraints, code builds, review context, continuation or context refresh, use [Purpose Context](../stdo-context/SKILL.md) and its reusable purpose indexes after native control intake. At SDLC work, QA, finding-triage, repair or acceptance/release decisions, select its declared workflow purpose and adopted default with the actual decision facts; retain the bound outcome, scope, subject and basis. Required source-first review derives expectations before candidate-derived index judgments. Source/method/purpose mismatch and unknown facts remain explicit. Ordinary unrelated work need not construct context.\n'
+        body += '\nFor this exact Skills package installation and purpose selection, use [Getting Started](../../' + bundle + '/GETTING_STARTED.md). Frozen native setup instructions retain their original release scope; the current guide locates the independently selected Products.\n'
+        body += '\nFor ticketed work or resumption, bind the current ticket or sufficient admitted carrier and actual source/evidence under the selected native TICKETS and ACTIVATION laws. Construct only the next decision context, preserve its declared acquisition bounds, and reconcile invalidated support or unknown effects before dependent work. Record facts/results through the permitted native return route; only the granted Writer updates work state. Private context, a summary or an index is no rival authority and resets no completed work.\n'
+        if args.visual_root:
+            body += '\nFor visual documentation or code/test-source exploration, use the separately selected [visual project skill](../stdo-project/SKILL.md).\n'
+        files['skills/' + name + '/SKILL.md'] = (header + body).encode()
+    return configuration, files, package_sha
 
 
-def prepared(package, workspace, host, definition, method_root, ac_root, stdo, python):
-    manifest, package_sha = validate_package(package)
-    selected_manager = manager_selection(stdo)
-    basis, native, observed = verified_method(definition, method_root, selected_manager['invocation'])
-    manager = manager_selection(selected_manager['invocation'], observed.get('runtime_launcher'))
-    if {**manager, 'runtime_launcher': None} != selected_manager:
-        raise ValueError('Selected manager changed during installation verification')
-    pins = runtime_pins(ac_root)
-    base, bundle, receipt = paths(workspace, host)
-    files = {}
-    workflow = native_selection(method_root, basis)
-    interpreter = python_selection(python)
-    configuration = {'kind': 'stdo-skills.runtime/1', 'version': VERSION, 'host': host, 'basis': basis,
-                     'method_selection_scope': 'runtime-installation-anchor-only',
-                     'operation_basis_rule': 'resolve the nominated Product Definition; no adoption or override',
-                     'definition': str(Path(definition).absolute()), 'method_root': str(Path(method_root).absolute()),
-                     'ac_root': str(Path(ac_root).absolute()), 'python': interpreter['invocation'], 'python_identity': interpreter, 'provider_pins': pins,
-                     'stdo': manager['invocation'], 'manager_identity': manager, 'manager_verification': observed,
-                     'native_workflow': workflow}
-    files['stdo-' + VERSION + '/CONFIG.json'] = encode(configuration)
-    files['stdo-' + VERSION + '/manage_skills.py'] = read(Path(__file__))
-    extension = Path(package) / 'build_tenants' / host / 'current/skills/stdo-project'
-    for path, raw in tree(extension).items():
-        files['skills/stdo-project/' + path] = raw
-    for name in (*CORE, *(('stdo-refresh',) if host == 'claude' else ())):
-        native_path = 'claude-skills/refresh/SKILL.md' if name == 'stdo-refresh' else 'skills/' + name + '/SKILL.md'
-        header = native_frontmatter(native[native_path], name)
-        target = (Path(workflow['root']) / native_path).as_uri()
-        wrapper = header + f'\nRead and apply the exact [native workflow]({target}). This host binding owns no alternate workflow or authority. Follow that file\'s relative references from its canonical installation. Read [host runtime](../../stdo-{VERSION}/CONFIG.json) only when its public provider is needed.\n'
-        files['skills/' + name + '/SKILL.md'] = wrapper.encode()
-    roots = ['stdo-' + VERSION] + sorted({'/'.join(path.split('/')[:2]) for path in files if path.startswith('skills/')})
-    return base, receipt, files, roots, package_sha
-
-
-def current(workspace, host, expected):
-    base, bundle, receipt_path = paths(workspace, host)
-    raw = read(receipt_path)
-    if sha(raw) != expected:
-        raise ValueError('Ownership receipt differs from the caller-selected installation')
-    receipt = json.loads(raw)
-    if receipt['version'] != VERSION or receipt['host'] != host:
-        raise ValueError('Ownership receipt selects a different host or version')
-    allowed = {'stdo-' + VERSION, 'skills/stdo-project', *('skills/' + name for name in CORE)}
-    if host == 'claude':
-        allowed.add('skills/stdo-refresh')
-    if set(receipt['roots']) != allowed or len(receipt['roots']) != len(allowed):
-        raise ValueError('Receipt owned roots differ from this exact host bundle')
-    actual = {}
-    for directory in receipt['roots']:
-        for name, value in tree(base / directory).items():
-            actual[directory + '/' + name] = sha(value)
-    if actual != receipt['files']:
-        raise ValueError('Owned installation changed; preserve it and reconcile before update/removal')
-    return base, receipt_path, receipt
+def paths(workspace, host, released=False):
+    base = Path(workspace).absolute() / ('.agents' if host == 'codex' else '.claude')
+    return base, base / (RELEASE_RECEIPT if released else RECEIPT)
 
 
 def install(args):
-    base, receipt_path, files, roots, package_sha = prepared(args.package, args.workspace, args.host, args.definition, args.method_root, args.ac_root, args.stdo, args.python)
-    for destination in [receipt_path, *(base / name for name in roots)]:
-        if destination.exists() or destination.is_symlink():
-            raise ValueError('Installation destination already exists: ' + str(destination))
-        for parent in destination.parents:
-            if parent.is_symlink():
-                raise ValueError('Installation ancestor is a symlink')
+    configuration, files, package_sha = prepared(args)
+    released = configuration['kind'] == 'stdo-skills.release-runtime/1'
+    bundle = RELEASE_BUNDLE if released else BUNDLE
+    base, receipt = paths(args.workspace, args.host, released)
+    roots = [bundle] + sorted({'/'.join(x.split('/')[:2]) for x in files if x.startswith('skills/')})
+    for target in [receipt, *(base / x for x in roots)]:
+        if target.exists() or target.is_symlink() or any(p.is_symlink() for p in target.parents):
+            raise ValueError('Installation destination collision or symlink: ' + str(target))
     if args.command == 'plan':
-        return {'status': 'planned', 'host': args.host, 'files': len(files), 'roots': roots, 'package_sha256': package_sha}
+        return {'status': 'planned', 'roots': roots, 'package_sha256': package_sha, 'components': sorted(configuration['components'])}
     for name, raw in files.items():
         target = base / name; target.parent.mkdir(parents=True, exist_ok=True)
         with target.open('xb') as out:
             out.write(raw)
-    receipt = {'kind': 'stdo-skills.installation/1', 'version': VERSION, 'host': args.host, 'package_sha256': package_sha,
-               'roots': roots, 'files': {name: sha(raw) for name, raw in files.items()},
-               'native_workflow': json.loads(files['stdo-' + VERSION + '/CONFIG.json'])['native_workflow']}
-    raw = encode(receipt)
-    with receipt_path.open('xb') as out:
-        out.write(raw)
-    return {'status': 'installed', 'host': args.host, 'receipt': str(receipt_path), 'receipt_sha256': sha(raw), 'files': len(files)}
+    record = {'kind': 'stdo-skills.release-installation/1' if released else 'stdo-skills.development-installation/1', 'host': args.host, 'package_sha256': package_sha,
+              'roots': roots, 'files': {k: sha(v) for k, v in files.items()}}
+    if released:
+        record['release'] = configuration['release']
+    with receipt.open('xb') as out:
+        out.write(encode(record))
+    return {'status': 'installed', 'receipt': str(receipt), 'receipt_sha256': sha(receipt.read_bytes()), 'components': sorted(configuration['components'])}
+
+
+def owned(args):
+    base, _ = paths(args.workspace, args.host)
+    matches = [p for p in (base / RECEIPT, base / RELEASE_RECEIPT) if p.is_file() and sha(read(p)) == args.receipt_sha256]
+    if len(matches) != 1:
+        raise ValueError('Receipt identity differs')
+    path = matches[0]; raw = read(path)
+    receipt = json.loads(raw)
+    released = receipt.get('kind') == 'stdo-skills.release-installation/1'
+    if receipt.get('kind') not in {'stdo-skills.development-installation/1', 'stdo-skills.release-installation/1'} or receipt.get('host') != args.host:
+        raise ValueError('Not this Skills installation')
+    if path.name != (RELEASE_RECEIPT if released else RECEIPT):
+        raise ValueError('Receipt path and installation kind differ')
+    if released:
+        release_identity(receipt['release'])
+    bundle = RELEASE_BUNDLE if released else BUNDLE
+    required = {bundle, 'skills/stdo-context', *('skills/' + n for n in CORE)}
+    if args.host == 'claude':
+        required.add('skills/stdo-refresh')
+    roots = set(receipt['roots'])
+    if roots not in (required, required | {'skills/stdo-project'}) or len(roots) != len(receipt['roots']):
+        raise ValueError('Receipt contains unsupported ownership roots')
+    actual = {root + '/' + n: sha(v) for root in receipt['roots'] for n, v in tree(base / root).items()}
+    if actual != receipt['files']:
+        raise ValueError('Owned files changed; preserve and reconcile before removal')
+    return base, path, receipt
+
+
+def verify_configuration(path):
+    value = json.loads(read(path)); method = value['native_method']
+    if executable(method['manager']['invocation']) != method['manager'] or sha(read(method['definition'])) != method['definition_sha256']:
+        raise ValueError('Selected native manager or Product changed')
+    observed, _ = native_method(method['definition'], method['method_root'], method['manager']['invocation'])
+    if observed != method:
+        raise ValueError('Native method/store binding changed')
+    if value.get('kind') == 'stdo-skills.release-runtime/1' and release_identity(value['release'])['native_method'] != method['basis']:
+        raise ValueError('Runtime release native binding differs')
+    base = path.parent.parent
+    module = provider(base)
+    module.python(value)
+    for name in value['components']:
+        module.component(value, name, path)
+    return value
 
 
 def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    sub = parser.add_subparsers(dest='command', required=True)
-    for name in ('plan', 'install'):
+    parser = argparse.ArgumentParser(description=__doc__); sub = parser.add_subparsers(dest='command', required=True)
+    for name in ['plan', 'install']:
         p = sub.add_parser(name)
-        for field in ('package', 'workspace', 'definition', 'method-root', 'ac-root'):
+        for field in ['package', 'workspace', 'definition', 'method-root', 'purpose-context']:
             p.add_argument('--' + field, type=Path, required=True)
-        p.add_argument('--host', choices=('codex', 'claude'), required=True)
-        p.add_argument('--stdo', default=shutil.which('stdo')); p.add_argument('--python', default=sys.executable)
-    for name in ('verify', 'remove'):
-        p = sub.add_parser(name); p.add_argument('--workspace', type=Path, required=True)
-        p.add_argument('--host', choices=('codex', 'claude'), required=True); p.add_argument('--receipt-sha256', required=True)
-    p = sub.add_parser('check-runtime'); p.add_argument('--configuration', type=Path, required=True)
-    args = parser.parse_args()
-    if args.command in ('plan', 'install'):
-        result = install(args)
-    elif args.command == 'check-runtime':
-        config = json.loads(read(args.configuration))
-        if config.get('method_selection_scope') != 'runtime-installation-anchor-only':
-            raise ValueError('Runtime method selection scope is missing or unsupported')
-        if python_selection(config['python']) != config.get('python_identity'):
-            raise ValueError('Selected Python executable changed')
-        actual = runtime_pins(config['ac_root'])
-        if actual != config['provider_pins']:
-            raise ValueError('Selected a_c provider changed; explicitly select a current installation')
-        verify_runtime_method(config)
-        result = {'status': 'verified', 'configuration': config}
-    else:
-        base, receipt_path, receipt = current(args.workspace, args.host, args.receipt_sha256)
-        if args.command == 'verify' and 'native_workflow' in receipt:
-            config = json.loads(read(base / ('stdo-' + VERSION) / 'CONFIG.json'))
-            if config.get('native_workflow') != receipt['native_workflow']:
-                raise ValueError('Canonical native workflow differs from ownership receipt')
-            verify_runtime_method(config)
-        if args.command == 'remove':
-            for directory in receipt['roots']:
-                shutil.rmtree(base / directory)
-            receipt_path.unlink()
-        result = {'status': 'removed' if args.command == 'remove' else 'verified', 'host': args.host, 'files': len(receipt['files'])}
-    print(json.dumps(result, indent=2))
-
-if __name__ == '__main__':
+        p.add_argument('--visual-root', type=Path);p.add_argument('--host', choices=['codex', 'claude'], required=True)
+        p.add_argument('--stdo', default=shutil.which('stdo'));p.add_argument('--python', default=sys.executable)
+    for name in ['verify', 'remove']:
+        p = sub.add_parser(name);p.add_argument('--workspace', type=Path, required=True)
+        p.add_argument('--host', choices=['codex', 'claude'], required=True);p.add_argument('--receipt-sha256', required=True)
+    p=sub.add_parser('check-runtime');p.add_argument('--configuration', type=Path, required=True)
+    args=parser.parse_args()
     try:
-        main()
-    except (OSError, ValueError, KeyError, TypeError, subprocess.SubprocessError) as error:
-        print(json.dumps({'status': 'refused_or_incomplete', 'error': str(error), 'recovery': 'Retain current files/receipt; reconcile partial effects before retry.'}))
-        raise SystemExit(2)
+        if args.command in ['plan','install']:
+            result=install(args)
+        elif args.command=='check-runtime':
+            result={'status':'verified','configuration':verify_configuration(args.configuration)}
+        else:
+            base,path,receipt=owned(args)
+            if args.command=='verify':
+                bundle = RELEASE_BUNDLE if receipt['kind'] == 'stdo-skills.release-installation/1' else BUNDLE
+                configuration = verify_configuration(base/bundle/'CONFIG.json')
+                if receipt.get('release') != configuration.get('release'):
+                    raise ValueError('Receipt and runtime release identities differ')
+            else:
+                for root in receipt['roots']:shutil.rmtree(base/root)
+                path.unlink()
+            result={'status':'verified' if args.command=='verify' else 'removed','owned_roots':receipt['roots']}
+        print(json.dumps(result,indent=2));return 0
+    except (OSError,ValueError,KeyError,TypeError,subprocess.TimeoutExpired) as exc:
+        print(json.dumps({'status':'refused_or_incomplete','error':str(exc),'recovery':'Preserve partial effects and exact receipt; reconcile before retry.'}),file=sys.stderr);return 2
+
+
+if __name__=='__main__':raise SystemExit(main())

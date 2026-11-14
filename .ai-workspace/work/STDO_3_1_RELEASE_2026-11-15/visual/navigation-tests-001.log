@@ -1,0 +1,21 @@
+node:internal/modules/esm/module_job:503
+      throw new ERR_REQUIRE_ASYNC_MODULE(filename, parentFilename);
+      ^
+
+Error [ERR_REQUIRE_ASYNC_MODULE]: require() cannot be used on an ESM graph with top-level await. Use import() instead. To see where the top-level await comes from, use --experimental-print-required-tla.
+  From /Users/jim/.npm/_npx/43414d9b790239bb/node_modules/cssstyle/lib/parsers.js 
+  Requiring /Users/jim/.npm/_npx/43414d9b790239bb/node_modules/@asamuzakjp/css-color/dist/esm/index.js 
+    at ModuleJobSync.runSync (node:internal/modules/esm/module_job:503:13)
+    at ModuleLoader.importSyncForRequire (node:internal/modules/esm/loader:443:47)
+    at loadESMFromCJS (node:internal/modules/cjs/loader:1567:24)
+    at Module._compile (node:internal/modules/cjs/loader:1720:5)
+    at Object..js (node:internal/modules/cjs/loader:1871:10)
+    at Module.load (node:internal/modules/cjs/loader:1470:32)
+    at Module._load (node:internal/modules/cjs/loader:1290:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:238:24)
+    at Module.require (node:internal/modules/cjs/loader:1493:12) {
+  code: 'ERR_REQUIRE_ASYNC_MODULE'
+}
+
+Node.js v24.7.0

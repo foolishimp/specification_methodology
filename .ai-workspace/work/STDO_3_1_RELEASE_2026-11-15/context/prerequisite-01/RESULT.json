@@ -1,0 +1,712 @@
+{
+  "standing": "Mechanical prerequisite controls against actual native 3.0.4; no 3.1 target construction or public release.",
+  "operations": [
+    {
+      "name": "package-development",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/scripts/package.py",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "package-release-mode-native-304",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/scripts/package.py",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package",
+        "--version",
+        "3.0.4",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--method-manifest-sha256",
+        "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "refuse-incomplete-release-selection",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/scripts/package.py",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/incomplete-output",
+        "--version",
+        "3.1.0-rc.1"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "refuse-future-label-on-304",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/scripts/package.py",
+        "--out",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/false-release-output",
+        "--version",
+        "3.1.0-rc.1",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--method-manifest-sha256",
+        "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "refuse-index-before-native-A",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context/scripts/rebuild_release_indexes.py",
+        "--version",
+        "3.1.0-rc.1",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--method-manifest-sha256",
+        "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b",
+        "--predecessor-source-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "development-codex-plan",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package/scripts/manage_skills.py",
+        "plan",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex",
+        "--host",
+        "codex",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "development-codex-install",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package/scripts/manage_skills.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex",
+        "--host",
+        "codex",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "development-codex-verify",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package/scripts/manage_skills.py",
+        "verify",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex",
+        "--host",
+        "codex",
+        "--receipt-sha256",
+        "29e9274add3bcf0b08564edf45a0e6725cb2e6bd43887edc1a1d553e911033d9"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "development-codex-runtime",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex/.agents/stdo-skills-dev/CONFIG.json"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "development-codex-describe",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex/.agents/skills/stdo-context/scripts/provider.py",
+        "describe"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "development-codex-indexes",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex/.agents/skills/stdo-context/scripts/provider.py",
+        "context",
+        "--",
+        "indexes",
+        "--public-manifest-sha256",
+        "e19477f3ad115e58789009ec149bc9cf92212e556145af9e9ef702d078794b5e"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "development-codex-collision",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package/scripts/manage_skills.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex",
+        "--host",
+        "codex",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "development-codex-changed-owned-refused",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package/scripts/manage_skills.py",
+        "verify",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex",
+        "--host",
+        "codex",
+        "--receipt-sha256",
+        "29e9274add3bcf0b08564edf45a0e6725cb2e6bd43887edc1a1d553e911033d9"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "development-codex-changed-remove-refused",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package/scripts/manage_skills.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex",
+        "--host",
+        "codex",
+        "--receipt-sha256",
+        "29e9274add3bcf0b08564edf45a0e6725cb2e6bd43887edc1a1d553e911033d9"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "development-codex-remove",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-package/scripts/manage_skills.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/development-codex",
+        "--host",
+        "codex",
+        "--receipt-sha256",
+        "29e9274add3bcf0b08564edf45a0e6725cb2e6bd43887edc1a1d553e911033d9"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-codex-plan",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "plan",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex",
+        "--host",
+        "codex",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-codex-install",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex",
+        "--host",
+        "codex",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-codex-verify",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "verify",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex",
+        "--host",
+        "codex",
+        "--receipt-sha256",
+        "a0cfc74b8775f2a8f4ffa94516f5f9af19abd1befac529bfe7394fb67d609046"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-codex-runtime",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex/.agents/stdo-skills/CONFIG.json"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-codex-describe",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex/.agents/skills/stdo-context/scripts/provider.py",
+        "describe"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-codex-indexes",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex/.agents/skills/stdo-context/scripts/provider.py",
+        "context",
+        "--",
+        "indexes",
+        "--public-manifest-sha256",
+        "e19477f3ad115e58789009ec149bc9cf92212e556145af9e9ef702d078794b5e"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-codex-collision",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex",
+        "--host",
+        "codex",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "release-codex-changed-owned-refused",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "verify",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex",
+        "--host",
+        "codex",
+        "--receipt-sha256",
+        "a0cfc74b8775f2a8f4ffa94516f5f9af19abd1befac529bfe7394fb67d609046"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "release-codex-changed-remove-refused",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex",
+        "--host",
+        "codex",
+        "--receipt-sha256",
+        "a0cfc74b8775f2a8f4ffa94516f5f9af19abd1befac529bfe7394fb67d609046"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "release-codex-remove",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-codex",
+        "--host",
+        "codex",
+        "--receipt-sha256",
+        "a0cfc74b8775f2a8f4ffa94516f5f9af19abd1befac529bfe7394fb67d609046"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-claude-plan",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "plan",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude",
+        "--host",
+        "claude",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-claude-install",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude",
+        "--host",
+        "claude",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-claude-verify",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "verify",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude",
+        "--host",
+        "claude",
+        "--receipt-sha256",
+        "3b7fe17a7ca13d2639159bb9cce9f6b3002ae20c0d27504d5a8b770102ddba3c"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-claude-runtime",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "check-runtime",
+        "--configuration",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude/.claude/stdo-skills/CONFIG.json"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-claude-describe",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude/.claude/skills/stdo-context/scripts/provider.py",
+        "describe"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-claude-indexes",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude/.claude/skills/stdo-context/scripts/provider.py",
+        "context",
+        "--",
+        "indexes",
+        "--public-manifest-sha256",
+        "e19477f3ad115e58789009ec149bc9cf92212e556145af9e9ef702d078794b5e"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "release-claude-collision",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "install",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude",
+        "--host",
+        "claude",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "release-claude-changed-owned-refused",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "verify",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude",
+        "--host",
+        "claude",
+        "--receipt-sha256",
+        "3b7fe17a7ca13d2639159bb9cce9f6b3002ae20c0d27504d5a8b770102ddba3c"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "release-claude-changed-remove-refused",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude",
+        "--host",
+        "claude",
+        "--receipt-sha256",
+        "3b7fe17a7ca13d2639159bb9cce9f6b3002ae20c0d27504d5a8b770102ddba3c"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    },
+    {
+      "name": "release-claude-remove",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-mode-control-package/scripts/manage_skills.py",
+        "remove",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/release-claude",
+        "--host",
+        "claude",
+        "--receipt-sha256",
+        "3b7fe17a7ca13d2639159bb9cce9f6b3002ae20c0d27504d5a8b770102ddba3c"
+      ],
+      "expected_returncode": 0,
+      "returncode": 0,
+      "passed": true
+    },
+    {
+      "name": "wrong-native-pin-refused",
+      "argv": [
+        "/usr/local/bin/python3",
+        "-B",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/wrong-native-pin-package/scripts/manage_skills.py",
+        "plan",
+        "--package",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/wrong-native-pin-package",
+        "--workspace",
+        "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/context/prerequisite-01/wrong-native-pin-workspace",
+        "--host",
+        "codex",
+        "--definition",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/stdo_skills/stdo_skills.json",
+        "--method-root",
+        "/Users/jim/Library/Application Support/STDO/releases/v3.0.4",
+        "--stdo",
+        "/Users/jim/.local/bin/stdo",
+        "--python",
+        "/usr/local/bin/python3",
+        "--purpose-context",
+        "/Users/jim/src/apps/specification_methodology-3.1-release/purpose_context"
+      ],
+      "expected_returncode": 2,
+      "returncode": 2,
+      "passed": true
+    }
+  ]
+}

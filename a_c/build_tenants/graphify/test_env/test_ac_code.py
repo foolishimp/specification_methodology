@@ -170,7 +170,7 @@ class CodeOverlayTests(unittest.TestCase):
             shutil.copyfile(self.run / "built/explorer.html", path)
             gen.save(path.with_suffix(".json"), data)
 
-    def test_public_cli_and_formal_mode_refusal_before_input_acquisition(self):
+    def test_public_cli_and_retired_flag_refusal_before_input_acquisition(self):
         process, result = self.cli("prepare", "--project", self.project, "--model", self.model,
                                    "--manifest", self.manifest, "--source-root", self.project,
                                    "--code", "src", "--test", "tests", "--upstream", self.upstream, "--out", self.run)
@@ -184,11 +184,13 @@ class CodeOverlayTests(unittest.TestCase):
         self.assertEqual(result["status"], "built")
         process, result = self.cli("status", "--run", self.run)
         self.assertEqual(process.returncode, 0, process.stderr)
-        process, result = self.cli("prepare", "--project", "missing", "--model", "missing", "--manifest", "missing",
-                                   "--source-root", "missing", "--code", "missing", "--upstream", "missing",
-                                   "--out", self.root / "forbidden", "--formal-checker", "missing")
+        process = subprocess.run([sys.executable, "-B", str(code.HERE / "ac_code.py"),
+                                  "prepare", "--project", "missing", "--model", "missing", "--manifest", "missing",
+                                  "--source-root", "missing", "--code", "missing", "--upstream", "missing",
+                                  "--out", str(self.root / "forbidden"), "--formal-checker", "missing"],
+                                 capture_output=True, text=True, timeout=60)
         self.assertEqual(process.returncode, 2)
-        self.assertIn("formal-checker mode is unsupported", result["reason"])
+        self.assertIn("unrecognized arguments: --formal-checker", process.stderr)
         self.assertFalse((self.root / "forbidden").exists())
 
     def test_base_drift_before_prepare_and_current_reuse_refuse(self):
@@ -462,7 +464,7 @@ class CodeOverlayTests(unittest.TestCase):
             code.status(self.run)
         extra.unlink()
         data = gen.load(self.run / "built/view-data.json")
-        data["code_overlay"]["standing"]["formal"] = "proved"
+        data["code_overlay"]["standing"]["evidence"] = "proved"
         gen.save(self.run / "built/view-data.json", data)
         result = gen.load(self.run / "BUILD.json")
         result["files"] = code.inventory(self.run / "built")

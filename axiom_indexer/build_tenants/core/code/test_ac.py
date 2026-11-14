@@ -9,7 +9,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from ac import Resolver, canonical_bytes, instantiate, join_sections, project_program, sha256, validate_program
+from ac import Resolver, canonical_bytes, instantiate, project_program, sha256, validate_program
 
 
 VOCABULARY = [
@@ -293,134 +293,9 @@ class ACProgramTests(unittest.TestCase):
         self.assertEqual(result.returncode, 1)
         self.assertFalse(map_path.exists())
 
-    def test_join_sections_preserves_exact_order_and_text(self) -> None:
-        sections = [
-            {"label": "Z", "text": "First line\nSecond line"},
-            {"label": "A", "text": "Unicode: λ"},
-            {"label": "Z", "text": "Repeated label"},
-            {"label": "", "text": ""},
-        ]
-        self.assertEqual(
-            join_sections(sections),
-            "Z\nFirst line\nSecond line\n\nA\nUnicode: λ\n\nZ\nRepeated label\n\n\n",
-        )
-        self.assertEqual(join_sections([]), "")
 
-    def test_join_sections_refuses_only_malformed_shapes(self) -> None:
-        invalid = [
-            None,
-            {},
-            [None],
-            [{}],
-            [{"label": "A"}],
-            [{"text": "B"}],
-            [{"label": "A", "text": "B", "extra": "C"}],
-            [{"label": 1, "text": "B"}],
-            [{"label": "A", "text": 1}],
-            [{"label": "\ud800", "text": "B"}],
-        ]
-        for value in invalid:
-            with self.subTest(value=value):
-                with self.assertRaises(ValueError):
-                    join_sections(value)
 
-    def test_join_cli_stdout_and_file_are_exact(self) -> None:
-        script = Path(__file__).with_name("ac.py")
-        sections_path = self.root / "sections.json"
-        sections_path.write_text(
-            json.dumps(
-                [
-                    {"label": "Reference frames", "text": "urn:frame:a"},
-                    {"label": "Return", "text": "GO | HOLD"},
-                ]
-            ),
-            encoding="utf-8",
-        )
-        expected = b"Reference frames\nurn:frame:a\n\nReturn\nGO | HOLD"
-        stdout_result = subprocess.run(
-            [sys.executable, str(script), "join", "--input", str(sections_path)],
-            check=False,
-            capture_output=True,
-        )
-        self.assertEqual(stdout_result.returncode, 0)
-        self.assertEqual(stdout_result.stdout, expected)
-        self.assertEqual(stdout_result.stderr, b"")
 
-        output_path = self.root / "request.txt"
-        file_result = subprocess.run(
-            [
-                sys.executable,
-                str(script),
-                "join",
-                "--input",
-                str(sections_path),
-                "--output",
-                str(output_path),
-            ],
-            check=False,
-            capture_output=True,
-        )
-        self.assertEqual(file_result.returncode, 0)
-        self.assertEqual(output_path.read_bytes(), expected)
-
-    def test_join_cli_refuses_before_writing(self) -> None:
-        script = Path(__file__).with_name("ac.py")
-        invalid_path = self.root / "invalid-sections.json"
-        invalid_path.write_text('{"label":"not-a-list"}', encoding="utf-8")
-        output_path = self.root / "request.txt"
-        output_path.write_text("preserve", encoding="utf-8")
-        invalid_result = subprocess.run(
-            [
-                sys.executable,
-                str(script),
-                "join",
-                "--input",
-                str(invalid_path),
-                "--output",
-                str(output_path),
-            ],
-            check=False,
-            capture_output=True,
-        )
-        self.assertEqual(invalid_result.returncode, 2)
-        self.assertEqual(output_path.read_text(encoding="utf-8"), "preserve")
-
-        invalid_utf8_path = self.root / "invalid-utf8.json"
-        invalid_utf8_path.write_bytes(b"\xff")
-        invalid_utf8_result = subprocess.run(
-            [
-                sys.executable,
-                str(script),
-                "join",
-                "--input",
-                str(invalid_utf8_path),
-                "--output",
-                str(output_path),
-            ],
-            check=False,
-            capture_output=True,
-        )
-        self.assertEqual(invalid_utf8_result.returncode, 2)
-        self.assertEqual(output_path.read_text(encoding="utf-8"), "preserve")
-
-        alias_result = subprocess.run(
-            [
-                sys.executable,
-                str(script),
-                "join",
-                "--input",
-                str(invalid_path),
-                "--output",
-                str(invalid_path),
-            ],
-            check=False,
-            capture_output=True,
-        )
-        self.assertEqual(alias_result.returncode, 2)
-        self.assertEqual(
-            invalid_path.read_text(encoding="utf-8"),
-            '{"label":"not-a-list"}',
-        )
 
 
 def frame_program() -> dict:

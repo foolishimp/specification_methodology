@@ -1,0 +1,94 @@
+{
+  "kind": "stdo.development-product-navigation/1",
+  "standing": "source navigation for selected STDO3.1.0-rc.1 cohort; exact release inventory and qualification are external",
+  "products": [
+    {
+      "name": "Specification Methodology",
+      "roots": [
+        "specification_methodology/v2",
+        "specification_methodology/v3"
+      ],
+      "definitions": [
+        "specification_methodology/v2/stdo_default.json",
+        "specification_methodology/v3/stdo_3.json"
+      ]
+    },
+    {
+      "name": "Purpose Context",
+      "roots": [
+        "purpose_context"
+      ],
+      "definitions": [
+        "purpose_context/stdo_purpose_context.json"
+      ],
+      "public_manifest": "purpose_context/PUBLIC_MANIFEST.json",
+      "catalog": "purpose_context/skills/stdo-context/indexes/CATALOG.json",
+      "coverage_boundary": "Declared purpose and exact source/query assessment only; no task acceptance, universal SDLC or release qualification claim.",
+      "public_manifest_sha256": "396ffa87ca05f6a621e0b0e556d641284e88fe9488b5c5b5b15038a790d810e7",
+      "selection_policy": "Latest owner-selected releasable source is the index target; exact consumer basis matching remains required. Constructor basis is independent; final-cut bindings and applicable assessments must be refreshed rather than relabeled.",
+      "purposes": [
+        {
+          "purpose_id": "python-pure-refactor/2",
+          "index_id": "stdo-3.1.0-rc.1-python-pure-refactor-v2",
+          "source_kind": "installed-release",
+          "indexed_method": {
+            "uri": "stdo://releases/v3.1.0-rc.1/",
+            "public_version_line": "3.1.0",
+            "manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa"
+          },
+          "standing": "Exact current native source; applicable assessments bind exact purpose/query independently."
+        },
+        {
+          "purpose_id": "sdlc-workflow/1",
+          "index_id": "stdo-3.1.0-rc.1-sdlc-workflow-v1",
+          "source_kind": "installed-release",
+          "indexed_method": {
+            "uri": "stdo://releases/v3.1.0-rc.1/",
+            "public_version_line": "3.1.0",
+            "manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa"
+          },
+          "standing": "Exact current native source; applicable assessments bind exact purpose/query independently."
+        }
+      ],
+      "distribution_policy": "Companion ZIP selects two current catalog entries and binds its own public manifest; source retains historical entries."
+    },
+    {
+      "name": "STDO Skills",
+      "roots": [
+        "stdo_skills"
+      ],
+      "definitions": [
+        "stdo_skills/stdo_skills.json"
+      ]
+    },
+    {
+      "name": "Representation Tools",
+      "roots": [
+        "a_c"
+      ],
+      "definitions": [
+        "a_c/stdo_a_c.json"
+      ]
+    },
+    {
+      "name": "STDO Representation",
+      "roots": [
+        "stdo_representation"
+      ],
+      "definitions": [
+        "stdo_representation/stdo_representation.json"
+      ]
+    },
+    {
+      "name": "Axiom Indexer",
+      "roots": [
+        "axiom_indexer"
+      ],
+      "definitions": [
+        "axiom_indexer/stdo_default.json"
+      ]
+    }
+  ],
+  "historical_release_descriptor": "stack_release.json",
+  "current_release_scope": "releases/3.1.0-rc.1/RELEASE.md"
+}

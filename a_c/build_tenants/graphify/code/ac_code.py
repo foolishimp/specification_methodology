@@ -34,7 +34,7 @@ DEPENDENCIES = ("tree-sitter", "tree-sitter-python", "tree-sitter-javascript",
 STANDING = {
     "structure": "Fallible Graphify source observations; no source execution or semantic completeness claim.",
     "trace": "Caller-attributed proposed correspondence; test source is not an executed test result.",
-    "formal": "The overlay has not been Lean checked. Native model, dependency closure and proof scope are unchanged.",
+    "evidence": "Code/test-source links are observations and authored mappings, not correctness or executed-test results.",
 }
 _ACTIVE_EXTRACTION = None
 _AUDIT_INSTALLED = False
@@ -192,7 +192,7 @@ def load(path):
 
 def machinery():
     paths = [HERE / name for name in ("ac_code.py", "code-requirements.txt", "ac_project.py", "ac_generate.py",
-                                      "ac_explore.py", "ac_graph.py", "ac_formal_gate.py")]
+                                      "ac_explore.py", "ac_graph.py")]
     paths += [p for p in (HERE / "viewer").rglob("*") if p.is_file()]
     return {p.relative_to(HERE).as_posix(): gen.sha(read(p)) for p in sorted(paths)}
 
@@ -718,8 +718,6 @@ def main(argv=None):
     p.add_argument("--test", action="append", default=[])
     p.add_argument("--title")
     # Recognize unsupported selection so refusal occurs before subject acquisition.
-    p.add_argument("--formal-checker", help=argparse.SUPPRESS)
-    p.add_argument("--formal-checker-sha256", help=argparse.SUPPRESS)
     for name in ("task", "build", "status"):
         p = commands.add_parser(name)
         p.add_argument("--run", type=Path, required=True)
@@ -731,7 +729,6 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         if args.command == "prepare":
-            require(not args.formal_checker and not args.formal_checker_sha256, "formal-checker mode is unsupported for a code overlay")
             result = prepare(args.project, args.model, args.manifest, args.source_root, args.out,
                              code=args.code, tests=args.test, upstream=args.upstream, title=args.title)
         elif args.command == "task":

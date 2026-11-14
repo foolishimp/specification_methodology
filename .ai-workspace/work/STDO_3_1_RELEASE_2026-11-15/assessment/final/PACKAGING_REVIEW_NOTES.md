@@ -1,0 +1,7 @@
+# Packaging inspection notes before final graph
+
+This Codex operator read native_cut, runtime_bundle, product_bundle and ref_transaction after the source-first expectation set. No material defect was identified for the selected fixed 3.1 input path. This is a nonauthor same-family code inspection, not the required distinct-family semantic verdict.
+
+The native builder binds committed source/config to the native-ready inventory and creates a new annotated immutable local tag. The runtime builder conserves exact inventoried predecessor third-party wheel bytes and constructs a new owned manager identity. The Product ZIP takes separately staged context/Skills distributions plus an exact visual member selection; installed/published checks remain necessary. The ref transaction declares25 destinations, checks six namespace memberships, annotated tag types, exact target/subtree identities, local objects, remote absence/expected objects and qualified input hashes; publication uses one atomic push with per-ref expected-object leases and readback.
+
+Final graph/effect judgments await actual B, tags, content-qualified files, plan and returned publication/readback evidence. The prepare step creates tags after receiving content qualification; exact post-tag review remains a distinct mandatory step before publish. No hypothetical adversarial input or generic security certification is claimed. Existing installed source and old cohorts remain outside this operator's write territory.

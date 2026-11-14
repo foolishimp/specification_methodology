@@ -1,5 +1,11 @@
 # Installed documentation design
 
+Distribution/tool/proof details in this document describe historical released
+subjects. Their exact constructors are archived; current source packaging follows
+[the separate Product navigation](../../development/TOOLS.md). This notice does
+not amend conceptual method law or any immutable native payload.
+
+
 Implements [DOC-01–DOC-06](../../specification/requirements/INSTALLED_DOCUMENTATION.md).
 
 The existing native package and manager already copy every manifest-listed
@@ -15,7 +21,7 @@ guide and the installed current standards. The viewer retains its own source
 identity and all source passages. `DOCUMENTATION.json` identifies the imported
 artifact and hashes every other documentation member.
 
-`../common-tools/documentation.py` owns repeatable bundling and checking.
+`../../.ai-workspace/work/PURPOSE_CONTEXT_ALIGNMENT_2026-11-12/archive/common-tools/documentation.py` owns repeatable bundling and checking.
 Its contract pins the current presentation and exact represented model/source.
 The November 2 review repair regenerates the T-014 model and corpus using the
 current unified renderer, conserving the entire embedded view-data payload,
@@ -31,7 +37,7 @@ opens the result from the disposable store. That tag is not a release tag in
 the main repository.
 
 `package_tools.py` and `native_release.py` now live beside `documentation.py`
-under the registered `common-tools/` implementation route. Documentation uses
+in the exact historical constructor archive. Documentation uses
 the single package checker's route semantics. The old working-record entry
 paths are compatibility launchers; the package launcher checks its fixed target
 digest before execution. No working record is an executable dependency of the

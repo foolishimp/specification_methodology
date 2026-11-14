@@ -1,6 +1,6 @@
 # REQ-P-MODEL-CONVERSION — Preserve a declared a_c model
 
-Status: active 3.0.5 requirement re-entry. Axiom remains the generic provider;
+Status: current development visual requirement. Axiom remains the generic provider;
 source owners retain semantic authoring and frame selection.
 
 1. Accept a caller-supplied, provider-checked source-semantic a_c model and an

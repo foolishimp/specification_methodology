@@ -1,10 +1,7 @@
 # Code and realization traces
 
 This capability connects an exact source representation to selected project
-code and tests. It extends [AC-R-001–015](README.md) and
-[PU-01–09](project-use.md), using [FC-01–07](fd-composition.md) for acquisition
-and disclosure. Those contracts retain their ownership; no new lifecycle,
-admission rule or formal-proof claim is introduced.
+code and tests. It refines the [visual requirements](README.md) and [project use](project-use.md). Acquisition remains confined to explicit local source selection; no lifecycle, context delivery or proof capability is introduced.
 
 ## Required outcomes
 
@@ -18,7 +15,7 @@ route into another Product. Unsupported acquisition routes refuse.
 **CR-02 — Additive representation.** Supply a versioned code-and-trace overlay
 bound to that exact base. Preserve the existing native model and carrier bytes,
 record identities and declared dependency semantics. An unknown overlay version
-or inconsistent base binding refuses. Existing validation and Lean evidence
+or inconsistent base binding refuses. Existing validation and historical evidence
 retain their original subject and proof scope; adding an overlay does not extend
 them to code or trace assertions.
 

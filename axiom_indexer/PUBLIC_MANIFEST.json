@@ -1,0 +1,35 @@
+{
+  "profile": "axiom-indexer.public-runtime/1",
+  "product_definition_id": "urn:stdo:product-definition:axiom-indexer",
+  "name": "Axiom Indexer",
+  "version": "3.1.0-rc.1",
+  "standing": "versioned mechanical visual runtime inventory; exact cohort records release standing",
+  "entrypoints": [
+    "build_tenants/core/code/ac.py",
+    "build_tenants/core/code/ac_model.py"
+  ],
+  "capabilities": [
+    "validate",
+    "project",
+    "convert",
+    "restore"
+  ],
+  "dependencies": "Python 3.11 or later, standard library; no Lean, registry, Graphify or context runtime",
+  "files": [
+    {
+      "path": "VERSION",
+      "sha256": "6d8a34718ea306c7e03719b8700d219b2eab836651286368ec957e1eb9f2ba5a",
+      "bytes": 11
+    },
+    {
+      "path": "build_tenants/core/code/ac.py",
+      "sha256": "e89ba6cf4011f22ea42c05e5ecd4512f8ecbc5ce507d6b3550aa7d26926e4027",
+      "bytes": 36605
+    },
+    {
+      "path": "build_tenants/core/code/ac_model.py",
+      "sha256": "a8baaeb06e45957d486ecf2977294ac49b481762d65812330018127e60c27ad2",
+      "bytes": 11858
+    }
+  ]
+}

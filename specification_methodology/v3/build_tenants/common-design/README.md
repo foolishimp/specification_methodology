@@ -1,5 +1,11 @@
 # Common native realisation design
 
+Distribution/tool/proof details in this document describe historical released
+subjects. Their exact constructors are archived; current source packaging follows
+[the separate Product navigation](../../development/TOOLS.md). This notice does
+not amend conceptual method law or any immutable native payload.
+
+
 The [coordinated skills design](COORDINATED_SKILLS.md) binds the selected
 3.0.4 native plugin increment under T-007. It adds one shared issue/receive/return
 procedure to the five skills; that increment conserved method law.
@@ -9,7 +15,7 @@ gates. Published releases and the installed construction basis remain unchanged.
 
 The [installed documentation design](installed-documentation.md) binds the
 3.0.3 constraint-explorer distribution under T-006. Its maintained bundler and
-verification command live in `../common-tools/documentation.py`; the output
+verification command live in `../../.ai-workspace/work/PURPOSE_CONTEXT_ALIGNMENT_2026-11-12/archive/common-tools/documentation.py`; the output
 is part of the normal native payload and installed manifest.
 
 This design route is outside the installed payload in `../common/`. It binds

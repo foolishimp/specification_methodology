@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import copy
 from dataclasses import dataclass
 import hashlib
 import json
@@ -698,15 +699,24 @@ def carrier_identity(carrier: GraphCarrier) -> Object:
 
 def inspect(model: Model, record_id: str) -> Object:
     model = _fresh(model)
+    return _inspect_checked(model, record_id)
+
+
+def _inspect_checked(model: Model, record_id: str, references=None) -> Object:
     require(record_id in model.records, "unknown local identity")
     record = model.records[record_id]
-    return {"parent": model_identity(model), "family": record.family, "record": record.fields, "references": [{"path": list(r.path), "target": r.target, "domain": r.schema["domain"]} for r in model.references if r.owner == record_id], "claim": "typed structural references only"}
+    refs = (r for r in model.references if r.owner == record_id) if references is None else (r for _, r in references[record_id])
+    return {"parent": model_identity(model), "family": record.family, "record": record.fields, "references": [{"path": list(r.path), "target": r.target, "domain": r.schema["domain"]} for r in refs], "claim": "typed structural references only"}
 
 
 def find(model: Model, text: str) -> Object:
     model = _fresh(model)
+    return _find_checked(model, text)
+
+
+def _find_checked(model: Model, text: str, search=None) -> Object:
     require(bool(text), "empty search unsupported")
-    matches: list[JSON] = [{"id": r.identity, "family": r.family} for r in model.records.values() if text.casefold() in canonical(r.fields).decode("utf-8").casefold()]
+    matches: list[JSON] = [{"id": r.identity, "family": r.family} for r in model.records.values() if text.casefold() in (search[r.identity] if search is not None else canonical(r.fields).decode("utf-8").casefold())]
     return {"parent": model_identity(model), "query": text, "matches": matches, "scope": "literal case-insensitive record content; no inference or ranking"}
 
 
@@ -718,6 +728,7 @@ class _ProjectionIndex:
     dependencies: Mapping[str, set[str]]
     references: Mapping[str, list[tuple[int, Reference]]]
     families: Mapping[str, list[Record]]
+    reasons: tuple[Object, ...]
 
 
 def _projection_index(model: Model) -> _ProjectionIndex:
@@ -726,28 +737,32 @@ def _projection_index(model: Model) -> _ProjectionIndex:
     dependencies: dict[str, set[str]] = {rid: set() for rid in model.records}
     references: dict[str, list[tuple[int, Reference]]] = {rid: [] for rid in model.records}
     families: dict[str, list[Record]] = {family: [] for family in CORE_FIELDS}
+    reasons: list[Object] = []
+    def add(source: str, target: str, kind: str, detail: JSON) -> None:
+        dependencies[source].add(target)
+        reasons.append({"source": source, "target": target, "kind": kind, "detail": detail})
     for ordinal, ref in enumerate(model.references):
         references[ref.owner].append((ordinal, ref))
         if ref.target in model.records and ref.schema["governing"] is True:
-            dependencies[ref.owner].add(ref.target)
+            add(ref.owner, ref.target, "base-governing-reference", list(ref.path))
     for record in model.records.values():
         families[record.family].append(record)
         if record.family == "relations" and record.fields["kind"] in governing:
             source = string(record.fields["source"], "source")
             target = string(record.fields["target"], "target")
             if source in model.records:
-                dependencies[source].add(record.identity)
-                dependencies[record.identity].add(source)
+                add(source, record.identity, "base-required-relation", record.fields["kind"])
+                add(record.identity, source, "base-relation-source", record.fields["kind"])
             if target in model.records:
-                dependencies[record.identity].add(target)
+                add(record.identity, target, "base-relation-target", record.fields["kind"])
         if record.family in ("constraints", "latitude", "residuals"):
             field = "subject" if record.family == "residuals" else "applies_to"
             subjects = [record.fields[field]] if field == "subject" else seq(record.fields[field], field)
             for value in subjects:
                 subject = string(value, field)
                 if subject in model.records:
-                    dependencies[subject].add(record.identity)
-    return _ProjectionIndex(tuple(sorted(model.records)), dependencies, references, families)
+                    add(subject, record.identity, "base-attachment", record.family)
+    return _ProjectionIndex(tuple(sorted(model.records)), dependencies, references, families, tuple(reasons))
 
 
 def _project_checked(model: Model, index: _ProjectionIndex, seeds: Sequence[str], budget: int | None) -> Object:
@@ -789,6 +804,54 @@ def project_many(model: Model, selections: Sequence[tuple[Sequence[str], int | N
     model = _fresh(model)
     index = _projection_index(model)
     return [_project_checked(model, index, seeds, budget) for seeds, budget in selections]
+
+
+class CheckedQueries:
+    """Detached invocation-local model and indexes; results never expose their state.
+
+    This is a query capability, not serialized evidence or a cross-process cache.
+    All base closure still uses _project_checked, exactly as project_many does.
+    """
+    __slots__ = ("__model", "__index", "__search")
+
+    def __init__(self, model: Model):
+        self.__model = copy.deepcopy(model)
+        self.__index = _projection_index(self.__model)
+        self.__search = {r.identity: canonical(r.fields).decode("utf-8").casefold() for r in self.__model.records.values()}
+
+    @property
+    def identity(self) -> Object:
+        return model_identity(self.__model)
+
+    @property
+    def record_ids(self) -> tuple[str, ...]:
+        return self.__index.identities
+
+    def find(self, text: str) -> Object:
+        return copy.deepcopy(_find_checked(self.__model, text, self.__search))
+
+    def inspect(self, record_id: str) -> Object:
+        return copy.deepcopy(_inspect_checked(self.__model, record_id, self.__index.references))
+
+    def project_many(self, selections: Sequence[tuple[Sequence[str], int | None]]) -> list[Object]:
+        return copy.deepcopy([_project_checked(self.__model, self.__index, seeds, budget) for seeds, budget in selections])
+
+    def reasons(self, included: Sequence[str] | None = None) -> list[Object]:
+        selected = set(self.record_ids if included is None else included)
+        require(selected <= set(self.record_ids), "unknown local identity")
+        return copy.deepcopy([r for r in self.__index.reasons if r["source"] in selected and r["target"] in selected])
+
+
+def open_checked_queries(subject: Model | GraphCarrier | Object) -> CheckedQueries:
+    """Validate once, detach inputs, build one shared query/reason index."""
+    if isinstance(subject, Model):
+        model = _fresh(subject)
+    elif isinstance(subject, GraphCarrier):
+        model = decode(subject)
+    else:
+        document = obj(subject, "subject")
+        model = validate(document) if document.get("profile") == MODEL_PROFILE else decode(GraphCarrier(document))
+    return CheckedQueries(model)
 
 
 def main(argv: Sequence[str] | None = None) -> int:

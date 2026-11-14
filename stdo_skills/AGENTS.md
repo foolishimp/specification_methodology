@@ -1,28 +1,25 @@
-# stdo_skills current bootstrap
+# STDO Skills source bootstrap
 
-Select `stdo_skills.json` and verify its exact installed STDO 3.0.4 basis. Read README, Goals, Intent, Product, requirements and the applicable design. The owner-selected [3.0.5 delivery contract](specification/RELEASE_3_0_5.md) supersedes earlier builder/cohort exclusions. Historical qualification records retain their original bases.
+Select [stdo_skills.json](stdo_skills.json), verify its exact installed STDO basis,
+then read README, specification/GOALS.md, specification/INTENT.md,
+specification/PRODUCT.md, requirements and specification/DESIGN.md. This Product
+owns host workflow bindings and installation. Purpose Context owns indexing and
+context construction. Representation Tools owns the optional visual runtime.
 
-This Product participates in the explicit five-Product release relation without merging Product ownership. Common WHAT remains in specification; build tenants own HOW. Root coordinates as Executive; separately granted Writer/Worker performs scoped effects. Existing grants remain valid within their exact scope. Missing authority, uncertain effects and failed required tools return through the deciding contract; never simulate success.
+Current construction supports an unversioned development package and an explicitly
+versioned release package bound to its actual native cut. Immutable release records
+and previous work receipts retain their original identities and claims. They do
+not qualify these changed source bytes or authorize changes to installed bundles.
 
-Preserve unrelated work and frozen historical evidence. Runtime and Skills support must bind exact selected sources, actual interfaces and retained responses. Test public paths and actual pinned upstreams before claiming compatibility. A tool result, package check or role label is not semantic acceptance or release authority.
+The native workflow owns intake, effects, assessment, recovery and handoff. Use
+existing owner/grant authority within its scope; a skill, route or tool result adds
+no authority. Root coordinates cross-Product work; a separately bound Writer
+performs exact scoped effects. Source-first independent reviewers derive their
+expectations before consuming candidate-produced indexes or results and do not
+repair their assessed subject. Preserve unrelated work and historical evidence.
 
-<!-- STDO_BOOTSTRAP_START -->
-## STDO Bootstrap
-
-This scope is routed by an STDO Product Definition Overlay.
-
-Before constitutional work:
-
-1. Resolve the applicable `stdo_<label>.json` for the requested Product scope.
-2. Use `constitution.stdo.basis`, not its mutable selector, as the operative basis.
-3. Resolve and verify that exact installed release through the STDO toolchain manager.
-4. Load the Product Definition's declared bootstrap entrypoint, then exact owning standards as needed.
-5. Resolve the applicable accepted Project Reference-Frame Basis or its declared composition.
-6. Bind the exact outcome, basis and existing work grant. Use direct Writer entry when the accepted frame configuration permits it and one capable context suffices; use Executive or the declared project equivalent for material coordination. Activate only applicable dependency-ready evaluations, preserving unknown applicability and required independence. Executive does not mutate files or Git; a separate Writer activation binds those effects.
-7. Fail closed when the Product Definition, frame basis, subject, authority, or activation is missing, ambiguous, stale, or outside the governed scope.
-
-Mutable methodology source, another installed version, a cache entry, and this
-bootstrap cannot replace the exact basis selected by the Product Definition.
-A prompt, summary, symbolic map, or prior result may route attention but cannot
-replace current source authority or a closed frame result.
-<!-- STDO_BOOTSTRAP_END -->
+For relevant task context, use skills/stdo-context/SKILL.md to resolve the pinned
+Purpose Context skill and reuse a suitable existing index. Unknown applicability,
+stale sources, mismatched purposes and missing coverage remain explicit. Native
+work and source review continue to decide what source is required. Read the local
+frame basis in specification/REFERENCE_FRAME_BASIS.md before constitutional work.

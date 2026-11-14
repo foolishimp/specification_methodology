@@ -1,28 +1,16 @@
-# Intent
+# Representation Tools intent
 
-Provide concrete implementations of the STDO axiomatic calculus that preserve
-source-owned identities, constraints, permitted variation and unresolved meaning
-while making declared symbolic models easier to inspect and acquire.
+Help a project reader understand exact source through visual records, relations,
+constraints, conditions, exceptions, unresolved meaning and source navigation.
+Retain the source as authority and make interpretation boundaries visible.
 
-Make those capabilities usable on a user's own STDO project: document and
-inspect its axiomatic program, check declared properties, and supply selected
-context to LLM construction and review. Preserve independently owned leaf
-projects and explicit composition edges. STDO is an application of the tools;
-the tools' usefulness must extend to other project subjects.
+The November 12 owner direction retains generation, model/carrier checks,
+offline exploration and additive code/test-source mapping. It withdraws
+nonvisual context construction, registry-as-authority, F_D orchestration and
+Lean/formal-gate delivery from this Product. Those obligations are withdrawn
+unsatisfied, not completed by the visual implementation. Purpose Context owns
+context indexing; STDO Skills owns its host adapter.
 
-Provide source-linked formal definitions and checked proofs for declared
-calculus fragments, with executable applications that preserve the exact model
-and expose the boundary between formal propositions and semantic interpretation.
-
-Provide deterministic support tools for F_P Executives, Workers and Reviewers
-using the source-owned contracts of Specification Methodology. Make their
-selected inputs, acquired context, declared checks and execution/evidence
-exchanges inspectable without taking ownership of the method or F_P judgment.
-
-The shared specification defines the required behavior independently of a graph
-library, authoring format, model provider or execution stack. A build tenant
-chooses its computational realization and demonstrates the required preservation.
-Graphify uses a graph representation and tools; Lean/Mathlib formalises a
-declared mathematical fragment. F_P remains responsible for semantic
-interpretation; mechanical tools and proofs check only declared properties and
-retain the evidence needed for further judgment.
+Improve the visual outcome against real reading tasks and source fidelity.
+No universal completeness, semantic truth or code-correctness claim follows
+from a valid model. Prior work, releases and evidence preserve their own scope.

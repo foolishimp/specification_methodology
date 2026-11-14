@@ -1,0 +1,60 @@
+[
+  {
+    "name": "venv",
+    "argv": [
+      "/opt/homebrew/bin/python3.13",
+      "-m",
+      "venv",
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/manager-venv"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "offline-install",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/manager-venv/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--no-index",
+      "--find-links",
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/assets/runtime/wheels",
+      "--require-hashes",
+      "--no-deps",
+      "-r",
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/assets/runtime/requirements-macos-arm64-cp313.txt"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "pip-check",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/manager-venv/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "version",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/manager-venv/bin/stdo",
+      "--version"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "verify",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/manager-venv/bin/stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/native-store",
+      "verify",
+      "v3.1.0-rc.1",
+      "--manifest-sha256",
+      "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa"
+    ],
+    "exit": 0
+  }
+]

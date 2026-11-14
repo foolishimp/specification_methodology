@@ -171,7 +171,7 @@ check('overlay identity, standing and counts stay separate from the exact native
   assert.deepEqual(JSON.parse(t.$('code-overlay-about').querySelector('pre').textContent), fixture.code_overlay);
   assert.match(t.$('map-count').textContent, /3 native records.*4 overlay nodes.*7 total nodes available/);
   assert.match(t.$('code-overlay-panel').textContent, /3 selected code\/test files.*1 unresolved mappings/);
-  assert.match(t.$('code-overlay-panel').textContent, /no Lean verdict/);
+  assert.match(t.$('code-overlay-panel').textContent, /no execution verdict/);
   assert.deepEqual(['code', 'test', 'code_external'].map(v => [...t.$('family').options].find(o => o.value === v).textContent), ['Code', 'Test source', 'Unresolved code reference']);
   t.$('code-overlay-panel').querySelector('button').click(); assert.equal(t.$('about-dialog').open, true); t.w.close();
 });

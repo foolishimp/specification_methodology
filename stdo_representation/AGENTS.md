@@ -1,3 +1,21 @@
+# STDO Representation source bootstrap
+
+Current purpose: source-linked visual documentation of exact STDO releases. Select `stdo_representation.json`, then read
+[Intent](specification/INTENT.md), [Product](specification/PRODUCT.md),
+[Goals](specification/GOALS.md) and [requirements](specification/requirements/README.md).
+The stable Product identity and exact installed STDO 3.0.4 construction basis remain.
+
+Purpose Context owns source-to-purpose context indexes. STDO Skills owns the
+`stdo-context` adapter. This Product does not own agent context construction,
+registry authority, workflow orchestration or proof execution. Keep visual source
+binding, declared model structure and navigation; never infer semantic truth or
+code correctness from a structural check or a diagram.
+
+Version `3.1.0-rc.1` implements the owner-approved visual-only transition.
+Read [migration and conservation](MIGRATION-3.1.md). The six-Product cohort owns
+publication identity and qualification; no global installation or consumer
+adoption is implied. Historical models and proof evidence retain their subjects.
+
 <!-- STDO_BOOTSTRAP_START -->
 ## STDO Bootstrap
 

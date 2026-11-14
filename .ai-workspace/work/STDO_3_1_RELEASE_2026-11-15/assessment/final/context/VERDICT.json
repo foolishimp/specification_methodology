@@ -1,0 +1,147 @@
+{
+  "subjects": [
+    {
+      "name": "python",
+      "index_sha256": "717857ed027b6624f053bbc9bdf4c7319139769d9352c7ca00adc6859ad6ca52",
+      "corpus_sha256": "159389bfd1449c9a529c14d3914a112225511eb102cd48b4f85d63e468633b1e",
+      "query_sha256": "8ac9ebeaa0b606dd7eb1551543b4008565d596f0aaefaf5ca319f48e646ccf64",
+      "status": "supported",
+      "evaluator": "Claude activation (environment-reported claude-opus-5-5; CLI metadata authoritative). Cross-family to the OpenAI/Codex Writers. Same family as the prior expectations author and the prior 3.0.5 Python native assessor. No tools used; the exposed advisor tool was not called; no hashes recomputed.",
+      "evidence": [
+        "INDEX.json raw 4c9ebc08...; CONTEXT.md 98ff870d... (94 selected rules re-read)",
+        "SOURCE-DELTA.json 49794291... (only C04 changed in meaning; C14/C17/C23 moved spans with equal span bytes; 15 owners equal)",
+        "PRIOR_SOURCE_DELTA.patch 80b81f4c... (TICKETS paragraph inserted at line 727)",
+        "Full native A owners: DESIGN_MODULE 741b798e..., TICKETS 2e601f70..., ACTIVATION 56109ffa..., SPEC_METHOD 06d5e8cb..., EVALUATION b856cf04..., FOUNDATIONS 7fe9ecf2..., ASSURANCE 5f6740a3..., others per SOURCES.json",
+        "fixture INPUT_FREEZE 2db6a616...; queries/python.json abba1057...",
+        "Cited support only: 3.0.5 COVERAGE-STANDING f3a2a9e7...; NATIVE-PARSED ab2b4bd9..."
+      ],
+      "scope": "Governing-method constraint sufficiency before construction, for the Worker / adopted-DESIGN_MODULE / pure-local Python 3.12 realization_refactor family on this exact query and native A. Excludes future code, typing pass, equivalence, task admission or acceptance, host pickup and release.",
+      "residuals": [
+        "F3 C10 capacity trigger and fit-distinction wording",
+        "F4 language_version grounding",
+        "F7 C04 omits explicit ticket-authority sentence",
+        "Retained 3.0.5 low residuals (R26, R28, R30, R33, R48, R53, R58, D05 reading)",
+        "Unchanged-owner meaning partly reliant on prior Claude judgment (confirmation-bias risk); no exhaustive clause-by-clause re-derivation; attention adequacy unclaimed"
+      ]
+    },
+    {
+      "name": "sdlc",
+      "index_sha256": "05b5d132a3e2e36f2e021d9b059108eccf646faa78a6a1fc0cffca6627b99cb2",
+      "corpus_sha256": "49470f7ac2cecb5dff40ab051ffb03f2bd6bdce07ce158bb3126115ef8527915",
+      "query_sha256": "07c7e60fd1d6f9ec89f945959fdb0bf6bc61a5b8eddc148bf7b428e6a3f56598",
+      "status": "supported",
+      "evaluator": "Claude activation (environment-reported claude-opus-5-5; CLI metadata authoritative). Cross-family to the OpenAI/Codex Writers. No prior supported SDLC verdict was reused. No tools used.",
+      "evidence": [
+        "INDEX.json raw fe82297b... (all 40 rules read); CONTEXT.md a9c85fda... (20 delivered, W09 and W10 visibly false)",
+        "SOURCE-DELTA.json 5cf12b4a... (W01 text and two fact wordings changed; 39 rule objects equal)",
+        "REUSE_CUSTODY_AND_DELTA 71351cf1... (W12 guard removed; W36-W40 added vs the 9-case trial)",
+        "Full owners: SDLC_DEFAULTS a04335fe..., TICKETS 2e601f70..., ACTIVATION 56109ffa..., EVALUATION b856cf04..., REFERENCE_FRAME 4bf3bb18..., FOUNDATIONS 7fe9ecf2..., others per SOURCES.json",
+        "fixture FRAME_BASIS 8d154297..., WORK_CONTRACT ae7bede7...; queries/sdlc.json 5e925a06..."
+      ],
+      "scope": "Workflow constraint sufficiency before the decision, for executing and recording the admitted bounded refactor through the run carrier under native A defaults (no Executive profile, boundary none). Excludes specialist or technical law (routed via W34 and the Python index), task success and acceptance.",
+      "residuals": [
+        "F1 change-class / no-drift duty gated on repair_planned",
+        "F2 W03 lacks explicit refusal when no durable result surface exists",
+        "F5 W12 condition carried in text",
+        "F6 fact meanings changed under same purpose ID",
+        "Intake-time facts: a test failure discovered during work requires requery (W09/W10 visible only as false dependencies)",
+        "Attention adequacy unclaimed"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "subject": "sdlc",
+      "severity": 4,
+      "status": "residual, not falsifying for this exact query",
+      "summary": "W11 gated by repair_planned; action=work receives no explicit SPEC_METHOD \u00a74 change-class / no-upstream-drift duty; contained by W03 admitted contract, DESIGN.md and companion Python S03/D25"
+    },
+    {
+      "id": "F2",
+      "subject": "sdlc",
+      "severity": 5,
+      "summary": "W03 omits ACTIVATION Admission's refusal when no durable result surface exists (C03 carries it; W39 partial)"
+    },
+    {
+      "id": "F3",
+      "subject": "python",
+      "severity": 5,
+      "summary": "C10 'where fit is claimed' trigger weaker than ACTIVATION \u00a72 step 3 capacity-declared trigger; whole-step/measured-boundary distinction absent; contained by W38"
+    },
+    {
+      "id": "F4",
+      "subject": "python",
+      "severity": 5,
+      "summary": "language_version=3.12 not grounded in a named fixture input; affects family selection only"
+    },
+    {
+      "id": "F5",
+      "subject": "sdlc",
+      "severity": 5,
+      "summary": "W12 guard removed; trigger kept in text; conservative and lawful"
+    },
+    {
+      "id": "F6",
+      "subject": "sdlc",
+      "severity": 5,
+      "summary": "adopted_defaults/operative_basis meanings changed under unchanged purpose_id; declared, and purpose hash change refuses predecessor reuse"
+    },
+    {
+      "id": "F7",
+      "subject": "python",
+      "severity": 5,
+      "summary": "C04 compresses the TICKETS paragraph without the explicit ticket work-state-authority sentence; meaning preserved by the actor-account clause"
+    },
+    {
+      "id": "ADJ-1",
+      "subject": "adjacent",
+      "severity": null,
+      "summary": "v3 requirements SDLC_DEFAULTS 'gains no release identity' and README rule-count mismatch (X-08); release-facing, not judged"
+    }
+  ],
+  "source_owner_placement": {
+    "SDLC_DEFAULTS": "Selectable projection installed in native A (a04335...); names deciding owners; selected by the Product basis (fixture FRAME_BASIS); not a second constitution",
+    "TICKETS_section5_paragraph": "Correctly placed application of ACTIVATION \u00a72/\u00a75/\u00a77 to the selected carrier; ACTIVATION is the single owner; no new carrier requirement or ticket-state authority; RELEASE \u00a79 disposition not judged here",
+    "W01": "Faithful rebinding to released native source; non-substitution and no implicit migration preserved",
+    "native_skills": "stdo-work, stdo-review and stdo-ticket project TICKETS and ACTIVATION; create no authority; direct Writer sufficiency preserved",
+    "purpose_context_and_skills": "Purpose Context owns index, runtime and catalog; the Skills adapter binds only and defers ticket writes to the granted Writer; no cross-Product authority leak found",
+    "default_projection_identity": "a04335... identical across A and the three frame-basis citations"
+  },
+  "prior_evidence_applicability": [
+    {
+      "evidence": "Ticket 3-case trial (TC01-TC03; freeze d1d0d270...)",
+      "applicability": "applicable as observations on original subjects for T-01 through T-06",
+      "basis": "12 owner bytes, native work/coordination instructions and W02-W40 meanings equal to A; W01 not deciding; binding-route change is mechanical",
+      "limits": "TC03 staged measurement, not an initial whole-boundary preflight; native source-currentness corroborated after returns; single sequential actor; instruction-bound isolation; fixture provider; clipping/recovery and failed command 025 retained; covered false; semantic unknown not transferred"
+    },
+    {
+      "evidence": "SDLC 9-case decision trial (S01-S09; freeze ecfb570b...)",
+      "applicability": "partially applicable as decision-level support for N-05 to N-13 classes; not a clean successor pass",
+      "basis": "Deciding rules W02-W11 and W13-W35 equal; W12 guard removal and W36-W40 additions do not contradict any decision",
+      "limits": "Native stdo-work ee0aac3b vs b7ed03fe and stdo-review 8ccbec09 vs a694b9d0 differ with no supplied delta (explicit residual); decision-use under supplied facts only; dev source and 3.0.5 basis; contexts unassessed"
+    },
+    {
+      "evidence": "3.0.5-rc.1 Python native assessment",
+      "applicability": "cited support only via 15 equal owners and 112 equal rule objects; verdict not transferred",
+      "limits": "same-family-as-me confirmation bias; prior low residuals retained"
+    },
+    {
+      "evidence": "Ticket-trial exact-query assessments (unknown) and host replay",
+      "applicability": "historical subjects; delivery-mechanics observation only",
+      "limits": "no coverage verdict transfers"
+    }
+  ],
+  "required_new_trials": [],
+  "unperformed_or_excluded": [
+    "Current native actor on final installed Skills path using both final-use-01 contexts (unperformed; required only if that actor claim is made)",
+    "Nine SDLC decision classes on current native skill bytes (unperformed; residual, not a defeated reuse)",
+    "Missing-admission case (no admitted contract) observation; only missing correction authority (TC01) and no-ticket (TC03) were observed",
+    "Automatic host pickup (Q06) and native review/handoff on live installed hosts (Q07)",
+    "Initial single whole-boundary capacity preflight",
+    "Real external-provider effects",
+    "Code execution, typing pass, equivalence, task acceptance",
+    "Release, tag, asset and publication closure (B); whole-method/C3; universal effectiveness; complete host-context fit; adequate attention",
+    "Exception, ODD/UX and live/release branches (excluded by fixture facts)"
+  ]
+}

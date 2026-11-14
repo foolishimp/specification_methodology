@@ -53,6 +53,30 @@ class RealizationTests(unittest.TestCase):
     def signature(self) -> Object:
         return obj(obj(self.document["signature"], "signature")["definition"], "definition")
 
+    def test_checked_query_results_detach_and_preserve_existing_operations(self) -> None:
+        model = self.model()
+        checked = codec.open_checked_queries(model)
+        record_id = uid("object:a")
+        self.assertEqual(checked.find("requires"), find(model, "requires"))
+        self.assertEqual(checked.inspect(record_id), inspect(model, record_id))
+        expected = copy.deepcopy(project_many(model, [([record_id], None), ([uid("object:c")], None)]))
+        self.assertEqual(checked.project_many([([record_id], None), ([uid("object:c")], None)]), expected)
+        result = checked.inspect(record_id)
+        result["record"]["value"]["text"] = "caller mutation"
+        self.assertEqual(checked.inspect(record_id), inspect(model, record_id))
+        self.document["populations"]["objects"][1]["value"]["text"] = "input mutation"
+        self.assertEqual(checked.project_many([([record_id], None), ([uid("object:c")], None)]), expected)
+
+    def test_checked_reasons_share_the_original_dependency_index(self) -> None:
+        model = self.model()
+        checked = codec.open_checked_queries(model)
+        expected = codec._projection_index(model)
+        actual = {(r["source"], r["target"]) for r in checked.reasons()}
+        self.assertEqual(actual, {(source, target) for source, targets in expected.dependencies.items() for target in targets})
+        view = checked.project_many([([uid("object:a")], None)])[0]
+        self.assertTrue(all(r["source"] in view["included"] and r["target"] in view["included"] for r in checked.reasons(view["included"])))
+        self.assertTrue(any(r["kind"] == "base-attachment" for r in checked.reasons()))
+
     def test_round_trip_every_family_and_population_order(self) -> None:
         original = self.model()
         recovered = decode(materialize(original))

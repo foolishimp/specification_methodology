@@ -1,0 +1,1583 @@
+{
+  "denominator": {
+    "diagnostic_paragraphs": 1,
+    "functional_checklist_items": 43,
+    "review_questions": 56,
+    "total_units": 100
+  },
+  "not_task_evidence": "This maps governing review obligations, not proof that a future task has performed or passed them. The source's materiality, adoption, promotion and claim conditions remain operative.",
+  "profile": "purpose-context.source-review-dispositions/1",
+  "rows": [
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-01",
+      "rule_ids": [
+        "D02",
+        "D15"
+      ],
+      "source": {
+        "end_line": 2068,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2068,
+        "text": "1. Does semantic law live in typed carriers or in orchestration code?",
+        "text_sha256": "589e699abc19102f75f8586c251351ae6bef155790578af56b8040c9004d3a04"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-02",
+      "rule_ids": [
+        "D05",
+        "S10"
+      ],
+      "source": {
+        "end_line": 2069,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2069,
+        "text": "2. Are the main steps readable as transforms over admitted truth?",
+        "text_sha256": "90ddff3e6815b22b1923beb218c794391fc7ced402703ecad62c82c381c422bb"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-03",
+      "rule_ids": [
+        "D15"
+      ],
+      "source": {
+        "end_line": 2070,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2070,
+        "text": "3. Are effects isolated to explicit edge modules?",
+        "text_sha256": "9db3c827127b78486ce3599fd7d9db56854915fa00abe85a9cf5082f07342842"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-04",
+      "rule_ids": [
+        "D16"
+      ],
+      "source": {
+        "end_line": 2071,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2071,
+        "text": "4. Can projections or reports invent closure independently?",
+        "text_sha256": "a39ec4180241b7b67f6cdab62d5835c8da8a6dffafbdda6f76885a4deb10d060"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-05",
+      "rule_ids": [
+        "D03"
+      ],
+      "source": {
+        "end_line": 2074,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2072,
+        "text": "5. Does each projection or query module derive from an admitted source\n   carrier, or can it reconstruct a same-name but structurally different\n   truth surface?",
+        "text_sha256": "01bd89c8ba93186c42f35d0f6451b6fd138b32f5787d228779796880280f375b"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-06",
+      "rule_ids": [
+        "D05",
+        "D06"
+      ],
+      "source": {
+        "end_line": 2075,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2075,
+        "text": "6. Is mutation justified, bounded and local?",
+        "text_sha256": "0cafd9c16da6d9f6bea01ef7e50f08249812c94c14a7abe61aad57e050b93a7b"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-07",
+      "rule_ids": [
+        "D04",
+        "D14"
+      ],
+      "source": {
+        "end_line": 2076,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2076,
+        "text": "7. Can consumers pattern-match the source carrier directly?",
+        "text_sha256": "7ff48ec8c9ed3dfc5bff85438da8d21c68b1fe51e203fe50b6bebd1539ac5fb5"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-08",
+      "rule_ids": [
+        "D17",
+        "S14"
+      ],
+      "source": {
+        "end_line": 2077,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2077,
+        "text": "8. Is any proxy or compatibility surface still silently authoritative?",
+        "text_sha256": "d656b7dfebf6cf17fa9c898a0cf0ebefc9792fffba8dd879c450421e80426f24"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-09",
+      "rule_ids": [
+        "D02"
+      ],
+      "source": {
+        "end_line": 2079,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2078,
+        "text": "9. Would removing the authoritative carrier make the system fail closed\n   rather than silently rebuilding truth?",
+        "text_sha256": "f9e7ac8be395fe6b2e7fa78ba36a408459bb8a16958a79f9f5f8c409ac032d85"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-10",
+      "rule_ids": [
+        "D12"
+      ],
+      "source": {
+        "end_line": 2081,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2080,
+        "text": "10. Does each new function project accepted Prime atoms without\n    convenience aggregation or rival semantic authority?",
+        "text_sha256": "909e7d59fe53d242fe711c9d6b7276812b4b11e289d10c62fcd56d82460b895e"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-11",
+      "rule_ids": [
+        "D16"
+      ],
+      "source": {
+        "end_line": 2083,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2082,
+        "text": "11. Does any interface bleed semantic authority into another interface\n    family?",
+        "text_sha256": "5dfca54de5e1cd5908110a93ee68dae288b4daa5e3209646ed9bc87ad15fd2e7"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-12",
+      "rule_ids": [
+        "D08",
+        "D09"
+      ],
+      "source": {
+        "end_line": 2085,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2084,
+        "text": "12. For Python, does any governed semantic surface still rely on `Any`,\n    open dictionary payloads or untyped definitions?",
+        "text_sha256": "979b67752b5decb77c2df5ff0489b496629823836e0f72ac40a53fdf88c35162"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-13",
+      "rule_ids": [
+        "D13"
+      ],
+      "source": {
+        "end_line": 2086,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2086,
+        "text": "13. Has the boundary declared its IACS?",
+        "text_sha256": "b2d181c84b9f4ec14dd1263d680919dc18dc642f2df065f42a671325ad870755"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-14",
+      "rule_ids": [
+        "D14"
+      ],
+      "source": {
+        "end_line": 2088,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2087,
+        "text": "14. Which shapes are Subordinate Payloads, and why are they not staying\n    subordinate?",
+        "text_sha256": "cc02a14d800faf7d690bc0a8f30314acd50bf3204a38a7315bbf27a8b93e8e9d"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-15",
+      "rule_ids": [
+        "D14"
+      ],
+      "source": {
+        "end_line": 2089,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2089,
+        "text": "15. Does every promoted top-level type pass the Promotion Test?",
+        "text_sha256": "f4d6a1c9236002e864ff59358747bc14183676cc8fffec9193bb80f9f978f16b"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-16",
+      "rule_ids": [
+        "D12",
+        "D14"
+      ],
+      "source": {
+        "end_line": 2091,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2090,
+        "text": "16. Has typed closure caused Boundary Inflation by multiplying peer types\n    or parallel schema migrations?",
+        "text_sha256": "56004810d44205f2f1c12cd7066d799a22cb41816c39e74dc067cd6bd39cd941"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-17",
+      "rule_ids": [
+        "D02",
+        "D12"
+      ],
+      "source": {
+        "end_line": 2093,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2092,
+        "text": "17. Does this change avoid increasing truth surfaces, and reduce duplicate\n    truth where duplicate truth exists?",
+        "text_sha256": "f5e4ac83d75c840a88259e052c7980c13179db54e488cf0c4f9f7f179bf6360e"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-18",
+      "rule_ids": [
+        "D04"
+      ],
+      "source": {
+        "end_line": 2094,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2094,
+        "text": "18. Is any foreign or open payload still trusted past ingress?",
+        "text_sha256": "6de9d7636e44d741f228a0faea7d6b52334acccc95d0fe03c656af4d8a6a9676"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-19",
+      "rule_ids": [
+        "D04",
+        "D09"
+      ],
+      "source": {
+        "end_line": 2096,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2095,
+        "text": "19. Did enforcement follow proof, or is the typing or schema work\n    cosmetic?",
+        "text_sha256": "f0dc6b725cc6acf1bd332283c3e87c25fa18b18b975ed7dd41f29ac5b5caed7e"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-20",
+      "rule_ids": [
+        "D16"
+      ],
+      "source": {
+        "end_line": 2098,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2097,
+        "text": "20. If this boundary governs another actor, is it publishing state and\n    admissible routes, or imperatively prescribing strategy?",
+        "text_sha256": "ed2014d9a373684485be958bcbffd540661e5dc0485266710f303c2a412e63d4"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-21",
+      "rule_ids": [
+        "D27"
+      ],
+      "source": {
+        "end_line": 2101,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2099,
+        "text": "21. If a reference realisation exists, has the target boundary been\n    derived explicitly from reference design to target design to target\n    module assets rather than from code drift?",
+        "text_sha256": "622f84f828df3ba36a7c6d4d91aebd9d27c3633425c075128b30131817ae8e67"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-22",
+      "rule_ids": [
+        "D13",
+        "D26",
+        "D39"
+      ],
+      "source": {
+        "end_line": 2105,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2102,
+        "text": "22. Does a module-bounded domain projection exist and accurately show IACS\n    carriers, their Prime-atom projection mappings, subordinate payloads,\n    visibility, ownership and deferred families from the accepted\n    Ontology?",
+        "text_sha256": "c64c2685c0eaf2713162da633ababea50e7c2e06ff3ad89cadc3255b7a13febc"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-23",
+      "rule_ids": [
+        "A02"
+      ],
+      "source": {
+        "end_line": 2107,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2106,
+        "text": "23. Do the unit tests derive from module ownership and module assets\n    rather than from helper layout or incidental code shape?",
+        "text_sha256": "d164e44ef09a9b9abcdb01c2f00246fa1490b00bcc6060f2e1224c22c887bced"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-24",
+      "rule_ids": [
+        "D18"
+      ],
+      "source": {
+        "end_line": 2110,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2108,
+        "text": "24. If the change claims clean-up or optimisation, does it stay\n    boundary-local, behaviour-preserving and authority-neutral rather than\n    becoming silent redesign?",
+        "text_sha256": "705aa6333b2ba3a3377de7aed36bf2f6b8a347189e67c1c82085729eb559a361"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-25",
+      "rule_ids": [
+        "D18"
+      ],
+      "source": {
+        "end_line": 2113,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2111,
+        "text": "25. If a cross-boundary opportunity was discovered, was it kept out of the\n    current change unless the owning authority admitted it at the lawful\n    re-entry point?",
+        "text_sha256": "a1b490f071b7105491f4c2e39b0eeaa37d1975cf2e51cfb6b7414eb42c7aeb78"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-26",
+      "rule_ids": [
+        "D19",
+        "C17"
+      ],
+      "source": {
+        "end_line": 2116,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2114,
+        "text": "26. If the same realisation pattern has already appeared elsewhere, did\n    review make an explicit library or commonisation decision rather than\n    allowing another silent local rebuild?",
+        "text_sha256": "9c2e15e0c29d867c28fedebfbba03223e257930f7f5501640a197d08658a9d2e"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-27",
+      "rule_ids": [
+        "D19",
+        "C17"
+      ],
+      "source": {
+        "end_line": 2120,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2117,
+        "text": "27. If this would be the third local rebuild of the same realisation\n    pattern, is the change design-method conformant because it consumes or\n    extends the governing library or records an explicit do-not-commonise\n    decision?",
+        "text_sha256": "54651729e81af030ef105fe6b2dfd2170c6196cb5f05e6be674d965570228867"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-28",
+      "rule_ids": [
+        "D37"
+      ],
+      "source": {
+        "end_line": 2123,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2121,
+        "text": "28. If the ticket is making a design-method closure claim, did the bounded\n    design check cover the exact claim and applicable hard stops without\n    automatically absorbing optional discovery?",
+        "text_sha256": "3134b31783dced8b9c227eda74706e669a6fbde4eb2c27ff39b8b3149e10381e"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-29",
+      "rule_ids": [
+        "O01",
+        "C19"
+      ],
+      "source": {
+        "end_line": 2126,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2124,
+        "text": "29. If the project is governed by the graph-execution profile, is this\n    module realising a declared outcome traversal rather than substituting\n    for the graph function?",
+        "text_sha256": "da5ee3f829d3f39b1cf4cf21268e1cc2778b082dcec9660674d8bb2a677ec4f2"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-30",
+      "rule_ids": [
+        "D39"
+      ],
+      "source": {
+        "end_line": 2129,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2127,
+        "text": "30. Has review checked whether a deterministic module boundary is actually\n    an operative edge traversal that should be declared under the\n    graph-execution profile?",
+        "text_sha256": "0d1c47c39e678f4f327eee8f4c7b37b7f801c89f4b4132a6d2be65c4d73b6385"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-31",
+      "rule_ids": [
+        "C13",
+        "O01",
+        "O02"
+      ],
+      "source": {
+        "end_line": 2133,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2130,
+        "text": "31. Do `F_D` uses establish the common total-domain contract and retain their\n    operation profiles, and do evaluators, deterministic transforms and effect shells remain\n    subordinate to the GTL and ABG graph carrier rather than becoming the\n    hidden program?",
+        "text_sha256": "dbb6cb0851e25ee72f31eb21334cf61da99810f695aa84862a64fe6e153a367e"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-32",
+      "rule_ids": [
+        "S08",
+        "A10"
+      ],
+      "source": {
+        "end_line": 2136,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2134,
+        "text": "32. Does the boundary have a lifecycle confirmation against the canonical\n    operational lifecycle chain of SPEC_METHOD §2, or named `Gap:` or\n    `Unanswered:` items for unresolved phases?",
+        "text_sha256": "d2d32a5088f677344d12d354a70991809665525956fd3ec330e6950958443c2d"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-33",
+      "rule_ids": [
+        "S08",
+        "A10",
+        "C15"
+      ],
+      "source": {
+        "end_line": 2139,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2137,
+        "text": "33. Are release, deployment, live usage, observed telemetry and retirement\n    questions answered by the proper authority surface rather than invented\n    by implementation, prompt prose, local convention or fixtures?",
+        "text_sha256": "ff778e294dcca441e0c299d5b995dcf23ab5aea26176baa601e07865b2a76769"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-34",
+      "rule_ids": [
+        "S08",
+        "A10"
+      ],
+      "source": {
+        "end_line": 2141,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2140,
+        "text": "34. If a lifecycle phase is declared not applicable, is the reason explicit\n    and compatible with the product and requirement authority?",
+        "text_sha256": "ac5aeb2ee55321954a518633a6660d00672400c8d2e7c13221f142cf984b602f"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-35",
+      "rule_ids": [
+        "D26"
+      ],
+      "source": {
+        "end_line": 2144,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2142,
+        "text": "35. Does the boundary have distinct Mermaid domain, sequence and\n    state-machine views rather than one carrier inventory or broad\n    flowchart?",
+        "text_sha256": "d3fe3d13cafe45cce5a30b5fc7627a8e6438e4b8b7e69f7e200584f0681b4e46"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-36",
+      "rule_ids": [
+        "D39"
+      ],
+      "source": {
+        "end_line": 2147,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2145,
+        "text": "36. Does every sequence participant exist in the domain model, and does\n    every message bind to a declared transform, graph or computation\n    constructor, interpreter act or effect boundary?",
+        "text_sha256": "7a355aca26ae0ca0a88d12ef1b5159af30cc78c49638c85007480d20ea12afc5"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-37",
+      "rule_ids": [
+        "D39",
+        "O08"
+      ],
+      "source": {
+        "end_line": 2149,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2148,
+        "text": "37. Does every state transition derive from admitted carrier, event or\n    projection truth rather than controller-local memory?",
+        "text_sha256": "dd40d82b33df78d3810df53d3f6ad8dcc1c4b294799349107d9de2626b0d7b01"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-38",
+      "rule_ids": [
+        "D39"
+      ],
+      "source": {
+        "end_line": 2152,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2150,
+        "text": "38. Does the axiom matrix evaluate every applicable product, graph,\n    language, runtime, handler and module law with `pass`, `fail` or\n    reasoned `not_applicable`?",
+        "text_sha256": "159d32fc24ef2a2e0422d2ba69f5a6fdb99e73609a0bee4d912e9768344d94ba"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-39",
+      "rule_ids": [
+        "D39",
+        "D30"
+      ],
+      "source": {
+        "end_line": 2155,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2153,
+        "text": "39. Is any relied-on graph, batch, retry, recursion or workflow\n    constructor still `semantic_not_realized`, and if so are promotion and\n    closure blocked rather than bypassed with imperative glue?",
+        "text_sha256": "6cf4d85e1314e718622a5a29ae7c5e2d8fb6c0d4f09795f2aaced73ebe067715"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-40",
+      "rule_ids": [
+        "D22",
+        "D26",
+        "D39"
+      ],
+      "source": {
+        "end_line": 2160,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2156,
+        "text": "40. Is the proportional sequencing relation justified, and is the design\n    verdict explicitly `accepted` before promotion or closure and, where\n    design-gated, before retained implementation establishes an unresolved\n    or contradictory relation or chooses a materially non-equivalent\n    network?",
+        "text_sha256": "fe71d062358a0c3047defa566a2bfda7d0460f9f286eee40f02167f26df686b1"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-41",
+      "rule_ids": [
+        "D13",
+        "D20",
+        "D26"
+      ],
+      "source": {
+        "end_line": 2162,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2161,
+        "text": "41. Does one accepted Ontology exist before IACS, public operation, schema,\n    module or implementation promotion?",
+        "text_sha256": "24e787f2c6a845faed6f70a329a37758eee85a1a3c078fd3abf17fe699a6169a"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-42",
+      "rule_ids": [
+        "D20",
+        "D30"
+      ],
+      "source": {
+        "end_line": 2165,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2163,
+        "text": "42. Does the Ontology enumerate entities, identities, relationships,\n    invariants and logical lifecycle completeness without treating mutable\n    CRUD as the default?",
+        "text_sha256": "65f122854c0b64b639b076c0fe04c015bc4b81d0dd09af32756297ee522535d5"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-43",
+      "rule_ids": [
+        "D34"
+      ],
+      "source": {
+        "end_line": 2169,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2166,
+        "text": "43. Does every Ontology function or transition declare proposer,\n    evaluator, verifier, admitter, executor, projector and retirement\n    authority as applicable, with actor and capability kept distinct from\n    authority?",
+        "text_sha256": "d4902e6eed6420858db9767ac937bbf42e84b5d4f69825991ceb0081e52248e6"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-44",
+      "rule_ids": [
+        "D36"
+      ],
+      "source": {
+        "end_line": 2172,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2170,
+        "text": "44. Has every discovered functionality item been derived through an atomic\n    function or higher-order composition, explicitly deferred or excluded,\n    or assigned to a named gap?",
+        "text_sha256": "92bc96b7ef97d5abf1945a595cfdc8548a07b63434943c80ce54337e596a8d62"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-45",
+      "rule_ids": [
+        "D10",
+        "D11"
+      ],
+      "source": {
+        "end_line": 2176,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2173,
+        "text": "45. Was Prime contraction applied to the complete candidate semantic-atom\n    family and all proposed realisation projections, with every accepted\n    atom's admitted domain recorded, rather than only to functions,\n    carriers or isolated units?",
+        "text_sha256": "73e9858402677cfcb0f224131245a292e4599abb7ba15d80ad73b0d3d9841d4b"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-46",
+      "rule_ids": [
+        "D36",
+        "S10",
+        "C12"
+      ],
+      "source": {
+        "end_line": 2179,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2177,
+        "text": "46. Does the boundary declare its composition and effect algebra and prove\n    identity, closure, cardinality, effect and authority conservation where\n    applicable?",
+        "text_sha256": "491624dc9bae2436ae5eeb067e1f700db3a88fa4c4977c134b409d1b01d3742b"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-47",
+      "rule_ids": [
+        "D27",
+        "D39"
+      ],
+      "source": {
+        "end_line": 2182,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2180,
+        "text": "47. Are the class, sequence, state, IACS, public contract, adapter, code\n    and test surfaces traceable projections of the Ontology with any\n    accepted loss declared?",
+        "text_sha256": "fbdcc48ab1665c20c2e5f3faf41ff3b46e6151a61930b0c3a3a5c96cbe281f7e"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-48",
+      "rule_ids": [
+        "D02",
+        "D24",
+        "D27"
+      ],
+      "source": {
+        "end_line": 2184,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2183,
+        "text": "48. Would removing the Ontology reveal ungrounded meaning in a downstream\n    view, operation register, controller or implementation branch?",
+        "text_sha256": "6d751cadcfd5a36e2770c73e76ccd565b6dd8174ba7d94c290bd179b8e6a55bf"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-49",
+      "rule_ids": [
+        "D28"
+      ],
+      "source": {
+        "end_line": 2188,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2185,
+        "text": "49. Before constructing a material generic capability or common mechanic,\n    was it stated without Product, domain, module, vendor, file or\n    incumbent labels, with declared semantic or authority-bearing\n    relations distinguished from generic mechanics?",
+        "text_sha256": "3e5dc68019ea67f55348988fb33eb45bb1c6f93e33c48c10c406c69ba73d7dcb"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-50",
+      "rule_ids": [
+        "D28",
+        "C07"
+      ],
+      "source": {
+        "end_line": 2192,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2189,
+        "text": "50. Does bounded discovery record every searched source or category,\n    cutoff time and version basis, applicability criteria, exclusions,\n    predecessor or incumbent status, and residual unknown, with later\n    material candidates invalidating affected selection evidence?",
+        "text_sha256": "86ed53bad2c06706d3046d5189ec3369c940f044767023ca2dd064dbbc763a3a"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-51",
+      "rule_ids": [
+        "D29"
+      ],
+      "source": {
+        "end_line": 2195,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2193,
+        "text": "51. Did foundation selection compare credible candidate compositions\n    across the decision-relevant lifecycle dimensions without incumbent,\n    source-order, local-code or dependency-count preference?",
+        "text_sha256": "ff8ef7280a98050cf2d1e6f21bcb47967573571078bc68d70002d69df599a04b"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-52",
+      "rule_ids": [
+        "D29"
+      ],
+      "source": {
+        "end_line": 2198,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2196,
+        "text": "52. Are hard authority, Product-contract, safety, security, licensing and\n    constructability failures eliminative, while unknown evidence remains\n    explicit rather than becoming a favourable score?",
+        "text_sha256": "85ea4415e21ad7e44eb965c02e4f98cb85de5acdec3e4ce5513eed420f85564a"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-53",
+      "rule_ids": [
+        "D29",
+        "C05"
+      ],
+      "source": {
+        "end_line": 2201,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2199,
+        "text": "53. Does every reused foundation hold only explicitly assigned roles,\n    preserving each declared relation's owner, role kind, subject, scope,\n    basis, lifecycle and refusal invariants without authority widening?",
+        "text_sha256": "21d332e8553c2925c852565dd36891d399274b52eba1f2fdbd55ef099c266827"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-54",
+      "rule_ids": [
+        "D29"
+      ],
+      "source": {
+        "end_line": 2204,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2202,
+        "text": "54. Is the selected composition undominated under the evidence, and did\n    the existing trade-off owner apply declared priorities and risk\n    tolerances rather than asserting an undefined total ordering?",
+        "text_sha256": "211694f961655530af8223e2c488d3a331fafd63e88db7b876486b3ef63870fe"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-55",
+      "rule_ids": [
+        "D29"
+      ],
+      "source": {
+        "end_line": 2207,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2205,
+        "text": "55. Does every rejected material candidate carry decisive evidence or a\n    falsifier, while an unresolved frontier remains a gap rather than an\n    unsupported preference?",
+        "text_sha256": "836a41b6c15fcb07308fe5f3336ca9fb25c63b924247801080c8798c5fe55f51"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Required review question when reviewing code under the adopted profile; its own conditional trigger remains material.",
+      "id": "review-question-56",
+      "rule_ids": [
+        "D29",
+        "D28"
+      ],
+      "source": {
+        "end_line": 2210,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2208,
+        "text": "56. Did any newly exposed material generic subproblem recursively re-enter\n    the foundation-selection relation before its implementation was\n    retained?",
+        "text_sha256": "d260d35a85f617482a449e5d4c7a54074e766afc31d5495c1b18c25f7eef9c07"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-01",
+      "rule_ids": [
+        "S01",
+        "S03",
+        "D18"
+      ],
+      "source": {
+        "end_line": 2229,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2228,
+        "text": "- [ ] the change preserves the constitutional WHAT and keeps realisation\n      work inside lawful HOW surfaces only;",
+        "text_sha256": "f98209d00030388d53e69180d06f738576a4d093674638404ac7027fbaa67a8c"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-02",
+      "rule_ids": [
+        "D20",
+        "D21"
+      ],
+      "source": {
+        "end_line": 2233,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2230,
+        "text": "- [ ] the active boundary has one accepted Ontology that derives its\n      entities, identities, relationships, invariants, lifecycle,\n      authority, atomic functions, higher-order composition, effects and\n      projections;",
+        "text_sha256": "81060267988805ea3e3c1ecc035cdc458d36f1bdc40256a2790d00bf17c45c9e"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-03",
+      "rule_ids": [
+        "D30"
+      ],
+      "source": {
+        "end_line": 2236,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2234,
+        "text": "- [ ] the entity-lifecycle completeness matrix gives every declare/create,\n      read/project, update/transition and delete/retire question a lawful\n      function, reasoned `not_applicable` or named owned gap;",
+        "text_sha256": "8e0841755aec8aa45ef5e7520951a8cd5cd7e8e8176a9e01e1d2211149b4f70e"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-04",
+      "rule_ids": [
+        "D34"
+      ],
+      "source": {
+        "end_line": 2239,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2237,
+        "text": "- [ ] the authority matrix distinguishes actor, capability, proposal,\n      evaluation, verification, admission, execution, projection and\n      retirement without implicit authority widening;",
+        "text_sha256": "b43276586692a7daf4e15a6c2a0fc44d9367ae4dc0aeb8b1a30e9d84acedbc39"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-05",
+      "rule_ids": [
+        "D36"
+      ],
+      "source": {
+        "end_line": 2241,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2240,
+        "text": "- [ ] the function-derivation matrix disposes every discovered\n      functionality item and prevents direct verb-to-operation promotion;",
+        "text_sha256": "072a3c72dc5dabef7250cd7af6b0c3b1d96e0f88e911a5ce3189b83167682585"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-06",
+      "rule_ids": [
+        "D11",
+        "D12"
+      ],
+      "source": {
+        "end_line": 2245,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2242,
+        "text": "- [ ] whole-family Prime contraction has factored repeated behaviour into\n      parameterised atomic functions and declared higher-order\n      composition before peer functions, operations or carriers are\n      promoted;",
+        "text_sha256": "cd85efe463b1e7b2f06aad5f76f6e77a21ef5063b88bde2acfc0c8018dd28f65"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-07",
+      "rule_ids": [
+        "D10",
+        "D11"
+      ],
+      "source": {
+        "end_line": 2248,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2246,
+        "text": "- [ ] Prime evidence covers the complete candidate semantic-atom family,\n      records every accepted atom's admitted domain, and maps accepted\n      atoms to every proposed realisation projection;",
+        "text_sha256": "07e4274c2b9d37e216ad25359912cfe722fb0c9a3e350c0b4f7200cadf1fa140"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-08",
+      "rule_ids": [
+        "D13",
+        "D26",
+        "D27",
+        "D39"
+      ],
+      "source": {
+        "end_line": 2251,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2249,
+        "text": "- [ ] the IACS, three views, public contracts, adapters, implementation\n      and tests are fidelity-checked projections of the accepted Ontology\n      rather than independent design authorities;",
+        "text_sha256": "e62636d53c70d7b2b1beadfb44f8884772cee0ea5012594de28bebc5e9ad9b35"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-09",
+      "rule_ids": [
+        "E06",
+        "D27"
+      ],
+      "source": {
+        "end_line": 2254,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2252,
+        "text": "- [ ] if a reference realisation exists, the new realisation is\n      functionally equivalent at the semantic boundary without copying\n      incidental implementation drift;",
+        "text_sha256": "fb521d8b8d494ce9ecfca786ba627c2a1c2619e82ed77cef1ba7b54a6925126c"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-10",
+      "rule_ids": [
+        "D27"
+      ],
+      "source": {
+        "end_line": 2257,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2255,
+        "text": "- [ ] if a reference realisation exists, the target design explicitly maps\n      reference design to target design to target module boundary before\n      implementation;",
+        "text_sha256": "a411b723397387ada44ac03c9e3478b40efac158b027cd082b9033aa9fcc9045"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-11",
+      "rule_ids": [
+        "D28",
+        "D29"
+      ],
+      "source": {
+        "end_line": 2263,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2258,
+        "text": "- [ ] before constructing a material generic capability, the boundary ran\n      the proportional foundation-selection pass (UP-023, §5), recorded\n      bounded discovery and the undominated frontier, distinguished\n      declared relations from generic mechanics, preserved every assigned\n      role and authority tuple, and recorded decisive evidence for\n      selected and rejected candidates;",
+        "text_sha256": "a69a4ad5906cddbfd6f418c7d393740adaf75c19a35f02c864eba4d90a917be2"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-12",
+      "rule_ids": [
+        "A01",
+        "A02"
+      ],
+      "source": {
+        "end_line": 2265,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2264,
+        "text": "- [ ] implementation and unit tests both derive from the same module\n      boundary assets rather than from code-first decomposition;",
+        "text_sha256": "b0ff47173ac1b407931df7cbb70b1fc09d8e2d91e2e390fcf89282aa9ea5e2be"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-13",
+      "rule_ids": [
+        "D02"
+      ],
+      "source": {
+        "end_line": 2266,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2266,
+        "text": "- [ ] each semantic truth surface still has one clear authoritative owner;",
+        "text_sha256": "17bdacfa2b61bb6933b80faacfe2ae23cd64a4e18df70087e403d26a513a8017"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-14",
+      "rule_ids": [
+        "D02",
+        "D17"
+      ],
+      "source": {
+        "end_line": 2268,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2267,
+        "text": "- [ ] the change reduces duplicated truth, controller reconstruction and\n      rival local authority paths;",
+        "text_sha256": "a61c7fe72f433b3db6a240146f87dcb574732f012d53787a9d68cc5851245ce3"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-15",
+      "rule_ids": [
+        "D04"
+      ],
+      "source": {
+        "end_line": 2269,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2269,
+        "text": "- [ ] semantic functions consume admitted carriers only;",
+        "text_sha256": "5a8ea3076605fbb3e915b6d279c82ffb9c70b7381083d9e9ead329c7c542c9cb"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-16",
+      "rule_ids": [
+        "D15"
+      ],
+      "source": {
+        "end_line": 2270,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2270,
+        "text": "- [ ] semantic functions are pure for the same admitted inputs;",
+        "text_sha256": "aaccbffe180aedc34bbc92e5200f1ba227d1fce1dd4c956561939427d3d45dde"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-17",
+      "rule_ids": [
+        "D15"
+      ],
+      "source": {
+        "end_line": 2273,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2271,
+        "text": "- [ ] time, randomness, UUID minting, environment reads, process state,\n      filesystem, network and global registries are absent from the\n      semantic centre;",
+        "text_sha256": "8d2be7831102169b6bdd62c3004d67f1e1807f263d8c6b50af2c763299a15ea7"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-18",
+      "rule_ids": [
+        "D15",
+        "D34"
+      ],
+      "source": {
+        "end_line": 2276,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2274,
+        "text": "- [ ] if identity is introduced, identity creation is explicitly owned by\n      a declared ingress or effect boundary rather than hidden inside\n      semantic helpers;",
+        "text_sha256": "5cbcf8a0a313182d18bd8e3fecda203f6f4e4a96e069cc0f0e9a694339825427"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-19",
+      "rule_ids": [
+        "D05",
+        "D06"
+      ],
+      "source": {
+        "end_line": 2278,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2277,
+        "text": "- [ ] carriers are immutable and returned as new values rather than\n      mutated in place;",
+        "text_sha256": "1a0754a15a44706153127f5e934b282d43a57cde8db98b549dd51ab1dd95fccc"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-20",
+      "rule_ids": [
+        "D05",
+        "D15"
+      ],
+      "source": {
+        "end_line": 2279,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2279,
+        "text": "- [ ] shared mutable state is absent from the semantic centre;",
+        "text_sha256": "26e134dae3ad854df32645a85d0ae48aa30897cbfef9b15c73ec457a1922043a"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-21",
+      "rule_ids": [
+        "D04"
+      ],
+      "source": {
+        "end_line": 2282,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2280,
+        "text": "- [ ] semantic transforms operate directly on local admitted carriers\n      rather than re-entering parsers, validators or loaders on locally\n      assembled truth;",
+        "text_sha256": "6c9a82a40f2f929ac486bc51f9a5d238b5233374bfbaf241dfb9b884796120ed"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-22",
+      "rule_ids": [
+        "D04",
+        "D07"
+      ],
+      "source": {
+        "end_line": 2284,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2283,
+        "text": "- [ ] invalid or incomplete truth is rejected at ingress instead of being\n      repaired procedurally inside semantic code;",
+        "text_sha256": "b9c9321f0dcf81365a76f0e1e4f827b02161b1e27405fd0147bf3b82d015bb32"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-23",
+      "rule_ids": [
+        "D07"
+      ],
+      "source": {
+        "end_line": 2286,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2285,
+        "text": "- [ ] defaults are explicit, ratified and carrier-owned rather than\n      helper-owned;",
+        "text_sha256": "883850b978d7fc8d1de77935e18921776d646e3e5b6720c0bc84fbf6e8b43412"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-24",
+      "rule_ids": [
+        "D15",
+        "D38"
+      ],
+      "source": {
+        "end_line": 2288,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2287,
+        "text": "- [ ] each function has one clear owner and one clear responsibility rather\n      than mixing admission, semantics and effects;",
+        "text_sha256": "457da55267929f261352928acbd0b8a0eb7f5c50e8e5caf99b7acf5b9f27b81b"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-25",
+      "rule_ids": [
+        "D15"
+      ],
+      "source": {
+        "end_line": 2292,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2289,
+        "text": "- [ ] coupling is low by dependency shape: semantic algebra depends on\n      carrier contracts, not runtime shells; admission depends on\n      validation, not semantic orchestration; effect code stays at the\n      edge;",
+        "text_sha256": "4c0555199cad5aee444cbadf83a20346e413f16abd81169c4780642b1123f014"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-26",
+      "rule_ids": [
+        "D15"
+      ],
+      "source": {
+        "end_line": 2293,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2293,
+        "text": "- [ ] no function both decides semantic meaning and performs effects;",
+        "text_sha256": "a61080e49b7e7047c00272666d7b6de793bd01cc66455208c5979952be818808"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-27",
+      "rule_ids": [
+        "D15",
+        "D39"
+      ],
+      "source": {
+        "end_line": 2295,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2294,
+        "text": "- [ ] effect boundaries are explicit, typed and unable to erase carrier\n      truth into open objects;",
+        "text_sha256": "36fab8c4f2eae9f70c2a146cdeb66423170e99fd8ab26abef797a360b21825ce"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-28",
+      "rule_ids": [
+        "D15",
+        "D39"
+      ],
+      "source": {
+        "end_line": 2297,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2296,
+        "text": "- [ ] package, bootstrap, controller, adapter and runtime-shell layers stay\n      below the semantic centre;",
+        "text_sha256": "b7118b921d1600290aad81f4e01b7e54313d9b5f9f73516df6a04cc1e4614f94"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-29",
+      "rule_ids": [
+        "D16"
+      ],
+      "source": {
+        "end_line": 2299,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2298,
+        "text": "- [ ] governance and observability surfaces publish facts, eligibility and\n      provenance only, without imperative builder or executor strategy;",
+        "text_sha256": "b2bfa11df1eaabe90e83b7561d45537413fc6eb4bd8ec1d044bfbd7d16d091bb"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-30",
+      "rule_ids": [
+        "D26",
+        "D39"
+      ],
+      "source": {
+        "end_line": 2302,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2300,
+        "text": "- [ ] the active boundary has complete Mermaid domain, sequence and\n      state-machine views that match the current IACS, visibility,\n      ownership, behaviour, lifecycle and deferred-family split;",
+        "text_sha256": "356fc17dcf57ca38c3d24eec66a9ca8007481813b09963a8b7364b6bc904489c"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-31",
+      "rule_ids": [
+        "D26",
+        "D39"
+      ],
+      "source": {
+        "end_line": 2305,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2303,
+        "text": "- [ ] the active boundary carries a complete cross-view axiom matrix and\n      an explicit `accepted` design verdict with no bypassed realisation\n      gap;",
+        "text_sha256": "a66f55cac9fae654cf484f80a58f284676b2cc1aff5e8b97a93ed17f7e27f8c3"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-32",
+      "rule_ids": [
+        "A02"
+      ],
+      "source": {
+        "end_line": 2307,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2306,
+        "text": "- [ ] the unit tests for the active boundary derive from module ownership,\n      IACS and structural carrier assets rather than from helper layout;",
+        "text_sha256": "69790384c3be12b0074281f84a5635bde350b3cf478e61ab1dda6adc54f355d0"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-33",
+      "rule_ids": [
+        "D18"
+      ],
+      "source": {
+        "end_line": 2309,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2308,
+        "text": "- [ ] if the change includes clean-up or optimisation, it stays\n      boundary-local, behaviour-preserving and authority-neutral;",
+        "text_sha256": "a060b7a5e9860db890f59ad43e2268e415456b5968ae68ca79af3084b35c0895"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-34",
+      "rule_ids": [
+        "D19",
+        "C17"
+      ],
+      "source": {
+        "end_line": 2312,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2310,
+        "text": "- [ ] if the same realisation pattern has appeared before, the ticket has\n      made an explicit library or commonisation decision rather than\n      rebuilding it again silently;",
+        "text_sha256": "dd89c502199a2b4c2d64bced8952b608beb1befd757766a8bab66e5dea60e8c2"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-35",
+      "rule_ids": [
+        "D19",
+        "C17"
+      ],
+      "source": {
+        "end_line": 2315,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2313,
+        "text": "- [ ] if a reusable library or commonisation surface exists, the ticket\n      explicitly consumes or extends it rather than duplicating the\n      pattern locally;",
+        "text_sha256": "1b85e6044f77b653d63e52de720425428a8284360081388551f544613fadbffb"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-36",
+      "rule_ids": [
+        "D19",
+        "C17"
+      ],
+      "source": {
+        "end_line": 2318,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2316,
+        "text": "- [ ] if no reusable library or commonisation surface is used, there is an\n      explicit rationale that the pattern is boundary-specific or not yet\n      a lawful commonisation candidate;",
+        "text_sha256": "69a1dec80e3adea3085b1617aca032dba4933b1e49b7809db50abf037e33c591"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-37",
+      "rule_ids": [
+        "D18"
+      ],
+      "source": {
+        "end_line": 2321,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2319,
+        "text": "- [ ] if a cross-boundary opportunity was discovered, it was kept out of\n      the current change unless the owning authority admitted it at the\n      lawful re-entry point;",
+        "text_sha256": "ae7b74249b7fbd39c59948abf37b6809b5b5cff67be2781ff4adcbd7b592fcdd"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-38",
+      "rule_ids": [
+        "D37"
+      ],
+      "source": {
+        "end_line": 2324,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2322,
+        "text": "- [ ] if the ticket is making a design-method closure claim, the bounded\n      design check covered the exact claim and applicable hard stops\n      without automatically absorbing optional discovery;",
+        "text_sha256": "4ce4b971b32d2166f727103a4c497463d3ea4f0905c7851fb5357d063b2559e4"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-39",
+      "rule_ids": [
+        "D39"
+      ],
+      "source": {
+        "end_line": 2326,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2325,
+        "text": "- [ ] a negative proof shows that an imperative bypass, open-payload\n      bypass or effect-edge erasure fails closed;",
+        "text_sha256": "3098b7849381f4af7b4bb62c2cc0bdb31158f3396b3b4bf5c52c5e9eb279dc79"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-40",
+      "rule_ids": [
+        "O01",
+        "C19"
+      ],
+      "source": {
+        "end_line": 2329,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2327,
+        "text": "- [ ] if the project is governed by the graph-execution profile, the\n      deterministic module sits inside a declared outcome traversal rather\n      than replacing one;",
+        "text_sha256": "d84a0085e63fbf006d6a93ad3bd84b1de9c574d3186a9a6e357bc0da72c24a61"
+      }
+    },
+    {
+      "disposition": "strengthened_or_added",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-41",
+      "rule_ids": [
+        "D39"
+      ],
+      "source": {
+        "end_line": 2332,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2330,
+        "text": "- [ ] if the module appears to decide next work, traversal closure,\n      semantic target movement or graph-function identity, the boundary\n      has been repriced under the graph-execution profile;",
+        "text_sha256": "dc2e967fd285da14893d0d420806bdcc217fae811c20c430e5832e2060249794"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-42",
+      "rule_ids": [
+        "S08",
+        "A10"
+      ],
+      "source": {
+        "end_line": 2336,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2333,
+        "text": "- [ ] the active boundary carries lifecycle confirmation against the\n      canonical operational lifecycle chain of SPEC_METHOD §2, with each\n      phase answered, declared not applicable with a reason, or recorded\n      as a named `Gap:` or `Unanswered:` item; and",
+        "text_sha256": "165ecc78b849718aaa7030459a2366d42e11805ca673908a4fd899d3afa69258"
+      }
+    },
+    {
+      "disposition": "retained",
+      "force": "Explicit review check when functional bias, pure transforms, immutable carriers, single-owner truth or low coupling is claimed; reuse remains subject to actual applicability/invalidators.",
+      "id": "functional-checklist-43",
+      "rule_ids": [
+        "S08",
+        "A10",
+        "C15"
+      ],
+      "source": {
+        "end_line": 2340,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2337,
+        "text": "- [ ] release, deployment, live usage, telemetry and retirement claims are\n      confirmed against product, requirement, design, release or\n      operational authority rather than derived from implementation\n      convention or fixtures.",
+        "text_sha256": "0ee11a8eda3866b466a431b52d1045eae413db9f305547d6320c1ac45ba98642"
+      }
+    },
+    {
+      "disposition": "added",
+      "force": "Withhold the dependent conformance claim; missing authority/observation alone is not a coupling diagnosis.",
+      "id": "unanswered-relation-and-diagnosis",
+      "rule_ids": [
+        "D39"
+      ],
+      "source": {
+        "end_line": 2220,
+        "source_id": "standards/DESIGN_MODULE.md",
+        "start_line": 2212,
+        "text": "An unanswered required relation withholds the conformance claim that\ndepends on it. Record the unanswered relation and the evidence needed to\ndecide it, then diagnose the gap at its actual owner under\n[ACTIVATION §1 Feedback and diagnosis](ACTIVATION.md#construction-relation).\nA missing authority declaration or observation does not by itself show\nexcessive coupling or imperative design. That diagnosis requires evidence\nthat meaning is held in orchestration or outside the declared carriers\nand transforms, under [SPEC_METHOD §2 Realisation shape](SPEC_METHOD.md#realisation-shape)\n(P6, P2, P1).",
+        "text_sha256": "7bf3393fea1734760729c122e634a52ef00e58785966ec33a2d63a9b4d89877d"
+      }
+    }
+  ],
+  "source_id": "standards/DESIGN_MODULE.md",
+  "source_scope": {
+    "end_line": 2340,
+    "start_line": 2064
+  },
+  "source_sha256": "741b798ea2e71797bd884817eb6903ae1a1431c97a989ab5741ffa315a3bd1e2",
+  "standing": "Author source comparison; every unit has a retained/strengthened rule mapping, pending independent assessment."
+}

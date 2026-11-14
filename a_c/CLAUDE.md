@@ -1,10 +1,20 @@
-# a_c current bootstrap
+# Representation Tools source bootstrap
 
-Select `stdo_a_c.json` and verify its exact installed STDO 3.0.4 basis. Read README, Goals, Intent, Product, requirements and the applicable design. The owner-selected [3.0.5 delivery contract](specification/RELEASE_3_0_5.md) supersedes earlier builder/cohort exclusions. Historical qualification records retain their original bases.
+Current purpose: source-linked visual documentation and exploration for a selected project. Select `stdo_a_c.json`, then read
+[Intent](specification/INTENT.md), [Product](specification/PRODUCT.md),
+[Goals](specification/GOALS.md) and [requirements](specification/requirements/README.md).
+The stable Product identity and exact installed STDO 3.0.4 construction basis remain.
 
-This Product participates in the explicit five-Product release relation without merging Product ownership. Common WHAT remains in specification; build tenants own HOW. Root coordinates as Executive; separately granted Writer/Worker performs scoped effects. Existing grants remain valid within their exact scope. Missing authority, uncertain effects and failed required tools return through the deciding contract; never simulate success.
+Purpose Context owns source-to-purpose context indexes. STDO Skills owns the
+`stdo-context` adapter. This Product does not own agent context construction,
+registry authority, workflow orchestration or proof execution. Keep visual source
+binding, declared model structure and navigation; never infer semantic truth or
+code correctness from a structural check or a diagram.
 
-Preserve unrelated work and frozen historical evidence. Runtime and Skills support must bind exact selected sources, actual interfaces and retained responses. Test public paths and actual pinned upstreams before claiming compatibility. A tool result, package check or role label is not semantic acceptance or release authority.
+Version `3.1.0-rc.1` implements the owner-approved visual-only transition.
+Read [migration and conservation](MIGRATION-3.1.md). The six-Product cohort owns
+publication identity and qualification; no global installation or consumer
+adoption is implied. Historical models and proof evidence retain their subjects.
 
 <!-- STDO_BOOTSTRAP_START -->
 ## STDO Bootstrap

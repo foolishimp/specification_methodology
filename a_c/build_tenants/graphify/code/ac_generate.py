@@ -24,25 +24,10 @@ import subprocess
 import sys
 import time
 import tomllib
-from typing import Any, TYPE_CHECKING
+from typing import Any
 from urllib.parse import quote
 
 import ac_graph
-
-if TYPE_CHECKING:
-    import ac_formal_gate
-else:
-    # This new bridge is loaded from the exact sibling source bytes, never by
-    # an ambient module/package name or a possibly stale bytecode cache.
-    from types import ModuleType
-    _formal_path = Path(__file__).resolve().with_name("ac_formal_gate.py")
-    if _formal_path.is_symlink() or not _formal_path.is_file():
-        raise RuntimeError("Formal bridge must be the selected regular source file")
-    _formal_source = _formal_path.read_bytes()
-    ac_formal_gate = ModuleType("ac_formal_gate")
-    ac_formal_gate.__file__ = str(_formal_path)
-    exec(compile(_formal_source, str(_formal_path), "exec"), ac_formal_gate.__dict__)
-    ac_formal_gate.__dict__["__a_c_loaded_sha256__"] = hashlib.sha256(_formal_source).hexdigest()
 
 HERE = Path(__file__).resolve().parent
 ASSETS = HERE / "generation"
@@ -225,97 +210,50 @@ def upstream_modules(path: Path) -> dict[str, Any]:
     return modules
 
 
-def _selected_path(checker: dict[str, Any] | None, path: Path, *, write: bool = False,
-                   directory: bool = False, absent: bool = False) -> Path:
-    if checker is not None:
-        return ac_formal_gate.guard_path(checker, path, output=write, directory=directory, absent=absent)
+def _path(path: Path, *, write: bool = False, directory: bool = False, absent: bool = False) -> Path:
+    """Preserve local source/run custody independently of any proof provider."""
+    path = Path(path)
+    require(not any(p.is_symlink() for p in (path, *path.parents)), "redirected selected path: " + str(path))
+    if path.exists():
+        require(path.is_dir() if directory else path.is_file(), "selected path has the wrong kind: " + str(path))
+    else:
+        require(write or absent, "selected path is missing: " + str(path))
     return path
 
 
-def _selected_read(checker: dict[str, Any] | None, path: Path) -> bytes:
-    return ac_formal_gate.read_selected(checker, path) if checker is not None else path.read_bytes()
+def _read(path: Path) -> bytes:
+    return _path(path).read_bytes()
 
 
-def _resolve_selection(plan: dict[str, Any], retained: Any, present: bool,
-                       selected: dict[str, Any] | None) -> dict[str, Any] | None:
-    prior = plan.get("formal_checker")
-    if present:
-        require(prior is None or retained == prior, "prepared formal checker selection changed")
-        prior = retained
-    elif prior is not None:
-        raise GenerationError("prepared required formal checker selection is missing")
-    if prior is not None and selected is not None:
-        require(prior == selected, "required formal checker cannot be changed during generation")
-    result = prior if prior is not None else selected
-    if result is not None:
-        ac_formal_gate.validate_config(result)
-    return result
+def _startup(output: Path) -> dict[str, Any]:
+    plan = _decode(_read(output / "plan.json"))
+    require("formal_checker" not in plan and not (output / "formal-selection.json").exists(),
+            "retired proof-selected run requires its archived exact runtime; prepare a new visual run")
+    return plan
 
 
-def _startup(output: Path, selected: dict[str, Any] | None = None) -> tuple[dict[str, Any], dict[str, Any] | None]:
-    """Read only the operator-owned fixed startup files before reservation.
-
-    This does not authenticate arbitrary request-selected run directories. The
-    operator/wrapper owns the run and selection, under the cooperative host
-    contract. No plan-named content is read until selected guards are active.
-    """
-    if selected is not None:
-        ac_formal_gate.validate_config(selected)
-        _selected_path(selected, output, write=True, directory=True)
-    plan_path, selection_path = output / "plan.json", output / "formal-selection.json"
-    _selected_path(selected, plan_path)
-    _selected_path(selected, selection_path, absent=True)
-    plan_raw = plan_path.read_bytes()
-    present = selection_path.exists()
-    selection_raw = selection_path.read_bytes() if present else None
-    try:
-        plan = _decode(plan_raw)
-        retained = _decode(selection_raw) if present else None
-    except (ValueError, UnicodeError) as exc:
-        raise GenerationError("Malformed trusted generation startup metadata") from None
-    checker = _resolve_selection(plan, retained, present, selected)
-    if checker is not None:
-        _selected_path(checker, output, write=True, directory=True)
-        require(_selected_read(checker, plan_path) == plan_raw, "generation plan changed during startup")
-        _selected_path(checker, selection_path, absent=True)
-        if present:
-            require(_selected_read(checker, selection_path) == selection_raw, "formal selection changed during startup")
-    return plan, checker
-
-
-def _selected_run(output: Path, selected: dict[str, Any] | None = None) -> tuple[dict[str, Any], dict[str, Any] | None]:
-    """Metadata-only scan of the actual selected run, never a registered root.
-
-    Downstream retained journals/actor files stay confined to this run. Concurrent
-    host replacement after inspection is outside the cooperative host contract.
-    """
-    plan, checker = _startup(output, selected)
-    if checker is not None:
-        pending = [output]
-        while pending:
-            directory = pending.pop()
-            for path in directory.iterdir():
-                mode = path.lstat().st_mode
-                is_directory = stat.S_ISDIR(mode)
-                _selected_path(checker, path, directory=is_directory)
-                if is_directory:
-                    pending.append(path)
-    return plan, checker
+def _selected_run(output: Path) -> dict[str, Any]:
+    plan = _startup(output)
+    pending = [output]
+    while pending:
+        for path in pending.pop().iterdir():
+            directory = stat.S_ISDIR(path.lstat().st_mode)
+            _path(path, directory=directory)
+            if directory:
+                pending.append(path)
+    return plan
 
 
 def _run_member(output: Path, path: Path) -> Path:
-    """Direct selected entry boundary before its first retained-member read."""
-    _, checker = _selected_run(output)
-    if checker is not None:
-        require(path.absolute().resolve().is_relative_to(output.absolute().resolve()), "selected member escapes retained run")
-        _selected_path(checker, path)
-    return path
+    _selected_run(output)
+    require(path.absolute().resolve().is_relative_to(output.absolute().resolve()), "selected member escapes retained run")
+    return _path(path)
 
 
 def _run_path(output: Path, path: Path, *, write: bool = False, directory: bool = False,
               absent: bool = False) -> Path:
-    _, checker = _startup(output)
-    return _selected_path(checker, path, write=write, directory=directory, absent=absent)
+    _startup(output)
+    return _path(path, write=write, directory=directory, absent=absent)
 
 
 def _upstream_path(output: Path, path: Path) -> Path:
@@ -325,18 +263,11 @@ def _upstream_path(output: Path, path: Path) -> Path:
 
 
 def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream: Path | None,
-            chunk_chars: int = 120_000, graph_chars: int = 40_000, *, formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
+            chunk_chars: int = 120_000, graph_chars: int = 40_000) -> dict[str, Any]:
     require(mode in SEMANTIC_PROFILES, "unsupported generation mode")
     require(1_000 <= chunk_chars <= 3_000_000 and 1_000 <= graph_chars <= 200_000, "explicit chunk/graph character envelope outside supported range")
-    if formal_checker is not None:
-        ac_formal_gate.validate_config(formal_checker)
-        _selected_path(formal_checker, output, write=True)
-        _selected_path(formal_checker, corpus, directory=True)
-        if upstream is not None:
-            _selected_path(formal_checker, upstream, directory=True)
-            _selected_path(formal_checker, upstream / UPSTREAM_PROMPT)
     corpus = corpus.resolve(strict=True)
-    manifest = _decode(_selected_read(formal_checker, manifest_path))
+    manifest = _decode(_read(manifest_path))
     require(isinstance(manifest, dict) and isinstance(manifest.get("files"), list) and manifest["files"], "corpus manifest requires nonempty files array")
     subject = manifest.get("subject_id")
     require(isinstance(subject, str) and re.match(r"^[A-Za-z][A-Za-z0-9+.-]*:[^\s]+$", subject), "manifest requires absolute subject_id")
@@ -350,7 +281,7 @@ def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream
         file_seen.add(path)
         source = corpus / path
         require(source.resolve(strict=True).is_relative_to(corpus), "source symlink escapes corpus")
-        raw = _selected_read(formal_checker, source)
+        raw = _read(source)
         require(sha(raw) == entry["sha256"], f"source digest mismatch: {path}")
         if "bytes" in entry:
             require(len(raw) == entry["bytes"], f"source byte count mismatch: {path}")
@@ -364,11 +295,11 @@ def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream
     for entry in pinned:
         destination = output / "corpus" / entry["path"]
         destination.parent.mkdir(parents=True, exist_ok=True)
-        _selected_path(formal_checker, destination, write=True).write_bytes(_selected_read(formal_checker, corpus / entry["path"]))
+        _path(destination, write=True).write_bytes(_read(corpus / entry["path"]))
     save(output / "source-manifest.json", manifest, exclusive=True)
     save(output / "chunks.json", chunks, exclusive=True)
     if mode == "graphify":
-        (output / "upstream-extraction-spec.md").write_bytes(_selected_read(formal_checker, Path(upstream_record["root"]) / UPSTREAM_PROMPT))
+        (output / "upstream-extraction-spec.md").write_bytes(_read(Path(upstream_record["root"]) / UPSTREAM_PROMPT))
     assets = {path.name: sha(path.read_bytes()) for path in sorted(ASSETS.iterdir()) if path.is_file()}
     plan = {"profile": "ac.generation.plan/1", "mode": mode, "subject_id": subject,
             "semantic_extraction_profile": SEMANTIC_PROFILES[mode],
@@ -379,18 +310,15 @@ def prepare(corpus: Path, manifest_path: Path, output: Path, mode: str, upstream
             "runner_sha256": sha(Path(__file__).read_bytes()), "codec_sha256": sha((HERE / "ac_graph.py").read_bytes()),
             "assets": assets, "calculus": {"uri": ac_graph.CALCULUS_URI, "sha256": ac_graph.CALCULUS_SHA256},
             "claim": "Fresh F_P proposal authoring; processing coverage is not semantic completeness or acceptance."}
-    if formal_checker is not None:
-        plan["formal_checker"] = formal_checker
-        save(output / "formal-selection.json", formal_checker, exclusive=True)
     save(output / "plan.json", plan, exclusive=True)
     return plan
 
 
-def checkpoint(output: Path, *, formal_checker: dict[str, Any] | None = None) -> tuple[dict[str, Any], list[dict[str, Any]]]:
-    plan, checker = _selected_run(output, formal_checker)
+def checkpoint(output: Path) -> tuple[dict[str, Any], list[dict[str, Any]]]:
+    plan = _selected_run(output)
     require(plan.get("profile") == "ac.generation.plan/1", "unknown generation plan")
     def read(path: Path) -> bytes:
-        return _selected_read(checker, path)
+        return _read(path)
     require(sha(read(output / "source-manifest.json")) == plan["source_manifest_sha256"], "source manifest changed")
     chunks_raw = read(output / "chunks.json")
     require(sha(chunks_raw) == plan["chunks_sha256"], "chunk plan changed")
@@ -398,19 +326,18 @@ def checkpoint(output: Path, *, formal_checker: dict[str, Any] | None = None) ->
     require(sha(read(HERE / "ac_graph.py")) == plan["codec_sha256"], "codec changed since preparation")
     require({path.name: sha(read(path)) for path in ASSETS.iterdir() if path.is_file()} == plan["assets"], "generation schemas/prompts changed")
     for entry in plan["files"]:
-        relative = safe_relative(entry["path"]) if checker is not None else entry["path"]
+        relative = safe_relative(entry["path"])
         source = output / "corpus" / relative
-        _selected_path(checker, source)
+        _path(source)
         require(source.resolve(strict=True).is_relative_to((output / "corpus").resolve()), "snapshot source escapes checkpoint")
         require(sha(read(source)) == entry["sha256"], "frozen source bytes changed: " + relative)
     if plan["mode"] == "graphify":
         require(sha(read(output / "upstream-extraction-spec.md")) == plan["upstream"]["prompt_sha256"], "upstream prompt changed")
     chunks = _decode(chunks_raw)
-    if checker is not None:
-        for chunk in chunks:
-            require("/" not in safe_relative(chunk["id"]), "selected chunk id must be one safe basename")
-            for segment in chunk["segments"]:
-                safe_relative(segment["path"])
+    for chunk in chunks:
+        require("/" not in safe_relative(chunk["id"]), "selected chunk id must be one safe basename")
+        for segment in chunk["segments"]:
+            safe_relative(segment["path"])
     return plan, chunks
 
 
@@ -869,7 +796,7 @@ def stage(output: Path, name: str, *, execute: bool, codex: str = "codex", timeo
         attempts = sorted(root.iterdir()) if root.exists() else []
         require(not attempts or retry_failed, f"{chunk['id']}: failed/interrupted attempt preserved; explicit --retry-failed required")
         attempt = root / f"attempt-{len(attempts) + 1:03d}"
-        _run_path(output, attempt, write=True)
+        _run_path(output, attempt, write=True, directory=True)
         result = run_actor(prompt, ASSETS / ("extraction.schema.json" if name == "extract" else "author.schema.json"), attempt, codex, timeout, load(settings_path)["settings"])
         if result["status"] == "completed":
             try:
@@ -920,7 +847,7 @@ def verify_discovery(output: Path) -> dict[str, Any]:
 def build_discovery(output: Path, upstream: Path | None = None) -> dict[str, Any]:
     plan, chunks = checkpoint(output)
     require(plan["mode"] in GRAPH_MODES, "direct mode does not build a discovery graph")
-    folder = _run_path(output, output / "discovery", write=True)
+    folder = _run_path(output, output / "discovery", write=True, directory=True)
     if folder.exists():
         return verify_discovery(output)
     attempts = [successful_attempt(output, "extract", chunk) for chunk in chunks] if plan["mode"] == "graphify" else []
@@ -1143,54 +1070,12 @@ def model_from_answers(plan: dict[str, Any], chunks: list[dict[str, Any]],
     return model, coverage
 
 
-def _formal_selection(output: Path, plan: dict[str, Any], selected: dict[str, Any] | None) -> dict[str, Any] | None:
-    path = output / "formal-selection.json"
-    if selected is not None:
-        ac_formal_gate.validate_config(selected)
-        _selected_path(selected, output, write=True, directory=True)
-        _selected_path(selected, path, absent=True)
-    present = path.exists()
-    # This fixed inherited startup locator has the same trusted custody as plan.
-    raw = path.read_bytes() if present else None
-    result = _resolve_selection(plan, _decode(raw) if present else None, present, selected)
-    if result is not None:
-        _selected_path(result, output, write=True, directory=True)
-        _selected_path(result, path, write=not present)
-        if present:
-            require(_selected_read(result, path) == raw, "formal selection changed during startup")
-        else:
-            save(path, result, exclusive=True)
-    return result
 
 
-def check_formal_proposal(plan: dict[str, Any], folder: Path, result: dict[str, Any], *,
-                          formal_checker: dict[str, Any] | None = None) -> None:
-    """One required-gate policy for direct, grounded and repaired producers."""
-    formal_checker = _formal_selection(folder.parent, plan, formal_checker)
-    if formal_checker is not None:
-        gate: dict[str, Any] = {"required": True, "status": "verified", "checker_sha256": digest(formal_checker), "runs": [],
-                                "scope": "exact generated model and actual carrier; no semantic acceptance"}
-        try:
-            for format in ("model", "carrier"):
-                raw = _selected_read(formal_checker, folder / (format + ".json"))
-                run = ac_formal_gate.verify(formal_checker, raw, format, [], None, None, folder / ("formal-" + format))
-                gate["runs"].append(run)
-                if run["result"]["status"] != "verified":
-                    gate["status"] = run["result"]["status"]
-                    gate["reason"] = run["result"].get("reason")
-                    break
-        except (ac_formal_gate.GateError, OSError) as exc:
-            gate["status"] = exc.status if isinstance(exc, ac_formal_gate.GateError) else "incomplete"
-            gate["reason"] = str(exc)
-        if gate["status"] != "verified":
-            result["status"] = "unverified_proposal"
-        result["formal_gate"] = gate
 
 
-def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None = None,
-             formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
-    plan, chunks = checkpoint(output, formal_checker=formal_checker)
-    formal_checker = _formal_selection(output, plan, formal_checker)
+def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None = None) -> dict[str, Any]:
+    plan, chunks = checkpoint(output)
     if plan["mode"] in GRAPH_MODES:
         verify_discovery(output)
     answers, provenance = {}, []
@@ -1203,14 +1088,12 @@ def assemble(output: Path, *, allow_partial: bool = False, upstream: Path | None
             provenance.append({"chunk": chunk["id"], "attempt": str(attempt.relative_to(output)), "answer_sha256": sha((attempt / "answer.json").read_bytes()),
                                "invocation_sha256": sha((attempt / "invocation.json").read_bytes())})
     require(allow_partial or len(answers) == len(chunks), "missing validated F_P chunks; normal assembly refuses. --allow-partial explicitly marks refused sections")
-    return emit_proposal(output, plan, chunks, answers, provenance, upstream=upstream,
-                         formal_checker=formal_checker)
+    return emit_proposal(output, plan, chunks, answers, provenance, upstream=upstream)
 
 
 def emit_proposal(output: Path, plan: dict[str, Any], chunks: list[dict[str, Any]],
                   answers: dict[str, dict[str, Any]], provenance: list[dict[str, str]], *,
-                  upstream: Path | None = None,
-                  formal_checker: dict[str, Any] | None = None) -> dict[str, Any]:
+                  upstream: Path | None = None) -> dict[str, Any]:
     """Shared checked materialization; callers own their actual author evidence."""
     known = {chunk["id"]: chunk for chunk in chunks}
     require(set(answers) <= set(known), "answer for an unknown source chunk")
@@ -1220,7 +1103,7 @@ def emit_proposal(output: Path, plan: dict[str, Any], chunks: list[dict[str, Any
     model_checked = ac_graph.validate(model)
     carrier = ac_graph.materialize(model_checked)
     require(ac_graph.decode(carrier).document == model, "proposal carrier did not preserve authored model")
-    folder = _run_path(output, output / ("partial-proposal" if len(answers) < len(chunks) else "proposal"), write=True)
+    folder = _run_path(output, output / ("partial-proposal" if len(answers) < len(chunks) else "proposal"), write=True, directory=True)
     require(not folder.exists(), "assembled proposal already exists; preserve immutable result")
     folder.mkdir()
     save(folder / "model.json", model)
@@ -1240,18 +1123,10 @@ def emit_proposal(output: Path, plan: dict[str, Any], chunks: list[dict[str, Any
               "processing_complete": coverage["processing_complete"], "upstream_trial": upstream_trial,
               "files": {path.name: sha(path.read_bytes()) for path in folder.iterdir() if path.is_file()},
               "claim": "Mechanically valid, source-grounded F_P proposal and lossless carrier; interpretation fidelity and semantic acceptance unassessed."}
-    check_formal_proposal(plan, folder, result, formal_checker=formal_checker)
     save(folder / "result.json", result)
     return result
 
 
-def formal_exit(value: Any) -> int:
-    if isinstance(value, dict):
-        selected = value.get("formal_gate")
-        if isinstance(selected, dict) and selected.get("required"):
-            return ac_formal_gate.EXITS[selected["status"]]
-        return max((formal_exit(child) for child in value.values()), default=0)
-    return max((formal_exit(child) for child in value), default=0) if isinstance(value, list) else 0
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
@@ -1283,29 +1158,19 @@ def main(argv: list[str] | None = None) -> int:
         p.add_argument("--upstream", type=Path)
         if name == "assemble":
             p.add_argument("--allow-partial", action="store_true")
-    for name in ("prepare", "assemble", "run"):
-        p = commands.choices[name]
-        p.add_argument("--formal-checker", type=Path, help="select a REQUIRED pinned checker configuration")
-        p.add_argument("--formal-checker-sha256", help="trusted startup digest of the exact checker configuration")
     args = parser.parse_args(argv)
     try:
-        formal_checker = None
-        if args.command in ("prepare", "assemble", "run"):
-            require(bool(args.formal_checker) == bool(args.formal_checker_sha256), "formal checker requires both path and trusted configuration digest")
-            if args.formal_checker:
-                formal_checker = ac_formal_gate.load_config(args.formal_checker, args.formal_checker_sha256)
         if args.command == "prepare":
-            result = prepare(args.corpus, args.manifest, args.output, args.mode, args.upstream, args.chunk_chars, args.graph_chars, formal_checker=formal_checker)
+            result = prepare(args.corpus, args.manifest, args.output, args.mode, args.upstream, args.chunk_chars, args.graph_chars)
         elif args.command in ("extract", "author"):
             result = stage(args.output, args.command, execute=args.execute, codex=args.codex, timeout=args.timeout, max_chunks=args.max_chunks,
                            jobs=args.jobs, retry_failed=args.retry_failed, upstream=args.upstream, model=args.model, effort=args.effort)
         elif args.command == "graph":
             result = build_discovery(args.output, args.upstream)
         elif args.command == "assemble":
-            result = assemble(args.output, allow_partial=args.allow_partial, upstream=args.upstream, formal_checker=formal_checker)
+            result = assemble(args.output, allow_partial=args.allow_partial, upstream=args.upstream)
         else:
-            plan, _ = checkpoint(args.output, formal_checker=formal_checker)
-            formal_checker = _formal_selection(args.output, plan, formal_checker)
+            plan, _ = checkpoint(args.output)
             results = []
             if plan["mode"] == "graphify-ac":
                 results.append(build_discovery(args.output, args.upstream))
@@ -1318,19 +1183,15 @@ def main(argv: list[str] | None = None) -> int:
                 if name == "extract":
                     results.append(build_discovery(args.output, args.upstream))
             if results[-1]["status"] == "completed" and args.execute:
-                results.append(assemble(args.output, upstream=args.upstream, formal_checker=formal_checker))
+                results.append(assemble(args.output, upstream=args.upstream))
             result = {"stages": results}
-            if formal_checker is not None and not any("formal_gate" in item for item in results):
-                result["formal_gate"] = {"required": True, "status": "incomplete", "reason": "Generation did not produce an assembled proposal for the required formal gate"}
         print(json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2))
         def failed(value: Any) -> bool:
             if isinstance(value, dict):
                 return value.get("status") == "failed" or any(failed(child) for child in value.values())
             return isinstance(value, list) and any(failed(child) for child in value)
-        if formal_exit(result):
-            return formal_exit(result)
         return 1 if failed(result) else 0
-    except (GenerationError, ac_graph.Refusal, ac_formal_gate.GateError, OSError, ValueError, subprocess.SubprocessError) as exc:
+    except (GenerationError, ac_graph.Refusal, OSError, ValueError, subprocess.SubprocessError) as exc:
         print("generation refused: " + str(exc), file=sys.stderr)
         return 2
 

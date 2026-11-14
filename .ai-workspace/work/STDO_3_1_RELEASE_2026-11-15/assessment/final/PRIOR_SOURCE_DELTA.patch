@@ -1,0 +1,126 @@
+--- /Users/jim/src/apps/specification_methodology/.ai-workspace/work/SDLC_DEFAULTS_2026-11-14/trial-preparation/purpose-context-frozen/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/SDLC_DEFAULTS.md
++++ /Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/native-store/releases/v3.1.0-rc.1/standards/SDLC_DEFAULTS.md
+@@ -1,7 +1,8 @@
+ # SDLC default frame guidance
+ 
+ This is a selectable projection of existing method law for ordinary software
+-work. It supplies a usable QA, diagnosis, re-entry and verification route;
++work. It connects the current work reference and bounded context to QA,
++diagnosis, re-entry, verification and durable continuation;
+ the linked sections remain the single deciding owners. It adds no result,
+ actor, workflow engine, permission or mandatory Executive configuration.
+ 
+@@ -26,7 +27,13 @@
+ 
+ ## Selected default flow
+ 
+-1. **Construct and perform incremental QA.** Check the admitted step against
++1. **Recover the work reference and construct bounded context.** Start from
++   the exact admitted ticket, sprint entry or run contract. Bind its current
++   question, subject/basis, grant, result/evidence routes and surviving
++   obligations. Apply [work continuity](#work-reference-context-and-continuation)
++   below before relying on a summary or prior result. A new session alone
++   neither resets progress nor requires another ticket.
++2. **Construct and perform incremental QA.** Check the admitted step against
+    its requirement/design and the smallest adequate falsifier. State the
+    observed predicate, subject, oracle, coverage and residuals. A local pass
+    supports that bounded predicate; it supplies no unnamed Product acceptance,
+@@ -34,12 +41,12 @@
+    conditions. Sources: [ASSURANCE](ASSURANCE.md),
+    [EVALUATION §1](EVALUATION.md#1-claims) and
+    [EVALUATION §5](EVALUATION.md#landing-closure-and-release).
+-2. **Triage a discrepancy before selecting a repair.** Use the causal routes
++3. **Triage a discrepancy before selecting a repair.** Use the causal routes
+    below and retain plausible unresolved causes. Repeated failure, escalating
+    repair cost or growing review context calls for bounded diagnosis of the
+    frame and capability; it authorizes neither another code patch nor an
+    upstream change. Source: [SPEC_METHOD intake](SPEC_METHOD.md#universal-intake-triage).
+-3. **Re-enter at the owning layer.** Record the change intent/class, affected
++4. **Re-enter at the owning layer.** Record the change intent/class, affected
+    Product boundary, first changed layer, downstream impact and whether release
+    scope changes. Reuse the admitted ticket, sprint entry or run intake when
+    it still covers the work. A changed requested outcome or territory needs
+@@ -47,12 +54,55 @@
+    only when its durable-state need and effect grant hold; an unrelated finding
+    does not silently enlarge this work. Sources: [change classes](SPEC_METHOD.md#change-classes),
+    [TICKETS carrier selection](TICKETS.md#carrier-selection).
+-4. **Repair, verify and dispose the bounded result.** Reconcile the affected
++5. **Repair, verify and dispose the bounded result.** Reconcile the affected
+    requirement, design, implementation, tests and displaced path; retain
+    unaffected valid support. Apply the verification and stopping rules below.
+    The authorized decision owner chooses `accept`, `local_repair`, `re_enter`
+-   or `reject` under [ACTIVATION §3](ACTIVATION.md#disposition). A new scope
+-   or missing authority returns to that owner before continuation.
++   or `reject` under [ACTIVATION §3](ACTIVATION.md#disposition). Preserve the
++   result and lawful next action through the named durable surface before
++   return. A new scope or missing authority returns to that owner before
++   continuation.
++
++## Work reference, context and continuation
++
++The selected ticket is the enduring reference for its unit of work, under
++[TICKETS records](TICKETS.md#ticket-records) and
++[one-truth state](TICKETS.md#one-truth-state-projection-and-drift-refusal-up-009).
++Retain a sufficient sprint or run carrier where
++[carrier selection](TICKETS.md#carrier-selection) permits it. Work-state
++authority, governing meaning and current material evidence remain distinct;
++a context summary or index supplies none of them by itself.
++
++Acquire the deciding owners and current material subject needed by the next
++bounded decision. An accessible qualified reference must preserve the
++consumer's subject/basis, assessment standing, provenance, active obligations
++and invalidators. If a derived surface is stale or insufficient, re-enter the
++exact owning sections. Where the selected envelope declares context capacity,
++record the required measurement, capacity and comparison before reading.
++Without complete active inputs or a supported upper bound, complete-fit
++judgment remains unresolved unless a measured excess falsifies it. Where no
++capacity is declared, no measurement gate is added. Source:
++[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope).
++
++Before return, a permitted Writer records the closed result, step-produced
++facts needed later, evidence, unresolved work, original owner rulings and the
++next authorized action or owner re-entry in the existing named durable
++result/evidence surface. Keep references with the owning work. This projection
++adds no second state ledger or per-tool logging requirement. An actor without those effects
++returns to the permitted Writer; Executive still performs no file or Git
++mutation in that role. Sources:
++[ACTIVATION admission](ACTIVATION.md#admission),
++[closed results](ACTIVATION.md#7-closed-result-and-reuse),
++[TICKETS continuity](TICKETS.md#recorded-judgment-and-owner-ruling-continuity).
++
++Resume from current material state, correct a contrary retained account,
++check exact applicability and invalidators, and reopen only affected support.
++Reconcile uncertain external effects before a retry or dependent action;
++unresolved completion remains unresolved. Handoff needs sufficient closed
++results and references, not the prior actor's private conversation. Sources:
++[ACTIVATION state and restart](ACTIVATION.md#5-work-state-and-restart),
++[actor account](ACTIVATION.md#the-workspace-and-an-actors-account) and
++[reuse](ACTIVATION.md#7-closed-result-and-reuse).
+ 
+ ## Causal triage
+ 
+
+--- /Users/jim/src/apps/specification_methodology/.ai-workspace/work/SDLC_DEFAULTS_2026-11-14/trial-preparation/purpose-context-frozen/skills/stdo-context/indexes/stdo-development-sdlc-workflow-v1/source/standards/TICKETS.md
++++ /Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/native-store/releases/v3.1.0-rc.1/standards/TICKETS.md
+@@ -727,6 +727,21 @@
+ Execution and closure use the same admitted categorisation, criteria,
+ proof surface and non-closure conditions. The resulting state still flows
+ through proof, gap analysis and repricing (P6, P2).
++
++The selected carrier is also the work reference for context construction and
++continuation: bind its current question, subject and basis, result and evidence
++references, and surviving obligations. Apply
++[ACTIVATION §2](ACTIVATION.md#2-context-construction-under-an-envelope) to that
++bounded acquisition, [§5](ACTIVATION.md#5-work-state-and-restart) to current
++work state, the disposable actor account and resumption, and
++[§7](ACTIVATION.md#7-closed-result-and-reuse) to closed results and reuse.
++The ticket retains its [work-state authority](#one-truth-state-projection-and-drift-refusal-up-009);
++an actor's account cannot replace the carrier, governing sources or current
++evidence. Preserve results, step-produced facts and owner rulings through
++the named result and evidence surface under existing admission and
++[continuity](#recorded-judgment-and-owner-ruling-continuity) law. This applies
++those owners to the selected carrier; it creates no additional carrier
++requirement and confers no ticket-state authority (P0, P3, P4b, P6).
+ 
+ ### Execution contract admission
+ 

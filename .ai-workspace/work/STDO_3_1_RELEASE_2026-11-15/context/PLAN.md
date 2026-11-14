@@ -1,0 +1,250 @@
+# Purpose Context and Skills: 3.1.0-rc.1 integration plan
+
+This is the separately granted Writer's initial read-only analysis, under
+`../ACTIVATION.md`. No main-source or Git edits, index construction, native trial,
+semantic assessment, package, or release result is claimed. `ANALYSIS.json`
+retains current inputs, verified construction bases, all 35 existing index-asset
+hashes and the exact Python source comparison. The next write phase requires
+Root's isolated source path and exact territory; no further owner approval is
+needed for already admitted work.
+
+## Verified basis and current behavior
+
+Both exact Product Definitions verify through the current STDO manager against
+installed `stdo://releases/v3.0.4/`, manifest
+`102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b`.
+That is their construction basis. It is not the 3.1 index source target and does
+not need silent migration as part of this release.
+
+Purpose Context already has one unchanged core and an installed-method catalog
+branch. `context_catalog.source_binding` verifies the actual manifest digest,
+cut URI, manifest declarations and ordered selected source bytes. No runtime
+change is indicated for native 3.1 SDLC binding. The current release-target
+Python index has 113 rules over 16 owners; the development SDLC index has 40
+rules over 12 owners. Purpose and family selection remain separate.
+
+The previous latest-method delivery supplied a new independently admitted exact
+Python query judgment. The later ticket/context SDLC delivery explicitly retained
+unknown assessments and `covered:false` on its three changed-subject queries.
+Neither delivery's exact query assessment can support a 3.1 corpus/index merely
+by copying it. Historical independent judgments may inform a separately
+authenticated applicability argument; source equality is not a new verdict.
+
+## Dependency order
+
+1. Root freezes the selected source into the isolated release tree, declares the
+   six-Product relation and finishes native method/plugin/release source. Root
+   supplies the eventual method source comparison and explicit migration boundary.
+   In parallel, this Writer can implement the release constructors, release
+   package handling and draft docs without guessing the native manifest.
+2. Root creates native commit/tag A locally and installs/verifies that actual
+   annotated cut. Required handoff: isolated source root, native full install
+   root, exact manager/launcher, method URI/digest, tag object/peel, allowed output
+   paths, and the final visual public-manifest pin when ready.
+3. Construct two separate entries from the actual native root:
+   `stdo-3.1.0-rc.1-python-pure-refactor-v2` and
+   `stdo-3.1.0-rc.1-sdlc-workflow-v1`. Preserve all existing index assets and
+   catalog entries. Bind exact member order, source bytes, corpus/view, purpose,
+   rule grounds, provenance and source-impact records. The new entries use
+   `installed-method-root`; do not fabricate a native manifest or distribute a
+   selected-owner directory as though it were a complete native install.
+4. Freeze authoring and public documentation, then regenerate Purpose Context's
+   complete public manifest. Keep new assessment/actual-use records outside its
+   member population so review does not produce a circular identity. New public
+   release metadata may name its cut and native dependency, but must not claim
+   qualification or publication before those operations occur.
+5. Bind Skills to that final public manifest and the final optional visual pin.
+   Build the exact versioned Skills package. Install into fresh private Codex and
+   Claude layouts using a separately selected trial Product Definition whose
+   actual complete native basis is 3.1.0-rc.1. Native wrappers must resolve to A's
+   plugin instructions and preserve their frontmatter and relative references.
+6. Execute mechanical public-path controls and meaningful finite native use on
+   this exact package. Obtain source-first independent-family semantic
+   assessments of the two exact contexts, plus applicable source/package and
+   behavioral review. Root owns independent reviewer activation and admissions;
+   this Writer supplies candidates and raw observations only.
+7. Root freezes derived child/source carrier B and child inventories, completes
+   cohort/ref/publication gates, and performs public download/install readback.
+   A public replay must check the final exact package/dependencies. Local receipts
+   and explicit native invocation do not establish automatic host pickup.
+
+## Minimal Purpose Context constructor change
+
+Do not change `context_core.py`, `context.py` or `context_catalog.py` merely to
+support released SDLC. The existing installed-source route already supplies the
+necessary runtime behavior.
+
+Keep the existing `rebuild_sdlc_index.py` and frozen development entry exact.
+Its provenance embeds its own script hash, and `test_sdlc_index.py` compares all
+regenerated bytes. Editing it would make the historical reproducibility check
+stale even without a rule change. A small new
+`purpose_context/scripts/rebuild_release_indexes.py` can reuse its section and
+encoding helpers, the existing core for view/validation, and catalog
+`source_binding` for actual installed-source verification. This avoids a second
+selector or a rewritten core. Add only focused release-mode controls.
+
+Use an explicit release authoring input such as
+`purpose_context/authoring/release-targets/3.1.0-rc.1.json` for the native target,
+predecessor identities, purpose wording adjustments and any individual rule
+amendment. Preserve the existing SDLC recipe, purpose, source closure and queries.
+The constructor can derive its selected source member set from those inputs and
+the historical Python `SOURCES.json`, but must require each native member hash
+to agree with the actual installed manifest. Full source deltas and per-rule
+field/ground comparisons remain review evidence.
+
+The release SDLC purpose needs a source-role wording adjustment: its current
+description and `adopted_defaults`/`operative_basis` meanings explicitly say
+development projection. Retain the same purpose ID, fact keys, actual-selection
+requirement and unknown handling, while binding the released method target.
+W01 also says the development target is not an immutable release; this sentence
+cannot be carried literally into the released-source entry. Re-express its
+unchanged ownership boundary: a projection/index neither substitutes for the
+complete operative constitution nor adopts or migrates a consumer. Retain the
+other 39 rule meanings, conditions, exceptions, dependencies and precedence if
+the final native source comparison establishes their applicability.
+
+Proposed constructor interface, not yet implemented or executed:
+
+```sh
+python3 -B purpose_context/scripts/rebuild_release_indexes.py \
+  --target 3.1.0-rc.1 \
+  --method-root /absolute/verified/native-v3.1.0-rc.1 \
+  --method-uri stdo://releases/v3.1.0-rc.1/ \
+  --method-manifest-sha256 ACTUAL_NATIVE_MANIFEST_SHA256 \
+  --predecessor-source-root /absolute/verified/v3.0.5-rc.1-source
+```
+
+`--check` must reproduce and compare the new release assets without changing
+them. Preserve the old generator's existing check command separately. No invented
+digest is a valid argument. Root's original native installation and manifest
+verification must precede construction.
+
+## Python TICKETS impact
+
+Against the current selected source, 15 of its 16 owners remain byte-identical
+to the 3.0.5 index sources. Only TICKETS changes, adding 15 lines applying current
+carrier, context, evidence and continuation law. The final native cut must be
+compared again; this result is not a future-cut guarantee.
+
+| Rule | Prior TICKETS span | Current exact same-text span |
+|---|---|---|
+| C14 | 1088–1145 | 1103–1160 |
+| C14 | 1234–1276 | 1249–1291 |
+| C17 | 903–933 | 918–948 |
+| C23 | 1146–1232 | 1161–1247 |
+
+All existing cited spans have one exact same-text match. C03 and C04's 672–730
+span still matches, but ends before the new paragraph. A coordinate-only rebind
+would not demonstrate retention of that newly explicit application. Existing
+C03, C07, C08, C10 and C23 already retain result recording, reuse, restart,
+bounded context and owner rulings. The minimal proposed authoring is to extend
+C04's source ground to the complete carrier-selection section and explicitly
+connect that sufficient carrier to those duties; update its relevant rule
+dependencies if justified. Record the exact changed fields and obtain independent
+assessment. Do not claim all 113 rule texts remain equal if this clarification is
+made. Do not add a new purpose flag that can disable continuity.
+
+The previous global default store has no v3.0.5-rc.1 directory. The analysis used
+the known historical assessment raw-source snapshot and verified all 16 file
+hashes against the retained Python `SOURCES.json` before comparison. Construction
+should use a Root-selected exact predecessor snapshot/install, not an arbitrary
+nearby directory.
+
+## Skills release envelope and exact files
+
+`scripts/package.py` currently only emits `stdo-skills.development-package/1`.
+The installer accepts only that kind, emits development runtime/receipt kinds,
+uses `stdo-skills-dev` owned roots and writes development-only guide text.
+`provider.py` accepts only source/development configuration kinds. A release zip
+of these bytes would still describe itself as unversioned development. This
+needs a bounded explicit versioned package mode, not a label added by Root's zip.
+
+Recommended change: a separate release package envelope that records exact
+Product identity, version, native method pin and component pins. Require those
+fields and reject missing/mismatched values. Carry that selection through the
+runtime/receipt and generated guide wording; preserve development mode for
+source use and keep the existing exact owned-root/collision checks. Existing
+installations are removed only through their owning original installer/receipt.
+No new installer silently rewrites an older installation.
+
+Expected Writer files, subject to Root's exact territory grant:
+
+- New release constructor, focused tests and release authoring record above.
+- New two index directories and `purpose_context/skills/stdo-context/indexes/CATALOG.json`.
+- `purpose_context/PUBLIC_MANIFEST.json`, `AGENTS.md`, `README.md`, Product/Goals/design
+  current-standing paragraphs, canonical skill and the three purpose/target usage
+  references. Preserve historical records; reconcile current release wording.
+- `stdo_skills/scripts/package.py`, `scripts/manage_skills.py`, adapter
+  `skills/stdo-context/scripts/provider.py`, `specification/composition/DEPENDENCIES.json`.
+- Skills `AGENTS.md`, `README.md`, `GETTING_STARTED.md`, `scripts/INSTALLATION.md`,
+  relevant Product/Goals/design/requirement and composition descriptions, and the
+  thin context skill's released versus development source routing.
+- Release-specific metadata/notes for these Products only as selected by Root's
+  exact namespace/member contract. Do not alter historical `release/3.0.5*`.
+
+The Product Definition construction pins remain 3.0.4. Root owns the top-level
+development/release inventory and release contract. The optional visual pin
+comes from its owning Writer; Context does not generate that manifest.
+
+## Install/use checks and migration documentation
+
+Existing commands remain the public user path after package construction:
+
+```sh
+"$stdo_manager" status --definition "$stdo_definition" --verify
+"$stdo_python" -B "$stdo_package/scripts/manage_skills.py" plan \
+  --package "$stdo_package" --workspace "$stdo_workspace" --host codex \
+  --definition "$stdo_definition" --method-root "$stdo_method_root" \
+  --stdo "$stdo_manager" --python "$stdo_python" \
+  --purpose-context "$stdo_context_root"
+```
+
+Then `install` with the same exact inputs, followed by receipt-bound `verify`
+and `check-runtime`, `provider.py describe`, and `context -- indexes`. Repeat
+the actual installed route for Claude, including its native refresh binding.
+For each new entry use the actual native method root (not `standards/`), exact
+native manifest digest and final public pin in `bind`, then `select`, `consume`
+and `check` with the same actual query, body budget and externally supplied
+assessment or admitted trial binding. Preserve JSON and Markdown bytes and
+actual recipient receipt; saved files alone establish no native receipt.
+
+Finite controls should cover both new released entries, historical selection,
+wrong release/purpose, source and manifest drift, predecessor assessment refusal,
+query mismatch, missing/ill-typed applicability, conditional ODD/UX and SDLC
+branches, whole-body overflow without partial output, changed package/member
+and receipt refusal, and exact remove leaving unrelated files. Reuse existing
+controls where the subject and evidence remain applicable rather than creating
+another broad test framework.
+
+Native observations must come from the final actual installed package. A bounded
+Python realization task and SDLC cases for ordinary verified repair, affected
+evidence reuse/contrary retained account, uncertain effects and a lawful no-new-
+ticket bounded run can cover distinct material paths. Bind exact queries and
+grants; do not copy scenario facts as observations. Independent expectations
+must precede candidate context exposure. Record explicit invocation, host pickup,
+source receipt, governing-context coverage and task outcome separately.
+
+Migration docs must state how to choose the exact 3.1 cohort, verify native and
+component identities, create a fresh workspace binding, and explicitly adopt
+the new native/default basis where Product authority selects that change. Explain
+that older consumers keep their matching old entry; installation and index
+selection do not adopt a method. Retire old routes through their original owning
+receipt/installer if requested. Existing global installations are outside this
+publication. Assessments remain external exact-query inputs; examples and
+release publication grant no universal covered claim.
+
+## Required handoffs and outstanding issues
+
+The next construction dependency is Root's isolated path/territory. The later
+binding dependency is actual native commit/tag A and its verified local install.
+Final Skills packaging additionally needs the final Purpose Context public pin
+and optional visual pin. Independent assessment requires the separately tasked
+actual independent-family reviewer and exact frozen subjects; this Writer cannot
+close it. Finite native package use and public download/install readback remain
+unperformed. None is represented as a blocking need for renewed user approval.
+
+The source says no successor is released because it predates this activation.
+Update present-tense documentation through admitted release work while preserving
+historical claims. Release-target identification and final qualification still
+need their actual evidence. The six-Product relation is Root's explicit scope,
+not an inference from matching versions or from the retired five-Product builder.

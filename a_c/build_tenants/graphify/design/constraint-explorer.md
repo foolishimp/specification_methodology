@@ -34,8 +34,8 @@ and record content is displayed as text. Embedded JSON escapes HTML delimiters.
 The generator refuses an existing destination and never edits the input or a
 sealed release. Renderer bytes and license notices are pinned locally. The
 artifact identifies the exact model and represented basis, and makes no new
-release or acceptance claim. Lean proves the selected closure/projection
-fragment elsewhere; this viewer does not label English constraints as proved.
+release or acceptance claim. This viewer does not execute proof checks or label
+English constraints as proved.
 
 ## Source navigation
 

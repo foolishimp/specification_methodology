@@ -126,6 +126,8 @@ def script_json(value):
     return json.dumps(value, ensure_ascii=False, separators=(",", ":")).replace("&", "\\u0026").replace("<", "\\u003c").replace(">", "\\u003e").replace("\u2028", "\\u2028").replace("\u2029", "\\u2029")
 
 
+
+
 def render(data, layout="unified"):
     ac.require(layout in ("unified", "force", "layered"), "unsupported renderer: " + str(layout))
     css = (ASSETS / "explorer.css").read_text()

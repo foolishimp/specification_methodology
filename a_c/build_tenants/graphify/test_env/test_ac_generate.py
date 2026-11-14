@@ -406,7 +406,7 @@ class GenerationTests(unittest.TestCase):
                                   "source_file": str((output / "corpus/rules.md").resolve()), "source_location": "L1",
                                   "source_url": None, "captured_at": None, "author": None, "contributor": None, "rationale": None}],
                                 "edges": [], "hyperedges": [], "input_tokens": 0, "output_tokens": 0}
-                    with patch.object(gen, "upstream_modules", return_value=modules):
+                    with patch.object(gen, "upstream_modules", return_value=modules), patch.object(gen, "_upstream_path", side_effect=lambda output, path: path):
                         extraction = self.fake_attempt("extract", semantic, output) if mode == "graphify" else None
                         if stage == "author":
                             folder = output / "discovery"
@@ -501,7 +501,7 @@ class GenerationTests(unittest.TestCase):
         plan = {**self.plan, "mode": "graphify-ac", "upstream": {"root": "unused"}}
         failed = {"nodes": [], "edges": [], "failed_sources": ["rules.md"], "extracted_sources": []}
         modules = {"extract": SimpleNamespace(extract=lambda *args, **kwargs: failed)}
-        with patch.object(gen, "checkpoint", return_value=(plan, self.chunks)), patch.object(gen, "upstream_modules", return_value=modules):
+        with patch.object(gen, "checkpoint", return_value=(plan, self.chunks)), patch.object(gen, "upstream_modules", return_value=modules), patch.object(gen, "_upstream_path", side_effect=lambda output, path: path):
             with self.assertRaisesRegex(gen.GenerationError, "structural extraction failed"):
                 gen.build_discovery(self.output)
         self.assertEqual(gen.load(self.output / "discovery/structural.json")["failed_sources"], ["rules.md"])

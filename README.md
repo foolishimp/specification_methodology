@@ -1,134 +1,59 @@
-# Specification Methodology Repository
+# STDO 3.1
 
-The Git repository is `foolishimp/specification_methodology`. In this workspace,
-the checkout directory is `specification_methodology`. The STDO Specification
-Methodology product has two source projects side by side under its
-`specification_methodology/` child: `v2/` owns the current STDO 2.* source and
-the toolchain manager; `v3/` owns STDO 3 source and standalone native releases
-of the same product. Select a child Product before working on its source.
+STDO supplies rules for the software development lifecycle. Version 3.1 brings
+Purpose Context, default QA and causal triage, and ticket-based context continuity
+together in an explicit six-Product release. Exact cut: **3.1.0-rc.1**; public
+version line: **3.1.0**.
 
-## STDO 3.0.5 release
+Start with [Using STDO](specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md)
+for the method and published assets, then [Skills Getting Started](stdo_skills/GETTING_STARTED.md)
+for Purpose Context and Codex/Claude bindings. The [release scope](releases/3.1.0-rc.1/RELEASE.md)
+and [migration guide](releases/3.1.0-rc.1/MIGRATION.md) describe the changed Product
+boundaries. The [exact release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.1)
+provides the native manifest, manager, companion Products and cohort inventory.
 
-**STDO 3.0.5 is published as a normal release and GitHub Latest.**
-[Download the exact RC1 release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.0.5-rc.1), immutable tag
-`specification_methodology/v3.0.5-rc.1`. All five peer Products share that exact
-cut; their `v3.0.5` tags select the current cut on this public version line.
-
-The [installation guide](specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md#new-project)
-verifies the five public assets before bootstrapping the exact manager and
-native payload. Fresh public installation, current tool/host interfaces,
-Graphify, Lean structural proof, documentation and offline navigation passed.
-The [release record](specification_methodology/v3/.ai-workspace/work/STDO305_RC_RESET/RELEASED.md)
-binds actual publication, public qualification and its limits.
-
-The former unadopted stable 3.0.5 cut is explicitly archived with its original
-objects and assets preserved. Other releases remain unchanged. This release
-does not adopt itself for a consumer: the v3 source project's builder remains
-the exact selected 3.0.4 basis.
-
-This repository co-locates six peer source projects:
-
-| Project | Purpose |
+| Product | Responsibility |
 |---|---|
-| [`specification_methodology/v2/`](specification_methodology/v2/) | Specification Methodology 2.* source and the STDO toolchain manager |
-| [`specification_methodology/v3/`](specification_methodology/v3/) | STDO 3 methodology source and standalone native releases; the common payload retains independent tenant construction history |
-| [`axiom_indexer/`](axiom_indexer/) | LLM-first `a_c` authoring, mechanical validation, logical-map projection, and ordered joining |
-| [`stdo_representation/`](stdo_representation/) | Release-matched `a_c.STDO` compression, constraint index, and native Codex and Claude instructions |
-| [`a_c/`](a_c/) | Independent axiomatic-calculus implementations, with Graphify as the first build tenant |
-| [`stdo_skills/`](stdo_skills/) | Shared agent-skill requirements with independent Codex and Claude skill build tenants, using static released STDO 3.0.1 |
+| [Specification Methodology](specification_methodology/v3/README.md) | SDLC rules, native workflows and default reference frames |
+| [Purpose Context](purpose_context/README.md) | Reusable indexes over exact sources and purpose-specific context construction |
+| [STDO Skills](stdo_skills/README.md) | Codex/Claude adapters that consume Purpose Context and preserve native workflow ownership |
+| [Representation Tools](a_c/README.md) | Source-linked visual generation and exploration; stable namespace remains `a_c` |
+| [STDO Representation](stdo_representation/README.md) | Visual documentation of selected STDO sources with declared coverage and residuals |
+| [Axiom Indexer](axiom_indexer/README.md) | Retained conversion, validation and visual projection |
 
-Both STDO source projects share one release namespace, `specification_methodology`,
-and one Product identity. Release tags and rc/release branches keep that
-namespace; only the source paths carry the version line.
+The [SDLC default](specification_methodology/v3/build_tenants/common/standards/SDLC_DEFAULTS.md)
+connects work → QA → causal triage → appropriate owner re-entry → verification →
+continue or close. Incremental QA and a named acceptance/release boundary have
+different claims and exit conditions. Recurring bugs can require requirements,
+design, model or observation repair rather than another implementation patch.
 
-The repository root is coordination only. It is not a Product, has no
-Product Definition, and grants no constitutional, composition, execution, or
-release authority. Each child retains its own WHAT, HOW, Product identity,
-release records, licence boundary, tickets, and accepted dependencies.
+The ticket is the durable reference for its unit of work. Construct task context
+from that current record and its linked governing sources and evidence; record
+results and the next authorized step there. [TICKETS](specification_methodology/v3/build_tenants/common/standards/TICKETS.md#5-from-carrier-to-execution)
+owns application through the work carrier; [ACTIVATION](specification_methodology/v3/build_tenants/common/standards/ACTIVATION.md#2-context-construction-under-an-envelope)
+owns context construction and restart. Default frames project those owners,
+Skills apply them, and guides explain their use.
 
-Co-location does not allow mutable sibling source to replace an immutable
-Product or Install selected by another child. Use the sibling only when an
-exact work relation authorizes source-level development across both projects.
+| Purpose | Current release index | Native source |
+|---|---|---|
+| Pure/local Python 3.12 refactoring | `stdo-3.1.0-rc.1-python-pure-refactor-v2` | Exact native 3.1.0-rc.1 |
+| Work, QA, triage, repair verification, boundaries and evidence reuse | `stdo-3.1.0-rc.1-sdlc-workflow-v1` | Exact native 3.1.0-rc.1 |
 
-## Development Flow
+Both indexes bind `stdo://releases/v3.1.0-rc.1/`, manifest
+`ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa`.
+Assessment applies to exact sources, purpose and caller facts. Unknown facts
+remain unknown. Context coverage does not establish successful code, repair,
+automatic host pickup or release acceptance. The complete installed constitution
+and the current ticket remain governing references.
 
-```text
-Specification Methodology prose and reference-frame law
-  -> STDO Representation release-matched a_c.STDO compression
-  -> Axiom Indexer mechanical validation and constraint index
-  -> STDO Representation native skill
-  -> project-owned Executive frame selection, evaluation, and action
-```
+The companion bundle exposes Purpose Context and Skills as separate Products.
+Visual documentation is optional for context use. Lean and the retired
+registry/formal/context routes are outside the current delivery. Historical
+indexes and releases remain exact historical subjects; they are not relabelled.
+Existing Product construction bases and consumer installations are unchanged by
+publication. The 3.0.4 construction basis does not select the indexed corpus.
 
-Axiom Indexer and STDO Representation are attention and consistency tools.
-`a_c` is the calculus they apply. None replaces Source STDO or performs
-downstream semantic interpretation.
-
-The independent [`a_c/`](a_c/) source project realizes its selected axiomatic
-calculus through its own build tenants. The current five-Product RC cohort
-includes its exact selected Graphify and Lean components and records their
-release dependencies. That release selection does not change the source
-project's independently owned definition or construction basis.
-
-The independent [`stdo_skills/`](stdo_skills/) Product applies the static installed
-STDO 3.0.1 basis selected in its [Product Definition](stdo_skills/stdo_skills.json).
-Its two skill tenants share requirements while owning their host-specific designs
-and tuning. Its construction lifecycle remains independent while the current RC cohort
-selects its exact host packages; its [local bootstrap](stdo_skills/AGENTS.md) routes construction and tool use.
-
-Work from the applicable child root. From this root, inspect all Product
-Definitions without changing them:
-
-```sh
-stdo fleet status --root .
-stdo fleet verify --root .
-```
-
-Install the current source toolchain for development with:
-
-```sh
-pipx install --force ./specification_methodology/v2
-```
-
-Each child owns its release profile, qualification, and publication decision.
-Published cuts retain their immutable refs and release records. A consumer's
-Product Definition selects its exact governing cut.
-
-## Coordinated Release-Matched Cohort
-
-This older cohort relation is not selected for the standalone 3.0.3 release above.
-For the default scope of an owner instruction to release STDO, follow
-[`Meaning Of A Release Request`](STACK_RELEASE.md#meaning-of-a-release-request).
-
-The [RC7 release work](specification_methodology/v2/.ai-workspace/comments/codex/20260915T093130Z_rc7_release/README.md)
-records the published and publicly reacquired complete RC7 cohort. STDO,
-Axiom Indexer and STDO Representation retain distinct immutable RC7 cuts;
-RC6 remains their immutable predecessor.
-
-The [2.5.1 RC1 release](specification_methodology/v2/.ai-workspace/comments/codex/20260920T070629Z_stdo_251_rc1/RELEASED.md)
-records the published matched cohort, verified public installation and retained
-Representation native qualification limits. T-288 and ABI delivery supply no
-release dependency. External consumer adoption remains unselected.
-
-The Product owners have declared one explicit release relation for STDO and its
-indexes. When that relation is selected, the exact normalized cohort version
-must match all five required assets:
-
-1. Specification Methodology/STDO standards corpus;
-2. distributed Claude and Codex `spec` plugin;
-3. Axiom Indexer mechanics Product;
-4. STDO Representation Product; and
-5. released `a_c.STDO` program and logical constraint map with complete exact
-   source-member and digest closure.
-
-[`stack_release.json`](stack_release.json) records the selected cohort version,
-exact Product refs, member inventories, source digests, and index locations.
-It links each Product's release record for qualification, publication evidence,
-and release history. Publication, Product acceptance, and consumer adoption
-remain separate.
-
-This relation does not make the root a Product or merge the three child
-Products. It makes publication incomplete if one required asset is stale,
-missing, differently versioned, or derived from another STDO cut. Follow
-[`STACK_RELEASE.md`](STACK_RELEASE.md) for the release procedure and use
-`scripts/check_stack_release.py` to validate the selected cohort.
+For source work, read [DEVELOPMENT.md](DEVELOPMENT.md), select a Product Definition
+and follow its local AGENTS.md. The repository root coordinates six independently
+owned Products; it owns no seventh Product. The [historical five-Product descriptor](stack_release.json)
+remains preserved and is not the 3.1 distribution contract.

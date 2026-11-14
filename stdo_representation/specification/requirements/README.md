@@ -1,39 +1,11 @@
-# STDO Representation Requirements
+# Visual documentation requirements
 
-The active requirements define one thin LLM-operated path:
+Current required outcomes are exact [basis and identity](REQ-P-BASIS-AND-IDENTITY.md),
+[STDO interpretation](REQ-P-STDO-AUTHORING-MAP.md), [model/view preservation](REQ-P-CURRENT-MODEL.md),
+[structural validation](REQ-P-CANDIDATE-VALIDATION.md) and
+[actual visual use evidence](REQ-P-DOGFOOD-VERIFICATION.md).
 
-```text
-Source STDO
-  -> LLM-authored a_c.STDO semantic compression
-  -> exact Axiom Indexer validation and logical constraint index
-  -> LLM-selected frames and ordered sections
-  -> exact Axiom Indexer join
-  -> native Codex or Claude use
-```
-
-1. [`REQ-P-BASIS-AND-IDENTITY.md`](REQ-P-BASIS-AND-IDENTITY.md) binds exact
-   Source STDO, Axiom Indexer, program, map, skill, and request coordinates.
-2. [`REQ-P-STDO-AUTHORING-MAP.md`](REQ-P-STDO-AUTHORING-MAP.md) defines the
-   Source STDO semantic compression and deterministic index over it.
-3. [`REQ-P-CANDIDATE-VALIDATION.md`](REQ-P-CANDIDATE-VALIDATION.md) defines the
-   LLM author/diagnose/repair boundary and imports the released validator.
-4. [`REQ-P-NATIVE-FRAME-USE.md`](REQ-P-NATIVE-FRAME-USE.md) defines native
-   Codex and Claude pickup, explicit LLM frame selection, and exact joining.
-5. [`REQ-P-DOGFOOD-VERIFICATION.md`](REQ-P-DOGFOOD-VERIFICATION.md) determines
-   whether the thin Product is useful enough to release and keep using.
-
-Source STDO remains semantic authority. Axiom Indexer owns its released
-mechanical contracts. This Product owns the selected `a_c.STDO` compression,
-its constraint index, native instructions, and their bounded usefulness claim.
-
-The active requirement set does not define a complete admitted `a_c` model,
-GTL overlay, GraphFunction, automatic closure, deterministic prompt packet,
-renderer, skill generator, or ABG runtime. Retained implementations of those
-earlier directions are historical evidence outside the active Product.
-
-## Current 3.0.5 model relation
-
-[REQ-P-CURRENT-MODEL](REQ-P-CURRENT-MODEL.md) is the operative successor for
-the canonical model/provider relation and current version/source bindings.
-Historical fixed RC bindings in older requirement text retain their historical
-subjects and do not select current output paths.
+The former context-registry successor, native frame-use skill and proof-delivery
+requirements are withdrawn unsatisfied where open. Their exact source text is
+preserved in alignment preimages/archive. Existing released requirements and
+artifacts retain their historical scope; this is changed development direction.

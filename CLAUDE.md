@@ -1,54 +1,40 @@
-# Specification Methodology Repository Bootstrap
+# Repository bootstrap
 
-This repository contains six peer source projects:
-`specification_methodology/v2`, `specification_methodology/v3`, `axiom_indexer`,
-`stdo_representation`, `a_c` and `stdo_skills`. The root is coordination only and
-is not a Product.
+This root coordinates six Products; it is not a Product. Read the current
+[development inventory](DEVELOPMENT.md), then select exactly one Product scope or
+an explicit cross-Product relation. STDO has two source version lines under
+specification_methodology/v2 and specification_methodology/v3; they count as one
+Product. Purpose Context, STDO Skills, Representation Tools (a_c), STDO
+Representation and Axiom Indexer retain independent Product definitions.
 
-`a_c/` independently realizes the axiomatic calculus, with Graphify as a build
-tenant. Use its local Product Definition and bootstrap. It participates in the explicitly selected 3.0.5 cohort; the declared relation preserves its own Product ownership.
+Read the selected child's AGENTS.md, README, specification/GOALS.md,
+specification/INTENT.md, specification/PRODUCT.md and applicable requirements/design.
+Resolve its exact Product Definition and installed methodology basis. Mutable
+sibling source, a symbolic index, shared actor or matching output supplies no
+implicit adoption, composition, semantic authority or effect grant.
 
-`stdo_skills/` owns shared skill requirements and independent Codex and Claude
-skill build tenants. Select `stdo_skills/stdo_skills.json` and its local bootstrap
-for the selected installed STDO 3.0.4 construction basis. It participates in the explicitly selected 3.0.5 cohort while retaining separate Product ownership.
+Purpose Context owns reusable purpose indexes and context construction. The
+root `$stdo-context` route is the [thin Skills adapter](stdo_skills/skills/stdo-context/SKILL.md)
+that verifies the selected independent Product and follows its canonical skill.
+Use matching existing indexes for relevant task/build/review/refresh constraints;
+preserve unknown facts, source re-entry, exact purpose and coverage limits.
+Source-first independent review derives obligations before candidate indexes.
 
-The Git checkout is `specification_methodology`. The STDO Specification
-Methodology product has two version lines side by side: STDO 2.* authoring
-belongs in `./specification_methodology/v2/`; v3 development belongs in
-`./specification_methodology/v3/`. That child now pins the released STDO 3.0.4
-builder and native tools; use its local bootstrap and
-[versioned guide](specification_methodology/v3/development/STDO_3_0_4.md). Each has its own Product Definition.
+Representation Tools and STDO Representation serve visual documentation. No
+active root axiomatize-corpus, stdo-representation, context registry or formal
+support workflow remains. Optional visual selection does not become a context
+prerequisite.
 
-Select the applicable child, load its local instructions and Product
-Definition, and preserve its exact authority and dependency boundaries.
-Directory proximity creates no inheritance or composition. Never substitute a
-mutable sibling checkout for an immutable Product or Install selected by the
-child.
+The Executive coordinates dependency-ready work and consumes closed results.
+Separately granted Writers perform exact scoped file/Git effects. Existing owner
+authorization persists; routines do not require repeated approval. Reviewers
+assess exact closed subjects without repairing their own assessment targets.
 
-For complex work, keep the Executive context small: lock outcome and basis,
-select the smallest dependency-ready reference-frame set, delegate bounded
-evaluations, consume closed results, and choose only an already-authorized next
-action. Do not combine all specialist frames into one prompt.
-
-Native skills:
-
-- `/axiomatize-corpus` for LLM-authored `a_c` compression and mechanical checks;
-- `/stdo-representation` for the released source-linked `a_c.STDO` map and
-  Source STDO re-entry.
-
-These skills route attention and grant no authority.
-
-Read [the required 3.0.5 candidate membership](RELEASE_PRODUCTS.md),
-[the complete release procedure](STACK_RELEASE.md) and `stack_release.json`.
-An owner release request selects all five Products and every required current
-component through installed qualification, atomic publication and public
-readback. Historical graphs, reports and source-only archives do not satisfy
-current-candidate membership. All owned components use the exact cohort
-version; third-party dependencies retain their independent exact pins.
-Published cuts remain immutable. The 3.0.4 builder adoption does not change.
-
-Use `scripts/check_stack_release.py` at ready, content, local-ref, published
-and public gates. Missing, extra, stale, mismatched or tampered subjects and
-unproven required claims stop promotion. The Executive coordinates; a
-separately bound Writer performs file/Git effects, and required independent
-review assesses the exact subject without repairing it.
+The selected successor cohort is STDO 3.1.0-rc.1 (public line 3.1.0),
+with six separate Product identities and explicit source/distribution manifests.
+Read releases/3.1.0-rc.1/RELEASE.md for its scope and the exact release record
+for qualification/publication standing; version selection alone supplies neither. The root
+stack_release.json and archived five-Product constructor/test families are
+historical contracts only. Preserve immutable releases, original evidence,
+installed/global files and unrelated work. Do not run a historical release gate
+as the current source acceptance check.

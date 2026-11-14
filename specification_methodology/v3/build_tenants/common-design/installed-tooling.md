@@ -1,12 +1,18 @@
 # Installed tooling design
 
+Distribution/tool/proof details in this document describe historical released
+subjects. Their exact constructors are archived; current source packaging follows
+[the separate Product navigation](../../development/TOOLS.md). This notice does
+not amend conceptual method law or any immutable native payload.
+
+
 Implements [TOOL-01–TOOL-05](../../specification/requirements/INSTALLED_TOOLING.md)
 with the existing native manifest and manager. `standards/tooling/` holds exactly
 `sources.zip`, `TOOLING.json`, `materialize.py` and `README.md`. The archive avoids
 treating imported historical Markdown references as current standards routes.
 It preserves the original relative source layout; no runtime API is changed.
 
-The explicit [selection](../common-tools/tooling-selection.json) binds 191 regular
+The explicit [selection](../../.ai-workspace/work/PURPOSE_CONTEXT_ALIGNMENT_2026-11-12/archive/common-tools/tooling-selection.json) binds 191 regular
 files and their Git modes, blobs, sizes and SHA-256 identities at
 `9c9626ffd20ea88a75ac8143802c13f4f828ec1c`: current Graphify and Lean tenants,
 both Skills packages, their common contract/provider files, and the native STDO
@@ -17,11 +23,11 @@ required by the unchanged Codex package's current source-route pin. It supplies
 no executable import or new authority. Source tests remain reference material; unsupported fixture/host closures are
 not advertised as runnable. The two package checks are a declared finite subset.
 
-[tooling.py](../common-tools/tooling.py) constructs a deterministic ZIP from
+[tooling.py](../../.ai-workspace/work/PURPOSE_CONTEXT_ALIGNMENT_2026-11-12/archive/common-tools/tooling.py) constructs a deterministic ZIP from
 that exact Git cut, refusing a mismatched working source. It verifies installed
 payload against the selection, guide and materializer implementation. The fixed inventory commitment also refuses a self-consistent narrowed source
 archive claiming the selected commit. The
-standalone [materializer](../common-tools/tooling_materialize.py) uses only
+standalone [materializer](../../.ai-workspace/work/PURPOSE_CONTEXT_ALIGNMENT_2026-11-12/archive/common-tools/tooling_materialize.py) uses only
 Python's standard library. Its installed copy checks the whole bundle, exact
 member set, duplicate/case/Unicode identities, sizes, regular modes, digests
 and file/directory collisions before creating any output. It refuses existing

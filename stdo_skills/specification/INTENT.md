@@ -1,15 +1,14 @@
 # Intent
 
-Make STDO usable through skills that help agents choose and perform the right
-work with the available computational tools. Reduce repeated ad hoc context
-construction, omitted checks and recovery mistakes while preserving the owner's
-outcome and the methodology's distinctions.
+Make the selected STDO method usable through ordinary Codex and Claude work while
+preserving the method's ownership, exact source basis and effect boundaries.
+Agents should reuse purpose indexes to construct the deciding context for a task,
+then inspect original sources when required. They should not rebuild the same
+context mechanism in every host skill.
 
-Build one common Product with independently tuned Codex and Claude realizations.
-Keep the released STDO 3.0.1 methodology static during this experiment. Use the
-method and current tools to build the skills, exposing real integration gaps as
-evidence rather than explaining them away.
-
-Demonstrate actual tool use and useful outcomes on declared tasks before claiming
-effective operation. Efficiency improvement and reliable automatic selection are
-empirical claims to measure, not consequences of packaging instructions as skills.
+The owner selected Purpose Context as an independent Product on 2026-11-12.
+STDO Skills consumes its public runtime and index assets. Representation Tools
+and STDO Representation serve visual documentation; registry/context/formal
+support routes are withdrawn from current Skills scope. This is a source scope
+and implementation change, not retroactive satisfaction of old requirements or
+a migration of existing installations.

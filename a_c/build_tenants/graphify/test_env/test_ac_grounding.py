@@ -324,7 +324,7 @@ class GroundingTests(unittest.TestCase):
         outside = self.root / "outside"
         outside.mkdir()
         (self.output / "normalization-outside").symlink_to(outside)
-        with self.assertRaisesRegex(grounding.GroundingError, "symlink escapes"):
+        with self.assertRaisesRegex((grounding.GroundingError, generation.GenerationError), "symlink escapes|redirected selected path"):
             grounding.normalize(self.output, name="normalization-outside")
 
     @unittest.skipUnless(os.environ.get("AC_GRAPHIFY_UPSTREAM"), "set AC_GRAPHIFY_UPSTREAM for actual pinned-upstream trial")

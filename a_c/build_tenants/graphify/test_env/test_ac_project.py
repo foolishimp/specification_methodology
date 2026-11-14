@@ -31,8 +31,8 @@ class ProjectBuildTests(unittest.TestCase):
             "what": {"intent": "specification/RULES.md", "product": "specification/RULES.md", "specification": ["specification"]}}
         gen.save(self.definition, self.product)
         self.run = self.root / "representation"
-        self.manager = patch.object(project, "verify_definition", side_effect=lambda p, m, checker=None:
-                                    (gen._decode(project.regular(p, checker)), {"valid": True, "test_fixture": True}))
+        self.manager = patch.object(project, "verify_definition", side_effect=lambda p, m:
+                                    (gen._decode(project.regular(p)), {"valid": True, "test_fixture": True}))
         self.manager.start()
 
     def tearDown(self):
@@ -72,7 +72,7 @@ class ProjectBuildTests(unittest.TestCase):
         self.assertEqual(built['status'], 'built')
         self.assertEqual(built['method'], self.product['constitution']['stdo']['basis'])
         self.assertEqual(self.definition.read_bytes(), definition_before)
-        self.assertEqual(built['formal_gate']['status'], 'not_performed')
+        self.assertNotIn('formal_gate', built)
         model = gen.load(Path(built['artifacts']['model']))
         carrier = gen.load(Path(built['artifacts']['carrier']))
         self.assertEqual(ac_graph.decode(ac_graph.GraphCarrier(carrier)).document, model)

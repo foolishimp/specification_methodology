@@ -69,84 +69,15 @@
     }
   },
   "local_constitution": {
-    "axioms": [
-      {
-        "uri": "./specification/PRODUCT.md#shared-source-release-profile",
-        "authority": [
-          "./specification/PRODUCT.md#product-disposition-authority"
-        ],
-        "applies_to": [
-          "urn:stdo:product-definition:stdo-representation"
-        ]
-      }
-    ],
+    "axioms": [],
     "overrides": [],
-    "disambiguations": [
-      {
-        "uri": "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings",
-        "term": "Executive",
-        "context": "urn:stdo-representation:bounded-context:product",
-        "disambiguates": [
-          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#executive"
-        ],
-        "resolves_to": "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#executive",
-        "authority": [
-          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#executive",
-          "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
-        ],
-        "basis": [
-          "#/constitution/stdo/basis"
-        ],
-        "applies_to": [
-          "urn:stdo:product-definition:stdo-representation"
-        ]
-      },
-      {
-        "uri": "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings",
-        "term": "Worker",
-        "context": "urn:stdo-representation:bounded-context:product",
-        "disambiguates": [
-          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#worker"
-        ],
-        "resolves_to": "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#worker",
-        "authority": [
-          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#worker",
-          "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
-        ],
-        "basis": [
-          "#/constitution/stdo/basis"
-        ],
-        "applies_to": [
-          "urn:stdo:product-definition:stdo-representation"
-        ]
-      },
-      {
-        "uri": "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings",
-        "term": "Reviewer",
-        "context": "urn:stdo-representation:bounded-context:product",
-        "disambiguates": [
-          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#reviewer"
-        ],
-        "resolves_to": "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#reviewer",
-        "authority": [
-          "stdo://releases/v3.0.4/standards/EXECUTIVE_BASELINE.md#reviewer",
-          "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#role-bindings"
-        ],
-        "basis": [
-          "#/constitution/stdo/basis"
-        ],
-        "applies_to": [
-          "urn:stdo:product-definition:stdo-representation"
-        ]
-      }
-    ]
+    "disambiguations": []
   },
   "reference_frame_bases": [
     {
       "uri": "./specification/REFERENCE_FRAME_BASIS.md#project-frame-basis",
       "authority": [
-        "./specification/PRODUCT.md#product-disposition-authority",
-        "./.ai-workspace/decisions/20261106_STDO305_configuration.json"
+        "./specification/PRODUCT.md#product-disposition-authority"
       ],
       "applies_to": [
         "urn:stdo:product-definition:stdo-representation"
@@ -209,8 +140,7 @@
       "relation": "./specification/PRODUCT.md#axiom-indexer-product-dependency-relation",
       "contracts": [
         "./specification/PRODUCT.md#exact-dependency-bases",
-        "./specification/requirements/REQ-P-CANDIDATE-VALIDATION.md#imported-validation-boundary",
-        "./specification/requirements/REQ-P-NATIVE-FRAME-USE.md#frame-use-relation"
+        "./specification/requirements/REQ-P-CANDIDATE-VALIDATION.md#imported-validation-boundary"
       ]
     },
     {

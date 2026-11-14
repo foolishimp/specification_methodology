@@ -1,63 +1,33 @@
-# STDO Representation 3.0.5-rc.1 Quickstart
+# Read and construct STDO 3.1 visual documentation
 
-Use the exact subject and same-version Axiom dependency bound by
-[the release record](releases/v3.0.5-rc.1.md) and final cohort binding. The caller's
-own Product Definition, accepted frame and work grant remain operative.
+For reading, open the current artifact's standalone
+[explorer](build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/explorer.html).
+Read its [source binding and scope](build_tenants/a_c/representation/stdo-v3.1.0-rc.1/README.md).
+The file list opens complete embedded sources. Search selects records; inspect
+conditions, exceptions, relation direction and residuals in the detail reader.
+Layered, 2D and 3D modes use the same model and reading state. 3D requires WebGL.
 
-## Verify current identity
-
-Check `VERSION`, the exact release inventory, source freeze, current model
-binding and conversion receipt before use. The canonical source snapshot is
-`build_tenants/a_c/representation/stdo-v3.0.5-rc.1/source/`; it contains 68 frozen
-members. `current-binding.json` names its source identity and exact model.
-Final installed native manifest identity belongs to the external cohort binding.
-
-In an explicitly selected source candidate, the supplied invocation-local
-Binding Set routes `stdo://releases/v3.0.5-rc.1/` to that exact snapshot. For an
-installed native release, bind the same URI to the verified Install root
-containing `standards/` and `plugins/`. Do not substitute a mutable neighboring
-checkout. Binding Sets are access coordinates, not authority or acceptance.
-
-## Validate and select a bounded view
-
-From the Representation Product root, use the verified Axiom Product:
+To replay this release's attributed recipe into a **fresh** Product-local output:
 
 ```sh
-python3 <axiom-product-root>/build_tenants/core/code/ac.py validate --program build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/axiomatic-program.json --bindings build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/bindings.json
+python3 -B scripts/build_31_visual.py \
+  --native-root /absolute/path/to/exact/native-v3.1.0-rc.1 \
+  --native-manifest-sha256 THE_DIGEST_FROM_SOURCE_BINDING_JSON \
+  --stdo /absolute/path/to/stdo \
+  --out /absolute/path/to/stdo_representation/build_tenants/a_c/representation/fresh-3.1-run
 ```
 
-The map names five explicit indexes. For the current native work/control cone:
+The script verifies the real native manifest/member bytes, then calls
+Representation Tools `project prepare/task/submit/build/status` with this
+Product Definition and its installed 3.0.4 construction basis. Exact authored
+quotes, complete section dispositions, model/carrier checks and command results
+are retained. No old model is read. A failed command leaves its original evidence.
+A different source cut needs a newly assessed recipe; do not change the expected
+cut or relabel the old evidence. For general authoring use `../a_c/scripts/ac.py
+project --help` and submit your own exact source-grounded records.
 
-```sh
-python3 <axiom-product-root>/build_tenants/core/code/ac.py project --program build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/axiomatic-program.json --map build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/logical-constraint-map.json --bindings build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/bindings.json --frame-index urn:stdo-representation:frame-index:v3.0.5-rc.1:native-work --mode reference-only
-```
-
-Use `materialized` for unchanged authored rows of the same closure. Omitted
-`--output` writes stdout; `--output -` names a literal file. File outputs need
-an existing grant and must be separate from inputs and source. The native work
-selection contains 21 records, including its real nested control/issuer/host
-dependencies and unresolved actual-host evidence limit. It does not authorize
-work or certify isolation.
-
-## Source re-entry and native use
-
-Load the canonical `skills/stdo-representation/SKILL.md` through the host's
-actual supported skill mechanism. Workspace Codex/Claude discovery links point
-to that same bundle; distributed inventories contain regular files.
-Read [frame-index use](skills/stdo-representation/references/frame-index-use.md)
-for refusal, source-currentness and role boundaries.
-
-Bring actual task facts, semantic judgments and owner rulings separately.
-Re-enter the exact owner for ambiguity, unsupported applicability, missing
-dependencies or changed normative premises. A historical judgment survives
-only its declared invalidators; equal source text alone is insufficient.
-
-For a requested handoff, author an ordered array of `{label,text}` strings and
-use Axiom's pure `join --input <sections.json>` command. It selects no frames,
-rewrites no grants and invokes no model. A sufficient direct task needs no
-new ticket, coordination or approval merely to use this representation.
-
-Model/carrier preservation, source fidelity review, real Lean checking,
-native usability, publication and consumer adoption are distinct evidence.
-Historical 2.x artifacts remain historical; they do not substitute for this
-current model or its exact release dependencies.
+The retained run contains producer-local absolute provenance paths. Its standalone
+model/carrier/explorer remain portable; regenerate a fresh run to use project
+status/reuse under a new producer root. Axiom `convert/restore` and
+`validate/project` are optional separate mechanics. Source-based independent
+assessment is separate from structural validation and viewer generation.

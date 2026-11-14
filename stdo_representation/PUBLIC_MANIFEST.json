@@ -1,0 +1,297 @@
+{
+  "profile": "stdo-representation.public-visual/1",
+  "product_definition_id": "urn:stdo:product-definition:stdo-representation",
+  "name": "STDO Representation",
+  "version": "3.1.0-rc.1",
+  "standing": "versioned bounded source-linked visual inventory; exact cohort records publication and independent qualification",
+  "entrypoint": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/explorer.html",
+  "regeneration": "scripts/build_31_visual.py",
+  "source_binding": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/SOURCE_BINDING.json",
+  "generation_binding": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/GENERATION.json",
+  "represented_source": {
+    "uri": "stdo://releases/v3.1.0-rc.1/",
+    "manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa",
+    "release": {
+      "commit": "c1e0faaa8437c169031a476343c764614135cd93",
+      "cut": "v3.1.0-rc.1",
+      "project_release_namespace": "specification_methodology",
+      "project_subtree_root": "specification_methodology/v3",
+      "project_subtree_tree": "31aab3cebc56ec308afb3c7312cd4b6d3315043e",
+      "qualified_ref": "refs/tags/specification_methodology/v3.1.0-rc.1",
+      "standards_tree": "78f97d798fabacf0b76c2e2e6a19d7257a75198d",
+      "tag_object": "fca8d5e97cf2e945196aecdc33908bb190efdca5",
+      "tree": "0ceecf8a106dff4c7b616849167757405f819610"
+    }
+  },
+  "construction_basis": {
+    "uri": "stdo://releases/v3.0.4/",
+    "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+  },
+  "model": {
+    "id": "urn:a-c:generation:c8b565861ea509feddf2ebd4:model:5e1b2b5f8f9ed32537efefe0",
+    "sha256": "784aa60f81eb2e9c4612ce0062a1e34c459088615692d672a0834021edfacde3"
+  },
+  "scope": "Complete source-section navigation for ACTIVATION.md, SDLC_DEFAULTS.md and TICKETS.md, plus these selected SDLC/work-carrier/context annotations. Navigation coverage is not semantic coverage.",
+  "limits": [
+    "All declared sections receive residual dispositions: their structure and source location are represented, while body meaning is not comprehensively modeled.",
+    "Only the explicitly listed authored annotations assert selected body meanings. They require independent source-first assessment for their exact subject.",
+    "The remaining native members and referenced owners are unrepresented meaning, not missing requirements inferred false or satisfied.",
+    "No operational judgments, traversals or transformations are instantiated. No Lean/formal claim, context selection, workflow execution or code-correctness claim is made.",
+    "Governing flags on the authored relations describe retention dependencies in this model; they grant no authority to a reader or tool.",
+    "Historical 3.0.5 models and semantic verdicts are not reused or rebound."
+  ],
+  "dependencies": {
+    "representation_tools": {
+      "product_definition_id": "urn:stdo:product-definition:a-c-implementations",
+      "root": "../a_c",
+      "public_manifest": "PUBLIC_MANIFEST.json",
+      "public_manifest_sha256": "40b6e19214f40ba10ed38d90b11f98f0e62ecad6ef2e9b2ccf758ed9607f74af",
+      "version": "3.1.0-rc.1"
+    },
+    "optional_axiom_conversion": {
+      "product_definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "root": "../axiom_indexer",
+      "public_manifest": "PUBLIC_MANIFEST.json",
+      "public_manifest_sha256": "9d9bbe03ebd31ea7d114ef4c56dd1929e9107cd12ceb12dd4ecaa4fbc9f5dbed",
+      "version": "3.1.0-rc.1"
+    },
+    "offline_reader": "Self-contained HTML; browser with JavaScript. Layered mode works without WebGL; 2D/3D force views require WebGL. No Lean, registry or network dependency."
+  },
+  "files": [
+    {
+      "path": "VERSION",
+      "sha256": "6d8a34718ea306c7e03719b8700d219b2eab836651286368ec957e1eb9f2ba5a",
+      "bytes": 11
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/COVERAGE.md",
+      "sha256": "f885f831f64f5f2a49f65656728c9a05e9d55005bc80cd5263f20e5ab7add6ed",
+      "bytes": 3981
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/GENERATION.json",
+      "sha256": "3b97d6bd7b66a2dba513e97f01ff877ca68757ac753ccb1ed46dcedf27b7b410",
+      "bytes": 2271
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/README.md",
+      "sha256": "85a7bc50c8cf9f92fa1eda46915a232a7ce805cb78a3b83261af8a13e31506be",
+      "bytes": 4268
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/SOURCE_BINDING.json",
+      "sha256": "9d3d6060cb98ac799bcf9baf38ddc3d1981de5cfc97626cdec2d5768af8320ed",
+      "bytes": 13299
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/authoring/ANSWER.json",
+      "sha256": "48cd271b5bb4f4a7b46da5503cea4ed43973f3f84165c44d8ef65b5733392259",
+      "bytes": 399571
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/authoring/TASK.json",
+      "sha256": "c336e6f6b97730acc1f0546b7e69b0e2b5b7321e5ee379c65b47c394f01b6e3c",
+      "bytes": 461427
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/PROVIDER.json",
+      "sha256": "7fefcb7f5c767df3620c23b823cf9a24d1326e10dfaf55a9ee437c59895330e7",
+      "bytes": 621
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/bindings.json",
+      "sha256": "b8843de4d4bb3f19feb85f09c17c06645fa412ecd1e015da9c691637acd5c9d0",
+      "bytes": 176
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/conversion-config.json",
+      "sha256": "772cb36ef27b4e255ecc08cb90ac93ae9cabec7da80ea4ea6dfc8d7d0555fc09",
+      "bytes": 1025
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/conversion-receipt.json",
+      "sha256": "0feeade4a688232ee5ad1dccbff586db5e02a4b787d5eef400eea0a79dee4362",
+      "bytes": 566
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/map.json",
+      "sha256": "d06099af8487fb6e9bc792f6971b114526f5cd3869ee61eb4b1b575c360f993a",
+      "bytes": 1117778
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/program.json",
+      "sha256": "d6c4e2ebfed7c45d3b51fd363677d7554d15c5b886d6c70438ec81ae5ad5dafe",
+      "bytes": 1072635
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/restored-model.json",
+      "sha256": "5c1ef1485ec7f470c42dada810f15fe4d66200a7140a14eb1d185c0fd8bb51cb",
+      "bytes": 925947
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/selected-projection.json",
+      "sha256": "2639f6d786a740d54ad819b46bcc3cd59f7f616c1f7825a6501bd26496aef360",
+      "bytes": 20398
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/axiom/validation.json",
+      "sha256": "20f40d5e1883076e8fe924e94f6bd8986018be68b96663822e66f2eda1af27f9",
+      "bytes": 1057
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/01-prepare.json",
+      "sha256": "473b13b0eaefffbaf1fe12920c6fc2070b978d1c495a754f2bc7787d799323b8",
+      "bytes": 1506
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/02-task.json",
+      "sha256": "8a9403395def7a06bded0e1f98a02f543a70230a932d65bbbe05d6b5fc157ec8",
+      "bytes": 517081
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/03-submit.json",
+      "sha256": "e2e331be942d0e067fc8e360890ebfe300b1efe0092845fe30d7ad1307606337",
+      "bytes": 887
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/04-build.json",
+      "sha256": "ba8546e59730c067fe544f94654253667a2bffa7b27e50cc5fb7805419eae301",
+      "bytes": 2763
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/05-status.json",
+      "sha256": "e5293e8b4f81786dc2e5813ea511968631bdc00cc8ab1c4ab3df42bd54c71bc9",
+      "bytes": 3307
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/commands/06-reuse.json",
+      "sha256": "ae88192671d00ed2f08d336d7095175524dd0f252637d24e5e86bb2e31b33214",
+      "bytes": 2764
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/BUILD.json",
+      "sha256": "86a5fd798786e1f386730d87c3bc995987c35c6a2dd143c163d3d7aa883f0373",
+      "bytes": 2265
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/PROJECT.json",
+      "sha256": "251c6866807fde4104ad038b8ce08bc7d49880989ef3ed3a57445aba73b848a9",
+      "bytes": 3729
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/answers/chunk-e24656fb6771a719aa6a.json",
+      "sha256": "086f61ef71bae7c409e48834880497993556589fdb07b0b993967c71697103ce",
+      "bytes": 411818
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/chunks.json",
+      "sha256": "6d8684c95b2b1641be789d6e99b8db7b72e45edc0c2347ee6cffcadc27fcccd3",
+      "bytes": 314010
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/ACTIVATION.md",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "bytes": 142205
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/SDLC_DEFAULTS.md",
+      "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8",
+      "bytes": 11713
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/TICKETS.md",
+      "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+      "bytes": 101437
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/plan.json",
+      "sha256": "5ec27bbc0bf863a033b51f7b0418bb3cf1fec7d7e89a5ae665a40a8ca6f74efb",
+      "bytes": 2204
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/carrier.json",
+      "sha256": "903d0070618b4bbbc1166ef1bf9d0511d84ee68e239c371aab90dc9a9c36657d",
+      "bytes": 5735238
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/coverage.json",
+      "sha256": "3994b04f229e6020690efdd6d40e81cb8be235aceb1b658c7f31825eb1130e8a",
+      "bytes": 87222
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/explorer.html",
+      "sha256": "2ab25f47a5f99575c7c93bfff3a57a3241d22925dbfb69068fdf1c9b453007e5",
+      "bytes": 3562244
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/model.json",
+      "sha256": "5c1ef1485ec7f470c42dada810f15fe4d66200a7140a14eb1d185c0fd8bb51cb",
+      "bytes": 925947
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/result.json",
+      "sha256": "85e892faf24f8d135211408128b894d632056dc9c02dd38b7a0f7aeea7b5f3ab",
+      "bytes": 943
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/source-manifest.json",
+      "sha256": "14a547910aa81f7823afc6827b8e79f37542df41d81df74fdfef5697925a5842",
+      "bytes": 1443
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/method-verification.json",
+      "sha256": "8aa5e39f211dbcb45f564bf622c3e7ce393aa5669fbe8f5ce87fba3951d48064",
+      "bytes": 14759
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/product-definition.json",
+      "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739",
+      "bytes": 4484
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/source-manifest.json",
+      "sha256": "14a547910aa81f7823afc6827b8e79f37542df41d81df74fdfef5697925a5842",
+      "bytes": 1443
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/manifest.json",
+      "sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa",
+      "bytes": 15471
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/ACTIVATION.md",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "bytes": 142205
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/AXIOMATIC_CALCULUS.md",
+      "sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+      "bytes": 92360
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/SDLC_DEFAULTS.md",
+      "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8",
+      "bytes": 11713
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.1/source/standards/TICKETS.md",
+      "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+      "bytes": 101437
+    },
+    {
+      "path": "scripts/build_31_visual.py",
+      "sha256": "f9f67e7600d8ef041a79eba60b5e8590d61e3be95ad225acc719c2d2ae6be4ba",
+      "bytes": 12427
+    },
+    {
+      "path": "scripts/visual_31_annotations.json",
+      "sha256": "045038c18fe7c52265c7d299f35051af55aa11c1304c7daf4a4a7bf9e940eee5",
+      "bytes": 43192
+    },
+    {
+      "path": "stdo_representation.json",
+      "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739",
+      "bytes": 4484
+    }
+  ]
+}

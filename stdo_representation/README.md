@@ -1,47 +1,20 @@
-# STDO Representation
+# STDO Representation 3.1.0-rc.1
 
-The current 3.0.5-rc.1 Product supplies one source-linked a_c model, its checked
-carrier and coverage, the exact STDO corpus, derived Axiom program/map and
-bounded projections, and the shared Codex/Claude native skill.
-[The release record](releases/v3.0.5-rc.1.md) identifies this subject; the external
-cohort binding records final native, publication and acceptance identities.
+Source-linked visual documentation of selected exact STDO release members.
+The current artifact presents source-section navigation and selected SDLC,
+ticket and context relations; complete method semantics are explicitly outside
+its claim. Every selected section has a coverage disposition and a visible
+residual where interpretation remains outside this bounded visual scope.
 
-The original model was authored through public a_c prepare/task/submit/build
-against the frozen 53 standards and 15 native workflow contracts. This RC
-successor preserves those exact source bytes and authored meanings through an
-explicit coordinate-only rebind, with an inverse equality witness. It is not a
-fresh authoring invocation. Its 1,885 records
-include 42 explicit residuals. All 896 source sections have processing
-dispositions; 24 empty headings are omitted. These counts describe coverage,
-not semantic completeness or acceptance.
+[Current artifact](build_tenants/a_c/representation/stdo-v3.1.0-rc.1/README.md) ·
+[Quickstart](QUICKSTART.md) · [installation](INSTALLATION.md) ·
+[public manifest](PUBLIC_MANIFEST.json) · [migration](MIGRATION-3.1.md)
 
-Start with [Quickstart](QUICKSTART.md) and the
-[native skill](skills/stdo-representation/SKILL.md). The current source and
-model are in `build_tenants/a_c/representation/stdo-v3.0.5-rc.1/`; the derived
-program, map and five frame indexes are in
-`build_tenants/axiom_indexer/representation/stdo-v3.0.5-rc.1/`.
+This Product owns STDO interpretation, coverage and residuals. Representation
+Tools supplies the existing project/model/carrier/explorer mechanics. Optional
+Axiom Indexer conversion preserves the exact declared model value.
+Source fidelity and reading value require their separate assessment.
 
-The indexes cover native work/control intake, deterministic processing,
-Product composition, finding reports and source-closed release. Each points
-to an actual source-owned Worker or Reviewer frame. Applicability, operation
-authority and actual task evidence remain the caller's responsibility.
-
-The exact 3.0.5-rc.1 Axiom provider preserves every model record, field and identity
-through reversible conversion. Reference-only and materialized projections
-have the same declared supporting closure. Current a_c viewers and real
-formal verification consume this same model; their evidence retains its
-declared scope. This is not a proof of all STDO meaning or a new executor.
-
-The source project's [Product Definition](stdo_representation.json) pins
-installed STDO 3.0.4 as construction methodology. The current provider candidate
-was explicitly pinned for the supported larger authoring transaction; the
-represented source and all owned release outputs are 3.0.5-rc.1. A caller's method
-adoption is a separate relation.
-
-[Goals](specification/GOALS.md), [Intent](specification/INTENT.md),
-[Product](specification/PRODUCT.md), [requirements](specification/requirements/)
-and the [accepted frame basis](specification/REFERENCE_FRAME_BASIS.md) own the
-source project. Historical 2.x releases, GTL/schema/compiler prototypes and
-native trials retain their original bytes and claims; they are not the current
-model or release evidence. Workspace discovery symlinks are not distributed
-Product members; installed payloads use regular canonical files.
+Historical 3.0.5 models remain unchanged and retain their original source and
+provider bindings. They are not rebound to 3.1. No current visual route depends
+on a context registry, agent authoring skill, Lean or workflow execution.
