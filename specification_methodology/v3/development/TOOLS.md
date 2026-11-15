@@ -45,7 +45,7 @@ authorized trial has its declared standing; no example query supplies authority
 or transfers coverage. The [native first-use guide](../build_tenants/common/plugins/spec/references/GETTING_STARTED.md)
 connects that context to work, review and Product disposition.
 
-The root [3.1 activation](../../../.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/ACTIVATION.md)
+The root [3.1 activation](../../../.ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md)
 owns current cohort construction, qualification and publication. Current context
 use does not require a visual representation or Lean installation.
 

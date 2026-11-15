@@ -1,0 +1,24 @@
+test_successor_acceptance_receives_predecessor_dispositions (__main__.SuccessorBoundaries.test_successor_acceptance_receives_predecessor_dispositions) ... 
+  test_successor_acceptance_receives_predecessor_dispositions (__main__.SuccessorBoundaries.test_successor_acceptance_receives_predecessor_dispositions) (reuse_evidence=False) ... FAIL
+  test_successor_acceptance_receives_predecessor_dispositions (__main__.SuccessorBoundaries.test_successor_acceptance_receives_predecessor_dispositions) (reuse_evidence=True) ... FAIL
+
+======================================================================
+FAIL: test_successor_acceptance_receives_predecessor_dispositions (__main__.SuccessorBoundaries.test_successor_acceptance_receives_predecessor_dispositions) (reuse_evidence=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc2/purpose_context/scripts/test_successor_boundaries.py", line 76, in test_successor_acceptance_receives_predecessor_dispositions
+    self.assertIsNotNone(selected, "EVALUATION section 5 successor acceptance must retain RELEASE section 9")
+AssertionError: unexpectedly None : EVALUATION section 5 successor acceptance must retain RELEASE section 9
+
+======================================================================
+FAIL: test_successor_acceptance_receives_predecessor_dispositions (__main__.SuccessorBoundaries.test_successor_acceptance_receives_predecessor_dispositions) (reuse_evidence=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc2/purpose_context/scripts/test_successor_boundaries.py", line 76, in test_successor_acceptance_receives_predecessor_dispositions
+    self.assertIsNotNone(selected, "EVALUATION section 5 successor acceptance must retain RELEASE section 9")
+AssertionError: unexpectedly None : EVALUATION section 5 successor acceptance must retain RELEASE section 9
+
+----------------------------------------------------------------------
+Ran 1 test in 0.054s
+
+FAILED (failures=2)

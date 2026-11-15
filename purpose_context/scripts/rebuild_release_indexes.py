@@ -40,6 +40,22 @@ def inputs_pin(names: list[str]) -> list[dict]:
             for name in names]
 
 
+def apply_sdlc_amendments(rules: list[dict], root: Path, authoring: dict) -> None:
+    """Apply owned, source-checked declarations without rewriting historical recipes."""
+    for amendment in authoring.get("sdlc_rule_amendments", []):
+        for ground in amendment["grounds"]:
+            _, _, body = section(catalog.local_file(
+                root, "standards/" + ground["source_id"] + ".md").read_bytes(), ground["heading"])
+            core.need(core.raw_digest(body) == ground["section_sha256"],
+                      "SDLC amendment source changed; re-enter " + amendment["rule_id"])
+        matches = [rule for rule in rules if rule["id"] == amendment["rule_id"]]
+        core.need(len(matches) == 1, "SDLC amendment rule is not unique")
+        for field, change in amendment["fields"].items():
+            core.need(matches[0].get(field) == change["expected"],
+                      "SDLC amendment predecessor differs: " + amendment["rule_id"] + "." + field)
+            matches[0][field] = copy.deepcopy(change["replacement"])
+
+
 def native_sources(root: Path, method: dict, subject: str, rows: list[dict]) -> tuple[dict, dict, dict]:
     sources = {"profile": "purpose-context.sources/1", "subject_id": subject, "method": method,
                "source_root_kind": "installed-method-root", "method_manifest_path": "manifest.json",
@@ -113,7 +129,7 @@ def sdlc_index(root: Path, method: dict, authoring: dict, previous: dict, versio
     sources, manifest, view = native_sources(root, method,
         "urn:purpose-context:corpus:stdo-" + version + ":sdlc-workflow-v1", rows)
     purpose = core.read_json(PRODUCT / "authoring/sdlc-workflow/PURPOSE.json")
-    old_purpose = copy.deepcopy(purpose)
+    old_purpose = core.read_json(PRODUCT / INDEXES / previous["id"] / "PURPOSE.json")
     purpose["description"] = purpose["description"].replace(
         "The selected development projection is a trial/adopted guidance subject under the caller separately bound complete constitution, not a partial constitution or published release.",
         "The selected guidance belongs to exact native STDO " + version + "; the caller binds its complete operative constitution and actual Product adoption. An index is not a partial constitution or an adoption decision.")
@@ -134,6 +150,7 @@ def sdlc_index(root: Path, method: dict, authoring: dict, previous: dict, versio
     rule = next(r for r in rules if r["id"] == amendment["rule_id"])
     core.need(rule["text"] == amendment["expected_text"], "SDLC amendment predecessor differs")
     rule["text"] = amendment["replacement_text"]
+    apply_sdlc_amendments(rules, root, authoring)
     old_index = core.read_json(PRODUCT / INDEXES / previous["id"] / "INDEX.json")
     old_sources = core.read_json(PRODUCT / INDEXES / previous["id"] / "SOURCES.json")
     index = {"profile": core.INDEX_PROFILE, "purpose_id": purpose["id"], "purpose_sha256": core.digest(purpose),
@@ -153,6 +170,7 @@ def sdlc_index(root: Path, method: dict, authoring: dict, previous: dict, versio
                                "before_sha256": core.digest(old), "after_sha256": core.digest(new)}
                               for old, new in zip(old_index["rules"], rules, strict=True)],
              "authoring_disposition": amendment["disposition"],
+             "declared_rule_amendments": copy.deepcopy(authoring.get("sdlc_rule_amendments", [])),
              "source_coverage_before": old_index["source_coverage"],
              "source_coverage_after": index["source_coverage"],
              "unresolved_equal": index["unresolved"] == old_index["unresolved"],

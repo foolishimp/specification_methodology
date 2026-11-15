@@ -1,0 +1,24 @@
+{
+  "reason": "Compare purpose wording against named RC1 predecessor, not the preserved development recipe",
+  "semantic_index_bytes_equal_to_package01": true,
+  "actual_rc1_fact_wording_changes": {},
+  "actual_rc1_purpose_changed_fields": [
+    "description"
+  ],
+  "original_package": "final-packages-01",
+  "new_package": "final-packages-02",
+  "argv": [
+    "python3",
+    "-B",
+    "purpose_context/scripts/rebuild_release_indexes.py",
+    "--version",
+    "3.1.0-rc.2",
+    "--method-root",
+    "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/native-store/releases/v3.1.0-rc.2",
+    "--method-manifest-sha256",
+    "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+    "--predecessor-source-root",
+    "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/public-readback/store/releases/v3.1.0-rc.1"
+  ],
+  "returncode": 0
+}

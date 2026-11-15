@@ -31,12 +31,12 @@ bind the consuming behavior and its continuation scenarios.
 Two current purposes serve different decisions:
 
 - `sdlc-workflow/1`: work → QA → causal triage → owning-layer re-entry →
-  verification → continue/close. The 40-rule release-target index binds exact native 3.1.0-rc.1;
+  verification → continue/close. The 40-rule release-target index binds exact native 3.1.0-rc.2;
   installation alone does not adopt its default. It distinguishes
   incremental QA from named boundary decisions and preserves valid evidence.
 - `python-pure-refactor/2`: preconstruction method constraints for pure/local
   Python 3.12 refactoring. The latest release-target entry has 113 rules over
-  sixteen owners from exact STDO 3.1.0-rc.1. Older exact entries remain available.
+  sixteen owners from exact STDO 3.1.0-rc.2. Older exact entries remain available.
 
 Use the catalog returned by `provider.py describe` to select the actual index,
 source and purpose. A purpose name alone does not select a release. New queries
@@ -50,7 +50,7 @@ STDO 3.0.4 as the construction basis, independently of the target consumer and
 indexed source.
 
 Current source builds an **exact development or release-matched package**. The
-selected successor is 3.1.0-rc.1; its inventory and dependency pins are separate
+selected successor is 3.1.0-rc.2; its inventory and dependency pins are separate
 from immutable 3.0.5 inventories. [Release and migration](RELEASE.md) explains
 the actual native binding and explicit consumer transition. The earlier nine-case SDLC trial retains its original source and
 query subjects; the constitutional continuity increment requires its own exact

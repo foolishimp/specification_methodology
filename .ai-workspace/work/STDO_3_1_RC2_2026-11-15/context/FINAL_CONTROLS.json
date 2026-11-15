@@ -1,0 +1,24 @@
+[
+  {
+    "name": "historical-controls",
+    "argv": [
+      "python3",
+      "-B",
+      "purpose_context/scripts/test_sdlc_index.py"
+    ],
+    "returncode": 0
+  },
+  {
+    "name": "rc2-boundary-controls",
+    "argv": [
+      "python3",
+      "-B",
+      "purpose_context/scripts/test_successor_boundaries.py",
+      "--method-root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/native-store/releases/v3.1.0-rc.2",
+      "--index-id",
+      "stdo-3.1.0-rc.2-sdlc-workflow-v1"
+    ],
+    "returncode": 0
+  }
+]

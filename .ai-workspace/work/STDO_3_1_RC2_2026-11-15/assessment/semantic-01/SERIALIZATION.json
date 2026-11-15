@@ -1,0 +1,107 @@
+{
+  "kind": "stdo.rc2.actual-assessor-envelope-serialization/1",
+  "report": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/ASSESSMENT.md",
+  "report_sha256": "e7636ededbad4e5cd1cc48cee0b39e1120518a84cf416a806464648e941a33c6",
+  "actual_actor_session": "004386e3-1178-4a56-9456-1fa4fbde5ce4",
+  "actual_actor_model": "claude-opus-5-5",
+  "source_packet_sha256": "2381daa1c565c45d2232444b092ec4a0fa0ca59a21c9070e8a57d1df0fd4e84d",
+  "serialized_supported": [
+    {
+      "name": "acceptance",
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/acceptance.json",
+      "sha256": "3d164d94ae985184d0f520f39e3437411b28cee948ff571c4f04eeabf0780e17",
+      "scope": "Predecision SDLC workflow-constraint sufficiency for a successor product_acceptance decision on native RC2; no acceptance, release or exact-cut criteria (RELEASE section 8 is not imported); exact-cut acceptance should use boundary release",
+      "source_status": "supported"
+    },
+    {
+      "name": "qualification",
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/qualification.json",
+      "sha256": "edf7f87f97b970925025c6e3d9ad7a06786b6f7700dccc20fa81c114a9fe6354",
+      "scope": "Workflow constraints and successor conservation at a qualification boundary; excludes the RELEASE section 3 exact-cut binding list (R6)",
+      "source_status": "supported"
+    },
+    {
+      "name": "release",
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/release.json",
+      "sha256": "bffaa2d4c07062f2e604deab52c3b74bcd55c1086ecbf23b08cfc6497b26e4d9",
+      "scope": "Workflow-level release criteria (W26) plus successor conservation; ref and publication mechanics are owner re-entry, not covered",
+      "source_status": "supported"
+    },
+    {
+      "name": "work",
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/work.json",
+      "sha256": "fc9674b9d34b96b438ed58f373f0675ef14768de09bf5e9e08a8afaedd762ae9",
+      "scope": "Ordinary work with proposed reuse and changed source; correct W35/W25/W26 exclusion; residuals F1 and A2",
+      "source_status": "supported"
+    },
+    {
+      "name": "sdlc",
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/sdlc.json",
+      "sha256": "2b64f93475a2b58df0b10e7f3b4345badf105cfae23ffec2458bec4f2086d80a",
+      "scope": "Executing and recording the admitted bounded refactor via the run carrier, boundary none, no Executive profile",
+      "source_status": "supported"
+    },
+    {
+      "name": "python",
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/python.json",
+      "sha256": "f1afd302c38a6e68830e464a3ceabbbb38a655d367fe86f66f215d516f958ccb",
+      "scope": "Preconstruction method-constraint sufficiency for the worker / DESIGN_MODULE / pure-local Python 3.12 realization_refactor family; excludes code, typing pass, equivalence and acceptance",
+      "source_status": "supported"
+    }
+  ],
+  "withheld": [
+    {
+      "name": "missing-boundary",
+      "status": "unknown",
+      "scope": "No delivered context exists, so semantic coverage is not judgeable; the fail-closed family refusal is judged correct under PC-R03"
+    },
+    {
+      "name": "null-boundary",
+      "status": "unknown",
+      "scope": "As missing-boundary"
+    },
+    {
+      "name": "ill-typed-boundary",
+      "status": "unknown",
+      "scope": "As missing-boundary"
+    }
+  ],
+  "explicit_reference_resolutions": [
+    {
+      "name": "qualification",
+      "field": "evaluator",
+      "original": "as above",
+      "resolved_from": "subjects[0].evaluator",
+      "value": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called"
+    },
+    {
+      "name": "release",
+      "field": "evaluator",
+      "original": "as above",
+      "resolved_from": "subjects[0].evaluator",
+      "value": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called"
+    },
+    {
+      "name": "work",
+      "field": "evaluator",
+      "original": "as above",
+      "resolved_from": "subjects[0].evaluator",
+      "value": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called"
+    },
+    {
+      "name": "sdlc",
+      "field": "evaluator",
+      "original": "as above",
+      "resolved_from": "subjects[0].evaluator",
+      "value": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called"
+    },
+    {
+      "name": "python",
+      "field": "evaluator",
+      "original": "as above",
+      "resolved_from": "subjects[0].evaluator",
+      "value": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called"
+    }
+  ],
+  "operation": "Extraction of the six runtime fields from explicit actual Claude same-subject supported verdicts; evaluator as-above references are expanded to their exact first-item text and recorded. No operator status invention, evidence addition or scope strengthening."
+}

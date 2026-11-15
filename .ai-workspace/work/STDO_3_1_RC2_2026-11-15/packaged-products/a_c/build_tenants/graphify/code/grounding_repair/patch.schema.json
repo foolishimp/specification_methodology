@@ -1,0 +1,95 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "decision": {
+      "enum": [
+        "patch",
+        "refuse"
+      ],
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "patches": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "family": {
+            "enum": [
+              "concepts",
+              "relations",
+              "constraints",
+              "latitude",
+              "residuals"
+            ],
+            "type": "string"
+          },
+          "grounding_index": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "reason": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "record_key": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "replacement": {
+            "additionalProperties": false,
+            "properties": {
+              "end_line": {
+                "minimum": 1,
+                "type": "integer"
+              },
+              "quote": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "section_id": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "start_line": {
+                "minimum": 1,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "section_id",
+              "quote",
+              "start_line",
+              "end_line"
+            ],
+            "type": "object"
+          }
+        },
+        "required": [
+          "family",
+          "record_key",
+          "grounding_index",
+          "replacement",
+          "reason"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "refusal_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "decision",
+    "patches",
+    "refusal_reason",
+    "limitations"
+  ],
+  "type": "object"
+}

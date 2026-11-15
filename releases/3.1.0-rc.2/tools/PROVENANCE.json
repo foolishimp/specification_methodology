@@ -7,5 +7,15 @@
       "origin": "specification_methodology/v3/.ai-workspace/work/PURPOSE_CONTEXT_ALIGNMENT_2026-11-12/archive/common-tools/package_tools.py",
       "reuse": "Unchanged stdlib-only inventory/package/links checker. Old combined constructors and runtime are not revived."
     }
-  ]
+  ],
+  "successor_of": "releases/3.1.0-rc.1/tools",
+  "changes": {
+    "native_cut.py": "Exact RC2 selection and RC1 predecessor from the committed descriptor; construction algorithm conserved.",
+    "runtime_bundle.py": "New owned manager version; third-party wheels conserved exactly.",
+    "product_bundle.py": "Select RC2 members and verify the actual supplied native manifest instead of hardcoding the previous digest.",
+    "ref_transaction.py": "Advance existing annotated selectors with expected-object leases; retain RC1, refuse higher ordinals, prepare local ref graph atomically and publish complete25 refs atomically.",
+    "public_readback.py": "RC2 release identity; download/digest behavior conserved.",
+    "test_ref_transaction.py": "Real local Git transport tests for advancement, refusals, atomic failure and predecessor preservation.",
+    "cohort_record.py": "Bind the actual native cut, committed source carrier and evidence, 225 archive members, annotated ref graph and actual independent assessments; exclude the cohort asset from its own hash inventory."
+  }
 }

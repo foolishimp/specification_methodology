@@ -22,6 +22,6 @@ the host adapter. Prior exact generated artifacts and releases remain historical
 ## Product disposition authority
 
 The November 12 owner direction selects this mechanical visual boundary.
-Retired undelivered obligations are withdrawn unsatisfied. Version 3.1.0-rc.1 has a public runtime manifest and participates in the
+Retired undelivered obligations are withdrawn unsatisfied. Version 3.1.0-rc.2 has a public runtime manifest and participates in the
 exact six-Product cohort. Publication and finite qualification are recorded
 there; no installed adoption or replacement of historical releases is implied.

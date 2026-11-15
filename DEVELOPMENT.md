@@ -6,7 +6,7 @@ selected installed methodology bases retain authority.
 
 The selected successor is [STDO 3.1.0-rc.2](releases/3.1.0-rc.2/RELEASE.md), public
 line 3.1.0. Its two Purpose Context indexes bind the actual native cut, manifest
-`ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa`:
+`b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4`:
 
 - `stdo-3.1.0-rc.2-python-pure-refactor-v2`, purpose `python-pure-refactor/2`.
 - `stdo-3.1.0-rc.2-sdlc-workflow-v1`, purpose `sdlc-workflow/1`.

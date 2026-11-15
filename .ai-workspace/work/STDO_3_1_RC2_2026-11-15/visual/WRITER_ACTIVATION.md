@@ -1,0 +1,7 @@
+# Visual Product Writer activation
+
+Admitted by ../ACTIVATION.md and the direct Root delegation. Exact scope is a_c, stdo_representation, axiom_indexer and this visual evidence directory in the RC2 worktree. Product definitions, installed 3.0.4 basis, requirements and visual designs were read. All three manager definition verifications returned valid:true with manifest 102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b. The release owner instruction authorizes this bounded successor; no additional gate or adoption is invented.
+
+Change classification: release identity and source/provider rebinding of the retained visual capability. No runtime behavior, author annotation meaning or requirement changes are selected. Preserve RC1 artifact, recipe, annotations and release notes. RC2 is regenerated through the existing public project pipeline from the actual native RC2 subject only after Root supplies it. Compare selected sources, annotations and normalized model records to RC1; differences in generated source coordinates and version/provider identity remain explicit. Fresh structural/currentness and portable public-path checks supplement retained RC1 independent fidelity/browser evidence, subject to Root's independent applicability assessment.
+
+Root owns all Git/publication effects and the native cut. This Writer makes no independent semantic judgment and cannot turn local equality into release acceptance. Return exact provider manifests, portable Product selection, source binding and evidence/limits through RETURN.md.

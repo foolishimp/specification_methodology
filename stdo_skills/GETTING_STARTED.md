@@ -2,7 +2,7 @@
 
 Use Skills to deliver a bounded outcome under your Product's selected STDO basis.
 The native workflow owns the work; Purpose Context supplies reusable constraints
-for the decision being made. The selected 3.1.0-rc.1 package binds its exact native method and independently
+for the decision being made. The selected 3.1.0-rc.2 package binds its exact native method and independently
 pinned Products. Development source remains available through its explicit mode.
 
 ## Keep the ticket as the work reference
@@ -100,14 +100,14 @@ Obtain the current entries through the same adapter:
 | Document source or code visually | Optional `stdo-project` | Separate visual Product; no context or Lean prerequisite |
 
 The canonical skill routes to the matching usage reference. Its 3.1 SDLC entry is
-`stdo-3.1.0-rc.1-sdlc-workflow-v1`, bound to the actual complete native cut. The caller
+`stdo-3.1.0-rc.2-sdlc-workflow-v1`, bound to the actual complete native cut. The caller
 binds its complete installed constitution and actual selection of the default.
 The historical development entry retains its explicit trial/adoption boundary. The current frame template proposes the shared default when
 a concrete basis is admitted; merely installing Skills or finding the index does
 not adopt it. Optional profiles and Product policy values remain explicit.
 
 The latest release-target Python entry is
-`stdo-3.1.0-rc.1-python-pure-refactor-v2`. A 3.0.4 or 3.0.5 consumer uses its own matching
+`stdo-3.1.0-rc.2-python-pure-refactor-v2`. A 3.0.4 or 3.0.5 consumer uses its own matching
 entry. Neither entry migrates a consumer or covers every kind of work. A task may
 need both purposes for different claims; keep their queries and coverage separate.
 

@@ -1,0 +1,252 @@
+{
+  "profile": "stdo-representation.public-visual/1",
+  "product_definition_id": "urn:stdo:product-definition:stdo-representation",
+  "name": "STDO Representation",
+  "version": "3.1.0-rc.2",
+  "standing": "versioned bounded source-linked visual inventory; exact cohort records publication and independent qualification",
+  "entrypoint": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/explorer.html",
+  "regeneration": "scripts/build_31_rc2_visual.py",
+  "source_binding": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/SOURCE_BINDING.json",
+  "generation_binding": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/GENERATION.json",
+  "represented_source": {
+    "uri": "stdo://releases/v3.1.0-rc.2/",
+    "manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+    "release": {
+      "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+      "cut": "v3.1.0-rc.2",
+      "project_release_namespace": "specification_methodology",
+      "project_subtree_root": "specification_methodology/v3",
+      "project_subtree_tree": "61efe71a824ce12d0c776f076503b27a7f7b2c14",
+      "qualified_ref": "refs/tags/specification_methodology/v3.1.0-rc.2",
+      "standards_tree": "f84106db86d358893c5cdc41a9292a65ab21a28a",
+      "tag_object": "fb85e1b7a5717a6c92af236308c4d0b5809414fe",
+      "tree": "2c44fdca54e3ecfb0f2125c114b431bd7cb9c7c1"
+    }
+  },
+  "construction_basis": {
+    "uri": "stdo://releases/v3.0.4/",
+    "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+  },
+  "model": {
+    "id": "urn:a-c:generation:13c1d78232c8476f3fa7ab22:model:42439d5574f9c96771c00694",
+    "sha256": "c16f1203d10df712f8eca154f8ae350d3de3507314e63ee0f3f1740f76c44266"
+  },
+  "scope": "Complete source-section navigation for ACTIVATION.md, SDLC_DEFAULTS.md and TICKETS.md, plus these selected SDLC/work-carrier/context annotations. Navigation coverage is not semantic coverage.",
+  "limits": [
+    "All declared sections receive residual dispositions: their structure and source location are represented, while body meaning is not comprehensively modeled.",
+    "Only the explicitly listed authored annotations assert selected body meanings. They require independent source-first assessment for their exact subject.",
+    "The remaining native members and referenced owners are unrepresented meaning, not missing requirements inferred false or satisfied.",
+    "No operational judgments, traversals or transformations are instantiated. No Lean/formal claim, context selection, workflow execution or code-correctness claim is made.",
+    "Governing flags on the authored relations describe retention dependencies in this model; they grant no authority to a reader or tool.",
+    "Historical 3.0.5 models and semantic verdicts are not reused or rebound."
+  ],
+  "dependencies": {
+    "representation_tools": {
+      "product_definition_id": "urn:stdo:product-definition:a-c-implementations",
+      "root": "../a_c",
+      "public_manifest": "PUBLIC_MANIFEST.json",
+      "public_manifest_sha256": "6810997f1a8a610a3147bbb46a1430171eef4ac3e089ba3dae9733414b8d7073",
+      "version": "3.1.0-rc.2"
+    },
+    "optional_axiom_conversion": {
+      "product_definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "root": "../axiom_indexer",
+      "public_manifest": "PUBLIC_MANIFEST.json",
+      "public_manifest_sha256": "f03c5982632c2ac76bc9023d6be1222ff76b43226079e023773a14e6bdcc144b",
+      "version": "3.1.0-rc.2"
+    },
+    "offline_reader": "Self-contained HTML; browser with JavaScript. Layered mode works without WebGL; 2D/3D force views require WebGL. No Lean, registry or network dependency."
+  },
+  "files": [
+    {
+      "path": "VERSION",
+      "sha256": "1a992ade4db1f05d3acbaa426aa74c819fdef970e913728e1e5cc8fa125ec378",
+      "bytes": 11
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/COVERAGE.md",
+      "sha256": "ffd63b9c4821277df9b7ce431ad4e613bf679ee9bd01edaa724db27ce6b4f5da",
+      "bytes": 3985
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/GENERATION.json",
+      "sha256": "b64a123f29f6928120c35387bdf93843916487d49cdbe7de20fd3be40c5dfef5",
+      "bytes": 2271
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/README.md",
+      "sha256": "3c70eff96f35b5ed3634c433980de3fd9026b55cfd174ca4ca7d6fe1b1752347",
+      "bytes": 4446
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/SOURCE_BINDING.json",
+      "sha256": "a514cebf337d89728da3243ec507d3f8179bcd433c3f135598b039215a90f59f",
+      "bytes": 13299
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/authoring/ANSWER.json",
+      "sha256": "cac5767cab9297fc9b452e74869d75aa9dedc8800a9c173af8ffb6d811629e79",
+      "bytes": 399571
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/authoring/TASK.json",
+      "sha256": "5562fdd36722b2070a26964fe451d5b67738d494841e4150812794ba3a75ac5a",
+      "bytes": 461055
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/01-prepare.json",
+      "sha256": "c8e574820d904d68e4a6011fc4be76ced91585a2082cd25118820a0741dde064",
+      "bytes": 1512
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/02-task.json",
+      "sha256": "f468693e2f9f1b6c29054240b74a1b0dbac7a93cb06b93101dd1c6e4192b2160",
+      "bytes": 516701
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/03-submit.json",
+      "sha256": "bfb470d61df1e5c93088a14ad8c05e5dd9a8c703363023e6d8c45134be7a906b",
+      "bytes": 875
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/04-build.json",
+      "sha256": "dff9f4b184e7db72ec850a0d0e71c90277054bb4272a98543033c390ef094802",
+      "bytes": 2739
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/05-status.json",
+      "sha256": "872a5586375faed57dde699cc27a9f1ebf3e013f354d92dce6ad0dc102ee2aac",
+      "bytes": 3279
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/06-reuse.json",
+      "sha256": "661869a9fcc1f84dedd54c64949194f3c26231bf86cf1ce2b6e87dcb6316bf96",
+      "bytes": 2740
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/BUILD.json",
+      "sha256": "54a59b7fb637ba2d27e4116e2d849f5bcfaa99ab7083e18a09b5860bc4ad6538",
+      "bytes": 2249
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/PROJECT.json",
+      "sha256": "6f8c675789598df631e7d6f04437f9422f1bd4cff665265aa8dcc0c3b00df613",
+      "bytes": 3743
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/answers/chunk-eef9a8453157dd55aa9a.json",
+      "sha256": "f7b48aff733bc95ea6cd5ad47939683475f6e4519efebad09ad51ff1f46522d1",
+      "bytes": 411818
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/chunks.json",
+      "sha256": "8734e14e1065c1bdffc8be429db9c120da546dcae3bc8d0d512f836c15adc1de",
+      "bytes": 314010
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/ACTIVATION.md",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "bytes": 142205
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/SDLC_DEFAULTS.md",
+      "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8",
+      "bytes": 11713
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/TICKETS.md",
+      "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+      "bytes": 101437
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/plan.json",
+      "sha256": "f1309edb11c47c70b9a9d1ea4af5f11bb82a61caaddcab98fbbb7a5362e092fa",
+      "bytes": 2204
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/carrier.json",
+      "sha256": "e2f93140a748e2c85d66bd1be6a9a8f717105d9d1149d7f1a4cd2295b50f059b",
+      "bytes": 5735261
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/coverage.json",
+      "sha256": "98098e8b5d8082f728001687456b84a2e58c879485c39a2cbcdca1fcb320e735",
+      "bytes": 87222
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/explorer.html",
+      "sha256": "b0fddc7ab3882446c4090c1d72e411e096593803f676bd244eccaa14db944b23",
+      "bytes": 3562244
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/model.json",
+      "sha256": "3d70fca6878e458a3a4e830ec0601adc0dd999d3dd38ebde355700ae749ff4e9",
+      "bytes": 925947
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/result.json",
+      "sha256": "f40c5c70df5a211e439207df250a198f9c793a38aa5c570c5c912139b190364d",
+      "bytes": 943
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/source-manifest.json",
+      "sha256": "f305919b7bbad205c65f8ed77c7823eb875d45192451b98987de9246607c7982",
+      "bytes": 1443
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/method-verification.json",
+      "sha256": "dda0f4f808ec7c692f97cce7a1a71c588e598ad3c6b5cfe7f82f759efef76df0",
+      "bytes": 14755
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/product-definition.json",
+      "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739",
+      "bytes": 4484
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/source-manifest.json",
+      "sha256": "f305919b7bbad205c65f8ed77c7823eb875d45192451b98987de9246607c7982",
+      "bytes": 1443
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/manifest.json",
+      "sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+      "bytes": 15471
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/ACTIVATION.md",
+      "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "bytes": 142205
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/AXIOMATIC_CALCULUS.md",
+      "sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5",
+      "bytes": 92360
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/SDLC_DEFAULTS.md",
+      "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8",
+      "bytes": 11713
+    },
+    {
+      "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/TICKETS.md",
+      "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+      "bytes": 101437
+    },
+    {
+      "path": "scripts/build_31_rc2_visual.py",
+      "sha256": "12342d2f1db0b924f084d016959824559817d7667a3945efc5dddd7bfc089a22",
+      "bytes": 12435
+    },
+    {
+      "path": "scripts/visual_31_rc2_annotations.json",
+      "sha256": "dcc2dcd938b2691c338ff8b3f1d9517f4aacb9c42e3c8b66baaef8ba6d41b8c6",
+      "bytes": 43192
+    },
+    {
+      "path": "stdo_representation.json",
+      "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739",
+      "bytes": 4484
+    }
+  ]
+}

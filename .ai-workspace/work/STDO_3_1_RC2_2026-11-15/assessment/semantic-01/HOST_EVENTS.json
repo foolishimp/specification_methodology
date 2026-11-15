@@ -1,0 +1,58 @@
+{
+  "kind": "stdo.rc2.assessment-host-events/1",
+  "status_events": [
+    {
+      "type": "system",
+      "subtype": "status",
+      "status": "compacting",
+      "compact_output_chars": 0,
+      "session_id": "004386e3-1178-4a56-9456-1fa4fbde5ce4",
+      "uuid": "6dcdc615-2513-4bec-aa44-eb44ec0e9099"
+    },
+    {
+      "type": "system",
+      "subtype": "status",
+      "status": null,
+      "compact_result": "failed",
+      "compact_error": "too_few_groups",
+      "session_id": "004386e3-1178-4a56-9456-1fa4fbde5ce4",
+      "uuid": "eccb0c8a-c17f-40b0-bb7f-5c636bfba31d"
+    }
+  ],
+  "result_subtype": "success",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 937267,
+    "cache_read_input_tokens": 940,
+    "output_tokens": 24369,
+    "output_tokens_details": {
+      "thinking_tokens": 15439
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 937267,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 24369,
+        "cache_read_input_tokens": 940,
+        "cache_creation_input_tokens": 937267,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 937267
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "standing": "Native CLI attempted compaction and reported too_few_groups; retained source packet was not operator-truncated or replaced. The actor returned success. No full-host context-fit, adequate-attention or enforced isolation claim is made. Raw native stream is authoritative."
+}

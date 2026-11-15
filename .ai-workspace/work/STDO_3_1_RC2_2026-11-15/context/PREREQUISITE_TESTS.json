@@ -1,0 +1,32 @@
+[
+  {
+    "name": "before",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/purpose_context/scripts/test_successor_boundaries.py",
+      "--method-root",
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/public-readback/store/releases/v3.1.0-rc.1",
+      "--index-id",
+      "stdo-3.1.0-rc.1-sdlc-workflow-v1"
+    ],
+    "returncode": 1,
+    "expected": 1
+  },
+  {
+    "name": "declared-repair",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/purpose_context/scripts/test_successor_boundaries.py",
+      "--method-root",
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/public-readback/store/releases/v3.1.0-rc.1",
+      "--index-id",
+      "stdo-3.1.0-rc.1-sdlc-workflow-v1",
+      "--amend-authoring",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/purpose_context/authoring/release-targets/3.1.0-rc.2.json"
+    ],
+    "returncode": 0,
+    "expected": 0
+  }
+]

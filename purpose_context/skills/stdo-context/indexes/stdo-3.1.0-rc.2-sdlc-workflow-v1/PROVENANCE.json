@@ -1,0 +1,184 @@
+{
+  "construction_basis": {
+    "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b",
+    "uri": "stdo://releases/v3.0.4/"
+  },
+  "covered": false,
+  "index_id": "stdo-3.1.0-rc.2-sdlc-workflow-v1",
+  "inputs": [
+    {
+      "path": "scripts/rebuild_release_indexes.py",
+      "sha256": "8353b8bdead27959aaa60224f3fdf6f02b1dd50ad3611c08fb84df9eb335cd09"
+    },
+    {
+      "path": "scripts/rebuild_sdlc_index.py",
+      "sha256": "2d38f6a77be784e4e84df1435b8ae154c098098a4c7cae88865718ca52e79f69"
+    },
+    {
+      "path": "authoring/release-targets/3.1.0-rc.2.json",
+      "sha256": "eea8f1374e7b761cf40f48433365dab2b22c0dea451ddc34a76a1e6e6455c495"
+    },
+    {
+      "path": "authoring/sdlc-workflow/SOURCE-CLOSURE.json",
+      "sha256": "da81436615f57237b351ab54697dfddd85c8b370375df89c0bf9589fed4b38ff"
+    },
+    {
+      "path": "authoring/sdlc-workflow/PURPOSE.json",
+      "sha256": "8ecba436caa12381da0c4b29f479358bc71e0e45fdae449ea1939bbcacdd1795"
+    },
+    {
+      "path": "authoring/sdlc-workflow/RULES.json",
+      "sha256": "427dda923fb5f9167583a74850a7fc3a66176e4d1b6b0d8e7a664eb3a0b16e9c"
+    }
+  ],
+  "limits": [
+    "Constraint coverage does not prove task admission, implementation correctness or acceptance.",
+    "An exact query needs its applicable external assessment; prior judgments are not transferred.",
+    "No implicit adoption, global installation or all-method compatibility is supplied."
+  ],
+  "mechanical_validation": {
+    "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+    "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+    "limit": "Processing accounting, source intervals and declared relations do not detect omitted source meaning.",
+    "rules": 40,
+    "semantic_coverage": "unassessed",
+    "source_members": 12,
+    "status": "mechanically_valid"
+  },
+  "method": {
+    "manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+    "uri": "stdo://releases/v3.1.0-rc.2/"
+  },
+  "predecessor": {
+    "artifacts": {
+      "index": {
+        "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-sdlc-workflow-v1/INDEX.json",
+        "sha256": "fe82297b1ce249cd5345ce50087720a2c2b0f57760184a2702a06d51e76725b5"
+      },
+      "provenance": {
+        "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-sdlc-workflow-v1/PROVENANCE.json",
+        "sha256": "2f9eed923bfb89f46c2416bb4ab9f2b9d6778ed560b0b8406b818b5843fa693c"
+      },
+      "purpose": {
+        "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-sdlc-workflow-v1/PURPOSE.json",
+        "sha256": "04fff05db176e8304f64ce0e8abd8300e45827a4723696baf6f676fbd0795b35"
+      },
+      "sources": {
+        "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.1-sdlc-workflow-v1/SOURCES.json",
+        "sha256": "f295d213d978fb75ba0af4520b11dcc868816f8db6248b70ba5c74632c2d3c8c"
+      }
+    },
+    "corpus_sha256": "49470f7ac2cecb5dff40ab051ffb03f2bd6bdce07ce158bb3126115ef8527915",
+    "description": "Retain the selected governing source constraints for ordinary SDLC work and incremental QA, evidence-led causal triage and lawful owner re-entry, bounded repair verification and conditional rechecks, named boundary decisions, drift and valid evidence reuse. This is predecision method-workflow constraint coverage over the stated source closure, not proof of task admission, technical design correctness, repair success, performed/independent assessment or boundary acceptance. Technical specialist and Product-specific law remains an explicit task acquisition obligation. The selected guidance belongs to exact native STDO 3.1.0-rc.1; the caller binds its complete operative constitution and actual Product adoption. An index is not a partial constitution or an adoption decision. Exact source, purpose, index and query bind any external assessment.",
+    "family_guard": {
+      "all": [
+        {
+          "fact": "sdlc_workflow",
+          "op": "eq",
+          "value": true
+        },
+        {
+          "fact": "adopted_defaults",
+          "op": "eq",
+          "value": true
+        }
+      ],
+      "any": [
+        {
+          "fact": "boundary_kind",
+          "op": "eq",
+          "value": "none"
+        },
+        {
+          "fact": "boundary_kind",
+          "op": "eq",
+          "value": "landing"
+        },
+        {
+          "fact": "boundary_kind",
+          "op": "eq",
+          "value": "work_closure"
+        },
+        {
+          "fact": "boundary_kind",
+          "op": "eq",
+          "value": "product_acceptance"
+        },
+        {
+          "fact": "boundary_kind",
+          "op": "eq",
+          "value": "qualification"
+        },
+        {
+          "fact": "boundary_kind",
+          "op": "eq",
+          "value": "release"
+        }
+      ]
+    },
+    "id": "stdo-3.1.0-rc.1-sdlc-workflow-v1",
+    "method": {
+      "manifest_sha256": "ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa",
+      "uri": "stdo://releases/v3.1.0-rc.1/"
+    },
+    "purpose_id": "sdlc-workflow/1",
+    "purpose_sha256": "87e41d252b69522778bfbaac796d3aa48340bcdbf65402a07045dec1d781c197",
+    "source_members": [
+      {
+        "id": "SDLC_DEFAULTS",
+        "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8"
+      },
+      {
+        "id": "SPEC_METHOD",
+        "sha256": "06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e"
+      },
+      {
+        "id": "FOUNDATIONS",
+        "sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e"
+      },
+      {
+        "id": "PRODUCT_DEFINITION",
+        "sha256": "7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523"
+      },
+      {
+        "id": "IDENTITY",
+        "sha256": "c70399311010a8835b00d2a887a2451f11f66f631d6217d8df4be41751a59c08"
+      },
+      {
+        "id": "REFERENCE_FRAME",
+        "sha256": "4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64"
+      },
+      {
+        "id": "ACTIVATION",
+        "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+      },
+      {
+        "id": "ASSURANCE",
+        "sha256": "5f6740a39355314ea2a9227a8795ea68cdafb2c4c3e9b25e1d9e626eb43f27ca"
+      },
+      {
+        "id": "EVALUATION",
+        "sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485"
+      },
+      {
+        "id": "EXECUTIVE_BASELINE",
+        "sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff"
+      },
+      {
+        "id": "TICKETS",
+        "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748"
+      },
+      {
+        "id": "RELEASE",
+        "sha256": "eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628"
+      }
+    ],
+    "standing": "Exact native-cut constraint index; external exact-query assessment required for covered standing.",
+    "subject_id": "urn:purpose-context:corpus:stdo-3.1.0-rc.1:sdlc-workflow-v1",
+    "view_sha256": "758d886a7af0c76e136b29713bbe18c00003d84c2c1332ccebfd1c0d3b691fe8"
+  },
+  "profile": "purpose-context.release-provenance/1",
+  "semantic_coverage": "unassessed",
+  "source_delta_sha256": "eef8470e0ed9f83f9dca7986f1e11c329bf69ce30d3eb03f838e1803397767fb",
+  "standing": "Exact native-cut index candidate; publication and applicable independent assessment are external records."
+}

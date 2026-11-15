@@ -40,7 +40,7 @@ binds the supported external judgment and preserved failed predecessor.
 
 For release-target index authoring, follow the [method-target policy](skills/stdo-context/references/method-targets.md).
 Select the latest releasable semantic source explicitly; the constructor's
-3.0.4 pin does not select the index target. The 3.1.0-rc.1 entries are separate from preserved 3.0.4, 3.0.5 and development assets. Consumption still binds the caller's actual
+3.0.4 pin does not select the index target. The 3.1.0-rc.2 entries are separate from preserved 3.0.4, 3.0.5 and development assets. Consumption still binds the caller's actual
 complete basis, and final packaging must refresh bindings to its actual cut.
 Never fabricate a 3.0.6 identity or migrate an older consumer by index selection.
 

@@ -1,0 +1,333 @@
+{
+  "init": {
+    "type": "system",
+    "subtype": "init",
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/source-first-01",
+    "session_id": "e0e5f751-e3bc-4b5d-8c51-877c15cb7ab3",
+    "tools": [],
+    "mcp_servers": [],
+    "model": "claude-opus-5-5",
+    "permissionMode": "dontAsk",
+    "slash_commands": [
+      "deep-research",
+      "design",
+      "design-sync",
+      "dataviz",
+      "update-config",
+      "verify",
+      "debug",
+      "code-review",
+      "simplify",
+      "batch",
+      "fewer-permission-prompts",
+      "doctor",
+      "loop",
+      "schedule",
+      "claude-api",
+      "workflow-authoring",
+      "run",
+      "run-skill-generator",
+      "plugin-authoring",
+      "advisor",
+      "agents",
+      "auto-mode-setup",
+      "autocompact",
+      "clear",
+      "color",
+      "compact",
+      "config",
+      "output-style",
+      "context",
+      "effort",
+      "fast",
+      "focus",
+      "heapdump",
+      "init",
+      "mcp",
+      "import",
+      "model",
+      "__remote-workflow",
+      "workflow-launch-exec",
+      "reload-plugins",
+      "reload-skills",
+      "rename",
+      "ultrareview",
+      "security-review",
+      "usage-credits",
+      "extra-usage",
+      "usage",
+      "insights",
+      "recap",
+      "skill-doctor",
+      "goal",
+      "design-consent",
+      "design-revoke",
+      "list-agents",
+      "team-onboarding"
+    ],
+    "terminal_slash_commands": [
+      "doctor",
+      "color",
+      "focus",
+      "reload-plugins"
+    ],
+    "apiKeySource": "none",
+    "claude_code_version": "2.1.323",
+    "output_style": "default",
+    "agents": [
+      "claude",
+      "Explore",
+      "general-purpose",
+      "Plan"
+    ],
+    "skills": [
+      "deep-research",
+      "design",
+      "design-sync",
+      "dataviz",
+      "update-config",
+      "verify",
+      "debug",
+      "code-review",
+      "simplify",
+      "batch",
+      "fewer-permission-prompts",
+      "doctor",
+      "loop",
+      "schedule",
+      "claude-api",
+      "workflow-authoring",
+      "run",
+      "run-skill-generator",
+      "plugin-authoring"
+    ],
+    "plugins": [
+      {
+        "name": "spec",
+        "path": "/Users/jim/.claude/plugins/cache/specification_stack/spec/2.5.0-rc.6",
+        "source": "spec@specification_stack",
+        "version": "2.5.0-rc.6"
+      },
+      {
+        "name": "cc-plugin-agents-md",
+        "path": "builtin",
+        "source": "cc-plugin-agents-md@builtin"
+      },
+      {
+        "name": "cc-plugin-telemetry",
+        "path": "builtin",
+        "source": "cc-plugin-telemetry@builtin"
+      },
+      {
+        "name": "cc-plugin-privacy",
+        "path": "builtin",
+        "source": "cc-plugin-privacy@builtin"
+      },
+      {
+        "name": "cc-plugin-plugin-authoring",
+        "path": "builtin",
+        "source": "cc-plugin-plugin-authoring@builtin"
+      },
+      {
+        "name": "cc-plugin-easel",
+        "path": "builtin",
+        "source": "cc-plugin-easel@builtin"
+      }
+    ],
+    "capabilities": [
+      "interrupt_receipt_v1",
+      "interrupt_cancel_queued_v1",
+      "interrupt_send_now_v1",
+      "interrupt_requeue_taken_v1",
+      "msg_lifecycle_v1",
+      "request_marker_lists_v1",
+      "ask_user_question_unanswered_v1",
+      "lifecycle_wakeup_source_v1",
+      "sdk_mcp_tools_list_changed",
+      "sdk_mcp_manifests",
+      "mcp_read_resource_v1",
+      "mcp_tool_ui_meta_v1",
+      "ui_surface_v1",
+      "mcp_call_result_not_for_model_v1",
+      "mcp_call_check_permissions_v1",
+      "voice_call_talk_line_v1",
+      "withdrawn_files_note_v2",
+      "ui_pane_widget_v1"
+    ],
+    "analytics_disabled": false,
+    "product_feedback_disabled": false,
+    "uuid": "f197665f-b6b8-4fa5-9fb5-89c908408c64",
+    "original_cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/source-first-01",
+    "additional_directories": [],
+    "messaging_socket_path": "/tmp/cc-socks/11380.sock",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "per_turn_effort_active": true,
+    "ultrathink_available": false,
+    "ultrathink_typed_raises": false,
+    "view_mode": "default"
+  },
+  "result": {
+    "duration_api_ms": 139854,
+    "stop_reason": "end_turn",
+    "session_id": "e0e5f751-e3bc-4b5d-8c51-877c15cb7ab3",
+    "total_cost_usd": 1.307728,
+    "usage": {
+      "input_tokens": 2,
+      "cache_creation_input_tokens": 127285,
+      "cache_read_input_tokens": 0,
+      "output_tokens": 14472,
+      "output_tokens_details": {
+        "thinking_tokens": 8988
+      },
+      "server_tool_use": {
+        "web_search_requests": 0,
+        "web_fetch_requests": 0
+      },
+      "service_tier": "standard",
+      "cache_creation": {
+        "ephemeral_1h_input_tokens": 127285,
+        "ephemeral_5m_input_tokens": 0
+      },
+      "inference_geo": "global",
+      "iterations": [
+        {
+          "input_tokens": 2,
+          "output_tokens": 14472,
+          "cache_read_input_tokens": 0,
+          "cache_creation_input_tokens": 127285,
+          "cache_creation": {
+            "ephemeral_5m_input_tokens": 0,
+            "ephemeral_1h_input_tokens": 127285
+          },
+          "type": "message"
+        }
+      ],
+      "speed": "standard",
+      "fallback_credit": null
+    },
+    "modelUsage": {
+      "claude-opus-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 14472,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 127285,
+        "webSearchRequests": 0,
+        "costUSD": 1.307728,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 8988,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 127285,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    },
+    "permission_denials": [],
+    "terminal_reason": "completed",
+    "fast_mode_state": "off",
+    "fast_mode_disabled_reason": "sdk_opt_in_required",
+    "subagent_stats": {
+      "spawned": 0,
+      "requested": {
+        "background": 0,
+        "foreground": 0,
+        "unset": 0
+      },
+      "started_in_background": 0,
+      "max_depth": 0,
+      "spawned_by_subagents": 0,
+      "completed": 0,
+      "failed": 0,
+      "killed": {
+        "parent": 0,
+        "user": 0,
+        "system": 0
+      },
+      "refused": {
+        "depth_limit": 0,
+        "concurrency_limit": 0,
+        "budget": 0
+      },
+      "by_type": {}
+    },
+    "safety_stops": 0,
+    "is_error": false,
+    "num_turns": 1,
+    "subtype": "success",
+    "api_error_status": null,
+    "result": "# Source-first expectation report: STDO 3.1.0-rc.2 W35 successor-conservation repair\n\n## 0. Standing of this report\n\n- **What this is:** expectations written before seeing any candidate. It contains no verdict on any candidate, no repair proposal and no publication authority.\n- **What I read:** only the supplied packet. I compared the supplied texts by reading them. The only hash comparisons I rely on are the ones the operator computed.\n- **Tool use:** none. I made no tool calls, including the advisor tool, because the instruction said not to use tools. I read no files and ran no commands.\n- **Host context:** the host injected an account-identity reminder and environment metadata. I did not use either. All other hidden host or system context is unmeasured.\n- **Who I am:** a Claude-family actor. I authored neither the candidate nor any governing source. Native CLI metadata, not this text, is authoritative for my session identity.\n- **Main limit:** I could not see W35's rule text, the index, the query or fact schema, or the meaning of the boundary values. Every expectation below that depends on them is conditional, and \u00a75 lists them as gaps.\n\n## 1. Expected behaviour by boundary\n\nA \"fact\" here is a value the query declares, such as which boundary is being decided or whether the subject is a successor.\n\n| Query case | What W35 should do | Depends on | Must not be transferred in |\n|---|---|---|---|\n| **A. Product acceptance of a successor subject** | W35 is present, with its full meaning (\u00a72). RC1 shows the defect as absent; RC2 must show it present. | Acceptance relies on qualified claims: an unresolved disposition blocks qualification \"and so cannot be accepted\" (EVALUATION \u00a75 \u00b62). Any rule W35 declares as a dependency (for example evidence reuse or result conjunction) must also be selected. | Release-only conditions: atomic 25-ref push, per-ref leases, remote-absence checks, selector advancement, cohort suffix equality, GitHub release, public readback. Also, RELEASE \u00a78's acceptance criteria for an immutable cut must not be presented as the generic Product acceptance law. Acceptance authority stays with the decision owner. |\n| **B. Product acceptance, subject not a successor** | The \"where the subject is a successor\" condition (EVALUATION \u00a75) stays visible. No disposition record is demanded as if the condition held. | The successor trigger itself. | An unconditional \"acceptance requires a disposition record\" for a subject with no predecessor. |\n| **C. Product acceptance, successor status unknown, null or ill-typed** | The condition stays open. If selection is gated on a fact, the result is incomplete or a material gap, never coverage (PC-R03, PC-S05). | \u2014 | Treating unknown as \"not a successor\". |\n| **D. Qualification** | W35 present before and after; no regression. RELEASE \u00a73 binds \"the complete successor relation\"; \u00a79 says an unresolved disposition blocks qualification of the affected claim. | Exact-cut binding. | The human acceptance criterion and any claim of acceptance authority. |\n| **E. Release** | W35 present before and after. RELEASE \u00a78 requires the \"successor relation stable\" and the mandatory gates. | Qualification (D) and the \u00a78 gates. | \u2014 (release conditions belong here) |\n| **F. Ordinary work, incremental QA, landing, no boundary** | W35 not selected. No acceptance gate is implied. | EVALUATION \u00a75 \"Landing, closure and release\"; PC-S02 (incremental QA cannot imply acceptance). | The acceptance-blocking predicate. Recording dispositions during construction or integration (RELEASE row 11 and the support-line paragraph) is a separate obligation, unchanged by this repair. |\n| **G. Boundary fact unknown, null or ill-typed** | Incomplete, not covered. It must not default to ordinary work (which would drop W35) or to acceptance (which would assert false applicability). | PC-R03, PC-S05. | \u2014 |\n\n**Constraint on how the repair is realised.** Two forms are admissible:\n- W35 is selected at product acceptance and carries its source-owned successor condition inside the rule; or\n- selection is gated on an existing declared fact, with unknown handled as in row C.\n\nIf the repair introduces a new purpose fact or changes what an existing fact means, that is a semantic change to the purpose (PC-S06, SDLC-WORKFLOW \"existing purpose and fact meanings are preserved\"). It would go beyond the activation's description of \"a bounded realization/selection repair, not a change to the governing obligation\", and it must be declared explicitly. Extra boolean facts must not make the obligation optional.\n\n## 2. Obligations W35 must carry at successor acceptance\n\n| # | Obligation | Source |\n|---|---|---|\n| O1 | Acceptance evidence for a successor includes the successor disposition record. | EVALUATION \u00a75 \u00b62 |\n| O2 | The record names the exact predecessor immutable cut, and that origin stays immutable for the candidate. | RELEASE \u00a79 \u00b61 |\n| O3 | Every predecessor claim capable of affecting the successor receives exactly one disposition: conserved, superseded (an accepted successor relation replaces it), intentionally removed (current Product authority removes it) or not applicable (with a bounded reason). | RELEASE \u00a79 \u00b61 |\n| O4 | A claim with an unresolved disposition cannot be qualified, and so cannot be accepted. In conjunction it is a gap, a planned assessment without a closed result. It is not a falsified result. | EVALUATION \u00a75; RELEASE \u00a79; FOUNDATIONS Conjunction \"Gaps\" |\n| O5 | \"Conserved\" is a semantic test made on the same material case, scope and authority. It covers what must happen, what may happen, what is prohibited, and what follows when a trigger, exception or premise is absent. It applies in the owning text and in the consumer bindings, with counterexamples. Obligation strength, preferences, exceptions and scope conditions must all survive. Naming, code similarity, patch absence or a whole-package equivalence statement prove nothing. | RELEASE \u00a79 \u00b63 |\n| O6 | A \"conserved\" disposition recorded before this test applied is unresolved until re-evaluated. | RELEASE \u00a79 \u00b63 |\n| O7 | A conserved reading made on an earlier successor text carries over only if the owning text and consumer bindings are unchanged, or the change is shown not to affect the claim (`retain_applicable`). | RELEASE \u00a79 \u00b62; FOUNDATIONS Change impact and evidence reuse |\n| O8 | A disposition is a claim, not a result. Qualification records a core result for it. It is distinct from the decision owner's disposition of an assessed candidate (ACTIVATION \u00a73). | RELEASE \u00a79 \u00b64 |\n| O9 | \"Intentionally removed\" is a decision of the current Product authority, and the record is that decision. | EVALUATION \u00a75 |\n| O10 | Acceptance is the decision owner's act over an unchanged subject. A reviewer result is input, never closure. Green labels and counts are not acceptance. Index coverage grants no acceptance. | EVALUATION \u00a75 \u00b61; Purpose Context PRODUCT \"makes no release decision\" |\n\n**Behaviour when a trigger, exception or premise is missing:**\n\n| Situation | Expected outcome |\n|---|---|\n| Successor trigger absent | O1\u2013O9 are not asserted. The general acceptance law still applies. |\n| Trigger present, predecessor not named | O2 is unmet, so the claim cannot be qualified or accepted. |\n| \"Not applicable\" without a bounded reason | Unresolved. |\n| \"Removed\" without an authority decision | Unresolved. |\n| Evidence binds an earlier text and no applicability is shown | Excluded by basis (EVALUATION \u00a72). |\n\nDeterministic-kind migration applies only if a successor adopts the total deterministic kind. I do not expect it at this boundary unless W35's source closure already includes it.\n\n**Finite counterexamples W35 must expose.** Each is a falsifier for the RC2 product-acceptance context:\n\n| ID | Scenario | Expected handling |\n|---|---|---|\n| K1 | Successor acceptance with no disposition record | W35 shows the block |\n| K2 | Record says \"conserved\" on the strength of whole-package wording equivalence | Unresolved |\n| K3 | Pre-test \"conserved\" disposition | Unresolved |\n| K4 | \"Removed\" without a Product-authority decision | Unresolved |\n| K5 | All dispositions resolved | Rendering must not imply acceptance follows |\n| K6 | Rendering conflates disposition (claim) with acceptance disposition (result) | Conflation is a falsifier |\n| K7 | RC1 conserved evidence reused after the bindings changed | Not retained without applicability |\n\n## 3. Verification matrix (proportionate)\n\n| Dimension | Kind of claim | Expected evidence | Not established by |\n|---|---|---|---|\n| **Before/after** | Behaviour | Before the repair: on RC1's exact published package (index ID, manifest `ddbd\u20267faa`, query bytes, output), rows A, D and E reproduce \"absent / present / present\", and that failed expectation is retained. After: RC2 on rows A\u2013G as in \u00a71, with the before and after outputs kept as distinct subjects. | A label change, or a digest update alone (PC-S06) |\n| **Structural content** | Structure | The RC2 indexes bind the actual RC2 native cut A, its tag object and the manager-produced manifest, not 3.0.4 or a predicted value. Source membership, order and bytes are bound. RC1, 3.0.4, 3.0.5 and development entries are byte-identical. The 39 unaffected rules are text-stable. Catalog, public-manifest and Skills pins are reconciled. No manifest contains its own hash. Six-Product version suffixes equal `3.1.0-rc.2`. | Semantic adequacy |\n| **Semantic coverage** | Independent judgment | A new assessment of the RC2 index, corpus and query for the repaired acceptance context, including rows B\u2013G, qualification, release and dependency guards. Codex authored the candidate and a Claude-family assessor is declared, so this is cross-family; same-family Codex checks count as mechanical only. Contexts never assessed stay `covered: false` or unknown. | Tests, checksums, author self-review, RC1 verdicts |\n| **Actor and host behaviour** | Operational | Both installed host adapters resolve the same checked runtime (PC-R09). Explicit invocation, installed-layout behaviour and automatic discovery are reported as separate claims, and only observed modes are qualified. | Source success standing in for installed behaviour (RELEASE \u00a73) |\n| **Predecessor conservation** | Claim-level | RC1 \u2192 RC2 dispositions per affected Product claim. W35 gets an explicit entry (changed selection, unchanged obligation). Native selected owners are compared RC1 vs RC2 byte by byte; any changed owner (for example release-facing metadata) gets a claim-level reading. The earlier repairs (two stale-guide findings, missing-helper frame failure) are re-verified, including all 52 frame tests. Visual rebinding carries the predecessor/current identity and the source delta of its selected members. | A version-string change alone (PC-R16) |\n| **Release identity** | Exact cut | Commit A, its local annotated tag and a private verified install; commit B; Product subtree roots and trees; member inventories. Remote absence of every RC2 immutable ref and no higher ordinal. Exact expected object IDs for mutable refs. One atomic transaction for 25 refs with no fallback. RC1 refs unmoved. A normal GitHub release. Downloaded assets match advertised and expected hashes. A fresh isolated-store install of the manager and native cut, with membership and context results verified. | Publication standing in for acceptance |\n| **Exact-cut acceptance** | Human decision | Outside the publication evidence. Recorded as open until the human authority accepts the exact cut identity. | Publication, qualification, review results |\n\nMy own consistency arithmetic gives 25 refs as 6 Products \u00d7 4 (RC tag, selector, RC branch, release branch) + 1 carrier. That is my inference only; no source supplied says so.\n\n## 4. Evidence reuse rules and what I will need later\n\n**Reuse rules:**\n- RC1 evidence keeps its original subject. It can be used for RC2 only under `retain_applicable`: the claim and scope still apply, the assertion and observation basis is still justified, and the dependencies are unchanged or covered by a preservation relation.\n- RC1 exact-query assessments are never relabelled as RC2 results (PC-S09, PC-R16). They may be cited as prior evidence.\n- Mechanical evidence may be shared; judgments may not (EVALUATION \u00a73).\n- The W35 counterexample is later counterevidence. Any RC1 verdict that depended on acceptance coverage for the affected query is invalidated for that claim, and the record must say so rather than delete it (EVALUATION \u00a71).\n- Mandatory gates (RELEASE \u00a78) stay in force even where evidence is reused.\n\n**Bytes, queries and evidence I will need:**\n1. The RC1 and RC2 W35 rule objects: text, conditions, exceptions, dependencies and grounds.\n2. The full rule-set diff, which should show only the W35 selection change.\n3. The SDLC purpose definition and its fact schema, including the boundary values and their meanings.\n4. The exact queries for rows A\u2013G, with outputs from RC1 and RC2.\n5. RC2 native A: commit, tag object and manifest. The selected-owner byte comparison RC1 vs RC2.\n6. The catalog, public manifest, coverage-standing records and Skills dependency pins.\n7. The disposition and impact record.\n8. Outputs of the 52 frame tests and the current-state checks.\n9. Both host-adapter observations.\n10. Commit B, the cohort record, the ref graph with remote expected and absent states, the GitHub asset hashes and the fresh-install readback.\n11. The Python RC2 entry's binding and its coverage-standing record.\n\n## 5. Gaps, ambiguities and limits\n\n**Missing sources and the predicates they leave unresolved:**\n- **What \"product_acceptance\" means:** this is owned by the Purpose Context SDLC purpose (`skills/stdo-context/references/sdlc-workflow.md` and the authoring inputs for the RC1 SDLC entry). Without it, I cannot decide whether this boundary includes acceptance of an immutable release cut, which would bring in RELEASE \u00a78. Rows A, B and C stay conditional.\n- **Parts of the method not supplied:** TICKETS, SPEC_METHOD, EXECUTIVE_BASELINE, ACTIVATION \u00a71\u2013\u00a75, `method-targets.md`, the Skills and visual Product documents, the RC1 cohort record and the RC2 root RELEASE record. These own boundary policy, the independence boundaries (UP-007) and the visual and Skills claims. I made no expectations that depend on them.\n\n**Reading observations (by eye, not by byte diff):**\n- Native RC1 RELEASE and installed 3.0.4 RELEASE differ in \u00a77: RC1 adds \"Source freeze and stable cohort construction\" and rewrites the lead-in to the two-commit paragraph. The texts of \u00a73, \u00a78 and \u00a79 look identical.\n- EVALUATION is byte-equal between the two, per the operator's hash.\n- This supports \"native law is already correct\" for W35's owning sections, but only as a reading.\n\n**Adjacent observation, not part of this repair:** if the preserved development SDLC entry shares W35's selection, it carries the same historical defect. It stays immutable and goes back to its owner with no repair here.\n\n**Not done:** I examined no candidate, executed nothing, verified no hashes, and claim no whole-method or universal context-fit result. I use no numeric severity scale; materiality is stated as the affected predicate (product-acceptance coverage, qualification and release regression, false applicability, unknown handling).",
+    "ttft_ms": 90701,
+    "type": "result",
+    "duration_ms": 140166,
+    "uuid": "1781e32e-77a4-4f9d-a1e3-fe6c3436323d",
+    "ttft_stream_ms": 4426,
+    "time_to_request_ms": 309,
+    "first_content_frame_ms": 4426,
+    "queued_turn_count": 0,
+    "result_index": 0,
+    "model_usage_since_last_result": {
+      "claude-opus-5-5": {
+        "inputTokens": 2,
+        "outputTokens": 14472,
+        "cacheReadInputTokens": 0,
+        "cacheCreationInputTokens": 127285,
+        "webSearchRequests": 0,
+        "costUSD": 1.307728,
+        "contextWindow": 1000000,
+        "maxOutputTokens": 128000,
+        "thinkingTokens": 8988,
+        "cacheCreationEphemeral5mInputTokens": 0,
+        "cacheCreationEphemeral1hInputTokens": 127285,
+        "canonicalModel": "claude-opus-5-5",
+        "provider": "firstParty",
+        "costBasis": "list"
+      }
+    }
+  },
+  "observed_tool_uses": [],
+  "invocation": {
+    "started_at_utc": "2026-11-15T01:16:59.408289+00:00",
+    "argv": [
+      "/Users/jim/.local/bin/claude",
+      "--print",
+      "--safe-mode",
+      "--tools",
+      "",
+      "--strict-mcp-config",
+      "--mcp-config",
+      "{\"mcpServers\":{}}",
+      "--permission-mode",
+      "dontAsk",
+      "--no-session-persistence",
+      "--session-id",
+      "e0e5f751-e3bc-4b5d-8c51-877c15cb7ab3",
+      "--model",
+      "opus",
+      "--effort",
+      "high",
+      "--output-format",
+      "stream-json",
+      "--verbose",
+      "--system-prompt",
+      "You are an independent source-first assessment actor. Derive obligations and finite falsifiers only from the supplied governing sources before any candidate exposure. Return your own source-grounded expectations, source gaps and limits. Do not construct, repair or judge any unseen candidate. Do not use tools."
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/source-first-01",
+    "stdin": "PACKET.md",
+    "stdin_sha256": "ded2309795ef6519f940d2980856ec71ed32e49bebad9c7e055d4ae00e6f1c4b",
+    "stdin_bytes": 355387,
+    "requested_model": "opus",
+    "requested_session_id": "e0e5f751-e3bc-4b5d-8c51-877c15cb7ab3",
+    "requested_tools": [],
+    "supplied_context": "source-only expectations",
+    "host_limitations": "ordinary Claude CLI; requested safe/tool-disabled session is not an enforced clean-room guarantee",
+    "context_capacity": "packet bytes measured; no numerical actor capacity selected; hidden host/system context not measured",
+    "exit_code": 0,
+    "finished_at_utc": "2026-11-15T01:19:20.944653+00:00",
+    "stdout_sha256": "09c53c4d9a599c6f5f4cb30d091ec87fc2a33130f16ba5d2bc5762f2be6d8ced",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "report": "EXPECTATIONS.md",
+  "report_sha256": "e3e10c4a2b2eecd2f90281857134060a150cfab75ae275761deb68570a8bf3f1"
+}

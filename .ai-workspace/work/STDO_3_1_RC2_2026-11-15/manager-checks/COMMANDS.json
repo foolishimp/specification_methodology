@@ -1,0 +1,96 @@
+[
+  {
+    "name": "wheel",
+    "argv": [
+      "/opt/homebrew/bin/python3.13",
+      "-m",
+      "pip",
+      "wheel",
+      "--no-deps",
+      "--wheel-dir",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assets",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/manager-source"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+    "exit": 0
+  },
+  {
+    "name": "runtime",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/releases/3.1.0-rc.2/tools/runtime_bundle.py",
+      "--predecessor",
+      "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/public-readback/assets/stdo-manager-runtime-v3.1.0-rc.1-macos-arm64-cp313.zip",
+      "--wheel",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assets/stdo_toolchain-3.1.0rc2-py3-none-any.whl",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assets/runtime-build"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+    "exit": 0
+  },
+  {
+    "name": "venv",
+    "argv": [
+      "/opt/homebrew/bin/python3.13",
+      "-m",
+      "venv",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/manager"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+    "exit": 0
+  },
+  {
+    "name": "offline-install",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/manager/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--no-index",
+      "--find-links",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assets/runtime-build/wheels",
+      "--require-hashes",
+      "--no-deps",
+      "-r",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assets/runtime-build/requirements-macos-arm64-cp313.txt"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+    "exit": 0
+  },
+  {
+    "name": "pip-check",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/manager/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+    "exit": 0
+  },
+  {
+    "name": "version",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/manager/bin/stdo",
+      "--version"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+    "exit": 0
+  },
+  {
+    "name": "native-verify",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/manager/bin/stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/native-store",
+      "verify",
+      "v3.1.0-rc.2",
+      "--manifest-sha256",
+      "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+    "exit": 0
+  }
+]

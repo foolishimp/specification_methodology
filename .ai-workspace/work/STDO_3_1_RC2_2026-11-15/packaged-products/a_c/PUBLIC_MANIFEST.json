@@ -1,0 +1,174 @@
+{
+  "profile": "representation-tools.public-runtime/1",
+  "product_definition_id": "urn:stdo:product-definition:a-c-implementations",
+  "name": "Representation Tools",
+  "standing": "versioned visual runtime inventory; release standing is recorded by the exact six-Product cohort",
+  "entrypoint": "scripts/ac.py",
+  "capabilities": [
+    "project",
+    "code",
+    "explore",
+    "graph",
+    "upstream"
+  ],
+  "optional_setup": "bootstrap graphify",
+  "files": [
+    {
+      "path": "VERSION",
+      "sha256": "1a992ade4db1f05d3acbaa426aa74c819fdef970e913728e1e5cc8fa125ec378",
+      "bytes": 11
+    },
+    {
+      "path": "build_tenants/graphify/code/ac_code.py",
+      "sha256": "4d12be85a2ee3bff2e2630816a43d240b14de38c2407a5570267ec043f0e69df",
+      "bytes": 43911
+    },
+    {
+      "path": "build_tenants/graphify/code/ac_explore.py",
+      "sha256": "6e4c80a71e69180c9af28aa1ea8aa1e779128971b21ab2c4232d86ccd56151ef",
+      "bytes": 9794
+    },
+    {
+      "path": "build_tenants/graphify/code/ac_fs_boundary.py",
+      "sha256": "93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b",
+      "bytes": 1621
+    },
+    {
+      "path": "build_tenants/graphify/code/ac_generate.py",
+      "sha256": "6730ae99c1b98663ec4f056aac890bcc867bf57b94103ae0e9fcb97cee515f2f",
+      "bytes": 83597
+    },
+    {
+      "path": "build_tenants/graphify/code/ac_graph.py",
+      "sha256": "d133fe1dd6d6581f88d94a35023d3e4ee494e61a1a4af2e6197641c2743de4cf",
+      "bytes": 52129
+    },
+    {
+      "path": "build_tenants/graphify/code/ac_grounding.py",
+      "sha256": "9593457967ca45853f29b8e6bb8378bad49914f3983f877860f7efbe034f0fb0",
+      "bytes": 22891
+    },
+    {
+      "path": "build_tenants/graphify/code/ac_project.py",
+      "sha256": "7bdb08310892963b3c22891a50b841ce232dbfb7920c474323d800fafdd8cfb8",
+      "bytes": 21280
+    },
+    {
+      "path": "build_tenants/graphify/code/ac_repair.py",
+      "sha256": "a8d91ee11561092e656d11647f47cb1494ccdad50849a65bdb21c77e697d65f6",
+      "bytes": 36733
+    },
+    {
+      "path": "build_tenants/graphify/code/ac_upstream.py",
+      "sha256": "69fb0850088f9c317ae9416048ffd3157e63ad55216af3704a94edb09bddec4a",
+      "bytes": 7991
+    },
+    {
+      "path": "build_tenants/graphify/code/code-requirements.txt",
+      "sha256": "f508937dfbfe84108aee664ddba1eb9577ebfc6007eb5b76a057378793218bca",
+      "bytes": 276
+    },
+    {
+      "path": "build_tenants/graphify/code/generation/author.schema.json",
+      "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87",
+      "bytes": 11148
+    },
+    {
+      "path": "build_tenants/graphify/code/generation/author.txt",
+      "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc",
+      "bytes": 4240
+    },
+    {
+      "path": "build_tenants/graphify/code/generation/extraction.schema.json",
+      "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd",
+      "bytes": 4818
+    },
+    {
+      "path": "build_tenants/graphify/code/generation/isolation.txt",
+      "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1",
+      "bytes": 696
+    },
+    {
+      "path": "build_tenants/graphify/code/generation/requirements.txt",
+      "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2",
+      "bytes": 214
+    },
+    {
+      "path": "build_tenants/graphify/code/grounding_repair/patch.schema.json",
+      "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76",
+      "bytes": 2037
+    },
+    {
+      "path": "build_tenants/graphify/code/grounding_repair/repair.txt",
+      "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e",
+      "bytes": 2231
+    },
+    {
+      "path": "build_tenants/graphify/code/viewer/explorer.css",
+      "sha256": "2cfa511fa05d81c1c0d26126b3b47014030a211367b7a30b7b39d46681c9f95f",
+      "bytes": 13494
+    },
+    {
+      "path": "build_tenants/graphify/code/viewer/explorer.html",
+      "sha256": "cb37641587297deaa3431eb5b557944e7fd80272e845ffb3643a5f70b2cfd8ec",
+      "bytes": 5517
+    },
+    {
+      "path": "build_tenants/graphify/code/viewer/explorer.js",
+      "sha256": "980c41adb0ec3401d22fd4c3c8054545d01ba356c92379e74fad275e71883649",
+      "bytes": 37927
+    },
+    {
+      "path": "build_tenants/graphify/code/viewer/layered.css",
+      "sha256": "fb2f005f61947def6c6c2f66fc1b36e8d87a40876c2a4ad4ffe137c22a313474",
+      "bytes": 2632
+    },
+    {
+      "path": "build_tenants/graphify/code/viewer/layered.js",
+      "sha256": "134b082f87f15eca059432e07453ce27e5a963bd94c798ef32b1eafb9cdc8b80",
+      "bytes": 12223
+    },
+    {
+      "path": "build_tenants/graphify/code/viewer/vendor/3d-force-graph-1.80.1.min.js",
+      "sha256": "13088340aad408156064fd120c3bc3a47c93a3cc45b8f132d6284b20e2223be9",
+      "bytes": 1389954
+    },
+    {
+      "path": "build_tenants/graphify/code/viewer/vendor/3d-force-graph-LICENSE",
+      "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded",
+      "bytes": 1072
+    },
+    {
+      "path": "build_tenants/graphify/code/viewer/vendor/THIRD_PARTY_NOTICES.txt",
+      "sha256": "5550725cb2e36431fc64242442a5e0fb94be7a2d93749c3f55cc99f2f68fee22",
+      "bytes": 38944
+    },
+    {
+      "path": "build_tenants/graphify/code/viewer/vendor/manifest.json",
+      "sha256": "c8d258151ce83b7864d6579fd27d2f4ac79049cab7966a0db0e8eca3a6bc883f",
+      "bytes": 576
+    },
+    {
+      "path": "build_tenants/graphify/test_env/requirements-qualification.txt",
+      "sha256": "9be107b68f56e3b7d7c1d6e3ac297daeda8484a8af8ceae783aead8355a7b3b5",
+      "bytes": 278
+    },
+    {
+      "path": "scripts/ac.py",
+      "sha256": "61214865a7b87c759f4069969038cbff8a91fcf61eae7844bc79bcb66d935f7f",
+      "bytes": 1118
+    },
+    {
+      "path": "scripts/bootstrap.py",
+      "sha256": "1574501ff5b9990bac11bbfdbe9897791079a85b8d6c59093d5613c31a4a356a",
+      "bytes": 5126
+    }
+  ],
+  "dependencies": {
+    "direct_project_and_explore": "Python standard library; project preparation verifies an explicitly selected STDO manager",
+    "code_and_upstream": "Optional exact Graphify/tree-sitter runtime; its own source/dependency verification applies",
+    "retired": "No Lean, ac_formal_gate, ac_support, ac_registry or ac_task_context dependency"
+  },
+  "history": "The 3.0.5-rc.1 mixed-scope package and prior installed copies remain separate immutable subjects; see MIGRATION-3.1.md.",
+  "version": "3.1.0-rc.2"
+}

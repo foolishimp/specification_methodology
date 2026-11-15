@@ -1,0 +1,20 @@
+{
+  "status": "readback verified",
+  "source_members": 136,
+  "companion_members": 86,
+  "freeze_sha256": "1f7bf0452fcc9ddac64ae97925a02c286ea383c9173b232fc92dacc4aa06f3f0",
+  "prior_writer_exit": "The previous writer completed and retained FINAL_FREEZE.json, then failed while printing a summary because its local p variable had been reused for a Path. No Product file or freeze payload was affected; this independent file readback reconciles completed writes.",
+  "rebuild_check": {
+    "status": "current",
+    "method": {
+      "uri": "stdo://releases/v3.1.0-rc.2/",
+      "manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4"
+    },
+    "indexes": [
+      "stdo-3.1.0-rc.2-python-pure-refactor-v2",
+      "stdo-3.1.0-rc.2-sdlc-workflow-v1"
+    ],
+    "changed_files": [],
+    "public_manifest_sha256": "a5f9479adc22b008743c7492cce113317155efd1fd36e53ab1df51b6e171e251"
+  }
+}

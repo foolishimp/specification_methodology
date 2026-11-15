@@ -1,0 +1,339 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "profile": {
+      "const": "stdo.context-index/1"
+    },
+    "corpus_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "input_view_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "obligation",
+              "prohibition",
+              "permission",
+              "definition",
+              "verification"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "when": {
+            "$ref": "#/$defs/guard"
+          },
+          "conditions": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "exceptions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "when": {
+                  "$ref": "#/$defs/guard"
+                },
+                "text": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "when",
+                "text"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "depends_on": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "precedence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "over": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "over",
+                "reason"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 0
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source_ref"
+            },
+            "minItems": 1
+          },
+          "unknowns": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "text",
+          "when",
+          "conditions",
+          "exceptions",
+          "depends_on",
+          "precedence",
+          "source_refs",
+          "unknowns"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "source_coverage": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "represented",
+              "no_applicable_rules",
+              "unresolved"
+            ]
+          },
+          "rule_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "minItems": 0
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source_id",
+          "status",
+          "rule_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "unresolved": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "material": {
+            "type": "boolean"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/source_ref"
+            },
+            "minItems": 0
+          }
+        },
+        "required": [
+          "text",
+          "material",
+          "source_refs"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 0
+    },
+    "purpose_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "purpose_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    }
+  },
+  "required": [
+    "profile",
+    "corpus_sha256",
+    "input_view_sha256",
+    "purpose_id",
+    "rules",
+    "source_coverage",
+    "unresolved",
+    "purpose_sha256"
+  ],
+  "additionalProperties": false,
+  "$defs": {
+    "source_ref": {
+      "type": "object",
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "start_line": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "end_line": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "required": [
+        "source_id",
+        "start_line",
+        "end_line"
+      ],
+      "additionalProperties": false
+    },
+    "guard": {
+      "type": "object",
+      "properties": {
+        "all": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fact": {
+                "type": "string",
+                "minLength": 1
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "eq",
+                  "ne",
+                  "contains",
+                  "not_contains"
+                ]
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "fact",
+              "op",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        },
+        "any": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fact": {
+                "type": "string",
+                "minLength": 1
+              },
+              "op": {
+                "type": "string",
+                "enum": [
+                  "eq",
+                  "ne",
+                  "contains",
+                  "not_contains"
+                ]
+              },
+              "value": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "boolean"
+                  },
+                  {
+                    "type": "integer"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "fact",
+              "op",
+              "value"
+            ],
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "all",
+        "any"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

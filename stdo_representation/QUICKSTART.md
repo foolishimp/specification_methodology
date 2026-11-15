@@ -1,8 +1,8 @@
 # Read and construct STDO 3.1 visual documentation
 
 For reading, open the current artifact's standalone
-[explorer](build_tenants/a_c/representation/stdo-v3.1.0-rc.1/run/generation/proposal/explorer.html).
-Read its [source binding and scope](build_tenants/a_c/representation/stdo-v3.1.0-rc.1/README.md).
+[explorer](build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/explorer.html).
+Read its [source binding and scope](build_tenants/a_c/representation/stdo-v3.1.0-rc.2/README.md).
 The file list opens complete embedded sources. Search selects records; inspect
 conditions, exceptions, relation direction and residuals in the detail reader.
 Layered, 2D and 3D modes use the same model and reading state. 3D requires WebGL.
@@ -10,8 +10,8 @@ Layered, 2D and 3D modes use the same model and reading state. 3D requires WebGL
 To replay this release's attributed recipe into a **fresh** Product-local output:
 
 ```sh
-python3 -B scripts/build_31_visual.py \
-  --native-root /absolute/path/to/exact/native-v3.1.0-rc.1 \
+python3 -B scripts/build_31_rc2_visual.py \
+  --native-root /absolute/path/to/exact/native-v3.1.0-rc.2 \
   --native-manifest-sha256 THE_DIGEST_FROM_SOURCE_BINDING_JSON \
   --stdo /absolute/path/to/stdo \
   --out /absolute/path/to/stdo_representation/build_tenants/a_c/representation/fresh-3.1-run

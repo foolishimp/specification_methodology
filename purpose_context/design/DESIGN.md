@@ -180,3 +180,10 @@ source relation identifies every selected member and excluded historical asset.
 Source history and its full catalog remain available for old callers. Skills
 release packaging explicitly selects the portable Product; it records the single
 dependency-pin transformation in its package inventory.
+
+The RC2 authoring record declares the W35 guard amendment with its expected
+preimage, replacement and deciding EVALUATION/RELEASE section hashes. The shared
+release generator applies that declaration after the preserved base recipe;
+it owns no hard-coded W35 interpretation. This preserves reproducibility of the
+historical development/RC1 indexes while current release authoring selects the
+corrected acceptance branch. The deterministic runtime is unchanged.

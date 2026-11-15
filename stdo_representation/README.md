@@ -1,4 +1,4 @@
-# STDO Representation 3.1.0-rc.1
+# STDO Representation 3.1.0-rc.2
 
 Source-linked visual documentation of selected exact STDO release members.
 The current artifact presents source-section navigation and selected SDLC,
@@ -6,7 +6,7 @@ ticket and context relations; complete method semantics are explicitly outside
 its claim. Every selected section has a coverage disposition and a visible
 residual where interpretation remains outside this bounded visual scope.
 
-[Current artifact](build_tenants/a_c/representation/stdo-v3.1.0-rc.1/README.md) ·
+[Current artifact](build_tenants/a_c/representation/stdo-v3.1.0-rc.2/README.md) ·
 [Quickstart](QUICKSTART.md) · [installation](INSTALLATION.md) ·
 [public manifest](PUBLIC_MANIFEST.json) · [migration](MIGRATION-3.1.md)
 

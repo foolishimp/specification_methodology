@@ -35,7 +35,8 @@ def package(out: Path, version: str, source_pin: str) -> dict:
     for row in public["files"]:
         path = Path(row["path"])
         historical_index = path.parts[:3] == ("skills", "stdo-context", "indexes") and len(path.parts) > 4 and path.parts[3] not in ids
-        source_only = row["path"] in {"scripts/port_ci02_index.py", "scripts/test_sdlc_index.py"}
+        source_only = row["path"] in {"scripts/port_ci02_index.py", "scripts/test_sdlc_index.py",
+                                      "scripts/test_successor_boundaries.py"}
         if historical_index or source_only:
             excluded.append(row)
             continue

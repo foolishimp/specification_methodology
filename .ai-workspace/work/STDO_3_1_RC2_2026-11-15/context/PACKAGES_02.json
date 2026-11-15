@@ -1,0 +1,54 @@
+[
+  {
+    "name": "purpose-context-package-02",
+    "argv": [
+      "python3",
+      "-B",
+      "purpose_context/scripts/package_release.py",
+      "--version",
+      "3.1.0-rc.2",
+      "--public-manifest-sha256",
+      "a5f9479adc22b008743c7492cce113317155efd1fd36e53ab1df51b6e171e251",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-packages-02/purpose_context"
+    ],
+    "returncode": 0,
+    "result": {
+      "status": "packaged",
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-packages-02/purpose_context",
+      "files": 51,
+      "source_public_manifest_sha256": "a5f9479adc22b008743c7492cce113317155efd1fd36e53ab1df51b6e171e251",
+      "public_manifest_sha256": "adb0f592c791ebaa60ba791a5bf2746d2fa779d57091b970b08423d26200b523",
+      "index_ids": [
+        "stdo-3.1.0-rc.2-python-pure-refactor-v2",
+        "stdo-3.1.0-rc.2-sdlc-workflow-v1"
+      ],
+      "source_relation_sha256": "2e606afe27981bb3d5000aab03c55fe3f430eaa720a8bc3f2eb144a6c41a0e7c"
+    }
+  },
+  {
+    "name": "skills-package-02",
+    "argv": [
+      "python3",
+      "-B",
+      "stdo_skills/scripts/package.py",
+      "--version",
+      "3.1.0-rc.2",
+      "--method-root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/native-store/releases/v3.1.0-rc.2",
+      "--method-manifest-sha256",
+      "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+      "--purpose-context",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-packages-02/purpose_context",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-packages-02/stdo_skills"
+    ],
+    "returncode": 0,
+    "result": {
+      "status": "packaged",
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-packages-02/stdo_skills",
+      "files": 34,
+      "inventory_sha256": "2acf39f89e7c15862344fc06c7d2fc5aaa66fcc5ba49790e274ef030dfa02105"
+    }
+  }
+]

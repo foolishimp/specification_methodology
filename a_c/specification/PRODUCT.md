@@ -26,7 +26,7 @@ implementations. Prior proof-selected runs require their exact archived runtime;
 they are not silently reinterpreted as current visual runs. Retired code, tests,
 requirements and original dirty source are preserved in the alignment archive.
 Existing generated artifacts, installed caches and immutable releases remain.
-Version 3.1.0-rc.1 participates in the exact six-Product cohort. Its public
+Version 3.1.0-rc.2 participates in the exact six-Product cohort. Its public
 runtime is inventoried by PUBLIC_MANIFEST.json; publication/qualification
 follow that cohort's evidence. Existing consumers require explicit adoption.
 

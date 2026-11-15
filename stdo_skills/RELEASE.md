@@ -1,4 +1,4 @@
-# STDO Skills 3.1.0-rc.1 package and migration
+# STDO Skills 3.1.0-rc.2 package and migration
 
 This release target has Product identity
 `urn:stdo:product-definition:stdo-skills` and an explicit relation to the exact
@@ -6,9 +6,9 @@ native Method, Purpose Context, and optional visual Product. Matching version
 suffixes do not merge their Product identities or assessment claims.
 
 Use the shared release recipe to acquire the native Method through its manager.
-The published native manifest is `stdo-v3.1.0-rc.1-manifest.json`. The separate
-Product archive is `stdo-products-v3.1.0-rc.1.zip`; its exact cohort inventory is
-`cohort-release-v3.1.0-rc.1.json`. Obtain all assets from the same immutable
+The published native manifest is `stdo-v3.1.0-rc.2-manifest.json`. The separate
+Product archive is `stdo-products-v3.1.0-rc.2.zip`; its exact cohort inventory is
+`cohort-release-v3.1.0-rc.2.json`. Obtain all assets from the same immutable
 release and verify the published identities before extraction/use. The archive's
 `stdo_skills` directory is an inventoried package; `purpose_context` and `a_c`
 remain separately inventoried Products. Follow [installation](scripts/INSTALLATION.md)

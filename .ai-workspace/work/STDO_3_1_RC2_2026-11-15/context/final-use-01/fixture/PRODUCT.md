@@ -1,0 +1,1 @@
+This disposable trial owns only a pure helper and its finite tests. Its complete selected method is native 3.1.0-rc.2. The root release activation admits bounded package/native-use checking; this work packet narrows that grant to the named fixture files. Public release, independent assessment and global installation remain outside the trial actor.

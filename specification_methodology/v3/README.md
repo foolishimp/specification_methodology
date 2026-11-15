@@ -8,7 +8,7 @@ construct or qualify the current six-Product source arrangement. The publication
 records below describe their original released subjects, not current source bytes.
 The owner now selects **3.1.0-rc.2 on public line 3.1.0** under the
 [release relation](specification/requirements/RELEASE_3_1.md) and
-[activation](../../.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/ACTIVATION.md).
+[activation](../../.ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md).
 The exact installed 3.0.4 builder remains this source Product's construction
 basis. The native package carries compact current reading routes; independently
 inventoried Products carry context, host binding and optional visual capabilities.

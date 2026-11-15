@@ -1,0 +1,693 @@
+{
+  "native_commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+  "manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+  "semantic_freeze_sha256": "c51bdf5a47e8be38c4ff7e86a00b3c45483e7659b5fc6838b7b59cea41ca2e84",
+  "comparisons": [
+    {
+      "index_id": "stdo-3.1.0-rc.2-python-pure-refactor-v2",
+      "canonical_index_sha256": "e6a71a11163b84e9906591cd02cc448949f289382814414976bc261aaeb41ecd",
+      "corpus_sha256": "108aa7915a7c236c27934f52531f43d271b94a0ad4366706a2e4fb222f8ca07e",
+      "purpose_sha256": "efdc5424c4c94d26498ed0500f713a89b47ee353add869d38d17badf65d9bd32",
+      "predecessor_index_sha256": "717857ed027b6624f053bbc9bdf4c7319139769d9352c7ca00adc6859ad6ca52",
+      "rules": 113,
+      "changed_rules": [],
+      "purpose_facts_equal": true,
+      "purpose_changed_fields": [
+        "description"
+      ],
+      "source_members_and_order_equal": true,
+      "all_selected_source_bytes_equal": true,
+      "family_guard_equal": true,
+      "old_family_guard": {
+        "all": [
+          {
+            "fact": "accepted_design_available",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "action",
+            "op": "eq",
+            "value": "realization_refactor"
+          },
+          {
+            "fact": "language",
+            "op": "eq",
+            "value": "python"
+          },
+          {
+            "fact": "language_version",
+            "op": "eq",
+            "value": "3.12"
+          },
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "pure_local",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "role",
+            "op": "eq",
+            "value": "worker"
+          },
+          {
+            "fact": "sdlc_phase",
+            "op": "eq",
+            "value": "implementation"
+          },
+          {
+            "fact": "source_state",
+            "op": "eq",
+            "value": "current"
+          },
+          {
+            "fact": "public_semantics_change_authorized",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "fact": "authority_change_authorized",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "fact": "effects_change_authorized",
+            "op": "eq",
+            "value": false
+          }
+        ],
+        "any": []
+      },
+      "current_family_guard": {
+        "all": [
+          {
+            "fact": "accepted_design_available",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "action",
+            "op": "eq",
+            "value": "realization_refactor"
+          },
+          {
+            "fact": "language",
+            "op": "eq",
+            "value": "python"
+          },
+          {
+            "fact": "language_version",
+            "op": "eq",
+            "value": "3.12"
+          },
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "pure_local",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "role",
+            "op": "eq",
+            "value": "worker"
+          },
+          {
+            "fact": "sdlc_phase",
+            "op": "eq",
+            "value": "implementation"
+          },
+          {
+            "fact": "source_state",
+            "op": "eq",
+            "value": "current"
+          },
+          {
+            "fact": "public_semantics_change_authorized",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "fact": "authority_change_authorized",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "fact": "effects_change_authorized",
+            "op": "eq",
+            "value": false
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "index_id": "stdo-3.1.0-rc.2-sdlc-workflow-v1",
+      "canonical_index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+      "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+      "purpose_sha256": "d33a4ff3e24bb3afe9a1172289fc1a6a2034bb531cb3875438805b4d73ae50ff",
+      "predecessor_index_sha256": "05b5d132a3e2e36f2e021d9b059108eccf646faa78a6a1fc0cffca6627b99cb2",
+      "rules": 40,
+      "changed_rules": [
+        {
+          "id": "W35",
+          "changed_fields": [
+            "when"
+          ],
+          "before": {
+            "conditions": [],
+            "depends_on": [
+              "W28",
+              "W26"
+            ],
+            "exceptions": [],
+            "id": "W35",
+            "kind": "obligation",
+            "precedence": [],
+            "source_refs": [
+              {
+                "end_line": 849,
+                "source_id": "RELEASE",
+                "start_line": 735
+              }
+            ],
+            "text": "For a successor qualification/acceptance claim, identify the exact immutable predecessor and disposition every predecessor claim capable of affecting the successor as conserved, superseded, intentionally removed by Product authority, or not applicable with bounded reason. Compare actual triggers, permissions, prohibitions, missing premises, exceptions and consumer bindings; matching wording/digests alone does not prove conservation. An unresolved disposition blocks its affected qualification and has no performed result. Retain applicable prior evidence without copying old judgment to a new subject.",
+            "unknowns": [],
+            "when": {
+              "all": [],
+              "any": [
+                {
+                  "fact": "boundary_kind",
+                  "op": "eq",
+                  "value": "qualification"
+                },
+                {
+                  "fact": "boundary_kind",
+                  "op": "eq",
+                  "value": "release"
+                }
+              ]
+            }
+          },
+          "after": {
+            "conditions": [],
+            "depends_on": [
+              "W28",
+              "W26"
+            ],
+            "exceptions": [],
+            "id": "W35",
+            "kind": "obligation",
+            "precedence": [],
+            "source_refs": [
+              {
+                "end_line": 849,
+                "source_id": "RELEASE",
+                "start_line": 735
+              }
+            ],
+            "text": "For a successor qualification/acceptance claim, identify the exact immutable predecessor and disposition every predecessor claim capable of affecting the successor as conserved, superseded, intentionally removed by Product authority, or not applicable with bounded reason. Compare actual triggers, permissions, prohibitions, missing premises, exceptions and consumer bindings; matching wording/digests alone does not prove conservation. An unresolved disposition blocks its affected qualification and has no performed result. Retain applicable prior evidence without copying old judgment to a new subject.",
+            "unknowns": [],
+            "when": {
+              "all": [],
+              "any": [
+                {
+                  "fact": "boundary_kind",
+                  "op": "eq",
+                  "value": "product_acceptance"
+                },
+                {
+                  "fact": "boundary_kind",
+                  "op": "eq",
+                  "value": "qualification"
+                },
+                {
+                  "fact": "boundary_kind",
+                  "op": "eq",
+                  "value": "release"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "purpose_facts_equal": true,
+      "purpose_changed_fields": [
+        "description"
+      ],
+      "source_members_and_order_equal": true,
+      "all_selected_source_bytes_equal": true,
+      "family_guard_equal": true,
+      "old_family_guard": {
+        "all": [
+          {
+            "fact": "sdlc_workflow",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "adopted_defaults",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": [
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "none"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "landing"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "work_closure"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "product_acceptance"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "qualification"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "release"
+          }
+        ]
+      },
+      "current_family_guard": {
+        "all": [
+          {
+            "fact": "sdlc_workflow",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "adopted_defaults",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": [
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "none"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "landing"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "work_closure"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "product_acceptance"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "qualification"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "release"
+          }
+        ]
+      }
+    }
+  ],
+  "contexts": [
+    {
+      "case": "python",
+      "query_sha256": "84b5d4b993d24b068e0e601f00f4b75cbeab4cd0475482256410b279be60f409",
+      "payload_sha256": "9310ec8276db8cb22fb6b1d93f64168eb964a80c006ad235ad342437d75b1869",
+      "markdown_sha256": "da7fb2666bfa68a694d7387e5ec725bdf52724d3407a6f49a3035603b12e31e9",
+      "context_file_sha256": "7013da1d54e2f5c40052ae57862019d7dce47411e1e2afc37b1429c66c6507f0",
+      "selection_status": "ready",
+      "covered": false,
+      "semantic_coverage": {
+        "assessment": null,
+        "status": "unassessed"
+      },
+      "gaps": [],
+      "selected_applicability": {
+        "S01": "true",
+        "S02": "true",
+        "S03": "true",
+        "S04": "true",
+        "S05": "true",
+        "S06": "true",
+        "S07": "true",
+        "S08": "true",
+        "S09": "true",
+        "S10": "true",
+        "D01": "true",
+        "D02": "true",
+        "D03": "true",
+        "D04": "true",
+        "D05": "true",
+        "D06": "true",
+        "D07": "true",
+        "D08": "true",
+        "D09": "true",
+        "D10": "true",
+        "D11": "true",
+        "D12": "true",
+        "D13": "true",
+        "D14": "true",
+        "D15": "true",
+        "D16": "true",
+        "D17": "true",
+        "D18": "true",
+        "D19": "true",
+        "D20": "true",
+        "D21": "true",
+        "D22": "true",
+        "D23": "true",
+        "D24": "true",
+        "D25": "true",
+        "D26": "true",
+        "D27": "true",
+        "D28": "true",
+        "D29": "true",
+        "D30": "true",
+        "D31": "true",
+        "D32": "true",
+        "D33": "true",
+        "D34": "true",
+        "D35": "true",
+        "D36": "true",
+        "D37": "true",
+        "A01": "true",
+        "A02": "true",
+        "A03": "true",
+        "A04": "true",
+        "A05": "true",
+        "A06": "true",
+        "A07": "true",
+        "A08": "true",
+        "A09": "true",
+        "A10": "true",
+        "A11": "true",
+        "E01": "true",
+        "E02": "true",
+        "E03": "true",
+        "E04": "true",
+        "E05": "true",
+        "E06": "true",
+        "E07": "true",
+        "S14": "true",
+        "S15": "true",
+        "S16": "true",
+        "C01": "true",
+        "C02": "true",
+        "C03": "true",
+        "C04": "true",
+        "C05": "true",
+        "C06": "true",
+        "C07": "true",
+        "C08": "true",
+        "C09": "true",
+        "C10": "true",
+        "C11": "true",
+        "C12": "true",
+        "C13": "true",
+        "C14": "true",
+        "C15": "true",
+        "C16": "true",
+        "C17": "true",
+        "C18": "true",
+        "C19": "true",
+        "C20": "true",
+        "C21": "true",
+        "C22": "true",
+        "C23": "true",
+        "C24": "true",
+        "D38": "true",
+        "D39": "true"
+      }
+    },
+    {
+      "case": "sdlc",
+      "query_sha256": "9e81574d3328ae77260769130ea16045ab84dc9594815aab8449bdb010f769a5",
+      "payload_sha256": "429d9a9ab5e4d4831d13e0e325ddfc4b8977d4fc1d0825da6b6731a889863272",
+      "markdown_sha256": "043f28a9d0662cfc54f81d37b77bb1516661b9472be3731888a6cecedeecce7b",
+      "context_file_sha256": "6d30216b42a1c2b357dd7896d9ffea022e6bda04d784bdc9e6842c6e03555ccd",
+      "selection_status": "ready",
+      "covered": false,
+      "semantic_coverage": {
+        "assessment": null,
+        "status": "unassessed"
+      },
+      "gaps": [],
+      "selected_applicability": {
+        "W01": "true",
+        "W02": "true",
+        "W03": "true",
+        "W04": "true",
+        "W05": "true",
+        "W06": "true",
+        "W07": "true",
+        "W08": "true",
+        "W09": "false",
+        "W10": "false",
+        "W12": "true",
+        "W23": "true",
+        "W24": "true",
+        "W33": "true",
+        "W34": "true",
+        "W36": "true",
+        "W37": "true",
+        "W38": "true",
+        "W39": "true",
+        "W40": "true"
+      }
+    },
+    {
+      "case": "acceptance",
+      "query_sha256": "58ce3e20119f98c411da8f0c04f693342e92a5821527635f51829f8d33f6a63f",
+      "payload_sha256": "4deb1e93e3aacb6d5bc4af853588220206a75abb5fc5b60714a08da3f1883b6c",
+      "markdown_sha256": "45b4ba3facddf611f9357dc0da9f462dd425dd37012b9f99debbf530ea884f7d",
+      "context_file_sha256": "f99f837097747ac64de3dcace5a2661ea46ade26df20ff552d89bba4054b30cc",
+      "selection_status": "ready",
+      "covered": false,
+      "semantic_coverage": {
+        "assessment": null,
+        "status": "unassessed"
+      },
+      "gaps": [],
+      "selected_applicability": {
+        "W01": "true",
+        "W02": "true",
+        "W03": "true",
+        "W04": "true",
+        "W05": "true",
+        "W06": "true",
+        "W07": "true",
+        "W08": "true",
+        "W09": "false",
+        "W10": "false",
+        "W12": "true",
+        "W14": "true",
+        "W15": "true",
+        "W16": "true",
+        "W23": "true",
+        "W24": "true",
+        "W25": "true",
+        "W26": "false",
+        "W27": "true",
+        "W28": "true",
+        "W29": "true",
+        "W30": "true",
+        "W31": "true",
+        "W33": "true",
+        "W34": "true",
+        "W35": "true",
+        "W36": "true",
+        "W37": "true",
+        "W38": "true",
+        "W39": "true",
+        "W40": "true"
+      }
+    },
+    {
+      "case": "qualification",
+      "query_sha256": "0049b6e2e05c603e7c786efa785bfbe98ceaba46337a7cb0c59b723e0c83ecfe",
+      "payload_sha256": "1c794df573cb293f4da8be5fa281e9c2732f40289ddd9bde209ba8eb8479d0a4",
+      "markdown_sha256": "329c66d9a3ad266a06b91cf6698f22712856c669ce36e1af6aca008cffaae93b",
+      "context_file_sha256": "b39bdc959a711ac91045ba68a145cb92240ce86f2129004dd45cf9df47139d7d",
+      "selection_status": "ready",
+      "covered": false,
+      "semantic_coverage": {
+        "assessment": null,
+        "status": "unassessed"
+      },
+      "gaps": [],
+      "selected_applicability": {
+        "W01": "true",
+        "W02": "true",
+        "W03": "true",
+        "W04": "true",
+        "W05": "true",
+        "W06": "true",
+        "W07": "true",
+        "W08": "true",
+        "W09": "false",
+        "W10": "false",
+        "W12": "true",
+        "W14": "true",
+        "W15": "true",
+        "W16": "true",
+        "W23": "true",
+        "W24": "true",
+        "W25": "true",
+        "W26": "false",
+        "W27": "true",
+        "W28": "true",
+        "W29": "true",
+        "W30": "true",
+        "W31": "true",
+        "W33": "true",
+        "W34": "true",
+        "W35": "true",
+        "W36": "true",
+        "W37": "true",
+        "W38": "true",
+        "W39": "true",
+        "W40": "true"
+      }
+    },
+    {
+      "case": "release",
+      "query_sha256": "428f2d98b8628bb2889cc4435773c572cb4d108471ff204a5610208082c4df8b",
+      "payload_sha256": "f15fe16af971333e9f2e734c3dbbbc57649c0be9d0c115ced270e5dfae0d477f",
+      "markdown_sha256": "15a513924fd91ecbff2716867dbe504034e41ed3bb5e89b6ed591f9a2774c8dd",
+      "context_file_sha256": "b180ba77d60113748218e0fada66e5f159a310d6a48993f18bb86daa6ca3b7a3",
+      "selection_status": "ready",
+      "covered": false,
+      "semantic_coverage": {
+        "assessment": null,
+        "status": "unassessed"
+      },
+      "gaps": [],
+      "selected_applicability": {
+        "W01": "true",
+        "W02": "true",
+        "W03": "true",
+        "W04": "true",
+        "W05": "true",
+        "W06": "true",
+        "W07": "true",
+        "W08": "true",
+        "W09": "false",
+        "W10": "false",
+        "W12": "true",
+        "W14": "true",
+        "W15": "true",
+        "W16": "true",
+        "W23": "true",
+        "W24": "true",
+        "W25": "true",
+        "W26": "true",
+        "W27": "true",
+        "W28": "true",
+        "W29": "true",
+        "W30": "true",
+        "W31": "true",
+        "W33": "true",
+        "W34": "true",
+        "W35": "true",
+        "W36": "true",
+        "W37": "true",
+        "W38": "true",
+        "W39": "true",
+        "W40": "true"
+      }
+    },
+    {
+      "case": "work",
+      "query_sha256": "650ed9eda70cc471c75ff528aa81d9650576ed71cffb41341ce2c07e0d8d0c1c",
+      "payload_sha256": "26397c60bf4300ae076c022b169a7f57b4fa294f00eb8298b6070d42f2af9ee9",
+      "markdown_sha256": "a56e6e3855bdfff791a2228958a07f166dfd6ec8db45cac91e6c6d463de7d0c8",
+      "context_file_sha256": "8c3e3264116678372f2dff5318c37cf14f31a9d41a2cb2fda54966419ddb80e9",
+      "selection_status": "ready",
+      "covered": false,
+      "semantic_coverage": {
+        "assessment": null,
+        "status": "unassessed"
+      },
+      "gaps": [],
+      "selected_applicability": {
+        "W01": "true",
+        "W02": "true",
+        "W03": "true",
+        "W04": "true",
+        "W05": "true",
+        "W06": "true",
+        "W07": "true",
+        "W08": "true",
+        "W09": "false",
+        "W10": "false",
+        "W12": "true",
+        "W14": "false",
+        "W23": "true",
+        "W24": "true",
+        "W27": "true",
+        "W28": "true",
+        "W29": "true",
+        "W30": "true",
+        "W31": "true",
+        "W33": "true",
+        "W34": "true",
+        "W36": "true",
+        "W37": "true",
+        "W38": "true",
+        "W39": "true",
+        "W40": "true"
+      }
+    },
+    {
+      "case": "missing-boundary",
+      "query_sha256": "abe1b7b7a7a45465ae6b23958e3a2b33ca83c4d6f209432b5ec47f17d2f86dcb",
+      "context": null,
+      "standing": "incomplete; no delivered body"
+    },
+    {
+      "case": "null-boundary",
+      "query_sha256": "191ef66060fde1062ca6becc85f63ff77d63256a625dbc98a44f7f51fa386e88",
+      "context": null,
+      "standing": "incomplete; no delivered body"
+    },
+    {
+      "case": "ill-typed-boundary",
+      "query_sha256": "0acae931ae6d9fc2cbd3ca0555870934f9109eea2b95c47d750c063056046484",
+      "context": null,
+      "standing": "incomplete; no delivered body"
+    }
+  ],
+  "standing": "Operator-computed hashes, byte equality and body readback; not semantic verdicts."
+}

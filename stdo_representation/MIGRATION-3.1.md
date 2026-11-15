@@ -1,6 +1,6 @@
 # STDO Representation 3.1 migration
 
-Version `3.1.0-rc.1` belongs to the six-Product 3.1 cohort. Its exact
+Version `3.1.0-rc.2` belongs to the six-Product 3.1 cohort. Its exact
 publication, inventories and qualification are recorded by that cohort; version
 text alone is not a qualification result. The Product's construction basis stays
 `stdo://releases/v3.0.4/`, manifest
@@ -26,3 +26,7 @@ its selected native members, navigation scope, selected relations and residuals.
 Its source-first independent assessment retains a separate exact subject.
 
 Historical sources: [3.0.5-rc.1 Product cut](https://github.com/foolishimp/specification_methodology/tree/stdo_representation/v3.0.5-rc.1/stdo_representation).
+
+## RC2 corrective cohort
+
+RC2 advances the release identity for the Purpose Context acceptance-selector repair. This visual Product retains its RC1 capability and declared limits. RC1 artifacts, annotations, release notes and evidence remain historical exact subjects. The RC2 source/provider bindings and the applicability of retained evidence are recorded by the corrective release; no new visual semantic coverage or consumer adoption is claimed.

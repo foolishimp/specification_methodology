@@ -1,0 +1,279 @@
+diff --git a/specification_methodology/v3/plugins/spec/references/GETTING_STARTED.md b/specification_methodology/v3/plugins/spec/references/GETTING_STARTED.md
+index b32edc9ff..67695dd2c 100644
+--- a/specification_methodology/v3/plugins/spec/references/GETTING_STARTED.md
++++ b/specification_methodology/v3/plugins/spec/references/GETTING_STARTED.md
+@@ -5,7 +5,7 @@ it. Resolve the exact method and existing work grant, then use the smallest
+ sufficient work or review path. This guide and the skills route attention;
+ the selected installed standards and Product-owned authority decide.
+ 
+-This guide belongs to the exact native 3.1.0-rc.1 cut. It includes the
++This guide belongs to the exact native 3.1.0-rc.2 cut. It includes the
+ adoptable SDLC default and separate Skills/Purpose Context setup. An existing
+ Product retains its selected complete method and frame basis until its own
+ authorized adoption. The fixed bootstrap below is for a Product explicitly
+@@ -345,7 +345,7 @@ Choose an index by **purpose and exact source**:
+ 
+ | Decision | Purpose and selection |
+ |---|---|
+-| Work, incremental QA, causal triage, repair, named boundary or evidence reuse | `sdlc-workflow/1`, selecting the catalog entry that binds the exact native 3.1.0-rc.1 source. Read the returned skill's `references/sdlc-workflow.md`. |
++| Work, incremental QA, causal triage, repair, named boundary or evidence reuse | `sdlc-workflow/1`, selecting the catalog entry that binds the exact native 3.1.0-rc.2 source. Read the returned skill's `references/sdlc-workflow.md`. |
+ | Pure/local Python 3.12 realization refactoring under adopted DESIGN_MODULE | `python-pure-refactor/2`, selecting the entry matching the actual released basis and query. Historical entries retain their separate bindings. |
+ 
+ The release-matched index records its actual native manifest and exact source
+@@ -377,29 +377,29 @@ retain unrelated evidence whose validity still holds.
+ 
+ ### New Project
+ 
+-This is the **fixed 3.1.0-rc.1 release bootstrap** for a new Product that
++This is the **fixed 3.1.0-rc.2 release bootstrap** for a new Product that
+ explicitly selects this release. It installs the exact native method and
+ acquires the separate Product distribution. Existing Products use their actual
+ basis and an explicit migration plan.
+ 
+-The normal public release titled STDO 3.1.0 selects immutable cut 3.1.0-rc.1.
++The normal public release titled STDO 3.1.0 selects immutable cut 3.1.0-rc.2.
+ Its six separately owned Products use that suffix; the Python manager uses
+-PEP 440 spelling 3.1.0rc1. The following manager recipe selects Git, macOS arm64
++PEP 440 spelling 3.1.0rc2. The following manager recipe selects Git, macOS arm64
+ and CPython 3.13. It creates a new explicit environment, store and Product
+ directory. Other platforms use the exact constraints with their own compatible
+ wheel acquisition and verification; the listed archive does not qualify them.
+ 
+ ```sh
+ set -eu
+-STDO_CUT='v3.1.0-rc.1'
+-STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1'
+-STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-3.1.0-rc.1"
+-STDO_STORE_ROOT="$HOME/.local/share/stdo-store-3.1.0-rc.1"
+-STDO_PRODUCTS_ROOT="$HOME/.local/share/stdo-products-3.1.0-rc.1"
++STDO_CUT='v3.1.0-rc.2'
++STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.2'
++STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-3.1.0-rc.2"
++STDO_STORE_ROOT="$HOME/.local/share/stdo-store-3.1.0-rc.2"
++STDO_PRODUCTS_ROOT="$HOME/.local/share/stdo-products-3.1.0-rc.2"
+ STDO_DOWNLOAD_DIR="$(mktemp -d)"
+ curl --fail --location --output "$STDO_DOWNLOAD_DIR/release.json" \
+-  'https://api.github.com/repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.1.0-rc.1'
+-for asset in stdo_toolchain-3.1.0rc1-py3-none-any.whl stdo-v3.1.0-rc.1-manifest.json stdo-manager-runtime-v3.1.0-rc.1-macos-arm64-cp313.zip stdo-manager-constraints-v3.1.0-rc.1-python313.txt stdo-products-v3.1.0-rc.1.zip cohort-release-v3.1.0-rc.1.json; do
++  'https://api.github.com/repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.1.0-rc.2'
++for asset in stdo_toolchain-3.1.0rc2-py3-none-any.whl stdo-v3.1.0-rc.2-manifest.json stdo-manager-runtime-v3.1.0-rc.2-macos-arm64-cp313.zip stdo-manager-constraints-v3.1.0-rc.2-python313.txt stdo-products-v3.1.0-rc.2.zip cohort-release-v3.1.0-rc.2.json; do
+   curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset" "$STDO_ASSETS/$asset"
+ done
+ python3.13 - "$STDO_DOWNLOAD_DIR" <<'PYVERIFY'
+@@ -407,12 +407,12 @@ from pathlib import Path
+ import hashlib, json, sys
+ root = Path(sys.argv[1])
+ release = json.loads((root / 'release.json').read_bytes())
+-if release.get('tag_name') != 'specification_methodology/v3.1.0-rc.1' or release.get('draft') is not False or release.get('prerelease') is not False:
++if release.get('tag_name') != 'specification_methodology/v3.1.0-rc.2' or release.get('draft') is not False or release.get('prerelease') is not False:
+     raise SystemExit('wrong fixed RC release or publication status')
+-names = {'stdo_toolchain-3.1.0rc1-py3-none-any.whl', 'stdo-v3.1.0-rc.1-manifest.json',
+-         'stdo-manager-runtime-v3.1.0-rc.1-macos-arm64-cp313.zip',
+-         'stdo-manager-constraints-v3.1.0-rc.1-python313.txt',
+-         'stdo-products-v3.1.0-rc.1.zip', 'cohort-release-v3.1.0-rc.1.json'}
++names = {'stdo_toolchain-3.1.0rc2-py3-none-any.whl', 'stdo-v3.1.0-rc.2-manifest.json',
++         'stdo-manager-runtime-v3.1.0-rc.2-macos-arm64-cp313.zip',
++         'stdo-manager-constraints-v3.1.0-rc.2-python313.txt',
++         'stdo-products-v3.1.0-rc.2.zip', 'cohort-release-v3.1.0-rc.2.json'}
+ assets = release.get('assets', [])
+ if len(assets) != len(names) or {a['name'] for a in assets} != names:
+     raise SystemExit('release asset population differs')
+@@ -423,16 +423,16 @@ for asset in assets:
+ PYVERIFY
+ test ! -e "$STDO_MANAGER_ENV" && test ! -L "$STDO_MANAGER_ENV"
+ test ! -e "$STDO_PRODUCTS_ROOT" && test ! -L "$STDO_PRODUCTS_ROOT"
+-python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-manager-runtime-v3.1.0-rc.1-macos-arm64-cp313.zip" "$STDO_DOWNLOAD_DIR/runtime"
++python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-manager-runtime-v3.1.0-rc.2-macos-arm64-cp313.zip" "$STDO_DOWNLOAD_DIR/runtime"
+ python3.13 -m venv "$STDO_MANAGER_ENV"
+ "$STDO_MANAGER_ENV/bin/python" -m pip install --no-index --find-links "$STDO_DOWNLOAD_DIR/runtime/wheels" --require-hashes --no-deps -r "$STDO_DOWNLOAD_DIR/runtime/requirements-macos-arm64-cp313.txt"
+ "$STDO_MANAGER_ENV/bin/python" -m pip check
+ stdo() { "$STDO_MANAGER_ENV/bin/stdo" --store "$STDO_STORE_ROOT" "$@"; }
+ stdo --version
+-STDO_MANIFEST="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.1.0-rc.1-manifest.json")"
++STDO_MANIFEST="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.1.0-rc.2-manifest.json")"
+ stdo install "$STDO_CUT" --repository https://github.com/foolishimp/specification_methodology.git --manifest-sha256 "$STDO_MANIFEST"
+ stdo verify "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
+-python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-products-v3.1.0-rc.1.zip" "$STDO_PRODUCTS_ROOT"
++python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-products-v3.1.0-rc.2.zip" "$STDO_PRODUCTS_ROOT"
+ ```
+ 
+ A failed download, checksum, dependency installation or exact-cut verification
+@@ -856,7 +856,7 @@ and [reading guide](../../../standards/documentation/README.md) route this
+ exact native method, default and independent Product setup. Resolve the page:
+ 
+ ```sh
+-stdo resolve stdo://releases/v3.1.0-rc.1/standards/documentation/index.html
++stdo resolve stdo://releases/v3.1.0-rc.2/standards/documentation/index.html
+ ```
+ 
+ For optional current visual documentation, select Representation Tools through
+diff --git a/specification_methodology/v3/release/release-note.md b/specification_methodology/v3/release/release-note.md
+index cca42008f..d09cd3c81 100644
+--- a/specification_methodology/v3/release/release-note.md
++++ b/specification_methodology/v3/release/release-note.md
+@@ -1,67 +1,58 @@
+-# STDO 3.1.0-rc.1
+-
+-This is the fixed native RC subject on public version line **STDO 3.1.0**.
+-Its immutable tag is `specification_methodology/v3.1.0-rc.1`, its logical cut
+-is `stdo://releases/v3.1.0-rc.1/`, and its moving version selector is
+-`specification_methodology/v3.1.0`. Normal GitHub release status does not turn
+-that selector into a stable immutable cut. The sole native predecessor is
+-3.0.5-rc.1 commit `b5b00b896d44804e0f5d615a9bc23a02345888b3`.
++# STDO 3.1.0-rc.2
++
++This corrective native cut belongs to public version line **STDO 3.1.0**.
++Its immutable tag is `specification_methodology/v3.1.0-rc.2`, logical cut is
++`stdo://releases/v3.1.0-rc.2/`, and moving selector is
++`specification_methodology/v3.1.0`. Its exact native predecessor is
++`specification_methodology/v3.1.0-rc.1`, commit
++`c1e0faaa8437c169031a476343c764614135cd93`. RC1 remains immutable.
++
++## Corrected capability and conservation
++
++Purpose Context's SDLC index selects W35 at `product_acceptance`, as well as
++`qualification` and `release`. A successor acceptance context carries the
++existing duty to identify the exact immutable predecessor and disposition
++each predecessor claim capable of affecting the successor. An unresolved
++disposition blocks the affected acceptance claim. EVALUATION section 5 and
++RELEASE section 9 already own this law; their bytes and meaning are unchanged.
++A query or delivered context creates no acceptance authority.
++
++All constitutional owners, default flow, generated frames and native workflow
++skill contracts are conserved from RC1. Native changes are this release note
++and acquisition/navigation version bindings. The manager has new version
++metadata with unchanged behavior and third-party dependency bytes. RC1's
++corrected guides and runnable frame suite remain in the source carrier.
+ 
+ ## Release subject
+ 
+-The explicit release-matched cohort contains six separately owned Products:
+-Specification Methodology, Purpose Context, STDO Skills, Representation Tools,
+-STDO Representation and Axiom Indexer. Owned versions use `3.1.0-rc.1`;
+-the Python manager uses `3.1.0rc1`. The
+-[cohort record](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/cohort-release-v3.1.0-rc.1.json)
+-binds their exact namespaces, members, dependencies, native manifest, public
+-assets and bounded evidence. Native commit/tag A precedes derived exact-cut
+-bindings and Product carrier B; the complete ref set publishes atomically.
+-
+-The native installation contains the constitutional standards, templates,
+-default guidance, generated frames, workflow plugin and compact
+-[reading page](../standards/documentation/index.html). The separate
+-[Product archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/stdo-products-v3.1.0-rc.1.zip)
+-contains Purpose Context, Skills and the visual Products. The manager wheel,
+-runtime dependency archive and constraints remain separate public assets.
++The cohort retains six independent Products: Specification Methodology,
++Purpose Context, STDO Skills, Representation Tools, STDO Representation and
++Axiom Indexer. Owned versions use `3.1.0-rc.2`; the manager uses equivalent
++PEP 440 version `3.1.0rc2`. The
++[cohort record](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.2/cohort-release-v3.1.0-rc.2.json)
++binds exact Product subjects, dependencies, assets, predecessor dispositions
++and evidence. Native A precedes derived bindings and carrier B; the complete
++ref set publishes in one guarded atomic transaction.
++
++The native installation retains its standards, templates, default guidance,
++frames, workflow plugin and [reading page](../standards/documentation/index.html).
++The separate [Product archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.2/stdo-products-v3.1.0-rc.2.zip)
++contains Purpose Context, Skills and optional visual Products. Both context
++purposes and the retained visual interpretation bind actual native RC2 sources.
++Earlier exact assets and assessments retain their original identities.
+ Follow [Getting Started](../plugins/spec/references/GETTING_STARTED.md#new-project)
+-for the fixed native installation and independent host bindings.
+-
+-## Source changes and conservation
+-
+-The adopted SDLC default connects work, incremental QA, causal triage, lawful
+-owner/carrier re-entry, affected verification and bounded continuation or
+-closure. The TICKETS carrier application connects the current work question,
+-subject/basis, evidence and surviving obligations to existing context/restart
+-and reuse owners. ACTIVATION's generic law remains unchanged. Default frames,
+-the frame-basis template, native work/review/ticket/help guidance and first-use
+-documentation project those owners without creating new authority.
+-
+-Purpose Context now owns reusable context construction; Skills consumes its
+-exact public manifest. Visual documentation is optional. Retired combined
+-context/formal-support/Lean routes, large generated model/explorer payloads,
+-proof reader and source-tooling bundles are intentionally absent from this
+-native package. The exact 3.0.5-rc.1 release preserves those sources, assets,
+-proof results, examples and receipts for their original subjects. They are not
+-relabelled as current evidence or required for context use.
+-
+-## Use, migration and evidence limits
++for native acquisition and independent host installation.
+ 
+-Existing consumers retain their complete installed method, selected default
+-and host receipts until an explicit consumer adoption or migration. Select the
+-actual native cut, Purpose Context index and Skills dependency; verify their
+-manifests and retain the installer receipt. The default becomes operative only
+-through its Product-owned selection. Historical runtime use remains governed
+-by its original contract.
++## Evidence and adoption boundaries
+ 
+-The source/default transition has finite development observations and separate
+-assessment subjects. The current cohort record binds applicable reuse, new
+-exact-cut checks and residuals. Package identity, frame reproduction, installed
+-verification, exact-query coverage and native task behavior support their own
+-claims. They do not establish general context sufficiency, automatic host
+-triggering, a proof of every prose rule or whole-method effectiveness. Common
+-source authorship supplies no independent semantic verdict; final acceptance
+-of an exact cut remains the Product authority's decision.
++The cohort record distinguishes failing RC1 acceptance, repaired boundary
++selection, independent exact-query assessment, installed adapter checks,
++package identity and public acquisition. Valid predecessor evidence is reused
++only through explicit applicability. No universal query coverage, whole-method
++qualification, automatic host pickup, whole-host context-fit or future task
++correctness is established. Exact-cut human acceptance remains separate.
+ 
+-Publication changes no global installation or consumer basis. The
+-[licence](../LICENSE) and independently selected third-party notices apply.
++Existing consumers retain their installed basis, defaults and receipts until
++their own authorized adoption. Publication changes no global installation.
++Historical formal/Lean and combined context routes remain retired from this
++cohort. The [licence](../LICENSE) and third-party notices apply.
+diff --git a/specification_methodology/v3/standards/documentation/README.md b/specification_methodology/v3/standards/documentation/README.md
+index 4d8ab3e61..d7c25b01b 100644
+--- a/specification_methodology/v3/standards/documentation/README.md
++++ b/specification_methodology/v3/standards/documentation/README.md
+@@ -1,6 +1,6 @@
+ # Read and use STDO 3.1
+ 
+-The [installed reading page](index.html) routes the native **3.1.0-rc.1**
++The [installed reading page](index.html) routes the native **3.1.0-rc.2**
+ method. Start with [the method index](../README.md) or
+ [Getting Started](../../plugins/spec/references/GETTING_STARTED.md).
+ The exact installed standards own meaning; this guide adds no rule, adoption
+@@ -18,9 +18,9 @@ installation do not select a default for an existing Product.
+ Purpose Context owns context construction and purpose indexes. STDO Skills
+ owns the receipt-based host bindings. Obtain their matching separately
+ inventoried directories from
+-[the Product archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/stdo-products-v3.1.0-rc.1.zip),
+-verified through [the release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.1)
+-and its [cohort record](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/cohort-release-v3.1.0-rc.1.json).
++[the Product archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.2/stdo-products-v3.1.0-rc.2.zip),
++verified through [the release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.2)
++and its [cohort record](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.2/cohort-release-v3.1.0-rc.2.json).
+ Follow `stdo_skills/scripts/INSTALLATION.md` and `stdo_skills/GETTING_STARTED.md`
+ inside that archive. An installed native method assumes no sibling checkout.
+ 
+diff --git a/specification_methodology/v3/standards/documentation/index.html b/specification_methodology/v3/standards/documentation/index.html
+index 89c329213..c3e2c729d 100644
+--- a/specification_methodology/v3/standards/documentation/index.html
++++ b/specification_methodology/v3/standards/documentation/index.html
+@@ -16,7 +16,7 @@
+ </head>
+ <body>
+ <main>
+-  <p class="version">Specification Methodology · Exact native cut 3.1.0-rc.1</p>
++  <p class="version">Specification Methodology · Exact native cut 3.1.0-rc.2</p>
+   <h1>Read and work with STDO</h1>
+   <p>STDO means Specification, Ticketing, Design and Outcome-Driven Development.
+     Start with the Product outcome, its exact installed basis and the existing
+@@ -50,7 +50,7 @@
+       <tr><td>Axiom Indexer</td><td>Separately owned conversion and mechanical checking.</td></tr>
+     </tbody>
+   </table>
+-  <p>The <a href="https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.1">fixed release</a>
++  <p>The <a href="https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.2">fixed release</a>
+     distributes a separate Product archive and exact cohort record. Follow each
+     Product's guide and public manifest. Context use requires no visual tool or
+     Lean installation. Installing a package changes no existing Product basis.</p>

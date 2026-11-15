@@ -1,0 +1,248 @@
+{
+  "subjects": [
+    {
+      "name": "acceptance",
+      "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+      "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+      "query_sha256": "58ce3e20119f98c411da8f0c04f693342e92a5821527635f51829f8d33f6a63f",
+      "status": "supported",
+      "evaluator": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called",
+      "evidence": [
+        "delivered context/acceptance 45b4ba3facddf611f9357dc0da9f462dd425dd37012b9f99debbf530ea884f7d",
+        "operator readback 8e9e7595c2cc5aff1d263e52e425037d79f51e9ac639cb6b6e960b530c47db51 (only W35.when changed)",
+        "EVALUATION b856cf04... section 5; RELEASE eea362e1... sections 8-9; FOUNDATIONS 7fe9ecf2... Conjunction",
+        "BOUNDARY_SCENARIOS db8547fc..."
+      ],
+      "scope": "Predecision SDLC workflow-constraint sufficiency for a successor product_acceptance decision on native RC2; no acceptance, release or exact-cut criteria (RELEASE section 8 is not imported); exact-cut acceptance should use boundary release"
+    },
+    {
+      "name": "qualification",
+      "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+      "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+      "query_sha256": "0049b6e2e05c603e7c786efa785bfbe98ceaba46337a7cb0c59b723e0c83ecfe",
+      "status": "supported",
+      "evaluator": "as above",
+      "evidence": [
+        "delivered context/qualification 329c66d9a3ad266a06b91cf6698f22712856c669ce36e1af6aca008cffaae93b",
+        "operator readback 8e9e7595..."
+      ],
+      "scope": "Workflow constraints and successor conservation at a qualification boundary; excludes the RELEASE section 3 exact-cut binding list (R6)"
+    },
+    {
+      "name": "release",
+      "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+      "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+      "query_sha256": "428f2d98b8628bb2889cc4435773c572cb4d108471ff204a5610208082c4df8b",
+      "status": "supported",
+      "evaluator": "as above",
+      "evidence": [
+        "delivered context/release 15a513924fd91ecbff2716867dbe504034e41ed3bb5e89b6ed591f9a2774c8dd"
+      ],
+      "scope": "Workflow-level release criteria (W26) plus successor conservation; ref and publication mechanics are owner re-entry, not covered"
+    },
+    {
+      "name": "work",
+      "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+      "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+      "query_sha256": "650ed9eda70cc471c75ff528aa81d9650576ed71cffb41341ce2c07e0d8d0c1c",
+      "status": "supported",
+      "evaluator": "as above",
+      "evidence": [
+        "delivered context/work a56e6e3855bdfff791a2228958a07f166dfd6ec8db45cac91e6c6d463de7d0c8"
+      ],
+      "scope": "Ordinary work with proposed reuse and changed source; correct W35/W25/W26 exclusion; residuals F1 and A2"
+    },
+    {
+      "name": "sdlc",
+      "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+      "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+      "query_sha256": "9e81574d3328ae77260769130ea16045ab84dc9594815aab8449bdb010f769a5",
+      "status": "supported",
+      "evaluator": "as above",
+      "evidence": [
+        "delivered context/sdlc 043f28a9d0662cfc54f81d37b77bb1516661b9472be3731888a6cecedeecce7b",
+        "fixture WORK_CONTRACT 65557c70..., FRAME_BASIS 4c04bc7a...",
+        "RC1 VERDICT a09b8f04... cited only"
+      ],
+      "scope": "Executing and recording the admitted bounded refactor via the run carrier, boundary none, no Executive profile"
+    },
+    {
+      "name": "python",
+      "index_sha256": "e6a71a11163b84e9906591cd02cc448949f289382814414976bc261aaeb41ecd",
+      "corpus_sha256": "108aa7915a7c236c27934f52531f43d271b94a0ad4366706a2e4fb222f8ca07e",
+      "query_sha256": "84b5d4b993d24b068e0e601f00f4b75cbeab4cd0475482256410b279be60f409",
+      "status": "supported",
+      "evaluator": "as above",
+      "evidence": [
+        "delivered context/python da7fb2666bfa68a694d7387e5ec725bdf52724d3407a6f49a3035603b12e31e9",
+        "operator readback: zero rule changes, 16 owners byte-equal, facts and guard equal",
+        "fixture REQUIREMENTS ab9a26eb..., DESIGN 0a91a535..., FRAME_BASIS 4c04bc7a...",
+        "RC1 python verdict on index 717857ed... cited only"
+      ],
+      "scope": "Preconstruction method-constraint sufficiency for the worker / DESIGN_MODULE / pure-local Python 3.12 realization_refactor family; excludes code, typing pass, equivalence and acceptance"
+    },
+    {
+      "name": "missing-boundary",
+      "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+      "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+      "query_sha256": "abe1b7b7a7a45465ae6b23958e3a2b33ca83c4d6f209432b5ec47f17d2f86dcb",
+      "status": "unknown",
+      "refusal_judgment": "correct",
+      "evaluator": "as above",
+      "evidence": [
+        "actual refusal 203f6455bf11a449512a704ce27ebf9ad234bee6b9f0bcf9b8b3be19bca5f9ff (status incomplete, covered false, family unknown)"
+      ],
+      "scope": "No delivered context exists, so semantic coverage is not judgeable; the fail-closed family refusal is judged correct under PC-R03"
+    },
+    {
+      "name": "null-boundary",
+      "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+      "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+      "query_sha256": "191ef66060fde1062ca6becc85f63ff77d63256a625dbc98a44f7f51fa386e88",
+      "status": "unknown",
+      "refusal_judgment": "correct",
+      "evaluator": "as above",
+      "evidence": [
+        "actual refusal 74c525401e35afd7691bd06fbe6c561b97184d4555a611affcdde9aa976a92b8"
+      ],
+      "scope": "As missing-boundary"
+    },
+    {
+      "name": "ill-typed-boundary",
+      "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+      "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+      "query_sha256": "0acae931ae6d9fc2cbd3ca0555870934f9109eea2b95c47d750c063056046484",
+      "status": "unknown",
+      "refusal_judgment": "correct",
+      "evaluator": "as above",
+      "evidence": [
+        "actual refusal ab30b694863b397d59d7559c7a8bea5682b4246e64f13da268f7de57f853eee6 (integer 3 treated as unknown, not coerced)"
+      ],
+      "scope": "As missing-boundary"
+    }
+  ],
+  "claim_results": [
+    {
+      "claim": "W35 selected at product_acceptance with unchanged obligation; qualification and release conserved; ordinary work excluded",
+      "result": "supported",
+      "basis": "Guard delta only; obligations O1-O5, O7 and O9 present; O4/O6/O8 compressed (R1, R2); W23 withholds unestablished successor status"
+    },
+    {
+      "claim": "No release-only duty imported at acceptance; dependency guards visible",
+      "result": "supported",
+      "basis": "W26 shown false at acceptance and qualification, true at release; no X3 emptying"
+    },
+    {
+      "claim": "No new or redefined purpose fact",
+      "result": "supported",
+      "basis": "purpose_facts_equal true for both indexes; description-only change"
+    },
+    {
+      "claim": "Unknown boundary fails closed",
+      "result": "supported_with_revised_expectation",
+      "basis": "boundary_kind is a family fact in the unchanged catalog guard; family incomplete is the correct outcome; the prior conditional expectation is revised"
+    },
+    {
+      "claim": "Native constitutional, default, frame and workflow owners conserved; four metadata members bounded",
+      "result": "supported",
+      "basis": "operator byte equality; patch is version rebinding plus a release note whose current claims match the evidence",
+      "condition": "C1"
+    },
+    {
+      "claim": "Visual unchanged semantics reuse",
+      "result": "supported_for_declared_claims",
+      "basis": "selected sources byte-equal; 306-record bijection; fresh source-tree browser checks",
+      "not_upgraded": [
+        "packaged/installed/public browser modes",
+        "Graphify",
+        "general fidelity",
+        "structured re-entry"
+      ]
+    }
+  ],
+  "evidence_reuse": [
+    {
+      "evidence": "RC1 python and sdlc supported verdicts",
+      "applicability": "cited support only; not invalidated by the W35 counterexample (boundary none excludes W35 in both releases); verdicts not relabelled"
+    },
+    {
+      "evidence": "RC1 failing acceptance test (ACCEPTANCE_NEGATIVE 36235df2...)",
+      "applicability": "retained on the RC1 subject as the before-failure"
+    },
+    {
+      "evidence": "RC1 visual recheck on model 784aa60f...",
+      "applicability": "applicable to the 24 annotations, navigation, relation direction and scope on RC2 model c16f1203... via Writer-computed equality; the RC2 verdict is this new judgment"
+    },
+    {
+      "evidence": "Writer mechanical tests (FINAL_CONTROLS 162ee727..., 28 + 8 tests)",
+      "applicability": "mechanical only; no semantic weight"
+    }
+  ],
+  "findings": [
+    {
+      "id": "R1",
+      "class": "bounded_residual",
+      "subject": "acceptance",
+      "summary": "W35 says an unresolved disposition 'blocks its affected qualification'; the EVALUATION section 5 consequence 'and so cannot be accepted' is implicit via 'qualification/acceptance claim' and W06/W23"
+    },
+    {
+      "id": "R2",
+      "class": "bounded_residual",
+      "subject": "acceptance/qualification/release",
+      "summary": "W35 omits: pre-test 'conserved' is unresolved (O6/K3; partly covered by W06/W29); disposition-is-a-claim (O8/K6); modal-strength and counterexample detail of RELEASE section 9 para 3; 'superseded by accepted successor relation'"
+    },
+    {
+      "id": "R3",
+      "class": "bounded_residual",
+      "summary": "Deterministic-kind migration and the support-line paragraph are reachable only through W35 source re-entry RELEASE 735-849"
+    },
+    {
+      "id": "R4",
+      "class": "bounded_residual",
+      "summary": "Acceptance of an exact immutable cut labelled product_acceptance would not receive W26; the label is the caller's observation"
+    },
+    {
+      "id": "R6",
+      "class": "adjacent",
+      "summary": "Qualification context lacks the RELEASE section 3 exact-cut binding list; unchanged from RC1"
+    },
+    {
+      "id": "A1",
+      "class": "adjacent",
+      "summary": "A direct compile_context caller bypassing the catalog family guard would silently deselect W35 on a misspelled boundary value; the catalog route refuses (code reading, unobserved)"
+    },
+    {
+      "id": "A2",
+      "class": "adjacent",
+      "summary": "RELEASE section 9 integration-time support-line dispositions not selected at boundary none; pre-existing"
+    },
+    {
+      "id": "C1",
+      "class": "closure_condition",
+      "summary": "Release note in immutable native A asserts future cohort record, assessment, public-acquisition and atomic-publication outcomes; these must be verified true"
+    },
+    {
+      "id": "RC1-F1/F2/F3/F4/F5/F7",
+      "class": "bounded_residual_carried",
+      "summary": "Unchanged RC1 residuals; F4 language_version still ungrounded in the RC2 fixture"
+    }
+  ],
+  "residuals": [
+    "No material counterexample found",
+    "Confirmation-bias risk: same model family as source-first and RC1 assessors",
+    "No exhaustive clause-by-clause re-derivation of the 113 Python rules",
+    "All hashes and equalities supplied, not recomputed",
+    "Adequate attention and receipt not claimed",
+    "Visual: 94 empty re_entry arrays; latitude label displays its identifier"
+  ],
+  "unperformed": [
+    "Claude-host adapter delivery and package02 byte comparison",
+    "Queries at landing/work_closure and misspelled-value observations",
+    "Manager behaviour and dependency-byte conservation",
+    "Source B, cohort record, ref graph, atomic push, GitHub release, public acquisition, fresh install",
+    "Packaged/installed/public visual browser modes",
+    "Task correctness, code equivalence, typing pass",
+    "Human exact-cut acceptance",
+    "Whole-method, universal coverage, automatic host pickup"
+  ]
+}

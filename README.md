@@ -40,7 +40,7 @@ Skills apply them, and guides explain their use.
 | Work, QA, triage, repair verification, boundaries and evidence reuse | `stdo-3.1.0-rc.2-sdlc-workflow-v1` | Exact native 3.1.0-rc.2 |
 
 Both indexes bind `stdo://releases/v3.1.0-rc.2/`, manifest
-`ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa`.
+`b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4`.
 Assessment applies to exact sources, purpose and caller facts. Unknown facts
 remain unknown. Context coverage does not establish successful code, repair,
 automatic host pickup or release acceptance. The complete installed constitution

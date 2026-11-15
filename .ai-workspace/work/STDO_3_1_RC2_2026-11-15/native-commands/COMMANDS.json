@@ -1,0 +1,60 @@
+[
+  {
+    "name": "cut",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/releases/3.1.0-rc.2/tools/native_cut.py",
+      "--repo",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+      "--source-commit",
+      "31e6f40ed81d6c5163c856c16815d89d5a3f5728",
+      "--inventory",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/method/NATIVE_READY_INVENTORY.json",
+      "--inventory-sha256",
+      "c3394fefeea592054502a6b124c8cf7cf4872e4ae8a2828e416a9a9ce8959900",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/native"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "manifest",
+    "argv": [
+      "stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/native-store",
+      "manifest",
+      "v3.1.0-rc.2",
+      "--repository",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "install",
+    "argv": [
+      "stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/native-store",
+      "install",
+      "v3.1.0-rc.2",
+      "--repository",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "verify",
+    "argv": [
+      "stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/native-store",
+      "verify",
+      "v3.1.0-rc.2",
+      "--manifest-sha256",
+      "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4"
+    ],
+    "exit": 0
+  }
+]

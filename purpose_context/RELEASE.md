@@ -1,16 +1,16 @@
-# Purpose Context 3.1.0-rc.1 package
+# Purpose Context 3.1.0-rc.2 package
 
-The approved release target is Purpose Context 3.1.0-rc.1 in an explicitly
+The approved release target is Purpose Context 3.1.0-rc.2 in an explicitly
 declared six-Product cohort. Its Product identity remains
 `urn:stdo:product-definition:purpose-context`. The complete native Method is
 acquired through its manager; the separately inventoried Purpose Context tree
-is delivered in `stdo-products-v3.1.0-rc.1.zip`. The external
-`cohort-release-v3.1.0-rc.1.json` binds the exact Products and dependencies.
+is delivered in `stdo-products-v3.1.0-rc.2.zip`. The external
+`cohort-release-v3.1.0-rc.2.json` binds the exact Products and dependencies.
 
 Select the archive and cohort record from the same immutable release. Verify
 their published digests and member inventories before use. Use Root's release
 installation recipe for the actual native manager and cut. The native manifest
-asset is `stdo-v3.1.0-rc.1-manifest.json`; its exact digest must match both the
+asset is `stdo-v3.1.0-rc.2-manifest.json`; its exact digest must match both the
 installed method and the two release-target entries in the pinned catalog.
 Publication and qualification are external exact-subject records, never claims
 created by the generator or the public manifest alone.

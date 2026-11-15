@@ -5,12 +5,12 @@ and boundary decisions, use [SDLC workflow](sdlc-workflow.md).
 
 ## Bind and consume the matching Python index
 
-1. Run `python3 -B <cli> indexes --public-manifest-sha256 <public-sha>`. It verifies the manifest and actual public members and shows each index's exact method, ordered source members, purpose and family guard. Match those to the actual work. The `python-pure-refactor/2` successor supplies preconstruction method constraints for pure/local Python 3.12 realization refactoring under adopted DESIGN_MODULE, including conditional ODD/UX law, over sixteen exact selected owners. The selected release-target entry binds STDO 3.1.0-rc.1; its 3.0.5 and 3.0.4 predecessors and four-owner P1 entry remain exact for older consumers. The family retains its permitted branches. Match the actual caller basis rather than automatically selecting the newest entry. No entry covers all builds, SDLC purposes, Product-specific law or STDO 3.* releases.
+1. Run `python3 -B <cli> indexes --public-manifest-sha256 <public-sha>`. It verifies the manifest and actual public members and shows each index's exact method, ordered source members, purpose and family guard. Match those to the actual work. The `python-pure-refactor/2` successor supplies preconstruction method constraints for pure/local Python 3.12 realization refactoring under adopted DESIGN_MODULE, including conditional ODD/UX law, over sixteen exact selected owners. The selected release-target entry binds STDO 3.1.0-rc.2; its 3.0.5 and 3.0.4 predecessors and four-owner P1 entry remain exact for older consumers. The family retains its permitted branches. Match the actual caller basis rather than automatically selecting the newest entry. No entry covers all builds, SDLC purposes, Product-specific law or STDO 3.* releases.
 
-2. Bind the caller's actual installation. The following example is for a caller that explicitly selected 3.1.0-rc.1. A 3.0.4 caller uses the retained 3.0.4 entry and exact manifest shown by `indexes`; do not change its basis to fit this example:
+2. Bind the caller's actual installation. The following example is for a caller that explicitly selected 3.1.0-rc.2. A 3.0.4 caller uses the retained 3.0.4 entry and exact manifest shown by `indexes`; do not change its basis to fit this example:
 
    ```sh
-   python3 -B <cli> bind --index-id stdo-3.1.0-rc.1-python-pure-refactor-v2 --source-root <selected-installed-method-root> --method-uri stdo://releases/v3.1.0-rc.1/ --method-manifest-sha256 ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa --public-manifest-sha256 <public-sha> --out context-work
+   python3 -B <cli> bind --index-id stdo-3.1.0-rc.2-python-pure-refactor-v2 --source-root <selected-installed-method-root> --method-uri stdo://releases/v3.1.0-rc.2/ --method-manifest-sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4 --public-manifest-sha256 <public-sha> --out context-work
    ```
 
    `source-root` contains `manifest.json` and `standards/`; it is not the standards directory. Bind hashes the actual manifest, checks selected-member declarations and hashes all sixteen actual source files in catalog order. It does not substitute a historical corpus or a different release. Whole-install qualification remains the existing method manager's responsibility.
@@ -18,8 +18,8 @@ and boundary decisions, use [SDLC workflow](sdlc-workflow.md).
 3. Write `QUERY.json` as `{id, purpose_id, facts}` using the declared meanings in `context-work/PURPOSE.json`. Obtain each family fact from the actual task/adoption/design/activation state. Do not copy the catalog's expected values as unverified defaults. Missing, null or wrong-type deciding facts remain unknown. `target_product`, `task` and `grant` can distinguish consumers without changing corpus identity.
 
    ```sh
-   python3 -B <cli> select --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.1-python-pure-refactor-v2 --public-manifest-sha256 <public-sha>
-   python3 -B <cli> consume --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.1-python-pure-refactor-v2 --public-manifest-sha256 <public-sha> --assessment <independently-selected-exact-query-assessment.json> --byte-budget 262144 --out delivery
+   python3 -B <cli> select --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.2-python-pure-refactor-v2 --public-manifest-sha256 <public-sha>
+   python3 -B <cli> consume --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.2-python-pure-refactor-v2 --public-manifest-sha256 <public-sha> --assessment <independently-selected-exact-query-assessment.json> --byte-budget 262144 --out delivery
    ```
 
    The assessed path uses an independently selected supported assessment for this exact canonical index, corpus and query (including query ID). Obtain that judgment through the applicable governing assessment contract; do not author it merely to make coverage true. A fixture assessment applies only to its exact subject and cannot qualify a changed query. Selection refuses identity drift and false family applicability. Unknown family applicability returns `incomplete` (exit 3), no selected index or delivery. Successful selection exposes all matches and the exact `index_path`. Consumption rechecks them and reuses the same authored index through the shared compiler. Repeat with a new actual query for another eligible task/project; no reauthoring is needed.
@@ -35,7 +35,7 @@ and boundary decisions, use [SDLC workflow](sdlc-workflow.md).
 If no applicable assessment exists, existing authorized experimental use can retain the explicit trial path without requesting a new permission merely for lack of coverage:
 
 ```sh
-python3 -B <cli> consume --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.1-python-pure-refactor-v2 --public-manifest-sha256 <public-sha> --trial-binding <existing-authorized-scope> --byte-budget 262144 --out trial-delivery
+python3 -B <cli> consume --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.2-python-pure-refactor-v2 --public-manifest-sha256 <public-sha> --trial-binding <existing-authorized-scope> --byte-budget 262144 --out trial-delivery
 python3 -B <cli> check --bundle context-work --index <selected-index-path> --query QUERY.json --trial-binding <existing-authorized-scope> --byte-budget 262144 --context trial-delivery/CONTEXT.json --markdown trial-delivery/CONTEXT.md
 ```
 

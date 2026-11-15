@@ -17,12 +17,22 @@ def main():
     parser.add_argument('--context-stage', type=Path, required=True)
     parser.add_argument('--visual-selection', type=Path, required=True)
     parser.add_argument('--out', type=Path, required=True)
+    parser.add_argument('--native-binding', type=Path, required=True)
     args = parser.parse_args()
     if args.out.exists():
         raise FileExistsError(args.out)
+    binding = json.loads(args.native_binding.read_text())
+    if binding['native']['version'] != '3.1.0-rc.2':
+        raise ValueError('Wrong native version')
+    manifest_pin = binding['manifest_sha256']
+    installed_manifest = Path(binding['installed_root']) / 'manifest.json'
+    if digest(installed_manifest.read_bytes()) != manifest_pin:
+        raise ValueError('Native manifest changed')
     selected = json.loads(args.visual_selection.read_text())
     if selected['version'] != '3.1.0-rc.2':
         raise ValueError('Wrong visual version')
+    if selected['native_manifest_sha256'] != manifest_pin:
+        raise ValueError('Visual and native source bindings differ')
     files = {}
     products = {}
 
@@ -65,7 +75,7 @@ def main():
         product['members'].sort(key=lambda row: row['path'])
     inventory = {'kind': 'stdo.companion-products/1', 'version': '3.1.0-rc.2',
                  'native_method': {'uri': 'stdo://releases/v3.1.0-rc.2/',
-                    'manifest_sha256': 'ddbd3910981a63f41c17879551f93ef58f369848bae81cc9726d77df55dc7faa'},
+                    'manifest_sha256': manifest_pin},
                  'products': products,
                  'limits': ['Product definitions and ownership remain separate.',
                             'Exact source-carrier and tag bindings are in the external cohort asset.',

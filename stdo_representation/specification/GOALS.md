@@ -2,7 +2,7 @@
 
 | Outcome | 3.1 disposition |
 |---|---|
-| Exact source visual documentation | A fresh artifact binds selected native 3.1.0-rc.1 members; predecessor models remain historical. |
+| Exact source visual documentation | A fresh artifact binds selected native 3.1.0-rc.2 members; predecessor models remain historical. |
 | Source navigation | Every selected section has an attributed navigation record, exact source link and explicit coverage disposition. |
 | Selected interpretation | Finite SDLC/work-carrier/context annotations retain conditions, exceptions and visible residuals; no whole-method semantic coverage is claimed. |
 | Public mechanics | Existing Representation Tools project/model/carrier/explorer; optional Axiom conversion and source-linked projection. |
