@@ -1,0 +1,49 @@
+[
+  {
+    "name": "freeze",
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/releases/3.1.0-rc.2/tools/package_tools.py",
+      "freeze",
+      "--root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/specification_methodology/v3/build_tenants/common",
+      "--inventory",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/method/NATIVE_READY_INVENTORY.json"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+    "exit": 0
+  },
+  {
+    "name": "package-check",
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/releases/3.1.0-rc.2/tools/package_tools.py",
+      "check",
+      "--root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/specification_methodology/v3/build_tenants/common",
+      "--inventory",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/method/NATIVE_READY_INVENTORY.json",
+      "--inventory-sha256",
+      "c3394fefeea592054502a6b124c8cf7cf4872e4ae8a2828e416a9a9ce8959900",
+      "--report",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/method/PACKAGE_CHECK.json"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2",
+    "exit": 0
+  },
+  {
+    "name": "frame-tests",
+    "argv": [
+      "python3",
+      "-I",
+      "-B",
+      ".ai-workspace/common-build/frame-tools/test_generate_frames.py"
+    ],
+    "cwd": "/Users/jim/src/apps/specification_methodology-3.1-rc2/specification_methodology/v3",
+    "exit": 0
+  }
+]

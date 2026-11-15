@@ -1,5 +1,13 @@
 # Goals
 
+## Current corrective release
+
+The owner [authorizes RC2](../../../.ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md)
+to repair successor-acceptance context and publish the next immutable
+six-Product cut. Follow the [RC2 contract](../../../releases/3.1.0-rc.2/RELEASE.md),
+retaining RC1 and its evidence. The exact native predecessor is now RC1;
+construction remains on 3.0.4.
+
 This file states the current work wave of this source project: what is being worked on now, and the state of each checkpoint. SELECTED means the product owner has chosen the item for current work. A checkpoint is one stage of the construction of the new release; [Checkpoints](PRODUCT.md#checkpoints) lists them.
 
 ## Current source distribution selection

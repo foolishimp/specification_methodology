@@ -31,7 +31,7 @@ retain their own conditions. The guide introduces no numeric policy or new gate.
 Purpose Context exposes two distinct useful purposes: `sdlc-workflow/1` for
 workflow decisions and `python-pure-refactor/2` for its narrower construction
 constraints. The release cohort binds their applicable indexes to the actual
-final native 3.1.0-rc.1 cut and manifest. Preserved development/earlier-release
+final native 3.1.0-rc.2 cut and manifest. Preserved development/earlier-release
 entries retain their original standing. Match the caller's actual source,
 purpose, scope and adoption; do not use a Product's 3.0.4 construction basis as a
 substitute for the index's semantic target.

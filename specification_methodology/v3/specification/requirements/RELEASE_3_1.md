@@ -1,5 +1,19 @@
 # STDO 3.1 release relation
 
+## Current corrective cut
+
+The owner's [RC2 instruction](../../../../.ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md)
+selects `3.1.0-rc.2` as the successor of the exact six-Product RC1 cohort.
+The bounded change repairs W35 at successor acceptance, preserves existing
+method law, and rebuilds actual-cut dependency bindings. R31-01 through R31-07
+below apply with RC1 as predecessor and RC2 as the current cut. The
+[RC2 contract](../../../../releases/3.1.0-rc.2/RELEASE.md) declares the claim set,
+required cases, independent assessment and atomic advancement. RC1 remains
+immutable; all six owned suffixes advance together and the manager uses
+`3.1.0rc2`. Construction stays on installed 3.0.4.
+
+## Preserved initial RC1 relation
+
 The owner's [2026-11-15 release activation](../../../../.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/ACTIVATION.md)
 selects public version line **3.1.0**, initially the immutable **3.1.0-rc.1**
 cut, as a normal GitHub release. Its moving version selectors retain RC
