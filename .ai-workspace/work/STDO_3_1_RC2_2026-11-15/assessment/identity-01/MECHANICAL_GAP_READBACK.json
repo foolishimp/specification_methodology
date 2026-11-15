@@ -1,0 +1,578 @@
+{
+  "kind": "stdo.rc2.identity-finite-gap-readback/1",
+  "performed_at_utc": "2026-11-15T02:05:44.267719+00:00",
+  "subject": {
+    "native": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+    "source_B": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+    "predecessor_source": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+  },
+  "standing": "Codex assessment operator mechanical evidence; no new independent semantic verdict, acceptance or publication authority. Original Claude report and limits remain unchanged.",
+  "G1": {
+    "checkpoint": "31e6f40ed81d6c5163c856c16815d89d5a3f5728",
+    "checkpoint_is_ancestor_of_B": true,
+    "source_path": "specification_methodology/v3/build_tenants/common",
+    "B_source_tree": "61efe71a824ce12d0c776f076503b27a7f7b2c14",
+    "checkpoint_source_tree": "61efe71a824ce12d0c776f076503b27a7f7b2c14",
+    "native_A_product_tree": "61efe71a824ce12d0c776f076503b27a7f7b2c14",
+    "source_freeze_byte_identity_preserved": true
+  },
+  "G2": {
+    "catalog_source_sha256": "5ce764b28d9521f5228aa840b055285094e9abe06bc69f5e33ae32aeb652c684",
+    "catalog_portable_sha256": "1f9beecddfd7cf0c6c9a1fd249a980a8940f1a09730d56329a7a64af81b28846",
+    "entries": [
+      {
+        "id": "stdo-3.1.0-rc.2-python-pure-refactor-v2",
+        "source_B_entry_equal_portable": true,
+        "prior_semantic_package_family_guard_equal": true,
+        "family_guard": {
+          "all": [
+            {
+              "fact": "accepted_design_available",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "fact": "action",
+              "op": "eq",
+              "value": "realization_refactor"
+            },
+            {
+              "fact": "language",
+              "op": "eq",
+              "value": "python"
+            },
+            {
+              "fact": "language_version",
+              "op": "eq",
+              "value": "3.12"
+            },
+            {
+              "fact": "profile_design_module",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "fact": "pure_local",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "fact": "role",
+              "op": "eq",
+              "value": "worker"
+            },
+            {
+              "fact": "sdlc_phase",
+              "op": "eq",
+              "value": "implementation"
+            },
+            {
+              "fact": "source_state",
+              "op": "eq",
+              "value": "current"
+            },
+            {
+              "fact": "public_semantics_change_authorized",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "fact": "authority_change_authorized",
+              "op": "eq",
+              "value": false
+            },
+            {
+              "fact": "effects_change_authorized",
+              "op": "eq",
+              "value": false
+            }
+          ],
+          "any": []
+        },
+        "prior_to_final_entry_changed_fields": [
+          "artifacts"
+        ]
+      },
+      {
+        "id": "stdo-3.1.0-rc.2-sdlc-workflow-v1",
+        "source_B_entry_equal_portable": true,
+        "prior_semantic_package_family_guard_equal": true,
+        "family_guard": {
+          "all": [
+            {
+              "fact": "sdlc_workflow",
+              "op": "eq",
+              "value": true
+            },
+            {
+              "fact": "adopted_defaults",
+              "op": "eq",
+              "value": true
+            }
+          ],
+          "any": [
+            {
+              "fact": "boundary_kind",
+              "op": "eq",
+              "value": "none"
+            },
+            {
+              "fact": "boundary_kind",
+              "op": "eq",
+              "value": "landing"
+            },
+            {
+              "fact": "boundary_kind",
+              "op": "eq",
+              "value": "work_closure"
+            },
+            {
+              "fact": "boundary_kind",
+              "op": "eq",
+              "value": "product_acceptance"
+            },
+            {
+              "fact": "boundary_kind",
+              "op": "eq",
+              "value": "qualification"
+            },
+            {
+              "fact": "boundary_kind",
+              "op": "eq",
+              "value": "release"
+            }
+          ]
+        },
+        "prior_to_final_entry_changed_fields": [
+          "artifacts"
+        ]
+      }
+    ],
+    "unknown_refusals": [
+      {
+        "case": "missing-boundary",
+        "host": "codex",
+        "before_sha256": "203f6455bf11a449512a704ce27ebf9ad234bee6b9f0bcf9b8b3be19bca5f9ff",
+        "after_sha256": "4d80b07a70d8a93bf32b61ccffacd93d2838de71028599ca00dd46ec17ff1807",
+        "changed_fields": [
+          "catalog_sha256",
+          "index_path",
+          "public_manifest_sha256"
+        ],
+        "same_guard_predicates_decision_query_index_and_sources": true,
+        "delivered_body": false
+      },
+      {
+        "case": "missing-boundary",
+        "host": "claude",
+        "before_sha256": "203f6455bf11a449512a704ce27ebf9ad234bee6b9f0bcf9b8b3be19bca5f9ff",
+        "after_sha256": "4d80b07a70d8a93bf32b61ccffacd93d2838de71028599ca00dd46ec17ff1807",
+        "changed_fields": [
+          "catalog_sha256",
+          "index_path",
+          "public_manifest_sha256"
+        ],
+        "same_guard_predicates_decision_query_index_and_sources": true,
+        "delivered_body": false
+      },
+      {
+        "case": "null-boundary",
+        "host": "codex",
+        "before_sha256": "74c525401e35afd7691bd06fbe6c561b97184d4555a611affcdde9aa976a92b8",
+        "after_sha256": "80bd7deeaf6d6f2c552aec6d48ee52916779d998af4980638a83801725bd3939",
+        "changed_fields": [
+          "catalog_sha256",
+          "index_path",
+          "public_manifest_sha256"
+        ],
+        "same_guard_predicates_decision_query_index_and_sources": true,
+        "delivered_body": false
+      },
+      {
+        "case": "null-boundary",
+        "host": "claude",
+        "before_sha256": "74c525401e35afd7691bd06fbe6c561b97184d4555a611affcdde9aa976a92b8",
+        "after_sha256": "80bd7deeaf6d6f2c552aec6d48ee52916779d998af4980638a83801725bd3939",
+        "changed_fields": [
+          "catalog_sha256",
+          "index_path",
+          "public_manifest_sha256"
+        ],
+        "same_guard_predicates_decision_query_index_and_sources": true,
+        "delivered_body": false
+      },
+      {
+        "case": "ill-typed-boundary",
+        "host": "codex",
+        "before_sha256": "ab30b694863b397d59d7559c7a8bea5682b4246e64f13da268f7de57f853eee6",
+        "after_sha256": "102c1820409e63dd13d606d7fe52da36aaff149ef2db4570746aa92216d76982",
+        "changed_fields": [
+          "catalog_sha256",
+          "index_path",
+          "public_manifest_sha256"
+        ],
+        "same_guard_predicates_decision_query_index_and_sources": true,
+        "delivered_body": false
+      },
+      {
+        "case": "ill-typed-boundary",
+        "host": "claude",
+        "before_sha256": "ab30b694863b397d59d7559c7a8bea5682b4246e64f13da268f7de57f853eee6",
+        "after_sha256": "102c1820409e63dd13d606d7fe52da36aaff149ef2db4570746aa92216d76982",
+        "changed_fields": [
+          "catalog_sha256",
+          "index_path",
+          "public_manifest_sha256"
+        ],
+        "same_guard_predicates_decision_query_index_and_sources": true,
+        "delivered_body": false
+      }
+    ],
+    "standing": "Only projection/provenance pins and physical index location change; unknown family decisions and supplied facts are equal."
+  },
+  "RM1": {
+    "contexts": [
+      {
+        "case": "python",
+        "host": "codex",
+        "before_sha256": "da7fb2666bfa68a694d7387e5ec725bdf52724d3407a6f49a3035603b12e31e9",
+        "after_sha256": "7b74a7edd6620f194407d51cd73d7e31f56fbf435eca57a66251fb2f6deb8e8a",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "python",
+        "host": "claude",
+        "before_sha256": "da7fb2666bfa68a694d7387e5ec725bdf52724d3407a6f49a3035603b12e31e9",
+        "after_sha256": "7b74a7edd6620f194407d51cd73d7e31f56fbf435eca57a66251fb2f6deb8e8a",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "sdlc",
+        "host": "codex",
+        "before_sha256": "043f28a9d0662cfc54f81d37b77bb1516661b9472be3731888a6cecedeecce7b",
+        "after_sha256": "98503596dca15f3a0c2a85b080780743d6700bb0416c388695c3ff75932c584e",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "sdlc",
+        "host": "claude",
+        "before_sha256": "043f28a9d0662cfc54f81d37b77bb1516661b9472be3731888a6cecedeecce7b",
+        "after_sha256": "98503596dca15f3a0c2a85b080780743d6700bb0416c388695c3ff75932c584e",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "acceptance",
+        "host": "codex",
+        "before_sha256": "45b4ba3facddf611f9357dc0da9f462dd425dd37012b9f99debbf530ea884f7d",
+        "after_sha256": "3b067c9a079bc182d57d9f71914f70c257c0ff959ffd1c9229562c32e3583488",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "acceptance",
+        "host": "claude",
+        "before_sha256": "45b4ba3facddf611f9357dc0da9f462dd425dd37012b9f99debbf530ea884f7d",
+        "after_sha256": "3b067c9a079bc182d57d9f71914f70c257c0ff959ffd1c9229562c32e3583488",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "qualification",
+        "host": "codex",
+        "before_sha256": "329c66d9a3ad266a06b91cf6698f22712856c669ce36e1af6aca008cffaae93b",
+        "after_sha256": "7163feb6181a1183f2b277c06c7cc10f241fa734aaef72711f9699e0f4c6f47e",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "qualification",
+        "host": "claude",
+        "before_sha256": "329c66d9a3ad266a06b91cf6698f22712856c669ce36e1af6aca008cffaae93b",
+        "after_sha256": "7163feb6181a1183f2b277c06c7cc10f241fa734aaef72711f9699e0f4c6f47e",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "release",
+        "host": "codex",
+        "before_sha256": "15a513924fd91ecbff2716867dbe504034e41ed3bb5e89b6ed591f9a2774c8dd",
+        "after_sha256": "a677e058cc577b43df781cce321cb7ea0400ce14e8c03f8b23429624b0346ba7",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "release",
+        "host": "claude",
+        "before_sha256": "15a513924fd91ecbff2716867dbe504034e41ed3bb5e89b6ed591f9a2774c8dd",
+        "after_sha256": "a677e058cc577b43df781cce321cb7ea0400ce14e8c03f8b23429624b0346ba7",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "work",
+        "host": "codex",
+        "before_sha256": "a56e6e3855bdfff791a2228958a07f166dfd6ec8db45cac91e6c6d463de7d0c8",
+        "after_sha256": "2faa237a5e0f6768bf42e1b42432d8e51842c4ea62d7ec54bf9b14c1d1ea1004",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      },
+      {
+        "case": "work",
+        "host": "claude",
+        "before_sha256": "a56e6e3855bdfff791a2228958a07f166dfd6ec8db45cac91e6c6d463de7d0c8",
+        "after_sha256": "2faa237a5e0f6768bf42e1b42432d8e51842c4ea62d7ec54bf9b14c1d1ea1004",
+        "exactly_two_header_annotations_changed": true,
+        "rule_and_source_text_equal": true
+      }
+    ],
+    "only_replacements": {
+      "Source-semantic coverage: unassessed": "Source-semantic coverage: supported",
+      "Use: experimental-candidate": "Use: assessed-context"
+    },
+    "all_other_bytes_equal": true
+  },
+  "G3": {
+    "manager_source_and_wheel_members": [
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/__init__.py",
+        "RC1_sha256": "fbb1dc1b2438a140199aabe4b965c39c0d6082bd6afd2db29eaef232c9afb3ef",
+        "RC2_sha256": "fc403ef55df0db5a7ccea4aea4d495e83b2661d10f8d127c8cab8e2b90210563",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "__version__ value only"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/cli.py",
+        "RC1_sha256": "7501055cbc5ffc48190bf66bc5d51cc5c579fc3a1c265c479eb17b06d28bdd06",
+        "RC2_sha256": "7501055cbc5ffc48190bf66bc5d51cc5c579fc3a1c265c479eb17b06d28bdd06",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/cohort_assets.py",
+        "RC1_sha256": "0ab00000697afb5bd5ab8bb71d56f310be466ac5a7782908f287374293747bff",
+        "RC2_sha256": "0ab00000697afb5bd5ab8bb71d56f310be466ac5a7782908f287374293747bff",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/cohort_update.py",
+        "RC1_sha256": "e00eff22e8938a672c48e3554ee6b194c397cc88d54046c652412283109a13af",
+        "RC2_sha256": "e00eff22e8938a672c48e3554ee6b194c397cc88d54046c652412283109a13af",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/composition.py",
+        "RC1_sha256": "f9c15e022627c12a1a9c8b7cbaf642fc396101fd2b0314e14b988456afff76d1",
+        "RC2_sha256": "f9c15e022627c12a1a9c8b7cbaf642fc396101fd2b0314e14b988456afff76d1",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/constants.py",
+        "RC1_sha256": "865976bc3726e27a3f48c6f895d9238b507d1ccf132cfc3cd3622e88db3313e1",
+        "RC2_sha256": "865976bc3726e27a3f48c6f895d9238b507d1ccf132cfc3cd3622e88db3313e1",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/errors.py",
+        "RC1_sha256": "2fcb25411f230ffdb1dfb38a1994b47e23b3516d79cfde7e5bc10d6580a01982",
+        "RC2_sha256": "2fcb25411f230ffdb1dfb38a1994b47e23b3516d79cfde7e5bc10d6580a01982",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/git_source.py",
+        "RC1_sha256": "64b1a7f3c1a179cfea56303ecf900378fc0152ea0767018498c5914f9251ce50",
+        "RC2_sha256": "64b1a7f3c1a179cfea56303ecf900378fc0152ea0767018498c5914f9251ce50",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/manifest.py",
+        "RC1_sha256": "c7b53d36ffd6970cf4bc1d5c626ec17b429e86edbe5f519e73d6ff9ba3033885",
+        "RC2_sha256": "c7b53d36ffd6970cf4bc1d5c626ec17b429e86edbe5f519e73d6ff9ba3033885",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/product_definition.py",
+        "RC1_sha256": "7c2d81ea1d3cff5769a0a5f1cdb2ca7d4bf37890262090cab071215343c2a077",
+        "RC2_sha256": "7c2d81ea1d3cff5769a0a5f1cdb2ca7d4bf37890262090cab071215343c2a077",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/references.py",
+        "RC1_sha256": "b230307a0c81d9896e3d98e83c17e0aa3f6a6fcf085a33c480027446a1e01a40",
+        "RC2_sha256": "b230307a0c81d9896e3d98e83c17e0aa3f6a6fcf085a33c480027446a1e01a40",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/store.py",
+        "RC1_sha256": "24dd080d0daced716e1284733c30089cb4768983e174441aae8eebc0e8f4e74d",
+        "RC2_sha256": "24dd080d0daced716e1284733c30089cb4768983e174441aae8eebc0e8f4e74d",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      },
+      {
+        "path": "specification_methodology/v2/src/stdo_toolchain/util.py",
+        "RC1_sha256": "51508fc8878db4211abb58265b4dd7824ed92d3125b98b8e392797ccbc68d7c0",
+        "RC2_sha256": "51508fc8878db4211abb58265b4dd7824ed92d3125b98b8e392797ccbc68d7c0",
+        "RC2_source_and_wheel_equal": true,
+        "RC1_to_RC2_change": "none"
+      }
+    ],
+    "retained_public_RC1_runtime": "/Users/jim/src/apps/specification_methodology/.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/public-readback/assets/stdo-manager-runtime-v3.1.0-rc.1-macos-arm64-cp313.zip",
+    "RC1_runtime_sha256": "7ef447eaf3162dfd8e85e8064e85ef1e355963c1d3796043801f5f8feb428e4a",
+    "RC2_runtime_sha256": "f542be7b025bc5d178925a5c3503d5ca884c5f6a86dd3688885dfd944a73b25e",
+    "third_party_wheels": [
+      {
+        "name": "arrow-1.4.0-py3-none-any.whl",
+        "sha256": "749f0769958ebdc79c173ff0b0670d59051a535fa26e8eba02953dc19eb43205"
+      },
+      {
+        "name": "attrs-26.1.0-py3-none-any.whl",
+        "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309"
+      },
+      {
+        "name": "fqdn-1.6.0-py3-none-any.whl",
+        "sha256": "6c793c312ccfa29981e1135b3ef5e1277ebe639731a6b0f7350d90e96e63f0b4"
+      },
+      {
+        "name": "idna-3.20-py3-none-any.whl",
+        "sha256": "ab7ae7122974553370f0bdb919e1a960b2cd1bc1ef0276416d896db81c14582c"
+      },
+      {
+        "name": "isoduration-20.11.0-py3-none-any.whl",
+        "sha256": "b2904c2a4228c3d44f409c8ae8e2370eb21a26f7ac2ec5446df141dde3452042"
+      },
+      {
+        "name": "jsonpointer-3.6-py3-none-any.whl",
+        "sha256": "a45c858f8a9e171f6b3790ed9446c9382782f6c4cb4589176813c5a553f4cfcd"
+      },
+      {
+        "name": "jsonschema-4.26.0-py3-none-any.whl",
+        "sha256": "d489f15263b8d200f8387e64b4c3a75f06629559fb73deb8fdfb525f2dab50ce"
+      },
+      {
+        "name": "jsonschema_specifications-2025.9.1-py3-none-any.whl",
+        "sha256": "98802fee3a11ee76ecaca44429fda8a41bff98b00a0f2838151b113f210cc6fe"
+      },
+      {
+        "name": "lark-1.3.1-py3-none-any.whl",
+        "sha256": "c629b661023a014c37da873b4ff58a817398d12635d3bbb2c5a03be7fe5d1e12"
+      },
+      {
+        "name": "pip-26.2.1-py3-none-any.whl",
+        "sha256": "71138adf1f4ca900cdb7d289c21b7494329f2332b6d85f0e1c42108c0384ed3e"
+      },
+      {
+        "name": "python_dateutil-3.0.0-py2.py3-none-any.whl",
+        "sha256": "3c79630202e4152c6add678446984236efe4f57e84d8e892aab0637bab82e9fd"
+      },
+      {
+        "name": "referencing-0.37.0-py3-none-any.whl",
+        "sha256": "381329a9f99628c9069361716891d34ad94af76e461dcb0335825aecc7692231"
+      },
+      {
+        "name": "rfc3339_validator-0.1.4-py2.py3-none-any.whl",
+        "sha256": "24f6ec1eda14ef823da9e36ec7113124b39c04d50a4d3d3a3c2859577e7791fa"
+      },
+      {
+        "name": "rfc3986_validator-0.1.1-py2.py3-none-any.whl",
+        "sha256": "2f235c432ef459970b4306369336b9d5dbdda31b510ca1e327636e01f528bfa9"
+      },
+      {
+        "name": "rfc3987_syntax-1.1.0-py3-none-any.whl",
+        "sha256": "6c3d97604e4c5ce9f714898e05401a0445a641cfa276432b0a648c80856f6a3f"
+      },
+      {
+        "name": "rpds_py-2026.9.1-cp313-cp313-macosx_11_0_arm64.whl",
+        "sha256": "eba5d173f7d5708b22a93815017a4611873ed54db9f268077c0dd1ed99cfc858"
+      },
+      {
+        "name": "six-1.17.0-py2.py3-none-any.whl",
+        "sha256": "4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"
+      },
+      {
+        "name": "tzdata-2026.5-py2.py3-none-any.whl",
+        "sha256": "b683bd1b6659ddcd810ff02ad09ba821d4bf1065072805063eb35c49617905ac"
+      },
+      {
+        "name": "uri_template-1.3.0-py3-none-any.whl",
+        "sha256": "a44a133ea12d44a0c0f06d7d42a52d71282e77e2f937d8abd5655b8d56fc1363"
+      },
+      {
+        "name": "webcolors-25.10.0-py3-none-any.whl",
+        "sha256": "032c727334856fc0b968f63daa252a1ac93d33db2f5267756623c210e57a4f1d"
+      }
+    ],
+    "twenty_third_party_wheel_bytes_equal": true,
+    "twelve_manager_runtime_members_equal": true,
+    "remaining_init_member_only_version_value_changes": true,
+    "entry_points_wheel_and_top_level_metadata_equal": true,
+    "METADATA_only_version_changes": true,
+    "limit": "Runtime/input byte conservation plus the retained finite fresh RC2 install checks; not an exhaustive behavioral theorem."
+  },
+  "F2": {
+    "package_script_commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+    "package_script_path": "stdo_skills/scripts/package.py",
+    "package_script_sha256": "da3e475e2e85cec5184ce76065d1ccad10dad181c199de8c70323e1137bfad71",
+    "selected_member_count": 34,
+    "generated_inventory_adds_one": true,
+    "selected_members_exactly_match_portable_inventory": true,
+    "excluded_from_source_freeze": [
+      "release/3.0.5-rc.1/README.md",
+      "release/3.0.5-rc.1/manifest.json",
+      "release/3.0.5/README.md",
+      "release/3.0.5/manifest.json"
+    ],
+    "reason": "The committed positive-selection recipe includes named root/current files and scripts/specification/skills/current host subtrees. It does not select release/ history. The four historical artifacts remain in B and have never been declared portable current members."
+  },
+  "context_runtime_conservation": [
+    {
+      "path": "purpose_context/skills/stdo-context/scripts/context.py",
+      "sha256": "11de6b6eb18480daa63f27679d48e238131cbfa733e11ae0993fa83f077730ee",
+      "RC1_to_RC2_bytes_equal": true
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/scripts/context_catalog.py",
+      "sha256": "df532546092d082d7e1e2bc2a5219a6d1ba96b0ca2e3d8cab834d605be07622a",
+      "RC1_to_RC2_bytes_equal": true
+    },
+    {
+      "path": "purpose_context/skills/stdo-context/scripts/context_core.py",
+      "sha256": "f690a4c09688fcd45df2befba9d71cb9eb7264bd0057621e8128c344b6ab3143",
+      "RC1_to_RC2_bytes_equal": true
+    },
+    {
+      "path": "stdo_skills/skills/stdo-context/scripts/provider.py",
+      "sha256": "45d7eb587ef4257f45b44201dc33954b958b25778153ca1f6d904a31b69043f6",
+      "RC1_to_RC2_bytes_equal": true
+    },
+    {
+      "path": "stdo_skills/scripts/manage_skills.py",
+      "sha256": "d150556b60b67467f26cc66fdc2e09ae9f5e4351313bafb8cf90ebecef3163ae",
+      "RC1_to_RC2_bytes_equal": true
+    }
+  ],
+  "retained_attempt": {
+    "script": "assessment/identity-facts-01.py",
+    "stderr": "assessment/identity-facts-01.stderr",
+    "reason": "The first operator checker incorrectly required the version-bearing __init__.py bytes to be identical. The actual source and wheel change only the declared __version__ value. The checker now verifies that exact single substitution and keeps all executable-mechanics members byte-equal; no Product bytes changed."
+  },
+  "report_count_clarification": {
+    "PC_total": 51,
+    "byte_equal_source_members": 48,
+    "filtered_catalog": 1,
+    "generated_replaced_identity_members": 2,
+    "note": "The actual actor report says 49 equal plus two, but also identifies the filtered catalog. The original report remains unedited; the exact mechanical partition is 48 + 1 + 2 = 51."
+  }
+}

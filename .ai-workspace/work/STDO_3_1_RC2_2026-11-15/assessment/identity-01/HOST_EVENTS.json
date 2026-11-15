@@ -1,0 +1,58 @@
+{
+  "kind": "stdo.rc2.assessment-host-events/1",
+  "status_events": [
+    {
+      "type": "system",
+      "subtype": "status",
+      "status": "compacting",
+      "compact_output_chars": 0,
+      "session_id": "ba0c3d53-7642-401a-b7ce-fd7d410dfdcc",
+      "uuid": "5f062ebc-fbb4-4778-b089-77e7284ceaa3"
+    },
+    {
+      "type": "system",
+      "subtype": "status",
+      "status": null,
+      "compact_result": "failed",
+      "compact_error": "too_few_groups",
+      "session_id": "ba0c3d53-7642-401a-b7ce-fd7d410dfdcc",
+      "uuid": "5df56ddb-c462-467d-ac0e-c20702ce128a"
+    }
+  ],
+  "result_subtype": "success",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 525514,
+    "cache_read_input_tokens": 1079,
+    "output_tokens": 31071,
+    "output_tokens_details": {
+      "thinking_tokens": 22915
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 525514,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 31071,
+        "cache_read_input_tokens": 1079,
+        "cache_creation_input_tokens": 525514,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 525514
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "standing": "Native CLI status and actual usage are retained without a whole-host fit, adequate-attention or clean-room claim."
+}

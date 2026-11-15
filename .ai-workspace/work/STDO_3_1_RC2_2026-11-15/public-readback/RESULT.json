@@ -1,0 +1,231 @@
+{
+  "kind": "stdo.public-installed-readback/1",
+  "release_id": 445750557,
+  "url": "https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.1.0-rc.2",
+  "native_manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+  "assets": 6,
+  "product_members": 225,
+  "manager_version": "stdo 3.1.0rc2",
+  "hosts": {
+    "claude": [
+      {
+        "purpose": "python",
+        "covered": true,
+        "context_sha256": "74f6d7a0dbe230a3ccf506759fac6f18c40b415611c92b00ddb0a566d1f470ab"
+      },
+      {
+        "purpose": "sdlc",
+        "covered": true,
+        "context_sha256": "d21464cc9497b4995d833479c1a287161f0fb0690ea8701631e88318350220f8"
+      }
+    ],
+    "codex": [
+      {
+        "purpose": "python",
+        "covered": true,
+        "context_sha256": "74f6d7a0dbe230a3ccf506759fac6f18c40b415611c92b00ddb0a566d1f470ab"
+      },
+      {
+        "purpose": "sdlc",
+        "covered": true,
+        "context_sha256": "d21464cc9497b4995d833479c1a287161f0fb0690ea8701631e88318350220f8"
+      }
+    ]
+  },
+  "boundary_controls": {
+    "claude": [
+      {
+        "W26": "false",
+        "W35": "true",
+        "assessment": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/acceptance.json",
+        "case": "acceptance",
+        "context_sha256": "cf9c64c04d95bab9854c94978e400c503a5bba955ba3003f69c7b7fc5b8c5166",
+        "covered": true,
+        "delivery": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/public-readback/host-checks/claude-acceptance-boundary",
+        "gaps": [],
+        "markdown_sha256": "3b067c9a079bc182d57d9f71914f70c257c0ff959ffd1c9229562c32e3583488",
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/acceptance.json",
+        "selection_status": "ready"
+      },
+      {
+        "W26": "false",
+        "W35": "true",
+        "assessment": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/qualification.json",
+        "case": "qualification",
+        "context_sha256": "55f9a4672cbe0bdfd1ab3f0bd76e525f161edd6f972a1d79ee2e4b504ef0387b",
+        "covered": true,
+        "delivery": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/public-readback/host-checks/claude-qualification-boundary",
+        "gaps": [],
+        "markdown_sha256": "7163feb6181a1183f2b277c06c7cc10f241fa734aaef72711f9699e0f4c6f47e",
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/qualification.json",
+        "selection_status": "ready"
+      },
+      {
+        "W26": "true",
+        "W35": "true",
+        "assessment": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/release.json",
+        "case": "release",
+        "context_sha256": "65dc099bf3eb13fa0660211e25982b9c6bc68db088eee64658c260f10caadfd9",
+        "covered": true,
+        "delivery": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/public-readback/host-checks/claude-release-boundary",
+        "gaps": [],
+        "markdown_sha256": "a677e058cc577b43df781cce321cb7ea0400ce14e8c03f8b23429624b0346ba7",
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/release.json",
+        "selection_status": "ready"
+      },
+      {
+        "W26": "excluded",
+        "W35": "excluded",
+        "assessment": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/work.json",
+        "case": "work",
+        "context_sha256": "0b7da5564a928b435b1bddc858ab79ac02164abe07e7f4f0b236393a33fef7a7",
+        "covered": true,
+        "delivery": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/public-readback/host-checks/claude-work-boundary",
+        "gaps": [],
+        "markdown_sha256": "2faa237a5e0f6768bf42e1b42432d8e51842c4ea62d7ec54bf9b14c1d1ea1004",
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/work.json",
+        "selection_status": "ready"
+      },
+      {
+        "W26": "unperformed: family unknown",
+        "W35": "unperformed: family unknown",
+        "assessment": null,
+        "case": "missing-boundary",
+        "context_sha256": null,
+        "covered": false,
+        "delivery": null,
+        "gaps": "family applicability unknown; no context delivery",
+        "markdown_sha256": null,
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/missing-boundary.json",
+        "selection_sha256": "eed792733d9cda3aff4bcc100bfd78e67e5b334db0a87ff1259d2083ff326752",
+        "selection_status": "incomplete"
+      },
+      {
+        "W26": "unperformed: family unknown",
+        "W35": "unperformed: family unknown",
+        "assessment": null,
+        "case": "null-boundary",
+        "context_sha256": null,
+        "covered": false,
+        "delivery": null,
+        "gaps": "family applicability unknown; no context delivery",
+        "markdown_sha256": null,
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/null-boundary.json",
+        "selection_sha256": "677cbe65109ce33e8e3316ef9037966467abe0d141b573ec76afe4e11a62ad13",
+        "selection_status": "incomplete"
+      },
+      {
+        "W26": "unperformed: family unknown",
+        "W35": "unperformed: family unknown",
+        "assessment": null,
+        "case": "ill-typed-boundary",
+        "context_sha256": null,
+        "covered": false,
+        "delivery": null,
+        "gaps": "family applicability unknown; no context delivery",
+        "markdown_sha256": null,
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/ill-typed-boundary.json",
+        "selection_sha256": "c68583343973bccc27658ecb696ccca801cd11d572016fa5d6d21648c392645b",
+        "selection_status": "incomplete"
+      }
+    ],
+    "codex": [
+      {
+        "W26": "false",
+        "W35": "true",
+        "assessment": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/acceptance.json",
+        "case": "acceptance",
+        "context_sha256": "cf9c64c04d95bab9854c94978e400c503a5bba955ba3003f69c7b7fc5b8c5166",
+        "covered": true,
+        "delivery": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/public-readback/host-checks/codex-acceptance-boundary",
+        "gaps": [],
+        "markdown_sha256": "3b067c9a079bc182d57d9f71914f70c257c0ff959ffd1c9229562c32e3583488",
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/acceptance.json",
+        "selection_status": "ready"
+      },
+      {
+        "W26": "false",
+        "W35": "true",
+        "assessment": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/qualification.json",
+        "case": "qualification",
+        "context_sha256": "55f9a4672cbe0bdfd1ab3f0bd76e525f161edd6f972a1d79ee2e4b504ef0387b",
+        "covered": true,
+        "delivery": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/public-readback/host-checks/codex-qualification-boundary",
+        "gaps": [],
+        "markdown_sha256": "7163feb6181a1183f2b277c06c7cc10f241fa734aaef72711f9699e0f4c6f47e",
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/qualification.json",
+        "selection_status": "ready"
+      },
+      {
+        "W26": "true",
+        "W35": "true",
+        "assessment": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/release.json",
+        "case": "release",
+        "context_sha256": "65dc099bf3eb13fa0660211e25982b9c6bc68db088eee64658c260f10caadfd9",
+        "covered": true,
+        "delivery": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/public-readback/host-checks/codex-release-boundary",
+        "gaps": [],
+        "markdown_sha256": "a677e058cc577b43df781cce321cb7ea0400ce14e8c03f8b23429624b0346ba7",
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/release.json",
+        "selection_status": "ready"
+      },
+      {
+        "W26": "excluded",
+        "W35": "excluded",
+        "assessment": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/work.json",
+        "case": "work",
+        "context_sha256": "0b7da5564a928b435b1bddc858ab79ac02164abe07e7f4f0b236393a33fef7a7",
+        "covered": true,
+        "delivery": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/public-readback/host-checks/codex-work-boundary",
+        "gaps": [],
+        "markdown_sha256": "2faa237a5e0f6768bf42e1b42432d8e51842c4ea62d7ec54bf9b14c1d1ea1004",
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/work.json",
+        "selection_status": "ready"
+      },
+      {
+        "W26": "unperformed: family unknown",
+        "W35": "unperformed: family unknown",
+        "assessment": null,
+        "case": "missing-boundary",
+        "context_sha256": null,
+        "covered": false,
+        "delivery": null,
+        "gaps": "family applicability unknown; no context delivery",
+        "markdown_sha256": null,
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/missing-boundary.json",
+        "selection_sha256": "eed792733d9cda3aff4bcc100bfd78e67e5b334db0a87ff1259d2083ff326752",
+        "selection_status": "incomplete"
+      },
+      {
+        "W26": "unperformed: family unknown",
+        "W35": "unperformed: family unknown",
+        "assessment": null,
+        "case": "null-boundary",
+        "context_sha256": null,
+        "covered": false,
+        "delivery": null,
+        "gaps": "family applicability unknown; no context delivery",
+        "markdown_sha256": null,
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/null-boundary.json",
+        "selection_sha256": "677cbe65109ce33e8e3316ef9037966467abe0d141b573ec76afe4e11a62ad13",
+        "selection_status": "incomplete"
+      },
+      {
+        "W26": "unperformed: family unknown",
+        "W35": "unperformed: family unknown",
+        "assessment": null,
+        "case": "ill-typed-boundary",
+        "context_sha256": null,
+        "covered": false,
+        "delivery": null,
+        "gaps": "family applicability unknown; no context delivery",
+        "markdown_sha256": null,
+        "query": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/final-use-01/queries/ill-typed-boundary.json",
+        "selection_sha256": "c68583343973bccc27658ecb696ccca801cd11d572016fa5d6d21648c392645b",
+        "selection_status": "incomplete"
+      }
+    ]
+  },
+  "visual_browser_result": "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/public-readback/visual-browser/RESULT.json",
+  "valid": true
+}

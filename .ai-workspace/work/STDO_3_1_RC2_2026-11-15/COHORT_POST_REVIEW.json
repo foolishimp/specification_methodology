@@ -1,0 +1,1914 @@
+{
+  "kind": "stdo.release-cohort/1",
+  "profile": "rc-six-product-v1",
+  "version": "3.1.0-rc.2",
+  "public_version": "3.1.0",
+  "repository": "https://github.com/foolishimp/specification_methodology.git",
+  "native": {
+    "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+    "cut": "v3.1.0-rc.2",
+    "project_release_namespace": "specification_methodology",
+    "project_subtree_root": "specification_methodology/v3",
+    "project_subtree_tree": "61efe71a824ce12d0c776f076503b27a7f7b2c14",
+    "qualified_ref": "refs/tags/specification_methodology/v3.1.0-rc.2",
+    "standards_tree": "f84106db86d358893c5cdc41a9292a65ab21a28a",
+    "tag_object": "fb85e1b7a5717a6c92af236308c4d0b5809414fe",
+    "tree": "2c44fdca54e3ecfb0f2125c114b431bd7cb9c7c1"
+  },
+  "native_manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+  "predecessor": {
+    "version": "3.1.0-rc.1",
+    "native_commit": "c1e0faaa8437c169031a476343c764614135cd93",
+    "source_carrier": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+  },
+  "source": {
+    "checkpoint": "31e6f40ed81d6c5163c856c16815d89d5a3f5728",
+    "carrier": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+    "native_source_subtree": "specification_methodology/v3/build_tenants/common",
+    "native_source_tree": "61efe71a824ce12d0c776f076503b27a7f7b2c14"
+  },
+  "products": [
+    {
+      "namespace": "specification_methodology",
+      "root": "specification_methodology/v3",
+      "definition_id": "urn:stdo:product-definition:stdo-3",
+      "commit_role": "native-A",
+      "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+      "subtree_tree": "61efe71a824ce12d0c776f076503b27a7f7b2c14",
+      "definition": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "specification_methodology/v3/stdo_3.json",
+        "sha256": "833874bacacea07ae6c70ab6e786d0ea2096865ad79daaf8e6daf9b6677eff4b",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-v3.1.0-rc.2-manifest.json",
+        "manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+        "native_members": 94
+      }
+    },
+    {
+      "namespace": "purpose_context",
+      "root": "purpose_context",
+      "definition_id": "urn:stdo:product-definition:purpose-context",
+      "commit_role": "source-B",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "subtree_tree": "1f11541324110155b62e2bd40fda8713a62c3182",
+      "definition": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "purpose_context/stdo_purpose_context.json",
+        "sha256": "a7d9c58a1d2a057a4358ebb4bd3fcb8e34081438df6c5fcfc0581e756c0243c8",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.2.zip",
+        "root": "purpose_context",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 4291,
+            "sha256": "f1f7dfd22ba119d57a2c77524a9e6879812f036b919cabae0e180c626b666132"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 209,
+            "sha256": "5654a1debcc3657a6b91893231934d81c4620cd91c6922dd94cb738a6fc44aa2"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 10107,
+            "sha256": "adb0f592c791ebaa60ba791a5bf2746d2fa779d57091b970b08423d26200b523"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4817,
+            "sha256": "3fdca1f729bd469d7ad08e902a9bd3f78c1e8a35a3f2a6f1bd8cab41d195d7e4"
+          },
+          {
+            "path": "RELEASE.md",
+            "bytes": 3074,
+            "sha256": "c2b147d076627b55a731b0da2dbdc2cda8aaa7f34b333b8a86d6e521d4500533"
+          },
+          {
+            "path": "SOURCE_RELATION.json",
+            "bytes": 25601,
+            "sha256": "2e606afe27981bb3d5000aab03c55fe3f430eaa720a8bc3f2eb144a6c41a0e7c"
+          },
+          {
+            "path": "authoring/README.md",
+            "bytes": 1276,
+            "sha256": "0a6f0167de3c14d4c7a20bff9197c811e0a03247bb76e71c3319ab7e67f0a9e0"
+          },
+          {
+            "path": "authoring/release-targets/3.1.0-rc.1.json",
+            "bytes": 3139,
+            "sha256": "c53ea7f5275b6429dc42a5a9fd6d41a60b707f186e7ea998552520900eb0f245"
+          },
+          {
+            "path": "authoring/release-targets/3.1.0-rc.2.json",
+            "bytes": 4941,
+            "sha256": "eea8f1374e7b761cf40f48433365dab2b22c0dea451ddc34a76a1e6e6455c495"
+          },
+          {
+            "path": "authoring/sdlc-workflow/PURPOSE.json",
+            "bytes": 3492,
+            "sha256": "8ecba436caa12381da0c4b29f479358bc71e0e45fdae449ea1939bbcacdd1795"
+          },
+          {
+            "path": "authoring/sdlc-workflow/QUERY-TEMPLATE.json",
+            "bytes": 99,
+            "sha256": "f21693cc7952a96a893d4855ae27eed19688627746c8765e8d9af5da4211f2b6"
+          },
+          {
+            "path": "authoring/sdlc-workflow/RULES.json",
+            "bytes": 55275,
+            "sha256": "427dda923fb5f9167583a74850a7fc3a66176e4d1b6b0d8e7a664eb3a0b16e9c"
+          },
+          {
+            "path": "authoring/sdlc-workflow/SOURCE-CLOSURE.json",
+            "bytes": 3740,
+            "sha256": "da81436615f57237b351ab54697dfddd85c8b370375df89c0bf9589fed4b38ff"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/adjacent-finding.json",
+            "bytes": 752,
+            "sha256": "f0494203c53268215311c28f4210c43ff78e2637145a39c3071cf500f6af402a"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/boundary-assessment.json",
+            "bytes": 776,
+            "sha256": "ce63027862e13657345e8a184b7571e1cb935256313c692710f0d3d839e9dac0"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/causal-reentry.json",
+            "bytes": 753,
+            "sha256": "1d971a68f0e7d3387b9ab631c13596ba7f27d53e194976f0bb88d7c8d7aa70d9"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/first-capability-limit.json",
+            "bytes": 877,
+            "sha256": "7388e9f7c4fcfb10c869c872584648f1b78447f0c0c2c04cc039d209fa9ec1e7"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/incomplete-evidence.json",
+            "bytes": 759,
+            "sha256": "dcbe9dbff86dcfcaaed1f488bb97791a1d62799ad1ae5be64fb9e7a9c47a213f"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/ordinary-repair.json",
+            "bytes": 755,
+            "sha256": "4a783f12d5d114482f7c5b869d71ba43c458482f3b491b2f1e4295dfb7139890"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/valid-support-reuse.json",
+            "bytes": 758,
+            "sha256": "c4a4db7fb6b57044682418517fb1f3c11c22a73c3e96fca5d48538348b3f3149"
+          },
+          {
+            "path": "design/DESIGN.md",
+            "bytes": 11564,
+            "sha256": "ff7b377ebd87b6fd61db583d7fa0aa28283979d7d378c39b23669efcf1f2d6ca"
+          },
+          {
+            "path": "scripts/package_release.py",
+            "bytes": 5234,
+            "sha256": "436067dc4a57d68eef47263f711a52b33916f80c86bdd7b82b3120a94b545864"
+          },
+          {
+            "path": "scripts/rebuild_release_indexes.py",
+            "bytes": 18579,
+            "sha256": "8353b8bdead27959aaa60224f3fdf6f02b1dd50ad3611c08fb84df9eb335cd09"
+          },
+          {
+            "path": "scripts/rebuild_sdlc_index.py",
+            "bytes": 10684,
+            "sha256": "2d38f6a77be784e4e84df1435b8ae154c098098a4c7cae88865718ca52e79f69"
+          },
+          {
+            "path": "skills/stdo-context/SKILL.md",
+            "bytes": 9412,
+            "sha256": "b82c32ee123abfc4277923f1834576a4d928611e4631cfe0036491d57adeca05"
+          },
+          {
+            "path": "skills/stdo-context/indexes/CATALOG.json",
+            "bytes": 12238,
+            "sha256": "1f9beecddfd7cf0c6c9a1fd249a980a8940f1a09730d56329a7a64af81b28846"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-python-pure-refactor-v2/INDEX.json",
+            "bytes": 163085,
+            "sha256": "84a4043c0cfa331666feb8ce53eb03133543bdeef0a57ad12fac676f9063cb26"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-python-pure-refactor-v2/PROVENANCE.json",
+            "bytes": 8984,
+            "sha256": "e0af835b54eafd1943fda6eb1438163c0a244371d3885d1574bb20cfaaf027f0"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-python-pure-refactor-v2/PURPOSE.json",
+            "bytes": 6506,
+            "sha256": "d5825cde3177add73688020d4ee7969c9d11186d6c8a50ce3b3b4d63ccd1a700"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-python-pure-refactor-v2/SOURCE-DELTA.json",
+            "bytes": 31801,
+            "sha256": "abdc27bfa31b3332a13808e799edcaf2225b4445b9d03aec6e6f731822455853"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-python-pure-refactor-v2/SOURCES.json",
+            "bytes": 3228,
+            "sha256": "a1931531dc2af2384f363397f526986b08ae088b0c264dfdd9ffc7b9398ebccf"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-sdlc-workflow-v1/INDEX.json",
+            "bytes": 51661,
+            "sha256": "e307802e75792d368f38ad56c555ad8a1fe7dc2192ade566867a93650da3aa65"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-sdlc-workflow-v1/PROVENANCE.json",
+            "bytes": 7366,
+            "sha256": "2d50e8fff2f93aeba0d3e1b10eda6548c0b00712829d0f1f7bac7f919908674f"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-sdlc-workflow-v1/PURPOSE.json",
+            "bytes": 3536,
+            "sha256": "1b5e11766c42eaec362abad9259109f74f68c5ea697f6788c87a71ed88f8b5d6"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-sdlc-workflow-v1/SOURCE-DELTA.json",
+            "bytes": 22530,
+            "sha256": "eef8470e0ed9f83f9dca7986f1e11c329bf69ce30d3eb03f838e1803397767fb"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.2-sdlc-workflow-v1/SOURCES.json",
+            "bytes": 2373,
+            "sha256": "4a36f23192ef8c9897ad64d43aafeed442556544a9645399ecc99444df45deda"
+          },
+          {
+            "path": "skills/stdo-context/references/authoring.md",
+            "bytes": 3730,
+            "sha256": "215f5ae233ca03b5acb99273eff2872e2d1a4b49d54158ec5a56c2a760eb3737"
+          },
+          {
+            "path": "skills/stdo-context/references/index.schema.json",
+            "bytes": 7659,
+            "sha256": "537784a980f5d8267bbeae271eebd04757ff9f2f241d30166d7f2d4c1f4c5ec6"
+          },
+          {
+            "path": "skills/stdo-context/references/method-targets.md",
+            "bytes": 3515,
+            "sha256": "e6bce5d13c47c381b5002baf994d3e239c511dd0704becb0fc47011dc548bb1a"
+          },
+          {
+            "path": "skills/stdo-context/references/python-pure-refactor.md",
+            "bytes": 9987,
+            "sha256": "676b32668489995e80f56f0e34c98c9815c0a9a79ae0cbbe41bc9dfcdb02b607"
+          },
+          {
+            "path": "skills/stdo-context/references/sdlc-workflow.md",
+            "bytes": 12620,
+            "sha256": "050a561e1c085b6d8b68afae4c215783064766df3be52b5a3858971bdb92f3e9"
+          },
+          {
+            "path": "skills/stdo-context/scripts/context.py",
+            "bytes": 15436,
+            "sha256": "11de6b6eb18480daa63f27679d48e238131cbfa733e11ae0993fa83f077730ee"
+          },
+          {
+            "path": "skills/stdo-context/scripts/context_catalog.py",
+            "bytes": 14487,
+            "sha256": "df532546092d082d7e1e2bc2a5219a6d1ba96b0ca2e3d8cab834d605be07622a"
+          },
+          {
+            "path": "skills/stdo-context/scripts/context_core.py",
+            "bytes": 22847,
+            "sha256": "f690a4c09688fcd45df2befba9d71cb9eb7264bd0057621e8128c344b6ab3143"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 3746,
+            "sha256": "f9c4674de33df2e5c3457cec85001bd95cb6fc9a26b8372b4e0f2d1e8aaea680"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 1764,
+            "sha256": "f940e0e7e034f99c49eac41783308f0d2b855ace0634ad4b1741fc0d6a895e4b"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 9029,
+            "sha256": "30ea15b67624ef98d8be8a5ea049acb03eefa6a0cbb98396838e58b80936d926"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 5422,
+            "sha256": "bfe1c456f69f7258fdad20a868c4cb52596ee3e9b3a913c00bc7e5e8e6f8f8ca"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 4936,
+            "sha256": "e1e2dad0c1d622d3212f89006cc2a3f50c75c35e1016c6f16ddfe8937c4266f2"
+          },
+          {
+            "path": "specification/requirements/SDLC-WORKFLOW.md",
+            "bytes": 7616,
+            "sha256": "5afba547f7e91fafe4af9c4b475ef936ee94ac1a6587465be4fe4e5419772cf7"
+          },
+          {
+            "path": "stdo_purpose_context.json",
+            "bytes": 2905,
+            "sha256": "a7d9c58a1d2a057a4358ebb4bd3fcb8e34081438df6c5fcfc0581e756c0243c8"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "adb0f592c791ebaa60ba791a5bf2746d2fa779d57091b970b08423d26200b523",
+        "member_count": 51
+      },
+      "source_public_identity": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "purpose_context/PUBLIC_MANIFEST.json",
+        "sha256": "a5f9479adc22b008743c7492cce113317155efd1fd36e53ab1df51b6e171e251"
+      }
+    },
+    {
+      "namespace": "stdo_skills",
+      "root": "stdo_skills",
+      "definition_id": "urn:stdo:product-definition:stdo-skills",
+      "commit_role": "source-B",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "subtree_tree": "121c71efa7063be9bbf1fd5758d19c46f6d52e2c",
+      "definition": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "stdo_skills/stdo_skills.json",
+        "sha256": "638397e839f8a39d0ddb5b0c5bbdcab12094d5bad5b4d9c520a83b984cd8bf97",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.2.zip",
+        "root": "stdo_skills",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 1640,
+            "sha256": "fdd747815a545675f77f76b18d2bd2fd523ea9938d4de3fe8c83e6b1cb09a474"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 1555,
+            "sha256": "df8ec2abb5e96e3342e47122cfd872af7e141b56bbba8521012b5622ab2655cc"
+          },
+          {
+            "path": "GETTING_STARTED.md",
+            "bytes": 10618,
+            "sha256": "cddfa4307186c0831bbc28e93a4fbea6bc357e929e9cb47e1e267baa63e55401"
+          },
+          {
+            "path": "INVENTORY.json",
+            "bytes": 6602,
+            "sha256": "2acf39f89e7c15862344fc06c7d2fc5aaa66fcc5ba49790e274ef030dfa02105"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4508,
+            "sha256": "a23cfb6965b5a128101e6c0da6611fcbb141681f4b1afeaa35a34c6b01f3a66e"
+          },
+          {
+            "path": "RELEASE.md",
+            "bytes": 3525,
+            "sha256": "9f2bee2457b06a16e90ee6653882236122cd1c2ffbd75ccf03c93d3c02645388"
+          },
+          {
+            "path": "build_tenants/README.md",
+            "bytes": 648,
+            "sha256": "1738a13504d6c572d40ee33e3f74ba9781b20401551711799ff89622f6d228ef"
+          },
+          {
+            "path": "build_tenants/claude/README.md",
+            "bytes": 704,
+            "sha256": "41d0a9b312e7c2e69042301fa6ecf97b8ab9e6e92982821489129f9232111833"
+          },
+          {
+            "path": "build_tenants/claude/current/DESIGN.md",
+            "bytes": 781,
+            "sha256": "db03deba7dbb5f02cb17ecbd91a008eb47687ca85c71a39511d087a13ab606cb"
+          },
+          {
+            "path": "build_tenants/claude/current/skills/stdo-project/SKILL.md",
+            "bytes": 1380,
+            "sha256": "2237dc3901d1b3505e711676042a25ce77372ed94f9a7a273c4065f16e4a4111"
+          },
+          {
+            "path": "build_tenants/claude/current/skills/stdo-project/references/code.md",
+            "bytes": 677,
+            "sha256": "63903db316f4e65cf9f47f4adc9f7dbe06c1634f753b00a32a2987c76fc5e622"
+          },
+          {
+            "path": "build_tenants/claude/current/skills/stdo-project/references/project.md",
+            "bytes": 984,
+            "sha256": "109198ac76a3facbf42fbecc31014ba454c530cf9e7225f5126d33cd43d40d16"
+          },
+          {
+            "path": "build_tenants/codex/README.md",
+            "bytes": 622,
+            "sha256": "24afb4a20bf12bd4dd8e3578d9d88e4255bba1419f539f18839c17193a57f176"
+          },
+          {
+            "path": "build_tenants/codex/current/DESIGN.md",
+            "bytes": 779,
+            "sha256": "4ebb06b172b2ca26e6faa9e2901d20766ae1f8bbd5aef17fe45b9c85d3f086ff"
+          },
+          {
+            "path": "build_tenants/codex/current/skills/stdo-project/SKILL.md",
+            "bytes": 1380,
+            "sha256": "2237dc3901d1b3505e711676042a25ce77372ed94f9a7a273c4065f16e4a4111"
+          },
+          {
+            "path": "build_tenants/codex/current/skills/stdo-project/references/code.md",
+            "bytes": 677,
+            "sha256": "63903db316f4e65cf9f47f4adc9f7dbe06c1634f753b00a32a2987c76fc5e622"
+          },
+          {
+            "path": "build_tenants/codex/current/skills/stdo-project/references/project.md",
+            "bytes": 984,
+            "sha256": "109198ac76a3facbf42fbecc31014ba454c530cf9e7225f5126d33cd43d40d16"
+          },
+          {
+            "path": "scripts/INSTALLATION.md",
+            "bytes": 8406,
+            "sha256": "b7ceea2cb744eff168c2498f2c66e6b95966aa900254f78eada2279d7e8bf703"
+          },
+          {
+            "path": "scripts/manage_skills.py",
+            "bytes": 18076,
+            "sha256": "d150556b60b67467f26cc66fdc2e09ae9f5e4351313bafb8cf90ebecef3163ae"
+          },
+          {
+            "path": "scripts/package.py",
+            "bytes": 5229,
+            "sha256": "da3e475e2e85cec5184ce76065d1ccad10dad181c199de8c70323e1137bfad71"
+          },
+          {
+            "path": "skills/stdo-context/BINDING.json",
+            "bytes": 75,
+            "sha256": "c293148fe010645681a981cf660f0b144a3d66f999f995f107227be6f42bfeea"
+          },
+          {
+            "path": "skills/stdo-context/SKILL.md",
+            "bytes": 4765,
+            "sha256": "7f5aef26f56880c6754086af6a01cdd75e2731dc36f49427bc7e66ae5cef2143"
+          },
+          {
+            "path": "skills/stdo-context/scripts/provider.py",
+            "bytes": 4622,
+            "sha256": "45d7eb587ef4257f45b44201dc33954b958b25778153ca1f6d904a31b69043f6"
+          },
+          {
+            "path": "specification/DESIGN.md",
+            "bytes": 3733,
+            "sha256": "cb7b1e277623fee068bb8106d8d6b71263b88d7a022fc3e5f537134cb5c788d5"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 2329,
+            "sha256": "c04856c0137ad852c0e591528068dc0af09d1412d31427e6b15e0ab22e75e3b1"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 797,
+            "sha256": "8f350c005614db78a584c7de73d684ff6d0e289ac8b64c9cc223fb4f7633da0d"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 5858,
+            "sha256": "eab6ba7e900d05cf73ac4095676d0ad75c1569295f28fe86c2d6059943bd9c06"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 3986,
+            "sha256": "4a9aade0265b59a8bf3f250b1857c0bd7e7ceead2f53c53b5ef7eedc0be5cfec"
+          },
+          {
+            "path": "specification/SOURCE_OWNERS.md",
+            "bytes": 950,
+            "sha256": "c8446fe900a00f2673b820d6094f4cb068aa9fad73b601275fc6a1c66e24d08e"
+          },
+          {
+            "path": "specification/composition/DEPENDENCIES.json",
+            "bytes": 627,
+            "sha256": "803ce52aa496a7e1912eca358d1c0b225465160e081db96705c7f19b4b0ad5e7"
+          },
+          {
+            "path": "specification/composition/PRODUCTS.md",
+            "bytes": 1576,
+            "sha256": "6e9ff183bd88b265b952b5993cc06b0fed5fc65355cfd00f2038378938a5899c"
+          },
+          {
+            "path": "specification/requirements/PURPOSE-INDEX-CONSUMPTION.md",
+            "bytes": 5908,
+            "sha256": "a843365899e6cf8ea75b6bbd2841b15b1bd6ef015f32228eb5197fdee06f5a80"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 3662,
+            "sha256": "38bfcfa5c4c8a89c7f29c2db488955d56622d4c673333673c256a0c794b33c68"
+          },
+          {
+            "path": "specification/requirements/SCENARIOS.md",
+            "bytes": 5165,
+            "sha256": "8b78121f3bc78bbb39336778b8d87b0f33d7e2f334838384301ec1977335da12"
+          },
+          {
+            "path": "stdo_skills.json",
+            "bytes": 4000,
+            "sha256": "638397e839f8a39d0ddb5b0c5bbdcab12094d5bad5b4d9c520a83b984cd8bf97"
+          }
+        ],
+        "identity_path": "INVENTORY.json",
+        "identity_sha256": "2acf39f89e7c15862344fc06c7d2fc5aaa66fcc5ba49790e274ef030dfa02105",
+        "member_count": 35
+      },
+      "source_public_identity": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "stdo_skills/specification/composition/DEPENDENCIES.json",
+        "sha256": "6e966661639e4a05936df1ad13785541cda699e4b0cd48904684ec2177071584"
+      }
+    },
+    {
+      "namespace": "a_c",
+      "root": "a_c",
+      "definition_id": "urn:stdo:product-definition:a-c-implementations",
+      "commit_role": "source-B",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "subtree_tree": "45fcf32e7b71948c5160f10305e44956fc334dbc",
+      "definition": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "a_c/stdo_a_c.json",
+        "sha256": "cc53f590a7fd577021f626c52b18c6aad1e7304b0dd9e7478887c1d5b49e9a36",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.2.zip",
+        "root": "a_c",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 2612,
+            "sha256": "ea38aee8a312abff5c17aba042be798540a69376085f9ed25caa08e71ad24caf"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 2612,
+            "sha256": "ea38aee8a312abff5c17aba042be798540a69376085f9ed25caa08e71ad24caf"
+          },
+          {
+            "path": "INSTALLATION.md",
+            "bytes": 1713,
+            "sha256": "8b745cc6a2346b4b42cd827d48eef21474bf73156bd7eea7a702f80de64d6976"
+          },
+          {
+            "path": "MIGRATION-3.1.md",
+            "bytes": 2437,
+            "sha256": "428da4ba13512b2335508f4f64569c109022c8c868d336cd796f1061e57ea4dd"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 6457,
+            "sha256": "6810997f1a8a610a3147bbb46a1430171eef4ac3e089ba3dae9733414b8d7073"
+          },
+          {
+            "path": "README.md",
+            "bytes": 1437,
+            "sha256": "82e322f27f9e8398c2b284fc04e9cb4a971c4b24b40f3502d441ee1f25df4305"
+          },
+          {
+            "path": "VERSION",
+            "bytes": 11,
+            "sha256": "1a992ade4db1f05d3acbaa426aa74c819fdef970e913728e1e5cc8fa125ec378"
+          },
+          {
+            "path": "build_tenants/README.md",
+            "bytes": 453,
+            "sha256": "bc2433d2c093b02ab53cf56ce02f9acddb9b22b42095b197cc0f5f7d0996f7d4"
+          },
+          {
+            "path": "build_tenants/graphify/README.md",
+            "bytes": 409,
+            "sha256": "f23f50a9b38583bcce41bcbdc760b61875da691aa73a4cfbfa3f6b717aaa5f03"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_code.py",
+            "bytes": 43911,
+            "sha256": "4d12be85a2ee3bff2e2630816a43d240b14de38c2407a5570267ec043f0e69df"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_explore.py",
+            "bytes": 9794,
+            "sha256": "6e4c80a71e69180c9af28aa1ea8aa1e779128971b21ab2c4232d86ccd56151ef"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_fs_boundary.py",
+            "bytes": 1621,
+            "sha256": "93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_generate.py",
+            "bytes": 83597,
+            "sha256": "6730ae99c1b98663ec4f056aac890bcc867bf57b94103ae0e9fcb97cee515f2f"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_graph.py",
+            "bytes": 52129,
+            "sha256": "d133fe1dd6d6581f88d94a35023d3e4ee494e61a1a4af2e6197641c2743de4cf"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_grounding.py",
+            "bytes": 22891,
+            "sha256": "9593457967ca45853f29b8e6bb8378bad49914f3983f877860f7efbe034f0fb0"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_project.py",
+            "bytes": 21280,
+            "sha256": "7bdb08310892963b3c22891a50b841ce232dbfb7920c474323d800fafdd8cfb8"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_repair.py",
+            "bytes": 36733,
+            "sha256": "a8d91ee11561092e656d11647f47cb1494ccdad50849a65bdb21c77e697d65f6"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_upstream.py",
+            "bytes": 7991,
+            "sha256": "69fb0850088f9c317ae9416048ffd3157e63ad55216af3704a94edb09bddec4a"
+          },
+          {
+            "path": "build_tenants/graphify/code/code-requirements.txt",
+            "bytes": 276,
+            "sha256": "f508937dfbfe84108aee664ddba1eb9577ebfc6007eb5b76a057378793218bca"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/author.schema.json",
+            "bytes": 11148,
+            "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/author.txt",
+            "bytes": 4240,
+            "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/extraction.schema.json",
+            "bytes": 4818,
+            "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/isolation.txt",
+            "bytes": 696,
+            "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/requirements.txt",
+            "bytes": 214,
+            "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2"
+          },
+          {
+            "path": "build_tenants/graphify/code/grounding_repair/patch.schema.json",
+            "bytes": 2037,
+            "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76"
+          },
+          {
+            "path": "build_tenants/graphify/code/grounding_repair/repair.txt",
+            "bytes": 2231,
+            "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/explorer.css",
+            "bytes": 13494,
+            "sha256": "2cfa511fa05d81c1c0d26126b3b47014030a211367b7a30b7b39d46681c9f95f"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/explorer.html",
+            "bytes": 5517,
+            "sha256": "cb37641587297deaa3431eb5b557944e7fd80272e845ffb3643a5f70b2cfd8ec"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/explorer.js",
+            "bytes": 37927,
+            "sha256": "980c41adb0ec3401d22fd4c3c8054545d01ba356c92379e74fad275e71883649"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/layered.css",
+            "bytes": 2632,
+            "sha256": "fb2f005f61947def6c6c2f66fc1b36e8d87a40876c2a4ad4ffe137c22a313474"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/layered.js",
+            "bytes": 12223,
+            "sha256": "134b082f87f15eca059432e07453ce27e5a963bd94c798ef32b1eafb9cdc8b80"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/3d-force-graph-1.80.1.min.js",
+            "bytes": 1389954,
+            "sha256": "13088340aad408156064fd120c3bc3a47c93a3cc45b8f132d6284b20e2223be9"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/3d-force-graph-LICENSE",
+            "bytes": 1072,
+            "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/THIRD_PARTY_NOTICES.txt",
+            "bytes": 38944,
+            "sha256": "5550725cb2e36431fc64242442a5e0fb94be7a2d93749c3f55cc99f2f68fee22"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/manifest.json",
+            "bytes": 576,
+            "sha256": "c8d258151ce83b7864d6579fd27d2f4ac79049cab7966a0db0e8eca3a6bc883f"
+          },
+          {
+            "path": "build_tenants/graphify/design/README.md",
+            "bytes": 1198,
+            "sha256": "1a3e05ee404fd8a7974e913c1b6268b4d2cd7a58eaebe28001a072496bf1bca1"
+          },
+          {
+            "path": "build_tenants/graphify/test_env/requirements-qualification.txt",
+            "bytes": 278,
+            "sha256": "9be107b68f56e3b7d7c1d6e3ac297daeda8484a8af8ceae783aead8355a7b3b5"
+          },
+          {
+            "path": "releases/v3.1.0-rc.2.md",
+            "bytes": 896,
+            "sha256": "6e18cbb7b375226906b0892aea2726f877fe70fa7a47c3e2dc17cc2d7361c489"
+          },
+          {
+            "path": "scripts/ac.py",
+            "bytes": 1118,
+            "sha256": "61214865a7b87c759f4069969038cbff8a91fcf61eae7844bc79bcb66d935f7f"
+          },
+          {
+            "path": "scripts/bootstrap.py",
+            "bytes": 5126,
+            "sha256": "1574501ff5b9990bac11bbfdbe9897791079a85b8d6c59093d5613c31a4a356a"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 1252,
+            "sha256": "15a64ecd0638a790bd8d8c2b82c198a4b73b3275f0f499608176aae9ed01232a"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 930,
+            "sha256": "dc2790eb8e812d638935a819b64128467a0025d227b521f1f4c93669874aac72"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 2101,
+            "sha256": "3a5fb4b2c98e089ae595ca69c34696b61b808db9b2f49ca6efb28849a4791bfc"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 1436,
+            "sha256": "403267c60a5d3cd18011d9af638f228704ccfbdb8ba48998d6d36e9b68e0c49a"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 1282,
+            "sha256": "89deb1f54881adc2600e1a2bdbf707bbeb5c1422a67e318e171342a475570364"
+          },
+          {
+            "path": "specification/requirements/code-realization.md",
+            "bytes": 4417,
+            "sha256": "096c4c0a6f5cbd380f860e78dd031614674a2b9ab4bf176f9fd48b02e52bcff2"
+          },
+          {
+            "path": "specification/requirements/project-use.md",
+            "bytes": 1225,
+            "sha256": "ca5fa75d647e7669c12b7864e29f9291e8c6f72bcf9c3e6dee878b8fd21ac6a7"
+          },
+          {
+            "path": "stdo_a_c.json",
+            "bytes": 3191,
+            "sha256": "cc53f590a7fd577021f626c52b18c6aad1e7304b0dd9e7478887c1d5b49e9a36"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "6810997f1a8a610a3147bbb46a1430171eef4ac3e089ba3dae9733414b8d7073",
+        "member_count": 48
+      },
+      "source_public_identity": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "a_c/PUBLIC_MANIFEST.json",
+        "sha256": "6810997f1a8a610a3147bbb46a1430171eef4ac3e089ba3dae9733414b8d7073"
+      }
+    },
+    {
+      "namespace": "stdo_representation",
+      "root": "stdo_representation",
+      "definition_id": "urn:stdo:product-definition:stdo-representation",
+      "commit_role": "source-B",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "subtree_tree": "c384331cd33f64f35a0b0350d0b77eff07c4e541",
+      "definition": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "stdo_representation/stdo_representation.json",
+        "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.2.zip",
+        "root": "stdo_representation",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 2606,
+            "sha256": "fb77ee4a4d392b1108fd497cfe62b52fa75e4143a2b92e36b65f64854bb41eac"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 2606,
+            "sha256": "fb77ee4a4d392b1108fd497cfe62b52fa75e4143a2b92e36b65f64854bb41eac"
+          },
+          {
+            "path": "INSTALLATION.md",
+            "bytes": 1825,
+            "sha256": "b073dabc08e63c27cb82f7ba1456abf11e21f9f98cdb56aaca851486c878fd04"
+          },
+          {
+            "path": "MIGRATION-3.1.md",
+            "bytes": 2468,
+            "sha256": "c58fab70f12f31d55bcc6a4e34b209b036814f0520a37edb85a45e0ace0d4a45"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 13643,
+            "sha256": "a9b9300ce18dd026a1e8602feda3715ee7e6b61a575127208c2f09a6f2a8adef"
+          },
+          {
+            "path": "QUICKSTART.md",
+            "bytes": 1929,
+            "sha256": "eb649dae9ddbc0ceb63c8128118c5db4f64f5e53ebec228474f409c9be7c65a9"
+          },
+          {
+            "path": "README.md",
+            "bytes": 1161,
+            "sha256": "13d283323548e2af38be00186ac49e1c26db3fc5f5cd6c43ff707b644ac6e5d2"
+          },
+          {
+            "path": "VERSION",
+            "bytes": 11,
+            "sha256": "1a992ade4db1f05d3acbaa426aa74c819fdef970e913728e1e5cc8fa125ec378"
+          },
+          {
+            "path": "build_tenants/a_c/design/CURRENT_MODEL.md",
+            "bytes": 1193,
+            "sha256": "943610e8a143431480452f6753d2edd9ec45e9a03f53fbb09530eea2a24ce125"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/COVERAGE.md",
+            "bytes": 3985,
+            "sha256": "ffd63b9c4821277df9b7ce431ad4e613bf679ee9bd01edaa724db27ce6b4f5da"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/GENERATION.json",
+            "bytes": 2271,
+            "sha256": "b64a123f29f6928120c35387bdf93843916487d49cdbe7de20fd3be40c5dfef5"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/README.md",
+            "bytes": 4446,
+            "sha256": "3c70eff96f35b5ed3634c433980de3fd9026b55cfd174ca4ca7d6fe1b1752347"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/SOURCE_BINDING.json",
+            "bytes": 13299,
+            "sha256": "a514cebf337d89728da3243ec507d3f8179bcd433c3f135598b039215a90f59f"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/authoring/ANSWER.json",
+            "bytes": 399571,
+            "sha256": "cac5767cab9297fc9b452e74869d75aa9dedc8800a9c173af8ffb6d811629e79"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/authoring/TASK.json",
+            "bytes": 461055,
+            "sha256": "5562fdd36722b2070a26964fe451d5b67738d494841e4150812794ba3a75ac5a"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/PROVIDER.json",
+            "bytes": 621,
+            "sha256": "d69c6d01db04b9e3f732c466dfaa9285ed7883fad973ab1f87093f013554218b"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/bindings.json",
+            "bytes": 176,
+            "sha256": "2d1cc1b438fc50c7926d219e2d44a929f1d5fbbb1f843cb01c4014b6b7169ac5"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/conversion-config.json",
+            "bytes": 1025,
+            "sha256": "3206610d6dcd15dfe71073bbe52927f52c918f61142a68612cd42be6988e7bcb"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/conversion-receipt.json",
+            "bytes": 566,
+            "sha256": "a8e8c41c33e66ad0846c68be5c9cd9b7910513bbb2c801fcdef9f07da5cfe3fc"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/map.json",
+            "bytes": 1117778,
+            "sha256": "17af65dc2c202533dfbaa14e06bc8809bf9381064e05622b32872bd956892ca2"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/program.json",
+            "bytes": 1072635,
+            "sha256": "efd5998e17ab05352757566a93dba139362b014487b6fd2ac2fa0552e23a0520"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/restored-model.json",
+            "bytes": 925947,
+            "sha256": "3d70fca6878e458a3a4e830ec0601adc0dd999d3dd38ebde355700ae749ff4e9"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/selected-projection.json",
+            "bytes": 20398,
+            "sha256": "fa90cfc9e63a6c162611863ccdace6a419aa697d5029e8cf518d76331cdfaac9"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/validation.json",
+            "bytes": 1057,
+            "sha256": "31891d55c3b3f868f4ee21d57cdcae0ef42185a0e822a2fdbbd125ecbe4a4a7b"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/01-prepare.json",
+            "bytes": 1512,
+            "sha256": "c8e574820d904d68e4a6011fc4be76ced91585a2082cd25118820a0741dde064"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/02-task.json",
+            "bytes": 516701,
+            "sha256": "f468693e2f9f1b6c29054240b74a1b0dbac7a93cb06b93101dd1c6e4192b2160"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/03-submit.json",
+            "bytes": 875,
+            "sha256": "bfb470d61df1e5c93088a14ad8c05e5dd9a8c703363023e6d8c45134be7a906b"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/04-build.json",
+            "bytes": 2739,
+            "sha256": "dff9f4b184e7db72ec850a0d0e71c90277054bb4272a98543033c390ef094802"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/05-status.json",
+            "bytes": 3279,
+            "sha256": "872a5586375faed57dde699cc27a9f1ebf3e013f354d92dce6ad0dc102ee2aac"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/commands/06-reuse.json",
+            "bytes": 2740,
+            "sha256": "661869a9fcc1f84dedd54c64949194f3c26231bf86cf1ce2b6e87dcb6316bf96"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/BUILD.json",
+            "bytes": 2249,
+            "sha256": "54a59b7fb637ba2d27e4116e2d849f5bcfaa99ab7083e18a09b5860bc4ad6538"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/PROJECT.json",
+            "bytes": 3743,
+            "sha256": "6f8c675789598df631e7d6f04437f9422f1bd4cff665265aa8dcc0c3b00df613"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/answers/chunk-eef9a8453157dd55aa9a.json",
+            "bytes": 411818,
+            "sha256": "f7b48aff733bc95ea6cd5ad47939683475f6e4519efebad09ad51ff1f46522d1"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/chunks.json",
+            "bytes": 314010,
+            "sha256": "8734e14e1065c1bdffc8be429db9c120da546dcae3bc8d0d512f836c15adc1de"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/ACTIVATION.md",
+            "bytes": 142205,
+            "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/SDLC_DEFAULTS.md",
+            "bytes": 11713,
+            "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/TICKETS.md",
+            "bytes": 101437,
+            "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/plan.json",
+            "bytes": 2204,
+            "sha256": "f1309edb11c47c70b9a9d1ea4af5f11bb82a61caaddcab98fbbb7a5362e092fa"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/carrier.json",
+            "bytes": 5735261,
+            "sha256": "e2f93140a748e2c85d66bd1be6a9a8f717105d9d1149d7f1a4cd2295b50f059b"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/coverage.json",
+            "bytes": 87222,
+            "sha256": "98098e8b5d8082f728001687456b84a2e58c879485c39a2cbcdca1fcb320e735"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/explorer.html",
+            "bytes": 3562244,
+            "sha256": "b0fddc7ab3882446c4090c1d72e411e096593803f676bd244eccaa14db944b23"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/model.json",
+            "bytes": 925947,
+            "sha256": "3d70fca6878e458a3a4e830ec0601adc0dd999d3dd38ebde355700ae749ff4e9"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/result.json",
+            "bytes": 943,
+            "sha256": "f40c5c70df5a211e439207df250a198f9c793a38aa5c570c5c912139b190364d"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/source-manifest.json",
+            "bytes": 1443,
+            "sha256": "f305919b7bbad205c65f8ed77c7823eb875d45192451b98987de9246607c7982"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/method-verification.json",
+            "bytes": 14755,
+            "sha256": "dda0f4f808ec7c692f97cce7a1a71c588e598ad3c6b5cfe7f82f759efef76df0"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/product-definition.json",
+            "bytes": 4484,
+            "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/source-manifest.json",
+            "bytes": 1443,
+            "sha256": "f305919b7bbad205c65f8ed77c7823eb875d45192451b98987de9246607c7982"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/manifest.json",
+            "bytes": 15471,
+            "sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/ACTIVATION.md",
+            "bytes": 142205,
+            "sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/AXIOMATIC_CALCULUS.md",
+            "bytes": 92360,
+            "sha256": "b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/SDLC_DEFAULTS.md",
+            "bytes": 11713,
+            "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.2/source/standards/TICKETS.md",
+            "bytes": 101437,
+            "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748"
+          },
+          {
+            "path": "build_tenants/axiom_indexer/README.md",
+            "bytes": 412,
+            "sha256": "d8eb6cb753b8a102a3fe9bdfc17d2438ee18296b300ab0411bc5ddd2e87105f0"
+          },
+          {
+            "path": "releases/v3.1.0-rc.2.md",
+            "bytes": 1332,
+            "sha256": "7dd9675679e21c0bda8df38facd2003dc1981433d0794d9b13882d120f477126"
+          },
+          {
+            "path": "scripts/build_31_rc2_visual.py",
+            "bytes": 12435,
+            "sha256": "12342d2f1db0b924f084d016959824559817d7667a3945efc5dddd7bfc089a22"
+          },
+          {
+            "path": "scripts/visual_31_rc2_annotations.json",
+            "bytes": 43192,
+            "sha256": "dcc2dcd938b2691c338ff8b3f1d9517f4aacb9c42e3c8b66baaef8ba6d41b8c6"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 1116,
+            "sha256": "bad1244e43c473b85a2c2bbca8d18ba873a98ff56685e4f2780a2eb8b65811f4"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 573,
+            "sha256": "5c77021a3da47024365b3bf48d4ab96392fdf4db0d4d224ab2144ee65b7640c8"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 2602,
+            "sha256": "8bb1f88351a44f823751d2ec9b2ea14932221b00e36d3a25dd2e9c17bd58685c"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 1419,
+            "sha256": "3ad10b92414735debbf3bebec6f0da09c520b52225a00b237e2749ffacb90de5"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 664,
+            "sha256": "827fd08360a9444f4dcab6c1577c2b9341e7c68bda147127ae6b8050d4ecee62"
+          },
+          {
+            "path": "specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
+            "bytes": 326,
+            "sha256": "5522fd151defd126b1474fdc7216d4f17786c490c2da36dd77060408890ffc68"
+          },
+          {
+            "path": "specification/requirements/REQ-P-CANDIDATE-VALIDATION.md",
+            "bytes": 449,
+            "sha256": "80a18d022dced000115d8544ff8f7ad9ebc5fa6e7113dc50fdc4d85a1b114fda"
+          },
+          {
+            "path": "specification/requirements/REQ-P-CURRENT-MODEL.md",
+            "bytes": 430,
+            "sha256": "107111ce83ec7bfd1a085041fc8d521ded23d329e13d1440e7fced21a1c6dcea"
+          },
+          {
+            "path": "specification/requirements/REQ-P-DOGFOOD-VERIFICATION.md",
+            "bytes": 354,
+            "sha256": "474ecacc1d56b0fd3257a7587ddb5998854c7b845b0f74b47a62ce7f01c76570"
+          },
+          {
+            "path": "specification/requirements/REQ-P-STDO-AUTHORING-MAP.md",
+            "bytes": 347,
+            "sha256": "49eecbecafee7f1999046b61b1bfe19a5531052ad932f9aac987ae8a23149d36"
+          },
+          {
+            "path": "stdo_representation.json",
+            "bytes": 4484,
+            "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "a9b9300ce18dd026a1e8602feda3715ee7e6b61a575127208c2f09a6f2a8adef",
+        "member_count": 67
+      },
+      "source_public_identity": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "stdo_representation/PUBLIC_MANIFEST.json",
+        "sha256": "a9b9300ce18dd026a1e8602feda3715ee7e6b61a575127208c2f09a6f2a8adef"
+      }
+    },
+    {
+      "namespace": "axiom_indexer",
+      "root": "axiom_indexer",
+      "definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "commit_role": "source-B",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "subtree_tree": "1d30f1102717c4a4f809f05fe352bf408576bc6f",
+      "definition": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "axiom_indexer/stdo_default.json",
+        "sha256": "553e099f2d7158ca5787a093f78e82aa633a66d67afa357525343a5bb0989b07",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.2.zip",
+        "root": "axiom_indexer",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 2622,
+            "sha256": "9b15a11cf443134525540bdbcb6fb6265faeeccc735bf956ba0ef20dd09784fc"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 2622,
+            "sha256": "9b15a11cf443134525540bdbcb6fb6265faeeccc735bf956ba0ef20dd09784fc"
+          },
+          {
+            "path": "INSTALLATION.md",
+            "bytes": 1084,
+            "sha256": "dbc36f23c7e5b4ed2497d6eca44fed583e7eac1e93dbe8a9b5de8ba903e62118"
+          },
+          {
+            "path": "MIGRATION-3.1.md",
+            "bytes": 2450,
+            "sha256": "60130f22b0569ba54b18b9ebee1d3150a2828e4453c58cbd24c71a8c7825fa79"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 1067,
+            "sha256": "f03c5982632c2ac76bc9023d6be1222ff76b43226079e023773a14e6bdcc144b"
+          },
+          {
+            "path": "README.md",
+            "bytes": 1072,
+            "sha256": "4730c4f53c99f822e6729c253fb4c219d07d2b4aca8584ea8ef188a1056e434a"
+          },
+          {
+            "path": "VERSION",
+            "bytes": 11,
+            "sha256": "1a992ade4db1f05d3acbaa426aa74c819fdef970e913728e1e5cc8fa125ec378"
+          },
+          {
+            "path": "build_tenants/core/README.md",
+            "bytes": 475,
+            "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d"
+          },
+          {
+            "path": "build_tenants/core/code/README.md",
+            "bytes": 475,
+            "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d"
+          },
+          {
+            "path": "build_tenants/core/code/ac.py",
+            "bytes": 36605,
+            "sha256": "e89ba6cf4011f22ea42c05e5ecd4512f8ecbc5ce507d6b3550aa7d26926e4027"
+          },
+          {
+            "path": "build_tenants/core/code/ac_model.py",
+            "bytes": 11858,
+            "sha256": "a8baaeb06e45957d486ecf2977294ac49b481762d65812330018127e60c27ad2"
+          },
+          {
+            "path": "build_tenants/core/design/README.md",
+            "bytes": 475,
+            "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d"
+          },
+          {
+            "path": "releases/v3.1.0-rc.2.md",
+            "bytes": 889,
+            "sha256": "2536eea51832e3702c89310f2245bde7e9178ad59a928a144ee0f9d2ff083459"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 658,
+            "sha256": "9d434d18fb65431e5568ada8537c096f319e6a6c06583035ee78532a9131027d"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 546,
+            "sha256": "169e83216d0c22c8fac7002b7a86a5c240df53389929a98f8fca4bf15a822907"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 1402,
+            "sha256": "224627a089b71f369b89e3a6ad8e08e64ec611bb01ac8b7d596f1c6f3725bb3e"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 1442,
+            "sha256": "aa1a32d8a5a055e14513fe1ad70f7d70a0ea05cc02e13fae80e933a56e11c35e"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 549,
+            "sha256": "7adb0e859283bb75d2ef0001af88ff54a3938940f64299d37366740c7508da63"
+          },
+          {
+            "path": "specification/requirements/REQ-P-MODEL-CONVERSION.md",
+            "bytes": 1663,
+            "sha256": "f196a3035f1148d3a9348533bcd65fb8cb358227f894f8af7d334a5853d011d9"
+          },
+          {
+            "path": "specification/requirements/REQ-P-PROGRAM.md",
+            "bytes": 242,
+            "sha256": "1ea0debf07c485a9ae80f4d6c278d962f63e2c724f1f4400d59c5dc8baba210b"
+          },
+          {
+            "path": "specification/requirements/REQ-P-PROJECTION.md",
+            "bytes": 262,
+            "sha256": "8dc8669ed540b79209103b91f45e277d892d506ed6e4f215ba4a5c7fb6b67238"
+          },
+          {
+            "path": "specification/requirements/REQ-P-RESOLUTION.md",
+            "bytes": 256,
+            "sha256": "e3e6c8c36ffd9702d70582e0a4a53294e55d8d752418a6c160637c887922e178"
+          },
+          {
+            "path": "specification/requirements/REQ-P-VALIDATION.md",
+            "bytes": 246,
+            "sha256": "8c6a1c639a64c7c1737df145718d65fa7915a96fb297fc9bd0d98b052757f797"
+          },
+          {
+            "path": "stdo_default.json",
+            "bytes": 3322,
+            "sha256": "553e099f2d7158ca5787a093f78e82aa633a66d67afa357525343a5bb0989b07"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "f03c5982632c2ac76bc9023d6be1222ff76b43226079e023773a14e6bdcc144b",
+        "member_count": 24
+      },
+      "source_public_identity": {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": "axiom_indexer/PUBLIC_MANIFEST.json",
+        "sha256": "f03c5982632c2ac76bc9023d6be1222ff76b43226079e023773a14e6bdcc144b"
+      }
+    }
+  ],
+  "assets": [
+    {
+      "name": "stdo-v3.1.0-rc.2-manifest.json",
+      "bytes": 15471,
+      "sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4"
+    },
+    {
+      "name": "stdo_toolchain-3.1.0rc2-py3-none-any.whl",
+      "bytes": 61596,
+      "sha256": "748c55fdedb9345ff9462228cf1169cb4edf4ce8f3b889fbf62aed5acc9fd3b6"
+    },
+    {
+      "name": "stdo-manager-constraints-v3.1.0-rc.2-python313.txt",
+      "bytes": 354,
+      "sha256": "2051b5374e86548a1e85d3cee1c58d43c1c223c7071551ea3e65fa068cd49255"
+    },
+    {
+      "name": "stdo-manager-runtime-v3.1.0-rc.2-macos-arm64-cp313.zip",
+      "bytes": 3000321,
+      "sha256": "f542be7b025bc5d178925a5c3503d5ca884c5f6a86dd3688885dfd944a73b25e"
+    },
+    {
+      "name": "stdo-products-v3.1.0-rc.2.zip",
+      "bytes": 2538211,
+      "sha256": "0336ae9e55dcf30fef3c0428ccb2ef7784adbee1f8032a537ccd3a620b915853"
+    }
+  ],
+  "asset_digest_policy": "This asset is excluded from its own hash inventory; final expected-assets and GitHub advertised digest bind it.",
+  "refs": [
+    {
+      "destination": "refs/heads/main",
+      "source": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f84ef0af1b91e84d211a2c187f97b237826de2b1"
+    },
+    {
+      "destination": "refs/tags/specification_methodology/v3.1.0-rc.2",
+      "source": "refs/tags/specification_methodology/v3.1.0-rc.2",
+      "object": "fb85e1b7a5717a6c92af236308c4d0b5809414fe",
+      "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/specification_methodology/v3.1.0",
+      "source": "refs/tags/specification_methodology/v3.1.0",
+      "object": "138b4216fbed1f35811d30424326b3ba123be437",
+      "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+      "immutable": false,
+      "expected_remote": "9bdc0ab48411145ed988e0475906825fb446889d"
+    },
+    {
+      "destination": "refs/heads/rc/specification_methodology/3.1.0",
+      "source": "refs/heads/rc/specification_methodology/3.1.0",
+      "object": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+      "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+      "immutable": false,
+      "expected_remote": "c1e0faaa8437c169031a476343c764614135cd93"
+    },
+    {
+      "destination": "refs/heads/release/specification_methodology/3.1.0",
+      "source": "refs/heads/release/specification_methodology/3.1.0",
+      "object": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+      "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+      "immutable": false,
+      "expected_remote": "c1e0faaa8437c169031a476343c764614135cd93"
+    },
+    {
+      "destination": "refs/tags/purpose_context/v3.1.0-rc.2",
+      "source": "refs/tags/purpose_context/v3.1.0-rc.2",
+      "object": "2e0b7b1e37d196b7077da04e430134c343a1a2a8",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/purpose_context/v3.1.0",
+      "source": "refs/tags/purpose_context/v3.1.0",
+      "object": "089a167be6c83d5101a271fa49be33d27fb0cac6",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "c033074d80a67367676374162096e9bcb3c2f2ea"
+    },
+    {
+      "destination": "refs/heads/rc/purpose_context/3.1.0",
+      "source": "refs/heads/rc/purpose_context/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "destination": "refs/heads/release/purpose_context/3.1.0",
+      "source": "refs/heads/release/purpose_context/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "destination": "refs/tags/stdo_skills/v3.1.0-rc.2",
+      "source": "refs/tags/stdo_skills/v3.1.0-rc.2",
+      "object": "ab806285517082a39dfff7403171319201d07f57",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/stdo_skills/v3.1.0",
+      "source": "refs/tags/stdo_skills/v3.1.0",
+      "object": "c22a225bdd6c78b0b069ceef3c9206129c67e484",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "291b1c04980d162b6a1a3b8502296400a1378958"
+    },
+    {
+      "destination": "refs/heads/rc/stdo_skills/3.1.0",
+      "source": "refs/heads/rc/stdo_skills/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "destination": "refs/heads/release/stdo_skills/3.1.0",
+      "source": "refs/heads/release/stdo_skills/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "destination": "refs/tags/a_c/v3.1.0-rc.2",
+      "source": "refs/tags/a_c/v3.1.0-rc.2",
+      "object": "1efa9888894a1fd0726d97970cff154ae919e4a7",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/a_c/v3.1.0",
+      "source": "refs/tags/a_c/v3.1.0",
+      "object": "6da4ffa5609d19ec90965f871325f7382e8a296f",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "a2fb41ac834518b90992a25980522f657c70fd87"
+    },
+    {
+      "destination": "refs/heads/rc/a_c/3.1.0",
+      "source": "refs/heads/rc/a_c/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "destination": "refs/heads/release/a_c/3.1.0",
+      "source": "refs/heads/release/a_c/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "destination": "refs/tags/stdo_representation/v3.1.0-rc.2",
+      "source": "refs/tags/stdo_representation/v3.1.0-rc.2",
+      "object": "65339feb036f7e2e29b843fc7ac8cfbde7eadb72",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/stdo_representation/v3.1.0",
+      "source": "refs/tags/stdo_representation/v3.1.0",
+      "object": "144a4b3034a234bdf7d844ada0ac44cc467012b4",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "4ba278353e9b7929abc0416ea5076f55307087f8"
+    },
+    {
+      "destination": "refs/heads/rc/stdo_representation/3.1.0",
+      "source": "refs/heads/rc/stdo_representation/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "destination": "refs/heads/release/stdo_representation/3.1.0",
+      "source": "refs/heads/release/stdo_representation/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "destination": "refs/tags/axiom_indexer/v3.1.0-rc.2",
+      "source": "refs/tags/axiom_indexer/v3.1.0-rc.2",
+      "object": "8468602886dbbd344b86310a625da5a9da5f762e",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/axiom_indexer/v3.1.0",
+      "source": "refs/tags/axiom_indexer/v3.1.0",
+      "object": "b48b9f35b10d38fc9fd37d40b38a0058f4ff8c5b",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "318aa1d4f021736eb2adad4d72d8d391c2c0d623"
+    },
+    {
+      "destination": "refs/heads/rc/axiom_indexer/3.1.0",
+      "source": "refs/heads/rc/axiom_indexer/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    },
+    {
+      "destination": "refs/heads/release/axiom_indexer/3.1.0",
+      "source": "refs/heads/release/axiom_indexer/3.1.0",
+      "object": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+      "immutable": false,
+      "expected_remote": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+    }
+  ],
+  "protected_predecessor_refs": {
+    "refs/tags/specification_methodology/v3.1.0-rc.1": "fca8d5e97cf2e945196aecdc33908bb190efdca5",
+    "refs/tags/specification_methodology/v3.1.0-rc.1^{}": "c1e0faaa8437c169031a476343c764614135cd93",
+    "refs/tags/purpose_context/v3.1.0-rc.1": "195000abd674d4615b3e29c2172d0cf8175718df",
+    "refs/tags/purpose_context/v3.1.0-rc.1^{}": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+    "refs/tags/stdo_skills/v3.1.0-rc.1": "d553a566c4d2df7fb3a4160467125f81486cfed7",
+    "refs/tags/stdo_skills/v3.1.0-rc.1^{}": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+    "refs/tags/a_c/v3.1.0-rc.1": "03da41ccf478a96ba8629f4e2aee8223aac10b8d",
+    "refs/tags/a_c/v3.1.0-rc.1^{}": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+    "refs/tags/stdo_representation/v3.1.0-rc.1": "c932ae2912d49b7ad652d092ebe84a2bc45a1315",
+    "refs/tags/stdo_representation/v3.1.0-rc.1^{}": "f68e8f47db69425205db313ba72fbc9cad94c2b9",
+    "refs/tags/axiom_indexer/v3.1.0-rc.1": "398d388e510e310ddc9d14a686c86da1a0e68599",
+    "refs/tags/axiom_indexer/v3.1.0-rc.1^{}": "f68e8f47db69425205db313ba72fbc9cad94c2b9"
+  },
+  "ref_graph_sha256": "3c8919055f70f0c9d099daa2459947aeaff78ee220ef4154696ee0c1937ce4ce",
+  "ref_graph_hash_scope": "Canonical JSON of products, refs and protected_predecessor_refs; excludes external qualification-file references.",
+  "qualification": {
+    "declared_prepublication_claims": "Supported within the attached exact-subject assessment and retained limits.",
+    "evidence": [
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md",
+        "sha256": "e9ddce4e5600bc45f5cb0a2fd02214d26005b4b0222727c3dd970dd184712030"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/PREPUBLICATION.md",
+        "sha256": "3caa68e6ef912642dd0511fbc4691d58f8566ee3d14bba56218e3598dd642e75"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/PREDECESSOR_DISPOSITIONS.json",
+        "sha256": "5e5a43ae20626f22b03a31dd302e7a94b7a7abd92cac8f26d893e64a3cdee30b"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/NATIVE_BINDING.json",
+        "sha256": "a96acecc7ef258ccd2c80560534715a82482311496228ed46b7cdc07ba9f8524"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/method/SOURCE_DELTA.json",
+        "sha256": "9c2343ce908d75a3c9491332201b36d30b86f6cae7b63ef8503ed7ed5c21b5a9"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/method/GUIDE_FINDINGS.json",
+        "sha256": "2015d135923a0622a208eb91d9fc7a2057e84084c05c2a8a9be0cf904892898c"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/RESULT.json",
+        "sha256": "0e8f5dc08aa4e044f41d0dfd386048e21e61a591964b2639bb0f9eba4b6d2d6a"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/context/FINAL_FREEZE.json",
+        "sha256": "1f7bf0452fcc9ddac64ae97925a02c286ea383c9173b232fc92dacc4aa06f3f0"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/visual/RESULT.json",
+        "sha256": "39825d1e3505d427b4b4466794fbe27e5ac2c96b898f0b75b562569a9e22bb77"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/visual/PREDECESSOR_COMPARISON.json",
+        "sha256": "45d42282c6c8c4bb3e56bfaf084f764012c10c53b24d7c608eb4a042f52dcf2e"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/manager-checks/RESULT.json",
+        "sha256": "fb06aa3ed5ed9316a089bc3947a6e31259877983263a0684180a23e103d45093"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/ref-tests-01/RESULT.json",
+        "sha256": "2c7892c89e08650901c70ce75ba0902536d04b912fa985fbc35014e83e59a5e6"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/SOURCE_FIRST.json",
+        "sha256": "eaff3de01aee3fa75ceb575c4b9bbd90bc16453ec62f3b7250dc7bfe6438ba84"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/ASSESSMENT.md",
+        "sha256": "e7636ededbad4e5cd1cc48cee0b39e1120518a84cf416a806464648e941a33c6"
+      },
+      {
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/VERDICT.json",
+        "sha256": "4280867301344a2d7b112331fe2aa70fa43e89ef8470dd038181cdefa8ede9c3"
+      }
+    ],
+    "exact_query_assessments": [
+      {
+        "name": "acceptance",
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/acceptance.json",
+        "sha256": "3d164d94ae985184d0f520f39e3437411b28cee948ff571c4f04eeabf0780e17",
+        "assessment": {
+          "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+          "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+          "query_sha256": "58ce3e20119f98c411da8f0c04f693342e92a5821527635f51829f8d33f6a63f",
+          "status": "supported",
+          "evaluator": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called",
+          "evidence": [
+            "delivered context/acceptance 45b4ba3facddf611f9357dc0da9f462dd425dd37012b9f99debbf530ea884f7d",
+            "operator readback 8e9e7595c2cc5aff1d263e52e425037d79f51e9ac639cb6b6e960b530c47db51 (only W35.when changed)",
+            "EVALUATION b856cf04... section 5; RELEASE eea362e1... sections 8-9; FOUNDATIONS 7fe9ecf2... Conjunction",
+            "BOUNDARY_SCENARIOS db8547fc..."
+          ]
+        }
+      },
+      {
+        "name": "python",
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/python.json",
+        "sha256": "f1afd302c38a6e68830e464a3ceabbbb38a655d367fe86f66f215d516f958ccb",
+        "assessment": {
+          "index_sha256": "e6a71a11163b84e9906591cd02cc448949f289382814414976bc261aaeb41ecd",
+          "corpus_sha256": "108aa7915a7c236c27934f52531f43d271b94a0ad4366706a2e4fb222f8ca07e",
+          "query_sha256": "84b5d4b993d24b068e0e601f00f4b75cbeab4cd0475482256410b279be60f409",
+          "status": "supported",
+          "evaluator": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called",
+          "evidence": [
+            "delivered context/python da7fb2666bfa68a694d7387e5ec725bdf52724d3407a6f49a3035603b12e31e9",
+            "operator readback: zero rule changes, 16 owners byte-equal, facts and guard equal",
+            "fixture REQUIREMENTS ab9a26eb..., DESIGN 0a91a535..., FRAME_BASIS 4c04bc7a...",
+            "RC1 python verdict on index 717857ed... cited only"
+          ]
+        }
+      },
+      {
+        "name": "qualification",
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/qualification.json",
+        "sha256": "edf7f87f97b970925025c6e3d9ad7a06786b6f7700dccc20fa81c114a9fe6354",
+        "assessment": {
+          "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+          "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+          "query_sha256": "0049b6e2e05c603e7c786efa785bfbe98ceaba46337a7cb0c59b723e0c83ecfe",
+          "status": "supported",
+          "evaluator": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called",
+          "evidence": [
+            "delivered context/qualification 329c66d9a3ad266a06b91cf6698f22712856c669ce36e1af6aca008cffaae93b",
+            "operator readback 8e9e7595..."
+          ]
+        }
+      },
+      {
+        "name": "release",
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/release.json",
+        "sha256": "bffaa2d4c07062f2e604deab52c3b74bcd55c1086ecbf23b08cfc6497b26e4d9",
+        "assessment": {
+          "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+          "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+          "query_sha256": "428f2d98b8628bb2889cc4435773c572cb4d108471ff204a5610208082c4df8b",
+          "status": "supported",
+          "evaluator": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called",
+          "evidence": [
+            "delivered context/release 15a513924fd91ecbff2716867dbe504034e41ed3bb5e89b6ed591f9a2774c8dd"
+          ]
+        }
+      },
+      {
+        "name": "sdlc",
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/sdlc.json",
+        "sha256": "2b64f93475a2b58df0b10e7f3b4345badf105cfae23ffec2458bec4f2086d80a",
+        "assessment": {
+          "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+          "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+          "query_sha256": "9e81574d3328ae77260769130ea16045ab84dc9594815aab8449bdb010f769a5",
+          "status": "supported",
+          "evaluator": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called",
+          "evidence": [
+            "delivered context/sdlc 043f28a9d0662cfc54f81d37b77bb1516661b9472be3731888a6cecedeecce7b",
+            "fixture WORK_CONTRACT 65557c70..., FRAME_BASIS 4c04bc7a...",
+            "RC1 VERDICT a09b8f04... cited only"
+          ]
+        }
+      },
+      {
+        "name": "work",
+        "commit": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+        "path": ".ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/work.json",
+        "sha256": "fc9674b9d34b96b438ed58f373f0675ef14768de09bf5e9e08a8afaedd762ae9",
+        "assessment": {
+          "index_sha256": "39f2432c76dd74a2db4c94b773640d2d06edc311d6f850a71a603e1f60d2571c",
+          "corpus_sha256": "f281ac7afbcece39b3febaae0e28bda568d38868ebebb2d72c35b778ff7558eb",
+          "query_sha256": "650ed9eda70cc471c75ff528aa81d9650576ed71cffb41341ce2c07e0d8d0c1c",
+          "status": "supported",
+          "evaluator": "Claude-family (env claude-opus-5-5; CLI metadata authoritative); cross-family to Codex Writers; same family as source-first and RC1 assessors; no tools; advisor exposed, not called",
+          "evidence": [
+            "delivered context/work a56e6e3855bdfff791a2228958a07f166dfd6ec8db45cac91e6c6d463de7d0c8"
+          ]
+        }
+      }
+    ],
+    "post_tag_review": {
+      "report": "# RC2 final identity and pre-push assessment (identity-01)\n\n## Verdict\n\nThe bounded prepublication identity of native A `21a9d4b9\u2026`, source B `4a7f7cdf\u2026` and ref graph `3c891905\u2026` is **supported**, with the limits listed below. Every identity I checked across the supplied records agrees, and I found no material counterexample.\n\nI recomputed no hashes. Every digest, equality and test outcome below was computed by the operator or a Writer, and Writer records count as claims. My contribution is checking that those records agree with each other and with the governing law.\n\nThe prior actual Claude semantic result (session `004386e3\u2026`) still applies to its exact six bindings. The three unknown-boundary queries are still refused and uncovered. Publication, public acquisition, adoption and human acceptance of the exact cut have not happened, and this report authorizes none of them.\n\n## Standing\n\n- **Who I am.** A Claude-family assessor, cross-family to the Codex Writers. I am the same family as the earlier source-first and semantic assessors, so confirmation bias is possible.\n- **Tools.** I used none. An advisor tool was exposed in this session; I did not call it, because the instructions say not to use tools.\n- **Host context.** The host added an account reminder, which I did not use. Any other hidden host context is unmeasured.\n- **Reading order.** Sources and candidate arrived in one packet. The only expectations recorded before the candidate was exposed are the two fixed source-first reports.\n\n## 1. Product, member, dependency and version identities\n\n**Supported.**\n\n- **Six Products.** The six namespaces in `REF_PLAN`, `COHORT_DRAFT`, the operator readback and `COHORT_INPUTS` are the same set, and `ref_transaction.NAMES` refuses any other population.\n- **Construction basis.** All six Product Definitions pin `stdo://releases/v3.0.4/`, manifest `102817a3\u2026`. `cohort_record.py` enforces this.\n- **Companion member counts.** I counted the members myself:\n  - Purpose Context: 51 (49 byte-equal to source, plus `PUBLIC_MANIFEST.json` and `SOURCE_RELATION.json`)\n  - Skills: 35 (34 listed files plus `INVENTORY.json`, which does not list itself)\n  - Representation Tools (`a_c`): 48\n  - STDO Representation: 67\n  - Axiom Indexer: 24\n  - Total 225, which matches `PRODUCT_EXTRACTION` and `PREPUBLICATION`. Purpose Context plus Skills (51 + 35) gives the Writer's figure of 86.\n- **Native cut.** The native has 94 members and manifest `b691b024\u2026`. That manifest is named identically in `NATIVE_BINDING`, the cohort, the companion inventory, Purpose Context's `SOURCE_RELATION.native_method`, Skills' `INVENTORY.release.native_method` and STDO Representation's embedded `source/manifest.json`.\n- **Version suffix.** The `VERSION` files of the three visual Products share digest `1a992ade\u2026` (11 bytes, consistent with `3.1.0-rc.2\\n`). The manager version is the PEP 440 equivalent `3.1.0rc2`.\n- **Dependency pins.**\n  - Skills' portable `DEPENDENCIES.json` pins Purpose Context `adb0f592\u2026` and `a_c` `6810997f\u2026`. These equal the archive identity files and the cohort's dependency edges.\n  - STDO Representation's edges pin `a_c` `6810997f\u2026` and Axiom Indexer `f03c5982\u2026`, which also equal the inventory.\n  - The cohort edges were produced by string replacement on the RC1 draft. I spot-checked every edge selection against the inventory and found no leftover `rc.1` value. No mechanical check of this exists beyond my reading.\n\n**Declared transformations:**\n\n- **Purpose Context: supported, with complete accounting.** I reconciled every Purpose Context file in `FINAL_FREEZE` against `SOURCE_RELATION`. Each one is either a byte-equal member, one of the 46 enumerated exclusions (historical indexes, test scripts, the development corpus), the declared filtered catalog (`5ce764b2\u2026` to `1f9beecd\u2026`), or the replaced public manifest (`a5f9479a\u2026` to `adb0f592\u2026`).\n- **Skills: partly declared.** The `DEPENDENCIES.json` change (`6e966661\u2026` to `803ce52a\u2026`) is declared in `INVENTORY.source_transformations`. However, four source members in `FINAL_FREEZE` are absent from the portable package and are declared nowhere in the supplied bytes:\n  - `release/3.0.5/README.md`\n  - `release/3.0.5/manifest.json`\n  - `release/3.0.5-rc.1/README.md`\n  - `release/3.0.5-rc.1/manifest.json`\n\n  `package.py` may define the selection, but it was not supplied (finding F2).\n\n## 2. Native A and source B\n\n**Supported.**\n\n- **Native A.** Commit `21a9d4b9`, repository-root tree `2c44fdca`, Product subtree `specification_methodology/v3` with tree `61efe71a`. Annotated tag `fb85e1b7` peels to A (operator-verified), and A's parent is RC1 `c1e0faaa`.\n- **Source of A.** A's subtree tree equals the `build_tenants/common` tree of source checkpoint `31e6f40e`. The cohort records this as `native_source_tree`.\n- **Source B.** The five derived Products sit at B (`4a7f7cdf`), and all five subtree trees were verified by the operator.\n- **Remote main.** `prepare` requires remote `main` (`f84ef0af`, the start of the admitted continuation) to be an ancestor of B.\n- **Definition versus subject.** The `specification_methodology` Product Definition is read from B (`stdo_3.json`), while its release subject is A. This split is declared and lawful: a Product Definition is a source-project surface, not the released artifact.\n- **Gaps.** Nothing supplied shows that `31e6f40e` is an ancestor of B, or that B's `build_tenants/common` still equals `61efe71a` (that is, no source drift after A was cut). Neither undermines A's identity. Both bear on the claim that the source freeze is still current (G1).\n\n## 3. Mapping the prior assessment onto the packaged context\n\n**Reuse applies to the six bindings.**\n\n- **Index bytes.** The packaged raw `INDEX.json` bytes (`84a4043c\u2026` and `e307802e\u2026`) equal source B. Their canonical hashes `e6a71a11\u2026` and `39f2432c\u2026` are the ones the assessment bound.\n- **Context bodies.** `FINAL_PACKAGE_SEMANTIC_READBACK_02` (78 operations) shows that all six JSON and Markdown context pairs equal the frozen bodies on both hosts. The Markdown digests are exactly the ones the assessment cites (for example acceptance `45b4ba3f\u2026`). This closes the prior unperformed item \"Claude-host delivery\".\n- **Assessed archive replay.** In the extracted-archive run (80 operations; I counted 40 per host), each envelope is consumed with `covered:true` and the selected-rule counts match the assessment: 94 / 20 / 31 / 31 / 31 / 26.\n- **Refusals in that run.** The RC1 Python assessment is refused against RC2, so no relabelling occurs. A wrong public pin, a wrong native selection, overflow, collision and tampering are all refused.\n- **Residual RM1.** The assessed Markdown bodies (for example `3b067c9a\u2026`) differ from the frozen bodies I judged. The operator's claim of unchanged semantic payload covers JSON fields plus the four annotation fields. Nothing shows the Markdown difference is annotation-only. This is plausible if the Markdown is a deterministic rendering, but it is not demonstrated.\n- **Unknown-boundary refusals.** All three still refuse on both hosts with exit code 3, status `incomplete`, `covered:false` and no delivery. Two caveats:\n  - Their output bytes (`4d80b07a\u2026`, `80bd7dea\u2026`, `102c1820\u2026`) differ from the refusal records I judged earlier (`203f6455\u2026`, `74c52540\u2026`, `ab30b694\u2026`). My earlier finding that the refusals were correct applies to those earlier bytes.\n  - That earlier finding relied on the catalog `family_guard`. The catalog has since been filtered to `1f9beecd\u2026`, and nothing supplied shows the RC2 SDLC entry's guard is unchanged (G2).\n\n## 4. Current release claims and predecessor conservation\n\n- **Ledger counts.** I counted 153 claims: 113 Python plus 40 SDLC. 152 are conserved with identical rule digests, and W35 is `superseded` with only its `when` field changed.\n- **Conserved rules.** For the 152 byte-identical rules, `conserved` meets the reuse condition of RELEASE \u00a79 \u00b62 (owner text and consumer bindings unchanged). This depends on the claimed equality of the runtime, which I did not see compared against RC1.\n- **W35.** RELEASE \u00a79 defines `superseded` by an *accepted* successor relation. Before human acceptance of the exact cut, this disposition is a claim that qualification evaluates, not a closed result. The ledger states as much itself (F3).\n- **Disposition category.** \"Stale 35-rule guides: `not applicable`\" mislabels the category. The RC1 claim, corrected guides with 52 passing tests, is in substance retained, which makes it `conserved`. The predicate is sound; only the value name is wrong (F4, minor).\n- **Manager.** The claim of \"unchanged behaviour\" is still unverified. The manager result shows that the 13 modules match source and that third-party bytes are conserved, but gives no RC1-to-RC2 behaviour comparison (G3).\n- **Native release note: prospective claims (condition C1).** Each of the following must be true at publication:\n  - an atomic, guarded 25-ref transaction takes place;\n  - the GitHub download URLs on tag `specification_methodology/v3.1.0-rc.2` resolve;\n  - the cohort \"distinguishes \u2026 installed adapter checks\".\n\n  The draft cohort's committed evidence includes `context/RESULT.json` (the unassessed 78-operation run). It does not include `assessed-packaged/RESULT.json` or `PRODUCT_EXTRACTION.json`, which are reachable only through a `PREPUBLICATION.md` link and a hash in the ref plan's `qualified_files` (F1). A is immutable, so if C1 fails the only remedy is a higher RC.\n\n## 5. Tags, peels, the 25-ref graph and remote expectations\n\n**Supported.**\n\n- **Ref count.** 25 = `main` + 6 \u00d7 (cut, selector, rc branch, release branch).\n- **Cut tags.** The six cut tags are annotated, create-only, and expect remote absence (`--force-with-lease=<ref>:` with an empty value means the ref must not exist).\n- **Selectors.** All six selectors are new annotated objects, separate from the cut tags. They peel to the same commit as their cut and are leased against the RC1 selector objects (for example `9bdc0ab4\u2026`). `prepare` verified that each RC1 selector peels to the RC1 commit, so this is a move from a lower ordinal.\n- **Branches.** The rc and release branches are leased against `c1e0faaa` (native) or `f68e8f47` (derived).\n- **Protected refs.** The 12 protected entries (6 RC1 tags and their peels) match `ACTIVATION`: `fca8d5e9\u2026` peels to `c1e0faaa\u2026`, and the other five peel to `f68e8f47\u2026`.\n- **Agreement across records.** The values in `REF_PLAN`, `COHORT_DRAFT` and the operator readback agree field for field. The graph hash `3c891905\u2026` was computed by the operator, and its scope correctly excludes `qualified_files`.\n\n## 6. Release helper and its finite tests\n\nThe helper is proportionate and fails closed.\n\n**What it does:**\n\n- `check` re-reads the remote at publish time, so the post-tag, pre-push gate is re-run immediately before the push.\n- It verifies the population, a 25-ref count with no duplicates, the destination set, annotation, mutability flags, Product trees, local objects, an exact remote expectation for every destination, and the `qualified_files` digests.\n- `publish` makes a single `git push --atomic` with a per-ref lease and no fallback, then reads back every object, peel and protected ref.\n\n**Fixture results.** Eight scenarios pass against a real local Git transport, using the same tool digest `b3efdcdb\u2026`:\n\n- a higher ordinal refuses before any mutation;\n- a missing predecessor destination refuses;\n- an incomplete graph refuses;\n- evidence drift refuses;\n- lease drift refuses, and no partial RC2 appears;\n- a pre-receive rejection leaves the remote unchanged;\n- a successful publish writes exactly 25 refs and preserves RC1.\n\n**Limits (F5):**\n\n- The higher-ordinal check scans only project-qualified namespaces, not unqualified historical `refs/tags/v3.1.0-rc.N`.\n- `check` does not verify a tag object's internal name or message.\n- `check` does not compare the plan's own digest. Publication must use plan bytes `882bb34f\u2026`.\n- `qualified_files` are hashed from the working tree, which says nothing about whether they are committed.\n- In the fixture, `native_predecessor == source_predecessor`, so a swap between the native and derived roles in the predecessor check would go undetected.\n- The fixture runs over local file transport only. Atomic-push support on GitHub is not tested.\n\n## 7. Atomic publication and RC1 preservation\n\nAtomic publication and RC1 preservation are shown only in the local fixture. Production publication has not been performed.\n\n## 8. Avoiding self-referencing digests in the external cohort\n\n**Supported.**\n\n- The cohort asset is excluded from its own asset list.\n- The native links to the cohort by URL, not by digest.\n- `INVENTORY.json` and the Purpose Context public manifest do not inventory themselves.\n- The cohort's `post_tag_review` field embeds this report, and this report contains no cohort digest.\n\n**Tension with the law (F6).** The RC-profile step 4, in both the 3.0.4 and the RC2 RELEASE text, lists \"cohort record\" among the content frozen in commit B. In this release, B freezes `COHORT_INPUTS` and the evidence, while the final binding of tags and assets is an external asset. That is necessary, because the record binds B's own tags. The RC2 text explicitly endorses external binding only for the stable, embedded-asset case. The release authority should state this reading in `RELEASED.md`. I do not judge it a blocker.\n\n## Local construction versus what still has to happen\n\nWhat is supported now is **local construction and prepublication qualification of identity** only.\n\nStill required before any public claim can be made:\n\n- the fresh-fetch re-check and the atomic push;\n- public readback of the refs;\n- a normal GitHub release with all six assets;\n- downloading those assets and comparing their hashes;\n- a fresh isolated install and replay;\n- verifying condition C1.\n\nHuman acceptance of the exact cut and consumer adoption remain separate decisions after that.\n\n```json\n{\n  \"subject\": {\"native_commit\": \"21a9d4b93c5adef1e84a369360a99176b98793c5\", \"source_carrier\": \"4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a\", \"ref_graph_sha256\": \"3c8919055f70f0c9d099daa2459947aeaff78ee220ef4154696ee0c1937ce4ce\"},\n  \"status\": \"supported\",\n  \"status_scope\": \"Bounded prepublication identity only, by cross-record consistency of operator/Writer-computed digests; no hash recomputed; not publication, acquisition, acceptance or adoption\",\n  \"claim_results\": [\n    {\"claim\": \"Six-Product membership, 225 companion members (51/35/48/67/24), 94-member native, manifest b691b024..., 3.0.4 construction basis on all definitions, version suffix 3.1.0-rc.2 / 3.1.0rc2\", \"result\": \"supported\"},\n    {\"claim\": \"Dependency pins PC adb0f592, a_c 6810997f, axiom f03c5982, native b691 across Skills, PC, cohort edges and inventory\", \"result\": \"supported\", \"limit\": \"edges derived by string replacement; only my reading checks them; Representation-owned pin contracts not supplied\"},\n    {\"claim\": \"PC portable projection fully declared (49 equal, catalog filtered, manifest replaced, 46 exclusions)\", \"result\": \"supported\"},\n    {\"claim\": \"Skills portable projection fully declared\", \"result\": \"unknown\", \"basis\": \"DEPENDENCIES transform declared; four release/3.0.5* source members omitted without declaration in supplied bytes (F2)\"},\n    {\"claim\": \"Native A / source B distinction and subtree identities\", \"result\": \"supported\", \"gap\": \"G1: checkpoint 31e6f40e ancestry to B and absence of build_tenants/common drift in B not shown\"},\n    {\"claim\": \"Prior assessment maps onto packaged contexts on both hosts\", \"result\": \"supported\", \"residual\": \"RM1: assessed Markdown differs from judged bodies; annotation-only delta not demonstrated\"},\n    {\"claim\": \"Predecessor dispositions: 152 conserved, W35 superseded\", \"result\": \"supported_as_claims\", \"basis\": \"RELEASE 9 para 2 retain condition for byte-identical rules; W35 superseded pending accepted successor relation (F3); guides disposition mislabelled (F4)\"},\n    {\"claim\": \"25-ref annotated graph, peels, create-only absence, leases to RC1 objects, 12 protected refs\", \"result\": \"supported\"},\n    {\"claim\": \"Guarded atomic publication preserving RC1\", \"result\": \"supported_local_fixture_only\"},\n    {\"claim\": \"External cohort without a self-referencing digest\", \"result\": \"supported\", \"note\": \"F6 tension with step 4 wording\"},\n    {\"claim\": \"Native release-note prospective claims\", \"result\": \"unknown\", \"condition\": \"C1\"},\n    {\"claim\": \"Manager behaviour unchanged from RC1\", \"result\": \"unknown\", \"gap\": \"G3\"}\n  ],\n  \"semantic_reuse\": {\n    \"source\": \"assessment/semantic-01/ASSESSMENT.md e7636ede..., session 004386e3-1178-4a56-9456-1fa4fbde5ce4\",\n    \"applies\": true,\n    \"bindings\": [\n      {\"name\": \"acceptance\", \"index\": \"39f2432c...\", \"corpus\": \"f281ac7a...\", \"query\": \"58ce3e20...\", \"status\": \"supported\"},\n      {\"name\": \"qualification\", \"index\": \"39f2432c...\", \"corpus\": \"f281ac7a...\", \"query\": \"0049b6e2...\", \"status\": \"supported\"},\n      {\"name\": \"release\", \"index\": \"39f2432c...\", \"corpus\": \"f281ac7a...\", \"query\": \"428f2d98...\", \"status\": \"supported\"},\n      {\"name\": \"work\", \"index\": \"39f2432c...\", \"corpus\": \"f281ac7a...\", \"query\": \"650ed9ed...\", \"status\": \"supported\"},\n      {\"name\": \"sdlc\", \"index\": \"39f2432c...\", \"corpus\": \"f281ac7a...\", \"query\": \"9e81574d...\", \"status\": \"supported\"},\n      {\"name\": \"python\", \"index\": \"e6a71a11...\", \"corpus\": \"108aa791...\", \"query\": \"84b5d4b9...\", \"status\": \"supported\"}\n    ],\n    \"refused_uncovered\": [\"missing-boundary\", \"null-boundary\", \"ill-typed-boundary\"],\n    \"refusal_note\": \"Current refusal bytes differ from the judged ones; standing is mechanical (incomplete, no delivery); catalog family_guard equality after filtering not shown (G2)\",\n    \"retained_residuals\": [\"R1\", \"R2\", \"R3\", \"R4\", \"R6\", \"A1\", \"A2\", \"RC1-F1/F2/F3/F4/F5/F7\", \"visual limits\"],\n    \"not_relabelled\": \"RC1 judgments keep their original subjects; predecessor assessment refused at runtime\"\n  },\n  \"findings\": [\n    {\"id\": \"F1\", \"class\": \"bounded\", \"summary\": \"Draft cohort does not bind assessed-packaged/RESULT.json (953e9408) or PRODUCT_EXTRACTION.json (0aba0945) as evidence, yet the native note claims the cohort distinguishes installed adapter checks\", \"smallest_correction\": \"Bind both into the final cohort evidence by digest (committed, if they are in B)\"},\n    {\"id\": \"F2\", \"class\": \"bounded\", \"summary\": \"Skills portable package omits four release/3.0.5* source members without a declared exclusion\"},\n    {\"id\": \"F3\", \"class\": \"bounded\", \"summary\": \"W35 'superseded' presupposes an accepted successor relation; it remains a claim until qualification and acceptance\"},\n    {\"id\": \"F4\", \"class\": \"minor\", \"summary\": \"Retained guide repairs disposed 'not applicable' where the retained claim is in substance 'conserved'\"},\n    {\"id\": \"F5\", \"class\": \"limit\", \"summary\": \"Helper: unqualified-namespace ordinal not scanned; tag name/message not checked; plan digest not self-checked; working-tree hashing; fixture does not discriminate predecessor roles; local transport only\"},\n    {\"id\": \"F6\", \"class\": \"interpretation\", \"summary\": \"External final cohort versus RC-profile step 4 'cohort record frozen in commit B'; to be stated by the release authority\"}\n  ],\n  \"residuals\": [\"G1 source-freeze currency in B\", \"G2 catalog family_guard after filtering\", \"G3 manager behaviour\", \"RM1 Markdown annotation delta\", \"PREPUBLICATION_QUALIFICATION.json (53a70421) content not supplied\", \"All digests operator-computed\", \"Same-family confirmation-bias risk\", \"Hidden host context unmeasured; no adequate-attention or clean-room claim\"],\n  \"unperformed\": [\"Fresh ls-remote and production atomic push\", \"Remote readback\", \"GitHub release\", \"Public download and hash comparison\", \"Fresh isolated install and replay (manager, native, both adapters, visual)\", \"Final cohort binding\", \"C1 verification\", \"Human exact-cut acceptance\", \"Consumer adoption\"],\n  \"publication_conditions\": [\n    \"Publish only from REF_PLAN bytes 882bb34f with ref graph 3c891905; check re-run on fresh remote; any lease or remote mismatch stops publication, followed by refetch and full requalification\",\n    \"qualified_files unchanged, including PREPUBLICATION_QUALIFICATION.json 53a70421\",\n    \"Remote must accept --atomic; otherwise refuse with no sequential fallback\",\n    \"Post-push readback: 25 objects and peels exact; 12 RC1 protected refs unchanged\",\n    \"Normal GitHub release on tag specification_methodology/v3.1.0-rc.2 with the six COHORT_INPUTS asset names; five digests as drafted; cohort digest bound by expected-assets record and advertised digest\",\n    \"Final cohort identity fields and ref_graph_sha256 equal the draft except review/qualification fields\",\n    \"Public reacquisition and fresh isolated install reproduce manifest b691, Product membership and the six contexts on both hosts\",\n    \"C1 release-note assertions verified true, otherwise a higher RC is required; record in RESULT.json and RELEASED.md\",\n    \"No publication authorization, acceptance or adoption is created by this report; Root remains the effect owner\"\n  ]\n}\n```\n",
+      "sha256": "bf5c1634337d012372087dd118778817de41da7c024aa7a522aca1fa3e7e3195",
+      "standing": "Read the actual independent conclusions and residuals below; publication is still unperformed.",
+      "execution": {
+        "model": "claude-opus-5-5",
+        "session_id": "ba0c3d53-7642-401a-b7ce-fd7d410dfdcc",
+        "result_subtype": "success",
+        "exit_code": 0,
+        "observed_tool_uses": 0,
+        "raw_stdout_sha256": "045cc2dc0b9f1873fba7835030616b057689c0b401875953fb4daf4f04754f94"
+      }
+    },
+    "public_verification": "Separate postpublication acquisition/install result; unperformed until actually observed."
+  },
+  "publication_contract": {
+    "authority": "Owner instruction to fix issues and cut RC2; ACTIVATION and RELEASE in source carrier.",
+    "atomic_refs": 25,
+    "immutable_tags_create_only": true,
+    "mutable_destinations_explicit_leases": true,
+    "github_normal_release": true,
+    "existing_consumers_adopted": false
+  },
+  "dependency_edges": [
+    {
+      "from": "purpose_context",
+      "to": "specification_methodology",
+      "relation_kind": "indexed-source input; not Product composition",
+      "selection": {
+        "uri": "stdo://releases/v3.1.0-rc.2/",
+        "manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+        "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+        "tag_object": "fb85e1b7a5717a6c92af236308c4d0b5809414fe"
+      },
+      "index_ids": [
+        "stdo-3.1.0-rc.2-python-pure-refactor-v2",
+        "stdo-3.1.0-rc.2-sdlc-workflow-v1"
+      ],
+      "contracts": [
+        "purpose_context/specification/PRODUCT.md",
+        "purpose_context/specification/requirements/README.md"
+      ],
+      "effect": "Exact source/purpose/query matching; no meaning or work-state authority transferred."
+    },
+    {
+      "from": "stdo_skills",
+      "to": "specification_methodology",
+      "relation_kind": "explicit native workflow binding",
+      "selection": {
+        "uri": "stdo://releases/v3.1.0-rc.2/",
+        "manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+        "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+        "tag_object": "fb85e1b7a5717a6c92af236308c4d0b5809414fe"
+      },
+      "required": true,
+      "contract": "stdo_skills/INVENTORY.json release.native_method",
+      "effect": "Installed wrappers preserve selected native workflow ownership."
+    },
+    {
+      "from": "stdo_skills",
+      "to": "purpose_context",
+      "relation_kind": "required Product composition",
+      "selection": {
+        "version": "3.1.0-rc.2",
+        "public_manifest_sha256": "adb0f592c791ebaa60ba791a5bf2746d2fa779d57091b970b08423d26200b523",
+        "scope": "portable distribution"
+      },
+      "source_public_manifest_sha256": "a5f9479adc22b008743c7492cce113317155efd1fd36e53ab1df51b6e171e251",
+      "contract": "stdo_skills/specification/composition/DEPENDENCIES.json",
+      "required": true
+    },
+    {
+      "from": "stdo_skills",
+      "to": "a_c",
+      "relation_kind": "optional visual Product composition",
+      "selection": {
+        "version": "3.1.0-rc.2",
+        "public_manifest_sha256": "6810997f1a8a610a3147bbb46a1430171eef4ac3e089ba3dae9733414b8d7073"
+      },
+      "contract": "stdo_skills/specification/composition/DEPENDENCIES.json",
+      "required_for_context": false
+    },
+    {
+      "from": "stdo_representation",
+      "to": "specification_methodology",
+      "relation_kind": "represented-source input",
+      "selection": {
+        "uri": "stdo://releases/v3.1.0-rc.2/",
+        "manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
+        "commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+        "tag_object": "fb85e1b7a5717a6c92af236308c4d0b5809414fe"
+      },
+      "scope": [
+        "standards/ACTIVATION.md",
+        "standards/SDLC_DEFAULTS.md",
+        "standards/TICKETS.md"
+      ],
+      "complete_native_inventory_retained": true,
+      "contract": "stdo_representation/build_tenants/a_c/representation/stdo-v3.1.0-rc.2/SOURCE_BINDING.json"
+    },
+    {
+      "from": "stdo_representation",
+      "to": "a_c",
+      "relation_kind": "selected visual generation Product composition",
+      "selection": {
+        "version": "3.1.0-rc.2",
+        "public_manifest_sha256": "6810997f1a8a610a3147bbb46a1430171eef4ac3e089ba3dae9733414b8d7073"
+      },
+      "contract": "stdo_representation/specification/PRODUCT.md#a-c-provider-relation",
+      "construction_selected": true
+    },
+    {
+      "from": "stdo_representation",
+      "to": "axiom_indexer",
+      "relation_kind": "selected mechanical conversion/validation/projection Product composition",
+      "selection": {
+        "version": "3.1.0-rc.2",
+        "public_manifest_sha256": "f03c5982632c2ac76bc9023d6be1222ff76b43226079e023773a14e6bdcc144b"
+      },
+      "contract": "stdo_representation/specification/PRODUCT.md#axiom-indexer-product-dependency-relation",
+      "construction_selected": true,
+      "live_runtime_required_for_standalone_viewer": false
+    }
+  ],
+  "constructor_basis": {
+    "applies_to": "all six Product Definitions",
+    "uri": "stdo://releases/v3.0.4/",
+    "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b",
+    "standing": "Construction basis only; separate from indexed/represented/runtime source selections."
+  },
+  "inactive_historical_dependency": {
+    "from": "specification_methodology",
+    "to": "axiom_indexer",
+    "relation": "urn:stdo-3:relation:a-c-mechanical-evaluation-dependency",
+    "contract": "specification_methodology/v3/specification/requirements/A_C_DEPENDENCY.md",
+    "contract_sha256": "74f871daa019ce3f12f7cbee2ce9b69c4fb4f9d58f510c83b8101c884afc12cc",
+    "selected_for_this_release": false,
+    "activation_policy": "Requires its separately selected evaluation and exact installed dependency; this cohort neither activates nor rebinds it.",
+    "mechanical_ref": "refs/tags/axiom_indexer/v2.5.1-rc.2",
+    "tag_object": "9bff233c3f0e7d80f63307fa3b12800dd3db681c",
+    "commit": "9a9c479776ffd974fbcafcf48341980918209aef",
+    "inventory_sha256": "55a2061bd55ca29e349318a2869bc13518374ef2fa764a73b1688e76d35a63c1",
+    "theory": {
+      "uri": "stdo://releases/v2.5.1-rc.2/",
+      "manifest_sha256": "3d860ff4c1746f06ac25295a9e205cffb8e7725869615ac77cf2304b70ff2782",
+      "calculus_sha256": "cbe2edb928d3e75e23446f6d525baea664966e8d5920e6fa389cbaa4af8f1f8d"
+    }
+  }
+}

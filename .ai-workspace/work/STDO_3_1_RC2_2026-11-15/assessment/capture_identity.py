@@ -116,6 +116,31 @@ def main():
                     'source_identical': data == source, 'source_sha256': sha(source) if source is not None else None})
         assert len(observations['companion_members']) == 225
         assert set(z.namelist()) == expected
+        relation = json.loads(z.read('purpose_context/SOURCE_RELATION.json'))
+        assert sha(git('show', args.carrier+':purpose_context/PUBLIC_MANIFEST.json')) == relation['source_public_manifest_sha256']
+        for row in relation['members']:
+            source = git('show', args.carrier+':purpose_context/'+row['path'])
+            data = z.read('purpose_context/'+row['path'])
+            assert sha(source) == row['source_sha256']
+            assert sha(data) == row['distribution_sha256']
+            assert (source == data) == row['bytes_equal']
+        skills_inventory = json.loads(z.read('stdo_skills/INVENTORY.json'))
+        for row in skills_inventory['source_transformations']:
+            assert sha(git('show', args.carrier+':stdo_skills/'+row['path'])) == row['source_sha256']
+            assert sha(z.read('stdo_skills/'+row['path'])) == row['package_sha256']
+        indexes = []
+        for name in z.namelist():
+            if name.startswith('purpose_context/') and name.endswith('/INDEX.json'):
+                index = json.loads(z.read(name)); digest = sha(canonical(index))
+                matching = [read(p) for p in (BASE/'semantic-01/assessments').glob('*.json')
+                            if read(p)['index_sha256'] == digest]
+                assert matching, 'Packaged index lacks the declared exact-subject assessment mapping.'
+                indexes.append({'path':name,'canonical_index_sha256':digest,
+                                'raw_bytes_equal_source_B':z.read(name)==git('show',args.carrier+':'+name)})
+                assert indexes[-1]['raw_bytes_equal_source_B']
+        assert len(indexes) == 2
+        observations['exact_assessed_packaged_indexes'] = indexes
+        observations['portable_source_relations_verified'] = True
         observations['companion_archive_sha256'] = sha(archive.read_bytes())
         observations['companion_inventory'] = inventory
     for row in cohort['assets']:
