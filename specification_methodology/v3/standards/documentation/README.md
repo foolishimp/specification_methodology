@@ -1,6 +1,6 @@
 # Read and use STDO 3.1
 
-The [installed reading page](index.html) routes the native **3.1.0-rc.1**
+The [installed reading page](index.html) routes the native **3.1.0-rc.2**
 method. Start with [the method index](../README.md) or
 [Getting Started](../../plugins/spec/references/GETTING_STARTED.md).
 The exact installed standards own meaning; this guide adds no rule, adoption
@@ -18,9 +18,9 @@ installation do not select a default for an existing Product.
 Purpose Context owns context construction and purpose indexes. STDO Skills
 owns the receipt-based host bindings. Obtain their matching separately
 inventoried directories from
-[the Product archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/stdo-products-v3.1.0-rc.1.zip),
-verified through [the release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.1)
-and its [cohort record](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.1/cohort-release-v3.1.0-rc.1.json).
+[the Product archive](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.2/stdo-products-v3.1.0-rc.2.zip),
+verified through [the release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.2)
+and its [cohort record](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.2/cohort-release-v3.1.0-rc.2.json).
 Follow `stdo_skills/scripts/INSTALLATION.md` and `stdo_skills/GETTING_STARTED.md`
 inside that archive. An installed native method assumes no sibling checkout.
 
