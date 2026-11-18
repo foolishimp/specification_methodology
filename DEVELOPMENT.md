@@ -4,12 +4,12 @@
 owned Products. It is not a release inventory. Product Definitions and their
 selected installed methodology bases retain authority.
 
-The selected successor is [STDO 3.1.0-rc.2](releases/3.1.0-rc.2/RELEASE.md), public
+The selected successor is [STDO 3.1.0-rc.3](releases/3.1.0-rc.3/RELEASE.md), public
 line 3.1.0. Its two Purpose Context indexes bind the actual native cut, manifest
-`b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4`:
+`2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a`:
 
-- `stdo-3.1.0-rc.2-python-pure-refactor-v2`, purpose `python-pure-refactor/2`.
-- `stdo-3.1.0-rc.2-sdlc-workflow-v1`, purpose `sdlc-workflow/1`.
+- `stdo-3.1.0-rc.3-python-pure-refactor-v2`, purpose `python-pure-refactor/2`.
+- `stdo-3.1.0-rc.3-sdlc-workflow-v1`, purpose `sdlc-workflow/1`.
 
 Source catalogs retain historical index assets and their exact evidence. The
 curated companion distribution selects the two current entries and declares
@@ -46,7 +46,7 @@ return as active dependencies.
 
 Run `python3 -B scripts/check_development_source.py` for finite source routing and
 public dependency identity checks. Release construction and exact inventories
-are in [releases/3.1.0-rc.2](releases/3.1.0-rc.2/RELEASE.md); qualification also
+are in [releases/3.1.0-rc.3](releases/3.1.0-rc.3/RELEASE.md); qualification also
 requires the declared actual-use, independent assessment, installed-path and
 public-acquisition evidence. Counts and digests alone do not supply those claims.
 

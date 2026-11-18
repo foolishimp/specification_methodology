@@ -1,0 +1,3826 @@
+{
+  "corpus_sha256": "b762e5eaa14744b2e8fc5aa44b94c91377c74b98c596e1268df501aa65613c91",
+  "input_view_sha256": "481cac5393fc0534acd8dc4afccc56244f87452ef5abccbd383300332760ff9f",
+  "profile": "stdo.context-index/1",
+  "purpose_id": "python-pure-refactor/2",
+  "purpose_sha256": "180ee31595296f0faaa9b9326e7d34efd9ac0d43be07e87d102c35df09d5f1ac",
+  "rules": [
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "S01",
+      "kind": "definition",
+      "precedence": [
+        {
+          "over": "D18",
+          "reason": "Opportunistic optimisation is explicitly subordinate to constitutional truth, declared module ownership and functional equivalence (DESIGN_MODULE 1866-1876)."
+        }
+      ],
+      "source_refs": [
+        {
+          "end_line": 272,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 207
+        },
+        {
+          "end_line": 462,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 446
+        }
+      ],
+      "text": "Product defines the adopted intended product and end state, including capabilities still to be built; Goals hold current epics or work-wave focus. Requirements own invariant WHAT; accepted design owns structural HOW, interfaces, topology, carriers, file placement and delivery mechanisms; code realises those decisions. Requirements plus accepted design govern implementation, not implementation precedent. Technology choice belongs to design unless already constitutionally constrained.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "S02",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 892,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 822
+        }
+      ],
+      "text": "Every substantive change enters intake triage, regardless of its label. Record intent, affected Product and scope, lawful class, re-entry point and triage time, downstream surfaces and evidence requiring re-evaluation, and release-scope impact. Diagnose realisation defect, governing insufficiency, inaccurate prediction or insufficient observation from evidence; a diagnosis grants no repair effects.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S01"
+      ],
+      "exceptions": [],
+      "id": "S03",
+      "kind": "definition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 904,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 872
+        }
+      ],
+      "text": "A realization_refactor is local code, configuration or attribute change with no intended constitutional or structural change: it re-enters only the realised surface and must prove no upstream drift. A design_reframe changes realisation structure while intent and requirement truth remain stable and re-enters Design, then Code and Evidence. Smaller changes explicitly assert unchanged upstream constitution. A class label is not a successful no-drift evaluation.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S02"
+      ],
+      "exceptions": [],
+      "id": "S04",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 969,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 906
+        }
+      ],
+      "text": "Computed classification keeps reproducible facts/rule application (C), residual semantic/materiality judgment (J) and owner-reserved ruling (O) distinct. Bind producer/procedure, exact inputs, scope, source/reproduction routes, unknowns and invalidators. Traverse declared authority, ownership, dependency and projection relations including root/grant changes even with equal public bytes; retain the unresolved frontier. Enumerate the complete relevant public member universe and exact typed/byte deltas; joins to current accepted design distinguish covered, missing, stale, ambiguous and outside-scope. Apply only rules with sufficient premises; a missing candidate, edge, projection or evidence does not prove unchanged meaning.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S04",
+        "C07",
+        "C08"
+      ],
+      "exceptions": [],
+      "id": "S05",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1011,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 971
+        }
+      ],
+      "text": "Repair or reject a nonconformant candidate locally within its grant when the contract remains sufficient; re-enter the actual governing owner only when the authorised desired outcome requires changed meaning or assessment establishes insufficiency. Unknown treatment withholds dependent reliance or promotion, not unrelated authorised work. Valid classification may be reused after applicability checks; changed request, candidate, owner/root, projection, design trace/acceptance, rule, configuration or material evidence, changed basis or a declared revising observation invalidates affected claims before reliance.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S01"
+      ],
+      "exceptions": [],
+      "id": "S06",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 604,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 565
+        },
+        {
+          "end_line": 1042,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 1013
+        }
+      ],
+      "text": "Maintain trace closure: each live requirement has owning design decisions; design records explicitly ground themselves via Implements. Live requirements are realised through design, code and tests or explicitly deferred. Shipping code and tests trace to live requirement and design authority. Tests must not lock in implementation habit. No gate closes while affected surfaces contradict upstream truth, required judgment/ruling lacks a closed result, a material counterexample survives, or an obligation lacks evidence; aggregate green and status changes do not substitute.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S15"
+      ],
+      "exceptions": [],
+      "id": "S07",
+      "kind": "permission",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 621,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 606
+        }
+      ],
+      "text": "Mutable engine code, design documents, tests and tooling may be refactored aggressively. Published live constitutional artifacts are immutable in place: correct them by supersession or withdrawal/deletion from the live surface. Superseded implementation mechanisms have no permanent authority; retained responsibility must satisfy the retention relation.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "S08",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 666,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 623
+        }
+      ],
+      "text": "For material designed things, preserve lifecycle signal across intent, requirement, build, assurance, release, deployment, live usage, observed telemetry and retirement. Each phase is answered by its governing surface, explicitly not applicable with reason, or a named Gap/Unanswered item. Silent absence is invalid. Missing truth is repriced at its owner or carried as governed debt, never supplied by code precedent, prompt prose or fixtures. These are record states, not successful evaluation results.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C09"
+      ],
+      "exceptions": [],
+      "id": "S09",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1241,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 1183
+        }
+      ],
+      "text": "Distinguish major ambiguity affecting architecture, stack, Product boundary, execution/deployment admissibility or public contracts from micro choices inside governed design. Detect and record major ambiguity, affected relations, decisions and resolved/carried/escalated/blocked state. Only resolved supports dependent claims as resolved. Declared policy and risk appetite determine lawful probabilistic decisions or human adjudication; ambiguity detection is mandatory and hard stops are not waived.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C12"
+      ],
+      "exceptions": [],
+      "id": "S10",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 482,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 464
+        }
+      ],
+      "text": "Under adopted DESIGN_MODULE, semantic steps read as transforms over admitted truth and effects are explicit at the edge. Hidden meaning in orchestration, mutable workspace state, service methods or fallback defaults is excessive coupling. Keep implementation readable, modular and honest about meaning/effects; higher-order or effectful composition declares its applicable identity, closure, cardinality, effect and authority-conservation algebra. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): The profile does not require a particular language, elimination of all imperative code, monadic/category vocabulary, or replacement of every exception by a custom algebraic type.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S01"
+      ],
+      "exceptions": [],
+      "id": "D01",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 42,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 28
+        },
+        {
+          "end_line": 2437,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 2379
+        }
+      ],
+      "text": "Apply the adopted profile consistently across its named boundary. Partial adoption is permitted only with explicitly named boundary and rule family; it cannot support design-method completion while skipping evidence needed to audit, refactor or reconstruct. The profile does not replace SPEC_METHOD authority. Its ASSURANCE bindings are IACS for carrier inventory, accepted Ontology/target design, three-view asset and decision-complete/co-evolution predicates; tier-2 meaning remains unchanged. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): Explicit partial adoption may narrow scope, but cannot omit the evidence necessary for the claimed design-method completion.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D10",
+        "D04"
+      ],
+      "exceptions": [],
+      "id": "D02",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 362,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 309
+        }
+      ],
+      "text": "Judge each design/implementation change by authority seam closure, essential carrier consolidation and enforcement after proof; improved ergonomics, tests or checker output cannot compensate for failing these evaluators. Do not increase truth surfaces; reduce rival truth during seam closure. Use one authoritative carrier/contract per semantic boundary, no downstream reconstruction or open payload past ingress. Removing that carrier must fail closed, not silently reconstruct meaning.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [
+        "Applies when the touched module is a projection or query boundary."
+      ],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "D03",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 336,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 329
+        }
+      ],
+      "text": "Projection/query modules name their admitted source and structurally compare reconstructed catalogue, ownership, route, status or closure truth against it before publication. Same-name/different-shape carriers fail closed; negative tests cover structural drift as well as missing truth. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): An explicit migration design may make a same-name structural divergence lawful.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S10"
+      ],
+      "exceptions": [],
+      "id": "D04",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 374,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 350
+        },
+        {
+          "end_line": 2283,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 2279
+        }
+      ],
+      "text": "Foreign/dynamic input is lawful only at ingress. Parse, validate or normalise once, explicitly admit and narrow, then construct local carrier truth before semantic transforms. Types, schemas and codecs enforce this proved shape; casts, unchecked assertions, dynamic mutation, loose typed envelopes, repeated loose-payload parsing and from_dict/to_dict ceremony are not closure. Semantic transforms consume local admitted carriers directly; do not route locally assembled admitted truth back through loaders, parsers or validators as a second truth path. Invalid or incomplete truth is rejected at ingress rather than procedurally repaired inside semantic code.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D06",
+        "D07",
+        "D17"
+      ],
+      "exceptions": [
+        {
+          "text": "Mutable carrier state is permitted only where materially necessary under Immutable carriers, with its required justification.",
+          "when": {
+            "all": [
+              {
+                "fact": "mutation_exception_requested",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "fact": "mutation_materially_necessary",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "fact": "mutation_justification_present",
+                "op": "eq",
+                "value": true
+              }
+            ],
+            "any": []
+          }
+        },
+        {
+          "text": "The explicit failure-carrier preference is qualified by practicality; it does not require replacing every exception.",
+          "when": {
+            "all": [
+              {
+                "fact": "failure_carrier_departure_requested",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "fact": "explicit_failure_carrier_practical",
+                "op": "eq",
+                "value": false
+              }
+            ],
+            "any": []
+          }
+        }
+      ],
+      "id": "D05",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 404,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 378
+        },
+        {
+          "end_line": 1111,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1089
+        },
+        {
+          "end_line": 1187,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1155
+        },
+        {
+          "end_line": 1783,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1773
+        },
+        {
+          "end_line": 482,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 464
+        }
+      ],
+      "text": "The functional preferences and avoidances bind: prefer immutable typed carriers, closed protocols, one ingress admission, explicit returns, practical explicit failure carriers and small transform composition. Avoid giant mutable workspaces, orchestration-owned law, hidden globals/registries/service-state coupling, open truth in typed envelopes, effectful semantic helpers and proxy interfaces preserving old authority. Convenience permits no departure. A false request flag grants no specific exception and leaves these qualified source preferences intact; if a departure becomes necessary, acquire its exact premises and reconstruct the context before relying on it. Determine a mutated value's actual source-truth, carrier, subordinate-payload and authority role from accepted design and use; a local name, temporary lifetime or 'scratch' label grants no exemption. The method does not require eliminating every imperative operation, so assignment alone does not establish a mutable semantic carrier either. Preserve the binding preferences and avoidances in every case; if actual realization forgoes one, only its owner-stated departure and required justification can permit it. A no-permission request is not a conformance finding for existing or future mutation.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [
+        {
+          "text": "Materially necessary mutation is permitted with explicit justification on the stated grounds.",
+          "when": {
+            "all": [
+              {
+                "fact": "mutation_exception_requested",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "fact": "mutation_materially_necessary",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "fact": "mutation_justification_present",
+                "op": "eq",
+                "value": true
+              }
+            ],
+            "any": []
+          }
+        }
+      ],
+      "id": "D06",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1783,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1773
+        },
+        {
+          "end_line": 404,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 378
+        }
+      ],
+      "text": "Source truth is carried in typed immutable values: constructors/parsers produce carriers, transforms return new carriers or closed results, projections do not mutate them. Mutable carrier state requires explicit justification that it is performance-critical, required by runtime/framework, or models a genuinely stateful boundary rather than semantic truth; convenience is insufficient.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "D07",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1802,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1785
+        },
+        {
+          "end_line": 2285,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 2284
+        }
+      ],
+      "text": "Semantic functions should be total or as close to total as language/problem allow. Reject invalid input at the boundary; kernels consume admitted carriers; return typed explicit failure where practical, preferably closed outcomes or explicit unsupported/rejected values. Avoid hidden preconditions, semantic get fallback chains and defaults reconstructing missing truth. Product-domain outcomes are distinct from method evaluation results. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): Totality is bounded by what language and problem allow, and typed explicit failure is preferred where practical. Defaults that carry semantic meaning are explicit, ratified and owned by the carrier contract, not invented by a helper.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [
+        {
+          "text": "Any, cast and type: ignore are allowed only at a genuinely foreign/dynamic boundary where local code cannot express the shape more precisely, use is narrow, explicit and justified in place, and imprecision never crosses into the kernel as governing truth.",
+          "when": {
+            "all": [
+              {
+                "fact": "typing_escape_requested",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "fact": "typing_escape_foreign_boundary",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "fact": "typing_escape_no_precise_local_shape",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "fact": "typing_escape_narrow_justified",
+                "op": "eq",
+                "value": true
+              },
+              {
+                "fact": "typing_escape_excluded_from_kernel",
+                "op": "eq",
+                "value": true
+              }
+            ],
+            "any": []
+          }
+        }
+      ],
+      "id": "D08",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 430,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 406
+        }
+      ],
+      "text": "Repo-authored Python is fully typed, including every function/method/callable parameter and return and tests/scripts/support code at the production bar. Semantic carriers must be closed typed forms; untyped defs, implicit Any, semantic dict/Mapping[str, Any], semantic object payloads and unchecked JSON/get chains are not typed semantic design. Parse and narrow foreign data before kernels. A false escape-request flag grants no escape; acquire and bind all four source premises before relying on a later requested escape.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "language",
+            "op": "eq",
+            "value": "python"
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D08",
+        "D02",
+        "E02"
+      ],
+      "exceptions": [],
+      "id": "D09",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 436,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 432
+        }
+      ],
+      "text": "Run a strict static typing pass, such as mypy --strict or equivalent strict configuration, on the adopted Python boundary. If it cannot run cleanly, that boundary is not implementation-conformant. A clean checker enforces shape after proof; it does not establish semantic closure.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "language",
+            "op": "eq",
+            "value": "python"
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "D10",
+      "kind": "definition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1012,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 986
+        }
+      ],
+      "text": "Prime is an irreducible semantic-design relation, not small source size, a class, module, callable or independently testable record. Each accepted atom has a declared admitted domain and governs every admitted instance. In-domain counterexamples falsify the shared atom and re-enter its design boundary; use cases compose/parameterise it, never fork or shadow it locally. Out-of-domain cases may justify a new candidate for design admission. Without a declared domain an atom remains candidate.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D10"
+      ],
+      "exceptions": [],
+      "id": "D11",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1061,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1014
+        }
+      ],
+      "text": "Prime review contracts the complete semantic-atom family and its projections, including identity, authority, lifecycle, topology, functions, composition, effects and closure. Retain root authority and semantic relations, explicit total atom-to-realisation mapping, stable identities, domains, falsifiers and accepted loss. Individual irreducibility does not prove the family Prime. Work inside an accepted boundary cites the existing Prime basis rather than recreating it. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): For work wholly inside an accepted boundary, cite its existing Prime basis instead of repeating whole-family derivation.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D10",
+        "D11"
+      ],
+      "exceptions": [],
+      "id": "D12",
+      "kind": "prohibition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1153,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1089
+        }
+      ],
+      "text": "A top-level function/class/carrier/schema/module must project accepted Prime atoms without inventing, duplicating or reinterpreting authority. Typed closure, shorter call sites, convenience aggregation, extra wrappers, old interfaces renamed, cosmetic payload variants or typing discomfort do not justify new top-level boundaries. Prefer composition and fewer sharper carrier families; line-count reduction is not the purpose. Contraction must not increase truth surfaces, authority centres, acceptance boundaries, cycles or review burden.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [
+        "Schema, carrier-family or typed-public-boundary definition/revision."
+      ],
+      "depends_on": [
+        "D14",
+        "E01",
+        "D20"
+      ],
+      "exceptions": [],
+      "id": "D13",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1223,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1155
+        }
+      ],
+      "text": "When defining schemas, carrier families or public typed boundaries, derive IACS from accepted Ontology before subordinate shapes/modules. Declare authoritative versus downstream carriers and mappings to identity/lifecycle/function/authority/effect/projection law; all other shapes remain subordinate/private by default. Reconcile typed implementation before closure. Missing Ontology or IACS means incomplete design evidence. Revisions may add/remove/merge/split via accepted re-entry, but rederive the complete set, rerun Promotion/Inflation checks over it, update composite assurance subjects and reconcile before promotion.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D10"
+      ],
+      "exceptions": [],
+      "id": "D14",
+      "kind": "prohibition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1266,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1225
+        }
+      ],
+      "text": "Subordinate payload becomes top-level only if irreducible boundary evidence shows authoritative source, public/persisted contract, public outcome variant directly pattern-matched, reuse across several modules without semantic bleed, or independent version/publication/admission. Internal record detail, one-off field groups, temporary open-dictionary shims, private payload variants and cosmetic type mirrors do not qualify. Keep shapes nested/private/local unless promotion is justified; declare IACS, downstream, subordinate and deferred shapes. Typing difficulty never excuses Boundary Inflation.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S10",
+        "D04"
+      ],
+      "exceptions": [],
+      "id": "D15",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1840,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1804
+        },
+        {
+          "end_line": 2283,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 2268
+        },
+        {
+          "end_line": 2298,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 2286
+        }
+      ],
+      "text": "Keep effects explicit and isolated at the edge: kernels do not both decide semantic law and write. Preferred flow admits authoritative input, transforms to typed plan/outcome, applies effects at edge, and publishes downstream. No controller/manager/service/loop/wrapper may hide closure, identity, failure, next-work or current-truth law. Reduce coupling by dependency shape (carriers to kernels to effect shells to projections), not file count; no shared mutable truth or downstream reconstruction. For a claimed pure semantic transform, the same admitted inputs determine its result: time, randomness, UUID minting, environment/process state, filesystem, network and global registries stay outside the semantic centre. Introduced identity has an explicitly owned ingress or effect boundary. Effect boundaries remain typed and cannot erase admitted carrier truth into open objects; package/bootstrap/controller/adapter/runtime shells remain subordinate to the semantic centre.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "D16",
+      "kind": "prohibition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 2039,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 2029
+        },
+        {
+          "end_line": 1861,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1842
+        }
+      ],
+      "text": "Interfaces must not bleed authority: reports/projections cannot invent closure or admission, wrappers cannot decide kernel law, adapters translate without inventing meaning, and each interface family consumes its single source truth. Governance/observability boundaries publish state and admissible routes, not hidden downstream repair strategy, policy preferences or replacement decision-engine logic. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): Strategy law is permitted only where strategy ownership is explicitly part of the boundary's ratified responsibility.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S14",
+        "S15"
+      ],
+      "exceptions": [],
+      "id": "D17",
+      "kind": "prohibition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 2052,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 2041
+        }
+      ],
+      "text": "Do not use proxy/partial interfaces to substitute for real migration or design completion: a new name forwarding to or reconstructing old authority, retaining old execution behind it or keeping tests green while old law governs is bridge debt. Remove the proxy path unless compatibility is an explicit feature with bounded authority and proof. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): Intentional compatibility may remain as an explicit feature with its own bounded authority and proof.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S03",
+        "D12",
+        "D14",
+        "S01"
+      ],
+      "exceptions": [],
+      "id": "D18",
+      "kind": "permission",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1901,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1863
+        }
+      ],
+      "text": "A lawfully opened boundary should be improved by local clean-up only when boundary-local, behaviour-preserving, authority-neutral, visibility-neutral (no silent subordinate promotion) and effect-neutral. Local algorithm/scan improvements and proof-fixture simplification are examples, not exclusive permitted domains. Cross-module lookup/index/cache/persistence repricing, public carrier or ownership changes, widened effects or changed Product performance expectations require design re-entry. Cross-boundary opportunities remain repricing inputs unless the owner admits separate work.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S15",
+        "D31",
+        "A09",
+        "C04"
+      ],
+      "exceptions": [],
+      "id": "D19",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1941,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1903
+        }
+      ],
+      "text": "A pattern recurring across processed boundaries is a commonisation candidate. A third local rebuild is nonconformant unless it consumes a reusable surface, extends it before landing, or review explicitly records why not to commonise. Tenant-local authority-neutral patterns should be extracted; changes of ownership, public carriers, module boundaries or common law are separate design decisions. Commonisation closes only when the selected path consumes the accepted relation and superseded responsibility is retired or lawfully retained; shared names, fewer lines and unused helpers do not prove contraction.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S01"
+      ],
+      "exceptions": [],
+      "id": "D20",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 482,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 438
+        }
+      ],
+      "text": "Accepted Ontology owns semantic entities, relationships, invariants, lifecycle, authority, functions, composition and effects; accepted design owns structural HOW. New/changed material boundaries produce candidate Ontology before promotion; identify constitutional sources, accepting design authority, stable element/relation IDs and version/basis. Code, tests and one implementing agent cannot self-ratify missing authority. A changed source reprices affected relations/projections only. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): A refactor wholly inside an accepted boundary may cite existing Ontology/design and prove no Ontology delta; unchanged evidence need not be re-authored or re-accepted. Semantic/structural change publishes the affected delta and projection set only.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S01"
+      ],
+      "exceptions": [],
+      "id": "D21",
+      "kind": "definition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 610,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 496
+        }
+      ],
+      "text": "decision_complete(B) means no unresolved material relation, jointly satisfiable material network and semantic equivalence of every admitted network under governing Product, requirements and accepted design. Material relations include entities/identity/relationships/cardinality/invariants/authority/transitions/functions/composition/topology/lifecycle/public contracts/Product meaning/domains/admission/refusal/effects/closure/projections/module mappings/material algorithms. Local algorithm/layout choice can remain open only if every admitted choice is semantically equivalent.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D21",
+        "S03"
+      ],
+      "exceptions": [],
+      "id": "D22",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 565,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 515
+        }
+      ],
+      "text": "Co-evolution is admissible iff the boundary is decision-complete. Otherwise accept the smallest causally closed affected design decision set before retained implementation establishes unresolved, contradictory or materially non-equivalent durable relations. Only disposable spikes may cross that uncertainty as evidence. Implementation counterexamples inform but never select missing law or retroactively ratify decisions. Hidden architectural ambiguity activates an affected design gate; repeated surprises alone do not diagnose design insufficiency. If design is complete and only code deviates, repair remains a refactor. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): When decision completeness holds, design, code and tests may co-evolve and reconcile before promotion/closure; there is no universal prior-design ceremony.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S01",
+        "S03"
+      ],
+      "exceptions": [],
+      "id": "D23",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 648,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 612
+        }
+      ],
+      "text": "Identify each material design frame's governing frames/accepted relations, bounded affected set, inherited invariants, authority/composition seams and subordinate unresolved distinctions. Evaluate against every affected governing frame, conserve its accepted relations and update only affected projections. Changed governing relations re-enter their owners before acceptance. Multiple governing frames are permitted; open subordinate frames only for material distinctions unresolved at governing altitude, not irrelevant recursive documentation.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D23",
+        "E01"
+      ],
+      "exceptions": [],
+      "id": "D24",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1408,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1338
+        }
+      ],
+      "text": "Method basis plus accepted design must suffice to recover every governing relation in the bounded action's causal affected set without conversation history or implementation folklore. Method supplies required relations; design supplies concrete invariant values. Preserve maps to satisfied; change maps to invalid_basis and owner re-entry; explicitly disposed duplicate (constituent/replica/replacement/independent realisation) maps to satisfied; contradiction or undisposed equivalent path maps to falsified. Acceptance locus, not delta size, separates change from violation; disposition, not equivalence, separates lawful duplication. Undecidable evidence stays indeterminate with what would decide.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D20",
+        "D24",
+        "A01",
+        "S03"
+      ],
+      "exceptions": [],
+      "id": "D25",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1571,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1566
+        },
+        {
+          "end_line": 1997,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1974
+        }
+      ],
+      "text": "For an unchanged realization_refactor, cite accepted Ontology/design, identify touched projections, and prove no change to entities, relationships, lifecycle, authority, functions, effects and public semantics. Reuse the existing verdict, not a new acceptance ceremony. Missing/stale/ambiguous coverage is not no-delta proof; a new role/conversation/review does not by itself invalidate accepted evidence. Changed governing basis, material input/counterexample or declared revising observation requires affected re-evaluation while conserving unaffected relations.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "action",
+            "op": "eq",
+            "value": "realization_refactor"
+          },
+          {
+            "fact": "accepted_design_available",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D21",
+        "D22",
+        "E04"
+      ],
+      "exceptions": [],
+      "id": "D26",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1319,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1296
+        },
+        {
+          "end_line": 1598,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1542
+        }
+      ],
+      "text": "New or materially changed semantic/typed module boundaries carry accepted Ontology and three distinct domain, execution and lifecycle views before promotion/design-method closure. Views are fidelity-checked projections, not peer authorities. Use classDiagram, sequenceDiagram and stateDiagram-v2; one flowchart is insufficient. Passing axiom matrices or produced packs are evidence, not the accepting authority's verdict; missing applicable results keep it non-accepted. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): Unchanged boundaries cite accepted basis; no material semantic delta means no recreated gate. A ratified alternative text-native format is permitted only if it preserves the same three distinct views and cross-view checks; views may share one surface/acceptance decision.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D20",
+        "S06"
+      ],
+      "exceptions": [],
+      "id": "D27",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1087,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1063
+        },
+        {
+          "end_line": 1294,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1268
+        }
+      ],
+      "text": "Ontology projections identify their source and preserved laws; accepted omissions/flattening declare loss and failure conditions. Public operations, sequence messages, transitions, carriers and effects without accepted-design-to-Ontology trace cannot enter the active line. Branches/test expectations trace through requirements and design while preserving Ontology, but need not be enumerated in it. Reference-derived modules need reference design, target Ontology mapping/dispositions, target design and module assets, not code comparison alone.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "D28",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 722,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 681
+        },
+        {
+          "end_line": 799,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 789
+        }
+      ],
+      "text": "Before retaining a material generic capability/common mechanic/algorithm or selecting a material dependency, perform proportional foundation selection. State capability without incumbent/domain/vendor labels; separate owned semantic/authority relations from generic mechanics. Discover applicable compositions among admitted foundations, language/runtime/platform/stdlib, accepted predecessors, permitted maintained externals and bounded local implementation; record searched sources, cutoff/version, criteria, exclusions, incumbent status, candidates and gaps. A discovery gap capable of changing the frontier prevents selection. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): No package survey or ledger is required for a trivial helper whose choice cannot materially affect authority, Product behaviour, lifecycle cost or accepted design network.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D28"
+      ],
+      "exceptions": [],
+      "id": "D29",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 787,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 724
+        },
+        {
+          "end_line": 799,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 766
+        }
+      ],
+      "text": "Foundation selection compares candidate compositions across fit/constructability, authority leakage, integration/migration/deletion/future-code cost, licensing/maintenance/security/supply-chain, runtime/startup/storage/operations, determinism/concurrency/failure/recovery/replay, proof burden and reversibility. Hard authority/contract/safety/security/licence/constructability failures eliminate; unknowns never become favourable scores. Dominance requires comparability or evidenced non-discrimination on every material dimension, no worse on all and better on one. Do not select dominated local rebuilds. Owner-declared priorities/risk resolve the undominated frontier or it stays a gap; no source-order/incumbent/local-code preference. Assigned reused roles preserve owner/scope/basis/lifecycle/refusal invariants. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): New evidence or another material dimension may invalidate a previous dominance relation; re-evaluate it before selection. A rejected material candidate records the evidence or falsifier that decides its rejection. If construction exposes another material generic subproblem, re-enter the same proportional foundation-selection relation before retaining that subproblem's implementation. This anticipatory selection is distinct from later recurrence extraction and retains the trivial-helper exemption; it does not impose a package survey on every helper.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D14"
+      ],
+      "exceptions": [],
+      "id": "D30",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 679,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 668
+        },
+        {
+          "end_line": 831,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 801
+        }
+      ],
+      "text": "Design must be natively constructable on the chosen substrate; missing identities, relations, authority, effects, lifecycle, composition, publication or retirement capability stays an explicit design gap or triggers re-entry, never hidden by bridge, adapter, runner, double or promised feature. Entity lifecycle matrices apply to identity-bearing entities and independently governed value families; cells name lawful functions, reasoned exclusions or owned gaps, not mandatory mutable CRUD. Subordinate payloads inherit owning lifecycle unless promoted.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D23"
+      ],
+      "exceptions": [],
+      "id": "D31",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1673,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1600
+        }
+      ],
+      "text": "Material realisation components declare role sets; capability is not authority. Variation within a role is ordinary, but new operational responsibility or semantic/authoritative role requires design re-entry. Computational projection identifies ADTs, keys, algorithms, laws, mutation/effects, implementations and domain mapping; material paths identify fact establishment, consumers, basis/invalidators, effects, retained alternatives and accumulated work. Similar computation is only a commonisation candidate: evaluate semantic/operational equivalence before reuse, parameterisation or separation.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D29",
+        "D31"
+      ],
+      "exceptions": [],
+      "id": "D32",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1692,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1654
+        }
+      ],
+      "text": "Material algorithmic obligations carry two dispositions: semantic (existing accepted relation, extension, or new candidate) and realisation (consume, local implementation, optimisation, adaptation or deliberate duplication under stated nonsemantic constraints). Isolation, substrate, performance, security and dependency ownership can lawfully justify independent implementation; it must not remint accepted semantic authority. Separate materially non-equivalent identity/key/ownership/ordering/mutation/concurrency/retention/failure/access/lifecycle/authority law; other differences justify separation only when adaptation would weaken material constraints.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "A09",
+        "E01"
+      ],
+      "exceptions": [],
+      "id": "D33",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1652,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1641
+        }
+      ],
+      "text": "Material algorithmic work declares input dimensions, workload/growth and operational assumptions. Bind Product-owned acceptance limits and authority before qualification; challenge representative supported paths and growth, directly observe work where elapsed time cannot locate it without rerunning merely to count. No universal complexity target or separate accounting system is required.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D20",
+        "C05"
+      ],
+      "exceptions": [],
+      "id": "D34",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 869,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 833
+        }
+      ],
+      "text": "For boundary-crossing Ontology functions/transitions, preserve proposer/evaluator/verifier/admitter/executor/projector/retirement roles, keeping identity/capability/attribution distinct from permission. Role coincidence requires explicit authority; pure subordinate helpers inherit the owning function envelope without peer rows unless crossing a semantic, authority, admission, effect, persistence or public boundary. Composition cannot widen authority; transfers/elevation/delegation/retirement require named typed transitions and admission ownership, never labels or payload reconstruction. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): Pure subordinate helpers inherit their owning Ontology function's authority envelope and need no peer authority row unless they cross a listed boundary.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D34",
+        "S15",
+        "C03"
+      ],
+      "exceptions": [],
+      "id": "D35",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 947,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 871
+        }
+      ],
+      "text": "Consequential transition design declares the complete admission relation: entity/predecessor/current basis and joins, authority scope/owners/boundaries, candidate family, cardinality, predicate, durable fact, supersession, refusal/effects, complete semantic commit unit and partial-failure coverage, direct/composite/nested reconstruction and competing-path disposition. Multiple actors/stages or equivalent implementations are lawful only with declared singular relation and dispositions; disjoint scopes are not rival authority. Projections cannot self-authenticate admission. Unsupported forms are not_applicable only if design/domain excludes them with no weaker competing path.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D10",
+        "D22",
+        "S10"
+      ],
+      "exceptions": [],
+      "id": "D36",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 984,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 949
+        }
+      ],
+      "text": "Variation only in entity/projection/transition/policy/subordinate payload normally uses typed parameters or closed variants of one atomic family. Each discovered functionality row is admitted atomic derivation, declared higher-order composition, owned deferment with re-entry, Product exclusion or named gap. Higher-order behaviour declares composition/effect algebra and applicable identity, closure, associativity, cardinality, effect and authority laws. No private helper/loop/adapter/endpoint may become an undeclared constructor.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [
+        "A ticket applies the profile and claims its boundary processed/closed."
+      ],
+      "depends_on": [
+        "D25",
+        "A01",
+        "A02",
+        "E05",
+        "C14",
+        "C15"
+      ],
+      "exceptions": [],
+      "id": "D37",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 2027,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1943
+        }
+      ],
+      "text": "Before a ticket claims design-method closure, perform a bounded design check against its accepted basis and exact claim, not merely previous findings. Reconstruct the selected function's causal chain from requirements through Ontology/Prime/IACS/views/modules to code and module-owned proof. Include all causally applicable live requirements, accepted relations and retained predecessor claims. Hashes identify subjects and green tests prove only asserted properties. Current falsifiers/hard stops block the design-method closure claim; optional observations outside it do not automatically expand work.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D20",
+        "D22",
+        "D26",
+        "S06"
+      ],
+      "exceptions": [],
+      "id": "A01",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1012,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 922
+        }
+      ],
+      "text": "Preserve the canonical design-to-module evidence route: constitutional WHAT/owning requirements to accepted ontology/carrier inventory/target design/domain-sequence-state evidence, then code and module-derived unit tests, reconciliation/acceptance, then promotion/closure. Reverse code/test feedback is evidence or falsification, never semantic authority. Final code traces to Ontology and module assets; discoveries reconcile before closure; no hidden controller compensates for unrealised constructors. Tests discovered from code are re-expressed against module ownership. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): An unchanged refactor cites the accepted relation and proves no material semantic-boundary delta instead of recreating evidence.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D13",
+        "A01"
+      ],
+      "exceptions": [],
+      "id": "A02",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1050,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 1014
+        },
+        {
+          "end_line": 513,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 492
+        }
+      ],
+      "text": "Every coded module under the profile needs a module-derived unit lane before closure. Trace it to accepted Ontology and applicable laws, module design, IACS/equivalent inventory, module domain/sequence/state views and owned requirements. Helper tests may exist but cannot replace canonical module proof; incidental branches, private layout and convenient mocks are not its authority. Low internal complexity permits a small lane, never omission or hundreds of implementation-shaped tests. Unit oracles derive independently from owned law. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): Helper-level and transitional slice tests are permitted as additional evidence, but never replace module-owned unit proof.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "E01"
+      ],
+      "exceptions": [],
+      "id": "A03",
+      "kind": "definition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 519,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 474
+        }
+      ],
+      "text": "Unit evidence establishes only the exact module law and module-bounded population, with counterexamples/residuals/invalidators. It does not close Product, installed, integration, architecture, path-selection, user-acceptance or release claims regardless of test count, coverage or mutation score. Composition/ownership/persistence/user-interaction complexity requires evidence at that actual boundary rather than mock substitution. Material changes to owned law, algorithm, boundary, state/numerics, implementation, oracle/generator or population invalidate affected unit evidence.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "A02",
+        "S06"
+      ],
+      "exceptions": [],
+      "id": "A04",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 234,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 133
+        }
+      ],
+      "text": "Every executable proof lane declares its authority: design/module conformance derives from realisation law; UAT derives from Product/requirements/scenarios. Execution breadth is distinct. Expected results never derive from current code behaviour. Required closure lanes are reproducible from declared source, without undeclared home/sibling/external mutable paths. External evidence needs checked-in minimal fixture, versioned manifest with acquisition/binding, or classification as sandbox/reference/optional evidence; missing fixtures produce governed fixture/lane diagnostics, not Product failures. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): External fixtures are lawful through a checked-in minimal fixture, a declared source/version/acquisition manifest, or an explicitly non-required-semantic-closure evidence classification.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "E01"
+      ],
+      "exceptions": [],
+      "id": "A05",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 304,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 236
+        }
+      ],
+      "text": "Written traceable test authority identifies each expected result's owning obligation, interpretation, assumptions, derivation/shared dependencies and whether its predicate is the obligation, a necessary condition or part of a sufficient conjunction. Declare and exercise significant success, rejection, control, integration and recovery paths where relevant; counts and incidental code coverage do not establish this. Meaningful system-behaviour claims need coherent scenario sequences. Installed/runnable-system claims require installed-dev isolated ordinary-surface evidence; source unit checks do not replace it.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "A02",
+        "E01"
+      ],
+      "exceptions": [],
+      "id": "A06",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 580,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 521
+        }
+      ],
+      "text": "Choose evidence by material combination coverage: subject congruence, independent dimensions, interaction strength, exact authoritative path, independent precise oracle, realistic fault/rival sensitivity, reproducibility and residuals. Declare finite population and coverage justification. Reduced interaction coverage is lawful only if omitted higher-order combinations cannot change the claim or remain explicit residuals. No universal scalar/test quota is required; line/branch coverage merely shows visits. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): Pairwise or other covering reductions require a basis justifying omitted higher interactions or explicit residual treatment.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [
+        "When asserting Product-path correctness or technical-debt erasure, not merely a local module property."
+      ],
+      "depends_on": [
+        "S15",
+        "E01"
+      ],
+      "exceptions": [],
+      "id": "A07",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 630,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 582
+        }
+      ],
+      "text": "Product-path claims need both ordinary supported-path reachability on the exact runnable Product and forbidden superseded/duplicate/fallback/bypass exclusion. Evaluate production closure separately from assurance/source closure; passing a successor does not prove the predecessor removed. Test-only seams may remain only isolated from distribution, excluded from ordinary-path proof and declared in assurance subject. Where proportionate/safe, path-sensitive sabotage detects disabled authority, rival paths and corrupted owners; mutating a subject without isolation/restoration/revalidation invalidates its basis. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): An isolated declared test-only seam outside Product distribution and ordinary-path evidence is not a production-path failure, but remains defective if it falsely establishes closure or reintroduces the path.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [
+        "The claim depends on owner-issued subject truth."
+      ],
+      "depends_on": [
+        "E02"
+      ],
+      "exceptions": [],
+      "id": "A08",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 697,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 664
+        }
+      ],
+      "text": "Acquire owner-issued Product/runtime/lifecycle/admission/replay/projection subjects through their exact runnable owner/validator/projection/receipt/reconstruction surface. A harness must not invent parallel owner state from raw fragments and evaluate it as the Product. Independent law-derived oracles and generic digest/equality/completeness mechanics are permitted but cannot mint owner truth or become fallback. Insufficient observations require further evidence, justified narrower scope or indeterminate; absent owner seams remain named gaps.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D31",
+        "D32",
+        "E01"
+      ],
+      "exceptions": [],
+      "id": "A09",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 900,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 879
+        }
+      ],
+      "text": "For material computational composition or recurrence, evaluate one complete producer-to-consumer path including operators, owners, reused foundations and proof, fact establishment/consumption, validity/invalidators, effects, alternatives and accumulated work. Challenge declared workload/assumptions without assuming semantic equivalence from computational similarity. Return identifiable complete-path result/evidence; local successes do not replace it. Actual-work claims need observations, not design evidence alone. Reuse valid unchanged results; reassess affected path/basis/workload changes.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S08"
+      ],
+      "exceptions": [],
+      "id": "A10",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1099,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 1052
+        }
+      ],
+      "text": "Before design-method closure, confirm each governed boundary's intent/requirements, build, proof, packaging, deployment/install, usage, telemetry and retirement postures, plus lifecycle owner/source/authority. Each phase is answered, reasoned not-applicable or named Gap/Unanswered with owning follow-up. This is an ambiguity detector, not release authority. Implementation/fixtures may confirm only declared lifecycle truth; work can proceed with an explicitly governed gap but cannot close via local convention. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): A lifecycle gap may permit continued work only when explicitly governed; it is not erased or counted as satisfied.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "S02",
+        "S05"
+      ],
+      "exceptions": [],
+      "id": "A11",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 739,
+          "source_id": "standards/ASSURANCE.md",
+          "start_line": 699
+        }
+      ],
+      "text": "Return counterexamples to earliest supported causal frontier, not first log/time position. Preserve unique locus, jointly necessary incomparable loci, unresolved alternative frontiers or indeterminate as distinct. Record exact subject/basis, causal evidence, expected/observed relation and downstream invalidations. Localisation does not itself authorise broader testing, compatibility repair, controllers or changed upstream meaning.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "E01",
+      "kind": "verification",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 57,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 11
+        }
+      ],
+      "text": "Before selecting witnesses, load-bearing claims name exact subject, property, governing basis, witness relation, nearest excluded weaker property and falsifier. Bind exact authoritative composition; per-file/carrier evidence cannot close an unevaluated composite. Mechanical enforcement needs executable/reproducible predicate and observed reachable ordinary-path witness; planned checks stay planned/open. Quantifier/population/scope cannot exceed evaluated evidence. Material counterevidence invalidates dependent verdicts pending withdrawal/supersession/requalification.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "E01"
+      ],
+      "exceptions": [],
+      "id": "E02",
+      "kind": "prohibition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 188,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 141
+        }
+      ],
+      "text": "Keep semantic basis, evidence basis and state projection distinct: law defines meaning, evidence supplies observations, evaluator applies relation, owner disposes. Structural checks decide syntax/types/IDs/references/bases/mechanical predicates; semantic fidelity remains separate absent an exact lawful decision contract. A parse, map, green test or historical judgment proves only its claim. Evidence on another basis is excluded, not rescued by narrower scope. Broad digest changes do not prove every semantic relation changed.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [
+        "Independent assessment required by governing basis; this section does not itself choose the requiring boundaries."
+      ],
+      "depends_on": [
+        "C14"
+      ],
+      "exceptions": [],
+      "id": "E03",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 260,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 190
+        }
+      ],
+      "text": "Where independent assessment is required, constructor self-review is construction output. Assess the exact immutable/stabilised subject and live authority/proof state, not the author's summary; derive source expectations before opening candidate, make no repair, and do not assess own authorship. Shared mechanical evidence may be reused, judgment may not. Authenticate producer/subject/basis/evidence separately from expected-answer and execution provenance. Fresh context creates no independence; actor-family independence requires declared policy, defaulting to non-independence when unstated.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "E01"
+      ],
+      "exceptions": [],
+      "id": "E04",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 279,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 262
+        },
+        {
+          "end_line": 387,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 337
+        }
+      ],
+      "text": "Reviews return a core result per evaluated predicate with exact subject/basis/evidence, ranked evidence-backed findings, smallest bounded correction, residuals and invalidators. Planned but unperformed predicates have no result, not indeterminate or falsified. Recommendations are evidence, not dispositions. Acceptance is the decision owner's bounded disposition; work closes by its stated condition, not reviewer approval or green labels. Landing, closure and release are separate decisions.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C09",
+        "C15"
+      ],
+      "exceptions": [],
+      "id": "E05",
+      "kind": "definition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 443,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 406
+        }
+      ],
+      "text": "Only findings that falsify the exact claim, expose competing/ambiguous acceptance-path authority, violate active authority/safety/retained accepted behaviour, or durably foreclose an admitted Product outcome can block promotion. These conditions are necessary, not all automatically sufficient: valid falsification of a mandatory non-waivable hard-stop claim blocks; otherwise decision owner applies exact claim/outcome/hard stops/Product cutoff and retains accepted residuals. Outside-claim observations are repricing inputs, not automatic scope widening, block or follow-up. Severity/priority cannot waive hard stops.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "E06",
+      "kind": "definition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 485,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 445
+        },
+        {
+          "end_line": 516,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 506
+        }
+      ],
+      "text": "Conformance satisfies a specification under declared interpretation and independent judgment; several implementations may conform. Semantic equivalence means identical interpreted behaviour on a stated domain, including behaviour beyond specification; computational equivalence additionally concerns same function at equal cost for declared workload/architecture. Categorical equivalence is separate. No rung implies another. Matching outputs, structural/byte identity, incumbent similarity or determinism are not generic conformance criteria; lawful alternatives pass. Reference outcomes are optional non-authoritative evidence unless the basis requires equivalence.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "E01",
+        "D24"
+      ],
+      "exceptions": [],
+      "id": "E07",
+      "kind": "permission",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 504,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 487
+        }
+      ],
+      "text": "For accepted layered relations, reuse exact current basis and sufficient reconstruction evidence after applicability/invalidation checks. Reconstructability requires a correct route, not execution at every use, grants no restart authority and never excuses stale success. The claim bounds reconstruction; a local function does not require recreating the whole subject. Material counterexamples challenge only affected relations.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C15"
+      ],
+      "exceptions": [],
+      "id": "S14",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1622,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 1599
+        }
+      ],
+      "text": "During refactor/migration, temporary mixed implementation is allowed only below the current break boundary as explicitly non-authoritative plumbing; adapters/scaffolds are named, bounded and outside acceptance. Never keep rival authority for the same scope. On landing the affected scope, prior operative paths are erased rather than passively preserved; historical traces remain in version/event/superseded records. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): Explicitly specified, deterministically routed non-overlapping Product/compatibility scopes may coexist while the enclosing migration remains visibly open. An explicit compatibility feature may remain when named as current Product behaviour, specification-justified, scope-bounded and intentionally tested.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [
+        "Core-interface migration closure; its retention relation is also explicitly imported by recurrence and superseded-mechanism rules."
+      ],
+      "depends_on": [
+        "C15"
+      ],
+      "exceptions": [],
+      "id": "S15",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1525,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 1500
+        }
+      ],
+      "text": "Core-interface migration closure requires all authoritative producers/consumers on the new contract, downstream projections on the same truth, one runtime/reporting/topology/proof closure law, retired superseded authority and no acceptance-path scaffolding. Retention bears proof: current supported obligation, owner, purpose, execution scope and material cost; temporary compatibility/comparison has expiry/removal trigger. Existing tests, oracle labels or nominal demotion do not justify duplicate production responsibility. Intermediate slice acceptance keeps enclosing migration open. Conditional qualifications to apply only when their stated premises are established (no permission is asserted by this context): A required cold reconstruction route or independent oracle may fulfil an enduring distinct obligation without invented expiry; retain it with explicit obligation/owner/scope/cost. If an obligation has no governing basis, no replacement guard is required; closed-cone retirement need not await unrelated Product closure.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "E03",
+        "E04",
+        "C02",
+        "C03",
+        "C18"
+      ],
+      "exceptions": [],
+      "id": "S16",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1684,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 1624
+        }
+      ],
+      "text": "Agentic construction follows the delegated bounded execution relation from accepted basis/affected set through construction/self-review, required independent assessment, owner disposition, exact accepted checkpoint and next already-authorised action. Candidate availability, assessment and acceptance are separate; none creates the next grant. This source does not mandate an Executive configuration or actor inventory merely because a worker exists.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "role",
+            "op": "eq",
+            "value": "worker"
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C01",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 57,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 11
+        },
+        {
+          "end_line": 188,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 175
+        },
+        {
+          "end_line": 789,
+          "source_id": "standards/FOUNDATIONS.md",
+          "start_line": 732
+        },
+        {
+          "end_line": 488,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 353
+        }
+      ],
+      "text": "Constraint coverage, execution readiness and task success answer different predicates. A source-complete instruction to establish a domain, grant, design premise or verification result is not an assertion that it is established. Before the dependent action, acquire the actual Product meaning, accepted design, admitted domains, scope, operation authority and evidence; missing or ambiguous material inputs withhold that action/claim. Future unperformed typing, preservation, admission and acceptance checks have no result. Do not turn them into satisfied, indeterminate or a fictitious pre-build fact. This method-constraint index never supplies Product-specific behavior or acceptance authority.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C02",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 409,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 353
+        },
+        {
+          "end_line": 691,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 619
+        },
+        {
+          "end_line": 159,
+          "source_id": "standards/FOUNDATIONS.md",
+          "start_line": 96
+        }
+      ],
+      "text": "Bind each step's exact outcome, subject and source checkpoint; acquisition paths for required inputs; evaluation/result contracts; affected causal cone and inherited invariants; operation/evaluation/decision authorities, write territory and reserved decisions; capability, invalidators and re-entry. The execution unit is the smallest coherent causal cone, not an arbitrary file or token slice. Include every materially deciding producer/consumer/owner; unrelated incompleteness does not block a sufficient bounded claim. A lawfully bounded proxy acts only within the existing grant and does not reprice the outcome or missing governing relation.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C03",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 488,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 410
+        },
+        {
+          "end_line": 730,
+          "source_id": "standards/TICKETS.md",
+          "start_line": 672
+        }
+      ],
+      "text": "Drafting an execution contract is not admission. Effects begin only after the selected deterministic admission or exact authorized override establishes the actual contract, subject/basis, authority, criteria, evidence and permitted territory. Neither a ticket, active status, actor label, tool success nor a child result grants authority or continuation. Applicability is true, false or unknown on sufficient premises; missing or ambiguous is not false. Record each result and residual in the authorized durable result/evidence surface before returning; if that surface is absent, refuse execution. Excluding an obligation produces no satisfied result for it.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C03"
+      ],
+      "exceptions": [],
+      "id": "C04",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 745,
+          "source_id": "standards/TICKETS.md",
+          "start_line": 672
+        }
+      ],
+      "text": "Use the smallest lawful work carrier under existing upstream authority. Reuse an exact admitted ticket; otherwise use a durable ticket only when work or an open obligation needs independent surviving state and ticket-state authority permits it; within an admitted sprint use its manifest-local iteration when state ends there; otherwise a one-run contract suffices. No applicable upstream authority means stop/re-entry, not creation of a ticket as substitute. Where surviving state is needed but ticket-state authority is absent, retain the obligation in an already authorized durable surface, withhold the dependent closure and name the re-entry. Carrier, execution and closure retain the same criteria, proof and non-closure conditions. Use that selected carrier as the current work reference for context construction and continuation: bind its question, subject/basis, result/evidence references and surviving obligations. Apply bounded qualified acquisition, current-state resumption and exact-result reuse; an actor account cannot replace the carrier, governing sources or current evidence. Preserve required step-produced facts, results and original owner rulings through the admitted result/evidence route. This application creates neither another carrier requirement nor ticket-state authority.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C05",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 159,
+          "source_id": "standards/FOUNDATIONS.md",
+          "start_line": 96
+        },
+        {
+          "end_line": 257,
+          "source_id": "standards/IDENTITY.md",
+          "start_line": 224
+        }
+      ],
+      "text": "Operation, semantic, evaluation and decision authority remain distinct from actor identity, capability and attribution. Composition carries or restricts authority; copying, naming, interpreting, hashing, encoding, testing or transporting a record does not create, widen or transfer it. A delegation identifies grantor, actor, exact subject/scope/basis, permitted and excluded decisions, validity, subdelegation/revocation and provenance. Owner rulings retain source, actor/mode, scope, disposition and supersession; the actor's interpretation is not the owner's source wording. Self-review cannot become independent acceptance by relabeling it.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C01"
+      ],
+      "exceptions": [],
+      "id": "C06",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 789,
+          "source_id": "standards/FOUNDATIONS.md",
+          "start_line": 732
+        },
+        {
+          "end_line": 999,
+          "source_id": "standards/FOUNDATIONS.md",
+          "start_line": 939
+        },
+        {
+          "end_line": 57,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 11
+        }
+      ],
+      "text": "Bind every result to its exact predicate, subject, basis, evidence, evaluator and invalidators. Satisfied, falsified, indeterminate, out_of_frame and invalid_basis retain their owning meanings; a profile refinement maps each value once and never upgrades standing. A combined result must retain closed results beside planned/unperformed assessments and uncovered required obligations: an unresolved required member prevents satisfaction. An absent result differs from an undeciding performed assessment; a stale evaluation basis differs from a missing current component result. A code test, schema check, context receipt or construction success proves only its declared predicate.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C07",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1748,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 1681
+        },
+        {
+          "end_line": 1458,
+          "source_id": "standards/FOUNDATIONS.md",
+          "start_line": 1378
+        },
+        {
+          "end_line": 1412,
+          "source_id": "standards/FOUNDATIONS.md",
+          "start_line": 1397
+        }
+      ],
+      "text": "Reuse an exact current result only after checking applicability and its invalidators: changed material input/evidence, changed basis or a declared revising observation. Preserve valid unaffected results and all earlier failures; changed bytes alone prove neither semantic failure nor equivalence. Impact follows the causal relations and affected support, not a fixed whole-suite cadence; an absent dependency edge is not proof of no influence. Unknown material impact widens re-evaluation or stays an explicit residual, and new obligations require their own work. Reuse does not replace an independently required judgment. An impact-based selection does not cancel a gate the governing policy requires independently of selection: retain every applicable mandatory gate alongside selected checks and new-obligation assessments. Excluding a check requires supported coverage of its material dependencies and a reason the change cannot invalidate the reused claim. Selecting work supplies no execution evidence. Materiality may require judgment; a merely non-semantic-looking edit is not automatically irrelevant to a check's execution or evidence validity.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C07"
+      ],
+      "exceptions": [],
+      "id": "C08",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1163,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 1114
+        },
+        {
+          "end_line": 1422,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 1370
+        }
+      ],
+      "text": "Work state comprises current persistent workspace, governing basis, applicable results/judgments with invalidators, residuals and uncertainty about external effects. Resumption starts from actual current state, recovers applicable progress and reopens affected support. Reconcile uncertain effects before repeating them or taking an outcome-dependent action; a lost reply proves neither completion nor no effect, and ended partial work is distinct from still-running work. Preserve rather than blindly restart: a restart states why retained-work repair is insufficient, surviving obligations/evidence and changed assumptions. Acceptance binds one checkpoint; the next already authorized action needs no newly invented approval.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C09",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1208,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 1164
+        },
+        {
+          "end_line": 892,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 822
+        }
+      ],
+      "text": "Handle every material failure, unknown, refusal and unavailable capability with a known lawful next move under the actual contract; this is not a proof of external termination. Hard stops remain violated invariant, missing authority/capability, undeclared irreversible effect or an explicit approval gate regardless of risk appetite. Diagnose whether to repair implementation, re-enter insufficient law, revise an inaccurate prediction or obtain missing observation. Difficulty, a slow provider or test count alone does not authorize new scope or governing change.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C10",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 776,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 693
+        },
+        {
+          "end_line": 327,
+          "source_id": "standards/REFERENCE_FRAME.md",
+          "start_line": 273
+        },
+        {
+          "end_line": 838,
+          "source_id": "standards/REFERENCE_FRAME.md",
+          "start_line": 820
+        },
+        {
+          "end_line": 697,
+          "source_id": "standards/AXIOMATIC_CALCULUS.md",
+          "start_line": 644
+        }
+      ],
+      "text": "Context is a declared, finite material closure under exact seed, scope, basis and dependency relations; unresolved, nonfinite or nonunique closure refuses or remains a gap. Preserve excluded, external, unresolved, translated and invalidation-sensitive seams. Include every known material relation or a declared authoritative input; exclude irrelevant workspace context. Where fit is claimed, measure the declared complete body in the actor's budget unit before receipt. Fit does not prove actual receipt or adequate attention. Overflow requires lawful refinement/sequencing/compression or another envelope, never silent truncation; a narrow projection cannot drop required meaning to fit. A local corpus inventory cannot prove absence of undiscovered material relations.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C11",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 283,
+          "source_id": "standards/PRODUCT_DEFINITION.md",
+          "start_line": 225
+        },
+        {
+          "end_line": 545,
+          "source_id": "standards/PRODUCT_DEFINITION.md",
+          "start_line": 479
+        },
+        {
+          "end_line": 688,
+          "source_id": "standards/PRODUCT_DEFINITION.md",
+          "start_line": 637
+        },
+        {
+          "end_line": 59,
+          "source_id": "standards/PROFILES.md",
+          "start_line": 1
+        }
+      ],
+      "text": "Apply source terms in their declared bounded context and exact basis. Resolve the nearest explicit scope, admitted local/imported definitions and owner-authorized overrides; exactly one concept must remain. Same names, directory proximity, glossary matches, data shapes or familiar examples do not supply a definition or authority. Zero or multiple material meanings fail closed and name the missing relation/owner. A method cut's integrity and availability do not automatically adopt a profile or activate a configuration; Product authority owns its exact Project Reference-Frame Basis and selected optional refinements.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C12",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1163,
+          "source_id": "standards/FOUNDATIONS.md",
+          "start_line": 1110
+        },
+        {
+          "end_line": 1115,
+          "source_id": "standards/AXIOMATIC_CALCULUS.md",
+          "start_line": 1095
+        },
+        {
+          "end_line": 1284,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 1209
+        }
+      ],
+      "text": "Preservation through a construction establishes initial conditions, every transition's premises, compatible composition boundaries and the connection to the selected outcome. Include material failure/interruption/refusal/effects; a successful-return-only relation proves nothing about omitted outcomes. Real execution conformity is separately verified. Exact transformations preserve declared meaning; approximation declares an adequate whole-composition bound, never assumed addition of local tolerances. Composition retains intermediate results, authorities, evidence, provenance and stops; it cannot flatten probabilistic proposal, deterministic evaluation and human adjudication into one authority. No universal F_P/F_D/F_H sequence is mandated. Each refinement layer states and discharges what it preserves of the transformation above it. Regrouping, partitioning, reordering, merging or substituting parts requires a rewrite/refinement law declared for that subject; without such a law, only a step valid irrespective of the subject's particular laws is admissible. A composite relying on an unlicensed, non-universal rewrite is inadmissible. Local passes do not establish the outer contract: coverage of outer obligations, valid local implications and legitimate authority are premises, and required coupled relations must fit together with each material seam's far side or its justified exclusion. An exact step preserves interpreted meaning; an approximate step needs its own adequacy relation and an argued whole-composition bound. A step satisfying neither contract, and any composite relying on it, is inadmissible.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C13",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1063,
+          "source_id": "standards/AXIOMATIC_CALCULUS.md",
+          "start_line": 934
+        },
+        {
+          "end_line": 825,
+          "source_id": "standards/RELEASE.md",
+          "start_line": 795
+        }
+      ],
+      "text": "Pure or deterministic-looking Python is not automatically common F_D. An F_D claim needs an exact closed logical domain, basis, all material state/dependencies, termination argument and exactly one declared outcome for every domain input; stops retain cause/predicate and never map to satisfied. A bounded successor has its own identity/domain/outcomes and does not prove the unbounded original total. Missing F_D eligibility does not automatically relabel a legacy deterministic operation F_P. Preserve its lawful old basis and an explicit supported migration obligation. Kind classification grants no operation, admission, physical effect, quality or acceptance authority; an unchanged-subject evaluator must preserve the judged subject.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C14",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 691,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 619
+        },
+        {
+          "end_line": 1160,
+          "source_id": "standards/TICKETS.md",
+          "start_line": 1103
+        },
+        {
+          "end_line": 1291,
+          "source_id": "standards/TICKETS.md",
+          "start_line": 1249
+        },
+        {
+          "end_line": 260,
+          "source_id": "standards/EVALUATION.md",
+          "start_line": 227
+        }
+      ],
+      "text": "Required independent assessment follows the Product/work contract and risk-bearing boundary: Product, qualification and release closure retain it, but every local implementation step does not automatically acquire a reviewer. A constructor without required review or reserved acceptance may record a sufficient local result under the existing grant. Where required, bind exact candidate and evidence, durable findings/verdict and current owner ruling; neither implementation authority nor a new context supplies independent verification. Authorship includes adopted wording/design/repair policy; source-backed defect reports alone are not authorship. Same-model-family semantic assessment is not independent by default unless governing policy establishes it.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C07"
+      ],
+      "exceptions": [],
+      "id": "C15",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 783,
+          "source_id": "standards/RELEASE.md",
+          "start_line": 735
+        },
+        {
+          "end_line": 283,
+          "source_id": "standards/PRODUCT_DEFINITION.md",
+          "start_line": 225
+        }
+      ],
+      "text": "For a successor or compatibility claim, identify the exact immutable predecessor and give each materially affecting claim one supported semantic disposition: conserved, superseded by accepted relation, intentionally removed by current Product authority or not applicable with bounded reason. Unresolved disposition withholds affected qualification. Compare the same material case, scope and authority, preserving what must/may/must not happen, triggers, exceptions and consequences of absent premises. Similar wording, shared names or unchanged patches are not proof. Old evidence applies only while its deciding source and consumer binding remain applicable; disposition itself is a claim to assess, not a successful result. Local refactoring does not authorize release, install, selector or adoption changes.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C16",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1591,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 1519
+        },
+        {
+          "end_line": 1422,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 1392
+        }
+      ],
+      "text": "Use proportional work and evidence: resolve material ambiguity without maximizing artifacts, diagrams, reviewers, tickets, code or repeated checks. An accepted constraint family can justify equivalent internal choices once; there is no universal per-internal receipt requirement. Reacquisition, rehashing or reevaluation needs an identified dependent decision or invalidator. Report a cost claim against its declared allowance and measured boundary, separating preparation, framework, external/provider, transport and assurance costs; unknown cost remains unknown. Activity, proof repetition or preserved unfinished work is not accepted outcome progress.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D19"
+      ],
+      "exceptions": [],
+      "id": "C17",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 948,
+          "source_id": "standards/TICKETS.md",
+          "start_line": 918
+        },
+        {
+          "end_line": 1941,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1903
+        }
+      ],
+      "text": "At the second credible recurrence, make commonisation an explicit review question; a third local rebuild must consume or extend the accepted reusable surface, or carry an explicit do-not-commonise design/library rationale. A new pattern is not automatically a hard stop or mandatory follow-up outside the selected claim. Record consume/extend/rebuild on implementation migration work. Prefer boundary-local cleanup, then tenant library extraction, then separately authorized shared design re-entry; no common name or unused helper proves reuse.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C02",
+        "C03",
+        "C14"
+      ],
+      "exceptions": [],
+      "id": "C18",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 185,
+          "source_id": "standards/EXECUTIVE_BASELINE.md",
+          "start_line": 147
+        },
+        {
+          "end_line": 1041,
+          "source_id": "standards/EXECUTIVE_BASELINE.md",
+          "start_line": 1006
+        },
+        {
+          "end_line": 1603,
+          "source_id": "standards/EXECUTIVE_BASELINE.md",
+          "start_line": 1549
+        }
+      ],
+      "text": "If EXECUTIVE_BASELINE is actually adopted/selected, direct Writer work binds the same exact intake, territory, obligations, evidence, stops and consumer as coordinated work. Direct entry gains no extra ticket, review, diagram recreation or owner ceremony. A Worker inherits bounded construction and self-review only; mutation outside its explicit grant refuses, while reading the material cone may exceed write territory within access authority. candidate_ready identifies exact candidate/transition evidence and is not acceptance. In the coordinated branch return the one work result to Executive and do not infer a next action; in direct work return to the existing declared work authority/result carrier. Configuration adoption and decision admission remain owned by existing authorities.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [],
+      "exceptions": [],
+      "id": "C19",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1723,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1694
+        },
+        {
+          "end_line": 2453,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 2421
+        },
+        {
+          "end_line": 139,
+          "source_id": "standards/PROFILES.md",
+          "start_line": 61
+        },
+        {
+          "end_line": 688,
+          "source_id": "standards/PRODUCT_DEFINITION.md",
+          "start_line": 637
+        }
+      ],
+      "text": "Optional profile law is selected by actual adopted scope, not language, pure/local status or available documents. DESIGN_MODULE governs module realization; adopted ODD additionally owns graph-native operative carriers and traversal authority; a realized UX surface additionally needs its applicable UX law, default-trigger/exemption determination and actual product carrier. ODD, TRAVERSAL_OCCURRENCE and WORLD_MODEL are distinct optional profiles: ODD does not imply the latter two, and world-model/metaphysical framing is not a prerequisite to engineering Ontology. If task-specific adopted law outside this exact method-constraint closure materially decides the task, acquire it through the named Product authority packet before that action; this index does not claim to replace it.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D35",
+        "C03",
+        "C07"
+      ],
+      "exceptions": [],
+      "id": "C20",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1368,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 1286
+        }
+      ],
+      "text": "For a material transition, each admission owner derives and validates the complete enclosing relation from authoritative inputs, including every materially deciding participant, equality join and far-side seam. Caller assertions of completeness, authority or prior admission are insufficient. Bind one exact current authoritative basis through semantic commit, or an explicitly coherent composite basis; if currentness can advance, condition commit on predecessor/currentness or re-enter without effect. Validate every participant before any effect. Direct and supported composite/nested paths admit the whole transition or none, never a subset or competing same-scope path. Standing proof covers supported forged/ambiguous/stale/mixed-basis/rival-authority cases, fresh reconstruction and exact replay, plus failure at each materially distinct publication boundary (or a declared covering equivalence/dominance proof). Final validation failure is not post-validation atomic-failure evidence. Unsupported cases need design-grounded exclusion, not a helper's inability to construct them.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C04",
+        "C06"
+      ],
+      "exceptions": [],
+      "id": "C21",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 324,
+          "source_id": "standards/TICKETS.md",
+          "start_line": 179
+        }
+      ],
+      "text": "If work is inside an admitted sprint, use its one authoritative manifest with exact authority, bounded scope/exclusions, expected classes, closure trigger/law, proof, non-closure conditions, deferred-compliance classes and paydown policy. A sprint batches repeated closure criteria, never substantive intake triage. Escrow is lawful only for named local debt, lower expected correction cost, a short reviewable window and close review/paydown; it satisfies no Product/method/release closure by itself. New Product truth/contracts/runtime/governance/evidence semantics, missing carriers or law-changing work exit to owning reprice/supersession. Closing freezes new iteration, reviews every item against authority, checks durable evidence and classifies every item/debt with durable follow-up. Closed is a carrier state, not universal satisfaction: accepted maps satisfied; local_paydown/remove falsified for compliance; design/requirement/Product reprice invalid_basis. Do not hide authority drift under local paydown.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O01",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 594,
+          "source_id": "standards/ODD.md",
+          "start_line": 587
+        },
+        {
+          "end_line": 602,
+          "source_id": "standards/ODD.md",
+          "start_line": 595
+        },
+        {
+          "end_line": 629,
+          "source_id": "standards/ODD.md",
+          "start_line": 603
+        },
+        {
+          "end_line": 636,
+          "source_id": "standards/ODD.md",
+          "start_line": 630
+        },
+        {
+          "end_line": 649,
+          "source_id": "standards/ODD.md",
+          "start_line": 637
+        },
+        {
+          "end_line": 715,
+          "source_id": "standards/ODD.md",
+          "start_line": 703
+        }
+      ],
+      "text": "Under adopted ODD, preserve typed asset boundaries and named published graph functions or compositions as the operative constructive carriers. Declare inputs/outputs, intent, public/helper role, outer/inner vector and refinement relations and produced/consumed asset contracts. Design the typed outcome traversal and its graph-language/runtime carrier before minimal adapters. Local scripts, services, nested calls and packaging cannot acquire rival semantic or graph authority. Public carriers and views reconcile structurally and semantically to their declared authoritative sources; missing, stale or materially conflicting sources leave the affected claim unestablished.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O02",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 680,
+          "source_id": "standards/ODD.md",
+          "start_line": 669
+        },
+        {
+          "end_line": 702,
+          "source_id": "standards/ODD.md",
+          "start_line": 681
+        }
+      ],
+      "text": "The declared runtime owns continuation and re-entry for its traversal. A bounded domain step returns outputs/results through its published contract; another Product, plugin, service or projection gains no traversal control by invocation or status reporting. Before activation and closure, changes to traversal control, delegation (including worker transport/process supervision), admission, evidence evaluation, closure, assurance, retry or continuation require an authority audit of actual call paths and outputs, each operation owner and grant, and absence of a rival controller. Missing or conflicting authority prevents affected activation and closure. Product owns concrete audit inventory and implementation protocol; ODD mandates no process API, event/replay seam or fixed five-surface design.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O03",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 568,
+          "source_id": "standards/ODD.md",
+          "start_line": 552
+        },
+        {
+          "end_line": 702,
+          "source_id": "standards/ODD.md",
+          "start_line": 681
+        },
+        {
+          "end_line": 782,
+          "source_id": "standards/ODD.md",
+          "start_line": 716
+        }
+      ],
+      "text": "Keep runtime control, evidence evaluation, operation grants and acceptance separately bound to their declared contracts and owners. F_P/F_H specialisations confer no additional authority. The Product owns evaluator decomposition, selection algorithm, storage and recovery protocol; ODD requires no four-function evaluator API or fixed constructive loop. An implementation refactor must preserve the actual adopted Product contracts as well as these method boundaries.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O04",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 782,
+          "source_id": "standards/ODD.md",
+          "start_line": 716
+        },
+        {
+          "end_line": 756,
+          "source_id": "standards/SPEC_METHOD.md",
+          "start_line": 668
+        }
+      ],
+      "text": "The selected outcome comes from SPEC_METHOD, never traversal activity, a model, gap or projection. Each invoked step binds graph contract, inputs, target, obligations, grant and lawful stop conditions. Changed commitments re-enter their owning surface; re-entry requests do not select replacement outcomes or grant effects. Work remains within the admitted outcome or bounded basis and stops under its governing terminal/exhaustion conditions. Missing lawful graph authority is not repaired by an unpublished fallback or local controller.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O05",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 668,
+          "source_id": "standards/ODD.md",
+          "start_line": 650
+        },
+        {
+          "end_line": 782,
+          "source_id": "standards/ODD.md",
+          "start_line": 716
+        }
+      ],
+      "text": "Tracking and reconciliation are required: keep current obligations, decisions, progress and unresolved matters available to later actors and reconcile with the authoritative mutable workspace before material reliance. An optional generic register or functionally equivalent LLM/other mechanism may do this. Declared sources and evidence can be re-acquired by reference; record needed transient observations, judgments, residuals and authority decisions that later steps cannot otherwise acquire. Preserve subject, basis, scope, evidence and authority plus enough prior/current identity for corrections. No mandatory immutable ledger, ledger-only attention, every-callout capture or event-log admission is imposed. Product-specific evidence/storage duties still apply. An F_P worker must not receive an F_D-authored semantic extraction recipe when its edge requires F_P judgment.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O06",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 782,
+          "source_id": "standards/ODD.md",
+          "start_line": 716
+        }
+      ],
+      "text": "An artifact, worker report or successful process exit alone cannot close a traversal or accept a Product. Evaluation, artifact admission and acceptance retain their declared contracts and owners. Each evaluation names its predicate and core result; evidence for one predicate cannot satisfy another. Runtime-specific disposition names/refinements belong to the Product and require declared mappings. ODD defines no closure-decision enum or ledger fold. Missing coverage and material residuals remain visible; traversal closure does not imply construction availability, Product acceptance or RELEASE successor disposition.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O07",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 680,
+          "source_id": "standards/ODD.md",
+          "start_line": 669
+        },
+        {
+          "end_line": 782,
+          "source_id": "standards/ODD.md",
+          "start_line": 716
+        }
+      ],
+      "text": "Lawful continuation and re-entry follow the declared graph and runtime ownership. Material surprise or changed basis re-enters ACTIVATION feedback/diagnosis rules. Resumption acquires relevant current sources and needed prior step-produced facts; bounded return does not erase progress or obligations. Activity, timeout or process state alone cannot decide a semantic predicate without its required evidence. The Product supplies any selection algorithm, runtime result vocabulary and recovery protocol; no evaluate_next totality, fixed resume variants, priority fallback or replay-visible yield carrier is mandated by ODD.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O08",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 649,
+          "source_id": "standards/ODD.md",
+          "start_line": 637
+        },
+        {
+          "end_line": 715,
+          "source_id": "standards/ODD.md",
+          "start_line": 703
+        },
+        {
+          "end_line": 782,
+          "source_id": "standards/ODD.md",
+          "start_line": 716
+        },
+        {
+          "end_line": 970,
+          "source_id": "standards/ODD.md",
+          "start_line": 955
+        }
+      ],
+      "text": "A projection names source, subject, scope and validity; it supplies no competing authority. Current asset views reconcile to workspace evidence; execution-history views name supporting records for historical claims. Matching names/output does not prove structural or semantic identity. Missing, stale or conflicting material sources invalidate affected reliance until reconciled; negative projection proof includes structural drift. Preserve needed facts and interpretable provenance, but no universal replay or prescribed causal-carrier chain is required. Published inner steps retain the outer contract and applicable ownership/evidence duties; opaque realization gains no hidden traversal control. Valid unchanged evidence retains only its exact applicable scope.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O09",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 380,
+          "source_id": "standards/ODD.md",
+          "start_line": 336
+        },
+        {
+          "end_line": 799,
+          "source_id": "standards/ODD.md",
+          "start_line": 783
+        },
+        {
+          "end_line": 1015,
+          "source_id": "standards/ODD.md",
+          "start_line": 931
+        }
+      ],
+      "text": "A graph-bound function declares cumulative typed requires/provides/carries, preserving the outer vector contract through any published refinement; it consumes accumulated admitted environment, not merely the last output. Coarse/inner closure folds must agree. Missing current required proof keeps closure open unless lawful deferment/repricing supplies its exact disposition. Domain semantics remain Product-owned above shared carriers. Refactoring a shared carrier cannot re-author domain meaning, use graph closure as release acceptance or silently erase predecessor evidence requirements.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "O10",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 932,
+          "source_id": "standards/ODD.md",
+          "start_line": 800
+        }
+      ],
+      "text": "ODD conformance preserves an end-to-end manual/agentic F_P walkthrough over the minimal exact authority packet and a separate admission gate for produced artifacts. General-method projections may orient source precedence/re-entry/traceability, but Product-specific behavior comes from the current Product packet. Bad reasoning/stale-memory use is agent error; a method defect requires a competent correctly configured actor blocked by actual source ambiguity/missing step/contradiction. A flaky live provider does not prove constitutional process failure. Walkthrough/admission evidence is not ratification. Where authority-path validity is claimed, remove/invalidate the actual authority input on the supported path and prove refusal before effects with no fallback, distinguishing source, package, installed and runtime absence.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_odd",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "U01",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 85,
+          "source_id": "standards/UX.md",
+          "start_line": 65
+        },
+        {
+          "end_line": 619,
+          "source_id": "standards/UX.md",
+          "start_line": 568
+        }
+      ],
+      "text": "For the affected UX surface, resolve actual Product adoption/scope and default triggers: reachable from Product shell, used as proof, able to mutate Product truth, dispatch work or change Context/selection/closure/continuation/evidence/provenance. Scaffolds/debug prototypes are not exempt by naming. A scoped exemption records permitted operations/mutation bound, visible label where user-facing, superseding authority surface, retirement condition/owning ticket and non-closure condition. A scaffold cannot accumulate into production. Profile ambiguity requires the stricter defined interpretation, owning reprice or recorded scoped exemption; unresolved ambiguity blocks the dependent implementation.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": [
+          {
+            "fact": "profile_ux",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "realizes_ux_surface",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "U02",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 369,
+          "source_id": "standards/UX.md",
+          "start_line": 241
+        }
+      ],
+      "text": "Preserve the Elm process model independent of stack: typed State, Msg, pure Update (Msg,State)->(State,Cmd), pure View State->ViewTree, and typed Cmd/Sub interpreted by the runtime. Record the chosen realization and why it preserves the process/effect membrane. Views do not own continuation, perform effects or bypass Msg through two-way binding, DOM mutation, handler controllers or hidden local state machines. Genuine view-local ephemeral state may remain local only if unmount loss changes neither Product behavior nor another view; Product-meaningful state goes through the reducer.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": [
+          {
+            "fact": "profile_ux",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "realizes_ux_surface",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "U03",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 397,
+          "source_id": "standards/UX.md",
+          "start_line": 320
+        }
+      ],
+      "text": "Each Cmd names effect kind, typed input, admitted carrier/external boundary, all materially possible success/failure/unresolved outcome Msgs, deciding evidence/missing observations and deterministic correlation key where required. Only the declared membrane interprets Cmd and translates outcomes to Msg; reducers/render/pure helpers perform no IO, subscriptions, globals mutation or platform effects. Business branching and multistep decisions belong in the reducer, not effect handlers. Lost transport replies retain completion_unknown unless sufficient observations decide otherwise. Reconciliation precedes a dependent or repeated effect; recovery is an explicit Cmd/Msg interaction, never hidden continuation.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": [
+          {
+            "fact": "profile_ux",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "realizes_ux_surface",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "U04",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 240,
+          "source_id": "standards/UX.md",
+          "start_line": 212
+        },
+        {
+          "end_line": 436,
+          "source_id": "standards/UX.md",
+          "start_line": 398
+        }
+      ],
+      "text": "Product-truth-changing UX messages bind one admitted Product carrier/action path: AssetSurface, published GraphFunction/composition, admitted workorder/job/runtime command, declared runtime boundary or the exact equivalent typed design contract. No carrier means blocked dependent construction and owning re-entry, not local UI invention. State derives from the authoritative shared contract; Product messages map one-to-one to its action registry or a documented meaning-preserving projection; writes follow that path and selection follows its Context contract. UI work context carries the deciding UX law and names the actual carrier/path when Product truth changes; this method index does not invent those Product-specific coordinates.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": [
+          {
+            "fact": "profile_ux",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "realizes_ux_surface",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "U05",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 499,
+          "source_id": "standards/UX.md",
+          "start_line": 437
+        }
+      ],
+      "text": "Views cannot hide inter-event state in refs/closures/globals or chain transitions without Msg. Each Product-meaningful interaction family needs an executable Msg-replay proof before UX closure: initial State, ordered Msg log, final State, ordered Cmd, returned typed outcomes including material unresolved/recovery paths, injected time/random/id/external values. Dependence on unrecorded DOM, mutable handler memory or effects bypassing Msg falsifies replay. Projection-only interactions may use a no-effect proof with empty Cmd. Successful replay of an unresolved effect State proves replay only, not effect completion; outcome-dependent repeat remains prohibited until observation.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": [
+          {
+            "fact": "profile_ux",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "realizes_ux_surface",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "U06",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 545,
+          "source_id": "standards/UX.md",
+          "start_line": 500
+        }
+      ],
+      "text": "Views take explicit typed inputs and return typed ViewTree without external reads, across-render mutable capture or body effects. UX-consumed Product types come from the shared authoritative contract rather than shadow declarations; local-only draft/filter types remain local. Every untrusted/out-of-process seam has runtime validation from the same typed-schema definition used for compile-time types, including HTTP/RPC/MCP, file/event/worker outputs and URL/storage/clipboard/browser inputs. Compile-time types alone do not admit foreign payloads. A platform-handle exception stays explicitly named at the declared membrane, not semantic hidden state.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": [
+          {
+            "fact": "profile_ux",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "realizes_ux_surface",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "U07",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 591,
+          "source_id": "standards/UX.md",
+          "start_line": 546
+        }
+      ],
+      "text": "A public Product capability surface declares semantic structure, keyboard/platform navigation for every pointer action, dynamic focus, annotations for custom controls and contrast at the declared accessibility standard. Internal-only debug exemption is optional only when recorded; stricter Product refinements remain authoritative. Adoption design records stack/justification, IACS/three views, State/Msg/Update/Cmd/Sub, exact carrier bindings, membrane, replay proof, accessibility refinement and scoped exemptions before implementation. This obligation does not claim those concrete Product records already exist.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": [
+          {
+            "fact": "profile_ux",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "realizes_ux_surface",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "U08",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 684,
+          "source_id": "standards/UX.md",
+          "start_line": 620
+        },
+        {
+          "end_line": 324,
+          "source_id": "standards/TICKETS.md",
+          "start_line": 234
+        }
+      ],
+      "text": "Within a lawfully admitted UX sprint, compliance escrow may defer local visual/copy/layout/accessibility/replay/design-trace proof during bounded iteration when proof cost exceeds expected correction cost; it never weakens the process model. It cannot escrow missing Product carriers, changed typed contracts/navigation/selection meaning, runtime/governance/closure/continuation/lineage/provenance/evidence semantics, release criteria or method law. Those findings leave the path through owning reprice/supersession. Close at timebox, too many changed states, inadequate walkthrough, behavior beyond polish or unsafe uncertainty; review each changed state/meaningful interaction and classify accepted, local_paydown, design_reframe, requirement_reprice, product_reprice or remove. Local follow-up cannot erase mandatory replay/accessibility closure or leave carrier gaps/hidden continuation/authority drift unclassified.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": [
+          {
+            "fact": "profile_ux",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "realizes_ux_surface",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C19"
+      ],
+      "exceptions": [],
+      "id": "U09",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 826,
+          "source_id": "standards/UX.md",
+          "start_line": 727
+        }
+      ],
+      "text": "Keep UX surface compliance, replay, closure and carrier admission as separate predicates. Compliance uses the stricter source test (sections 4–10, no failure pattern, all review questions answered from design); unresolved design evidence is invalid_basis, actual rule violation falsified. Replay success does not establish physical effect completion. Closure requires every meaningful interaction's replay and accessibility declarations unless the exact recorded exemption covers that obligation; missing required proof is closure_unproven, not success. Missing Product carrier is falsified carrier admission and violation, with owning re-entry; undefined terms with no fixed stricter reading are out_of_frame. Escrow or exemption is a scope/disposition, not a satisfied result.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": [
+          {
+            "fact": "profile_ux",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "realizes_ux_surface",
+            "op": "eq",
+            "value": true
+          }
+        ]
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C06",
+        "C08"
+      ],
+      "exceptions": [],
+      "id": "C22",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 172,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 116
+        },
+        {
+          "end_line": 1047,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 1005
+        }
+      ],
+      "text": "Bind bounded transitions to the actual current state, selected destination and applicable governing obligations; an actor's account is not the workspace state. Discovery may add obligations or invalidate support before further reliance. Excluding work from current attention leaves that work open and preserves its material dependencies on the next decision. An authorized destination change re-enters its owner: reaching the revised destination proves nothing about reaching the previous one. Completion requires sufficient evidence that current state meets the applicable destination and acceptance conditions, followed by the decision owner's disposition. Empty work lists, closed-item counts and no known counterexample do not prove completion; a lawful bounded stop or available candidate is not destination attainment.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C05",
+        "C06",
+        "C07"
+      ],
+      "exceptions": [],
+      "id": "C23",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1247,
+          "source_id": "standards/TICKETS.md",
+          "start_line": 1161
+        }
+      ],
+      "text": "A residual judgment needed by another activation is recorded once in the existing owning carrier with exact question, subject/basis, supporting computed facts/evidence, actor/authority, scoped conclusion, uncertainty and concrete revising observation; a question settled by rule needs no invented judgment record. Preserve an applicable owner ruling in its original wording, scope, conditions and source separately from agent interpretation; neither record grants new effects. If repricing occurs, give each affected obligation its owner-authorized retained, superseded, deferred or withdrawn state with evidence/dependency/surviving-work links. These lifecycle states are not evaluation results and have no automatic core mapping. A separate performed evaluation of the exact owner decision returns repricing_established/satisfied, repricing_falsified/falsified, repricing_indeterminate/indeterminate, repricing_out_of_frame/out_of_frame or repricing_invalid_basis/invalid_basis for lawful disposition and preservation of survivors, retaining its cause/evidence. Unperformed evaluation has no result. A lawful deferral can pass that predicate while delivery remains outstanding; an unauthorized withdrawal closes nothing, and no disposition erases unresolved obligations/evidence. A general instruction to continue does not accept undisclosed scope or architecture changes.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "C03",
+        "C06",
+        "C10"
+      ],
+      "exceptions": [],
+      "id": "C24",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1047,
+          "source_id": "standards/ACTIVATION.md",
+          "start_line": 968
+        },
+        {
+          "end_line": 577,
+          "source_id": "standards/REFERENCE_FRAME.md",
+          "start_line": 513
+        }
+      ],
+      "text": "Distinguish lawful admission/activation from an activated step's output availability. Admission/activation returns activated only with admitted exact contract, exact finite unique material closure, selected projection and activated_frame; admission_refused(authority) names missing admitted work authority or durable evidence surface and maps out_of_frame, admission_refused(basis) maps invalid_basis, closure_unresolved maps invalid_basis, and unavailable frame/capability or no fitting envelope maps out_of_frame. Frame activation_refusal(capability/authority) maps out_of_frame; activation_refusal(basis), including stale/advanced/ambiguous/mismatched subject or topology, maps invalid_basis. A refusal before lawful activation creates no step, work result or step stop: return its outcome to the assigning authority/result carrier. After lawful activation, candidate_ready is satisfied only for candidate availability; an owner-valid refusal or incomplete output is falsified for availability; re_entry_requested(authority) is out_of_frame and re_entry_requested(basis) invalid_basis, with both causes retained and basis taking precedence. Completed evaluations keep their own predicate-specific results, and unperformed ones have none: an assessor's incomplete availability does not falsify its unevaluated subject. Neither an available candidate nor successful activation establishes fitness or acceptance.",
+      "unknowns": [],
+      "when": {
+        "all": [],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D31",
+        "D34"
+      ],
+      "exceptions": [],
+      "id": "D38",
+      "kind": "definition",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 1764,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 1725
+        }
+      ],
+      "text": "When DESIGN_MODULE governs a realization boundary, modules should be classified by role. Recommended roles are carrier (typed immutable contracts/values), semantic kernel (pure carrier transforms), effect shell (explicit IO/publication/process/persistence/delivery), projection (derived authoritative read models), binding/adapter (boundary conversion without invented law), and constructor/materialization (artifacts from admitted carriers and plans). This is a role recommendation for bounded reasoning, ownership, inputs/outputs, proof and later commonisation, not mandatory naming ceremony, a requirement for six files or a grant of authority. Preserve the actual assurance bindings and accepted module boundary.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    {
+      "conditions": [],
+      "depends_on": [
+        "D25",
+        "D26",
+        "D37",
+        "C07"
+      ],
+      "exceptions": [],
+      "id": "D39",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 308,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 302
+        },
+        {
+          "end_line": 2339,
+          "source_id": "standards/DESIGN_MODULE.md",
+          "start_line": 2063
+        }
+      ],
+      "text": "When reviewing code under this profile, check every required relation applicable to the exact claim; for functional-bias/pure-transform/immutable-carrier/single-truth/low-coupling claims, explicitly apply the functional realization checks. Domain, sequence and state views must agree: sequence participants exist in the domain model, messages bind declared transforms/constructors/interpreter acts/effect boundaries, and transitions derive admitted carrier/event/projection truth rather than controller memory. The cross-view matrix evaluates applicable Product, graph, language, runtime, handler and module laws as pass, fail or reasoned not_applicable. A relied-on semantic_not_realized constructor blocks promotion/closure; an accepted verdict and proportionate sequencing are required at their actual design/promotion boundary, with unchanged valid evidence reusable. Negative proof must show imperative bypass, open-payload bypass and effect-edge truth erasure fail closed. If a deterministic module appears to own next work, target movement, traversal closure or graph-function identity, its boundary should be repriced against graph-execution law before design-method closure; this is not inferred graph adoption from purity. An unanswered required relation withholds its dependent conformance claim and names deciding evidence/owner; missing authority or observation alone does not diagnose excessive coupling without evidence that meaning lives in orchestration or outside declared carriers/transforms.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    }
+  ],
+  "source_coverage": [
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06",
+        "D07",
+        "D08",
+        "D09",
+        "D10",
+        "D11",
+        "D12",
+        "D13",
+        "D14",
+        "D15",
+        "D16",
+        "D17",
+        "D18",
+        "D19",
+        "D20",
+        "D21",
+        "D22",
+        "D23",
+        "D24",
+        "D25",
+        "D26",
+        "D27",
+        "D28",
+        "D29",
+        "D30",
+        "D31",
+        "D32",
+        "D33",
+        "D34",
+        "D35",
+        "D36",
+        "D37",
+        "C17",
+        "C19",
+        "D38",
+        "D39"
+      ],
+      "source_id": "standards/DESIGN_MODULE.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S06",
+        "S07",
+        "S08",
+        "S09",
+        "S10",
+        "D05",
+        "S14",
+        "S15",
+        "S16",
+        "C09",
+        "O04"
+      ],
+      "source_id": "standards/SPEC_METHOD.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "A09",
+        "A10",
+        "A11"
+      ],
+      "source_id": "standards/ASSURANCE.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E07",
+        "C01",
+        "C06",
+        "C14"
+      ],
+      "source_id": "standards/EVALUATION.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C01",
+        "C02",
+        "C03",
+        "C07",
+        "C08",
+        "C09",
+        "C10",
+        "C12",
+        "C14",
+        "C16",
+        "C20",
+        "C22",
+        "C24"
+      ],
+      "source_id": "standards/ACTIVATION.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C01",
+        "C02",
+        "C05",
+        "C06",
+        "C07",
+        "C12"
+      ],
+      "source_id": "standards/FOUNDATIONS.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C03",
+        "C04",
+        "C14",
+        "C17",
+        "C21",
+        "U08",
+        "C23"
+      ],
+      "source_id": "standards/TICKETS.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C05"
+      ],
+      "source_id": "standards/IDENTITY.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C13",
+        "C15"
+      ],
+      "source_id": "standards/RELEASE.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C11",
+        "C15",
+        "C19"
+      ],
+      "source_id": "standards/PRODUCT_DEFINITION.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C10",
+        "C24"
+      ],
+      "source_id": "standards/REFERENCE_FRAME.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C10",
+        "C12",
+        "C13"
+      ],
+      "source_id": "standards/AXIOMATIC_CALCULUS.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C11",
+        "C19"
+      ],
+      "source_id": "standards/PROFILES.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "O05",
+        "O06",
+        "O07",
+        "O08",
+        "O09",
+        "O10"
+      ],
+      "source_id": "standards/ODD.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "U01",
+        "U02",
+        "U03",
+        "U04",
+        "U05",
+        "U06",
+        "U07",
+        "U08",
+        "U09"
+      ],
+      "source_id": "standards/UX.md",
+      "status": "represented"
+    },
+    {
+      "reason": "Purpose-selected normative clauses represented with exact line grounds; other clauses are contextual, repeated ownership bindings or outside the declared preconstruction method-constraint predicate. This source-processing ledger is not an independent completeness assessment; consult the source-disposition record and exact query assessment.",
+      "rule_ids": [
+        "C18"
+      ],
+      "source_id": "standards/EXECUTIVE_BASELINE.md",
+      "status": "represented"
+    }
+  ],
+  "unresolved": []
+}

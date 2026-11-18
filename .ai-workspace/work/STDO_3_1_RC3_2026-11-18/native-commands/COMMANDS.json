@@ -1,0 +1,60 @@
+[
+  {
+    "name": "cut",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/native_cut.py",
+      "--repo",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3",
+      "--source-commit",
+      "d52f6df8fae0028cda213e5dfb7104a6a81d2970",
+      "--inventory",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/method-02/NATIVE_READY_INVENTORY.json",
+      "--inventory-sha256",
+      "936679ac2fc70854644fd6031182fa24a43538e598e8f70918fbd48a7abd0aa0",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/native"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "manifest",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager/bin/stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/native-store",
+      "manifest",
+      "v3.1.0-rc.3",
+      "--repository",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "install",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager/bin/stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/native-store",
+      "install",
+      "v3.1.0-rc.3",
+      "--repository",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "verify",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager/bin/stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/native-store",
+      "verify",
+      "v3.1.0-rc.3",
+      "--manifest-sha256",
+      "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
+    ],
+    "exit": 0
+  }
+]

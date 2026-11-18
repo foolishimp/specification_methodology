@@ -2,7 +2,7 @@
 
 This installs current Codex or Claude bindings, Purpose Context access and the
 current first-use guides into a selected workspace. The native method and Purpose
-Context remain separately selected Products. Release mode binds the exact 3.1.0-rc.2 native cut and separate Product pins.
+Context remain separately selected Products. Release mode binds the exact 3.1.0-rc.3 native cut and separate Product pins.
 The explicit development mode remains unversioned. Neither mode upgrades an
 existing installation or adopts a method on the consumer's behalf.
 
@@ -20,8 +20,8 @@ Use Python 3.11+ and absolute paths. Before installation, obtain:
   package's `specification/composition/DEPENDENCIES.json`. Verification checks
   its pinned public manifest and every listed member; no visual runtime is needed.
 
-For the selected release, obtain `stdo-products-v3.1.0-rc.2.zip` and
-`cohort-release-v3.1.0-rc.2.json` from the same immutable release and verify their
+For the selected release, obtain `stdo-products-v3.1.0-rc.3.zip` and
+`cohort-release-v3.1.0-rc.3.json` from the same immutable release and verify their
 published identities/member inventories. Select its `stdo_skills` package and
 `purpose_context` Product. The native method is acquired separately through its
 manager using the shared release recipe. See [release and migration](../RELEASE.md).
@@ -151,8 +151,8 @@ the package constructor only after the actual native tag/install exists:
 
 ```sh
 "$stdo_python" -B stdo_skills/scripts/package.py --out /absolute/fresh/skills-package \
-  --version 3.1.0-rc.2 --method-root "$stdo_method_root" \
-  --method-manifest-sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4 \
+  --version 3.1.0-rc.3 --method-root "$stdo_method_root" \
+  --method-manifest-sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a \
   --purpose-context "$stdo_context_root"
 ```
 

@@ -1,0 +1,173 @@
+[
+  {
+    "name": "01-higher-ordinal-refused",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "prepare",
+      "--root",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/repo",
+      "--plan",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/plan.json",
+      "--result",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/prepare.json",
+      "--native",
+      "5181f818669463cad9b16ddb7d9a4629421f746c",
+      "--carrier",
+      "6974489de514808bc585f09162139953993559ed",
+      "--qualification",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/qualification.json"
+    ],
+    "exit": 1,
+    "expected": 1
+  },
+  {
+    "name": "02-missing-predecessor-refused",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "prepare",
+      "--root",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/repo",
+      "--plan",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/plan.json",
+      "--result",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/prepare.json",
+      "--native",
+      "5181f818669463cad9b16ddb7d9a4629421f746c",
+      "--carrier",
+      "6974489de514808bc585f09162139953993559ed",
+      "--qualification",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/qualification.json"
+    ],
+    "exit": 1,
+    "expected": 1
+  },
+  {
+    "name": "03-prepare",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "prepare",
+      "--root",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/repo",
+      "--plan",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/plan.json",
+      "--result",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/prepare.json",
+      "--native",
+      "5181f818669463cad9b16ddb7d9a4629421f746c",
+      "--carrier",
+      "6974489de514808bc585f09162139953993559ed",
+      "--qualification",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/qualification.json"
+    ],
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "04-check",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "check",
+      "--root",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/repo",
+      "--plan",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/plan.json",
+      "--result",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/check.json"
+    ],
+    "exit": 0,
+    "expected": 0
+  },
+  {
+    "name": "05-incomplete-graph-refused",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "check",
+      "--root",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/repo",
+      "--plan",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/plan.json",
+      "--result",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/check.json"
+    ],
+    "exit": 1,
+    "expected": 1
+  },
+  {
+    "name": "06-evidence-drift-refused",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "check",
+      "--root",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/repo",
+      "--plan",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/plan.json",
+      "--result",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/check.json"
+    ],
+    "exit": 1,
+    "expected": 1
+  },
+  {
+    "name": "07-remote-drift-refused",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "publish",
+      "--root",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/repo",
+      "--plan",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/plan.json",
+      "--result",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/publish.json"
+    ],
+    "exit": 1,
+    "expected": 1
+  },
+  {
+    "name": "08-server-rejection",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "publish",
+      "--root",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/repo",
+      "--plan",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/plan.json",
+      "--result",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/publish.json"
+    ],
+    "exit": 1,
+    "expected": 1
+  },
+  {
+    "name": "09-publish",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "publish",
+      "--root",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/repo",
+      "--plan",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/plan.json",
+      "--result",
+      "/private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/stdo-rc3-ref-fixture-mw5gwuv9/publish.json"
+    ],
+    "exit": 0,
+    "expected": 0
+  }
+]

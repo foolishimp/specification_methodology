@@ -1,0 +1,98 @@
+[
+  {
+    "name": "rebuild-03",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/purpose_context/scripts/rebuild_release_indexes.py",
+      "--version",
+      "3.1.0-rc.3",
+      "--method-root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/native-store/releases/v3.1.0-rc.3",
+      "--method-manifest-sha256",
+      "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+      "--predecessor-source-root",
+      "/Users/jim/Library/Application Support/STDO/releases/v3.1.0-rc.2"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "regeneration-check-02",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/purpose_context/scripts/rebuild_release_indexes.py",
+      "--version",
+      "3.1.0-rc.3",
+      "--method-root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/native-store/releases/v3.1.0-rc.3",
+      "--method-manifest-sha256",
+      "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+      "--predecessor-source-root",
+      "/Users/jim/Library/Application Support/STDO/releases/v3.1.0-rc.2",
+      "--check"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "package-context-02",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/purpose_context/scripts/package_release.py",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/packages-02/purpose_context",
+      "--version",
+      "3.1.0-rc.3",
+      "--public-manifest-sha256",
+      "ba1e246e11560187bedb507ed1a7375ebcc9fb9e229a999cbdab62b6aa1d5960"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "package-skills-02",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/stdo_skills/scripts/package.py",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/packages-02/stdo_skills",
+      "--version",
+      "3.1.0-rc.3",
+      "--method-root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/native-store/releases/v3.1.0-rc.3",
+      "--method-manifest-sha256",
+      "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+      "--purpose-context",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/packages-02/purpose_context"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "trial-hosts-02",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/run_distribution_checks.py",
+      "--products-root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/packages-02",
+      "--native-root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/native-store/releases/v3.1.0-rc.3",
+      "--stdo",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager/bin/stdo",
+      "--store",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/native-store",
+      "--python",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager/bin/python",
+      "--fixture-root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/final-use-02/fixture",
+      "--queries-root",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/final-use-02/queries",
+      "--predecessor-assessment",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assessment/semantic-01/assessments/python.json",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/trial-hosts-02"
+    ],
+    "exit": 0
+  }
+]

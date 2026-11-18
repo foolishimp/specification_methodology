@@ -45,7 +45,7 @@ previous conversation, with finite stale-summary, changed-evidence,
 uncertain-effect and declared-capacity observations under PC-S11/PC-S12.
 The author supplies no external semantic verdict or native-use result.
 
-The selected 3.1.0-rc.2 successor realizes PC-06/PC-07 through separate entries
+The selected 3.1.0-rc.3 successor realizes PC-06/PC-07 through separate entries
 bound to the actual native cut. The release constructor preserves all prior
 index assets and the original development recipe. Exact source deltas, new
 assessment subjects and final installed/public-path evidence decide its release

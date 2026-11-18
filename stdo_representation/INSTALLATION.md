@@ -2,7 +2,7 @@
 
 Extract the cohort tooling ZIP into a new directory, preserving all independently
 owned Product roots. Verify its exact inventories and public manifests. Open
-`stdo_representation/build_tenants/a_c/representation/stdo-v3.1.0-rc.2/run/generation/proposal/explorer.html`
+`stdo_representation/build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/proposal/explorer.html`
 in a browser. The view embeds its source-linked model and viewer assets; ordinary
 reading requires no Python, STDO manager, Lean or network request.
 
@@ -23,6 +23,6 @@ The Product Definition is also a source-development overlay. Its Axiom tenant
 implementation route `build_tenants/axiom_indexer/representation/` locates
 retained historical source outputs and is absent from this curated package.
 Current optional conversion, validation and projection artifacts are under
-`build_tenants/a_c/representation/stdo-v3.1.0-rc.2/axiom/`, with their exact
+`build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/`, with their exact
 provider binding in `PROVIDER.json` and the public manifest. Historical payloads
 are not restored merely to populate that source-development directory.

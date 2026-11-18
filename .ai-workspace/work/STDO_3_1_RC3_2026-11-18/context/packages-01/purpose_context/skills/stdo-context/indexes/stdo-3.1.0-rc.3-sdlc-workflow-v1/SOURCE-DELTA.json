@@ -1,0 +1,680 @@
+{
+  "authoring_disposition": "Preserve released-source W01 and RC2 W35 acceptance selection. RC3 source-ground amendments are explicit below.",
+  "declared_rule_amendments": [
+    {
+      "disposition": "Superseded selector: include product_acceptance because EVALUATION section 5 applies RELEASE section 9 to successor acceptance. Preserve the complete existing obligation, qualification/release branches, dependencies, exceptions and unknown handling. This supplies a constraint, not authority or an acceptance verdict.",
+      "fields": {
+        "when": {
+          "expected": {
+            "all": [],
+            "any": [
+              {
+                "fact": "boundary_kind",
+                "op": "eq",
+                "value": "qualification"
+              },
+              {
+                "fact": "boundary_kind",
+                "op": "eq",
+                "value": "release"
+              }
+            ]
+          },
+          "replacement": {
+            "all": [],
+            "any": [
+              {
+                "fact": "boundary_kind",
+                "op": "eq",
+                "value": "product_acceptance"
+              },
+              {
+                "fact": "boundary_kind",
+                "op": "eq",
+                "value": "qualification"
+              },
+              {
+                "fact": "boundary_kind",
+                "op": "eq",
+                "value": "release"
+              }
+            ]
+          }
+        }
+      },
+      "grounds": [
+        {
+          "heading": "## 5. Acceptance",
+          "section_sha256": "3631c6764f4fb16b46fcc0b0d62794d33ff2fdf982560de466bbe9478dcb13ee",
+          "source_id": "EVALUATION"
+        },
+        {
+          "heading": "## 9. Successor baseline conservation (STDO-UP-015)",
+          "section_sha256": "4540bdf9530e50714627916a60f4cce1579bffdd2e46e33668eb579e88b235ea",
+          "source_id": "RELEASE"
+        }
+      ],
+      "rule_id": "W35"
+    }
+  ],
+  "fact_wording_changes": {},
+  "family_guard_equal": true,
+  "predecessor_index": "stdo-3.1.0-rc.2-sdlc-workflow-v1",
+  "profile": "purpose-context.release-source-delta/1",
+  "purpose_changed_fields": [
+    "description"
+  ],
+  "rule_changes": [
+    {
+      "after_sha256": "8439201c73fe2b6b352e93965d365ed74c2dfe70134c4a1337ca4245f45a27cf",
+      "before_sha256": "8439201c73fe2b6b352e93965d365ed74c2dfe70134c4a1337ca4245f45a27cf",
+      "changed_fields": [],
+      "id": "W01"
+    },
+    {
+      "after_sha256": "6d301982e9be62f9be55f82f6eeb9503d6f5dd815341e41b1bef4fe176fa84c8",
+      "before_sha256": "6d301982e9be62f9be55f82f6eeb9503d6f5dd815341e41b1bef4fe176fa84c8",
+      "changed_fields": [],
+      "id": "W02"
+    },
+    {
+      "after_sha256": "17b5d3c2b7d313a42bf97d946c29b79f360ae1deba426e79e966d02d0a707ea7",
+      "before_sha256": "17b5d3c2b7d313a42bf97d946c29b79f360ae1deba426e79e966d02d0a707ea7",
+      "changed_fields": [],
+      "id": "W03"
+    },
+    {
+      "after_sha256": "c95a0795c6ce9be74adc430b23217c7488425f1e61f5ea01635d654ace6823ea",
+      "before_sha256": "c95a0795c6ce9be74adc430b23217c7488425f1e61f5ea01635d654ace6823ea",
+      "changed_fields": [],
+      "id": "W04"
+    },
+    {
+      "after_sha256": "597feb472c3f0d67e5f197bca42f779021d4c9b6226a298d75e8a910c0f626ea",
+      "before_sha256": "597feb472c3f0d67e5f197bca42f779021d4c9b6226a298d75e8a910c0f626ea",
+      "changed_fields": [],
+      "id": "W05"
+    },
+    {
+      "after_sha256": "be11b0f7b55927f53dbe2126302aa45b82cb09134343a4ec569a35ef52ec7127",
+      "before_sha256": "be11b0f7b55927f53dbe2126302aa45b82cb09134343a4ec569a35ef52ec7127",
+      "changed_fields": [],
+      "id": "W06"
+    },
+    {
+      "after_sha256": "33a41ea7c69322ec0e54c5df4ddb04e2ada9fcc0016211b21df4a2ccdd063384",
+      "before_sha256": "33a41ea7c69322ec0e54c5df4ddb04e2ada9fcc0016211b21df4a2ccdd063384",
+      "changed_fields": [],
+      "id": "W07"
+    },
+    {
+      "after_sha256": "6e7394d372a01e79ca770d2d3f21d39a54219f35778ab5973cb9472e0e7a71b9",
+      "before_sha256": "6e7394d372a01e79ca770d2d3f21d39a54219f35778ab5973cb9472e0e7a71b9",
+      "changed_fields": [],
+      "id": "W08"
+    },
+    {
+      "after_sha256": "6101785489952fe664ee4248438bb8f26b228c93cd7055fe5d127647744293f2",
+      "before_sha256": "4bdd6ac7b7e0da9876c43ddec8717746e668ea54f67d7240d8a7db962392e2b3",
+      "changed_fields": [
+        "source_refs"
+      ],
+      "id": "W09"
+    },
+    {
+      "after_sha256": "88d05675606f05fae6de4ff4f412627b8348d328d316e94c4560d3d23e7ba0ca",
+      "before_sha256": "88d05675606f05fae6de4ff4f412627b8348d328d316e94c4560d3d23e7ba0ca",
+      "changed_fields": [],
+      "id": "W10"
+    },
+    {
+      "after_sha256": "9ff5de25902c15eee681666e09122f6abd77ee4f67fdee64da7fb79e38ac2110",
+      "before_sha256": "b8875cd8d3778f642b1657547848ddb3eca48e649955f85d8d9ba3f90204927d",
+      "changed_fields": [
+        "source_refs",
+        "text"
+      ],
+      "id": "W11"
+    },
+    {
+      "after_sha256": "582a168cc4ea4261207f76138471706a6a81e851025483b4894207be0cf69657",
+      "before_sha256": "582a168cc4ea4261207f76138471706a6a81e851025483b4894207be0cf69657",
+      "changed_fields": [],
+      "id": "W12"
+    },
+    {
+      "after_sha256": "7491416c03570ebb928af0262c8c18892e0a835048cf89fad2d6d62405b7c364",
+      "before_sha256": "7491416c03570ebb928af0262c8c18892e0a835048cf89fad2d6d62405b7c364",
+      "changed_fields": [],
+      "id": "W13"
+    },
+    {
+      "after_sha256": "08890208b50772e6c1a3949b4aa4e1ca8c8d1f6c2010d31d8415b89894ac0869",
+      "before_sha256": "08890208b50772e6c1a3949b4aa4e1ca8c8d1f6c2010d31d8415b89894ac0869",
+      "changed_fields": [],
+      "id": "W14"
+    },
+    {
+      "after_sha256": "7dc5c3049a000b099108e4834f9083d9e588845bfd49d4df3d88c91ab99b0e5c",
+      "before_sha256": "7dc5c3049a000b099108e4834f9083d9e588845bfd49d4df3d88c91ab99b0e5c",
+      "changed_fields": [],
+      "id": "W15"
+    },
+    {
+      "after_sha256": "ffe5d8b4873461c9f159f764e143253f901c271a042fe5bb02bdc92fec3f31aa",
+      "before_sha256": "ffe5d8b4873461c9f159f764e143253f901c271a042fe5bb02bdc92fec3f31aa",
+      "changed_fields": [],
+      "id": "W16"
+    },
+    {
+      "after_sha256": "5c2bb1c1f4667410a2b69135f7191175ccf8dcd6267f443090563fed83361c4c",
+      "before_sha256": "5c2bb1c1f4667410a2b69135f7191175ccf8dcd6267f443090563fed83361c4c",
+      "changed_fields": [],
+      "id": "W17"
+    },
+    {
+      "after_sha256": "d5ab7a0593df69cde384315507d071996b34346444bd05e0a54ad5f38086f2bf",
+      "before_sha256": "d5ab7a0593df69cde384315507d071996b34346444bd05e0a54ad5f38086f2bf",
+      "changed_fields": [],
+      "id": "W18"
+    },
+    {
+      "after_sha256": "ae100cc8c4c09279ef3ca51dd6a7888b054d1f23ad7d841c778864bd1a0d4a9f",
+      "before_sha256": "ae100cc8c4c09279ef3ca51dd6a7888b054d1f23ad7d841c778864bd1a0d4a9f",
+      "changed_fields": [],
+      "id": "W19"
+    },
+    {
+      "after_sha256": "a1f1656a70eb84ceda0356481d7e985f1745bebd9b56b8b3a4cd9b04ac5fd9fe",
+      "before_sha256": "a1f1656a70eb84ceda0356481d7e985f1745bebd9b56b8b3a4cd9b04ac5fd9fe",
+      "changed_fields": [],
+      "id": "W20"
+    },
+    {
+      "after_sha256": "39c8dc5da3e94b3de1d5136f9d2e87d2fdff3537b4c25fbf470bc0be9f94739b",
+      "before_sha256": "39c8dc5da3e94b3de1d5136f9d2e87d2fdff3537b4c25fbf470bc0be9f94739b",
+      "changed_fields": [],
+      "id": "W21"
+    },
+    {
+      "after_sha256": "2cb59b27bfdb86bc4b6db781de4a151600874373fd31ca4e6e74ba919a3de248",
+      "before_sha256": "2cb59b27bfdb86bc4b6db781de4a151600874373fd31ca4e6e74ba919a3de248",
+      "changed_fields": [],
+      "id": "W22"
+    },
+    {
+      "after_sha256": "35615144512e74cebb6ee03df3fc7d355f3b037ae24491688ab11d5ce5f52059",
+      "before_sha256": "35615144512e74cebb6ee03df3fc7d355f3b037ae24491688ab11d5ce5f52059",
+      "changed_fields": [],
+      "id": "W23"
+    },
+    {
+      "after_sha256": "3755a09fe16109fa67b6d7d57971d46fabe1df443933aba93b211cdf8a9fc988",
+      "before_sha256": "3755a09fe16109fa67b6d7d57971d46fabe1df443933aba93b211cdf8a9fc988",
+      "changed_fields": [],
+      "id": "W24"
+    },
+    {
+      "after_sha256": "50963dea4cda3c08a92f71f042cd3485b136b9fd21850e678726e8dd2617d2e1",
+      "before_sha256": "50963dea4cda3c08a92f71f042cd3485b136b9fd21850e678726e8dd2617d2e1",
+      "changed_fields": [],
+      "id": "W25"
+    },
+    {
+      "after_sha256": "9d04ea47bc6dceacb342b02c4e407e0a8d9c323fcc5e28d520f9e7b5c2804065",
+      "before_sha256": "9d04ea47bc6dceacb342b02c4e407e0a8d9c323fcc5e28d520f9e7b5c2804065",
+      "changed_fields": [],
+      "id": "W26"
+    },
+    {
+      "after_sha256": "6dd7bf4de8f1185b807283fa5d0713ce244d1de2d7e96ddd9ecf2a343345cbb0",
+      "before_sha256": "6dd7bf4de8f1185b807283fa5d0713ce244d1de2d7e96ddd9ecf2a343345cbb0",
+      "changed_fields": [],
+      "id": "W27"
+    },
+    {
+      "after_sha256": "44dd7d640679126e373beaa145f1dba4d03e506f9e9db3b32d9fe29216cc8b4f",
+      "before_sha256": "44dd7d640679126e373beaa145f1dba4d03e506f9e9db3b32d9fe29216cc8b4f",
+      "changed_fields": [],
+      "id": "W28"
+    },
+    {
+      "after_sha256": "ea11a747dc5b77751aec22bacae3c4e009569a7e205cd96c22946e361a584f3a",
+      "before_sha256": "ea11a747dc5b77751aec22bacae3c4e009569a7e205cd96c22946e361a584f3a",
+      "changed_fields": [],
+      "id": "W29"
+    },
+    {
+      "after_sha256": "e0d4b3f03f7aacff31f75475210e1cf885b0d8baed388d3e68e50d9ceaa21376",
+      "before_sha256": "e0d4b3f03f7aacff31f75475210e1cf885b0d8baed388d3e68e50d9ceaa21376",
+      "changed_fields": [],
+      "id": "W30"
+    },
+    {
+      "after_sha256": "6293190cf0b2e9d415bf948700f695973a0a1344d9fca76fbd8c60c83953b4b8",
+      "before_sha256": "6293190cf0b2e9d415bf948700f695973a0a1344d9fca76fbd8c60c83953b4b8",
+      "changed_fields": [],
+      "id": "W31"
+    },
+    {
+      "after_sha256": "241defbee955f252be6b27a90c63471a577d09513af4b9309e9cd9b6a6d88418",
+      "before_sha256": "241defbee955f252be6b27a90c63471a577d09513af4b9309e9cd9b6a6d88418",
+      "changed_fields": [],
+      "id": "W32"
+    },
+    {
+      "after_sha256": "ac60d75f1b35f9dd0dd9126ca5b9c53edebe827c367e3d22b9595b4606df1cdb",
+      "before_sha256": "ac60d75f1b35f9dd0dd9126ca5b9c53edebe827c367e3d22b9595b4606df1cdb",
+      "changed_fields": [],
+      "id": "W33"
+    },
+    {
+      "after_sha256": "bf595383600bc8cf7f63d9937074f308aa14819c3cfe06ad23688ddf92426aee",
+      "before_sha256": "bf595383600bc8cf7f63d9937074f308aa14819c3cfe06ad23688ddf92426aee",
+      "changed_fields": [],
+      "id": "W34"
+    },
+    {
+      "after_sha256": "32c994f450e03e31a3034e77ea39eec16ce0c4d3d9701ad34188a3d697a594bc",
+      "before_sha256": "32c994f450e03e31a3034e77ea39eec16ce0c4d3d9701ad34188a3d697a594bc",
+      "changed_fields": [],
+      "id": "W35"
+    },
+    {
+      "after_sha256": "1171689ad8dd56c7af4515a872d0f53d41c81025a900cdcb8ca230c7786e73dc",
+      "before_sha256": "1171689ad8dd56c7af4515a872d0f53d41c81025a900cdcb8ca230c7786e73dc",
+      "changed_fields": [],
+      "id": "W36"
+    },
+    {
+      "after_sha256": "5ce9f754d9574a0914b21aaebc4c71a1184fdf76e12313468ec6fdcab3ee608d",
+      "before_sha256": "5ce9f754d9574a0914b21aaebc4c71a1184fdf76e12313468ec6fdcab3ee608d",
+      "changed_fields": [],
+      "id": "W37"
+    },
+    {
+      "after_sha256": "09e32f3537425b18746f0fc400644d031507654f2db59d5febcf343a16ac8a28",
+      "before_sha256": "09e32f3537425b18746f0fc400644d031507654f2db59d5febcf343a16ac8a28",
+      "changed_fields": [],
+      "id": "W38"
+    },
+    {
+      "after_sha256": "661aecb9d68cde81a421b64cdf057ba192f6b6efa9da1299072150d7333eb5db",
+      "before_sha256": "661aecb9d68cde81a421b64cdf057ba192f6b6efa9da1299072150d7333eb5db",
+      "changed_fields": [],
+      "id": "W39"
+    },
+    {
+      "after_sha256": "8343f56a437b01bb10fa23a19f11b3a4d4fd13bd8ea39fce9821930d8a1e5783",
+      "before_sha256": "8343f56a437b01bb10fa23a19f11b3a4d4fd13bd8ea39fce9821930d8a1e5783",
+      "changed_fields": [],
+      "id": "W40"
+    }
+  ],
+  "source_coverage_after": [
+    {
+      "reason": "Adopted guidance from the selected native cut projects the workflow; its cited owning clauses decide.",
+      "rule_ids": [
+        "W01",
+        "W07",
+        "W10",
+        "W11",
+        "W12",
+        "W14",
+        "W33",
+        "W34"
+      ],
+      "source_id": "SDLC_DEFAULTS",
+      "status": "represented"
+    },
+    {
+      "reason": "Universal intake, change classes and lawful first changed layer for this workflow.",
+      "rule_ids": [
+        "W09",
+        "W11"
+      ],
+      "source_id": "SPEC_METHOD",
+      "status": "represented"
+    },
+    {
+      "reason": "Authority, core results/conjunction and impact-based evidence applicability used by every workflow decision.",
+      "rule_ids": [
+        "W02",
+        "W05",
+        "W06",
+        "W27",
+        "W28"
+      ],
+      "source_id": "FOUNDATIONS",
+      "status": "represented"
+    },
+    {
+      "reason": "Product-owned frame selection and single complete constitution boundary; technical specialist law remains separately selected.",
+      "rule_ids": [
+        "W01",
+        "W30",
+        "W34"
+      ],
+      "source_id": "PRODUCT_DEFINITION",
+      "status": "represented"
+    },
+    {
+      "reason": "Authority identity and bounded proxy/grant conservation.",
+      "rule_ids": [
+        "W02"
+      ],
+      "source_id": "IDENTITY",
+      "status": "represented"
+    },
+    {
+      "reason": "Exact activation, causal diagnostic order and material frame-revision invalidation.",
+      "rule_ids": [
+        "W12",
+        "W31",
+        "W34"
+      ],
+      "source_id": "REFERENCE_FRAME",
+      "status": "represented"
+    },
+    {
+      "reason": "Admission, bounded context and qualified references, declared capacity, recorded results, current work state/restart, uncertain effects, construction/diagnosis, stopping, staleness and closed-result reuse.",
+      "rule_ids": [
+        "W03",
+        "W04",
+        "W10",
+        "W12",
+        "W18",
+        "W29",
+        "W30",
+        "W33",
+        "W37",
+        "W38",
+        "W39",
+        "W40"
+      ],
+      "source_id": "ACTIVATION",
+      "status": "represented"
+    },
+    {
+      "reason": "Claim-relative verification layers, owner-issued subject observation and supported counterexample localisation.",
+      "rule_ids": [
+        "W07",
+        "W08",
+        "W13"
+      ],
+      "source_id": "ASSURANCE",
+      "status": "represented"
+    },
+    {
+      "reason": "Separation, exact independent review, findings/triage, acceptance and claim-relative blocking.",
+      "rule_ids": [
+        "W07",
+        "W14",
+        "W15",
+        "W16",
+        "W17",
+        "W18",
+        "W19",
+        "W24",
+        "W25"
+      ],
+      "source_id": "EVALUATION",
+      "status": "represented"
+    },
+    {
+      "reason": "Conditional adopted configuration, technical triage, drift locks and bounded repair/recheck cadence.",
+      "rule_ids": [
+        "W17",
+        "W20",
+        "W21",
+        "W32"
+      ],
+      "source_id": "EXECUTIVE_BASELINE",
+      "status": "represented"
+    },
+    {
+      "reason": "Durable work-record authority, smallest lawful carrier, carrier-to-context/continuation application, retained judgment/owner rulings, findings/bug-item state and condition-based closure.",
+      "rule_ids": [
+        "W03",
+        "W19",
+        "W22",
+        "W23",
+        "W36",
+        "W39",
+        "W40"
+      ],
+      "source_id": "TICKETS",
+      "status": "represented"
+    },
+    {
+      "reason": "Conditional named release acceptance and successor conservation; no publication duty for ordinary local work.",
+      "rule_ids": [
+        "W26",
+        "W35"
+      ],
+      "source_id": "RELEASE",
+      "status": "represented"
+    }
+  ],
+  "source_coverage_before": [
+    {
+      "reason": "Adopted guidance from the selected native cut projects the workflow; its cited owning clauses decide.",
+      "rule_ids": [
+        "W01",
+        "W07",
+        "W10",
+        "W11",
+        "W12",
+        "W14",
+        "W33",
+        "W34"
+      ],
+      "source_id": "SDLC_DEFAULTS",
+      "status": "represented"
+    },
+    {
+      "reason": "Universal intake, change classes and lawful first changed layer for this workflow.",
+      "rule_ids": [
+        "W09",
+        "W11"
+      ],
+      "source_id": "SPEC_METHOD",
+      "status": "represented"
+    },
+    {
+      "reason": "Authority, core results/conjunction and impact-based evidence applicability used by every workflow decision.",
+      "rule_ids": [
+        "W02",
+        "W05",
+        "W06",
+        "W27",
+        "W28"
+      ],
+      "source_id": "FOUNDATIONS",
+      "status": "represented"
+    },
+    {
+      "reason": "Product-owned frame selection and single complete constitution boundary; technical specialist law remains separately selected.",
+      "rule_ids": [
+        "W01",
+        "W30",
+        "W34"
+      ],
+      "source_id": "PRODUCT_DEFINITION",
+      "status": "represented"
+    },
+    {
+      "reason": "Authority identity and bounded proxy/grant conservation.",
+      "rule_ids": [
+        "W02"
+      ],
+      "source_id": "IDENTITY",
+      "status": "represented"
+    },
+    {
+      "reason": "Exact activation, causal diagnostic order and material frame-revision invalidation.",
+      "rule_ids": [
+        "W12",
+        "W31",
+        "W34"
+      ],
+      "source_id": "REFERENCE_FRAME",
+      "status": "represented"
+    },
+    {
+      "reason": "Admission, bounded context and qualified references, declared capacity, recorded results, current work state/restart, uncertain effects, construction/diagnosis, stopping, staleness and closed-result reuse.",
+      "rule_ids": [
+        "W03",
+        "W04",
+        "W10",
+        "W12",
+        "W18",
+        "W29",
+        "W30",
+        "W33",
+        "W37",
+        "W38",
+        "W39",
+        "W40"
+      ],
+      "source_id": "ACTIVATION",
+      "status": "represented"
+    },
+    {
+      "reason": "Claim-relative verification layers, owner-issued subject observation and supported counterexample localisation.",
+      "rule_ids": [
+        "W07",
+        "W08",
+        "W13"
+      ],
+      "source_id": "ASSURANCE",
+      "status": "represented"
+    },
+    {
+      "reason": "Separation, exact independent review, findings/triage, acceptance and claim-relative blocking.",
+      "rule_ids": [
+        "W07",
+        "W14",
+        "W15",
+        "W16",
+        "W17",
+        "W18",
+        "W19",
+        "W24",
+        "W25"
+      ],
+      "source_id": "EVALUATION",
+      "status": "represented"
+    },
+    {
+      "reason": "Conditional adopted configuration, technical triage, drift locks and bounded repair/recheck cadence.",
+      "rule_ids": [
+        "W17",
+        "W20",
+        "W21",
+        "W32"
+      ],
+      "source_id": "EXECUTIVE_BASELINE",
+      "status": "represented"
+    },
+    {
+      "reason": "Durable work-record authority, smallest lawful carrier, carrier-to-context/continuation application, retained judgment/owner rulings, findings/bug-item state and condition-based closure.",
+      "rule_ids": [
+        "W03",
+        "W19",
+        "W22",
+        "W23",
+        "W36",
+        "W39",
+        "W40"
+      ],
+      "source_id": "TICKETS",
+      "status": "represented"
+    },
+    {
+      "reason": "Conditional named release acceptance and successor conservation; no publication duty for ordinary local work.",
+      "rule_ids": [
+        "W26",
+        "W35"
+      ],
+      "source_id": "RELEASE",
+      "status": "represented"
+    }
+  ],
+  "source_members": [
+    {
+      "after_sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8",
+      "before_sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8",
+      "equal": true,
+      "id": "SDLC_DEFAULTS"
+    },
+    {
+      "after_sha256": "3aefe8942bd2a5501367a85f019c8e1d5b8f38e94ddb62fa3a1f5a52036a05c5",
+      "before_sha256": "06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e",
+      "equal": false,
+      "id": "SPEC_METHOD"
+    },
+    {
+      "after_sha256": "4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e",
+      "before_sha256": "7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e",
+      "equal": false,
+      "id": "FOUNDATIONS"
+    },
+    {
+      "after_sha256": "2307ee89002a34d7d2d76fc57b45cfdd3fc55a9f3ea96d8566080d10f2e15a13",
+      "before_sha256": "7ee46438de5e4cb33cd8920814ecc90cfef95fb5eaee269f6f1a4fa389f4e523",
+      "equal": false,
+      "id": "PRODUCT_DEFINITION"
+    },
+    {
+      "after_sha256": "c70399311010a8835b00d2a887a2451f11f66f631d6217d8df4be41751a59c08",
+      "before_sha256": "c70399311010a8835b00d2a887a2451f11f66f631d6217d8df4be41751a59c08",
+      "equal": true,
+      "id": "IDENTITY"
+    },
+    {
+      "after_sha256": "a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f",
+      "before_sha256": "4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64",
+      "equal": false,
+      "id": "REFERENCE_FRAME"
+    },
+    {
+      "after_sha256": "0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6",
+      "before_sha256": "56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d",
+      "equal": false,
+      "id": "ACTIVATION"
+    },
+    {
+      "after_sha256": "5f6740a39355314ea2a9227a8795ea68cdafb2c4c3e9b25e1d9e626eb43f27ca",
+      "before_sha256": "5f6740a39355314ea2a9227a8795ea68cdafb2c4c3e9b25e1d9e626eb43f27ca",
+      "equal": true,
+      "id": "ASSURANCE"
+    },
+    {
+      "after_sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485",
+      "before_sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485",
+      "equal": true,
+      "id": "EVALUATION"
+    },
+    {
+      "after_sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff",
+      "before_sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff",
+      "equal": true,
+      "id": "EXECUTIVE_BASELINE"
+    },
+    {
+      "after_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+      "before_sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748",
+      "equal": true,
+      "id": "TICKETS"
+    },
+    {
+      "after_sha256": "ea78e66a442d25cb6b9a322e767c26d15d33c597e926357a90251d59c947317b",
+      "before_sha256": "eea362e1fa60fee0ed07d0fd5790f2bb8437cdcee968985c445e59e151eab628",
+      "equal": false,
+      "id": "RELEASE"
+    }
+  ],
+  "standing": "Source role and exact-binding successor; no predecessor assessment transferred.",
+  "unresolved_equal": true
+}

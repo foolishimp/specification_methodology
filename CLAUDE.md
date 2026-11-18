@@ -30,9 +30,9 @@ Separately granted Writers perform exact scoped file/Git effects. Existing owner
 authorization persists; routines do not require repeated approval. Reviewers
 assess exact closed subjects without repairing their own assessment targets.
 
-The selected successor cohort is STDO 3.1.0-rc.2 (public line 3.1.0),
+The selected successor cohort is STDO 3.1.0-rc.3 (public line 3.1.0),
 with six separate Product identities and explicit source/distribution manifests.
-Read releases/3.1.0-rc.2/RELEASE.md for its scope and the exact release record
+Read releases/3.1.0-rc.3/RELEASE.md for its scope and the exact release record
 for qualification/publication standing; version selection alone supplies neither. The root
 stack_release.json and archived five-Product constructor/test families are
 historical contracts only. Preserve immutable releases, original evidence,

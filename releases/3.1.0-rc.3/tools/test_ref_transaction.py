@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exercise RC2 advancement and refusal against a disposable real Git remote."""
+"""Exercise RC3 advancement and refusal against a disposable real Git remote."""
 import argparse
 import hashlib
 import json
@@ -26,7 +26,7 @@ def main():
         (args.out/'COMMANDS.json').write_text(json.dumps(commands,indent=2)+'\n')
         assert (p.returncode == 0) == (expected == 0), name + ': ' + p.stderr
         return p.stdout.strip()
-    with tempfile.TemporaryDirectory(prefix='stdo-rc2-ref-fixture-') as temporary:
+    with tempfile.TemporaryDirectory(prefix='stdo-rc3-ref-fixture-') as temporary:
         base=Path(temporary).resolve(); repo=base/'repo'; remote=base/'remote.git'; repo.mkdir()
         def git(*argv): return subprocess.check_output(['git','-C',str(repo),*argv],text=True,stderr=subprocess.DEVNULL).strip()
         subprocess.run(['git','init','--bare','-q',str(remote)],check=True)
@@ -42,10 +42,10 @@ def main():
         descriptor=repo/'releases/3.1.0-rc.3/COHORT_INPUTS.json'; descriptor.parent.mkdir(parents=True)
         descriptor.write_text(json.dumps({'version':'3.1.0-rc.3','native_predecessor':old,'source_predecessor':old,
           'products':[{'namespace':n,'root':n,'commit_role':'native-A' if n=='specification_methodology' else 'source-B'} for n in NAMES]}))
-        (repo/'specification_methodology/README.md').write_text('native fixture RC2\n')
+        (repo/'specification_methodology/README.md').write_text('native fixture RC3\n')
         git('add','.');git('commit','-q','-m','fixture native'); native=git('rev-parse','HEAD')
         git('tag','-a','specification_methodology/v3.1.0-rc.3',native,'-m','fixture native cut')
-        (repo/'purpose_context/README.md').write_text('derived fixture RC2\n')
+        (repo/'purpose_context/README.md').write_text('derived fixture RC3\n')
         git('add','.');git('commit','-q','-m','fixture carrier');carrier=git('rev-parse','HEAD')
         evidence=base/'evidence.txt';evidence.write_text('qualified fixture only\n')
         qualification=base/'qualification.json'
@@ -85,7 +85,7 @@ def main():
         assert not any(f'refs/tags/{n}/v3.1.0-rc.3' in refs() for n in NAMES)
         subprocess.run(['git','--git-dir',str(remote),'update-ref',raced,old,carrier],check=True)
         subprocess.run(['git','--git-dir',str(remote),'update-ref','-d','refs/heads/fixture-object-transfer'],check=True)
-        checks.append('remote lease drift refuses with no partial RC2')
+        checks.append('remote lease drift refuses with no partial RC3')
         hook=remote/'hooks/pre-receive'
         hook.write_text('#!/bin/sh\nwhile read old new ref; do\n  case \"$ref\" in refs/tags/a_c/v3.1.0-rc.3) exit 1;; esac\ndone\nexit 0\n')
         hook.chmod(0o755)
@@ -96,8 +96,8 @@ def main():
         actual=refs();p=json.loads(plan.read_text())
         for row in p['refs']: assert actual[row['destination']]==row['object']
         for ref,obj in p['protected_predecessor_refs'].items(): assert actual[ref]==obj
-        checks.append('atomic success publishes 25 exact refs and preserves all RC1 tag objects and peels')
-    result={'kind':'stdo.rc2-ref-transaction-fixture/1','checks':checks,'passed':True,
+        checks.append('atomic success publishes 25 exact refs and preserves all RC2 tag objects and peels')
+    result={'kind':'stdo.rc3-ref-transaction-fixture/1','checks':checks,'passed':True,
       'tool_sha256':hashlib.sha256(TOOL.read_bytes()).hexdigest(),
       'limit':'Real local Git transport fixture only; no production publication or semantic qualification.'}
     (args.out/'RESULT.json').write_text(json.dumps(result,indent=2)+'\n')

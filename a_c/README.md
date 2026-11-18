@@ -1,4 +1,4 @@
-# Representation Tools 3.1.0-rc.2
+# Representation Tools 3.1.0-rc.3
 
 Create and explore source-linked visual documentation. The stable Product lives
 in `a_c/` and keeps its existing model/carrier formats for visual artifacts.

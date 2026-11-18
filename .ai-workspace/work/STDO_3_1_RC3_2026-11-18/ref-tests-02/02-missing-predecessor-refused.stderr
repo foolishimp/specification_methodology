@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py", line 211, in <module>
+    main()
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py", line 140, in main
+    protected = predecessor_graph(args.root, inputs, remote)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py", line 54, in predecessor_graph
+    raise ValueError('Predecessor mutable identity differs: ' + ref)
+ValueError: Predecessor mutable identity differs: refs/heads/release/a_c/3.1.0

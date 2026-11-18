@@ -1,0 +1,296 @@
+{
+  "entries": [
+    {
+      "artifacts": {
+        "index": {
+          "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-python-pure-refactor-v2/INDEX.json",
+          "sha256": "c90881b387e040dddb9409b370f056dfb64b2a949dcb1128d79a989176b5b3ba"
+        },
+        "provenance": {
+          "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-python-pure-refactor-v2/PROVENANCE.json",
+          "sha256": "df4cb0e39d0a31eaf5804074d5f10fa9b7895f4128f7537c119b92dd213c461e"
+        },
+        "purpose": {
+          "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-python-pure-refactor-v2/PURPOSE.json",
+          "sha256": "6a6375ccfce5759021155a188e481cea62f6ba6fd4b6b6c1c75e41fd64cb63df"
+        },
+        "sources": {
+          "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-python-pure-refactor-v2/SOURCES.json",
+          "sha256": "6102feaa8b599963ef5cd6b383e06b481dd9f8e36ece9992a77dcb6b0c263a9a"
+        }
+      },
+      "corpus_sha256": "b762e5eaa14744b2e8fc5aa44b94c91377c74b98c596e1268df501aa65613c91",
+      "description": "Construct the applicable STDO 3.1.0-rc.3 method constraints for a pure/local Python 3.12 realization refactor under adopted DESIGN_MODULE, including its conditional ODD and UX obligations. Preserve the original family of changes to realization structure within accepted design; the request authorizes no change to public semantics or admitted domains, authority, or effects. This purpose evaluates coverage of governing method constraints before construction, not whether a particular candidate has complied with them. Concrete Product meaning, accepted design, domains, authority grants and evidence must still be acquired and applied by the task; source-complete conditional proof obligations are not claims that their future predicates already hold. Missing applicable governing law or an undecided permission actually requested remains a coverage gap. No profile is excluded merely because the implementation is pure/local. Other Product-specific or separately adopted profile law must enter through the task's exact authority packet; this index neither substitutes for it nor qualifies all STDO or every undiscovered relation. The exact source closure and independently assessed query, not this description, bound a supported coverage claim.",
+      "family_guard": {
+        "all": [
+          {
+            "fact": "accepted_design_available",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "action",
+            "op": "eq",
+            "value": "realization_refactor"
+          },
+          {
+            "fact": "language",
+            "op": "eq",
+            "value": "python"
+          },
+          {
+            "fact": "language_version",
+            "op": "eq",
+            "value": "3.12"
+          },
+          {
+            "fact": "profile_design_module",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "pure_local",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "role",
+            "op": "eq",
+            "value": "worker"
+          },
+          {
+            "fact": "sdlc_phase",
+            "op": "eq",
+            "value": "implementation"
+          },
+          {
+            "fact": "source_state",
+            "op": "eq",
+            "value": "current"
+          },
+          {
+            "fact": "public_semantics_change_authorized",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "fact": "authority_change_authorized",
+            "op": "eq",
+            "value": false
+          },
+          {
+            "fact": "effects_change_authorized",
+            "op": "eq",
+            "value": false
+          }
+        ],
+        "any": []
+      },
+      "id": "stdo-3.1.0-rc.3-python-pure-refactor-v2",
+      "method": {
+        "manifest_sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+        "uri": "stdo://releases/v3.1.0-rc.3/"
+      },
+      "purpose_id": "python-pure-refactor/2",
+      "purpose_sha256": "180ee31595296f0faaa9b9326e7d34efd9ac0d43be07e87d102c35df09d5f1ac",
+      "source_members": [
+        {
+          "id": "standards/DESIGN_MODULE.md",
+          "sha256": "a95cbaea8c90edb220944b12e456997670e70d0be086682cf593db236af68716"
+        },
+        {
+          "id": "standards/SPEC_METHOD.md",
+          "sha256": "3aefe8942bd2a5501367a85f019c8e1d5b8f38e94ddb62fa3a1f5a52036a05c5"
+        },
+        {
+          "id": "standards/ASSURANCE.md",
+          "sha256": "5f6740a39355314ea2a9227a8795ea68cdafb2c4c3e9b25e1d9e626eb43f27ca"
+        },
+        {
+          "id": "standards/EVALUATION.md",
+          "sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485"
+        },
+        {
+          "id": "standards/ACTIVATION.md",
+          "sha256": "0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6"
+        },
+        {
+          "id": "standards/FOUNDATIONS.md",
+          "sha256": "4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e"
+        },
+        {
+          "id": "standards/TICKETS.md",
+          "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748"
+        },
+        {
+          "id": "standards/IDENTITY.md",
+          "sha256": "c70399311010a8835b00d2a887a2451f11f66f631d6217d8df4be41751a59c08"
+        },
+        {
+          "id": "standards/RELEASE.md",
+          "sha256": "ea78e66a442d25cb6b9a322e767c26d15d33c597e926357a90251d59c947317b"
+        },
+        {
+          "id": "standards/PRODUCT_DEFINITION.md",
+          "sha256": "2307ee89002a34d7d2d76fc57b45cfdd3fc55a9f3ea96d8566080d10f2e15a13"
+        },
+        {
+          "id": "standards/REFERENCE_FRAME.md",
+          "sha256": "a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f"
+        },
+        {
+          "id": "standards/AXIOMATIC_CALCULUS.md",
+          "sha256": "d2a29d4b9a9a260c364f942285c159dfd1cb439ee528d55146613c23533b9d4a"
+        },
+        {
+          "id": "standards/PROFILES.md",
+          "sha256": "92cb95dbdcc22e34216d8294cf2fefacb0b1c912042b530c0eea90b8961cabc9"
+        },
+        {
+          "id": "standards/ODD.md",
+          "sha256": "3c5492dc9728aff26916d309758abaf94f39499e325cbfdbee59f738b414e334"
+        },
+        {
+          "id": "standards/UX.md",
+          "sha256": "784349f09670309b52ff1fd3e7cc93a2740efcbb75e32eae89c57ee6ec431bfe"
+        },
+        {
+          "id": "standards/EXECUTIVE_BASELINE.md",
+          "sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff"
+        }
+      ],
+      "standing": "Exact native-cut constraint index; external exact-query assessment required for covered standing.",
+      "subject_id": "urn:purpose-context:corpus:stdo-3.1.0-rc.3:python-refactoring-closure-v2",
+      "view_sha256": "481cac5393fc0534acd8dc4afccc56244f87452ef5abccbd383300332760ff9f"
+    },
+    {
+      "artifacts": {
+        "index": {
+          "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/INDEX.json",
+          "sha256": "dd3164078e4a298e0d951a77e792ba36062d9f7f566fc33531f7e88f236b697c"
+        },
+        "provenance": {
+          "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/PROVENANCE.json",
+          "sha256": "feffaaeb852fae6f4f329d49286fc539d868b86b766e2827b457ecd454ff5db4"
+        },
+        "purpose": {
+          "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/PURPOSE.json",
+          "sha256": "e0b5032fd01f8b1fd94e55c3314f8fb7d9617724764e36e18cf6ee5873691843"
+        },
+        "sources": {
+          "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/SOURCES.json",
+          "sha256": "27de9b9a9f87323cb32e7c4c7ad5523b4dbbbd1398082b851ffe3080f028cfb4"
+        }
+      },
+      "corpus_sha256": "25ac95be8936a9fd0d8e1556af02803f14c6fa885935431ccdb0094d0a5806f6",
+      "description": "Retain the selected governing source constraints for ordinary SDLC work and incremental QA, evidence-led causal triage and lawful owner re-entry, bounded repair verification and conditional rechecks, named boundary decisions, drift and valid evidence reuse. This is predecision method-workflow constraint coverage over the stated source closure, not proof of task admission, technical design correctness, repair success, performed/independent assessment or boundary acceptance. Technical specialist and Product-specific law remains an explicit task acquisition obligation. The selected guidance belongs to exact native STDO 3.1.0-rc.3; the caller binds its complete operative constitution and actual Product adoption. An index is not a partial constitution or an adoption decision. Exact source, purpose, index and query bind any external assessment.",
+      "family_guard": {
+        "all": [
+          {
+            "fact": "sdlc_workflow",
+            "op": "eq",
+            "value": true
+          },
+          {
+            "fact": "adopted_defaults",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": [
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "none"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "landing"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "work_closure"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "product_acceptance"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "qualification"
+          },
+          {
+            "fact": "boundary_kind",
+            "op": "eq",
+            "value": "release"
+          }
+        ]
+      },
+      "id": "stdo-3.1.0-rc.3-sdlc-workflow-v1",
+      "method": {
+        "manifest_sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+        "uri": "stdo://releases/v3.1.0-rc.3/"
+      },
+      "purpose_id": "sdlc-workflow/1",
+      "purpose_sha256": "ac43482e8a79b0ddfa1c668befd32386642912635c5c0678db634dc55d45340a",
+      "source_members": [
+        {
+          "id": "SDLC_DEFAULTS",
+          "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8"
+        },
+        {
+          "id": "SPEC_METHOD",
+          "sha256": "3aefe8942bd2a5501367a85f019c8e1d5b8f38e94ddb62fa3a1f5a52036a05c5"
+        },
+        {
+          "id": "FOUNDATIONS",
+          "sha256": "4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e"
+        },
+        {
+          "id": "PRODUCT_DEFINITION",
+          "sha256": "2307ee89002a34d7d2d76fc57b45cfdd3fc55a9f3ea96d8566080d10f2e15a13"
+        },
+        {
+          "id": "IDENTITY",
+          "sha256": "c70399311010a8835b00d2a887a2451f11f66f631d6217d8df4be41751a59c08"
+        },
+        {
+          "id": "REFERENCE_FRAME",
+          "sha256": "a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f"
+        },
+        {
+          "id": "ACTIVATION",
+          "sha256": "0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6"
+        },
+        {
+          "id": "ASSURANCE",
+          "sha256": "5f6740a39355314ea2a9227a8795ea68cdafb2c4c3e9b25e1d9e626eb43f27ca"
+        },
+        {
+          "id": "EVALUATION",
+          "sha256": "b856cf04e2cf6ea0ba8b5f9de8b455a3a5f95cdb05fe7337f077f1b7547c7485"
+        },
+        {
+          "id": "EXECUTIVE_BASELINE",
+          "sha256": "ba089c92bee43891a509788e34b92044b0c8b0c0bb0217271724930a846e24ff"
+        },
+        {
+          "id": "TICKETS",
+          "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748"
+        },
+        {
+          "id": "RELEASE",
+          "sha256": "ea78e66a442d25cb6b9a322e767c26d15d33c597e926357a90251d59c947317b"
+        }
+      ],
+      "standing": "Exact native-cut constraint index; external exact-query assessment required for covered standing.",
+      "subject_id": "urn:purpose-context:corpus:stdo-3.1.0-rc.3:sdlc-workflow-v1",
+      "view_sha256": "12e5098e56509570ad936e09798fb32a3474966a18b8f45c8d56bbd707ed07fa"
+    }
+  ],
+  "profile": "purpose-context.index-catalog/1"
+}

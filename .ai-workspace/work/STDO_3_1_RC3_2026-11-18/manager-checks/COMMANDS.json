@@ -1,0 +1,76 @@
+[
+  {
+    "name": "wheel",
+    "argv": [
+      "/opt/homebrew/bin/python3.13",
+      "-m",
+      "pip",
+      "wheel",
+      "--no-deps",
+      "--wheel-dir",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager-source"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "runtime",
+    "argv": [
+      "python3",
+      "-B",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/runtime_bundle.py",
+      "--predecessor",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc2/.ai-workspace/work/STDO_3_1_RC2_2026-11-15/assets/stdo-manager-runtime-v3.1.0-rc.2-macos-arm64-cp313.zip",
+      "--wheel",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo_toolchain-3.1.0rc3-py3-none-any.whl",
+      "--out",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/runtime-build"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "venv",
+    "argv": [
+      "/opt/homebrew/bin/python3.13",
+      "-m",
+      "venv",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "offline-install",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--no-index",
+      "--find-links",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/runtime-build/wheels",
+      "--require-hashes",
+      "--no-deps",
+      "-r",
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/runtime-build/requirements-macos-arm64-cp313.txt"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "pip-check",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "exit": 0
+  },
+  {
+    "name": "version",
+    "argv": [
+      "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager/bin/stdo",
+      "--version"
+    ],
+    "exit": 0
+  }
+]

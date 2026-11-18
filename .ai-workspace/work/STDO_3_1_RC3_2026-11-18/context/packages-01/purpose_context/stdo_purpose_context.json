@@ -1,0 +1,110 @@
+{
+  "$schema": "stdo://releases/v3.0.4/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:product-definition:purpose-context",
+    "name": "Purpose Context",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:purpose-context:bounded-context:purpose-context-construction",
+      "definition": "./specification/PRODUCT.md#product-boundary"
+    }
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/3.0.4",
+      "basis": {
+        "uri": "stdo://releases/v3.0.4/",
+        "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+      }
+    },
+    "additional_authorities": [
+      "./specification/INTENT.md",
+      "./specification/PRODUCT.md"
+    ],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/frames/bootstrap.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/EXECUTIVE_BASELINE.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [],
+    "overrides": [],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./specification/REFERENCE_FRAME_BASIS.md",
+      "authority": [
+        "./specification/PRODUCT.md#construction-authority"
+      ],
+      "applies_to": [
+        "urn:stdo:product-definition:purpose-context"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./specification/INTENT.md",
+    "product": "./specification/PRODUCT.md",
+    "specification": [
+      "./specification/requirements/README.md",
+      "./specification/requirements/SDLC-WORKFLOW.md"
+    ]
+  },
+  "how": {
+    "common": [
+      "./design/DESIGN.md"
+    ],
+    "build_tenants": [
+      {
+        "id": "urn:purpose-context:build-tenant:python-cli",
+        "root": "./skills/stdo-context/",
+        "design": [
+          "./design/DESIGN.md"
+        ],
+        "implementation": [
+          "./skills/stdo-context/"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./specification/GOALS.md",
+    "tickets": {
+      "root": "./.ai-workspace/tickets/",
+      "lanes": {
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "active": "./.ai-workspace/tickets/active/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    }
+  },
+  "composition": []
+}

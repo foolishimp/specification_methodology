@@ -1,0 +1,571 @@
+diff --git a/specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md b/specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md
+index c85440166..fa97f5865 100644
+--- a/specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md
++++ b/specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md
+@@ -1,94 +1,145 @@
+ # Using STDO
+ 
+-This guide is the practical entrypoint for a person or LLM entering an
+-STDO-governed project. It answers five questions:
++Start with the Product outcome you need and the evidence that would establish
++it. Resolve the exact method and existing work grant, then use the smallest
++sufficient work or review path. This guide and the skills route attention;
++the selected installed standards and Product-owned authority decide.
+ 
+-1. How do I get ready to work?
+-2. How do I iterate requirements?
+-3. What authorizes code development and testing?
+-4. How do I monitor progress and help triage?
+-5. How do I issue work to another actor without writing a replacement brief?
+-
+-This guide and its companion skills are non-deciding interaction projections.
+-The project's exact installed STDO cut and Product-owned authority remain the
+-governing sources.
++This source guide includes the development SDLC default and independent
++Skills/Purpose Context setup. Those changes have no successor release identity
++and do not update an older installed plugin. The fixed 3.0.5-rc.1 bootstrap
++below installs that released subject only; it does not deliver these development
++changes or adopt them for an existing Product.
+ 
+ ## Contents
+ 
++- [The Operating Loop](#the-operating-loop)
++- [Keep The Ticket And Context In Step](#keep-the-ticket-and-context-in-step)
+ - [Get Ready To Work](#1-get-ready-to-work)
++- [Install Current Host Bindings](#install-current-host-bindings)
++- [Choose And Consume Task Context](#choose-and-consume-task-context)
++- [New Project: Fixed Release Bootstrap](#new-project)
+ - [Iterate Requirements](#2-iterate-requirements)
+ - [Start Code Development And Testing](#3-start-code-development-and-testing)
+ - [Monitor And Help Triage](#4-monitor-and-help-triage)
+ - [Coordinate Work And Review](#coordinate-work-and-review)
+-- [Common Stops](#common-stops)
+ - [Read The Installed Documentation](#read-the-installed-documentation)
++- [Common Stops](#common-stops)
+ - [Owning References](#owning-references)
+ 
+-## Read The Installed Documentation
+-
+-STDO 3.0.5-rc.1 installs its [documentation home](../../../standards/documentation/index.html),
+-[3D/2D/Layered constraint explorer](../../../standards/documentation/constraint-explorer/index.html)
+-and [current Lean proof reader](../../../standards/documentation/proofs/index.html)
+-with the ordinary method payload. Resolve the installed entry:
+-
+-```sh
+-stdo resolve stdo://releases/v3.0.5-rc.1/standards/documentation/index.html
+-```
+-
+-Open the returned `path` in a browser. Search constraints, read their complete
+-statements and source passages, and follow labelled connections with a reading
+-trail. Use Files to discover records by source path and switch the middle view
+-without losing the selection. Layered works without WebGL. No Graphify, Lean
+-or Node installation is needed to read these offline files.
+-
+-The [reading guide](../../../standards/documentation/README.md) binds the current
+-model to all 68 selected semantic source members, including native workflow
+-contracts. The proof reader retains the actual finite-model and selected-view
+-verification, its sources, complete compiled evidence and limits. Prose fidelity,
+-semantic acceptance and installed runtime verification remain separate claims.
+-Use the owning installed standards for method decisions.
+-
+-The [bundled tooling guide](../../../standards/tooling/README.md) exposes the
+-current a_c, Representation, Axiom Indexer and both host Skills packages.
+-The [five-Product release manifest](https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.0.5-rc.1/stack-release-v3.0.5-rc.1.json)
+-is their external binding to this native installation. Generated readers do not
+-contain their own final release manifest digest.
+-
+-The [frozen ABI code example](../../../standards/documentation/code-explorer/index.html)
+-retains the exact ABIogenesis T-019 artifact published with STDO 3.0.4. Its
+-[example identity](../../../standards/documentation/code-explorer/EXAMPLE.json)
+-records that custody; it is not current ABI qualification or current STDO
+-model/proof evidence.
+-
+ ## The Operating Loop
+ 
+-Keep these distinct:
+-
+-- an immutable STDO cut defines the selected method;
+-- `stdo_<label>.json` selects that cut and locates the Product's actual
+-  authority, realization, and work carriers;
+-- the project owns its Goals, Intent, Product, requirements, design, code,
+-  tickets, decisions, and evidence; and
+-- skills route common requests without becoming another method, workflow
+-  engine, prompt engine, or source of truth.
+-
+-```text
+-request
+-  -> verify the exact basis and current outcome
+-  -> triage, select the smallest work carrier, and admit a run contract
+-  -> re-enter at the first changed layer
+-  -> update constitutional truth and accepted design when required
+-  -> construct code and tests when authorized
+-  -> return an exact candidate
+-  -> independently review when required
+-  -> Product-owned disposition and checkpoint
+-  -> status, evidence, and the next authorized action
+-```
+-
+-STDO constrains governed relations. It does not prescribe an actor count,
+-repository layout, prompt construction engine, internal decomposition, search
+-procedure, or tool sequence where those choices cannot change a governed
+-semantic, authority, evidence, safety, or release property.
++Bind the actual claim before work: incremental QA, bounded repair/work closure,
++or a named Product acceptance, qualification or release. A local test result
++supports its tested predicate; it does not establish a larger boundary.
++
++The [SDLC default](../../../standards/SDLC_DEFAULTS.md) projects existing law:
++
++1. **Work and check.** Use the existing admitted carrier and a sufficient direct
++   Writer where the accepted frame basis permits it. Derive the smallest
++   adequate falsifier from the requirement and accepted design.
++2. **Diagnose a discrepancy.** Use observations to distinguish the causes
++   below; preserve uncertainty when the evidence cannot decide.
++3. **Re-enter its owner.** Admit any changed requirement, design, model, outcome
++   or territory before dependent work. Reuse the existing carrier when it
++   still covers the work; an unrelated finding does not enlarge the grant.
++4. **Verify the affected claims.** Reconcile the changed owners, implementation,
++   tests and displaced paths. Check the applicability of retained evidence;
++   rerun or reassess what the change invalidates.
++5. **Continue or close within the grant.** Close only when applicable conditions
++   are satisfied, required judgments exist and no active non-closure condition
++   remains. Return the exact result and residuals at the activation boundary.
++
++| Supported cause | Next route |
++|---|---|
++| Defective realisation under adequate unchanged law | Repair the realised surface and verify no upstream drift. |
++| Inadequate requirement or design | Re-enter the first inadequate owner; derive downstream work from its admitted change. |
++| Inaccurate predictive model | Re-enter its owner with the failed prediction and observation; reassess dependent claims. |
++| Insufficient observation | Obtain the missing admissible evidence or retain `indeterminate` and withhold the dependent claim. |
++
++Repeated failure, increasing repair cost or a capability limit calls for the
++[frame diagnostic order](../../../standards/REFERENCE_FRAME.md#diagnostic-order):
++check frame family, exact subject/basis, actor capability and evidence before
++adding variables, joins or frames. The observation does not itself authorize
++another code patch or a requirement change.
++
++For a basis adopting the
++[Executive QA cadence](../../../standards/EXECUTIVE_BASELINE.md#qa-cadence-and-repair-rechecks),
++a mechanically decidable repair may close on its failing-before/passing-after
++reproduction, declared suite and other applicable conditions. An independent
++bounded recheck remains required when the boundary requires or claims
++independence, the repair concerns a hard stop or material capture fidelity,
++there is no reproducing test, or selected review left coverage incomplete.
++Other accepted configurations retain their own conditions. No fresh review,
++coordinator, ticket or numeric policy follows merely from making a repair.
++
++A review binds one exact claim, subject, coverage population, exclusions and
++stopping condition. Return finite findings and gaps; a later material finding
++receives a new bounded disposition. Reviewer severity and causal confidence
++are evidence. Product priority, boundary effect and `accept`, `local_repair`,
++`re_enter` or `reject` remain the authorized decision owner's responsibility.
++The [worked cases](../../../standards/examples/SDLC_DEFAULTS.md) explain these
++routes; they are not actual-use evidence.
++
++The [frame-basis template](../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection)
++proposes this default ready for adoption. An existing Product selects it through
++its authorized frame-basis change, binding exact projection identity and the
++operative method. Merely finding this guide or installing a skill selects
++nothing. Preserve the Product's accepted alternatives, optional profiles,
++explicit gates and policy choices. Follow the
++[selected review flow](COORDINATED_HANDOFF.md#review-flow-from-the-selected-basis)
++against the actual basis; do not import newer law into an older installation.
++
++## Keep The Ticket And Context In Step
++
++The constitutional application belongs to
++[TICKETS carrier-to-execution](../../../standards/TICKETS.md#5-from-carrier-to-execution),
++with generic context/restart owned by ACTIVATION. The selected default frames
++project those owners; native Skills apply them. This guide explains their use
++and is not the authority that makes them binding.
++
++The [ticket record](../../../standards/TICKETS.md#ticket-records) is the durable
++source of truth for its unit of work. After the actor's own named control intake,
++resolve the current ticket through the Product Definition and use its admitted
++scope, linked sources and evidence to reconstruct the next task. The ticket owns
++its work state; governing specifications own meaning and current workspace
++evidence decides what has actually happened. An active label is not execution
++admission, and a ticket claim cannot overrule contrary evidence.
++
++Keep continuation information in the existing ticket and its linked records:
++outcome and scope, basis and grant, closure criteria, current checkpoint,
++applicable decisions and owner rulings, observed verification, surviving
++obligations, uncertain effects and the next already-authorized action/owner.
++Record facts and evidence rather than replacing them with a passing summary.
++Use existing fields and qualified links instead of duplicating every source or
++log. A Reviewer returns its granted report; the authorized Writer performs any
++ticket-state update. Where the selected work law permits a sufficient sprint
++entry or run contract, no redundant durable ticket is required.
++
++[Context construction](../../../standards/ACTIVATION.md#2-context-construction-under-an-envelope)
++projects the material needed for the next decision. Use the matching Purpose
++Context index and follow deciding source/evidence references when the derived
++surface is stale or insufficient. References must be accessible and retain the
++consumer's required distinctions; names and hashes alone are not meaning.
++Keep irrelevant corpus material out without dropping coupled obligations.
++Measure fit before acquisition where the selected envelope declares a context
++capacity, naming the measured boundary and unmeasured host inputs. If material
++does not fit, refine or sequence the work, use a preserving compression or the
++applicable envelope/actor re-entry. Recover clipped windows; do not treat a
++saved file or truncated response as complete receipt.
++
++[Work state and restart](../../../standards/ACTIVATION.md#5-work-state-and-restart)
++require step-produced facts and results to survive the actor. Persist those facts,
++decisions, evidence links, residuals and effect uncertainty through the granted
++work-record update before returning or handing off. A handoff points to the
++current ticket and linked results; it does not become a rival status authority.
++The next actor reacquires relevant actual state, checks invalidators and reopens
++only affected support. Resolve uncertain effects before a dependent retry.
++
++The [actor's account](../../../standards/ACTIVATION.md#the-workspace-and-an-actors-account)
++is disposable. Replacing a context does not reset the workspace, erase valid work
++or require replaying the full conversation. Purpose Context supplies reusable
++constraints within this cycle; it does not replace the durable work record.
+ 
+ ## Coordinate Work And Review
+ 
+@@ -207,8 +258,129 @@ to resolve the actual method members and anchors before following a skill's
+ route. Neither a plugin installation nor a skill name changes the Product's
+ selected method basis.
+ 
++### Install Current Host Bindings
++
++Obtain an independently selected **STDO Skills development distribution** and
++its pinned **Purpose Context** Product. In that Skills distribution, read
++`scripts/INSTALLATION.md` for package/host setup and `GETTING_STARTED.md` for
++first use. These are distribution-relative paths: an installed native plugin
++does not assume a sibling source checkout. In the source repository only,
++the corresponding paths begin `stdo_skills/`.
++
++The current installer also retains those guides inside the selected workspace's
++`.agents/stdo-skills-dev/` or `.claude/stdo-skills-dev/` directory. Follow that
++receipt-owned `GETTING_STARTED.md` for the current independent Product setup
++when the selected native release contains an older first-use guide.
++
++The Skills installer binds the selected Product Definition, actual native
++method root, manager/store, interpreter and Purpose Context public manifest.
++Use its `plan`, then `install` with the same selected inputs for `codex` or
++`claude`, retaining the returned receipt path and digest. Its receipt owns
++subsequent verification/removal; use that exact installer and receipt. The
++independent installation guide provides the complete commands and refusal
++conditions. Installing a development adapter neither changes the Product's
++constitution nor replaces the selected native workflow text.
++
++The five core bindings enter that verified native plugin. `stdo-context` follows
++the independent Purpose Context skill. Add the separately pinned visual Product
++only when visual documentation is wanted; that option supplies `stdo-project`.
++Current context use needs no Graphify or Lean. Historical combined `setup.py`
++and formal-support routes in the 3.0.5-rc.1 archive are not this installer.
++Existing historical installs keep their original receipts and owner tools.
++
++### Use The Selected Native Skills
++
++Resolve the plugin from the **verified Product basis**, substituting its exact
++URI below. Preserve the complete release layout and the plugin's relative
++references:
++
++```sh
++STDO_BASIS_URI='stdo://releases/<selected-immutable-cut>/'
++STDO_PLUGIN_ROOT="$(
++  stdo resolve "${STDO_BASIS_URI}plugins/spec/.codex-plugin/plugin.json" |
++    python3 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)'
++)"
++```
++
++For explicit native use, load the resolved `skills/stdo-work/SKILL.md` or the
++other applicable skill and follow its relative references. This file-loading
++route does not require host registration. A selected Claude plugin can be
++loaded with `claude --plugin-dir "$STDO_PLUGIN_ROOT"`. Codex discovery bindings
++are supplied by the independent Skills installer above. A skill name or version
++string alone does not establish which bytes the host loaded.
++
++| Outcome needed | Native skill | Claude plugin | Codex Skills binding |
++|---|---|---|---|
++| Next lawful step or missing binding | `stdo-help` | `/spec:stdo-help` | `$stdo-help` |
++| Authorized durable carrier change | `stdo-ticket` | `/spec:stdo-ticket` | `$stdo-ticket` |
++| Admitted construction, repair or verification | `stdo-work` | `/spec:stdo-work` | `$stdo-work` |
++| Scoped QA or named boundary assessment | `stdo-review` | `/spec:stdo-review` | `$stdo-review` |
++| Read-only Product/work status and triage | `stdo-status` | `/spec:stdo-status` | `$stdo-status` |
++
++The current development work/review source exposes the selected SDLC default.
++An older native install retains its original text and basis; a context query
++cannot replace those files or establish their deployment. Required acquisition
++or isolation constraints still need the declared [host binding](HOST_BINDING.md).
++
++In chat, `stdo status` requests Product/work status through the skill. In a
++shell, `stdo status --definition ... --verify` checks installed-basis health.
++
++### Choose And Consume Task Context
++
++After Skills installation, run its actual `stdo-context` provider's `describe`
++command with the selected interpreter. For example, using a Codex workspace:
++
++```sh
++/absolute/selected/python3 -B /absolute/workspace/.agents/skills/stdo-context/scripts/provider.py describe
++```
++
++For Claude the entry is under `.claude/skills/`. Read the returned physical
++`skill` path and its references from that Purpose Context Product. Its public
++manifest pin comes from the independently selected dependency, not from hashing
++an arbitrary replacement. Forward public API arguments through that provider's
++`context -- ...` route, following the canonical skill's exact command recipes.
++
++Choose an index by **purpose and exact source**:
++
++| Decision | Purpose and selection |
++|---|---|
++| Work, incremental QA, causal triage, repair, named boundary or evidence reuse | `sdlc-workflow/1`, currently `stdo-development-sdlc-workflow-v1`: 40 rules over 12 exact development-source members. Read the returned skill's `references/sdlc-workflow.md`. |
++| Pure/local Python 3.12 realization refactoring under adopted DESIGN_MODULE | `python-pure-refactor/2`, using the entry matching the actual selected released basis. The 3.0.5-rc.1 entry and retained 3.0.4 entries have separate bindings. |
++
++The workflow snapshot names its development manifest and exact 3.0.5-rc.1
++predecessor. It is separate from the caller's complete operative constitution
++and from Skills/Purpose Context's 3.0.4 construction basis. No 3.0.6 release is
++implied. The Python purpose is not coverage for the workflow purpose.
++
++Follow the canonical `indexes` → `bind` → `select` → `consume` → `check` recipe.
++Create a query from the actual outcome, task, grant, source selection, adopted
++default/profile, finding/repair/review facts and requested boundary. Missing,
++null or ill-typed facts remain unknown; example values cannot supply adoption,
++authority or a future successful verification. Bind the actual recipient byte
++budget and read the complete delivered body before relying on its constraints.
++
++Use an applicable independently selected exact-query assessment when required.
++A changed query, including its identity, inherits no verdict. Where existing
++authority permits experimental use, an explicit trial binding retains its
++uncovered standing; it does not bypass a required assessment. If no matching
++index, binding or coverage is available, re-enter the deciding source and retain
++the limitation. Source-first independent review derives expectations before
++opening candidate-derived indexes or judgments.
++
++Return from context acquisition to the native work/review route with the actual
++rules, unresolved facts and source re-entry points. Context coverage does not
++prove the repair, close a task or decide release. Changed source, purpose,
++facts or default selection requires affected binding/assessment refresh;
++retain unrelated evidence whose validity still holds.
++
+ ### New Project
+ 
++This is the **fixed 3.0.5-rc.1 release bootstrap**, retained for a new Product
++that explicitly selects that release. It installs the released native method
++and copies that cut's templates; it does not install the current development
++Skills/Purpose Context distribution or the new default projection. Existing
++Products use their actual basis, not this example's version.
++
+ The normal public release titled STDO 3.0.5 selects the immutable cut
+ 3.0.5-rc.1. Its five Products carry that exact owned version; the Python manager
+ uses the equivalent PEP 440 spelling 3.0.5rc1. Acquire
+@@ -269,8 +441,10 @@ A failed download, checksum, dependency installation or exact-cut verification
+ stops this sequence. The fixed-tag GitHub release API supplies the exact asset
+ SHA-256 and size over verified HTTPS; no unshipped checksum sidecars are assumed. The external five-Product manifest
+ records the complete component and qualification closure. Installation does
+-not adopt this basis for an existing Product. Complete the declared runtime and
+-host setup below to execute the optional Graphify and Lean dependencies.
++not adopt this basis for an existing Product. Continue with the independent
++[host binding setup](#install-current-host-bindings) when that development
++distribution is explicitly selected. No Graphify or Lean setup is needed for
++current context use.
+ 
+ Resolve and copy the Product Definition and Project Reference-Frame Basis
+ templates from that same installed cut:
+@@ -426,115 +600,12 @@ stdo bootstrap --definition stdo_default.json --dry-run
+ stdo bootstrap --definition stdo_default.json
+ ```
+ 
+-The packaged [Product Definition template guide](../../../standards/templates/README.md#product-definition-overlay)
+-explains the fields and their required bindings; the
+-[Project Reference-Frame Basis template](../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md)
+-provides the frame-basis declaration.
+-
+-### Install The Shared Skills
+-
+-The 3.0.5-rc.1 installation includes all five native skills under `plugins/spec/`.
+-The current Skills Product supplies Codex and Claude discovery bindings and the
+-`stdo-project` extension over that same native workflow owner. The complete
+-setup below installs these bindings; direct use of the native plugin remains
+-available. First verify the exact cut, then locate its plugin through the manager:
+-
+-```sh
+-STDO_PLUGIN_ROOT="$(
+-  stdo resolve stdo://releases/v3.0.5-rc.1/plugins/spec/.codex-plugin/plugin.json |
+-    python3 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)'
+-)"
+-```
+-
+-For a Claude Code session, load that directory directly:
+-
+-```sh
+-claude --plugin-dir "$STDO_PLUGIN_ROOT"
+-```
+-
+-For Codex, direct use needs no marketplace: ask the actor to read the exact
+-`$STDO_PLUGIN_ROOT/skills/stdo-work/SKILL.md` (substitute its resolved absolute
+-path) and follow that skill for the admitted task. The shared references and
+-scripts remain relative to that installed plugin root. This is explicit file
+-loading, not a claim that the host registered a plugin.
+-
+-For Codex discovery, use the [current host binding installer](#install-tools-and-both-host-bindings)
+-below. Its wrappers resolve the verified canonical native files and retain
+-that dependency in their installation receipt. Do not copy the plugin alone
+-into a marketplace: its owning standards and relative references belong to
+-the complete installed release. This guide does not qualify a relocated
+-marketplace layout.
+-
+-Required context/acquisition limits still need the explicit
+-[host binding](HOST_BINDING.md); discovery supplies no new authority or
+-isolation guarantee.
+-
+-Both hosts consume the same workflow skill bytes. With the Claude plugin or
+-the installed Codex Skills binding selected, use:
+-
+-| Say | Portable skill | Claude plugin | Codex Skills |
+-|---|---|---|---|
+-| `stdo help` | `stdo-help` | `/spec:stdo-help` | `$stdo-help` |
+-| `stdo ticket` | `stdo-ticket` | `/spec:stdo-ticket` | `$stdo-ticket` |
+-| `stdo work` | `stdo-work` | `/spec:stdo-work` | `$stdo-work` |
+-| `stdo review` | `stdo-review` | `/spec:stdo-review` | `$stdo-review` |
+-| `stdo status` | `stdo-status` | `/spec:stdo-status` | `$stdo-status` |
+-
+-Natural-language invocation remains valid. In chat, `stdo status` requests
+-Product/work status through the skill. In a shell, `stdo status --definition
+-...` remains the toolchain command for installed-basis health.
+-
+-### Install Tools And Both Host Bindings
+-
+-Continue with the verified manager/store variables above. All generated runtime,
+-request, receipt and host files belong outside the immutable installed release.
+-The materialized Product source stays exact; the separate a_c runtime may change
+-only its declared proof-support profile during controlled Lean setup.
+-
+-```sh
+-STDO_METHOD_ROOT="$(stdo resolve stdo://releases/v3.0.5-rc.1/standards/FOUNDATIONS.md | python3.13 -c 'import json,pathlib,sys; print(pathlib.Path(json.load(sys.stdin)["path"]).parent.parent)')"
+-STDO_TOOLING_ROOT="$STDO_METHOD_ROOT/standards/tooling"
+-STDO_RUNTIME_BASE="$HOME/.local/share/stdo-runtime-3.0.5-rc.1"
+-test ! -e "$STDO_RUNTIME_BASE"
+-mkdir -p "$STDO_RUNTIME_BASE"
+-python3.13 "$STDO_TOOLING_ROOT/materialize.py" materialize --destination "$STDO_RUNTIME_BASE/tools"
+-python3.13 "$STDO_RUNTIME_BASE/tools/a_c/scripts/bootstrap.py" graphify --destination "$STDO_RUNTIME_BASE/graphify"
+-STDO_RUNTIME_PYTHON="$STDO_RUNTIME_BASE/graphify/venv/bin/python"
+-python3.13 "$STDO_TOOLING_ROOT/setup.py" derive-runtime --tools "$STDO_RUNTIME_BASE/tools" --destination "$STDO_RUNTIME_BASE/a_c-runtime" --receipt "$STDO_RUNTIME_BASE/derivation-prepared.json"
+-STDO_DERIVATION_SHA="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_RUNTIME_BASE/derivation-prepared.json")"
+-python3.13 "$STDO_TOOLING_ROOT/setup.py" bootstrap-lean --derivation "$STDO_RUNTIME_BASE/derivation-prepared.json" --derivation-sha256 "$STDO_DERIVATION_SHA" --python "$STDO_RUNTIME_PYTHON" --output "$STDO_RUNTIME_BASE/lean-bootstrap"
+-STDO_DERIVATION="$STDO_RUNTIME_BASE/lean-bootstrap/derivation.json"
+-STDO_DERIVATION_SHA="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DERIVATION")"
+-for host in codex claude; do
+-  mkdir "$STDO_RUNTIME_BASE/$host-workspace"
+-  python3.13 "$STDO_TOOLING_ROOT/setup.py" host --host "$host" --tools "$STDO_RUNTIME_BASE/tools" --runtime-ac "$STDO_RUNTIME_BASE/a_c-runtime" --derivation "$STDO_DERIVATION" --derivation-sha256 "$STDO_DERIVATION_SHA" --anchor "$STDO_RUNTIME_BASE/$host-anchor" --workspace "$STDO_RUNTIME_BASE/$host-workspace" --method-root "$STDO_METHOD_ROOT" --store "$STDO_STORE_ROOT" --stdo "$STDO_MANAGER_ENV/bin/stdo" --python "$STDO_RUNTIME_PYTHON" --manifest-sha256 "$STDO_MANIFEST"
+-done
+-```
+-
+-Graphify and Lean bootstrap retain their exact third-party pins and execution
+-receipts. Each host gets an explicit runtime-installation anchor and a manager
+-launcher fixed to this store. Enter the selected host workspace and load its
+-installed skill instructions. Keep the returned `stdo` launcher and forward it
+-through the documented project commands; an ambient manager or store does not
+-supply that binding. The nominated construction Product still uses its own
+-Definition, basis and work grant.
+-
+-To verify the current model using this installed runtime, recover the complete
+-retained proof bundle and create a separate request with local input paths:
+-
+-```sh
+-STDO_PROOF_ROOT="$STDO_METHOD_ROOT/standards/documentation/proofs"
+-python3.13 "$STDO_PROOF_ROOT/materialize.py" materialize --destination "$STDO_RUNTIME_BASE/evidence"
+-python3.13 "$STDO_PROOF_ROOT/materialize.py" request --evidence "$STDO_RUNTIME_BASE/evidence" --output "$STDO_RUNTIME_BASE/current-request.json"
+-"$STDO_RUNTIME_PYTHON" -I -S -B "$STDO_RUNTIME_BASE/a_c-runtime/build_tenants/lean/scripts/formal_gate.py" verify --request "$STDO_RUNTIME_BASE/current-request.json" --output "$STDO_RUNTIME_BASE/current-verification"
+-```
+-
+-The original construction request/result remain unchanged as provenance. This
+-command creates a new actual verification under the installed runtime identity.
+-Use the installed `a_c/scripts/ac.py` Graphify, Axiom Indexer and host extension
+-routes with explicitly selected model, view, source and runtime inputs. Setup
+-success and proof success retain their respective exact scopes; neither adopts
+-or authorizes work in a nominated Product.
++Read the Product Definition and frame-basis template guides from that same
++installed cut when completing this release-specific setup. The current source
++[frame template](../../../standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection)
++separately proposes the new SDLC default. Selecting that exact development
++projection needs the Product's authorized adoption and binding; the old release
++bootstrap does not supply it.
+ 
+ ## 2. Iterate Requirements
+ 
+@@ -567,7 +638,7 @@ The table quotes SPEC_METHOD §4 Change classes, which owns them.
+ |---|---|---|
+ | current bounded work-wave focus changes | `goal_reprice` | Goals |
+ | directional or scope change | `intent_reprice` | Intent |
+-| current product realisation changes while directional intent stays stable | `product_reprice` | Product |
++| the adopted Product definition or intended end state changes while directional intent stays stable | `product_reprice` | Product |
+ | constitutional truth changes while project direction stays stable | `requirement_reprice` | Requirements |
+ | realisation structure changes while active intent and requirement truth stay stable | `design_reframe` | Design |
+ | local code, configuration or attribute change with no intended constitutional or structural change; it must prove no upstream drift | `realization_refactor` | the realised surface only |
+@@ -772,6 +843,33 @@ Status may propose a likely change class and re-entry point. It does not
+ silently create a ticket, widen a release boundary, reprioritize the Product,
+ or apply disposition.
+ 
++## Read The Installed Documentation
++
++The retained 3.0.5-rc.1 [documentation home](../../../standards/documentation/index.html),
++[constraint explorer](../../../standards/documentation/constraint-explorer/index.html)
++and [proof reader](../../../standards/documentation/proofs/index.html) describe
++that exact released combined distribution. Resolve its installed entry with:
++
++```sh
++stdo resolve stdo://releases/v3.0.5-rc.1/standards/documentation/index.html
++```
++
++These offline readers require no Graphify, Lean or Node installation. Their
++source, model and proof identities remain those in the retained
++[reading guide](../../../standards/documentation/README.md). They do not
++represent the new SDLC default or establish current context coverage. The
++[frozen ABI example](../../../standards/documentation/code-explorer/index.html)
++retains its [published identity](../../../standards/documentation/code-explorer/EXAMPLE.json)
++and original scope.
++
++For current optional visual documentation, select Representation Tools through
++the independent Skills installer's visual option and follow its `stdo-project`
++route. Visual output is explanatory; exact method owners still decide.
++The retained [tooling guide](../../../standards/tooling/README.md) describes the
++historical combined runtime for reproduction with its original dependencies,
++not current first-use setup. A graph edge, retained proof or source archive
++does not grant work authority or qualify changed development source.
++
+ ## Common Stops
+ 
+ | Condition | Response |
+@@ -785,6 +883,8 @@ or apply disposition.
+ | code and test disagree | reconcile through governing authority |
+ | independent review is required (the boundaries TICKETS §7 names) | stabilise one exact review subject as EVALUATION §3 Protocol states (frozen before material reference exposure where method qualification requires it; otherwise an immutable identity or an equivalent exact-subject relation sufficient for the claim) and activate Reviewer |
+ | a finding is adjacent to the current claim | return it as triage input; do not automatically block |
++| context source, purpose or query does not match | withhold that index use; follow the exact owning-source route and retain the gap |
++| context facts or declared review coverage remain unknown | preserve the unknown and withhold only the dependent claim |
+ | requested effect exceeds the grant | refuse and return to Product-owned decision authority |
+ 
+ ## Owning References
+diff --git a/specification_methodology/v3/build_tenants/common/standards/README.md b/specification_methodology/v3/build_tenants/common/standards/README.md
+index 103fc1b8c..e8e931922 100644
+--- a/specification_methodology/v3/build_tenants/common/standards/README.md
++++ b/specification_methodology/v3/build_tenants/common/standards/README.md
+@@ -28,6 +28,7 @@ It also includes the [ABI code example](documentation/code-explorer/index.html),
+ | migrate a core interface or reset a constitutional line | [SPEC_METHOD §7](SPEC_METHOD.md), then [TICKETS §6](TICKETS.md#6-implementation-migration) for the ticket's declaration and checklist |
+ | prove a realisation | [EVALUATION §1–2](EVALUATION.md) for what a proof names, [§6](EVALUATION.md#6-conformance-of-realisations) for conformance and the equivalence ladder, then [ASSURANCE](ASSURANCE.md) for verification layers, the testing taxonomy, test authority, scenario bundles, installed proof and path coverage |
+ | interpret a subject as a model, project a frame from it, or encode an accepted model | [AXIOMATIC_CALCULUS §2–4](AXIOMATIC_CALCULUS.md) for the signature, records and laws, [§6–8](AXIOMATIC_CALCULUS.md#6-interpretation-and-models) for interpretation, the three layers and identity, then [EVALUATION §2](EVALUATION.md) for the structural and semantic split of its review |
++| select ordinary SDLC QA, causal triage, re-entry and bounded verification defaults | [SDLC default guidance](SDLC_DEFAULTS.md#selected-default-flow), selected through the [Project frame-basis template](templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection); linked method owners retain authority |
+ | do a bounded piece of work | [ACTIVATION §1](ACTIVATION.md#1-the-step) for the transition, the intake, the admission and the configuration, [§2](ACTIVATION.md#2-context-construction-under-an-envelope) for the context you acquire and its size measurement, [§3](ACTIVATION.md#3-step-results-and-disposition) for the step's results, which map into the core of [FOUNDATIONS §4 Results](FOUNDATIONS.md#results), [REFERENCE_FRAME §11](REFERENCE_FRAME.md#11-the-activation-packet) for the packet you are activated on, then [SPEC_METHOD §4](SPEC_METHOD.md#4-change-management) for where your change re-enters |
+ | declare, audit or revise a project's frame set | [REFERENCE_FRAME §4, §8 and §10](REFERENCE_FRAME.md), then [EVALUATION §7](EVALUATION.md) to qualify a frame |
+ | resume work someone else left | [ACTIVATION §5](ACTIVATION.md#5-work-state-and-restart) for work state and resumption, with [the workspace and an actor's account](ACTIVATION.md#the-workspace-and-an-actors-account), [§7](ACTIVATION.md#7-closed-result-and-reuse) for reuse, then [TICKETS §7](TICKETS.md#recorded-judgment-and-owner-ruling-continuity) for recorded judgment and owner rulings |
+@@ -66,7 +67,7 @@ It also includes the [ABI code example](documentation/code-explorer/index.html),
+ | [PROFILES.md](PROFILES.md) | 3 | the core boundary and the import rule every profile applies (§1), and the index of the profiles (§2 to §6) |
+ | [EXECUTIVE_BASELINE.md](EXECUTIVE_BASELINE.md) | 3 | the optional operational profile of the executive configuration, one configuration under ACTIVATION §1 with Executive, Worker and Reviewer frames: canonical compression, authority boundary, engagement applicability, empirical revision boundary, profile terms with the reading of each work-result value, Executive attention with its drift locks and no-mutation rule, the executive configuration, the derived Executive, Worker and Reviewer frames, steel-thread delivery, the twelve generic specialist families, the engagement transition with the promotion constraint projection, handoff, coverage and re-entry application, adoption or project configuration, actor binding, profile qualification, basis and activation additions, failure classification, anti-patterns, closure |
+ | [DESIGN_MODULE.md](DESIGN_MODULE.md) | 3 | the optional software-design profile: purpose, position and graph-execution alignment; boundary closure evaluators and ingress collapse; functional bias and Python typing; ontology-first design with proportional design sequencing, decision-complete symbolic design, bounded frame conservation (UP-017), native constructability (UP-002), capability and foundation selection (UP-023), entity, authority, transformation-admission (UP-016) and function completeness, Prime atoms, whole-family contraction and root conservation (UP-003), ontology projection; Prime law with governance cost (UP-005), the carrier set, promotion and inflation; the three-view gate with invariant reconstruction (UP-018) and computational realisation (UP-019); theoretical framing; module taxonomy; realisation rules; review questions and checklist; adoption, relations and identity defaults |
+-| [ODD.md](ODD.md) | 3 | the Outcome-Driven Development profile: position, method role and composition, library classes, graph model with probabilistic compute and graph-native F_P and F_H and the exact-edition common F_D import, product and self-host boundaries, responsibility layers, governance, what an ODD product is, core law 11.1 to 11.9 with the execution-authority audit, the constructive evaluation and yield loop (A0 to A16), UP-010 and the cumulative environment law, scenario, installed-dev, dogfooding, release boundary, failure pattern, invocation, reading order, ramp-up |
++| [ODD.md](ODD.md) | 3 | the Outcome-Driven Development profile: position, method role and composition, library classes, graph model with probabilistic compute and graph-native F_P and F_H and the exact-edition common F_D import, product and self-host boundaries, responsibility layers, governance, what an ODD product is, core law 11.1 to 11.9 with the execution-authority audit, tracking, evidence and bounded decisions with an optional generic-register example, UP-010 and the cumulative environment law, scenario, installed-dev, dogfooding, release boundary, failure pattern, invocation, reading order, ramp-up |
+ | [TRAVERSAL_OCCURRENCE.md](TRAVERSAL_OCCURRENCE.md) | 3 | the optional a_c traversal occurrence profile over mutable subjects: imported calculus boundary, closed sorts and reference domains, event kinds, relation families, constraint, judgment, residual and stop kinds, occurrence identity, admission cut, causality and lineage, effect relation, frontier and projection, OP-001 to OP-007, adoption, exact profile identity, exclusions, conformance |
+ | [UX.md](UX.md) | 3 | the optional UX profile: Elm process model, carrier boundary, state transitions, effect membrane, carrier binding, continuation and Msg-replay proof, view shape, type sharing, accessibility minimum, adoption with scaffold law and sprint escrow, failure patterns, review questions, result mapping |
+ | [WORLD_MODEL.md](WORLD_MODEL.md) | 3 | the optional world-model profile: position, imports and Builder Project, Markov-object construct at candidate status, core claims, units, flow, representation and ledger laws, entity cut construction, overlay construction, saturation, composition, projection, planes, proof, output, result mapping |
+@@ -74,6 +75,7 @@ It also includes the [ABI code example](documentation/code-explorer/index.html),
+ | [WRITING_GUIDE.md](WRITING_GUIDE.md) | guide | writing discipline: core rule, style rules, habits to remove, good and bad prose, tone by authority layer, specification artifact practice, layer checks, current-surface writing |
+ | [GLOSSARY.md](GLOSSARY.md) | guide | the non-deciding locator index: index contract, locator law, rows by bounded context, and rows for concepts whose member declares no context |
+ | [DETERMINISTIC_CONTRACTS](examples/DETERMINISTIC_CONTRACTS.md) and [finite model](examples/deterministic_contracts.py) | example | complete finite fixture contracts and oracles for D301; bounded mathematical and executable evidence, no generic law or acceptance authority |
++| [GENERIC_REGISTER](examples/GENERIC_REGISTER.md) | example | an optional register illustrating required tracking and reconciliation to the authoritative workspace; equivalent LLM or other mechanisms are allowed |
+ 
+ The constitutional method members of this corpus are its tier 1 and tier 2
+ standards and, when a project selects them, its tier 3 profiles (P6, P3).

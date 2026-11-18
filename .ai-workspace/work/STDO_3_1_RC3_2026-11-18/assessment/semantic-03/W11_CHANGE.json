@@ -1,0 +1,75 @@
+[
+  {
+    "id": "W11",
+    "before": {
+      "conditions": [],
+      "depends_on": [
+        "W09",
+        "W02"
+      ],
+      "exceptions": [],
+      "id": "W11",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 905,
+          "source_id": "SPEC_METHOD",
+          "start_line": 872
+        },
+        {
+          "end_line": 65,
+          "source_id": "SDLC_DEFAULTS",
+          "start_line": 28
+        }
+      ],
+      "text": "Choose the first actually changed layer: goal_reprice for current epics/work-wave focus re-enters Goals; intent_reprice for direction/scope re-enters Intent; product_reprice for the adopted Product definition or intended end state re-enters Product; requirement_reprice for constitutional truth re-enters Requirements; design_reframe for realization structure re-enters Design; realization_refactor for local realization change with no upstream drift re-enters only that surface. Product may include capabilities still to be built. Derive affected downstream work and evidence. A supported implementation defect under sufficient law is repaired within its grant; changed outcome, scope or territory re-enters its owner before effects.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "repair_planned",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    },
+    "after": {
+      "conditions": [],
+      "depends_on": [
+        "W09",
+        "W02"
+      ],
+      "exceptions": [],
+      "id": "W11",
+      "kind": "obligation",
+      "precedence": [],
+      "source_refs": [
+        {
+          "end_line": 905,
+          "source_id": "SPEC_METHOD",
+          "start_line": 872
+        },
+        {
+          "end_line": 65,
+          "source_id": "SDLC_DEFAULTS",
+          "start_line": 28
+        }
+      ],
+      "text": "Choose the first actually changed layer: goal_reprice for current epics/work-wave focus re-enters Goals; intent_reprice for direction/scope re-enters Intent; product_reprice for the adopted Product definition or intended end state re-enters Product; requirement_reprice for constitutional truth re-enters Requirements; design_reframe for realization structure re-enters Design; realization_refactor for local realization change re-enters only that surface and must prove no upstream drift. A smaller change re-enters below Goals only with an explicit no-upstream-change assertion. A declared change class is never a result: realization_refactor cannot stand in for a satisfied result that no upstream drift occurred. Product may include capabilities still to be built. Derive affected downstream work and evidence. A supported implementation defect under sufficient law is repaired within its grant; changed outcome, scope or territory re-enters its owner before effects.",
+      "unknowns": [],
+      "when": {
+        "all": [
+          {
+            "fact": "repair_planned",
+            "op": "eq",
+            "value": true
+          }
+        ],
+        "any": []
+      }
+    }
+  }
+]

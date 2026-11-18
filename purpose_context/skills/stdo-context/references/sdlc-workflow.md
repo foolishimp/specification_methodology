@@ -1,17 +1,18 @@
 # SDLC workflow: actual use and rebuilding
 
-Use `stdo-3.1.0-rc.2-sdlc-workflow-v1` for the declared `sdlc-workflow/1`
+Use `stdo-3.1.0-rc.3-sdlc-workflow-v1` for the declared `sdlc-workflow/1`
 workflow constraint purpose. Its 40 rules retain ordinary QA, four-cause
 diagnosis, lawful re-entry, bounded repair/rechecks, exact review, boundary
 decisions, staleness and evidence reuse. Five additive continuity rules retain
 ticket/carrier authority, bounded qualified context, declared capacity handling,
-before-return facts/results and current-state resumption. The original rule
-texts, purpose and fact meanings are conserved. RC2 repairs W35's selector so
+before-return facts/results and current-state resumption. The purpose, fact meanings and rule lineages remain. RC3 re-enters changed
+source grounds and clarifies W11 Product/Goals ownership; it retains the
+RC2 repair to W35's selector so
 successor `product_acceptance` includes the predecessor-disposition obligation
 already required at qualification and release. These constraints do not solve a task or prove
 admission, repair, independent assessment, acceptance or release.
 
-This release-target entry binds exact native `stdo://releases/v3.1.0-rc.2/`
+This release-target entry binds exact native `stdo://releases/v3.1.0-rc.3/`
 and the actual manifest digest returned by its pinned catalog entry. Verify that
 complete native installation through its selected manager, then bind its actual
 source root. The caller still selects the default through its Product authority;
@@ -28,9 +29,9 @@ insufficient, and an optional Executive profile is not inferred.
 ## Bind, supply facts and consume
 
 Obtain the public manifest pin from the owning dependency selection. Let
-`<selected-native-root>` be the actual complete installed 3.1.0-rc.2 directory
+`<selected-native-root>` be the actual complete installed 3.1.0-rc.3 directory
 verified by the manager. It contains `manifest.json` and `standards/`. Obtain
-`b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4` from that exact selected catalog/method
+`2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a` from that exact selected catalog/method
 binding; a guessed version or independently hashed replacement selects nothing.
 Use the physical `scripts/context.py` as `<cli>`. Through installed Skills,
 replace `python3 -B <cli>` with the selected interpreter and
@@ -38,7 +39,7 @@ replace `python3 -B <cli>` with the selected interpreter and
 Use fresh `context-work` and `delivery` output directories.
 
 ```sh
-python3 -B <cli> bind --index-id stdo-3.1.0-rc.2-sdlc-workflow-v1 --source-root <selected-native-root> --method-uri stdo://releases/v3.1.0-rc.2/ --method-manifest-sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4 --public-manifest-sha256 <selected-public-pin> --out context-work
+python3 -B <cli> bind --index-id stdo-3.1.0-rc.3-sdlc-workflow-v1 --source-root <selected-native-root> --method-uri stdo://releases/v3.1.0-rc.3/ --method-manifest-sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a --public-manifest-sha256 <selected-public-pin> --out context-work
 ```
 
 Before selection, write the actual `QUERY.json` using
@@ -46,8 +47,8 @@ Before selection, write the actual `QUERY.json` using
 read the declared fact meanings and supply only observed values. Then run:
 
 ```sh
-python3 -B <cli> select --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.2-sdlc-workflow-v1 --public-manifest-sha256 <selected-public-pin>
-python3 -B <cli> consume --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.2-sdlc-workflow-v1 --public-manifest-sha256 <selected-public-pin> --trial-binding <existing-admitted-trial> --byte-budget 131072 --out delivery
+python3 -B <cli> select --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.3-sdlc-workflow-v1 --public-manifest-sha256 <selected-public-pin>
+python3 -B <cli> consume --bundle context-work --query QUERY.json --index-id stdo-3.1.0-rc.3-sdlc-workflow-v1 --public-manifest-sha256 <selected-public-pin> --trial-binding <existing-admitted-trial> --byte-budget 131072 --out delivery
 python3 -B <cli> check --bundle context-work --index <selected-index-path> --query QUERY.json --trial-binding <existing-admitted-trial> --byte-budget 131072 --context delivery/CONTEXT.json --markdown delivery/CONTEXT.md
 ```
 
@@ -70,7 +71,7 @@ facts merely to obtain a delivery.
 ## Actual query facts
 
 Start from the empty [query template](../../../authoring/sdlc-workflow/QUERY-TEMPLATE.json)
-and the meanings in [PURPOSE.json](../indexes/stdo-3.1.0-rc.2-sdlc-workflow-v1/PURPOSE.json).
+and the meanings in [PURPOSE.json](../indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/PURPOSE.json).
 Supply `sdlc_workflow`, actual `adopted_defaults` and `action` from the request
 and adoption/trial record. Without a true matching family the selector refuses
 or reports incomplete. `action` is work, qa, triage, repair, boundary or reuse.
@@ -179,18 +180,18 @@ For a release-target rebuild, use the separate constructor after the actual
 native cut exists. The predecessor source root contains the retained Python
 index's exact `standards/` members; their hashes must match its historical pins.
 The [current authoring entry point](../../../authoring/README.md) selects the
-explicit RC2 declaration. The preserved development recipe and RC1 index retain
+explicit RC3 declaration, including the retained RC2 W35 correction. The preserved development recipe and RC1 index retain
 the original missing acceptance selector for reproducibility; they are not the
 corrected current release inputs on their own.
 
 ```sh
-python3 -B purpose_context/scripts/rebuild_release_indexes.py --version 3.1.0-rc.2 --method-root <selected-native-root> --method-manifest-sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4 --predecessor-source-root <exact-predecessor-source-root>
+python3 -B purpose_context/scripts/rebuild_release_indexes.py --version 3.1.0-rc.3 --method-root <selected-native-root> --method-manifest-sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a --predecessor-source-root <exact-predecessor-source-root>
 ```
 
 Append `--check` for an exact comparison without writes. This release constructor
 retains the original generator and development index; it uses the same core and
 catalog. Source-role wording in W01 and the purpose is explicitly reconciled to
-the released target. Relative to RC1, only W35's boundary guard changes; all 40
-rule texts and dependency/condition/exception fields remain exact. The declared
-repair checks its predecessor and deciding source hashes before application.
+the released target. RC3 explicitly re-enters five changed source grounds and W11 wording.
+Dependency/condition/exception fields, including the repaired W35 guard, remain.
+Every declared amendment checks its predecessor and deciding source hashes.
 New assessment and native-use evidence remain external.

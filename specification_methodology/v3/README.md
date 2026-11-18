@@ -6,9 +6,9 @@ Current source packages follow the separate [development tool owners](developmen
 The previous five-Product distribution constructors are archived; they do not
 construct or qualify the current six-Product source arrangement. The publication
 records below describe their original released subjects, not current source bytes.
-The owner now selects **3.1.0-rc.2 on public line 3.1.0** under the
+The owner now selects **3.1.0-rc.3 on public line 3.1.0** under the
 [release relation](specification/requirements/RELEASE_3_1.md) and
-[activation](../../.ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md).
+[activation](../../.ai-workspace/work/STDO_3_1_RC3_2026-11-18/ACTIVATION.md).
 The exact installed 3.0.4 builder remains this source Product's construction
 basis. The native package carries compact current reading routes; independently
 inventoried Products carry context, host binding and optional visual capabilities.
@@ -44,7 +44,7 @@ This Product explicitly selected the default projection in its frame basis;
 the [template](build_tenants/common/standards/templates/PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md#sdlc-default-selection)
 offers it for another Product's authorized adoption. Finding the guide or
 installing Skills does not adopt it. Release-matched workflow/refactoring
-indexes bind the actual final native 3.1.0-rc.2 cut through Purpose Context's
+indexes bind the actual final native 3.1.0-rc.3 cut through Purpose Context's
 catalog. Preserved development and earlier release entries retain their own
 exact sources and query-assessment standing. The installed 3.0.4 construction
 basis is separate from an index's semantic target.

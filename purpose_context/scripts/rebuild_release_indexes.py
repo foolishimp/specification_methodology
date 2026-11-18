@@ -40,6 +40,24 @@ def inputs_pin(names: list[str]) -> list[dict]:
             for name in names]
 
 
+def apply_source_amendment(rule: dict, amendment: dict, root: Path, source_paths: dict) -> None:
+    """Apply an explicit reviewed successor claim, refusing changed source grounds."""
+    core.need(rule["text"] == amendment["expected_text"],
+              "rule amendment predecessor differs: " + rule["id"])
+    refs = []
+    for ground in amendment["grounds"]:
+        ref = {k: ground[k] for k in ("source_id", "start_line", "end_line")}
+        core.need(source_paths.get(ref["source_id"]) == ground["path"],
+                  "amended source id/path differs: " + rule["id"])
+        path_ref = {**ref, "source_id": ground["path"]}
+        core.need(core.raw_digest(source_text(root, path_ref)) == ground["sha256"],
+                  "amended source changed; re-enter " + rule["id"])
+        refs.append(ref)
+    core.need(bool(refs), "amended rule requires actual source grounds")
+    rule["text"] = amendment["replacement_text"]
+    rule["source_refs"] = refs
+
+
 def apply_sdlc_amendments(rules: list[dict], root: Path, authoring: dict) -> None:
     """Apply owned, source-checked declarations without rewriting historical recipes."""
     for amendment in authoring.get("sdlc_rule_amendments", []):
@@ -85,6 +103,11 @@ def python_index(root: Path, predecessor_root: Path, method: dict, authoring: di
     index = copy.deepcopy(old_index)
     moves = []
     for rule in index["rules"]:
+        amendment = authoring.get("python_source_amendments", {}).get(rule["id"])
+        if amendment is not None:
+            apply_source_amendment(rule, amendment, root,
+                                   {row["id"]: row["path"] for row in old_sources["files"]})
+            continue
         for n, before in enumerate(rule["source_refs"]):
             after = conserved_ref(predecessor_root, root, before)
             rule["source_refs"][n] = after
@@ -101,6 +124,11 @@ def python_index(root: Path, predecessor_root: Path, method: dict, authoring: di
     rule["source_refs"] = [{"source_id": amendment["source_id"], "start_line": start, "end_line": end}]
     index.update(corpus_sha256=view["corpus_sha256"], input_view_sha256=view["view_sha256"],
                  purpose_sha256=core.digest(purpose))
+    for coverage in index["source_coverage"]:
+        grounded = [r["id"] for r in index["rules"]
+                    if any(ref["source_id"] == coverage["source_id"] for ref in r["source_refs"])]
+        coverage["rule_ids"] = [ident for ident in coverage["rule_ids"] if ident in grounded]
+        coverage["rule_ids"] += [ident for ident in grounded if ident not in coverage["rule_ids"]]
     delta = {"profile": "purpose-context.release-source-delta/1", "predecessor_index": previous["id"],
              "source_members": [{"id": old["id"], "before_sha256": old["sha256"],
                                  "after_sha256": new["sha256"], "equal": old["sha256"] == new["sha256"]}
@@ -141,6 +169,12 @@ def sdlc_index(root: Path, method: dict, authoring: dict, previous: dict, versio
     for authored in recipe["rules"]:
         rule = {k: copy.deepcopy(v) for k, v in authored.items() if k != "grounds"}
         rule["source_refs"] = []
+        amendment = authoring.get("sdlc_source_amendments", {}).get(rule["id"])
+        if amendment is not None:
+            apply_source_amendment(rule, amendment, root,
+                                   {row["id"]: row["path"] for row in rows})
+            rules.append(rule)
+            continue
         for ground in authored["grounds"]:
             start, end, body = section(catalog.local_file(root, "standards/" + ground["source_id"] + ".md").read_bytes(), ground["heading"])
             core.need(core.raw_digest(body) == ground["section_sha256"], "SDLC deciding source changed; re-enter " + rule["id"])

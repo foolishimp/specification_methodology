@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py", line 211, in <module>
+    main()
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py", line 139, in main
+    no_published_successor(remote)
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py", line 34, in no_published_successor
+    raise ValueError('RC3 or higher already published: ' + namespace)
+ValueError: RC3 or higher already published: a_c

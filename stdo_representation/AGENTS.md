@@ -11,7 +11,7 @@ registry authority, workflow orchestration or proof execution. Keep visual sourc
 binding, declared model structure and navigation; never infer semantic truth or
 code correctness from a structural check or a diagram.
 
-Version `3.1.0-rc.2` preserves the visual-only transition introduced in RC1.
+Version `3.1.0-rc.3` preserves the visual-only transition introduced in RC1.
 Read [migration and conservation](MIGRATION-3.1.md). The six-Product cohort owns
 publication identity and qualification; no global installation or consumer
 adoption is implied. Historical models and proof evidence retain their subjects.

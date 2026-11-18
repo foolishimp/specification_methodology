@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py", line 211, in <module>
+    main()
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py", line 184, in main
+    check(args.root, plan, remote)
+  File "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py", line 107, in check
+    raise ValueError('Changed remote object: ' + row['destination'])
+ValueError: Changed remote object: refs/heads/rc/a_c/3.1.0

@@ -1,0 +1,16 @@
+{
+  "kind": "stdo.rc3-ref-transaction-fixture/1",
+  "checks": [
+    "higher ordinal refuses before ref mutation",
+    "missing predecessor destination refuses",
+    "complete 25-ref advancement prepares and checks",
+    "incomplete ref graph refuses",
+    "qualified evidence drift refuses",
+    "remote lease drift refuses with no partial RC3",
+    "atomic server rejection leaves all prior remote refs unchanged",
+    "atomic success publishes 25 exact refs and preserves all RC2 tag objects and peels"
+  ],
+  "passed": true,
+  "tool_sha256": "ec6773476dd2bef54882279685b5d66346fabab0d90556de701b3875fb2cbf39",
+  "limit": "Real local Git transport fixture only; no production publication or semantic qualification."
+}

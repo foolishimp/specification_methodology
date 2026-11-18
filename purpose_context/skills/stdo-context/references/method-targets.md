@@ -2,11 +2,11 @@
 
 Purpose Context's Product Definition continues to select installed STDO 3.0.4
 as its construction basis. The owner-approved release target is exact native
-3.1.0-rc.2. The actual annotated cut and installed manifest are required before
+3.1.0-rc.3. The actual annotated cut and installed manifest are required before
 its release-target indexes are generated. A version label cannot select bytes.
 
-The release contains separate `stdo-3.1.0-rc.2-python-pure-refactor-v2` and
-`stdo-3.1.0-rc.2-sdlc-workflow-v1` entries. Read their exact method URI/digest,
+The release contains separate `stdo-3.1.0-rc.3-python-pure-refactor-v2` and
+`stdo-3.1.0-rc.3-sdlc-workflow-v1` entries. Read their exact method URI/digest,
 source membership/order, purpose and family from the pinned catalog. The native
 method is installed and verified by its manager; the catalog independently
 checks the actual manifest and selected source bytes at binding and reuse.

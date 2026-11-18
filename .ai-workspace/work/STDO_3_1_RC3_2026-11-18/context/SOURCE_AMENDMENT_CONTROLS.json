@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "case": "actual source and predecessor accepted",
+      "passed": true
+    },
+    {
+      "case": "mismatched-source-path",
+      "passed": true,
+      "refusal": "amended source id/path differs: W11"
+    },
+    {
+      "case": "wrong-preimage",
+      "passed": true,
+      "refusal": "rule amendment predecessor differs: W11"
+    },
+    {
+      "case": "wrong-ground-digest",
+      "passed": true,
+      "refusal": "amended source changed; re-enter W11"
+    }
+  ],
+  "generator_sha256": "3eb3f77ef11c543951a58020d2e39ea274cd200b65dfe321c0401bcabf01db31"
+}

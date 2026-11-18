@@ -16,7 +16,7 @@ context registry or select agent instructions for this Product.
 
 ## Exact dependency bases
 
-Version 3.1.0-rc.2 uses separately inventoried public providers. Existing
+Version 3.1.0-rc.3 uses separately inventoried public providers. Existing
 published artifacts retain their original exact provider/release pins. A source
 change does not carry old qualification forward or rewrite those pins. The 3.1
 cohort binds and assesses its own full provider and artifact inventory.
@@ -33,9 +33,9 @@ The STDO-specific model and coverage judgment remain this Product's responsibili
 The old `skills/stdo-representation` bundle and registry data route are archived
 outside active source. Purpose Context is a separate Product; STDO Skills owns
 its adapter. Existing visual artifacts and prior release evidence are unchanged.
-The current RC2 artifact is regenerated through the public pipeline from the native cut recorded in
-`build_tenants/a_c/representation/stdo-v3.1.0-rc.2/SOURCE_BINDING.json`. It
-retains the corrected RC1 annotations over byte-identical selected source members and
+The current RC3 artifact is regenerated through the public pipeline from the native cut recorded in
+`build_tenants/a_c/representation/stdo-v3.1.0-rc.3/SOURCE_BINDING.json`. It
+re-enters the corrected annotations against actual RC3 source members and
 provides complete source-section navigation for its declared members plus
 selected SDLC/work-carrier/context annotations, with explicit unrepresented
 meaning. It does not rebind the old models or migrate installed bundles.

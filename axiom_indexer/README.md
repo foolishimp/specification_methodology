@@ -1,4 +1,4 @@
-# Axiom Indexer 3.1.0-rc.2
+# Axiom Indexer 3.1.0-rc.3
 
 Mechanical model conversion, validation and source-linked visual projection.
 The stable Product and directory remain; ordinary agent context discovery is

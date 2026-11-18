@@ -2,14 +2,14 @@
 
 STDO supplies rules for the software development lifecycle. Version 3.1 brings
 Purpose Context, default QA and causal triage, and ticket-based context continuity
-together in an explicit six-Product release. Exact cut: **3.1.0-rc.2**; public
+together in an explicit six-Product release. Exact cut: **3.1.0-rc.3**; public
 version line: **3.1.0**.
 
 Start with [Using STDO](specification_methodology/v3/build_tenants/common/plugins/spec/references/GETTING_STARTED.md)
 for the method and published assets, then [Skills Getting Started](stdo_skills/GETTING_STARTED.md)
-for Purpose Context and Codex/Claude bindings. The [release scope](releases/3.1.0-rc.2/RELEASE.md)
-and [migration guide](releases/3.1.0-rc.2/MIGRATION.md) describe the changed Product
-boundaries. The [exact release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.2)
+for Purpose Context and Codex/Claude bindings. The [release scope](releases/3.1.0-rc.3/RELEASE.md)
+and [migration guide](releases/3.1.0-rc.3/MIGRATION.md) describe the changed Product
+boundaries. The [exact release](https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology%2Fv3.1.0-rc.3)
 provides the native manifest, manager, companion Products and cohort inventory.
 
 | Product | Responsibility |
@@ -36,11 +36,11 @@ Skills apply them, and guides explain their use.
 
 | Purpose | Current release index | Native source |
 |---|---|---|
-| Pure/local Python 3.12 refactoring | `stdo-3.1.0-rc.2-python-pure-refactor-v2` | Exact native 3.1.0-rc.2 |
-| Work, QA, triage, repair verification, boundaries and evidence reuse | `stdo-3.1.0-rc.2-sdlc-workflow-v1` | Exact native 3.1.0-rc.2 |
+| Pure/local Python 3.12 refactoring | `stdo-3.1.0-rc.3-python-pure-refactor-v2` | Exact native 3.1.0-rc.3 |
+| Work, QA, triage, repair verification, boundaries and evidence reuse | `stdo-3.1.0-rc.3-sdlc-workflow-v1` | Exact native 3.1.0-rc.3 |
 
-Both indexes bind `stdo://releases/v3.1.0-rc.2/`, manifest
-`b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4`.
+Both indexes bind `stdo://releases/v3.1.0-rc.3/`, manifest
+`2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a`.
 Assessment applies to exact sources, purpose and caller facts. Unknown facts
 remain unknown. Context coverage does not establish successful code, repair,
 automatic host pickup or release acceptance. The complete installed constitution

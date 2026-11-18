@@ -1,6 +1,6 @@
 # Axiom Indexer 3.1 migration
 
-Version `3.1.0-rc.2` belongs to the six-Product 3.1 cohort. Its exact
+Version `3.1.0-rc.3` belongs to the six-Product 3.1 cohort. Its exact
 publication, inventories and qualification are recorded by that cohort; version
 text alone is not a qualification result. The Product's construction basis stays
 `stdo://releases/v3.0.4/`, manifest

@@ -136,7 +136,7 @@ files; it never upgrades the standing of an authored candidate.
 
 ## Selected 3.1 release target
 
-The owner-approved release activation selects two separate native 3.1.0-rc.2
+The owner-approved release activation selects two separate native 3.1.0-rc.3
 entries for `python-pure-refactor/2` and `sdlc-workflow/1`. Both bind the actual
 annotated native cut's installed manifest and complete selected owner bytes.
 The old Python and development SDLC entries, their frozen inputs and judgments

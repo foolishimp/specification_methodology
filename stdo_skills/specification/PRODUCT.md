@@ -30,7 +30,7 @@ Resolve and verify that installed cut. The target project's independently select
 method and work grant remain separate from this construction basis. A dependency
 or host installation does not adopt a method on a target project's behalf.
 Release-targeted indexing follows the latest owner-selected releasable method,
-currently exact 3.1.0-rc.2 for the approved release target. Its source manifest and index identity remain explicit;
+currently exact 3.1.0-rc.3 for the approved release target. Its source manifest and index identity remain explicit;
 the constructor's older basis is not an index-selection default. Older consumers
 continue to require their own exact-basis matching catalog entry. Final packaging
 must reconcile the index and assessment with the actual final semantic source
@@ -91,6 +91,6 @@ checks, explicit agent use, automatic host pickup and full native workflow
 qualification are separate claims. Unperformed scenarios stay unestablished.
 
 The immutable historical five-Product 3.0.5 contract is not the current six-Product
-development inventory. The separately approved 3.1.0-rc.2 release contract supplies successor construction
+development inventory. The separately approved 3.1.0-rc.3 release contract supplies successor construction
 and publication scope. Exact external release evidence decides those claims;
 no installation migration or general host qualification follows implicitly.
