@@ -1,0 +1,63 @@
+{
+  "profile": "stdo.release-cohort-inputs/1",
+  "version": "3.1.0-rc.3",
+  "public_version": "3.1.0",
+  "release_profile": "rc-six-product-v1",
+  "repository": "https://github.com/foolishimp/specification_methodology.git",
+  "native_predecessor": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+  "native_source": "specification_methodology/v3/build_tenants/common",
+  "native_subtree": "specification_methodology/v3",
+  "products": [
+    {
+      "namespace": "specification_methodology",
+      "root": "specification_methodology/v3",
+      "definition_id": "urn:stdo:product-definition:stdo-3",
+      "commit_role": "native-A"
+    },
+    {
+      "namespace": "purpose_context",
+      "root": "purpose_context",
+      "definition_id": "urn:stdo:product-definition:purpose-context",
+      "commit_role": "source-B"
+    },
+    {
+      "namespace": "stdo_skills",
+      "root": "stdo_skills",
+      "definition_id": "urn:stdo:product-definition:stdo-skills",
+      "commit_role": "source-B"
+    },
+    {
+      "namespace": "a_c",
+      "root": "a_c",
+      "definition_id": "urn:stdo:product-definition:a-c-implementations",
+      "commit_role": "source-B"
+    },
+    {
+      "namespace": "stdo_representation",
+      "root": "stdo_representation",
+      "definition_id": "urn:stdo:product-definition:stdo-representation",
+      "commit_role": "source-B"
+    },
+    {
+      "namespace": "axiom_indexer",
+      "root": "axiom_indexer",
+      "definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "commit_role": "source-B"
+    }
+  ],
+  "assets": [
+    "stdo-v3.1.0-rc.3-manifest.json",
+    "stdo_toolchain-3.1.0rc3-py3-none-any.whl",
+    "stdo-manager-constraints-v3.1.0-rc.3-python313.txt",
+    "stdo-manager-runtime-v3.1.0-rc.3-macos-arm64-cp313.zip",
+    "stdo-products-v3.1.0-rc.3.zip",
+    "cohort-release-v3.1.0-rc.3.json"
+  ],
+  "limits": [
+    "This input is not a publication, qualification or installed inventory",
+    "Exact tag, manifest, subtree, dependency and asset identities are bound after their actual construction",
+    "Published source and evidence remain immutable; existing consumers are not adopted automatically"
+  ],
+  "predecessor_cohort": "3.1.0-rc.2",
+  "source_predecessor": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+}

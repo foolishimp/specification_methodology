@@ -6,8 +6,8 @@ Purpose: The owning sections for build-tenant binding, ambiguity governance with
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -51,7 +51,7 @@ Routes, in order:
 
 Size of this frame: 98224 bytes.
 
-Source: SPEC_METHOD.md#11-build-tenant-binding sha256=06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e
+Source: SPEC_METHOD.md#11-build-tenant-binding sha256=3aefe8942bd2a5501367a85f019c8e1d5b8f38e94ddb62fa3a1f5a52036a05c5
 
 ## 11. Build-tenant binding
 
@@ -254,7 +254,7 @@ tenant-local realisation derivative until ratified (rule 1). Rule 4 applies
 tenants need not behave identically outside the contract.
 
 
-Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e
+Source: SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle sha256=3aefe8942bd2a5501367a85f019c8e1d5b8f38e94ddb62fa3a1f5a52036a05c5
 
 ## 5. Ambiguity governance and lifecycle
 
@@ -325,7 +325,7 @@ to lifecycle phases: an unanswered phase is a recorded gap, never a silent
 absence.
 
 
-Source: FOUNDATIONS.md#2-ontology sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
+Source: FOUNDATIONS.md#2-ontology sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e
 
 ## 2. Ontology
 
@@ -746,7 +746,7 @@ policy the governing basis states for the claim; the default where it is not
 stated is that they are not independent.
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+Source: AXIOMATIC_CALCULUS.md#ac-018-structural-and-semantic-separation sha256=d2a29d4b9a9a260c364f942285c159dfd1cb439ee528d55146613c23533b9d4a
 
 ### AC-018 Structural and semantic separation
 
@@ -760,7 +760,7 @@ the semantic fidelity of an interpretation covers its meaning and
 materiality (P1, P6).
 
 
-Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5
+Source: AXIOMATIC_CALCULUS.md#ac-019-valid-model sha256=d2a29d4b9a9a260c364f942285c159dfd1cb439ee528d55146613c23533b9d4a
 
 ### AC-019 Valid model
 
@@ -784,7 +784,7 @@ the semantic or authority subset unless the model supplies an exact lawful
 decision contract for it (P6, P1).
 
 
-Source: ACTIVATION.md#effects sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#effects sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Effects
 
@@ -837,7 +837,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: FOUNDATIONS.md#results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1010,7 +1010,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e
 
 ### Conjunction of results
 
@@ -1132,7 +1132,7 @@ premises hold ([ACTIVATION §4](../ACTIVATION.md#4-totality-and-refinement),
 Refinement).
 
 
-Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=b39c45fd86b8f9add7d196b2974a8e5f75bf4a327cf796e362716a6b4f5776d5 rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
+Source: AXIOMATIC_CALCULUS.md#foundation-to-law sha256=d2a29d4b9a9a260c364f942285c159dfd1cb439ee528d55146613c23533b9d4a rows=1/19 selected by the anchors this frame carries; the consumers paragraph of 19 items is omitted
 
 ### Foundation to law
 
@@ -1240,7 +1240,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-chain-outcome-and-build-tenant-binding sha256=3aefe8942bd2a5501367a85f019c8e1d5b8f38e94ddb62fa3a1f5a52036a05c5 rows=3/13 selected by the anchors this frame carries; the consumers paragraph of 13 items is omitted
 
 ### Foundation to law: chain, outcome and build-tenant binding
 
@@ -1275,7 +1275,7 @@ the rows §8 applies and the families that trace its statement of the
 step's results and its use of the tenant's binding.
 
 
-Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=06d5e8cbbda67952cd5671a4b01752a1eaaf30be84a790ee7e31b1551a5a787e rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
+Source: SPEC_METHOD.md#foundation-to-law-change-management-and-ambiguity sha256=3aefe8942bd2a5501367a85f019c8e1d5b8f38e94ddb62fa3a1f5a52036a05c5 rows=1/10 selected by the anchors this frame carries; the consumers paragraph of 10 items is omitted
 
 ### Foundation to law: change management and ambiguity
 

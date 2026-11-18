@@ -1,6 +1,6 @@
 # Project Goals
 
-State the current overriding concerns for this project in present tense.
+State the current epics or overriding concerns being worked on for this project.
 
 Resolve and verify the exact installed STDO basis declared by the applicable
 Product Definition while you fill this document out.
@@ -12,7 +12,8 @@ product definition, and requirements.
 
 ## Current Goals
 
-List the active goals for the current wave of work.
+List the active goals for the current wave of work, such as the epics being
+worked on, and how they advance the intended Product end state.
 
 Each goal should orient work. It should not masquerade as a requirement or a
 release version label.

@@ -1,0 +1,73 @@
+test_bind_span_digests_the_family (__main__.Bindings.test_bind_span_digests_the_family) ... refusal: standards/M.md:5: frame "f": bind span_until "b" precedes "c"
+ok
+test_binds_rendered_and_recorded (__main__.Bindings.test_binds_rendered_and_recorded) ... ok
+test_check_distinguishes_section_drift_from_owner_drift (__main__.Bindings.test_check_distinguishes_section_drift_from_owner_drift) ... ok
+test_current_frames_bind_their_declared_shared_relations (__main__.Bindings.test_current_frames_bind_their_declared_shared_relations) ... ok
+test_malformed_binds_refused (__main__.Bindings.test_malformed_binds_refused) ... refusal: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmphe9dh8he/standards/frames/FRAME_INPUTS.json: frame "f": binds must be a non-empty list of items with text
+refusal: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmposdikye1/standards/frames/FRAME_INPUTS.json: frame "f": binds must be a non-empty list of items with text
+refusal: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpwfftv6ti/standards/frames/FRAME_INPUTS.json: frame "f": binds must be a non-empty list of items with text
+refusal: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmp4jw3497a/standards/frames/FRAME_INPUTS.json: frame "f": a bind names both owner and anchor or neither
+refusal: standards/M.md: anchor "absent" matches no heading outside fenced blocks
+ok
+test_build_records_consumer_items (__main__.ConsumerItems.test_build_records_consumer_items) ... ok
+test_consumers_paragraph_omitted (__main__.ConsumerItems.test_consumers_paragraph_omitted) ... ok
+test_manifest_and_frame (__main__.Digests.test_manifest_and_frame) ... ok
+test_full_extent (__main__.F14Sections.test_full_extent) ... ok
+test_close_needs_same_character_at_least_as_long (__main__.FencedCode.test_close_needs_same_character_at_least_as_long) ... ok
+test_codex_rule_would_cut_the_section_short (__main__.FencedCode.test_codex_rule_would_cut_the_section_short) ... ok
+test_fence_indented_up_to_three_spaces_opens (__main__.FencedCode.test_fence_indented_up_to_three_spaces_opens) ... ok
+test_headings_inside_fences_are_neither_anchors_nor_ends (__main__.FencedCode.test_headings_inside_fences_are_neither_anchors_nor_ends) ... ok
+test_last_section_runs_to_end_of_member (__main__.FencedCode.test_last_section_runs_to_end_of_member) ... ok
+test_level_one_heading_ends_a_section (__main__.FencedCode.test_level_one_heading_ends_a_section) ... ok
+test_section_runs_to_next_outside_heading_of_equal_or_higher_level (__main__.FencedCode.test_section_runs_to_next_outside_heading_of_equal_or_higher_level) ... ok
+test_frame_without_routes (__main__.InputRefusals.test_frame_without_routes) ... refusal: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpuv7o9lfo/standards/frames/FRAME_INPUTS.json: frame "f" has no routes
+ok
+test_malformed_frame_id (__main__.InputRefusals.test_malformed_frame_id) ... refusal: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmp7u13z2tw/standards/frames/FRAME_INPUTS.json: frame id "Bad Id" is malformed or repeated
+ok
+test_member_not_utf8 (__main__.InputRefusals.test_member_not_utf8) ... refusal: standards/M.md:3: not valid UTF-8
+ok
+test_owner_missing (__main__.InputRefusals.test_owner_missing) ... refusal: standards/Absent.md: owner member does not exist
+ok
+test_owner_outside_standards (__main__.InputRefusals.test_owner_outside_standards) ... refusal: other/M.md: owner is not a member under standards/
+ok
+test_repeated_frame_id (__main__.InputRefusals.test_repeated_frame_id) ... refusal: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpl8ury_q2/standards/frames/FRAME_INPUTS.json: frame id "f" is malformed or repeated
+ok
+test_unreadable_inputs (__main__.InputRefusals.test_unreadable_inputs) ... refusal: /private/var/folders/rz/r6wxvr0n15d906k2s0jw8j2h0000gn/T/tmpe6mt52py/standards/frames/FRAME_INPUTS.json: frame inputs unreadable: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+ok
+test_absolute_and_stdo_unchanged (__main__.LinkRebasing.test_absolute_and_stdo_unchanged) ... ok
+test_every_link_form (__main__.LinkRebasing.test_every_link_form) ... ok
+test_fenced_code_untouched (__main__.LinkRebasing.test_fenced_code_untouched) ... ok
+test_owner_in_a_subdirectory (__main__.LinkRebasing.test_owner_in_a_subdirectory) ... ok
+test_relative_and_in_member_fragment (__main__.LinkRebasing.test_relative_and_in_member_fragment) ... ok
+test_section_digest_is_over_owner_bytes_and_check_compares_rebased (__main__.LinkRebasing.test_section_digest_is_over_owner_bytes_and_check_compares_rebased) ... ok
+test_absent_anchor (__main__.Refusals.test_absent_anchor) ... ok
+test_anchor_only_inside_fence_names_its_line (__main__.Refusals.test_anchor_only_inside_fence_names_its_line) ... ok
+test_duplicate_anchor (__main__.Refusals.test_duplicate_anchor) ... ok
+test_fence_like_line_indented_by_tab (__main__.Refusals.test_fence_like_line_indented_by_tab) ... ok
+test_fence_like_line_indented_four_spaces (__main__.Refusals.test_fence_like_line_indented_four_spaces) ... ok
+test_fence_like_line_indented_four_spaces_inside_a_fence (__main__.Refusals.test_fence_like_line_indented_four_spaces_inside_a_fence) ... ok
+test_fence_open_at_end_of_member (__main__.Refusals.test_fence_open_at_end_of_member) ... ok
+test_frame_over_limit_is_refused_not_truncated (__main__.Refusals.test_frame_over_limit_is_refused_not_truncated) ... refusal: standards/frames/big.md: frame would be 162180 bytes, over the limit of 160000; no excerpt is truncated
+ok
+test_overlapping_routes_are_refused (__main__.Refusals.test_overlapping_routes_are_refused) ... refusal: standards/M.md:14: frame "o": route "alpha-sub" overlaps route "1-alpha"
+ok
+test_refusal_writes_no_file (__main__.Refusals.test_refusal_writes_no_file) ... refusal: standards/M.md: anchor "absent" matches no heading outside fenced blocks
+ok
+test_rule_after_blank_line_or_inside_fence_is_not_refused (__main__.Refusals.test_rule_after_blank_line_or_inside_fence_is_not_refused) ... ok
+test_section_would_end_inside_open_fence (__main__.Refusals.test_section_would_end_inside_open_fence) ... ok
+test_setext_dashes_under_text (__main__.Refusals.test_setext_dashes_under_text) ... ok
+test_setext_equals_under_text (__main__.Refusals.test_setext_equals_under_text) ... ok
+test_byte_identical_and_drift (__main__.Regeneration.test_byte_identical_and_drift) ... ok
+test_tenant_regeneration_is_byte_identical_in_memory (__main__.Regeneration.test_tenant_regeneration_is_byte_identical_in_memory) ... ok
+test_build_records_rows_and_marks_source_line (__main__.RowSelection.test_build_records_rows_and_marks_source_line) ... ok
+test_cross_member_link_counts_when_that_owner_route_is_carried (__main__.RowSelection.test_cross_member_link_counts_when_that_owner_route_is_carried) ... ok
+test_keeps_header_prose_and_cited_rows_only (__main__.RowSelection.test_keeps_header_prose_and_cited_rows_only) ... ok
+test_examples (__main__.SlugRule.test_examples) ... ok
+test_historical_heading_compatibility_has_only_declared_differences (__main__.SlugRule.test_historical_heading_compatibility_has_only_declared_differences) ... ok
+test_frames (__main__.TenantFrames.test_frames) ... ok
+test_resolution_from_frames_directory (__main__.TenantLinkResolution.test_resolution_from_frames_directory) ... ok
+
+----------------------------------------------------------------------
+Ran 52 tests in 3.324s
+
+OK

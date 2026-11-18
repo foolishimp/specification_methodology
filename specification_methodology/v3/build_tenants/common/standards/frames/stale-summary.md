@@ -6,9 +6,9 @@ Purpose: The owning sections for enduring ticket records and carrier selection; 
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
-- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
+- A reuse decision in this task acquires the change and the evidence-validity conditions that support applicability: the impact cover of the change, the dependencies of each retained result and its retention conditions ([../FOUNDATIONS.md#change-impact-and-evidence-reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse); member sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e; section sha256=e989bf4b8c0dd996e5545f18db94f8ba275d14485697c0b046429746ed3bfbc6)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -50,7 +50,7 @@ Routes, in order:
 14. [FOUNDATIONS.md#conjunction-of-results](../FOUNDATIONS.md#conjunction-of-results)
 15. [TICKETS.md#foundation-to-law-work-carriers](../TICKETS.md#foundation-to-law-work-carriers)
 
-Size of this frame: 105704 bytes.
+Size of this frame: 105728 bytes.
 
 Source: TICKETS.md#ticket-records sha256=2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748
 
@@ -140,7 +140,7 @@ those owners to the selected carrier; it creates no additional carrier
 requirement and confers no ticket-state authority (P0, P3, P4b, P6).
 
 
-Source: ACTIVATION.md#transitions sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#transitions sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Transitions
 
@@ -226,7 +226,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. 
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ## 2. Context construction under an envelope
 
@@ -413,7 +413,7 @@ Acquisition above selects, including the raw owning members where
 Acquisition falls back to them (P6, P0, P5). The design, ODD, UX and ticket
 specialisations are
 [DESIGN_MODULE §11](../DESIGN_MODULE.md#11-review),
-[ODD §11.5D](../ODD.md#115d-constructive-evaluation-and-yield-loop) A5 and
+[ODD §11.5D](../ODD.md#115d-evidence-and-bounded-decisions) and
 [§11.7A](../ODD.md#117a-conforming-agentic-development),
 [UX §7](../UX.md#7-carrier-binding) and
 [TICKETS §5](../TICKETS.md#5-from-carrier-to-execution) and
@@ -474,7 +474,7 @@ relation is whether a decision rests on a surface whose sources are not
 those of the selected basis. This rule applies to derived surfaces under every selected carrier.
 
 
-Source: ACTIVATION.md#construction-availability sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#construction-availability sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Construction availability
 
@@ -524,7 +524,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#effects sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Effects
 
@@ -577,7 +577,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: ACTIVATION.md#5-work-state-and-restart sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#5-work-state-and-restart sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ## 5. Work state and restart
 
@@ -657,7 +657,7 @@ Consumers of these rows, where an actor enters them (FOUNDATIONS §3
 Foundation to law, Consumers), one list per row, each consumer linked to
 its own locus:
 
-- Row 1, work state as an object: [§1 Transitions](../ACTIVATION.md#transitions), where the current state is the work state this section records; [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), Not performed, and [Assertions and observation](../FOUNDATIONS.md#assertions-and-observation), where unresolved work and an unexercised capability are a state of the work, carried as a residual and not a result; [WORLD_MODEL §14](../WORLD_MODEL.md#14-results-of-this-profile), where a step's work state carries an unrun verification as a residual; [REFERENCE_FRAME §10 Revision actions](../REFERENCE_FRAME.md#revision-actions), where results reopened without a material revision are recorded in the work state; [UX §8 Msg-replay proof](../UX.md#msg-replay-proof), whose Msg log is the surface's recorded work state, and the [UX family table](../UX.md#foundation-to-law), whose row for continuation and replay imports F4; the [ODD family table](../ODD.md#foundation-to-law), whose rows for the immutable ledger and for yield import F4 for a replay-visible work state.
+- Row 1, work state as an object: [§1 Transitions](../ACTIVATION.md#transitions), where the current state is the work state this section records; [FOUNDATIONS §4 Results](../FOUNDATIONS.md#results), Not performed, and [Assertions and observation](../FOUNDATIONS.md#assertions-and-observation), where unresolved work and an unexercised capability are a state of the work, carried as a residual and not a result; [WORLD_MODEL §14](../WORLD_MODEL.md#14-results-of-this-profile), where a step's work state carries an unrun verification as a residual; [REFERENCE_FRAME §10 Revision actions](../REFERENCE_FRAME.md#revision-actions), where results reopened without a material revision are recorded in the work state; [UX §8 Msg-replay proof](../UX.md#msg-replay-proof), whose Msg log is the surface's recorded work state, and the [UX family table](../UX.md#foundation-to-law), whose row for continuation and replay imports F4; the [ODD family table](../ODD.md#foundation-to-law), whose conservation row imports F4 for records of needed step-produced facts and reconciliation with current workspace evidence.
 - Row 2, the workspace and an actor's account: [§1 Transitions](../ACTIVATION.md#transitions), where an actor's context is an account of the current state and not the state itself; [EXECUTIVE_BASELINE §20](../EXECUTIVE_BASELINE.md#20-failure-classification), where a compression, summary or prior result that replaces current source authority is evidence substitution and a retained account never overrules current evidence; [UX §8 Msg-replay proof](../UX.md#msg-replay-proof), where replay is resumption from the recorded work state; [CONFORMANCE §4](../CONFORMANCE.md#4-cases-for-method-discriminators), case CD-03, and [§5](../CONFORMANCE.md#5-discriminator-coverage), discriminators 38 and 39.
 - Row 3, resumption and effects of uncertain completion: [§1 Construction relation](../ACTIVATION.md#construction-relation), Control, where resumption reacquires current reality and unknown effects are resolved before the next dependent action; [EXECUTIVE_BASELINE §12 step 4](../EXECUTIVE_BASELINE.md#4-executive-evaluates-the-work-result), [§7 The executive configuration](../EXECUTIVE_BASELINE.md#the-executive-configuration), failure assumptions, and [§13 Handoff projection](../EXECUTIVE_BASELINE.md#13-handoff-projection), whose work result names each intended effect with its value, and the [EXECUTIVE_BASELINE family table](../EXECUTIVE_BASELINE.md#foundation-to-law), whose row for the effect field imports F4 for the reconciliation; [PRODUCT_DEFINITION §4 Explicit complete consumer update](../PRODUCT_DEFINITION.md#explicit-complete-consumer-update), where an update of uncertain completion is reconciled from the presented preimages before any repetition; [SPEC_METHOD §4 Computed classification and treatment](../SPEC_METHOD.md#computed-classification-and-treatment), where a retry waits on that reconciliation; [TRAVERSAL_OCCURRENCE Closed constraint, judgment, residual and stop kinds](../TRAVERSAL_OCCURRENCE.md#closed-constraint-judgment-residual-and-stop-kinds) and [Mutable-subject effect relation](../TRAVERSAL_OCCURRENCE.md#mutable-subject-effect-relation), where an effect whose end is not established is reconciled before any repetition; [FOUNDATIONS §4 Change impact and evidence reuse](../FOUNDATIONS.md#change-impact-and-evidence-reuse), where recovery reacquires current reality and need not erase valid work; [CONFORMANCE §4](../CONFORMANCE.md#4-cases-for-method-discriminators), case CD-03, and [§5](../CONFORMANCE.md#5-discriminator-coverage), discriminators 38 and 39.
 - Row 4, checkpoint and progress: [SPEC_METHOD §3](../SPEC_METHOD.md#3-outcome-conservation), whose four kinds of evidence refine the progress categories for a product outcome, and [§8](../SPEC_METHOD.md#8-bounded-execution-in-this-method), where construction ends at the exact accepted checkpoint and the next already-authorised bounded action; [EXECUTIVE_BASELINE §14](../EXECUTIVE_BASELINE.md#14-coverage-application), where checkpoint and continuation are the Executive's under existing authority; [CONFORMANCE §1](../CONFORMANCE.md#1-counterexample-cases), case C-03, where a restart proposal states why repair of retained work is insufficient.
@@ -729,7 +729,7 @@ work state and the closed results carry it, and no further carrier is
 required.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ## 7. Closed result and reuse
 
@@ -1036,7 +1036,7 @@ evidence remains history and cannot be projected as current acceptance
 (P6, P4b).
 
 
-Source: FOUNDATIONS.md#results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1210,7 +1210,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e
 
 ### Conjunction of results
 

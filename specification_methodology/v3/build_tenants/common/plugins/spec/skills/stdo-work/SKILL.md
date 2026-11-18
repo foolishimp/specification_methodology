@@ -77,13 +77,13 @@ that section names.
 ## Classify From The Available Evidence
 
 Apply the selected basis's intake and agentic-construction rules
-(`SPEC_METHOD.md` sections 4 and 8, `ACTIVATION.md` section 1). Use declared source/worksite/proof tools to compute the affected owner
+(`SPEC_METHOD.md` sections 4 and 8, `ACTIVATION.md` section 1). Use declared source/workspace/proof tools to compute the affected owner
 and authority-layer routes, the complete relevant Public serialized membership
 and value delta, and accepted-design trace coverage. Bind their exact inputs,
 producer, output and freshness. A file diff alone is not a Public comparison;
 an existing trace is not a judgment of semantic sufficiency. Missing targets,
 serialization or trace mappings remain explicit unknowns. Do not invent a
-tool result or make the STDO distribution manager a worksite analyzer.
+tool result or make the STDO distribution manager a workspace analyzer.
 
 Reuse applicable computed facts and recorded classification/materiality
 judgments from the existing work carrier. Check the question, subject, basis,

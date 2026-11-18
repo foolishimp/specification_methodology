@@ -6,8 +6,8 @@ Purpose: The owning sections for transitions, intake, configuration with its opt
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -58,9 +58,9 @@ Routes, in order:
 23. [EXECUTIVE_BASELINE.md#foundation-to-law](../EXECUTIVE_BASELINE.md#foundation-to-law)
 24. [REFERENCE_FRAME.md#foundation-to-law](../REFERENCE_FRAME.md#foundation-to-law)
 
-Size of this frame: 145724 bytes.
+Size of this frame: 145705 bytes.
 
-Source: ACTIVATION.md#transitions sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#transitions sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Transitions
 
@@ -146,7 +146,7 @@ obligations are those that the intake and the work state already bind; no
 further carrier is required. 
 
 
-Source: ACTIVATION.md#intake sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#intake sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Intake
 
@@ -187,7 +187,7 @@ this section consumes those laws and creates no second design package
 ([DESIGN_MODULE](../DESIGN_MODULE.md)).
 
 
-Source: ACTIVATION.md#configuration sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#configuration sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Configuration
 
@@ -312,7 +312,7 @@ authority with position in a decomposition, or hide a blocker from the
 decision that needs it. 
 
 
-Source: ACTIVATION.md#roles-and-delegation sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#roles-and-delegation sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Roles and delegation
 
@@ -389,7 +389,7 @@ applicable; an operation grant covering the sequence does not lift it
 (P6, P3).
 
 
-Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#2-context-construction-under-an-envelope sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ## 2. Context construction under an envelope
 
@@ -576,7 +576,7 @@ Acquisition above selects, including the raw owning members where
 Acquisition falls back to them (P6, P0, P5). The design, ODD, UX and ticket
 specialisations are
 [DESIGN_MODULE §11](../DESIGN_MODULE.md#11-review),
-[ODD §11.5D](../ODD.md#115d-constructive-evaluation-and-yield-loop) A5 and
+[ODD §11.5D](../ODD.md#115d-evidence-and-bounded-decisions) and
 [§11.7A](../ODD.md#117a-conforming-agentic-development),
 [UX §7](../UX.md#7-carrier-binding) and
 [TICKETS §5](../TICKETS.md#5-from-carrier-to-execution) and
@@ -637,7 +637,7 @@ relation is whether a decision rests on a surface whose sources are not
 those of the selected basis. This rule applies to derived surfaces under every selected carrier.
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ## 7. Closed result and reuse
 
@@ -729,7 +729,7 @@ proof when loss of incidental process state is a material counterexample:
 the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
-Source: ACTIVATION.md#construction-availability sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#construction-availability sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Construction availability
 
@@ -779,7 +779,7 @@ because a decision cannot be taken on a basis that cannot support it (P5,
 P3).
 
 
-Source: ACTIVATION.md#effects sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#effects sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Effects
 
@@ -832,7 +832,7 @@ counterexample already established for the declared outcome, and an
 effect that may still be acting.
 
 
-Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-002 Finite attention
 
@@ -848,7 +848,7 @@ question, answered by actual-use evidence under
 does not answer it (P0, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-009-no-assumed-hierarchy sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-009 No assumed hierarchy
 
@@ -870,7 +870,7 @@ grant or as a dependency would move authority or change a result without a
 declared relation.
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-012 Closed results
 
@@ -888,7 +888,7 @@ its stop state being
 applies them to every frame and defines none of them (P5).
 
 
-Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-014 Capability fit
 
@@ -903,7 +903,7 @@ selects itself and which re-enter the grant's owner. The actor may not
 silently omit material relations to fit its context (P0, P5).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ## 11. The activation packet
 
@@ -1201,7 +1201,7 @@ allocation only where it fits, and whether its prohibitions and its
 reporting of blockers hold wherever it is used.
 
 
-Source: FOUNDATIONS.md#authority-kinds sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
+Source: FOUNDATIONS.md#authority-kinds sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e
 
 ### Authority kinds
 
@@ -1268,7 +1268,7 @@ so one list keeps the answer the same in every member, and a capability,
 a label or a passing check can never be read as a permission (P6).
 
 
-Source: FOUNDATIONS.md#disjointness-and-independence sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
+Source: FOUNDATIONS.md#disjointness-and-independence sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e
 
 ### Disjointness and independence
 
@@ -1287,7 +1287,7 @@ be disjoint; and the unqualified word "independent" establishes none of
 the three.
 
 
-Source: FOUNDATIONS.md#results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e rows=7/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1461,7 +1461,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e
 
 ### Conjunction of results
 
@@ -1740,7 +1740,7 @@ TICKETS §4 owns finding carriers. The consumers are §12's Executive decision,
 §19's adoption projection and the Project Reference-Frame Basis template.
 
 
-Source: REFERENCE_FRAME.md#foundation-to-law sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64 rows=16/36 selected by the anchors this frame carries; the consumers paragraph of 36 items is omitted
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f rows=16/36 selected by the anchors this frame carries; the consumers paragraph of 36 items is omitted
 
 ### Foundation to law
 
@@ -1787,7 +1787,7 @@ The standing of the consequences below is stated in
 | P0 (recovered, with its actor-change premise), P3 (independent), P6 (independent); instance premise e | By P0's actor-change premise and P3 an input is acquired by exact identity from the selected basis, and by P6 absence from view grants nothing, so declared inputs are acquired by exact identity, and only from the exact selected basis: a declared input absent from the actor's view is neither licence to read elsewhere nor evidence that it is absent, and a candidate source, a moving selector or another basis is no substitute. Where a derived surface is stale, missing or insufficient for a named question, the deciding owner sections are acquired directly. Acquisition is read-only, grants no role, operation or decision, and a missing binding is returned with its outcome before any dependent action | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) step 4 and Acquisition, outside this member | acquiring a current derived surface in preference to its owning sections where it serves the task: ACTIVATION §2 Acquisition; which derived surfaces are published: their publisher, and none owns a determination | 2, 7 |
 | P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise), P3 (independent), P6 (independent) | By P0 an actor loads only what its frame declares, and by P5 and P3 a declaration is not evidence about one activation, so activation binds each reusable frame declaration to the exact subject and basis and loads the declared material relations and evidence sources, never an undifferentiated workspace dump; a reusable declaration is not evidence that a particular activation was correct. When no available frame and actor pairing can lawfully perform the evaluation, activation returns `out_of_frame` or the refusal whose cause holds, and work does not proceed through implied context | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Activation, outside this member; [FOUNDATIONS §2 Frame objects](../FOUNDATIONS.md#frame-objects), Activated frame, outside this member | who selects the frame: the actor or the assigning authority, as the configuration allocates ([ACTIVATION §1 Configuration](../ACTIVATION.md#configuration), family F2) | 7, 8 |
 | P6 (independent), P1 (independent); instance premise e | By P6 a derived surface owns no determination, and by P1 it is a representation of its sources, so a derived surface or projected frame decides standalone only the questions its own source members own. For a question another member owns, or one that joins the law of several owners, the step returns `out_of_frame` naming the owning members, and the question is decided from those members or from a derived surface whose declared sources include every owner | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Standalone scope, outside this member | none | 6, 7, 9 |
-| P6 (independent), P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise) | By P6 a prompt holds no authority of its own, and by P0 and P5 it carries only what the step needs, so a prompt is a rendered contract over typed authority, not source law. It projects the current authority references, obligations, contracts, boundaries, proof expectations and fallback conditions the step needs, and the material Acquisition selects; it carries no historical workaround prose unless a current surface still needs that constraint. Construction starts from the highest live authority surface the question needs and names an unresolved upstream authority gap before fallback context is read | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Prompt construction, outside this member | the design, ODD, UX and ticket specialisations: [DESIGN_MODULE §11](../DESIGN_MODULE.md#11-review), [ODD §11.5D](../ODD.md#115d-constructive-evaluation-and-yield-loop) and [§11.7A](../ODD.md#117a-conforming-agentic-development), [UX §7](../UX.md#7-carrier-binding), and [TICKETS §5](../TICKETS.md#5-from-carrier-to-execution) and [§7](../TICKETS.md#7-authority-judgment-closure-and-state) | 6, 7 |
+| P6 (independent), P0 (recovered), P5 (derived from P0 and P6, with P0's open-world premise) | By P6 a prompt holds no authority of its own, and by P0 and P5 it carries only what the step needs, so a prompt is a rendered contract over typed authority, not source law. It projects the current authority references, obligations, contracts, boundaries, proof expectations and fallback conditions the step needs, and the material Acquisition selects; it carries no historical workaround prose unless a current surface still needs that constraint. Construction starts from the highest live authority surface the question needs and names an unresolved upstream authority gap before fallback context is read | [ACTIVATION §2](../ACTIVATION.md#2-context-construction-under-an-envelope) Prompt construction, outside this member | the design, ODD, UX and ticket specialisations: [DESIGN_MODULE §11](../DESIGN_MODULE.md#11-review), [ODD §11.5D](../ODD.md#115d-evidence-and-bounded-decisions) and [§11.7A](../ODD.md#117a-conforming-agentic-development), [UX §7](../UX.md#7-carrier-binding), and [TICKETS §5](../TICKETS.md#5-from-carrier-to-execution) and [§7](../TICKETS.md#7-authority-judgment-closure-and-state) | 6, 7 |
 
 RF-012, and the mapping of the outcomes of §5 and the coverage statuses of
 §8 into the core, apply the core result algebra and its refinement rule;

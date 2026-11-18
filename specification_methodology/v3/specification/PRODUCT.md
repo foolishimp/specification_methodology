@@ -71,7 +71,7 @@ A tier may need all three. A category, equivalence or functor is established onl
 
 Each candidate supplies and owns its interpretation of the method in a_c. The calculus, interpretation and encoded carrier have distinct content identities and proof boundaries under the [a_c dependency contract](requirements/A_C_DEPENDENCY.md). The Axiom Indexer checker and the existing released STDO Representation are separately owned Products. A candidate's interpretation does not replace either Product or inherit its acceptance.
 
-Runtimes that execute applications built with the method are outside the product. Examples are ABIogenesis (ABG), which runs typed graph programs and records what happened at run time, its executor HoG, which traverses those programs, and application workflow runtimes.
+Runtimes, graph languages and executors used by applications built with the method are outside the Product. The method defines their required roles and contracts within STDO. No normative tier, including an optional profile, depends on a downstream Product's names, source or behaviour to define method meaning; the [self-contained method requirement](requirements/README.md#self-contained-method-requirement) governs that boundary.
 
 Example applications, such as Hello World and Data Mapper, are test subjects outside the product. So is the sum-and-histogram example used by the steel thread. Their particular features never become general method rules because they were used once.
 

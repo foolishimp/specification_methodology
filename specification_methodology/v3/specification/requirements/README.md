@@ -47,6 +47,32 @@ Modal wording is judged by that meaning. Present-tense indicative wording can st
 
 Each supersession names the affected claim, the replacement determination and its owning successor locus or loci. A shared relation may replace several claims, but each row identifies how its claim is replaced and cites the product owner's recorded acceptance under [Construction Authority](../PRODUCT.md#construction-authority). A changed obligation is not conserved merely because its heading survives. During construction a proposed disposition and replacement remain distinguishable from an accepted one; a refreshed hash supplies neither semantic comparison nor acceptance.
 
+## Self-Contained Method Requirement
+
+Source: this Product's [boundary](../PRODUCT.md#product-boundary).
+Every normative tier of STDO, including optional profiles, defines its terms,
+obligations and conformance conditions within the method. Normative text names
+capabilities and roles, not products built using STDO. Reading or running a
+downstream system is never necessary to supply a method rule's meaning.
+Consuming Products own their concrete implementation selections and bindings.
+External conformance subjects and their evidence remain separately scoped;
+they cannot become method authority by precedent.
+
+The mutable workspace and its authoritative inputs remain the continuing truth
+surface. Evidence and derived views support only their declared subjects and
+claims. They cannot replace current source authority, establish an unobserved
+workspace condition or resolve conflicting material observations by precedence
+alone. Affected closure, reuse and continuation claims require reconciliation
+and valid evidence. Raw observations confer no decision or effect authority.
+
+Work tracks the obligations, decisions, progress and unresolved matters needed
+by later steps and actors, and reconciles that account with the authoritative
+workspace before relying on it for a material decision. The method preserves
+this functionality without requiring a particular register or runtime design.
+A generic register is an example tool; an LLM or other mechanism may provide
+equivalent tracking, conservation of needed step-produced facts and
+reconciliation to the same truth surface.
+
 ## Standalone Successor Requirement
 
 Source: this Product. The successor stands alone. Every `conserved` claim is stated in the successor's own text, so that the successor is complete and usable without the predecessor in force. A link to the predecessor shows where a claim came from, not that it is conserved. Under this requirement a link alone satisfies no disposition. Construction establishes the axioms, meaning the candidate's declared foundational premises, then restates the predecessor corpus on them under the relationships below.

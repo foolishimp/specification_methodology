@@ -8,9 +8,9 @@ are the core.
 
 ## 1. The boundary
 
-The core names no runtime, no carrier and no executor. Terms owned outside
+The core prescribes no concrete runtime, carrier or executor. Terms owned outside
 the core, by a profile or a realisation, never enter tier 1 or 2: graph, edge, vector, ledger, event
-log, worksite, HoG, Markov overlay, screen, entity cut, and the design
+log, Markov overlay, screen, entity cut, and the design
 profile's IACS and Prime. The traversal record and the functor kinds F_D,
 F_P and F_H are tier-1 calculus terms owned by AXIOMATIC_CALCULUS §5, and
 "module" is a generic term under [ASSURANCE](ASSURANCE.md); neither is
@@ -46,9 +46,17 @@ each profile table cites the families it rests on without restating them,
 so no generic rule gains a second owner in a profile and no choice a
 profile adds is presented as following from the foundations (P6, P1).
 
+The core and every profile are self-contained normative parts of STDO.
+They define capabilities, roles and contracts in this method's own terms;
+they do not name products built using STDO as method concepts or rely on
+those products' source, specifications or behaviour to supply a rule's
+meaning. The restriction applies to all three tiers. Concrete implementation
+selection and bindings belong to the consuming Product (P1, P6).
+
 A worked application, a hello world or a data mapper is an external test
-subject; its particulars cannot become generic method functionality by
-precedent.
+subject. Its particulars and evidence may test conformance in a separate,
+explicitly scoped record; they supply no normative method definitions or
+functionality by precedent.
 
 ## 2. Graph execution
 

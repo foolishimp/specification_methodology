@@ -29,7 +29,7 @@ ViewTree, Cmd and Sub (§4), view-local ephemera (§5), effect membrane
 (§6), product-truth-changing message and admitted product carrier (§3),
 Msg-replay test and Msg-replay proof (§8), scaffold and exemption record
 (§12), UX sprint (§12) and the refined result values of §15. Graph
-function and ABG are the graph-execution profile's terms, used here as
+function and runtime are the graph-execution profile's terms, used here as
 that profile names them; AssetSurface and workorder name carriers that a
 product's design publishes or admits (§3, §7), used here as that design
 names them. Binding declared under PROFILES §1: where TICKETS §3 Compliance escrow names
@@ -230,7 +230,7 @@ Such a message maps to one admitted product carrier (P6, P4a):
 - an AssetSurface action;
 - a published graph function or lawful graph-function composition;
 - a workorder, job or runtime command admitted by the product's design;
-- an ABG event or command boundary where ABG is the runtime authority;
+- a runtime event or command boundary admitted by the bound traversal authority;
 - another typed product contract named by the design module.
 
 The UX layer does not become the hidden constructive carrier. If no

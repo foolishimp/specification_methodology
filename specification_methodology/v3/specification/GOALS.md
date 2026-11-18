@@ -2,11 +2,11 @@
 
 ## Current corrective release
 
-The owner [authorizes RC2](../../../.ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md)
-to repair successor-acceptance context and publish the next immutable
-six-Product cut. Follow the [RC2 contract](../../../releases/3.1.0-rc.2/RELEASE.md),
-retaining RC1 and its evidence. The exact native predecessor is now RC1;
-construction remains on 3.0.4.
+The owner approves the self-contained method correction and authorizes
+[3.1.0-rc.3](../../../releases/3.1.0-rc.3/RELEASE.md) under the
+[release activation](../../../.ai-workspace/work/STDO_3_1_RC3_2026-11-18/ACTIVATION.md).
+The current epic is publication and public verification of that exact six-Product
+cut. Construction remains on 3.0.4; earlier release records retain their subjects.
 
 This file states the current work wave of this source project: what is being worked on now, and the state of each checkpoint. SELECTED means the product owner has chosen the item for current work. A checkpoint is one stage of the construction of the new release; [Checkpoints](PRODUCT.md#checkpoints) lists them.
 
@@ -328,9 +328,27 @@ The cross-family round-1 review at `afb6ad6` exposes missing acceptance and cove
 
 ## Historical ABG Case Inputs
 
-ABG is ABIogenesis, a separate product that runs typed graph programs and records what happened at run time. These posts are available read-only as inputs for designing test cases if a later checkpoint selects such cases. When such cases are designed, fetch these posts again, check them against the hashes below, and record the exact versions used, together with the primary evidence they cite. They are historical case-design inputs, not evidence about any current runtime. No ABG work is selected here.
+ABG is ABIogenesis, a separate product that runs typed graph programs. These
+historical posts are optional inputs for test-case design if a later checkpoint
+selects such cases. Its checkout was mothballed on 18 November 2026; the former
+local file links no longer resolve. Recover a selected source from a verified
+Git object and check its hash before use, together with the primary evidence it
+cites. These records establish no current runtime claim and select no ABG work.
 
-| Historical source | Selected historical SHA256 |
-|---|---|
-| [March–September post-mortem](../../../../abiogenesis/.ai-workspace/comments/claude/20260920T041441Z_REVIEW_postmortem_march_to_september_week_by_week.md) | 478435ce71c5402c18224393e4b4d01220dffec9829de4f66af69ce67c5cd5cc |
-| [2 October RC1 handoff](../../../../abiogenesis/.ai-workspace/comments/codex/20261002_HANDOFF_ABG_5_RC1_STEEL_THREAD.md) | c9ea23d8bc67f0931bc2031b722934edda62e72477f8dff6c99b3fafa38cb35a |
+| Historical source | Selected historical SHA256 | Custody |
+|---|---|---|
+| March–September post-mortem | `478435ce71c5402c18224393e4b4d01220dffec9829de4f66af69ce67c5cd5cc` | Unresolved: the original path is not present at the mothball commit and was not found among object names reachable from the remaining local refs. Do not use until recovered and verified. |
+| 2 October RC1 handoff | `c9ea23d8bc67f0931bc2031b722934edda62e72477f8dff6c99b3fafa38cb35a` | Verified in the Git object identified below; the recorded hash matches. |
+
+Repository: `/Users/jim/src/apps/abiogenesis`. Verified mothball commit:
+`7bf7c342a5108aa139fb791a882b6309d59e0791`.
+
+- Post-mortem original path:
+  `.ai-workspace/comments/claude/20260920T041441Z_REVIEW_postmortem_march_to_september_week_by_week.md`.
+- Handoff retained path:
+  `.ai-workspace/comments/codex/20261002_HANDOFF_ABG_5_RC1_STEEL_THREAD.md`.
+  Read with `git show <commit>:<path>` in that repository.
+
+Custody was checked on 18 November 2026. Unreachable Git objects and archive
+members were not searched; the unresolved row is a limit on reuse, not a claim
+that the post-mortem was destroyed.

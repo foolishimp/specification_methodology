@@ -2,15 +2,15 @@
 
 ## Current corrective cut
 
-The owner's [RC2 instruction](../../../../.ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md)
-selects `3.1.0-rc.2` as the successor of the exact six-Product RC1 cohort.
-The bounded change repairs W35 at successor acceptance, preserves existing
-method law, and rebuilds actual-cut dependency bindings. R31-01 through R31-07
-below apply with RC1 as predecessor and RC2 as the current cut. The
-[RC2 contract](../../../../releases/3.1.0-rc.2/RELEASE.md) declares the claim set,
-required cases, independent assessment and atomic advancement. RC1 remains
-immutable; all six owned suffixes advance together and the manager uses
-`3.1.0rc2`. Construction stays on installed 3.0.4.
+The owner's [RC3 approval](../../../../.ai-workspace/work/STDO_3_1_RC3_2026-11-18/ACTIVATION.md)
+selects `3.1.0-rc.3` after the exact six-Product RC2 cohort. The approved change
+makes the method self-contained, retains required tracking/reconciliation with
+an optional register example, removes fixed runtime ledger/replay design, and
+aligns Product intended end state with Goals current epics. R31-01 through R31-07
+apply with RC2 as predecessor and RC3 as current cut. The
+[RC3 contract](../../../../releases/3.1.0-rc.3/RELEASE.md) binds changed-meaning
+assessment and actual-cut dependencies. All six suffixes advance together;
+manager version is `3.1.0rc3`. Construction remains installed STDO 3.0.4.
 
 ## Preserved initial RC1 relation
 

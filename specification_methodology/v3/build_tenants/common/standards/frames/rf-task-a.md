@@ -6,8 +6,8 @@ Purpose: The owning sections for the frame declaration, its activation on an exa
 
 Binds:
 
-- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
-- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
+- This task binds the construction relation: A is the exact subject and basis the activation binds, Z is the task's required outcome with the acceptance conditions the task states, and the actor's claims keep preservation, progress and outcome satisfaction distinct; a judgment its evidence cannot decide is `indeterminate`, and work it cannot finish is reported as unresolved work, not as a judgment ([../ACTIVATION.md#construction-relation](../ACTIVATION.md#construction-relation); member sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6; section sha256=6b6c2ce91c5a7e4be765af2f8009252fa8918719e1d885af6b5810ba4eb699da)
+- An evaluation this task returns binds the assurance relations: the source obligation, the claimed predicate and its scope, the observation basis, the exact subject and its material dependencies; a pass is an observation until the oracle's fidelity is established ([../FOUNDATIONS.md#assurance-relations](../FOUNDATIONS.md#assurance-relations); member sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e; section sha256=4598dccee4a65f206b604ea9a4c19db8aaff855a6b2fdc8e151dcc37f1439cb1 spanning to #formal-representation)
 
 A `Binds:` item names an obligation the activation of this frame binds, with
 a link to the owning section, the digest of its member and the digest of that
@@ -63,7 +63,7 @@ Routes, in order:
 
 Size of this frame: 113789 bytes.
 
-Source: FOUNDATIONS.md#2-ontology sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
+Source: FOUNDATIONS.md#2-ontology sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e
 
 ## 2. Ontology
 
@@ -357,7 +357,7 @@ members cannot answer one question two ways, and using a concept grants
 no authority over it (P1, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-001-evaluation-relativity sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-001 Evaluation relativity
 
@@ -365,7 +365,7 @@ Every frame declares the evaluation family it supports. A frame with no
 declared evaluation family has no testable sufficiency boundary (P2).
 
 
-Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-002-finite-attention sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-002 Finite attention
 
@@ -381,7 +381,7 @@ question, answered by actual-use evidence under
 does not answer it (P0, P6).
 
 
-Source: REFERENCE_FRAME.md#rf-003-material-sufficiency sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-003-material-sufficiency sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-003 Material sufficiency
 
@@ -393,7 +393,7 @@ insufficient. The law does not require proving that no undiscovered
 material relation exists (P2; P0 with the open-world premise).
 
 
-Source: REFERENCE_FRAME.md#rf-004-irrelevance-exclusion sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-004-irrelevance-exclusion sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-004 Irrelevance exclusion
 
@@ -402,7 +402,7 @@ attention unless they are needed to establish that irrelevance. A frame
 does not expand because adjacent workspace material exists (P2).
 
 
-Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-005-exact-basis-and-coordinates sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-005 Exact basis and coordinates
 
@@ -420,7 +420,7 @@ and [ACTIVATION §7](../ACTIVATION.md#7-closed-result-and-reuse) own that decisi
 this law supplies no blanket prohibition on reusing applicable evidence.
 
 
-Source: REFERENCE_FRAME.md#rf-006-authority-conservation sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-006-authority-conservation sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-006 Authority conservation
 
@@ -432,7 +432,7 @@ instances in a frame include actor identity, available capability,
 evidence shape, implementation reachability and frame selection (P6).
 
 
-Source: REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-007-semantic-evidence-and-verdict-separation sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-007 Semantic, evidence and verdict separation
 
@@ -445,7 +445,7 @@ performs a material operation, the existing operation owner supplies the
 exact grant as a further role the declaration keeps apart (P6).
 
 
-Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-011-topology-mutation-and-recharting sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-011 Topology mutation and recharting
 
@@ -457,7 +457,7 @@ invalidates for reuse every result bound to the prior revision coordinate;
 §10 Revision actions states that rule (P3, P4b).
 
 
-Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-012-closed-results sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-012 Closed results
 
@@ -475,7 +475,7 @@ its stop state being
 applies them to every frame and defines none of them (P5).
 
 
-Source: REFERENCE_FRAME.md#rf-013-reconstructable-activation sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-013-reconstructable-activation sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-013 Reconstructable activation
 
@@ -485,7 +485,7 @@ subject, the basis and the admissible inputs, without undocumented
 conversational or historical context (P0 with the actor-change premise).
 
 
-Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-014-capability-fit sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-014 Capability fit
 
@@ -500,7 +500,7 @@ selects itself and which re-enter the grant's owner. The actor may not
 silently omit material relations to fit its context (P0, P5).
 
 
-Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#rf-015-residual-uncertainty sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### RF-015 Residual uncertainty
 
@@ -510,7 +510,7 @@ stay explicit. Absence of a recorded counterexample is not evidence of
 universal completeness (P4b, P6; open-world premise).
 
 
-Source: REFERENCE_FRAME.md#5-method-functions sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#5-method-functions sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ## 5. Method functions
 
@@ -597,7 +597,7 @@ acceptance, which is a separate result
 ([FOUNDATIONS §4](../FOUNDATIONS.md#results)).
 
 
-Source: REFERENCE_FRAME.md#7-frame-relations sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#7-frame-relations sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ## 7. Frame relations
 
@@ -625,7 +625,7 @@ only the relations its evaluations and coverage claims need (P3, P2;
 RF-009).
 
 
-Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#11-the-activation-packet sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ## 11. The activation packet
 
@@ -707,7 +707,7 @@ missing condition instead of acquiring prohibited material. Byte deduplication
 or recursion must not merge distinct route permissions (P1, P3, P6).
 
 
-Source: REFERENCE_FRAME.md#minimal-frame-declaration sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#minimal-frame-declaration sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### Minimal frame declaration
 
@@ -752,7 +752,7 @@ Source: REFERENCE_FRAME.md#minimal-frame-declaration sha256=4bf3bb18f8590b8096f5
 ```
 
 
-Source: REFERENCE_FRAME.md#minimal-evaluation-result sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64
+Source: REFERENCE_FRAME.md#minimal-evaluation-result sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f
 
 ### Minimal evaluation result
 
@@ -837,7 +837,7 @@ test. Finite attention makes fit necessary
 is never qualified for attention because it fits (P0, P6).
 
 
-Source: ACTIVATION.md#admission-and-activation sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#admission-and-activation sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Admission and activation
 
@@ -874,7 +874,7 @@ reported with its cause in the one core, so it is neither mistaken for a
 step that stopped nor for one that ran.
 
 
-Source: ACTIVATION.md#disposition sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#disposition sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ### Disposition
 
@@ -915,7 +915,7 @@ unchanged failed construction relation as if iteration alone could close
 it (P2).
 
 
-Source: ACTIVATION.md#7-closed-result-and-reuse sha256=56109ffa2e8ec6f158e6dbd0b387fededa685abc100a288ea88525854a78441d
+Source: ACTIVATION.md#7-closed-result-and-reuse sha256=0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6
 
 ## 7. Closed result and reuse
 
@@ -1007,7 +1007,7 @@ proof when loss of incidental process state is a material counterexample:
 the proof destroys or excludes the incidental authority and compares the
 reconstructed semantic outcomes (P5, P6).
 
-Source: FOUNDATIONS.md#results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
+Source: FOUNDATIONS.md#results sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e rows=6/18 selected by the anchors this frame carries; the consumers paragraph of 18 items is omitted
 
 ### Results
 
@@ -1180,7 +1180,7 @@ beyond any refinement they map under the fifth row;
 step's refinements of the fifth row and the stop state of the seventh.
 
 
-Source: FOUNDATIONS.md#conjunction-of-results sha256=7fe9ecf257ad9aa725e7ae87ba23e406f6993dbd143c429d53df06284023127e
+Source: FOUNDATIONS.md#conjunction-of-results sha256=4215925741093ab84a0622347452848c97f7788ccad55afa0487ef77f3caaa6e
 
 ### Conjunction of results
 
@@ -1378,7 +1378,7 @@ last two rows; its §5 maps the method discriminators to cases and
 logical-review checks.
 
 
-Source: REFERENCE_FRAME.md#foundation-to-law sha256=4bf3bb18f8590b8096f5ff2de6554787d29a164224be697c76640289d2096d64 rows=16/36 selected by the anchors this frame carries; the consumers paragraph of 36 items is omitted
+Source: REFERENCE_FRAME.md#foundation-to-law sha256=a23ff395f08919ef609141c789ef52970497f91777405325bdcae07de24bfc3f rows=16/36 selected by the anchors this frame carries; the consumers paragraph of 36 items is omitted
 
 ### Foundation to law
 

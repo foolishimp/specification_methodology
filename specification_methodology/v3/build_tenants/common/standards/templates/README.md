@@ -15,6 +15,31 @@ Use these templates as source material for project-local files such as:
 - a Product-owned Project Reference-Frame Basis copied from
   `PROJECT_REFERENCE_FRAME_BASIS_TEMPLATE.md`
 
+## Goals, Intent and Product
+
+The starters project the ownership in [SPEC_METHOD §2](../SPEC_METHOD.md#2-the-chain):
+
+| Surface | Content it owns |
+|---|---|
+| [Goals](GOALS_TEMPLATE.md) | Current epics, bounded work-wave focus and overriding concerns. |
+| [Intent](INTENT_TEMPLATE.md) | Purpose, direction, required outcomes and constraints. |
+| [Product](PRODUCT_TEMPLATE.md) | The intended Product end state under the currently adopted definition: capabilities, guarantees, domain terms and boundaries from which requirements derive. |
+
+Product cites the governing Intent and defines the destination in present tense.
+"Current" identifies the Product definition in force; its end state includes
+capabilities that remain to be built. Goals selects the epics or work wave
+currently pursued toward that destination. A change of work-wave priorities
+with unchanged Product meaning requires no rewrite of the Product page; a
+change to the destination re-enters Product. Links to Goals or Intent provide
+navigation without copying their determinations.
+
+Product-specific concepts, including a domain concept named goal, remain Product
+terms when the Product owns them. Imported method concepts retain their owner,
+selected basis and explicit binding under
+[PRODUCT_DEFINITION §5](../PRODUCT_DEFINITION.md#5-bounded-context-semantic-resolution).
+The current Product definition governs what requirements must make true;
+implementation and delivery claims retain their separate evidence.
+
 ## Product Definition Overlay
 
 `PRODUCT_DEFINITION_TEMPLATE.json` is the one per-product fill-in overlay. Its
@@ -44,8 +69,8 @@ match the default paths in the template.
 The template's `$schema` value is relative to the same exact logical release
 basis selected in `constitution.stdo.basis`; it contains no machine-local store
 path. Install the cut once through the STDO toolchain manager and resolve the
-`stdo:` URI through that manager. A project-local `.genesis` copy is not
-required.
+`stdo:` URI through that manager. No project-local copy of the installed
+method is required.
 
 One definition represents one distinct product `WHAT`. Put multiple
 independent realizations of that same `WHAT` in `how.build_tenants`, not in
