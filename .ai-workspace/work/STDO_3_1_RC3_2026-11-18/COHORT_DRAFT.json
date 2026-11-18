@@ -1,0 +1,1905 @@
+{
+  "kind": "stdo.release-cohort/1",
+  "profile": "rc-six-product-v1",
+  "version": "3.1.0-rc.3",
+  "public_version": "3.1.0",
+  "repository": "https://github.com/foolishimp/specification_methodology.git",
+  "native": {
+    "commit": "b2e21ad0a2bab04e59afd5246b990da992417047",
+    "cut": "v3.1.0-rc.3",
+    "project_release_namespace": "specification_methodology",
+    "project_subtree_root": "specification_methodology/v3",
+    "project_subtree_tree": "d7caf6e19de414e4c08e791d44f16066c043cb75",
+    "qualified_ref": "refs/tags/specification_methodology/v3.1.0-rc.3",
+    "standards_tree": "2e071de56c18702e5dbf619361a96daf3a99dc87",
+    "tag_object": "61344ea9035ecdce5dbd544b212eebc487c1edff",
+    "tree": "1432a3084e9ac698ad2b439ebaa70f3b880a35c1"
+  },
+  "native_manifest_sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+  "predecessor": {
+    "version": "3.1.0-rc.2",
+    "native_commit": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+    "source_carrier": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+  },
+  "source": {
+    "checkpoint": "d52f6df8fae0028cda213e5dfb7104a6a81d2970",
+    "carrier": "be3d42211130b960d325b0415529405dcc76a375",
+    "native_source_subtree": "specification_methodology/v3/build_tenants/common",
+    "native_source_tree": "d7caf6e19de414e4c08e791d44f16066c043cb75"
+  },
+  "products": [
+    {
+      "namespace": "specification_methodology",
+      "root": "specification_methodology/v3",
+      "definition_id": "urn:stdo:product-definition:stdo-3",
+      "commit_role": "native-A",
+      "commit": "b2e21ad0a2bab04e59afd5246b990da992417047",
+      "subtree_tree": "d7caf6e19de414e4c08e791d44f16066c043cb75",
+      "definition": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "specification_methodology/v3/stdo_3.json",
+        "sha256": "833874bacacea07ae6c70ab6e786d0ea2096865ad79daaf8e6daf9b6677eff4b",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-v3.1.0-rc.3-manifest.json",
+        "manifest_sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+        "native_members": 95
+      }
+    },
+    {
+      "namespace": "purpose_context",
+      "root": "purpose_context",
+      "definition_id": "urn:stdo:product-definition:purpose-context",
+      "commit_role": "source-B",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "subtree_tree": "2af058a8e2591e1c5d3074d316b5e7917a34702c",
+      "definition": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "purpose_context/stdo_purpose_context.json",
+        "sha256": "a7d9c58a1d2a057a4358ebb4bd3fcb8e34081438df6c5fcfc0581e756c0243c8",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.3.zip",
+        "root": "purpose_context",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 4291,
+            "sha256": "69213b57b9cb123b115ad5c0d412e3f588ef333cec65e4fe72eee4efc8b3609f"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 209,
+            "sha256": "5654a1debcc3657a6b91893231934d81c4620cd91c6922dd94cb738a6fc44aa2"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 10284,
+            "sha256": "5a9ecd765558932dd7c7768ffe6690b0c1b7d5466c1b5d668db8d97a816e8e5e"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4951,
+            "sha256": "8aa8715eead1e0f75623173781e5b0f2deac6f9f4e317be48356920fa318edd7"
+          },
+          {
+            "path": "RELEASE.md",
+            "bytes": 3074,
+            "sha256": "866e3558d475eb88e3505952a32648488212a776b44ebfa6da3b64382db6d84c"
+          },
+          {
+            "path": "SOURCE_RELATION.json",
+            "bytes": 28019,
+            "sha256": "85f0f22a5601cd04b84794c1ba38d4d60041edabaa766812a821863a6c8205d4"
+          },
+          {
+            "path": "authoring/README.md",
+            "bytes": 1016,
+            "sha256": "8c51e1acf689670f9f0b60a0e4c03ad8c26a8da06a92dad52543542e408f187c"
+          },
+          {
+            "path": "authoring/release-targets/3.1.0-rc.1.json",
+            "bytes": 3139,
+            "sha256": "c53ea7f5275b6429dc42a5a9fd6d41a60b707f186e7ea998552520900eb0f245"
+          },
+          {
+            "path": "authoring/release-targets/3.1.0-rc.2.json",
+            "bytes": 4941,
+            "sha256": "eea8f1374e7b761cf40f48433365dab2b22c0dea451ddc34a76a1e6e6455c495"
+          },
+          {
+            "path": "authoring/release-targets/3.1.0-rc.3.json",
+            "bytes": 61632,
+            "sha256": "ae279a93507c329a338da6013ac40864ca1efc22aefc18a71414a6067be41d3c"
+          },
+          {
+            "path": "authoring/sdlc-workflow/PURPOSE.json",
+            "bytes": 3492,
+            "sha256": "8ecba436caa12381da0c4b29f479358bc71e0e45fdae449ea1939bbcacdd1795"
+          },
+          {
+            "path": "authoring/sdlc-workflow/QUERY-TEMPLATE.json",
+            "bytes": 99,
+            "sha256": "f21693cc7952a96a893d4855ae27eed19688627746c8765e8d9af5da4211f2b6"
+          },
+          {
+            "path": "authoring/sdlc-workflow/RULES.json",
+            "bytes": 55275,
+            "sha256": "427dda923fb5f9167583a74850a7fc3a66176e4d1b6b0d8e7a664eb3a0b16e9c"
+          },
+          {
+            "path": "authoring/sdlc-workflow/SOURCE-CLOSURE.json",
+            "bytes": 3740,
+            "sha256": "da81436615f57237b351ab54697dfddd85c8b370375df89c0bf9589fed4b38ff"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/adjacent-finding.json",
+            "bytes": 752,
+            "sha256": "f0494203c53268215311c28f4210c43ff78e2637145a39c3071cf500f6af402a"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/boundary-assessment.json",
+            "bytes": 776,
+            "sha256": "ce63027862e13657345e8a184b7571e1cb935256313c692710f0d3d839e9dac0"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/causal-reentry.json",
+            "bytes": 753,
+            "sha256": "1d971a68f0e7d3387b9ab631c13596ba7f27d53e194976f0bb88d7c8d7aa70d9"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/first-capability-limit.json",
+            "bytes": 877,
+            "sha256": "7388e9f7c4fcfb10c869c872584648f1b78447f0c0c2c04cc039d209fa9ec1e7"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/incomplete-evidence.json",
+            "bytes": 759,
+            "sha256": "dcbe9dbff86dcfcaaed1f488bb97791a1d62799ad1ae5be64fb9e7a9c47a213f"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/ordinary-repair.json",
+            "bytes": 755,
+            "sha256": "4a783f12d5d114482f7c5b869d71ba43c458482f3b491b2f1e4295dfb7139890"
+          },
+          {
+            "path": "authoring/sdlc-workflow/queries/valid-support-reuse.json",
+            "bytes": 758,
+            "sha256": "c4a4db7fb6b57044682418517fb1f3c11c22a73c3e96fca5d48538348b3f3149"
+          },
+          {
+            "path": "design/DESIGN.md",
+            "bytes": 11564,
+            "sha256": "ff7b377ebd87b6fd61db583d7fa0aa28283979d7d378c39b23669efcf1f2d6ca"
+          },
+          {
+            "path": "scripts/package_release.py",
+            "bytes": 5234,
+            "sha256": "436067dc4a57d68eef47263f711a52b33916f80c86bdd7b82b3120a94b545864"
+          },
+          {
+            "path": "scripts/rebuild_release_indexes.py",
+            "bytes": 20526,
+            "sha256": "3eb3f77ef11c543951a58020d2e39ea274cd200b65dfe321c0401bcabf01db31"
+          },
+          {
+            "path": "scripts/rebuild_sdlc_index.py",
+            "bytes": 10684,
+            "sha256": "2d38f6a77be784e4e84df1435b8ae154c098098a4c7cae88865718ca52e79f69"
+          },
+          {
+            "path": "skills/stdo-context/SKILL.md",
+            "bytes": 9412,
+            "sha256": "b82c32ee123abfc4277923f1834576a4d928611e4631cfe0036491d57adeca05"
+          },
+          {
+            "path": "skills/stdo-context/indexes/CATALOG.json",
+            "bytes": 12238,
+            "sha256": "3670a99f6fd496a741498b11a493517e04ddcde683d9804539d22820f17ebfb9"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-python-pure-refactor-v2/INDEX.json",
+            "bytes": 163689,
+            "sha256": "c90881b387e040dddb9409b370f056dfb64b2a949dcb1128d79a989176b5b3ba"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-python-pure-refactor-v2/PROVENANCE.json",
+            "bytes": 8984,
+            "sha256": "df4cb0e39d0a31eaf5804074d5f10fa9b7895f4128f7537c119b92dd213c461e"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-python-pure-refactor-v2/PURPOSE.json",
+            "bytes": 6506,
+            "sha256": "6a6375ccfce5759021155a188e481cea62f6ba6fd4b6b6c1c75e41fd64cb63df"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-python-pure-refactor-v2/SOURCE-DELTA.json",
+            "bytes": 60436,
+            "sha256": "df51011c980abe1d17f50179b8a2a1d4995faf593d74113e27eb3bd1c14abaa5"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-python-pure-refactor-v2/SOURCES.json",
+            "bytes": 3228,
+            "sha256": "6102feaa8b599963ef5cd6b383e06b481dd9f8e36ece9992a77dcb6b0c263a9a"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/INDEX.json",
+            "bytes": 52159,
+            "sha256": "dd3164078e4a298e0d951a77e792ba36062d9f7f566fc33531f7e88f236b697c"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/PROVENANCE.json",
+            "bytes": 7366,
+            "sha256": "feffaaeb852fae6f4f329d49286fc539d868b86b766e2827b457ecd454ff5db4"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/PURPOSE.json",
+            "bytes": 3536,
+            "sha256": "e0b5032fd01f8b1fd94e55c3314f8fb7d9617724764e36e18cf6ee5873691843"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/SOURCE-DELTA.json",
+            "bytes": 22507,
+            "sha256": "df62e29ebe81a1b3f2d503bcd628266b11193808617778ccff6fbb9e974353fa"
+          },
+          {
+            "path": "skills/stdo-context/indexes/stdo-3.1.0-rc.3-sdlc-workflow-v1/SOURCES.json",
+            "bytes": 2373,
+            "sha256": "27de9b9a9f87323cb32e7c4c7ad5523b4dbbbd1398082b851ffe3080f028cfb4"
+          },
+          {
+            "path": "skills/stdo-context/references/authoring.md",
+            "bytes": 3730,
+            "sha256": "215f5ae233ca03b5acb99273eff2872e2d1a4b49d54158ec5a56c2a760eb3737"
+          },
+          {
+            "path": "skills/stdo-context/references/index.schema.json",
+            "bytes": 7659,
+            "sha256": "537784a980f5d8267bbeae271eebd04757ff9f2f241d30166d7f2d4c1f4c5ec6"
+          },
+          {
+            "path": "skills/stdo-context/references/method-targets.md",
+            "bytes": 3515,
+            "sha256": "7d2e628c44227ee7b97ff3f0957027702b60f42c57aa8b939fae4d107772b162"
+          },
+          {
+            "path": "skills/stdo-context/references/python-pure-refactor.md",
+            "bytes": 9987,
+            "sha256": "a89f8cb66c7e71b9cba1895610af13484b5d8875626bd148a0b17a697fd29aeb"
+          },
+          {
+            "path": "skills/stdo-context/references/sdlc-workflow.md",
+            "bytes": 12758,
+            "sha256": "b276105d8ded3a80e6e9517050fa880d9e743c692e80c7a51e99ce1a003978c7"
+          },
+          {
+            "path": "skills/stdo-context/scripts/context.py",
+            "bytes": 15436,
+            "sha256": "11de6b6eb18480daa63f27679d48e238131cbfa733e11ae0993fa83f077730ee"
+          },
+          {
+            "path": "skills/stdo-context/scripts/context_catalog.py",
+            "bytes": 14487,
+            "sha256": "df532546092d082d7e1e2bc2a5219a6d1ba96b0ca2e3d8cab834d605be07622a"
+          },
+          {
+            "path": "skills/stdo-context/scripts/context_core.py",
+            "bytes": 22847,
+            "sha256": "f690a4c09688fcd45df2befba9d71cb9eb7264bd0057621e8128c344b6ab3143"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 3746,
+            "sha256": "84970e286252dff77c5d302bea27c38e602f1be6ef682fa6e0f29939e1f7726c"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 1764,
+            "sha256": "f940e0e7e034f99c49eac41783308f0d2b855ace0634ad4b1741fc0d6a895e4b"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 9029,
+            "sha256": "4a965ca0b8b366af8e52b17287792953b076d6659ad13654221923436a5db407"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 5422,
+            "sha256": "bfe1c456f69f7258fdad20a868c4cb52596ee3e9b3a913c00bc7e5e8e6f8f8ca"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 4936,
+            "sha256": "e1e2dad0c1d622d3212f89006cc2a3f50c75c35e1016c6f16ddfe8937c4266f2"
+          },
+          {
+            "path": "specification/requirements/SDLC-WORKFLOW.md",
+            "bytes": 7616,
+            "sha256": "5afba547f7e91fafe4af9c4b475ef936ee94ac1a6587465be4fe4e5419772cf7"
+          },
+          {
+            "path": "stdo_purpose_context.json",
+            "bytes": 2905,
+            "sha256": "a7d9c58a1d2a057a4358ebb4bd3fcb8e34081438df6c5fcfc0581e756c0243c8"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "5a9ecd765558932dd7c7768ffe6690b0c1b7d5466c1b5d668db8d97a816e8e5e",
+        "member_count": 52
+      },
+      "source_public_identity": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "purpose_context/PUBLIC_MANIFEST.json",
+        "sha256": "c2bd656bed1d279257379f8673bd3c93b8236c510e928f8f50a229ecf09b1e6d"
+      }
+    },
+    {
+      "namespace": "stdo_skills",
+      "root": "stdo_skills",
+      "definition_id": "urn:stdo:product-definition:stdo-skills",
+      "commit_role": "source-B",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "subtree_tree": "4314f3922f3f7192563a3b841edca14c7dbcf6f9",
+      "definition": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "stdo_skills/stdo_skills.json",
+        "sha256": "638397e839f8a39d0ddb5b0c5bbdcab12094d5bad5b4d9c520a83b984cd8bf97",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.3.zip",
+        "root": "stdo_skills",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 1640,
+            "sha256": "fdd747815a545675f77f76b18d2bd2fd523ea9938d4de3fe8c83e6b1cb09a474"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 1555,
+            "sha256": "df8ec2abb5e96e3342e47122cfd872af7e141b56bbba8521012b5622ab2655cc"
+          },
+          {
+            "path": "GETTING_STARTED.md",
+            "bytes": 10618,
+            "sha256": "bbd7872bf83ec11801d884d30ecaad4aa2414a2cc51a39a58cba0d92b9ac12cd"
+          },
+          {
+            "path": "INVENTORY.json",
+            "bytes": 6602,
+            "sha256": "afc26ea051d800fd7c1ad68d044fdc468119cee68d8bce13803fc58d45bcb93b"
+          },
+          {
+            "path": "README.md",
+            "bytes": 4508,
+            "sha256": "554c995f73b3c114bfc338c7d8e52bbdf207c3d6dd7bbb4e21145ee11b0ff239"
+          },
+          {
+            "path": "RELEASE.md",
+            "bytes": 3525,
+            "sha256": "0ef5735ba3cee72f7cd646448cb6c8c08e0273d66506a766083cda974ed03f5b"
+          },
+          {
+            "path": "build_tenants/README.md",
+            "bytes": 648,
+            "sha256": "1738a13504d6c572d40ee33e3f74ba9781b20401551711799ff89622f6d228ef"
+          },
+          {
+            "path": "build_tenants/claude/README.md",
+            "bytes": 704,
+            "sha256": "41d0a9b312e7c2e69042301fa6ecf97b8ab9e6e92982821489129f9232111833"
+          },
+          {
+            "path": "build_tenants/claude/current/DESIGN.md",
+            "bytes": 781,
+            "sha256": "db03deba7dbb5f02cb17ecbd91a008eb47687ca85c71a39511d087a13ab606cb"
+          },
+          {
+            "path": "build_tenants/claude/current/skills/stdo-project/SKILL.md",
+            "bytes": 1380,
+            "sha256": "2237dc3901d1b3505e711676042a25ce77372ed94f9a7a273c4065f16e4a4111"
+          },
+          {
+            "path": "build_tenants/claude/current/skills/stdo-project/references/code.md",
+            "bytes": 677,
+            "sha256": "63903db316f4e65cf9f47f4adc9f7dbe06c1634f753b00a32a2987c76fc5e622"
+          },
+          {
+            "path": "build_tenants/claude/current/skills/stdo-project/references/project.md",
+            "bytes": 984,
+            "sha256": "109198ac76a3facbf42fbecc31014ba454c530cf9e7225f5126d33cd43d40d16"
+          },
+          {
+            "path": "build_tenants/codex/README.md",
+            "bytes": 622,
+            "sha256": "24afb4a20bf12bd4dd8e3578d9d88e4255bba1419f539f18839c17193a57f176"
+          },
+          {
+            "path": "build_tenants/codex/current/DESIGN.md",
+            "bytes": 779,
+            "sha256": "4ebb06b172b2ca26e6faa9e2901d20766ae1f8bbd5aef17fe45b9c85d3f086ff"
+          },
+          {
+            "path": "build_tenants/codex/current/skills/stdo-project/SKILL.md",
+            "bytes": 1380,
+            "sha256": "2237dc3901d1b3505e711676042a25ce77372ed94f9a7a273c4065f16e4a4111"
+          },
+          {
+            "path": "build_tenants/codex/current/skills/stdo-project/references/code.md",
+            "bytes": 677,
+            "sha256": "63903db316f4e65cf9f47f4adc9f7dbe06c1634f753b00a32a2987c76fc5e622"
+          },
+          {
+            "path": "build_tenants/codex/current/skills/stdo-project/references/project.md",
+            "bytes": 984,
+            "sha256": "109198ac76a3facbf42fbecc31014ba454c530cf9e7225f5126d33cd43d40d16"
+          },
+          {
+            "path": "scripts/INSTALLATION.md",
+            "bytes": 8406,
+            "sha256": "b8471800526392fc785a4cc145fd3329a0099183f7811ce74960314d0e663d89"
+          },
+          {
+            "path": "scripts/manage_skills.py",
+            "bytes": 18076,
+            "sha256": "d150556b60b67467f26cc66fdc2e09ae9f5e4351313bafb8cf90ebecef3163ae"
+          },
+          {
+            "path": "scripts/package.py",
+            "bytes": 5229,
+            "sha256": "da3e475e2e85cec5184ce76065d1ccad10dad181c199de8c70323e1137bfad71"
+          },
+          {
+            "path": "skills/stdo-context/BINDING.json",
+            "bytes": 75,
+            "sha256": "c293148fe010645681a981cf660f0b144a3d66f999f995f107227be6f42bfeea"
+          },
+          {
+            "path": "skills/stdo-context/SKILL.md",
+            "bytes": 4765,
+            "sha256": "7f5aef26f56880c6754086af6a01cdd75e2731dc36f49427bc7e66ae5cef2143"
+          },
+          {
+            "path": "skills/stdo-context/scripts/provider.py",
+            "bytes": 4622,
+            "sha256": "45d7eb587ef4257f45b44201dc33954b958b25778153ca1f6d904a31b69043f6"
+          },
+          {
+            "path": "specification/DESIGN.md",
+            "bytes": 3733,
+            "sha256": "cb7b1e277623fee068bb8106d8d6b71263b88d7a022fc3e5f537134cb5c788d5"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 2329,
+            "sha256": "c04856c0137ad852c0e591528068dc0af09d1412d31427e6b15e0ab22e75e3b1"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 797,
+            "sha256": "8f350c005614db78a584c7de73d684ff6d0e289ac8b64c9cc223fb4f7633da0d"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 5858,
+            "sha256": "b6c2bd0496e66eefba96de3cd4cfda4df43ca7b5065dfd42a5d1b176bd19805f"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 3986,
+            "sha256": "4a9aade0265b59a8bf3f250b1857c0bd7e7ceead2f53c53b5ef7eedc0be5cfec"
+          },
+          {
+            "path": "specification/SOURCE_OWNERS.md",
+            "bytes": 950,
+            "sha256": "c8446fe900a00f2673b820d6094f4cb068aa9fad73b601275fc6a1c66e24d08e"
+          },
+          {
+            "path": "specification/composition/DEPENDENCIES.json",
+            "bytes": 627,
+            "sha256": "7a4f49d03952346e3f864a287efdd1f483540d8693438994b7ba3cf00ea1a790"
+          },
+          {
+            "path": "specification/composition/PRODUCTS.md",
+            "bytes": 1576,
+            "sha256": "6e9ff183bd88b265b952b5993cc06b0fed5fc65355cfd00f2038378938a5899c"
+          },
+          {
+            "path": "specification/requirements/PURPOSE-INDEX-CONSUMPTION.md",
+            "bytes": 5908,
+            "sha256": "a843365899e6cf8ea75b6bbd2841b15b1bd6ef015f32228eb5197fdee06f5a80"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 3662,
+            "sha256": "38bfcfa5c4c8a89c7f29c2db488955d56622d4c673333673c256a0c794b33c68"
+          },
+          {
+            "path": "specification/requirements/SCENARIOS.md",
+            "bytes": 5165,
+            "sha256": "8b78121f3bc78bbb39336778b8d87b0f33d7e2f334838384301ec1977335da12"
+          },
+          {
+            "path": "stdo_skills.json",
+            "bytes": 4000,
+            "sha256": "638397e839f8a39d0ddb5b0c5bbdcab12094d5bad5b4d9c520a83b984cd8bf97"
+          }
+        ],
+        "identity_path": "INVENTORY.json",
+        "identity_sha256": "afc26ea051d800fd7c1ad68d044fdc468119cee68d8bce13803fc58d45bcb93b",
+        "member_count": 35
+      },
+      "source_public_identity": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "stdo_skills/specification/composition/DEPENDENCIES.json",
+        "sha256": "5b5e2e77edf9b09fc42c9bb21e9458bfbc64db9e119438068c2033593b651f66"
+      }
+    },
+    {
+      "namespace": "a_c",
+      "root": "a_c",
+      "definition_id": "urn:stdo:product-definition:a-c-implementations",
+      "commit_role": "source-B",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "subtree_tree": "570252fce218a2fe31837472b14e04ed84da157c",
+      "definition": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "a_c/stdo_a_c.json",
+        "sha256": "cc53f590a7fd577021f626c52b18c6aad1e7304b0dd9e7478887c1d5b49e9a36",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.3.zip",
+        "root": "a_c",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 2612,
+            "sha256": "6469da86bf69d8933e59c8d05e040b0b09f7e913978f82fabc65b6674391ecb6"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 2612,
+            "sha256": "6469da86bf69d8933e59c8d05e040b0b09f7e913978f82fabc65b6674391ecb6"
+          },
+          {
+            "path": "INSTALLATION.md",
+            "bytes": 1713,
+            "sha256": "8b745cc6a2346b4b42cd827d48eef21474bf73156bd7eea7a702f80de64d6976"
+          },
+          {
+            "path": "MIGRATION-3.1.md",
+            "bytes": 2437,
+            "sha256": "3082832491d36838efe1fdbaecbd71fb8637f76a1cb5d1d2bbdbda9d1b929b0c"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 6457,
+            "sha256": "651e633d60bae201e57db980956905eab516154e9aa0f4d40a7d203bb76677a4"
+          },
+          {
+            "path": "README.md",
+            "bytes": 1437,
+            "sha256": "767f1e879085c2a5201ed2613b34944a9a8a0ae1060f2c4ca641afafe4e62fc2"
+          },
+          {
+            "path": "VERSION",
+            "bytes": 11,
+            "sha256": "2b4a8622ec7b65f7f3553c4b67d4e6b43d963627557099b5381ec63224f98951"
+          },
+          {
+            "path": "build_tenants/README.md",
+            "bytes": 453,
+            "sha256": "bc2433d2c093b02ab53cf56ce02f9acddb9b22b42095b197cc0f5f7d0996f7d4"
+          },
+          {
+            "path": "build_tenants/graphify/README.md",
+            "bytes": 409,
+            "sha256": "f23f50a9b38583bcce41bcbdc760b61875da691aa73a4cfbfa3f6b717aaa5f03"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_code.py",
+            "bytes": 43911,
+            "sha256": "4d12be85a2ee3bff2e2630816a43d240b14de38c2407a5570267ec043f0e69df"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_explore.py",
+            "bytes": 9794,
+            "sha256": "6e4c80a71e69180c9af28aa1ea8aa1e779128971b21ab2c4232d86ccd56151ef"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_fs_boundary.py",
+            "bytes": 1621,
+            "sha256": "93796928cef9016d2d1f6527ef3228253ce5ba17c8edbd7a14c62f46a5811c6b"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_generate.py",
+            "bytes": 83597,
+            "sha256": "6730ae99c1b98663ec4f056aac890bcc867bf57b94103ae0e9fcb97cee515f2f"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_graph.py",
+            "bytes": 52129,
+            "sha256": "d133fe1dd6d6581f88d94a35023d3e4ee494e61a1a4af2e6197641c2743de4cf"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_grounding.py",
+            "bytes": 22891,
+            "sha256": "9593457967ca45853f29b8e6bb8378bad49914f3983f877860f7efbe034f0fb0"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_project.py",
+            "bytes": 21280,
+            "sha256": "7bdb08310892963b3c22891a50b841ce232dbfb7920c474323d800fafdd8cfb8"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_repair.py",
+            "bytes": 36733,
+            "sha256": "a8d91ee11561092e656d11647f47cb1494ccdad50849a65bdb21c77e697d65f6"
+          },
+          {
+            "path": "build_tenants/graphify/code/ac_upstream.py",
+            "bytes": 7991,
+            "sha256": "69fb0850088f9c317ae9416048ffd3157e63ad55216af3704a94edb09bddec4a"
+          },
+          {
+            "path": "build_tenants/graphify/code/code-requirements.txt",
+            "bytes": 276,
+            "sha256": "f508937dfbfe84108aee664ddba1eb9577ebfc6007eb5b76a057378793218bca"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/author.schema.json",
+            "bytes": 11148,
+            "sha256": "6a9ecd905c5fe6d9cfa6cf35bf7945fb57833e43d87cc95e5ceb25efeb3dca87"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/author.txt",
+            "bytes": 4240,
+            "sha256": "11f1fcf1e9a4da5531737639fcfe64dfbfcb4c57026ad9d20b2f8a0a0e8bacdc"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/extraction.schema.json",
+            "bytes": 4818,
+            "sha256": "30f3dace4caad72b9b53edf5f208a8688da271e249b30eb1080ac3e5e37382cd"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/isolation.txt",
+            "bytes": 696,
+            "sha256": "3bf712063d1cb959d5c7c1eab258368eac8cbe6f4351c2dc745b0552f77f73e1"
+          },
+          {
+            "path": "build_tenants/graphify/code/generation/requirements.txt",
+            "bytes": 214,
+            "sha256": "233c1d0d4946525f9539289ad957c49c73491391cb0e3f52e574925e99bb93c2"
+          },
+          {
+            "path": "build_tenants/graphify/code/grounding_repair/patch.schema.json",
+            "bytes": 2037,
+            "sha256": "65c58364a33a31d25fb2de16e50fc1f92bf2eb30307ebb42eb0f7a60ecb58b76"
+          },
+          {
+            "path": "build_tenants/graphify/code/grounding_repair/repair.txt",
+            "bytes": 2231,
+            "sha256": "304752f5d5359364f6b34a2cf1f16b1a9da3c786bcb3baba12364fa7ba4b0d7e"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/explorer.css",
+            "bytes": 13494,
+            "sha256": "2cfa511fa05d81c1c0d26126b3b47014030a211367b7a30b7b39d46681c9f95f"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/explorer.html",
+            "bytes": 5517,
+            "sha256": "cb37641587297deaa3431eb5b557944e7fd80272e845ffb3643a5f70b2cfd8ec"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/explorer.js",
+            "bytes": 37927,
+            "sha256": "980c41adb0ec3401d22fd4c3c8054545d01ba356c92379e74fad275e71883649"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/layered.css",
+            "bytes": 2632,
+            "sha256": "fb2f005f61947def6c6c2f66fc1b36e8d87a40876c2a4ad4ffe137c22a313474"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/layered.js",
+            "bytes": 12223,
+            "sha256": "134b082f87f15eca059432e07453ce27e5a963bd94c798ef32b1eafb9cdc8b80"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/3d-force-graph-1.80.1.min.js",
+            "bytes": 1389954,
+            "sha256": "13088340aad408156064fd120c3bc3a47c93a3cc45b8f132d6284b20e2223be9"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/3d-force-graph-LICENSE",
+            "bytes": 1072,
+            "sha256": "7262e566e874d1ce8cfadace01d4f635f8d704b6bdf7b4345cc028e5faeafded"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/THIRD_PARTY_NOTICES.txt",
+            "bytes": 38944,
+            "sha256": "5550725cb2e36431fc64242442a5e0fb94be7a2d93749c3f55cc99f2f68fee22"
+          },
+          {
+            "path": "build_tenants/graphify/code/viewer/vendor/manifest.json",
+            "bytes": 576,
+            "sha256": "c8d258151ce83b7864d6579fd27d2f4ac79049cab7966a0db0e8eca3a6bc883f"
+          },
+          {
+            "path": "build_tenants/graphify/design/README.md",
+            "bytes": 1198,
+            "sha256": "1a3e05ee404fd8a7974e913c1b6268b4d2cd7a58eaebe28001a072496bf1bca1"
+          },
+          {
+            "path": "build_tenants/graphify/test_env/requirements-qualification.txt",
+            "bytes": 278,
+            "sha256": "9be107b68f56e3b7d7c1d6e3ac297daeda8484a8af8ceae783aead8355a7b3b5"
+          },
+          {
+            "path": "releases/v3.1.0-rc.3.md",
+            "bytes": 397,
+            "sha256": "5601d9ece358205ad76c47d6efe22fab523af7f6ceaf5d7ed94302071142f9f0"
+          },
+          {
+            "path": "scripts/ac.py",
+            "bytes": 1118,
+            "sha256": "61214865a7b87c759f4069969038cbff8a91fcf61eae7844bc79bcb66d935f7f"
+          },
+          {
+            "path": "scripts/bootstrap.py",
+            "bytes": 5126,
+            "sha256": "1574501ff5b9990bac11bbfdbe9897791079a85b8d6c59093d5613c31a4a356a"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 1252,
+            "sha256": "15a64ecd0638a790bd8d8c2b82c198a4b73b3275f0f499608176aae9ed01232a"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 930,
+            "sha256": "dc2790eb8e812d638935a819b64128467a0025d227b521f1f4c93669874aac72"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 2101,
+            "sha256": "a9f76e5eb1f8a898ca15d46fe72762d1ebdda5f88e1dd32a92f4f633a97a3a9d"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 1436,
+            "sha256": "403267c60a5d3cd18011d9af638f228704ccfbdb8ba48998d6d36e9b68e0c49a"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 1282,
+            "sha256": "89deb1f54881adc2600e1a2bdbf707bbeb5c1422a67e318e171342a475570364"
+          },
+          {
+            "path": "specification/requirements/code-realization.md",
+            "bytes": 4417,
+            "sha256": "096c4c0a6f5cbd380f860e78dd031614674a2b9ab4bf176f9fd48b02e52bcff2"
+          },
+          {
+            "path": "specification/requirements/project-use.md",
+            "bytes": 1225,
+            "sha256": "ca5fa75d647e7669c12b7864e29f9291e8c6f72bcf9c3e6dee878b8fd21ac6a7"
+          },
+          {
+            "path": "stdo_a_c.json",
+            "bytes": 3191,
+            "sha256": "cc53f590a7fd577021f626c52b18c6aad1e7304b0dd9e7478887c1d5b49e9a36"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "651e633d60bae201e57db980956905eab516154e9aa0f4d40a7d203bb76677a4",
+        "member_count": 48
+      },
+      "source_public_identity": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "a_c/PUBLIC_MANIFEST.json",
+        "sha256": "651e633d60bae201e57db980956905eab516154e9aa0f4d40a7d203bb76677a4"
+      }
+    },
+    {
+      "namespace": "stdo_representation",
+      "root": "stdo_representation",
+      "definition_id": "urn:stdo:product-definition:stdo-representation",
+      "commit_role": "source-B",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "subtree_tree": "e92406b3beb75e95b731f25e17a1b7dea4ca4f63",
+      "definition": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "stdo_representation/stdo_representation.json",
+        "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.3.zip",
+        "root": "stdo_representation",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 2606,
+            "sha256": "41b3b60ef504ad48f85ac9375f00e8c2f1d1390d236d63e02f8018d4f15d1e71"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 2606,
+            "sha256": "41b3b60ef504ad48f85ac9375f00e8c2f1d1390d236d63e02f8018d4f15d1e71"
+          },
+          {
+            "path": "INSTALLATION.md",
+            "bytes": 1825,
+            "sha256": "58fbb815abe8be561459221b4b2e83f665e1584a594e51b2e272557b8a159660"
+          },
+          {
+            "path": "MIGRATION-3.1.md",
+            "bytes": 2468,
+            "sha256": "c586bcb6ac72fb99505fc076bbe4e3571940dfaa876cdb8eeee67a28ae009ac5"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 13643,
+            "sha256": "8e06d399237fdd09c5ffcfa70b5ce922e5556e644b3cea13429c633f774cf716"
+          },
+          {
+            "path": "QUICKSTART.md",
+            "bytes": 1929,
+            "sha256": "eb649dae9ddbc0ceb63c8128118c5db4f64f5e53ebec228474f409c9be7c65a9"
+          },
+          {
+            "path": "README.md",
+            "bytes": 1161,
+            "sha256": "283a073805f87d380cb233b6b2e4ac89102885015f13f685f178a6fc451266c3"
+          },
+          {
+            "path": "VERSION",
+            "bytes": 11,
+            "sha256": "2b4a8622ec7b65f7f3553c4b67d4e6b43d963627557099b5381ec63224f98951"
+          },
+          {
+            "path": "build_tenants/a_c/design/CURRENT_MODEL.md",
+            "bytes": 1193,
+            "sha256": "943610e8a143431480452f6753d2edd9ec45e9a03f53fbb09530eea2a24ce125"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/COVERAGE.md",
+            "bytes": 3985,
+            "sha256": "dd60fc1a9115166e4c481cf8f4199c3b9a48cc98058faac1385aff7f1b12364b"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/GENERATION.json",
+            "bytes": 2271,
+            "sha256": "6b7ee6b8b2b468fa9806a92e4dc06bbcc7fb4c113e9b3dbe52cc89cb8e08edbe"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/README.md",
+            "bytes": 1190,
+            "sha256": "623f6aaf33800ff37e57579346533459d52d64d07fa89c7411ae0eab5b897059"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/SOURCE_BINDING.json",
+            "bytes": 13441,
+            "sha256": "f986d102469d7c74d5f430a4529c8ed799eb6a49f6dffb437cfc714be26c153b"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/authoring/ANSWER.json",
+            "bytes": 399571,
+            "sha256": "fc6a80588ad6681927b9f77e35ecdac582fcdf304e25d06e52198d1b93080b6a"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/authoring/TASK.json",
+            "bytes": 461071,
+            "sha256": "3170b68145dcb83a58bdd115c9b8098ae96a663fa625ffce3898681134daade4"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/PROVIDER.json",
+            "bytes": 621,
+            "sha256": "358ce28c8f0c99d0ec9b9dcc7310eaa4e29e1ecc9ac8deab6c600201ab03436f"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/bindings.json",
+            "bytes": 176,
+            "sha256": "c3c6812869780d6c520e30937649d865421c85ca25f7c10101e0ddbb0b85a929"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/conversion-config.json",
+            "bytes": 1025,
+            "sha256": "9680808c66b9f8814ff0f8202aaf9e50982db66d33baa72fd13901242b8d41b9"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/conversion-receipt.json",
+            "bytes": 566,
+            "sha256": "4a7c7d07b2c7e07a8fd6cd6101c4e19fbbcf53a171914216ad484177ea6ad740"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/map.json",
+            "bytes": 1117778,
+            "sha256": "aa4f9d1c9f0205b9bb9acb389f86af09c7a79bbeb2871e2da88fc78fbaae4d6e"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/program.json",
+            "bytes": 1072635,
+            "sha256": "9c14f0fc26944feded9b48cd57f7d0287dca6e347bb342f396e815d6b71bd868"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/restored-model.json",
+            "bytes": 925947,
+            "sha256": "06fada10a0b525f4761476199e637f5f59b038d621da890cf196b16253eae3a4"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/selected-projection.json",
+            "bytes": 20398,
+            "sha256": "266c8d708a4b0c3520c82ef854d2ebd987ee609e15d736fcb0f866d5d0e15c8a"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/axiom/validation.json",
+            "bytes": 1057,
+            "sha256": "69236696fcfdbeb40555fb9a2a1ef21a091f100250da3ca1bdac3629b37fc18d"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/commands/01-prepare.json",
+            "bytes": 1512,
+            "sha256": "1c6c07d121df3373b2e0c7cd5590577993a65a732700b16427d515dc2919b480"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/commands/02-task.json",
+            "bytes": 516717,
+            "sha256": "52887e2c9ec9eeb8976d1ba05cd8e33c58dac59fac424a669f9b3fd7fa5ad8fc"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/commands/03-submit.json",
+            "bytes": 875,
+            "sha256": "e316d2a672a19788171cd9b1b0f6a8de8366b8ed8903ae88af0b9bcd6b611e76"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/commands/04-build.json",
+            "bytes": 2739,
+            "sha256": "a794e62dc189202d92b842f6d342db311b9eb535bcb07eb75a524dae235e4194"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/commands/05-status.json",
+            "bytes": 3279,
+            "sha256": "e09a1adba3a13bebb4d174df2874a29436ac8f2aab73f2896056d340e0b0d6cc"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/commands/06-reuse.json",
+            "bytes": 2740,
+            "sha256": "fea2296b4ec85fe4881e1760149000f583665bc359275841ff5b30b8de68c458"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/BUILD.json",
+            "bytes": 2249,
+            "sha256": "c8fc46d1be9c0b337e07e74b412934f837fd9cab608b5ccb8052cf9e4e64e32b"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/PROJECT.json",
+            "bytes": 3743,
+            "sha256": "68e6e2458eb4e96e7c455e318d11a199c65ba30b109a767efe413166a0527d6b"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/answers/chunk-a033119c8ce35fa46d5b.json",
+            "bytes": 411818,
+            "sha256": "908d1fa418fab19711fa363a02baa59eef6999985021ee1f3d56d4c7d4d47a78"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/chunks.json",
+            "bytes": 314026,
+            "sha256": "333938e4da7cfd8c880c4ec82e6c678008cac404384c3f5dc88a6a45d3382bcc"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.3/source/standards/ACTIVATION.md",
+            "bytes": 142221,
+            "sha256": "0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.3/source/standards/SDLC_DEFAULTS.md",
+            "bytes": 11713,
+            "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/corpus/build_tenants/a_c/representation/stdo-v3.1.0-rc.3/source/standards/TICKETS.md",
+            "bytes": 101437,
+            "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/plan.json",
+            "bytes": 2204,
+            "sha256": "1181d539d86cc556f0917c6bd4bd89f1dae66f02d1c1db1a02eeac24eeee1777"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/proposal/carrier.json",
+            "bytes": 5735214,
+            "sha256": "33c259a03760cc689ed770a7ed4056f042a2416888c11eb5f4091ff4628c9659"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/proposal/coverage.json",
+            "bytes": 87222,
+            "sha256": "22902b5fb3d4904afcdab4df60bc26be26ee259c55e293dbe44e504fb0bcc1fa"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/proposal/explorer.html",
+            "bytes": 3562260,
+            "sha256": "e403a2e59eeddbf0172b7bcafe0c96bd662f56ca4ebfeb87db4806f684ac63fd"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/proposal/model.json",
+            "bytes": 925947,
+            "sha256": "06fada10a0b525f4761476199e637f5f59b038d621da890cf196b16253eae3a4"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/proposal/result.json",
+            "bytes": 943,
+            "sha256": "5767d0e868420edf6ad68b0da76628a6718232e4732a94fdd34e30bb9c8c4d5c"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/generation/source-manifest.json",
+            "bytes": 1443,
+            "sha256": "09128daa124793c02257bf44500b34721b090a979c83d0dbbbf7b3987a9cd827"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/method-verification.json",
+            "bytes": 14755,
+            "sha256": "52275b7f22cec3e758bf7ad6b18ed6c29230968d49475bfb355ed63a44c5eaa9"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/product-definition.json",
+            "bytes": 4484,
+            "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/run/source-manifest.json",
+            "bytes": 1443,
+            "sha256": "09128daa124793c02257bf44500b34721b090a979c83d0dbbbf7b3987a9cd827"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/source/manifest.json",
+            "bytes": 15621,
+            "sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/source/standards/ACTIVATION.md",
+            "bytes": 142221,
+            "sha256": "0abbb2def2afade46ccef552c2df3db17024f169df5e42903131829a34feadf6"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/source/standards/AXIOMATIC_CALCULUS.md",
+            "bytes": 92357,
+            "sha256": "d2a29d4b9a9a260c364f942285c159dfd1cb439ee528d55146613c23533b9d4a"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/source/standards/SDLC_DEFAULTS.md",
+            "bytes": 11713,
+            "sha256": "a04335fe75f38c665055c8272f6707fe9e244b7fece5bed936332d0c82e1aac8"
+          },
+          {
+            "path": "build_tenants/a_c/representation/stdo-v3.1.0-rc.3/source/standards/TICKETS.md",
+            "bytes": 101437,
+            "sha256": "2e601f701170a7eece65153ba707cc7d857bfb7c3b9ce28c283dad199e919748"
+          },
+          {
+            "path": "build_tenants/axiom_indexer/README.md",
+            "bytes": 412,
+            "sha256": "d8eb6cb753b8a102a3fe9bdfc17d2438ee18296b300ab0411bc5ddd2e87105f0"
+          },
+          {
+            "path": "releases/v3.1.0-rc.3.md",
+            "bytes": 413,
+            "sha256": "6ce3fb22ace896097647ce27350ac9bb04743e6c600ddd09402c37cb27e3901d"
+          },
+          {
+            "path": "scripts/build_31_rc3_visual.py",
+            "bytes": 12435,
+            "sha256": "9b11453913b1b15935ff88a6dd756bd845cdc62ada413af69089c2892bff907a"
+          },
+          {
+            "path": "scripts/visual_31_rc3_annotations.json",
+            "bytes": 43192,
+            "sha256": "4694e29705fd8a4a30d30f5d1fae12dc4341e26cbc6c562a340de85482a8caf0"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 1116,
+            "sha256": "0488647bf57bffcf1e572b3ef9ec7c20b5a878bc43432dd6775290d7a57bb51b"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 573,
+            "sha256": "5c77021a3da47024365b3bf48d4ab96392fdf4db0d4d224ab2144ee65b7640c8"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 2590,
+            "sha256": "be78bffbfda6360ef03207ecf214ac2303f0bcf35ed864dd218ef6b2bfa80566"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 1419,
+            "sha256": "3ad10b92414735debbf3bebec6f0da09c520b52225a00b237e2749ffacb90de5"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 664,
+            "sha256": "827fd08360a9444f4dcab6c1577c2b9341e7c68bda147127ae6b8050d4ecee62"
+          },
+          {
+            "path": "specification/requirements/REQ-P-BASIS-AND-IDENTITY.md",
+            "bytes": 326,
+            "sha256": "5522fd151defd126b1474fdc7216d4f17786c490c2da36dd77060408890ffc68"
+          },
+          {
+            "path": "specification/requirements/REQ-P-CANDIDATE-VALIDATION.md",
+            "bytes": 449,
+            "sha256": "80a18d022dced000115d8544ff8f7ad9ebc5fa6e7113dc50fdc4d85a1b114fda"
+          },
+          {
+            "path": "specification/requirements/REQ-P-CURRENT-MODEL.md",
+            "bytes": 430,
+            "sha256": "107111ce83ec7bfd1a085041fc8d521ded23d329e13d1440e7fced21a1c6dcea"
+          },
+          {
+            "path": "specification/requirements/REQ-P-DOGFOOD-VERIFICATION.md",
+            "bytes": 354,
+            "sha256": "474ecacc1d56b0fd3257a7587ddb5998854c7b845b0f74b47a62ce7f01c76570"
+          },
+          {
+            "path": "specification/requirements/REQ-P-STDO-AUTHORING-MAP.md",
+            "bytes": 347,
+            "sha256": "49eecbecafee7f1999046b61b1bfe19a5531052ad932f9aac987ae8a23149d36"
+          },
+          {
+            "path": "stdo_representation.json",
+            "bytes": 4484,
+            "sha256": "a19f7402d651de768e5677c2b4bfda441206b78404e5fae8a4595ab371d20739"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "8e06d399237fdd09c5ffcfa70b5ce922e5556e644b3cea13429c633f774cf716",
+        "member_count": 67
+      },
+      "source_public_identity": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "stdo_representation/PUBLIC_MANIFEST.json",
+        "sha256": "8e06d399237fdd09c5ffcfa70b5ce922e5556e644b3cea13429c633f774cf716"
+      }
+    },
+    {
+      "namespace": "axiom_indexer",
+      "root": "axiom_indexer",
+      "definition_id": "urn:stdo:product-definition:axiom-indexer",
+      "commit_role": "source-B",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "subtree_tree": "7dd13ca83e714d168e2392362579f03d3addbe81",
+      "definition": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "axiom_indexer/stdo_default.json",
+        "sha256": "553e099f2d7158ca5787a093f78e82aa633a66d67afa357525343a5bb0989b07",
+        "construction_basis": {
+          "uri": "stdo://releases/v3.0.4/",
+          "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+        }
+      },
+      "distribution": {
+        "asset": "stdo-products-v3.1.0-rc.3.zip",
+        "root": "axiom_indexer",
+        "members": [
+          {
+            "path": "AGENTS.md",
+            "bytes": 2622,
+            "sha256": "4690d28066cec41eecfb66ed6e69aee651de72493a6181f2cabd911dad8b967c"
+          },
+          {
+            "path": "CLAUDE.md",
+            "bytes": 2622,
+            "sha256": "4690d28066cec41eecfb66ed6e69aee651de72493a6181f2cabd911dad8b967c"
+          },
+          {
+            "path": "INSTALLATION.md",
+            "bytes": 1084,
+            "sha256": "dbc36f23c7e5b4ed2497d6eca44fed583e7eac1e93dbe8a9b5de8ba903e62118"
+          },
+          {
+            "path": "MIGRATION-3.1.md",
+            "bytes": 2450,
+            "sha256": "87459ddfe1a5f9b09a9ad3a5899f28d9501879278884a6532318951f2cbec1e4"
+          },
+          {
+            "path": "PUBLIC_MANIFEST.json",
+            "bytes": 1067,
+            "sha256": "9eba50a37643e44023600d17f1bbac9e3dd357a3f31016da77d9eba268da7794"
+          },
+          {
+            "path": "README.md",
+            "bytes": 1072,
+            "sha256": "dab79937ff4a4a1d10556341f3b5c8a21a07f5254828ba659a1175c1793b3370"
+          },
+          {
+            "path": "VERSION",
+            "bytes": 11,
+            "sha256": "2b4a8622ec7b65f7f3553c4b67d4e6b43d963627557099b5381ec63224f98951"
+          },
+          {
+            "path": "build_tenants/core/README.md",
+            "bytes": 475,
+            "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d"
+          },
+          {
+            "path": "build_tenants/core/code/README.md",
+            "bytes": 475,
+            "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d"
+          },
+          {
+            "path": "build_tenants/core/code/ac.py",
+            "bytes": 36605,
+            "sha256": "e89ba6cf4011f22ea42c05e5ecd4512f8ecbc5ce507d6b3550aa7d26926e4027"
+          },
+          {
+            "path": "build_tenants/core/code/ac_model.py",
+            "bytes": 11858,
+            "sha256": "a8baaeb06e45957d486ecf2977294ac49b481762d65812330018127e60c27ad2"
+          },
+          {
+            "path": "build_tenants/core/design/README.md",
+            "bytes": 475,
+            "sha256": "eb85871b92813a61734157538448f92e27a057476b843579ffd0beea32c8783d"
+          },
+          {
+            "path": "releases/v3.1.0-rc.3.md",
+            "bytes": 407,
+            "sha256": "bd9ecb94fa8804c3f61ab58c2844fe37f37fdce64633481641a0292684d26900"
+          },
+          {
+            "path": "specification/GOALS.md",
+            "bytes": 658,
+            "sha256": "9d434d18fb65431e5568ada8537c096f319e6a6c06583035ee78532a9131027d"
+          },
+          {
+            "path": "specification/INTENT.md",
+            "bytes": 546,
+            "sha256": "169e83216d0c22c8fac7002b7a86a5c240df53389929a98f8fca4bf15a822907"
+          },
+          {
+            "path": "specification/PRODUCT.md",
+            "bytes": 1402,
+            "sha256": "6b51a839bffa0d2d1898e83277b1ee993d25843c7d7853c7cb3d696858ac3edf"
+          },
+          {
+            "path": "specification/REFERENCE_FRAME_BASIS.md",
+            "bytes": 1442,
+            "sha256": "aa1a32d8a5a055e14513fe1ad70f7d70a0ea05cc02e13fae80e933a56e11c35e"
+          },
+          {
+            "path": "specification/requirements/README.md",
+            "bytes": 549,
+            "sha256": "7adb0e859283bb75d2ef0001af88ff54a3938940f64299d37366740c7508da63"
+          },
+          {
+            "path": "specification/requirements/REQ-P-MODEL-CONVERSION.md",
+            "bytes": 1663,
+            "sha256": "f196a3035f1148d3a9348533bcd65fb8cb358227f894f8af7d334a5853d011d9"
+          },
+          {
+            "path": "specification/requirements/REQ-P-PROGRAM.md",
+            "bytes": 242,
+            "sha256": "1ea0debf07c485a9ae80f4d6c278d962f63e2c724f1f4400d59c5dc8baba210b"
+          },
+          {
+            "path": "specification/requirements/REQ-P-PROJECTION.md",
+            "bytes": 262,
+            "sha256": "8dc8669ed540b79209103b91f45e277d892d506ed6e4f215ba4a5c7fb6b67238"
+          },
+          {
+            "path": "specification/requirements/REQ-P-RESOLUTION.md",
+            "bytes": 256,
+            "sha256": "e3e6c8c36ffd9702d70582e0a4a53294e55d8d752418a6c160637c887922e178"
+          },
+          {
+            "path": "specification/requirements/REQ-P-VALIDATION.md",
+            "bytes": 246,
+            "sha256": "8c6a1c639a64c7c1737df145718d65fa7915a96fb297fc9bd0d98b052757f797"
+          },
+          {
+            "path": "stdo_default.json",
+            "bytes": 3322,
+            "sha256": "553e099f2d7158ca5787a093f78e82aa633a66d67afa357525343a5bb0989b07"
+          }
+        ],
+        "identity_path": "PUBLIC_MANIFEST.json",
+        "identity_sha256": "9eba50a37643e44023600d17f1bbac9e3dd357a3f31016da77d9eba268da7794",
+        "member_count": 24
+      },
+      "source_public_identity": {
+        "commit": "be3d42211130b960d325b0415529405dcc76a375",
+        "path": "axiom_indexer/PUBLIC_MANIFEST.json",
+        "sha256": "9eba50a37643e44023600d17f1bbac9e3dd357a3f31016da77d9eba268da7794"
+      }
+    }
+  ],
+  "dependency_edges": [
+    {
+      "consumer": "purpose_context",
+      "provider": "specification_methodology",
+      "relation": "Two exact native-source purpose indexes; no implicit method adoption",
+      "selected": {
+        "uri": "stdo://releases/v3.1.0-rc.3/",
+        "manifest_sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
+      }
+    },
+    {
+      "consumer": "stdo_skills",
+      "provider": "specification_methodology",
+      "relation": "Exact native workflow host bindings",
+      "selected": {
+        "uri": "stdo://releases/v3.1.0-rc.3/",
+        "manifest_sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
+      }
+    },
+    {
+      "consumer": "stdo_skills",
+      "provider": "purpose_context",
+      "relation": "Required single context runtime and catalog",
+      "distribution_manifest_sha256": "5a9ecd765558932dd7c7768ffe6690b0c1b7d5466c1b5d668db8d97a816e8e5e"
+    },
+    {
+      "consumer": "stdo_skills",
+      "provider": "a_c",
+      "relation": "Optional visual documentation; not needed for context",
+      "distribution_manifest_sha256": "651e633d60bae201e57db980956905eab516154e9aa0f4d40a7d203bb76677a4"
+    },
+    {
+      "consumer": "stdo_representation",
+      "provider": "specification_methodology",
+      "relation": "Selected exact native sources for bounded visual documentation",
+      "selected": {
+        "uri": "stdo://releases/v3.1.0-rc.3/",
+        "manifest_sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
+      }
+    },
+    {
+      "consumer": "stdo_representation",
+      "provider": "a_c",
+      "relation": "Public visual generation/model/carrier/explorer",
+      "distribution_manifest_sha256": "651e633d60bae201e57db980956905eab516154e9aa0f4d40a7d203bb76677a4"
+    },
+    {
+      "consumer": "stdo_representation",
+      "provider": "axiom_indexer",
+      "relation": "Optional mechanical conversion and projection",
+      "distribution_manifest_sha256": "9eba50a37643e44023600d17f1bbac9e3dd357a3f31016da77d9eba268da7794"
+    }
+  ],
+  "constructor_basis": {
+    "specification_methodology": {
+      "uri": "stdo://releases/v3.0.4/",
+      "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+    },
+    "purpose_context": {
+      "uri": "stdo://releases/v3.0.4/",
+      "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+    },
+    "stdo_skills": {
+      "uri": "stdo://releases/v3.0.4/",
+      "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+    },
+    "a_c": {
+      "uri": "stdo://releases/v3.0.4/",
+      "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+    },
+    "stdo_representation": {
+      "uri": "stdo://releases/v3.0.4/",
+      "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+    },
+    "axiom_indexer": {
+      "uri": "stdo://releases/v3.0.4/",
+      "manifest_sha256": "102817a3f4bea4dca1d6fa0fc634b94404dd2ba82ba6d8c38b273402dda9f95b"
+    }
+  },
+  "assets": [
+    {
+      "name": "stdo-v3.1.0-rc.3-manifest.json",
+      "bytes": 15621,
+      "sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
+    },
+    {
+      "name": "stdo_toolchain-3.1.0rc3-py3-none-any.whl",
+      "bytes": 61595,
+      "sha256": "eb46d6c62d444c421da0d4c5c468adbebb972e07861df97a1670f0085c520edb"
+    },
+    {
+      "name": "stdo-manager-constraints-v3.1.0-rc.3-python313.txt",
+      "bytes": 354,
+      "sha256": "2051b5374e86548a1e85d3cee1c58d43c1c223c7071551ea3e65fa068cd49255"
+    },
+    {
+      "name": "stdo-manager-runtime-v3.1.0-rc.3-macos-arm64-cp313.zip",
+      "bytes": 3000308,
+      "sha256": "4191b24aafb73141527f952de7e80cf6160fd031828bfa94bff5a5416fe0cf67"
+    },
+    {
+      "name": "stdo-products-v3.1.0-rc.3.zip",
+      "bytes": 2559789,
+      "sha256": "0975b05589c951c2c1aec08222e0d3ef655bd3fdbf254e71a2df315e2bd70669"
+    }
+  ],
+  "asset_digest_policy": "This asset is excluded from its own digest inventory; expected assets and public GitHub metadata bind its final bytes.",
+  "refs": [
+    {
+      "destination": "refs/heads/main",
+      "source": "be3d42211130b960d325b0415529405dcc76a375",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "2c95df2fe4656f1bbe6c4eb2d9f4be6e28446e0d"
+    },
+    {
+      "destination": "refs/tags/specification_methodology/v3.1.0-rc.3",
+      "source": "refs/tags/specification_methodology/v3.1.0-rc.3",
+      "object": "61344ea9035ecdce5dbd544b212eebc487c1edff",
+      "commit": "b2e21ad0a2bab04e59afd5246b990da992417047",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/specification_methodology/v3.1.0",
+      "source": "refs/tags/specification_methodology/v3.1.0",
+      "object": "8ff41e9a04d2deb200fa9e2dc5f3bbb192fe9fb1",
+      "commit": "b2e21ad0a2bab04e59afd5246b990da992417047",
+      "immutable": false,
+      "expected_remote": "138b4216fbed1f35811d30424326b3ba123be437"
+    },
+    {
+      "destination": "refs/heads/rc/specification_methodology/3.1.0",
+      "source": "refs/heads/rc/specification_methodology/3.1.0",
+      "object": "b2e21ad0a2bab04e59afd5246b990da992417047",
+      "commit": "b2e21ad0a2bab04e59afd5246b990da992417047",
+      "immutable": false,
+      "expected_remote": "21a9d4b93c5adef1e84a369360a99176b98793c5"
+    },
+    {
+      "destination": "refs/heads/release/specification_methodology/3.1.0",
+      "source": "refs/heads/release/specification_methodology/3.1.0",
+      "object": "b2e21ad0a2bab04e59afd5246b990da992417047",
+      "commit": "b2e21ad0a2bab04e59afd5246b990da992417047",
+      "immutable": false,
+      "expected_remote": "21a9d4b93c5adef1e84a369360a99176b98793c5"
+    },
+    {
+      "destination": "refs/tags/purpose_context/v3.1.0-rc.3",
+      "source": "refs/tags/purpose_context/v3.1.0-rc.3",
+      "object": "d7c8517010a6b60259db528d569377a76afd4f3a",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/purpose_context/v3.1.0",
+      "source": "refs/tags/purpose_context/v3.1.0",
+      "object": "9d376386bfa2b6783c156bdba5f56536f0012e1e",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "089a167be6c83d5101a271fa49be33d27fb0cac6"
+    },
+    {
+      "destination": "refs/heads/rc/purpose_context/3.1.0",
+      "source": "refs/heads/rc/purpose_context/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    },
+    {
+      "destination": "refs/heads/release/purpose_context/3.1.0",
+      "source": "refs/heads/release/purpose_context/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    },
+    {
+      "destination": "refs/tags/stdo_skills/v3.1.0-rc.3",
+      "source": "refs/tags/stdo_skills/v3.1.0-rc.3",
+      "object": "3725673ffb3e274f8d3ca9d687a502a1c8bf71e9",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/stdo_skills/v3.1.0",
+      "source": "refs/tags/stdo_skills/v3.1.0",
+      "object": "ce36137c17f544fb5edfed39135f68a98d78af45",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "c22a225bdd6c78b0b069ceef3c9206129c67e484"
+    },
+    {
+      "destination": "refs/heads/rc/stdo_skills/3.1.0",
+      "source": "refs/heads/rc/stdo_skills/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    },
+    {
+      "destination": "refs/heads/release/stdo_skills/3.1.0",
+      "source": "refs/heads/release/stdo_skills/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    },
+    {
+      "destination": "refs/tags/a_c/v3.1.0-rc.3",
+      "source": "refs/tags/a_c/v3.1.0-rc.3",
+      "object": "b088a4cec9f722e54f2018987b4978c31227d133",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/a_c/v3.1.0",
+      "source": "refs/tags/a_c/v3.1.0",
+      "object": "a8214141a2ef452c430b41f3266e7bda8a81233e",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "6da4ffa5609d19ec90965f871325f7382e8a296f"
+    },
+    {
+      "destination": "refs/heads/rc/a_c/3.1.0",
+      "source": "refs/heads/rc/a_c/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    },
+    {
+      "destination": "refs/heads/release/a_c/3.1.0",
+      "source": "refs/heads/release/a_c/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    },
+    {
+      "destination": "refs/tags/stdo_representation/v3.1.0-rc.3",
+      "source": "refs/tags/stdo_representation/v3.1.0-rc.3",
+      "object": "5638b9e53f439cbe65691565161a52856150d1a9",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/stdo_representation/v3.1.0",
+      "source": "refs/tags/stdo_representation/v3.1.0",
+      "object": "d4a72d25214d15c983553ef17423bcf58baa0177",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "144a4b3034a234bdf7d844ada0ac44cc467012b4"
+    },
+    {
+      "destination": "refs/heads/rc/stdo_representation/3.1.0",
+      "source": "refs/heads/rc/stdo_representation/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    },
+    {
+      "destination": "refs/heads/release/stdo_representation/3.1.0",
+      "source": "refs/heads/release/stdo_representation/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    },
+    {
+      "destination": "refs/tags/axiom_indexer/v3.1.0-rc.3",
+      "source": "refs/tags/axiom_indexer/v3.1.0-rc.3",
+      "object": "064e9af77d77709e6da9e3b3b5a702f44946ef8d",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": true,
+      "expected_remote": ""
+    },
+    {
+      "destination": "refs/tags/axiom_indexer/v3.1.0",
+      "source": "refs/tags/axiom_indexer/v3.1.0",
+      "object": "a8aee72945ae2b36bd690faf2dd4cfc401247864",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "b48b9f35b10d38fc9fd37d40b38a0058f4ff8c5b"
+    },
+    {
+      "destination": "refs/heads/rc/axiom_indexer/3.1.0",
+      "source": "refs/heads/rc/axiom_indexer/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    },
+    {
+      "destination": "refs/heads/release/axiom_indexer/3.1.0",
+      "source": "refs/heads/release/axiom_indexer/3.1.0",
+      "object": "be3d42211130b960d325b0415529405dcc76a375",
+      "commit": "be3d42211130b960d325b0415529405dcc76a375",
+      "immutable": false,
+      "expected_remote": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+    }
+  ],
+  "protected_predecessor_refs": {
+    "refs/tags/specification_methodology/v3.1.0-rc.2": "fb85e1b7a5717a6c92af236308c4d0b5809414fe",
+    "refs/tags/specification_methodology/v3.1.0-rc.2^{}": "21a9d4b93c5adef1e84a369360a99176b98793c5",
+    "refs/tags/purpose_context/v3.1.0-rc.2": "2e0b7b1e37d196b7077da04e430134c343a1a2a8",
+    "refs/tags/purpose_context/v3.1.0-rc.2^{}": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+    "refs/tags/stdo_skills/v3.1.0-rc.2": "ab806285517082a39dfff7403171319201d07f57",
+    "refs/tags/stdo_skills/v3.1.0-rc.2^{}": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+    "refs/tags/a_c/v3.1.0-rc.2": "1efa9888894a1fd0726d97970cff154ae919e4a7",
+    "refs/tags/a_c/v3.1.0-rc.2^{}": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+    "refs/tags/stdo_representation/v3.1.0-rc.2": "65339feb036f7e2e29b843fc7ac8cfbde7eadb72",
+    "refs/tags/stdo_representation/v3.1.0-rc.2^{}": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a",
+    "refs/tags/axiom_indexer/v3.1.0-rc.2": "8468602886dbbd344b86310a625da5a9da5f762e",
+    "refs/tags/axiom_indexer/v3.1.0-rc.2^{}": "4a7f7cdfcd724d6b2e47b3d790fa88030b70d84a"
+  },
+  "ref_graph_sha256": "b79a4a8788ecf91abc7fa2f22f8045a29bf8802a73aaeabbb330715cb0a95103",
+  "ref_graph_hash_scope": "Canonical JSON of products, refs and protected_predecessor_refs; external evidence hashes excluded.",
+  "qualification": {
+    "prepublication": {
+      "kind": "stdo.prepublication-qualified-subjects/1",
+      "status": "qualified-for-declared-prepublication-claims",
+      "carrier": "be3d42211130b960d325b0415529405dcc76a375",
+      "native": "b2e21ad0a2bab04e59afd5246b990da992417047",
+      "expected_remote_main": "2c95df2fe4656f1bbe6c4eb2d9f4be6e28446e0d",
+      "scope_record": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/PREPUBLICATION.md",
+      "qualified_files": [
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/ACTIVATION.md",
+          "sha256": "7e13bc48832a8fe0efab3743af6266c1b85b50fc7672f7307f6d60b04221e5c4"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/PREPUBLICATION.md",
+          "sha256": "80f475309c293aafd750a0ea8498a65cf8aaeb12f783d9727ca16f3114a560eb"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/PREDECESSOR_DISPOSITIONS.json",
+          "sha256": "36ad3689e70e687baab2bb175e337ac5e23f40ffdbe023ed02d1df7030653621"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/COMPANION_DISPOSITIONS.json",
+          "sha256": "7ddd748a6384faf77044cf480ab1e63102b6a685183f9db9decd89d3bd6995d8"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/NATIVE_BINDING.json",
+          "sha256": "93fc64c98009f694cd5fa1020a34a38978e85697d350f18c90380e2b9b2dfb5f"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/NATIVE_ASSESSMENT_BINDING.json",
+          "sha256": "09c575c303ae5255cb1d533c7dd87e956a1d97c7e4ffd5e55191e571d2475d2e"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/FINAL_NATIVE_IDENTITY.json",
+          "sha256": "3b0112ed15b4ea619737dc18b151bfda0e9379f57cd919ccc1073dc078c0a644"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/SOURCE_CARRIER.json",
+          "sha256": "6b57bef3b62ecb77fdffbc2758bcef79633ab250e0b423c72fbfdee0e6b54d8b"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/FINAL_FREEZE.json",
+          "sha256": "0d2f9fcdd41be3ba82be6d27ab0812e3de780eeb6d448043c51a1a2c501d0d2d"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/FINAL_RESULT.json",
+          "sha256": "d27a86e6f5ffeebfb29a3f18accd636e3ada4c2bd2426cae57e12787951c1e90"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/SOURCE_AMENDMENT_CONTROLS.json",
+          "sha256": "35f9156351fb917c82ce896dc72250e1b11140a58338a2447c5ce94cea078be2"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/regeneration-check-03.stdout",
+          "sha256": "1758b4746571d52d5d9de8b809e4775eb5a5a616988f463e75edc39b4cc7d16a"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessed-packaged/RESULT.json",
+          "sha256": "6033ee13cfaf4c5d133aa375c0cd01c43435617dbe0ae43c05243d03a87ae1db"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/PRODUCT_EXTRACTION_03.json",
+          "sha256": "73bd079066f606a2d6dff92bc2f194715dde84483e627318fd86e7c809fad193"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/visual/PACKAGE_SELECTION.json",
+          "sha256": "bde14691fccb4cda5c8f076ad8b02fd45d131e42d3e765112bfe0c4cc9fa203a"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/visual/RESULT.json",
+          "sha256": "d4ba9c237769137f42302a85ecc7f782e7c3087c2307e9f8f70e2c92265a35a2"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/visual/PREDECESSOR_COMPARISON.json",
+          "sha256": "2810cc5686d7d9925d0bfab2a869b75374db5463e74b4381280c5509e71550d3"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/visual/browser-rc3-01/RESULT.json",
+          "sha256": "0eab176221721807e6b7842d47d7076dca1910066e23f56c7b948218d10fb6d9"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager-checks/RESULT.json",
+          "sha256": "fb56889da3246cf9c929ec40802b57d56d45a42754dd9ad2dbc5a8bbb23f789e"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/method-02/PACKAGE_CHECK.json",
+          "sha256": "b7b6a50669bce7ba2d5c64958662fb247964807e5332085fe97b53bb83487496"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/ref-tests-02/RESULT.json",
+          "sha256": "3ebb240d279bee6a38acfe1443e4065cf257891ce58e91a34eafd1efc200ad2a"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/native-02/ASSESSMENT.md",
+          "sha256": "67faabe5cf8aa4886c6248d9a80452e9ad9df424928d0d9a928aa42f9002a86f"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/native-02/EXECUTION.json",
+          "sha256": "cc2f1478c32e901380d0b4871d5e38b885f05a931a8f938e4a92ab1a6a600617"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-01/ASSESSMENT.md",
+          "sha256": "a2a3d1f05379ecc0eea18691766bae2e0ae520bb85daa806588ba91f98d43e45"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/ASSESSMENT.md",
+          "sha256": "431707476781e51cbd8d5d0cd5a8c069e38e713f3ca45dd97b9aab5e09a171c6"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/EXECUTION.json",
+          "sha256": "8d73610fffd6d071e5182e59176a79b338b4837bde1125727cf7f91eacc419f6"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/TRANSCRIPTION.json",
+          "sha256": "2bdad4bcc2e74ff04c69325c978f5763c1b2625aa0d4b78f12727a4ad6d9908a"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/run_public_install.py",
+          "sha256": "b7660a816683092b3afcddc35354f3c52dee20ba5823f62dbaa58cd31c5a6f15"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/run_distribution_checks.py",
+          "sha256": "f57b51aa02ac3f62fb94e4e3aaf10ee3f4450943f8fbc3159249681936c4019e"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/GITHUB_RELEASE_NOTES.md",
+          "sha256": "59229ca37432507882a06048ad097ae2f8fe7fa2f7758d41ac38c97fd5c9b4ef"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/acceptance.json",
+          "sha256": "92ed601b2e7e822d9498bb0fe0bd34324da8f494f9b86d3733101419d7815084"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/profile.json",
+          "sha256": "0d577ad3ce628e983a5efa018bb39445d575527e546a3f41de8aa04730756dfb"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/python.json",
+          "sha256": "721ad1359bfe372112da625f878e5d4db07a09bc152682060279e1107d365fd5"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/qualification.json",
+          "sha256": "e0a6b45325616466028ce114ece77af54f9e0d9775cf19a7cafc7d437b43a8e7"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/release.json",
+          "sha256": "643437e0ef8527b04dae29da382e0bad7714ab2f7300b4f0ec1d6ab06ec773e3"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/sdlc.json",
+          "sha256": "27aa56063f1f093b61f7d09c74d2b102bdc5f79d01e3fd1c95bc313ed96627cc"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/triage.json",
+          "sha256": "49924f900f99e59cf8d7c42aebcbe6bec95ceef8bfea5f75d1a4068547bc42a9"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/work.json",
+          "sha256": "a11132609b4fd015bfeface695613930a4d3c8342b304cd811daa98905162956"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/native_cut.py",
+          "sha256": "baa7f9cb8ff7574de057371fc269cdc8ea597db724bca79299640d0ffd5cd657"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/cohort_record.py",
+          "sha256": "844e9c887df82d494b4b516434a88ddbd6f94a2752f97e4c1e45b7b157bf723c"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/PROVENANCE.json",
+          "sha256": "cde09869ba6e21a0afcf83a6bae56d61f48d1d35a1ad4594fc111d8777fea658"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/runtime_bundle.py",
+          "sha256": "ae74f49e0c31b4d9a79c05e9eb1446b526cc98387bb739c731871f680c969d44"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/test_ref_transaction.py",
+          "sha256": "8b3753bb735ee8ad64db76074c64d476b6464b2786503e7d2d6c64960a4c2ae9"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/package_tools.py",
+          "sha256": "c4efb97adeb071a9d2750ebd4bcb69240f8cd09c6ebed2373bf405f61c30a921"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/public_readback.py",
+          "sha256": "813d3173a061d5e8b10dcd8a7e417ad88a521c6a1a3eba5da52f12ac8d539ae8"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/product_bundle.py",
+          "sha256": "325e740ea806e091622ff255ea2619e67669ba605908d9ba1556d249a172d469"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+          "sha256": "ec6773476dd2bef54882279685b5d66346fabab0d90556de701b3875fb2cbf39"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo-v3.1.0-rc.3-manifest.json",
+          "sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo_toolchain-3.1.0rc3-py3-none-any.whl",
+          "sha256": "eb46d6c62d444c421da0d4c5c468adbebb972e07861df97a1670f0085c520edb"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo-manager-constraints-v3.1.0-rc.3-python313.txt",
+          "sha256": "2051b5374e86548a1e85d3cee1c58d43c1c223c7071551ea3e65fa068cd49255"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo-manager-runtime-v3.1.0-rc.3-macos-arm64-cp313.zip",
+          "sha256": "4191b24aafb73141527f952de7e80cf6160fd031828bfa94bff5a5416fe0cf67"
+        },
+        {
+          "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo-products-v3.1.0-rc.3.zip",
+          "sha256": "0975b05589c951c2c1aec08222e0d3ef655bd3fdbf254e71a2df315e2bd70669"
+        }
+      ],
+      "limits": [
+        "Finite declared subjects only; identity gate and public installation remain separate.",
+        "No human exact-cut acceptance, whole-method qualification or consumer adoption.",
+        "Actual external Claude-family review independent of Codex construction; earlier Claude-family architectural influence disclosed."
+      ]
+    },
+    "record_sha256": "60b6c2601ff644d3ad6b0a2b5ea41ae78c880617cea95a93430d17d099f72da2",
+    "public_verification": "Recorded separately after actual public acquisition and fresh installation; not supplied by this asset."
+  },
+  "publication_contract": {
+    "authority": "Owner approval and RC3 release instruction in source ACTIVATION.md.",
+    "atomic_refs": 25,
+    "immutable_tags_create_only": true,
+    "mutable_destinations_explicit_leases": true,
+    "github_normal_release": true,
+    "existing_consumers_adopted": false
+  },
+  "limits": [
+    "Finite declared claims only; no whole-method qualification or arbitrary-query coverage.",
+    "Source assessment is cross-family to Codex construction, not independent of earlier Claude-family architectural advice.",
+    "Automatic host discovery, wider usefulness, human exact-cut acceptance and consumer adoption remain separate.",
+    "Earlier immutable cuts, index assets, models and judgments retain their original subjects."
+  ]
+}

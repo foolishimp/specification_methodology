@@ -11,6 +11,8 @@ report=(a/'ASSESSMENT.md').read_text();j=next(json.loads(x) for x in re.findall(
 for row in read(a/'FREEZE.json')['files']:assert sha(Path(row['path']))==row['sha256'],row['path']
 q=read(w/'PREPUBLICATION_QUALIFICATION.json')
 for row in q['qualified_files']:assert sha(Path(row['path']))==row['sha256'],row['path']
+q['identity_readback_supplement']=read(w/'IDENTITY_READBACK_SUPPLEMENT.json')
+q['qualified_files'] += [{'path':str(p),'sha256':sha(p)} for p in [w/'IDENTITY_READBACK_SUPPLEMENT.json',w/'assessment/native-01/ASSESSMENT.md',w/'assessment/native-01/stdout.jsonl',w/'assessment/semantic-02/ASSESSMENT.md',w/'assessment/semantic-02/stdout.jsonl']]
 q['identity_assessment']={'result':j['result'],'report':str(a/'ASSESSMENT.md'),'report_sha256':sha(a/'ASSESSMENT.md'),'scope':j.get('scope'),'independence':'Claude review independent of Codex construction; not earlier Claude-family architecture direction.'};q['qualified_files'] += [{'path':str(p),'sha256':sha(p)} for p in [a/'ASSESSMENT.md',a/'EXECUTION.json',a/'FREEZE.json',w/'TAG_INTERNAL_READBACK.json',w/'REF_PLAN.json']];q['limits'][0]='Finite declared native, context, visual, package and local ref identity claims; public installation is the separate mandatory postpublication gate.';save(w/'FINAL_QUALIFICATION.json',q)
 cohort=w/'assets/cohort-release-v3.1.0-rc.3.json';run('FINAL_COHORT',['python3','-B',tool/'cohort_record.py','--root',r,'--work',w,'--plan',w/'REF_PLAN.json','--qualification',w/'FINAL_QUALIFICATION.json','--out',cohort,'--carrier',s['carrier']])
 draft=read(w/'COHORT_DRAFT.json');final=read(cohort);assert {k:v for k,v in draft.items() if k!='qualification'}=={k:v for k,v in final.items() if k!='qualification'}

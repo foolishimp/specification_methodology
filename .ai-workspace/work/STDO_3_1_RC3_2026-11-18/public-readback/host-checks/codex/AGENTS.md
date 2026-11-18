@@ -1,0 +1,1 @@
+Start from WORK_CONTRACT.md. Select the one Product Definition stdo_trial.json and verify it with the explicitly selected private manager. Read the actual installed Skills wrapper and canonical Purpose Context instructions. Preserve the fixture scope and use the sufficient run carrier; report completed work, actual checks and any unknowns through WORK_RESULT.md.

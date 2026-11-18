@@ -1,0 +1,312 @@
+{
+  "kind": "stdo.final-prepush-gate/1",
+  "result": "satisfied-for-declared-publication",
+  "carrier": "be3d42211130b960d325b0415529405dcc76a375",
+  "native": "b2e21ad0a2bab04e59afd5246b990da992417047",
+  "ref_graph_sha256": "b79a4a8788ecf91abc7fa2f22f8045a29bf8802a73aaeabbb330715cb0a95103",
+  "identity_verdict": {
+    "kind": "stdo.rc3-identity-assessment/1",
+    "result": "satisfied",
+    "carrier": "be3d42211130b960d325b0415529405dcc76a375",
+    "native": "b2e21ad0a2bab04e59afd5246b990da992417047",
+    "findings": [
+      {
+        "id": "L1",
+        "severity": "low",
+        "blocking": false,
+        "summary": "Retained failure reports native-01 and semantic-02 are not in the hash-bound qualified_files; the PREPUBLICATION.md non-rewrite claim is narrative for those two."
+      },
+      {
+        "id": "L2",
+        "severity": "low",
+        "blocking": false,
+        "summary": "Cohort records the repository-root tree for native A only; for source-B Products the root tree is implied by the commit and not stated (RELEASE \u00a72)."
+      },
+      {
+        "id": "L3",
+        "severity": "low",
+        "blocking": false,
+        "summary": "A context/FINAL_RESULT limit still names trial-hosts-02/03; semantic-03 subjects are trial-hosts-04. Wording only, digests consistent."
+      },
+      {
+        "id": "L4",
+        "severity": "low",
+        "blocking": false,
+        "summary": "Native cut tag annotation carries Frozen-Source-* markers, not the STDO-Product-Subtree/Tree markers on the other tags; the manifest and cohort bind subtree/tree."
+      }
+    ],
+    "scope": "Read-only consistency check of the frozen RC3 identity and claims against installed STDO 3.0.4 RELEASE \u00a72-\u00a78, the RC3 RELEASE.md and the RELEASE_3_1 corrective-cut clause: six Products and definitions, native A before B, 95-member native manifest, 226 companion members, exact dependency pins including the Purpose Context and Skills source-to-public changes, the 25-ref leased atomic graph with six create-only cuts, 12 protected RC2 objects, five constructed assets plus the self-excluded cohort asset, and prior report dispositions. Git object, tree and hash values are Writer observations checked only for internal consistency; no hashing or git commands were run. Not a semantic re-review of the method; no publication, public readback, installation, human acceptance or consumer adoption is assessed or implied. Public installation remains a mandatory later gate."
+  },
+  "metadata_only_cohort_change": true,
+  "qualified_files": [
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/ACTIVATION.md",
+      "sha256": "7e13bc48832a8fe0efab3743af6266c1b85b50fc7672f7307f6d60b04221e5c4"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/PREPUBLICATION.md",
+      "sha256": "80f475309c293aafd750a0ea8498a65cf8aaeb12f783d9727ca16f3114a560eb"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/PREDECESSOR_DISPOSITIONS.json",
+      "sha256": "36ad3689e70e687baab2bb175e337ac5e23f40ffdbe023ed02d1df7030653621"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/COMPANION_DISPOSITIONS.json",
+      "sha256": "7ddd748a6384faf77044cf480ab1e63102b6a685183f9db9decd89d3bd6995d8"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/NATIVE_BINDING.json",
+      "sha256": "93fc64c98009f694cd5fa1020a34a38978e85697d350f18c90380e2b9b2dfb5f"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/NATIVE_ASSESSMENT_BINDING.json",
+      "sha256": "09c575c303ae5255cb1d533c7dd87e956a1d97c7e4ffd5e55191e571d2475d2e"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/FINAL_NATIVE_IDENTITY.json",
+      "sha256": "3b0112ed15b4ea619737dc18b151bfda0e9379f57cd919ccc1073dc078c0a644"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/SOURCE_CARRIER.json",
+      "sha256": "6b57bef3b62ecb77fdffbc2758bcef79633ab250e0b423c72fbfdee0e6b54d8b"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/FINAL_FREEZE.json",
+      "sha256": "0d2f9fcdd41be3ba82be6d27ab0812e3de780eeb6d448043c51a1a2c501d0d2d"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/FINAL_RESULT.json",
+      "sha256": "d27a86e6f5ffeebfb29a3f18accd636e3ada4c2bd2426cae57e12787951c1e90"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/SOURCE_AMENDMENT_CONTROLS.json",
+      "sha256": "35f9156351fb917c82ce896dc72250e1b11140a58338a2447c5ce94cea078be2"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/regeneration-check-03.stdout",
+      "sha256": "1758b4746571d52d5d9de8b809e4775eb5a5a616988f463e75edc39b4cc7d16a"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessed-packaged/RESULT.json",
+      "sha256": "6033ee13cfaf4c5d133aa375c0cd01c43435617dbe0ae43c05243d03a87ae1db"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/PRODUCT_EXTRACTION_03.json",
+      "sha256": "73bd079066f606a2d6dff92bc2f194715dde84483e627318fd86e7c809fad193"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/visual/PACKAGE_SELECTION.json",
+      "sha256": "bde14691fccb4cda5c8f076ad8b02fd45d131e42d3e765112bfe0c4cc9fa203a"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/visual/RESULT.json",
+      "sha256": "d4ba9c237769137f42302a85ecc7f782e7c3087c2307e9f8f70e2c92265a35a2"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/visual/PREDECESSOR_COMPARISON.json",
+      "sha256": "2810cc5686d7d9925d0bfab2a869b75374db5463e74b4381280c5509e71550d3"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/visual/browser-rc3-01/RESULT.json",
+      "sha256": "0eab176221721807e6b7842d47d7076dca1910066e23f56c7b948218d10fb6d9"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/manager-checks/RESULT.json",
+      "sha256": "fb56889da3246cf9c929ec40802b57d56d45a42754dd9ad2dbc5a8bbb23f789e"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/method-02/PACKAGE_CHECK.json",
+      "sha256": "b7b6a50669bce7ba2d5c64958662fb247964807e5332085fe97b53bb83487496"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/ref-tests-02/RESULT.json",
+      "sha256": "3ebb240d279bee6a38acfe1443e4065cf257891ce58e91a34eafd1efc200ad2a"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/native-02/ASSESSMENT.md",
+      "sha256": "67faabe5cf8aa4886c6248d9a80452e9ad9df424928d0d9a928aa42f9002a86f"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/native-02/EXECUTION.json",
+      "sha256": "cc2f1478c32e901380d0b4871d5e38b885f05a931a8f938e4a92ab1a6a600617"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-01/ASSESSMENT.md",
+      "sha256": "a2a3d1f05379ecc0eea18691766bae2e0ae520bb85daa806588ba91f98d43e45"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/ASSESSMENT.md",
+      "sha256": "431707476781e51cbd8d5d0cd5a8c069e38e713f3ca45dd97b9aab5e09a171c6"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/EXECUTION.json",
+      "sha256": "8d73610fffd6d071e5182e59176a79b338b4837bde1125727cf7f91eacc419f6"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/TRANSCRIPTION.json",
+      "sha256": "2bdad4bcc2e74ff04c69325c978f5763c1b2625aa0d4b78f12727a4ad6d9908a"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/run_public_install.py",
+      "sha256": "b7660a816683092b3afcddc35354f3c52dee20ba5823f62dbaa58cd31c5a6f15"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/context/run_distribution_checks.py",
+      "sha256": "f57b51aa02ac3f62fb94e4e3aaf10ee3f4450943f8fbc3159249681936c4019e"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/GITHUB_RELEASE_NOTES.md",
+      "sha256": "59229ca37432507882a06048ad097ae2f8fe7fa2f7758d41ac38c97fd5c9b4ef"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/acceptance.json",
+      "sha256": "92ed601b2e7e822d9498bb0fe0bd34324da8f494f9b86d3733101419d7815084"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/profile.json",
+      "sha256": "0d577ad3ce628e983a5efa018bb39445d575527e546a3f41de8aa04730756dfb"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/python.json",
+      "sha256": "721ad1359bfe372112da625f878e5d4db07a09bc152682060279e1107d365fd5"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/qualification.json",
+      "sha256": "e0a6b45325616466028ce114ece77af54f9e0d9775cf19a7cafc7d437b43a8e7"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/release.json",
+      "sha256": "643437e0ef8527b04dae29da382e0bad7714ab2f7300b4f0ec1d6ab06ec773e3"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/sdlc.json",
+      "sha256": "27aa56063f1f093b61f7d09c74d2b102bdc5f79d01e3fd1c95bc313ed96627cc"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/triage.json",
+      "sha256": "49924f900f99e59cf8d7c42aebcbe6bec95ceef8bfea5f75d1a4068547bc42a9"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-03/assessments/work.json",
+      "sha256": "a11132609b4fd015bfeface695613930a4d3c8342b304cd811daa98905162956"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/native_cut.py",
+      "sha256": "baa7f9cb8ff7574de057371fc269cdc8ea597db724bca79299640d0ffd5cd657"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/cohort_record.py",
+      "sha256": "844e9c887df82d494b4b516434a88ddbd6f94a2752f97e4c1e45b7b157bf723c"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/PROVENANCE.json",
+      "sha256": "cde09869ba6e21a0afcf83a6bae56d61f48d1d35a1ad4594fc111d8777fea658"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/runtime_bundle.py",
+      "sha256": "ae74f49e0c31b4d9a79c05e9eb1446b526cc98387bb739c731871f680c969d44"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/test_ref_transaction.py",
+      "sha256": "8b3753bb735ee8ad64db76074c64d476b6464b2786503e7d2d6c64960a4c2ae9"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/package_tools.py",
+      "sha256": "c4efb97adeb071a9d2750ebd4bcb69240f8cd09c6ebed2373bf405f61c30a921"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/public_readback.py",
+      "sha256": "813d3173a061d5e8b10dcd8a7e417ad88a521c6a1a3eba5da52f12ac8d539ae8"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/product_bundle.py",
+      "sha256": "325e740ea806e091622ff255ea2619e67669ba605908d9ba1556d249a172d469"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/releases/3.1.0-rc.3/tools/ref_transaction.py",
+      "sha256": "ec6773476dd2bef54882279685b5d66346fabab0d90556de701b3875fb2cbf39"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo-v3.1.0-rc.3-manifest.json",
+      "sha256": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo_toolchain-3.1.0rc3-py3-none-any.whl",
+      "sha256": "eb46d6c62d444c421da0d4c5c468adbebb972e07861df97a1670f0085c520edb"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo-manager-constraints-v3.1.0-rc.3-python313.txt",
+      "sha256": "2051b5374e86548a1e85d3cee1c58d43c1c223c7071551ea3e65fa068cd49255"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo-manager-runtime-v3.1.0-rc.3-macos-arm64-cp313.zip",
+      "sha256": "4191b24aafb73141527f952de7e80cf6160fd031828bfa94bff5a5416fe0cf67"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/stdo-products-v3.1.0-rc.3.zip",
+      "sha256": "0975b05589c951c2c1aec08222e0d3ef655bd3fdbf254e71a2df315e2bd70669"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/IDENTITY_READBACK_SUPPLEMENT.json",
+      "sha256": "f06b7cc1ae50987b4a6f41aff17b65ae2e0a9b478486a9254b4562016184be73"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/native-01/ASSESSMENT.md",
+      "sha256": "0abe178285f110510946a6bd61a40821f87ffa60d52957c3f77d7d2d08ac72bb"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/native-01/stdout.jsonl",
+      "sha256": "9a89fd868824c057cd68ca30443f09546766bd54eb456db6a2fe66751a34bbc2"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-02/ASSESSMENT.md",
+      "sha256": "15fb0b34f15b286ab7fe1fdc7468f673c98b361125bf67f571b5ed80de023668"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/semantic-02/stdout.jsonl",
+      "sha256": "78aa0c1710035dd3e33ba01f4db54c87eefb13a6df22edafefd18b712f2edd95"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/identity-01/ASSESSMENT.md",
+      "sha256": "9f26a827d37dbe75e6fe52773b2c33860ab56d03c44ca237eeffbd94a357c4fb"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/identity-01/EXECUTION.json",
+      "sha256": "a51d87315e5636812904e413ec9e2557223889a8ea12a756d7de70b3b252ddb4"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assessment/identity-01/FREEZE.json",
+      "sha256": "ad91a41eaac4c6080e1f4038904a9935feb42ddc2a6632854076cb70e5e8cb4e"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/TAG_INTERNAL_READBACK.json",
+      "sha256": "8c0123d18dbc9064cbb79b3cf25add23eb3ca8d7acc992118b12504299ee0fd1"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/REF_PLAN.json",
+      "sha256": "e51b04f2309117ccb7ace1619b6dbf2fb3442980044100ed5fad7c5ccba561e7"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/FINAL_QUALIFICATION.json",
+      "sha256": "018c1c57bf38801641249ca75f175ba06853398074080188ba6013be346f02bd"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/assets/cohort-release-v3.1.0-rc.3.json",
+      "sha256": "a7b70d2d332a4e8d0dc172c95b8500b50eaec5b8010b82eb64a3a6b56fedadbd"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/EXPECTED_ASSETS.json",
+      "sha256": "27af1ab3f0bd4b8efe4d6dea2f1eef88b1eceacb1b43f5a90b5c146161ed7003"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/GITHUB_RELEASE_NOTES.md",
+      "sha256": "59229ca37432507882a06048ad097ae2f8fe7fa2f7758d41ac38c97fd5c9b4ef"
+    },
+    {
+      "path": "/Users/jim/src/apps/specification_methodology-3.1-rc3/.ai-workspace/work/STDO_3_1_RC3_2026-11-18/finalize_publication.py",
+      "sha256": "4e1c7d4a3ab8fc23b9d4896a21a28153b68fea0a1c7ae0068f5a3cf788832cc0"
+    }
+  ],
+  "public_verification": "Required after publication; not yet performed."
+}
