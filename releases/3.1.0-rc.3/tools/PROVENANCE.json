@@ -1,21 +1,62 @@
 {
   "kind": "stdo.release-tool-provenance/1",
-  "files": [
+  "version": "3.1.0-rc.3",
+  "predecessor_source": "2c95df2fe4656f1bbe6c4eb2d9f4be6e28446e0d",
+  "relation": "RC2 six-Product constructors adapted to the next selected ordinal. No historical five-Product gate is activated.",
+  "tools": [
+    {
+      "path": "cohort_record.py",
+      "sha256": "844e9c887df82d494b4b516434a88ddbd6f94a2752f97e4c1e45b7b157bf723c",
+      "predecessor_sha256": "c769bac2c65f37e5e2ecf4efb0bf944a82bd60086dfa2c44f75510771c99fe03",
+      "byte_equal": false
+    },
+    {
+      "path": "native_cut.py",
+      "sha256": "baa7f9cb8ff7574de057371fc269cdc8ea597db724bca79299640d0ffd5cd657",
+      "predecessor_sha256": "a532f3125f9598f784bca85ef77652a1363b167f12c11a2128d65aaa76d1e646",
+      "byte_equal": false
+    },
     {
       "path": "package_tools.py",
       "sha256": "c4efb97adeb071a9d2750ebd4bcb69240f8cd09c6ebed2373bf405f61c30a921",
-      "origin": "specification_methodology/v3/.ai-workspace/work/PURPOSE_CONTEXT_ALIGNMENT_2026-11-12/archive/common-tools/package_tools.py",
-      "reuse": "Unchanged stdlib-only inventory/package/links checker. Old combined constructors and runtime are not revived."
+      "predecessor_sha256": "c4efb97adeb071a9d2750ebd4bcb69240f8cd09c6ebed2373bf405f61c30a921",
+      "byte_equal": true
+    },
+    {
+      "path": "product_bundle.py",
+      "sha256": "325e740ea806e091622ff255ea2619e67669ba605908d9ba1556d249a172d469",
+      "predecessor_sha256": "a148833779ca97d404b2ddb9ab13461a439e98396fbae17ab6b9ccad382bd916",
+      "byte_equal": false
+    },
+    {
+      "path": "public_readback.py",
+      "sha256": "813d3173a061d5e8b10dcd8a7e417ad88a521c6a1a3eba5da52f12ac8d539ae8",
+      "predecessor_sha256": "3080e1cfc216053d398facdf2bf94c4ce31075f68f2056eabc09c1e1fc4cca1b",
+      "byte_equal": false
+    },
+    {
+      "path": "ref_transaction.py",
+      "sha256": "ec6773476dd2bef54882279685b5d66346fabab0d90556de701b3875fb2cbf39",
+      "predecessor_sha256": "b3efdcdbe319e35fb94f87f24e6319299150d1e8a93dadee62260a07ac73b862",
+      "byte_equal": false
+    },
+    {
+      "path": "runtime_bundle.py",
+      "sha256": "ae74f49e0c31b4d9a79c05e9eb1446b526cc98387bb739c731871f680c969d44",
+      "predecessor_sha256": "ae5b3735a3b6bbf99a44b1847da669b68338e4bd01dc8977521c5dd2f2ad7f19",
+      "byte_equal": false
+    },
+    {
+      "path": "test_ref_transaction.py",
+      "sha256": "3467db098c1374797514059a4394c2cc7afb23e4c45379cc843e0f337af1e143",
+      "predecessor_sha256": "eeaf9bc4ba6106670cda72d7020fd02dfe539ff099c1c975e4009ab539f8b17c",
+      "byte_equal": false
     }
   ],
-  "successor_of": "releases/3.1.0-rc.2/tools",
-  "changes": {
-    "native_cut.py": "Exact RC2 selection and RC1 predecessor from the committed descriptor; construction algorithm conserved.",
-    "runtime_bundle.py": "New owned manager version; third-party wheels conserved exactly.",
-    "product_bundle.py": "Select RC2 members and verify the actual supplied native manifest instead of hardcoding the previous digest.",
-    "ref_transaction.py": "Advance existing annotated selectors with expected-object leases; retain RC1, refuse higher ordinals, prepare local ref graph atomically and publish complete25 refs atomically.",
-    "public_readback.py": "RC2 release identity; download/digest behavior conserved.",
-    "test_ref_transaction.py": "Real local Git transport tests for advancement, refusals, atomic failure and predecessor preservation.",
-    "cohort_record.py": "Bind the actual native cut, committed source carrier and evidence, 225 archive members, annotated ref graph and actual independent assessments; exclude the cohort asset from its own hash inventory."
-  }
+  "changes": [
+    "Selected RC3 version and RC2 predecessor; create-only immutable cuts and 25-ref leased atomic transaction retained.",
+    "Cohort metadata is constructed from actual inputs and dependency inventories, without historical hash substitution.",
+    "Manager behavior and third-party wheel bytes conserved; owned manager version advances.",
+    "Package/member/ref checks supply identity evidence, not semantic assessment."
+  ]
 }

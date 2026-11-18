@@ -680,12 +680,15 @@ command names, process APIs, evaluator functions or a fixed execution loop.
 
 ### 11.5B Execution authority audit
 
-A change to traversal control, delegation, admission or continuation must
-identify the affected authority boundaries and show that each operation
+Before activation and closure, a change to traversal control, delegation
+(including worker transport and process supervision), admission, evidence
+evaluation, closure, assurance, retry or continuation must identify the
+affected authority boundaries and show that each operation
 has its declared owner and grant. The audit establishes that the runtime
 governs the affected traversal and no other controller can claim the same
 authority. It examines the supported call path as well as its outputs;
 artifact checks alone cannot establish absence of hidden control (P6).
+Missing or conflicting authority prevents the affected activation and closure.
 
 Where an operation admits a consequential transformation, its admission
 semantics remain with
@@ -757,6 +760,8 @@ close the traversal or accept the Product. Evaluation, artifact admission
 and acceptance keep their contracts and owners under ACTIVATION, TICKETS
 and EVALUATION. A common F_D claim additionally meets §5's total-domain
 contract and supplies no operation authority by itself (P6).
+An F_P worker must not be given an F_D-authored semantic extraction recipe
+when the edge requires F_P judgment (P0, P6).
 
 Each evaluation carries its predicate and core result under
 [FOUNDATIONS Results](FOUNDATIONS.md#results). Runtime-specific result

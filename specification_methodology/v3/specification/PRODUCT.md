@@ -24,7 +24,8 @@ Current source development follows the separately owned
 Purpose Context Product and Skills consumption. The owner now selects the
 [six-Product 3.1 release relation](requirements/RELEASE_3_1.md) under its exact
 [initial activation](../../../.ai-workspace/work/STDO_3_1_RELEASE_2026-11-15/ACTIVATION.md)
-and the [bounded RC2 correction](../../../.ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md).
+the [bounded RC2 correction](../../../.ai-workspace/work/STDO_3_1_RC2_2026-11-15/ACTIVATION.md),
+and the [approved RC3 correction](../../../.ai-workspace/work/STDO_3_1_RC3_2026-11-18/ACTIVATION.md).
 Native source, context and visual dependencies retain separate identities;
 qualification follows the current frozen subjects and actual evidence. The
 adopted construction builder remains exact STDO 3.0.4.
