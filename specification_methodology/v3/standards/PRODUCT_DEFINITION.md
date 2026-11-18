@@ -344,7 +344,7 @@ version-control, dependency, generated, cache or managed-store internals:
 `.git`, `.hg`, `.svn`, `.bzr`, `.venv`, `venv`, `node_modules`, `vendor`,
 `site-packages`, `build`, `dist`, `out`, `target`, `.gradle`, `.tox`,
 `.nox`, `.cache`, `.ruff_cache`, `.mypy_cache`, `.pytest_cache`,
-`__pycache__`, `.genesis` and `.stdo`. A discovered Product Definition may
+`__pycache__` and `.stdo`. A discovered Product Definition may
 not itself be a symlink. These exclusions are discovery law, not evidence
 that an excluded tree lacks another independently governed Product (P5,
 P6).

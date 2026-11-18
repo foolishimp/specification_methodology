@@ -53,10 +53,10 @@ can reconstruct the project (P2, P0).
 
 The boundary between surfaces is this: this member defines the process
 constitution; a goals surface, conventionally `GOALS.md`, names the current
-overriding concerns for the active body of work; an intent surface,
+epics or bounded work wave; an intent surface,
 conventionally `INTENT.md`, names domain direction; a product-definition
-surface, conventionally `PRODUCT.md`, names the current product definition
-of the mutable source project; a requirement surface, conventionally
+surface, conventionally `PRODUCT.md`, defines the intended Product end state,
+including capabilities still to be built; a requirement surface, conventionally
 `specification/requirements/`, is the live requirement surface derived from
 the product definition; a shared design surface plus any tenant-local design
 surfaces choose the concrete mechanism. The product's definition binds the
@@ -192,7 +192,7 @@ its own locus:
 - Row 3, layer sufficiency and several realisations: [§11](#11-build-tenant-binding), rule 1 and Application in this method, where the execution binding is chosen under the Design rule; [WRITING_GUIDE §7](WRITING_GUIDE.md#7-specification-artifact-practice), whose discipline, with the layer checks of its §8, keeps each sentence in its layer and asks whether the next layer can derive from the artifact.
 - Row 4, live surface immutability and the version boundary: [RELEASE §6 Release-scoped assets](RELEASE.md#release-scoped-assets), where a live constitutional surface's use of version labels follows the surface rule; [WRITING_GUIDE §9](WRITING_GUIDE.md#9-current-surface-writing), which writes the current surface in the present tense and removes what is no longer live; [IDENTITY §9](IDENTITY.md#9-release-version-boundary), where an immutable release cut is the only exact operative release identifier and release version is not object identity; [Fundamental migration](#fundamental-migration), a supersession by a new constitutional surface and no in-place mutation.
 - Row 5, the renewal path and lifecycle sufficiency: [ASSURANCE §16](ASSURANCE.md#16-module-lifecycle-confirmation), which applies the three answers to the design evidence of a governed boundary; [DESIGN_MODULE §11 Design review questions](DESIGN_MODULE.md#design-review-questions), question 32, and [Functional realisation checklist](DESIGN_MODULE.md#functional-realisation-checklist), whose lifecycle items are confirmed against the canonical chain.
-- Row 6, outcome conservation: [TICKETS §5 Execution contract admission](TICKETS.md#execution-contract-admission), where a ticket's status, lane or contract is never the admission of a growth basis, and [§6 Closure of a migration ticket](TICKETS.md#closure-of-a-migration-ticket), where growth after an accepted slice needs another admitted basis; [ODD §11.5D](ODD.md#115d-constructive-evaluation-and-yield-loop), where the selected outcome is external authority for the loop, and the [ODD family table](ODD.md#foundation-to-law), whose row for the selected outcome imports F10; [CONFORMANCE §1](CONFORMANCE.md#1-counterexample-cases), case C-08; [§8](#8-bounded-execution-in-this-method), which binds a step's selected outcome to the product outcome, prerequisite or experiment of this section; [Constitutional migration options](#constitutional-migration-options), where ticket activity alone is no basis for further growth.
+- Row 6, outcome conservation: [TICKETS §5 Execution contract admission](TICKETS.md#execution-contract-admission), where a ticket's status, lane or contract is never the admission of a growth basis, and [§6 Closure of a migration ticket](TICKETS.md#closure-of-a-migration-ticket), where growth after an accepted slice needs another admitted basis; [ODD §11.5D](ODD.md#115d-evidence-and-bounded-decisions), where the selected outcome is external authority for traversal, and the [ODD family table](ODD.md#foundation-to-law), whose row for the selected outcome imports F10; [CONFORMANCE §1](CONFORMANCE.md#1-counterexample-cases), case C-08; [§8](#8-bounded-execution-in-this-method), which binds a step's selected outcome to the product outcome, prerequisite or experiment of this section; [Constitutional migration options](#constitutional-migration-options), where ticket activity alone is no basis for further growth.
 - Row 7, the evidence for closing a realisation claim: no separate consumer applies. The closure condition the evidence serves is [TICKETS §7 Condition-based closure and reuse](TICKETS.md#condition-based-closure-and-reuse)'s, which names this section nowhere, and the rules of evidence it points to are EVALUATION's and ASSURANCE's own, as the choice column states; the kinds of evidence are assembled where a claim closes, under that condition.
 - Row 8, lineage objects and shared method adoption: [PRODUCT_DEFINITION §1](PRODUCT_DEFINITION.md#1-overlay-and-layout-independence), where changing a released Product does not repurpose the definition identity as release identity, and [§7](PRODUCT_DEFINITION.md#7-collective-reference-frame-basis), whose map keeps the lineage objects as distinct identities; [ASSURANCE §5](ASSURANCE.md#5-installed-dev-proof), which takes the install and development-product roles from §6; [POSTING_GUIDE §10](POSTING_GUIDE.md#10-shared-method-adoption), where a post that carries evidence or proposes a change adopts nothing.
 - Row 9, method identity: [TICKETS](TICKETS.md#tickets), its preamble, which places that member as the T area of the method identity and makes nothing in it foundational.
@@ -212,10 +212,11 @@ Goals → Intent → Product Definition → Requirements → Design → Code
   → Repricing at the layer its change class names
 ```
 
-Goals define the current overriding concerns for the active body of work.
-Intent defines purpose and direction. Product Definition defines the current
-product realisation of the mutable source project, its key terms and its
-end-state shape in terms that can be decomposed into requirements.
+Goals identify the current epics or bounded work wave being pursued toward
+the Product. Intent defines purpose and direction. Product Definition defines
+the intended Product end state, including capabilities still to be built,
+its key terms and its boundaries, in terms that requirements decompose and
+make true.
 Requirements define invariant truths the system must satisfy. Design
 defines the structural decisions, interfaces, carrier surfaces and delivery
 topology that make those truths achievable; ADRs are one durable form of
@@ -245,15 +246,17 @@ Code, Events and Projection name responsibilities every realisation
 carries in the carrier its binding selects (§11), and no product owes a
 code base or an event store that its binding does not select (P2, P6).
 
-The goals surface is the bounded work-wave surface: it captures the current
-overriding concerns for the next body of work, keeps temporary focus out of
+The goals surface is the bounded work-wave surface: it identifies the current
+epics being pursued toward the Product, keeps temporary focus out of
 deeper constitutional layers until it is intentionally repriced there, and
 is more immediate than intent while remaining higher-level than product
 definition and requirements. The product-definition surface is the bridge
-between direction and obligation: it states the current product definition
-of the mutable source project in present-tense terms, names the product
-terms and boundaries that downstream layers rely on, and provides the
-surface that requirements decompose. It is not the immutable release cut
+between direction and obligation: it states the intended Product end state
+under the definition currently in force. Present-tense declarations describe
+that adopted destination; implementation status and delivery claims need their
+own evidence. The definition names the product terms and boundaries that
+downstream layers rely on and provides the surface that requirements decompose.
+It is not the immutable release cut
 and not the installed product; those are the lineage objects of FOUNDATIONS
 §2 (P3).
 
@@ -276,8 +279,8 @@ The relation between the WHAT and the build tenants that realise it is
 The method commits to these (P2, P6). It defines the
 current goals for the active body of work before repricing deeper
 constitutional layers. It works from intent before implementation. It
-defines the current product definition in explicit present-tense terms
-before decomposing it into detailed requirements. It defines the full
+defines the intended Product end state, including capabilities still to be
+built, before decomposing it into detailed requirements. It defines the full
 constitutional what in requirements, not merely a feature list. It prefers
 declaring desired truth and lawful boundaries over prescribing step-by-step
 imperative procedure. It makes design the explicit structural bridge
@@ -875,7 +878,7 @@ layers its repricing flows through (P4b, P2):
 |---|---|---|---|
 | `goal_reprice` | current bounded work-wave focus changes | Goals | Intent, Product, Requirements, Design, Code and Evidence where that focus changes deeper constitutional truth |
 | `intent_reprice` | directional or scope change | Intent | Product, Requirements, Design, Code, Evidence |
-| `product_reprice` | current product realisation changes while directional intent stays stable | Product | Requirements, Design, Code, Evidence |
+| `product_reprice` | the adopted Product definition or intended end state changes while directional intent stays stable | Product | Requirements, Design, Code, Evidence |
 | `requirement_reprice` | constitutional truth changes while project direction stays stable | Requirements | Design, Code, Evidence |
 | `design_reframe` | realisation structure changes while active intent and requirement truth stay stable | Design | Code, Evidence |
 | `realization_refactor` | local code, configuration or attribute change with no intended constitutional or structural change | the realised surface only | nothing upstream; it must prove no upstream drift |
@@ -912,7 +915,7 @@ an instance of
 creates no authority, and introduce no calculus kind, runtime, classifier interface or mandatory
 document.
 
-The explicitly selected source, worksite or qualification capability
+The explicitly selected source, workspace or qualification capability
 produces C over the exact request and desired outcome, the known targets
 and effects, the operation grant and work lifetime, the product definition
 and governing basis, the baseline and the available candidate, the declared
@@ -1106,8 +1109,8 @@ release-bound change.
 
 When a feature is introduced or changed: update goals if the current
 bounded work wave or overriding concerns have changed; update intent if the
-purpose or scope has changed; update product if the current product
-realisation, terms, boundaries or end-state shape have changed; update
+purpose or scope has changed; update Product if its adopted intended end
+state, terms or boundaries have changed; update
 requirements so the invariant truths are explicit as a decomposition of the
 product definition, including any lifecycle obligations or named lifecycle
 ambiguity gaps, and classify each new or changed requirement by category;

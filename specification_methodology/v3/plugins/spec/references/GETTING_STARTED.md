@@ -5,7 +5,7 @@ it. Resolve the exact method and existing work grant, then use the smallest
 sufficient work or review path. This guide and the skills route attention;
 the selected installed standards and Product-owned authority decide.
 
-This guide belongs to the exact native 3.1.0-rc.2 cut. It includes the
+This guide belongs to the exact native 3.1.0-rc.3 cut. It includes the
 adoptable SDLC default and separate Skills/Purpose Context setup. An existing
 Product retains its selected complete method and frame basis until its own
 authorized adoption. The fixed bootstrap below is for a Product explicitly
@@ -345,7 +345,7 @@ Choose an index by **purpose and exact source**:
 
 | Decision | Purpose and selection |
 |---|---|
-| Work, incremental QA, causal triage, repair, named boundary or evidence reuse | `sdlc-workflow/1`, selecting the catalog entry that binds the exact native 3.1.0-rc.2 source. Read the returned skill's `references/sdlc-workflow.md`. |
+| Work, incremental QA, causal triage, repair, named boundary or evidence reuse | `sdlc-workflow/1`, selecting the catalog entry that binds the exact native 3.1.0-rc.3 source. Read the returned skill's `references/sdlc-workflow.md`. |
 | Pure/local Python 3.12 realization refactoring under adopted DESIGN_MODULE | `python-pure-refactor/2`, selecting the entry matching the actual released basis and query. Historical entries retain their separate bindings. |
 
 The release-matched index records its actual native manifest and exact source
@@ -377,29 +377,29 @@ retain unrelated evidence whose validity still holds.
 
 ### New Project
 
-This is the **fixed 3.1.0-rc.2 release bootstrap** for a new Product that
+This is the **fixed 3.1.0-rc.3 release bootstrap** for a new Product that
 explicitly selects this release. It installs the exact native method and
 acquires the separate Product distribution. Existing Products use their actual
 basis and an explicit migration plan.
 
-The normal public release titled STDO 3.1.0 selects immutable cut 3.1.0-rc.2.
+The normal public release titled STDO 3.1.0 selects immutable cut 3.1.0-rc.3.
 Its six separately owned Products use that suffix; the Python manager uses
-PEP 440 spelling 3.1.0rc2. The following manager recipe selects Git, macOS arm64
+PEP 440 spelling 3.1.0rc3. The following manager recipe selects Git, macOS arm64
 and CPython 3.13. It creates a new explicit environment, store and Product
 directory. Other platforms use the exact constraints with their own compatible
 wheel acquisition and verification; the listed archive does not qualify them.
 
 ```sh
 set -eu
-STDO_CUT='v3.1.0-rc.2'
-STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.2'
-STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-3.1.0-rc.2"
-STDO_STORE_ROOT="$HOME/.local/share/stdo-store-3.1.0-rc.2"
-STDO_PRODUCTS_ROOT="$HOME/.local/share/stdo-products-3.1.0-rc.2"
+STDO_CUT='v3.1.0-rc.3'
+STDO_ASSETS='https://github.com/foolishimp/specification_methodology/releases/download/specification_methodology%2Fv3.1.0-rc.3'
+STDO_MANAGER_ENV="$HOME/.local/share/stdo-toolchain-3.1.0-rc.3"
+STDO_STORE_ROOT="$HOME/.local/share/stdo-store-3.1.0-rc.3"
+STDO_PRODUCTS_ROOT="$HOME/.local/share/stdo-products-3.1.0-rc.3"
 STDO_DOWNLOAD_DIR="$(mktemp -d)"
 curl --fail --location --output "$STDO_DOWNLOAD_DIR/release.json" \
-  'https://api.github.com/repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.1.0-rc.2'
-for asset in stdo_toolchain-3.1.0rc2-py3-none-any.whl stdo-v3.1.0-rc.2-manifest.json stdo-manager-runtime-v3.1.0-rc.2-macos-arm64-cp313.zip stdo-manager-constraints-v3.1.0-rc.2-python313.txt stdo-products-v3.1.0-rc.2.zip cohort-release-v3.1.0-rc.2.json; do
+  'https://api.github.com/repos/foolishimp/specification_methodology/releases/tags/specification_methodology%2Fv3.1.0-rc.3'
+for asset in stdo_toolchain-3.1.0rc3-py3-none-any.whl stdo-v3.1.0-rc.3-manifest.json stdo-manager-runtime-v3.1.0-rc.3-macos-arm64-cp313.zip stdo-manager-constraints-v3.1.0-rc.3-python313.txt stdo-products-v3.1.0-rc.3.zip cohort-release-v3.1.0-rc.3.json; do
   curl --fail --location --output "$STDO_DOWNLOAD_DIR/$asset" "$STDO_ASSETS/$asset"
 done
 python3.13 - "$STDO_DOWNLOAD_DIR" <<'PYVERIFY'
@@ -407,12 +407,12 @@ from pathlib import Path
 import hashlib, json, sys
 root = Path(sys.argv[1])
 release = json.loads((root / 'release.json').read_bytes())
-if release.get('tag_name') != 'specification_methodology/v3.1.0-rc.2' or release.get('draft') is not False or release.get('prerelease') is not False:
+if release.get('tag_name') != 'specification_methodology/v3.1.0-rc.3' or release.get('draft') is not False or release.get('prerelease') is not False:
     raise SystemExit('wrong fixed RC release or publication status')
-names = {'stdo_toolchain-3.1.0rc2-py3-none-any.whl', 'stdo-v3.1.0-rc.2-manifest.json',
-         'stdo-manager-runtime-v3.1.0-rc.2-macos-arm64-cp313.zip',
-         'stdo-manager-constraints-v3.1.0-rc.2-python313.txt',
-         'stdo-products-v3.1.0-rc.2.zip', 'cohort-release-v3.1.0-rc.2.json'}
+names = {'stdo_toolchain-3.1.0rc3-py3-none-any.whl', 'stdo-v3.1.0-rc.3-manifest.json',
+         'stdo-manager-runtime-v3.1.0-rc.3-macos-arm64-cp313.zip',
+         'stdo-manager-constraints-v3.1.0-rc.3-python313.txt',
+         'stdo-products-v3.1.0-rc.3.zip', 'cohort-release-v3.1.0-rc.3.json'}
 assets = release.get('assets', [])
 if len(assets) != len(names) or {a['name'] for a in assets} != names:
     raise SystemExit('release asset population differs')
@@ -423,16 +423,16 @@ for asset in assets:
 PYVERIFY
 test ! -e "$STDO_MANAGER_ENV" && test ! -L "$STDO_MANAGER_ENV"
 test ! -e "$STDO_PRODUCTS_ROOT" && test ! -L "$STDO_PRODUCTS_ROOT"
-python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-manager-runtime-v3.1.0-rc.2-macos-arm64-cp313.zip" "$STDO_DOWNLOAD_DIR/runtime"
+python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-manager-runtime-v3.1.0-rc.3-macos-arm64-cp313.zip" "$STDO_DOWNLOAD_DIR/runtime"
 python3.13 -m venv "$STDO_MANAGER_ENV"
 "$STDO_MANAGER_ENV/bin/python" -m pip install --no-index --find-links "$STDO_DOWNLOAD_DIR/runtime/wheels" --require-hashes --no-deps -r "$STDO_DOWNLOAD_DIR/runtime/requirements-macos-arm64-cp313.txt"
 "$STDO_MANAGER_ENV/bin/python" -m pip check
 stdo() { "$STDO_MANAGER_ENV/bin/stdo" --store "$STDO_STORE_ROOT" "$@"; }
 stdo --version
-STDO_MANIFEST="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.1.0-rc.2-manifest.json")"
+STDO_MANIFEST="$(python3.13 -c 'import hashlib,sys; print(hashlib.sha256(open(sys.argv[1],"rb").read()).hexdigest())' "$STDO_DOWNLOAD_DIR/stdo-v3.1.0-rc.3-manifest.json")"
 stdo install "$STDO_CUT" --repository https://github.com/foolishimp/specification_methodology.git --manifest-sha256 "$STDO_MANIFEST"
 stdo verify "$STDO_CUT" --manifest-sha256 "$STDO_MANIFEST"
-python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-products-v3.1.0-rc.2.zip" "$STDO_PRODUCTS_ROOT"
+python3.13 -m zipfile -e "$STDO_DOWNLOAD_DIR/stdo-products-v3.1.0-rc.3.zip" "$STDO_PRODUCTS_ROOT"
 ```
 
 A failed download, checksum, dependency installation or exact-cut verification
@@ -644,7 +644,7 @@ The table quotes SPEC_METHOD §4 Change classes, which owns them.
 |---|---|---|
 | current bounded work-wave focus changes | `goal_reprice` | Goals |
 | directional or scope change | `intent_reprice` | Intent |
-| current product realisation changes while directional intent stays stable | `product_reprice` | Product |
+| the adopted Product definition or intended end state changes while directional intent stays stable | `product_reprice` | Product |
 | constitutional truth changes while project direction stays stable | `requirement_reprice` | Requirements |
 | realisation structure changes while active intent and requirement truth stay stable | `design_reframe` | Design |
 | local code, configuration or attribute change with no intended constitutional or structural change; it must prove no upstream drift | `realization_refactor` | the realised surface only |
@@ -856,7 +856,7 @@ and [reading guide](../../../standards/documentation/README.md) route this
 exact native method, default and independent Product setup. Resolve the page:
 
 ```sh
-stdo resolve stdo://releases/v3.1.0-rc.2/standards/documentation/index.html
+stdo resolve stdo://releases/v3.1.0-rc.3/standards/documentation/index.html
 ```
 
 For optional current visual documentation, select Representation Tools through

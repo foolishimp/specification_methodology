@@ -302,14 +302,13 @@ keeps its legacy basis and requires an explicit migration (P1, P3).
 | Indexed term | Bounded-context identity | Owning concept clause | Relation clause |
 |---|---|---|---|
 | `ODD`; `Outcome-Driven Development` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#1-position`](ODD.md#1-position) | none |
-| `GTL`; `Graph Transformation Language` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#1-position`](ODD.md#1-position) | none |
-| `ABG` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#1-position`](ODD.md#1-position) | [`ODD.md#abg`](ODD.md#abg) |
+| `graph language`; `graph module` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#1-position`](ODD.md#1-position) | none |
+| `runtime` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#1-position`](ODD.md#1-position) | [`ODD.md#runtime`](ODD.md#runtime) |
 | `Edge Traversal`; `Traversal` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#traversal`](ODD.md#traversal) | none |
 | `Probabilistic Compute` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | none |
 | `F_D` (imported use) | `urn:stdo:bounded-context:axiomatic-calculus` | [`AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds`](AXIOMATIC_CALCULUS.md#5-traversals-and-functor-kinds) | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) |
 | `F_P` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) |
 | `F_H` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#probabilistic-compute`](ODD.md#probabilistic-compute) | [`SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle`](SPEC_METHOD.md#5-ambiguity-governance-and-lifecycle) |
-| closure decision: `close`; `yield`; `retry(defeated)`; `retry(undecided)`; `repair(implementation)`; `repair(proof)`; `re-enter(undeclared)`; `re-enter(basis)`; `reprice`; `block(undeclared)`; `block(basis)` | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#115d-constructive-evaluation-and-yield-loop`](ODD.md#115d-constructive-evaluation-and-yield-loop) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
 | audit outcome: compliant; non-compliant; valid and worth incorporating | `urn:stdo:bounded-context:graph-native-odd` | [`ODD.md#9-method-governance-and-audit`](ODD.md#9-method-governance-and-audit) | [`FOUNDATIONS.md#results`](FOUNDATIONS.md#results) |
 
 ## 15. Traversal occurrence

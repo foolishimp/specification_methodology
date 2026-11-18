@@ -18,7 +18,7 @@ Product-owned, digest-pinned policy of this form:
   "schema_version": 1,
   "policy_id": "<exact policy identity>",
   "authority_ref": "<existing grant identity and source route>",
-  "cwd": "<canonical absolute worksite>",
+  "cwd": "<canonical absolute workspace>",
   "read_paths": ["<canonical absolute permitted control file>"],
   "bash_commands": ["<complete exact permitted command string>"],
   "skills": ["spec:stdo-work"]
@@ -64,11 +64,11 @@ write grant. Register the hook for every tool, with failure blocking selected;
 otherwise a crash, timeout or unmatched tool could bypass the intended gate.
 
 Bind the available tool roster to `Read,Skill,Bash` for the supported policy
-surface, the explicit plugin root, selected worksite and exact session settings.
+surface, the explicit plugin root, selected workspace and exact session settings.
 With `--restricted`, `--plugin-dir` loads the skill but does not itself make its
-shared references readable outside the worksite. Bind `--add-dir` to that exact
+shared references readable outside the workspace. Bind `--add-dir` to that exact
 already-admitted plugin root as well. If a required direct owner-file read is
-outside the worksite, bind only its already-admitted directory or use the
+outside the workspace, bind only its already-admitted directory or use the
 approved source-reader command; do not add a parent, home or whole fixture
 tree. These host directory capabilities do not enlarge the business grant:
 the gate still admits only its exact policy paths/commands. Expose the selected

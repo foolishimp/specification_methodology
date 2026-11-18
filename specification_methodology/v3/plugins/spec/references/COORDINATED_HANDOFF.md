@@ -307,7 +307,7 @@ For a strict selected tool-acquisition boundary, use the concrete
 host permission prompt or a fresh actor supplies that boundary.
 
 Use the host's actually available delegation or separate-session mechanism.
-Record the selected actor/model where exposed, worksite, supplied packet,
+Record the selected actor/model where exposed, workspace, supplied packet,
 inherited history/instructions, available tool/permission settings and return
 channel. Respect the admitted context/resource envelope. Unknown required
 properties withhold dispatch; optional unobserved properties are explicit
@@ -322,7 +322,7 @@ limits. Tool availability alone grants no operation.
   delegation mechanism, return the prepared packet without claiming dispatch.
 - **Claude:** select the available subagent/session mechanism and inspect the
   selected agent definition, inherited instructions, tool permissions and
-  worksite. Supply the packet and target skill explicitly. A subagent label
+  workspace. Supply the packet and target skill explicitly. A subagent label
   or a resumed session does not establish a clean context. Return through
   the actual task/result mechanism; if its properties cannot meet a required
   boundary, return the unsupported activation rather than silently executing
