@@ -11,9 +11,10 @@ remains the source for a consumer's governing rules.
 STDO (Specification, Ticketing, Design, and Outcome-Driven Development)
 developed through applications, coding agents, development workflows,
 execution engines and a parallel investigation into constraints and emergence.
-Its independent repository began in April 2026. Its practical ancestry reaches
-back to experiments in 2024, including a collaborative whiteboard, Chain of
-Thoth and Coder for Hire, usually shortened to C4H.
+Its independent repository began in April 2026. The author dates the beginning
+of the work to **mid-2024**, before the surviving application check-ins.
+Its practical ancestry includes a collaborative whiteboard, Chain of Thoth
+and Coder for Hire, usually shortened to C4H.
 
 The applications and the foundational investigation developed together. In the
 author's account, questions about the fundamentals were already part of the
@@ -80,6 +81,24 @@ their recorded time zones; they do not establish when an idea was first
 conceived. Some early repositories require access to the author's archives.
 
 ## 2024: applications, state and the first construction agents
+
+### Mid-2024: the work begins
+
+The author's initial work began in mid-2024, using conversational AI to explore
+ideas and construct applications. The first application recalled was a Mural
+replacement, later preserved as Brain Dump / MyPostit. The surviving Git
+history anchors the experiments in August and the whiteboard implementation
+in September; it does not establish the first day of the work.
+
+The model releases provide context for this period. ChatGPT launched using
+GPT-3.5 on **30 November 2022**, and Anthropic introduced Claude on
+**14 March 2023**. By mid-2024, OpenAI had announced GPT-4o on **13 May**, and
+Anthropic released Claude 3.5 Sonnet in **June**. The project's mid-2024 start
+therefore belongs to that later generation of tools. It is separate from the
+original launches of ChatGPT and Claude. These dates describe availability;
+they do not establish which model was used for each early experiment.
+[ChatGPT introduction][chatgpt-launch], [Claude introduction][claude-launch],
+[GPT-4o announcement][gpt4o-launch], [Claude 3.5 Sonnet][sonnet35-launch]
 
 ### Brain Dump and MyPostit
 
@@ -871,3 +890,7 @@ the locally available continuation of the record.
 [langgraph]: https://www.langchain.com/blog/langgraph
 [kiro]: https://kiro.dev/blog/introducing-kiro/
 [spec-kit]: https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/
+[chatgpt-launch]: https://openai.com/index/chatgpt/
+[claude-launch]: https://www.anthropic.com/news/introducing-claude
+[gpt4o-launch]: https://openai.com/index/hello-gpt-4o/
+[sonnet35-launch]: https://www.anthropic.com/news/claude-3-5-sonnet

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="The history of STDO: from mid-2024 AI-assisted application experiments through C4H, constraint-emergence research, Genesis and the specification methodology.">
+  <meta name="history-source-sha256" content="@@SOURCE_SHA@@">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2313263b'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Georgia' font-size='25' fill='white'%3ES%3C/text%3E%3C/svg%3E">
+  <title>A history of STDO · 2024–2026</title>
+  <style>
+    :root{--ink:#152c42;--muted:#53677b;--blue:#2254a4;--teal:#217c70;--rust:#9b5234;--line:#dce3ea;--paper:#fbfcfd;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--top:72px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}a{color:var(--blue);text-underline-offset:4px;text-decoration-thickness:1px}a:hover{text-decoration-thickness:2px}button,select{font:inherit}button,a,summary,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid #c56f38;outline-offset:5px}::selection{background:#cee5fa;color:#152c42}h1,h2,h3,p,figure{margin-top:0}h1,h2,h3{line-height:1.15}button{border:0;background:none;color:inherit}button[hidden]{display:none}svg{display:block}section{scroll-margin-top:0}.skip{position:fixed;left:20px;top:-100px;background:white;padding:10px 20px;z-index:100}.skip:focus{top:12px}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(251,252,253,.97);border-bottom:1px solid var(--line);height:var(--top)}.topbar-inner{max-width:1400px;margin:auto;padding:0 52px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:17px;font-weight:750;letter-spacing:.05em;text-decoration:none;color:var(--ink);white-space:nowrap}.brand span{font-weight:400;color:var(--muted);letter-spacing:0;margin-left:14px;border-left:1px solid var(--line);padding-left:18px}.top-actions{display:flex;align-items:center;gap:26px;font-size:14px}.top-actions a,.top-actions button{text-decoration:none;padding:7px 0;white-space:nowrap}.top-actions button:hover,.top-actions a:hover{color:var(--blue);text-decoration:underline}.reading-label{font-variant-numeric:tabular-nums;color:var(--muted)}.progress{position:absolute;left:0;bottom:-1px;width:100%;height:2px;appearance:none;border:0;background:transparent;color:var(--blue)}.progress::-webkit-progress-bar{background:transparent}.progress::-webkit-progress-value{background:var(--blue)}.progress::-moz-progress-bar{background:var(--blue)}
+    .hero{background:#13263b;color:#f5f8fc;overflow:hidden}.hero-inner{max-width:1400px;margin:auto;padding:82px 72px 70px;display:grid;grid-template-columns:1.13fr 1fr;gap:65px;align-items:center}.eyebrow{font-size:14px;letter-spacing:.13em;text-transform:uppercase;font-weight:650;color:var(--blue);margin-bottom:24px}.hero .eyebrow{color:#a6c8e9}.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(64px,7.6vw,110px);letter-spacing:-.055em;line-height:.98;margin:0 0 30px}.hero h1 span{display:block;color:#abcce9}.hero-deck{font-size:21px;color:#d8e2ec;max-width:490px;line-height:1.6;margin-bottom:32px}.hero-meta{display:flex;flex-wrap:wrap;gap:12px 26px;color:#acc1d6;font-size:14px}.hero-meta strong{font-weight:500;color:#e2ebf4}.hero-art{position:relative;padding:24px 0}.hero-art svg{width:100%;height:auto;overflow:visible}.hero-art figcaption{color:#b0c5d9;font-size:14px;max-width:330px;margin:22px auto 0;text-align:center;line-height:1.6}.hero-art text{font-family:var(--sans)}
+    .era-strip{max-width:1400px;margin:auto;padding:28px 72px;display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}.era-strip a{color:var(--ink);text-decoration:none;padding:5px 25px;border-left:1px solid var(--line);font-size:15px;line-height:1.6}.era-strip a:first-child{padding-left:0;border-left:0}.era-strip strong{display:block;font-size:17px;color:var(--blue);font-weight:650}.era-strip a:hover strong{text-decoration:underline;text-underline-offset:5px}.page{max-width:1400px;margin:auto;display:grid;grid-template-columns:225px minmax(0,1fr);gap:65px;padding:70px 72px 0}.rail{position:sticky;top:108px;align-self:start;max-height:calc(100vh - 135px);overflow:auto;padding:0 12px 20px 0;scrollbar-width:thin}.rail-label{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 18px}.chapter-nav{border-left:1px solid var(--line)}.chapter-nav a{position:relative;display:block;color:var(--muted);padding:10px 0 10px 18px;font-size:14px;line-height:1.4;text-decoration:none;border-left:2px solid transparent;margin-left:-1px}.chapter-nav a span{display:block;font-size:12px;color:#6b7e8d;margin-bottom:3px}.chapter-nav a:hover{color:var(--blue)}.chapter-nav a[aria-current="location"]{border-left-color:var(--blue);color:var(--blue);font-weight:650;background:#eff4fa}.chapter-nav a[aria-current="location"] span{color:var(--blue);font-weight:400}.rail-note{margin:24px 0 0;font-size:13px;line-height:1.6;color:var(--muted)}.mobile-nav{display:none}.article{min-width:0}.introduction{padding-bottom:70px}.introduction .eyebrow{margin-bottom:20px}.introduction h2{font-family:var(--serif);font-weight:400;font-size:43px;letter-spacing:-.025em;max-width:650px;margin-bottom:32px}.source-cut{border-left:3px solid var(--teal);padding:18px 22px;margin:34px 0 0;background:#edf5f4;font-size:15px;line-height:1.65;color:#325e5b}.source-cut strong{display:block;margin-bottom:4px;color:#204c46}
+    .chapter{border-top:1px solid var(--line);padding:62px 0 65px}.chapter-heading{margin-bottom:36px}.chapter-heading .eyebrow{margin-bottom:17px}.chapter-heading h2{font-family:var(--serif);font-size:clamp(32px,3.4vw,44px);font-weight:400;letter-spacing:-.025em;max-width:800px;margin-bottom:20px}.chapter-deck{font-size:18px;line-height:1.6;color:var(--muted);max-width:650px;border-left:2px solid #bbcadc;padding-left:20px}.prose{font-size:18px;line-height:1.8}.prose p{margin-bottom:23px}.prose h3{font-family:var(--serif);font-size:29px;line-height:1.25;font-weight:600;letter-spacing:-.015em;margin:45px 0 22px}.prose h3:first-child{margin-top:0}.prose strong{font-weight:650}.prose code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em;background:#edf1f5;border-radius:3px;padding:2px 5px;overflow-wrap:anywhere}.prose pre{background:#142b42;color:#e5eef6;padding:25px 28px;border-radius:5px;overflow:auto;line-height:1.65;font-size:15px;margin:35px 0}.prose pre code{padding:0;background:none;color:inherit;font-size:inherit}.prose ul,.prose ol{padding-left:25px}.prose a{overflow-wrap:anywhere}.prose>p,.prose>h3{max-width:760px}.table-scroll{overflow:auto;margin:35px 0;border-top:2px solid #31597d;border-bottom:1px solid var(--line)}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65;min-width:590px}th,td{padding:17px 15px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{font-weight:650;background:#edf2f7;color:#254969}th:first-child,td:first-child{padding-left:15px;min-width:110px}tr:last-child td{border-bottom:0}tbody tr:nth-child(even){background:#f4f7fa}
+    .diagram-figure{margin:38px 0;border:1px solid var(--line);border-radius:8px;background:#f2f6fa;overflow:hidden}.diagram-figure>figcaption{font-size:16px;font-weight:650;padding:22px 25px 0}.diagram-scroll{overflow:auto;padding:16px 12px 0;scrollbar-width:thin}.history-diagram{width:100%;min-width:650px;height:auto}.diagram-key{font-size:13px;line-height:1.6;color:var(--muted);display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:15px 25px 22px!important}.key-line{display:inline-block;width:26px;height:0;border-top:2px solid #71849a}.key-line.dotted{border-top-style:dashed;margin-left:10px}.diagram-text{border-top:1px solid var(--line);background:#f9fbfd;font-size:14px}.diagram-text summary{cursor:pointer;padding:15px 25px;color:var(--blue);font-weight:550}.diagram-text ul{margin:0;padding:10px 28px 24px 45px}.diagram-text li{padding:6px 0}.diagram-text li span{display:block;color:var(--muted);font-size:13px}.sources-directory{padding:30px 0 55px}.sources-directory h3{font-family:var(--serif);font-size:29px;margin-bottom:15px}.sources-directory>p{font-size:16px;color:var(--muted)}.sources-directory details{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.sources-directory summary{padding:20px 0;font-size:16px;cursor:pointer;color:var(--blue)}.source-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.source-list li{border-top:1px solid var(--line);padding:13px 0;font-size:15px;line-height:1.5;overflow-wrap:anywhere}.source-list span{display:block;font-size:12px;color:var(--muted);margin-top:5px}.footer{background:#13263b;color:#cad8e5;margin-top:30px;padding:38px 72px;font-size:14px}.footer-inner{max-width:1256px;margin:auto;display:flex;align-items:start;justify-content:space-between;gap:30px}.footer strong{display:block;color:white;font-weight:600;margin-bottom:5px}.footer p{margin:0}.footer a{color:#d2e4f5}.footer .footer-links{display:flex;gap:24px;white-space:nowrap}
+    @media(min-width:1450px){.page{gap:90px;grid-template-columns:225px minmax(0,1fr)}}
+    @media(max-width:1100px){.topbar-inner{padding:0 32px}.hero-inner{padding:65px 40px;gap:35px}.hero h1{font-size:80px}.hero-deck{font-size:19px}.era-strip{padding:24px 40px}.page{padding:55px 40px 0;gap:35px;grid-template-columns:185px minmax(0,1fr)}.rail{padding-right:4px}.chapter-nav a{font-size:14px;padding-left:12px}.footer{padding:32px 40px}.hero-art figcaption{font-size:13px}.history-diagram{min-width:650px}.chapter-heading h2{font-size:36px}}
+    @media(max-width:800px){:root{--top:64px}.topbar-inner{padding:0 24px}.top-actions{gap:18px}.brand span{margin-left:10px;padding-left:12px}.hero-inner{padding:52px 28px 38px;grid-template-columns:1fr;gap:25px}.hero h1{font-size:80px}.hero-deck{max-width:600px;margin-bottom:25px}.hero-art{max-width:440px;justify-self:center;width:100%;padding:0;margin-bottom:0}.hero-art svg{max-height:330px}.hero-art figcaption{max-width:330px;margin-top:14px}.era-strip{padding:23px 28px;grid-template-columns:repeat(2,1fr);row-gap:22px}.era-strip a{padding-left:22px}.era-strip a:nth-child(3){padding-left:0;border-left:0}.page{display:block;padding:36px 28px 0}.rail{position:static;max-height:none;padding:0;margin-bottom:35px}.rail-note,.rail-label{display:none}.chapter-nav{display:flex;overflow:auto;border-left:0;gap:10px}.chapter-nav a{min-width:170px;border-bottom:2px solid transparent;border-left:0;padding:8px 10px}.chapter-nav a[aria-current="location"]{border-bottom-color:var(--blue)}.js .rail{display:none}.js .mobile-nav{display:block;position:sticky;top:var(--top);z-index:15;background:#f3f6fa;border-bottom:1px solid var(--line);padding:11px 24px}.mobile-nav label{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-right:12px}.select-wrap{position:relative;display:inline-block;width:calc(100% - 82px)}.select-wrap:after{content:"";position:absolute;right:4px;top:10px;border-right:1.5px solid #31597d;border-bottom:1.5px solid #31597d;width:7px;height:7px;transform:rotate(45deg);pointer-events:none}.mobile-nav select{appearance:none;background:none;border:0;border-radius:0;width:100%;font-size:14px;color:var(--ink);padding:2px 22px 2px 0;white-space:nowrap;text-overflow:ellipsis}.chapter{padding:45px 0}.introduction{padding-bottom:45px}.introduction h2{font-size:36px}.chapter-heading h2{font-size:35px}.prose{font-size:17px;line-height:1.8}.chapter-deck{font-size:17px}.prose h3{font-size:27px}.source-cut{font-size:14px}.footer{padding:30px 28px}.footer-inner{flex-direction:column;gap:20px}section{scroll-margin-top:0}html{scroll-padding-top:140px}.reading-label{display:none}}
+    @media(max-width:440px){.topbar-inner{padding:0 18px;gap:12px}.top-actions{gap:14px;font-size:13px}.brand{font-size:15px}.brand span{font-size:14px}.hero-inner{padding:42px 22px 32px}.hero h1{font-size:68px}.hero-deck{font-size:18px}.hero .eyebrow{font-size:12px}.hero-meta{font-size:13px;gap:6px 18px}.hero-art{max-width:350px}.era-strip{padding:20px 22px}.era-strip a{font-size:14px}.era-strip strong{font-size:15px}.page{padding:32px 22px 0}.introduction h2{font-size:32px}.chapter-heading h2{font-size:31px}.chapter-deck{font-size:16px}.eyebrow{font-size:12px;letter-spacing:.1em}.source-list{grid-template-columns:1fr}.footer{padding:28px 22px}.diagram-key{font-size:12px;gap:7px;margin-left:16px!important;margin-right:16px!important}.diagram-figure>figcaption{padding:18px 16px 0}.diagram-text summary{padding:15px 16px}.top-actions #print-button{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{html{scroll-behavior:auto}body{background:white;color:#111;font-size:11pt;line-height:1.6}.topbar,.rail,.mobile-nav,.era-strip,.skip,.footer-links{display:none!important}.hero{background:white;color:#111;border-bottom:2px solid #333}.hero-inner{padding:20px 0 25px;display:block}.hero h1{font-size:48pt;margin-bottom:15px}.hero h1 span{display:inline;color:#111}.hero .eyebrow,.hero-deck,.hero-meta,.hero-meta strong{color:#333}.hero-deck{font-size:15pt;max-width:none}.hero-art{display:none}.page{display:block;padding:30px 0 0}.introduction{padding-bottom:25px}.introduction h2{font-size:25pt}.chapter{padding:25px 0;break-before:auto}.chapter-heading{margin-bottom:20px;break-after:avoid}.chapter-heading h2{font-size:25pt}.prose{font-size:11pt;line-height:1.6}.prose h3{font-size:17pt;break-after:avoid}.chapter-deck{font-size:11pt}.history-diagram{min-width:0;max-height:850px;width:100%}.diagram-scroll{overflow:visible}.diagram-figure{break-inside:avoid;max-width:100%}.diagram-text{display:none}.table-scroll{overflow:visible}table{min-width:0;font-size:9pt}.source-list{display:block}.sources-directory details:not([open])>ul{display:block}.footer{background:white;color:#333;padding:25px 0;border-top:1px solid #ccc}.footer strong{color:#111}.source-cut{background:none}.eyebrow{font-size:9pt}a{color:#1a3d61}p{orphans:3;widows:3}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#story">Skip to the history</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="STDO history, back to the beginning">STDO<span>History</span></a>
+      <div class="top-actions"><span class="reading-label" id="reading-percent" aria-hidden="true">0% read</span><a href="history.md" id="source-download" download="history.md">Markdown</a><button id="print-button" type="button" hidden>Print</button><a href="#sources">Sources</a></div>
+    </div>
+    <progress class="progress" value="0" max="100" aria-label="Reading progress" id="reading-progress"></progress>
+  </header>
+  <div class="mobile-nav"><label for="chapter-select">Chapter</label><span class="select-wrap"><select id="chapter-select"><option value="top">The beginning</option>@@OPTIONS@@</select></span></div>
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">An account of the work · 2024–2026</p>
+          <h1 id="page-title">A history<span>of STDO.</span></h1>
+          <p class="hero-deck">From AI-assisted applications to a methodology for constrained construction and evaluation.</p>
+          <div class="hero-meta"><span>Work began <strong>mid-2024</strong></span><span>Account through <strong>21 November 2026</strong></span></div>
+        </div>
+        <figure class="hero-art">
+          <svg viewBox="0 0 460 410" role="img" aria-labelledby="hero-diagram-title hero-diagram-description">
+            <title id="hero-diagram-title">A recurring relationship across the projects</title><desc id="hero-diagram-description">Intent and constraints guide construction. Evaluation informs correction, which returns to the governing intent and constraints.</desc>
+            <g fill="none" stroke="#2b4865" stroke-width="1"><path d="M40 25V385M135 25V385M230 25V385M325 25V385M420 25V385M20 55H440M20 155H440M20 255H440M20 355H440"/></g>
+            <g fill="none" stroke="#87abc9" stroke-width="1.5"><path d="M120 95V145Q120 165 140 165H230V200M340 95V145Q340 165 320 165H230M230 260V305M140 335H62Q35 335 35 310V70Q35 55 65 55"/><path d="M225 192L230 200L235 192M225 297L230 305L235 297M57 50L65 55L57 60"/></g>
+            <g fill="#1b344e" stroke="#617e99"><rect x="65" y="25" width="110" height="70" rx="7"/><rect x="275" y="25" width="130" height="70" rx="7"/><rect x="140" y="200" width="180" height="60" rx="7"/><rect x="140" y="305" width="180" height="60" rx="7"/></g>
+            <g fill="#edf5fc" text-anchor="middle" font-size="17"><text x="120" y="66">Intent</text><text x="340" y="66">Constraints</text><text x="230" y="236">Construction</text><text x="230" y="341">Evaluation</text></g>
+            <text x="53" y="270" fill="#a5c8e2" font-size="13" transform="rotate(-90 53 270)">Correction at the owning layer</text><text x="230" y="397" fill="#99b5cf" text-anchor="middle" font-size="13">The relationship survives changes in implementation.</text>
+          </svg>
+          <figcaption>A recurring question: what must remain true as an intention becomes an implementation?</figcaption>
+        </figure>
+      </div>
+    </section>
+    <nav class="era-strip" aria-label="Key periods"><a href="#beginnings"><strong>Mid-2024</strong>Applications & experiments</a><a href="#intent"><strong>2025</strong>Intent & constraints</a><a href="#construction"><strong>Early 2026</strong>Construction & evaluation</a><a href="#context"><strong>November 2026</strong>STDO 3.1.0-rc.3</a></nav>
+    <div class="page" id="story">
+      <aside class="rail" aria-label="History chapter navigation"><p class="rail-label">Follow the history</p><nav class="chapter-nav" aria-label="Chapters">@@NAV@@</nav><p class="rail-note">The projects overlap in time. Chapters follow the refinement of the ideas.</p></aside>
+      <article class="article" aria-label="The complete STDO history">
+        <section class="introduction" aria-labelledby="intro-heading"><p class="eyebrow">The continuing question</p><h2 id="intro-heading">Preserving meaning<br>through change.</h2><div class="prose">@@INTRO@@</div><aside class="source-cut"><strong>A historical account, dated 21 November 2026</strong>The latest published method cut covered here is STDO 3.1.0-rc.3, published on 18 November. The account describes the lineage; each consumer’s selected immutable release governs its rules.</aside></section>
+        @@CHAPTERS@@
+        <section class="sources-directory" aria-labelledby="source-directory-title"><h3 id="source-directory-title">Follow the source record</h3><p>The narrative links to the evidence where it is discussed. Some early repositories require archive access.</p><details id="source-directory"><summary>Browse all @@SOURCE_COUNT@@ source references</summary><ul class="source-list">@@SOURCES@@</ul></details></section>
+      </article>
+    </div>
+  </main>
+  <footer class="footer"><div class="footer-inner"><p><strong>STDO · A history of the work</strong>Mid-2024 to November 2026. Based on the repository history, preserved designs and release records.</p><div class="footer-links"><a href="#top">Back to the beginning</a><a href="https://github.com/foolishimp/specification_methodology">Repository</a></div></div></footer>
+  <script type="text/plain" id="history-markdown">@@MARKDOWN@@</script>
+  <script>
+    (() => {
+      'use strict';
+      document.documentElement.classList.add('js');
+      const sections = [...document.querySelectorAll('.chapter')];
+      const links = [...document.querySelectorAll('[data-chapter-link]')];
+      const select = document.getElementById('chapter-select');
+      const progress = document.getElementById('reading-progress');
+      const percentage = document.getElementById('reading-percent');
+      let current = '', scheduled = false;
+      const update = () => {
+        scheduled = false;
+        const distance = document.documentElement.scrollHeight - innerHeight;
+        const ratio = distance > 0 ? Math.min(100, Math.max(0, scrollY / distance * 100)) : 100;
+        progress.value = ratio;
+        percentage.textContent = Math.round(ratio) + '% read';
+        let active = 'top';
+        for (const section of sections) {
+          if (section.getBoundingClientRect().top <= 200) active = section.id;
+          else break;
+        }
+        if (active !== current) {
+          current = active;
+          links.forEach(link => {
+            if (link.dataset.chapterLink === active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+          });
+          select.value = active;
+        }
+      };
+      const schedule = () => { if (!scheduled) { scheduled = true; requestAnimationFrame(update); } };
+      addEventListener('scroll', schedule, { passive: true });
+      addEventListener('resize', schedule);
+      addEventListener('hashchange', schedule);
+      document.querySelectorAll('details').forEach(details => details.addEventListener('toggle', schedule));
+      select.addEventListener('change', () => {
+        const target = document.getElementById(select.value);
+        if (target) { history.pushState(null, '', '#' + select.value); target.scrollIntoView({ block: 'start' }); }
+      });
+      const printButton = document.getElementById('print-button');
+      printButton.hidden = false;
+      printButton.addEventListener('click', () => window.print());
+      const markdown = document.getElementById('history-markdown').textContent.replace(/<\\\//g, '</');
+      const sourceURL = URL.createObjectURL(new Blob([markdown], { type: 'text/markdown;charset=utf-8' }));
+      document.getElementById('source-download').href = sourceURL;
+      update();
+    })();
+  </script>
+</body>
+</html>

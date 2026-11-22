@@ -1,0 +1,1742 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="The history of STDO: from mid-2024 AI-assisted application experiments through C4H, constraint-emergence research, Genesis and the specification methodology.">
+  <meta name="history-source-sha256" content="fe04f58ef7aed63d16d9928197084afca84c17aaf78469abf093a23f9c0a8272">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='5' fill='%2313263b'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Georgia' font-size='25' fill='white'%3ES%3C/text%3E%3C/svg%3E">
+  <title>A history of STDO · 2024–2026</title>
+  <style>
+    :root{--ink:#152c42;--muted:#53677b;--blue:#2254a4;--teal:#217c70;--rust:#9b5234;--line:#dce3ea;--paper:#fbfcfd;--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--top:72px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:110px}body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--sans);font-size:18px;line-height:1.75;-webkit-font-smoothing:antialiased}a{color:var(--blue);text-underline-offset:4px;text-decoration-thickness:1px}a:hover{text-decoration-thickness:2px}button,select{font:inherit}button,a,summary,select{-webkit-tap-highlight-color:transparent}button{cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,[tabindex]:focus-visible{outline:3px solid #c56f38;outline-offset:5px}::selection{background:#cee5fa;color:#152c42}h1,h2,h3,p,figure{margin-top:0}h1,h2,h3{line-height:1.15}button{border:0;background:none;color:inherit}button[hidden]{display:none}svg{display:block}section{scroll-margin-top:0}.skip{position:fixed;left:20px;top:-100px;background:white;padding:10px 20px;z-index:100}.skip:focus{top:12px}
+    .topbar{position:sticky;top:0;z-index:20;background:rgba(251,252,253,.97);border-bottom:1px solid var(--line);height:var(--top)}.topbar-inner{max-width:1400px;margin:auto;padding:0 52px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:17px;font-weight:750;letter-spacing:.05em;text-decoration:none;color:var(--ink);white-space:nowrap}.brand span{font-weight:400;color:var(--muted);letter-spacing:0;margin-left:14px;border-left:1px solid var(--line);padding-left:18px}.top-actions{display:flex;align-items:center;gap:26px;font-size:14px}.top-actions a,.top-actions button{text-decoration:none;padding:7px 0;white-space:nowrap}.top-actions button:hover,.top-actions a:hover{color:var(--blue);text-decoration:underline}.reading-label{font-variant-numeric:tabular-nums;color:var(--muted)}.progress{position:absolute;left:0;bottom:-1px;width:100%;height:2px;appearance:none;border:0;background:transparent;color:var(--blue)}.progress::-webkit-progress-bar{background:transparent}.progress::-webkit-progress-value{background:var(--blue)}.progress::-moz-progress-bar{background:var(--blue)}
+    .hero{background:#13263b;color:#f5f8fc;overflow:hidden}.hero-inner{max-width:1400px;margin:auto;padding:82px 72px 70px;display:grid;grid-template-columns:1.13fr 1fr;gap:65px;align-items:center}.eyebrow{font-size:14px;letter-spacing:.13em;text-transform:uppercase;font-weight:650;color:var(--blue);margin-bottom:24px}.hero .eyebrow{color:#a6c8e9}.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(64px,7.6vw,110px);letter-spacing:-.055em;line-height:.98;margin:0 0 30px}.hero h1 span{display:block;color:#abcce9}.hero-deck{font-size:21px;color:#d8e2ec;max-width:490px;line-height:1.6;margin-bottom:32px}.hero-meta{display:flex;flex-wrap:wrap;gap:12px 26px;color:#acc1d6;font-size:14px}.hero-meta strong{font-weight:500;color:#e2ebf4}.hero-art{position:relative;padding:24px 0}.hero-art svg{width:100%;height:auto;overflow:visible}.hero-art figcaption{color:#b0c5d9;font-size:14px;max-width:330px;margin:22px auto 0;text-align:center;line-height:1.6}.hero-art text{font-family:var(--sans)}
+    .era-strip{max-width:1400px;margin:auto;padding:28px 72px;display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}.era-strip a{color:var(--ink);text-decoration:none;padding:5px 25px;border-left:1px solid var(--line);font-size:15px;line-height:1.6}.era-strip a:first-child{padding-left:0;border-left:0}.era-strip strong{display:block;font-size:17px;color:var(--blue);font-weight:650}.era-strip a:hover strong{text-decoration:underline;text-underline-offset:5px}.page{max-width:1400px;margin:auto;display:grid;grid-template-columns:225px minmax(0,1fr);gap:65px;padding:70px 72px 0}.rail{position:sticky;top:108px;align-self:start;max-height:calc(100vh - 135px);overflow:auto;padding:0 12px 20px 0;scrollbar-width:thin}.rail-label{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 18px}.chapter-nav{border-left:1px solid var(--line)}.chapter-nav a{position:relative;display:block;color:var(--muted);padding:10px 0 10px 18px;font-size:14px;line-height:1.4;text-decoration:none;border-left:2px solid transparent;margin-left:-1px}.chapter-nav a span{display:block;font-size:12px;color:#6b7e8d;margin-bottom:3px}.chapter-nav a:hover{color:var(--blue)}.chapter-nav a[aria-current="location"]{border-left-color:var(--blue);color:var(--blue);font-weight:650;background:#eff4fa}.chapter-nav a[aria-current="location"] span{color:var(--blue);font-weight:400}.rail-note{margin:24px 0 0;font-size:13px;line-height:1.6;color:var(--muted)}.mobile-nav{display:none}.article{min-width:0}.introduction{padding-bottom:70px}.introduction .eyebrow{margin-bottom:20px}.introduction h2{font-family:var(--serif);font-weight:400;font-size:43px;letter-spacing:-.025em;max-width:650px;margin-bottom:32px}.source-cut{border-left:3px solid var(--teal);padding:18px 22px;margin:34px 0 0;background:#edf5f4;font-size:15px;line-height:1.65;color:#325e5b}.source-cut strong{display:block;margin-bottom:4px;color:#204c46}
+    .chapter{border-top:1px solid var(--line);padding:62px 0 65px}.chapter-heading{margin-bottom:36px}.chapter-heading .eyebrow{margin-bottom:17px}.chapter-heading h2{font-family:var(--serif);font-size:clamp(32px,3.4vw,44px);font-weight:400;letter-spacing:-.025em;max-width:800px;margin-bottom:20px}.chapter-deck{font-size:18px;line-height:1.6;color:var(--muted);max-width:650px;border-left:2px solid #bbcadc;padding-left:20px}.prose{font-size:18px;line-height:1.8}.prose p{margin-bottom:23px}.prose h3{font-family:var(--serif);font-size:29px;line-height:1.25;font-weight:600;letter-spacing:-.015em;margin:45px 0 22px}.prose h3:first-child{margin-top:0}.prose strong{font-weight:650}.prose code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.85em;background:#edf1f5;border-radius:3px;padding:2px 5px;overflow-wrap:anywhere}.prose pre{background:#142b42;color:#e5eef6;padding:25px 28px;border-radius:5px;overflow:auto;line-height:1.65;font-size:15px;margin:35px 0}.prose pre code{padding:0;background:none;color:inherit;font-size:inherit}.prose ul,.prose ol{padding-left:25px}.prose a{overflow-wrap:anywhere}.prose>p,.prose>h3{max-width:760px}.table-scroll{overflow:auto;margin:35px 0;border-top:2px solid #31597d;border-bottom:1px solid var(--line)}table{border-collapse:collapse;width:100%;font-size:15px;line-height:1.65;min-width:590px}th,td{padding:17px 15px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{font-weight:650;background:#edf2f7;color:#254969}th:first-child,td:first-child{padding-left:15px;min-width:110px}tr:last-child td{border-bottom:0}tbody tr:nth-child(even){background:#f4f7fa}
+    .diagram-figure{margin:38px 0;border:1px solid var(--line);border-radius:8px;background:#f2f6fa;overflow:hidden}.diagram-figure>figcaption{font-size:16px;font-weight:650;padding:22px 25px 0}.diagram-scroll{overflow:auto;padding:16px 12px 0;scrollbar-width:thin}.history-diagram{width:100%;min-width:650px;height:auto}.diagram-key{font-size:13px;line-height:1.6;color:var(--muted);display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:15px 25px 22px!important}.key-line{display:inline-block;width:26px;height:0;border-top:2px solid #71849a}.key-line.dotted{border-top-style:dashed;margin-left:10px}.diagram-text{border-top:1px solid var(--line);background:#f9fbfd;font-size:14px}.diagram-text summary{cursor:pointer;padding:15px 25px;color:var(--blue);font-weight:550}.diagram-text ul{margin:0;padding:10px 28px 24px 45px}.diagram-text li{padding:6px 0}.diagram-text li span{display:block;color:var(--muted);font-size:13px}.sources-directory{padding:30px 0 55px}.sources-directory h3{font-family:var(--serif);font-size:29px;margin-bottom:15px}.sources-directory>p{font-size:16px;color:var(--muted)}.sources-directory details{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.sources-directory summary{padding:20px 0;font-size:16px;cursor:pointer;color:var(--blue)}.source-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:0 28px}.source-list li{border-top:1px solid var(--line);padding:13px 0;font-size:15px;line-height:1.5;overflow-wrap:anywhere}.source-list span{display:block;font-size:12px;color:var(--muted);margin-top:5px}.footer{background:#13263b;color:#cad8e5;margin-top:30px;padding:38px 72px;font-size:14px}.footer-inner{max-width:1256px;margin:auto;display:flex;align-items:start;justify-content:space-between;gap:30px}.footer strong{display:block;color:white;font-weight:600;margin-bottom:5px}.footer p{margin:0}.footer a{color:#d2e4f5}.footer .footer-links{display:flex;gap:24px;white-space:nowrap}
+    @media(min-width:1450px){.page{gap:90px;grid-template-columns:225px minmax(0,1fr)}}
+    @media(max-width:1100px){.topbar-inner{padding:0 32px}.hero-inner{padding:65px 40px;gap:35px}.hero h1{font-size:80px}.hero-deck{font-size:19px}.era-strip{padding:24px 40px}.page{padding:55px 40px 0;gap:35px;grid-template-columns:185px minmax(0,1fr)}.rail{padding-right:4px}.chapter-nav a{font-size:14px;padding-left:12px}.footer{padding:32px 40px}.hero-art figcaption{font-size:13px}.history-diagram{min-width:650px}.chapter-heading h2{font-size:36px}}
+    @media(max-width:800px){:root{--top:64px}.topbar-inner{padding:0 24px}.top-actions{gap:18px}.brand span{margin-left:10px;padding-left:12px}.hero-inner{padding:52px 28px 38px;grid-template-columns:1fr;gap:25px}.hero h1{font-size:80px}.hero-deck{max-width:600px;margin-bottom:25px}.hero-art{max-width:440px;justify-self:center;width:100%;padding:0;margin-bottom:0}.hero-art svg{max-height:330px}.hero-art figcaption{max-width:330px;margin-top:14px}.era-strip{padding:23px 28px;grid-template-columns:repeat(2,1fr);row-gap:22px}.era-strip a{padding-left:22px}.era-strip a:nth-child(3){padding-left:0;border-left:0}.page{display:block;padding:36px 28px 0}.rail{position:static;max-height:none;padding:0;margin-bottom:35px}.rail-note,.rail-label{display:none}.chapter-nav{display:flex;overflow:auto;border-left:0;gap:10px}.chapter-nav a{min-width:170px;border-bottom:2px solid transparent;border-left:0;padding:8px 10px}.chapter-nav a[aria-current="location"]{border-bottom-color:var(--blue)}.js .rail{display:none}.js .mobile-nav{display:block;position:sticky;top:var(--top);z-index:15;background:#f3f6fa;border-bottom:1px solid var(--line);padding:11px 24px}.mobile-nav label{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-right:12px}.select-wrap{position:relative;display:inline-block;width:calc(100% - 82px)}.select-wrap:after{content:"";position:absolute;right:4px;top:10px;border-right:1.5px solid #31597d;border-bottom:1.5px solid #31597d;width:7px;height:7px;transform:rotate(45deg);pointer-events:none}.mobile-nav select{appearance:none;background:none;border:0;border-radius:0;width:100%;font-size:14px;color:var(--ink);padding:2px 22px 2px 0;white-space:nowrap;text-overflow:ellipsis}.chapter{padding:45px 0}.introduction{padding-bottom:45px}.introduction h2{font-size:36px}.chapter-heading h2{font-size:35px}.prose{font-size:17px;line-height:1.8}.chapter-deck{font-size:17px}.prose h3{font-size:27px}.source-cut{font-size:14px}.footer{padding:30px 28px}.footer-inner{flex-direction:column;gap:20px}section{scroll-margin-top:0}html{scroll-padding-top:140px}.reading-label{display:none}}
+    @media(max-width:440px){.topbar-inner{padding:0 18px;gap:12px}.top-actions{gap:14px;font-size:13px}.brand{font-size:15px}.brand span{font-size:14px}.hero-inner{padding:42px 22px 32px}.hero h1{font-size:68px}.hero-deck{font-size:18px}.hero .eyebrow{font-size:12px}.hero-meta{font-size:13px;gap:6px 18px}.hero-art{max-width:350px}.era-strip{padding:20px 22px}.era-strip a{font-size:14px}.era-strip strong{font-size:15px}.page{padding:32px 22px 0}.introduction h2{font-size:32px}.chapter-heading h2{font-size:31px}.chapter-deck{font-size:16px}.eyebrow{font-size:12px;letter-spacing:.1em}.source-list{grid-template-columns:1fr}.footer{padding:28px 22px}.diagram-key{font-size:12px;gap:7px;margin-left:16px!important;margin-right:16px!important}.diagram-figure>figcaption{padding:18px 16px 0}.diagram-text summary{padding:15px 16px}.top-actions #print-button{display:none}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    @media print{html{scroll-behavior:auto}body{background:white;color:#111;font-size:11pt;line-height:1.6}.topbar,.rail,.mobile-nav,.era-strip,.skip,.footer-links{display:none!important}.hero{background:white;color:#111;border-bottom:2px solid #333}.hero-inner{padding:20px 0 25px;display:block}.hero h1{font-size:48pt;margin-bottom:15px}.hero h1 span{display:inline;color:#111}.hero .eyebrow,.hero-deck,.hero-meta,.hero-meta strong{color:#333}.hero-deck{font-size:15pt;max-width:none}.hero-art{display:none}.page{display:block;padding:30px 0 0}.introduction{padding-bottom:25px}.introduction h2{font-size:25pt}.chapter{padding:25px 0;break-before:auto}.chapter-heading{margin-bottom:20px;break-after:avoid}.chapter-heading h2{font-size:25pt}.prose{font-size:11pt;line-height:1.6}.prose h3{font-size:17pt;break-after:avoid}.chapter-deck{font-size:11pt}.history-diagram{min-width:0;max-height:850px;width:100%}.diagram-scroll{overflow:visible}.diagram-figure{break-inside:avoid;max-width:100%}.diagram-text{display:none}.table-scroll{overflow:visible}table{min-width:0;font-size:9pt}.source-list{display:block}.sources-directory details:not([open])>ul{display:block}.footer{background:white;color:#333;padding:25px 0;border-top:1px solid #ccc}.footer strong{color:#111}.source-cut{background:none}.eyebrow{font-size:9pt}a{color:#1a3d61}p{orphans:3;widows:3}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#story">Skip to the history</a>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="STDO history, back to the beginning">STDO<span>History</span></a>
+      <div class="top-actions"><span class="reading-label" id="reading-percent" aria-hidden="true">0% read</span><a href="history.md" id="source-download" download="history.md">Markdown</a><button id="print-button" type="button" hidden>Print</button><a href="#sources">Sources</a></div>
+    </div>
+    <progress class="progress" value="0" max="100" aria-label="Reading progress" id="reading-progress"></progress>
+  </header>
+  <div class="mobile-nav"><label for="chapter-select">Chapter</label><span class="select-wrap"><select id="chapter-select"><option value="top">The beginning</option><option value="lineage">Across the projects · The lineage</option><option value="beginnings">Mid-2024 · The first applications</option><option value="intent">Late 2024–2025 · Preserving intent</option><option value="method">August 2025–January 2026 · A reusable method</option><option value="foundations">January–February 2026 · Constraints &amp; emergence</option><option value="construction">February–March 2026 · The asset graph</option><option value="boundaries">March–June 2026 · Separating responsibilities</option><option value="authority">March–April 2026 · An independent method</option><option value="lifecycle">April–June 2026 · The complete lifecycle</option><option value="evidence">July–September 2026 · The boundaries of evidence</option><option value="context">October–November 2026 · Finite context, explicit ownership</option><option value="contribution">What accumulated · The contribution</option><option value="sources">The record · Sources &amp; limits</option></select></span></div>
+  <main id="top">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero-inner">
+        <div>
+          <p class="eyebrow">An account of the work · 2024–2026</p>
+          <h1 id="page-title">A history<span>of STDO.</span></h1>
+          <p class="hero-deck">From AI-assisted applications to a methodology for constrained construction and evaluation.</p>
+          <div class="hero-meta"><span>Work began <strong>mid-2024</strong></span><span>Account through <strong>21 November 2026</strong></span></div>
+        </div>
+        <figure class="hero-art">
+          <svg viewBox="0 0 460 410" role="img" aria-labelledby="hero-diagram-title hero-diagram-description">
+            <title id="hero-diagram-title">A recurring relationship across the projects</title><desc id="hero-diagram-description">Intent and constraints guide construction. Evaluation informs correction, which returns to the governing intent and constraints.</desc>
+            <g fill="none" stroke="#2b4865" stroke-width="1"><path d="M40 25V385M135 25V385M230 25V385M325 25V385M420 25V385M20 55H440M20 155H440M20 255H440M20 355H440"/></g>
+            <g fill="none" stroke="#87abc9" stroke-width="1.5"><path d="M120 95V145Q120 165 140 165H230V200M340 95V145Q340 165 320 165H230M230 260V305M140 335H62Q35 335 35 310V70Q35 55 65 55"/><path d="M225 192L230 200L235 192M225 297L230 305L235 297M57 50L65 55L57 60"/></g>
+            <g fill="#1b344e" stroke="#617e99"><rect x="65" y="25" width="110" height="70" rx="7"/><rect x="275" y="25" width="130" height="70" rx="7"/><rect x="140" y="200" width="180" height="60" rx="7"/><rect x="140" y="305" width="180" height="60" rx="7"/></g>
+            <g fill="#edf5fc" text-anchor="middle" font-size="17"><text x="120" y="66">Intent</text><text x="340" y="66">Constraints</text><text x="230" y="236">Construction</text><text x="230" y="341">Evaluation</text></g>
+            <text x="53" y="270" fill="#a5c8e2" font-size="13" transform="rotate(-90 53 270)">Correction at the owning layer</text><text x="230" y="397" fill="#99b5cf" text-anchor="middle" font-size="13">The relationship survives changes in implementation.</text>
+          </svg>
+          <figcaption>A recurring question: what must remain true as an intention becomes an implementation?</figcaption>
+        </figure>
+      </div>
+    </section>
+    <nav class="era-strip" aria-label="Key periods"><a href="#beginnings"><strong>Mid-2024</strong>Applications & experiments</a><a href="#intent"><strong>2025</strong>Intent & constraints</a><a href="#construction"><strong>Early 2026</strong>Construction & evaluation</a><a href="#context"><strong>November 2026</strong>STDO 3.1.0-rc.3</a></nav>
+    <div class="page" id="story">
+      <aside class="rail" aria-label="History chapter navigation"><p class="rail-label">Follow the history</p><nav class="chapter-nav" aria-label="Chapters"><a href="#lineage" data-chapter-link="lineage"><span>Across the projects</span>The lineage</a><a href="#beginnings" data-chapter-link="beginnings"><span>Mid-2024</span>The first applications</a><a href="#intent" data-chapter-link="intent"><span>Late 2024–2025</span>Preserving intent</a><a href="#method" data-chapter-link="method"><span>August 2025–January 2026</span>A reusable method</a><a href="#foundations" data-chapter-link="foundations"><span>January–February 2026</span>Constraints &amp; emergence</a><a href="#construction" data-chapter-link="construction"><span>February–March 2026</span>The asset graph</a><a href="#boundaries" data-chapter-link="boundaries"><span>March–June 2026</span>Separating responsibilities</a><a href="#authority" data-chapter-link="authority"><span>March–April 2026</span>An independent method</a><a href="#lifecycle" data-chapter-link="lifecycle"><span>April–June 2026</span>The complete lifecycle</a><a href="#evidence" data-chapter-link="evidence"><span>July–September 2026</span>The boundaries of evidence</a><a href="#context" data-chapter-link="context"><span>October–November 2026</span>Finite context, explicit ownership</a><a href="#contribution" data-chapter-link="contribution"><span>What accumulated</span>The contribution</a><a href="#sources" data-chapter-link="sources"><span>The record</span>Sources &amp; limits</a></nav><p class="rail-note">The projects overlap in time. Chapters follow the refinement of the ideas.</p></aside>
+      <article class="article" aria-label="The complete STDO history">
+        <section class="introduction" aria-labelledby="intro-heading"><p class="eyebrow">The continuing question</p><h2 id="intro-heading">Preserving meaning<br>through change.</h2><div class="prose"><p>STDO (Specification, Ticketing, Design, and Outcome-Driven Development)
+developed through applications, coding agents, development workflows,
+execution engines and a parallel investigation into constraints and emergence.
+Its independent repository began in April 2026. The author dates the beginning
+of the work to <strong>mid-2024</strong>, before the surviving application check-ins.
+Its practical ancestry includes a collaborative whiteboard, Chain of Thoth
+and Coder for Hire, usually shortened to C4H.</p>
+<p>The applications and the foundational investigation developed together. In the
+author&rsquo;s account, questions about the fundamentals were already part of the
+early work. The later Constraint-Emergence Ontology captured that thinking in a
+more explicit form. Its repository creation date therefore marks a publication
+and separation of the work, rather than the beginning of the inquiry.</p>
+<p>Across these projects, the recurring problem was how to turn an intention into
+an implementation while preserving the relationships that made the intention
+meaningful. Each generation made another part of that problem explicit:
+state and history, task context, transformation lineage, requirements,
+evaluation, authority, recovery and the limits of a completion claim.</p></div><aside class="source-cut"><strong>A historical account, dated 21 November 2026</strong>The latest published method cut covered here is STDO 3.1.0-rc.3, published on 18 November. The account describes the lineage; each consumer’s selected immutable release governs its rules.</aside></section>
+        <section class="chapter" id="lineage" aria-labelledby="lineage-heading" data-period="Across the projects"><header class="chapter-heading"><p class="eyebrow">Across the projects</p><h2 id="lineage-heading">Reading the lineage</h2><p class="chapter-deck">Relationships between the implementations and the ideas.</p></header><div class="prose"><p>The arrows below describe project relationships and conceptual transfers. They
+do not all represent Git forks. Several projects were reconstructions, and
+some reused a specification or design while replacing the implementation.
+Dotted arrows mark conceptual influence or a precursor relationship rather
+than a demonstrated transfer of code.</p>
+<figure class="diagram-figure"><figcaption>Project and conceptual lineage</figcaption><div class="diagram-scroll" tabindex="0" aria-label="Project and conceptual lineage; scroll horizontally on a narrow screen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 1510" role="img" aria-labelledby="lineage-0-title lineage-0-desc" class="history-diagram"><title id="lineage-0-title">Project and conceptual lineage</title><desc id="lineage-0-desc">The application and agent line feeds into Genesis, the execution and lifecycle projects, and STDO. The ontology supplies a parallel conceptual contribution.</desc><defs><marker id="lineage-0-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#71849a"/></marker></defs><path d="M 155 110 C 155 125.0, 155 125.0, 155 140" fill="none" stroke="#71849a" stroke-width="1.7" stroke-dasharray="5 6" marker-end="url(#lineage-0-arrow)"/><path d="M 155 230 C 155 245.0, 155 245.0, 155 260" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 155 350 C 155 365.0, 155 365.0, 155 380" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 155 470 C 155 497.5, 155 497.5, 155 525" fill="none" stroke="#71849a" stroke-width="1.7" stroke-dasharray="5 6" marker-end="url(#lineage-0-arrow)"/><path d="M 155 627 C 155 648.5, 155 648.5, 155 670" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 155 470 C 155 497.5, 625 497.5, 625 525" fill="none" stroke="#71849a" stroke-width="1.7" stroke-dasharray="5 6" marker-end="url(#lineage-0-arrow)"/><path d="M 155 760 C 155 787.5, 390 787.5, 390 815" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 625 647 C 625 731.0, 390 731.0, 390 815" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 390 905 C 390 932.5, 155 932.5, 155 960" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 390 905 C 390 932.5, 625 932.5, 625 960" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 155 1050 C 155 1077.5, 155 1077.5, 155 1105" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 625 1050 C 625 1077.5, 155 1077.5, 155 1105" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 155 1207 C 155 1228.5, 155 1228.5, 155 1250" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 625 1050 C 625 1077.5, 625 1077.5, 625 1105" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 625 1195 C 625 1222.5, 625 1222.5, 625 1250" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 625 1340 C 625 1367.5, 625 1367.5, 625 1395" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-0-arrow)"/><path d="M 750 586.0 C 805 586.0, 805 1295.0, 750 1295.0" fill="none" stroke="#71849a" stroke-width="1.7" stroke-dasharray="5 6" marker-end="url(#lineage-0-arrow)"/><g><rect x="30" y="20" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="36" width="3" height="58" rx="1" fill="#22786e"/><text x="155" y="61.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Brain Dump / MyPostit</text><text x="155" y="81.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">September 2024</text></g><g><rect x="30" y="140" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="156" width="3" height="58" rx="1" fill="#22786e"/><text x="155" y="181.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Chain of Thoth</text><text x="155" y="201.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">September 2024</text></g><g><rect x="30" y="260" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="276" width="3" height="58" rx="1" fill="#22786e"/><text x="155" y="291.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Refactorer and Unit of</text><text x="155" y="311.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Thought design</text><text x="155" y="331.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">October-November 2024</text></g><g><rect x="30" y="380" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="396" width="3" height="58" rx="1" fill="#22786e"/><text x="155" y="411.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">C4H intent system and</text><text x="155" y="431.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">agent services</text><text x="155" y="451.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">November 2024-2025</text></g><g><rect x="30" y="525" width="250" height="102" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="541" width="3" height="70" rx="1" fill="#2858a4"/><text x="155" y="552.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Reusable development</text><text x="155" y="572.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">practices</text><text x="155" y="592.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">claude_init, claude_dev, ai_init</text><text x="155" y="612.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">August 2025</text></g><g><rect x="30" y="670" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="686" width="3" height="58" rx="1" fill="#2858a4"/><text x="155" y="711.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">AI SDLC Method</text><text x="155" y="731.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">October 2025</text></g><g><rect x="500" y="525" width="250" height="122" rx="8" fill="white" stroke="#cbd4df"/><rect x="500" y="541" width="3" height="90" rx="1" fill="#9b5234"/><text x="625" y="552.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Constraint-Emergence</text><text x="625" y="572.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Ontology</text><text x="625" y="592.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Captured January 2026</text><text x="625" y="612.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Separate repository February</text><text x="625" y="632.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">2026</text></g><g><rect x="265" y="815" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="265" y="831" width="3" height="58" rx="1" fill="#22786e"/><text x="390" y="856.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Genesis asset graph</text><text x="390" y="876.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">February-March 2026</text></g><g><rect x="30" y="960" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="976" width="3" height="58" rx="1" fill="#22786e"/><text x="155" y="991.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">ABIogenesis</text><text x="155" y="1011.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Generic execution engine</text><text x="155" y="1031.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">March 2026</text></g><g><rect x="500" y="960" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="500" y="976" width="3" height="58" rx="1" fill="#22786e"/><text x="625" y="991.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">genesis_sdlc</text><text x="625" y="1011.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Software lifecycle package</text><text x="625" y="1031.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">March 2026</text></g><g><rect x="30" y="1105" width="250" height="102" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="1121" width="3" height="70" rx="1" fill="#22786e"/><text x="155" y="1132.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">odd_sdlc</text><text x="155" y="1152.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Fresh adoption of selected</text><text x="155" y="1172.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">foundations</text><text x="155" y="1192.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">April 2026</text></g><g><rect x="30" y="1250" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="1266" width="3" height="58" rx="1" fill="#22786e"/><text x="155" y="1281.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">odd_glc</text><text x="155" y="1301.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">General lifecycle framework</text><text x="155" y="1321.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">June 2026</text></g><g><rect x="500" y="1105" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="500" y="1121" width="3" height="58" rx="1" fill="#2858a4"/><text x="625" y="1146.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Specification Methodology</text><text x="625" y="1166.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Independent source April 2026</text></g><g><rect x="500" y="1250" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="500" y="1266" width="3" height="58" rx="1" fill="#2858a4"/><text x="625" y="1291.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">STDO 2.x</text><text x="625" y="1311.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">July-September 2026</text></g><g><rect x="500" y="1395" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="500" y="1411" width="3" height="58" rx="1" fill="#2858a4"/><text x="625" y="1436.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">STDO 3.x</text><text x="625" y="1456.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">October-November 2026</text></g></svg></div><p class="diagram-key"><span class="key-line"></span> Documented relationship <span class="key-line dotted"></span> Conceptual influence</p><details class="diagram-text"><summary>Read the diagram connections</summary><ul><li><strong>Brain Dump / MyPostit</strong> to <strong>Chain of Thoth</strong><span>conceptual influence or precursor relationship</span></li><li><strong>Chain of Thoth</strong> to <strong>Refactorer and Unit of Thought design</strong><span>design carried forward</span></li><li><strong>Refactorer and Unit of Thought design</strong> to <strong>C4H intent system and agent services</strong><span>documented relationship</span></li><li><strong>C4H intent system and agent services</strong> to <strong>Reusable development practices</strong><span>development practice</span></li><li><strong>Reusable development practices</strong> to <strong>AI SDLC Method</strong><span>explicit integration</span></li><li><strong>C4H intent system and agent services</strong> to <strong>Constraint-Emergence Ontology</strong><span>reasoning and transformation studies</span></li><li><strong>AI SDLC Method</strong> to <strong>Genesis asset graph</strong><span>documented relationship</span></li><li><strong>Constraint-Emergence Ontology</strong> to <strong>Genesis asset graph</strong><span>declared foundation</span></li><li><strong>Genesis asset graph</strong> to <strong>ABIogenesis</strong><span>engine reconstruction</span></li><li><strong>Genesis asset graph</strong> to <strong>genesis_sdlc</strong><span>software specialization</span></li><li><strong>ABIogenesis</strong> to <strong>odd_sdlc</strong><span>runtime basis</span></li><li><strong>genesis_sdlc</strong> to <strong>odd_sdlc</strong><span>selective re-adoption</span></li><li><strong>odd_sdlc</strong> to <strong>odd_glc</strong><span>generalized lifecycle concerns</span></li><li><strong>genesis_sdlc</strong> to <strong>Specification Methodology</strong><span>shared standards extracted</span></li><li><strong>Specification Methodology</strong> to <strong>STDO 2.x</strong><span>documented relationship</span></li><li><strong>STDO 2.x</strong> to <strong>STDO 3.x</strong><span>documented relationship</span></li><li><strong>Constraint-Emergence Ontology</strong> to <strong>STDO 2.x</strong><span>constraints, boundaries and preservation</span></li></ul></details></figure>
+
+<p>The oldest surviving implementation found during this investigation is the
+August 2024 <code>discover_build</code> experiment. The whiteboard is the author&rsquo;s
+recollection of the first application. Those are compatible descriptions:
+an early experiment, a first application and the first preserved check-in
+need not be the same event. Dates below identify surviving records, with
+their recorded time zones; they do not establish when an idea was first
+conceived. Some early repositories require access to the author&rsquo;s archives.</p></div></section>
+<section class="chapter" id="beginnings" aria-labelledby="beginnings-heading" data-period="Mid-2024"><header class="chapter-heading"><p class="eyebrow">Mid-2024</p><h2 id="beginnings-heading">2024: applications, state and the first construction agents</h2><p class="chapter-deck">State, relationships and a history of change.</p></header><div class="prose"><h3>Mid-2024: the work begins</h3>
+<p>The author&rsquo;s initial work began in mid-2024, using conversational AI to explore
+ideas and construct applications. The first application recalled was a Mural
+replacement, later preserved as Brain Dump / MyPostit. The surviving Git
+history anchors the experiments in August and the whiteboard implementation
+in September; it does not establish the first day of the work.</p>
+<p>The model releases provide context for this period. ChatGPT launched using
+GPT-3.5 on <strong>30 November 2022</strong>, and Anthropic introduced Claude on
+<strong>14 March 2023</strong>. By mid-2024, OpenAI had announced GPT-4o on <strong>13 May</strong>, and
+Anthropic released Claude 3.5 Sonnet in <strong>June</strong>. The project&rsquo;s mid-2024 start
+therefore belongs to that later generation of tools. It is separate from the
+original launches of ChatGPT and Claude. These dates describe availability;
+they do not establish which model was used for each early experiment.
+<a href="https://openai.com/index/chatgpt/">ChatGPT introduction</a>, <a href="https://www.anthropic.com/news/introducing-claude">Claude introduction</a>,
+<a href="https://openai.com/index/hello-gpt-4o/">GPT-4o announcement</a>, <a href="https://www.anthropic.com/news/claude-3-5-sonnet">Claude 3.5 Sonnet</a></p>
+<h3>Brain Dump and MyPostit</h3>
+<p>The likely Mural replacement is the project preserved as <strong>Jims-Brain-Dump</strong>
+and <strong>MyPostit</strong>. Both repositories share the same initial history. A scaffold
+was checked in on 15 September 2024, followed that day by the first substantial
+TypeScript application, commit <code>b361df7605</code>.</p>
+<p>The application had an infinite canvas, movable notes, arrows and connection
+points, storage, import and export, and an event history interface. It was
+already an exercise in keeping relationships intact as objects changed. Moving
+a note also meant preserving the meaning and position of its connections.
+The event-log and undo/redo machinery show an early concern with recoverable
+state, although their presence alone does not establish complete replay
+correctness. <a href="https://github.com/foolishimp/MyPostit/commit/b361df76052966835dcbd81030895916269de3b4">First application check-in</a></p>
+<p>The <a href="https://github.com/foolishimp/MyPostit/commits/f0f7fe6b00cbb8e9a1224bcafaf189dcdf21a02b/">following commits</a> record the experience of building with an AI assistant
+more candidly than a retrospective feature list could. They describe lost
+arrows, unstable positioning and a Claude 3.5 refactor. The record supports a
+limited but useful observation: apparently local changes could damage
+relationships elsewhere in the application. Later concerns with preserved
+meaning and evidence can be understood against that experience. This is a
+historical interpretation, rather than a claim that the September application
+already contained STDO&rsquo;s later theory.</p>
+<p>An earlier side branch, <strong>discover_build</strong>, was checked in on 20 August 2024.
+It combined retrieval using FAISS and sentence embeddings with AutoGen agents
+for topic refinement and code execution. It establishes that experimentation
+with model context and agent-mediated work preceded the surviving whiteboard
+implementation. A direct derivation from this experiment to C4H has not been
+established. <a href="https://github.com/foolishimp/discover_build/commit/c1f1f9d6296290c7f810891018d2d0fa17066d87">Retrieval and agent experiment</a></p>
+<h3>Chain of Thoth: making change explicit</h3>
+<p><strong>Chain of Thoth</strong> begins on 17 September 2024. Its early commits explicitly
+introduce command/query separation and event sourcing. The Rust backend
+represents notes, arrows, groups and embedded boards, with command handlers,
+query handlers, an event store, snapshots and collaborative sessions.
+React and Flutter clients followed in September and October.
+<a href="https://github.com/foolishimp/chain_of_thoth/tree/8c8c4ae06570dafa5b6f62aa1b8659e94c4f5d10">Chain of Thoth source</a></p>
+<p>This made the application a system with an explicit history of change. A board
+was a state reconstructed and communicated through operations, with separate
+paths for changing it and observing it. That distinction later reappeared in
+the separation between runtime facts and their projections, although the
+repositories do not establish a continuous reuse of the same code.</p>
+<p>The techniques themselves were established. Event sourcing, including
+reconstruction from recorded changes, had been described well before 2024.
+The significance here is their adoption in the author&rsquo;s early AI-assisted
+application work. The later methodology grew partly from problems exposed by
+using these techniques. <a href="https://martinfowler.com/eaaDev/EventSourcing.html">Fowler&rsquo;s 2005 account of event sourcing</a></p>
+<h3>From a board to a Unit of Thought</h3>
+<p>The connection to the coding-agent work becomes explicit in <strong>refactorer</strong>,
+whose first check-in is dated 20 October UTC, or 21 October in Sydney.
+Its implementation uses specialized AutoGen agents for intent, scoping,
+analysis, refactoring and testing. A <code>coder4h_config.yaml</code> file places the
+Coder for Hire name in this precursor.</p>
+<p>More revealing is <code>Chain_of_Thoth_v001.md</code>, retained in the refactorer
+repository. It describes a <strong>Unit of Thought</strong> with operations for capturing
+intent, constraining scope, verifying and optimizing. Feedback can travel back
+through the structure. Agent specializations include discovery, scoping,
+refactoring, testing and Coder4H. The document is a direct bridge between the
+Thoth name and the construction-agent design. <a href="https://github.com/foolishimp/refactorer/blob/27785481f5eb2e2e633dddd249154eb862325ffb/docs/Chain_of_Thoth_v001.md">Unit of Thought design</a></p>
+<p>The conceptual unit had changed. A note on a board was a piece of represented
+thought; the proposed Unit of Thought was a bounded piece of work with intent,
+constraints, execution and feedback. It anticipated later concerns with
+construction units and evaluation, while leaving much of their meaning to
+the agent implementation.</p>
+<p>This work belonged to an active field. Microsoft&rsquo;s September 2023 AutoGen
+announcement already described specialized agents combining models, tools
+and human participation. MetaGPT, first submitted in August 2023, encoded
+software-team roles and operating procedures into agent workflows. SWE-agent&rsquo;s
+May 2024 paper examined interfaces through which agents navigate repositories,
+edit code and execute tests. The presence of several agents or a testing role
+was therefore established practice by the time of refactorer.
+<a href="https://www.microsoft.com/en-us/research/blog/autogen-enabling-next-generation-large-language-model-applications/">AutoGen</a>, <a href="https://arxiv.org/abs/2308.00352">MetaGPT</a>, <a href="https://arxiv.org/abs/2405.15793">SWE-agent</a></p>
+<p>The distinctive direction within this lineage was the attempt to make intent,
+scope and feedback properties of the work unit itself. That is a design
+contribution visible in the source, without implying that the project had
+demonstrated superior performance or invented multi-agent development.</p></div></section>
+<section class="chapter" id="intent" aria-labelledby="intent-heading" data-period="Late 2024–2025"><header class="chapter-heading"><p class="eyebrow">Late 2024–2025</p><h2 id="intent-heading">Late 2024-2025: C4H and the preservation of intent</h2><p class="chapter-deck">C4H makes work orders, context and transformation lineage explicit.</p></header><div class="prose"><h3>C4H was a sequence of implementations</h3>
+<p>The surviving <strong>c4h_intent_system</strong> history begins on 3 November 2024. Its
+architecture describes an intent-driven flow through discovery, solution,
+refactoring and verification. Events carry operation lineage, including root,
+parent and branch relationships. Deterministic skills and model-driven work
+occupy different roles. <a href="https://github.com/foolishimp/c4h_intent_system/tree/2ca732aaa519f7a9ba54388dd16191318267b7f2">Early C4H repository</a></p>
+<p>The implementation changed quickly. November commits record a move away from
+an AutoGen 0.4 attempt toward LiteLLM, followed by semantic extraction,
+iteration, coding and feedback work. A Prefect implementation appears in
+December. The main <strong>c4h</strong> repository starts on 31 December with a commit that
+explicitly says it reinitializes a monorepo. That date marks a consolidation;
+the earlier repositories preserve its antecedents. The author&rsquo;s recollection
+places the beginnings of C4H around mid-2024, but the named implementation
+records recovered here establish October and November as firm anchors.
+<a href="https://github.com/foolishimp/c4h/commit/356343f">C4H consolidation</a></p>
+<p>During early 2025, C4H separated agent capabilities from service orchestration.
+Discovery, solution and coding could be arranged into configured teams.
+Execution context carried a workflow identifier, an agent execution
+identifier, a parent and an execution path. The editor provided a place to
+submit and inspect work orders. These changes addressed practical questions:
+which request produced a change, which agent acted, and which context it used.</p>
+<p>The May methodology documents made that separation more explicit. They
+distinguished the interface, the declarative methodology and the reference
+implementation. Configuration snapshots, stateless agents, explicit responses
+and traceable transformations were recurring concerns. The SDLC account
+connected intent and work orders to discovery, design, coding and assurance.
+<a href="https://github.com/foolishimp/c4h_projects/tree/4633dcdf200225d692dd337be2d216fd6a05a746">C4H methodology and process archive</a></p>
+<p>The innovation within C4H was this combination of work-order semantics,
+configured transformation stages and execution lineage. Each ingredient had
+precedents. Their combination made the system an experiment in accountable
+construction across several steps. Recording inputs and configuration improved
+inspectability; it did not by itself make probabilistic outputs deterministic
+or establish that every transformation preserved meaning.</p>
+<h3>The foundational inquiry was already present</h3>
+<p>The C4H archive contains <strong>From Constrained Problem Domains to Emergent
+Reasoning in LLMs</strong>, first checked in on <strong>22 February 2025</strong>. Following the
+file across later moves is necessary to recover that date. Its eventual
+location under <code>Philosophy/</code> can otherwise make it appear younger.
+<a href="https://github.com/foolishimp/c4h_projects/blob/57165be1a0808f5441c8856225a166771508772e/old_docs/EmergentReasoning.md">First preserved reasoning paper</a></p>
+<p>The paper asks how constraints reduce a problem&rsquo;s possible solutions, how
+attention might be understood as a dynamic constraint mechanism, and whether
+the matching performed by a transformer has a useful relationship to symbolic
+unification. It also considers statistical boundaries and symbol-like
+representations. These were proposed interpretations of computation. They
+supplied questions and candidate models for the engineering work, rather than
+a measured guarantee about model behavior.</p>
+<p>A second bridge appears in <strong>A Formal Model for Semantic Transformation in
+AI-Augmented Processes</strong>, checked in on <strong>18 July 2025</strong>. It describes a chain
+from root or regulatory intent, through contextual policy and business
+requirements, to architecture and a solution. Transformations should add
+specificity while preserving the source&rsquo;s meaning. Where several constraints
+meet, the document explores compositional reconciliation using category-theoretic
+language. <a href="https://github.com/foolishimp/c4h_projects/commit/b907f5b5beaa9f40708f3f3796b1fd77f7cee7fb">Semantic transformation model</a></p>
+<p>This is an identifiable ancestor of STDO&rsquo;s later authority chain. It moves
+attention from the sequence of agents to the relationship between artifacts:
+what permits a downstream decision, what it must preserve, and how it can be
+traced back. The paper&rsquo;s language sometimes presents semantic preservation as
+a guarantee of the proposed model. The historical record establishes the
+proposal; it does not establish a general proof that an LLM implementation
+satisfies it.</p>
+<p>The <strong>emergent_reasoning</strong> repository began on 30 July 2025. Like the later
+ontology repository, it separated work already present elsewhere. The practical
+and theoretical branches were now independently visible, while continuing to
+inform one another. <a href="https://github.com/foolishimp/emergent_reasoning/commit/09f648e76f433fc43367fd6c71833709b0201938">Emergent Reasoning first check-in</a></p></div></section>
+<section class="chapter" id="method" aria-labelledby="method-heading" data-period="August 2025–January 2026"><header class="chapter-heading"><p class="eyebrow">August 2025–January 2026</p><h2 id="method-heading">August 2025-January 2026: development practice becomes a methodology</h2><p class="chapter-deck">Development practices become a subject of development in their own right.</p></header><div class="prose"><p>The August projects <strong>claude_init</strong>, <strong>claude_dev</strong> and <strong>ai_init</strong> extracted
+reusable development practices from individual applications. They supplied
+project instructions, task records, test-first practices and session
+continuity. <code>ai_init</code> explicitly began as a copy of <code>claude_init</code>.
+<a href="https://github.com/foolishimp/claude_init/tree/86a609bc1d5da9983ff5de28c503d62d82fdcdcf">Development bootstrap</a>, <a href="https://github.com/foolishimp/ai_init/commit/3c639bd">AI bootstrap</a></p>
+<p><strong>ai_sdlc_method</strong> starts on <strong>15 October 2025</strong> as a configuration and context
+management system. The following day&rsquo;s history explicitly integrates
+<code>ai_init</code> as its baseline development practices. This is a documented transfer,
+rather than an inferred resemblance between two repositories.
+<a href="https://github.com/foolishimp/ai_sdlc_method/commit/b378c17e3f83eb6f9002989a593a5d19b5dbf29b">AI SDLC origin</a>, <a href="https://github.com/foolishimp/ai_sdlc_method/commit/0649ce635456d00f57d4a5190f0007e2be171f9b">Baseline integration</a></p>
+<p>Through November, the project developed requirements, design, code and testing
+skills, configurable context and implementations for different coding-agent
+environments. The method could increasingly be described separately from a
+particular agent or application. C4H had implemented a development process;
+AI SDLC was making the process itself a reusable subject of development.</p>
+<p>By this time, specification-led agent workflows were also becoming a visible
+part of the wider tooling landscape. Kiro&rsquo;s <strong>14 July 2025</strong> introduction
+described requirements, technical design and implementation tasks, with
+acceptance criteria and links back to requirements. GitHub&rsquo;s <strong>2 September
+2025</strong> Spec Kit announcement described specification, planning, tasks and
+implementation across several coding agents, with human checkpoints.
+<a href="https://kiro.dev/blog/introducing-kiro/">Kiro&rsquo;s introduction</a>, <a href="https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/">Spec Kit&rsquo;s introduction</a></p>
+<p>These are relevant contemporaries, not evidence of influence in either
+direction. They establish that documents before code, task decomposition,
+traceability and multiple supported agents were shared concerns by late 2025.
+The distinctive thread developing here was the connection to a proposed model
+of semantic refinement: the method was intended to explain what survives a
+transformation, as well as to organize the work of performing it.</p></div></section>
+<section class="chapter" id="foundations" aria-labelledby="foundations-heading" data-period="January–February 2026"><header class="chapter-heading"><p class="eyebrow">January–February 2026</p><h2 id="foundations-heading">January-February 2026: the Constraint-Emergence Ontology</h2><p class="chapter-deck">A parallel inquiry into persistence, boundaries and meaning.</p></header><div class="prose"><p>The ontology was first checked into <strong>AI SDLC on 22 January 2026</strong>, in commit
+<code>3760f2fae0</code>. Its initial synthesis connected questions about physics,
+computation and emergence with requirements and homeostasis. The separate
+<strong>constraint_emergence_ontology</strong> repository began on <strong>9 February 2026</strong>;
+AI SDLC then recorded the migration of the philosophy material out of its own
+tree. <a href="https://github.com/foolishimp/ai_sdlc_method/commit/3760f2fae0a40f85094ed0da6e77d819c633d284">Ontology synthesis</a>, <a href="https://github.com/foolishimp/constraint_emergence_ontology/commit/3b0d79a">Independent repository</a></p>
+<p>The inquiry asked what allows structures to form, persist, interact and become
+components of further construction. Constraints described admissible states
+and changes. Boundaries allowed a structure to be treated as a unit. Meaning
+was considered through relationships that survive transformation. Evaluation
+and feedback connected a model of an intended state to observations of an
+actual state.</p>
+<p>For software, this suggested a practical interpretation. A requirement could
+act as a continuing condition on a product. An implementation was one
+realization of those conditions. Observations could reveal a gap in the
+implementation, the design, or the requirements themselves. Repair therefore
+needed a way to return to the layer responsible for the discrepancy.</p>
+<p>The ontology gave this interpretation a vocabulary and a broader research
+programme. Its physical and cross-domain claims remained hypotheses or
+philosophical proposals with their own evidential burdens. The engineering
+method could use explicit constraints, boundaries and feedback without
+requiring those broader claims to be established.</p>
+<figure class="diagram-figure"><figcaption>Engineering and the foundational inquiry</figcaption><div class="diagram-scroll" tabindex="0" aria-label="Engineering and the foundational inquiry; scroll horizontally on a narrow screen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 922" role="img" aria-labelledby="lineage-1-title lineage-1-desc" class="history-diagram"><title id="lineage-1-title">Engineering and the foundational inquiry</title><desc id="lineage-1-desc">Application work informs reasoning and semantic models. The ontology informs Genesis and STDO. Counterexamples feed back into both the theory and the method.</desc><defs><marker id="lineage-1-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#71849a"/></marker></defs><path d="M 390 122 C 390 146.0, 155 146.0, 155 170" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><path d="M 390 122 C 390 146.0, 625 146.0, 625 170" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><path d="M 155 272 C 155 298.5, 390 298.5, 390 325" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><path d="M 625 272 C 625 298.5, 390 298.5, 390 325" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><path d="M 390 447 C 390 461.0, 390 461.0, 390 475" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><path d="M 390 565 C 390 595.0, 390 595.0, 390 625" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><path d="M 515 386.0 C 805 386.0, 805 841.0, 750 841.0" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><path d="M 390 715 C 390 747.5, 625 747.5, 625 780" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><path d="M 750 841.0 C 823 841.0, 823 386.0, 515 386.0" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><path d="M 750 841.0 C 805 841.0, 805 670.0, 515 670.0" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-1-arrow)"/><g><rect x="265" y="20" width="250" height="102" rx="8" fill="white" stroke="#cbd4df"/><rect x="265" y="36" width="3" height="70" rx="1" fill="#22786e"/><text x="390" y="47.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Application and agent work</text><text x="390" y="67.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">2024-2025</text><text x="390" y="87.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">State, context, changes and</text><text x="390" y="107.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">failures</text></g><g><rect x="30" y="170" width="250" height="102" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="186" width="3" height="70" rx="1" fill="#9b5234"/><text x="155" y="197.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Emergent Reasoning</text><text x="155" y="217.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Preserved February 2025</text><text x="155" y="237.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Constraints and candidate</text><text x="155" y="257.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">semantic structure</text></g><g><rect x="500" y="170" width="250" height="102" rx="8" fill="white" stroke="#cbd4df"/><rect x="500" y="186" width="3" height="70" rx="1" fill="#9b5234"/><text x="625" y="197.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Semantic transformation</text><text x="625" y="217.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">model</text><text x="625" y="237.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">July 2025</text><text x="625" y="257.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Refinement and preserved meaning</text></g><g><rect x="265" y="325" width="250" height="122" rx="8" fill="white" stroke="#cbd4df"/><rect x="265" y="341" width="3" height="90" rx="1" fill="#9b5234"/><text x="390" y="352.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Constraint-Emergence</text><text x="390" y="372.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Ontology</text><text x="390" y="392.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">January-February 2026</text><text x="390" y="412.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Persistence, boundaries,</text><text x="390" y="432.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">construction, feedback</text></g><g><rect x="265" y="475" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="265" y="491" width="3" height="58" rx="1" fill="#22786e"/><text x="390" y="506.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Genesis</text><text x="390" y="526.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Assets, iteration, context and</text><text x="390" y="546.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">evaluators</text></g><g><rect x="265" y="625" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="265" y="641" width="3" height="58" rx="1" fill="#2858a4"/><text x="390" y="656.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">STDO</text><text x="390" y="676.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Authority, conformance, evidence</text><text x="390" y="696.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">and re-entry</text></g><g><rect x="500" y="780" width="250" height="122" rx="8" fill="white" stroke="#cbd4df"/><rect x="500" y="796" width="3" height="90" rx="1" fill="#9b5234"/><text x="625" y="807.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Research and engineering</text><text x="625" y="827.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">counterexamples</text><text x="625" y="847.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">2026</text><text x="625" y="867.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Narrower claims and explicit</text><text x="625" y="887.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">limits</text></g></svg></div><p class="diagram-key"><span class="key-line"></span> Documented relationship <span class="key-line dotted"></span> Conceptual influence</p><details class="diagram-text"><summary>Read the diagram connections</summary><ul><li><strong>Application and agent work</strong> to <strong>Emergent Reasoning</strong><span>documented relationship</span></li><li><strong>Application and agent work</strong> to <strong>Semantic transformation model</strong><span>documented relationship</span></li><li><strong>Emergent Reasoning</strong> to <strong>Constraint-Emergence Ontology</strong><span>documented relationship</span></li><li><strong>Semantic transformation model</strong> to <strong>Constraint-Emergence Ontology</strong><span>documented relationship</span></li><li><strong>Constraint-Emergence Ontology</strong> to <strong>Genesis</strong><span>documented relationship</span></li><li><strong>Genesis</strong> to <strong>STDO</strong><span>documented relationship</span></li><li><strong>Constraint-Emergence Ontology</strong> to <strong>Research and engineering counterexamples</strong><span>documented relationship</span></li><li><strong>STDO</strong> to <strong>Research and engineering counterexamples</strong><span>documented relationship</span></li><li><strong>Research and engineering counterexamples</strong> to <strong>Constraint-Emergence Ontology</strong><span>revisions to the account</span></li><li><strong>Research and engineering counterexamples</strong> to <strong>STDO</strong><span>revisions to the method</span></li></ul></details></figure>
+
+<p>The later revisions matter to the history. The September 2026 working paper
+distinguishes constraints, dynamics and evaluation. It requires an account of
+reachability and persistence before inferring that an allowed structure will
+form. It reserves a Markov-boundary claim for a declared screening property
+that has been tested. Its research discussion reports structured
+representations and interventions alongside failed screening tests.
+<a href="https://github.com/foolishimp/constraint_emergence_ontology/blob/942d4bda15c5b0f5ec5162737353cde3d06e28f3/constraint_emergence_ontology_v3.md">Constraint and Emergence, September revision</a></p>
+<p>This is a refinement of the original programme. The language became more
+careful about the difference between a useful organizing model and an
+established mechanism. In the method, the corresponding discipline is to
+state what a claim is about, what would count as evidence, and where the
+claim stops applying. The source record supports that correspondence; it
+does not establish that every later STDO rule was deduced from the ontology.</p></div></section>
+<section class="chapter" id="construction" aria-labelledby="construction-heading" data-period="February–March 2026"><header class="chapter-heading"><p class="eyebrow">February–March 2026</p><h2 id="construction-heading">February-March 2026: Genesis and the asset graph</h2><p class="chapter-deck">Construction and evaluation become a shared operation across artifacts.</p></header><div class="prose"><p>On <strong>19 February 2026</strong>, AI SDLC records the <strong>Asset Graph Model</strong>. The Genesis
+name appears in the same repository later that week. The transformation was
+conceptual as well as nominal: a fixed development sequence was recast in
+terms of four primitives—assets in a graph, iteration, evaluators, and
+specification plus context. <a href="https://github.com/foolishimp/ai_sdlc_method/commit/91f29bcb53f879ee186609a8a5af49a4c4b9cf62">Asset graph revision</a></p>
+<p>The central operation was written as:</p>
+<pre><code class="language-text">iterate(Asset, Context[], Evaluators) → Asset'
+</code></pre>
+<p>An intent, a design, a piece of code or a test artifact could be treated as a
+subject of construction and evaluation. A software lifecycle was one
+configuration of the graph. Different work could select different assets,
+transitions, evaluators and stopping conditions. Human judgment, probabilistic
+model work and deterministic evaluation became explicit categories, later
+written as <code>F_H</code>, <code>F_P</code> and <code>F_D</code>.</p>
+<p>The ontology connection was declared in the project&rsquo;s README. Requirements
+and context bounded construction; evaluation determined whether a candidate
+met the selected conditions; telemetry and other observations could reopen
+work. The February <strong>Genesis Bootloader</strong> attempted to express the governing
+ideas in a compact context that an LLM could consume. The associated
+<strong>abiogenesis principle</strong> proposed human bootstrapping followed by a system
+capable of sustaining its own development.
+<a href="https://github.com/foolishimp/ai_sdlc_method/blob/bd68f1e33124ba25f180092f7c5fcf3ca1ecbf48/README.md">Genesis account</a>, <a href="https://github.com/foolishimp/ai_sdlc_method/commit/4a97b338bff54efb6de6bd97acf82cfb4323e534">Bootloader</a>, <a href="https://github.com/foolishimp/ai_sdlc_method/commit/f2d5a2f24f46bd69f9d2132efb3e7e1199df8b5c">Abiogenesis principle</a></p>
+<p>Graphs and evaluation were already part of AI tooling. DSPy&rsquo;s October 2023
+paper described declarative language-model modules in transformation graphs,
+optimized against a metric. LangGraph&rsquo;s January 2024 introduction supplied
+cyclic graphs for agent runtimes. Genesis&rsquo;s graph representation therefore
+belongs to a wider development in the field. Its particular synthesis applied
+a common construction-and-evaluation model across lifecycle artifacts, with
+the specification/context boundary carrying the conditions of acceptable work.
+<a href="https://arxiv.org/abs/2310.03714">DSPy</a>, <a href="https://www.langchain.com/blog/langgraph">LangGraph</a></p>
+<p>One March decision makes the intended freedom of realization explicit.
+<strong>ADR-S-036</strong>, dated 12 March and revised on 14 March, treated invariants as
+conditions to satisfy, with room for agents of different capabilities to take
+different construction paths. It referred to a project built in a construction
+pass followed by an assurance pass. That account motivated the decision; it
+is not independent qualification of the reported build.
+<a href="https://github.com/foolishimp/ai_sdlc_method/blob/bd68f1e33124ba25f180092f7c5fcf3ca1ecbf48/specification/adrs/ADR-S-036-invariants-as-termination-conditions-not-procedures.md">Invariant and procedure decision</a></p>
+<p>The decision also exposes a tension that later versions had to resolve.
+Equivalent final artifacts do not settle every question about authorized
+effects, necessary causal order or admissible evidence. STDO would retain
+freedom where the contract permits it while making those additional
+obligations explicit. The progression was a continuing adjustment of what
+belongs in the method and what belongs in a particular realization.</p></div></section>
+<section class="chapter" id="boundaries" aria-labelledby="boundaries-heading" data-period="March–June 2026"><header class="chapter-heading"><p class="eyebrow">March–June 2026</p><h2 id="boundaries-heading">March-June 2026: separating engine, lifecycle and method</h2><p class="chapter-deck">Engine, software lifecycle and general lifecycle acquire distinct owners.</p></header><div class="prose"><h3>ABIogenesis and genesis_sdlc</h3>
+<p><strong>ABIogenesis</strong> begins on <strong>15 March 2026</strong> with an explicit statement that
+the earlier Genesis engine had accumulated implementation history and needed
+a clean reconstruction. Its initial intent names six functions—<code>iterate</code>,
+<code>project</code>, <code>emit</code>, <code>bind_fd</code>, <code>delta</code> and <code>schedule</code>—and a GTL-first engine.
+GTL, the graph declaration language, was being developed as a typed Python
+library. The initial plan set a self-hosting gate in which the engine would
+build a successor of itself. <a href="https://github.com/foolishimp/abiogenesis/blob/abe471b7f7ce8c0055b792979d77206957bfdd47/specification/INTENT.md">ABIogenesis initial intent</a></p>
+<p>The compiler analogy was deliberate. A language describes the construction;
+an engine executes it; the engine can eventually be built using an earlier
+engine. The first intent even proposed that the GTL package itself was the
+requirements surface. Later work gave requirements and design their own
+authority again. This records an actual change of position about how much
+meaning should be owned by an executable declaration.</p>
+<p><strong>genesis_sdlc</strong> also begins on 15 March. It supplied the software-development
+graph and practices that a generic engine would not own. Its subsequent
+specification describes that missing layer through a compiler-and-standard-
+library analogy. Work on module decomposition addressed a concrete weakness:
+a direct jump from design to code forced module-boundary decisions and
+implementation decisions into the same step.
+<a href="https://github.com/foolishimp/genesis-sdlc/commit/680541c">genesis_sdlc origin and specification</a></p>
+<p>The separation made several different questions visible. The engine needed
+to execute and preserve runtime facts. The software lifecycle needed to say
+what those facts meant for development. The method needed to say what counted
+as an authorized and sufficiently evidenced result. Sharing a vocabulary
+did not make those responsibilities interchangeable.</p>
+<h3>odd_sdlc: retaining selected foundations</h3>
+<p>The repository now called <strong>odd_sdlc</strong> begins on <strong>5 April 2026</strong>, initially
+using the <code>odd_method</code> name. Its first intent explicitly describes a fresh
+constitutional line informed by <code>genesis_sdlc</code>. It retained specification
+authority, graph functions, GTL/ABIogenesis execution, runtime fact ownership
+and scenario-based evidence. It rejected the inheritance of a product-local
+automation layer that duplicated runtime responsibility.
+<a href="https://github.com/foolishimp/odd_sdlc/blob/e636d778cf0ad17f2103b7d31babddc079cd27c1/specification/INTENT.md">odd_sdlc founding intent</a></p>
+<p>This was selective re-adoption. A successor was expected to identify which
+predecessor requirements it still wanted and where they were now owned.
+Repository ancestry and working code were insufficient reasons to preserve
+every old obligation or implementation choice. Later STDO rules about
+migration and predecessor conservation gave this lesson a general form.</p>
+<h3>odd_glc: the lifecycle extends beyond software</h3>
+<p>On <strong>27 June 2026</strong>, <strong>odd_glc</strong>, the <strong>ODD General Life Cycle</strong>, received its
+first check-in. Its bootstrap cites the preceding ABIogenesis requirements-
+algebra strategy and observations from <code>odd_sdlc</code>. It identifies concerns
+such as materialization, evidence, partial completion, unresolved obligations,
+re-entry and release as applicable beyond software delivery.
+<a href="https://github.com/foolishimp/odd_glc/blob/b12bc3eeef7fea61f77997f933b1b4229d8027d6/.ai-workspace/context/project_bootstrap.md">General lifecycle bootstrap</a></p>
+<p>Its intended position was between the generic execution substrate and domain
+products. ABIogenesis/GTL would preserve and execute the declared structures;
+<code>odd_glc</code> would interpret their lifecycle meaning; domain products would add
+their own policy and interpretation. The bootstrap expressly prevents the
+new layer from becoming another local runtime or closure ledger.</p>
+<p>The general-lifecycle branch is recorded as <code>odd_glc</code>, distinct from the
+software-development specialization <code>odd_sdlc</code>.</p></div></section>
+<section class="chapter" id="authority" aria-labelledby="authority-heading" data-period="March–April 2026"><header class="chapter-heading"><p class="eyebrow">March–April 2026</p><h2 id="authority-heading">March-April 2026: Specification Methodology becomes independent</h2><p class="chapter-deck">Shared standards acquire their own source and release identity.</p></header><div class="prose"><p>The method predates its repository. <strong>SPEC_METHOD.md</strong> was first checked into
+<code>genesis_sdlc</code> on <strong>27 March 2026</strong>, with an internal document date of 24 March.
+<strong>GRAPH_METHOD.md</strong> followed on <strong>3 April</strong>. ABIogenesis distributed copies
+into installed workspaces. That arrangement made a shared method depend on
+which product&rsquo;s source tree happened to supply the installer.
+<a href="https://github.com/foolishimp/genesis-sdlc/blob/e27e895e7e6e1f80aaa337da52c23a6ea4669980/specification/standards/SPEC_METHOD.md">First specification method</a>, <a href="https://github.com/foolishimp/genesis-sdlc/blob/bfa5d7710e6ac4cab52f8d9bdc08e0f8740e6345/specification/standards/GRAPH_METHOD.md">First graph method</a></p>
+<p>The independent <strong>specification_methodology</strong> repository was established on
+<strong>7 April 2026</strong>, commit <code>287c866787</code>. Its provenance document states the
+reason: remove ambiguity over the authoritative source. Shared standards would
+be authored in one place, published as complete immutable cuts, and adopted
+through exact release identities. Installed copies would derive their
+authority from the selected cut. <a href="https://github.com/foolishimp/specification_methodology/commit/287c86678730b70a9b7aabb6737b22f4181c98a0">Independent method origin</a></p>
+<p>The extracted method made the direction of authority explicit. Intent and
+requirements govern design; requirements and design govern realization.
+Evidence can reveal a defect at any of those layers. A report, index or
+generated view remains a representation of its source. The process for
+returning to an owning layer allows the specification to evolve without
+allowing a local workaround to rewrite it silently.</p>
+<figure class="diagram-figure"><figcaption>Authority, evaluation and correction</figcaption><div class="diagram-scroll" tabindex="0" aria-label="Authority, evaluation and correction; scroll horizontally on a narrow screen"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 790" role="img" aria-labelledby="lineage-2-title lineage-2-desc" class="history-diagram"><title id="lineage-2-title">Authority, evaluation and correction</title><desc id="lineage-2-desc">Intent and requirements govern design and realization. Evaluation informs judgment. A material discrepancy returns work to the layer that owns it.</desc><defs><marker id="lineage-2-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#71849a"/></marker></defs><path d="M 155 110 C 155 130.0, 155 130.0, 155 150" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><path d="M 155 240 C 155 260.0, 155 260.0, 155 280" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><path d="M 155 370 C 155 390.0, 155 390.0, 155 410" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><path d="M 155 500 C 155 520.0, 155 520.0, 155 540" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><path d="M 155 630 C 155 650.0, 155 650.0, 155 670" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><path d="M 280 715 C 415 715, 415 455, 500 455" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><path d="M 500 455 C 415 455, 415 65, 280 65" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><path d="M 500 455 C 415 455, 415 195, 280 195" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><path d="M 500 455 C 415 455, 415 325, 280 325" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><path d="M 500 455 C 415 455, 415 455, 280 455" fill="none" stroke="#71849a" stroke-width="1.7" marker-end="url(#lineage-2-arrow)"/><g><rect x="30" y="20" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="36" width="3" height="58" rx="1" fill="#2858a4"/><text x="155" y="51.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Intent and product</text><text x="155" y="71.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">definition</text><text x="155" y="91.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Purpose and intended outcome</text></g><g><rect x="30" y="150" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="166" width="3" height="58" rx="1" fill="#2858a4"/><text x="155" y="191.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Requirements</text><text x="155" y="211.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Conditions that must hold</text></g><g><rect x="30" y="280" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="296" width="3" height="58" rx="1" fill="#22786e"/><text x="155" y="311.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Design</text><text x="155" y="331.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Structural choices and</text><text x="155" y="351.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">obligations</text></g><g><rect x="30" y="410" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="426" width="3" height="58" rx="1" fill="#22786e"/><text x="155" y="451.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Realization</text><text x="155" y="471.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Code, tools and human activity</text></g><g><rect x="30" y="540" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="556" width="3" height="58" rx="1" fill="#9b5234"/><text x="155" y="581.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Evaluation</text><text x="155" y="601.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Observations and evidence</text></g><g><rect x="30" y="670" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="30" y="686" width="3" height="58" rx="1" fill="#9b5234"/><text x="155" y="701.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Judgment</text><text x="155" y="721.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Satisfied conditions and</text><text x="155" y="741.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">remaining gaps</text></g><g><rect x="500" y="410" width="250" height="90" rx="8" fill="white" stroke="#cbd4df"/><rect x="500" y="426" width="3" height="58" rx="1" fill="#2858a4"/><text x="625" y="441.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">Re-entry at the owning</text><text x="625" y="461.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="600" fill="#142b42">layer</text><text x="625" y="481.0" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="400" fill="#465b70">Revise the authorized source</text></g></svg></div><p class="diagram-key"><span class="key-line"></span> Documented relationship <span class="key-line dotted"></span> Conceptual influence</p><details class="diagram-text"><summary>Read the diagram connections</summary><ul><li><strong>Intent and product definition</strong> to <strong>Requirements</strong><span>documented relationship</span></li><li><strong>Requirements</strong> to <strong>Design</strong><span>documented relationship</span></li><li><strong>Design</strong> to <strong>Realization</strong><span>documented relationship</span></li><li><strong>Realization</strong> to <strong>Evaluation</strong><span>documented relationship</span></li><li><strong>Evaluation</strong> to <strong>Judgment</strong><span>documented relationship</span></li><li><strong>Judgment</strong> to <strong>Re-entry at the owning layer</strong><span>a material discrepancy</span></li><li><strong>Re-entry at the owning layer</strong> to <strong>Intent and product definition</strong><span>direction or product gap</span></li><li><strong>Re-entry at the owning layer</strong> to <strong>Requirements</strong><span>requirement gap</span></li><li><strong>Re-entry at the owning layer</strong> to <strong>Design</strong><span>design gap</span></li><li><strong>Re-entry at the owning layer</strong> to <strong>Realization</strong><span>realization defect</span></li></ul></details></figure>
+
+<p>This diagram summarizes the authority and feedback relationship. It is not
+a mandatory runtime schedule. Some work can satisfy several obligations in
+one construction, while a declared causal or evidence obligation may require
+a particular ordering.</p>
+<p>The independent repository is the point at which lessons from the engines
+became a separately versioned method. Engine behavior could now be evaluated
+against it. A working engine would no longer define the method solely through
+its existing behavior.</p></div></section>
+<section class="chapter" id="lifecycle" aria-labelledby="lifecycle-heading" data-period="April–June 2026"><header class="chapter-heading"><p class="eyebrow">April–June 2026</p><h2 id="lifecycle-heading">April-June 2026: the first released method</h2><p class="chapter-deck">The product remains answerable to its conditions after construction.</p></header><div class="prose"><p>The 1.x line established a method that could govern its own development and
+the products using it. It distinguished a mutable source project, an immutable
+release, an installed product and a product acting as the builder of another
+product. This distinction followed directly from the bootstrap experience:
+the source being edited and the installed tool doing the work could have
+different identities and different authority.</p>
+<p>The line also accumulated rules for migration, bounded work, design,
+probabilistic operations and evaluation. Each addition addressed a different
+way that useful construction could lose its connection to the intended
+outcome. A sprint needed a bounded claim. A migration needed to say which
+old requirements survived. A successful test needed to be related to the
+property it actually observed.</p>
+<p>By <strong>1.8.0</strong>, the scope explicitly covered the operational lifecycle, including
+release, deployment, live use, telemetry and retirement. Correctness had
+become a continuing relationship between the specification and the observed
+product. This carried forward the homeostatic interpretation developed in
+Genesis and the ontology: a system remains answerable to its governing
+conditions as its environment and implementation change.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Historical release table"><table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Method cut</th>
+<th>Main refinement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15 April 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.0.0.md">1.0.0</a></td>
+<td>Independent method product; recursive product taxonomy; shared world-model, graph, release and work-record conventions.</td>
+</tr>
+<tr>
+<td>April 2026</td>
+<td>1.1.0; <a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.0.1.md">1.0.1</a>; <a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.0.2.md">1.0.2</a></td>
+<td>Consolidated method and agent bootstrap guidance; explicit migration and re-adoption; distinction between a mutable candidate and an immutable release candidate.</td>
+</tr>
+<tr>
+<td>26-27 April 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.2.0.md">1.2.0</a>, <a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.3.0.md">1.3.0</a></td>
+<td>Probabilistic boundaries and outcome-driven construction; explicit UI state, messages, effects and replay obligations where selected.</td>
+</tr>
+<tr>
+<td>30 April 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.4.0.md">1.4.0</a>, <a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.5.0.md">1.5.0</a></td>
+<td>Bounded execution, evidence cost and authority; consolidation of repeated method prose.</td>
+</tr>
+<tr>
+<td>10 May 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.6.0.md">1.6.0</a></td>
+<td>Constructive evaluation and yield; clearer closure conditions and design-decision conventions.</td>
+</tr>
+<tr>
+<td>7 June 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.7.0.md">1.7.0</a></td>
+<td>Agentic construction walkthrough, admission boundaries and source-bound method compressions.</td>
+</tr>
+<tr>
+<td>30 June 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v1.8.0.md">1.8.0</a></td>
+<td>Explicit coverage of the complete operational lifecycle.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The early 1.x publication order is not a simple ascending sequence of version
+numbers. The <a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.0.0.md">2.0.0 predecessor-conservation record</a> identifies the
+accepted families carried forward, including 1.1.0 and the subsequent 1.0.x
+amendments. The conceptual history is clearer when those accepted changes are
+followed directly rather than inferred from numeric sorting.</p></div></section>
+<section class="chapter" id="evidence" aria-labelledby="evidence-heading" data-period="July–September 2026"><header class="chapter-heading"><p class="eyebrow">July–September 2026</p><h2 id="evidence-heading">July-September 2026: STDO 2 and the boundaries of evidence</h2><p class="chapter-deck">Every result needs a subject, a basis and a stated limit.</p></header><div class="prose"><h3>An incremental successor with stricter claims</h3>
+<p><strong>2.0.0</strong>, in July, explicitly conserved the accepted 1.8.0 method. Its release
+note describes an incremental successor and distinguishes it from earlier
+rejected reconstruction candidates. The method added design-boundary work and
+lessons from delivery incidents. <a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.0.0.md">2.0.0 release account</a></p>
+<p>Several of those lessons concern the difference between a useful observation
+and the claim someone wants it to support. Evidence must identify its subject.
+A test through a substitute path does not establish behavior on the actual
+authority path. A result for one candidate does not automatically qualify a
+changed candidate. Passing a component check does not close a product-level
+outcome. Independent review must have an identifiable subject and a durable
+disposition.</p>
+<p>This sharpened the earlier lineage work. C4H had asked which operation
+produced an output. STDO now also asked what that output justified, under
+which basis, for which subject, and with what remaining uncertainty.</p>
+<p>The method also made its own cost part of the judgment. A disproportionate
+control or redesign could damage delivery without providing evidence relevant
+to the actual claim. The developing position required sufficient structure
+and assurance for the consequence at issue. It did not equate more ceremony
+with a stronger result.</p>
+<h3>The ontology also had to respect its application boundaries</h3>
+<p>The <strong>2.2.2</strong> release records a specific correction to the world-model method.
+Earlier wording had made a geometric Markov-object construction part of the
+publication requirements for recovered entities. That could reject an
+institutional or software entity whose identity and evidence were adequate
+but whose source offered no suitable geometric representation.
+<a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.2.2.md">Entity and geometry correction</a></p>
+<p>The correction made the <strong>entity cut</strong> the primary semantic unit and treated
+the geometric Markov-object account as an optional overlay requiring an
+appropriate representation space. This is a concrete example of the
+foundational inquiry being refined through use. An explanatory model had
+introduced an obligation that did not fit every governed domain. The method
+retained the useful boundary questions and narrowed the geometric claim.</p>
+<h3>Reference frames and a shared result vocabulary</h3>
+<p>The August <strong>2.4.0</strong> line introduced a general reference-frame account. A
+judgment has a purpose, a subject, a governing basis, an authority boundary and
+evidence. A result can be satisfied, falsified, indeterminate, outside the
+frame, or based on an invalid basis. These distinctions preserve information
+that a single success/failure flag loses.
+<a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.4.0.md">Reference-frame release</a></p>
+<p>For example, an evaluator lacking the necessary observation has a different
+result from an evaluator that observed a counterexample. An out-of-scope
+judgment cannot be made relevant by reporting confidence. A valid result
+about an earlier release does not silently transfer to a later one. These
+were methodological conditions for interpreting results, with concrete
+realization left to the applicable product.</p>
+<p>The 2.4.x line also established the STDO naming and Product Definition binding,
+and made release selection and installation more explicit. The 2.5.x work
+developed a shared axiomatic account, source-linked representations and
+construction/evaluation profiles. Deterministic, probabilistic and human
+functions remained distinguishable from the actors performing them and from
+the authority to accept their results.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Historical release table"><table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Line</th>
+<th>Development</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>July 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.0.0.md">2.0.0</a></td>
+<td>Exact evidence subjects, independent review, product-outcome conservation and proportionate method obligations.</td>
+</tr>
+<tr>
+<td>July 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.2.0.md">2.2.0</a>-<a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.2.2.md">2.2.2</a></td>
+<td>Bounded authority for growth, decision-complete constraints, and separation of entity recovery from optional geometry.</td>
+</tr>
+<tr>
+<td>August 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.3.0.md">2.3.0</a></td>
+<td>Transformation admission, reconstructable design and explicit computational mapping.</td>
+</tr>
+<tr>
+<td>August 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.4.0.md">2.4.0</a>-<a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.4.2.md">2.4.2</a>, followed by 2.4.3 candidates</td>
+<td>Reference frames, claim-relative testing, STDO Product Definitions and more precise release selection.</td>
+</tr>
+<tr>
+<td>August-September 2026</td>
+<td>2.5.0 candidates</td>
+<td>Axiomatic calculus, representation tooling, construction profiles and bounded executive attention.</td>
+</tr>
+<tr>
+<td>September 2026</td>
+<td>2.5.1 candidates</td>
+<td>Review and triage refinement; RC2 made triangulation depend on distinct evidence and constraints rather than a count of reviewers.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The <a href="https://github.com/foolishimp/specification_methodology/commit/c45a6c6739c72c47974d7435424d3db2dc2662a9">30 September RC2 change</a> is a useful example of the
+direction. Several similar assessments can repeat the same blind spot.
+Triangulation requires observations or frames that constrain a diagnosis in
+different ways. The evidential relationship matters more than the number of
+agents producing prose.</p></div></section>
+<section class="chapter" id="context" aria-labelledby="context-heading" data-period="October–November 2026"><header class="chapter-heading"><p class="eyebrow">October–November 2026</p><h2 id="context-heading">October-November 2026: STDO 3, finite context and separate products</h2><p class="chapter-deck">STDO 3 separates product responsibilities and strengthens continuation.</p></header><div class="prose"><h3>Reconstructing accumulated rules around common foundations</h3>
+<p>The October work developed separate Claude and Codex constructions against a
+common specification, followed by comparison and synthesis. The common
+definition owned the required meaning; each tenant supplied a realization.
+Candidate packaging and comparison results retained their own scope. Neither
+the existence of two implementations nor a successful package check established
+whole-method qualification.</p>
+<p>Version 3 organized the accumulated method around shared foundations. Entities,
+relations, authority, selected bases and evaluation results had clearer common
+owners. Reference frames and independent review already existed in 2.x; the
+new work integrated them and made finite context, activation and continuation
+more explicit. <a href="https://github.com/foolishimp/specification_methodology/tree/225284646/specification_methodology/v3">V3 source project and construction record</a></p>
+<p>This addressed a recurring operational fact of AI-assisted development: a
+session is finite. A later actor may receive only part of the earlier context.
+A useful continuation therefore needs enough current state to identify the
+subject, its governing source, completed work, unresolved matters and the
+next authorized action. A summary can direct attention, but its omissions
+cannot amend the underlying obligations.</p>
+<p>The method&rsquo;s result vocabulary also became a common basis for composing
+judgments. Missing coverage, an invalid basis and a demonstrated failure retain
+their different meanings when work is combined. A coordinator consumes results
+within its grant; a writer needs authority for its effects; applicable review
+requires the necessary independence. A particular Executive/Worker/Reviewer
+arrangement remains a selected profile rather than a universal organizational
+chart.</p>
+<h3>From a method package to independently owned supporting products</h3>
+<p>The first native 3.0.0 candidate cut was recorded in October. Subsequent
+releases developed distribution, recursive product composition, tools and
+native workflows. By November, the repository also contained independently
+owned support products. Their co-location did not give one product authority
+over another.</p>
+<p><strong>3.0.4</strong> supplied native work, review, status, ticket and help workflows. It
+made distinctions such as landing a change, closing work and qualifying a
+release visible in ordinary use. It later remained the construction basis
+for the 3.1 release work. A methodology can therefore be built under one
+released version while producing a different successor.</p>
+<p>The <strong>3.1</strong> arrangement separated <strong>Purpose Context</strong>, which owns reusable
+indexes and context construction, from <strong>STDO Skills</strong>, which binds those
+capabilities to supported hosts. Representation Tools and STDO Representation
+serve visual documentation. Axiom Indexer retains its separately owned
+conversion and projection responsibilities. This was another application of
+the ownership lesson learned during the engine/lifecycle split.</p>
+<p>The history of representation tools includes formal and Lean-related work.
+The 3.1 boundary changes retired the earlier formal/context routes from the
+active product arrangement and made visual documentation optional. An index
+or diagram could help a reader find and understand a rule while remaining
+answerable to its exact source. It would not become a new owner of that rule.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Historical release table"><table>
+<thead>
+<tr>
+<th>Period</th>
+<th>Cut</th>
+<th>Main change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>October 2026</td>
+<td>3.0.0-rc.1 and 3.0.1-rc.1</td>
+<td>Native successor packages following the common-definition and tenant construction work.</td>
+</tr>
+<tr>
+<td>26 October 2026</td>
+<td>3.0.2</td>
+<td>Recursive product composition and integrated outcome responsibility, with explicit limits on inherited authority.</td>
+</tr>
+<tr>
+<td>2 November 2026</td>
+<td>3.0.3</td>
+<td>Bundled exploration and source-reading tools, with bounded evidence for the represented examples.</td>
+</tr>
+<tr>
+<td>3 November 2026</td>
+<td>3.0.4</td>
+<td>Native method workflows; clearer distinctions among review, closure and release.</td>
+</tr>
+<tr>
+<td>7 November 2026</td>
+<td>3.0.5-rc.1</td>
+<td>A coordinated five-product distribution with exact member identities and acquisition evidence.</td>
+</tr>
+<tr>
+<td>15 November 2026</td>
+<td>3.1.0-rc.1 and rc.2</td>
+<td>Six independently owned products, including Purpose Context; RC2 corrected a missing predecessor obligation in the context coverage.</td>
+</tr>
+<tr>
+<td>18 November 2026</td>
+<td><a href="https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.1.0-rc.3">3.1.0-rc.3</a></td>
+<td>Self-contained method meaning, optional tracking machinery, and a clearer distinction between intended product and current work.</td>
+</tr>
+</tbody>
+</table></div>
+<p>The <a href="https://github.com/foolishimp/specification_methodology/commits/b2e21ad0a2bab04e59afd5246b990da992417047/">native release history</a> and the individual release
+records retain the exact cut identities. Native packages have their own
+deliberately small Git history. That history alone cannot reconstruct the
+earlier source development, which remains in the source repository and the
+predecessor projects.</p>
+<h3>RC3: preserving obligations while removing an inherited mechanism</h3>
+<p>The latest published cut in this account is
+<code>specification_methodology/v3.1.0-rc.3</code>, native commit
+<code>b2e21ad0a2bab04e59afd5246b990da992417047</code>. GitHub records its publication on
+<strong>18 November 2026 at 08:19:51 UTC</strong>. The project published it as a normal
+GitHub release while retaining the <code>rc.3</code> identity. Those are separate facts;
+the label should not be silently rewritten as a final <code>3.1.0</code> cut.
+<a href="https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.1.0-rc.3">Published release</a></p>
+<p>RC3 corrected a remaining dependency of method meaning on downstream products
+and runtime machinery. Every normative tier, including optional profiles,
+must define its terms and rules within the method. Tracking obligations,
+decisions, progress and unresolved matters remains required. So does conserving
+needed facts and reconciling a work record with the actual workspace. A generic
+register is one possible realization. ODD no longer imposes an immutable
+ledger, a fixed evaluator API or a universal replay architecture.
+<a href="https://github.com/foolishimp/specification_methodology/blob/b2e21ad0a2bab04e59afd5246b990da992417047/specification_methodology/v3/release/release-note.md">RC3 native release note</a></p>
+<p>That correction is historically significant. Event histories and runtime
+lineage had been useful from the first whiteboard and C4H implementations.
+They helped expose the need to preserve state, explain change and retain
+evidence. By RC3, the method stated those obligations without requiring every
+consumer to reproduce the machinery through which they had first been
+explored. A product may still require replay or a particular ledger when its
+own contract calls for them.</p>
+<p>RC3 also clarified that <strong>Product</strong> describes the intended product and end
+state, including capabilities still to be built, while <strong>Goals</strong> describes
+the current epics or work wave. That distinction prevents a bounded delivery
+plan from quietly shrinking the product&rsquo;s intended outcome.</p>
+<p>The release retains six independent products and the STDO 3.0.4 construction
+basis. Its evidence distinguishes source assessment, package identity,
+context coverage, installed-host observations and public acquisition. The
+release note explicitly limits the conclusions: publication does not establish
+whole-method qualification, universal context coverage or successful future
+tasks, and it does not migrate existing consumers. Later mutable source work
+also remains a separate subject from this historical release boundary.
+<a href="https://github.com/foolishimp/specification_methodology/blob/b2e21ad0a2bab04e59afd5246b990da992417047/specification_methodology/v3/release/release-note.md">RC3 distribution and evidence record</a></p></div></section>
+<section class="chapter" id="contribution" aria-labelledby="contribution-heading" data-period="What accumulated"><header class="chapter-heading"><p class="eyebrow">What accumulated</p><h2 id="contribution-heading">The contribution that accumulated</h2><p class="chapter-deck">Preservation, evaluation, authority and correction across generations.</p></header><div class="prose"><p>The differentiators are most accurately described as a combination that
+developed over time. The early projects used established application and
+agent techniques. The later work made their governing relationships an
+independent object of design.</p>
+<p><strong>Meaning across transformations.</strong> C4H&rsquo;s intent and operation lineage,
+the 2025 semantic model and STDO&rsquo;s requirements/design chain all address
+preservation through change. The refinement was to make preservation an
+explicit obligation with a subject and evidence, rather than assume it from
+the fact that several stages completed.</p>
+<p><strong>A shared account of construction and evaluation.</strong> Genesis applied its
+asset-and-evaluator model to multiple development artifacts. STDO generalized
+the conditions of acceptable construction while allowing different products
+to choose their realizations. This extends the project&rsquo;s scope beyond a
+particular coding-agent loop or document-to-task workflow.</p>
+<p><strong>Authority and evidence that remain attached to their basis.</strong> A source
+document, released method, installed tool, generated view and evaluation
+result have different roles. The separation became especially important when
+the method was used to build itself and when several products and coding
+agents shared a workspace.</p>
+<p><strong>Correction at the layer that owns the problem.</strong> A failed observation can
+require a code repair, a different design, a revised requirement or a changed
+goal. The lifecycle provides a way to make that decision explicit. Partial
+completion and unresolved obligations remain visible instead of disappearing
+inside a broad success claim.</p>
+<p><strong>Fundamental ideas exposed to engineering limits.</strong> The constraint-emergence
+work supplied a way of thinking about boundaries, persistence, meaning and
+feedback. Application and research then exposed where the account needed
+qualification: geometric representations were not available everywhere;
+screening claims needed tests; admissible outcomes did not remove authority
+or causal obligations; useful runtime patterns could become over-prescriptive
+when promoted into general method.</p>
+<p>These are claims about the design and documented evolution of this project.
+The contemporary sources establish that several component ideas were already
+in use. They do not support a claim of sole invention, industry-wide priority
+or comparative performance. The distinctive work lies in the particular
+integration, its continued revision through application, and the effort to
+state exactly which relationships an alternative realization must preserve.</p></div></section>
+<section class="chapter" id="sources" aria-labelledby="sources-heading" data-period="The record"><header class="chapter-heading"><p class="eyebrow">The record</p><h2 id="sources-heading">Sources and remaining historical gaps</h2><p class="chapter-deck">Check-ins, releases, contemporary publications and the remaining gaps.</p></header><div class="prose"><p>This account uses surviving Git histories, initial intents, design documents,
+method release notes and the public release record. The whiteboard&rsquo;s intended
+role as a Mural replacement, the approximate mid-2024 recollection of C4H,
+and the presence of foundational thinking during the earliest work are
+attributed to the author&rsquo;s recollection. Those recollections help identify
+the projects; a later preserved check-in does not establish an earlier date.</p>
+<p>Three distinctions matter when extending this history. First, a file move or
+repository extraction can conceal an older first check-in; following the
+reasoning paper across its moves recovered February 2025. Second, a commit
+message reporting successful tests or a completed build records the author&rsquo;s
+assessment at that time; this history has not rerun and independently
+qualified those implementations. Third, conceptual influence and direct code
+descent are different relationships. The narrative identifies an explicit
+transfer where the source provides one and labels retrospective interpretation
+where it does not.</p>
+<p>The comparison with other tools uses their dated publications. It concerns
+what those sources described at the time, rather than claiming to survey
+every capability of their current versions. Early private repositories may
+require access; the STDO release notes linked within this repository provide
+the locally available continuation of the record.</p></div></section>
+        <section class="sources-directory" aria-labelledby="source-directory-title"><h3 id="source-directory-title">Follow the source record</h3><p>The narrative links to the evidence where it is discussed. Some early repositories require archive access.</p><details id="source-directory"><summary>Browse all 50 source references</summary><ul class="source-list"><li id="source-brain-dump"><a href="https://github.com/foolishimp/MyPostit/commit/b361df76052966835dcbd81030895916269de3b4">brain dump</a><span>github.com</span></li><li id="source-brain-history"><a href="https://github.com/foolishimp/MyPostit/commits/f0f7fe6b00cbb8e9a1224bcafaf189dcdf21a02b/">brain history</a><span>github.com</span></li><li id="source-discover-build"><a href="https://github.com/foolishimp/discover_build/commit/c1f1f9d6296290c7f810891018d2d0fa17066d87">discover build</a><span>github.com</span></li><li id="source-thoth"><a href="https://github.com/foolishimp/chain_of_thoth/tree/8c8c4ae06570dafa5b6f62aa1b8659e94c4f5d10">thoth</a><span>github.com</span></li><li id="source-uot"><a href="https://github.com/foolishimp/refactorer/blob/27785481f5eb2e2e633dddd249154eb862325ffb/docs/Chain_of_Thoth_v001.md">uot</a><span>github.com</span></li><li id="source-c4h-intent"><a href="https://github.com/foolishimp/c4h_intent_system/tree/2ca732aaa519f7a9ba54388dd16191318267b7f2">c4h intent</a><span>github.com</span></li><li id="source-c4h-root"><a href="https://github.com/foolishimp/c4h/commit/356343f">c4h root</a><span>github.com</span></li><li id="source-c4h-processes"><a href="https://github.com/foolishimp/c4h_projects/tree/4633dcdf200225d692dd337be2d216fd6a05a746">c4h processes</a><span>github.com</span></li><li id="source-early-reasoning"><a href="https://github.com/foolishimp/c4h_projects/blob/57165be1a0808f5441c8856225a166771508772e/old_docs/EmergentReasoning.md">early reasoning</a><span>github.com</span></li><li id="source-semantic-model"><a href="https://github.com/foolishimp/c4h_projects/commit/b907f5b5beaa9f40708f3f3796b1fd77f7cee7fb">semantic model</a><span>github.com</span></li><li id="source-reasoning-repo"><a href="https://github.com/foolishimp/emergent_reasoning/commit/09f648e76f433fc43367fd6c71833709b0201938">reasoning repo</a><span>github.com</span></li><li id="source-claude-init"><a href="https://github.com/foolishimp/claude_init/tree/86a609bc1d5da9983ff5de28c503d62d82fdcdcf">claude init</a><span>github.com</span></li><li id="source-ai-init"><a href="https://github.com/foolishimp/ai_init/commit/3c639bd">ai init</a><span>github.com</span></li><li id="source-ai-sdlc-root"><a href="https://github.com/foolishimp/ai_sdlc_method/commit/b378c17e3f83eb6f9002989a593a5d19b5dbf29b">ai sdlc root</a><span>github.com</span></li><li id="source-ai-init-integration"><a href="https://github.com/foolishimp/ai_sdlc_method/commit/0649ce635456d00f57d4a5190f0007e2be171f9b">ai init integration</a><span>github.com</span></li><li id="source-ontology-origin"><a href="https://github.com/foolishimp/ai_sdlc_method/commit/3760f2fae0a40f85094ed0da6e77d819c633d284">ontology origin</a><span>github.com</span></li><li id="source-ontology-root"><a href="https://github.com/foolishimp/constraint_emergence_ontology/commit/3b0d79a">ontology root</a><span>github.com</span></li><li id="source-ontology-v3"><a href="https://github.com/foolishimp/constraint_emergence_ontology/blob/942d4bda15c5b0f5ec5162737353cde3d06e28f3/constraint_emergence_ontology_v3.md">ontology v3</a><span>github.com</span></li><li id="source-asset-graph"><a href="https://github.com/foolishimp/ai_sdlc_method/commit/91f29bcb53f879ee186609a8a5af49a4c4b9cf62">asset graph</a><span>github.com</span></li><li id="source-genesis-readme"><a href="https://github.com/foolishimp/ai_sdlc_method/blob/bd68f1e33124ba25f180092f7c5fcf3ca1ecbf48/README.md">genesis readme</a><span>github.com</span></li><li id="source-bootloader"><a href="https://github.com/foolishimp/ai_sdlc_method/commit/4a97b338bff54efb6de6bd97acf82cfb4323e534">bootloader</a><span>github.com</span></li><li id="source-abiogenesis-principle"><a href="https://github.com/foolishimp/ai_sdlc_method/commit/f2d5a2f24f46bd69f9d2132efb3e7e1199df8b5c">abiogenesis principle</a><span>github.com</span></li><li id="source-invariant-adr"><a href="https://github.com/foolishimp/ai_sdlc_method/blob/bd68f1e33124ba25f180092f7c5fcf3ca1ecbf48/specification/adrs/ADR-S-036-invariants-as-termination-conditions-not-procedures.md">invariant adr</a><span>github.com</span></li><li id="source-abg-origin"><a href="https://github.com/foolishimp/abiogenesis/blob/abe471b7f7ce8c0055b792979d77206957bfdd47/specification/INTENT.md">abg origin</a><span>github.com</span></li><li id="source-gsdlc"><a href="https://github.com/foolishimp/genesis-sdlc/commit/680541c">gsdlc</a><span>github.com</span></li><li id="source-odd-origin"><a href="https://github.com/foolishimp/odd_sdlc/blob/e636d778cf0ad17f2103b7d31babddc079cd27c1/specification/INTENT.md">odd origin</a><span>github.com</span></li><li id="source-glc-origin"><a href="https://github.com/foolishimp/odd_glc/blob/b12bc3eeef7fea61f77997f933b1b4229d8027d6/.ai-workspace/context/project_bootstrap.md">glc origin</a><span>github.com</span></li><li id="source-spec-origin"><a href="https://github.com/foolishimp/genesis-sdlc/blob/e27e895e7e6e1f80aaa337da52c23a6ea4669980/specification/standards/SPEC_METHOD.md">spec origin</a><span>github.com</span></li><li id="source-graph-origin"><a href="https://github.com/foolishimp/genesis-sdlc/blob/bfa5d7710e6ac4cab52f8d9bdc08e0f8740e6345/specification/standards/GRAPH_METHOD.md">graph origin</a><span>github.com</span></li><li id="source-method-origin"><a href="https://github.com/foolishimp/specification_methodology/commit/287c86678730b70a9b7aabb6737b22f4181c98a0">method origin</a><span>github.com</span></li><li id="source-release-2"><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.0.0.md">release 2</a><span>Repository release record</span></li><li id="source-release-222"><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.2.2.md">release 222</a><span>Repository release record</span></li><li id="source-release-240"><a href="https://github.com/foolishimp/specification_methodology/blob/225284646a5f975c2c4a3aec6e8ef70a97000d3d/specification_methodology/v2/releases/v2.4.0.md">release 240</a><span>Repository release record</span></li><li id="source-triangulation"><a href="https://github.com/foolishimp/specification_methodology/commit/c45a6c6739c72c47974d7435424d3db2dc2662a9">triangulation</a><span>github.com</span></li><li id="source-v3-construction"><a href="https://github.com/foolishimp/specification_methodology/tree/225284646/specification_methodology/v3">v3 construction</a><span>github.com</span></li><li id="source-native-history"><a href="https://github.com/foolishimp/specification_methodology/commits/b2e21ad0a2bab04e59afd5246b990da992417047/">native history</a><span>github.com</span></li><li id="source-latest-release"><a href="https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.1.0-rc.3">latest release</a><span>github.com</span></li><li id="source-rc3-note"><a href="https://github.com/foolishimp/specification_methodology/blob/b2e21ad0a2bab04e59afd5246b990da992417047/specification_methodology/v3/release/release-note.md">rc3 note</a><span>github.com</span></li><li id="source-event-sourcing"><a href="https://martinfowler.com/eaaDev/EventSourcing.html">event sourcing</a><span>martinfowler.com</span></li><li id="source-autogen"><a href="https://www.microsoft.com/en-us/research/blog/autogen-enabling-next-generation-large-language-model-applications/">autogen</a><span>www.microsoft.com</span></li><li id="source-metagpt"><a href="https://arxiv.org/abs/2308.00352">metagpt</a><span>arxiv.org</span></li><li id="source-swe-agent"><a href="https://arxiv.org/abs/2405.15793">swe agent</a><span>arxiv.org</span></li><li id="source-dspy"><a href="https://arxiv.org/abs/2310.03714">dspy</a><span>arxiv.org</span></li><li id="source-langgraph"><a href="https://www.langchain.com/blog/langgraph">langgraph</a><span>www.langchain.com</span></li><li id="source-kiro"><a href="https://kiro.dev/blog/introducing-kiro/">kiro</a><span>kiro.dev</span></li><li id="source-spec-kit"><a href="https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/">spec kit</a><span>github.blog</span></li><li id="source-chatgpt-launch"><a href="https://openai.com/index/chatgpt/">chatgpt launch</a><span>openai.com</span></li><li id="source-claude-launch"><a href="https://www.anthropic.com/news/introducing-claude">claude launch</a><span>www.anthropic.com</span></li><li id="source-gpt4o-launch"><a href="https://openai.com/index/hello-gpt-4o/">gpt4o launch</a><span>openai.com</span></li><li id="source-sonnet35-launch"><a href="https://www.anthropic.com/news/claude-3-5-sonnet">sonnet35 launch</a><span>www.anthropic.com</span></li></ul></details></section>
+      </article>
+    </div>
+  </main>
+  <footer class="footer"><div class="footer-inner"><p><strong>STDO · A history of the work</strong>Mid-2024 to November 2026. Based on the repository history, preserved designs and release records.</p><div class="footer-links"><a href="#top">Back to the beginning</a><a href="https://github.com/foolishimp/specification_methodology">Repository</a></div></div></footer>
+  <script type="text/plain" id="history-markdown"># A history of STDO
+
+*From AI-assisted applications to a methodology for constrained construction and evaluation*
+
+**Historical cut: 21 November 2026.** The latest published method cut at this
+date is **STDO 3.1.0-rc.3**, published on 18 November. This document describes
+the development of the ideas, implementations and project boundaries that led
+to it. It is historical commentary; the selected immutable method release
+remains the source for a consumer's governing rules.
+
+STDO (Specification, Ticketing, Design, and Outcome-Driven Development)
+developed through applications, coding agents, development workflows,
+execution engines and a parallel investigation into constraints and emergence.
+Its independent repository began in April 2026. The author dates the beginning
+of the work to **mid-2024**, before the surviving application check-ins.
+Its practical ancestry includes a collaborative whiteboard, Chain of Thoth
+and Coder for Hire, usually shortened to C4H.
+
+The applications and the foundational investigation developed together. In the
+author's account, questions about the fundamentals were already part of the
+early work. The later Constraint-Emergence Ontology captured that thinking in a
+more explicit form. Its repository creation date therefore marks a publication
+and separation of the work, rather than the beginning of the inquiry.
+
+Across these projects, the recurring problem was how to turn an intention into
+an implementation while preserving the relationships that made the intention
+meaningful. Each generation made another part of that problem explicit:
+state and history, task context, transformation lineage, requirements,
+evaluation, authority, recovery and the limits of a completion claim.
+
+## Reading the lineage
+
+The arrows below describe project relationships and conceptual transfers. They
+do not all represent Git forks. Several projects were reconstructions, and
+some reused a specification or design while replacing the implementation.
+Dotted arrows mark conceptual influence or a precursor relationship rather
+than a demonstrated transfer of code.
+
+```mermaid
+flowchart TB
+    B["Brain Dump / MyPostit<br/>September 2024"]
+    T["Chain of Thoth<br/>September 2024"]
+    R["Refactorer and Unit of Thought design<br/>October-November 2024"]
+    C["C4H intent system and agent services<br/>November 2024-2025"]
+    I["Reusable development practices<br/>claude_init, claude_dev, ai_init<br/>August 2025"]
+    A["AI SDLC Method<br/>October 2025"]
+    O["Constraint-Emergence Ontology<br/>Captured January 2026<br/>Separate repository February 2026"]
+    G["Genesis asset graph<br/>February-March 2026"]
+    E["ABIogenesis<br/>Generic execution engine<br/>March 2026"]
+    S["genesis_sdlc<br/>Software lifecycle package<br/>March 2026"]
+    D["odd_sdlc<br/>Fresh adoption of selected foundations<br/>April 2026"]
+    L["odd_glc<br/>General lifecycle framework<br/>June 2026"]
+    M["Specification Methodology<br/>Independent source April 2026"]
+    V["STDO 2.x<br/>July-September 2026"]
+    W["STDO 3.x<br/>October-November 2026"]
+
+    B -.-> T
+    T -->|design carried forward| R
+    R --> C
+    C -.->|development practice| I
+    I -->|explicit integration| A
+    C -.->|reasoning and transformation studies| O
+    A --> G
+    O -->|declared foundation| G
+    G -->|engine reconstruction| E
+    G -->|software specialization| S
+    E -->|runtime basis| D
+    S -->|selective re-adoption| D
+    D -->|generalized lifecycle concerns| L
+    S -->|shared standards extracted| M
+    M --> V --> W
+    O -.->|constraints, boundaries and preservation| V
+```
+
+The oldest surviving implementation found during this investigation is the
+August 2024 `discover_build` experiment. The whiteboard is the author's
+recollection of the first application. Those are compatible descriptions:
+an early experiment, a first application and the first preserved check-in
+need not be the same event. Dates below identify surviving records, with
+their recorded time zones; they do not establish when an idea was first
+conceived. Some early repositories require access to the author's archives.
+
+## 2024: applications, state and the first construction agents
+
+### Mid-2024: the work begins
+
+The author's initial work began in mid-2024, using conversational AI to explore
+ideas and construct applications. The first application recalled was a Mural
+replacement, later preserved as Brain Dump / MyPostit. The surviving Git
+history anchors the experiments in August and the whiteboard implementation
+in September; it does not establish the first day of the work.
+
+The model releases provide context for this period. ChatGPT launched using
+GPT-3.5 on **30 November 2022**, and Anthropic introduced Claude on
+**14 March 2023**. By mid-2024, OpenAI had announced GPT-4o on **13 May**, and
+Anthropic released Claude 3.5 Sonnet in **June**. The project's mid-2024 start
+therefore belongs to that later generation of tools. It is separate from the
+original launches of ChatGPT and Claude. These dates describe availability;
+they do not establish which model was used for each early experiment.
+[ChatGPT introduction][chatgpt-launch], [Claude introduction][claude-launch],
+[GPT-4o announcement][gpt4o-launch], [Claude 3.5 Sonnet][sonnet35-launch]
+
+### Brain Dump and MyPostit
+
+The likely Mural replacement is the project preserved as **Jims-Brain-Dump**
+and **MyPostit**. Both repositories share the same initial history. A scaffold
+was checked in on 15 September 2024, followed that day by the first substantial
+TypeScript application, commit `b361df7605`.
+
+The application had an infinite canvas, movable notes, arrows and connection
+points, storage, import and export, and an event history interface. It was
+already an exercise in keeping relationships intact as objects changed. Moving
+a note also meant preserving the meaning and position of its connections.
+The event-log and undo/redo machinery show an early concern with recoverable
+state, although their presence alone does not establish complete replay
+correctness. [First application check-in][brain-dump]
+
+The [following commits][brain-history] record the experience of building with an AI assistant
+more candidly than a retrospective feature list could. They describe lost
+arrows, unstable positioning and a Claude 3.5 refactor. The record supports a
+limited but useful observation: apparently local changes could damage
+relationships elsewhere in the application. Later concerns with preserved
+meaning and evidence can be understood against that experience. This is a
+historical interpretation, rather than a claim that the September application
+already contained STDO's later theory.
+
+An earlier side branch, **discover_build**, was checked in on 20 August 2024.
+It combined retrieval using FAISS and sentence embeddings with AutoGen agents
+for topic refinement and code execution. It establishes that experimentation
+with model context and agent-mediated work preceded the surviving whiteboard
+implementation. A direct derivation from this experiment to C4H has not been
+established. [Retrieval and agent experiment][discover-build]
+
+### Chain of Thoth: making change explicit
+
+**Chain of Thoth** begins on 17 September 2024. Its early commits explicitly
+introduce command/query separation and event sourcing. The Rust backend
+represents notes, arrows, groups and embedded boards, with command handlers,
+query handlers, an event store, snapshots and collaborative sessions.
+React and Flutter clients followed in September and October.
+[Chain of Thoth source][thoth]
+
+This made the application a system with an explicit history of change. A board
+was a state reconstructed and communicated through operations, with separate
+paths for changing it and observing it. That distinction later reappeared in
+the separation between runtime facts and their projections, although the
+repositories do not establish a continuous reuse of the same code.
+
+The techniques themselves were established. Event sourcing, including
+reconstruction from recorded changes, had been described well before 2024.
+The significance here is their adoption in the author's early AI-assisted
+application work. The later methodology grew partly from problems exposed by
+using these techniques. [Fowler's 2005 account of event sourcing][event-sourcing]
+
+### From a board to a Unit of Thought
+
+The connection to the coding-agent work becomes explicit in **refactorer**,
+whose first check-in is dated 20 October UTC, or 21 October in Sydney.
+Its implementation uses specialized AutoGen agents for intent, scoping,
+analysis, refactoring and testing. A `coder4h_config.yaml` file places the
+Coder for Hire name in this precursor.
+
+More revealing is `Chain_of_Thoth_v001.md`, retained in the refactorer
+repository. It describes a **Unit of Thought** with operations for capturing
+intent, constraining scope, verifying and optimizing. Feedback can travel back
+through the structure. Agent specializations include discovery, scoping,
+refactoring, testing and Coder4H. The document is a direct bridge between the
+Thoth name and the construction-agent design. [Unit of Thought design][uot]
+
+The conceptual unit had changed. A note on a board was a piece of represented
+thought; the proposed Unit of Thought was a bounded piece of work with intent,
+constraints, execution and feedback. It anticipated later concerns with
+construction units and evaluation, while leaving much of their meaning to
+the agent implementation.
+
+This work belonged to an active field. Microsoft's September 2023 AutoGen
+announcement already described specialized agents combining models, tools
+and human participation. MetaGPT, first submitted in August 2023, encoded
+software-team roles and operating procedures into agent workflows. SWE-agent's
+May 2024 paper examined interfaces through which agents navigate repositories,
+edit code and execute tests. The presence of several agents or a testing role
+was therefore established practice by the time of refactorer.
+[AutoGen][autogen], [MetaGPT][metagpt], [SWE-agent][swe-agent]
+
+The distinctive direction within this lineage was the attempt to make intent,
+scope and feedback properties of the work unit itself. That is a design
+contribution visible in the source, without implying that the project had
+demonstrated superior performance or invented multi-agent development.
+
+## Late 2024-2025: C4H and the preservation of intent
+
+### C4H was a sequence of implementations
+
+The surviving **c4h_intent_system** history begins on 3 November 2024. Its
+architecture describes an intent-driven flow through discovery, solution,
+refactoring and verification. Events carry operation lineage, including root,
+parent and branch relationships. Deterministic skills and model-driven work
+occupy different roles. [Early C4H repository][c4h-intent]
+
+The implementation changed quickly. November commits record a move away from
+an AutoGen 0.4 attempt toward LiteLLM, followed by semantic extraction,
+iteration, coding and feedback work. A Prefect implementation appears in
+December. The main **c4h** repository starts on 31 December with a commit that
+explicitly says it reinitializes a monorepo. That date marks a consolidation;
+the earlier repositories preserve its antecedents. The author's recollection
+places the beginnings of C4H around mid-2024, but the named implementation
+records recovered here establish October and November as firm anchors.
+[C4H consolidation][c4h-root]
+
+During early 2025, C4H separated agent capabilities from service orchestration.
+Discovery, solution and coding could be arranged into configured teams.
+Execution context carried a workflow identifier, an agent execution
+identifier, a parent and an execution path. The editor provided a place to
+submit and inspect work orders. These changes addressed practical questions:
+which request produced a change, which agent acted, and which context it used.
+
+The May methodology documents made that separation more explicit. They
+distinguished the interface, the declarative methodology and the reference
+implementation. Configuration snapshots, stateless agents, explicit responses
+and traceable transformations were recurring concerns. The SDLC account
+connected intent and work orders to discovery, design, coding and assurance.
+[C4H methodology and process archive][c4h-processes]
+
+The innovation within C4H was this combination of work-order semantics,
+configured transformation stages and execution lineage. Each ingredient had
+precedents. Their combination made the system an experiment in accountable
+construction across several steps. Recording inputs and configuration improved
+inspectability; it did not by itself make probabilistic outputs deterministic
+or establish that every transformation preserved meaning.
+
+### The foundational inquiry was already present
+
+The C4H archive contains **From Constrained Problem Domains to Emergent
+Reasoning in LLMs**, first checked in on **22 February 2025**. Following the
+file across later moves is necessary to recover that date. Its eventual
+location under `Philosophy/` can otherwise make it appear younger.
+[First preserved reasoning paper][early-reasoning]
+
+The paper asks how constraints reduce a problem's possible solutions, how
+attention might be understood as a dynamic constraint mechanism, and whether
+the matching performed by a transformer has a useful relationship to symbolic
+unification. It also considers statistical boundaries and symbol-like
+representations. These were proposed interpretations of computation. They
+supplied questions and candidate models for the engineering work, rather than
+a measured guarantee about model behavior.
+
+A second bridge appears in **A Formal Model for Semantic Transformation in
+AI-Augmented Processes**, checked in on **18 July 2025**. It describes a chain
+from root or regulatory intent, through contextual policy and business
+requirements, to architecture and a solution. Transformations should add
+specificity while preserving the source's meaning. Where several constraints
+meet, the document explores compositional reconciliation using category-theoretic
+language. [Semantic transformation model][semantic-model]
+
+This is an identifiable ancestor of STDO's later authority chain. It moves
+attention from the sequence of agents to the relationship between artifacts:
+what permits a downstream decision, what it must preserve, and how it can be
+traced back. The paper's language sometimes presents semantic preservation as
+a guarantee of the proposed model. The historical record establishes the
+proposal; it does not establish a general proof that an LLM implementation
+satisfies it.
+
+The **emergent_reasoning** repository began on 30 July 2025. Like the later
+ontology repository, it separated work already present elsewhere. The practical
+and theoretical branches were now independently visible, while continuing to
+inform one another. [Emergent Reasoning first check-in][reasoning-repo]
+
+## August 2025-January 2026: development practice becomes a methodology
+
+The August projects **claude_init**, **claude_dev** and **ai_init** extracted
+reusable development practices from individual applications. They supplied
+project instructions, task records, test-first practices and session
+continuity. `ai_init` explicitly began as a copy of `claude_init`.
+[Development bootstrap][claude-init], [AI bootstrap][ai-init]
+
+**ai_sdlc_method** starts on **15 October 2025** as a configuration and context
+management system. The following day's history explicitly integrates
+`ai_init` as its baseline development practices. This is a documented transfer,
+rather than an inferred resemblance between two repositories.
+[AI SDLC origin][ai-sdlc-root], [Baseline integration][ai-init-integration]
+
+Through November, the project developed requirements, design, code and testing
+skills, configurable context and implementations for different coding-agent
+environments. The method could increasingly be described separately from a
+particular agent or application. C4H had implemented a development process;
+AI SDLC was making the process itself a reusable subject of development.
+
+By this time, specification-led agent workflows were also becoming a visible
+part of the wider tooling landscape. Kiro's **14 July 2025** introduction
+described requirements, technical design and implementation tasks, with
+acceptance criteria and links back to requirements. GitHub's **2 September
+2025** Spec Kit announcement described specification, planning, tasks and
+implementation across several coding agents, with human checkpoints.
+[Kiro's introduction][kiro], [Spec Kit's introduction][spec-kit]
+
+These are relevant contemporaries, not evidence of influence in either
+direction. They establish that documents before code, task decomposition,
+traceability and multiple supported agents were shared concerns by late 2025.
+The distinctive thread developing here was the connection to a proposed model
+of semantic refinement: the method was intended to explain what survives a
+transformation, as well as to organize the work of performing it.
+
+## January-February 2026: the Constraint-Emergence Ontology
+
+The ontology was first checked into **AI SDLC on 22 January 2026**, in commit
+`3760f2fae0`. Its initial synthesis connected questions about physics,
+computation and emergence with requirements and homeostasis. The separate
+**constraint_emergence_ontology** repository began on **9 February 2026**;
+AI SDLC then recorded the migration of the philosophy material out of its own
+tree. [Ontology synthesis][ontology-origin], [Independent repository][ontology-root]
+
+The inquiry asked what allows structures to form, persist, interact and become
+components of further construction. Constraints described admissible states
+and changes. Boundaries allowed a structure to be treated as a unit. Meaning
+was considered through relationships that survive transformation. Evaluation
+and feedback connected a model of an intended state to observations of an
+actual state.
+
+For software, this suggested a practical interpretation. A requirement could
+act as a continuing condition on a product. An implementation was one
+realization of those conditions. Observations could reveal a gap in the
+implementation, the design, or the requirements themselves. Repair therefore
+needed a way to return to the layer responsible for the discrepancy.
+
+The ontology gave this interpretation a vocabulary and a broader research
+programme. Its physical and cross-domain claims remained hypotheses or
+philosophical proposals with their own evidential burdens. The engineering
+method could use explicit constraints, boundaries and feedback without
+requiring those broader claims to be established.
+
+```mermaid
+flowchart TB
+    P["Application and agent work<br/>2024-2025<br/>State, context, changes and failures"]
+    R["Emergent Reasoning<br/>Preserved February 2025<br/>Constraints and candidate semantic structure"]
+    S["Semantic transformation model<br/>July 2025<br/>Refinement and preserved meaning"]
+    O["Constraint-Emergence Ontology<br/>January-February 2026<br/>Persistence, boundaries, construction, feedback"]
+    G["Genesis<br/>Assets, iteration, context and evaluators"]
+    M["STDO<br/>Authority, conformance, evidence and re-entry"]
+    E["Research and engineering counterexamples<br/>2026<br/>Narrower claims and explicit limits"]
+
+    P --> R
+    P --> S
+    R --> O
+    S --> O
+    O --> G
+    G --> M
+    O --> E
+    M --> E
+    E -->|revisions to the account| O
+    E -->|revisions to the method| M
+```
+
+The later revisions matter to the history. The September 2026 working paper
+distinguishes constraints, dynamics and evaluation. It requires an account of
+reachability and persistence before inferring that an allowed structure will
+form. It reserves a Markov-boundary claim for a declared screening property
+that has been tested. Its research discussion reports structured
+representations and interventions alongside failed screening tests.
+[Constraint and Emergence, September revision][ontology-v3]
+
+This is a refinement of the original programme. The language became more
+careful about the difference between a useful organizing model and an
+established mechanism. In the method, the corresponding discipline is to
+state what a claim is about, what would count as evidence, and where the
+claim stops applying. The source record supports that correspondence; it
+does not establish that every later STDO rule was deduced from the ontology.
+
+## February-March 2026: Genesis and the asset graph
+
+On **19 February 2026**, AI SDLC records the **Asset Graph Model**. The Genesis
+name appears in the same repository later that week. The transformation was
+conceptual as well as nominal: a fixed development sequence was recast in
+terms of four primitives—assets in a graph, iteration, evaluators, and
+specification plus context. [Asset graph revision][asset-graph]
+
+The central operation was written as:
+
+```text
+iterate(Asset, Context[], Evaluators) → Asset'
+```
+
+An intent, a design, a piece of code or a test artifact could be treated as a
+subject of construction and evaluation. A software lifecycle was one
+configuration of the graph. Different work could select different assets,
+transitions, evaluators and stopping conditions. Human judgment, probabilistic
+model work and deterministic evaluation became explicit categories, later
+written as `F_H`, `F_P` and `F_D`.
+
+The ontology connection was declared in the project's README. Requirements
+and context bounded construction; evaluation determined whether a candidate
+met the selected conditions; telemetry and other observations could reopen
+work. The February **Genesis Bootloader** attempted to express the governing
+ideas in a compact context that an LLM could consume. The associated
+**abiogenesis principle** proposed human bootstrapping followed by a system
+capable of sustaining its own development.
+[Genesis account][genesis-readme], [Bootloader][bootloader], [Abiogenesis principle][abiogenesis-principle]
+
+Graphs and evaluation were already part of AI tooling. DSPy's October 2023
+paper described declarative language-model modules in transformation graphs,
+optimized against a metric. LangGraph's January 2024 introduction supplied
+cyclic graphs for agent runtimes. Genesis's graph representation therefore
+belongs to a wider development in the field. Its particular synthesis applied
+a common construction-and-evaluation model across lifecycle artifacts, with
+the specification/context boundary carrying the conditions of acceptable work.
+[DSPy][dspy], [LangGraph][langgraph]
+
+One March decision makes the intended freedom of realization explicit.
+**ADR-S-036**, dated 12 March and revised on 14 March, treated invariants as
+conditions to satisfy, with room for agents of different capabilities to take
+different construction paths. It referred to a project built in a construction
+pass followed by an assurance pass. That account motivated the decision; it
+is not independent qualification of the reported build.
+[Invariant and procedure decision][invariant-adr]
+
+The decision also exposes a tension that later versions had to resolve.
+Equivalent final artifacts do not settle every question about authorized
+effects, necessary causal order or admissible evidence. STDO would retain
+freedom where the contract permits it while making those additional
+obligations explicit. The progression was a continuing adjustment of what
+belongs in the method and what belongs in a particular realization.
+
+## March-June 2026: separating engine, lifecycle and method
+
+### ABIogenesis and genesis_sdlc
+
+**ABIogenesis** begins on **15 March 2026** with an explicit statement that
+the earlier Genesis engine had accumulated implementation history and needed
+a clean reconstruction. Its initial intent names six functions—`iterate`,
+`project`, `emit`, `bind_fd`, `delta` and `schedule`—and a GTL-first engine.
+GTL, the graph declaration language, was being developed as a typed Python
+library. The initial plan set a self-hosting gate in which the engine would
+build a successor of itself. [ABIogenesis initial intent][abg-origin]
+
+The compiler analogy was deliberate. A language describes the construction;
+an engine executes it; the engine can eventually be built using an earlier
+engine. The first intent even proposed that the GTL package itself was the
+requirements surface. Later work gave requirements and design their own
+authority again. This records an actual change of position about how much
+meaning should be owned by an executable declaration.
+
+**genesis_sdlc** also begins on 15 March. It supplied the software-development
+graph and practices that a generic engine would not own. Its subsequent
+specification describes that missing layer through a compiler-and-standard-
+library analogy. Work on module decomposition addressed a concrete weakness:
+a direct jump from design to code forced module-boundary decisions and
+implementation decisions into the same step.
+[genesis_sdlc origin and specification][gsdlc]
+
+The separation made several different questions visible. The engine needed
+to execute and preserve runtime facts. The software lifecycle needed to say
+what those facts meant for development. The method needed to say what counted
+as an authorized and sufficiently evidenced result. Sharing a vocabulary
+did not make those responsibilities interchangeable.
+
+### odd_sdlc: retaining selected foundations
+
+The repository now called **odd_sdlc** begins on **5 April 2026**, initially
+using the `odd_method` name. Its first intent explicitly describes a fresh
+constitutional line informed by `genesis_sdlc`. It retained specification
+authority, graph functions, GTL/ABIogenesis execution, runtime fact ownership
+and scenario-based evidence. It rejected the inheritance of a product-local
+automation layer that duplicated runtime responsibility.
+[odd_sdlc founding intent][odd-origin]
+
+This was selective re-adoption. A successor was expected to identify which
+predecessor requirements it still wanted and where they were now owned.
+Repository ancestry and working code were insufficient reasons to preserve
+every old obligation or implementation choice. Later STDO rules about
+migration and predecessor conservation gave this lesson a general form.
+
+### odd_glc: the lifecycle extends beyond software
+
+On **27 June 2026**, **odd_glc**, the **ODD General Life Cycle**, received its
+first check-in. Its bootstrap cites the preceding ABIogenesis requirements-
+algebra strategy and observations from `odd_sdlc`. It identifies concerns
+such as materialization, evidence, partial completion, unresolved obligations,
+re-entry and release as applicable beyond software delivery.
+[General lifecycle bootstrap][glc-origin]
+
+Its intended position was between the generic execution substrate and domain
+products. ABIogenesis/GTL would preserve and execute the declared structures;
+`odd_glc` would interpret their lifecycle meaning; domain products would add
+their own policy and interpretation. The bootstrap expressly prevents the
+new layer from becoming another local runtime or closure ledger.
+
+The general-lifecycle branch is recorded as `odd_glc`, distinct from the
+software-development specialization `odd_sdlc`.
+
+## March-April 2026: Specification Methodology becomes independent
+
+The method predates its repository. **SPEC_METHOD.md** was first checked into
+`genesis_sdlc` on **27 March 2026**, with an internal document date of 24 March.
+**GRAPH_METHOD.md** followed on **3 April**. ABIogenesis distributed copies
+into installed workspaces. That arrangement made a shared method depend on
+which product's source tree happened to supply the installer.
+[First specification method][spec-origin], [First graph method][graph-origin]
+
+The independent **specification_methodology** repository was established on
+**7 April 2026**, commit `287c866787`. Its provenance document states the
+reason: remove ambiguity over the authoritative source. Shared standards would
+be authored in one place, published as complete immutable cuts, and adopted
+through exact release identities. Installed copies would derive their
+authority from the selected cut. [Independent method origin][method-origin]
+
+The extracted method made the direction of authority explicit. Intent and
+requirements govern design; requirements and design govern realization.
+Evidence can reveal a defect at any of those layers. A report, index or
+generated view remains a representation of its source. The process for
+returning to an owning layer allows the specification to evolve without
+allowing a local workaround to rewrite it silently.
+
+```mermaid
+flowchart TB
+    I["Intent and product definition<br/>Purpose and intended outcome"]
+    R["Requirements<br/>Conditions that must hold"]
+    D["Design<br/>Structural choices and obligations"]
+    C["Realization<br/>Code, tools and human activity"]
+    E["Evaluation<br/>Observations and evidence"]
+    J["Judgment<br/>Satisfied conditions and remaining gaps"]
+    Q["Re-entry at the owning layer<br/>Revise the authorized source"]
+
+    I --> R --> D --> C --> E --> J
+    J -->|a material discrepancy| Q
+    Q -->|direction or product gap| I
+    Q -->|requirement gap| R
+    Q -->|design gap| D
+    Q -->|realization defect| C
+```
+
+This diagram summarizes the authority and feedback relationship. It is not
+a mandatory runtime schedule. Some work can satisfy several obligations in
+one construction, while a declared causal or evidence obligation may require
+a particular ordering.
+
+The independent repository is the point at which lessons from the engines
+became a separately versioned method. Engine behavior could now be evaluated
+against it. A working engine would no longer define the method solely through
+its existing behavior.
+
+## April-June 2026: the first released method
+
+The 1.x line established a method that could govern its own development and
+the products using it. It distinguished a mutable source project, an immutable
+release, an installed product and a product acting as the builder of another
+product. This distinction followed directly from the bootstrap experience:
+the source being edited and the installed tool doing the work could have
+different identities and different authority.
+
+The line also accumulated rules for migration, bounded work, design,
+probabilistic operations and evaluation. Each addition addressed a different
+way that useful construction could lose its connection to the intended
+outcome. A sprint needed a bounded claim. A migration needed to say which
+old requirements survived. A successful test needed to be related to the
+property it actually observed.
+
+By **1.8.0**, the scope explicitly covered the operational lifecycle, including
+release, deployment, live use, telemetry and retirement. Correctness had
+become a continuing relationship between the specification and the observed
+product. This carried forward the homeostatic interpretation developed in
+Genesis and the ontology: a system remains answerable to its governing
+conditions as its environment and implementation change.
+
+| Period | Method cut | Main refinement |
+|---|---|---|
+| 15 April 2026 | [1.0.0](specification_methodology/v2/releases/v1.0.0.md) | Independent method product; recursive product taxonomy; shared world-model, graph, release and work-record conventions. |
+| April 2026 | 1.1.0; [1.0.1](specification_methodology/v2/releases/v1.0.1.md); [1.0.2](specification_methodology/v2/releases/v1.0.2.md) | Consolidated method and agent bootstrap guidance; explicit migration and re-adoption; distinction between a mutable candidate and an immutable release candidate. |
+| 26-27 April 2026 | [1.2.0](specification_methodology/v2/releases/v1.2.0.md), [1.3.0](specification_methodology/v2/releases/v1.3.0.md) | Probabilistic boundaries and outcome-driven construction; explicit UI state, messages, effects and replay obligations where selected. |
+| 30 April 2026 | [1.4.0](specification_methodology/v2/releases/v1.4.0.md), [1.5.0](specification_methodology/v2/releases/v1.5.0.md) | Bounded execution, evidence cost and authority; consolidation of repeated method prose. |
+| 10 May 2026 | [1.6.0](specification_methodology/v2/releases/v1.6.0.md) | Constructive evaluation and yield; clearer closure conditions and design-decision conventions. |
+| 7 June 2026 | [1.7.0](specification_methodology/v2/releases/v1.7.0.md) | Agentic construction walkthrough, admission boundaries and source-bound method compressions. |
+| 30 June 2026 | [1.8.0](specification_methodology/v2/releases/v1.8.0.md) | Explicit coverage of the complete operational lifecycle. |
+
+The early 1.x publication order is not a simple ascending sequence of version
+numbers. The [2.0.0 predecessor-conservation record][release-2] identifies the
+accepted families carried forward, including 1.1.0 and the subsequent 1.0.x
+amendments. The conceptual history is clearer when those accepted changes are
+followed directly rather than inferred from numeric sorting.
+
+## July-September 2026: STDO 2 and the boundaries of evidence
+
+### An incremental successor with stricter claims
+
+**2.0.0**, in July, explicitly conserved the accepted 1.8.0 method. Its release
+note describes an incremental successor and distinguishes it from earlier
+rejected reconstruction candidates. The method added design-boundary work and
+lessons from delivery incidents. [2.0.0 release account][release-2]
+
+Several of those lessons concern the difference between a useful observation
+and the claim someone wants it to support. Evidence must identify its subject.
+A test through a substitute path does not establish behavior on the actual
+authority path. A result for one candidate does not automatically qualify a
+changed candidate. Passing a component check does not close a product-level
+outcome. Independent review must have an identifiable subject and a durable
+disposition.
+
+This sharpened the earlier lineage work. C4H had asked which operation
+produced an output. STDO now also asked what that output justified, under
+which basis, for which subject, and with what remaining uncertainty.
+
+The method also made its own cost part of the judgment. A disproportionate
+control or redesign could damage delivery without providing evidence relevant
+to the actual claim. The developing position required sufficient structure
+and assurance for the consequence at issue. It did not equate more ceremony
+with a stronger result.
+
+### The ontology also had to respect its application boundaries
+
+The **2.2.2** release records a specific correction to the world-model method.
+Earlier wording had made a geometric Markov-object construction part of the
+publication requirements for recovered entities. That could reject an
+institutional or software entity whose identity and evidence were adequate
+but whose source offered no suitable geometric representation.
+[Entity and geometry correction][release-222]
+
+The correction made the **entity cut** the primary semantic unit and treated
+the geometric Markov-object account as an optional overlay requiring an
+appropriate representation space. This is a concrete example of the
+foundational inquiry being refined through use. An explanatory model had
+introduced an obligation that did not fit every governed domain. The method
+retained the useful boundary questions and narrowed the geometric claim.
+
+### Reference frames and a shared result vocabulary
+
+The August **2.4.0** line introduced a general reference-frame account. A
+judgment has a purpose, a subject, a governing basis, an authority boundary and
+evidence. A result can be satisfied, falsified, indeterminate, outside the
+frame, or based on an invalid basis. These distinctions preserve information
+that a single success/failure flag loses.
+[Reference-frame release][release-240]
+
+For example, an evaluator lacking the necessary observation has a different
+result from an evaluator that observed a counterexample. An out-of-scope
+judgment cannot be made relevant by reporting confidence. A valid result
+about an earlier release does not silently transfer to a later one. These
+were methodological conditions for interpreting results, with concrete
+realization left to the applicable product.
+
+The 2.4.x line also established the STDO naming and Product Definition binding,
+and made release selection and installation more explicit. The 2.5.x work
+developed a shared axiomatic account, source-linked representations and
+construction/evaluation profiles. Deterministic, probabilistic and human
+functions remained distinguishable from the actors performing them and from
+the authority to accept their results.
+
+| Period | Line | Development |
+|---|---|---|
+| July 2026 | [2.0.0][release-2] | Exact evidence subjects, independent review, product-outcome conservation and proportionate method obligations. |
+| July 2026 | [2.2.0](specification_methodology/v2/releases/v2.2.0.md)-[2.2.2][release-222] | Bounded authority for growth, decision-complete constraints, and separation of entity recovery from optional geometry. |
+| August 2026 | [2.3.0](specification_methodology/v2/releases/v2.3.0.md) | Transformation admission, reconstructable design and explicit computational mapping. |
+| August 2026 | [2.4.0][release-240]-[2.4.2](specification_methodology/v2/releases/v2.4.2.md), followed by 2.4.3 candidates | Reference frames, claim-relative testing, STDO Product Definitions and more precise release selection. |
+| August-September 2026 | 2.5.0 candidates | Axiomatic calculus, representation tooling, construction profiles and bounded executive attention. |
+| September 2026 | 2.5.1 candidates | Review and triage refinement; RC2 made triangulation depend on distinct evidence and constraints rather than a count of reviewers. |
+
+The [30 September RC2 change][triangulation] is a useful example of the
+direction. Several similar assessments can repeat the same blind spot.
+Triangulation requires observations or frames that constrain a diagnosis in
+different ways. The evidential relationship matters more than the number of
+agents producing prose.
+
+## October-November 2026: STDO 3, finite context and separate products
+
+### Reconstructing accumulated rules around common foundations
+
+The October work developed separate Claude and Codex constructions against a
+common specification, followed by comparison and synthesis. The common
+definition owned the required meaning; each tenant supplied a realization.
+Candidate packaging and comparison results retained their own scope. Neither
+the existence of two implementations nor a successful package check established
+whole-method qualification.
+
+Version 3 organized the accumulated method around shared foundations. Entities,
+relations, authority, selected bases and evaluation results had clearer common
+owners. Reference frames and independent review already existed in 2.x; the
+new work integrated them and made finite context, activation and continuation
+more explicit. [V3 source project and construction record][v3-construction]
+
+This addressed a recurring operational fact of AI-assisted development: a
+session is finite. A later actor may receive only part of the earlier context.
+A useful continuation therefore needs enough current state to identify the
+subject, its governing source, completed work, unresolved matters and the
+next authorized action. A summary can direct attention, but its omissions
+cannot amend the underlying obligations.
+
+The method's result vocabulary also became a common basis for composing
+judgments. Missing coverage, an invalid basis and a demonstrated failure retain
+their different meanings when work is combined. A coordinator consumes results
+within its grant; a writer needs authority for its effects; applicable review
+requires the necessary independence. A particular Executive/Worker/Reviewer
+arrangement remains a selected profile rather than a universal organizational
+chart.
+
+### From a method package to independently owned supporting products
+
+The first native 3.0.0 candidate cut was recorded in October. Subsequent
+releases developed distribution, recursive product composition, tools and
+native workflows. By November, the repository also contained independently
+owned support products. Their co-location did not give one product authority
+over another.
+
+**3.0.4** supplied native work, review, status, ticket and help workflows. It
+made distinctions such as landing a change, closing work and qualifying a
+release visible in ordinary use. It later remained the construction basis
+for the 3.1 release work. A methodology can therefore be built under one
+released version while producing a different successor.
+
+The **3.1** arrangement separated **Purpose Context**, which owns reusable
+indexes and context construction, from **STDO Skills**, which binds those
+capabilities to supported hosts. Representation Tools and STDO Representation
+serve visual documentation. Axiom Indexer retains its separately owned
+conversion and projection responsibilities. This was another application of
+the ownership lesson learned during the engine/lifecycle split.
+
+The history of representation tools includes formal and Lean-related work.
+The 3.1 boundary changes retired the earlier formal/context routes from the
+active product arrangement and made visual documentation optional. An index
+or diagram could help a reader find and understand a rule while remaining
+answerable to its exact source. It would not become a new owner of that rule.
+
+| Period | Cut | Main change |
+|---|---|---|
+| October 2026 | 3.0.0-rc.1 and 3.0.1-rc.1 | Native successor packages following the common-definition and tenant construction work. |
+| 26 October 2026 | 3.0.2 | Recursive product composition and integrated outcome responsibility, with explicit limits on inherited authority. |
+| 2 November 2026 | 3.0.3 | Bundled exploration and source-reading tools, with bounded evidence for the represented examples. |
+| 3 November 2026 | 3.0.4 | Native method workflows; clearer distinctions among review, closure and release. |
+| 7 November 2026 | 3.0.5-rc.1 | A coordinated five-product distribution with exact member identities and acquisition evidence. |
+| 15 November 2026 | 3.1.0-rc.1 and rc.2 | Six independently owned products, including Purpose Context; RC2 corrected a missing predecessor obligation in the context coverage. |
+| 18 November 2026 | [3.1.0-rc.3][latest-release] | Self-contained method meaning, optional tracking machinery, and a clearer distinction between intended product and current work. |
+
+The [native release history][native-history] and the individual release
+records retain the exact cut identities. Native packages have their own
+deliberately small Git history. That history alone cannot reconstruct the
+earlier source development, which remains in the source repository and the
+predecessor projects.
+
+### RC3: preserving obligations while removing an inherited mechanism
+
+The latest published cut in this account is
+`specification_methodology/v3.1.0-rc.3`, native commit
+`b2e21ad0a2bab04e59afd5246b990da992417047`. GitHub records its publication on
+**18 November 2026 at 08:19:51 UTC**. The project published it as a normal
+GitHub release while retaining the `rc.3` identity. Those are separate facts;
+the label should not be silently rewritten as a final `3.1.0` cut.
+[Published release][latest-release]
+
+RC3 corrected a remaining dependency of method meaning on downstream products
+and runtime machinery. Every normative tier, including optional profiles,
+must define its terms and rules within the method. Tracking obligations,
+decisions, progress and unresolved matters remains required. So does conserving
+needed facts and reconciling a work record with the actual workspace. A generic
+register is one possible realization. ODD no longer imposes an immutable
+ledger, a fixed evaluator API or a universal replay architecture.
+[RC3 native release note][rc3-note]
+
+That correction is historically significant. Event histories and runtime
+lineage had been useful from the first whiteboard and C4H implementations.
+They helped expose the need to preserve state, explain change and retain
+evidence. By RC3, the method stated those obligations without requiring every
+consumer to reproduce the machinery through which they had first been
+explored. A product may still require replay or a particular ledger when its
+own contract calls for them.
+
+RC3 also clarified that **Product** describes the intended product and end
+state, including capabilities still to be built, while **Goals** describes
+the current epics or work wave. That distinction prevents a bounded delivery
+plan from quietly shrinking the product's intended outcome.
+
+The release retains six independent products and the STDO 3.0.4 construction
+basis. Its evidence distinguishes source assessment, package identity,
+context coverage, installed-host observations and public acquisition. The
+release note explicitly limits the conclusions: publication does not establish
+whole-method qualification, universal context coverage or successful future
+tasks, and it does not migrate existing consumers. Later mutable source work
+also remains a separate subject from this historical release boundary.
+[RC3 distribution and evidence record][rc3-note]
+
+## The contribution that accumulated
+
+The differentiators are most accurately described as a combination that
+developed over time. The early projects used established application and
+agent techniques. The later work made their governing relationships an
+independent object of design.
+
+**Meaning across transformations.** C4H's intent and operation lineage,
+the 2025 semantic model and STDO's requirements/design chain all address
+preservation through change. The refinement was to make preservation an
+explicit obligation with a subject and evidence, rather than assume it from
+the fact that several stages completed.
+
+**A shared account of construction and evaluation.** Genesis applied its
+asset-and-evaluator model to multiple development artifacts. STDO generalized
+the conditions of acceptable construction while allowing different products
+to choose their realizations. This extends the project's scope beyond a
+particular coding-agent loop or document-to-task workflow.
+
+**Authority and evidence that remain attached to their basis.** A source
+document, released method, installed tool, generated view and evaluation
+result have different roles. The separation became especially important when
+the method was used to build itself and when several products and coding
+agents shared a workspace.
+
+**Correction at the layer that owns the problem.** A failed observation can
+require a code repair, a different design, a revised requirement or a changed
+goal. The lifecycle provides a way to make that decision explicit. Partial
+completion and unresolved obligations remain visible instead of disappearing
+inside a broad success claim.
+
+**Fundamental ideas exposed to engineering limits.** The constraint-emergence
+work supplied a way of thinking about boundaries, persistence, meaning and
+feedback. Application and research then exposed where the account needed
+qualification: geometric representations were not available everywhere;
+screening claims needed tests; admissible outcomes did not remove authority
+or causal obligations; useful runtime patterns could become over-prescriptive
+when promoted into general method.
+
+These are claims about the design and documented evolution of this project.
+The contemporary sources establish that several component ideas were already
+in use. They do not support a claim of sole invention, industry-wide priority
+or comparative performance. The distinctive work lies in the particular
+integration, its continued revision through application, and the effort to
+state exactly which relationships an alternative realization must preserve.
+
+## Sources and remaining historical gaps
+
+This account uses surviving Git histories, initial intents, design documents,
+method release notes and the public release record. The whiteboard's intended
+role as a Mural replacement, the approximate mid-2024 recollection of C4H,
+and the presence of foundational thinking during the earliest work are
+attributed to the author's recollection. Those recollections help identify
+the projects; a later preserved check-in does not establish an earlier date.
+
+Three distinctions matter when extending this history. First, a file move or
+repository extraction can conceal an older first check-in; following the
+reasoning paper across its moves recovered February 2025. Second, a commit
+message reporting successful tests or a completed build records the author's
+assessment at that time; this history has not rerun and independently
+qualified those implementations. Third, conceptual influence and direct code
+descent are different relationships. The narrative identifies an explicit
+transfer where the source provides one and labels retrospective interpretation
+where it does not.
+
+The comparison with other tools uses their dated publications. It concerns
+what those sources described at the time, rather than claiming to survey
+every capability of their current versions. Early private repositories may
+require access; the STDO release notes linked within this repository provide
+the locally available continuation of the record.
+
+[brain-dump]: https://github.com/foolishimp/MyPostit/commit/b361df76052966835dcbd81030895916269de3b4
+[brain-history]: https://github.com/foolishimp/MyPostit/commits/f0f7fe6b00cbb8e9a1224bcafaf189dcdf21a02b/
+[discover-build]: https://github.com/foolishimp/discover_build/commit/c1f1f9d6296290c7f810891018d2d0fa17066d87
+[thoth]: https://github.com/foolishimp/chain_of_thoth/tree/8c8c4ae06570dafa5b6f62aa1b8659e94c4f5d10
+[uot]: https://github.com/foolishimp/refactorer/blob/27785481f5eb2e2e633dddd249154eb862325ffb/docs/Chain_of_Thoth_v001.md
+[c4h-intent]: https://github.com/foolishimp/c4h_intent_system/tree/2ca732aaa519f7a9ba54388dd16191318267b7f2
+[c4h-root]: https://github.com/foolishimp/c4h/commit/356343f
+[c4h-processes]: https://github.com/foolishimp/c4h_projects/tree/4633dcdf200225d692dd337be2d216fd6a05a746
+[early-reasoning]: https://github.com/foolishimp/c4h_projects/blob/57165be1a0808f5441c8856225a166771508772e/old_docs/EmergentReasoning.md
+[semantic-model]: https://github.com/foolishimp/c4h_projects/commit/b907f5b5beaa9f40708f3f3796b1fd77f7cee7fb
+[reasoning-repo]: https://github.com/foolishimp/emergent_reasoning/commit/09f648e76f433fc43367fd6c71833709b0201938
+[claude-init]: https://github.com/foolishimp/claude_init/tree/86a609bc1d5da9983ff5de28c503d62d82fdcdcf
+[ai-init]: https://github.com/foolishimp/ai_init/commit/3c639bd
+[ai-sdlc-root]: https://github.com/foolishimp/ai_sdlc_method/commit/b378c17e3f83eb6f9002989a593a5d19b5dbf29b
+[ai-init-integration]: https://github.com/foolishimp/ai_sdlc_method/commit/0649ce635456d00f57d4a5190f0007e2be171f9b
+[ontology-origin]: https://github.com/foolishimp/ai_sdlc_method/commit/3760f2fae0a40f85094ed0da6e77d819c633d284
+[ontology-root]: https://github.com/foolishimp/constraint_emergence_ontology/commit/3b0d79a
+[ontology-v3]: https://github.com/foolishimp/constraint_emergence_ontology/blob/942d4bda15c5b0f5ec5162737353cde3d06e28f3/constraint_emergence_ontology_v3.md
+[asset-graph]: https://github.com/foolishimp/ai_sdlc_method/commit/91f29bcb53f879ee186609a8a5af49a4c4b9cf62
+[genesis-readme]: https://github.com/foolishimp/ai_sdlc_method/blob/bd68f1e33124ba25f180092f7c5fcf3ca1ecbf48/README.md
+[bootloader]: https://github.com/foolishimp/ai_sdlc_method/commit/4a97b338bff54efb6de6bd97acf82cfb4323e534
+[abiogenesis-principle]: https://github.com/foolishimp/ai_sdlc_method/commit/f2d5a2f24f46bd69f9d2132efb3e7e1199df8b5c
+[invariant-adr]: https://github.com/foolishimp/ai_sdlc_method/blob/bd68f1e33124ba25f180092f7c5fcf3ca1ecbf48/specification/adrs/ADR-S-036-invariants-as-termination-conditions-not-procedures.md
+[abg-origin]: https://github.com/foolishimp/abiogenesis/blob/abe471b7f7ce8c0055b792979d77206957bfdd47/specification/INTENT.md
+[gsdlc]: https://github.com/foolishimp/genesis-sdlc/commit/680541c
+[odd-origin]: https://github.com/foolishimp/odd_sdlc/blob/e636d778cf0ad17f2103b7d31babddc079cd27c1/specification/INTENT.md
+[glc-origin]: https://github.com/foolishimp/odd_glc/blob/b12bc3eeef7fea61f77997f933b1b4229d8027d6/.ai-workspace/context/project_bootstrap.md
+[spec-origin]: https://github.com/foolishimp/genesis-sdlc/blob/e27e895e7e6e1f80aaa337da52c23a6ea4669980/specification/standards/SPEC_METHOD.md
+[graph-origin]: https://github.com/foolishimp/genesis-sdlc/blob/bfa5d7710e6ac4cab52f8d9bdc08e0f8740e6345/specification/standards/GRAPH_METHOD.md
+[method-origin]: https://github.com/foolishimp/specification_methodology/commit/287c86678730b70a9b7aabb6737b22f4181c98a0
+[release-2]: specification_methodology/v2/releases/v2.0.0.md
+[release-222]: specification_methodology/v2/releases/v2.2.2.md
+[release-240]: specification_methodology/v2/releases/v2.4.0.md
+[triangulation]: https://github.com/foolishimp/specification_methodology/commit/c45a6c6739c72c47974d7435424d3db2dc2662a9
+[v3-construction]: https://github.com/foolishimp/specification_methodology/tree/225284646/specification_methodology/v3
+[native-history]: https://github.com/foolishimp/specification_methodology/commits/b2e21ad0a2bab04e59afd5246b990da992417047/
+[latest-release]: https://github.com/foolishimp/specification_methodology/releases/tag/specification_methodology/v3.1.0-rc.3
+[rc3-note]: https://github.com/foolishimp/specification_methodology/blob/b2e21ad0a2bab04e59afd5246b990da992417047/specification_methodology/v3/release/release-note.md
+[event-sourcing]: https://martinfowler.com/eaaDev/EventSourcing.html
+[autogen]: https://www.microsoft.com/en-us/research/blog/autogen-enabling-next-generation-large-language-model-applications/
+[metagpt]: https://arxiv.org/abs/2308.00352
+[swe-agent]: https://arxiv.org/abs/2405.15793
+[dspy]: https://arxiv.org/abs/2310.03714
+[langgraph]: https://www.langchain.com/blog/langgraph
+[kiro]: https://kiro.dev/blog/introducing-kiro/
+[spec-kit]: https://github.blog/ai-and-ml/generative-ai/spec-driven-development-with-ai-get-started-with-a-new-open-source-toolkit/
+[chatgpt-launch]: https://openai.com/index/chatgpt/
+[claude-launch]: https://www.anthropic.com/news/introducing-claude
+[gpt4o-launch]: https://openai.com/index/hello-gpt-4o/
+[sonnet35-launch]: https://www.anthropic.com/news/claude-3-5-sonnet
+</script>
+  <script>
+    (() => {
+      'use strict';
+      document.documentElement.classList.add('js');
+      const sections = [...document.querySelectorAll('.chapter')];
+      const links = [...document.querySelectorAll('[data-chapter-link]')];
+      const select = document.getElementById('chapter-select');
+      const progress = document.getElementById('reading-progress');
+      const percentage = document.getElementById('reading-percent');
+      let current = '', scheduled = false;
+      const update = () => {
+        scheduled = false;
+        const distance = document.documentElement.scrollHeight - innerHeight;
+        const ratio = distance > 0 ? Math.min(100, Math.max(0, scrollY / distance * 100)) : 100;
+        progress.value = ratio;
+        percentage.textContent = Math.round(ratio) + '% read';
+        let active = 'top';
+        for (const section of sections) {
+          if (section.getBoundingClientRect().top <= 200) active = section.id;
+          else break;
+        }
+        if (active !== current) {
+          current = active;
+          links.forEach(link => {
+            if (link.dataset.chapterLink === active) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+          });
+          select.value = active;
+        }
+      };
+      const schedule = () => { if (!scheduled) { scheduled = true; requestAnimationFrame(update); } };
+      addEventListener('scroll', schedule, { passive: true });
+      addEventListener('resize', schedule);
+      addEventListener('hashchange', schedule);
+      document.querySelectorAll('details').forEach(details => details.addEventListener('toggle', schedule));
+      select.addEventListener('change', () => {
+        const target = document.getElementById(select.value);
+        if (target) { history.pushState(null, '', '#' + select.value); target.scrollIntoView({ block: 'start' }); }
+      });
+      const printButton = document.getElementById('print-button');
+      printButton.hidden = false;
+      printButton.addEventListener('click', () => window.print());
+      const markdown = document.getElementById('history-markdown').textContent.replace(/<\\\//g, '</');
+      const sourceURL = URL.createObjectURL(new Blob([markdown], { type: 'text/markdown;charset=utf-8' }));
+      document.getElementById('source-download').href = sourceURL;
+      update();
+    })();
+  </script>
+</body>
+</html>
