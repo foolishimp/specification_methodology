@@ -1,0 +1,19 @@
+{
+  "term": "workflow",
+  "nodes": [
+    { "name": "plan", "place": "plan.md", "result": ["The plan says, point by point, what the text is to say."] },
+    {
+      "name": "text",
+      "place": "text.md",
+      "result": ["The text says what the plan says, in finished words, and says that it follows the plan."],
+      "checks": [
+        { "name": "the text says it follows the plan", "run": { "kind": "command", "argv": ["grep", "-q", "It follows the plan.", "text.md"] } }
+      ],
+      "depends": ["draft"]
+    }
+  ],
+  "vectors": [
+    { "name": "make-plan", "function": { "term": "reference", "name": "outline-it" } },
+    { "name": "make-text", "function": { "term": "reference", "name": "text-from-plan" } }
+  ]
+}

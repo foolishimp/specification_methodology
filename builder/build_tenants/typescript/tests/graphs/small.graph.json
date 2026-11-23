@@ -1,0 +1,26 @@
+{
+  "term": "workflow",
+  "nodes": [
+    { "name": "brief", "place": "input/brief.md", "result": ["The brief is written by the user."], "given": true },
+    { "name": "draft", "place": "work/draft", "result": ["The draft covers every point of the brief."], "depends": ["brief"] },
+    {
+      "name": "final",
+      "place": "work/final",
+      "result": ["The final text is the draft, polished."],
+      "checks": [
+        { "name": "the final text reads well", "run": { "kind": "command", "argv": ["sh", "check-final.sh"] } }
+      ],
+      "depends": ["notes", "brief"],
+      "accepted": ["evaluation", "decision"]
+    }
+  ],
+  "vectors": [
+    { "name": "make-draft", "function": { "term": "reference", "name": "draft-it" } },
+    {
+      "name": "make-final",
+      "evaluation": { "findings": "reviews/final/findings.md", "verdict": "reviews/final/verdict.json" },
+      "decision": {},
+      "function": { "term": "reference", "name": "finish" }
+    }
+  ]
+}

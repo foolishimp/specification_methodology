@@ -1,0 +1,685 @@
+{
+  "algorithm": "well_formed",
+  "requirement": "REQ-ALG-002",
+  "cases": [
+    {
+      "covers": [],
+      "says": "A graph with a given asset, an evaluation, a decision, an inner workflow and a reference to its registry is well formed.",
+      "given": { "fixture": "small" },
+      "expect": { "yes": true }
+    },
+    {
+      "covers": [],
+      "says": "A vector that declares a condition is refused on reading: the graph language has none (D172).",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [{ "name": "out", "place": "out", "result": ["made"], "accepted": ["decision"] }],
+          "vectors": [
+            {
+              "name": "make",
+              "decision": {},
+              "condition": { "name": "asked for", "run": { "kind": "ticket_field", "field": "wants", "is": "yes" } },
+              "function": { "term": "reference", "name": "make" }
+            }
+          ]
+        },
+        "registry": { "entries": [{ "name": "make", "writes": ["out"], "purpose": "Makes out.", "definition": { "term": "session" } }] }
+      },
+      "expect": { "no": [{ "rule": "terms", "where": "vectors[0].condition" }] }
+    },
+    {
+      "covers": [],
+      "says": "A decision asked under a condition is refused on reading: a decision declares nothing, and is always asked (D172).",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [{ "name": "out", "place": "out", "result": ["made"], "accepted": ["decision"] }],
+          "vectors": [
+            {
+              "name": "make",
+              "decision": { "when": { "name": "asked for", "run": { "kind": "ticket_field", "field": "decide", "is": "yes" } } },
+              "function": { "term": "reference", "name": "make" }
+            }
+          ]
+        },
+        "registry": { "entries": [{ "name": "make", "writes": ["out"], "purpose": "Makes out.", "definition": { "term": "session" } }] }
+      },
+      "expect": { "no": [{ "rule": "terms", "where": "vectors[0].decision.when" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 law 1", "REQ-ALG-002 acceptance 1"],
+      "says": "A vector carries out no graph function of the registry, so it writes no node: refused, and there is no graph to traverse.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "in", "place": "in.md", "result": ["written"], "given": true },
+            { "name": "out", "place": "out", "result": ["made"] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "session" } }
+          ]
+        },
+        "registry": { "entries": [] }
+      },
+      "expect": { "no": [{ "rule": "writes", "where": "vector 'make'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A vector's graph function writes no node.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "in", "place": "in.md", "result": ["written"], "given": true },
+            { "name": "out", "place": "out", "result": ["made"] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "reference", "name": "make" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "make", "writes": [], "purpose": "Makes out.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "writes", "where": "vector 'make'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A vector's graph function writes a given node, which no graph function writes.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "in", "place": "in.md", "result": ["written"], "given": true },
+            { "name": "out", "place": "out", "result": ["made"] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "reference", "name": "make" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "make", "writes": ["in"], "purpose": "Makes out.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "writes", "where": "vector 'make'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "One asset's place lies inside another's: refused. A place that only begins with the same letters does not lie inside it.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "spec", "place": "spec", "result": ["written"], "given": true },
+            { "name": "specification", "place": "specification", "result": ["written"], "given": true },
+            { "name": "part", "place": "spec/part.md", "result": ["made"] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "reference", "name": "make" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "make", "writes": ["part"], "purpose": "Makes the part.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "places", "where": "nodes 'spec' and 'part'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A check does not say what runs it.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "out", "place": "out", "result": ["made"], "checks": [{ "name": "out is good" }] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "reference", "name": "make" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "make", "writes": ["out"], "purpose": "Makes out.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "checks", "where": "nodes[0].checks[0].run" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "Two nodes declare a check of one name: a check's name is used twice in the graph, and is refused.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "out", "place": "out", "result": ["made"], "checks": [{ "name": "it is kept", "run": { "kind": "ticket_kept" } }] },
+            { "name": "more", "place": "more", "result": ["made"], "checks": [{ "name": "it is kept", "run": { "kind": "ticket_kept" } }] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "reference", "name": "make" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "make", "writes": ["out", "more"], "purpose": "Makes out and more.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "checks", "where": "check 'it is kept'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A check is run by something the graph language does not have.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "out", "place": "out", "result": ["made"], "checks": [{ "name": "out is good", "run": { "kind": "ask-a-model" } }] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "reference", "name": "make" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "make", "writes": ["out"], "purpose": "Makes out.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "checks", "where": "nodes[0].checks[0].run" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A graph function is named that is not in the registry.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "out", "place": "out", "result": ["made"] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "reference", "name": "nowhere" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "somewhere", "writes": ["out"], "purpose": "Makes out.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "registry", "where": "reference 'nowhere'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A term the graph language does not have: two sessions at once.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "out", "place": "out", "result": ["made"] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "parallel", "terms": [{ "term": "session" }, { "term": "session" }] } }
+          ]
+        },
+        "registry": { "entries": [] }
+      },
+      "expect": { "no": [{ "rule": "terms", "where": "vectors[0].function" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A key the graph language does not know.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "out", "place": "out", "result": ["made"], "colour": "blue" }
+          ],
+          "vectors": []
+        },
+        "registry": { "entries": [] }
+      },
+      "expect": { "no": [{ "rule": "terms", "where": "nodes[0].colour" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "Two vectors are the first vector for a ticket.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [],
+          "vectors": [
+            { "name": "place", "first": true, "result": [], "checks": [], "function": { "term": "reference", "name": "place" } },
+            { "name": "place-again", "first": true, "result": [], "checks": [], "function": { "term": "reference", "name": "place" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "place", "writes": [], "purpose": "Inducts the ticket.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "first", "where": "vector 'place', vector 'place-again'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "The vectors of a graph with no default term, declared against the order of the edges, are taken in that order (C7): well formed.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"] },
+            { "name": "b", "place": "b", "result": ["made"], "depends": ["a"] }
+          ],
+          "vectors": [
+            { "name": "make-b", "function": { "term": "reference", "name": "make-b" } },
+            { "name": "make-a", "function": { "term": "reference", "name": "make-a" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "make-a", "writes": ["a"], "purpose": "Makes a.", "definition": { "term": "session" } },
+            { "name": "make-b", "writes": ["b"], "purpose": "Makes b.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "yes": true }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "Two vectors of a graph with no default term each rest on a node the other writes: the edges give them no order, and the graph is refused.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"] },
+            { "name": "b", "place": "b", "result": ["made"], "depends": ["a"] },
+            { "name": "c", "place": "c", "result": ["made"], "depends": ["a", "b"] }
+          ],
+          "vectors": [
+            { "name": "make-ac", "function": { "term": "reference", "name": "make-ac" } },
+            { "name": "make-b", "function": { "term": "reference", "name": "make-b" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "make-ac", "writes": ["a", "c"], "purpose": "Makes a and c.", "definition": { "term": "session" } },
+            { "name": "make-b", "writes": ["b"], "purpose": "Makes b.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "terms", "where": "the vectors of the graph, its default term" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A node depends on itself through another node: refused, as a cycle.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"], "depends": ["b"] },
+            { "name": "b", "place": "b", "result": ["made"], "depends": ["a"] }
+          ],
+          "vectors": []
+        },
+        "registry": { "entries": [] }
+      },
+      "expect": { "no": [{ "rule": "cycle", "where": "node 'a', node 'b'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A vector writes two nodes, neither of which depends on the other: it is well formed (D164).",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"] },
+            { "name": "b", "place": "b", "result": ["made"] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "reference", "name": "make-both" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "make-both", "writes": ["a", "b"], "purpose": "Makes a and b.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "yes": true }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A graph function whose definition leads back to itself.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "out", "place": "out", "result": ["made"] }
+          ],
+          "vectors": [
+            { "name": "make", "function": { "term": "reference", "name": "again" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "again", "writes": ["out"], "purpose": "Does itself again.", "definition": { "term": "sequence", "terms": [{ "term": "session" }, { "term": "reference", "name": "again" }] } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "cycle", "where": "graph function 'again'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A graph function no vector carries out names a term that does not write what the entry writes (T2): refused.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"] },
+            { "name": "b", "place": "b", "result": ["made"], "depends": ["a"] }
+          ],
+          "vectors": [
+            { "name": "a-it", "function": { "term": "reference", "name": "a-it" } },
+            { "name": "b-it", "function": { "term": "reference", "name": "b-it" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "a-it", "writes": ["a"], "purpose": "Makes a.", "definition": { "term": "session" } },
+            { "name": "b-it", "writes": ["b"], "purpose": "Makes b.", "definition": { "term": "session" } },
+            { "name": "both", "writes": ["a", "b"], "purpose": "Makes a and b.", "definition": { "term": "reference", "name": "a-it" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "registry", "where": "registry entry 'both'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "Two registry entries have the same name.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [],
+          "vectors": []
+        },
+        "registry": {
+          "entries": [
+            { "name": "twice", "writes": [], "purpose": "One.", "definition": { "term": "session" } },
+            { "name": "twice", "writes": [], "purpose": "Two.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "registry", "where": "registry entry 'twice'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A reference in the graph, or in a registry entry's definition, names a stretch, which only an induction entry of a ticket's term names: refused, once for each.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"] },
+            { "name": "b", "place": "b", "result": ["made"], "depends": ["a"] }
+          ],
+          "vectors": [
+            { "name": "make-a", "function": { "term": "reference", "name": "inner", "enters": "a", "ends": "b" } },
+            { "name": "make-b", "function": { "term": "reference", "name": "outer" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "inner", "writes": ["a"], "purpose": "Makes a.", "definition": { "term": "session" } },
+            { "name": "outer", "writes": ["b"], "purpose": "Makes b.", "definition": { "term": "sequence", "terms": [{ "term": "session" }, { "term": "reference", "name": "inner", "enters": "a", "ends": "b" }] } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "terms", "where": "the graph" }, { "rule": "terms", "where": "registry entry 'outer'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A reference names where its stretch enters and not where it ends: refused as it is read.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"] }
+          ],
+          "vectors": [
+            { "name": "make-a", "function": { "term": "reference", "name": "inner", "enters": "a" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "inner", "writes": ["a"], "purpose": "Makes a.", "definition": { "term": "session" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "terms", "where": "reference 'inner'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "Text that is not data at all.",
+      "given": { "graphText": "nodes: intent, code", "registry": { "entries": [] } },
+      "expect": { "no": [{ "rule": "terms", "where": "the whole" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "Two inner workflows each declare a vector named polish: a vector's name is used twice in the graph, inner workflows included, and is refused (D10).",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "plan", "place": "plan.md", "result": ["s"] },
+            { "name": "text", "place": "text.md", "result": ["s"], "depends": ["plan", "d1"] },
+            { "name": "final", "place": "final.md", "result": ["s"], "depends": ["text", "d2"] }
+          ],
+          "vectors": [
+            { "name": "make-plan", "function": { "term": "reference", "name": "plan-it" } },
+            { "name": "make-text", "function": { "term": "reference", "name": "text-it" } },
+            { "name": "make-final", "function": { "term": "reference", "name": "final-it" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "plan-it", "writes": ["plan"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "d1-it", "writes": ["d1"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "p1-it", "writes": ["text"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "d2-it", "writes": ["d2"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "p2-it", "writes": ["final"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "text-it", "writes": ["d1", "text"], "purpose": "p.", "definition": { "term": "workflow", "nodes": [{ "name": "d1", "place": "d1.md", "result": ["s"], "depends": ["plan"] }], "vectors": [{ "name": "write-d1", "function": { "term": "reference", "name": "d1-it" } }, { "name": "polish", "function": { "term": "reference", "name": "p1-it" } }] } },
+            { "name": "final-it", "writes": ["d2", "final"], "purpose": "p.", "definition": { "term": "workflow", "nodes": [{ "name": "d2", "place": "d2.md", "result": ["s"], "depends": ["text"] }], "vectors": [{ "name": "write-d2", "function": { "term": "reference", "name": "d2-it" } }, { "name": "polish", "function": { "term": "reference", "name": "p2-it" } }] } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "terms", "where": "vector 'polish'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A graph function no vector carries out has an empty definition, which writes none of what the entry writes (T2): refused.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"] },
+            { "name": "b", "place": "b", "result": ["made"], "depends": ["a"] }
+          ],
+          "vectors": [
+            { "name": "make-a", "function": { "term": "reference", "name": "a-it" } },
+            { "name": "make-b", "function": { "term": "reference", "name": "b-it" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "a-it", "writes": ["a"], "purpose": "A.", "definition": { "term": "session" } },
+            { "name": "b-it", "writes": ["b"], "purpose": "B.", "definition": { "term": "session" } },
+            { "name": "alias-empty", "writes": ["a", "b"], "purpose": "Nothing.", "definition": { "term": "sequence", "terms": [] } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "registry", "where": "registry entry 'alias-empty'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A graph function no vector carries out names, in its definition, an entry the registry does not have (T2): refused.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"] },
+            { "name": "b", "place": "b", "result": ["made"], "depends": ["a"] }
+          ],
+          "vectors": [
+            { "name": "make-a", "function": { "term": "reference", "name": "a-it" } },
+            { "name": "make-b", "function": { "term": "reference", "name": "b-it" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "a-it", "writes": ["a"], "purpose": "A.", "definition": { "term": "session" } },
+            { "name": "b-it", "writes": ["b"], "purpose": "B.", "definition": { "term": "session" } },
+            { "name": "alias-unknown", "writes": ["a", "b"], "purpose": "Unknown.", "definition": { "term": "reference", "name": "no-such" } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "registry", "where": "registry entry 'alias-unknown'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A graph function no vector carries out, whose definition composes from what the entry rests on and writes what it writes, is well formed (T2).",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "a", "place": "a", "result": ["made"] },
+            { "name": "b", "place": "b", "result": ["made"], "depends": ["a"] }
+          ],
+          "vectors": [
+            { "name": "make-a", "function": { "term": "reference", "name": "a-it" } },
+            { "name": "make-b", "function": { "term": "reference", "name": "b-it" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "a-it", "writes": ["a"], "purpose": "A.", "definition": { "term": "session" } },
+            { "name": "b-it", "writes": ["b"], "purpose": "B.", "definition": { "term": "session" } },
+            { "name": "alias-ok", "writes": ["a", "b"], "purpose": "Both.", "definition": { "term": "sequence", "terms": [{ "term": "reference", "name": "a-it" }, { "term": "reference", "name": "b-it" }] } }
+          ]
+        }
+      },
+      "expect": { "yes": true }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "An inner vector declares an evaluation at a node its outer vector writes: its verdict is recorded at that node and accepts it, whichever vector's evaluation gave it, and the graph is well formed (D164).",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "draft", "place": "draft.md", "result": ["drafted"] },
+            { "name": "final", "place": "final.md", "result": ["judged and accepted"], "depends": ["notes"], "accepted": ["evaluation", "decision"] }
+          ],
+          "vectors": [
+            { "name": "make-draft", "function": { "term": "reference", "name": "draft-it" } },
+            { "name": "make-final", "evaluation": { "findings": "reviews/final/findings.md", "verdict": "reviews/final/verdict.json" }, "decision": {}, "function": { "term": "reference", "name": "finish" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "draft-it", "writes": ["draft"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "note-it", "writes": ["notes"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "polish-it", "writes": ["final"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "finish", "writes": ["notes", "final"], "purpose": "p.", "definition": { "term": "workflow", "nodes": [{ "name": "notes", "place": "notes.md", "result": ["s"], "depends": ["draft"] }], "vectors": [{ "name": "take-notes", "function": { "term": "reference", "name": "note-it" } }, { "name": "polish", "evaluation": { "findings": "reviews/polish/findings.md", "verdict": "reviews/polish/verdict.json" }, "function": { "term": "reference", "name": "polish-it" } }] } }
+          ]
+        }
+      },
+      "expect": { "yes": true }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A vector declares a decision, and no node it writes is accepted by one: its answer would be recorded nowhere, and it is refused, the outer vector and the inner one alike.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "draft", "place": "draft.md", "result": ["drafted"] },
+            { "name": "final", "place": "final.md", "result": ["judged and accepted"], "depends": ["notes"], "accepted": ["evaluation"] }
+          ],
+          "vectors": [
+            { "name": "make-draft", "function": { "term": "reference", "name": "draft-it" } },
+            { "name": "make-final", "evaluation": { "findings": "reviews/final/findings.md", "verdict": "reviews/final/verdict.json" }, "decision": {}, "function": { "term": "reference", "name": "finish" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "draft-it", "writes": ["draft"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "note-it", "writes": ["notes"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "polish-it", "writes": ["final"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "finish", "writes": ["notes", "final"], "purpose": "p.", "definition": { "term": "workflow", "nodes": [{ "name": "notes", "place": "notes.md", "result": ["s"], "depends": ["draft"] }], "vectors": [{ "name": "take-notes", "function": { "term": "reference", "name": "note-it" } }, { "name": "polish", "decision": {}, "function": { "term": "reference", "name": "polish-it" } }] } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "writes", "where": "vector 'make-final'" }, { "rule": "writes", "where": "vector 'polish'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "A vector of the governing graph writes a node a decision accepts, and declares none: the node could not be accepted, and it is refused.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "draft", "place": "draft.md", "result": ["drafted"] },
+            { "name": "final", "place": "final.md", "result": ["judged and accepted"], "depends": ["notes"], "accepted": ["evaluation", "decision"] }
+          ],
+          "vectors": [
+            { "name": "make-draft", "function": { "term": "reference", "name": "draft-it" } },
+            { "name": "make-final", "evaluation": { "findings": "reviews/final/findings.md", "verdict": "reviews/final/verdict.json" }, "function": { "term": "reference", "name": "finish" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "draft-it", "writes": ["draft"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "note-it", "writes": ["notes"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "polish-it", "writes": ["final"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "finish", "writes": ["notes", "final"], "purpose": "p.", "definition": { "term": "workflow", "nodes": [{ "name": "notes", "place": "notes.md", "result": ["s"], "depends": ["draft"] }], "vectors": [{ "name": "take-notes", "function": { "term": "reference", "name": "note-it" } }, { "name": "polish", "function": { "term": "reference", "name": "polish-it" } }] } }
+          ]
+        }
+      },
+      "expect": { "no": [{ "rule": "writes", "where": "vector 'make-final'" }] }
+    },
+    {
+      "covers": ["REQ-ALG-002 acceptance 1"],
+      "says": "An inner vector may declare an evaluation and a decision where a node it writes is accepted by them, and may declare neither: the vector of the governing graph that holds it declares each that a node it writes is accepted by.",
+      "given": {
+        "graph": {
+          "term": "workflow",
+          "nodes": [
+            { "name": "draft", "place": "draft.md", "result": ["drafted"] },
+            { "name": "final", "place": "final.md", "result": ["judged and accepted"], "depends": ["notes"], "accepted": ["evaluation", "decision"] }
+          ],
+          "vectors": [
+            { "name": "make-draft", "function": { "term": "reference", "name": "draft-it" } },
+            { "name": "make-final", "evaluation": { "findings": "reviews/final/findings.md", "verdict": "reviews/final/verdict.json" }, "decision": {}, "function": { "term": "reference", "name": "finish" } }
+          ]
+        },
+        "registry": {
+          "entries": [
+            { "name": "draft-it", "writes": ["draft"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "note-it", "writes": ["notes"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "polish-it", "writes": ["final"], "purpose": "p.", "definition": { "term": "session" } },
+            { "name": "finish", "writes": ["notes", "final"], "purpose": "p.", "definition": { "term": "workflow", "nodes": [{ "name": "notes", "place": "notes.md", "result": ["s"], "depends": ["draft"], "accepted": ["evaluation", "decision"] }], "vectors": [{ "name": "take-notes", "evaluation": { "findings": "reviews/notes/findings.md", "verdict": "reviews/notes/verdict.json" }, "decision": {}, "function": { "term": "reference", "name": "note-it" } }, { "name": "polish", "function": { "term": "reference", "name": "polish-it" } }] } }
+          ]
+        }
+      },
+      "expect": { "yes": true }
+    }
+  ]
+}

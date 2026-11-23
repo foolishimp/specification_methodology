@@ -1,0 +1,132 @@
+{
+  "$schema": "stdo://releases/v3.1.0-rc.2/standards/schemas/product-definition.schema.json",
+  "kind": "stdo.product-definition",
+  "product": {
+    "definition_id": "urn:stdo:product-definition:stdo-builder",
+    "name": "STDO Builder",
+    "source_project": "./",
+    "bounded_context": {
+      "id": "urn:stdo-builder:bounded-context:governed-construction",
+      "definition": "./specification/PRODUCT.md#product-boundary"
+    }
+  },
+  "constitution": {
+    "stdo": {
+      "source": {
+        "repository": "https://github.com/foolishimp/specification_methodology.git"
+      },
+      "selector": "stdo://channels/3.1.0",
+      "basis": {
+        "uri": "stdo://releases/v3.1.0-rc.2/",
+        "manifest_sha256": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4"
+      }
+    },
+    "additional_authorities": [
+      "./specification/INTENT.md",
+      "./specification/PRODUCT.md"
+    ],
+    "entrypoints": [
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/frames/bootstrap.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/SPEC_METHOD.md"
+      },
+      {
+        "basis": "#/constitution/stdo/basis",
+        "uri": "standards/REFERENCE_FRAME.md"
+      }
+    ],
+    "agent_bootstrap": {
+      "entrypoint": "#/constitution/entrypoints/0",
+      "targets": [
+        "./AGENTS.md",
+        "./CLAUDE.md"
+      ]
+    }
+  },
+  "local_constitution": {
+    "axioms": [
+      {
+        "uri": "./specification/INTENT.md#guard-rails",
+        "authority": [
+          "./specification/INTENT.md"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-builder"
+        ]
+      }
+    ],
+    "overrides": [
+      {
+        "uri": "./specification/PRODUCT.md#how-this-product-reads-the-method",
+        "overrides": [
+          "stdo://releases/v3.1.0-rc.2/standards/ODD.md"
+        ],
+        "authority": [
+          "./specification/INTENT.md#guard-rails"
+        ],
+        "applies_to": [
+          "urn:stdo:product-definition:stdo-builder"
+        ]
+      }
+    ],
+    "disambiguations": []
+  },
+  "reference_frame_bases": [
+    {
+      "uri": "./specification/REFERENCE_FRAME_BASIS.md",
+      "authority": [
+        "./specification/PRODUCT.md#product-boundary"
+      ],
+      "applies_to": [
+        "urn:stdo:product-definition:stdo-builder"
+      ]
+    }
+  ],
+  "what": {
+    "intent": "./specification/INTENT.md",
+    "product": "./specification/PRODUCT.md",
+    "specification": [
+      "./specification/requirements/"
+    ]
+  },
+  "how": {
+    "common": [],
+    "build_tenants": [
+      {
+        "id": "urn:stdo-builder:build-tenant:typescript",
+        "root": "./build_tenants/typescript/",
+        "design": [
+          "./build_tenants/typescript/design/#design"
+        ],
+        "implementation": [
+          "./build_tenants/typescript/src/#code",
+          "./build_tenants/typescript/scripts/#code",
+          "./build_tenants/typescript/packaging/#code",
+          "./build_tenants/typescript/tests/#tests"
+        ]
+      }
+    ]
+  },
+  "ticketing": {
+    "goals": "./specification/GOALS.md",
+    "tickets": {
+      "root": "./.ai-workspace/tickets/",
+      "lanes": {
+        "backlog": "./.ai-workspace/tickets/backlog/",
+        "active": "./.ai-workspace/tickets/active/",
+        "completed": "./.ai-workspace/tickets/completed/"
+      }
+    },
+    "comments": {
+      "root": "./.ai-workspace/comments/"
+    },
+    "sprints": {
+      "root": "./.ai-workspace/sprints/"
+    }
+  },
+  "composition": []
+}

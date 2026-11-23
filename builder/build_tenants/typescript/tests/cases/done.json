@@ -1,0 +1,50 @@
+{
+  "algorithm": "done",
+  "requirement": "REQ-ALG-011",
+  "cases": [
+    {
+      "covers": ["REQ-ALG-011 law 1"],
+      "says": "On main after the first build: every vector that applies passes, and the first vector takes no part. Done.",
+      "given": {
+        "fixture": "method",
+        "snapshot": {
+          "identities": { "intent": "i1", "product": "p1", "requirements": "r1", "design": "d1", "tests": "s1", "code": "c1" },
+          "ticket": "simplest",
+          "checks": { "the design names every requirement and no other": "yes", "the tests name every requirement and no other": "yes", "the tests pass": "yes", "the code names every requirement and no other": "yes" },
+          "vectors": {},
+          "records": {
+            "intent": { "answer": { "says": "yes", "on": { "intent": "i1" } } },
+            "product": { "answer": { "says": "yes", "on": { "product": "p1", "intent": "i1" } } },
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "tests": { "verdict": { "says": "yes", "on": { "tests": "s1", "requirements": "r1", "intent": "i1", "product": "p1", "design": "d1" } } },
+            "code": { "verdict": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } }, "answer": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } } }
+          }
+        }
+      },
+      "expect": { "done": "yes" }
+    },
+    {
+      "covers": ["REQ-ALG-011 law 1", "REQ-ALG-011 acceptance 1"],
+      "says": "The same workspace, after a file that is part of no asset was changed so that a test fails. No asset's identity changed, but the check runs on the workspace as it is: done says no, and names the vector and the check.",
+      "given": {
+        "fixture": "method",
+        "snapshot": {
+          "identities": { "intent": "i1", "product": "p1", "requirements": "r1", "design": "d1", "tests": "s1", "code": "c1" },
+          "ticket": "simplest",
+          "checks": { "the design names every requirement and no other": "yes", "the tests name every requirement and no other": "yes", "the tests pass": { "result": "no", "found": ".stdo-builder/found/write-code.json" }, "the code names every requirement and no other": "yes" },
+          "vectors": {},
+          "records": {
+            "intent": { "answer": { "says": "yes", "on": { "intent": "i1" } } },
+            "product": { "answer": { "says": "yes", "on": { "product": "p1", "intent": "i1" } } },
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "tests": { "verdict": { "says": "yes", "on": { "tests": "s1", "requirements": "r1", "intent": "i1", "product": "p1", "design": "d1" } } },
+            "code": { "verdict": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } }, "answer": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } } }
+          }
+        }
+      },
+      "expect": { "done": "no", "saysNo": [{ "vector": "write-code", "outcomes": ["the tests pass"] }] }
+    }
+  ]
+}

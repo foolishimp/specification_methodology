@@ -1,0 +1,1003 @@
+{
+  "algorithm": "passes",
+  "requirement": "REQ-ALG-004",
+  "cases": [
+    {
+      "covers": [
+        "REQ-ALG-004 law 1",
+        "REQ-ALG-004 acceptance 1"
+      ],
+      "says": "The session reported success but wrote no design. Its report is no input: the design it writes is not there, its check says no and no verdict stands.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": {
+            "requirements": "r1",
+            "intent": "i1",
+            "product": "p1"
+          },
+          "ticket": "simplest",
+          "checks": {
+            "the design names every requirement and no other": "no"
+          },
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p1",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "r1",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "no",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the design names every requirement and no other",
+            "result": "no"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "no",
+            "found": "no verdict stands for the content as it is now"
+          },
+          {
+            "source": "node",
+            "name": "design",
+            "result": "no",
+            "found": "design is not in the workspace"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 law 2"
+      ],
+      "says": "The verdict was given when the requirements were r1; they are r2 now. On changed content it counts as absent.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": {
+            "requirements": "r2",
+            "design": "d1",
+            "intent": "i1",
+            "product": "p1"
+          },
+          "ticket": "simplest",
+          "checks": {
+            "the design names every requirement and no other": "yes"
+          },
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p1",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "r2",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            },
+            "design": {
+              "verdict": {
+                "says": "yes",
+                "on": {
+                  "design": "d1",
+                  "requirements": "r1"
+                }
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "no",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the design names every requirement and no other",
+            "result": "yes"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "no",
+            "found": "no verdict stands for the content as it is now"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 law 2"
+      ],
+      "says": "The ticket enters at the design. The verdict was not given on this ticket, so at the entry vector it counts as absent.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": {
+            "requirements": "r1",
+            "design": "d1",
+            "intent": "i1",
+            "product": "p1"
+          },
+          "ticket": {
+            "path": "tickets/active/261119-a.md",
+            "identity": "t1",
+            "asked": "a1",
+            "enters": "design"
+          },
+          "checks": {
+            "the design names every requirement and no other": "yes"
+          },
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p1",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "r1",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            },
+            "design": {
+              "verdict": {
+                "says": "yes",
+                "on": {
+                  "design": "d1",
+                  "requirements": "r1"
+                }
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "no",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the design names every requirement and no other",
+            "result": "yes"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "no"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 law 2",
+        "REQ-ALG-004 law 3"
+      ],
+      "says": "The same verdict, with a ticket that enters at the code: the design is not the entry vector, the ticket is not among what the verdict stands for, and the verdict is used again for exactly its content.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": {
+            "requirements": "r1",
+            "design": "d1",
+            "intent": "i1",
+            "product": "p1"
+          },
+          "ticket": {
+            "path": "tickets/active/261119-a.md",
+            "identity": "t1",
+            "enters": "code"
+          },
+          "checks": {
+            "the design names every requirement and no other": "yes"
+          },
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p1",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "r1",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            },
+            "design": {
+              "verdict": {
+                "says": "yes",
+                "on": {
+                  "design": "d1",
+                  "requirements": "r1"
+                },
+                "at": "build_tenants/main/evaluations/design/verdict.json"
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "yes",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the design names every requirement and no other",
+            "result": "yes"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "yes",
+            "found": "build_tenants/main/evaluations/design/verdict.json"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 law 3"
+      ],
+      "says": "A verdict given at the entry vector of a ticket now done, on main: the ticket it was given on is no longer what it stands for, and on the same content it is used again.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "snapshot": {
+          "identities": {
+            "requirements": "r1",
+            "design": "d1",
+            "tests": "s1",
+            "code": "c1",
+            "intent": "i1",
+            "product": "p1"
+          },
+          "ticket": "simplest",
+          "checks": {
+            "the design names every requirement and no other": "yes",
+            "the tests name every requirement and no other": "yes",
+            "the tests pass": "yes",
+            "the code names every requirement and no other": "yes"
+          },
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p1",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "r1",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            },
+            "design": {
+              "verdict": {
+                "says": "yes",
+                "on": {
+                  "design": "d1",
+                  "requirements": "r1"
+                }
+              }
+            },
+            "tests": {
+              "verdict": {
+                "says": "yes",
+                "on": {
+                  "tests": "s1",
+                  "requirements": "r1"
+                }
+              }
+            },
+            "code": {
+              "verdict": {
+                "says": "yes",
+                "on": {
+                  "code": "c1",
+                  "requirements": "r1",
+                  "design": "d1",
+                  "tests": "s1",
+                  "the ticket but its term": "a1"
+                }
+              },
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "code": "c1",
+                  "requirements": "r1",
+                  "design": "d1",
+                  "tests": "s1",
+                  "the ticket but its term": "a1"
+                }
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "yes",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the tests pass",
+            "result": "yes"
+          },
+          {
+            "source": "check",
+            "name": "the code names every requirement and no other",
+            "result": "yes"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "yes"
+          },
+          {
+            "source": "answer",
+            "name": "answer",
+            "result": "yes"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 law 2"
+      ],
+      "says": "The user's answer on the requirements was given when the product definition was p1; it is p2 now.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-requirements",
+        "snapshot": {
+          "identities": {
+            "intent": "i1",
+            "product": "p2",
+            "requirements": "q1"
+          },
+          "ticket": "simplest",
+          "checks": {},
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p2",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "q1",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "no",
+        "outcomes": [
+          {
+            "source": "answer",
+            "name": "answer",
+            "result": "no",
+            "found": "no answer stands for the content as it is now"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 law 4",
+        "REQ-ALG-004 acceptance 2"
+      ],
+      "says": "The user wrote the design by hand, as d9, and it was judged on d9: it is judged as one a session wrote. Nothing in the inputs says who wrote it.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": {
+            "requirements": "r1",
+            "design": "d9",
+            "intent": "i1",
+            "product": "p1"
+          },
+          "ticket": "simplest",
+          "checks": {
+            "the design names every requirement and no other": "yes"
+          },
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p1",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "r1",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            },
+            "design": {
+              "verdict": {
+                "says": "yes",
+                "on": {
+                  "design": "d9",
+                  "requirements": "r1"
+                }
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "yes",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the design names every requirement and no other",
+            "result": "yes"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "yes"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [],
+      "says": "The evaluation's verdict stands and says no.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": {
+            "requirements": "r1",
+            "design": "d1",
+            "intent": "i1",
+            "product": "p1"
+          },
+          "ticket": "simplest",
+          "checks": {
+            "the design names every requirement and no other": "yes"
+          },
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p1",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "r1",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            },
+            "design": {
+              "verdict": {
+                "says": "no",
+                "on": {
+                  "design": "d1",
+                  "requirements": "r1"
+                },
+                "at": "build_tenants/main/evaluations/design/verdict.json"
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "no",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the design names every requirement and no other",
+            "result": "yes"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "no",
+            "found": "build_tenants/main/evaluations/design/verdict.json"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 law 2"
+      ],
+      "says": "The first vector: the user confirmed the ticket as t1, then edited it to t2. The confirmation no longer stands.",
+      "given": {
+        "fixture": "method",
+        "vector": "induct-ticket",
+        "snapshot": {
+          "identities": {},
+          "ticket": {
+            "path": "tickets/active/261119-a.md",
+            "identity": "t2",
+            "enters": "requirements"
+          },
+          "checks": {
+            "the ticket says its kind": "yes",
+            "the ticket says its class": "yes",
+            "the ticket says where it enters": "yes",
+            "the ticket says where it ends": "yes",
+            "the ticket says how much it touches": "yes",
+            "the ticket says its term": "yes",
+            "the user's words are kept": "yes"
+          },
+          "vectors": {
+            "induct-ticket": {
+              "composes": "yes"
+            }
+          },
+          "records": {
+            "induct-ticket": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "the ticket": "t1"
+                }
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "no",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the ticket says its kind",
+            "result": "yes"
+          },
+          {
+            "source": "check",
+            "name": "the ticket says its class",
+            "result": "yes"
+          },
+          {
+            "source": "check",
+            "name": "the ticket says where it enters",
+            "result": "yes"
+          },
+          {
+            "source": "check",
+            "name": "the ticket says where it ends",
+            "result": "yes"
+          },
+          {
+            "source": "check",
+            "name": "the ticket says how much it touches",
+            "result": "yes"
+          },
+          {
+            "source": "check",
+            "name": "the ticket says its term",
+            "result": "yes"
+          },
+          {
+            "source": "check",
+            "name": "the user's words are kept",
+            "result": "yes"
+          },
+          {
+            "source": "check",
+            "name": "the ticket's term composes",
+            "result": "yes"
+          },
+          {
+            "source": "answer",
+            "name": "answer",
+            "result": "no"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [],
+      "says": "The evaluating session wrote that it cannot judge the design. The verdict stands for the content it was given on, and gives cannot: the vector is not closed by it.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": {
+            "requirements": "r1",
+            "design": "d1",
+            "intent": "i1",
+            "product": "p1"
+          },
+          "ticket": "simplest",
+          "checks": {
+            "the design names every requirement and no other": "yes"
+          },
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p1",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "r1",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            },
+            "design": {
+              "verdict": {
+                "says": "cannot",
+                "on": {
+                  "design": "d1",
+                  "requirements": "r1"
+                },
+                "at": "build_tenants/main/evaluations/design/verdict.json"
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "cannot",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the design names every requirement and no other",
+            "result": "yes"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "cannot",
+            "found": "build_tenants/main/evaluations/design/verdict.json"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 acceptance 3"
+      ],
+      "says": "The user said no to the intent, and no content changed: the design's own checks and verdict stand, and it does not pass, since the requirements it rests on depend on an intent that is not accepted.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": {
+            "intent": "i1",
+            "product": "p1",
+            "requirements": "r1",
+            "design": "d1"
+          },
+          "ticket": "simplest",
+          "checks": {
+            "the design names every requirement and no other": "yes"
+          },
+          "vectors": {},
+          "records": {
+            "intent": {
+              "answer": {
+                "says": "no",
+                "on": {
+                  "intent": "i1"
+                }
+              }
+            },
+            "product": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "product": "p1",
+                  "intent": "i1"
+                }
+              }
+            },
+            "requirements": {
+              "answer": {
+                "says": "yes",
+                "on": {
+                  "requirements": "r1",
+                  "intent": "i1",
+                  "product": "p1"
+                }
+              }
+            },
+            "design": {
+              "verdict": {
+                "says": "yes",
+                "on": {
+                  "design": "d1",
+                  "requirements": "r1"
+                }
+              }
+            }
+          }
+        }
+      },
+      "expect": {
+        "result": "no",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the design names every requirement and no other",
+            "result": "yes"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "yes"
+          },
+          {
+            "source": "node",
+            "name": "requirements",
+            "result": "no",
+            "found": "the user has not accepted intent as it now stands"
+          }
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 law 5"
+      ],
+      "says": "Every asset is there and nothing is recorded, so the intent is not accepted, and no check of the code was done: each says neither yes nor no, and that no answer of it can change what is done next, and the code does not pass.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "snapshot": {
+          "identities": {
+            "intent": "i1",
+            "product": "p1",
+            "requirements": "r1",
+            "design": "d1",
+            "tests": "t1",
+            "code": "c1"
+          },
+          "ticket": "simplest",
+          "vectors": {}
+        }
+      },
+      "expect": {
+        "result": "cannot",
+        "outcomes": [
+          {
+            "source": "check",
+            "name": "the tests pass",
+            "result": "cannot",
+            "found": "not done: no answer of it can change what is done next"
+          },
+          {
+            "source": "check",
+            "name": "the code names every requirement and no other",
+            "result": "cannot",
+            "found": "not done: no answer of it can change what is done next"
+          },
+          {
+            "source": "verdict",
+            "name": "verdict",
+            "result": "no"
+          },
+          {
+            "source": "answer",
+            "name": "answer",
+            "result": "no"
+          },
+          {
+            "source": "node",
+            "name": "requirements",
+            "result": "no",
+            "found": "the user has not accepted intent as it now stands"
+          },
+          {
+            "source": "node",
+            "name": "design",
+            "result": "no",
+            "found": "the user has not accepted intent as it now stands"
+          },
+          {
+            "source": "node",
+            "name": "tests",
+            "result": "no",
+            "found": "the user has not accepted intent as it now stands"
+          }
+        ]
+      }
+    }
+  ],
+  "elsewhere": [
+    {
+      "covers": [
+        "REQ-ALG-004 law 5"
+      ],
+      "in": "checks_where_they_count.scenario.test.ts",
+      "says": "The tests' run.sh is in the ticket's checkout from the first run on, and the code's check that runs it is not run while the code is not there; it is then run once before the user is asked about the build, and once in the run that merges."
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 acceptance 4"
+      ],
+      "in": "new_ticket.scenario.test.ts",
+      "says": "After S1's ticket is done, a new ticket that changes the code alone finds the intent, the product definition, the requirements, the design and the tests accepted by the resolutions of the done ticket: no session runs on them and the user is asked on the code alone."
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 acceptance 5"
+      ],
+      "in": "resolutions.scenario.test.ts",
+      "says": "After S1's ticket is done with the user's yes to the requirements, the next ticket holds the user's no on the same content: the requirements are not accepted, and the code, which rests on them, is not built."
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 acceptance 6"
+      ],
+      "in": "resolutions.scenario.test.ts",
+      "says": "The user's yes to the requirements names a commit git does not hold: it counts as absent, and the run asks the user again on the specification."
+    }
+  ]
+}

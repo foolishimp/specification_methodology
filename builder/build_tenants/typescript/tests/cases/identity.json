@@ -1,0 +1,50 @@
+{
+  "algorithm": "identity",
+  "requirement": "REQ-ALG-001",
+  "cases": [
+    {
+      "covers": ["REQ-ALG-001 law 2"],
+      "says": "A file asset has the identity given for its file; only identities are given, no content.",
+      "given": {
+        "asset": { "name": "intent", "place": "specification/INTENT.md" },
+        "tree": { "specification": "f1", "specification/INTENT.md": "a1", "specification/PRODUCT.md": "a2" }
+      },
+      "expect": { "identity": "a1", "byPath": { "specification/INTENT.md": "a1" } }
+    },
+    {
+      "covers": ["REQ-ALG-001 law 2"],
+      "says": "A folder asset has the identity of the folder and all it holds.",
+      "given": {
+        "asset": { "name": "requirements", "place": "specification/requirements" },
+        "tree": { "specification/requirements": "d7", "specification/requirements/A.md": "a3" }
+      },
+      "expect": { "identity": "d7", "byPath": { "specification/requirements": "d7" } }
+    },
+    {
+      "covers": ["REQ-ALG-001 law 2"],
+      "says": "An asset with nothing at its place has no identity.",
+      "given": {
+        "asset": { "name": "code", "place": "build_tenants/main/code" },
+        "tree": { "specification/INTENT.md": "a1" }
+      },
+      "expect": { "identity": null, "byPath": {} }
+    },
+    {
+      "covers": ["REQ-ALG-001 law 2"],
+      "says": "An asset at several paths has the identity of each that is there, after its path, one to a line; read back, it gives each path's identity.",
+      "given": {
+        "asset": { "name": "code", "place": "build_tenants/main/code", "paths": ["build_tenants/main/code", "build_tenants/main/bin", "build_tenants/main/lib"] },
+        "tree": { "build_tenants/main/code": "c1", "build_tenants/main/bin": "b1", "specification/INTENT.md": "a1" }
+      },
+      "expect": { "identity": "build_tenants/main/code c1\nbuild_tenants/main/bin b1", "byPath": { "build_tenants/main/code": "c1", "build_tenants/main/bin": "b1" } }
+    }
+  ],
+  "elsewhere": [
+    {"covers": ["REQ-ALG-001 acceptance 2"], "in": "setup_inside_repository.scenario.test.ts", "says": "In S13, files outside the workspace's folder are changed while the build is asked, two at assets' places from the repository's top among them, and the answer on the content asked is taken: no identity changed."},
+    {
+      "covers": ["REQ-ALG-001 law 1", "REQ-ALG-001 acceptance 1"],
+      "in": "kit_effects.test.ts",
+      "says": "Identities are computed by content addressing (C1) over git; a test in a new repository in a temporary folder shows them."
+    }
+  ]
+}

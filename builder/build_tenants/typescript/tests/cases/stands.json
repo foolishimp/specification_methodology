@@ -1,0 +1,1184 @@
+{
+  "algorithm": "stands",
+  "requirement": "REQ-ALG-012",
+  "cases": [
+    {
+      "covers": [
+        "REQ-ALG-012 law 1",
+        "REQ-ALG-012 law 3",
+        "REQ-ALG-012 acceptance 1",
+        "REQ-ALG-012 acceptance 7"
+      ],
+      "says": "Work by the six single-asset functions, with the intent and the product definition accepted and the requirements delivered for the user's decision. Without an event log: what the board, the tickets and git give, and the log was not found. In the graph's own names, the ticket waits for the user's answer on the requirements, as the ticket shows, with when it was asked.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [
+            {
+              "name": "261120-b"
+            }
+          ],
+          "active": [
+            {
+              "name": "261119-a"
+            }
+          ],
+          "done": []
+        },
+        "branches": [
+          "261119-a"
+        ],
+        "views": {
+          "261119-a": {
+            "changes": [
+              {
+                "path": "specification/INTENT.md",
+                "lines": 12
+              },
+              {
+                "path": "specification/PRODUCT.md",
+                "lines": 20
+              },
+              {
+                "path": "specification/requirements/FUNCTIONS.md",
+                "lines": 30
+              },
+              {
+                "path": "tickets/active/261119-a.md",
+                "lines": 4
+              }
+            ],
+            "ticket": {
+              "asked": {
+                "vector": "write-requirements",
+                "asset": "requirements",
+                "when": "2026-11-19T10:00:00.000Z"
+              },
+              "inducted": true
+            }
+          }
+        },
+        "log": null
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261120-b",
+            "lane": "backlog",
+            "changed": []
+          },
+          {
+            "name": "261119-a",
+            "lane": "active",
+            "waits": {
+              "on": "answer",
+              "vector": "write-requirements",
+              "asset": "requirements",
+              "from": "ticket",
+              "when": "2026-11-19T10:00:00.000Z"
+            },
+            "changed": [
+              {
+                "asset": "intent",
+                "lines": 12
+              },
+              {
+                "asset": "product",
+                "lines": 20
+              },
+              {
+                "asset": "requirements",
+                "lines": 30
+              }
+            ]
+          }
+        ],
+        "withdrawn": [],
+        "log": "not found"
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 2"
+      ],
+      "says": "After two tickets are done: for each, the assets it changed and no others.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [],
+          "active": [],
+          "done": [
+            {
+              "name": "261119-a"
+            },
+            {
+              "name": "261120-b"
+            }
+          ]
+        },
+        "branches": [
+          "261119-a",
+          "261120-b"
+        ],
+        "views": {
+          "261119-a": {
+            "changes": [
+              {
+                "path": "specification/requirements/FUNCTIONS.md",
+                "lines": 6
+              },
+              {
+                "path": "build_tenants/main/design/DESIGN.md",
+                "lines": 4
+              },
+              {
+                "path": "build_tenants/main/tests/run.sh",
+                "lines": 2
+              },
+              {
+                "path": "build_tenants/main/tests/functions.test.sh",
+                "lines": 10
+              },
+              {
+                "path": "build_tenants/main/code/main.sh",
+                "lines": 9
+              },
+              {
+                "path": "tickets/done/261119-a.md",
+                "lines": 7
+              }
+            ]
+          },
+          "261120-b": {
+            "changes": [
+              {
+                "path": "build_tenants/main/code/main.sh",
+                "lines": 3
+              },
+              {
+                "path": "tickets/done/261120-b.md",
+                "lines": 5
+              }
+            ]
+          }
+        },
+        "log": []
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261119-a",
+            "lane": "done",
+            "changed": [
+              {
+                "asset": "requirements",
+                "lines": 6
+              },
+              {
+                "asset": "design",
+                "lines": 4
+              },
+              {
+                "asset": "tests",
+                "lines": 12
+              },
+              {
+                "asset": "code",
+                "lines": 9
+              }
+            ]
+          },
+          {
+            "name": "261120-b",
+            "lane": "done",
+            "changed": [
+              {
+                "asset": "code",
+                "lines": 3
+              }
+            ]
+          }
+        ],
+        "withdrawn": [],
+        "log": "found"
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 1"
+      ],
+      "says": "Scenario S5: the code step's working session was started twice and failed the same check. The ticket shows no question; from the log, the ticket is held up, with the vector of the last step, the check that said no there and where what it found is kept, with when the last run ended; how that run ended and the sessions so far.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [],
+          "active": [
+            {
+              "name": "261119-a"
+            }
+          ],
+          "done": []
+        },
+        "branches": [
+          "261119-a"
+        ],
+        "views": {
+          "261119-a": {
+            "changes": [
+              {
+                "path": "build_tenants/main/code/main.sh",
+                "lines": 40
+              }
+            ],
+            "ticket": {
+              "inducted": true
+            }
+          }
+        },
+        "log": [
+          {
+            "event": "set-up"
+          },
+          {
+            "event": "run started",
+            "ticket": "261119-a"
+          },
+          {
+            "event": "session started",
+            "ticket": "261119-a",
+            "vector": "write-code",
+            "kind": "work",
+            "agent": "stand-in"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261119-a",
+            "vector": "write-code",
+            "kind": "work",
+            "seconds": 300,
+            "cost": "0.40 USD"
+          },
+          {
+            "event": "check run",
+            "ticket": "261119-a",
+            "vector": "write-code",
+            "check": "the tests pass",
+            "result": "no",
+            "seconds": 12
+          },
+          {
+            "event": "session started",
+            "ticket": "261119-a",
+            "vector": "write-code",
+            "kind": "work",
+            "agent": "stand-in"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261119-a",
+            "vector": "write-code",
+            "kind": "work",
+            "seconds": 240,
+            "cost": "0.35 USD"
+          },
+          {
+            "event": "check run",
+            "ticket": "261119-a",
+            "vector": "write-code",
+            "check": "the tests pass",
+            "result": "no",
+            "seconds": 12
+          },
+          {
+            "event": "a kind of entry this reader does not know",
+            "ticket": "261119-a"
+          },
+          {
+            "event": "run ended",
+            "ticket": "261119-a",
+            "ending": "stopped",
+            "why": "write-code could not close: the tests pass said no twice",
+            "at": "2026-11-19T11:00:00.000Z"
+          }
+        ],
+        "found": ".stdo-builder/local/found/{vector}.md"
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261119-a",
+            "lane": "active",
+            "waits": {
+              "on": "held up",
+              "vector": "write-code",
+              "checks": [
+                "the tests pass"
+              ],
+              "found": ".stdo-builder/local/found/write-code.md",
+              "from": "log",
+              "when": "2026-11-19T11:00:00.000Z"
+            },
+            "changed": [
+              {
+                "asset": "code",
+                "lines": 40
+              }
+            ],
+            "runs": {
+              "last": {
+                "ending": "stopped",
+                "why": "write-code could not close: the tests pass said no twice",
+                "at": "2026-11-19T11:00:00.000Z"
+              },
+              "sessions": [
+                {
+                  "vector": "write-code",
+                  "kind": "work",
+                  "agent": "stand-in",
+                  "ended": "returned",
+                  "seconds": 300,
+                  "cost": "0.40 USD"
+                },
+                {
+                  "vector": "write-code",
+                  "kind": "work",
+                  "agent": "stand-in",
+                  "ended": "returned",
+                  "seconds": 240,
+                  "cost": "0.35 USD"
+                }
+              ],
+              "attempts": {
+                "write-code": 2
+              }
+            }
+          }
+        ],
+        "withdrawn": [],
+        "log": "found"
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 law 2"
+      ],
+      "says": "A ticket just pulled, not yet inducted: it waits to be inducted, as its ticket shows, and no record of a run's reading is read.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [],
+          "active": [
+            {
+              "name": "261121-c"
+            }
+          ],
+          "done": []
+        },
+        "branches": [
+          "261121-c"
+        ],
+        "views": {
+          "261121-c": {
+            "changes": [],
+            "ticket": {
+              "inducted": false
+            }
+          }
+        },
+        "log": null
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261121-c",
+            "lane": "active",
+            "waits": {
+              "on": "induction",
+              "from": "ticket"
+            },
+            "changed": []
+          }
+        ],
+        "withdrawn": [],
+        "log": "not found"
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 law 2"
+      ],
+      "says": "The same ticket, once inducted and confirmed at the design: the ticket shows no question and a confirmation that stands, and the log shows its last step on the design, under way: it is in build, with the design, as the log shows. A ticket with a branch that is not on the board is withdrawn.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [],
+          "active": [
+            {
+              "name": "261121-c"
+            }
+          ],
+          "done": []
+        },
+        "branches": [
+          "261121-c",
+          "261118-w"
+        ],
+        "views": {
+          "261121-c": {
+            "changes": [],
+            "ticket": {
+              "inducted": true
+            }
+          }
+        },
+        "log": [
+          {
+            "event": "run started",
+            "ticket": "261121-c"
+          },
+          {
+            "event": "session started",
+            "ticket": "261121-c",
+            "vector": "write-design",
+            "kind": "work",
+            "agent": "claude"
+          }
+        ]
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261121-c",
+            "lane": "active",
+            "waits": {
+              "on": "work",
+              "vector": "write-design",
+              "from": "log"
+            },
+            "changed": [],
+            "runs": {
+              "sessions": [
+                {
+                  "vector": "write-design",
+                  "kind": "work",
+                  "agent": "claude",
+                  "ended": "under way"
+                }
+              ],
+              "attempts": {
+                "write-design": 1
+              }
+            }
+          }
+        ],
+        "withdrawn": [
+          "261118-w"
+        ],
+        "log": "found"
+      }
+    },
+    {
+      "covers": [],
+      "says": "Every vector on the branch is closed and the last run on the ticket ended done, as the log shows: the ticket waits to be merged, with when that run ended.",
+      "given": {
+        "fixture": "small",
+        "board": {
+          "backlog": [],
+          "active": [
+            {
+              "name": "261119-s",
+              "simplest": true
+            }
+          ],
+          "done": []
+        },
+        "branches": [
+          "261119-s"
+        ],
+        "views": {
+          "261119-s": {
+            "changes": [
+              {
+                "path": "work/draft/draft.md",
+                "lines": 8
+              },
+              {
+                "path": "work/final/final.md",
+                "lines": 9
+              }
+            ],
+            "ticket": {
+              "inducted": true
+            }
+          }
+        },
+        "log": [
+          {
+            "event": "vector closed",
+            "ticket": "261119-s",
+            "vector": "make-final"
+          },
+          {
+            "event": "run ended",
+            "ticket": "261119-s",
+            "ending": "done",
+            "why": "every vector of the ticket is closed",
+            "at": "2026-11-19T12:00:00.000Z"
+          }
+        ]
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261119-s",
+            "lane": "active",
+            "waits": {
+              "on": "merge",
+              "from": "log",
+              "when": "2026-11-19T12:00:00.000Z"
+            },
+            "changed": [
+              {
+                "asset": "draft",
+                "lines": 8
+              },
+              {
+                "asset": "final",
+                "lines": 9
+              }
+            ],
+            "runs": {
+              "last": {
+                "ending": "done",
+                "why": "every vector of the ticket is closed",
+                "at": "2026-11-19T12:00:00.000Z"
+              },
+              "sessions": [],
+              "attempts": {}
+            }
+          }
+        ],
+        "withdrawn": [],
+        "log": "found"
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 3"
+      ],
+      "says": "The design's evaluation said that it cannot judge: the log shows the ticket held up on the verdict. The sessions reported their cost and their calls, one of them in an older form: each session's is given, a number to the cent and the older form as reported, and the sums of those that are numbers.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [],
+          "active": [
+            {
+              "name": "261121-d"
+            }
+          ],
+          "done": []
+        },
+        "branches": [
+          "261121-d"
+        ],
+        "views": {
+          "261121-d": {
+            "changes": [
+              {
+                "path": "build_tenants/main/design/DESIGN.md",
+                "lines": 30
+              }
+            ],
+            "ticket": {
+              "inducted": true
+            }
+          }
+        },
+        "log": [
+          {
+            "event": "run started",
+            "ticket": "261121-d"
+          },
+          {
+            "event": "session started",
+            "ticket": "261121-d",
+            "vector": "induct-ticket",
+            "kind": "work",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261121-d",
+            "vector": "induct-ticket",
+            "kind": "work",
+            "seconds": 40,
+            "cost": "0.5",
+            "calls": 3
+          },
+          {
+            "event": "session started",
+            "ticket": "261121-d",
+            "vector": "write-design",
+            "kind": "work",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261121-d",
+            "vector": "write-design",
+            "kind": "work",
+            "seconds": 300,
+            "cost": "1.25",
+            "calls": 12
+          },
+          {
+            "event": "session started",
+            "ticket": "261121-d",
+            "vector": "write-design",
+            "kind": "evaluation",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261121-d",
+            "vector": "write-design",
+            "kind": "evaluation",
+            "seconds": 90,
+            "cost": "0.40 USD"
+          },
+          {
+            "event": "verdict read",
+            "ticket": "261121-d",
+            "vector": "write-design",
+            "result": "cannot",
+            "path": "build_tenants/main/evaluations/design/verdict.json",
+            "findings": "build_tenants/main/evaluations/design/findings.md"
+          },
+          {
+            "event": "run ended",
+            "ticket": "261121-d",
+            "ending": "stopped",
+            "why": "the evaluation of write-design cannot judge; why is in its findings at build_tenants/main/evaluations/design/findings.md",
+            "at": "2026-11-21T12:00:00.000Z"
+          }
+        ],
+        "found": ".stdo-builder/local/found/{vector}.md"
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261121-d",
+            "lane": "active",
+            "waits": {
+              "on": "held up",
+              "vector": "write-design",
+              "checks": [
+                "verdict"
+              ],
+              "found": ".stdo-builder/local/found/write-design.md",
+              "from": "log",
+              "when": "2026-11-21T12:00:00.000Z"
+            },
+            "changed": [
+              {
+                "asset": "design",
+                "lines": 30
+              }
+            ],
+            "runs": {
+              "last": {
+                "ending": "stopped",
+                "why": "the evaluation of write-design cannot judge; why is in its findings at build_tenants/main/evaluations/design/findings.md",
+                "at": "2026-11-21T12:00:00.000Z"
+              },
+              "sessions": [
+                {
+                  "vector": "induct-ticket",
+                  "kind": "work",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 40,
+                  "cost": "0.50",
+                  "calls": 3
+                },
+                {
+                  "vector": "write-design",
+                  "kind": "work",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 300,
+                  "cost": "1.25",
+                  "calls": 12
+                },
+                {
+                  "vector": "write-design",
+                  "kind": "evaluation",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 90,
+                  "cost": "0.40 USD"
+                }
+              ],
+              "attempts": {
+                "induct-ticket": 1,
+                "write-design": 1
+              },
+              "cost": "1.75",
+              "calls": 15
+            }
+          }
+        ],
+        "withdrawn": [],
+        "log": "found"
+      }
+    },
+    {
+      "covers": [],
+      "says": "The sessions reported their cost with the unit the settings name (D102): each session's is given with it, and so is the sum.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [],
+          "active": [],
+          "done": [
+            {
+              "name": "261121-e"
+            }
+          ]
+        },
+        "branches": [],
+        "views": {},
+        "log": [
+          {
+            "event": "session started",
+            "ticket": "261121-e",
+            "vector": "write-code",
+            "kind": "work",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261121-e",
+            "vector": "write-code",
+            "kind": "work",
+            "seconds": 60,
+            "cost": "0.25",
+            "unit": "USD",
+            "calls": 7
+          },
+          {
+            "event": "session started",
+            "ticket": "261121-e",
+            "vector": "write-code",
+            "kind": "evaluation",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261121-e",
+            "vector": "write-code",
+            "kind": "evaluation",
+            "seconds": 30,
+            "cost": "0.5",
+            "unit": "USD",
+            "calls": 2
+          }
+        ]
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261121-e",
+            "lane": "done",
+            "changed": [],
+            "runs": {
+              "sessions": [
+                {
+                  "vector": "write-code",
+                  "kind": "work",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 60,
+                  "cost": "0.25",
+                  "unit": "USD",
+                  "calls": 7
+                },
+                {
+                  "vector": "write-code",
+                  "kind": "evaluation",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 30,
+                  "cost": "0.50",
+                  "unit": "USD",
+                  "calls": 2
+                }
+              ],
+              "attempts": {
+                "write-code": 1
+              },
+              "cost": "0.75",
+              "unit": "USD",
+              "calls": 9
+            }
+          }
+        ],
+        "withdrawn": [],
+        "log": "found"
+      }
+    },
+    {
+      "covers": [],
+      "says": "Two sessions reported their cost in different units: each is given with its own, and no sum of the cost is given.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [],
+          "active": [],
+          "done": [
+            {
+              "name": "261121-f"
+            }
+          ]
+        },
+        "branches": [],
+        "views": {},
+        "log": [
+          {
+            "event": "session started",
+            "ticket": "261121-f",
+            "vector": "write-code",
+            "kind": "work",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261121-f",
+            "vector": "write-code",
+            "kind": "work",
+            "seconds": 60,
+            "cost": "0.25",
+            "unit": "USD",
+            "calls": 7
+          },
+          {
+            "event": "session started",
+            "ticket": "261121-f",
+            "vector": "write-code",
+            "kind": "evaluation",
+            "agent": "other"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261121-f",
+            "vector": "write-code",
+            "kind": "evaluation",
+            "seconds": 30,
+            "cost": "0.5",
+            "calls": 2
+          }
+        ]
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261121-f",
+            "lane": "done",
+            "changed": [],
+            "runs": {
+              "sessions": [
+                {
+                  "vector": "write-code",
+                  "kind": "work",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 60,
+                  "cost": "0.25",
+                  "unit": "USD",
+                  "calls": 7
+                },
+                {
+                  "vector": "write-code",
+                  "kind": "evaluation",
+                  "agent": "other",
+                  "ended": "returned",
+                  "seconds": 30,
+                  "cost": "0.50",
+                  "calls": 2
+                }
+              ],
+              "attempts": {
+                "write-code": 1
+              },
+              "calls": 9
+            }
+          }
+        ],
+        "withdrawn": [],
+        "log": "found"
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 4"
+      ],
+      "says": "A session reported a cost of 0.6511950000000001 with the unit USD, and on another ticket one reported it with no unit: each is given to the cent, as 0.65 with USD and as 0.65 with none, and so is each ticket's sum.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [],
+          "active": [],
+          "done": [
+            {
+              "name": "261122-g"
+            },
+            {
+              "name": "261122-h"
+            }
+          ]
+        },
+        "branches": [],
+        "views": {},
+        "log": [
+          {
+            "event": "session started",
+            "ticket": "261122-g",
+            "vector": "write-code",
+            "kind": "work",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261122-g",
+            "vector": "write-code",
+            "kind": "work",
+            "seconds": 60,
+            "cost": "0.6511950000000001",
+            "unit": "USD",
+            "calls": 7
+          },
+          {
+            "event": "session started",
+            "ticket": "261122-h",
+            "vector": "write-code",
+            "kind": "work",
+            "agent": "other"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261122-h",
+            "vector": "write-code",
+            "kind": "work",
+            "seconds": 60,
+            "cost": "0.6511950000000001",
+            "calls": 7
+          }
+        ]
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261122-g",
+            "lane": "done",
+            "changed": [],
+            "runs": {
+              "sessions": [
+                {
+                  "vector": "write-code",
+                  "kind": "work",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 60,
+                  "cost": "0.65",
+                  "unit": "USD",
+                  "calls": 7
+                }
+              ],
+              "attempts": {
+                "write-code": 1
+              },
+              "cost": "0.65",
+              "unit": "USD",
+              "calls": 7
+            }
+          },
+          {
+            "name": "261122-h",
+            "lane": "done",
+            "changed": [],
+            "runs": {
+              "sessions": [
+                {
+                  "vector": "write-code",
+                  "kind": "work",
+                  "agent": "other",
+                  "ended": "returned",
+                  "seconds": 60,
+                  "cost": "0.65",
+                  "calls": 7
+                }
+              ],
+              "attempts": {
+                "write-code": 1
+              },
+              "cost": "0.65",
+              "calls": 7
+            }
+          }
+        ],
+        "withdrawn": [],
+        "log": "found"
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 5"
+      ],
+      "says": "Three sessions each reported a cost of 0.334 with the unit USD: each is given as 0.33, and the ticket's sum, of the costs as reported, as 1.00.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [],
+          "active": [],
+          "done": [
+            {
+              "name": "261122-i"
+            }
+          ]
+        },
+        "branches": [],
+        "views": {},
+        "log": [
+          {
+            "event": "session started",
+            "ticket": "261122-i",
+            "vector": "write-design",
+            "kind": "work",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261122-i",
+            "vector": "write-design",
+            "kind": "work",
+            "seconds": 60,
+            "cost": "0.334",
+            "unit": "USD"
+          },
+          {
+            "event": "session started",
+            "ticket": "261122-i",
+            "vector": "write-tests",
+            "kind": "work",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261122-i",
+            "vector": "write-tests",
+            "kind": "work",
+            "seconds": 60,
+            "cost": "0.334",
+            "unit": "USD"
+          },
+          {
+            "event": "session started",
+            "ticket": "261122-i",
+            "vector": "write-code",
+            "kind": "work",
+            "agent": "claude"
+          },
+          {
+            "event": "session returned",
+            "ticket": "261122-i",
+            "vector": "write-code",
+            "kind": "work",
+            "seconds": 60,
+            "cost": "0.334",
+            "unit": "USD"
+          }
+        ]
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261122-i",
+            "lane": "done",
+            "changed": [],
+            "runs": {
+              "sessions": [
+                {
+                  "vector": "write-design",
+                  "kind": "work",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 60,
+                  "cost": "0.33",
+                  "unit": "USD"
+                },
+                {
+                  "vector": "write-tests",
+                  "kind": "work",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 60,
+                  "cost": "0.33",
+                  "unit": "USD"
+                },
+                {
+                  "vector": "write-code",
+                  "kind": "work",
+                  "agent": "claude",
+                  "ended": "returned",
+                  "seconds": 60,
+                  "cost": "0.33",
+                  "unit": "USD"
+                }
+              ],
+              "attempts": {
+                "write-design": 1,
+                "write-tests": 1,
+                "write-code": 1
+              },
+              "cost": "1.00",
+              "unit": "USD"
+            }
+          }
+        ],
+        "withdrawn": [],
+        "log": "found"
+      }
+    }
+  ],
+  "elsewhere": [
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 8"
+      ],
+      "in": "setup_inside_repository.scenario.test.ts",
+      "says": "In S13, files changed outside the workspace's folder on main are named for no ticket by show, and the code's count of lines is that of the folder's file alone. A second workspace inside a larger repository has the user commit files outside the folder on the active ticket's branch, one at the code's place from the repository's top: show, read while the ticket is active, names neither, and the code's count of lines is that of the folder's file alone."
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 6"
+      ],
+      "in": "show_runs_no_check.scenario.test.ts",
+      "says": "A run ends waiting for the user's answer, and the code in the ticket's checkout is then deleted: show gives that the ticket waits for the user's answer on that vector, as the ticket shows, with when the question was asked."
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 4",
+        "REQ-ALG-012 acceptance 5"
+      ],
+      "in": "show_cost.scenario.test.ts",
+      "says": "Sessions of S1 report their cost by what the stand-in prints, and show prints each to the cent, with its unit or with none, and the ticket's sum."
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 7"
+      ],
+      "says": "With the event log deleted after a run ends waiting for the user's answer, show gives the question from the ticket and says the log was not found.",
+      "in": "one_log.scenario.test.ts"
+    }
+  ]
+}

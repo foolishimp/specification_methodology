@@ -1,0 +1,218 @@
+{
+  "algorithm": "open",
+  "requirement": "REQ-ALG-005",
+  "cases": [
+    {
+      "covers": ["REQ-ALG-005 law 1"],
+      "says": "A standing verdict of yes does not close the design while its check says no.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": { "requirements": "r1", "design": "d1" },
+          "ticket": "simplest",
+          "checks": { "the design names every requirement and no other": "no" },
+          "vectors": {},
+          "records": {
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1" } } }
+          }
+        }
+      },
+      "expect": { "open": true, "changed": [] }
+    },
+    {
+      "covers": ["REQ-ALG-005 law 2", "REQ-ALG-005 acceptance 1"],
+      "says": "A requirement of a built product was changed (r1 to r2). The design, which needs the requirements, is open, and names them as changed; nothing told it what changed.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": { "requirements": "r2", "design": "d1" },
+          "ticket": "simplest",
+          "checks": { "the design names every requirement and no other": "yes" },
+          "vectors": {},
+          "records": {
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1" } } }
+          }
+        }
+      },
+      "expect": { "open": true, "changed": ["requirements"] }
+    },
+    {
+      "covers": ["REQ-ALG-005 acceptance 1"],
+      "says": "The same change opens the code, which needs the requirements too.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "snapshot": {
+          "identities": { "requirements": "r2", "design": "d1", "tests": "s1", "code": "c1" },
+          "ticket": "simplest",
+          "checks": { "the tests pass": "yes", "the code names every requirement and no other": "yes" },
+          "vectors": {},
+          "records": {
+            "code": { "verdict": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1" } }, "answer": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1" } } }
+          }
+        }
+      },
+      "expect": { "open": true, "changed": ["requirements"] }
+    },
+    {
+      "covers": ["REQ-ALG-005 acceptance 1"],
+      "says": "The same change leaves the intent, which does not depend on the requirements, closed.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-intent",
+        "snapshot": {
+          "identities": { "intent": "i1", "requirements": "r2" },
+          "ticket": "simplest",
+          "checks": {}, "vectors": {}, "records": { "intent": { "answer": { "says": "yes", "on": { "intent": "i1" } } } }
+        }
+      },
+      "expect": { "open": false, "changed": [] }
+    },
+    {
+      "covers": ["REQ-ALG-005 law 3"],
+      "says": "On main, the code was entered by a ticket now done (t1). Neither that ticket nor any log is an input, and the code is closed.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "snapshot": {
+          "identities": { "requirements": "r1", "design": "d1", "tests": "s1", "code": "c1", "intent": "i1", "product": "p1" },
+          "ticket": "simplest",
+          "checks": { "the design names every requirement and no other": "yes", "the tests name every requirement and no other": "yes", "the tests pass": "yes", "the code names every requirement and no other": "yes" },
+          "vectors": {},
+          "records": {
+            "intent": { "answer": { "says": "yes", "on": { "intent": "i1" } } },
+            "product": { "answer": { "says": "yes", "on": { "product": "p1", "intent": "i1" } } },
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1" } } },
+            "tests": { "verdict": { "says": "yes", "on": { "tests": "s1", "requirements": "r1" } } },
+            "code": { "verdict": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "the ticket but its term": "a1" } }, "answer": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "the ticket but its term": "a1" } } }
+          }
+        }
+      },
+      "expect": { "open": false, "changed": [] }
+    },
+    {
+      "covers": ["REQ-ALG-005 acceptance 2"],
+      "says": "A checkout just opened from main for a new ticket, not yet inducted: the design, closed on main, is closed.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": { "requirements": "r1", "design": "d1", "intent": "i1", "product": "p1" },
+          "ticket": { "path": "tickets/active/261119-b.md", "identity": "t5" },
+          "checks": { "the design names every requirement and no other": "yes" },
+          "vectors": {},
+          "records": {
+            "intent": { "answer": { "says": "yes", "on": { "intent": "i1" } } },
+            "product": { "answer": { "says": "yes", "on": { "product": "p1", "intent": "i1" } } },
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1" } } }
+          }
+        }
+      },
+      "expect": { "open": false, "changed": [] }
+    },
+    {
+      "covers": [],
+      "says": "A ticket inducted at the requirements opens them; with no evaluation, changed is read from the answer, and names the ticket without its term.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-requirements",
+        "snapshot": {
+          "identities": { "intent": "i1", "product": "p1", "requirements": "q1" },
+          "ticket": { "path": "tickets/active/261119-b.md", "identity": "t5", "asked": "a5", "enters": "requirements" },
+          "checks": {},
+          "vectors": {},
+          "records": {
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "q1", "intent": "i1", "product": "p1" } } }
+          }
+        }
+      },
+      "expect": { "open": true, "changed": ["the ticket but its term"] }
+    },
+    {
+      "covers": [],
+      "says": "The design itself was changed by hand: the verdict no longer stands and the design is open, but changed names only needed assets, so it is empty.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": {
+          "identities": { "requirements": "r1", "design": "d2" },
+          "ticket": "simplest",
+          "checks": { "the design names every requirement and no other": "yes" },
+          "vectors": {},
+          "records": {
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1" } } }
+          }
+        }
+      },
+      "expect": { "open": true, "changed": [] }
+    },
+    {
+      "covers": [],
+      "says": "No verdict yet: changed is empty, whatever the needed assets are now.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "snapshot": { "identities": { "requirements": "r1" }, "ticket": "simplest", "checks": { "the design names every requirement and no other": "no" }, "vectors": {} }
+      },
+      "expect": { "open": true, "changed": [] }
+    },
+    {
+      "covers": ["REQ-GRAPH-006 acceptance 1"],
+      "says": "Every record make-final declares stands, but a check of the final text, which its inner polish writes, says no: the outer vector is open.",
+      "given": {
+        "fixture": "small",
+        "vector": "make-final",
+        "snapshot": {
+          "identities": { "brief": "b1", "draft": "r1", "notes": "n1", "final": "f1" },
+          "ticket": "simplest",
+          "checks": { "the final text reads well": "no" },
+          "vectors": {},
+          "records": {
+            "final": { "verdict": { "says": "yes", "on": { "final": "f1", "notes": "n1", "brief": "b1" } }, "answer": { "says": "yes", "on": { "final": "f1", "notes": "n1", "brief": "b1" } } }
+          }
+        }
+      },
+      "expect": { "open": true, "changed": [] }
+    },
+    {
+      "covers": ["REQ-METHOD-005 acceptance 1"],
+      "says": "A requirement with no test: the tests' tracing check says no, and the vector that produces the tests is open though its verdict stands.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-tests",
+        "snapshot": {
+          "identities": { "requirements": "r1", "tests": "s1" },
+          "ticket": "simplest",
+          "checks": { "the tests name every requirement and no other": "no" },
+          "vectors": {},
+          "records": {
+            "tests": { "verdict": { "says": "yes", "on": { "tests": "s1", "requirements": "r1" } } }
+          }
+        }
+      },
+      "expect": { "open": true, "changed": [] }
+    },
+    {
+      "covers": ["REQ-METHOD-005 acceptance 2"],
+      "says": "Code that names a requirement which does not exist: the code's tracing check says no, and the vector that produces the code is open.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "snapshot": {
+          "identities": { "requirements": "r1", "design": "d1", "tests": "s1", "code": "c1" },
+          "ticket": "simplest",
+          "checks": { "the tests pass": "yes", "the code names every requirement and no other": "no" },
+          "vectors": {},
+          "records": {
+            "code": { "verdict": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1" } }, "answer": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1" } } }
+          }
+        }
+      },
+      "expect": { "open": true, "changed": [] }
+    }
+  ]
+}

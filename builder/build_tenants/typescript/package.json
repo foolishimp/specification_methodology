@@ -1,0 +1,26 @@
+{
+  "name": "stdo-builder",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "bin": { "stdo-builder": "dist/src/programs/cli.js" },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && mkdir -p dist/src/method && cp src/method/graph.json src/method/registry.json dist/src/method/",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --testTimeout 30000",
+    "check:compliance": "node scripts/compliance.mjs",
+    "release": "node scripts/release.mjs",
+    "check": "pnpm typecheck && pnpm test && pnpm check:compliance"
+  },
+  "dependencies": {
+    "@effect/platform-node": "4.1.4",
+    "effect": "4.1.4"
+  },
+  "devDependencies": {
+    "@effect/vitest": "4.1.4",
+    "@types/node": "24.10.1",
+    "typescript": "7.0.2",
+    "vitest": "5.1.1"
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "algorithm": "take_up",
+  "requirement": "REQ-ALG-010",
+  "cases": [
+    {
+      "covers": ["REQ-ALG-010 law 1", "REQ-ALG-010 acceptance 1"],
+      "says": "With the limit at one, a ticket is active and no run holds it, and a second waits in the backlog: the active one is taken up.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [{ "name": "261119-b" }], "active": [{ "name": "261119-a" }], "done": [] },
+        "held": [],
+        "mainDone": true,
+        "limit": 1
+      },
+      "expect": { "take": "ticket", "name": "261119-a", "lane": "active" }
+    },
+    {
+      "covers": ["REQ-ALG-010 acceptance 1"],
+      "says": "While a run holds the first ticket, the second waits: none, since a run already works on every active ticket.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [{ "name": "261119-b" }], "active": [{ "name": "261119-a" }], "done": [] },
+        "held": ["261119-a"],
+        "mainDone": true,
+        "limit": 1
+      },
+      "expect": { "take": "none", "why": "held" }
+    },
+    {
+      "covers": ["REQ-ALG-010 acceptance 1"],
+      "says": "Once the first is done, the second is built after it.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [{ "name": "261119-b" }], "active": [], "done": [{ "name": "261119-a" }] },
+        "held": [],
+        "mainDone": true,
+        "limit": 1
+      },
+      "expect": { "take": "ticket", "name": "261119-b", "lane": "backlog" }
+    },
+    {
+      "covers": [],
+      "says": "Of two active tickets no run holds, the first by name.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [], "active": [{ "name": "261120-x" }, { "name": "261119-q" }], "done": [] },
+        "held": [],
+        "mainDone": true,
+        "limit": 3
+      },
+      "expect": { "take": "ticket", "name": "261119-q", "lane": "active" }
+    },
+    {
+      "covers": [],
+      "says": "Of the backlog, under the limit, the first by name.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [{ "name": "261121-c" }, { "name": "261120-b" }], "active": [], "done": [] },
+        "held": [],
+        "mainDone": false,
+        "limit": 1
+      },
+      "expect": { "take": "ticket", "name": "261120-b", "lane": "backlog" }
+    },
+    {
+      "covers": ["REQ-ALG-010 law 2", "REQ-ALG-010 acceptance 2"],
+      "says": "No ticket waits; every ticket lies in the done lane, but a file that is part of no asset was changed so that a test fails and done says no on main. The lanes prove nothing: the simplest ticket.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [], "active": [], "done": [{ "name": "261119-a" }, { "name": "261119-b" }] },
+        "held": [],
+        "mainDone": false,
+        "limit": 1
+      },
+      "expect": { "take": "simplest" }
+    },
+    {
+      "covers": [],
+      "says": "Nothing waits and done says yes on main: nothing to build.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [], "active": [], "done": [{ "name": "261119-a" }] },
+        "held": [],
+        "mainDone": true,
+        "limit": 1
+      },
+      "expect": { "take": "none", "why": "nothing" }
+    },
+    {
+      "covers": [],
+      "says": "The user names the backlog ticket while the limit is reached: none, the limit is reached.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [{ "name": "261119-b" }], "active": [{ "name": "261119-a" }], "done": [] },
+        "held": ["261119-a"],
+        "named": "261119-b",
+        "mainDone": true,
+        "limit": 1
+      },
+      "expect": { "take": "none", "why": "limit" }
+    },
+    {
+      "covers": [],
+      "says": "The user names an active ticket no run holds: that ticket, though another comes first by name.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [], "active": [{ "name": "261119-a" }, { "name": "261119-b" }], "done": [] },
+        "held": [],
+        "named": "261119-b",
+        "mainDone": true,
+        "limit": 3
+      },
+      "expect": { "take": "ticket", "name": "261119-b", "lane": "active" }
+    },
+    {
+      "covers": [],
+      "says": "The user names a ticket that is not on the board: none.",
+      "given": {
+        "fixture": "method",
+        "board": { "backlog": [], "active": [], "done": [] },
+        "held": [],
+        "named": "261119-gone",
+        "mainDone": false,
+        "limit": 1
+      },
+      "expect": { "take": "none", "why": "nothing" }
+    },
+    {
+      "covers": [],
+      "says": "A graph that declares no first vector, a user's ticket in the backlog, and main not done: only the simplest ticket is taken up.",
+      "given": {
+        "fixture": "small",
+        "board": { "backlog": [{ "name": "261119-b" }], "active": [], "done": [] },
+        "held": [],
+        "mainDone": false,
+        "limit": 1
+      },
+      "expect": { "take": "simplest" }
+    },
+    {
+      "covers": [],
+      "says": "The same graph and ticket, with main done: none, and the framework says why the ticket is passed over.",
+      "given": {
+        "fixture": "small",
+        "board": { "backlog": [{ "name": "261119-b" }], "active": [], "done": [] },
+        "held": [],
+        "mainDone": true,
+        "limit": 1
+      },
+      "expect": { "take": "none", "why": "nothing", "note": "only the simplest ticket is taken up: the graph declares no first vector for a ticket" }
+    },
+    {
+      "covers": [],
+      "says": "The same graph, with the simplest ticket active and no run holding it: it is taken up.",
+      "given": {
+        "fixture": "small",
+        "board": { "backlog": [], "active": [{ "name": "261119-s", "simplest": true }], "done": [] },
+        "held": [],
+        "mainDone": false,
+        "limit": 1
+      },
+      "expect": { "take": "ticket", "name": "261119-s", "lane": "active" }
+    }
+  ],
+  "elsewhere": [
+    {"covers": ["REQ-ALG-010 acceptance 3"], "in": "setup_inside_repository.scenario.test.ts", "says": "In S13, after the merge no ticket waits; a file outside the workspace's folder is changed and committed on main, and the run finds nothing to build."}
+  ]
+}

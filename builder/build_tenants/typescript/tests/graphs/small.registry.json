@@ -1,0 +1,35 @@
+{
+  "entries": [
+    {
+      "name": "draft-it",
+      "writes": ["draft"],
+      "purpose": "Writes a draft from a brief.",
+      "definition": { "term": "session" }
+    },
+    {
+      "name": "finish",
+      "writes": ["notes", "final"],
+      "purpose": "Takes notes on the draft, then polishes it into the final text.",
+      "definition": {
+        "term": "workflow",
+        "nodes": [{ "name": "notes", "place": "work/notes", "result": ["Notes on what to polish."], "depends": ["draft"] }],
+        "vectors": [
+          { "name": "take-notes", "function": { "term": "reference", "name": "note-it" } },
+          { "name": "polish", "function": { "term": "reference", "name": "polish-it" } }
+        ]
+      }
+    },
+    {
+      "name": "note-it",
+      "writes": ["notes"],
+      "purpose": "Writes notes on what to polish.",
+      "definition": { "term": "session" }
+    },
+    {
+      "name": "polish-it",
+      "writes": ["final"],
+      "purpose": "Polishes the draft by the notes.",
+      "definition": { "term": "session" }
+    }
+  ]
+}

@@ -1,0 +1,209 @@
+{
+  "algorithm": "next",
+  "requirement": "REQ-ALG-006",
+  "cases": [
+    {
+      "covers": ["REQ-ALG-006 acceptance 1"],
+      "says": "A built product, and a ticket confirmed at the code with the code alone as its term: next is the code, and no vector the term does not name.",
+      "given": {
+        "fixture": "method",
+        "snapshot": {
+          "identities": { "intent": "i1", "product": "p1", "requirements": "r1", "design": "d1", "tests": "s1", "code": "c1" },
+          "ticket": { "path": "tickets/active/261119-c.md", "identity": "t1", "asked": "a1", "enters": "code", "term": ["write-code"] },
+          "checks": { "the ticket says its kind": "yes", "the ticket says its class": "yes", "the ticket says where it enters": "yes", "the ticket says where it ends": "yes", "the ticket says how much it touches": "yes", "the ticket says its term": "yes", "the user's words are kept": "yes", "the design names every requirement and no other": "yes", "the tests name every requirement and no other": "yes", "the tests pass": "yes", "the code names every requirement and no other": "yes" },
+          "vectors": {
+            "induct-ticket": { "composes": "yes" }
+          },
+          "records": {
+            "induct-ticket": { "answer": { "says": "yes", "on": { "the ticket": "t1" } } },
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "tests": { "verdict": { "says": "yes", "on": { "tests": "s1", "requirements": "r1", "intent": "i1", "product": "p1", "design": "d1" } } },
+            "code": { "verdict": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } }, "answer": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } } }
+          }
+        }
+      },
+      "expect": "write-code"
+    },
+    {
+      "covers": ["REQ-ALG-006 acceptance 2"],
+      "says": "A product built by the specification and the build, and a ticket confirmed at the design with the design and the code as its term: next is the design, and no vector before it, nor the tests (D161).",
+      "given": {
+        "fixture": "method",
+        "snapshot": {
+          "identities": { "intent": "i1", "product": "p1", "requirements": "r1", "design": "d1", "tests": "s1", "code": "c1" },
+          "ticket": { "path": "tickets/active/261121-c.md", "identity": "t2", "asked": "a2", "enters": "design", "term": ["write-design", "write-code"] },
+          "checks": { "the ticket says its kind": "yes", "the ticket says its class": "yes", "the ticket says where it enters": "yes", "the ticket says where it ends": "yes", "the ticket says how much it touches": "yes", "the ticket says its term": "yes", "the user's words are kept": "yes", "the design names every requirement and no other": "yes", "the tests name every requirement and no other": "yes", "the tests pass": "yes", "the code names every requirement and no other": "yes" },
+          "vectors": {
+            "induct-ticket": { "composes": "yes" }
+          },
+          "records": {
+            "induct-ticket": { "answer": { "says": "yes", "on": { "the ticket": "t2" } } },
+            "intent": { "answer": { "says": "yes", "on": { "intent": "i1" } } },
+            "product": { "answer": { "says": "yes", "on": { "product": "p1", "intent": "i1" } } },
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "tests": { "verdict": { "says": "yes", "on": { "tests": "s1", "requirements": "r1", "intent": "i1", "product": "p1", "design": "d1" } } },
+            "code": { "verdict": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } }, "answer": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } } }
+          }
+        }
+      },
+      "expect": "write-design"
+    },
+    {
+      "covers": ["REQ-ALG-006 law 2"],
+      "says": "A built product whose requirements were changed by hand, and a ticket confirmed at the requirements with the term write-requirements ; write-build: both are open, and next is write-requirements, by the term's order, though the graph declares write-build before it.",
+      "given": {
+        "fixture": "method",
+        "snapshot": {
+          "identities": { "intent": "i1", "product": "p1", "requirements": "r2", "design": "d1", "tests": "s1", "code": "c1" },
+          "ticket": { "path": "tickets/active/261121-c.md", "identity": "t2", "asked": "a2", "enters": "requirements", "term": ["write-requirements", "write-build"] },
+          "checks": { "the ticket says its kind": "yes", "the ticket says its class": "yes", "the ticket says where it enters": "yes", "the ticket says where it ends": "yes", "the ticket says how much it touches": "yes", "the ticket says its term": "yes", "the user's words are kept": "yes", "the design names every requirement and no other": "yes", "the tests name every requirement and no other": "yes", "the tests pass": "yes", "the code names every requirement and no other": "yes" },
+          "vectors": {
+            "induct-ticket": { "composes": "yes" }
+          },
+          "records": {
+            "induct-ticket": { "answer": { "says": "yes", "on": { "the ticket": "t2" } } },
+            "intent": { "answer": { "says": "yes", "on": { "intent": "i1" } } },
+            "product": { "answer": { "says": "yes", "on": { "product": "p1", "intent": "i1" } } },
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "tests": { "verdict": { "says": "yes", "on": { "tests": "s1", "requirements": "r1", "intent": "i1", "product": "p1", "design": "d1" } } },
+            "code": { "verdict": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } }, "answer": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } } }
+          }
+        }
+      },
+      "expect": "write-requirements"
+    },
+    {
+      "covers": [],
+      "says": "A new ticket, not yet inducted: the first vector is next before any other, though nothing is built.",
+      "given": {
+        "fixture": "method",
+        "snapshot": {
+          "identities": {},
+          "ticket": { "path": "tickets/active/261119-d.md", "identity": "t2" },
+          "vectors": {}
+        }
+      },
+      "expect": "induct-ticket"
+    },
+    {
+      "covers": [],
+      "says": "The simplest ticket, after the code was deleted: the first vector takes no part, and next is the code.",
+      "given": {
+        "fixture": "method",
+        "snapshot": {
+          "identities": { "intent": "i1", "product": "p1", "requirements": "r1", "design": "d1", "tests": "s1" },
+          "ticket": "simplest",
+          "checks": { "the design names every requirement and no other": "yes", "the tests name every requirement and no other": "yes", "the tests pass": "no", "the code names every requirement and no other": "no" },
+          "vectors": {},
+          "records": {
+            "intent": { "answer": { "says": "yes", "on": { "intent": "i1" } } },
+            "product": { "answer": { "says": "yes", "on": { "product": "p1", "intent": "i1" } } },
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "tests": { "verdict": { "says": "yes", "on": { "tests": "s1", "requirements": "r1", "intent": "i1", "product": "p1", "design": "d1" } } },
+            "code": { "verdict": { "says": "yes", "on": { "code": "c1", "requirements": "r1", "design": "d1", "tests": "s1", "intent": "i1", "product": "p1" } } }
+          }
+        }
+      },
+      "expect": "write-code"
+    },
+    {
+      "covers": ["REQ-ALG-006 law 1", "REQ-ALG-006 law 2"],
+      "says": "The draft and the final text are both open. The final text needs the draft, so the graph allows only the draft. Nothing but the graph and the workspace is an input.",
+      "given": {
+        "fixture": "small",
+        "snapshot": {
+          "identities": { "brief": "b1" },
+          "ticket": "simplest",
+          "checks": { "the final text reads well": "no" },
+          "vectors": {}
+        }
+      },
+      "expect": "make-draft"
+    },
+    {
+      "covers": ["REQ-ALG-006 law 2"],
+      "says": "Once the draft is closed, the final text may run.",
+      "given": {
+        "fixture": "small",
+        "snapshot": {
+          "identities": { "brief": "b1", "draft": "r1" },
+          "ticket": "simplest",
+          "checks": { "the final text reads well": "no" },
+          "vectors": {}
+        }
+      },
+      "expect": "make-final"
+    },
+    {
+      "covers": [],
+      "says": "Inside the inner workflow of the final text: the notes come first.",
+      "given": {
+        "fixture": "small",
+        "within": "make-final",
+        "snapshot": {
+          "identities": { "brief": "b1", "draft": "r1" },
+          "ticket": "simplest",
+          "checks": {}, "vectors": {}
+        }
+      },
+      "expect": "take-notes"
+    },
+    {
+      "covers": [],
+      "says": "Inside the inner workflow, with the notes taken: the polish, which starts from the notes.",
+      "given": {
+        "fixture": "small",
+        "within": "make-final",
+        "snapshot": {
+          "identities": { "brief": "b1", "draft": "r1", "notes": "n1" },
+          "ticket": "simplest",
+          "checks": {}, "vectors": {}
+        }
+      },
+      "expect": "polish"
+    },
+    {
+      "covers": ["REQ-METHOD-004 acceptance 1"],
+      "says": "The tests exist and pass their checks but have not been evaluated, and the design is closed: next is the tests, not the code.",
+      "given": {
+        "fixture": "method",
+        "snapshot": {
+          "identities": { "intent": "i1", "product": "p1", "requirements": "r1", "design": "d1", "tests": "s1" },
+          "ticket": "simplest",
+          "checks": { "the design names every requirement and no other": "yes", "the tests name every requirement and no other": "yes", "the tests pass": "no", "the code names every requirement and no other": "no" },
+          "vectors": {},
+          "records": {
+            "intent": { "answer": { "says": "yes", "on": { "intent": "i1" } } },
+            "product": { "answer": { "says": "yes", "on": { "product": "p1", "intent": "i1" } } },
+            "requirements": { "answer": { "says": "yes", "on": { "requirements": "r1", "intent": "i1", "product": "p1" } } },
+            "design": { "verdict": { "says": "yes", "on": { "design": "d1", "requirements": "r1", "intent": "i1", "product": "p1" } } }
+          }
+        }
+      },
+      "expect": "write-tests"
+    },
+    {
+      "covers": ["REQ-METHOD-003 acceptance 1"],
+      "says": "New work by the six single-asset functions: the intent is written but the user has not accepted it, so the product definition does not run.",
+      "given": {
+        "fixture": "method",
+        "snapshot": {
+          "identities": { "intent": "i1" },
+          "ticket": { "path": "tickets/active/261119-a.md", "identity": "t1", "enters": "intent", "term": ["write-intent", "write-product", "write-requirements", "write-design", "write-tests", "write-code"] },
+          "checks": { "the ticket says its kind": "yes", "the ticket says its class": "yes", "the ticket says where it enters": "yes", "the ticket says where it ends": "yes", "the ticket says how much it touches": "yes", "the ticket says its term": "yes", "the user's words are kept": "yes" },
+          "vectors": {
+            "induct-ticket": { "composes": "yes" }
+          },
+          "records": {
+            "induct-ticket": { "answer": { "says": "yes", "on": { "the ticket": "t1" } } }
+          }
+        }
+      },
+      "expect": "write-intent"
+    }
+  ]
+}

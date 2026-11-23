@@ -1,0 +1,35 @@
+{
+  "entries": [
+    {
+      "name": "plan-it",
+      "writes": ["plan"],
+      "purpose": "Writes a plan of what the text is to say.",
+      "definition": { "term": "session" }
+    },
+    {
+      "name": "draft-it",
+      "writes": ["draft"],
+      "purpose": "Writes a first draft of the text from the plan.",
+      "definition": { "term": "session" }
+    },
+    {
+      "name": "polish-it",
+      "writes": ["text"],
+      "purpose": "Turns a draft into the finished text.",
+      "definition": { "term": "session" }
+    },
+    {
+      "name": "text-from-plan",
+      "writes": ["draft", "text"],
+      "purpose": "Writes the text from the plan in two steps, a draft and then its polish.",
+      "definition": {
+        "term": "workflow",
+        "nodes": [{ "name": "draft", "place": "drafts", "result": ["The draft covers every point of the plan."], "depends": ["plan"] }],
+        "vectors": [
+          { "name": "write-draft", "function": { "term": "reference", "name": "draft-it" } },
+          { "name": "polish-draft", "function": { "term": "reference", "name": "polish-it" } }
+        ]
+      }
+    }
+  ]
+}

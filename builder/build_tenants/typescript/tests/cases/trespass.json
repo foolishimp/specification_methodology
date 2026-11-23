@@ -1,0 +1,345 @@
+{
+  "algorithm": "trespass",
+  "requirement": "REQ-ALG-008",
+  "shared": {
+    "places": {
+      "definition": "stdo_product.json",
+      "settings": ".stdo-builder/settings.json",
+      "graph": ".stdo-builder/graph.json",
+      "registry": ".stdo-builder/registry.json",
+      "own": [
+        ".stdo-builder/.gitignore"
+      ],
+      "lanes": [
+        "tickets/backlog",
+        "tickets/active",
+        "tickets/done"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "covers": [
+        "REQ-ALG-008 law 1",
+        "REQ-ALG-008 acceptance 1"
+      ],
+      "says": "Scenario S7: during the code step the session changes an accepted requirement and writes a scratch file in a place the graph does not name. The requirement is returned; the scratch file and the code are not.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "work",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {
+          "specification/requirements/FUNCTIONS.md": "a1",
+          "build_tenants/main/code/main.ts": "c1",
+          "tickets/active/261119-a.md": "t1"
+        },
+        "end": {
+          "specification/requirements/FUNCTIONS.md": "a2",
+          "build_tenants/main/code/main.ts": "c2",
+          "scratch/notes.txt": "z1",
+          "tickets/active/261119-a.md": "t1"
+        }
+      },
+      "expect": [
+        "specification/requirements/FUNCTIONS.md"
+      ]
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 law 2"
+      ],
+      "says": "The session committed, then undid its commits with git: the protected files are as they were at the start, and nothing is returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "work",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {
+          "specification/requirements/FUNCTIONS.md": "a1",
+          "build_tenants/main/design/DESIGN.md": "d1"
+        },
+        "end": {
+          "specification/requirements/FUNCTIONS.md": "a1",
+          "build_tenants/main/design/DESIGN.md": "d1",
+          "build_tenants/main/code/main.ts": "c3"
+        }
+      },
+      "expect": []
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 law 3"
+      ],
+      "says": "The user changed the settings by hand while the session worked: returned as well.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "work",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {
+          ".stdo-builder/settings.json": "g1"
+        },
+        "end": {
+          ".stdo-builder/settings.json": "g2"
+        }
+      },
+      "expect": [
+        ".stdo-builder/settings.json"
+      ]
+    },
+    {
+      "covers": [],
+      "says": "A working session adds a ticket to the backlog, which it may, and deletes one that was there at the start, which it may not.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "work",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {
+          "tickets/active/261119-a.md": "t1",
+          "tickets/backlog/261118-z.md": "t9"
+        },
+        "end": {
+          "tickets/active/261119-a.md": "t1",
+          "tickets/backlog/261119-new.md": "t10"
+        }
+      },
+      "expect": [
+        "tickets/backlog/261118-z.md"
+      ]
+    },
+    {
+      "covers": [],
+      "says": "A working session writes the verdict of its own vector: returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "work",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {},
+        "end": {
+          "build_tenants/main/evaluations/code/verdict.json": "v1",
+          "build_tenants/main/evaluations/code/findings.md": "f1"
+        }
+      },
+      "expect": [
+        "build_tenants/main/evaluations/code/verdict.json"
+      ]
+    },
+    {
+      "covers": [],
+      "says": "An evaluating session changes the code it judges, and writes its findings and verdict: only the code is returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "evaluation",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {
+          "build_tenants/main/code/main.ts": "c1"
+        },
+        "end": {
+          "build_tenants/main/code/main.ts": "c2",
+          "build_tenants/main/evaluations/code/verdict.json": "v1",
+          "build_tenants/main/evaluations/code/findings.md": "f1"
+        }
+      },
+      "expect": [
+        "build_tenants/main/code/main.ts"
+      ]
+    },
+    {
+      "covers": [],
+      "says": "The first vector's working session adds its induction to the branch's own ticket, which is its asset; another ticket it may not change.",
+      "given": {
+        "fixture": "method",
+        "vector": "induct-ticket",
+        "kind": "work",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {
+          "tickets/active/261119-a.md": "t1",
+          "tickets/done/261101-x.md": "t0"
+        },
+        "end": {
+          "tickets/active/261119-a.md": "t2",
+          "tickets/done/261101-x.md": "t0b"
+        }
+      },
+      "expect": [
+        "tickets/done/261101-x.md"
+      ]
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 law 3"
+      ],
+      "says": "QA-01. In main's own folder, during the code step: the governing graph, which the run reads from main, is changed by hand, and so is main's code. Both are returned: all work on a ticket is done in its checkout. The user edits the active ticket and writes a new one on main, which the board allows at any time: neither is returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "work",
+        "side": "main",
+        "start": {
+          ".stdo-builder/graph.json": "g1",
+          "build_tenants/main/code/main.ts": "c1",
+          "tickets/active/261119-a.md": "t1",
+          "README.md": "r1"
+        },
+        "end": {
+          ".stdo-builder/graph.json": "g2",
+          "build_tenants/main/code/main.ts": "c2",
+          "tickets/active/261119-a.md": "t2",
+          "tickets/backlog/261119-b.md": "t3",
+          "README.md": "r2"
+        }
+      },
+      "expect": [
+        ".stdo-builder/graph.json",
+        "build_tenants/main/code/main.ts"
+      ]
+    },
+    {
+      "covers": [],
+      "says": "QA-01. In main's own folder, during an evaluation: the settings were removed and the verdict written. Both are returned; the evaluation's own verdict place is not free on main.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "evaluation",
+        "side": "main",
+        "start": {
+          ".stdo-builder/settings.json": "s1"
+        },
+        "end": {
+          "build_tenants/main/evaluations/code/verdict.json": "v1"
+        }
+      },
+      "expect": [
+        ".stdo-builder/settings.json",
+        "build_tenants/main/evaluations/code/verdict.json"
+      ]
+    },
+    {
+      "covers": [],
+      "says": "A working session lists what its build leaves in the .gitignore at the top of the checkout, as its packet allows: not returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "work",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {
+          ".gitignore": "g1",
+          "build_tenants/main/code/main.ts": "c1"
+        },
+        "end": {
+          ".gitignore": "g2",
+          "build_tenants/main/code/main.ts": "c2"
+        }
+      },
+      "expect": []
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 2"
+      ],
+      "says": "The build's working session writes the design, the tests and the code, the three nodes its vector writes. Nothing is returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {
+          "specification/requirements/FUNCTIONS.md": "a1",
+          "build_tenants/main/design/DESIGN.md": "d1",
+          "build_tenants/main/tests/run.sh": "s1",
+          "tickets/active/261121-a.md": "t1"
+        },
+        "end": {
+          "specification/requirements/FUNCTIONS.md": "a1",
+          "build_tenants/main/design/DESIGN.md": "d2",
+          "build_tenants/main/tests/run.sh": "s2",
+          "build_tenants/main/code/main.ts": "c1",
+          "tickets/active/261121-a.md": "t1"
+        }
+      },
+      "expect": []
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 2"
+      ],
+      "says": "The design's working session writes the design and also the code, a node the build writes and the design's vector does not: the code is returned, and the design is not.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-design",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {
+          "build_tenants/main/design/DESIGN.md": "d1",
+          "build_tenants/main/code/main.ts": "c1",
+          "tickets/active/261121-a.md": "t1"
+        },
+        "end": {
+          "build_tenants/main/design/DESIGN.md": "d2",
+          "build_tenants/main/code/main.ts": "c2",
+          "tickets/active/261121-a.md": "t1"
+        }
+      },
+      "expect": [
+        "build_tenants/main/code/main.ts"
+      ]
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 3"
+      ],
+      "says": "The first vector's working session changes the triage and the term of the branch's ticket, and leaves the framework's part as it was: nothing is returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "induct-ticket",
+        "kind": "work",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {
+          "tickets/active/261119-a.md": "t1",
+          "tickets/active/261119-a.md#framework": "f1"
+        },
+        "end": {
+          "tickets/active/261119-a.md": "t2",
+          "tickets/active/261119-a.md#framework": "f1"
+        }
+      },
+      "expect": []
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 3"
+      ],
+      "says": "The first vector's working session changes a resolution in the framework's part of the branch's ticket: the ticket is returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "induct-ticket",
+        "kind": "work",
+        "ticket": "tickets/active/261119-a.md",
+        "start": {
+          "tickets/active/261119-a.md": "t1",
+          "tickets/active/261119-a.md#framework": "f1"
+        },
+        "end": {
+          "tickets/active/261119-a.md": "t2",
+          "tickets/active/261119-a.md#framework": "f2"
+        }
+      },
+      "expect": [
+        "tickets/active/261119-a.md"
+      ]
+    }
+  ],
+  "elsewhere": [
+    {
+      "covers": [
+        "REQ-ALG-008 law 4"
+      ],
+      "in": "s7.scenario.test.ts",
+      "says": "After the run stopped on the changed requirement, nothing was put back and the next run went on from the workspace as it was."
+    }
+  ]
+}

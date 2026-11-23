@@ -1,0 +1,375 @@
+{
+  "term": "workflow",
+  "nodes": [
+    {
+      "name": "intent",
+      "place": "specification/INTENT.md",
+      "result": [
+        "The intent states what is to be built and why, in the user's terms."
+      ],
+      "accepted": [
+        "decision"
+      ]
+    },
+    {
+      "name": "product",
+      "place": "specification/PRODUCT.md",
+      "result": [
+        "The product definition states the product's boundary, its terms and what it does, within the intent."
+      ],
+      "depends": [
+        "intent"
+      ],
+      "accepted": [
+        "decision"
+      ]
+    },
+    {
+      "name": "requirements",
+      "place": "specification/requirements",
+      "result": [
+        "Each requirement has a name of the form REQ-<FAMILY>-<NUMBER> and says what the product must do.",
+        "A requirement that is put off says Deferred in its own section."
+      ],
+      "depends": [
+        "intent",
+        "product"
+      ],
+      "accepted": [
+        "decision"
+      ]
+    },
+    {
+      "name": "design",
+      "place": "#design",
+      "result": [
+        "The design says how each requirement that is not deferred is met, and names it."
+      ],
+      "checks": [
+        {
+          "name": "the design names every requirement and no other",
+          "run": {
+            "kind": "traced",
+            "pattern": "REQ-[A-Z]+-[0-9]+",
+            "from": "requirements",
+            "into": "design",
+            "deferred": "Deferred",
+            "others": [
+              "HELLO"
+            ]
+          }
+        }
+      ],
+      "depends": [
+        "requirements"
+      ],
+      "accepted": [
+        "evaluation"
+      ]
+    },
+    {
+      "name": "tests",
+      "place": "#tests",
+      "result": [
+        "The tests are written from the accepted requirements and exercise the product from end to end, as a user of it would: they test what the requirements state, and are not bent to fit the code.",
+        "Each test names the requirements it tests.",
+        "The tests' place holds run.sh, which runs every test and exits with zero only when all pass."
+      ],
+      "checks": [
+        {
+          "name": "the tests name every requirement and no other",
+          "run": {
+            "kind": "traced",
+            "pattern": "REQ-[A-Z]+-[0-9]+",
+            "from": "requirements",
+            "into": "tests",
+            "deferred": "Deferred",
+            "others": [
+              "HELLO"
+            ]
+          }
+        }
+      ],
+      "depends": [
+        "requirements"
+      ],
+      "accepted": [
+        "evaluation"
+      ]
+    },
+    {
+      "name": "code",
+      "place": "#code",
+      "result": [
+        "The code passes the tests.",
+        "The code names the requirements it carries out."
+      ],
+      "checks": [
+        {
+          "name": "the tests pass",
+          "run": {
+            "kind": "command",
+            "argv": [
+              "sh",
+              "{tests}/run.sh"
+            ]
+          }
+        },
+        {
+          "name": "the code names every requirement and no other",
+          "run": {
+            "kind": "traced",
+            "pattern": "REQ-(?!VERIFY-)[A-Z]+-[0-9]+",
+            "from": "requirements",
+            "into": "code",
+            "deferred": "Deferred",
+            "others": [
+              "HELLO"
+            ]
+          }
+        }
+      ],
+      "depends": [
+        "requirements",
+        "design",
+        "tests"
+      ],
+      "accepted": [
+        "evaluation",
+        "decision"
+      ]
+    }
+  ],
+  "vectors": [
+    {
+      "name": "induct-ticket",
+      "first": true,
+      "result": [
+        "The ticket gives its triage, as the method gives it: its kind (kind), its class of change (class), the node at which the work enters, the highest asset it reaches (enters), the node at which it ends (ends), and how much of the system it touches (scope); or it says that the ticket cannot be inducted, and why.",
+        "The ticket gives the term that carries its work out (term): one line, \"- term: \" and then a term in the graph language's written form, either a reference {\"term\": \"reference\", \"name\": \"<entry>\"} to an entry of the registry this packet lists, or a sequence {\"term\": \"sequence\", \"terms\": [...]} of such references, in the order the work is done.",
+        "Proportion is a choice among terms that write the same work: of those, the one in proportion to the work is chosen.",
+        "Every word the user wrote in the ticket is unchanged."
+      ],
+      "checks": [
+        {
+          "name": "the ticket says its kind",
+          "run": {
+            "kind": "ticket_field",
+            "field": "kind"
+          }
+        },
+        {
+          "name": "the ticket says its class",
+          "run": {
+            "kind": "ticket_field",
+            "field": "class"
+          }
+        },
+        {
+          "name": "the ticket says where it enters",
+          "run": {
+            "kind": "ticket_field",
+            "field": "enters"
+          }
+        },
+        {
+          "name": "the ticket says where it ends",
+          "run": {
+            "kind": "ticket_field",
+            "field": "ends"
+          }
+        },
+        {
+          "name": "the ticket says how much it touches",
+          "run": {
+            "kind": "ticket_field",
+            "field": "scope"
+          }
+        },
+        {
+          "name": "the ticket says its term",
+          "run": {
+            "kind": "ticket_field",
+            "field": "term"
+          }
+        },
+        {
+          "name": "the user's words are kept",
+          "run": {
+            "kind": "ticket_kept"
+          }
+        }
+      ],
+      "decision": {},
+      "frames": {
+        "work": {
+          "name": "induct-ticket",
+          "revision": 1,
+          "method": [
+            {
+              "term": "kind",
+              "file": "standards/TICKETS.md",
+              "section": "Types"
+            },
+            {
+              "term": "class",
+              "file": "standards/SPEC_METHOD.md",
+              "section": "Change classes"
+            },
+            {
+              "term": "triage",
+              "file": "standards/SPEC_METHOD.md",
+              "section": "Universal intake triage"
+            }
+          ]
+        }
+      },
+      "function": {
+        "term": "reference",
+        "name": "induct-ticket"
+      }
+    },
+    {
+      "name": "write-specification",
+      "decision": {},
+      "frames": {
+        "work": {
+          "name": "write-specification",
+          "revision": 1
+        }
+      },
+      "function": {
+        "term": "reference",
+        "name": "write-specification"
+      }
+    },
+    {
+      "name": "write-build",
+      "evaluation": {
+        "findings": "build_tenants/main/evaluations/build/findings.md",
+        "verdict": "build_tenants/main/evaluations/build/verdict.json"
+      },
+      "decision": {},
+      "frames": {
+        "work": {
+          "name": "write-build",
+          "revision": 1
+        },
+        "evaluation": {
+          "name": "judge-build",
+          "revision": 1
+        }
+      },
+      "function": {
+        "term": "reference",
+        "name": "write-build"
+      }
+    },
+    {
+      "name": "write-intent",
+      "decision": {},
+      "frames": {
+        "work": {
+          "name": "write-intent",
+          "revision": 1
+        }
+      },
+      "function": {
+        "term": "reference",
+        "name": "write-intent"
+      }
+    },
+    {
+      "name": "write-product",
+      "decision": {},
+      "frames": {
+        "work": {
+          "name": "write-product",
+          "revision": 1
+        }
+      },
+      "function": {
+        "term": "reference",
+        "name": "write-product"
+      }
+    },
+    {
+      "name": "write-requirements",
+      "decision": {},
+      "frames": {
+        "work": {
+          "name": "write-requirements",
+          "revision": 1
+        }
+      },
+      "function": {
+        "term": "reference",
+        "name": "write-requirements"
+      }
+    },
+    {
+      "name": "write-design",
+      "evaluation": {
+        "findings": "build_tenants/main/evaluations/design/findings.md",
+        "verdict": "build_tenants/main/evaluations/design/verdict.json"
+      },
+      "frames": {
+        "work": {
+          "name": "write-design",
+          "revision": 1
+        },
+        "evaluation": {
+          "name": "judge-design",
+          "revision": 1
+        }
+      },
+      "function": {
+        "term": "reference",
+        "name": "write-design"
+      }
+    },
+    {
+      "name": "write-tests",
+      "evaluation": {
+        "findings": "build_tenants/main/evaluations/tests/findings.md",
+        "verdict": "build_tenants/main/evaluations/tests/verdict.json"
+      },
+      "frames": {
+        "work": {
+          "name": "write-tests",
+          "revision": 1
+        },
+        "evaluation": {
+          "name": "judge-tests",
+          "revision": 1
+        }
+      },
+      "function": {
+        "term": "reference",
+        "name": "write-tests"
+      }
+    },
+    {
+      "name": "write-code",
+      "evaluation": {
+        "findings": "build_tenants/main/evaluations/code/findings.md",
+        "verdict": "build_tenants/main/evaluations/code/verdict.json"
+      },
+      "decision": {},
+      "frames": {
+        "work": {
+          "name": "write-code",
+          "revision": 1
+        },
+        "evaluation": {
+          "name": "judge-code",
+          "revision": 1
+        }
+      },
+      "function": {
+        "term": "reference",
+        "name": "write-code"
+      }
+    }
+  ]
+}

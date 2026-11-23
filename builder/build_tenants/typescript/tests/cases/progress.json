@@ -1,0 +1,36 @@
+{
+  "algorithm": "progress",
+  "requirement": "REQ-ALG-009",
+  "cases": [
+    {
+      "covers": ["REQ-ALG-009 acceptance 1"],
+      "says": "Three checks failed, then two: progress.",
+      "given": { "before": ["no", "no", "no", "yes"], "now": ["no", "no", "yes", "yes"] },
+      "expect": true
+    },
+    {
+      "covers": ["REQ-ALG-009 acceptance 1"],
+      "says": "The same two again: no progress.",
+      "given": { "before": ["no", "no", "yes", "yes"], "now": ["no", "no", "yes", "yes"] },
+      "expect": false
+    },
+    {
+      "covers": ["REQ-ALG-009 acceptance 2"],
+      "says": "The first working session after an evaluation says no starts a new attempt, so it counts as progress, however many fail.",
+      "given": { "before": null, "now": ["no", "no", "no"] },
+      "expect": true
+    },
+    {
+      "covers": [],
+      "says": "A check that could not be run counts as failing: one failed, then one could not be run.",
+      "given": { "before": ["no", "yes"], "now": ["cannot", "yes"] },
+      "expect": false
+    },
+    {
+      "covers": [],
+      "says": "More fail than before: no progress.",
+      "given": { "before": ["no", "yes"], "now": ["no", "no"] },
+      "expect": false
+    }
+  ]
+}
