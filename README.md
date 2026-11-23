@@ -1,4 +1,20 @@
-# STDO 3.1
+# STDO 3.2
+
+STDO 3.2 is one release of two parts: the STDO standards, and STDO Builder, a
+framework that builds a product to its specification under those standards.
+Exact cut: **3.2.0**.
+
+Download `stdo-3.2.0.tar.gz` from the
+[3.2.0 release](https://github.com/foolishimp/specification_methodology/releases/tag/stdo%2Fv3.2.0),
+unpack it, run `sh stdo-3.2.0/install.sh <folder>` and put `<folder>/bin` on your
+PATH. Then start with `builder/GETTING_STARTED.md` in the unpacked folder. The
+same folder holds `history/history.html`, a history of how STDO came to this
+release.
+
+The standards in 3.2.0 are release 3.1.0-rc.2, unchanged. The rest of this page
+describes the 3.1 standards and their companion Products.
+
+## The standards: STDO 3.1
 
 STDO supplies rules for the software development lifecycle. Version 3.1 brings
 Purpose Context, default QA and causal triage, and ticket-based context continuity
