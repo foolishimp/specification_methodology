@@ -1,0 +1,125 @@
+{
+  "entries": [
+    {
+      "name": "induct-ticket",
+      "writes": [],
+      "purpose": "Triages a ticket as the method does and writes on it the term of registered graph functions that carries its work out, in proportion to it, without changing the user's words. As an entry of a term, naming the stretch it inducts, it fits a later stretch whose right grain cannot be judged until the assets before it are accepted: when the run reaches it, it writes the term for that stretch in its place. Small work never needs one.",
+      "definition": {
+        "term": "session"
+      }
+    },
+    {
+      "name": "write-specification",
+      "writes": [
+        "intent",
+        "product",
+        "requirements"
+      ],
+      "purpose": "Writes the intent, the product definition and the requirements in one session, for one decision by the user: it fits work that enters at the intent and whose whole specification a person reads and accepts at once, such as a new product of a few commands.",
+      "definition": {
+        "term": "session"
+      }
+    },
+    {
+      "name": "write-build",
+      "writes": [
+        "design",
+        "tests",
+        "code"
+      ],
+      "purpose": "Writes the design, the tests and the code in one session, judged together by one evaluation and accepted by the user once: it fits work that reaches the design, the tests and the code and that a person judges whole, as a new product of a few commands or a change to one.",
+      "definition": {
+        "term": "session"
+      }
+    },
+    {
+      "name": "write-intent",
+      "writes": [
+        "intent"
+      ],
+      "purpose": "Writes or amends the intent, what is to be built and why, for its own decision by the user: it fits work that enters at the intent and is too large to accept in one decision.",
+      "definition": {
+        "term": "session"
+      }
+    },
+    {
+      "name": "write-product",
+      "writes": [
+        "product"
+      ],
+      "purpose": "Writes or amends the product definition, the product's boundary, its terms and what it does within the intent, for its own decision by the user: it fits work that enters at the product definition, and work from the intent too large to accept in one decision.",
+      "definition": {
+        "term": "session"
+      }
+    },
+    {
+      "name": "write-requirements",
+      "writes": [
+        "requirements"
+      ],
+      "purpose": "Writes or amends the requirements, what the product must do, each under a name of its own, for its own decision by the user: it fits a change that enters at the requirements.",
+      "definition": {
+        "term": "session"
+      }
+    },
+    {
+      "name": "write-design",
+      "writes": [
+        "design"
+      ],
+      "purpose": "Writes or amends the design, how the accepted requirements are met, naming each one, judged on its own: it fits work that enters at the design, and work from the requirements too large to judge whole.",
+      "definition": {
+        "term": "session"
+      }
+    },
+    {
+      "name": "write-tests",
+      "writes": [
+        "tests"
+      ],
+      "purpose": "Writes or amends the tests from the accepted requirements, exercising the product from end to end as a user would, judged before the code is written: it fits work that enters at the tests, and work from the requirements too large to judge whole.",
+      "definition": {
+        "term": "session"
+      }
+    },
+    {
+      "name": "write-code",
+      "writes": [
+        "code"
+      ],
+      "purpose": "Writes or amends the code so that it passes the tests and carries out the requirements, judged and accepted on its own: alone, it fits a fault in the code that the accepted requirements and the judged tests already rule out.",
+      "definition": {
+        "term": "session"
+      }
+    }
+  ],
+  "default": {
+    "term": "sequence",
+    "terms": [
+      {
+        "term": "reference",
+        "name": "write-intent"
+      },
+      {
+        "term": "reference",
+        "name": "write-product"
+      },
+      {
+        "term": "reference",
+        "name": "write-requirements"
+      },
+      {
+        "term": "reference",
+        "name": "write-design"
+      },
+      {
+        "term": "reference",
+        "name": "write-tests"
+      },
+      {
+        "term": "reference",
+        "name": "write-code"
+      }
+    ]
+  }
+}
