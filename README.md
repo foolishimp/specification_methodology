@@ -15,7 +15,8 @@ Builder's source is in [builder/](builder/README.md): its intent, product
 definition, requirements, design, tests and code.
 
 The standards in 3.2.0 are release 3.1.0-rc.2, unchanged. The rest of this page
-describes the 3.1 standards and their companion Products.
+describes the 3.1 standards and their companion Products. The [release note](releases/3.2.0/RELEASE.md)
+says what 3.2.0 holds, and [the history](history.html) how STDO came to it.
 
 ## The standards: STDO 3.1
 
@@ -38,6 +39,7 @@ provides the native manifest, manager, companion Products and cohort inventory.
 | [STDO Skills](stdo_skills/README.md) | Codex/Claude adapters that consume Purpose Context and preserve native workflow ownership |
 | [Representation Tools](a_c/README.md) | Source-linked visual generation and exploration; stable namespace remains `a_c` |
 | [STDO Representation](stdo_representation/README.md) | Visual documentation of selected STDO sources with declared coverage and residuals |
+| [STDO Builder](builder/README.md) | New in 3.2: builds a product to its specification under the standards, by governed LLM agent sessions |
 | [Axiom Indexer](axiom_indexer/README.md) | Retained conversion, validation and visual projection |
 
 The [SDLC default](specification_methodology/v3/build_tenants/common/standards/SDLC_DEFAULTS.md)
