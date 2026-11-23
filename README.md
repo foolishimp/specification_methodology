@@ -11,6 +11,9 @@ PATH. Then start with `builder/GETTING_STARTED.md` in the unpacked folder. The
 same folder holds `history/history.html`, a history of how STDO came to this
 release.
 
+Builder's source is in [builder/](builder/README.md): its intent, product
+definition, requirements, design, tests and code.
+
 The standards in 3.2.0 are release 3.1.0-rc.2, unchanged. The rest of this page
 describes the 3.1 standards and their companion Products.
 
