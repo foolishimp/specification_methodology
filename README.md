@@ -2,21 +2,22 @@
 
 STDO 3.2 is one release of two parts: the STDO standards, and STDO Builder, a
 framework that builds a product to its specification under those standards.
-Exact cut: **3.2.0**.
+Exact cut: **3.2.1**. Release 3.2.0 was reviewed in full and the verdict was no:
+do not use it on real work.
 
-Download `stdo-3.2.0.tar.gz` from the
-[3.2.0 release](https://github.com/foolishimp/specification_methodology/releases/tag/stdo%2Fv3.2.0),
-unpack it, run `sh stdo-3.2.0/install.sh <folder>` and put `<folder>/bin` on your
-PATH. Then start with `builder/GETTING_STARTED.md` in the unpacked folder. The
-same folder holds `history/history.html`, a history of how STDO came to this
-release.
+Download `stdo-3.2.1.tar.gz` from the
+[3.2.1 release](https://github.com/foolishimp/specification_methodology/releases/tag/stdo%2Fv3.2.1),
+unpack it, run `sh stdo-3.2.1/install.sh <folder>` and put `<folder>/bin` on your
+PATH. Then start with `builder/GETTING_STARTED.md` in the unpacked folder.
 
 Builder's source is in [builder/](builder/README.md): its intent, product
 definition, requirements, design, tests and code.
 
-The standards in 3.2.0 are release 3.1.0-rc.2, unchanged. The rest of this page
-describes the 3.1 standards and their companion Products. The [release note](releases/3.2.0/RELEASE.md)
-says what 3.2.0 holds, and [the history](history.html) how STDO came to it.
+The standards in 3.2.1 are release 3.1.0-rc.3, the exact cut of the public 3.1.0
+line. The rest of this page describes the 3.1 standards and their companion
+Products. The [release note](releases/3.2.1/RELEASE.md) says what 3.2.1 repairs
+and what it does not. [The history](history.html) says how STDO came to 3.2.0
+and is not yet brought up to this release.
 
 ## The standards: STDO 3.1
 
