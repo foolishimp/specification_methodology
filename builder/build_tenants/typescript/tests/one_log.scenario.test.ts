@@ -40,16 +40,16 @@ beforeAll(async () => {
   rmSync(ws.path(".stdo-builder", "local", "events.log"))
   askedWithoutLog = await ws.command(["show", folder])
   // The asset asked on changes after the question and before the answer.
-  appendFileSync(ws.checkout(ticket, CODE), "# changed by hand\n")
+  appendFileSync(ws.path(CODE), "# changed by hand\n")
   changedThenAnswered = await ws.command(["answer", folder, "yes"])
-  ws.git(["-C", ws.checkout(ticket), "checkout", "--", CODE])
+  ws.git(["-C", ws.path(), "checkout", "--", CODE])
   refusedNo = await ws.command(["answer", folder, "no"])
   ruledNo = await ws.command(["answer", folder, "no", "--reason", "it is too large", "--ruling", "keep every file under ten lines"])
   const after = answeringTheNo()
   await ws.run(after)
-  briefAfterRuling = readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8")
+  briefAfterRuling = readFileSync(ws.path(".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8")
   await ws.command(["answer", folder, "yes"])
-  ticketText = readFileSync(ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`), "utf8")
+  ticketText = readFileSync(ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`), "utf8")
   last = await ws.run(after)
   log = ws.log()
 }, 300_000)
@@ -113,7 +113,7 @@ describe("REQ-FLOW-004: the ticket holds the checklist, the resolutions and the 
     expect(ws.board().done).toContain(ticket)
   })
   it("REQ-FLOW-001: no file of the framework's but the tickets holds a resolution, and none holds a reading of a ticket or a question", () => {
-    for (const folder of [ws.path(), ws.checkout(ticket)]) {
+    for (const folder of [ws.path(), ws.path()]) {
       for (const record of [[".stdo-builder", "answers"], [".stdo-builder", "given"], [".stdo-builder", "local", "found", "snapshot.json"], [".stdo-builder", "local", "question.md"]]) {
         expect(existsSync(join(folder, ...record)), join(folder, ...record)).toBe(false)
       }

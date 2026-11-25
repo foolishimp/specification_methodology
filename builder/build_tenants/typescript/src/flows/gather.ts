@@ -1,5 +1,5 @@
 /**
- * Gathering the facts of one checkout as it is now, for the algorithms: the
+ * Gathering the facts of the workspace's folder as it is now, for the algorithms: the
  * content identity of each asset (C1, through the git service), the branch's
  * ticket without the framework's part, the resolutions at each node and under
  * the first vector's name, and the checks of the nodes and of the ticket, each
@@ -27,7 +27,7 @@
  * here; they hand the snapshot to the algorithms. Nothing is taken from the
  * event log (guard rail 3), and nothing of the reading is kept.
  *
- * @uses C1 C4 C7 C14 C5 C6 C17 H5
+ * @uses C1 C4 C7 C13 C14 C5 C6 C17 H1 H5
  * @is REQ-FLOW-003 REQ-FLOW-005 REQ-ALG-001 REQ-ALG-012 REQ-FLOW-004
  */
 import { decide, each, end, repeat, using, type Round } from "../kit/calculus.js"
@@ -35,6 +35,7 @@ import { fieldsOf, withoutField } from "../kit/field_lines.js"
 import { read } from "../kit/lossless_encoding.js"
 import type { Identities } from "../kit/content_addressing.js"
 import { MINUTES, pathsOf } from "../graph/terms.js"
+import { covers } from "../kit/place_containment.js"
 import { bindingOf, declaration, FRAMEWORK, TICKET, ASKED, workedIn, type Given, type Recorded, type Snapshot, type TicketLine } from "../algorithms/facts.js"
 import { identity } from "../algorithms/identity.js"
 import { takesPart } from "../algorithms/next.js"
@@ -45,14 +46,14 @@ import { Checks, type Ran, type Site } from "../services/checks.js"
 import { Files } from "../services/files.js"
 import { Git } from "../services/git.js"
 import type { Flow, Services } from "../services/services.js"
-import { at, boardOf, checkoutOf, declarationsOf, foundPath, frameworkPlaces, laneOfTicket, LINES, LOCAL, lineOf, nodes, PLACES, placesNamedIn, placesOf, ticketLines, ticketPath, userPart, vectors, type Fault, type Workspace } from "./workspace.js"
+import { at, boardOf, declarationsOf, foundPath, frameworkPlaces, laneOfTicket, LINES, linesRead, LOCAL, lineOf, nodes, PLACES, placesNamedIn, placesOf, ticketPath, userPart, vectors, type Fault, type Workspace } from "./workspace.js"
 
-/** One checkout: main's, or a ticket's with its ticket. */
+/** The workspace's folder, on main or on a ticket's branch with its ticket. */
 export interface Here {
   readonly folder: string
   /** The line its commits go on: main, or the ticket's branch. */
   readonly line: string
-  /** The branch's ticket, by its path in the checkout. */
+  /** The branch's ticket, by its path in the folder. */
   readonly ticket?: string
   /** The branch's ticket, by its name, which an answer on the first vector names (D200). */
   readonly name?: string
@@ -61,13 +62,13 @@ export interface Here {
 }
 
 /**
- * A ticket's checkout, with the ticket where it lies on the branch: in the
+ * The folder on a ticket's branch, with the ticket where it lies on the branch: in the
  * active lane, or in the done lane where a run moved it there and was stopped
  * before the merge, or main was returned to a commit before it. On main the
  * ticket lies in the active lane.
  */
 export const hereOf = (ws: Workspace, ticket: string): Flow<Here> => {
-  const folder = checkoutOf(ws.root, ticket, ws.within)
+  const folder = ws.root
   return decide(boardOf(folder), (board): Flow<Here> => {
     const lane = laneOfTicket(board, ticket) ?? "active"
     return end({ folder, line: lineOf(ticket), ticket: ticketPath(lane, ticket), name: ticket, ...(lane === "active" ? {} : { onMain: ticketPath("active", ticket) }) })
@@ -75,20 +76,20 @@ export const hereOf = (ws: Workspace, ticket: string): Flow<Here> => {
 }
 
 /**
- * The identities of a checkout as it is now, from git's index of identities
- * there, which follows the files that changed (C1): of the whole checkout, of
- * each file and folder at `places`, and of the checkout beside the places
+ * The identities of the folder as it is now, from git's index of identities
+ * there, which follows the files that changed (C1):  of the whole folder, of
+ * each file and folder at `places`, and of the folder beside the places
  * `aside`. Files git ignores are no part of them (REQ-ALG-001).
  */
-export const identitiesIn = (folder: string, places: readonly string[], aside?: readonly string[]): Flow<Identities, Fault> =>
+export const identitiesIn = (folder: string, places: readonly string[], aside?: readonly string[], own?: string): Flow<Identities, Fault> =>
   using(Files, (files) =>
     using(Git, (git) => {
-      const index = at(folder, PLACES.index)
+      const index = at(folder, own ?? PLACES.index)
       return decide(files.exists(index), (there): Flow<Identities, Fault> =>
         decide(there ? end(undefined) : files.makeFolder(at(folder, LOCAL)), () => git.identities(folder, index, places, !there, aside)))
     }))
 
-/** The assets of a checkout now: the identities of the checkout, of each asset by its node's name and of each node's declaration (D168), and the ticket's text with the identities of that text without the framework's part, whole and without its term (D141, D202). */
+/** The assets of the folder now: the identities of the folder, of each asset by its node's name and of each node's declaration (D168), and the ticket's text with the identities of that text without the framework's part, whole and without its term (D141, D202). */
 export interface Now {
   readonly tree: Identities
   readonly identities: ReadonlyMap<string, string>
@@ -104,10 +105,10 @@ const ticketIdentities = (folder: string, written: string): Flow<{ readonly whol
       decide(git.identityOfText(folder, withoutField(userPart(written), "term")), (asked) => end({ whole, asked }))))
 
 /**
- * The identity of each asset of a checkout now, by its node's name, with the
- * identities of the whole checkout and of each asset's files and the ticket
+ * The identity of each asset of the folder now, by its node's name, with the
+ * identities of the whole folder and of each asset's files and the ticket
  * (C1), and the ticket without the framework's part (H5); with `aside`, of the
- * checkout beside those places. Reading them runs no check.
+ * folder beside those places. Reading them runs no check.
  */
 const assetsNow = (ws: Workspace, here: Here, aside?: readonly string[]): Flow<Now, Fault> =>
   using(Files, (files) => {
@@ -144,7 +145,7 @@ const ticketOf = (ws: Workspace, here: Here, now: Now, fields: ReadonlyMap<strin
 }
 
 /**
- * The checkout's identities and its ticket, as `gather` reads them, with no
+ * The folder's identities and its ticket, as `gather` reads them, with no
  * record read and no check run: what the answer compares with what a
  * delivery's commit holds (D80, D204). It reads no check result, so it does no
  * check (CALCULUS L3).
@@ -152,7 +153,7 @@ const ticketOf = (ws: Workspace, here: Here, now: Now, fields: ReadonlyMap<strin
 export const givenOn = (ws: Workspace, here: Here): Flow<Snapshot, Fault> =>
   decide(assetsNow(ws, here), (now): Flow<Snapshot, Fault> => {
     const written = now.written ?? ""
-    return end({ identities: now.identities, ticket: ticketOf(ws, here, now, fieldsOf(written), ticketLines(written)), vectors: new Map() })
+    return decide(linesRead(here.folder, written), (lines) => end({ identities: now.identities, ticket: ticketOf(ws, here, now, fieldsOf(written), lines), vectors: new Map() }))
   })
 
 /** What a record under a commit stands for, by key, in the form a reading gives now (D203). */
@@ -197,7 +198,7 @@ export const onCommit = (ws: Workspace, folder: string, commit: string, ticket: 
     })
   })
 
-/** The done tickets of a checkout, the one merged last first: main's merges as its line holds them (D203). */
+/** The done tickets of the folder's branch, the one merged last first: main's merges as its line holds them (D203). */
 const mergedLast = (here: Here): Flow<readonly string[], Fault> =>
   using(Git, (git) =>
     decide(git.mergeSubjects(here.folder, here.line), (subjects) => {
@@ -240,16 +241,16 @@ const resolutionsOf = (ws: Workspace, here: Here, lines: readonly TicketLine[]):
         const name = names[i]
         if (name === undefined || !missing(found)) return end({ leave: found })
         const path = ticketPath("done", name)
-        return decide(files.read(at(here.folder, path)), (written) => end({ again: { i: i + 1, found: written === undefined ? found : lastIn(ticketLines(written), name, path, found, false) } }))
+        return decide(files.read(at(here.folder, path)), (written) => decide(linesRead(here.folder, written ?? ""), (read) => end({ again: { i: i + 1, found: written === undefined ? found : lastIn(read, name, path, found, false) } })))
       }, { rounds: names.length + 1, leave: (st) => st.found }))
-    return decide(fromDone, (found) => {
+    return decide(fromDone, (found) => decide(movedSince(ws, here, [...found.values()]), (moved) => {
       const commits = [...new Map([...found.values()].map((f) => [`${f.l.commit} ${f.ticket}`, f] as const)).values()]
       return decide(each(commits, (f) => decide(onCommit(ws, here.folder, f.l.commit, f.ticket), (on) => end([`${f.l.commit} ${f.ticket}`, on] as const))), (ons) => {
         const onOf = new Map(ons)
-        // Where git does not hold the commit, the resolution counts as absent (REQ-ALG-004).
+        // Where git does not hold the commit, the resolution counts as absent; so does the user's answer on a node whose file main changed, taken in after it (REQ-ALG-004).
         const given = [...found.values()].flatMap((f) => {
           const on = onOf.get(`${f.l.commit} ${f.ticket}`)
-          return on === undefined ? [] : [{ at: f.l.at, by: f.l.by, g: givenOf(f.l, on, f.ticket, f.path) }]
+          return on === undefined || moved.has(`${f.l.at} ${f.l.commit}`) ? [] : [{ at: f.l.at, by: f.l.by, g: givenOf(f.l, on, f.ticket, f.path) }]
         })
         const of = (at: string, by: "evaluation" | "user"): Given | undefined => given.find((x) => x.at === at && x.by === by)?.g
         return end(new Map(given.map(({ at }): readonly [string, Recorded] => {
@@ -258,8 +259,28 @@ const resolutionsOf = (ws: Workspace, here: Here, lines: readonly TicketLine[]):
           return [at, { ...(verdict === undefined ? {} : { verdict }), ...(answer === undefined ? {} : { answer }) }]
         })))
       })
-    })
+    }))
   })
+
+/**
+ * The user's answers on the branch's own ticket that no longer stand, by
+ * `<node> <commit>`: main, taken into the branch after the answer's commit,
+ * changed a file of that node, whatever the file then holds (REQ-ALG-004,
+ * REQ-FLOW-008, D240). Main as the branch held it at the answer is where the
+ * answer's commit and main part; main as the branch holds it now, where HEAD
+ * and main part. Git is asked only where an answer of the user's is found.
+ */
+const movedSince = (ws: Workspace, here: Here, found: readonly { readonly l: Extract<TicketLine, { line: "resolved" }>; readonly ticket: string }[]): Flow<ReadonlySet<string>, Fault> => {
+  const answers = found.filter((f) => f.l.by === "user" && f.ticket === here.name)
+  if (answers.length === 0) return end(new Set())
+  const places = placesOf(ws)
+  return using(Git, (git) =>
+    decide(git.mergeBase(here.folder, "HEAD", ws.main), (now) =>
+      now === undefined ? end(new Set<string>()) : decide(each(answers, (f) =>
+        decide(git.mergeBase(here.folder, f.l.commit, ws.main), (then) =>
+          then === undefined || then === now ? end([] as readonly string[]) : decide(git.changedLines(here.folder, then, now), (changes) =>
+            end(changes.some((c) => (places.get(f.l.at) ?? []).some((p) => covers(p, c.path) || p === c.path)) ? [`${f.l.at} ${f.l.commit}`] : [])))), (moved) => end(new Set(moved.flat())))))
+}
 
 /**
  * Whether a change to the ticket since the user's confirmation is the session
@@ -278,17 +299,16 @@ const boundNow = (ws: Workspace, here: Here, lines: readonly TicketLine[], whole
 /** What a command check's key leaves aside (CALCULUS L2): what the framework and an evaluating session write between readings, and the branch's ticket, whose framework part the framework adds to (D202). */
 const asideOf = (ws: Workspace, here: Here): readonly string[] => [...apart(ws.graph, frameworkPlaces(ws)), ...(here.ticket === undefined ? [] : [here.ticket])]
 
-/** The reading of a checkout, `snapshot` of CALCULUS section 5; with `stepping`, `snapshot(v)` for a step on that vector. Its checks are done where `counts` says (L3). */
+/** The reading of the folder, `snapshot` of CALCULUS section 5; with `stepping`, `snapshot(v)` for a step on that vector. Its checks are done where `counts` says (L3). */
 export const gather = (ws: Workspace, here: Here, stepping?: string): Flow<Snapshot, Fault> =>
   using(Files, (files) =>
     using(Checks, (checks) =>
       using(Git, (git) =>
         // The branch's ticket lies apart too: the framework adds its lines there between readings, which reopen nothing and run no check again (D202).
-        decide(assetsNow(ws, here, asideOf(ws, here)), (now): Flow<Snapshot, Fault> => {
+        decide(assetsNow(ws, here, asideOf(ws, here)), (now): Flow<Snapshot, Fault> => decide(linesRead(here.folder, now.written ?? ""), (lines): Flow<Snapshot, Fault> => {
           const { tree, identities } = now
           const written = now.written ?? ""
           const fields = fieldsOf(written)
-          const lines = ticketLines(written)
           const first = ws.graph.graph.vectors.find((v) => v.first === true)
           const ticket = ticketOf(ws, here, now, fields, lines)
           const bare: Snapshot = { identities, ticket, vectors: new Map() }
@@ -300,13 +320,15 @@ export const gather = (ws: Workspace, here: Here, stepping?: string): Flow<Snaps
             return decide(on === undefined || here.ticket === undefined ? end(false) : boundNow(ws, here, lines, now.whole), (bound): Flow<Snapshot, Fault> =>
               // The ticket as the user last confirmed its induction, read under the commit the confirmation names (C1, REQ-METHOD-006).
               decide(on === undefined || !bound || here.ticket === undefined ? end(undefined) : git.textAt(here.folder, on, here.onMain ?? here.ticket), (confirmedText): Flow<Snapshot, Fault> =>
-              decide(confirmedText === undefined ? end(undefined) : git.identityOfText(here.folder, withoutField(userPart(confirmedText), "term")), (confirmedAsked): Flow<Snapshot, Fault> => {
+              decide(confirmedText === undefined ? end(undefined) : git.identityOfText(here.folder, withoutField(userPart(confirmedText), "term")), (confirmedAsked): Flow<Snapshot, Fault> =>
+              // The ticket as main holds it, read from git by main's name and the ticket's path, for `ticket_kept` (D239).
+              decide(here.ticket === undefined || here.name === undefined ? end(undefined) : git.textAt(here.folder, ws.main, here.onMain ?? here.ticket), (onMain): Flow<Snapshot, Fault> => {
               const confirmed: Confirmed | undefined = confirmedText === undefined || confirmedAsked === undefined ? undefined : { fields: fieldsOf(confirmedText), asked: confirmedAsked }
               const places = placesOf(ws)
               // A check of an asset may run as long as a session of a vector that writes it.
               const siteOf = (place: string): Site => ({
-                checkout: here.folder,
-                main: ws.root,
+                folder: here.folder,
+                ...(onMain === undefined ? {} : { onMain }),
                 tree,
                 ...(here.ticket === undefined ? {} : { ticket: here.ticket }),
                 ...(here.onMain === undefined ? {} : { ticketOnMain: here.onMain }),
@@ -332,11 +354,11 @@ export const gather = (ws: Workspace, here: Here, stepping?: string): Flow<Snaps
                   // The stretch an induction is bound to, where the run has reached an induction entry (REQ-METHOD-006).
                   const stretch = ticket === "simplest" ? undefined : inducting(ws.graph, fields, facts, confirmed)
                   const read: Snapshot = ticket === "simplest" || stretch === undefined ? facts : { ...facts, ticket: { ...ticket, inducting: stretch } }
-                  // The first vector's outcome beside the ticket's checks: the ticket's term is well formed on the checkout as read.
+                  // The first vector's outcome beside the ticket's checks: the ticket's term is well formed on the folder as read.
                   return end(ticket === "simplest"
                     ? read
                     : { ...read, vectors: new Map([...read.vectors].map(([name, f]) => [name, name === first?.name ? { ...f, composes: composes(ws.graph, fields, read, confirmed) } : f])) })
                 }))
-              })))
+              }))))
           })
-        }))))
+        })))))

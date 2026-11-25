@@ -976,7 +976,7 @@
         "REQ-ALG-004 law 5"
       ],
       "in": "checks_where_they_count.scenario.test.ts",
-      "says": "The tests' run.sh is in the ticket's checkout from the first run on, and the code's check that runs it is not run while the code is not there; it is then run once before the user is asked about the build, and once in the run that merges."
+      "says": "The tests' run.sh is in the workspace's folder from the first run on, and the code's check that runs it is not run while the code is not there; it is then run once before the user is asked about the build, and once in the run that merges."
     },
     {
       "covers": [
@@ -998,6 +998,13 @@
       ],
       "in": "resolutions.scenario.test.ts",
       "says": "The user's yes to the requirements names a commit git does not hold: it counts as absent, and the run asks the user again on the specification."
+    },
+    {
+      "covers": [
+        "REQ-ALG-004 acceptance 7"
+      ],
+      "in": "one_folder.scenario.test.ts",
+      "says": "Main, taken into the ticket's branch after the user's yes, changed a file of the node to what the branch holds: the yes counts as absent, and the user is asked again."
     }
   ]
 }

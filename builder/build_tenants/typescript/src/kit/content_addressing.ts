@@ -127,6 +127,87 @@ export const identitiesOf = (folder: string, index: string, places: readonly str
     return { root, identities, files, beside: beside.join("\n") }
   })
 
+/**
+ * The identity at `from` and at `to` of each path whose identity differs
+ * between two identities of the folder, written as trees from the index of
+ * identities, by path from the folder: `git diff-tree -r --no-renames`, which
+ * reads names and identities and no content. None where git no longer holds
+ * `from`: the identities from then are missing (REQ-ALG-008, D226).
+ */
+export const treeDifference = (folder: string, from: string, to: string): Effect.Effect<{ readonly start: IdentityMap; readonly end: IdentityMap } | undefined, IdentityRefused, ChildProcessSpawner.ChildProcessSpawner> =>
+  asks(folder, ["cat-file", "-e", `${from}^{tree}`]).pipe(
+    Effect.matchEffect({
+      onFailure: () => Effect.succeed(undefined),
+      onSuccess: () =>
+        asks(folder, ["diff-tree", "-r", "-z", "--no-renames", from, to]).pipe(Effect.map((out) => {
+          const start = new Map<string, string>()
+          const end = new Map<string, string>()
+          const fields = out.split("\0")
+          const none = /^0+$/
+          for (let i = 0; i + 1 < fields.length; i += 2) {
+            const meta = (fields[i] ?? "").split(" ")
+            const path = fields[i + 1] ?? ""
+            const before = meta[2] ?? ""
+            const after = meta[3] ?? ""
+            if (path === "" || meta.length < 5) continue
+            if (!none.test(before)) start.set(path, before)
+            if (!none.test(after)) end.set(path, after)
+          }
+          return { start, end }
+        }))
+    })
+  )
+
+/**
+ * The identity at `from`, a tree of the folder kept from a session's start,
+ * and now of each path whose identity differs, by path from the folder, read
+ * without writing anything: no index, no tree and no file's content is
+ * written into git's store (REQ-ALG-012, D242). The tree is listed
+ * (`ls-tree -r --full-tree`). Now is read through the index of identities at
+ * `index`, which no one writes here: its entries whose files' times and sizes
+ * still match are taken as they stand (`ls-files -s`), and each file it lists
+ * as changed or does not hold, files git ignores left out, is hashed with
+ * nothing stored (`hash-object --stdin-paths`). None where git no longer holds
+ * `from`: the identities from then are missing (REQ-ALG-008).
+ */
+export const differenceNow = (folder: string, index: string, from: string): Effect.Effect<{ readonly start: IdentityMap; readonly end: IdentityMap } | undefined, IdentityRefused, ChildProcessSpawner.ChildProcessSpawner> =>
+  asks(folder, ["cat-file", "-e", `${from}^{tree}`]).pipe(
+    Effect.matchEffect({
+      onFailure: () => Effect.succeed(undefined),
+      onSuccess: () =>
+        Effect.gen(function*() {
+          // `ls-tree` gives the mode, the type and the identity; `ls-files -s` the mode, the identity and the stage.
+          const entries = (out: string, at: number): Map<string, string> =>
+            new Map(parts(out).flatMap((l) => {
+              const tab = l.indexOf("\t")
+              const id = l.slice(0, tab).split(" ")[at]
+              return id === undefined || tab < 0 ? [] : [[l.slice(tab + 1), id] as const]
+            }))
+          const atStart = entries(yield* asks(folder, ["ls-tree", "-r", "-z", "--full-tree", from]), 2)
+          const held = entries(yield* asks(folder, ["ls-files", "-s", "-z"], { index }), 1)
+          const gone = new Set(parts(yield* asks(folder, ["ls-files", "-z", "--deleted"], { index })))
+          const changed = parts(yield* asks(folder, ["ls-files", "-z", "--modified", "--others", "--exclude-standard"], { index })).filter((p) => !p.endsWith("/") && !gone.has(p))
+          // git reads these paths from the repository's top, not from the folder within it; each is given whole.
+          const hashed = changed.length === 0 ? [] : (yield* asks(folder, ["hash-object", "--stdin-paths"], { input: changed.map((p) => `${folder}/${p}\n`).join("") })).split("\n").filter((l) => l !== "")
+          const now = new Map([...held].filter(([p]) => !gone.has(p)))
+          changed.forEach((p, i) => now.set(p, hashed[i] ?? ""))
+          const start = new Map<string, string>()
+          const end = new Map<string, string>()
+          for (const [p, id] of atStart) if (now.get(p) !== id) start.set(p, id)
+          for (const [p, id] of now) if (atStart.get(p) !== id) end.set(p, id)
+          for (const p of start.keys()) if (now.has(p) && !end.has(p)) end.set(p, now.get(p) ?? "")
+          return { start, end }
+        })
+    })
+  )
+
+/** The tree of the folder in `commit`, from the folder: what the identities of the commit the folder is on are, as a tree; the empty tree where the commit holds no file under the folder (REQ-FLOW-003 step 1, D241). */
+export const folderTreeAt = (folder: string, commit: string): Effect.Effect<string, IdentityRefused, ChildProcessSpawner.ChildProcessSpawner> =>
+  asks(folder, ["rev-parse", "--verify", "--quiet", `${commit}:./`]).pipe(
+    Effect.map((out) => out.trim()),
+    Effect.catch(() => asks(folder, ["hash-object", "-t", "tree", "--stdin"], { input: "" }).pipe(Effect.map((out) => out.trim())))
+  )
+
 /** The files git holds in the folder or does not ignore there, by path relative to it. */
 export const filesOf = (folder: string): Effect.Effect<readonly string[], IdentityRefused, ChildProcessSpawner.ChildProcessSpawner> =>
   asks(folder, ["ls-files", "-z", "--cached", "--others", "--exclude-standard"]).pipe(Effect.map((out) => parts(out).filter((p) => !p.endsWith("/"))))

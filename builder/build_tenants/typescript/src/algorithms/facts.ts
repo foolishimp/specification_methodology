@@ -1,6 +1,6 @@
 /**
  * The facts of the workspace that the algorithms read, given to them as plain
- * data: a snapshot of one checkout, the board, and the event log's entries.
+ * data: a snapshot of the workspace's folder, the board, and the event log's entries.
  * The flows gather these facts; the algorithms only read them.
  *
  * @uses C3
@@ -86,7 +86,7 @@ export interface BranchTicket {
   readonly worked?: readonly string[]
 }
 
-/** One checkout as it is now. */
+/** The workspace's folder as it is now. */
 export interface Snapshot {
   /** The content identity of each asset, by node name, and of what each node that declares what accepts it declares of itself, and the first vector of the ticket, under `declaration`. An asset that is not there has none. */
   readonly identities: ReadonlyMap<string, string>
@@ -97,8 +97,11 @@ export interface Snapshot {
   readonly vectors: ReadonlyMap<string, VectorFacts>
   /** What is recorded at each node, and under the first vector's name; none where nothing is. */
   readonly records?: ReadonlyMap<string, Recorded>
-  /** Main as the branch holds it, for an evaluating brief: the commit where the two last met, and the nodes main holds there (REQ-ALG-007, D208). */
-  readonly main?: { readonly commit: string; readonly holds: readonly string[] }
+  /**
+   * Main as the branch holds it, for an evaluating brief: the commit where the two last met, and the nodes main holds there (REQ-ALG-007, D208);
+   * and, by node, each commit on the branch since then that holds the user's change by hand there (D244).
+   */
+  readonly main?: { readonly commit: string; readonly holds: readonly string[]; readonly byHand?: ReadonlyMap<string, readonly string[]> }
 }
 
 const noFacts: VectorFacts = {}
@@ -140,24 +143,34 @@ export interface LogEntry {
 
 /**
  * The framework's part of a ticket (REQ-FLOW-001, REQ-FLOW-004; D202): every
- * line of the field `framework`, wherever it lies. The checklist (`began`,
- * `delivered`, `bound`, `unbound`), the resolutions (`resolved`) and the rulings (`ruling`).
+ * line of the field `framework`, wherever it lies. The branch it left
+ * (`left`), the checklist (`began`, `delivered`, `bound`, `unbound`), the
+ * resolutions (`resolved`), the rulings (`ruling`) and the rulings on what
+ * changed (`changed`).
  */
 export const FRAMEWORK = "framework"
 
 export type TicketLine =
+  /** The branch the folder was on when the ticket was pulled: main for the ticket until it is merged (REQ-FLOW-001, REQ-FLOW-004; D239). */
+  | { readonly line: "left"; readonly branch: string }
   | { readonly line: "began"; readonly vector: string; readonly commit: string }
   | { readonly line: "delivered"; readonly vector: string; readonly commit: string; readonly decision?: true; readonly when?: string }
   | { readonly line: "bound"; readonly vector: string; readonly enters: string; readonly ends: string; readonly commit: string }
   | { readonly line: "unbound"; readonly commit: string }
   | { readonly line: "resolved"; readonly by: "evaluation" | "user"; readonly says: "yes" | "no"; readonly at: string; readonly commit: string; readonly verdict?: string; readonly findings?: string; readonly reason?: string }
   | { readonly line: "ruling"; readonly commit: string; readonly words: string }
+  /** The user's ruling on what changed while a session worked at the vector: a yes names each file it was given on, by its path in the workspace, with its identity then, and each line of the framework's part that changed while the session worked, by its identity, which is never read as the user's answer (REQ-FLOW-004, D227, D230). */
+  | { readonly line: "changed"; readonly says: "yes" | "no"; readonly vector: string; readonly files: readonly { readonly key: string; readonly identity: string }[]; readonly foreign?: readonly string[] }
 
 const DECISION = "for the user's decision"
+/** The key of a ruling's entry naming, by its identity, a line of the framework's part that changed while a session worked (D230). */
+export const NOT_THE_USERS = "not the user's answer"
 
 /** The words of one line of the framework's part, after its field. */
 export function lineText(l: TicketLine): string {
   switch (l.line) {
+    case "left":
+      return `left ${l.branch}`
     case "began":
       return `began ${l.vector} at ${l.commit}`
     case "delivered":
@@ -175,6 +188,10 @@ export function lineText(l: TicketLine): string {
       ].join("; ")
     case "ruling":
       return `ruling on ${l.commit}: ${oneLine(l.words)}`
+    case "changed": {
+      const entries = [...l.files.map((f) => `${f.key} ${f.identity === "" ? "none" : f.identity}`), ...(l.foreign ?? []).map((id) => `${NOT_THE_USERS} ${id}`)]
+      return `ruled ${l.says} on what changed at ${l.vector}${entries.length === 0 ? "" : `: ${entries.join("; ")}`}`
+    }
   }
 }
 
@@ -192,6 +209,7 @@ export function readLine(words: string): TicketLine | undefined {
     const when = w[i + 2]
     return { line: "delivered", vector: w[1] ?? "", commit: w[i + 1] ?? "", ...(decision ? { decision: true as const } : {}), ...(when === undefined ? {} : { when: when.slice(1, -1) }) }
   }
+  if (w[0] === "left" && w.length === 2 && w[1] !== "") return { line: "left", branch: w[1] ?? "" }
   if (w[0] === "began" && w.length === 4 && w[2] === "at") return { line: "began", vector: w[1] ?? "", commit: w[3] ?? "" }
   if (w[0] === "bound" && w.length === 8) return { line: "bound", vector: w[1] ?? "", enters: w[3] ?? "", ends: w[5] ?? "", commit: w[7] ?? "" }
   if (w[0] === "unbound" && w.length === 3) return { line: "unbound", commit: w[2] ?? "" }
@@ -200,6 +218,17 @@ export function readLine(words: string): TicketLine | undefined {
     const findings = after("findings")
     const reason = after("reason")
     return { line: "resolved", by: w[1], says: w[2], at: w[4] ?? "", commit: w[6] ?? "", ...(verdict === undefined ? {} : { verdict }), ...(findings === undefined ? {} : { findings }), ...(reason === undefined ? {} : { reason }) }
+  }
+  if (w[0] === "ruled" && (w[1] === "yes" || w[1] === "no") && w[2] === "on" && w[3] === "what" && w[4] === "changed" && w[5] === "at" && w.length >= 7) {
+    const colon = words.indexOf(": ")
+    const entries = colon < 0 ? [] : words.slice(colon + 2).split("; ").flatMap((entry) => {
+      const space = entry.lastIndexOf(" ")
+      const identity = entry.slice(space + 1)
+      return space < 0 ? [] : [{ key: entry.slice(0, space), identity: identity === "none" ? "" : identity }]
+    })
+    const files = entries.filter((e) => e.key !== NOT_THE_USERS)
+    const foreign = entries.filter((e) => e.key === NOT_THE_USERS).map((e) => e.identity)
+    return { line: "changed", says: w[1], vector: (w[6] ?? "").replace(/:$/, ""), files, ...(foreign.length === 0 ? {} : { foreign }) }
   }
   if (w[0] === "ruling" && w[1] === "on" && w.length >= 3) {
     const colon = words.indexOf(": ")

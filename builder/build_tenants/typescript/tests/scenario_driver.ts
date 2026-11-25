@@ -12,8 +12,8 @@
  * @uses C14 C5 C6 H5
  * @is REQ-VERIFY-002 REQ-FLOW-007
  */
-import { execFile, execFileSync, spawn } from "node:child_process"
-import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, realpathSync, rmSync, statSync, writeFileSync } from "node:fs"
+import { execFile, execFileSync, spawn, spawnSync } from "node:child_process"
+import { cpSync, existsSync, mkdirSync, mkdtempSync, readdirSync, readFileSync, realpathSync, rmSync, statSync, symlinkSync, writeFileSync } from "node:fs"
 import { homedir, tmpdir } from "node:os"
 import { dirname, join } from "node:path"
 import { fileURLToPath } from "node:url"
@@ -54,12 +54,14 @@ export interface LogEntry {
   readonly check?: string
   readonly ending?: string
   readonly why?: string
+  readonly named?: number
   readonly commit?: string
   readonly path?: string
   readonly result?: string
   readonly files?: readonly string[]
   readonly cost?: string
   readonly calls?: number
+  readonly processes?: number
 }
 
 const made: string[] = []
@@ -171,7 +173,8 @@ export const RELEASE_VERSION = "9.8.7-test.1"
  */
 export function installed(version: string = RELEASE_VERSION): Installed {
   const out = temporary("stdo-builder-release-")
-  execFileSync(process.execPath, [join(tenant, "scripts", "release.mjs"), version, out], { stdio: "pipe" })
+  const c = cut([version, out])
+  if (c.status !== 0) throw new Error(`the release command failed:\n${c.said}`)
   const name = readdirSync(out).find((n) => n.startsWith("stdo-builder-"))
   if (name === undefined) throw new Error("the release script made no release")
   const release = join(out, name)
@@ -180,6 +183,57 @@ export function installed(version: string = RELEASE_VERSION): Installed {
   const [command = "sh", ...args] = words
   const said = execFileSync(command, args, { encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] })
   return { cli: "stdo-builder", bin: join(place, "bin"), release, place, said }
+}
+
+/** What a cut said and how it ended. */
+export interface Cut {
+  readonly status: number | null
+  readonly said: string
+}
+
+/**
+ * Runs the release command of `from`, this tenant or a copy of it, with these
+ * words, as the person who cuts a release does: the method's release manager
+ * on the path, and the store `store` where one is given (STDO_STORE).
+ */
+export function cut(args: readonly string[], options: { readonly from?: string; readonly store?: string } = {}): Cut {
+  const env: NodeJS.ProcessEnv = { ...process.env, PATH: `${join(homedir(), ".local", "bin")}:${process.env.PATH ?? ""}` }
+  if (options.store !== undefined) env.STDO_STORE = options.store
+  const r = spawnSync(process.execPath, [join(options.from ?? tenant, "scripts", "release.mjs"), ...args], { env, encoding: "utf8", timeout: 240_000 })
+  return { status: r.status, said: `${r.stdout ?? ""}${r.stderr ?? ""}` }
+}
+
+/**
+ * A copy of the source project as the release command reads it: the tenant's
+ * source, scripts, pages, fixtures and package files, its installed packages
+ * by a link, and the requirement files two folders above, changed by
+ * `change`. Gives the copy's tenant.
+ */
+export function tenantCopy(change: (copy: string) => void): string {
+  const top = temporary("stdo-builder-copy-")
+  const copy = join(top, "build_tenants", "typescript")
+  for (const f of ["src", "scripts", "packaging", join("tests", "fixtures"), "package.json", "tsconfig.json", "tsconfig.build.json"]) cpSync(join(tenant, f), join(copy, f), { recursive: true })
+  symlinkSync(join(tenant, "node_modules"), join(copy, "node_modules"))
+  cpSync(join(tenant, "..", "..", "specification", "requirements"), join(top, "specification", "requirements"), { recursive: true })
+  change(copy)
+  return copy
+}
+
+/**
+ * A git repository of its own holding `files`, each committed as it is, as
+ * the person who cuts gives the words and the history page of one cut.
+ * Gives the repository's folder.
+ */
+export function committed(files: Readonly<Record<string, string>>): string {
+  const repo = temporary("stdo-builder-words-")
+  for (const [name, text] of Object.entries(files)) writeFileSync(join(repo, name), text)
+  const git = (args: readonly string[]): void => {
+    execFileSync("git", ["-C", repo, "-c", "user.name=cutter", "-c", "user.email=cutter@localhost", ...args], { stdio: "pipe" })
+  }
+  git(["init", "-q"])
+  git(["add", "--", ...Object.keys(files)])
+  git(["commit", "-q", "-m", "the words of one cut"])
+  return repo
 }
 
 /**
@@ -253,6 +307,18 @@ export class Workspace {
     const p = this.path(...parts)
     return existsSync(p) ? readFileSync(p, "utf8") : undefined
   }
+  /**
+   * A path among the workspace's notes, where the hold and the identities kept
+   * from a session's start lie: a folder of the framework's own under the
+   * directory `git rev-parse --absolute-git-dir` gives for the workspace's
+   * folder, apart for each workspace by its place from the repository's top
+   * (REQ-FLOW-001, D245).
+   */
+  notes(...parts: string[]): string {
+    const dir = this.git(["rev-parse", "--absolute-git-dir"]).trim()
+    const within = this.git(["rev-parse", "--show-prefix"]).trim().replace(/\/$/, "")
+    return join(dir, "stdo-builder", within === "" ? "top" : `at-${encodeURIComponent(within)}`, ...parts)
+  }
   /** git in the workspace, which is a repository of its own in a temporary folder. */
   git(args: readonly string[]): string {
     return execFileSync("git", ["-C", this.root, ...args], { env: this.env, encoding: "utf8", stdio: ["ignore", "pipe", "pipe"] })
@@ -271,6 +337,21 @@ export class Workspace {
       }
     })
   }
+  /**
+   * Does `change` with the workspace's folder put on main, as a user does who
+   * changes main while a ticket is active, and puts the folder back on the
+   * branch it was on (REQ-FLOW-001; D238). What `change` leaves is committed on
+   * main by its own words.
+   */
+  onMain(change: () => void): void {
+    const was = this.git(["symbolic-ref", "--quiet", "--short", "HEAD"]).trim()
+    this.git(["switch", "-q", "main"])
+    try {
+      change()
+    } finally {
+      this.git(["switch", "-q", was])
+    }
+  }
   /** The tickets on main's board, by lane. */
   board(): { readonly backlog: string[]; readonly active: string[]; readonly done: string[] } {
     const lane = (name: string) =>
@@ -284,9 +365,6 @@ export class Workspace {
     }
     return { backlog: safe("backlog"), active: safe("active"), done: safe("completed") }
   }
-  checkout(ticket: string, ...parts: string[]): string {
-    return this.path(".stdo-builder", "local", "checkouts", ticket, ...this.within, ...parts)
-  }
 }
 
 /** Waits until `ready` holds, looking every tenth of a second. */
@@ -299,16 +377,16 @@ export async function until(ready: () => boolean, seconds: number): Promise<void
 }
 
 /**
- * The stand-in's session for `vector` and `kind` has written all its fixtures give it in the checkout: each file of `files/` with its whole content,
+ * The stand-in's session for `vector` and `kind` has written all its fixtures give it in the workspace's folder: each file of `files/` with its whole content,
  * and, where there is an `append`, the file at `appendedTo` ends with it. A driver that kills a session waits for this, so it does not kill it partway
  * through its writes.
  */
-export function wroteAll(fixtures: string, vector: string, kind: string, checkout: string, appendedTo?: string): boolean {
+export function wroteAll(fixtures: string, vector: string, kind: string, folder: string, appendedTo?: string): boolean {
   const here = join(fixtures, vector, kind)
   const files = join(here, "files")
   const same = (from: string, to: string): boolean => existsSync(to) && readFileSync(to).equals(readFileSync(from))
   const written = !existsSync(files) || (readdirSync(files, { recursive: true }) as string[])
-    .every((p) => !statSync(join(files, p)).isFile() || same(join(files, p), join(checkout, p)))
+    .every((p) => !statSync(join(files, p)).isFile() || same(join(files, p), join(folder, p)))
   const appended = join(here, "append")
   return written && (!existsSync(appended) || (appendedTo !== undefined && existsSync(appendedTo) && readFileSync(appendedTo, "utf8").endsWith(readFileSync(appended, "utf8"))))
 }

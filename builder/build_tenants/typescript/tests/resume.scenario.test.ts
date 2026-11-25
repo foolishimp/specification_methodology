@@ -5,9 +5,11 @@
  *
  * One workspace stands for a run killed between moving the ticket to the done
  * lane on its branch and merging the branch into main: S1 up to the user's
- * last answer, then that move made by git in the ticket's checkout and
+ * last answer, then that move made by git in the workspace's folder and
  * committed, as the run would have. Another is S1 whole, after which the user
- * returns main to the commit before the merge (`git reset --hard main^1`).
+ * returns main to the commit before the merge (`git reset --hard main^1`) and
+ * puts the folder back on the ticket's branch, as a run on another branch is
+ * refused while the ticket is active.
  * Either way the next run merges the ticket as done, and the event log has
  * lost no entry.
  *
@@ -36,9 +38,9 @@ beforeAll(async () => {
     const { ticket } = await s1ToRequirements(ws, S1_FIXTURES)
     await ws.run(S1_FIXTURES)
     await ws.answer("yes")
-    const checkout = ws.checkout(ticket)
-    const git = (args: readonly string[]) => execFileSync("git", ["-C", checkout, ...args], { env: ws.env, stdio: "pipe" })
-    mkdirSync(ws.checkout(ticket, ".ai-workspace", "tickets", "completed"), { recursive: true })
+    const folder = ws.path()
+    const git = (args: readonly string[]) => execFileSync("git", ["-C", folder, ...args], { env: ws.env, stdio: "pipe" })
+    mkdirSync(ws.path(".ai-workspace", "tickets", "completed"), { recursive: true })
     git(["mv", `.ai-workspace/tickets/active/${ticket}.md`, `.ai-workspace/tickets/completed/${ticket}.md`])
     git(["-c", "user.name=STDO Builder", "-c", "user.email=stdo-builder@localhost", "commit", "-qm", `board: ${ticket} to done`])
     const before = ws.log()
@@ -48,6 +50,7 @@ beforeAll(async () => {
     const ws = new Workspace(cli)
     const { ticket } = await s1Whole(ws, S1_FIXTURES)
     ws.git(["reset", "-q", "--hard", "main^1"])
+    ws.git(["switch", "-q", `stdo/${ticket}`])
     const before = ws.log()
     return { ws, ticket, ran: await ws.run(S1_FIXTURES), before }
   }

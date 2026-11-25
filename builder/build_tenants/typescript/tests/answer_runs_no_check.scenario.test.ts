@@ -7,7 +7,7 @@
  * The user then changes the code by hand and answers. The answer is not on the
  * content its question was asked on, so it is refused and nothing is written.
  * The next run asks again. The user answers yes, and the answer is written in
- * the ticket in its checkout, as a `resolved user` line that names a commit
+ * the ticket in the workspace's folder, as a `resolved user` line that names a commit
  * (REQ-FLOW-006 step 3, D202). Neither
  * answer runs the tests' run.sh. The run after it ends with the work done.
  *
@@ -58,25 +58,25 @@ beforeAll(async () => {
   )
   ws = new Workspace(build())
   ticket = (await s1ToRequirements(ws, fixtures)).ticket
-  const tip = (): string => ws.git(["-C", ws.checkout(ticket), "rev-parse", "HEAD"]).trim()
+  const tip = (): string => ws.git(["-C", ws.path(), "rev-parse", "HEAD"]).trim()
 
   asked = await ws.run(fixtures)
   ranAtQuestion = count()
 
   // The user changes the code by hand after the question, and answers.
-  const code = ws.checkout(ticket, CODE)
+  const code = ws.path(CODE)
   writeFileSync(code, `${readFileSync(code, "utf8")}# changed by hand after the question\n`)
   tipBefore = tip()
   refused = await ws.answer("yes")
   ranAfterRefused = count()
-  answerAfterRefused = resolvedAt(ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)) !== undefined
+  answerAfterRefused = resolvedAt(ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)) !== undefined
   tipAfterRefused = tip()
 
   askedAgain = await ws.run(fixtures)
   ranBeforeAnswer = count()
   answered = await ws.answer("yes")
   ranAfterAnswer = count()
-  answer = resolvedAt(ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)) ?? {}
+  answer = resolvedAt(ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)) ?? {}
   last = await ws.run(fixtures)
   log = ws.log()
 }, 240_000)
@@ -112,7 +112,7 @@ describe("the answer runs no check (the ticket's item 2)", () => {
     expect(ranAfterAnswer).toBe(ranBeforeAnswer)
   })
 
-  it("the answer is written in the ticket in its checkout, as the user's resolution, naming a commit", () => {
+  it("the answer is written in the ticket in the workspace's folder, as the user's resolution, naming a commit", () => {
     expect(answer.says).toBe("yes")
     expect((answer.on ?? "").length).toBeGreaterThan(0)
   })

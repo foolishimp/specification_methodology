@@ -66,7 +66,7 @@ describe("REQ-METHOD-006 S1, inducted with the specification and then the build:
   let said: Said[] = []
   let last: Said
   let log: LogEntry[] = []
-  const briefOf = (name: string): readonly string[] => readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", name), "utf8").split("\n")
+  const briefOf = (name: string): readonly string[] => readFileSync(ws.path(".stdo-builder", "local", "briefs", name), "utf8").split("\n")
 
   beforeAll(async () => {
     ws = new Workspace(program())
@@ -129,8 +129,9 @@ describe("REQ-METHOD-006 S1, inducted with the specification and then the build:
     }
     expect(lineOf(work, "- frame: ")).toBe("- frame: write-build, revision 1.")
     expect(lineOf(work, "- write: ")).toBe(`- write: ${places.get("design") ?? ""}, ${places.get("tests") ?? ""}, ${places.get("code") ?? ""} and .gitignore. Work in this folder only.`)
-    expect(lineOf(work, "- must not change: ")).toContain("specification/requirements")
-    expect(lineOf(work, "- must not change: ")).not.toContain(places.get("code") ?? "")
+    // Anything else that differs when the session is over is named to the user (REQ-ALG-007 acceptance 12).
+    expect(lineOf(work, "- what changed: ")).toContain("is named to the user, who rules on it before anything of the step is judged or committed")
+    expect(lineOf(work, "- what changed: ")).not.toContain(places.get("code") ?? "")
     expect(lineOf(judge, "- frame: ")).toBe("- frame: judge-build, revision 1.")
     expect(lineOf(judge, "- evaluation: ")).toBe("- evaluation: judge design, tests and code against requirements.")
     expect(lineOf(judge, "- findings: ")).toBe("- findings: write why at build_tenants/main/evaluations/build/findings.md.")
@@ -301,7 +302,7 @@ describe("REQ-METHOD-006 acceptance 4: a no from the one evaluation reopens the 
 
   it("the build is written again after the no, and its working packet names where the findings are", () => {
     expect(sessionsIn(log)).toEqual(["write-build work", "write-build evaluation", "write-build work", "write-build evaluation", "write-build work", "write-build evaluation"])
-    const brief = readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8").split("\n")
+    const brief = readFileSync(ws.path(".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8").split("\n")
     expect(brief.filter((l) => l.startsWith("- as it stands, ")).some((l) => l.includes("the evaluation said no to it (in the ticket ") && l.includes(", with its findings at build_tenants/main/evaluations/build/findings.md"))).toBe(true)
   })
 
@@ -361,7 +362,7 @@ describe("REQ-METHOD-006 acceptance 6: a ticket whose term the user edits is ind
     ws = new Workspace(program())
     const { ticket } = await s1ToRequirements(ws, S1_FIXTURES)
     edited = ws.log().length
-    const path = ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)
+    const path = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
     write(path, `${readFileSync(path, "utf8")}- term: ${writeTerm(sequence(ONE_BY_ONE.map((n) => reference(n))))}\n`)
     said = [await ws.run(S1_FIXTURES), await ws.answer("yes"), await ws.run(S1_FIXTURES)]
     log = ws.log().slice(edited)
@@ -410,7 +411,7 @@ describe("REQ-METHOD-006 acceptance 11: a nested induction chooses the requireme
     ws = new Workspace(program())
     const to = await toInductionEntry(ws)
     ticket = to.ticket
-    const path = ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)
+    const path = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
     triage = readFileSync(path, "utf8").split("\n").filter((l) => !l.startsWith("- term: "))
     const nested = await runAndAnswer(ws, NESTED_FIXTURES(CHOSEN), 4)
     reached = nested[0]
@@ -428,7 +429,7 @@ describe("REQ-METHOD-006 acceptance 11: a nested induction chooses the requireme
   })
 
   it("the nested induction's packet is bound to the stretch, and the user is asked on the term with that entry replaced", () => {
-    const brief = readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8").split("\n")
+    const brief = readFileSync(ws.path(".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8").split("\n")
     expect(lineOf(brief, "- stretch: ")).toContain("the run has reached the induction entry over requirements to code in the term the user confirmed")
     expect(reached?.out).toContain("In the place of the induction entry over requirements to code, which you confirmed before, it names the work from requirements to code.")
   })
@@ -476,7 +477,7 @@ describe("REQ-METHOD-006 acceptance 12: a term in the induction entry's place is
       const { ticket } = await toInductionEntry(ws)
       const from = ws.log().length
       const said = await ws.run(NESTED_FIXTURES(term, also))
-      const found = readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "found", "induct-ticket.md"), "utf8")
+      const found = readFileSync(ws.path(".stdo-builder", "local", "found", "induct-ticket.md"), "utf8")
       ran.set(name, { said, log: ws.log().slice(from), found })
     }
   }, 600_000)
@@ -502,7 +503,7 @@ describe("REQ-METHOD-006 acceptance 14, R1: while the run waits at an induction 
     const ws = new Workspace(program())
     const { ticket } = await toInductionEntry(ws)
     // The user writes the term by hand in the ticket, on its branch, before the run reaches the entry.
-    const path = ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)
+    const path = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
     write(path, readFileSync(path, "utf8").replace(/- term: .*\n/, `- term: ${writeTerm(term)}\n`))
     const from = ws.log().length
     const fixtures = NESTED_FIXTURES(CHOSEN)
@@ -518,7 +519,7 @@ describe("REQ-METHOD-006 acceptance 14, R1: while the run waits at an induction 
     const { ticket } = await toInductionEntry(ws)
     const fixtures = NESTED_FIXTURES(CHOSEN)
     await ws.run(fixtures)
-    const path = ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)
+    const path = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
     write(path, readFileSync(path, "utf8").replace(/- term: .*\n/, `- term: ${writeTerm(sequence([...TO_PRODUCT, reference("write-requirements"), reference("write-design"), reference("write-tests"), reference("write-code")]))}\n`))
     const from = ws.log().length
     return { said: await ws.run(fixtures), log: ws.log().slice(from) }
@@ -570,7 +571,7 @@ describe("REQ-FLOW-004, D165: the stretch is bound before its session starts and
     const { ticket } = await toInductionEntry(ws)
     const from = ws.log().length
     const said = await ws.run(NESTED_FIXTURES(term, also, (f) => write(join(f, "induct-ticket", "work", "fails"), "")))
-    const packet = readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8")
+    const packet = readFileSync(ws.path(".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8")
     return { said, log: ws.log().slice(from), packet }
   }
   /** The stretch's session writes its term and is held at a gate; its run is killed, and a run is started again. */
@@ -578,38 +579,44 @@ describe("REQ-FLOW-004, D165: the stretch is bound before its session starts and
     const ws = new Workspace(program())
     const { ticket } = await toInductionEntry(ws)
     const gate = join(temporary("stdo-builder-gate-"), "never")
-    const path = ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)
+    const path = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
     const before = readFileSync(path, "utf8")
     const fixtures = NESTED_FIXTURES(CHOSEN, "", (f) => write(join(f, "induct-ticket", "work", "gate"), `${gate}\n`))
     const running = ws.start(["run", ws.root, "--stand-in", fixtures])
-    await until(() => existsSync(path) && readFileSync(path, "utf8") !== before && wroteAll(fixtures, "induct-ticket", "work", ws.checkout(ticket), path), 60)
+    await until(() => existsSync(path) && readFileSync(path, "utf8") !== before && wroteAll(fixtures, "induct-ticket", "work", ws.path(), path), 60)
     running.kill()
     await running.ended
     const from = ws.log().length
     return { said: await ws.run(NESTED_FIXTURES(CHOSEN)), log: ws.log().slice(from) }
   }
   /**
-   * The review's K1 and K3: the stretch's session writes its term, and its run is killed (K1) or the user is asked (K3); the user then adds a
-   * sentence to the ticket on main and starts a run, whose session writes the triage again with a term for the whole work.
+   * The review's K1 and K3: the stretch's session writes its term, and its run is killed and a run started again (K1) or the user is asked (K3);
+   * the user then adds a sentence to the ticket on main and starts a run, whose session writes the triage again with a term for the whole work.
    */
-  const editedOnMain = async (kill: boolean): Promise<{ readonly said: Said; readonly log: readonly LogEntry[]; readonly packet: string; readonly text: string }> => {
+  const editedOnMain = async (kill: boolean): Promise<{ readonly said: Said; readonly log: readonly LogEntry[]; readonly packet: string; readonly text: string; readonly ruling?: Said }> => {
     const ws = new Workspace(program())
     const { ticket } = await toInductionEntry(ws)
-    const path = ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)
+    const path = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
     if (kill) {
       const before = readFileSync(path, "utf8")
       const gate = join(temporary("stdo-builder-gate-"), "never")
       const fixtures = NESTED_FIXTURES(CHOSEN, "", (f) => write(join(f, "induct-ticket", "work", "gate"), `${gate}\n`))
       const running = ws.start(["run", ws.root, "--stand-in", fixtures])
-      await until(() => existsSync(path) && readFileSync(path, "utf8") !== before && wroteAll(fixtures, "induct-ticket", "work", ws.checkout(ticket), path), 60)
+      await until(() => existsSync(path) && readFileSync(path, "utf8") !== before && wroteAll(fixtures, "induct-ticket", "work", ws.path(), path), 60)
       running.kill()
       await running.ended
     } else await ws.run(NESTED_FIXTURES(CHOSEN))
-    appendFileSync(ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`), `\n${SENTENCE}\n`)
+    // After the kill, the run commits what the session wrote, says it cannot tell what changed among the branches while the session worked, and asks on the term (REQ-FLOW-003 step 1, D228).
+    const ruling = kill ? await ws.run(NESTED_FIXTURES(CHOSEN, TRIAGE)) : undefined
+    // The folder is then clean: the user puts it on main, adds the sentence and commits it there, and puts it back on the ticket's branch (D239).
+    ws.onMain(() => {
+      appendFileSync(ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`), `\n${SENTENCE}\n`)
+      ws.git(["commit", "-qam", "the user's sentence"])
+    })
     const from = ws.log().length
     const said = await ws.run(NESTED_FIXTURES(CHOSEN, TRIAGE))
-    const packet = readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8")
-    return { said, log: ws.log().slice(from), packet, text: readFileSync(path, "utf8") }
+    const packet = readFileSync(ws.path(".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8")
+    return { said, log: ws.log().slice(from), packet, text: readFileSync(path, "utf8"), ...(ruling === undefined ? {} : { ruling }) }
   }
   const STRETCH = "- stretch: the run has reached the induction entry over requirements to code"
   const SENTENCE = "It prints nothing on standard error."
@@ -651,7 +658,43 @@ describe("REQ-FLOW-004, D165: the stretch is bound before its session starts and
     expect(sessionsIn(afterKill.log)).toEqual([])
   })
 
-  it("K1, D174: a run killed while the stretch's session was at work, and then the user's sentence added to the ticket on main: the next run inducts the whole ticket, bound to no stretch, keeps the sentence, and asks the user", () => {
+  // K1 as the review gives it: the user adds the sentence on main while the killed session's work is not committed, in a working tree of their own (D239). The identities from that session's start are still kept, so the edit is put to the user first (REQ-FLOW-004, "Where the user puts a ticket back, withdraws it or edits it on main while a session's identities are kept"; D257).
+  it("K1, D174, REQ-FLOW-004, the user's sentence added on main while the killed session's work is not committed: the next run waits for the user's ruling, naming the ticket as changed on main, and takes nothing in; after the yes, the next run takes it in and inducts the whole ticket, bound to no stretch, keeps the sentence, and asks the user", async () => {
+    const ws = new Workspace(program())
+    const { ticket } = await toInductionEntry(ws)
+    const path = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
+    const before = readFileSync(path, "utf8")
+    const gate = join(temporary("stdo-builder-gate-"), "never")
+    const fixtures = NESTED_FIXTURES(CHOSEN, "", (f) => write(join(f, "induct-ticket", "work", "gate"), `${gate}\n`))
+    const running = ws.start(["run", ws.root, "--stand-in", fixtures])
+    await until(() => existsSync(path) && readFileSync(path, "utf8") !== before && wroteAll(fixtures, "induct-ticket", "work", ws.path(), path), 60)
+    running.kill()
+    await running.ended
+    const own = join(temporary("stdo-builder-own-"), "main")
+    ws.git(["worktree", "add", "-q", own, "main"])
+    appendFileSync(join(own, ".ai-workspace", "tickets", "active", `${ticket}.md`), `\n${SENTENCE}\n`)
+    ws.git(["-C", own, "commit", "-qam", "the user's sentence"])
+    ws.git(["worktree", "remove", own])
+    const from = ws.log().length
+    const ruling = await ws.run(NESTED_FIXTURES(CHOSEN, TRIAGE))
+    expect(ruling.code, ruling.out).toBe(0)
+    expect(ruling.out).toContain("cannot tell what changed then among the repository's branches, tags and stash")
+    expect(ruling.out).toContain("waits for your ruling")
+    expect(ruling.out).toContain(`- .ai-workspace/tickets/active/${ticket}.md (changed on main)`)
+    expect(await ws.gitSays(["merge-base", "--is-ancestor", "main", `stdo/${ticket}`])).not.toBe(0)
+    expect(readFileSync(path, "utf8")).not.toContain(SENTENCE)
+    await ws.answer("yes")
+    const said = await ws.run(NESTED_FIXTURES(CHOSEN, TRIAGE))
+    expect(sessionsIn(ws.log().slice(from))).toEqual(["induct-ticket work"])
+    expect(readFileSync(ws.path(".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8")).not.toContain("- stretch:")
+    expect(readFileSync(path, "utf8")).toContain(SENTENCE)
+    expect(said.out).toContain("waits for your answer on induct-ticket")
+  }, 240_000)
+
+  it("K1 after the run that follows the kill, D174: a run killed while the stretch's session was at work: the next run cannot tell what changed then among the branches and asks on the term; then the user's sentence added to the ticket on main: a run inducts the whole ticket, bound to no stretch, keeps the sentence, and asks the user", () => {
+    expect(killedThenEdited.ruling?.code, killedThenEdited.ruling?.out).toBe(0)
+    expect(killedThenEdited.ruling?.out).toContain("cannot tell what changed then among the repository's branches, tags and stash")
+    expect(killedThenEdited.ruling?.out).toContain("waits for your answer on induct-ticket")
     expect(killedThenEdited.said.code, killedThenEdited.said.out).toBe(0)
     expect(sessionsIn(killedThenEdited.log)).toEqual(["induct-ticket work"])
     expect(killedThenEdited.packet).not.toContain("- stretch:")

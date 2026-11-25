@@ -20,6 +20,7 @@ import { decide, end, sequence, using } from "../kit/calculus.js"
 import { anything, read, write } from "../kit/lossless_encoding.js"
 import { Files } from "../services/files.js"
 import type { Flow } from "../services/services.js"
+import { elsewhere, placedOf } from "./branch.js"
 import { note } from "./events.js"
 import { at, open, PLACES, recordedIn, releaseWords, running, sameBuilder, type Builder, type BuilderRecord, type Fault, type Opened } from "./workspace.js"
 
@@ -27,6 +28,7 @@ import { at, open, PLACES, recordedIn, releaseWords, running, sameBuilder, type 
 export type RecordGiven =
   | Exclude<Opened, { readonly root: string }>
   | { readonly refused: "settings" }
+  | { readonly elsewhere: string }
   | { readonly recorded: Builder; readonly was: BuilderRecord; readonly changed: boolean }
 
 /** The record's field in the settings. */
@@ -40,11 +42,14 @@ const withRecord = (fields: readonly (readonly [string, unknown])[], builder: Bu
     ? fields.flatMap(([name, value]) => (name === "definition" ? [[name, value] as const, [FIELD, builder] as const] : [[name, value] as const]))
     : [...fields, [FIELD, builder] as const]
 
-/** Records the release whose manifest would be at `manifest` as the one that builds the product in `folder`. */
+/** Records the release whose manifest would be at `manifest` as the one that builds the product in `folder`; refused while a ticket is active and the folder is not on its branch (REQ-FLOW-001, D239). */
 export const recordRelease = (folder: string, manifest: string): Flow<RecordGiven, Fault> =>
   decide(open(folder), (opened): Flow<RecordGiven, Fault> => {
     if ("refused" in opened) return end(opened)
     const place = at(opened.root, PLACES.settings)
+    return decide(placedOf(opened.root, opened.on), (placed): Flow<RecordGiven, Fault> => {
+    const off = elsewhere(placed)
+    if (off !== undefined) return end({ elsewhere: off })
     return using(Files, (files) =>
       decide(files.read(place), (text) =>
         decide(running(manifest), (now): Flow<RecordGiven, Fault> => {
@@ -59,4 +64,5 @@ export const recordRelease = (folder: string, manifest: string): Flow<RecordGive
             end({ recorded: now, was, changed: true })
           )
         })))
+    })
   })

@@ -1,20 +1,26 @@
 /**
  * Three-way merge from a common ancestor: git's merge of two lines of work.
- * This is the one module that asks git to keep lines of work: to make a
- * repository and to say the top of the one a folder lies in, a branch and its
- * checkout, to commit on a line, to merge one
- * line into another, and to say what a line changed. It decides nothing about
- * which side of a merge is right. It starts git through the supervised child
- * (C12).
+ * This is the one module that asks git to keep lines of work: to say git's
+ * version, to make a
+ * repository and to say the top of the one a folder lies in and git's own
+ * directory for it, to make a branch
+ * and put the folder on it, to commit on the line the folder is on, to take
+ * one line into another and merge one into another, and to say what a line
+ * changed. It makes no second folder: no working tree is made or pruned
+ * (REQ-FLOW-001, D238). It decides nothing about which side of a merge is
+ * right. It starts git through the supervised child (C12).
  *
  * A commit is made the way git makes one, from the files of the folder, and
- * goes on the line it names.
+ * goes on the line the folder is on.
  *
  * The folder may lie below the top of the repository (REQ-FLOW-001, D201).
  * Git is then started in the folder, so each path it is given or gives is
- * from the folder, and every commit, checkout, merge and change it reads
- * concerns only files under it. A ticket's checkout then holds only the
- * folder: git's sparse checkout, set for that checkout alone.
+ * from the folder, and every commit but one that takes main in or merges, and
+ * every change it reads, concerns only files under it; taking main in and the
+ * merge take the whole tree, since the repository's folder has one branch
+ * checked out, and a file git could not merge is given from the repository's
+ * top (D240). A merge of the user's own under way there is left as it is
+ * (D201).
  *
  * @carries C13
  */
@@ -54,21 +60,12 @@ const env = {
   GIT_EDITOR: "true"
 }
 /**
- * A ticket's checkout of a folder below the repository's top holds only the
- * folder, by the patterns git keeps for that checkout alone (D201). Git reads
- * them where these two settings are given; they are given on each call, not
- * written in the repository's settings, so the user's configuration is not
- * changed. Where a checkout has no patterns, as main's own folder and every
- * checkout of a repository of its own, git holds every file, as without them.
- */
-const sparse = ["-c", "core.sparseCheckout=true", "-c", "core.sparseCheckoutCone=false"]
-/**
  * Git starts no upkeep of its own after a merge, either: that runs detached,
  * past the child's return and its deadline (C12), and at 100,000 files
  * (REQ-PARAM-001) it is still writing in the workspace when the command has
  * ended. The user's own git commands keep the repository as its settings say.
  */
-const settings = ["-c", "commit.gpgsign=false", "-c", "core.hooksPath=/dev/null", "-c", "gc.auto=0", "-c", "maintenance.auto=false", ...sparse]
+const settings = ["-c", "commit.gpgsign=false", "-c", "core.hooksPath=/dev/null", "-c", "gc.auto=0", "-c", "maintenance.auto=false"]
 
 type Returned = Extract<Outcome, { outcome: "returned" }>
 type Env = Readonly<Record<string, string>>
@@ -111,6 +108,21 @@ const inGroups = (paths: readonly string[]): readonly (readonly string[])[] => {
 }
 
 /**
+ * Git's version, as `git --version` gives it, from its first line: the
+ * numbers after `git version`, such as `2.50.1`; none where git gives no such
+ * line. Git is asked that and nothing else, with no setting before it, in the
+ * system's top folder, so the folder named need not be there (D248).
+ */
+export const versionOf = (): Effect.Effect<string | undefined, LineRefused, Spawner> =>
+  supervise({ command: "git", args: ["--version"], cwd: "/", deadline: MINUTE, env: { ...clean, LC_ALL: "C" } }).pipe(
+    Effect.flatMap((o) =>
+      o.outcome === "returned"
+        ? Effect.succeed(o.code === 0 ? /^git version ([0-9]+(?:\.[0-9]+)+)/.exec(o.output.trim())?.[1] : undefined)
+        : Effect.fail(new LineRefused("/", "--version", o.outcome === "ran over" ? "git ran over" : o.why))
+    )
+  )
+
+/**
  * The top folder of the repository the folder lies in, as git gives it; none
  * only where git says the folder is in no repository. Git's words are read in
  * English, so this one call sets `LC_ALL=C`. Any other refusal is refused.
@@ -125,6 +137,15 @@ export const topOf = (folder: string): Effect.Effect<string | undefined, LineRef
         : Effect.fail(new LineRefused(folder, "rev-parse --show-toplevel", o.errors.trim() || o.output.trim()))
     )
   )
+
+/**
+ * Git's own directory for the folder, by its absolute path, as git gives it
+ * (`rev-parse --absolute-git-dir`): in a linked working tree, that tree's own.
+ * Git's commands that clean the folder or stash what it holds do not reach it
+ * (REQ-FLOW-001, D245).
+ */
+export const gitDirOf = (folder: string): Effect.Effect<string, LineRefused, Spawner> =>
+  must(folder, ["rev-parse", "--absolute-git-dir"]).pipe(Effect.map((out) => out.trim()))
 
 /** The folder's place from the top of its repository, as git gives it: empty at the top. */
 const prefixOf = (folder: string): Effect.Effect<string, LineRefused, Spawner> =>
@@ -161,13 +182,14 @@ export const tipOf = (folder: string, name: string): Effect.Effect<string | unde
 /** A line git writes to mark where it could not merge, at the start of a line: `<<<<<<<` or `>>>>>>>`. */
 const MARKER = "^(<<<<<<<|>>>>>>>)( |$)"
 
-/** What a commit gave: the new commit, or none where nothing changed; or, where git could not merge them, the files, and no commit. */
-export type Committed = { readonly commit: string | undefined } | { readonly unresolved: readonly string[] }
+/** What a commit gave: the new commit, or none where nothing changed; or, where git could not merge them, the files, each by its path from the repository's top, as `Merged` names them, with the folder's place from there (empty at the top), and no commit. */
+export type Committed = { readonly commit: string | undefined } | { readonly unresolved: readonly string[]; readonly within: string }
 
 /**
  * Commits what the folder holds, or what it holds at `paths`, on the line
  * named `line`, with `message`: its parent is that line's tip and that line is
- * moved, whatever the folder's HEAD names. Git is started in the folder, so
+ * moved. The folder must be on that line, or nothing is committed and git's
+ * refusal is given (REQ-FLOW-001, "Commit"). Git is started in the folder, so
  * the paths are from it, and what it holds is its files alone, files git
  * ignores left out (REQ-FLOW-001). At the top of a repository, git stages the
  * whole folder in the folder's own index (`add -A -- .`). For `paths`, or
@@ -182,24 +204,39 @@ export type Committed = { readonly commit: string | undefined } | { readonly unr
  *
  * A merge git could not make is never committed. Where git left a file of the
  * commit unmerged, or a file the commit changes holds a line marking a
- * conflict, nothing is committed and the files are given. A merge in progress
- * whose files are resolved is committed with both its parents, even where they
- * were resolved to what the line already held, from the folder's own index,
- * which holds what the merge took in. That is done in a ticket's checkout, or
- * where the folder is the top of its repository: a merge the user has under
- * way elsewhere in a larger repository is the user's (D201).
+ * conflict, nothing is committed and the files are given, each by its path
+ * from the repository's top. A merge in progress whose files are resolved is
+ * committed with both its parents, even where they were resolved to what the
+ * line already held, from the folder's own index, which holds what the merge
+ * took in. That is done where the folder is the top of its repository, and,
+ * below the top, only where the merge takes in a commit that the line `taken`
+ * holds: git's own merge of main into the ticket's branch, which the user
+ * resolved in the folder (D240). That commit takes the whole tree, outside the
+ * folder too, so while it is in progress a file git left unmerged, or one the
+ * merge changes that holds a line marking a conflict, is looked for in the
+ * whole repository. Below the top, any other merge in progress is the user's
+ * (D201): it is left in progress, and the commit is of the folder's files
+ * alone, with one parent, as where no merge is in progress. The files are
+ * then looked for under the folder, or at `paths`.
  */
-export const commit = (folder: string, index: string, line: string, message: string, paths?: readonly string[]): Effect.Effect<Committed, LineRefused, Spawner> =>
+export const commit = (folder: string, index: string, line: string, message: string, paths?: readonly string[], taken?: string): Effect.Effect<Committed, LineRefused, Spawner> =>
   Effect.gen(function*() {
     const only = ["--", ...(paths ?? ["."])]
+    const on = yield* currentLine(folder)
+    if (on !== line) return yield* Effect.fail(new LineRefused(folder, "commit", `the folder is ${on === undefined ? "on no branch" : `on ${on}`}, not on ${line}`))
     const head = yield* tipOf(folder, refOf(line))
     const within = (path: string) => paths === undefined || paths.some((p) => covers(p, path))
-    // Staging would take a file git left unmerged as resolved, so those are found first.
-    const unmerged = parts(yield* must(folder, ["ls-files", "-u", "-z"])).map((e) => e.slice(e.indexOf("\t") + 1)).filter(within)
-    if (unmerged.length > 0) return { unresolved: byName(new Set(unmerged)) }
     const prefix = yield* prefixOf(folder)
-    const [own = "", common = ""] = (yield* must(folder, ["rev-parse", "--path-format=absolute", "--git-dir", "--git-common-dir"])).trim().split("\n")
-    const merging = paths === undefined && (prefix === "" || own !== common) ? yield* tipOf(folder, "MERGE_HEAD") : undefined
+    const inProgress = paths === undefined ? yield* tipOf(folder, "MERGE_HEAD") : undefined
+    // Below the top, the merge in progress is the take-in's only where the line taken in holds what it takes in; any other is the user's, and is left as it is (D201, D240).
+    const takenIn = inProgress === undefined || prefix === "" || taken === undefined ? false : (yield* git(folder, ["merge-base", "--is-ancestor", inProgress, refOf(taken)])).code === 0
+    const merging = prefix === "" || takenIn ? inProgress : undefined
+    // While a merge is in progress git is asked from the repository's top, so it names each file from there; otherwise from the folder, and each file is named from the top by the folder's place.
+    const seen = merging === undefined ? folder : (yield* must(folder, ["rev-parse", "--show-toplevel"])).trim()
+    const fromTop = (path: string): string => (merging !== undefined || prefix === "" ? path : `${prefix}/${path}`)
+    // Staging would take a file git left unmerged as resolved, so those are found first.
+    const unmerged = parts(yield* must(seen, ["ls-files", "-u", "-z"])).map((e) => e.slice(e.indexOf("\t") + 1)).filter(within)
+    if (unmerged.length > 0) return { unresolved: byName(new Set(unmerged.map(fromTop))), within: prefix }
     const named = merging !== undefined || (paths === undefined && prefix === "") ? undefined : index
     const staging = named === undefined ? {} : { GIT_INDEX_FILE: named }
     if (named !== undefined) {
@@ -208,10 +245,10 @@ export const commit = (folder: string, index: string, line: string, message: str
     }
     yield* must(folder, ["add", "-A", ...only], staging)
     const tree = (yield* must(folder, ["write-tree"], staging)).trim()
-    const changed = parts(yield* must(folder, head === undefined ? ["ls-tree", "-r", "-z", "--name-only", tree] : ["diff-tree", "-r", "-z", "--name-only", "--no-renames", "--relative", head, tree]))
-    const found = yield* Effect.forEach(inGroups(changed), (group) => git(folder, ["grep", "-l", "-z", "-I", "-E", MARKER, tree, "--", ...group]))
+    const changed = parts(yield* must(seen, head === undefined ? ["ls-tree", "-r", "-z", "--name-only", tree] : ["diff-tree", "-r", "-z", "--name-only", "--no-renames", ...(merging === undefined ? ["--relative"] : []), head, tree]))
+    const found = yield* Effect.forEach(inGroups(changed), (group) => git(seen, ["grep", "-l", "-z", "-I", "-E", MARKER, tree, "--", ...group]))
     const marked = found.flatMap((o) => parts(o.output)).map((p) => p.slice(tree.length + 1))
-    if (marked.length > 0) return { unresolved: byName(new Set(marked)) }
+    if (marked.length > 0) return { unresolved: byName(new Set(marked.map(fromTop))), within: prefix }
     if (changed.length === 0 && merging === undefined) return { commit: undefined }
     const parents = [...(head === undefined ? [] : ["-p", head]), ...(merging === undefined ? [] : ["-p", merging])]
     const made = (yield* must(folder, ["commit-tree", tree, ...parents, "-m", message])).trim()
@@ -226,143 +263,257 @@ export const commit = (folder: string, index: string, line: string, message: str
   })
 
 /**
- * The checkout of `line` at `checkout`, made by git. Where the line does not
- * yet exist it is made from the line `from`; where its checkout is there, it
- * is taken up. Where `repository` lies below the top of its repository, the
- * checkout holds that folder alone: git makes it with no files, sets the
- * folder as its one pattern (`sparse-checkout set`, with the settings above,
- * so the repository's own settings are not changed) and then puts the files
- * under the folder in it (`read-tree -mu`). The folder is then at its place
- * from the top within the checkout (D201).
+ * Commits on `line` the file at `path`, from the folder, as `text` gives it,
+ * and nothing else: what the folder holds of that file or of any other is not
+ * staged (REQ-FLOW-006 step 3, D227). The commit's own index at `index` is
+ * read from the line's tip; the folder's own index then holds the file as the
+ * commit does. None where the text is what the tip holds.
  */
-export const checkoutOf = (repository: string, line: string, from: string, checkout: string): Effect.Effect<void, LineRefused, Spawner> =>
+export const commitText = (folder: string, index: string, line: string, message: string, path: string, text: string): Effect.Effect<string | undefined, LineRefused, Spawner> =>
   Effect.gen(function*() {
-    const listed = yield* must(repository, ["worktree", "list", "--porcelain", "-z"])
-    if (parts(listed).includes(`worktree ${checkout}`)) return
-    yield* must(repository, ["worktree", "prune"])
-    const exists = (yield* tipOf(repository, refOf(line))) !== undefined
-    const prefix = yield* prefixOf(repository)
-    const empty = prefix === "" ? [] : ["--no-checkout"]
-    yield* must(repository, exists ? ["worktree", "add", "-q", ...empty, checkout, line] : ["worktree", "add", "-q", ...empty, "-b", line, checkout, refOf(from)])
-    if (prefix === "") return
-    yield* must(checkout, ["sparse-checkout", "set", "--", `/${prefix.replace(/[\\*?[]/g, (c) => `\\${c}`)}/`])
-    yield* must(checkout, ["read-tree", "-mu", "HEAD"])
+    const on = yield* currentLine(folder)
+    if (on !== line) return yield* Effect.fail(new LineRefused(folder, "commit", `the folder is ${on === undefined ? "on no branch" : `on ${on}`}, not on ${line}`))
+    const head = yield* tipOf(folder, refOf(line))
+    if (head === undefined) return undefined
+    const staging = { GIT_INDEX_FILE: index }
+    // The path from the top of the folder's tree, where git reads it whatever folder it is started in.
+    const top = (yield* must(folder, ["rev-parse", "--show-toplevel"])).trim()
+    const prefix = yield* prefixOf(folder)
+    const full = prefix === "" ? path : `${prefix}/${path}`
+    yield* must(top, ["read-tree", head], staging)
+    const blob = (yield* must(top, ["hash-object", "-w", "--stdin"], {}, text)).trim()
+    yield* must(top, ["update-index", "--add", "--cacheinfo", `100644,${blob},${full}`], staging)
+    const tree = (yield* must(top, ["write-tree"], staging)).trim()
+    if (tree === (yield* must(top, ["rev-parse", `${head}^{tree}`])).trim()) return undefined
+    const made = (yield* must(top, ["commit-tree", tree, "-p", head, "-m", message])).trim()
+    yield* must(top, ["update-ref", "-m", `commit: ${message}`, refOf(line), made, head])
+    yield* must(top, ["update-index", "--add", "--cacheinfo", `100644,${blob},${full}`])
+    return made
+  })
+
+/**
+ * The lines of work the repository has as remote branches, by the name each
+ * has below its remote (`refs/remotes/<remote>/<name>`), named one of `names`
+ * or below one, each with the full name of the first remote that has it: what
+ * a clone holds of the lines its origin had (REQ-FLOW-003 step 1).
+ */
+export const remoteLines = (folder: string, names: readonly string[]): Effect.Effect<ReadonlyMap<string, string>, LineRefused, Spawner> =>
+  must(folder, ["for-each-ref", "--format=%(refname)", "refs/remotes"]).pipe(
+    Effect.map((out) => {
+      const found = new Map<string, string>()
+      for (const ref of out.split("\n").filter((r) => r !== "")) {
+        const name = ref.split("/").slice(3).join("/")
+        if (name !== "" && names.some((n) => name === n || covers(n, name)) && !found.has(name)) found.set(name, ref)
+      }
+      return found
+    })
+  )
+
+/**
+ * Of the files asked for, each a name of git's, such as a line, and a path
+ * from the folder, the ones git holds there, by their place in the list: one
+ * `cat-file --batch-check` for all, which reads no content (D239).
+ */
+export const presentAt = (folder: string, asked: readonly (readonly [string, string])[]): Effect.Effect<ReadonlySet<number>, LineRefused, Spawner> =>
+  Effect.gen(function*() {
+    if (asked.length === 0) return new Set<number>()
+    const prefix = yield* prefixOf(folder)
+    const input = asked.map(([rev, path]) => `${rev}:${prefix === "" ? path : `${prefix}/${path}`}\n`).join("")
+    const lines = (yield* must(folder, ["cat-file", "--batch-check=%(objecttype)"], {}, input)).split("\n")
+    return new Set(asked.flatMap((_, i) => (lines[i] === "blob" ? [i] : [])))
+  })
+
+/** The names of the files in the folder at `path`, from the workspace's folder, under the name `rev` of git's; none where there is no such folder there. It reads no content. */
+export const namesAt = (folder: string, rev: string, path: string): Effect.Effect<readonly string[], LineRefused, Spawner> =>
+  git(folder, ["ls-tree", "-z", "--full-tree", "--name-only", `${rev}:./${path}`]).pipe(Effect.map((o) => (o.code === 0 ? parts(o.output) : [])))
+
+/** Makes the line `line` at `commit`, where there is none of that name; git refuses where there is (`update-ref` with no old value). */
+export const makeLine = (folder: string, line: string, commit: string): Effect.Effect<void, LineRefused, Spawner> =>
+  must(folder, ["update-ref", "-m", `branch: ${line}`, refOf(line), commit, ""]).pipe(Effect.asVoid)
+
+/** Each working tree of the repository, by its folder, with the line it has checked out, where it has one (`worktree list --porcelain`). It writes nothing: it neither makes nor prunes one. */
+const workingTrees = (folder: string): Effect.Effect<readonly { readonly folder: string; readonly line?: string }[], LineRefused, Spawner> =>
+  must(folder, ["worktree", "list", "--porcelain", "-z"]).pipe(
+    Effect.map((out) => {
+      const trees: { folder: string; line?: string }[] = []
+      for (const field of out.split("\0")) {
+        if (field.startsWith("worktree ")) trees.push({ folder: field.slice("worktree ".length) })
+        const last = trees[trees.length - 1]
+        const named = field.startsWith("branch ") ? lineNamed(field.slice("branch ".length)) : undefined
+        if (last !== undefined && named !== undefined) last.line = named
+      }
+      return trees
+    })
+  )
+
+/** The working tree, other than the one the folder lies in, that has the line `line` checked out; none where no other has it (D239). */
+export const heldElsewhere = (folder: string, line: string): Effect.Effect<string | undefined, LineRefused, Spawner> =>
+  Effect.gen(function*() {
+    const own = (yield* must(folder, ["rev-parse", "--show-toplevel"])).trim()
+    const trees = yield* workingTrees(folder)
+    return trees.find((t) => t.line === line && t.folder !== own)?.folder
+  })
+
+/** What putting the folder on a line gave: done, or git's refusal, with the working tree that has the line checked out where that is why. */
+export type Switched = { readonly switched: true } | { readonly refused: string; readonly elsewhere?: string }
+
+/**
+ * Puts the folder on the line `line` (REQ-FLOW-001, "Open a branch"). Where
+ * another working tree has it checked out, git would refuse, and so does
+ * this, naming that tree. Where the line is on the commit the folder is on,
+ * only HEAD is moved (`symbolic-ref`), so no file is written. Otherwise git
+ * puts it there (`switch`), and its refusal is given as git words it.
+ */
+export const switchTo = (folder: string, line: string): Effect.Effect<Switched, LineRefused, Spawner> =>
+  Effect.gen(function*() {
+    const elsewhere = yield* heldElsewhere(folder, line)
+    if (elsewhere !== undefined) return { refused: `'${line}' is already used by worktree at '${elsewhere}'`, elsewhere }
+    const tip = yield* tipOf(folder, refOf(line))
+    if (tip === undefined) return { refused: `there is no branch ${line}` }
+    if (tip === (yield* tipOf(folder, "HEAD"))) {
+      yield* must(folder, ["symbolic-ref", "-m", `switch: ${line}`, "HEAD", refOf(line)])
+      return { switched: true }
+    }
+    const o = yield* git(folder, ["switch", "--quiet", line], { LC_ALL: "C" })
+    return o.code === 0 ? { switched: true } : { refused: (o.errors || o.output).trim() }
   })
 
 export type Merged =
   | { readonly merged: "yes"; readonly changed: boolean }
+  /** Git could not merge `files` by itself, each by its path from the repository's top. */
   | { readonly merged: "conflict"; readonly files: readonly string[] }
-  | { readonly merged: "refused"; readonly why: string }
+  /** Git refused; `files` where it refused for what the user has not committed in them, by path from the repository's top; `elsewhere`, where the line merged into is checked out in another working tree; `inTheWay`, where a path the take-in adds, or a folder on the way to it, is there already and git does not hold it, by path from the top (D250). */
+  | { readonly merged: "refused"; readonly why: string; readonly files?: readonly string[]; readonly elsewhere?: string; readonly inTheWay?: readonly string[] }
+
+/** What the merge into the line a ticket left gave: no conflict, since it takes the branch's tree whole (D240). */
+export type MergedInto = Exclude<Merged, { readonly merged: "conflict" }>
+
+/** The files git names where it refuses to write over what the user has not committed or has not added, by path from the repository's top. */
+const refusedFiles = (words: string): readonly string[] =>
+  byName(new Set(words.split("\n").flatMap((l) => {
+    const m = /(?:Entry|Untracked working tree file) '([^']+)' (?:not uptodate|would be overwritten)/.exec(l)
+    return m?.[1] === undefined ? [] : [m[1]]
+  })))
 
 /**
- * Merges the line `from` into the line `line`, which `folder` has checked
- * out. Git merges into what the folder's HEAD names, so where the folder is
- * not on `line` the merge is refused, and nothing is merged. A merge git
- * cannot make by itself is left as git leaves it, with the files under the
- * folder it could not merge named from the folder (`--relative`, D201).
+ * Of the paths the take-in adds, from the commit `from` to the tree or commit
+ * `to`, each that is there already in the repository's folder, inside the
+ * workspace's folder or outside it, and that git does not hold: the path
+ * itself, as a file, or as a folder that holds a file git does not hold; or a
+ * folder on the way to it, there as a file. Each by its path from the
+ * repository's top, in the order of the names. Git ignores some of them, and
+ * its own take-in would write over those with no word (REQ-FLOW-008, D250).
+ * Git lists them, with every file it does not hold, ignored or not, and each
+ * folder that holds no file it holds as one entry ending in `/`; each path is
+ * given to it literally, from the repository's top.
  */
-export const merge = (folder: string, line: string, from: string, message: string, fastForward: boolean): Effect.Effect<Merged, LineRefused, Spawner> =>
+const inTheWay = (folder: string, from: string, to: string): Effect.Effect<readonly string[], LineRefused, Spawner> =>
   Effect.gen(function*() {
-    const on = yield* currentLine(folder)
-    if (on !== line) return { merged: "refused", why: `${folder} is ${on === undefined ? "on no line of work" : `on ${on}`}, not on ${line}` } as const
-    const before = yield* tipOf(folder, "HEAD")
-    const o = yield* git(folder, ["merge", "--no-edit", fastForward ? "--ff" : "--no-ff", "-m", message, refOf(from)])
-    if (o.code === 0) return { merged: "yes", changed: (yield* tipOf(folder, "HEAD")) !== before } as const
-    const files = parts(yield* must(folder, ["diff", "--name-only", "--diff-filter=U", "--relative", "-z"]))
-    return files.length > 0 ? ({ merged: "conflict", files } as const) : ({ merged: "refused", why: (o.errors || o.output).trim() } as const)
-  })
-
-/** The entries of a tree, as git lists them from its top (`ls-tree --full-tree`, whatever folder git is started in), each with its name. */
-const entriesOf = (folder: string, tree: string, path?: string): Effect.Effect<readonly { readonly entry: string; readonly name: string; readonly id: string; readonly type: string }[], LineRefused, Spawner> =>
-  must(folder, ["ls-tree", "-z", "--full-tree", tree, ...(path === undefined ? [] : ["--", path])]).pipe(
-    Effect.map((out) =>
-      parts(out).map((entry) => {
-        const tab = entry.indexOf("\t")
-        const [, type = "", id = ""] = entry.slice(0, tab).split(" ")
-        return { entry, name: entry.slice(tab + 1), id, type }
-      })
-    )
-  )
-
-/** The tree at `path`, from the top, in the tree `tree`; none where there is no folder there. */
-const treeAt = (folder: string, tree: string, path: string): Effect.Effect<string | undefined, LineRefused, Spawner> =>
-  entriesOf(folder, tree, path).pipe(Effect.map((found) => found.find((e) => e.name === path && e.type === "tree")?.id))
-
-/**
- * The tree `tree` with the tree `put` at the path whose folders are `path`,
- * from the top, and every other entry as `tree` has it: each tree on the way
- * is written again by git (`mktree`), and no index is used. A folder on the
- * way that `tree` does not have is made.
- */
-const graft = (folder: string, tree: string, path: readonly string[], put: string): Effect.Effect<string, LineRefused, Spawner> =>
-  Effect.gen(function*() {
-    const [name, ...rest] = path
-    if (name === undefined) return put
-    const entries = yield* entriesOf(folder, tree)
-    const there = entries.find((e) => e.name === name && e.type === "tree")?.id ?? (yield* must(folder, ["mktree", "-z"], {}, "")).trim()
-    const inner = yield* graft(folder, there, rest, put)
-    const kept = entries.filter((e) => e.name !== name).map((e) => e.entry)
-    return (yield* must(folder, ["mktree", "-z", "--missing"], {}, [...kept, `040000 tree ${inner}\t${name}`].map((e) => `${e}\0`).join(""))).trim()
+    const top = yield* topOf(folder)
+    if (top === undefined) return []
+    const added = parts(yield* must(top, ["diff-tree", "-r", "-z", "--name-only", "--diff-filter=A", from, to]))
+    if (added.length === 0) return []
+    const ways = [...new Set(added.flatMap((p) => p.split("/").slice(0, -1).map((_, i, all) => all.slice(0, i + 1).join("/"))))]
+    const listed = (paths: readonly string[]) =>
+      Effect.map(Effect.forEach(inGroups(paths), (group) => must(top, ["--literal-pathspecs", "ls-files", "--others", "--directory", "-z", "--", ...group])), (outs) => outs.flatMap(parts))
+    const adds = new Set(added)
+    const found = new Set<string>()
+    // A path the take-in adds is in the way where git lists it, or a file below it.
+    for (const entry of yield* listed(added)) {
+      const path = entry.replace(/\/$/, "")
+      const named = adds.has(path) ? path : added.find((p) => covers(p, path))
+      if (named !== undefined) found.add(named)
+    }
+    // A folder on the way is in the way where git lists it as a file, with no `/`.
+    const onTheWay = new Set(ways)
+    for (const entry of ways.length === 0 ? [] : yield* listed(ways)) if (onTheWay.has(entry)) found.add(entry)
+    return byName(found)
   })
 
 /**
- * Merges the line `from` into the line `line`, which the repository's own
- * folder has checked out, with a commit of the merge. Where the folder is the
- * top of its repository, it is `merge`, with no fast-forward. Where it lies
- * below, git's merge would refuse while the user has a file staged anywhere in
- * the repository, so git makes the merge apart from the index
- * (`merge-tree --write-tree`). The merge takes the folder alone from it:
- * the commit's tree is the line's own tree with the folder's tree from git's
- * merge in its place (`graft`), so outside the folder every file is as the
- * line had it, whatever the other line changed there, and a file git could
- * not merge outside the folder is no conflict. Git commits it
- * (`commit-tree`), puts what the merge changed in the index and the files
- * (`read-tree -m -u`), which refuses where that would overwrite a change the
- * user has not committed, and only then moves the line (`update-ref`). Every
- * other file and entry of the index stays as the user left it (REQ-FLOW-008,
- * D201). Where git cannot merge a file under the folder by itself, nothing is
- * written and the files are named, from the folder.
+ * Takes the line `from` into the line `line`, which the folder has checked
+ * out, in the folder (REQ-FLOW-008 step 1). Where `from` is held already,
+ * nothing is done. Git makes the merge apart from the index first
+ * (`merge-tree --write-tree`), so a file the user staged anywhere in the
+ * repository is no refusal; where `line` holds nothing `from` lacks, the
+ * merge is `from` itself. Git puts what it changed in the index and the files
+ * (`read-tree -m -u`), which refuses where that would write over what the user
+ * has not committed or has not added: the files are then named and nothing is
+ * taken in. Only then is the line moved (`update-ref`). Where git cannot merge
+ * a file by itself, git's own merge is run in the folder so the user resolves
+ * it there, and each file it could not merge is named by its path from the
+ * repository's top, as git names it; a merge git left unmerged is that, and no
+ * refusal. Where that merge refuses, nothing is taken in. Before any of it,
+ * where a path the take-in adds, or a folder on the way to it, is there
+ * already and git does not hold it, nothing is taken in and each is named
+ * (D250).
  */
-export const mergeInto = (folder: string, line: string, from: string, message: string): Effect.Effect<Merged, LineRefused, Spawner> =>
+export const takeInto = (folder: string, line: string, from: string, message: string): Effect.Effect<Merged, LineRefused, Spawner> =>
   Effect.gen(function*() {
-    const prefix = yield* prefixOf(folder)
-    if (prefix === "") return yield* merge(folder, line, from, message, false)
     const on = yield* currentLine(folder)
-    if (on !== line) return { merged: "refused", why: `${folder} is ${on === undefined ? "on no line of work" : `on ${on}`}, not on ${line}` } as const
+    if (on !== line) return { merged: "refused", why: `${folder} is ${on === undefined ? "on no branch" : `on ${on}`}, not on ${line}` } as const
     const before = yield* tipOf(folder, refOf(line))
     const theirs = yield* tipOf(folder, refOf(from))
     if (before === undefined || theirs === undefined) return { merged: "refused", why: `${line} or ${from} has no commit` } as const
-    const o = yield* git(folder, ["merge-tree", "--write-tree", "-z", "--name-only", refOf(line), refOf(from)])
-    const [first = "", ...conflicted] = (o.output.split("\0\0")[0] ?? "").split("\0")
-    if (o.code !== 0 && o.code !== 1) return { merged: "refused", why: (o.errors || o.output).trim() } as const
-    const under = conflicted.filter((p) => p !== "" && covers(prefix, p)).map((p) => p.slice(prefix.length + 1))
-    if (under.length > 0) return { merged: "conflict", files: byName(new Set(under)) } as const
-    const merged = yield* treeAt(folder, first.trim(), prefix)
-    if (merged === undefined) return { merged: "refused", why: `git's merge holds no folder ${prefix}` } as const
-    const own = (yield* must(folder, ["rev-parse", "--verify", `${before}^{tree}`])).trim()
-    const tree = yield* graft(folder, own, prefix.split("/"), merged)
-    const made = (yield* must(folder, ["commit-tree", tree, "-p", before, "-p", theirs, "-m", message])).trim()
-    const put = yield* git(folder, ["read-tree", "-m", "-u", before, made])
-    if (put.code !== 0) return { merged: "refused", why: (put.errors || put.output).trim() } as const
+    if ((yield* git(folder, ["merge-base", "--is-ancestor", theirs, before])).code === 0) return { merged: "yes", changed: false } as const
+    const forward = (yield* git(folder, ["merge-base", "--is-ancestor", before, theirs])).code === 0
+    const o = forward ? undefined : yield* git(folder, ["merge-tree", "--write-tree", "-z", "--name-only", refOf(line), refOf(from)])
+    if (o !== undefined && o.code !== 0 && o.code !== 1) return { merged: "refused", why: (o.errors || o.output).trim() } as const
+    // The tree the take-in gives, whether or not git could merge every file: what it adds is looked at before anything is written (D250).
+    const tree = o === undefined ? theirs : (o.output.split("\0")[0] ?? "").trim()
+    const way = yield* inTheWay(folder, before, tree)
+    if (way.length > 0) return { merged: "refused", why: `${from} adds ${way.join(", ")}, where a file or a folder that git does not hold is there already`, inTheWay: way } as const
+    if (o !== undefined && o.code === 1) {
+      const m = yield* git(folder, ["merge", "--no-edit", "--no-ff", "-m", message, refOf(from)], { LC_ALL: "C" })
+      // Each file git left unmerged, by its path from the repository's top.
+      const files = parts(yield* must(folder, ["diff", "--name-only", "--diff-filter=U", "-z"]))
+      if (files.length > 0) return { merged: "conflict", files } as const
+      const why = (m.errors || m.output).trim()
+      return { merged: "refused", why, files: refusedFiles(why) } as const
+    }
+    const made = o === undefined ? theirs : (yield* must(folder, ["commit-tree", (o.output.split("\0")[0] ?? "").trim(), "-p", before, "-p", theirs, "-m", message])).trim()
+    const put = yield* git(folder, ["read-tree", "-m", "-u", before, made], { LC_ALL: "C" })
+    if (put.code !== 0) {
+      const why = (put.errors || put.output).trim()
+      return { merged: "refused", why, files: refusedFiles(why) } as const
+    }
     yield* must(folder, ["update-ref", "-m", `merge: ${message}`, refOf(line), made, before])
     return { merged: "yes", changed: true } as const
   })
 
-/** The file at `path` as the line `from` has it, put in the checkout and in git's index by git. */
+/**
+ * Merges the line `from` into the line `line` (REQ-FLOW-008 step 2): `line`
+ * is an ancestor of `from`, so the merge's content is `from`'s own. Git makes
+ * the merge commit from `from`'s whole tree with both lines as its parents
+ * (`commit-tree`), moves `line` to it (`update-ref`, from the tip it read) and
+ * puts the folder on `line` (`symbolic-ref`). No file is written and the index
+ * is not touched, so what the user has uncommitted, staged or untracked is as
+ * it was. Where another working tree has `line` checked out, or `line` is not
+ * an ancestor of `from`, nothing is done. No file is merged, so git meets no
+ * conflict here.
+ */
+export const mergeInto = (folder: string, line: string, from: string, message: string): Effect.Effect<MergedInto, LineRefused, Spawner> =>
+  Effect.gen(function*() {
+    const elsewhere = yield* heldElsewhere(folder, line)
+    if (elsewhere !== undefined) return { merged: "refused", why: `${line} is checked out in the working tree at ${elsewhere}`, elsewhere } as const
+    const before = yield* tipOf(folder, refOf(line))
+    const theirs = yield* tipOf(folder, refOf(from))
+    if (before === undefined || theirs === undefined) return { merged: "refused", why: `${line} or ${from} has no commit` } as const
+    if ((yield* git(folder, ["merge-base", "--is-ancestor", before, theirs])).code !== 0) return { merged: "refused", why: `${from} does not hold all of ${line}` } as const
+    const tree = (yield* must(folder, ["rev-parse", "--verify", `${theirs}^{tree}`])).trim()
+    const made = (yield* must(folder, ["commit-tree", tree, "-p", before, "-p", theirs, "-m", message])).trim()
+    yield* must(folder, ["update-ref", "-m", `merge: ${message}`, refOf(line), made, before])
+    yield* must(folder, ["symbolic-ref", "-m", `merge: ${message}`, "HEAD", refOf(line)])
+    return { merged: "yes", changed: true } as const
+  })
+
+/** The file at `path` as the line `from` has it, put in the folder and in git's index by git. */
 export const takeFrom = (folder: string, from: string, path: string): Effect.Effect<void, LineRefused, Spawner> =>
   must(folder, ["checkout", refOf(from), "--", path]).pipe(Effect.asVoid)
 
-/**
- * The line checked out in `folder` holds all of the line `name` under the
- * folder: every commit of it, or every change it made under the folder since
- * the two last met (`diff HEAD...name -- .`). A line that has moved only
- * outside the folder is held (REQ-FLOW-008, D201).
- */
+/** The line checked out in `folder` holds all of the line `name`: every commit of it, wherever in the repository it changed a file (REQ-FLOW-008, D240). */
 export const holdsAll = (folder: string, name: string): Effect.Effect<boolean, LineRefused, Spawner> =>
-  Effect.gen(function*() {
-    if ((yield* git(folder, ["merge-base", "--is-ancestor", refOf(name), "HEAD"])).code === 0) return true
-    return (yield* git(folder, ["diff", "--quiet", `HEAD...${refOf(name)}`, "--", "."])).code === 0
-  })
+  git(folder, ["merge-base", "--is-ancestor", refOf(name), "HEAD"]).pipe(Effect.map((o) => o.code === 0))
 
 /** The files under the folder that differ between two commits, or over a range such as `a...b`, by their paths from the folder, with how many lines of each were added or taken out (D201). */
 export const changedLines = (folder: string, from: string, to?: string): Effect.Effect<readonly Changed[], LineRefused, Spawner> =>
@@ -387,6 +538,110 @@ export interface Changed {
 /** The commit where `from` and the line `name` last met, git's merge base; none where they share none (REQ-FLOW-006, D211). */
 export const mergeBase = (folder: string, from: string, name: string): Effect.Effect<string | undefined, LineRefused, Spawner> =>
   git(folder, ["merge-base", from, refOf(name)]).pipe(Effect.map((r) => (r.code === 0 && r.output.trim() !== "" ? r.output.trim() : undefined)))
+
+/**
+ * The commits the line `line` holds and `from` does not, merges left out, whose
+ * message is `message` and nothing else and which change a file at one of
+ * `paths`, from the folder; oldest first (REQ-ALG-007, D244).
+ */
+export const commitsWith = (folder: string, from: string, line: string, message: string, paths: readonly string[]): Effect.Effect<readonly string[], LineRefused, Spawner> =>
+  paths.length === 0
+    ? Effect.succeed([])
+    : must(folder, ["rev-list", "--reverse", "--no-merges", "--fixed-strings", `--grep=${message}`, "--format=%H%x00%B", `${from}..${refOf(line)}`, "--", ...paths]).pipe(
+      Effect.map((out) =>
+        // rev-list prints a line `commit <id>` before each format; only a message that is `message` alone counts.
+        out.split(/^commit [0-9a-f]+\n/m).filter((e) => e !== "").flatMap((e) => {
+          const [id = "", body = ""] = e.split("\0")
+          return body.trim() === message ? [id.trim()] : []
+        })
+      )
+    )
+
+/** Each branch, tag and the stash, by its full name, with the commit it is on (D228). */
+export const refs = (folder: string): Effect.Effect<ReadonlyMap<string, string>, LineRefused, Spawner> =>
+  must(folder, ["for-each-ref", "--format=%(refname) %(objectname)", "refs/heads", "refs/tags", "refs/stash"]).pipe(
+    Effect.map((out) => new Map(out.split("\n").filter((l) => l.includes(" ")).map((l) => [l.slice(0, l.lastIndexOf(" ")), l.slice(l.lastIndexOf(" ") + 1)] as const)))
+  )
+
+/**
+ * What git lists as changed, staged or untracked under the repository's top,
+ * outside the folder `within`, by path from the top, each with whether git
+ * tracks it; it reads no file's content beyond what git's own listing does
+ * (D228, D243).
+ */
+export const outside = (top: string, within: string): Effect.Effect<ReadonlyMap<string, "tracked" | "untracked">, LineRefused, Spawner> =>
+  Effect.gen(function*() {
+    const out = (p: string) => p !== "" && !p.endsWith("/") && !(within !== "" && covers(within, p))
+    const untracked = parts(yield* must(top, ["ls-files", "-z", "--others", "--exclude-standard"])).filter(out)
+    const tracked = parts(yield* must(top, ["ls-files", "-z", "--modified", "--deleted"])).filter(out)
+    const head = yield* tipOf(top, "HEAD")
+    const staged = head === undefined ? [] : parts(yield* must(top, ["diff-index", "--cached", "--name-only", "--no-renames", "-z", head])).filter(out)
+    return new Map<string, "tracked" | "untracked">([...untracked.map((p) => [p, "untracked"] as const), ...[...tracked, ...staged].map((p) => [p, "tracked"] as const)])
+  })
+
+/** What happened to a file between two commits: added, changed or removed. */
+export type Happened = "added" | "changed" | "removed"
+
+/**
+ * Each file outside the folder `within` that differs between the commits
+ * `from` and `to`, by path from the repository's top, with what happened to
+ * it: one `diff-tree` of the whole tree, which compares the identities git
+ * holds and reads no file's content; with no renames found, since finding one
+ * reads content (D256).
+ */
+export const committedOutside = (top: string, within: string, from: string, to: string): Effect.Effect<readonly (readonly [string, Happened])[], LineRefused, Spawner> =>
+  must(top, ["diff-tree", "-r", "-z", "--no-renames", "--name-status", from, to]).pipe(
+    Effect.map((out) => {
+      const fields = parts(out)
+      const found = new Map<string, Happened>()
+      for (let i = 0; i + 1 < fields.length; i += 2) {
+        const status = fields[i] ?? ""
+        const path = fields[i + 1] ?? ""
+        if (within !== "" && covers(within, path)) continue
+        found.set(path, status.startsWith("A") ? "added" : status.startsWith("D") ? "removed" : "changed")
+      }
+      return byName(found.keys()).map((p) => [p, found.get(p) ?? "changed"] as const)
+    })
+  )
+
+/** One file that differs between two commits, by path from the repository's top: what happened to it, and the identity each commit gives it, empty where it holds none (D257). */
+export interface Differs {
+  readonly path: string
+  readonly how: Happened
+  readonly from: string
+  readonly to: string
+}
+
+/** The identity git gives a file a commit does not hold. */
+const NO_FILE = /^0+$/
+
+/**
+ * Each file that differs between the commits `from` and `to`, anywhere in the
+ * repository, by path from its top, with what happened to it and the identity
+ * each commit gives it: one `diff-tree` of the whole tree, which compares the
+ * identities git holds and reads no file's content; with no renames found,
+ * and each identity whole (D257).
+ */
+export const differsBetween = (top: string, from: string, to: string): Effect.Effect<readonly Differs[], LineRefused, Spawner> =>
+  must(top, ["diff-tree", "-r", "-z", "--no-renames", "--no-abbrev", from, to]).pipe(
+    Effect.map((out) => {
+      const fields = parts(out)
+      const found = new Map<string, Differs>()
+      for (let i = 0; i + 1 < fields.length; i += 2) {
+        // `:<mode> <mode> <identity> <identity> <status>`, then the path.
+        const [, , a = "", b = "", status = ""] = (fields[i] ?? "").split(" ")
+        const path = fields[i + 1] ?? ""
+        found.set(path, { path, how: status.startsWith("A") ? "added" : status.startsWith("D") ? "removed" : "changed", from: NO_FILE.test(a) ? "" : a, to: NO_FILE.test(b) ? "" : b })
+      }
+      return byName(found.keys()).flatMap((p) => found.get(p) ?? [])
+    })
+  )
+
+/** Of the paths given, by path from the repository's top, those the commit holds: one `ls-tree` for each group of paths, which reads no file. */
+export const heldBy = (top: string, commit: string, paths: readonly string[]): Effect.Effect<ReadonlySet<string>, LineRefused, Spawner> =>
+  Effect.forEach(inGroups(paths), (group) => must(top, ["ls-tree", "-r", "-z", "--full-tree", "--name-only", commit, "--", ...group])).pipe(
+    Effect.map((outs) => new Set(outs.flatMap(parts)))
+  )
 
 /** The lines of work named one of `names`, or below one of them as `stdo/x` is below `stdo`, by name. */
 export const linesNamed = (folder: string, names: readonly string[]): Effect.Effect<readonly string[], LineRefused, Spawner> =>

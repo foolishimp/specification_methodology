@@ -1,8 +1,8 @@
 /**
  * QA-06, REQ-FLOW-006 and REQ-INTERFACE: every path a question, a run's end
  * or `show` names is one the user can open as written from the workspace's
- * folder. The work on a ticket lies in its checkout, so a path of the
- * checkout is given from the workspace's folder. On S1's way, the questions
+ * folder. The work on a ticket is done in that folder, on the ticket's
+ * branch, and no second folder is named. On S1's way, the questions
  * on the induction and on the requirements are read; with S5's failing code,
  * the stopped run and `show`.
  *
@@ -47,10 +47,11 @@ describe("QA-06 the paths the framework names are ones the user can open as writ
     })
   }
 
-  it("the questions name the ticket's checkout", () => {
-    const checkout = `.stdo-builder/local/checkouts/${ticket}`
-    expect(said.induction.out).toContain(`${checkout}/.ai-workspace/tickets/active/${ticket}.md`)
-    expect(said.requirements.out).toContain(`${checkout}/specification/requirements`)
-    expect(said.shown.out).toContain(`${checkout}/.stdo-builder/local/found/write-build.md`)
+  it("the questions name each path from the workspace's folder, and no second folder (D238)", () => {
+    expect(said.induction.out).toContain(` .ai-workspace/tickets/active/${ticket}.md`)
+    expect(said.requirements.out).toContain(" specification/requirements")
+    expect(said.shown.out).toContain(" .stdo-builder/local/found/write-build.md")
+    for (const s of [said.induction, said.requirements, said.shown]) expect(s.out).not.toContain(".stdo-builder/local/checkouts")
+    expect(existsSync(join(ws.root, ".stdo-builder", "local", "checkouts"))).toBe(false)
   })
 })

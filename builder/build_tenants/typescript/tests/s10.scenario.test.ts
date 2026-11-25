@@ -74,7 +74,7 @@ describe("S10 Two agents", () => {
   })
 
   it("nothing but the one setting and the code was changed by hand", () => {
-    const byHand = log.filter((e) => e.event === "commit made" && e.why === "what the user left uncommitted on main").map((e) => e.commit ?? "")
+    const byHand = log.filter((e) => e.event === "commit made" && e.why === "what the user left uncommitted").map((e) => e.commit ?? "")
     expect(byHand).toHaveLength(1)
     expect(ws.git(["rev-parse", `${byHand[0]}^`]).trim()).toBe(mainBefore)
     const changed = ws.git(["diff", "--name-only", mainBefore, byHand[0] ?? ""]).trim().split("\n")

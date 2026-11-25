@@ -29,6 +29,11 @@
  * Of the method, a packet admits only the sections its frame names, and gives
  * where the release is installed only then (D103, D104).
  *
+ * Inside a larger repository, every packet says in one sentence that the
+ * folder lies inside it, that the files outside the folder are the user's and
+ * no part of the step, and that a git command given without a path acts on
+ * the whole repository (D256).
+ *
  * Both give what the graph says the asset must be: the results each node it
  * writes declares (for the first vector, the ticket's, which it declares), their
  * checks, and the checks of the other assets the vectors that take part write
@@ -56,7 +61,7 @@ import { factsOf, TICKET, type Given, type Snapshot } from "./facts.js"
 import { byPath } from "./identity.js"
 import { takesPart } from "./next.js"
 import { against, identityNow, recordAt, recordsOf, since, TERM } from "./passes.js"
-import { guarded, type FrameworkPlaces } from "./trespass.js"
+import { writes as stepWrites, type FrameworkPlaces } from "./trespass.js"
 import { declaredAt, placedOf, type WellFormed } from "./well_formed.js"
 
 /** The method release the definition file selects: its identity, and where the method keeps it installed, where that is known (D89). */
@@ -71,6 +76,8 @@ export interface Basis {
   readonly places: FrameworkPlaces
   readonly release?: Release
   readonly limits?: { readonly sessions?: number; readonly minutes?: number }
+  /** The workspace's folder lies inside a larger git repository, below its top (REQ-FLOW-001, D256). */
+  readonly inside?: true
 }
 
 export interface Asset {
@@ -123,9 +130,8 @@ interface Shared {
   /** The ticket holds a ruling of the user, which binds the session (REQ-FLOW-004). */
   readonly ruled?: true
   readonly basis: Basis
-  /** The places the session may write, and those it must not change (REQ-ALG-008). */
+  /** The places the session may write; anything else that differs when it is over is named to the user (REQ-ALG-008). */
   readonly write: readonly string[]
-  readonly guarded: readonly string[]
   /** Who decides on the asset, in words. */
   readonly decision: string
   readonly minutes: number
@@ -163,6 +169,8 @@ export interface OnMain {
   readonly name: string
   readonly paths: readonly string[]
   readonly commit?: string
+  /** Each commit on the ticket's branch that holds the user's change by hand at the node, oldest first (D244). */
+  readonly byHand?: readonly string[]
 }
 
 export interface EvaluationBrief extends Shared {
@@ -259,7 +267,8 @@ export function brief(graph: WellFormed, vector: Vector, kind: "work" | "evaluat
       })
     }
   }
-  const fenced = guarded(graph, vector, kind, basis.places)
+  // Beside the nodes it writes, a working session may write the top `.gitignore`; an evaluating session its findings and its verdict, and nothing else (REQ-ALG-008, D99, D226).
+  const free = stepWrites(graph, vector, kind).filter((place) => kind === "evaluation" || place === ".gitignore")
   const kept = keptAt(recordsOf(graph, vector, "decision"), produced)
   const own = produced.map((name) => assetOf(name).place)
   const first = graph.graph.vectors.find((v) => v.first === true)
@@ -270,7 +279,6 @@ export function brief(graph: WellFormed, vector: Vector, kind: "work" | "evaluat
   const shared = {
     vector: vector.name,
     basis,
-    guarded: fenced.fixed.filter((place) => !fenced.free.some((free) => covers(free, place))),
     decision: vector.decision === undefined
       ? "none by the user"
       : `the user says yes or no to ${listed(produced)} once its checks pass${vector.evaluation === undefined ? "" : " and its verdict says yes"}${kept === undefined ? "" : `; the answer is ${kept}`}`,
@@ -292,9 +300,12 @@ export function brief(graph: WellFormed, vector: Vector, kind: "work" | "evaluat
       ...shared,
       ...(frame === undefined ? {} : { frame }),
       ...(ticket === undefined ? {} : { ticket: assetOf(TICKET), ...(ticket.ruled === true ? { ruled: true as const } : {}) }),
-      write: fenced.free,
+      write: free,
       judge: judged.map((name) => assetOf(name)),
-      ...(snapshot.main === undefined ? {} : { main: judged.map((name): OnMain => ({ name, paths: paths.get(name) ?? [], ...(snapshot.main?.holds.includes(name) === true ? { commit: snapshot.main.commit } : {}) })) }),
+      ...(snapshot.main === undefined ? {} : { main: judged.map((name): OnMain => {
+        const byHand = snapshot.main?.byHand?.get(name) ?? []
+        return { name, paths: paths.get(name) ?? [], ...(snapshot.main?.holds.includes(name) === true ? { commit: snapshot.main.commit } : {}), ...(byHand.length === 0 ? {} : { byHand }) }
+      }) }),
       against: against(graph, vector).map((name) => assetOf(name)),
       stands: judged.map(standOf),
       findings: evaluation.findings,
@@ -321,7 +332,7 @@ export function brief(graph: WellFormed, vector: Vector, kind: "work" | "evaluat
     ...shared,
     ...(frame === undefined ? {} : { frame }),
     ...(ticket === undefined ? {} : { ticket: assetOf(TICKET), ...(ticket.ruled === true ? { ruled: true as const } : {}) }),
-    write: [...own, ...fenced.free],
+    write: [...own, ...free],
     produce: produced.map((name) => assetOf(name)),
     rests: placedOf(graph, vector).rests.map((name) => assetOf(name)),
     stands: produced.map(standOf),
@@ -345,12 +356,19 @@ export const UNCHANGED = {
   evaluation: "- unchanged: a line changed since the content last accepted, as main holds it (below), that the ticket's work and the findings do not require is a ground for no; the findings name each such line by its path and line, and copy none of it."
 } as const
 
-/** A node judged as main holds it, in one line: the commands that give the lines the branch changed from it, or that every line of it is the ticket's work (D208). */
+/**
+ * A node judged as main holds it, in one line: the commands that give the lines the branch changed from it, or that every line of it is the
+ * ticket's work (D208); and each commit on the branch that holds the user's change by hand there, whose lines are the user's (D244).
+ */
 const onMain = (m: OnMain): string => {
   const at = m.paths.map(shown).join(" ")
+  const commits = m.byHand ?? []
+  const byHand = commits.length === 0
+    ? ""
+    : ` The user's change by hand, made in the folder while the ticket is active, is committed on the branch in ${commits.length === 1 ? "the commit" : "the commits"} ${listed([...commits])} (\`git show ${commits.join(" ")} -- ${at}\`): the lines ${commits.length === 1 ? "it" : "they"} changed are the user's, not the ticket's work.`
   return m.commit === undefined
-    ? `- as main holds it, ${m.name}: main holds none of it, so every line of it is judged as the ticket's work.`
-    : `- as main holds it, ${m.name}: the content last accepted, with what the user changed there by hand, is under the commit ${m.commit}; the lines the branch changed from it: \`git diff ${m.commit} -- ${at}\`, with each file git does not yet hold, every line of which the branch added: \`git ls-files --others --exclude-standard -- ${at}\`.`
+    ? `- as main holds it, ${m.name}: main holds none of it, so every line of it is judged as the ticket's work${commits.length === 0 ? "" : ", but for the user's"}.${byHand}`
+    : `- as main holds it, ${m.name}: the content last accepted, with what the user changed there by hand, is under the commit ${m.commit}; the lines the branch changed from it: \`git diff ${m.commit} -- ${at}\`, with each file git does not yet hold, every line of which the branch added: \`git ls-files --others --exclude-standard -- ${at}\`.${byHand}`
 }
 
 /** What every working packet says the work is, and every evaluating packet what is judged: the gap, whose one form the lines "as it stands" give (D177). */
@@ -423,11 +441,20 @@ export function lines(b: Brief): readonly string[] {
     : limits?.minutes !== undefined
     ? `at most ${limits.minutes} minutes`
     : undefined
-  const fenced = `- must not change: ${b.guarded.join(", ")}; nor the tickets in ${listed(places.lanes)} that were there at the start${work?.ownTicket === true ? ", but for the ticket above" : ""}.`
+  // Anything else that differs when the session is over is named to the user, who rules on it before anything of the step is judged or committed (REQ-ALG-008, D226).
+  const fenced = `- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed${b.kind === "evaluation" ? "; the verdict is then not read" : ""}. Do not change ${places.definition}, ${places.settings}, ${places.graph}, ${places.registry} or a ticket${work?.ownTicket === true ? " but the triage and the term of the ticket above" : ""}.`
   // Of the method, the packet admits the sections it names and nothing else (D103).
   const exclusions = `- do not read: the framework's installation, ${places.graph}, ${places.registry}, ${places.settings} and the event log; nor anything of the method${sections.length === 0 ? "" : " but the sections named in this packet"}.`
-  const evidence = "- evidence: the files of this folder. The event log is no evidence."
+  // The judge's evidence is the assets its vector names and those they were made from; the working session's own account is not (REQ-ALG-007, D229).
+  const local = `${places.folder}/local`
+  const evidence = b.kind === "evaluation"
+    ? `- evidence: the assets named above, to judge and to judge against. Not to be read: what a working session printed, at ${local}/printed; the working packets, ${local}/briefs/*.work.md; and what the checks found, at ${local}/found. The event log is no evidence.`
+    : "- evidence: the files of this folder. The event log is no evidence."
   const run = limit === undefined ? "- run: the settings set no limit on a run." : `- run: ${limit}, as the settings set.`
+  // Inside a larger repository, for each session, in one sentence: what lies outside the folder is the user's, and git acts on the whole repository (REQ-ALG-007, D256).
+  const repository = b.basis.inside === true
+    ? ["- repository: this folder lies inside a larger git repository; the files outside this folder are the user's and no part of the step, and a git command given without a path acts on the whole repository."]
+    : []
   if (b.kind === "evaluation") {
     // What each verdict means, one line each (D98).
     return [
@@ -444,7 +471,9 @@ export function lines(b: Brief): readonly string[] {
       "## Subject And Basis", ...b.judge.map((a) => `- judge: ${asset(a)}`), ...ticket, ...basis, "",
       "## Attention Surface", ...results, ...stands, ...(b.main ?? []).map(onMain), ...b.against.map((a) => `- against: ${asset(a)}`), exclusions, "",
       "## Actor And Authority", write, fenced,
-      "- may run: any command, in this folder. What a run leaves that git does not ignore counts as a change.",
+      // Files git ignores in the folder may be the user's own, for each session (REQ-ALG-007, D254).
+      "- may run: any command, in this folder. What a run leaves that git does not ignore counts as a change. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
+      ...repository,
       `- decision: ${b.decision}.`, "",
       "## Evidence And Relations", ...checks, ...others, evidence, "",
       "## Stop And Change", `- time: up to ${b.minutes} minutes.`, run, "- stop: where this session cannot judge, write cannot and stop."
@@ -471,7 +500,8 @@ export function lines(b: Brief): readonly string[] {
     "## Actor And Authority",
     write,
     fenced,
-    "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+    "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
+    ...repository,
     `- decision: ${b.decision}.`, "",
     "## Evidence And Relations",
     ...checks,

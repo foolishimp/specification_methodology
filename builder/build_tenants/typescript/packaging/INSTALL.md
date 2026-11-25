@@ -4,9 +4,13 @@ This folder is one release of STDO Builder, `stdo-builder-<version>`. Its
 release note, `RELEASE_NOTE.md`, gives the version and what it ships.
 
 To install it you need Node.js 24 or later on your PATH. To use it you also
-need git 2.31 or later (2.38 or later for a product inside a larger git
-repository), the method's release manager `stdo`, and an LLM agent that runs
-from the command line, as `INSTRUCTIONS.md` says.
+need, on your PATH:
+
+- git 2.38 or later, for every product;
+- `ps`, which reads the table of processes; on Debian and Ubuntu it comes
+  with the package procps, which a clean machine may lack;
+- the method's release manager `stdo`;
+- an LLM agent that runs from the command line, as `INSTRUCTIONS.md` says.
 
 Install it into a folder of your choice, from this folder:
 
@@ -35,6 +39,6 @@ Then go on with `INSTRUCTIONS.md`, at "Set up a product". If you have not
 used the product before, read the getting-started guide, `GETTING_STARTED.md`,
 in this folder, first: it takes one small product from nothing to a change.
 
-The install exits with 0 once it has installed; 2 where no folder is named; 3
-where Node.js 24 or later is not on your PATH; 5 where the release is not as
-its manifest says.
+The install exits with 0 once it has installed; 2 where no folder is named, or
+the folder named cannot be made or used; 3 where Node.js 24 or later is not on
+your PATH; 5 where the release is not as its manifest says.

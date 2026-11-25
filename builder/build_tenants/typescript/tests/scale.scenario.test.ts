@@ -187,7 +187,7 @@ beforeAll(async () => {
   whole = atSize.ws.log()
   ofLimited = whole.slice(atSize.log.length)
   const ticket = atSize.log.find((e) => e.event === "ticket pulled")?.ticket ?? ""
-  const folder = atSize.ws.checkout(ticket, ".stdo-builder", "local", "briefs")
+  const folder = atSize.ws.path(".stdo-builder", "local", "briefs")
   briefs = existsSync(folder) ? readdirSync(folder).filter((f) => f.endsWith(".md")).map((f) => [f, readFileSync(join(folder, f), "utf8").split("\n").length] as const) : []
 }, 900_000)
 

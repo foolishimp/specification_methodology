@@ -9,11 +9,13 @@ named inputs, and the output they determine. Three laws hold for every one:
 
 - The same inputs give the same output.
 - It calls no language model.
-- It reads nothing but its inputs. "Workspace" as an input means the workspace
-  as it is now: for work on a ticket, the workspace as the ticket's checkout
-  holds it (REQ-FLOW-004). Main and a branch, as inputs, are their files under
-  the workspace's folder, so main that has moved only outside the folder is
-  the same input (REQ-FLOW-001). Only `stands` reads the event log.
+- It reads nothing but its inputs. "Workspace" as an input means the
+  workspace's folder as it is now, on the ticket's branch for work on a
+  ticket (REQ-FLOW-001). Main and a branch, as inputs, are their files under
+  the workspace's folder, read from git by the commit each is on and the
+  path, never from a folder; which branch is main, REQ-FLOW-001 says. A
+  commit of main that changes only files outside the folder changes no
+  input. Only `stands` reads the event log.
 
 A person working by hand from the same inputs reaches the same output. That is
 the test of each (REQ-VERIFY-004). The [flows](FLOWS.md) say when each is used.
@@ -106,7 +108,10 @@ Laws:
   reopens it. The user's confirmation of the induction stands for the ticket
   without the framework's part, and for what the first vector declares of it.
   On changed content, or where git does not hold the commit, it counts as
-  absent.
+  absent. A resolution of the user also counts as absent where main, taken
+  into the ticket's branch after the commit it names, changed a file of the
+  node it is recorded at from the last commit of main that the named commit
+  holds, whatever the file then holds on the branch.
 - A check gives the same result on the same content. Its result may be used
   again for exactly the content it reads, and for no other.
 - Who or what wrote an asset makes no difference: a resolution at a node
@@ -131,10 +136,15 @@ Acceptance:
   content in the next: the requirements are not accepted.
 - A resolution whose commit git no longer holds counts as absent, and the
   user is asked again.
+- The user says yes at a node. Main, taken into the ticket's branch, then
+  changes a file of that node, and a session writes the file back as it was
+  at the yes: the yes counts as absent. Where main changed no file of the
+  node, the yes stands.
 
 From: product definition, the terms "Check", "Evaluation" and "Ticket", and
 "The framework's own work for a step is small and does not grow with the
-history of the work"; intent, guard rail 3.
+history of the work"; intent, guard rail 3; the user, in ticket
+261124-091541-a64b.
 
 ### REQ-ALG-005 `open : {vector, workspace} → yes or no`
 
@@ -161,11 +171,12 @@ Acceptance:
 
 - After a requirement of a built product is changed, the vectors that depend
   on it are open, without the framework being told what changed.
-- In a checkout just opened from main, every vector closed on main is closed.
+- On a ticket's branch just made from main, every vector closed on main is
+  closed.
 
 From: product definition, "A vector is closed when the checks of the assets it
 writes pass against the workspace as it is now" and "Change"; intent, guard
-rail 3.
+rail 3; the user, in ticket 261124-091541-a64b.
 
 ### REQ-ALG-006 `next : {graph, workspace} → one vector, or none`
 
@@ -248,12 +259,15 @@ to do its work. It holds:
   judges, the content last accepted as main holds it, with what the user
   changed there by hand, and the command that gives the lines the branch
   changed from it; or, where main holds none of the node, that every line of
-  it is judged as the ticket's work. The work is the gap between the asset
+  it is judged as the ticket's work. Where the user's change by hand was
+  committed on the ticket's branch (REQ-FLOW-003, step 1), it also names
+  each commit that holds one, and says that the lines it changed are the
+  user's and not the ticket's work. The work is the gap between the asset
   as it stands and what is required of it, against what it rests on as it now
   is: with nothing there, all of it; after a no, what was found; after a change
   to what an accepted asset rests on, what the change requires, which may be
-  nothing. The places of the assets needed or judged against, and where what
-  the checks last found is kept. For inducting a ticket, each entry of the registry its term may name,
+  nothing. The places of the assets needed or judged against and, for a
+  working session, where what the checks last found is kept. For inducting a ticket, each entry of the registry its term may name,
   the induction's own among them, with the nodes it writes, what it rests on
   and its purpose; and where the run has reached an induction entry, its stretch,
   that the term written is the confirmed one with that entry alone replaced,
@@ -270,18 +284,30 @@ to do its work. It holds:
   families of another product. For the first vector's working session, also
   that the ticket's term composes (REQ-METHOD-006).
 - **The authority and the territory.** What the session may write: a working
-  session its asset and the workspace's own `.gitignore`. The protected
-  files and the protected part of the ticket, which it must not change
-  (REQ-ALG-008). For a working session, that
+  session its asset and the workspace's own `.gitignore`, and the first
+  vector's session also the triage and the term in the branch's ticket; an
+  evaluating session its findings and its verdict, and nothing else. That
+  anything else in the workspace that differs when the session is over is
+  named to the user, who rules on it before
+  anything of the step is judged or committed, and that an evaluating
+  session's verdict is then not read (REQ-ALG-008). For a working session, that
   the framework commits every file git does not ignore, so what a build
   leaves that is no part of the product is listed in that `.gitignore`. For
   an evaluating session, that it may run commands, and that what a run leaves
-  that git does not ignore counts as a change. Whether the user decides on
-  the asset.
+  that git does not ignore counts as a change. For each session, that files
+  git ignores in the folder may be the user's own, and that it removes of
+  them only what its own work or its build made. For each session in a
+  workspace inside a larger repository, in one sentence: that the folder
+  lies inside a larger git repository, that the files outside the folder are
+  the user's and no part of the step, and that a git command given without a
+  path acts on the whole repository. Whether the user decides on the asset.
 - **The exclusions.** The session reads nothing of the framework: its
   installation, the graph, the registry, the settings and the event log. Of
   the method it reads only the sections the brief names; where the brief
-  names none, nothing. The event log is no evidence.
+  names none, nothing. The event log is no evidence. For an evaluating
+  session, the evidence is the assets its vector names and the assets they
+  were made from; what a working session printed, the working packets and
+  what the checks found are named, by their places, as not to be read.
 - **The stop conditions.** The attempts and the time the graph allows, and
   the limits the settings set on a run. A working session whose work needs a
   change it may not make says in what it prints what change and why, and
@@ -316,7 +342,9 @@ Acceptance:
   command that shows the lines the branch changed in the code from main, and
   says that a line changed that the ticket's work and the findings do not
   require is a ground for no, which the findings name by its path and line.
-  A line the user changed by hand on main is not among those lines.
+  A line the user changed by hand on main is not among those lines. A line
+  the user changed by hand in the folder while the ticket is active is in a
+  commit the brief names as the user's.
 - The brief for the code step of scenario S1 holds no line of any asset. After
   ten more tickets are done, the brief for the same step is no longer.
 - Every brief of scenario S1 holds each part listed above. Every working
@@ -345,48 +373,161 @@ Acceptance:
 - Every brief names the branch's ticket as the context its session starts
   from. After the user gives a ruling with an answer, every later brief on
   the ticket says that the rulings in the ticket bind its session.
+- Every evaluating brief names as its evidence the assets its vector names
+  and those they were made from, and names what a working session printed,
+  the working packets and what the checks found, each by its place, as not
+  to be read.
+- Every brief says what its session may write, and that anything else that
+  differs when the session is over is named to the user before anything of
+  the step is judged or committed.
+- Inside a larger repository, a working brief and an evaluating brief each
+  hold the sentence on the larger repository that the authority and the
+  territory give. At the top of a repository, neither holds it.
 
 From: product definition, "Change" and the term "Ticket"; intent, guard rails
 5 and 7; the method's REFERENCE_FRAME standard, section 11; the user, in
-ticket 261123-100659-a0d5.
+tickets 261123-100659-a0d5, 261124-001024-40f8, 261124-091541-a64b,
+261124-220448-c7ab and 261125-043021-2fed.
 
-### REQ-ALG-008 `trespass : {vector, kind of session, graph, workspace at the start, workspace at the return} → files`
+### REQ-ALG-008 `trespass : {what the step writes, the identities taken at the session's start, the workspace as it is, main} → files, each added, changed or removed, those changed on main apart, and whether the identities were missing`
 
-The protected files for a working session are: the files of every asset the
-vector does not write; every ticket that was
-there at the start, but for the first vector's session the branch's ticket,
-of which only the framework's part is protected; the definition file, the
-settings file, the governing graph, the registry, every verdict, and the
-framework's own files (REQ-FLOW-001). For an evaluating session the asset it judges is
-protected too, and the places for its findings and verdict are not. `trespass`
-returns the protected files whose identity differs between the start and the
-return, and the branch's ticket where its protected part differs.
+What a step writes is what its session's packet names it may write
+(REQ-ALG-007): for a working session, the assets of its vector and the
+workspace's own `.gitignore`, and for the first vector's session the part of
+the branch's ticket that session writes; for an evaluating session, its
+findings and its verdict, and nothing else.
+
+When a session starts, the framework takes the content identity of every file
+of the workspace that git does not ignore, as the workspace's folder holds
+it, with what is not committed there. When the session is over
+(REQ-FLOW-005), however it ended, `trespass` takes them again and compares
+the two, path by path. It returns each file whose identity differs, outside
+what the step writes, by its path in the workspace: added where it was not
+there at the start, removed where it is not there now, and changed where it
+is there both times. Of the branch's ticket it compares each part apart. What
+the framework itself writes is not returned, a ticket the user writes with
+the product's command among it.
+
+It also returns, apart, each file of the workspace's folder that differs
+between the commit main was on at the session's start and the commit main is
+on now, by its path in the workspace: added where main holds it now and did
+not then, removed where main held it then and does not now, and changed where
+main holds it both times and not as it was. Main is the branch the ticket
+left (REQ-FLOW-001). Git gives what differs from the two commits and the
+paths, and no content is read. None of these counts as what the step writes,
+whatever the file: the step's own work, committed on main, is returned too.
+
+The framework keeps the identities taken at a session's start, with the name
+of the commit the folder was on then and the name of the commit main was on
+then, as the record of that start among its own files, in git's own
+directory for the workspace's folder (REQ-FLOW-001),
+as identities and never as content, from the session's
+start until the result of its step is committed (REQ-FLOW-003, step 1, and
+REQ-FLOW-005, step 7), or the next session of that step takes its own. Where
+they are missing, cannot be read, name a step the graph does not hold or name
+what git no longer holds, the identities of the commit the session started
+from stand in their place, with nothing counted as what the step writes, and
+are kept as that session's: so each file of the folder that differs from that
+commit when the comparison is made, committed since or not committed, is
+returned, and `trespass` says that the identities were missing. The run that
+started the session knows that commit: it is the one it names in the event
+`session started` (REQ-FLOW-007). A later run, or an answer, reads it from the
+record kept at the session's start, where that record reads and git holds the
+commit it names. Where neither holds, which is a later run or an answer where
+that record is gone, cannot be read or names a commit git does not hold, the
+identities of the commit the folder is on stand in, in the same way, and each
+file not committed is returned: what a session committed of its own is then
+not returned. That is an accepted limit. Where the
+identities of a commit stand in, in either way, or the record names no commit
+of main, as a record an earlier build wrote names none, the commit where the
+ticket's branch and main last met stands in for the commit main was on at the
+session's start: each file of the folder that main holds otherwise than that
+commit is returned, apart. A yes of the user
+on what changed (REQ-FLOW-006) counts for a file only where the ticket holds
+the line of that ruling, naming the file with the identity it has now, and
+the framework's own record agrees; for a file changed on main, the line names
+it apart from a file of the folder (REQ-FLOW-004), with the identity main
+gives it now.
 
 Laws:
 
-- A file in a place that neither the graph nor the definition file names is
-  never returned.
-- What a session does with git is its own affair. Only the content of the
-  protected files at its return counts.
-- A change made by hand during the session is returned as well: the framework
-  cannot tell who made it.
-- `trespass` reads the files of the workspace at the return, and nothing of
-  git's own. It is a check on an agent that strays, and the framework is not
-  hardened against an agent that sets out to get round it. It puts nothing
-  right. The next session works in its checkout as it finds it and carries on
-  with its task.
+- It reads the workspace and main as they are now. The identities kept from
+  a session's start say only what they were then. Where they are missing,
+  the framework cannot tell what the session changed, so it asks: it never
+  goes on without the user's ruling (REQ-FLOW-005).
+- Only what differs when the session is over counts. What a session does and
+  undoes inside its time, with git or without, is its own affair, and so are
+  its own commits of its step's work on the ticket's branch. A commit on main
+  is not: each file of the folder it changes is returned (above).
+- The framework cannot tell who changed a file. A change the user makes while
+  a session works, in the folder or by a commit on main, is returned as well,
+  and named as REQ-FLOW-006 says.
+- It freezes nothing and puts nothing back: the user may work in the folder
+  while a session works.
+- A file git ignores is not compared, the framework's own files among them.
+  Nothing outside the repository is seen, and whether a session read a file
+  cannot be known. It is a check on an agent that strays and on a run the
+  user interrupts; the framework is not hardened against an agent that sets
+  out to get round it.
 
 Acceptance:
 
 - Scenario S7 ends as it should.
 - A working session on a vector that writes three nodes changes each of
   them: nothing is returned. A working session on a vector that writes one of
-  them and changes another: that one is returned.
+  them and changes another: that one is returned, as changed.
 - The first vector's session changes the triage and the term: nothing is
   returned. It changes a resolution: the ticket is returned.
+- A session adds a file in a place that neither the graph nor the definition
+  file names, and removes another: the one is returned as added, the other as
+  removed.
+- While a session works, the user changes a file the step does not write: it
+  is returned, by its path in the workspace, as changed.
+- A session changes a file outside what its step writes and changes it back,
+  or commits its own asset on the ticket's branch: nothing is returned.
+- While a session works, the user writes a ticket with the product's command:
+  it is not returned.
+- The user says yes to what changed, and then takes the line of that ruling
+  out of the ticket by hand: the yes does not count, and the file is returned
+  again.
+- A working session gives `git clean -fdx` in the workspace's folder as its
+  first act, then sets the command of a check in the graph to `true`, adds a
+  line to `AGENTS.md` and writes a file of its own outside every asset, and
+  returns. The run asks for a ruling that names those three files and none of
+  what the step writes, and commits nothing.
+- The same, with `git clean -fdX` as the session's last act; and again with
+  `git stash --all` as its first act, the stash never taken back.
+- The same as the session that gives `git clean -fdx` as its first act, where
+  the product is one folder of a larger repository and the cleaning is given
+  at the repository's top.
+- While a session works, the identities kept from its start are removed from
+  where they lie, and the session returns. The run says that they are
+  missing, puts every file not committed to the user and commits nothing.
+  After the user's yes, they are committed with the step and the work goes
+  on.
+- An evaluating session changes a file its step does not write, commits what
+  it changed in the workspace's folder, and gives `git gc --prune=now`. The
+  run asks for a ruling that names the file, reads no verdict and commits
+  nothing of the step.
+- The same, with `git prune --expire=now` in place of the gc.
+- The same, where the run is killed while that session works, after the
+  session has committed and pruned: the next run asks, naming the file.
+- A working session commits a file its step does not write, and the record
+  of its start is then removed from git's own directory: the run that started
+  it still asks, naming the file.
+- A working session sets the command of a check in the graph to `true`, adds
+  a line to `AGENTS.md` and writes a file of its own, commits the three on
+  main, puts the folder back on the ticket's branch and returns. The run ends
+  waiting for the user's ruling and names the three as changed on main. The
+  ticket's branch holds none of them, and no commit the framework made holds
+  them. After the user's yes, the next run takes main in; the ticket holds
+  one ruling on what changed, which names the three; and what rests on them
+  is judged or asked again.
 
-From: product definition, "neither writes the other's"; intent, guard rail 7
-and outcome 2.
+From: product definition, "neither writes the other's"; intent, guard rails
+1, 2, 3, 5 and 7 and outcome 2; the user, in tickets 261124-001024-40f8,
+261124-091541-a64b, 261124-190535-753f, 261125-014851-46cb and
+261125-083337-0fdf.
 
 ### REQ-ALG-009 `progress : {what the checks found after the last working session of the attempt, what they find after this one} → yes or no`
 
@@ -403,8 +544,8 @@ ticket 261123-100659-a0d5.
 
 ### REQ-ALG-010 `take_up : {board, tickets a run holds, the ticket the user names, graph, main} → a ticket, the simplest ticket, or none`
 
-The board is the three ticket lanes as main has them: backlog, active and
-done. In order:
+The board is the three ticket lanes as main has them (REQ-FLOW-001):
+backlog, active and done. In order:
 
 1. an active ticket that no run holds, the first by name;
 2. where fewer tickets are active than the limit the user set
@@ -430,8 +571,8 @@ Acceptance:
   file outside the workspace's folder is changed and committed on main:
   `take_up` gives none.
 
-From: product definition, "Ask" and the term "Ticket"; the user, in ticket
-261123-001543-eae1.
+From: product definition, "Ask" and the term "Ticket"; the user, in tickets
+261123-001543-eae1 and 261124-091541-a64b.
 
 ### REQ-ALG-011 `done : {graph, workspace} → yes, or the vectors and checks that say no`
 
@@ -454,16 +595,24 @@ From: intent, guard rail 3 and outcome 3.
 In the graph's own names:
 
 - For each ticket on the board, its lane, and for an active one what it waits
-  on, the first of these that holds: the user's answer, and to what; to be
+  on, the first of these that holds: the user's ruling on what changed while
+  a session worked, with the question again (REQ-FLOW-006); the user's
+  answer, and to what; to be
   inducted; held up, with the vector, the checks that said no and where what
   they found is kept; in build, with the vector of the last step; to be
-  merged. The first two are read from the ticket: a vector's work that its
+  merged. The first is read, where no run holds the ticket, from the
+  identities kept from the session's start and the workspace and main as
+  they are (REQ-ALG-008), with the files changed on main named apart. The
+  next two are read from the ticket: a vector's work that its
   checklist shows delivered for the user's decision, with no answer of the
   user after it, and whether a confirmation in it stands (REQ-ALG-004). The
   rest are read from the event log: how the last run on the ticket ended, and
   its last step. It says which it read each from, with when that was written,
   and that a run reads the workspace again.
 - A ticket that has a branch and is not on the board: withdrawn.
+- While a ticket is active and the folder is not on its branch: that the
+  folder is on another branch, naming both, and that a run and an answer are
+  refused until the folder is put back on the ticket's branch (REQ-FLOW-001).
 - For a ticket, active or done: every asset it changed and how many lines of
   each. For an active ticket that is the difference between main and its
   branch; for a done one, what its merge brought to main.
@@ -479,13 +628,14 @@ In the graph's own names:
 Laws:
 
 - It starts no session and changes nothing in the workspace.
-- It runs no check and keeps nothing. It works out what it gives, when asked,
-  from the board, the tickets, git and the event log, and from no other
-  record.
+- It runs no check, keeps nothing and writes nothing: no file, and nothing
+  into git's index or git's store. It works out what it gives, when asked,
+  from the board, the tickets, git, the identities kept from a session's
+  start and the event log, and from no other record.
 - Without an event log it gives what the board, the tickets and git give, and
   says the log was not found. For an active ticket that waits on neither the
-  user's answer nor its induction, it then says that a run finds what it
-  waits on.
+  user's ruling, the user's answer nor its induction, it then says that a run
+  finds what it waits on.
 
 Acceptance:
 
@@ -500,8 +650,8 @@ Acceptance:
   given as `0.65 USD`; one that reported it with no unit, as `0.65`.
 - Three sessions that each reported a cost of `0.334` with the unit USD are each
   given as `0.33 USD`, and the ticket's sum as `1.00 USD`.
-- A run ends waiting for the user's answer on a vector, and the code in the
-  ticket's checkout is then deleted: it still gives that the ticket waits for
+- A run ends waiting for the user's answer on a vector, and the code is then
+  deleted from the folder: it still gives that the ticket waits for
   the user's answer on that vector, as the ticket shows, with when the
   question was asked.
 - With the event log deleted, it gives what a ticket waiting for the user's
@@ -509,10 +659,20 @@ Acceptance:
 - Inside a larger repository, a file changed outside the workspace's folder,
   on main or on a ticket's branch, is named for no ticket and adds to no
   count of lines.
+- A run ends waiting for the user's ruling on what changed while a session
+  worked: it gives that the ticket waits on that ruling, and the same
+  question, file by file, the files changed on main named apart as the
+  question names them.
+- After it answers, every file of the workspace, git's index and git's store
+  are as they were before it was asked.
+- A ticket is active and the folder is on another branch: it answers, names
+  both branches, and says that a run and an answer are refused until the
+  folder is put back.
 
 From: product definition, "Show" and "What happened is recovered from these
 three"; intent, outcome 5; the user, in tickets 261122-232152-1198,
-261123-001543-eae1 and 261123-021212-4e94.
+261123-001543-eae1, 261123-021212-4e94, 261124-001024-40f8,
+261124-091541-a64b and 261125-083337-0fdf.
 
 ### REQ-ALG-013 `collides : {branch, main, graph} → assets`
 

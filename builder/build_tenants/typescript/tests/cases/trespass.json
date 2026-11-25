@@ -20,48 +20,51 @@
   "cases": [
     {
       "covers": [
-        "REQ-ALG-008 law 1",
         "REQ-ALG-008 acceptance 1"
       ],
-      "says": "Scenario S7: during the code step the session changes an accepted requirement and writes a scratch file in a place the graph does not name. The requirement is returned; the scratch file and the code are not.",
+      "says": "Scenario S7: during the build's step the session changes an accepted requirement and writes a scratch file in a place the graph does not name. Both are returned, the requirement as changed and the scratch file as added; the code it writes is not.",
       "given": {
         "fixture": "method",
-        "vector": "write-code",
+        "vector": "write-build",
         "kind": "work",
-        "ticket": "tickets/active/261119-a.md",
+        "ticket": "tickets/active/261121-a.md",
         "start": {
-          "specification/requirements/FUNCTIONS.md": "a1",
-          "build_tenants/main/code/main.ts": "c1",
-          "tickets/active/261119-a.md": "t1"
+          "specification/requirements/FUNCTIONS.md": "a1"
         },
         "end": {
           "specification/requirements/FUNCTIONS.md": "a2",
           "build_tenants/main/code/main.ts": "c2",
-          "scratch/notes.txt": "z1",
-          "tickets/active/261119-a.md": "t1"
+          "scratch/notes.txt": "z1"
         }
       },
       "expect": [
-        "specification/requirements/FUNCTIONS.md"
+        {
+          "path": "scratch/notes.txt",
+          "how": "added"
+        },
+        {
+          "path": "specification/requirements/FUNCTIONS.md",
+          "how": "changed"
+        }
       ]
     },
     {
       "covers": [
-        "REQ-ALG-008 law 2"
+        "REQ-ALG-008 law 2",
+        "REQ-ALG-008 acceptance 6"
       ],
-      "says": "The session committed, then undid its commits with git: the protected files are as they were at the start, and nothing is returned.",
+      "says": "The session changed the requirements and changed them back, and committed its own code on the ticket's branch: only what differs when it is over counts, and nothing is returned.",
       "given": {
         "fixture": "method",
-        "vector": "write-code",
+        "vector": "write-build",
         "kind": "work",
-        "ticket": "tickets/active/261119-a.md",
+        "ticket": "tickets/active/261121-a.md",
         "start": {
           "specification/requirements/FUNCTIONS.md": "a1",
-          "build_tenants/main/design/DESIGN.md": "d1"
+          "build_tenants/main/code/main.ts": "c1"
         },
         "end": {
           "specification/requirements/FUNCTIONS.md": "a1",
-          "build_tenants/main/design/DESIGN.md": "d1",
           "build_tenants/main/code/main.ts": "c3"
         }
       },
@@ -69,14 +72,15 @@
     },
     {
       "covers": [
-        "REQ-ALG-008 law 3"
+        "REQ-ALG-008 law 3",
+        "REQ-ALG-008 acceptance 5"
       ],
-      "says": "The user changed the settings by hand while the session worked: returned as well.",
+      "says": "While the session worked the settings were changed in the workspace's own folder, by the session or by the user: returned.",
       "given": {
         "fixture": "method",
-        "vector": "write-code",
+        "vector": "write-build",
         "kind": "work",
-        "ticket": "tickets/active/261119-a.md",
+        "ticket": "tickets/active/261121-a.md",
         "start": {
           ".stdo-builder/settings.json": "g1"
         },
@@ -85,28 +89,84 @@
         }
       },
       "expect": [
-        ".stdo-builder/settings.json"
+        {
+          "path": ".stdo-builder/settings.json",
+          "how": "changed"
+        }
+      ]
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 4"
+      ],
+      "says": "A session adds a file in a place that neither the graph nor the definition file names, and removes another: the one is returned as added, the other as removed.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {
+          "notes/old.txt": "o1"
+        },
+        "end": {
+          "notes/new.txt": "n1"
+        }
+      },
+      "expect": [
+        {
+          "path": "notes/new.txt",
+          "how": "added"
+        },
+        {
+          "path": "notes/old.txt",
+          "how": "removed"
+        }
       ]
     },
     {
       "covers": [],
-      "says": "A working session adds a ticket to the backlog, which it may, and deletes one that was there at the start, which it may not.",
+      "says": "A working session adds a ticket to the backlog: returned as added.",
       "given": {
         "fixture": "method",
-        "vector": "write-code",
+        "vector": "write-build",
         "kind": "work",
-        "ticket": "tickets/active/261119-a.md",
-        "start": {
-          "tickets/active/261119-a.md": "t1",
-          "tickets/backlog/261118-z.md": "t9"
-        },
+        "ticket": "tickets/active/261121-a.md",
+        "start": {},
         "end": {
-          "tickets/active/261119-a.md": "t1",
-          "tickets/backlog/261119-new.md": "t10"
+          "tickets/backlog/261121-new.md": "t9"
         }
       },
       "expect": [
-        "tickets/backlog/261118-z.md"
+        {
+          "path": "tickets/backlog/261121-new.md",
+          "how": "added"
+        }
+      ]
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 7"
+      ],
+      "says": "While the session worked the user wrote a ticket with the product's command, in the workspace's own folder: the framework wrote it, and it is not returned. A ticket written there by hand is.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {},
+        "end": {
+          "tickets/backlog/261121-cmd.md": "t5",
+          "tickets/backlog/261121-hand.md": "t6"
+        },
+        "framework": {
+          "tickets/backlog/261121-cmd.md": "t5"
+        }
+      },
+      "expect": [
+        {
+          "path": "tickets/backlog/261121-hand.md",
+          "how": "added"
+        }
       ]
     },
     {
@@ -114,125 +174,80 @@
       "says": "A working session writes the verdict of its own vector: returned.",
       "given": {
         "fixture": "method",
-        "vector": "write-code",
+        "vector": "write-build",
         "kind": "work",
-        "ticket": "tickets/active/261119-a.md",
+        "ticket": "tickets/active/261121-a.md",
         "start": {},
         "end": {
-          "build_tenants/main/evaluations/code/verdict.json": "v1",
-          "build_tenants/main/evaluations/code/findings.md": "f1"
+          "build_tenants/main/evaluations/build/verdict.json": "v1"
         }
       },
       "expect": [
-        "build_tenants/main/evaluations/code/verdict.json"
+        {
+          "path": "build_tenants/main/evaluations/build/verdict.json",
+          "how": "added"
+        }
       ]
     },
     {
       "covers": [],
-      "says": "An evaluating session changes the code it judges, and writes its findings and verdict: only the code is returned.",
+      "says": "An evaluating session changes the code it judges, and writes its findings and verdict: the code is returned, and its findings and verdict are not.",
       "given": {
         "fixture": "method",
-        "vector": "write-code",
+        "vector": "write-build",
         "kind": "evaluation",
-        "ticket": "tickets/active/261119-a.md",
+        "ticket": "tickets/active/261121-a.md",
         "start": {
           "build_tenants/main/code/main.ts": "c1"
         },
         "end": {
           "build_tenants/main/code/main.ts": "c2",
-          "build_tenants/main/evaluations/code/verdict.json": "v1",
-          "build_tenants/main/evaluations/code/findings.md": "f1"
+          "build_tenants/main/evaluations/build/findings.md": "x1",
+          "build_tenants/main/evaluations/build/verdict.json": "v1"
         }
       },
       "expect": [
-        "build_tenants/main/code/main.ts"
+        {
+          "path": "build_tenants/main/code/main.ts",
+          "how": "changed"
+        }
       ]
     },
     {
       "covers": [],
-      "says": "The first vector's working session adds its induction to the branch's own ticket, which is its asset; another ticket it may not change.",
+      "says": "An evaluating session adds a line to the agent instruction file, which is part of no asset: returned.",
       "given": {
         "fixture": "method",
-        "vector": "induct-ticket",
-        "kind": "work",
-        "ticket": "tickets/active/261119-a.md",
-        "start": {
-          "tickets/active/261119-a.md": "t1",
-          "tickets/done/261101-x.md": "t0"
-        },
-        "end": {
-          "tickets/active/261119-a.md": "t2",
-          "tickets/done/261101-x.md": "t0b"
-        }
-      },
-      "expect": [
-        "tickets/done/261101-x.md"
-      ]
-    },
-    {
-      "covers": [
-        "REQ-ALG-008 law 3"
-      ],
-      "says": "QA-01. In main's own folder, during the code step: the governing graph, which the run reads from main, is changed by hand, and so is main's code. Both are returned: all work on a ticket is done in its checkout. The user edits the active ticket and writes a new one on main, which the board allows at any time: neither is returned.",
-      "given": {
-        "fixture": "method",
-        "vector": "write-code",
-        "kind": "work",
-        "side": "main",
-        "start": {
-          ".stdo-builder/graph.json": "g1",
-          "build_tenants/main/code/main.ts": "c1",
-          "tickets/active/261119-a.md": "t1",
-          "README.md": "r1"
-        },
-        "end": {
-          ".stdo-builder/graph.json": "g2",
-          "build_tenants/main/code/main.ts": "c2",
-          "tickets/active/261119-a.md": "t2",
-          "tickets/backlog/261119-b.md": "t3",
-          "README.md": "r2"
-        }
-      },
-      "expect": [
-        ".stdo-builder/graph.json",
-        "build_tenants/main/code/main.ts"
-      ]
-    },
-    {
-      "covers": [],
-      "says": "QA-01. In main's own folder, during an evaluation: the settings were removed and the verdict written. Both are returned; the evaluation's own verdict place is not free on main.",
-      "given": {
-        "fixture": "method",
-        "vector": "write-code",
+        "vector": "write-build",
         "kind": "evaluation",
-        "side": "main",
+        "ticket": "tickets/active/261121-a.md",
         "start": {
-          ".stdo-builder/settings.json": "s1"
+          "AGENTS.md": "a1"
         },
         "end": {
-          "build_tenants/main/evaluations/code/verdict.json": "v1"
+          "AGENTS.md": "a2"
         }
       },
       "expect": [
-        ".stdo-builder/settings.json",
-        "build_tenants/main/evaluations/code/verdict.json"
+        {
+          "path": "AGENTS.md",
+          "how": "changed"
+        }
       ]
     },
     {
       "covers": [],
-      "says": "A working session lists what its build leaves in the .gitignore at the top of the checkout, as its packet allows: not returned.",
+      "says": "A working session lists what its build leaves in the .gitignore at the top of the workspace's folder, which it may write: nothing is returned.",
       "given": {
         "fixture": "method",
-        "vector": "write-code",
+        "vector": "write-build",
         "kind": "work",
-        "ticket": "tickets/active/261119-a.md",
+        "ticket": "tickets/active/261121-a.md",
         "start": {
-          ".gitignore": "g1",
-          "build_tenants/main/code/main.ts": "c1"
+          ".gitignore": "i1"
         },
         "end": {
-          ".gitignore": "g2",
-          "build_tenants/main/code/main.ts": "c2"
+          ".gitignore": "i2"
         }
       },
       "expect": []
@@ -248,17 +263,13 @@
         "kind": "work",
         "ticket": "tickets/active/261121-a.md",
         "start": {
-          "specification/requirements/FUNCTIONS.md": "a1",
           "build_tenants/main/design/DESIGN.md": "d1",
-          "build_tenants/main/tests/run.sh": "s1",
-          "tickets/active/261121-a.md": "t1"
+          "build_tenants/main/tests/run.sh": "s1"
         },
         "end": {
-          "specification/requirements/FUNCTIONS.md": "a1",
           "build_tenants/main/design/DESIGN.md": "d2",
           "build_tenants/main/tests/run.sh": "s2",
-          "build_tenants/main/code/main.ts": "c1",
-          "tickets/active/261121-a.md": "t1"
+          "build_tenants/main/code/main.ts": "c1"
         }
       },
       "expect": []
@@ -267,7 +278,7 @@
       "covers": [
         "REQ-ALG-008 acceptance 2"
       ],
-      "says": "The design's working session writes the design and also the code, a node the build writes and the design's vector does not: the code is returned, and the design is not.",
+      "says": "The design's working session writes the design and also changes the code, a node the build writes and the design's vector does not: the code is returned, as changed, and the design is not.",
       "given": {
         "fixture": "method",
         "vector": "write-design",
@@ -275,36 +286,41 @@
         "ticket": "tickets/active/261121-a.md",
         "start": {
           "build_tenants/main/design/DESIGN.md": "d1",
-          "build_tenants/main/code/main.ts": "c1",
-          "tickets/active/261121-a.md": "t1"
+          "build_tenants/main/code/main.ts": "c1"
         },
         "end": {
           "build_tenants/main/design/DESIGN.md": "d2",
-          "build_tenants/main/code/main.ts": "c2",
-          "tickets/active/261121-a.md": "t1"
+          "build_tenants/main/code/main.ts": "c2"
         }
       },
       "expect": [
-        "build_tenants/main/code/main.ts"
+        {
+          "path": "build_tenants/main/code/main.ts",
+          "how": "changed"
+        }
       ]
     },
     {
       "covers": [
         "REQ-ALG-008 acceptance 3"
       ],
-      "says": "The first vector's working session changes the triage and the term of the branch's ticket, and leaves the framework's part as it was: nothing is returned.",
+      "says": "The first vector's working session changes the triage and the term of the branch's ticket, and leaves the user's words and the framework's part as they were: nothing is returned.",
       "given": {
         "fixture": "method",
         "vector": "induct-ticket",
         "kind": "work",
-        "ticket": "tickets/active/261119-a.md",
+        "ticket": "tickets/active/261121-a.md",
         "start": {
-          "tickets/active/261119-a.md": "t1",
-          "tickets/active/261119-a.md#framework": "f1"
+          "tickets/active/261121-a.md": "t1",
+          "tickets/active/261121-a.md#words": "w1",
+          "tickets/active/261121-a.md#triage": "r1",
+          "tickets/active/261121-a.md#framework": "f1"
         },
         "end": {
-          "tickets/active/261119-a.md": "t2",
-          "tickets/active/261119-a.md#framework": "f1"
+          "tickets/active/261121-a.md": "t2",
+          "tickets/active/261121-a.md#words": "w1",
+          "tickets/active/261121-a.md#triage": "r2",
+          "tickets/active/261121-a.md#framework": "f1"
         }
       },
       "expect": []
@@ -318,19 +334,265 @@
         "fixture": "method",
         "vector": "induct-ticket",
         "kind": "work",
-        "ticket": "tickets/active/261119-a.md",
+        "ticket": "tickets/active/261121-a.md",
         "start": {
-          "tickets/active/261119-a.md": "t1",
-          "tickets/active/261119-a.md#framework": "f1"
+          "tickets/active/261121-a.md": "t1",
+          "tickets/active/261121-a.md#words": "w1",
+          "tickets/active/261121-a.md#triage": "r1",
+          "tickets/active/261121-a.md#framework": "f1"
         },
         "end": {
-          "tickets/active/261119-a.md": "t2",
-          "tickets/active/261119-a.md#framework": "f2"
+          "tickets/active/261121-a.md": "t2",
+          "tickets/active/261121-a.md#words": "w1",
+          "tickets/active/261121-a.md#triage": "r1",
+          "tickets/active/261121-a.md#framework": "f2"
         }
       },
       "expect": [
-        "tickets/active/261119-a.md"
+        {
+          "path": "tickets/active/261121-a.md",
+          "how": "changed"
+        }
       ]
+    },
+    {
+      "covers": [],
+      "says": "A working session on another vector writes lines of the framework's part into the ticket: the ticket is returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {
+          "tickets/active/261121-a.md": "t1",
+          "tickets/active/261121-a.md#words": "w1",
+          "tickets/active/261121-a.md#triage": "r1",
+          "tickets/active/261121-a.md#framework": "f1"
+        },
+        "end": {
+          "tickets/active/261121-a.md": "t2",
+          "tickets/active/261121-a.md#words": "w1",
+          "tickets/active/261121-a.md#triage": "r1",
+          "tickets/active/261121-a.md#framework": "f2"
+        }
+      },
+      "expect": [
+        {
+          "path": "tickets/active/261121-a.md",
+          "how": "changed"
+        }
+      ]
+    },
+    {
+      "covers": [],
+      "says": "The user said yes to the changed requirement, and it is as it was at the yes: it is not returned again. The scratch file changed after the yes: it is.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {
+          "specification/requirements/FUNCTIONS.md": "a1",
+          "scratch/notes.txt": "z1"
+        },
+        "end": {
+          "specification/requirements/FUNCTIONS.md": "a2",
+          "scratch/notes.txt": "z3"
+        },
+        "yes": {
+          "specification/requirements/FUNCTIONS.md": "a2",
+          "scratch/notes.txt": "z2"
+        }
+      },
+      "expect": [
+        {
+          "path": "scratch/notes.txt",
+          "how": "changed"
+        }
+      ]
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 law 1"
+      ],
+      "says": "The identities from the session's start are missing, and the commit's stand in their place: nothing counts as what the step writes, so each file not committed is returned, what the step writes among them, and it says that the identities were missing.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "stood": true,
+        "start": {
+          "build_tenants/main/code/main.ts": "c1"
+        },
+        "end": {
+          "build_tenants/main/code/main.ts": "c2",
+          "AGENTS.md": "g1"
+        }
+      },
+      "expect": {
+        "files": [
+          {
+            "path": "AGENTS.md",
+            "how": "added"
+          },
+          {
+            "path": "build_tenants/main/code/main.ts",
+            "how": "changed"
+          }
+        ],
+        "missing": true
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 law 5"
+      ],
+      "says": "A file git ignores is in neither identity, the framework's own files among them: only the files the identities hold are compared, and nothing else is returned.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {
+          "build_tenants/main/code/main.ts": "c1"
+        },
+        "end": {
+          "build_tenants/main/code/main.ts": "c2"
+        }
+      },
+      "expect": []
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 17"
+      ],
+      "says": "A working session commits on main, the branch the ticket left, the graph with a check's command set to true, a line added to AGENTS.md, a file of its own and its own asset: each is returned apart, as changed on main, its own asset among them, since none of what main gains counts as what the step writes; nothing of the folder differs.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {},
+        "end": {},
+        "main": {
+          "start": {
+            ".stdo-builder/graph.json": "g1",
+            "AGENTS.md": "a1"
+          },
+          "end": {
+            ".stdo-builder/graph.json": "g2",
+            "AGENTS.md": "a2",
+            "notes.md": "n1",
+            "build_tenants/main/code/main.ts": "c1"
+          }
+        }
+      },
+      "expect": {
+        "files": [],
+        "main": [
+          {
+            "path": "notes.md",
+            "how": "added",
+            "on": "main"
+          },
+          {
+            "path": "build_tenants/main/code/main.ts",
+            "how": "added",
+            "on": "main"
+          },
+          {
+            "path": ".stdo-builder/graph.json",
+            "how": "changed",
+            "on": "main"
+          },
+          {
+            "path": "AGENTS.md",
+            "how": "changed",
+            "on": "main"
+          }
+        ],
+        "missing": false
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-008",
+        "REQ-FLOW-006 acceptance 12"
+      ],
+      "says": "The user said yes to two files changed on main and to a file of the folder of the same path as one of them; main then changed one of the two again: that one alone is returned, apart, and the yes on main is told from the yes on the folder's file.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {
+          "AGENTS.md": "f1"
+        },
+        "end": {
+          "AGENTS.md": "f2"
+        },
+        "yes": {
+          "AGENTS.md": "f2",
+          "left:AGENTS.md": "a2",
+          "left:notes.md": "n1"
+        },
+        "main": {
+          "start": {
+            "AGENTS.md": "a1"
+          },
+          "end": {
+            "AGENTS.md": "a2",
+            "notes.md": "n2"
+          }
+        }
+      },
+      "expect": {
+        "files": [],
+        "main": [
+          {
+            "path": "notes.md",
+            "how": "added",
+            "on": "main"
+          }
+        ],
+        "missing": false
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-008"
+      ],
+      "says": "A file main removed is returned as removed on main; a yes on it counts with no identity.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-build",
+        "kind": "work",
+        "ticket": "tickets/active/261121-a.md",
+        "start": {},
+        "end": {},
+        "yes": {
+          "left:gone.md": ""
+        },
+        "main": {
+          "start": {
+            "gone.md": "x1",
+            "kept.md": "k1"
+          },
+          "end": {}
+        }
+      },
+      "expect": {
+        "files": [],
+        "main": [
+          {
+            "path": "kept.md",
+            "how": "removed",
+            "on": "main"
+          }
+        ],
+        "missing": false
+      }
     }
   ],
   "elsewhere": [
@@ -339,7 +601,34 @@
         "REQ-ALG-008 law 4"
       ],
       "in": "s7.scenario.test.ts",
-      "says": "After the run stopped on the changed requirement, nothing was put back and the next run went on from the workspace as it was."
+      "says": "While the run waited for the user's ruling, nothing was put back; the user's yes let both files stand, and the next run committed them."
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 8"
+      ],
+      "in": "one_folder_cases.scenario.test.ts",
+      "says": "A yes the framework's record holds and the ticket's ruling line does not counts for nothing: the run names the file again."
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 9",
+        "REQ-ALG-008 acceptance 10",
+        "REQ-ALG-008 acceptance 11",
+        "REQ-ALG-008 acceptance 12"
+      ],
+      "in": "cleaned.scenario.test.ts",
+      "says": "A working session cleans what git ignores, or stashes it all, in the workspace's folder or at the top of the larger repository, or the identities kept from its start are removed: the run asks for a ruling on the files changed outside the step, or on every file that differs from the commit the session started from where the identities are missing, and commits nothing."
+    },
+    {
+      "covers": [
+        "REQ-ALG-008 acceptance 13",
+        "REQ-ALG-008 acceptance 14",
+        "REQ-ALG-008 acceptance 15",
+        "REQ-ALG-008 acceptance 16"
+      ],
+      "in": "started_from.scenario.test.ts",
+      "says": "A session commits a file its step does not write, and git gc or git prune removes the tree taken at its start, or the record of its start is removed: the commit the session started from stands in, and the run that started it, or the next run after a kill, asks for a ruling that names the file, reads no verdict and commits nothing of the step."
     }
   ]
 }

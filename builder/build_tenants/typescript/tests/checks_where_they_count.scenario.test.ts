@@ -6,7 +6,7 @@
  * line to a file outside the workspace, which says whether the code was
  * there. S1 is then run by hand: the ticket, the induction and its answer, the
  * specification and its answer. The code's check "the tests pass" is not run
- * while the code is not there, though its run.sh is in the ticket's checkout;
+ * while the code is not there, though its run.sh is in the workspace's folder;
  * no answer runs a check (D80). The run that builds runs it once, after the
  * working session wrote the code: the evaluation's findings and verdict and
  * what the framework records are not what it reads, so the readings after the
@@ -31,7 +31,7 @@ const count = (line = "ran"): number => readFileSync(counter, "utf8").split("\n"
 
 const said: Said[] = []
 let ranBeforeBuild = -1
-let inCheckout = false
+let inFolder = false
 let before: readonly LogEntry[] = []
 let atBuild: readonly LogEntry[] = []
 let built: Said
@@ -55,7 +55,7 @@ beforeAll(async () => {
   ticket = /The ticket (\S+) is written/.exec(said[1]?.out ?? "")?.[1] ?? ""
   said.push(await ws.run(fixtures), await ws.answer("yes"), await ws.run(fixtures), await ws.answer("yes"))
   ranBeforeBuild = count()
-  inCheckout = existsSync(ws.checkout(ticket, TESTS_RUN))
+  inFolder = existsSync(ws.path(TESTS_RUN))
   const from = ws.log().length
   before = ws.log()
   built = await ws.run(fixtures)
@@ -76,8 +76,8 @@ describe("REQ-ALG-004 law 5: a check is run only where its answer can change wha
     expect(said[4]?.out).toContain("waits for your answer on write-specification")
   })
 
-  it("while the code is not there, the tests' run.sh is in the ticket's checkout and is not run, before the build and in it", () => {
-    expect(inCheckout).toBe(true)
+  it("while the code is not there, the tests' run.sh is in the workspace's folder and is not run, before the build and in it", () => {
+    expect(inFolder).toBe(true)
     expect(ranBeforeBuild).toBe(0)
     expect(count("ran without the code")).toBe(0)
   })

@@ -1,5 +1,6 @@
 /**
- * A step (REQ-FLOW-005): one attempt at one vector, in the ticket's checkout.
+ * A step (REQ-FLOW-005): one attempt at one vector, in the workspace's folder,
+ * on the ticket's branch.
  *
  * Each reading the step decides on is `snapshot(v)`, and the one a verdict's
  * identities are taken from runs no check (CALCULUS L3, section 5).
@@ -14,9 +15,17 @@
  * return `trespass` is asked against the identities of the files at its start
  * (C1, C2). What the agent printed is read for the cost and the calls it
  * reported, which go into the log and into no decision (D91). Files it
- * returns stop the run; the framework puts nothing back. What a session printed is kept in the ticket's
- * checkout when it returns or fails, and the run keeps where it is for each
- * session that failed (D81). Where the vector declares an evaluation, its
+ * returns stop the run; the framework puts nothing back. A session is over
+ * when every process the framework knows to be of it is ended and it finds
+ * none it cannot place, and the log holds how many the framework ended (D213,
+ * D214, D222, D223); where the run receives a signal while a session is at
+ * work, it notes that and goes no further (REQ-FLOW-003); where a process it
+ * knows is still alive, or it finds one it cannot place, the session is not
+ * over, and the run commits, judges and starts nothing more on the ticket and
+ * is cut off, leaving its hold, naming each (REQ-FLOW-005, D221). What a session
+ * printed is kept in a file of its own in the workspace's folder when it
+ * returns or fails, which its entry names, and the run keeps where it is for
+ * each session that failed (D81, D218). Where the vector declares an evaluation, its
  * asset is there (D97) and each check of the nodes it writes says yes (D173), and its verdict
  * does not stand, or says that it cannot judge, a new session makes it. A
  * yes or a no is committed, and the framework then adds a `resolved
@@ -69,10 +78,9 @@ import { changed } from "../algorithms/open.js"
 import { next } from "../algorithms/next.js"
 import { asksUser, cannotRun, firstEntry, identitiesAt, isDone, overturned, passes, recordsOf, standsFor, type Outcome } from "../algorithms/passes.js"
 import { progress } from "../algorithms/progress.js"
-import { PART, trespass } from "../algorithms/trespass.js"
 import { declaredAt, placedOf, type Reason, type WellFormed } from "../algorithms/well_formed.js"
 import { within } from "../kit/bounded_loop.js"
-import { decide, each, end, outcome, repeat, sequence, using, type Round } from "../kit/calculus.js"
+import { decide, each, end, fault, outcome, repeat, sequence, using, type Round } from "../kit/calculus.js"
 import { now as clock } from "../kit/clock.js"
 import { Files } from "../services/files.js"
 import { Git } from "../services/git.js"
@@ -80,16 +88,19 @@ import { Sessions } from "../services/sessions.js"
 import type { Flow, Services } from "../services/services.js"
 import { read } from "../kit/lossless_encoding.js"
 import { withPath } from "../kit/path_in_command.js"
-import { committed } from "./commit.js"
+import { BY_HAND, committed } from "./commit.js"
 import { logOf, note } from "./events.js"
-import { gather, givenOn, identitiesIn, type Here } from "./gather.js"
+import { gather, type Here } from "./gather.js"
+import { afterSession, changedQuestion, noteNow, notedWords, settle, take } from "./changed.js"
 import { linesChanged, questionFor } from "./question.js"
-import { addLines, agentFor, at, checkoutPlace, foundPath, frameworkPlaces, frameworkPart, nodes, PLACES, VerdictShape, printedPath, reported, seenFrom, watchedPlaces, type Builder, type BuilderRecord, type Fault, type Workspace } from "./workspace.js"
+import { addLines, agentFor, at, foundPath, frameworkPlaces, markOf, nodes, PLACES, VerdictShape, printedPath, reported, type Builder, type BuilderRecord, type Fault, type Workspace } from "./workspace.js"
 
 /** How a run ends: in exactly one of four ways (REQ-FLOW-003). */
 export type Ending =
-  | { readonly ending: "done"; readonly ticket: string; readonly merged: string }
-  | { readonly ending: "waiting"; readonly ticket: string; readonly vector: string; readonly question: string }
+  /** The work done; inside a larger repository, with each file outside the workspace's folder the merge took in (REQ-FLOW-003, REQ-FLOW-008 step 2, D256). */
+  | { readonly ending: "done"; readonly ticket: string; readonly merged: string; readonly into: string; readonly outside?: readonly string[] }
+  /** Waiting for the user's answer; or, with `ruling`, for the user's ruling on what changed while a session worked, with how many files were named (REQ-FLOW-006). */
+  | { readonly ending: "waiting"; readonly ticket: string; readonly vector: string; readonly question: string; readonly ruling?: number }
   | {
     readonly ending: "stopped"
     readonly ticket: string
@@ -103,25 +114,27 @@ export type Ending =
   }
   | {
     readonly ending: "refused"
-    readonly why: "release" | "not well formed" | "held" | "limit" | "nothing" | "not set up" | "unresolved" | "fault"
+    readonly why: "release" | "not well formed" | "held" | "limit" | "nothing" | "not set up" | "unresolved" | "fault" | "cannot tell" | "ps" | "alive" | "branch" | "main"
+    /** For "held": each hold, by its file, and the process it names (REQ-FLOW-001, D216). */
+    readonly holds?: readonly { readonly file: string; readonly by?: { readonly pid: number; readonly start?: string } }[]
     /** For "release": what the settings record, and what is running (REQ-FLOW-010). */
     readonly release?: { readonly recorded: BuilderRecord; readonly running: Builder }
     readonly reasons?: readonly Reason[]
-    /** For "unresolved": the files on main git could not merge. */
+    /** For "unresolved": the files on main git could not merge; for "main", the files git named where it refused to take main in. */
     readonly files?: readonly string[]
-    /** For "fault": what failed and what the user does next, in plain words (D75). */
+    /** For "fault": what failed and what the user does next, in plain words (D75); for "cannot tell" and "alive", what the framework found (D215); for "ps", the one sentence that `ps` was not found or could not read the table of processes, and what to install (D249); for "main", git's refusal to take main in or to merge into it, before any step (REQ-FLOW-008); for "unresolved", where the user resolves the files (D240). */
     readonly fault?: string
   }
 
 /**
  * The attempts made at one vector in this run, each a no of its evaluation
- * (REQ-PARAM-003); what the last working session of the attempt under way left
- * failing, for `progress`; and whether the last session on it failed (D210).
+ * (REQ-PARAM-003); and what the last working session of the attempt under way
+ * left failing, for `progress`. Which sessions failed in a row is the run's
+ * `inRow` (D219).
  */
 export interface Tried {
   readonly used: number
   readonly before?: readonly Outcome[]
-  readonly failed?: true
 }
 
 /**
@@ -139,9 +152,15 @@ export interface RunState {
   readonly sessions: number
   readonly vector?: string
   readonly failed: readonly string[]
+  /** By vector, how many sessions on it in this run failed one after another, up to the last; a session that returns sets it to none (REQ-FLOW-005, D210, D219). */
+  readonly inRow?: ReadonlyMap<string, number>
+  /** Where what the last working session printed is kept, from the workspace's folder (D97, D218). */
+  readonly lastWork?: string
+  /** What differed among the branches, tags and stash, and outside the workspace's folder, while a session worked, in the run's words; it holds no ticket (REQ-FLOW-001, D228). */
+  readonly noted?: readonly string[]
 }
 
-/** What the steps are on, read in the terms that enclose them: the workspace, the checkout, the ticket, the run's id and the method release, with where it is installed where the run found it (D89). */
+/** What the steps are on, read in the terms that enclose them: the workspace, its folder, the ticket, the run's id and the method release, with where it is installed where the run found it (D89). */
 export interface On {
   readonly ws: Workspace
   readonly here: Here
@@ -186,7 +205,7 @@ export type StepEnd =
   /** The checks or the verdict said no; `judged` where an evaluation of this step said no, which is one attempt (D210); where a working session worked in the step, where what it printed is kept (D97). */
   | { readonly step: "open"; readonly failing: readonly Outcome[]; readonly found: string; readonly printed?: string; readonly judged?: true }
   | { readonly step: "failed"; readonly why: string }
-  | { readonly step: "asks"; readonly question: string }
+  | { readonly step: "asks"; readonly question: string; readonly ruling?: number }
   | { readonly step: "stopped"; readonly why: string; readonly files?: readonly string[] }
   /** A fault met after a session of the step, which keeps the places of what the step's sessions printed. */
   | { readonly step: "fault"; readonly fault: Fault }
@@ -203,78 +222,46 @@ const stepped = (e: StepEnd, state: RunState): Stepped => ({ end: e, state })
 const keeping = (state: RunState, rest: Flow<Stepped, Fault>): Flow<Stepped, Fault> =>
   decide(outcome(rest), (o) => end("fault" in o ? { end: { step: "fault", fault: o.fault }, state } : o.value))
 
-/** The identities `trespass` compares, in the ticket's checkout and in main's own folder, at a session's start or at its return. */
-interface Held {
-  readonly checkout: ReadonlyMap<string, string>
-  readonly main: ReadonlyMap<string, string>
-}
-
-/**
- * The identity of every file in the places `trespass` can protect, in both
- * folders, from git's index of identities, which follows the files that
- * changed (C1). Files git ignores are no part of them.
- */
-const heldNow = (ws: Workspace, here: Here): Flow<Held, Fault> => {
-  const watched = watchedPlaces(ws)
-  const filesIn = (folder: string): Flow<ReadonlyMap<string, string>, Fault> =>
-    decide(identitiesIn(folder, watched), (t) => end(new Map(t.files.map((f) => [f, t.identities.get(f) ?? ""]))))
-  // The framework's lines of the branch's ticket are compared on their own, so the first vector's session, which may change the ticket, may not change them (REQ-ALG-008).
-  const part: Flow<readonly (readonly [string, string])[], Fault> = here.ticket === undefined ? end([]) : using(Files, (files) =>
-    decide(files.read(at(here.folder, here.ticket ?? "")), (written) =>
-      using(Git, (git) => decide(git.identityOfText(here.folder, frameworkPart(written ?? "")), (id) => end([[`${here.ticket ?? ""}${PART}`, id] as const])))))
-  return decide(filesIn(here.folder), (checkout) =>
-    decide(part, (framework) =>
-      decide(here.folder === ws.root ? end(new Map<string, string>()) : filesIn(ws.root), (main) => end({ checkout: new Map([...checkout, ...framework]), main }))))
-}
-
-/** The protected files a session changed: in the ticket's checkout, and in main's own folder. */
-interface Trespassed {
-  readonly checkout: readonly string[]
-  readonly main: readonly string[]
-}
-
-/** The files a session changed that it may not, named where the user finds them: the paths from the workspace's own folder. */
-export const trespassWords = (ticket: string, t: Trespassed, within: string): { readonly says: string; readonly files: readonly string[] } => ({
-  says: [
-    ...(t.checkout.length === 0 ? [] : [`${t.checkout.join(", ")} in the ticket's checkout, ${checkoutPlace(ticket, within)}`]),
-    ...(t.main.length === 0 ? [] : [`${t.main.join(", ")} in the workspace's own folder`])
-  ].join("; and "),
-  files: [...t.checkout.map((f) => `${checkoutPlace(ticket, within)}/${f}`), ...t.main]
-})
-
 /** What one session gave the step. */
 type Ran =
   | { readonly limit: string }
   | { readonly failed: string }
-  | { readonly trespassed: Trespassed }
+  /** Files that changed while the session worked, outside what its step writes: the question on them, and how many (REQ-ALG-008). */
+  | { readonly changed: string; readonly count: number }
+  /** The folder was found on another branch than the ticket's (REQ-FLOW-005 step 3). */
+  | { readonly elsewhere: string }
   | { readonly returned: true; readonly wroteVerdict: boolean }
   | { readonly faulted: Fault }
 
-/** Starts one session of a kind on the vector, where no limit of the run is reached, and waits for its return; then asks `trespass` of both folders. */
+/** Starts one session of a kind on the vector, where no limit of the run is reached, and waits for its return; then looks at the branch the folder is on and compares the workspace with the identities kept from the session's start (REQ-ALG-008, D226). */
 const session = (on: On, v: Vector, kind: "work" | "evaluation", s: Snapshot, state: RunState): Flow<{ readonly ran: Ran; readonly state: RunState }, Fault> => {
   const { ws, here, ticket, run } = on
   const limits = ws.settings.limits
-  const basis: Basis = { places: frameworkPlaces(ws), ...(on.release === undefined ? {} : { release: on.release }), ...(limits === undefined ? {} : { limits }) }
+  // Inside a larger repository, the packet says so (REQ-ALG-007, D256).
+  const basis: Basis = { places: frameworkPlaces(ws), ...(on.release === undefined ? {} : { release: on.release }), ...(limits === undefined ? {} : { limits }), ...(ws.within === "" ? {} : { inside: true as const }) }
   const limit = limitReached(ws, state)
   if (limit !== undefined) return end({ ran: { limit }, state })
   // An evaluating packet names, at each node it judges, main's content of it where the branch and main last met (REQ-ALG-007, D208).
-  const judged = kind === "evaluation" && here.folder !== ws.root ? recordsOf(ws.graph, v, "evaluation") : []
+  const judged = kind === "evaluation" && here.line !== ws.main ? recordsOf(ws.graph, v, "evaluation") : []
   const pathsAt = (n: string): readonly string[] => {
     const node = nodes(ws).find((m) => m.name === n)
     return node === undefined ? [] : pathsOf(node)
   }
+  // With each commit on the branch since then that holds the user's change by hand at the node (D244).
   const read: Flow<Snapshot, Fault> = judged.length === 0 ? end(s) : using(Git, (git) =>
     decide(git.mergeBase(here.folder, "HEAD", ws.main), (base) =>
       base === undefined ? end(s) : decide(git.underCommit(here.folder, base, judged.flatMap(pathsAt)), (held) =>
-        end({ ...s, main: { commit: base, holds: judged.filter((n) => pathsAt(n).some((p) => held?.has(p) === true)) } }))))
+        decide(each(judged, (n) => decide(git.commitsWith(here.folder, base, here.line, BY_HAND, pathsAt(n)), (commits) => end([n, commits] as const))), (byHand) =>
+          end({ ...s, main: { commit: base, holds: judged.filter((n) => pathsAt(n).some((p) => held?.has(p) === true)), byHand: new Map(byHand.filter(([, c]) => c.length > 0)) } })))))
   return decide(read, (withMain) => {
   const b = brief(ws.graph, v, kind, withMain, basis)
   const counted: RunState = { ...state, sessions: state.sessions + 1 }
   const briefFile = `${PLACES.briefs}/${v.name}.${kind}.md`
   const agent = agentFor(ws.settings, v.name, kind)
   const verdict = kind === "evaluation" && v.evaluation !== undefined ? at(here.folder, v.evaluation.verdict) : undefined
-  const printed = printedPath(v.name, kind)
-  const kept = seenFrom(here.folder === ws.root ? undefined : ticket, printed, ws.within)
+  // A file of its own for what each session printed, which its entry in the log names (REQ-FLOW-001, D218).
+  const printed = printedPath(v.name, kind, run, counted.sessions)
+  const kept = printed
   // A working session on a stretch is bound to it by a line of the checklist, committed before the session starts (REQ-FLOW-004, D204).
   const stretch = kind === "work" && v.first === true && s.ticket !== "simplest" ? s.ticket.inducting : undefined
   // On the first entry to the vector, the checklist shows that its work began, committed before the session starts (REQ-FLOW-005 step 1, D209).
@@ -291,42 +278,62 @@ const session = (on: On, v: Vector, kind: "work" | "evaluation", s: Snapshot, st
       return sequence(
         files.write(at(here.folder, briefFile), `${lines(b).join("\n")}\n`),
         binding,
-        // The agent's command as it is run, and the commit the session starts from (REQ-FLOW-007).
-        using(Git, (git) => decide(git.tipOf(here.folder, here.line), (from) =>
-          note(ws.root, { event: "session started", run, ticket, vector: v.name, kind, agent: named, path: briefFile, command: withPath(agent.command, at(here.folder, briefFile)), ...(from === undefined ? {} : { commit: from }) }))),
-        decide(heldNow(ws, here), (before) =>
+        // The agent's command as it is run, and the commit the session starts from (REQ-FLOW-007), which the run carries to the comparison after the session, where it stands in for identities that cannot serve (REQ-ALG-008, D255).
+        using(Git, (git) => decide(git.tipOf(here.folder, here.line), (from) => sequence(
+          note(ws.root, { event: "session started", run, ticket, vector: v.name, kind, agent: named, path: briefFile, command: withPath(agent.command, at(here.folder, briefFile)), ...(from === undefined ? {} : { commit: from }) }),
+        // The identities of both folders are taken and kept at the session's start, until its result is committed or ruled on (D227).
+        decide(noteNow(ws, ticket), (notedBefore) =>
+        decide(take(ws, here, ticket, v, kind), () =>
           decide(stamp, (stampBefore) =>
-            decide(sessions.start({ vector: v.name, kind, checkout: here.folder, brief: b, briefPath: at(here.folder, briefFile), agent, minutes: v.minutes ?? MINUTES }), (ended) => {
+            decide(sessions.start({ vector: v.name, kind, folder: here.folder, brief: b, briefPath: at(here.folder, briefFile), agent, minutes: v.minutes ?? MINUTES, mark: markOf(ws.root, ticket) }), (ended): Flow<{ readonly ran: Ran; readonly state: RunState }, Fault> => {
+              // Each time the framework ends processes of the session, the log holds how many (REQ-FLOW-007, D214).
+              const stopped = (why: string): Flow<void, Fault> =>
+                ended.processes === undefined ? end(undefined) : note(ws.root, { event: "session processes ended", run, ticket, vector: v.name, kind, processes: ended.processes, why })
+              const how = ended.ended === "cut off" ? `the run received the ${ended.signal} signal` : ended.ended === "returned" ? "the session returned, and these were still alive" : "the session failed, and these were still alive"
+              // Where a process it knows to be of the session is still alive, or it finds one it cannot place, the session is not over: nothing is committed, judged or started on the ticket, and the run is cut off, leaving its hold (REQ-FLOW-003, REQ-FLOW-005, D221).
+              // Where the table of processes could not be read, the words are the one sentence of D249, and name no process (REQ-FLOW-005).
+              const unended = ended.unended === undefined
+                ? undefined
+                : ended.table !== undefined
+                ? `The run is cut off on the ticket ${ticket}, at ${v.name}: its ${kind === "work" ? "working" : "evaluating"} session is not over, since the framework cannot read the table of processes. ${ended.unended} Until it can, nothing is committed, judged or started on the ticket. What the session printed is kept at ${kept}. Then start a run again: it ends what is left of the session before anything else.`
+                : `The run is cut off on the ticket ${ticket}, at ${v.name}: its ${kind === "work" ? "working" : "evaluating"} session is not over: ${ended.unended}. While one of them is alive, nothing is committed, judged or started on the ticket. What the session printed is kept at ${kept}. End each process named here, then start a run again.`
+              // What it printed is kept, and the processes ended noted, before the run asks whether it received a signal: a signal from the session's start on is kept until then (D214).
+              const recordedEnd = sequence(files.write(at(here.folder, printed), ended.printed), stopped(unended === undefined ? how : `${how}; the session is not over: ${ended.unended ?? ""}`))
+              return decide(outcome(recordedEnd), (r) => decide(sessions.settled(), (signal): Flow<{ readonly ran: Ran; readonly state: RunState }, Fault> => {
+              // The run received a signal, or the session is not over: the run goes no further, leaving its hold for the next run to find (REQ-FLOW-003).
+              if (signal !== undefined || unended !== undefined || ended.ended === "cut off") return sessions.goNoFurther(signal, unended)
+              if ("fault" in r) return fault(r.fault)
               // What the agent reported of its cost and its calls, read from what it printed by the fields the settings name (D91); it enters no decision (L5, L9).
               const spent = reported(agent.reports, ended.printed)
-              // What it printed is kept, whether it returned or failed; each session replaces the last of its vector and kind (D81).
-              const placed: RunState = ended.ended === "failed" && !counted.failed.includes(kept) ? { ...counted, failed: [...counted.failed, kept] } : counted
-              const rest: Flow<Ran, Fault> = decide(stamp, (stampAfter) =>
-                decide(heldNow(ws, here), (after) => {
+              // What it printed is kept in a file of its own, whether it returned or failed (D81, D218); how many sessions on the vector failed in a row, a return setting it to none (D219).
+              const inRow = new Map([...(counted.inRow ?? []), [v.name, ended.ended === "failed" ? (counted.inRow?.get(v.name) ?? 0) + 1 : 0]])
+              const counts: RunState = { ...counted, inRow, ...(kind === "work" ? { lastWork: kept } : {}) }
+              const placed: RunState = ended.ended === "failed" && !counts.failed.includes(kept) ? { ...counts, failed: [...counts.failed, kept] } : counts
+              const rest: Flow<{ readonly ran: Ran; readonly noted: readonly string[] }, Fault> = decide(noteNow(ws, ticket, notedBefore), (notedAfter) => decide(stamp, (stampAfter) =>
+                using(Git, (git) => decide(git.currentLine(here.folder), (branch): Flow<{ readonly ran: Ran; readonly noted: readonly string[] }, Fault> => {
                   const said = ended.ended === "failed"
                     ? note(ws.root, { event: "session failed", run, ticket, vector: v.name, kind, agent: named, seconds: ended.seconds, why: ended.why, printed, ...spent })
                     : note(ws.root, { event: "session returned", run, ticket, vector: v.name, kind, agent: named, seconds: ended.seconds, printed, ...spent })
-                  const asked = { graph: ws.graph, vector: v, kind, places: frameworkPlaces(ws), ...(here.ticket === undefined ? {} : { ticket: here.ticket }) }
-                  const trespassed: Trespassed = {
-                    checkout: trespass({ ...asked, start: before.checkout, end: after.checkout }),
-                    main: trespass({ ...asked, side: "main", start: before.main, end: after.main })
-                  }
-                  // The session wrote its verdict where the file is there now and is not the one that was there at its start, by content or by its writing (N7).
-                  const place = v.evaluation?.verdict
-                  const wrote = place !== undefined && stampAfter !== undefined &&
-                    (stampBefore === undefined || after.checkout.get(place) !== before.checkout.get(place) || stampAfter.written !== stampBefore.written || stampAfter.node !== stampBefore.node)
-                  const ran: Ran = trespassed.checkout.length > 0 || trespassed.main.length > 0
-                    ? { trespassed }
-                    : ended.ended === "failed"
-                    ? { failed: ended.why }
-                    : { returned: true, wroteVerdict: wrote }
-                  return sequence(said, end(ran))
-                }))
-              return sequence(
-                files.write(at(here.folder, printed), ended.printed),
-                decide(outcome(rest), (o) => end({ ran: "fault" in o ? { faulted: o.fault } : o.value, state: placed }))
-              )
-            })))
+                  // The folder on a branch that is not the ticket's: the run names it and goes no further on the ticket (REQ-FLOW-005 step 3).
+                  const noted = notedWords(v.name, ws.main, notedBefore, notedAfter)
+                  if (branch !== here.line) return sequence(said, end({ ran: { elsewhere: branch ?? "no branch" }, noted }))
+                  // Where the identities taken at the session's start are missing, cannot be read, are not its own, name a step the graph does not hold or name what git no longer holds, those of the commit the session started from stand in, and each file that differs from it is put to the user; where git no longer holds that commit, the flow fails (REQ-ALG-008, REQ-FLOW-005 step 3, D246, D255).
+                  return decide(afterSession(ws, here, ticket, v.name, kind, from), ({ kept, changed }): Flow<{ readonly ran: Ran; readonly noted: readonly string[] }, Fault> => {
+                      // The session wrote its verdict where the file is there now and is not the one that was there at its start, by its writing (N7).
+                      const wrote = v.evaluation?.verdict !== undefined && stampAfter !== undefined &&
+                        (stampBefore === undefined || stampAfter.written !== stampBefore.written || stampAfter.node !== stampBefore.node)
+                      const ran: Ran = changed.length > 0
+                        ? { changed: changedQuestion(v.name, changed, kept.stood, ws.main), count: changed.length }
+                        : ended.ended === "failed"
+                        ? { failed: ended.why }
+                        : { returned: true, wroteVerdict: wrote }
+                      // Nothing differs on which no yes was given: the identities are no longer kept (D227).
+                      return sequence(said, changed.length === 0 ? settle(ws, ticket, kept) : end(undefined), end({ ran, noted }))
+                    })
+                }))))
+              return decide(outcome(rest), (o) => end("fault" in o ? { ran: { faulted: o.fault }, state: placed } : { ran: o.value.ran, state: o.value.noted.length === 0 ? placed : { ...placed, noted: [...(placed.noted ?? []), ...o.value.noted] } }))
+            }))
+            })))))))
       )
     }))
   })
@@ -365,12 +372,15 @@ const leftBy = (on: On, v: Vector, ran: Ran, state: RunState, session: "working 
   if ("faulted" in ran) return end({ end: { step: "fault", fault: ran.faulted }, state })
   if ("limit" in ran) return keeping(state, sequence(commitStep(on, v, "a limit of the run was reached"), end(stepped({ step: "stopped", why: ran.limit }, state))))
   if ("failed" in ran) return keeping(state, sequence(commitStep(on, v, `${how} failed`), end(stepped({ step: "failed", why: ran.failed }, state))))
-  if ("trespassed" in ran) {
-    const said = trespassWords(on.ticket, ran.trespassed, on.ws.within)
+  // What changed while the session worked, outside what its step writes, is put to the user: no verdict is read, no check is run and nothing of the step is committed until the user has ruled (REQ-FLOW-005 step 3, REQ-FLOW-006).
+  if ("changed" in ran) {
     return keeping(state, sequence(
-      commitStep(on, v, `${how} changed files it may not`),
-      end(stepped({ step: "stopped", why: `the ${session} of ${v.name} changed protected files: ${said.says}`, files: said.files }, state))
+      note(on.ws.root, { event: "user asked", run: on.run, ticket: on.ticket, vector: v.name, why: "what changed while a session worked", named: ran.count }),
+      end(stepped({ step: "asks", question: ran.changed, ruling: ran.count }, state))
     ))
+  }
+  if ("elsewhere" in ran) {
+    return end(stepped({ step: "stopped", why: `the workspace's folder is on ${ran.elsewhere === "no branch" ? "no branch" : `the branch ${ran.elsewhere}`}, which is not the ticket's, ${on.here.line}. Put it back on ${on.here.line}, git switch ${on.here.line}; nothing is committed, judged or started on the ticket until then` }, state))
   }
   return undefined
 }
@@ -402,7 +412,7 @@ const working = (on: On, v: Vector, s: Snapshot, state: RunState): Flow<Stepped 
         return decide(steps(on, part, st), (inner) =>
           end("ended" in inner.traversed ? { leave: { end: { step: "ended", ending: inner.traversed.ended }, state: inner.state } } : { again: { i: i + 1, state: { ...inner.state, vector: v.name } } }))
       }
-      // Between parts, the checkout is read again; a change to the ticket stays that session's while the last `bound` line is not ended (D204).
+      // Between parts, the folder is read again; a change to the ticket stays that session's while the last `bound` line is not ended (D204).
       return decide(i === 0 ? end(s) : gather(on.ws, on.here), (now) =>
         decide(session(on, v, "work", now, st), ({ ran, state: after }): Flow<Round<Parts, Stepped | { readonly worked: RunState }>, Fault> => {
           const left = "limit" in ran && i === 0 ? end(stepped({ step: "stopped", why: ran.limit }, after)) : leftBy(on, v, ran, after, "working session")
@@ -426,8 +436,8 @@ const judging = (on: On, v: Vector, state: RunState, worked: boolean, before: Sn
       records: new Map<string, Recorded>([...(read.records ?? []), ...recordsOf(ws.graph, v, "evaluation").map((node) => [node, { ...read.records?.get(node), verdict: { says: "cannot", on: identitiesAt(ws.graph, node, read), at: cannot } satisfies Given }] as const)])
     }
     const result = passes(ws.graph, v, last)
-    const found = seenFrom(here.folder === ws.root ? undefined : ticket, foundPath(v.name), ws.within)
-    const printed = seenFrom(here.folder === ws.root ? undefined : ticket, printedPath(v.name, "work"), ws.within)
+    const found = foundPath(v.name)
+    const printed = state.lastWork
     const closing = (how: string, event: "vector closed" | "vector left open", why: string, stepEnd: StepEnd): Flow<Stepped, Fault> =>
       sequence(
         // A vector that closes is delivered: the checklist names the commit that holds its work (REQ-FLOW-004).
@@ -436,14 +446,14 @@ const judging = (on: On, v: Vector, state: RunState, worked: boolean, before: Sn
         end({ end: stepEnd, state }))
     const done = result.outcomes.filter(isDone) // a check not done is neither logged as run nor failing (CALCULUS L3)
     const failing = done.filter((o) => o.source !== "answer" && o.result !== "yes")
-    const findings = seenFrom(here.folder === ws.root ? undefined : ticket, v.evaluation?.findings ?? "", ws.within)
+    const findings = v.evaluation?.findings ?? ""
     const judged: Flow<Stepped, Fault> = cannotRun(result).length > 0
       ? closing("a check could not be run", "vector left open", "a check could not be run", { step: "stopped", why: `a check of ${v.name} could not be run; what it found is kept at ${found}` })
       : result.outcomes.some((o) => o.source === "verdict" && o.result === "cannot")
       // The evaluator's words stay in its findings: the ending names where they are, and the log holds none of them (D90).
       ? closing("the evaluation cannot judge", "vector left open", "the evaluation cannot judge", { step: "stopped", why: `the evaluation of ${v.name} cannot judge; why is in its findings at ${findings}` })
       : result.result === "yes"
-      ? closing("closed", "vector closed", "its checks pass on the checkout as it is", { step: "closed" })
+      ? closing("closed", "vector closed", "its checks pass on the folder as it is", { step: "closed" })
       : asksUser(ws.graph, v, last)
       ? using(Files, (files) =>
           decide(here.ticket === undefined ? end(undefined) : files.read(at(here.folder, here.ticket)), (text) => {
@@ -454,10 +464,10 @@ const judging = (on: On, v: Vector, state: RunState, worked: boolean, before: Sn
               decide(commit === undefined ? end(undefined) : linesChanged(ws, here.folder, v, commit), (counted) =>
                 sequence(
                   note(ws.root, { event: "user asked", run, ticket, vector: v.name }),
-                  end({ end: { step: "asks" as const, question: questionFor(ws, v, last, text ?? "", here.folder === ws.root ? undefined : ticket, told, counted) }, state })
+                  end({ end: { step: "asks" as const, question: questionFor(ws, v, last, text ?? "", told, counted) }, state })
                 )))
           }))
-      : closing("left open", "vector left open", failing.map((o) => o.name).join(", "), { step: "open", failing, found, ...(worked ? { printed } : {}), ...(judgedNo === true ? { judged: true as const } : {}) })
+      : closing("left open", "vector left open", failing.map((o) => o.name).join(", "), { step: "open", failing, found, ...(worked && printed !== undefined ? { printed } : {}), ...(judgedNo === true ? { judged: true as const } : {}) })
     return sequence(
       using(Files, (files) => files.write(at(here.folder, foundPath(v.name)), foundText(v, last, result.outcomes))),
       each(done.filter((o) => o.source === "check"), (o) =>
@@ -543,7 +553,7 @@ const afterStep = (on: On, workflow: Workflow, v: Vector, stepped: Stepped): Rou
   if (e.step === "closed") return { again: state }
   if (e.step === "ended") return ended(e.ending)
   if (e.step === "fault") return ended(faultEnding(on.ws.root, e.fault, ticket, state.vector))
-  if (e.step === "asks") return ended({ ending: "waiting", ticket, vector: v.name, question: e.question })
+  if (e.step === "asks") return ended({ ending: "waiting", ticket, vector: v.name, question: e.question, ...(e.ruling === undefined ? {} : { ruling: e.ruling }) })
   if (e.step === "stopped") return ended({ ending: "stopped", ticket, vector: v.name, why: e.why, ...(e.files === undefined ? {} : { files: e.files }) })
   const so = state.attempts.get(workflow)?.get(v.name) ?? { used: 0 }
   const bound = v.attempts ?? ATTEMPTS
@@ -561,11 +571,8 @@ const afterStep = (on: On, workflow: Workflow, v: Vector, stepped: Stepped): Rou
       state: tried
     }
   })
-  // A session that failed is made again in the same attempt, unless the session before it on the vector in this run failed too (REQ-FLOW-005, D210).
-  if (e.step === "failed") {
-    const tried = withTried(state, workflow, v.name, { ...so, failed: true })
-    return so.failed !== true ? { again: tried } : stopped(`the session on ${v.name} failed twice in a row: ${e.why}`, tried)
-  }
+  // A session that failed is made again in the same attempt, unless the session before it on the vector in this run failed too; one that returned between them breaks the row (REQ-FLOW-005, D210, D219).
+  if (e.step === "failed") return (state.inRow?.get(v.name) ?? 0) < 2 ? { again: state } : stopped(`the session on ${v.name} failed twice in a row: ${e.why}`, state)
   // An evaluation that said no is one attempt; the step is made again while the attempts the graph allows are not used up (REQ-PARAM-003).
   if (e.judged === true) {
     const used = so.used + 1
@@ -595,8 +602,8 @@ const rounds = (graph: WellFormed, workflow: Workflow): number =>
 
 /**
  * The steps on one workflow, the governing graph or one inside a vector's
- * graph function: `next` gives the vector among its vectors, in the ticket's
- * checkout, and a step is made on it; again while `progress` says yes
+ * graph function: `next` gives the vector among its vectors, in the
+ * workspace's folder, and a step is made on it; again while `progress` says yes
  * within the attempts the graph allows (C9), until none may run or the run
  * ends. The `repeat` is bounded by `rounds(w)` and has no measure: which
  * vectors are open is read in each round. Where the bound is reached, the run

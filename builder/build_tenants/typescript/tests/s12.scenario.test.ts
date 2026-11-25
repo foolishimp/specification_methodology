@@ -57,21 +57,24 @@ beforeAll(async () => {
   shown.set("waiting", (await ws.show()).out)
   await step("no", () => ws.answer("no", REASON))
   await step("again", () => ws.run(ANSWERED))
-  afterNo = readFileSync(ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`), "utf8")
-  briefAfterNo = readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8").split("\n")
+  afterNo = readFileSync(ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`), "utf8")
+  briefAfterNo = readFileSync(ws.path(".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8").split("\n")
   const at = /^- as it stands, the ticket: .*the user said no to it(?: \(in the ticket \S+ on the commit [0-9a-f]+\))?, with the reason at (.+?)(?:; |\.$)/.exec(briefAfterNo.find((l) => l.startsWith("- as it stands, the ticket: ")) ?? "")?.[1]
-  keptNo = at === undefined ? "" : readFileSync(ws.checkout(ticket, at), "utf8")
+  keptNo = at === undefined ? "" : readFileSync(ws.path(at), "utf8")
   await step("confirmed", () => ws.answer("yes"))
   await step("requirements", () => ws.run(S1_FIXTURES))
   await step("accepted", () => ws.answer("yes"))
-  // The user edits the active ticket's words on main, and commits.
+  // The user edits the active ticket's words on main, and commits: the folder is put on main for it, and back on the ticket's branch.
   const onMain = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
-  write(onMain, readFileSync(onMain, "utf8").replace(TICKET, EDITED))
-  ws.git(["commit", "-qam", "the user edits the ticket"])
+  ws.onMain(() => {
+    write(onMain, readFileSync(onMain, "utf8").replace(TICKET, EDITED))
+    ws.git(["commit", "-qam", "the user edits the ticket"])
+  })
   await step("edited", () => ws.run(INDUCTED))
   await step("reconfirmed", () => ws.answer("yes"))
   await step("rebuilt", () => ws.run(S1_FIXTURES))
-  // The user withdraws the ticket: deletes its file on main, and commits.
+  // The user withdraws the ticket: puts the folder on main, deletes its file there, and commits.
+  ws.git(["switch", "-q", "main"])
   ws.git(["rm", "-q", `.ai-workspace/tickets/active/${ticket}.md`])
   ws.git(["commit", "-qm", "the user withdraws the ticket"])
   await step("withdrawn", () => ws.run(S1_FIXTURES))

@@ -9,8 +9,8 @@
  *
  * Another: the user writes, by hand on main, the requirements the ticket's
  * branch has also written. Git cannot merge them; the run stops naming the
- * file and the checkout, and the next run stops again without committing
- * anything. Once the user resolves the file in the checkout, the run goes on,
+ * file, and the next run stops again without committing anything. Once the
+ * user resolves the file in the workspace's folder, the run goes on,
  * whether they wrote it anew or kept the branch's side.
  *
  * @uses C14 C5 C6
@@ -44,8 +44,10 @@ beforeAll(async () => {
     await ws.run(S1_FIXTURES)
     await ws.answer("yes")
     const path = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
-    write(path, (ws.read(".ai-workspace", "tickets", "active", `${ticket}.md`) ?? "").replace(S1_TICKET, EDITED))
-    ws.git(["commit", "-qam", "the user edits the ticket"])
+    ws.onMain(() => {
+      write(path, (ws.read(".ai-workspace", "tickets", "active", `${ticket}.md`) ?? "").replace(S1_TICKET, EDITED))
+      ws.git(["commit", "-qam", "the user edits the ticket"])
+    })
     const from = ws.log().length
     const ran = await ws.run(S1_FIXTURES)
     return { ws, ticket, ran, log: ws.log().slice(from) }
@@ -53,18 +55,20 @@ beforeAll(async () => {
   const two = async (resolve: "anew" | "ours") => {
     const ws = new Workspace(cli)
     const { ticket } = await s1ToRequirements(ws, S1_FIXTURES)
-    write(ws.path("specification", "requirements", "HELLO.md"), "# Hello, by hand\n\nWritten on main by the user.\n")
-    ws.git(["add", "-A"])
-    ws.git(["commit", "-qm", "the user writes the requirements on main"])
+    ws.onMain(() => {
+      write(ws.path("specification", "requirements", "HELLO.md"), "# Hello, by hand\n\nWritten on main by the user.\n")
+      ws.git(["add", "-A"])
+      ws.git(["commit", "-qm", "the user writes the requirements on main"])
+    })
     const first = await ws.run(S1_FIXTURES)
     const tip = ws.git(["rev-parse", `stdo/${ticket}`]).trim()
     const second = await ws.run(S1_FIXTURES)
     const commits = [tip, ws.git(["rev-parse", `stdo/${ticket}`]).trim()]
-    const checkout = ws.checkout(ticket)
+    const folder = ws.path()
     // The user resolves the file and stages it, without a commit: written anew, or kept as the branch has it.
-    if (resolve === "anew") write(ws.checkout(ticket, "specification", "requirements", "HELLO.md"), "# Hello\n\nREQ-HELLO-001: run with no arguments, the program prints hello, world and exits with code 0.\n")
-    else execFileSync("git", ["-C", checkout, "checkout", "--ours", "specification/requirements/HELLO.md"], { env: ws.env })
-    execFileSync("git", ["-C", checkout, "add", "specification/requirements/HELLO.md"], { env: ws.env })
+    if (resolve === "anew") write(ws.path("specification", "requirements", "HELLO.md"), "# Hello\n\nREQ-HELLO-001: run with no arguments, the program prints hello, world and exits with code 0.\n")
+    else execFileSync("git", ["-C", folder, "checkout", "--ours", "specification/requirements/HELLO.md"], { env: ws.env })
+    execFileSync("git", ["-C", folder, "add", "specification/requirements/HELLO.md"], { env: ws.env })
     const third = await ws.run(S1_FIXTURES)
     return { ws, ticket, first, second, third, commits }
   }
@@ -90,7 +94,7 @@ describe("QA-04 an active ticket the user edited on main", () => {
 })
 
 describe("QA-04 a file git cannot merge", () => {
-  it("stops the run, naming the file and the checkout", () => {
+  it("stops the run, naming the file and where to resolve it", () => {
     expect(conflict.first.code, conflict.first.out).toBe(1)
     expect(conflict.first.out).toContain("git could not merge specification/requirements/HELLO.md")
   })
@@ -98,12 +102,12 @@ describe("QA-04 a file git cannot merge", () => {
   it("keeps the run stopped, with nothing committed, until the user resolves it", () => {
     expect(conflict.second.code, conflict.second.out).toBe(1)
     expect(conflict.second.out).toContain("specification/requirements/HELLO.md")
-    expect(conflict.second.out).toContain(`.stdo-builder/local/checkouts/${conflict.ticket}`)
+    expect(conflict.second.out).toContain("in the workspace's folder")
     expect(conflict.commits[1]).toBe(conflict.commits[0])
     expect(markers(conflict.ws)).toBe("")
   })
 
-  it("goes on once the user has resolved it in the checkout", () => {
+  it("goes on once the user has resolved it in the workspace's folder", () => {
     expect(conflict.third.out).not.toContain("could not merge")
     expect(conflict.third.out).not.toContain("not resolved")
     expect(markers(conflict.ws)).toBe("")

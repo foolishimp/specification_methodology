@@ -43,7 +43,7 @@ describe("S5 A step that does not close", () => {
 
   it("D173: no evaluation of the build was started while a check of it said no; the step went back to a working session, whose packet names what the checks found", () => {
     expect(log.filter((e) => e.event === "session started" && e.vector === "write-build").map((e) => e.kind)).toEqual(["work", "work"])
-    expect(readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8")).toContain(".stdo-builder/local/found/write-build.md")
+    expect(readFileSync(ws.path(".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8")).toContain(".stdo-builder/local/found/write-build.md")
   })
 
   it("the run then ended as stopped, and said which vector could not close and which check did not pass", () => {
@@ -59,9 +59,9 @@ describe("S5 A step that does not close", () => {
   it("no session wrote a ticket", () => {
     const placed = readFileSync(join(S1_FIXTURES, "induct-ticket", "work", "append"), "utf8")
     // The framework's part of the ticket is the framework's (REQ-FLOW-001, REQ-FLOW-004); the rest is the user's words and the induction's.
-    const written = ws.read(".stdo-builder", "local", "checkouts", ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)
+    const written = ws.read(".ai-workspace", "tickets", "active", `${ticket}.md`)
     expect((written ?? "").split("\n").filter((l) => !l.startsWith("- framework: ")).join("\n")).toBe(`${S1_TICKET}\n${placed}`)
-    const tickets = ws.git(["-C", ws.checkout(ticket), "ls-files", ".ai-workspace"]).trim().split("\n")
+    const tickets = ws.git(["-C", ws.path(), "ls-files", ".ai-workspace"]).trim().split("\n")
     expect(tickets).toEqual([`.ai-workspace/tickets/active/${ticket}.md`])
   })
 
@@ -72,6 +72,6 @@ describe("S5 A step that does not close", () => {
   })
 
   it("the file the stand-in wrote is still there, unchanged", () => {
-    expect(readFileSync(ws.checkout(ticket, "build_tenants", "main", "code", "hello.sh"), "utf8")).toBe(FAILING)
+    expect(readFileSync(ws.path("build_tenants", "main", "code", "hello.sh"), "utf8")).toBe(FAILING)
   })
 })

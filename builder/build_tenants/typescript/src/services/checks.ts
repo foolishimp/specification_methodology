@@ -1,6 +1,6 @@
 /**
  * The checks service: the framework runs the checks the graph declares of an
- * asset against a checkout as it is now (REQ-FLOW-001, and the term "Check":
+ * asset against the workspace's folder as it is now (REQ-FLOW-001, and the term "Check":
  * no language model, the same result on the same workspace). A command is
  * started through the supervised child (C12); a result is kept under the
  * identities of what the check reads, and used again only for exactly that
@@ -34,13 +34,13 @@ import type { Tri } from "../kit/three_valued.js"
 import { covered, type Check } from "../graph/terms.js"
 import { Files } from "./files.js"
 
-/** Where a check is run: a checkout as it is now. */
+/** Where a check is run: the workspace's folder as it is now. */
 export interface Site {
-  /** The checkout, by its absolute path. */
-  readonly checkout: string
-  /** The checkout of main, by its absolute path: where main's copy of the ticket is read. */
-  readonly main: string
-  /** The identities of the whole checkout, and of the assets and the ticket (C1). */
+  /** The workspace's folder, by its absolute path. */
+  readonly folder: string
+  /** The ticket as main, the branch the ticket left, holds it, read from git by that branch and the ticket's path (D239); none where main holds none there. */
+  readonly onMain?: string
+  /** The identities of the whole folder, and of the assets and the ticket (C1). */
   readonly tree: Identities
   /** The path of the branch's ticket, where there is one. */
   readonly ticket?: string
@@ -107,7 +107,7 @@ export const checksLive: Layer.Layer<Checks, never, Files | ChildProcessSpawner.
     const kept = memo<Ran>()
 
     const textsUnder = (site: Site, places: readonly string[]) =>
-      Effect.forEach(covered(places, site.tree.files), (f) => files.read(`${site.checkout}/${f}`)).pipe(
+      Effect.forEach(covered(places, site.tree.files), (f) => files.read(`${site.folder}/${f}`)).pipe(
         Effect.map((texts) => texts.map((t) => t ?? ""))
       )
 
@@ -118,7 +118,7 @@ export const checksLive: Layer.Layer<Checks, never, Files | ChildProcessSpawner.
           // A node's name in braces stands for the paths of its asset (REQ-GRAPH-003).
           const argv = withPaths(run.argv, site.places)
           const [command = "", ...args] = argv
-          return supervise({ command, args, cwd: site.checkout, deadline: site.minutes * 60_000, merged: true }).pipe(
+          return supervise({ command, args, cwd: site.folder, deadline: site.minutes * 60_000, merged: true }).pipe(
             Effect.provideContext(context),
             Effect.map((o): Ran => {
               if (o.outcome === "returned") {
@@ -132,7 +132,7 @@ export const checksLive: Layer.Layer<Checks, never, Files | ChildProcessSpawner.
         }
         case "ticket_field":
           return Effect.gen(function*() {
-            const written = site.ticket === undefined ? "" : yield* files.read(`${site.checkout}/${site.ticket}`)
+            const written = site.ticket === undefined ? "" : yield* files.read(`${site.folder}/${site.ticket}`)
             if (written === undefined) return { result: "cannot", found: `no ticket at ${site.ticket}` } satisfies Ran
             const value = fieldsOf(written).get(run.field)
             const holds = run.is !== undefined ? value === run.is : run.is_not !== undefined ? value !== run.is_not : value !== undefined
@@ -141,8 +141,8 @@ export const checksLive: Layer.Layer<Checks, never, Files | ChildProcessSpawner.
         case "ticket_kept":
           return Effect.gen(function*() {
             if (site.ticket === undefined) return { result: "cannot", found: "there is no ticket of the branch" } satisfies Ran
-            const onMain = yield* files.read(`${site.main}/${site.ticketOnMain ?? site.ticket}`)
-            const here = yield* files.read(`${site.checkout}/${site.ticket}`)
+            const onMain = site.onMain
+            const here = yield* files.read(`${site.folder}/${site.ticket}`)
             if (onMain === undefined || here === undefined) return { result: "cannot", found: `main holds no ticket at ${site.ticketOnMain ?? site.ticket}, or the branch none at ${site.ticket}` } satisfies Ran
             // The user's lines are the keys of one map, the branch's of another: those only on main are lost (C2).
             const linesOf = (text: string, all: boolean) => new Map(text.split("\n").filter((l) => all || l.trim() !== "").map((l) => [l, l]))
@@ -190,7 +190,7 @@ export const checksLive: Layer.Layer<Checks, never, Files | ChildProcessSpawner.
       const read = (paths: readonly string[]) => paths.flatMap((p) => [p, site.tree.identities.get(p) ?? ""])
       if (run.kind === "ticket_field") return [run.kind, run.field, run.is ?? "", run.is_not ?? "", ...read(site.ticket === undefined ? [] : [site.ticket])]
       if (run.kind === "traced") return [run.kind, run.pattern, run.deferred, ...(run.others ?? []), ...read(site.places.get(run.from) ?? []), "", ...read(site.places.get(run.into) ?? [])]
-      // A command may read any file of the checkout: all of it but what lies apart, or all of it where it names a place apart.
+      // A command may read any file of the folder: all of it but what lies apart, or all of it where it names a place apart.
       const argv = run.kind === "command" ? withPaths(run.argv, site.places) : []
       return [run.kind, ...argv, "", site.apart.some((p) => argv.some((a) => covers(a, p) || covers(p, a))) ? site.tree.root : site.tree.beside ?? site.tree.root]
     }
@@ -203,7 +203,7 @@ export const checksLive: Layer.Layer<Checks, never, Files | ChildProcessSpawner.
             const start = now().millis
             return fresh(check, site).pipe(Effect.map((ran): Ran => ({ ...ran, seconds: (now().millis - start) / 1000 })))
           })
-        // What main holds of the ticket lies outside the checkout's identities, so that check is never kept.
+        // What main holds of the ticket lies outside the folder's identities, so that check is never kept.
         if (check.run.kind === "ticket_kept") return timed()
         const key = keyOf(check, site)
         const got = kept.lookup(key)

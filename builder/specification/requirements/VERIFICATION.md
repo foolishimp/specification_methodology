@@ -21,6 +21,9 @@ From: goals, "First build".
 
 ### REQ-VERIFY-002 A scenario is driven by a user, on the installed product
 
+**Status**: Deferred: the user put it off on 23 November 2026, in ticket
+261124-055459-1851.
+
 A scenario is run on the product as a user installs it, in a new folder, with a
 live LLM agent doing the work unless the scenario names a stand-in. It is
 driven by a person, or by an LLM agent standing in for one. The driver is given
@@ -39,6 +42,9 @@ Acceptance:
 From: intent, outcome 5.
 
 ### REQ-VERIFY-003 A scenario is judged from the workspace it leaves
+
+**Status**: Deferred: the user put it off on 23 November 2026, in ticket
+261124-055459-1851.
 
 Whether a scenario ended as it should is decided from the workspace it leaves.
 Where a scenario compares the workspace with an earlier state, or must show

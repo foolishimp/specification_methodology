@@ -4,7 +4,9 @@
  * starts a run. The stand-in's working session on the induction prints a line
  * and fails, at every attempt, so the run ends. The run names where what that
  * session printed is kept. The line is there, in the workspace, and is neither
- * in the event log nor in the history.
+ * in the event log nor in the history. Each session's line is in a file of its
+ * own, which that session's entry names (finding C-13 of the review of
+ * release 3.2.0).
  *
  * @uses C14 C5 C6
  * @is REQ-VERIFY-002 REQ-FLOW-001
@@ -65,6 +67,14 @@ describe("what a failed session printed is kept (the ticket's item 3)", () => {
   it("the run names where what the session printed is kept, and the line is there, in the workspace", () => {
     const holding = filesNamed(ran.out, ws.root).filter((p) => readFileSync(p, "utf8").includes(LINE))
     expect(holding.length, ran.out).toBeGreaterThan(0)
+  })
+
+  it("each session that failed kept what it printed in a file of its own, which its entry in the log names", () => {
+    const failed = log.filter((e) => e.event === "session failed" && e.vector === "induct-ticket")
+    expect(failed.length).toBeGreaterThanOrEqual(2)
+    const places = failed.map((e) => e.printed ?? "")
+    expect(new Set(places).size).toBe(places.length)
+    for (const p of places) expect(readFileSync(join(ws.path(), p), "utf8")).toContain(LINE)
   })
 
   it("the line is not in the event log", () => {

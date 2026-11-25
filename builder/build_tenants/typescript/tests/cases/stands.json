@@ -1148,6 +1148,101 @@
         "withdrawn": [],
         "log": "found"
       }
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 9"
+      ],
+      "says": "A run ended waiting for the user's ruling on what changed while a session worked, and the requirements were delivered for the user's decision before: the ticket waits on that ruling first, read from the identities kept from the session's start, with the same question, file by file.",
+      "given": {
+        "fixture": "method",
+        "board": {
+          "backlog": [
+            {
+              "name": "261120-b"
+            }
+          ],
+          "active": [
+            {
+              "name": "261119-a"
+            }
+          ],
+          "done": []
+        },
+        "branches": [
+          "261119-a"
+        ],
+        "views": {
+          "261119-a": {
+            "changes": [
+              {
+                "path": "specification/INTENT.md",
+                "lines": 12
+              },
+              {
+                "path": "specification/PRODUCT.md",
+                "lines": 20
+              },
+              {
+                "path": "specification/requirements/FUNCTIONS.md",
+                "lines": 30
+              },
+              {
+                "path": "tickets/active/261119-a.md",
+                "lines": 4
+              }
+            ],
+            "ticket": {
+              "asked": {
+                "vector": "write-requirements",
+                "asset": "requirements",
+                "when": "2026-11-19T10:00:00.000Z"
+              },
+              "inducted": true,
+              "ruling": {
+                "vector": "write-build",
+                "question": "While the session on write-build worked, these files changed outside what its step writes. Each changed while the session worked; it may have been the session or you:\n- scratch/notes.txt (added, in the workspace's folder)"
+              }
+            }
+          }
+        },
+        "log": null
+      },
+      "expect": {
+        "tickets": [
+          {
+            "name": "261120-b",
+            "lane": "backlog",
+            "changed": []
+          },
+          {
+            "name": "261119-a",
+            "lane": "active",
+            "waits": {
+              "on": "ruling",
+              "vector": "write-build",
+              "question": "While the session on write-build worked, these files changed outside what its step writes. Each changed while the session worked; it may have been the session or you:\n- scratch/notes.txt (added, in the workspace's folder)",
+              "from": "kept"
+            },
+            "changed": [
+              {
+                "asset": "intent",
+                "lines": 12
+              },
+              {
+                "asset": "product",
+                "lines": 20
+              },
+              {
+                "asset": "requirements",
+                "lines": 30
+              }
+            ]
+          }
+        ],
+        "withdrawn": [],
+        "log": "not found"
+      }
     }
   ],
   "elsewhere": [
@@ -1163,7 +1258,7 @@
         "REQ-ALG-012 acceptance 6"
       ],
       "in": "show_runs_no_check.scenario.test.ts",
-      "says": "A run ends waiting for the user's answer, and the code in the ticket's checkout is then deleted: show gives that the ticket waits for the user's answer on that vector, as the ticket shows, with when the question was asked."
+      "says": "A run ends waiting for the user's answer, and the code in the workspace's folder is then deleted: show gives that the ticket waits for the user's answer on that vector, as the ticket shows, with when the question was asked."
     },
     {
       "covers": [
@@ -1179,6 +1274,20 @@
       ],
       "says": "With the event log deleted after a run ends waiting for the user's answer, show gives the question from the ticket and says the log was not found.",
       "in": "one_log.scenario.test.ts"
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 10"
+      ],
+      "in": "one_folder_cases.scenario.test.ts",
+      "says": "After show, every file under the framework's local folder, git's index and git's store are as they were."
+    },
+    {
+      "covers": [
+        "REQ-ALG-012 acceptance 11"
+      ],
+      "in": "one_folder.scenario.test.ts",
+      "says": "With a ticket active and the folder on another branch, show answers, names both branches, and says a run and an answer are refused until the folder is back on the ticket's branch."
     }
   ]
 }

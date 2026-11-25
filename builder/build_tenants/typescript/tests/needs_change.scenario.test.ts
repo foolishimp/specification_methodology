@@ -16,7 +16,7 @@ import { afterAll, beforeAll, describe, expect, it } from "vitest"
 import { build, clean, fixturesLike, s1ToRequirements, Workspace, write, type LogEntry, type Said } from "./scenario_driver.js"
 
 const NEEDS = "This work needs a change to the requirements: they give no exit code. 5be1d9."
-const PRINTED = ".stdo-builder/local/printed/write-build.work.txt"
+const PRINTED = ".stdo-builder/local/printed/write-build.work."
 let ws: Workspace
 let ticket = ""
 let ran: Said
@@ -38,7 +38,7 @@ afterAll(clean)
 
 describe("REQ-FLOW-005 a working session needs a change it may not make", () => {
   it("its packet tells it to say so in what it prints and to stop without writing its asset", () => {
-    const brief = readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8")
+    const brief = readFileSync(ws.path(".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8")
     expect(brief).toContain("- stop: where the work needs a change this session may not make, say what change and why in what you print, and stop without writing build_tenants/main/design, build_tenants/main/tests and build_tenants/main/code.")
     expect(brief).not.toContain("backlog that says what and why")
   })
@@ -51,7 +51,10 @@ describe("REQ-FLOW-005 a working session needs a change it may not make", () => 
   it("the run stops, and names where what the last working session printed is kept; the words are there", () => {
     expect(ran.code, ran.out).toBe(1)
     expect(ran.out).toContain("write-build could not close: the same number of checks failed twice in a row")
-    const kept = `.stdo-builder/local/checkouts/${ticket}/${PRINTED}`
+    // The last working session's own file, which its entry in the log names (D218).
+    const own = log.filter((e) => e.event === "session returned" && e.vector === "write-build" && e.kind === "work").at(-1)?.printed ?? ""
+    expect(own.startsWith(PRINTED)).toBe(true)
+    const kept = `${own}`
     expect(ran.out).toContain(`What the last working session printed is kept at ${kept}.`)
     expect(readFileSync(ws.path(kept), "utf8")).toContain(NEEDS)
     expect(JSON.stringify(log)).not.toContain("5be1d9")

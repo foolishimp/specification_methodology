@@ -8,7 +8,10 @@
  *   packet names main's content of each node it judges, or that main holds
  *   none of it. The user changes another line of the code by hand on main
  *   after the ticket's branch is made, and the command the packet gives does
- *   not show it (REQ-ALG-007 acceptance 2 and 3).
+ *   not show it (REQ-ALG-007 acceptance 2 and 3). The user adds a line to the
+ *   code by hand in the folder while the ticket is active: the evaluating
+ *   packet names the commit that holds it as the user's (REQ-ALG-007
+ *   acceptance 3, D244).
  * - The first entry: under a confirmed term, the first step on a vector
  *   starts its working session, and the checklist shows that its work began
  *   (REQ-FLOW-005 step 1). Under the requirements and then the build:
@@ -73,16 +76,18 @@ describe("a ticket that changes one line of the built code", () => {
     const fixtures = codeFixtures()
     await ws.run(fixtures)
     await ws.answer("yes")
-    // The user changes the code's last line by hand on main, after the ticket's branch is made; the next run takes it in.
-    write(ws.path(...CODE), (ws.read(...CODE) ?? "").replace("printf 'hello, world\\n'", BY_HAND))
-    ws.git(["commit", "-qam", "the user changes the code's last line"])
+    // The user puts the folder on main, changes the code's last line by hand there and commits it, after the ticket's branch is made, and puts the folder back; the next run takes it in.
+    ws.onMain(() => {
+      write(ws.path(...CODE), (ws.read(...CODE) ?? "").replace("printf 'hello, world\\n'", BY_HAND))
+      ws.git(["commit", "-qam", "the user changes the code's last line"])
+    })
     const from = ws.log().length
     built = await ws.run(fixtures)
     log = ws.log().slice(from)
     shown = await ws.show()
   }, 240_000)
 
-  const packet = (t: string, name: string): string => readFileSync(ws.checkout(t, ".stdo-builder", "local", "briefs", name), "utf8")
+  const packet = (t: string, name: string): string => readFileSync(ws.path(".stdo-builder", "local", "briefs", name), "utf8")
 
   it("REQ-ALG-007 acceptance 2: every working packet after the induction says that every line the work and the findings do not require is left as it stands, and what holds where the work removes or renames something", () => {
     for (const name of ["write-specification.work.md", "write-build.work.md"]) expect(packet(earlier, name)).toContain(UNCHANGED_WORK)
@@ -98,9 +103,9 @@ describe("a ticket that changes one line of the built code", () => {
     expect(command).toBeDefined()
     // The user's line is on main and in the code the evaluation judged, so the command's lines are judged with it there.
     expect(ws.git(["show", `main:${CODE.join("/")}`])).toContain(BY_HAND)
-    expect(readFileSync(ws.checkout(ticket, ...CODE), "utf8")).toBe(FIXED)
-    // The command, run in the ticket's checkout, gives the one line the branch changed, and no other: not the user's.
-    const diff = ws.git(["-C", ws.checkout(ticket), ...(command ?? "").split(" ").slice(1)])
+    expect(readFileSync(ws.path(...CODE), "utf8")).toBe(FIXED)
+    // The command, run in the workspace's folder on the ticket's branch, gives the one line the branch changed, and no other: not the user's.
+    const diff = ws.git(["-C", ws.path(), ...(command ?? "").split(" ").slice(1)])
     expect(diff.split("\n").filter((l) => /^[-+][^-+]/.test(l))).toEqual([
       "-# Hello. Carries out REQ-HELLO-001.",
       "+# Hello. Carries out REQ-HELLO-001. It reads no file, so it prints the same from any folder."
@@ -109,7 +114,7 @@ describe("a ticket that changes one line of the built code", () => {
 
   it("REQ-FLOW-005 step 1: the first step on the code under the confirmed term starts its working session; the checklist shows that its work began", () => {
     expect(sessionsIn(log)[0]).toBe("write-code work")
-    const text = ws.read(".stdo-builder", "local", "checkouts", ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`) ?? ""
+    const text = ws.read(".ai-workspace", "tickets", "active", `${ticket}.md`) ?? ""
     expect(text).toMatch(/^- framework: began write-code at [0-9a-f]{40}$/m)
     expect(text.indexOf("began write-code")).toBeLessThan(text.indexOf("resolved evaluation"))
   })
@@ -120,6 +125,42 @@ describe("a ticket that changes one line of the built code", () => {
     expect(shown.out).toContain("1 line changed (1 added, 1 taken out), and 2 lines remain as they were.")
     const specification = whole.find((s) => s.out.includes("Do you accept intent at"))?.out ?? ""
     for (const node of ["intent", "product", "requirements"]) expect(specification).toContain(`${node} is new: main holds none of it.`)
+  })
+})
+
+describe("REQ-ALG-007 acceptance 3: a line the user changed by hand in the folder while the ticket is active", () => {
+  /** The file the user adds to the code by hand, in the folder, on the ticket's branch. */
+  const NOTE = ["build_tenants", "main", "code", "NOTE.txt"] as const
+  let ws: Workspace
+  let ticket = ""
+  let evaluating = ""
+  let byHand: readonly string[] = []
+
+  beforeAll(async () => {
+    ws = new Workspace(build())
+    await s1Whole(ws, S1_FIXTURES)
+    ticket = /The ticket (\S+) is written/.exec((await ws.ticket(FAULT)).out)?.[1] ?? ""
+    const fixtures = codeFixtures()
+    await ws.run(fixtures)
+    await ws.answer("yes")
+    // While the ticket is active, the user adds a note to the code by hand in the folder, and commits nothing; the next run commits it as the user's change by hand.
+    write(ws.path(...NOTE), "the user's note, written by hand\n")
+    await ws.run(fixtures)
+    evaluating = readFileSync(ws.path(".stdo-builder", "local", "briefs", "write-code.evaluation.md"), "utf8")
+    byHand = ws.git(["log", "--format=%H", "--grep=^what the user changed by hand$", `main..stdo/${ticket}`]).split("\n").filter((l) => l !== "")
+  }, 240_000)
+
+  it("the run commits the user's line on the ticket's branch as the user's change by hand, and the evaluating packet on the code names that commit and says its lines are the user's, not the ticket's work", () => {
+    expect(byHand).toHaveLength(1)
+    const commit = byHand[0] ?? ""
+    expect(ws.git(["show", "--name-only", "--format=", commit]).trim()).toBe(NOTE.join("/"))
+    const line = evaluating.split("\n").find((l) => l.startsWith("- as main holds it, code: ")) ?? ""
+    expect(line, evaluating).toContain(`The user's change by hand, made in the folder while the ticket is active, is committed on the branch in the commit ${commit}`)
+    expect(line).toContain("the lines it changed are the user's, not the ticket's work.")
+  })
+
+  it("S1's evaluating packet on the build, under which the user changed nothing by hand, names no such commit", () => {
+    expect(readFileSync(ws.path(".stdo-builder", "local", "briefs", "write-build.evaluation.md"), "utf8")).not.toContain("The user's change by hand")
   })
 })
 

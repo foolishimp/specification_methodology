@@ -5,6 +5,8 @@
  * and exits with its exit code. It holds no check, no decision and no step of
  * a run. Its commands: set up, write a ticket, run, answer, show, list the
  * registry, and record the release that builds the product (REQ-FLOW-010).
+ * A command it does not know, or one not given what it needs, it ends with
+ * the usage and the code 2.
  *
  * @uses C14
  * @is REQ-INTERFACE-001 REQ-FLOW-010
@@ -12,13 +14,14 @@
 import * as NodeRuntime from "@effect/platform-node/NodeRuntime"
 import * as NodeServices from "@effect/platform-node/NodeServices"
 import * as Effect from "effect/Effect"
-import { Argument, Command, Flag } from "effect/cli"
+import { Argument, CliError, Command, Flag } from "effect/cli"
 import * as Library from "../library/library.js"
 
 const workspace = Argument.String("workspace").pipe(Argument.withDescription("The workspace, by its path or file: URI"), Argument.withDefault("."))
 const given = (value: string): string | undefined => (value === "" ? undefined : value)
+// The command is not cut short by the runtime's own handling of a signal: the run binds its signals itself (REQ-FLOW-003, D214).
 const say = (said: () => Promise<Library.Said<unknown>>) =>
-  Effect.promise(said).pipe(Effect.flatMap((s) => Effect.sync(() => {
+  Effect.uninterruptible(Effect.promise(said)).pipe(Effect.flatMap((s) => Effect.sync(() => {
     console.log(s.words)
     process.exitCode = s.exitCode
   })))
@@ -64,4 +67,11 @@ const recordRelease = Command.make("record-release", { workspace }, (c) => say((
 
 const program = Command.make("stdo-builder").pipe(Command.withSubcommands([setup, ticket, run, answer, show, registry, recordRelease]))
 
-Command.run(program, { version: "0.0.0" }).pipe(Effect.provide(NodeServices.layer), NodeRuntime.runMain)
+// A command that is not known, or is not given what it needs, has had the usage printed by the time it fails here; it ends with 2, the code the instructions give for it (REQ-INTERFACE-001, D251).
+Command.run(program, { version: "0.0.0" }).pipe(
+  Effect.catchIf(CliError.isCliError, () => Effect.sync(() => {
+    process.exitCode = Library.NOT_GIVEN
+  })),
+  Effect.provide(NodeServices.layer),
+  NodeRuntime.runMain
+)

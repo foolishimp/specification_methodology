@@ -11,14 +11,14 @@
 import * as NodeServices from "@effect/platform-node/NodeServices"
 import * as Effect from "effect/Effect"
 import { execFileSync } from "node:child_process"
-import { existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, writeFileSync } from "node:fs"
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, realpathSync, rmSync, statSync, writeFileSync } from "node:fs"
 import { tmpdir } from "node:os"
 import { join } from "node:path"
 import { afterAll, describe, expect, it } from "vitest"
 import { append, exists, fold } from "../src/kit/append_only_log.js"
 import { identitiesOf, sha256Of } from "../src/kit/content_addressing.js"
 import { createIfAbsent } from "../src/kit/create_if_absent.js"
-import { held, holding } from "../src/kit/exclusive_hold.js"
+import { held, holding, keeping, left } from "../src/kit/exclusive_hold.js"
 import { supervise } from "../src/kit/supervised_child.js"
 import * as Lines from "../src/kit/three_way_merge.js"
 
@@ -172,32 +172,45 @@ describe("C12 supervised child", () => {
 })
 
 describe("C13 three-way merge", () => {
-  it("merges lines that change different files, and leaves a conflict as git leaves it, naming the file", async () => {
+  it("takes main into a line in the one folder, merges the line's whole tree into main with no file written, and leaves a conflict as git leaves it, naming the file (REQ-FLOW-008)", async () => {
     const f = await repository()
+    const git = (args: string[]) => execFileSync("git", ["-C", f, ...args], { encoding: "utf8", stdio: "pipe" }).trim()
     writeFileSync(join(f, "a.txt"), "one\n")
     writeFileSync(join(f, "b.txt"), "one\n")
     const base = await on(commitAll(f, "main", "base"))
     expect(base).toBeDefined()
     expect(await on(commitAll(f, "main", "nothing changed"))).toBeUndefined()
-    const checkout = join(f, "..", `${f.split("/").pop()}-line`)
-    made.push(checkout)
-    await on(Lines.checkoutOf(f, "stdo/t", "main", checkout))
-    writeFileSync(join(checkout, "a.txt"), "two\n")
-    await on(commitAll(checkout, "stdo/t", "on the line"))
+    git(["switch", "-q", "-c", "stdo/t"])
+    writeFileSync(join(f, "a.txt"), "two\n")
+    await on(commitAll(f, "stdo/t", "on the line"))
+    git(["switch", "-q", "main"])
     writeFileSync(join(f, "b.txt"), "two\n")
     await on(commitAll(f, "main", "on main"))
-    expect(await on(Lines.holdsAll(checkout, "main"))).toBe(false)
-    const taken = await on(Lines.merge(checkout, "stdo/t", "main", "take main in", true))
-    expect(taken).toEqual({ merged: "yes", changed: true })
-    expect(await on(Lines.holdsAll(checkout, "main"))).toBe(true)
-    expect(readFileSync(join(checkout, "b.txt"), "utf8")).toBe("two\n")
+    git(["switch", "-q", "stdo/t"])
+    expect(await on(Lines.holdsAll(f, "main"))).toBe(false)
+    expect(await on(Lines.takeInto(f, "stdo/t", "main", "take main in"))).toEqual({ merged: "yes", changed: true })
+    expect(await on(Lines.holdsAll(f, "main"))).toBe(true)
+    expect(readFileSync(join(f, "b.txt"), "utf8")).toBe("two\n")
+    expect(git(["status", "--porcelain"])).toBe("")
 
-    writeFileSync(join(checkout, "a.txt"), "three\n")
-    await on(commitAll(checkout, "stdo/t", "line again"))
+    // The merge into main writes no file: git moves main and the folder's HEAD alone.
+    const line = git(["rev-parse", "stdo/t"])
+    const before = [statSync(join(f, "a.txt")).mtimeMs, statSync(join(f, "b.txt")).mtimeMs]
+    expect(await on(Lines.mergeInto(f, "main", "stdo/t", "merge the line"))).toEqual({ merged: "yes", changed: true })
+    expect(await on(Lines.currentLine(f))).toBe("main")
+    expect(git(["rev-parse", "main^2"])).toBe(line)
+    expect(git(["rev-parse", "main^{tree}"])).toBe(git(["rev-parse", "stdo/t^{tree}"]))
+    expect([statSync(join(f, "a.txt")).mtimeMs, statSync(join(f, "b.txt")).mtimeMs]).toEqual(before)
+    expect(git(["status", "--porcelain"])).toBe("")
+
+    git(["switch", "-q", "stdo/t"])
+    writeFileSync(join(f, "a.txt"), "three\n")
+    await on(commitAll(f, "stdo/t", "line again"))
+    git(["switch", "-q", "main"])
     writeFileSync(join(f, "a.txt"), "four\n")
     await on(commitAll(f, "main", "main again"))
-    const clash = await on(Lines.merge(f, "main", "stdo/t", "merge the line", false))
-    expect(clash).toEqual({ merged: "conflict", files: ["a.txt"] })
+    git(["switch", "-q", "stdo/t"])
+    expect(await on(Lines.takeInto(f, "stdo/t", "main", "take main in"))).toEqual({ merged: "conflict", files: ["a.txt"] })
     expect(readFileSync(join(f, "a.txt"), "utf8")).toContain("<<<<<<<")
     expect(await on(Lines.linesNamed(f, ["stdo"]))).toEqual(["stdo/t"])
   }, 30_000)
@@ -217,25 +230,29 @@ describe("C13 three-way merge", () => {
     expect(existsSync(join(f, ".git"))).toBe(true)
     expect(existsSync(elsewhere)).toBe(false)
   })
-  it("a commit goes on the line it names, whatever the folder's HEAD names, and a merge into a folder not on the line is refused", async () => {
+  it("a commit goes on the line it names, which the folder is on, whatever else takes its name; a commit or a merge on a line the folder is not on is refused (REQ-FLOW-001)", async () => {
     const f = await repository()
     writeFileSync(join(f, "a.txt"), "one\n")
     const base = (await on(commitAll(f, "main", "base"))) ?? ""
     const git = (args: string[]) => execFileSync("git", ["-C", f, ...args], { encoding: "utf8", stdio: "pipe" }).trim()
     git(["branch", "other"])
-    // HEAD is put on another line, and a tag and a file of git's take main's name: none of them is where main's commit goes.
-    git(["symbolic-ref", "HEAD", "refs/heads/other"])
+    // A tag and a file of git's take main's name: neither is where main's commit goes.
     git(["tag", "main", base])
     writeFileSync(join(f, ".git", "main"), `${base}\n`)
     writeFileSync(join(f, "a.txt"), "two\n")
     const made = (await on(commitAll(f, "main", "on main by its name"))) ?? ""
     expect(git(["rev-parse", "refs/heads/main"])).toBe(made)
-    expect(git(["rev-parse", "refs/heads/other"])).toBe(base)
     expect(git(["rev-parse", `${made}^`])).toBe(base)
-    expect(await on(Lines.currentLine(f))).toBe("other")
-    expect(await on(Lines.merge(f, "main", "other", "a merge into main", false))).toEqual({ merged: "refused", why: `${f} is on other, not on main` })
+    // The folder put on another line: a commit on main from it is refused, and main is as it was.
+    git(["switch", "-q", "other"])
+    writeFileSync(join(f, "a.txt"), "three\n")
+    await expect(on(commitAll(f, "main", "on main from another line"))).rejects.toMatchObject({ why: "the folder is on other, not on main" })
     expect(git(["rev-parse", "refs/heads/main"])).toBe(made)
-    git(["checkout", "-q", "--detach", made])
+    expect(git(["rev-parse", "refs/heads/other"])).toBe(base)
+    expect(await on(Lines.currentLine(f))).toBe("other")
+    expect(await on(Lines.takeInto(f, "main", "other", "a merge into main"))).toEqual({ merged: "refused", why: `${f} is on other, not on main` })
+    expect(git(["rev-parse", "refs/heads/main"])).toBe(made)
+    git(["checkout", "-q", "-f", "--detach", made])
     expect(await on(Lines.currentLine(f))).toBeUndefined()
     expect(await on(Lines.linesNamed(f, ["main"]))).toEqual(["main"])
   })
@@ -266,7 +283,8 @@ describe("C11 exclusive hold", () => {
   it("at most one holds it; a second is refused while the first holds; it is released at the end", async () => {
     const file = join(folder(), "holds", "t")
     const inner = await on(holding(file, holding(file, Effect.succeed("inner"))))
-    expect(inner).toEqual({ done: "held" })
+    // The second is refused, and names the process that holds it: this one (D216).
+    expect(inner).toEqual({ done: { heldBy: { pid: process.pid, start: expect.any(String) } } })
     expect(await on(held([file]))).toEqual([])
     expect(await on(holding(file, Effect.succeed(1)))).toEqual({ done: 1 })
   })
@@ -275,6 +293,19 @@ describe("C11 exclusive hold", () => {
     writeFileSync(file, "999999999\n")
     expect(await on(held([file]))).toEqual([])
     expect(await on(holding(file, Effect.succeed("taken")))).toEqual({ done: "taken" })
+  })
+  it("`keeping` takes a hold whose holder has ended and leaves it so, naming the same process and its start; `holding` leaves it free (D232)", async () => {
+    const file = join(folder(), "kept")
+    writeFileSync(file, "999999999 Mon Nov 23 10:00:00 2026\n")
+    const before = await on(left(file))
+    expect(before).toEqual({ pid: 999999999, since: "20261123100000" })
+    expect(await on(keeping(file, Effect.succeed("taken")))).toEqual({ done: "taken" })
+    expect(await on(left(file))).toEqual(before)
+    expect(await on(holding(file, Effect.succeed("taken")))).toEqual({ done: "taken" })
+    expect(await on(left(file))).toBeUndefined()
+    // A free hold is left free.
+    expect(await on(keeping(file, Effect.succeed("again")))).toEqual({ done: "again" })
+    expect(await on(left(file))).toBeUndefined()
   })
 })
 

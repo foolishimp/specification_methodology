@@ -155,6 +155,19 @@ describe("ticket item 3, the check of the event log against the flow terms", () 
     expect(refusals(text(resumed))).toEqual([])
   })
 
+  it("allows a run killed at work, and the run after it that ends the session's processes, notes the cut-off and waits for the ruling on what changed (REQ-FLOW-007, D232)", () => {
+    const killed = S1.slice(0, at(S1, "session started", "r3", "write-code") + 1)
+    const waits = [
+      ...killed,
+      of("r6")("run started"),
+      of("r6")("session processes ended"),
+      of("r6")("run cut off"),
+      of("r6")("user asked"),
+      of("r6")("run ended", { ending: "waiting" })
+    ]
+    expect(refusals(text(waits))).toEqual([])
+  })
+
   it("allows a run that met a fault, its run ended straight after the start of a word (D75)", () => {
     const upTo = S1.slice(0, at(S1, "session started", "r3", "write-code") + 1)
     const fault = [...upTo, of("r3", "write-code")("session returned"), of("r3")("run ended", { ending: "stopped" })]

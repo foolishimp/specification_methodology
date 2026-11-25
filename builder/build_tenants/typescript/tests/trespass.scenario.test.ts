@@ -1,17 +1,16 @@
 /**
- * QA-01, REQ-ALG-008: the protected files are in the trespass snapshot in both
- * folders. While the build's working session, which writes S1's code with its
- * design and tests (REQ-METHOD-006), is held at a stand-in gate, the
- * user changes by hand the governing graph on main (one workspace) and the
- * definition file in the ticket's checkout (another). Each change is returned
- * as trespass and the run stops. A run refused meanwhile only adds to the
- * event log, which is no trespass (S1).
+ * REQ-ALG-008: what changed while a session worked is compared in the
+ * workspace's folder. While the build's working session, which writes S1's
+ * code with its design and tests (REQ-METHOD-006), is held at a stand-in gate,
+ * the user changes by hand the governing graph and the definition file. Each
+ * is named to the user and the run waits for the ruling. A run refused meanwhile only adds to
+ * the event log, which git ignores and is not named (S1).
  *
- * REQ-FLOW-005 step 3: the framework puts nothing back, and the next run goes
- * on from the workspace as it is.
+ * REQ-FLOW-005 step 3, REQ-FLOW-006: the framework puts nothing back; the next
+ * run without a ruling asks again, and after a yes commits what stands.
  *
  * @uses C14 C5 C6
- * @is REQ-VERIFY-002 REQ-ALG-008 REQ-FLOW-005
+ * @is REQ-VERIFY-002 REQ-ALG-008 REQ-FLOW-005 REQ-FLOW-006
  */
 import { appendFileSync, readFileSync, writeFileSync } from "node:fs"
 import { join } from "node:path"
@@ -33,7 +32,7 @@ async function heldAtCode(cli: string, byHand: (ws: Workspace, ticket: string) =
   const ticket = (await s1ToRequirements(ws, fixtures)).ticket
   const running = ws.start(["run", ws.root, "--stand-in", fixtures])
   // The session has started once the stand-in has written its code; it then waits at the gate.
-  await until(() => ws.read(".stdo-builder", "local", "checkouts", ticket, "build_tenants", "main", "code", "hello.sh") !== undefined, 60)
+  await until(() => ws.read("build_tenants", "main", "code", "hello.sh") !== undefined, 60)
   byHand(ws, ticket)
   // A second run while the session is at work is refused, and adds to the event log as it is refused.
   const refused = await ws.run(fixtures)
@@ -45,8 +44,13 @@ async function heldAtCode(cli: string, byHand: (ws: Workspace, ticket: string) =
 
 let graph: Held
 let definition: Held
-/** The run after the graph's trespass. */
+/** The run after the graph changed, before the user rules; the main and branch tips then; the run after the user's yes. */
 let next: Said
+let tipsBefore = ""
+let tipsAfterNext = ""
+let graphAfterNext = ""
+let ruled: Said
+let afterYes: Said
 
 beforeAll(async () => {
   const cli = build()
@@ -57,41 +61,56 @@ beforeAll(async () => {
       for (const n of g.nodes) if (n.name === "code") n.result = [...n.result, "The user changed this line by hand."]
       writeFileSync(path, `${JSON.stringify(g, null, 2)}\n`)
     }),
-    heldAtCode(cli, (ws, ticket) => appendFileSync(ws.checkout(ticket, "stdo_hello.json"), "\n"))
+    heldAtCode(cli, (ws, ticket) => appendFileSync(ws.path("stdo_hello.json"), "\n"))
   ])
+  const tips = (): string => graph.ws.git(["rev-parse", "main", `stdo/${graph.ticket}`])
+  tipsBefore = tips()
   next = await graph.ws.run(S1_FIXTURES)
-}, 180_000)
+  tipsAfterNext = tips()
+  graphAfterNext = graph.ws.git(["show", `stdo/${graph.ticket}:.stdo-builder/graph.json`])
+  ruled = await graph.ws.answer("yes")
+  afterYes = await graph.ws.run(S1_FIXTURES)
+}, 240_000)
 
 afterAll(clean)
 
-describe("QA-01 the trespass snapshot holds the protected files of both folders", () => {
-  it("a change to the governing graph on main during the session is returned, and the run stops", () => {
-    expect(graph.stopped.code, graph.stopped.out).toBe(1)
-    expect(graph.stopped.out).toContain("changed protected files")
-    expect(graph.stopped.out).toContain(".stdo-builder/graph.json in the workspace's own folder")
-    const ended = graph.log.filter((e) => e.event === "run ended" && e.ending === "stopped")
-    expect(ended.map((e) => e.vector)).toEqual(["write-build"])
+describe("what changed while a session worked, in the workspace's folder (REQ-ALG-008, REQ-FLOW-005, REQ-FLOW-006)", () => {
+  it("a change to the governing graph during the session is named, and the run waits for the user's ruling", () => {
+    expect(graph.stopped.code, graph.stopped.out).toBe(0)
+    expect(graph.stopped.out).toContain("waits for your ruling on what changed while the session on write-build worked")
+    expect(graph.stopped.out).toContain(".stdo-builder/graph.json (changed)")
+    expect(graph.stopped.out).toContain("it may have been the session or you")
+    const ended = graph.log.filter((e) => e.event === "run ended")
+    expect(ended.at(-1)?.ending).toBe("waiting")
+    expect(ended.at(-1)?.vector).toBe("write-build")
     expect(graph.log.some((e) => e.event === "vector closed" && e.vector === "write-build")).toBe(false)
-    expect(graph.log.some((e) => e.event === "user asked" && e.vector === "write-build")).toBe(false)
+    expect(graph.log.filter((e) => e.event === "user asked" && e.vector === "write-build").map((e) => e.named)).toEqual([1])
   })
 
-  it("a change to the definition file in the ticket's checkout is returned", () => {
-    expect(definition.stopped.code, definition.stopped.out).toBe(1)
-    expect(definition.stopped.out).toContain(`stdo_hello.json in the ticket's checkout, .stdo-builder/local/checkouts/${definition.ticket}`)
+  it("a change to the definition file is named, by a path the user can open from the workspace's folder", () => {
+    expect(definition.stopped.code, definition.stopped.out).toBe(0)
+    expect(definition.stopped.out).toContain(`stdo_hello.json (changed)`)
   })
 
-  it("another run's entries added to the event log meanwhile are not returned", () => {
+  it("another run's entries added to the event log meanwhile are not named", () => {
     expect(graph.stopped.out).not.toContain("events.log")
     const refused = graph.log.filter((e) => e.event === "run ended" && e.ending === "refused").map((e) => e.why)
     expect(refused).toEqual(["held"])
   })
 
-  it("REQ-FLOW-005: the next run goes on from the workspace as it is", () => {
-    expect(next.code, next.out).not.toBe(2)
-    expect(next.out).not.toContain("refused")
+  it("the next run, before the user has ruled, asks again and commits nothing on the ticket's branch or on main (REQ-FLOW-003 step 1, C-2, C-18)", () => {
+    expect(next.code, next.out).toBe(0)
+    expect(next.out).toContain("waits for your ruling on what changed while the session on write-build worked")
+    expect(next.out).toContain(".stdo-builder/graph.json (changed)")
+    expect(tipsAfterNext).toBe(tipsBefore)
+    expect(graphAfterNext).not.toContain("The user changed this line by hand.")
   })
 
-  it("the files are named by paths the user can open from the workspace's folder", () => {
-    expect(definition.stopped.out).toContain(`The files: .stdo-builder/local/checkouts/${definition.ticket}/stdo_hello.json`)
+  it("after the user's yes, the next run commits the change as it stands, on the ticket's branch (REQ-FLOW-006)", () => {
+    expect(ruled.code, ruled.out).toBe(0)
+    expect(graph.ws.read(".ai-workspace", "tickets", "active", `${graph.ticket}.md`)).toContain("- framework: ruled yes on what changed at write-build: .stdo-builder/graph.json ")
+    expect(afterYes.out).not.toContain("waits for your ruling")
+    expect(afterYes.out).not.toContain("refused")
+    expect(graph.ws.git(["show", `stdo/${graph.ticket}:.stdo-builder/graph.json`])).toContain("The user changed this line by hand.")
   })
 })

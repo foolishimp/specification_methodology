@@ -37,6 +37,8 @@ export const METHOD_RESOLVER = ["stdo", "resolve"] as const
 export interface Stamp {
   readonly written: number
   readonly node: string
+  /** The file's size in bytes (D228). */
+  readonly size: number
 }
 
 /** A file could not be read or written, and why. */
@@ -91,7 +93,8 @@ export const filesLive: Layer.Layer<Files, never, FileSystem.FileSystem | ChildP
         fs.stat(path).pipe(
           Effect.map((info): Stamp => ({
             written: info.mtime._tag === "Some" ? info.mtime.value.getTime() : 0,
-            node: info.ino._tag === "Some" ? String(info.ino.value) : ""
+            node: info.ino._tag === "Some" ? String(info.ino.value) : "",
+            size: Number(info.size)
           })),
           Effect.orElseSucceed(() => undefined)
         ),

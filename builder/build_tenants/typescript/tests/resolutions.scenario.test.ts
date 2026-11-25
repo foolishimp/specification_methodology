@@ -22,9 +22,9 @@ const NOT_HELD = "e".repeat(40)
 const sessionsIn = (log: readonly LogEntry[]): readonly string[] =>
   log.filter((e) => e.event === "session started").map((e) => `${e.vector ?? ""} ${e.kind ?? ""}`)
 
-/** The ticket in its checkout, with `change` made to it by hand. */
+/** The ticket in the workspace's folder, with `change` made to it by hand. */
 const byHand = (ws: Workspace, ticket: string, change: (text: string) => string): void => {
-  const path = ws.checkout(ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`)
+  const path = ws.path(".ai-workspace", "tickets", "active", `${ticket}.md`)
   write(path, change(readFileSync(path, "utf8")))
 }
 
@@ -86,6 +86,6 @@ describe("REQ-ALG-004 acceptance 5: the user says yes to the requirements in one
     expect(ran.out).not.toContain("waits for your answer on write-code")
     expect(confirmed.code, confirmed.out).toBe(0)
     expect(ran.out).toContain("at induct-ticket")
-    expect(readFileSync(ws.checkout(later, ".stdo-builder", "local", "found", "induct-ticket.md"), "utf8")).toContain("the user has not accepted requirements as it now stands")
+    expect(readFileSync(ws.path(".stdo-builder", "local", "found", "induct-ticket.md"), "utf8")).toContain("the user has not accepted requirements as it now stands")
   })
 })

@@ -10,7 +10,10 @@
  * A term may be cut off after any effect (L11). So a run's entries may be the
  * start of a word, or that start followed by `run ended` where the run met a
  * fault; the last step of each vector in a run, and the last answer, may be
- * cut short. Two runs that share an id are refused (D75). A line the check
+ * cut short. Where the log a run was adding to was gone, the new log begins
+ * with that run's `new log started`, and the rest of its word lies there: the
+ * check reads of such a run only that `new log started` is its first entry
+ * there, and its only one (D247). Two runs that share an id are refused (D75). A line the check
  * cannot read as an entry is passed over: one that is not an object with
  * `at` and `event` as text, and `run` and `vector` as text where it has them.
  * The log service passes over a line it cannot read too; it reads by the full
@@ -95,11 +98,12 @@ const takeIn = seq(any(COMMIT), "main taken in")
 const build = seq(maybe(COMMIT), either(seq(takeIn, any(takeIn), maybe(last)), maybe(COMMIT)))
 // pull    = [ "commit made" ] "ticket pulled"
 const pull = seq(maybe(COMMIT), "ticket pulled")
-// run     = "run started" [ "commit made" ] [ "commit made" ] [ "run cut off" ] [ pull ] [ build ] "run ended"
-export const RUN = seq("run started", maybe(COMMIT), maybe(COMMIT), maybe("run cut off"), maybe(pull), maybe(build), "run ended")
+// run     = "run started" { "session processes ended" } [ "run cut off" ] [ "commit made" ] [ "user asked" ]
+//           [ "commit made" ] [ "commit made" ] [ "commit made" ] [ "run cut off" ] [ pull ] [ build ] "run ended"
+export const RUN = seq("run started", any("session processes ended"), maybe("run cut off"), maybe(COMMIT), maybe("user asked"), maybe(COMMIT), maybe(COMMIT), maybe(COMMIT), maybe("run cut off"), maybe(pull), maybe(build), "run ended")
 
-// session = "session started" ( "session returned" | "session failed" )
-const session = seq("session started", either("session returned", "session failed"))
+// session = "session started" [ "session processes ended" ] ( "session returned" | "session failed" )
+const session = seq("session started", maybe("session processes ended"), either("session returned", "session failed"))
 // judged  = { "check run" } { "commit made" }
 //           ( "vector closed" | "vector left open" | "user asked" )
 const judged = seq(any("check run"), any(COMMIT), either("vector closed", "vector left open", "user asked"))
@@ -111,7 +115,7 @@ export const NO_RUN = any(either(setUp, answer))
 export const STEPS = any(step)
 
 /** The events of a step, besides a commit that names a vector. */
-const STEP_EVENTS = new Set(["session started", "session returned", "session failed", "verdict not written", "verdict read", "check run", "vector closed", "vector left open", "user asked"])
+const STEP_EVENTS = new Set(["session started", "session processes ended", "session returned", "session failed", "verdict not written", "verdict read", "check run", "vector closed", "vector left open", "user asked"])
 
 /** One entry as the check reads it: what happened, and the run, vector, ticket and commit it names. */
 export interface Read {
@@ -122,7 +126,7 @@ export interface Read {
   readonly commit?: string
 }
 
-const isStep = (e: Read): boolean => STEP_EVENTS.has(e.event) || (e.event === COMMIT && e.vector !== undefined)
+const isStep = (e: Read): boolean => (STEP_EVENTS.has(e.event) && ((e.event !== "session processes ended" && e.event !== "user asked") || e.vector !== undefined)) || (e.event === COMMIT && e.vector !== undefined)
 
 /** The entries of a log, in its order. A line that is not an object (C14) with `at` and `event` as text, and `run` and `vector` as text where given, is passed over. */
 export function entriesOf(log: string): readonly Read[] {
@@ -142,6 +146,9 @@ export function entriesOf(log: string): readonly Read[] {
   })
 }
 
+/** The entry that starts a new log where the one a run was adding to is gone (D247). */
+const NEW_LOG = "new log started"
+
 /** What the check refuses in a log, one line each. None where the flow terms allow it. */
 export function refusals(log: string): readonly string[] {
   const entries = entriesOf(log).map((e, i) => ({ ...e, i }))
@@ -155,6 +162,10 @@ export function refusals(log: string): readonly string[] {
     const starts = of.filter((e) => e.event === "run started").length
     if (starts > 1) out.push(`${starts} runs share the id ${id}`)
 
+    // The run's word began in a log that is gone: its entries here are the rest of it (D247).
+    const anew = of.filter((e) => e.event === NEW_LOG).length
+    if (anew > 1 || (anew === 1 && of[0]?.event !== NEW_LOG)) out.push(`the run ${id} has a new log started that is not the first of its entries, or more than one`)
+    if (anew === 1) continue
     const own = of.filter((e) => !isStep(e)).map((e) => e.event)
     const cut = own.at(-1) === "run ended" ? own.slice(0, -1) : own
     if (!begins(RUN, cut)) out.push(`the entries of the run ${id} are not a word of run, nor the start of one: ${own.join(", ")}`)

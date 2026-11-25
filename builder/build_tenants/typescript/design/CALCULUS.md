@@ -76,7 +76,7 @@ K1 to K4 are plain functions and are not part of C17.
 | | Law | Guard rail or requirement it carries |
 |---|---|---|
 | L1 | A pure term given equal inputs gives an equal value | REQ-ALG laws of each algorithm |
-| L2 | `memo(t)` equals `t`. Its key is what `t` reads, each place with its identity (C1). A check reads: for `ticket_field`, the ticket; for `traced`, the two assets it names; for a command, the checkout but what lies apart, or all of it where its command names a place apart. Apart lie what the framework and an evaluating session write between readings: the framework's own folder, and the findings and verdict L12 leaves free to each evaluating session (`apart`, from `guarded`). A check that reads past the checkout, `ticket_kept`, is not kept | REQ-ALG-004 |
+| L2 | `memo(t)` equals `t`. Its key is what `t` reads, each place with its identity (C1). A check reads: for `ticket_field`, the ticket; for `traced`, the two assets it names; for a command, the workspace's folder but what lies apart, or all of it where its command names a place apart. Apart lie what the framework and an evaluating session write between readings: the framework's own folder, and the findings and verdict of each evaluation (`apart`). A check that reads past the folder, `ticket_kept`, which reads main's ticket by git, is not kept | REQ-ALG-004 |
 | L3 | `all` gives the same value in any order, and says yes only where each of its terms does: where its pure terms already say other than yes, no effect term beside them can make it yes. So a reading does a check (L10) only where its value can change `passes` for the node it is declared of or for the step being decided (`counts`): a node's where the node is there, its records stand or the step's vector writes it, and each node it depends on is accepted or written by that vector; the ticket's where the user's confirmation stands or the step is on the first vector. One not done gives cannot and says it was not done (D18); it stops no step, is not logged as run and fails in no measure (`isDone`). `first` does not give the same value in any order: its order is part of its definition | REQ-ALG-004, REQ-ALG-010; the product definition, "The framework's own work for a step is small and does not grow with the history of the work" |
 | L4 | In K6, the inputs of `p` are only what the user's command gave, what was read in that term or in a term enclosing it, and what the enclosing `repeat` carries. A `repeat` carries only the counts and measures for its bounds, and, for the ending's words, where the run is and where what failed sessions printed is kept (D75, D81). Nothing else passes from one step to the next, and nothing is read from the log | Guard rails 3 and 5; REQ-FLOW-003, "reads the workspace and not the event log" |
 | L5 | Removing every `note` from a term changes no decision it takes and no file it writes outside the log | REQ-FLOW-007 |
@@ -86,7 +86,7 @@ K1 to K4 are plain functions and are not part of C17.
 | L9 | A value of the clock enters only a bound, a `note`, a run's id, a ticket's name, the simplest ticket's `written` field and the time a `delivered` line of the ticket's checklist holds, which `show` gives (D35, D59, D204). The identities a record stands for are of the ticket without the framework's part, so that time reaches none of them. So it decides the order in which `take_up` takes tickets by name (H2), and reaches one content identity: that of the simplest ticket's text, which its name takes. It enters no other decision and no other identity. It is read by a plain call (section 1), in a flow or a service, and in no pure module | REQ-ALG-001 |
 | L10 | A session and a check command are effect terms. Beside the workspace after it, a session gives its outcome (C12) and what it printed, and a check gives its result. These enter only the step they are in: its decisions on that session or check, the log, and the files of what was printed and found. No value passes from one session to the next | REQ-FLOW-005, "nothing passes from one session to the next except the workspace" |
 | L11 | An effect term may be cut off after any effect. A run started on the workspace it left reaches the end the uncut term would have reached | REQ-FLOW-005, "the next attempt and the next run judge them as they stand"; scenarios S2 and S3 |
-| L12 | `trespass` protects, in the ticket's checkout, the definition file, the framework's files, every verdict, every asset and the tickets there at a session's start, but what `guarded` leaves free: to a working session, the nodes its vector writes and the top `.gitignore`, and to the first vector's, its ticket; to an evaluating session, its findings and verdict. In main's own folder it protects the same files for either kind, the nodes and the findings and verdict too, and no ticket. A session that changes a protected file ends its step stopped (`session`, section 5), and nothing is put back. So a step that goes on has changed no asset but those its vector writes | REQ-ALG-008; guard rail 2 |
+| L12 | `trespass` returns each file git does not ignore whose identity differs between a session's start and when it is over, in the workspace's folder, but what the step writes (`writes`); where the identities of a commit stood in for missing ones, the commit the session started from or, where a later run does not know it, the commit the folder is on, nothing counts as what it writes, and it says that the identities were missing (D241, D246, D255): for a working session the nodes its vector writes, the top `.gitignore` and, for the first vector's, the triage and the term of its ticket; for an evaluating session its findings and its verdict. Of the branch's ticket each part is compared apart. What the framework wrote in that time is not returned, nor a file the user said yes to, at the identity it had at the yes. It also returns, apart, each file of the folder that differs between the commit main, the branch the ticket left, was on at the session's start and the commit main is on now, none of them counted as what the step writes; where a commit's identities stood in, or the record names no commit of main, the commit where the ticket's branch and main last met stands in for main's (D257). Where anything is returned, the step ends asking the user to rule (`session`, section 5): no verdict is read, no check is run, nothing is committed, and nothing is put back. So a step that goes on has changed nothing but what its step writes, or what the user said yes to (D226) | REQ-ALG-008; guard rail 2 |
 
 ## 4. The business algorithms as pure terms
 
@@ -97,7 +97,7 @@ K1 to K4 are plain functions and are not part of C17.
 | `open` | `not passes`, with C2 for what changed |
 | `next` | `first of ⟦t⟧ open` (section 10, T4) |
 | `brief` | C5 over the vector, with C2 for what changed |
-| `trespass` | `difference(protected at start, protected at return)` (C2) |
+| `trespass` | `difference(identities at the start, identities now)` (C2), less what the step writes, what the framework wrote and what the user said yes to |
 | `progress` | the measure of C9 over two sets of check results |
 | `take_up` | `first(rule…)` |
 | `done` | `all(passes of every vector that takes part)` |
@@ -105,7 +105,7 @@ K1 to K4 are plain functions and are not part of C17.
 
 ## 5. The flows as effect terms
 
-`snapshot` is the reading of a checkout: identities (C1) and check results,
+`snapshot` is the reading of the workspace's folder: identities (C1) and check results,
 each `memo(check)` in the check runner (C4, L2), and the identity of what
 each accepting node declares, once for the command (D168). It does the
 checks of the ticket and of the nodes in the order of the edges (C7), each
@@ -122,10 +122,13 @@ services, runs it and puts its ending in words. It reads and decides nothing
 itself.
 
 ```
-open     = read the folder >> decide(it is there, lies in a repository, is set up, and is on a line) {
+gitOld   = read git's version (C13) >> decide(it reads as older than 2.38) {
+             yes → end refused, changing nothing, naming the version found and the version needed (D248) }
+
+open     = gitOld >> read the folder >> decide(it is there, lies in a repository, is set up, and is on a line) {
              no → end refused }   (the folder's place from the repository's top is read with it, D201)
 
-set-up   = read the method at the place the library gives >> decide(it is there) { no → fault }
+set-up   = gitOld >> read the method at the place the library gives >> decide(it is there) { no → fault }
            >> repeat(read the parent, measure = the path's length, bound = its depth)
              to the nearest folder that is there
            >> read the repository that folder lies in >> decide(where the folder lies) {
@@ -163,41 +166,82 @@ run'     = read the record in main's settings >> read what is running (D197)
            >> decide(the record is there and is what is running) { no → end refused }
            >> read main >> decide(well_formed) {
              no  → end refused
-             yes → read the holds >> decide(a ticket is held) {
-                     no → commit main >> decide(unresolved) { files → end refused } }
-                   >> read board >> decide(take_up, with main taken as done) {
+             yes → read the table of processes (C12) >> decide(it can be read) {
+                     no → end refused, starting no session and ending nothing, saying in one sentence that `ps` was not found or could not read it, and what to install; naming no process (D249) }
+                   >> each active ticket no live run holds: read whether its hold was left by a process that has ended (C11)
+                     >> read the live processes it knows to be of its sessions, and, where the hold was left, those it cannot place (C12, D222, D223) >> decide(what was read) {
+                       cannot tell              → end refused, cannot tell, ending nothing, naming why (D212); where the table cannot be read, in its one sentence, naming no process (D249)
+                       none, hold free          → nothing
+                       some, or the hold left   → end those it knows >> note(session processes ended, where it ended any)
+                                                  >> decide(none it knows is left, and, where the hold was left, none it cannot place) {
+                                                       no → end refused, naming the hold and each process } } (D215, D224)
+                   >> each active ticket whose hold was left: decide(a record from a session's start is kept) {
+                        yes → say it cannot tell what changed among the branches, tags and stash, nor, inside a larger repository, outside the folder } (D228)
+                   >> each active ticket whose hold was left: note(run cut off) >> held(t, nothing) (D232)
+                   >> read the branches, the active ticket and the branch it left, by git (D239) >> decide(where the folder is) {
+                        on no branch, or on a ticket's branch, with no ticket active → end refused, naming it
+                        not on the active ticket's branch → decide(the branch is only a remote one, or the ticket records no branch it left) {
+                          yes → make the local branches from the remote ones; or record the branch the folder is on as the one it left >> commit
+                                >> put the folder on the ticket's branch >> decide(git put it there) { no → end refused, naming the working tree that has it and how to remove it, or what git names }
+                          no  → end refused, naming both branches }
+                        on it, or no ticket active → main is the branch the ticket left, or the one the folder is on }
+                   >> read the holds >> decide(a ticket is held) {
+                     no → decide(how the record from a session's start on the active ticket stands, read under git's own directory (D245): `standing`) {
+                            kept, and compared          → nothing
+                            not to be read, naming a step the graph does not hold or what git no longer holds, or none where its run was cut off
+                                                        → the commit the session started from stands in, as the record names it where it reads and git holds it, else the commit the folder is on, kept as that session's, with nothing counted as what its step writes (D241, D246, D255)
+                            none, no run cut off        → the accepted limit: nothing to compare }
+                          >> decide(a record is kept or stands in) {
+                            yes → compare, the folder and main as it is now, before main is taken in (D257) >> decide(what differs, on which no yes was given) {
+                              files → note(user asked, how many) >> end waiting, with the question, which says first, where the commit stood in, that the identities are missing (D246), and names the files changed on main apart (D257); nothing of main taken in
+                              none  → nothing }
+                                  >> commit what the step writes and each file of the folder the user said yes to, as the step's result, none of those changed on main >> settle (D227, D241, D257) }
+                          >> commit what is still not committed, as the user's change by hand, completing a merge in progress where the folder is the repository's top, whosever it is (D47), and below the top only where it is the take-in's, leaving the user's own there as it is (D201, D240)
+                             >> decide(unresolved, anywhere in the repository while the take-in's merge is in progress, else under the folder) {
+                               files → decide(a ticket is active) {
+                                         yes → end stopped, naming each file from the folder, or from the repository's top where it lies outside, and saying so and where to resolve it
+                                         no  → end refused, naming them the same way } (D47, D240) } }
+                   >> read main's board by git >> decide(take_up, with main taken as done) {
                      none, no ticket active and none named → read snapshot of main
                           >> decide(take_up, with done on main) { as below }
                      none     → end refused
                      simplest → create(the simplest ticket) >> commit >> build(it)
                      ticket   → build(it) }}
 
-build(t) = read whether t's hold was left by a process that has ended (C11) >> decide(it was) { yes → note(run cut off) (D205) }
+build(t) = read whether t's hold was left by a process that has ended (C11) >> decide(it was) { yes → note(run cut off) (D205; a hold `run'` did not see, D232) }
            >> decide(outcome(held(t,
-             decide(t lies in the backlog) { yes → move it to the active lane >> commit >> note(ticket pulled) }
-             >> make the checkout >> commit what an interrupted step left
-             >> decide(unresolved) { files → end stopped }
-             >> take-in(t) >> read where the method release is installed (D89)
+             decide(t lies in the backlog) { yes → record the branch it leaves in t >> move it to the active lane >> commit on main
+                                                  >> make its branch there >> put the folder on it >> decide(git did) { no → end refused }
+                                                  >> note(ticket pulled, with main and the branch) (D239) }
+             >> take-in(t, no session of the run started) >> read where the method release is installed (D89)
              >> repeat(round(t), bound = the run's limit of minutes)))) {
                another run holds t → end refused
                ended               → end }
 
-take-in(t) = read the branch >> decide(it holds all of main under the folder) {
-               yes → note(main taken in, already held)
+take-in(t, s) = read the branch >> decide(it holds all of main) {
+               yes → note(main taken in, already held, with main's name)
                no  → decide(the user edited t on main) { yes → read the framework's part of t >> take t as main has it >> commit }
-                     >> merge main in >> decide(merged) {
-                          conflict → add back the framework's part, where t was taken >> note(main taken in) >> end stopped
-                          refused  → end stopped
+                     >> merge main in, in the folder, wherever in the repository it moved (D240) >> decide(merged) {
+                          conflict → add back the framework's part, where t was taken >> note(main taken in) >> end stopped, naming each file from the folder, or from the repository's top where it lies outside, and saying so
+                          in the way → add back the framework's part, where t was taken >> commit >> decide(s: a session of the run started) {
+                                       no  → end refused, naming each path main adds where a file or a folder git does not hold, or ignores, is there; nothing written over
+                                       yes → end stopped, naming them } (D250)
+                          refused  → add back the framework's part, where t was taken >> commit >> decide(s: a session of the run started) {
+                                       no  → end refused, naming the files git would not write over
+                                       yes → end stopped, naming them } (D240)
                           yes      → add back the framework's part, where t was taken, with `unbound` where a binding held >> commit (D202)
                                      >> note(main taken in) }}
-             >> read board >> decide(t lies in the active lane on main) { no → end stopped }
+             >> read t on main by git >> decide(t lies in the active lane on main) { no → end stopped }
 
-round(t) = steps(⟦t⟧) >> read the branch >> decide(it holds all of main under the folder) {
-             no  → take-in(t) >> go round again
-             yes → decide(t lies in the active lane of the branch) { yes → move it to done >> commit }
-                   >> merge into main >> decide(merged) {
-                        conflict or refused → end stopped
-                        yes                 → note(ticket merged) >> end done }}
+round(t) = steps(⟦t⟧) >> read the branch >> decide(it holds all of main) {
+             no  → take-in(t, whether a session of the run started) >> go round again
+             yes → read the working trees by git >> decide(main is checked out in another working tree) {
+                     yes → decide(a session of the run started) { no → end refused, naming it; yes → end stopped, naming it } (D240)
+                     no  → decide(t lies in the active lane of the branch) { yes → move it to done >> commit }
+                           >> merge into main: a commit of the branch's whole tree with both parents, main moved to it, the folder put on main; no file written (D240)
+                           >> decide(merged) {
+                                refused → decide(a session of the run started) { no → end refused, naming what git names; yes → end stopped, naming it }
+                                yes     → note(ticket merged, with main's name) >> end done, naming main, and, inside a larger repository, each file outside the folder that differs between main before the merge and the merge's commit (D256) }}}
 
 On a workflow, `done` holds where `next` gives none: both read one snapshot,
 over the vectors that take part, and `next` gives none only where each of
@@ -251,18 +295,36 @@ step(v)  = read snapshot(v) >> decide(a check it did cannot be run) { yes → en
 session(k, v) = decide(a limit of the run is reached) { yes → commit, where a part of the step ran before it >> end stopped }
            >> write the brief >> decide(a working session bound to a stretch) { yes → add the binding to t's checklist >> commit (D204) }
            >> decide(a working session on the first entry to v) { yes → add `began` to t's checklist >> commit (D209) }
-           >> note(session started) >> read the protected files
-           >> session(k) >> keep what it printed (D81) >> read the protected files
-           >> note(session returned or failed, with the cost and calls it printed, D91) >> decide(trespass, its outcome) {
-                files  → commit >> end stopped
+           >> note(session started) >> read, held by the run alone, the branches, tags and stash, and, inside a larger repository, what git lists outside the folder and the commit the folder is on (D228, D243)
+           >> take and keep the identities of the folder, with the commit main is on (D227, D257)
+           >> session(k), the processes it knows to be of it ended at its end, and those it cannot place looked for (D213, D222, D223)
+           >> keep what it printed, in a file of its own (D218)
+           >> note(session processes ended, where it ended any)
+           >> decide(settled: a signal received from the session's start, or the session not over) {
+                yes → go no further, leaving the hold, naming each process where the session is not over (D214, D221) }
+           >> note(session returned or failed, with the cost and calls it printed, D91)
+           >> read them again, and name what differs, as changed while the session worked, main among the branches, not said to hold no ticket where it changed a file of the folder (D257); and, inside a larger repository, each file outside the folder that differs between the commit the folder was on at the start and the one it is on now, as committed while the session worked, and, apart, each that differs between main's commit at the start and now, as committed on main, or that git cannot compare the two (D228, D243, D256, D257)
+           >> decide(the folder is on the ticket's branch) { no → end stopped, naming the branch; nothing committed }
+           >> read the record from the session's start (D245) >> decide(it is that session's, kept, and compares) {
+                no → the commit the session started from, which `note(session started)` named, stands in, kept as that session's, with nothing counted as what its step writes; where git does not hold it, the stand-in cannot be compared, and the flow fails, with nothing written (D246, D255) }
+           >> decide(trespass, its outcome) {
+                files, in the folder or changed on main → note(user asked, with how many files) >> end asks the user to rule; nothing committed, judged or read, and nothing of main taken in (D226, D257)
+                none   → settle the identities kept (D227)
                 failed → commit >> end failed }
 
 answer   = open >> read main >> decide(well_formed) { no → end refused }
            >> decide(the answer is no, with no reason) { yes → end refused }
-           >> read board >> decide(the ticket is active) { no → end refused }
-           >> read whether its checkout is there >> decide(it is) { no → end refused }
-           >> decide(outcome(held(ticket,
-                read the ticket >> read identities, and those under the commit of the last delivery for the user's decision (D204)
+           >> read the branches by git >> decide(the ticket is active) { no → end refused }
+           >> decide(the folder is on its branch) { no → end refused, naming both branches } (D239)
+           >> read the live processes of the ticket's sessions (C12) >> decide(none, and the framework can tell) { no → end refused } (D216; where the table cannot be read, in its one sentence, naming no process, D249)
+           >> decide(outcome(held(ticket, letting go as it found the hold, so a hold a cut-off run left is left so (D232),
+                decide(how the record from a session's start stands, as at the start of a run: `standing`) {
+                  stands in → end refused, saying that a run asks on every file not committed; nothing is written (D246) }
+                >> decide(identities kept from a session's start, and a file differs on which no yes was given) {
+                  yes → add the user's ruling on what changed to the ticket, a yes with each file's identity now, and with each file changed on main, named apart, at the identity main gives it now (D257), a yes or a no with each line of the framework's part that changed while the session worked
+                        >> note in the record the identity of the ruling's line and each file of a yes
+                        >> note(answer written) >> commit that line alone >> end (D227, D230) }
+                >> read the ticket >> read identities, and those under the commit of the last delivery for the user's decision (D204)
                 >> decide(that delivery has no answer of the user after it, and nothing the answer would stand for differs now from that commit) {
                   no → end refused
                   v  → at each node v writes that the user's yes accepts, or under the first vector's name (D164): add the user's resolution to the ticket,
@@ -384,12 +446,13 @@ the log of each scenario against the terms.
 | Scenario | The term and law that carry it | In the first draft |
 |---|---|---|
 | S1 smallest product | `set-up`, `ticket`, `run`, `answer`; the second run is refused by `take_up` under L7 | Covered |
-| S2 interrupt and resume | L11, L7; `build` notes the run cut off and commits what the cut-off step left | The law was missing |
+| S2 interrupt and resume | L11, L7; `run'` notes the run cut off (D232), and `build` commits what the cut-off step left | The law was missing |
+| S14 a session is over when the framework has ended it | `session(k)` over when every process it knows to be of it is ended and none it cannot place is found; the branch of `session` that goes no further, on a signal or a session not over; the left holds, the processes known and those it cannot place in `run'` (D212 to D215, D221 to D224) | Added with the ticket `261123-185201-a149` |
 | S3 no event log | L5; `show` and `run` say the log is not there, and `run` starts one | That branch was missing |
 | S4 three changes | `passes` holds an answer only on the identities it was given on; `show` names what each ticket changed from git | `show` did not read git |
 | S5 a step that does not close | The `open` branch of `vector`, by `progress` within one attempt, and by the vector's attempts where its evaluation said no (D210) | One loop stood for two |
 | S6 second graph, registry, inner workflow | `well_formed` refuses; `registry`; the workflow part of `step` | `registry` and inner terms were missing |
-| S7 a session writes outside its vector | `decide(trespass)` in `session` | Covered |
+| S7 a session writes outside its vector | `decide(trespass)` in `session`; the comparison at the start of `run` and in `answer` (D227) | Covered |
 | S8 an existing system | The first branch of `set-up`; the rest is the graph's data | That branch was missing |
 | S9 build again | The `simplest` branch of `run` | That branch was missing |
 | S10 two agents | No term: which agent is a setting read by `session` | Covered |
@@ -437,7 +500,8 @@ vector. The check reads the log in three parts.
 set-up  = "set-up" [ "commit made" ] | "ticket written" | "release recorded"
 answer  = "answer written" { "answer written" } [ "commit made" ] [ "vector closed" ]
 
-run     = "run started" [ "commit made" ] [ "commit made" ] [ "run cut off" ] [ pull ] [ build ] "run ended"
+run     = "run started" { "session processes ended" } [ "run cut off" ] [ "commit made" ] [ "user asked" ]
+          [ "commit made" ] [ "commit made" ] [ "commit made" ] [ "run cut off" ] [ pull ] [ build ] "run ended"
 pull    = [ "commit made" ] "ticket pulled"
 build   = [ "commit made" ] ( take-in { take-in } [ last ] | [ "commit made" ] )
 take-in = [ "commit made" ] "main taken in"
@@ -445,20 +509,29 @@ last    = "commit made" | merge
 merge   = [ "commit made" ] "ticket merged"
 
 step    = { session [ "verdict not written" | "verdict read" ] | "commit made" } [ judged ]
-session = "session started" ( "session returned" | "session failed" )
+session = "session started" [ "session processes ended" ] ( "session returned" | "session failed" )
 judged  = { "check run" } { "commit made" }
           ( "vector closed" | "vector left open" | "user asked" )
 ```
 
 A commit with no closing entry is where git refuses what follows it, and the
-run then ends as stopped. In `take-in`, git would not take main in after the
+run then ends as refused where no session of it started, and as stopped
+otherwise (D240). In `take-in`, git would not take main in after the
 branch took the user's edit of the ticket: as the run's first take-in, that
 is the lone commit of `build`'s second branch, and later it is `last`. In
-`round`, git would not merge the branch into main, by a conflict or a
-refusal, after the ticket moved to done: that is `last`.
+`round`, git would not merge the branch into main, after the ticket moved to
+done: that is `last`.
+
+Where the log a run was adding to is gone when the run next adds to it, the
+run starts a new one whose first entry is that run's `new log started`, with
+the release in force (D247). The rest of the run's word lies in the new log:
+the check reads of such a run only that `new log started` is its first entry
+there, and its only one.
 
 A term may be cut off after any effect (L11). So the entries of a run may
-also be the start of a word: a run killed at work leaves no `run ended`, nor
+also be the start of a word: a run killed at work, cut off by a signal, or
+gone no further on a session it could not end, after its `session processes
+ended` where it ended any (D214, D221), leaves no `run ended`, nor
 does a run whose `run ended` could not be written, and a run that met a fault
 ends with `run ended` straight after the start of a word (D75). A run that
 met a fault before its `run started` was written leaves no entry. The last
@@ -491,17 +564,24 @@ answer.
 | `ticket`, `run` | A ticket's name and a run's id are made from the clock (D35). The simplest ticket's text holds the clock's `written` value, and its name takes the identity of that text (D59). So the clock orders tickets by name and reaches one content identity, where L9 and C16 said it entered no identity and no decision but a deadline | The page: L9 and C16 name both |
 | Every command | The library finds the workspace, and refuses where there is none, where it is not set up in a repository, or where it is on no line. It refuses an answer where the graph is not `well_formed` and a ticket with no words, and reads the method set-up installs. These are decisions on what was read, made outside C17, and no term had them | Both. The page writes them as `open` and as branches of `answer`, `ticket` and `set-up`. The code moves them into `src/flows/`, and the library keeps only what section 5 gives it |
 | `set-up` | The nearest folder there is is found first; a folder on no line is a fault; the first ticket is written after the framework files; an agent file is added to, not only created. The term noted the commit before `note(set-up)`; the code notes set-up first | The page |
-| `run` | Main is not committed while another run holds a ticket (D57), and a merge left unresolved there refuses the run (D47) | The page |
+| `run` | Main is not committed while another run holds a ticket (D57), and a merge left unresolved there refuses the run where no ticket is active (D47) | The page |
+| `run'` | The term refused the run wherever a merge was left unresolved. The code stops it where a ticket is active, as D47 and REQ-FLOW-003's endings say, and refuses it only where none is | The page: `run'` decides on whether a ticket is active |
+| `run'` | While main was taken in, git could leave a file unmerged outside the workspace's folder, and C13's commit looked for unmerged and marked files under the folder alone: the next run met git's refusal of `write-tree` as a fault, naming the file from the repository's top with no word saying so, and would have committed a file outside the folder staged with the lines that mark a conflict (D47) | The code: while the take-in's merge is in progress C13 looks in the whole repository and gives each file from the repository's top, and the run names it as `take-in` does (D240). The page: `run'`'s `unresolved` says so |
+| `run'` | Below the top, the run's commit of what the user left uncommitted completed any merge in progress, a merge of the user's own among them, with both its parents, so it took in files outside the folder; and with no ticket active, a file outside the folder that the user's merge left unmerged refused the run | The code: below the top, C13 completes only the take-in's merge, whose second parent main holds; any other merge is left under way, the commit is of the folder's files alone with one parent, and its files are looked for under the folder (D201, D240). The page: `run'` says so |
 | `run` | `take_up` reads main's snapshot only where nothing else gives a ticket (D38); the simplest ticket is committed | The page |
 | `run` | A fault ends the run as refused, or stopped where a step has started (D75); no combinator expressed it. The term written for it left `open`, `run started` and the `run ended` of an ending that met no fault outside every `outcome`; the code followed it, and a fault there gave exit 4 | The page and D75. K6 reads an effect term's outcome, and `run` decides on the outcome of each (section 5). For a fault in writing `run ended`, D75 is corrected: the run keeps the ending it reached, as L5 asks, and its words say that the log could not be written. D75 gave the fault ending there, stopped at the last vector or refused, as the code did before the calculus build. Everywhere else the term is corrected towards D75. The code is corrected to follow the term |
-| `build` | It makes the checkout, stops on a merge left unresolved, takes main in again where main moved by the time `done` says yes, and stops where the ticket left the active lane (D47, D48; REQ-FLOW-008) | The page |
+| `build` | It pulls the ticket onto a branch of its own in the workspace's folder (D239), takes main in again where main moved by the time `done` says yes, and stops where the ticket left the active lane (D47, D48; REQ-FLOW-008) | The page |
 | `build` | A run held by another is refused | The page |
-| `take-in`, `round` | The term merged main in whatever main had changed. The code first asks whether the branch holds all of main under the workspace's folder, and where it does, notes `already held` and merges nothing, so main moved only outside the folder is not taken in (REQ-FLOW-008 step 1, D201) | The page |
+| `take-in`, `round` | The term merged main in whatever main had changed. The code first asks whether the branch holds all of main, and where it does, notes `already held` and merges nothing; where it does not, main is taken in wherever in the repository it moved (REQ-FLOW-008 step 1, D240, which replaces D201's take-in of the folder alone) | The page |
+| `take-in`, `round` | The term ended the run as stopped where git refused to take main in or to merge, and where main was checked out in another working tree. The code refuses the run where no session of it started, and stops it where one did (REQ-FLOW-008, REQ-FLOW-003, D240) | The page: `take-in` is given whether a session of the run started, and `round` decides on it |
+| `round` | The term moved the ticket to the done lane before it looked at the other working trees. The code looks first, and where main is checked out in another, moves nothing and merges nothing, so main and both working trees are as they were (REQ-FLOW-008, D240) | The page |
+| `take-in` | A file git could not merge outside the workspace's folder was named by its path from the repository's top with no word saying so, where every other path the run gives is from the folder (D49) | Both. The code: C13 gives each file from the repository's top, and the run names one outside the folder from there and says so, as for a refusal (D240). The page: `take-in`'s conflict says how each file is named |
+| `session` | The term did not show the note the run holds before and after each session, of the branches, tags and stash and of what lies outside the folder, which the code takes (D228) | The page: `session` reads it before and after, and names what differs and what was committed outside the folder (D256) |
 | `build` | The round that takes main in again reads no limit of the run. A run whose round goes again with no session passes the minutes the settings set (REQ-PARAM-003) | The code: the round is bounded by the run's limit of minutes, read before it goes again (section 5). L6 holds for it |
 | `steps` | Its `repeat` carried neither the bound nor the measure the term named. It ended only through `vector`'s decisions and the limits `session` reads, and a round that closes a vector spends no attempt | Both. The term leaves the measure out (K7) and names the bound `rounds(w)`. The code gives the `repeat` of `steps` that bound, so L6 holds for it |
 | `vector` | Inner terms run inside a step, as parts of its work, not in its place (D65); a failed session is tried again by the bound alone (D51) | The page; K7's measure may be left out |
 | `step` | An outcome that cannot be run stops the step before any session, and again after the last reading (D38); a limit of the run stops it before a session (D67); a verdict not written is noted (D45) | The page |
-| `answer` | It is refused before the hold where a no has no reason, the ticket is not active or has no checkout, and where a run holds the ticket | The page |
+| `answer` | It is refused before the hold where a no has no reason, the ticket is not active, the folder is not on its branch (D239), and where a run holds the ticket | The page |
 | `show`, `registry` | Each is refused where the graph is not `well_formed`; printing is the program's | The page |
 | Every run | Only the entries `run` adds itself name the run | The code (section 8) |
 | Every flow | The check of how a flow is written passed `x .pipe (1)`, `x["pipe"](1)` and `Array.prototype.push.call(xs, 1)`, where section 6 said each refused form is refused from one line | Both. The code: the check refuses the three, and its self-test plants them. The page: section 6 says which spellings a line refuses, and names those it cannot |

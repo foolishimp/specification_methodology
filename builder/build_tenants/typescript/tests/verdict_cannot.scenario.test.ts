@@ -44,7 +44,7 @@ afterAll(clean)
 describe("REQ-FLOW-005 an evaluating session says that it cannot judge", () => {
   it("the run stops and names where its findings are", () => {
     expect(first.code, first.out).toBe(1)
-    expect(first.out).toContain(`the evaluation of write-build cannot judge; why is in its findings at .stdo-builder/local/checkouts/${ticket}/${FINDINGS}`)
+    expect(first.out).toContain(`the evaluation of write-build cannot judge; why is in its findings at ${FINDINGS}`)
     expect(firstLog.some((e) => e.event === "vector closed" && e.vector === "write-build")).toBe(false)
     expect(firstLog.some((e) => e.event === "user asked")).toBe(false)
   })

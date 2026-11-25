@@ -48,7 +48,7 @@ beforeAll(async () => {
   await ws.answer("yes")
   const from = ws.log().length
   const running = ws.start(["run", ws.root, "--stand-in", fixtures])
-  await until(() => ws.read(".stdo-builder", "local", "checkouts", ticket, ...CODE) === FAILING, 120)
+  await until(() => ws.read(...CODE) === FAILING, 120)
   // The first session has written its code; the next writes S1's, which passes the tests.
   write(join(fixtures, "write-build", "work", "files", ...CODE), readFileSync(join(S1_FIXTURES, "write-build", "work", "files", ...CODE), "utf8"))
   write(gate, "")
@@ -60,7 +60,7 @@ afterAll(clean)
 
 describe("REQ-FLOW-005: with one attempt allowed, a working session leaves a check failing and the next leaves none", () => {
   it("the build's working packet gives the one attempt the graph allows", () => {
-    expect(readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8")).toContain("- attempts: 1,")
+    expect(readFileSync(ws.path(".stdo-builder", "local", "briefs", "write-build.work.md"), "utf8")).toContain("- attempts: 1,")
   })
 
   it("the first working session leaves the tests failing and the second leaves none, so no evaluation is made between them", () => {

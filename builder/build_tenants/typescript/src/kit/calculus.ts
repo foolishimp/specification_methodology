@@ -81,9 +81,9 @@ export const repeat = <S, A, E, R>(state: S, body: (state: S) => Term<Round<S, A
 
 /** The hold service as C17 knows it, by its shape: a thing that does a term while holding a name, or says another holds it. */
 export interface Holds {
-  readonly holding: <A, E, R>(name: string, term: Term<A, E, R>) => Term<{ readonly done: A } | "held", E, R>
+  readonly holding: <A, E, R>(name: string, term: Term<A, E, R>) => Term<{ readonly done: A } | { readonly heldBy?: { readonly pid: number; readonly start?: string } }, E, R>
 }
 
-/** K8: does `term` while holding `name`; "held" where another process holds it. */
-export const held = <A, E, R>(hold: Holds, name: string, term: Term<A, E, R>): Term<{ readonly done: A } | "held", E, R> =>
+/** K8: does `term` while holding `name`; where another process holds it, that process, where one is found. */
+export const held = <A, E, R>(hold: Holds, name: string, term: Term<A, E, R>): Term<{ readonly done: A } | { readonly heldBy?: { readonly pid: number; readonly start?: string } }, E, R> =>
   hold.holding(name, term)

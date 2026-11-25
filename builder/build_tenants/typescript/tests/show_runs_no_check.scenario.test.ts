@@ -6,7 +6,7 @@
  * changes no byte of the workspace, and says that the ticket waits for the
  * answer on the code, as the ticket shows, with when the question was asked:
  * the time of the ticket's line that delivers the code for the user's decision
- * (BDR-03, D204). The driver then deletes the code in the ticket's checkout;
+ * (BDR-03, D204). The driver then deletes the code in the workspace's folder;
  * `show` still says that, as the ticket shows, with the same time, since it
  * runs no check and reads no asset.
  *
@@ -60,7 +60,7 @@ beforeAll(async () => {
   shown.push(await ws.show(), await ws.show())
   countAfter = readFileSync(counter, "utf8")
   filesAfter = everyFile(ws.root)
-  rmSync(ws.checkout(ticket, "build_tenants", "main", "code", "hello.sh"))
+  rmSync(ws.path("build_tenants", "main", "code", "hello.sh"))
   deleted = await ws.show()
 }, 180_000)
 
@@ -101,7 +101,7 @@ describe("show runs no check (QA-08)", () => {
     expect(Date.parse(at)).toBeLessThanOrEqual(Date.parse(runTo))
   })
 
-  it("BDR-03, REQ-ALG-012 acceptance 6: with the code deleted in the checkout, show still gives that the ticket waits for the answer, as the ticket shows, with when it was asked", () => {
+  it("BDR-03, REQ-ALG-012 acceptance 6: with the code deleted in the workspace's folder, show still gives that the ticket waits for the answer, as the ticket shows, with when it was asked", () => {
     expect(deleted.code, deleted.out).toBe(0)
     expect(readAt(deleted), deleted.out).toBe(readAt(shown[0] ?? deleted))
   })

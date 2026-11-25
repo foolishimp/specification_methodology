@@ -279,6 +279,5 @@ Acceptance:
 - A product built by the specification and then the build is done on main
   under the six, and one built by the six is done under the two.
 
-From: product definition, "Ask", "at which node it enters the graph and
-whether it is small work", and the terms "Step" and "Registry"; the method's
-REFERENCE_FRAME standard, RF-017.
+From: product definition, "Ask", "at which node it enters the graph", and the
+terms "Step" and "Registry"; the method's REFERENCE_FRAME standard, RF-017.

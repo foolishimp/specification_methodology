@@ -69,7 +69,7 @@ const KIT_EFFECT = {
   C1: ["effect/Effect", "effect/process/ChildProcessSpawner", "effect/crypto"],
   C13: ["effect/Effect", "effect/process/ChildProcessSpawner"],
   C10: ["effect/Effect", "effect/FileSystem"],
-  C11: ["effect/Effect", "effect/FileSystem"],
+  C11: ["effect/Effect", "effect/FileSystem", "effect/process/ChildProcessSpawner"],
   C15: ["effect/Effect", "effect/FileSystem"],
   C17: ["effect/Effect"] // the combinators, the one place a flow reaches Effect
 }
@@ -87,7 +87,7 @@ const LAYER_EFFECT = {
 // kit by its name, a layer, or a module by its path below src/. A global not
 // listed may be used anywhere; one listed with no owner is used nowhere.
 const GLOBALS = new Map([
-  ["process", ["C11", "programs"]], // the holder's process, the exit code (section 4)
+  ["process", ["C11", "C12", "programs"]], // the holder's process, a session's signals and processes (D212), the exit code (section 4)
   ["console", ["programs"]], // the words the program prints
   ["TextEncoder", ["C12"]], // a child's input as bytes
   ["URL", ["library"]], // a workspace given by its file: URI
@@ -106,7 +106,7 @@ const BOUND = {
   C1: ["services/git.ts", "services/files.ts"],
   C10: ["services/log.ts"],
   C11: ["services/hold.ts"],
-  C12: ["C1", "C13", "services/checks.ts", "services/files.ts", "services/sessions.ts"],
+  C12: ["C1", "C11", "C13", "services/checks.ts", "services/files.ts", "services/sessions.ts", "services/hold.ts", "services/stand_in.ts"],
   C13: ["services/git.ts"],
   C15: ["C11", "services/files.ts"],
   C16: ["flows", "services"]

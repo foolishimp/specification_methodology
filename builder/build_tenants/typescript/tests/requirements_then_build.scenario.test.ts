@@ -83,7 +83,7 @@ describe("on a built product, under a ticket whose term is the requirements and 
   })
 
   it("REQ-FLOW-005 step 1: the checklist shows that the work of each began, before the step's resolutions", () => {
-    const text = ws.read(".stdo-builder", "local", "checkouts", ticket, ".ai-workspace", "tickets", "active", `${ticket}.md`) ?? ""
+    const text = ws.read(".ai-workspace", "tickets", "active", `${ticket}.md`) ?? ""
     for (const vector of ["write-requirements", "write-build"]) expect(text).toMatch(new RegExp(`^- framework: began ${vector} at [0-9a-f]{40}$`, "m"))
     expect(text.indexOf("began write-requirements")).toBeLessThan(text.indexOf("resolved user yes at requirements"))
     expect(text.indexOf("began write-build")).toBeLessThan(text.indexOf("resolved evaluation"))
@@ -91,7 +91,7 @@ describe("on a built product, under a ticket whose term is the requirements and 
 
   it("REQ-FLOW-006: the question on the requirements says that 1 line of their file of 100 changed and 99 remain as they were, and that every other file is as it was", () => {
     expect(ws.git(["show", `main:${REQUIREMENTS.join("/")}`]).split("\n").filter((l, i, all) => i < all.length - 1 || l !== "")).toHaveLength(100)
-    expect(requirementsRun.out).toContain(`In requirements, .stdo-builder/local/checkouts/${ticket}/${REQUIREMENTS.join("/")}: 1 line changed (1 added, 1 taken out), and 99 lines remain as they were.`)
+    expect(requirementsRun.out).toContain(`In requirements, ${REQUIREMENTS.join("/")}: 1 line changed (1 added, 1 taken out), and 99 lines remain as they were.`)
     expect(requirementsRun.out).toContain("Every other file of requirements is as it was when main last held it.")
   })
 })

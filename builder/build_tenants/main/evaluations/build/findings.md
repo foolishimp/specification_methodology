@@ -1,133 +1,139 @@
-# Build evaluation: four findings from using release 0.1.0
+# Findings: judge-build on ticket 261125-083337-0fdf
 
-Verdict: yes.
+Verdict: **yes**. The last round said no on B1 and asked for B2 to B4 to be
+repaired with it. Each is repaired, and each repair meets the requirement it
+serves. Nothing else changed since that round. The rest of the branch is still
+what the results require.
 
-Ticket: `261123-100659-a0d5-four-findings-from-using`.
+Paths are from `build_tenants/typescript/` unless they start with
+`specification/`.
 
 ## What was judged, and against what
 
-The subject is the working tree on `HEAD` `5e7b256153e9`, with changes not yet
-committed.
-
-- Two files are changed (25 lines added, 10 taken out):
-  `design/DECISIONS.md` (blob `f35b81818b6c`) and
-  `tests/four_findings.scenario.test.ts` (blob `e83d1eb9d74a`).
-- The sha256 of `git diff HEAD -- build_tenants/typescript` is
-  `c200486f…09217a`.
-- Two files are new, and the diff's hash does not cover them:
-  `tests/one_attempt.scenario.test.ts` (blob `6cc8eea353b1`, 76 lines) and
-  `tests/requirements_then_build.scenario.test.ts` (blob `a351eaf7a1c6`,
-  97 lines).
-- Nothing under `src`, `scripts` or `packaging` changed since `d7380a8`,
-  where the last evaluation judged the code and found it held.
-
-The verdict stands for this content only.
-
-The meaning was tested against:
-
-- the requirements as they now stand, tree `72979a5d308b`, which is the same
-  tree the last evaluation judged against;
-- the ticket's triage and its ruling that the intent and the product
-  definition are not changed;
-- the last evaluation's findings, which are the reason for this session's
-  work.
-
-Following the gap rule, only what changed since `d7380a8` was judged for new
-gaps.
+- **Subject.** The lines the branch changed from main's 015a0bc, 19 files in
+  all. Fourteen are as the last round judged them at f05f591. Five have
+  changed since and are not committed: `design/DECISIONS.md`,
+  `packaging/INSTRUCTIONS.md`, `tests/changed_on_main.scenario.test.ts`,
+  `tests/changed_refs.scenario.test.ts` and `tests/release.test.ts`. No file
+  is outside git, and `scripts/` is unchanged.
+- **Against.** `specification/requirements` as the user said yes to it at
+  63e50f0, unchanged since; the ticket's items 1 to 11, its scope and "What
+  stands"; the packet's rules. I used the last findings only to find what was
+  repaired. I tested each repair against the requirements, not against the
+  findings' suggested fix.
+- **Not read:** the method, the installation, the graph, the registry, the
+  settings, the event log, what sessions printed, the working packets and
+  what the checks found.
+- **Not run:** the new tests against the code before this ticket. D257 says
+  that those which ask fail there. My support for that comes from reading the
+  old code: its `compare` compared the folder alone, and each run's start
+  then took main in.
 
 ## Checks of form
 
-These check names and exit codes only, not meaning.
+- **Naming.** This is an inline script built from the declared pattern. It
+  leaves out the sections that say `Deferred` (REQ-ALG-013, REQ-FLOW-009,
+  REQ-INTERFACE-001, REQ-INTERFACE-002, REQ-VERIFY-002, REQ-VERIFY-003) and
+  the HELLO family. Design, tests and code each name every stated requirement
+  not deferred, and none not stated. Each also names the two that are only
+  partly deferred, REQ-INTERFACE-001 and REQ-INTERFACE-002.
+- **The tests.** `sh build_tenants/typescript/tests/run.sh`, run in this
+  folder, exited 0 after 632 s:
+  - typecheck;
+  - 72 files with 909 tests, against 907 last round (the two new tests are
+    additions);
+  - the release cuts, 8 files with 109 tests;
+  - the scale test, 2 tests;
+  - compliance, 147 modules, no break.
 
-- The design names every requirement and no other: yes. Every name stated
-  outside a Deferred section is there, and no unstated name is used. HELLO is
-  left out. This holds whether REQ-INTERFACE-002, which is Deferred only in
-  part, is counted or not.
-- The tests name every requirement and no other: yes, on the same terms.
-- The code names every requirement and no other: yes. VERIFY and HELLO are
-  left out.
-- The tests pass: yes. `sh build_tenants/typescript/tests/run.sh` exited
-  with 0.
-  - It ran the typecheck, then 55 test files with 752 tests, all passed.
-    That is the 53 files and 745 tests of the last run plus the two new
-    files' 3 and 4 tests, so the new files ran.
-  - Compliance found no break.
-  - `git status` was the same before and after the run.
+  The changed test files skip no test and focus on none, and `trespass.json`
+  adds no skip. The run left these as they were: the status, the refs, the
+  stash, the working trees, `dist/`, the folder and the five uncommitted
+  files. The one "Updated 1 path from the index" in the output comes from
+  `one_log`'s checkout in its temporary workspace.
 
-## The last no, item by item
+## Judged on meaning
 
-1. "With one attempt allowed, a working session leaves a check failing and
-   the next leaves none: the evaluation is made"
-   (`specification/requirements/FLOWS.md:416`).
-   - Now driven by `tests/one_attempt.scenario.test.ts`.
-   - The user sets `attempts` to 1 for write-build in the workspace's graph
-     (line 42), as REQ-PARAM-003 allows ("as the graph declares").
-   - The first build session writes failing code and waits at the stand-in's
-     gate. The driver changes the fixed files, then opens the gate (line 54).
-   - The test asserts:
-     - the packet gives `- attempts: 1,` (line 62);
-     - "the tests pass" said no, then yes (line 66);
-     - the sessions are work, work, evaluation, then the user asked
-       (line 70).
-   - Under the old count the first failed check would have used up the one
-     attempt, so this test tells the new rule from the old.
-   - The claim at `DECISIONS.md:529` is gone. It now names this test: "a
-     graph that allows the build one attempt, whose first working session
-     leaves the tests failing and waits at the stand-in's gate while the
-     driver changes the stand-in's files, so the second leaves none: the
-     evaluation is made, and the user is asked."
-2. "A line the user changed by hand on main is not among those lines"
-   (`specification/requirements/ALGORITHMS.md:319`).
-   - Now driven by `tests/four_findings.scenario.test.ts`.
-   - After the ticket's branch is made, the user changes the code's
-     `printf` line on main and commits (lines 77-78).
-   - The test asserts that main holds the user's line (line 100), and that
-     the command the evaluating packet gives shows only the ticket's
-     comment line (lines 103-107).
-   - If the merge base were the branch's first fork point, or main were not
-     taken in, the diff would also show the `printf` line. So the test tells
-     the cases apart.
-   - D208's test note (`DECISIONS.md:517`) says the same.
-3. "On a built product, under a ticket whose term is the requirements and
-   then the build, the first step on each starts its working session"
-   (`specification/requirements/FLOWS.md:407`).
-   - Now driven by `tests/requirements_then_build.scenario.test.ts`.
-   - S1 is run whole, then the ticket's term is write-requirements and then
-     write-build. The test asserts:
-     - after the induction, the sessions are the requirements' work, then
-       the user asked (line 73);
-     - after that answer, the sessions are the build's work, its
-       evaluation, then the user asked (line 79);
-     - the checklist shows `began` for each before the step's resolution
-       (line 85).
-   - D209's test note (`DECISIONS.md:522`) names it.
-4. The lesser point: the 100-line example of
-   `specification/requirements/FLOWS.md:483`.
-   - Now driven on its own terms (`requirements_then_build`, line 92).
-   - Main holds a requirements file of 100 lines.
-   - The question says "1 line changed (1 added, 1 taken out), and 99 lines
-     remain as they were", and that every other file of requirements is as
-     it was.
-   - D211's test note (`DECISIONS.md:534`) names it.
+- **B1 is repaired.** `packaging/INSTRUCTIONS.md:324-334` now says two things.
+  - Under the accepted limit, each file not committed in the folder is put to
+    the user. Only what a session committed on the ticket's branch goes
+    unasked.
+  - Wherever a commit stands in, in either way, or the record names no commit
+    of main, the commit where the ticket's branch and main last met stands in
+    for main's. Each file of the folder that main holds otherwise is put to
+    the user, named apart.
 
-## Proportion
+  Tested against REQ-ALG-008 (`specification/requirements/ALGORITHMS.md:436-445`)
+  and against `mainSince` (`src/flows/changed.ts:269-283`). Tested also against
+  REQ-INTERFACE-003. Its unchanged sentence at
+  `specification/requirements/INTERFACE.md:141-146` asks the page to state the
+  limit as "what a session committed of its own is not asked about". In that
+  case the session's commits on main are asked about. So the page's qualifier
+  "on the ticket's branch" is what the newer sentence at :126-127 requires:
+  "Nothing else they say contradicts this". `tests/release.test.ts:140-173`
+  reads both sentences, and that the clause without the qualifier is absent.
+- **B2 is repaired.** `tests/changed_refs.scenario.test.ts:208-217` reads, in
+  the run's words after the session, the sentence about `a.txt`. The user
+  committed that file on main outside the folder while the session worked
+  (:100-105). The sentence names it as committed on main, by what happened to
+  it, says nothing is asked on it, and the question does not name it. Tested
+  against REQ-FLOW-001 (`specification/requirements/FLOWS.md:169-175`) and
+  REQ-PARAM-001.
+- **B3 is repaired.** `tests/changed_on_main.scenario.test.ts:260-281` and
+  :450-465 test this through the product.
+  - An induction session writes two files of the folder and the user says yes.
+  - The test then gives the ruling's line and the framework's record an
+    earlier release's names, `checkout:one.md` and `main:two.md`, by hand,
+    standing in for an earlier release's data.
+  - The next run asks nothing, and commits both files as the step's result.
 
-- Every changed line serves the last evaluation's findings.
-  - The design changed in four "Tests." bullets, of D208 to D211. Each now
-    names the test that drives its rule, as the file's convention has it.
-  - The header comment of `four_findings` points to the two new files.
-  - The `CODE` constant is used by the new hand change and by the fixture
-    line it replaced.
-- No part the ticket does not ask for was found.
-- A search of the workspace found no claim left that the stand-in cannot
-  write differently in two sessions.
-- The new files are named only where they belong: in the test notes of
-  D209 to D211 (`DECISIONS.md:522`, `:529` and `:534`) and in the header of
-  `four_findings` (lines 15 and 19).
+  The reading is still the product's. Were either prefix misread, `keyOf` and
+  `yesCounted` would not count that yes, so the run would ask again. And
+  `resultPaths` would not give the file's path, so the file would not be
+  committed as the step's result. Tested against REQ-FLOW-004
+  (`specification/requirements/FLOWS.md:572-580`).
+- **B4 is repaired.** In `design/DECISIONS.md`:
+  - :652, D240's bullet. The run after the kill waits for the ruling and
+    takes nothing in, and takes main's ticket in after the yes.
+  - :653, D241 points to D257.
+  - :656-657. Each file of the folder said yes to is committed with the step.
+    A file changed on main is named `left:<path>`.
+  - :750, D257's tests name K1 and the S13 amendment.
 
-## Not a ground for no
-
-The question names a file by its path under the ticket's checkout
-(`.stdo-builder/local/checkouts/<ticket>/…`). That is code the last
-evaluation judged, and it has not changed. A person can still tell which
-file is meant.
+  Tested against REQ-FLOW-004 (`specification/requirements/FLOWS.md:609-615`),
+  against REQ-FLOW-006 step 1 (:873-876), and against `resultPaths` and
+  `yesOn`.
+- **The rest of the branch.** I re-read each hunk against items 1 to 11 and
+  the changed requirements.
+  - D257 says how each changed requirement is met. CALCULUS.md's L12, `run'`,
+    `session` and `answer` agree with it.
+  - The code does what REQ-ALG-008, REQ-FLOW-001, REQ-FLOW-003 step 1,
+    REQ-FLOW-005 step 3, REQ-FLOW-006 and REQ-FLOW-008 step 1 say. That covers
+    `take`, `mainSince`, `compare`, `trespass`, `yesOn`, `resultPaths`,
+    `changedQuestion`, `mainBetween`, `notedWords` and `differsBetween`.
+  - At a run's start, `told` (`src/flows/run.ts:324-363`) compares before
+    `build` takes main in (:168). After a session, a step that returns a file
+    ends the round before `takeIn` (:147-151). Git is only asked to read.
+  - Each of the ticket's eleven cases is a test, with fixture-agent sessions
+    as processes of their own, on a built product, in temporary repositories.
+    Each test names its requirements, and each assertion tests what its
+    acceptance line states.
+- **Read, and not a ground:**
+  - `packaging/INSTRUCTIONS.md:256-260` and :296-301 are unchanged. Each says
+    a file said yes to is committed with the step. Both speak of the folder:
+    the first of the folder's comparison, the second of what the user leaves
+    uncommitted in the folder. Lines :283-286 say main's files are committed
+    with none of the step. Read that way, neither contradicts REQ-INTERFACE-003.
+  - Suppose the record names a commit of main that git no longer holds.
+    `mainSince` puts the meeting commit in its place, and the folder is still
+    compared with the record's tree. REQ-ALG-008 sends identities that "name
+    what git no longer holds" to the commit the session started from. The
+    design reads that phrase as the tree, as D227 and D255 do. Main's files
+    are asked about under either reading.
+  - REQ-PARAM-002's bound on the added comparison is met by reasoning: one
+    `diff-tree` of two trees git holds, where main moved. It is not measured,
+    since the scale test's sessions move no branch.
+- **Work and unchanged.** No line differs from 015a0bc beyond what the
+  ticket's items and scope, and the last findings, require. The five files
+  changed since the last round touch only the lines B1 to B4 name, with the
+  test titles and file headers that describe them.

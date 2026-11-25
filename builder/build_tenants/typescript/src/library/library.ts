@@ -21,7 +21,7 @@
  * be: beside its code, where the install puts it. A command that reads what
  * is running reads it there (REQ-FLOW-010, D197).
  *
- * @is REQ-INTERFACE-001 REQ-INTERFACE-002 REQ-FLOW-001 REQ-FLOW-002 REQ-FLOW-003 REQ-FLOW-004 REQ-FLOW-006 REQ-FLOW-010 REQ-ALG-012
+ * @is REQ-INTERFACE-001 REQ-INTERFACE-002 REQ-FLOW-001 REQ-FLOW-002 REQ-FLOW-003 REQ-FLOW-004 REQ-FLOW-006 REQ-FLOW-008 REQ-FLOW-010 REQ-ALG-012 REQ-PARAM-001
  */
 import * as NodeServices from "@effect/platform-node/NodeServices"
 import * as Effect from "effect/Effect"
@@ -38,13 +38,14 @@ import { eventLogLive } from "../services/log.js"
 import { commandSessions } from "../services/sessions.js"
 import type { Services } from "../services/services.js"
 import { standInSessions } from "../services/stand_in.js"
+import { atMost } from "../flows/changed.js"
 import { answer as answerFlow, type AnswerGiven, type Answered } from "../flows/question.js"
 import { recordRelease as recordFlow, type RecordGiven } from "../flows/record.js"
 import { run as runFlow, type Ending, type Ran, type RunGiven } from "../flows/run.js"
 import { setUp, type Method, type Refused, type Release, type SetUp } from "../flows/setup.js"
 import { registryOf, show as showFlow } from "../flows/show.js"
 import { ticket as ticketFlow, type TicketWritten, type Written } from "../flows/ticket.js"
-import { PLACES, seenFrom, UNRELEASED, type Builder, type BuilderRecord, type Fault, type Opened } from "../flows/workspace.js"
+import { GIT_NEEDED, PLACES, UNRELEASED, type Builder, type BuilderRecord, type Fault, type Opened } from "../flows/workspace.js"
 
 /** What every command gives back: its result, the same in plain words, and the exit code a program gives. */
 export interface Said<A> {
@@ -53,10 +54,13 @@ export interface Said<A> {
   readonly result?: A
 }
 
+/** The exit code of a command the program does not know, or one not given what it needs, once the usage is printed: 2, the code of a command refused (REQ-INTERFACE-001, D251). */
+export const NOT_GIVEN = 2
+
 /** The method release set-up names where the user names none: the release this build was tested on. */
 export const RELEASE: Release = {
-  uri: "stdo://releases/v3.1.0-rc.2/",
-  manifest: "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4"
+  uri: "stdo://releases/v3.1.0-rc.3/",
+  manifest: "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
 }
 
 export interface Options {
@@ -94,13 +98,23 @@ const folderOf = (workspace: string) =>
     return yield* path.fromFileUrl(new URL(workspace)).pipe(Effect.orElseSucceed(() => path.resolve(workspace)))
   })
 
+/** Why a command given from inside a session is refused (REQ-INTERFACE-001, D217). */
+const insideWords = (root: string): string =>
+  `This command is refused, and nothing is changed: it was given from inside a session that STDO Builder started on the workspace at ${root}, and names that workspace or a folder inside it. The framework runs that workspace's commands itself; a session works on the files its packet names.`
+
+/** Why a command is refused where git's version reads as older than the product needs, in one sentence naming the version found and the version needed (REQ-INTERFACE-001, D248). */
+const gitWords = (found: string): string =>
+  `This command is refused, and nothing is changed: STDO Builder needs git ${GIT_NEEDED} or later, and the git on your PATH gives its version as ${found}.`
+
 /** Why `open` refused a command, in words. */
 const openWords = (workspace: string, o: Exclude<Opened, { readonly root: string }>): string =>
-  o.refused === "absent"
+  o.refused === "older git"
+    ? gitWords(o.found)
+    : o.refused === "inside a session"
+    ? insideWords(o.folder)
+    : o.refused === "absent"
     ? `There is no workspace at ${o.folder}.`
-    : o.refused === "not set up"
-    ? `${o.folder} is not set up. Set it up first: stdo-builder setup ${workspace} --name "<a name for the product>"`
-    : `The workspace's own folder, ${o.folder}, is on no line of work: its HEAD names a commit alone. Check out main there, then try again.`
+    : `${o.folder} is not set up. Set it up first: stdo-builder setup ${workspace} --name "<a name for the product>"`
 
 /**
  * Where the library keeps the method's graph and its registry: set-up reads
@@ -151,14 +165,17 @@ export const setup = (workspace: string, options: SetupOptions): Promise<Said<Se
   return perform(
     command(workspace, (folder, method) => setUp(folder, options.name, release, method), (done: SetUp | Refused): Said<SetUp> => {
       if ("refused" in done) {
+        const r = done.refused
+        if ("olderGit" in r) return { exitCode: 2, words: gitWords(r.olderGit) }
+        if ("inside" in r) return { exitCode: 2, words: insideWords(r.inside) }
         return {
           exitCode: 2,
-          words: `Set-up is refused: ${done.refused.folder} lies inside the git repository at ${done.refused.top}, and that repository ignores it. Set the product up in a folder the repository does not ignore, in a folder that is in no git repository, or in the top folder of one.`
+          words: `Set-up is refused: ${r.folder} lies inside the git repository at ${r.top}, and that repository ignores it. Set the product up in a folder the repository does not ignore, in a folder that is in no git repository, or in the top folder of one.`
         }
       }
       const lines = [
         `Set up ${options.name} in ${done.root}.`,
-        ...(done.inside === undefined ? [] : [`The product lies inside a larger git repository, at ${done.inside}. The framework's commits, checkouts and merges concern only the files under ${done.root}; the repository's other files, what is not committed outside the folder and its other branches are left as they are.`]),
+        ...(done.inside === undefined ? [] : [`The product lies inside a larger git repository, at ${done.inside}. The framework commits only the files under ${done.root}, on the branch the folder is on; what is not committed outside the folder and the repository's other branches are left as they are. A merge of a ticket's branch carries the whole of the branch's tree, so a commit of yours outside the folder, made on the ticket's branch, reaches the branch the ticket left with it.`]),
         done.wrote.length === 0 ? "It wrote nothing: the workspace was already set up." : `It wrote: ${done.wrote.join(", ")}.`,
         ...(done.there.length === 0 ? [] : [`These were there already and were left as they are: ${done.there.join(", ")}.`]),
         "installed" in done.method
@@ -179,6 +196,7 @@ export const ticket = (workspace: string, words: string): Promise<Said<Written>>
   perform<Written>(command(workspace, (folder) => ticketFlow(folder, words), (got: TicketWritten): Said<Written> => {
     if ("folder" in got) return { exitCode: 2, words: openWords(workspace, got) }
     if ("refused" in got) return { exitCode: 2, words: "A ticket says, in your words, what you want. Give the words." }
+    if ("elsewhere" in got) return { exitCode: 2, words: `${got.elsewhere}. Nothing is written.` }
     if ("there" in got) return { exitCode: 2, words: `The ticket ${got.there} is there already, with these words.`, result: got }
     return {
       exitCode: 0,
@@ -194,8 +212,29 @@ const endingWords = (workspace: string, e: Ending, printed: readonly string[], m
   const kept = printed.map((p) => `A session failed in this run. What it printed is kept at ${p}.`)
   switch (e.ending) {
     case "done":
-      return { exitCode: 0, words: [`The work on the ticket ${e.ticket} is done. It lies in the done lane and its branch is merged into main, at ${e.merged}.`, ...kept].join("\n") }
+      return {
+        exitCode: 0,
+        words: [
+          `The work on the ticket ${e.ticket} is done. It lies in the done lane and its branch is merged into ${e.into}, the branch it left, at ${e.merged}.`,
+          // Inside a larger repository, each file outside the workspace's folder the merge took in, at most as many as a run names, with how many there are (REQ-FLOW-008 step 2, REQ-PARAM-001, D256).
+          ...(e.outside === undefined || e.outside.length === 0 ? [] : [`The merge took these files outside the workspace's folder into ${e.into}, the branch the ticket left: ${atMost(e.outside)}.`]),
+          ...kept
+        ].join("\n")
+      }
     case "waiting":
+      if (e.ruling !== undefined) {
+        return {
+          exitCode: 0,
+          words: [
+            `The run waits for your ruling on what changed while the session on ${e.vector} worked, for the ticket ${e.ticket}. Nothing of the step is judged or committed until you rule. The question is given here, and stdo-builder show gives it again:`,
+            "",
+            e.question,
+            "",
+            ...kept,
+            `Rule: stdo-builder answer ${workspace} yes, or put back what is not to stand and give stdo-builder answer ${workspace} no --reason "<why>". Then start a run again.`
+          ].join("\n")
+        }
+      }
       return {
         exitCode: 0,
         words: [
@@ -226,10 +265,16 @@ const endingWords = (workspace: string, e: Ending, printed: readonly string[], m
         release: `the settings record ${recordedWords(e.release?.recorded ?? { none: true })} as the one that builds this product, and this is ${e.release === undefined ? "another" : builderWords(e.release.running)}. To have this one build it, record it: stdo-builder record-release ${workspace}. Then start a run again.`,
         "not well formed": `${notWellFormed(e.reasons ?? [], method).replace(/^The/, "the")}\nPut a graph that is well formed in place, then start a run again.`,
         "not set up": `the workspace is not set up. Set it up first: stdo-builder setup ${workspace} --name "<a name>".`,
-        held: "a run already works on every active ticket. Wait for it to end, then start a run again.",
+        held: `a run already works on every active ticket${(e.holds ?? []).map((h) => `; the hold ${h.file} names the process ${h.by === undefined ? "that holds it" : `${h.by.pid}${h.by.start === undefined ? "" : `, started ${h.by.start}`}`}`).join("")}. Wait for it to end, then start a run again.`,
+        "cannot tell": `${e.fault ?? ""}. Nothing is started, and nothing is ended where the framework cannot tell. See that the current folders of processes can be read, and end any process named here that is of a session on the ticket, then start a run again.`,
+        // The one sentence that `ps` was not found or could not read the table of processes, and what to install; it names no process (REQ-FLOW-001, D249).
+        ps: `no session is started, and nothing is ended or committed. ${e.fault ?? ""} Then start a run again.`,
+        alive: `${e.fault ?? ""}. Nothing is started on the ticket while one of them is alive. End them, then start a run again.`,
+        branch: `${e.fault ?? ""}. Then start a run again.`,
+        main: `${e.fault ?? ""}.${(e.files ?? []).length === 0 ? "" : ` The files: ${(e.files ?? []).join(", ")}.`}`,
         limit: "the limit on active tickets is reached. Finish an active ticket first.",
         nothing: `there is nothing to build. Write a ticket to change something: stdo-builder ticket ${workspace} "<what you want>".`,
-        unresolved: `git could not merge ${(e.files ?? []).join(", ")} on main, and the merge is not resolved. Resolve it in the workspace's own folder and commit there, then start a run again.`,
+        unresolved: `git could not merge ${(e.files ?? []).join(", ")}, and the merge is not resolved. ${e.fault ?? "Resolve it in the workspace's folder, and commit there"}, then start a run again.`,
         fault: `${e.fault ?? "the workspace could not be read or written"}.`
       }[e.why]
       return { exitCode: 2, words: [`The run is refused before any step: ${why}`, ...kept].join("\n") }
@@ -248,9 +293,13 @@ export const run = (workspace: string, options: RunOptions = {}): Promise<Said<R
     const said = endingWords(workspace, ran.ending, ran.printed, method)
     const words = [
       ...(ran.logStarted ? [`The event log was not found; this run starts a new one, at ${PLACES.log}.`] : []),
+      // The log the run was adding to was gone when it next added to it: said once (D247).
+      ...(ran.logRestarted === true ? [`The event log this run was adding to was not found; this run started a new one, at ${PLACES.log}.`] : []),
       // The run kept the ending it reached; the log holds nothing of it (D75).
       ...(ran.logUnwritten === true ? [`The event log could not be written at ${PLACES.log}, so it holds nothing of how this run ended. Put that right before you start the next run.`] : []),
-      said.words
+      said.words,
+      // What changed among the branches, tags and stash, or outside the workspace's folder, while a session worked; none of it holds the ticket (D228).
+      ...(ran.noted ?? [])
     ].join("\n")
     return { exitCode: said.exitCode, words, result: ran }
   }), options)
@@ -263,13 +312,14 @@ export type ReleaseRecorded = Extract<RecordGiven, { readonly recorded: Builder 
 export const recordRelease = (workspace: string): Promise<Said<ReleaseRecorded>> =>
   perform<ReleaseRecorded>(command(workspace, (folder, method) => recordFlow(folder, method.manifest), (got: RecordGiven): Said<ReleaseRecorded> => {
     if ("folder" in got) return { exitCode: 2, words: openWords(workspace, got) }
+    if ("elsewhere" in got) return { exitCode: 2, words: `${got.elsewhere}. Nothing is changed.` }
     if ("refused" in got) return { exitCode: 2, words: `The settings, at ${PLACES.settings}, do not read as an object, so the record cannot be written there. Put them right, then record the release again.` }
     if (!got.changed) return { exitCode: 0, words: `The settings already record ${builderWords(got.recorded)} as the one that builds this product. Nothing is changed.`, result: got }
     return {
       exitCode: 0,
       words: [
         `The settings now record ${builderWords(got.recorded)} as the one that builds this product, in place of ${recordedWords(got.was)}.`,
-        `Nothing is committed: the next run commits it as your change on main. Next: start a run, stdo-builder run ${workspace}.`
+        `Nothing is committed: the next run commits it as your change by hand, on the branch the folder is on. Next: start a run, stdo-builder run ${workspace}.`
       ].join("\n"),
       result: got
     }
@@ -301,13 +351,15 @@ export const answer = (workspace: string, says: "yes" | "no", options: AnswerOpt
 
 // ---- Where the work stands
 
-const ticketWords = (within: string) => (t: TicketStands): string => {
+const ticketWords = (t: TicketStands): string => {
   const waits = t.waits === undefined
     ? ""
+    : t.waits.on === "ruling"
+    ? `, waits for your ruling on what changed while the session on ${t.waits.vector} worked`
     : t.waits.on === "answer"
     ? `, waits for your answer on ${t.waits.vector}`
     : t.waits.on === "held up"
-    ? `, held up at ${t.waits.vector}: ${t.waits.checks.join(", ")} did not pass${t.waits.found === undefined ? "" : `; what was found is at ${seenFrom(t.lane === "active" ? t.name : undefined, t.waits.found, within)}`}`
+    ? `, held up at ${t.waits.vector}: ${t.waits.checks.join(", ")} did not pass${t.waits.found === undefined ? "" : `; what was found is at ${t.waits.found}`}`
     : t.waits.on === "work"
     ? `, to be built at ${t.waits.vector}`
     : t.waits.on === "induction"
@@ -319,7 +371,7 @@ const ticketWords = (within: string) => (t: TicketStands): string => {
   const asOf = t.waits === undefined || t.waits.on === "unknown"
     ? ""
     : `, as ${t.waits.from === "ticket" ? "the ticket shows" : "the event log shows"}${"when" in t.waits && t.waits.when !== undefined ? ` (written at ${t.waits.when})` : ""}; a run reads the workspace again`
-  const question = t.waits?.on === "answer" && t.waits.question !== undefined ? `\n  asked:\n${t.waits.question.split("\n").map((l) => `    ${l}`).join("\n")}` : ""
+  const question = (t.waits?.on === "answer" || t.waits?.on === "ruling") && t.waits.question !== undefined ? `\n  asked:\n${t.waits.question.split("\n").map((l) => `    ${l}`).join("\n")}` : ""
   const changed = t.changed.length === 0 ? "" : `\n  changed: ${t.changed.map((c) => `${c.asset} (${c.lines} lines)`).join(", ")}`
   const last = t.runs?.last === undefined ? "" : `\n  last run: ${t.runs.last.ending}, ${t.runs.last.why}`
   // What the agents reported each session cost, with its unit as the settings name it, and the sums for the ticket (D91, D102); a cost that is a number, to the cent as `stands` gives it (D195). The calls, of a session and their sum, are said to be the agent's own report, which leaves out what further agents did (REQ-ALG-012, D199).
@@ -340,8 +392,9 @@ export const show = (workspace: string): Promise<Said<Standing>> =>
     if ("folder" in got) return { exitCode: 2, words: openWords(workspace, got) }
     if ("refused" in got) return { exitCode: 2, words: notWellFormed(got.refused, method) }
     const lines = [
+      ...(got.elsewhere === undefined ? [] : [`${got.elsewhere}.`]),
       got.tickets.length === 0 ? "No ticket is on the board." : "The tickets:",
-      ...got.tickets.map(ticketWords(got.within ?? "")),
+      ...got.tickets.map(ticketWords),
       ...(got.withdrawn.length === 0 ? [] : [`Withdrawn: ${got.withdrawn.join(", ")}.`]),
       got.log === "found" ? `The event log is at ${PLACES.log}.` : "The event log was not found."
     ]

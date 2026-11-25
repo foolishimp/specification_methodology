@@ -69,7 +69,7 @@ describe(`S1 Set up and build the smallest product, on ${on}`, () => {
     said.push(await ws.run(fixtures))
     last = await ws.run(fixtures)
     log = ws.log()
-  }, 180_000)
+  }, 300_000)
 
   it("the user types the command stdo-builder, and it is the one this run uses", () => {
     const found = execFileSync("sh", ["-c", "command -v stdo-builder || true"], { env: ws.env, encoding: "utf8" }).trim()
@@ -153,7 +153,7 @@ describe(`S1 Set up and build the smallest product, on ${on}`, () => {
   })
 
   it("REQ-ALG-007 acceptance 1: every brief after the induction says the asset holds what the ticket's work needs and no part the ticket does not ask for, and that such a part is a ground for no", () => {
-    const folder = ws.checkout(ticket, ".stdo-builder", "local", "briefs")
+    const folder = ws.path(".stdo-builder", "local", "briefs")
     const briefs = readdirSync(folder).filter((f) => f.endsWith(".md")).sort()
     const graph = methodGraph()
     const sessions = graph.graph.vectors.filter((v) => S1_ASKED.includes(v.name)).flatMap((v) => [`${v.name}.work.md`, ...(v.evaluation === undefined ? [] : [`${v.name}.evaluation.md`])]).sort()
@@ -167,7 +167,7 @@ describe(`S1 Set up and build the smallest product, on ${on}`, () => {
   })
 
   it("REQ-ALG-007 acceptance 5: every brief is an activation packet that holds each part, and every working brief each check of its vector in its form", () => {
-    const folder = ws.checkout(ticket, ".stdo-builder", "local", "briefs")
+    const folder = ws.path(".stdo-builder", "local", "briefs")
     const definition = (JSON.parse(readFileSync(join(ws.root, ".stdo-builder", "settings.json"), "utf8")) as { definition: string }).definition
     const release = (JSON.parse(execFileSync("stdo", ["resolve", RELEASE.uri], { env: ws.env, encoding: "utf8" })) as { path: string }).path
     const places = new Map([...placesIn(ws)].map(([name, paths]) => [name, paths.join(", ")]))
@@ -192,7 +192,7 @@ describe(`S1 Set up and build the smallest product, on ${on}`, () => {
         expect(starts("- ticket: "), b).toHaveLength(1)
         expect(starts("- do not read: ")[0], b).toContain(".stdo-builder/graph.json")
         expect(starts("- do not read: ")[0], b).toMatch(named ? /; nor anything of the method but the sections named in this packet\.$/ : /; nor anything of the method\.$/)
-        expect(starts("- must not change: ")[0], b).toContain(definition)
+        expect(starts("- what changed: ")[0], b).toContain(definition)
         expect(starts("- write: "), b).toHaveLength(1)
         expect(starts("- decision: "), b).toHaveLength(1)
         expect(starts("- evidence: ")[0], b).toContain("The event log is no evidence.")

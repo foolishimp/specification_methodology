@@ -11,7 +11,7 @@
  *
  * After a step has started: S1 is run to the build step, whose working
  * session, once it has written its files, waits at a gate. The lock is left
- * on the ticket's checkout's own index and the gate is opened, so git refuses
+ * on the workspace's folder's own index and the gate is opened, so git refuses
  * the step's commit. The run ends as stopped, naming the build's vector, with
  * the stopped ending's exit code. The user removes the lock and starts a run
  * again, and that run goes on.
@@ -55,8 +55,8 @@ beforeAll(async () => {
   ticket = (await s1ToRequirements(atStep, fixtures)).ticket
   const fromStep = atStep.log().length
   const running = atStep.start(["run", atStep.root, "--stand-in", fixtures])
-  await until(() => atStep.read(".stdo-builder", "local", "checkouts", ticket, "build_tenants", "main", "code", "hello.sh") !== undefined, 60)
-  const ownIndex = atStep.git(["-C", atStep.checkout(ticket), "rev-parse", "--path-format=absolute", "--git-path", "index"]).trim()
+  await until(() => atStep.read("build_tenants", "main", "code", "hello.sh") !== undefined, 60)
+  const ownIndex = atStep.git(["-C", atStep.path(), "rev-parse", "--path-format=absolute", "--git-path", "index"]).trim()
   const stepLock = `${ownIndex}.lock`
   write(stepLock, "")
   write(gate, "")

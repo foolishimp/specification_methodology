@@ -208,13 +208,17 @@ const adapters: Record<string, Adapter> = {
         kind: g.kind,
         places: g.places as FrameworkPlaces,
         ...(g.ticket === undefined ? {} : { ticket: g.ticket }),
-        ...(g.side === undefined ? {} : { side: g.side }),
-        start: new Map(Object.entries(g.start)),
-        end: new Map(Object.entries(g.end))
+        ...(g.stood === true ? { stood: true } : {}),
+        start: new Map(Object.entries(g.start ?? {})),
+        end: new Map(Object.entries(g.end ?? {})),
+        ...(g.framework === undefined ? {} : { framework: new Map(Object.entries(g.framework)) }),
+        ...(g.yes === undefined ? {} : { yes: new Map(Object.entries(g.yes)) }),
+        ...(g.main === undefined ? {} : { main: { start: new Map(Object.entries(g.main.start ?? {})), end: new Map(Object.entries(g.main.end ?? {})) } })
       }
     },
     call: (inputs) => trespass(inputs),
-    compare: equal
+    // A case that expects a list of files expects identities that were not missing, and nothing changed on main (REQ-ALG-008).
+    compare: (actual, expected) => equal(actual, Array.isArray(expected) ? { files: expected, main: [], missing: false } : { main: [], ...expected })
   },
   progress: {
     prepare: (g) => ({ before: g.before === null ? undefined : outcomesOf(g.before), now: outcomesOf(g.now) }),
@@ -736,6 +740,17 @@ describe("acceptance stands on what it means and on what it judges against (D168
       }
     }
     expect(judged).toBeGreaterThan(5)
+  })
+})
+
+describe("REQ-ALG-007: the user's change by hand on the ticket's branch, in the evaluating packet (D244)", () => {
+  it("where two commits on the branch hold the user's change by hand at the node judged, the line names each, and its command shows the lines of each", () => {
+    const data = JSON.parse(text("tests", "cases", "brief.json")) as J
+    const g = { ...data.shared, ...(data.cases as J[]).find((c) => c.given.vector === "write-code" && c.given.kind === "evaluation" && c.given.named !== undefined).given }
+    const graph = fixture(g.fixture, g.named)
+    const snapshot: Snapshot = { ...snapshotOf(g.snapshot), main: { commit: "m1", holds: ["code"], byHand: new Map([["code", ["h1", "h2"]]]) } }
+    const line = lines(brief(graph, vectorOf(graph, "write-code"), "evaluation", snapshot, g.basis)).find((l) => l.startsWith("- as main holds it, code:")) ?? ""
+    expect(line).toContain("is committed on the branch in the commits h1 and h2 (`git show h1 h2 -- build_tenants/main/code build_tenants/main/bin`): the lines they changed are the user's, not the ticket's work.")
   })
 })
 

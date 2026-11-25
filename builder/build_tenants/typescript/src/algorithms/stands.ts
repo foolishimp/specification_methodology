@@ -24,6 +24,8 @@ import type { WellFormed } from "./well_formed.js"
 
 /** What an active ticket waits on, and what it was read from: the ticket, or the event log, with when that was written (D204). Without the log, the rest is what a run finds. */
 export type Waits =
+  /** The user's ruling on what changed while a session worked, read from the identities kept from its start and the workspace as it is, with the question again (REQ-FLOW-006, D227). */
+  | { readonly on: "ruling"; readonly vector: string; readonly question: string; readonly from: "kept" }
   | { readonly on: "answer"; readonly vector: string; readonly asset: string; readonly question?: string; readonly from: "ticket"; readonly when?: string }
   | { readonly on: "induction"; readonly from: "ticket" }
   | { readonly on: "held up"; readonly vector: string; readonly checks: readonly string[]; readonly found?: string; readonly from: "log"; readonly when?: string }
@@ -106,12 +108,14 @@ export const logStep: Step<LogFold, LogEntry> = (fold, entry) => {
 export interface TicketShows {
   /** The vector whose work its checklist shows delivered for the user's decision with no answer of the user after it: the asset asked on, the question, and when it was asked. */
   readonly asked?: { readonly vector: string; readonly asset: string; readonly question?: string; readonly when?: string }
+  /** What changed while a session worked, on which the user has not ruled: the vector of that session's step and the question (REQ-ALG-012). */
+  readonly ruling?: { readonly vector: string; readonly question: string }
   /** Whether a confirmation of its induction in it stands (REQ-ALG-004), or it needs none. */
   readonly inducted: boolean
 }
 
 export interface TicketView {
-  /** For an active ticket with a checkout, what its ticket shows. */
+  /** For an active ticket, what its ticket on its branch shows. */
   readonly ticket?: TicketShows
   /** The files the ticket changed and how many lines of each: main against its branch, or what its merge brought. */
   readonly changes: readonly { readonly path: string; readonly lines: number }[]
@@ -140,8 +144,10 @@ export interface TicketStands {
 
 export interface Standing {
   readonly tickets: readonly TicketStands[]
-  /** The workspace's folder from the top of its repository, which `show` adds, so a path in a ticket's checkout is named where it is (D201). */
+  /** The workspace's folder from the top of its repository, which `show` adds, so a path is named where it is from the repository's top (D201). */
   readonly within?: string
+  /** Where a ticket is active and the folder is not on its branch, the words naming both, which `show` adds (REQ-ALG-012, D239). */
+  readonly elsewhere?: string
   readonly withdrawn: readonly string[]
   readonly log: "found" | "not found"
 }
@@ -184,6 +190,7 @@ function spent(sessions: readonly SessionSeen[]): { readonly cost?: string; read
  * build at the vector of its last step. Without the log, what a run finds.
  */
 function waitsOf(shows: TicketShows | undefined, runs: LogFold extends Map<string, infer R> ? R | undefined : never, logFound: boolean, foundOf: ((vector: string) => string) | undefined): Waits {
+  if (shows?.ruling !== undefined) return { on: "ruling", vector: shows.ruling.vector, question: shows.ruling.question, from: "kept" }
   if (shows?.asked !== undefined) {
     const a = shows.asked
     return { on: "answer", vector: a.vector, asset: a.asset, from: "ticket", ...(a.question === undefined ? {} : { question: a.question }), ...(a.when === undefined ? {} : { when: a.when }) }

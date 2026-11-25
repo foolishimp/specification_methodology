@@ -87,7 +87,7 @@ beforeAll(() => {
   const madeSecond = installed(SECOND_VERSION)
   onSecond = new Workspace(madeSecond.cli, madeSecond.bin)
   second = { version: SECOND_VERSION, manifest_sha256: sha256Of(join(madeSecond.release, "manifest.json")) }
-}, 240_000)
+}, 480_000)
 
 describe("REQ-FLOW-010 set-up records the release that builds the product", () => {
   let fromRelease: Said
@@ -182,7 +182,7 @@ describe("REQ-FLOW-010 a run by another release than the one recorded, or with n
     diff = ws.git(["diff", "--unified=0", "--", ".stdo-builder/settings.json"]).split("\n").filter((l) => /^[-+] /.test(l))
     ranAfter = await ws.run(S1_FIXTURES)
     mainAfter = ws.git(["show", "main:.stdo-builder/settings.json"])
-    byHand = ws.git(["log", "--format=%s", "--name-only", "-1", "--grep=what the user changed by hand on main", "main"]).split("\n").filter((l) => l !== "")
+    byHand = ws.git(["log", "--format=%s", "--name-only", "-1", "--grep=what the user changed by hand", "main"]).split("\n").filter((l) => l !== "")
     recordedAgain = await ws.command(["record-release", ws.root])
   }, 240_000)
 
@@ -245,7 +245,7 @@ describe("REQ-FLOW-010 a run by another release than the one recorded, or with n
     expect(ranAfter.code, ranAfter.out).toBe(0)
     expect(ranAfter.out).toContain("waits for your answer on induct-ticket")
     expect((JSON.parse(mainAfter) as Record<string, unknown>).builder).toEqual(released)
-    expect(byHand[0]).toBe("what the user changed by hand on main")
+    expect(byHand[0]).toBe("what the user changed by hand")
     expect(byHand).toContain(".stdo-builder/settings.json")
     expect(byHand).toContain("NOTES.md")
   })
@@ -267,7 +267,7 @@ describe("REQ-FLOW-010 a run by another release than the one recorded, and the c
   let settingsAfterAnswer = ""
   let ranUnderHandEdit: Said
   let ranUnderHandEditLogged: readonly LogEntry[] = []
-  let mainAfterHandEdit = ""
+  let committedAfterHandEdit = ""
   let byHandAfterEdit: readonly string[] = []
 
   beforeAll(async () => {
@@ -282,7 +282,7 @@ describe("REQ-FLOW-010 a run by another release than the one recorded, and the c
     diff = ws.git(["diff", "--unified=0", "--", ".stdo-builder/settings.json"]).split("\n").filter((l) => /^[-+] /.test(l))
     ranSecond = await onSecond.command(["run", ws.root, "--stand-in", S1_FIXTURES])
     mainAfter = ws.git(["show", "main:.stdo-builder/settings.json"])
-    byHand = ws.git(["log", "--format=%s", "--name-only", "-1", "--grep=what the user changed by hand on main", "main"]).split("\n").filter((l) => l !== "")
+    byHand = ws.git(["log", "--format=%s", "--name-only", "-1", "--grep=what the user changed by hand", "main"]).split("\n").filter((l) => l !== "")
     byFirst = await refusedRun(onRelease, ws)
     // The record names the second release, and the ticket waits on induct-ticket: the user answers with the first.
     const beforeAnswer = ws.log().length
@@ -294,8 +294,8 @@ describe("REQ-FLOW-010 a run by another release than the one recorded, and the c
     const beforeRun = ws.log().length
     ranUnderHandEdit = await ws.run(S1_FIXTURES)
     ranUnderHandEditLogged = ws.log().slice(beforeRun)
-    mainAfterHandEdit = ws.git(["show", "main:.stdo-builder/settings.json"])
-    byHandAfterEdit = ws.git(["log", "--format=%s", "--name-only", "-1", "--grep=what the user changed by hand on main", "main"]).split("\n").filter((l) => l !== "")
+    committedAfterHandEdit = ws.git(["show", "HEAD:.stdo-builder/settings.json"])
+    byHandAfterEdit = ws.git(["log", "--format=%s", "--name-only", "-1", "--grep=what the user changed by hand", "main"]).split("\n").filter((l) => l !== "")
   }, 360_000)
 
   it("acceptance 2: a run by another release than the one recorded starts no session, commits nothing and is refused, saying what is recorded and what is running", () => {
@@ -328,7 +328,7 @@ describe("REQ-FLOW-010 a run by another release than the one recorded, and the c
     expect(ranSecond.code, ranSecond.out).toBe(0)
     expect(ranSecond.out).toContain("waits for your answer on induct-ticket")
     expect((JSON.parse(mainAfter) as Record<string, unknown>).builder).toEqual(second)
-    expect(byHand[0]).toBe("what the user changed by hand on main")
+    expect(byHand[0]).toBe("what the user changed by hand")
     expect(byHand).toContain(".stdo-builder/settings.json")
     expect(byFirst.said.code, byFirst.said.out).toBe(2)
     expect(byFirst.said.out).toContain(`the settings record ${releaseWords(second.version, second.manifest_sha256)} as the one that builds this product, and this is ${releaseWords(released.version, released.manifest_sha256)}.`)
@@ -344,13 +344,13 @@ describe("REQ-FLOW-010 a run by another release than the one recorded, and the c
     expect((JSON.parse(settingsAfterAnswer) as Record<string, unknown>).builder).toEqual(second)
   })
 
-  it("law: a record the user edits by hand is read as it stands; edited to what is running, a run goes on and commits it as the user's change on main", () => {
+  it("law: a record the user edits by hand is read as it stands; edited to what is running, a run goes on and commits it as the user's change by hand, on the branch the folder is on", () => {
     expect(ranUnderHandEdit.code, ranUnderHandEdit.out).toBe(0)
     expect(ranUnderHandEdit.out).not.toContain("record-release")
     expect(ranUnderHandEditLogged.filter((e) => e.event === "run ended" && e.why === "release")).toEqual([])
     expect(ranUnderHandEditLogged.some((e) => e.event === "session started")).toBe(true)
-    expect((JSON.parse(mainAfterHandEdit) as Record<string, unknown>).builder).toEqual(released)
-    expect(byHandAfterEdit[0]).toBe("what the user changed by hand on main")
+    expect((JSON.parse(committedAfterHandEdit) as Record<string, unknown>).builder).toEqual(released)
+    expect(byHandAfterEdit[0]).toBe("what the user changed by hand")
     expect(byHandAfterEdit).toContain(".stdo-builder/settings.json")
   })
 })

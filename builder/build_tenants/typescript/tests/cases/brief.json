@@ -16,12 +16,13 @@
           ".ai-workspace/tickets/backlog",
           ".ai-workspace/tickets/active",
           ".ai-workspace/tickets/completed"
-        ]
+        ],
+        "folder": ".stdo-builder"
       },
       "release": {
-        "uri": "stdo://releases/v3.1.0-rc.2/",
-        "manifest": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4",
-        "path": "/Library/Application Support/STDO/releases/v3.1.0-rc.2"
+        "uri": "stdo://releases/v3.1.0-rc.3/",
+        "manifest": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+        "path": "/Library/Application Support/STDO/releases/v3.1.0-rc.3"
       },
       "limits": {
         "sessions": 20,
@@ -87,7 +88,7 @@
           "- produce: code at build_tenants/main/code",
           "- ticket: tickets/active/261119-a.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: The code passes the tests.",
@@ -101,8 +102,8 @@
           "",
           "## Actor And Authority",
           "- write: build_tenants/main/code and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to code once its checks pass and its verdict says yes.",
           "",
           "## Evidence And Relations",
@@ -168,7 +169,7 @@
           "- produce: code at build_tenants/main/code",
           "- ticket: tickets/active/261130-k.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: The code passes the tests.",
@@ -182,8 +183,8 @@
           "",
           "## Actor And Authority",
           "- write: build_tenants/main/code and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to code once its checks pass and its verdict says yes.",
           "",
           "## Evidence And Relations",
@@ -241,7 +242,7 @@
           "## Subject And Basis",
           "- produce: design at build_tenants/main/design",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: The design says how each requirement that is not deferred is met, and names it.",
@@ -251,8 +252,8 @@
           "",
           "## Actor And Authority",
           "- write: build_tenants/main/design and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/tests, build_tenants/main/code, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: none by the user.",
           "",
           "## Evidence And Relations",
@@ -329,7 +330,7 @@
           "- produce: requirements at specification/requirements",
           "- ticket: tickets/active/261119-a.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: Each requirement has a name of the form REQ-<FAMILY>-<NUMBER> and says what the product must do.",
@@ -341,8 +342,8 @@
           "",
           "## Actor And Authority",
           "- write: specification/requirements and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/code, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to requirements once its checks pass.",
           "",
           "## Evidence And Relations",
@@ -358,7 +359,9 @@
     },
     {
       "covers": [
-        "REQ-ALG-007 acceptance 8"
+        "REQ-ALG-007 acceptance 8",
+        "REQ-ALG-007 acceptance 11",
+        "REQ-ALG-007 acceptance 12"
       ],
       "says": "The evaluating session for the code: its frame, what to judge, against what, where to write, and the exact content of its verdict, which may say that it cannot judge.",
       "given": {
@@ -404,7 +407,7 @@
           "- judge: code at build_tenants/main/code",
           "- ticket: tickets/active/261119-a.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: The code passes the tests.",
@@ -417,14 +420,14 @@
           "",
           "## Actor And Authority",
           "- write: build_tenants/main/evaluations/code/findings.md and build_tenants/main/evaluations/code/verdict.json. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/code, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start.",
-          "- may run: any command, in this folder. What a run leaves that git does not ignore counts as a change.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed; the verdict is then not read. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- may run: any command, in this folder. What a run leaves that git does not ignore counts as a change. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to code once its checks pass and its verdict says yes.",
           "",
           "## Evidence And Relations",
           "- check \"the tests pass\": yes where `sh build_tenants/main/tests/run.sh` exits with 0, run in this folder.",
           "- check \"the code names every requirement and no other\": yes where every name matching `REQ-[A-Z]+-[0-9]+` that specification/requirements states is named in build_tenants/main/code, unless the section that states it says `Deferred`; and build_tenants/main/code names none that specification/requirements does not state.",
-          "- evidence: the files of this folder. The event log is no evidence.",
+          "- evidence: the assets named above, to judge and to judge against. Not to be read: what a working session printed, at .stdo-builder/local/printed; the working packets, .stdo-builder/local/briefs/*.work.md; and what the checks found, at .stdo-builder/local/found. The event log is no evidence.",
           "",
           "## Stop And Change",
           "- time: up to 60 minutes.",
@@ -465,7 +468,7 @@
           "- produce: the ticket at tickets/active/261119-a.md",
           "- ticket: tickets/active/261119-a.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4, installed at \"/Library/Application Support/STDO/releases/v3.1.0-rc.2\"",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a, installed at \"/Library/Application Support/STDO/releases/v3.1.0-rc.3\"",
           "- method term kind: section \"Types\" of standards/TICKETS.md in the method release.",
           "- method term class: section \"Change classes\" of standards/SPEC_METHOD.md in the method release.",
           "- method term triage: section \"Universal intake triage\" of standards/SPEC_METHOD.md in the method release.",
@@ -481,8 +484,8 @@
           "",
           "## Actor And Authority",
           "- write: tickets/active/261119-a.md and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/code, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start, but for the ticket above.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket but the triage and the term of the ticket above.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to the ticket once its checks pass.",
           "",
           "## Evidence And Relations",
@@ -549,7 +552,7 @@
           "- produce: the ticket at tickets/active/261119-a.md",
           "- ticket: tickets/active/261119-a.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4, installed at \"/Library/Application Support/STDO/releases/v3.1.0-rc.2\"",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a, installed at \"/Library/Application Support/STDO/releases/v3.1.0-rc.3\"",
           "- method term kind: section \"Types\" of standards/TICKETS.md in the method release.",
           "- method term class: section \"Change classes\" of standards/SPEC_METHOD.md in the method release.",
           "- method term triage: section \"Universal intake triage\" of standards/SPEC_METHOD.md in the method release.",
@@ -566,8 +569,8 @@
           "",
           "## Actor And Authority",
           "- write: tickets/active/261119-a.md and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/code, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start, but for the ticket above.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket but the triage and the term of the ticket above.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to the ticket once its checks pass.",
           "",
           "## Evidence And Relations",
@@ -606,11 +609,12 @@
               "lanes/backlog",
               "lanes/active",
               "lanes/done"
-            ]
+            ],
+            "folder": ".fw"
           },
           "release": {
-            "uri": "stdo://releases/v3.1.0-rc.2/",
-            "manifest": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4"
+            "uri": "stdo://releases/v3.1.0-rc.3/",
+            "manifest": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
           }
         },
         "snapshot": {
@@ -642,7 +646,7 @@
           "- produce: final at work/final",
           "- ticket: lanes/active/a.md, the context this session starts from.",
           "- definition: def.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: Notes on what to polish.",
@@ -655,8 +659,8 @@
           "",
           "## Actor And Authority",
           "- write: work/notes, work/final and .gitignore. Work in this folder only.",
-          "- must not change: def.json, s.json, g.json, r.json, input/brief.md, work/draft, reviews/final/verdict.json; nor the tickets in lanes/backlog, lanes/active and lanes/done that were there at the start.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change def.json, s.json, g.json, r.json or a ticket.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to notes and final once its checks pass and its verdict says yes; the answer is kept at final, for it and the nodes it depends on.",
           "",
           "## Evidence And Relations",
@@ -742,7 +746,7 @@
           "- produce: code at build_tenants/main/code",
           "- ticket: tickets/active/261119-a.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: The code passes the tests.",
@@ -756,8 +760,8 @@
           "",
           "## Actor And Authority",
           "- write: build_tenants/main/code and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to code once its checks pass and its verdict says yes.",
           "",
           "## Evidence And Relations",
@@ -817,7 +821,7 @@
           "- produce: tests at build_tenants/main/tests",
           "- ticket: tickets/active/261119-a.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: The tests are written from the accepted requirements and exercise the product from end to end, as a user of it would: they test what the requirements state, and are not bent to fit the code.",
@@ -829,8 +833,8 @@
           "",
           "## Actor And Authority",
           "- write: build_tenants/main/tests and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/code, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: none by the user.",
           "",
           "## Evidence And Relations",
@@ -875,11 +879,12 @@
               ".ai-workspace/tickets/backlog",
               ".ai-workspace/tickets/active",
               ".ai-workspace/tickets/completed"
-            ]
+            ],
+            "folder": ".stdo-builder"
           },
           "release": {
-            "uri": "stdo://releases/v3.1.0-rc.2/",
-            "manifest": "b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4"
+            "uri": "stdo://releases/v3.1.0-rc.3/",
+            "manifest": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a"
           },
           "limits": {
             "sessions": 20,
@@ -901,7 +906,7 @@
           "- produce: the ticket at tickets/active/261119-a.md",
           "- ticket: tickets/active/261119-a.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4. It could not be found on this machine, so judge by this packet alone.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a. It could not be found on this machine, so judge by this packet alone.",
           "",
           "## Attention Surface",
           "- result: The ticket gives its triage, as the method gives it: its kind (kind), its class of change (class), the node at which the work enters, the highest asset it reaches (enters), the node at which it ends (ends), and how much of the system it touches (scope); or it says that the ticket cannot be inducted, and why.",
@@ -914,8 +919,8 @@
           "",
           "## Actor And Authority",
           "- write: tickets/active/261119-a.md and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/code, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start, but for the ticket above.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket but the triage and the term of the ticket above.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to the ticket once its checks pass.",
           "",
           "## Evidence And Relations",
@@ -938,7 +943,9 @@
     },
     {
       "covers": [
-        "REQ-ALG-007 acceptance 8"
+        "REQ-ALG-007 acceptance 8",
+        "REQ-ALG-007 acceptance 11",
+        "REQ-ALG-007 acceptance 12"
       ],
       "says": "The code is at two paths, and one was changed by hand since the evaluation and the user said yes to it, as were the requirements. The evaluating packet's line on the code as it stands names both records, and of what changed only the path that differs, each by the identity git holds it under as it was, with the command that shows it.",
       "given": {
@@ -1029,7 +1036,7 @@
           "- judge: code at build_tenants/main/code, build_tenants/main/bin",
           "- ticket: tickets/active/261119-a.md, the context this session starts from.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: The code passes the tests.",
@@ -1042,14 +1049,14 @@
           "",
           "## Actor And Authority",
           "- write: build_tenants/main/evaluations/code/findings.md and build_tenants/main/evaluations/code/verdict.json. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/code, build_tenants/main/bin, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start.",
-          "- may run: any command, in this folder. What a run leaves that git does not ignore counts as a change.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed; the verdict is then not read. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- may run: any command, in this folder. What a run leaves that git does not ignore counts as a change. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to code once its checks pass and its verdict says yes.",
           "",
           "## Evidence And Relations",
           "- check \"the tests pass\": yes where `sh build_tenants/main/tests/run.sh` exits with 0, run in this folder.",
           "- check \"the code names every requirement and no other\": yes where every name matching `REQ-[A-Z]+-[0-9]+` that specification/requirements states is named in build_tenants/main/code, build_tenants/main/bin, unless the section that states it says `Deferred`; and build_tenants/main/code, build_tenants/main/bin names none that specification/requirements does not state.",
-          "- evidence: the files of this folder. The event log is no evidence.",
+          "- evidence: the assets named above, to judge and to judge against. Not to be read: what a working session printed, at .stdo-builder/local/printed; the working packets, .stdo-builder/local/briefs/*.work.md; and what the checks found, at .stdo-builder/local/found. The event log is no evidence.",
           "",
           "## Stop And Change",
           "- time: up to 60 minutes.",
@@ -1113,7 +1120,7 @@
           "- produce: code at build_tenants/main/code",
           "- ticket: tickets/active/261119-a.md, the context this session starts from; the rulings in it bind this session.",
           "- definition: stdo_hello.json",
-          "- method release: stdo://releases/v3.1.0-rc.2/, manifest sha256 b691b0249c82ff39033ae636c4eaa0ab44bafee3732c79a227eb9409d53776c4.",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
           "",
           "## Attention Surface",
           "- result: The code passes the tests.",
@@ -1127,8 +1134,8 @@
           "",
           "## Actor And Authority",
           "- write: build_tenants/main/code and .gitignore. Work in this folder only.",
-          "- must not change: stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/.gitignore, specification/REFERENCE_FRAME_BASIS.md, specification/INTENT.md, specification/PRODUCT.md, specification/requirements, build_tenants/main/design, build_tenants/main/tests, build_tenants/main/evaluations/build/verdict.json, build_tenants/main/evaluations/design/verdict.json, build_tenants/main/evaluations/tests/verdict.json, build_tenants/main/evaluations/code/verdict.json; nor the tickets in .ai-workspace/tickets/backlog, .ai-workspace/tickets/active and .ai-workspace/tickets/completed that were there at the start.",
-          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
           "- decision: the user says yes or no to code once its checks pass and its verdict says yes.",
           "",
           "## Evidence And Relations",
@@ -1143,6 +1150,225 @@
           "- stop: where the work needs a change this session may not make, say what change and why in what you print, and stop without writing build_tenants/main/code."
         ]
       }
+    },
+    {
+      "covers": [
+        "REQ-ALG-007 acceptance 13"
+      ],
+      "says": "Inside a larger repository, the working packet for the code says in one sentence, under the authority and the territory, that the folder lies inside a larger git repository, that the files outside it are the user's and no part of the step, and that a git command given without a path acts on the whole repository. The packet for the same step at the top of a repository, the first case, does not.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "work",
+        "basis": {
+          "places": {
+            "definition": "stdo_hello.json",
+            "settings": ".stdo-builder/settings.json",
+            "graph": ".stdo-builder/graph.json",
+            "registry": ".stdo-builder/registry.json",
+            "own": [
+              ".stdo-builder/.gitignore",
+              "specification/REFERENCE_FRAME_BASIS.md"
+            ],
+            "lanes": [
+              ".ai-workspace/tickets/backlog",
+              ".ai-workspace/tickets/active",
+              ".ai-workspace/tickets/completed"
+            ],
+            "folder": ".stdo-builder"
+          },
+          "release": {
+            "uri": "stdo://releases/v3.1.0-rc.3/",
+            "manifest": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+            "path": "/Library/Application Support/STDO/releases/v3.1.0-rc.3"
+          },
+          "limits": {
+            "sessions": 20,
+            "minutes": 120
+          },
+          "inside": true
+        },
+        "snapshot": {
+          "identities": {
+            "intent": "i1",
+            "product": "p1",
+            "requirements": "r1",
+            "design": "d1",
+            "tests": "s1"
+          },
+          "ticket": {
+            "path": "tickets/active/261119-a.md",
+            "identity": "t1",
+            "enters": "intent",
+            "term": [
+              "write-intent",
+              "write-product",
+              "write-requirements",
+              "write-design",
+              "write-tests",
+              "write-code"
+            ]
+          },
+          "vectors": {
+            "write-code": {
+              "found": ".stdo-builder/found/write-code.json"
+            }
+          }
+        }
+      },
+      "expect": {
+        "lines": [
+          "# Reference-Frame Activation: write-code, working session",
+          "",
+          "## Frame",
+          "- frame: write-code, revision 1.",
+          "- evaluation: the checks below judge what this session leaves at code. Each says yes, no, or cannot where it cannot be run.",
+          "- return: the session ends, and the framework runs the checks on what it left.",
+          "- work: the asset holds what the ticket's work needs and no part the ticket does not ask for; a part it does not ask for is a ground for no.",
+          "- unchanged: every line the ticket's work and the findings do not require is left as it stands. Where the work removes or renames a file, a command, a record or a term, no file this session may write still mentions it as it was, and what this session prints names each file of an asset it may not write that does, which is left for that asset's step.",
+          "- gap: the work is the gap between each asset as it stands, below, and what its results require against what it rests on as it now is. What the gap does not concern stays as it stands.",
+          "",
+          "## Subject And Basis",
+          "- produce: code at build_tenants/main/code",
+          "- ticket: tickets/active/261119-a.md, the context this session starts from.",
+          "- definition: stdo_hello.json",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
+          "",
+          "## Attention Surface",
+          "- result: The code passes the tests.",
+          "- result: The code names the requirements it carries out.",
+          "- as it stands, code: not there; nothing is recorded at it.",
+          "- rests on: requirements at specification/requirements",
+          "- rests on: design at build_tenants/main/design",
+          "- rests on: tests at build_tenants/main/tests",
+          "- last found: .stdo-builder/found/write-code.json",
+          "- do not read: the framework's installation, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/settings.json and the event log; nor anything of the method.",
+          "",
+          "## Actor And Authority",
+          "- write: build_tenants/main/code and .gitignore. Work in this folder only.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- commits: the framework commits every file git does not ignore. What the work or its build leaves that is no part of the product, such as compiled output, is listed in the .gitignore at the top of this folder. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
+          "- repository: this folder lies inside a larger git repository; the files outside this folder are the user's and no part of the step, and a git command given without a path acts on the whole repository.",
+          "- decision: the user says yes or no to code once its checks pass and its verdict says yes.",
+          "",
+          "## Evidence And Relations",
+          "- check \"the tests pass\": yes where `sh build_tenants/main/tests/run.sh` exits with 0, run in this folder.",
+          "- check \"the code names every requirement and no other\": yes where every name matching `REQ-[A-Z]+-[0-9]+` that specification/requirements states is named in build_tenants/main/code, unless the section that states it says `Deferred`; and build_tenants/main/code names none that specification/requirements does not state.",
+          "- judged: then an evaluating session judges code against requirements, design and tests.",
+          "- evidence: the files of this folder. The event log is no evidence.",
+          "",
+          "## Stop And Change",
+          "- attempts: 3, each session of up to 60 minutes.",
+          "- run: at most 20 sessions and 120 minutes, as the settings set.",
+          "- stop: where the work needs a change this session may not make, say what change and why in what you print, and stop without writing build_tenants/main/code."
+        ]
+      }
+    },
+    {
+      "covers": [
+        "REQ-ALG-007 acceptance 13"
+      ],
+      "says": "Inside a larger repository, the evaluating packet for the code says the same sentence under the authority and the territory. The packet for the same evaluation at the top of a repository, the fifth case, does not.",
+      "given": {
+        "fixture": "method",
+        "vector": "write-code",
+        "kind": "evaluation",
+        "basis": {
+          "places": {
+            "definition": "stdo_hello.json",
+            "settings": ".stdo-builder/settings.json",
+            "graph": ".stdo-builder/graph.json",
+            "registry": ".stdo-builder/registry.json",
+            "own": [
+              ".stdo-builder/.gitignore",
+              "specification/REFERENCE_FRAME_BASIS.md"
+            ],
+            "lanes": [
+              ".ai-workspace/tickets/backlog",
+              ".ai-workspace/tickets/active",
+              ".ai-workspace/tickets/completed"
+            ],
+            "folder": ".stdo-builder"
+          },
+          "release": {
+            "uri": "stdo://releases/v3.1.0-rc.3/",
+            "manifest": "2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a",
+            "path": "/Library/Application Support/STDO/releases/v3.1.0-rc.3"
+          },
+          "limits": {
+            "sessions": 20,
+            "minutes": 120
+          },
+          "inside": true
+        },
+        "snapshot": {
+          "identities": {},
+          "ticket": {
+            "path": "tickets/active/261119-a.md",
+            "identity": "t1",
+            "enters": "intent",
+            "term": [
+              "write-intent",
+              "write-product",
+              "write-requirements",
+              "write-design",
+              "write-tests",
+              "write-code"
+            ]
+          },
+          "vectors": {}
+        }
+      },
+      "expect": {
+        "lines": [
+          "# Reference-Frame Activation: write-code, evaluating session",
+          "",
+          "## Frame",
+          "- frame: judge-code, revision 1.",
+          "- evaluation: judge code against requirements, design and tests.",
+          "- verdict: write build_tenants/main/evaluations/code/verdict.json holding exactly {\"verdict\": \"yes\"}, {\"verdict\": \"no\"} or {\"verdict\": \"cannot\"}.",
+          "- yes means: code is what the results below say it must be.",
+          "- no means: code goes back to be written again, with the findings as the reason.",
+          "- cannot means: this session could not judge, and the findings say why. It stops the run for the user.",
+          "- findings: write why at build_tenants/main/evaluations/code/findings.md.",
+          "- return: the session ends, and the framework reads the verdict. It stands only for the content this session judged.",
+          "- work: the asset holds what the ticket's work needs and no part the ticket does not ask for; a part it does not ask for is a ground for no.",
+          "- unchanged: a line changed since the content last accepted, as main holds it (below), that the ticket's work and the findings do not require is a ground for no; the findings name each such line by its path and line, and copy none of it.",
+          "- gap: each asset as it stands, below, is judged by its results against what it is judged against as it now is. A yes recorded at an asset held on what it was given on, so a gap can open only in what has changed since.",
+          "",
+          "## Subject And Basis",
+          "- judge: code at build_tenants/main/code",
+          "- ticket: tickets/active/261119-a.md, the context this session starts from.",
+          "- definition: stdo_hello.json",
+          "- method release: stdo://releases/v3.1.0-rc.3/, manifest sha256 2b3a7391dfb731219e64240199fe2e1b2736b9d5a44d030602fe7f07dd6c7a9a.",
+          "",
+          "## Attention Surface",
+          "- result: The code passes the tests.",
+          "- result: The code names the requirements it carries out.",
+          "- as it stands, code: not there; nothing is recorded at it.",
+          "- against: requirements at specification/requirements",
+          "- against: design at build_tenants/main/design",
+          "- against: tests at build_tenants/main/tests",
+          "- do not read: the framework's installation, .stdo-builder/graph.json, .stdo-builder/registry.json, .stdo-builder/settings.json and the event log; nor anything of the method.",
+          "",
+          "## Actor And Authority",
+          "- write: build_tenants/main/evaluations/code/findings.md and build_tenants/main/evaluations/code/verdict.json. Work in this folder only.",
+          "- what changed: anything else that differs when this session is over, in this folder or in the workspace's own folder, is named to the user, who rules on it before anything of the step is judged or committed; the verdict is then not read. Do not change stdo_hello.json, .stdo-builder/settings.json, .stdo-builder/graph.json, .stdo-builder/registry.json or a ticket.",
+          "- may run: any command, in this folder. What a run leaves that git does not ignore counts as a change. Files that git ignores in this folder may be the user's own: remove only what your own work or its build made.",
+          "- repository: this folder lies inside a larger git repository; the files outside this folder are the user's and no part of the step, and a git command given without a path acts on the whole repository.",
+          "- decision: the user says yes or no to code once its checks pass and its verdict says yes.",
+          "",
+          "## Evidence And Relations",
+          "- check \"the tests pass\": yes where `sh build_tenants/main/tests/run.sh` exits with 0, run in this folder.",
+          "- check \"the code names every requirement and no other\": yes where every name matching `REQ-[A-Z]+-[0-9]+` that specification/requirements states is named in build_tenants/main/code, unless the section that states it says `Deferred`; and build_tenants/main/code names none that specification/requirements does not state.",
+          "- evidence: the assets named above, to judge and to judge against. Not to be read: what a working session printed, at .stdo-builder/local/printed; the working packets, .stdo-builder/local/briefs/*.work.md; and what the checks found, at .stdo-builder/local/found. The event log is no evidence.",
+          "",
+          "## Stop And Change",
+          "- time: up to 60 minutes.",
+          "- run: at most 20 sessions and 120 minutes, as the settings set.",
+          "- stop: where this session cannot judge, write cannot and stop."
+        ]
+      }
     }
   ],
   "elsewhere": [
@@ -1152,28 +1378,35 @@
         "REQ-ALG-007 acceptance 3"
       ],
       "in": "four_findings.scenario.test.ts",
-      "says": "The working packets of S1 and of the next ticket say that every line the work and the findings do not require is left as it stands; S1's evaluating packet on the code says main holds none of it, and the next ticket's gives the command that shows the one line the branch changed in the code from main, run in its checkout."
+      "says": "The working packets of S1 and of the next ticket say that every line the work and the findings do not require is left as it stands; S1's evaluating packet on the code says main holds none of it, and the next ticket's gives the command that shows the one line the branch changed in the code from main, run in the workspace's folder."
     },
     {
       "covers": [
         "REQ-ALG-007 acceptance 1"
       ],
       "in": "s1.scenario.test.ts",
-      "says": "Every brief S1 writes after the induction says the asset holds what the ticket's work needs and no part the ticket does not ask for, and that such a part is a ground for no; the test reads the briefs in the ticket's checkout."
+      "says": "Every brief S1 writes after the induction says the asset holds what the ticket's work needs and no part the ticket does not ask for, and that such a part is a ground for no; the test reads the briefs in the workspace's folder."
     },
     {
       "covers": [
         "REQ-ALG-007 acceptance 5"
       ],
       "in": "s1.scenario.test.ts",
-      "says": "Every packet S1 leaves in the ticket's checkout holds each part of an activation packet, and every working packet each check of its vector in its form."
+      "says": "Every packet S1 leaves in the workspace's folder holds each part of an activation packet, and every working packet each check of its vector in its form."
     },
     {
       "covers": [
         "REQ-ALG-007 acceptance 9"
       ],
       "in": "gap.scenario.test.ts",
-      "says": "On the workspace S1 left, the user changes the product definition, and then rewords the requirements: the working packet for the requirements and the evaluating packet for the design name the record at their node and what it was given on as it was, the command each names reads it in the ticket's checkout, the requirements are left as they were and no session is started below them."
+      "says": "On the workspace S1 left, the user changes the product definition, and then rewords the requirements: the working packet for the requirements and the evaluating packet for the design name the record at their node and what it was given on as it was, the command each names reads it in the workspace's folder, the requirements are left as they were and no session is started below them."
+    },
+    {
+      "covers": [
+        "REQ-ALG-007 acceptance 13"
+      ],
+      "in": "committed_outside.scenario.test.ts",
+      "says": "In a product inside a larger repository, with sessions started by the agent's command, the working and the evaluating packets hold the sentence on the larger repository; in a product at the top of a repository, neither does."
     }
   ]
 }

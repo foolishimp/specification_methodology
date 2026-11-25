@@ -25,8 +25,8 @@ adds it to the set or does not. This section names no stack.
 | C8 | First-match rule list | Rules in a fixed order. The first whose condition holds gives the result | The order is part of the definition | One pass over the rules |
 | C9 | Bounded loop with a measure | Repeat while a count strictly falls and a bound is not reached | It ends within the bound | The bound |
 | C10 | Append-only log with a fold | Entries are only added, each whole or not at all. A reader makes one pass and keeps a running result | Earlier entries never change | Adding does not grow with the log. Reading is one pass |
-| C11 | Exclusive hold bound to a process | At most one holder. The operating system releases it when the holder's process ends | Nothing has to clean up after a killed holder | Constant |
-| C12 | Supervised child with a deadline | Start a process and wait for its return or for the deadline, and end it at the deadline | Exactly one outcome: returned, could not start, stopped without returning, ran over | The child's own time |
+| C11 | Exclusive hold bound to a process | At most one holder. The operating system releases it when the holder's process ends; a process given the holder's number again holds nothing (D216) | Nothing has to clean up after a killed holder | Constant |
+| C12 | Supervised child with a deadline | Start a process and wait for its return or for the deadline, and end it at the deadline. A marked child is a session's agent: every process the framework knows to be of the session, by its parent, its group or its mark, from the agent's own process on, is ended at its return, at the deadline and on the run's signals, and a process it cannot place is looked for, before its outcome, which says how many were ended and, where the session is not over, why, naming each process (D212 to D214, D221 to D223) | Exactly one outcome: returned, could not start, stopped without returning, ran over, cut off | The child's own time, the rounds of ending its processes, and the readings of the process table until one tells of every process not known otherwise whether it holds the mark |
 | C13 | Three-way merge from a common ancestor | Git's merge of two lines of work. Deferred: the assets changed on both sides are the intersection of two C2 results | It decides nothing about which side is right | Follows what changed |
 | C14 | Lossless encoding | A value written as text and read back is equal to the value. One value has one written form | Reading refuses anything it does not know | One pass |
 | C15 | Create if absent | Write a file only where there is none. Otherwise report it | Done twice, it changes nothing the second time | Constant for each file |
@@ -65,7 +65,7 @@ the kit, and the rules of sections 3 and 6 hold for it as for an entry.
 | `open` | By `passes` | Plain function |
 | `next` | C3 | Plain function over `open` |
 | `brief` | C2 | Plain function |
-| `trespass` | C1, C2 | Plain function over two snapshots of the protected files |
+| `trespass` | C1, C2 | Plain function over what differs between two identities of each folder, written as trees (D226) |
 | `progress` | The measure of C9 | Plain function |
 | `take_up` | C8 | Plain function |
 | `done` | C3 | Plain function over `passes` |
@@ -113,7 +113,8 @@ Effect is pinned to one exact release of version 4.
 | The digest module | In C1 alone: the sha256 of the manifest of the release that is running (REQ-FLOW-010, D197) |
 
 Of Node itself, beside its file and process modules: the process global, in
-C11 for whether a holder's process lives, and in the command-line program for
+C11 for whether a holder's process lives, in C12 for a session's signals and
+marks (D212 to D214), and in the command-line program for
 the exit code.
 
 Not used: fibers and concurrency, schedules, transactional memory and the
@@ -126,11 +127,12 @@ application that embeds the library does not need Effect.
 
 | Parameter | Met by |
 |---|---|
-| 100,000 files in a workspace | C1 through git costs what changed. `trespass` asks git which protected files changed |
+| 100,000 files in a workspace | C1 through git costs what changed. `trespass` asks git which paths differ between two trees of each folder (`diff-tree`), which reads names and identities alone; and, where main moved while a session's identities are kept, which differ between main's two commits, by one more `diff-tree` (D257) |
 | 200 vectors in a graph | C5 and C6 are each one pass, C7 one pass over what is left for each item it takes, and `well_formed` places each vector once |
 | 100,000 entries in the event log, with under a second of growth | A run only adds to the log (C10) and never reads it. `stands` reads it once |
 | The framework's own time for a step, up to 10 seconds | C4: a check is not run again on content it has already judged |
 | A brief of up to 100 lines | It holds references only (C2 gives which changed) |
+| Git 2.38 or later, for every product | C13 reads `git --version` before anything else of a command (`versionOf`); `open` and `set-up` refuse an older one, changing nothing (D248) |
 
 ## 6. How the set is enforced
 

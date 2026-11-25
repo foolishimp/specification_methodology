@@ -78,7 +78,7 @@ beforeAll(async () => {
   }
   shown = await ws.show()
   listed = await ws.command(["registry", ws.root])
-}, 180_000)
+}, 300_000)
 
 afterAll(clean)
 

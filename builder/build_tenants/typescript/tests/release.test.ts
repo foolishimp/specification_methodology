@@ -8,8 +8,13 @@
  * user names, and nowhere else, once every file agrees with the manifest.
  * Scenario S1 on the installed product is run in `s1.scenario.test.ts`.
  *
+ * The release holds the product's own licence, the Apache License 2.0, and
+ * its note says what is under it (REQ-INTERFACE-005). The bundle, the download
+ * and the cut's steps are tested in `bundle.test.ts`, `cut_fails.test.ts` and
+ * `cut_changed.test.ts`.
+ *
  * @uses C14
- * @is REQ-INTERFACE-003 REQ-INTERFACE-004 REQ-VERIFY-002
+ * @is REQ-INTERFACE-003 REQ-INTERFACE-004 REQ-INTERFACE-005 REQ-VERIFY-002
  */
 import { execFileSync, spawnSync } from "node:child_process"
 import { createHash } from "node:crypto"
@@ -37,14 +42,13 @@ const GUIDE = "GETTING_STARTED.md"
 
 /**
  * The run the guide is written from, and the figures it gave, as the user
- * records them in ticket 261123-054924-2092 (REQ-INTERFACE-003): the release
- * and the date, what `--version` printed, the sessions and the costs of the
- * two tickets and of the change by hand.
+ * records them in ticket 261123-054924-2092 (REQ-INTERFACE-003): the date,
+ * the sessions and the costs of the two tickets and of the change by hand.
+ * Wherever the guide names a version of the product, it names the release it
+ * ships in.
  */
 const RUN = {
-  release: "0.1.0-rc.5",
   date: "23 November 2026",
-  versions: ["0.1.0-rc.5"],
   sessions: ["4", "2"],
   costs: ["6.10", "6.60", "2.10"]
 } as const
@@ -54,7 +58,7 @@ beforeAll(() => {
   instructions = readFileSync(join(made.release, "INSTRUCTIONS.md"), "utf8")
   guide = readFileSync(join(made.release, GUIDE), "utf8")
   manifest = JSON.parse(readFileSync(join(made.release, "manifest.json"), "utf8")) as Manifest
-}, 120_000)
+}, 300_000)
 
 afterAll(clean)
 
@@ -133,6 +137,44 @@ describe("REQ-INTERFACE-003 the product is installed from a release, with instru
     for (const command of ["setup", "ticket", "run", "answer", "show", "registry", "record-release"]) expect(instructions, command).toContain(`stdo-builder ${command} <workspace>`)
   })
 
+  it("where the instructions say what changed while a session worked and what a run notes among the branches, they say what main gains while a session's identities are kept, what a yes and a no mean for it, what is named outside the folder, what is taken in with no question, which commit stands in for main's wherever a commit stands in, and the limits of the comparison (ticket 261125-083337-0fdf)", () => {
+    const said = instructions.replace(/\s+/g, " ")
+    for (const words of [
+      // Each file of the folder main gained, put to the user, named apart as changed on main, and nothing of main taken in before the yes.
+      "Each file of the workspace's folder that differs there, by a commit of the session's or of yours, is put to you in the same question, named apart from the files that differ in the folder, as changed on main",
+      "Until you have said yes to each, as main then holds it, nothing of main is taken into the ticket's branch",
+      // What a yes and a no mean for those files.
+      "A yes: main stands as it then is, and the run takes it into the ticket's branch; the framework commits none of those files with the step",
+      "A no: put main back, to the commit it was on or by a commit on main that undoes the change",
+      // Inside a larger repository, a file outside the folder committed on main is named, and nothing is asked on it.
+      "as committed on main while the session worked, by whether it was added, changed or removed, at most 20 with how many there are; nothing is asked on them, and none of them holds the ticket",
+      // Where a commit stands in, in either way, the commit where the ticket's branch and main last met stands in for main's (REQ-ALG-008).
+      "Wherever a commit stands in for the identities, in either way, or where the record names no commit of main, as a record an earlier release wrote names none, the commit where the ticket's branch and main last met stands in for the commit main was on: each file of the folder that main holds otherwise than that commit is put to you, named apart as changed on main, before main is taken in, so what a session committed of its own on main is asked about too",
+      // The accepted limit, where the commit the folder is on stands in, reaches the ticket's branch alone.
+      "the commit the folder is on stands in instead, each file not committed in the folder is put to you, and what a session committed of its own on the ticket's branch is not asked about",
+      // What main gains while no identities are kept is taken in with no question.
+      "What main gains while no session's identities are kept, as between two runs when no ruling is awaited",
+      "the next run takes in with no question",
+      // Among the branches, main no longer said to hold no ticket where it changed a file of the folder.
+      "None of it holds the ticket, save main where it changed a file of the folder",
+      // The three cases the comparison does not reach.
+      "a folder in the workspace that is a git repository of its own, as `git clone` or `git init` there leaves: none of its files is compared or asked about, and the framework commits a pointer to its commit, which a clone of the product cannot follow",
+      "a file that a session takes out of git's index and has git ignore: it is removed from the ticket's branch, and so from main, with no question, and stays in the folder",
+      "a change of a file's mode alone: it is committed with no question",
+      // The case that stops a run.
+      "a symbolic link to a folder, or one whose target is not there, that appears while a session works stops the run with git's own words, and each run and answer after it is refused until you remove the link or have git ignore it"
+    ]) expect(said, words).toContain(words)
+    // Nothing it says contradicts it: a commit on main while the folder is put on main is put to the user first while a session works.
+    expect(said).toContain("Done while a session works, or while your ruling on what changed is awaited, each file of the folder your commit changes is put to you first, and main is taken in after your yes.")
+    expect(said).not.toContain("with how many there are; it holds no ticket.")
+    // A withdrawal or a putting back of the ticket is not said to be taken in after a yes; the page says when either may be done.
+    expect(said).not.toContain("A withdrawal, a putting back or an edit on main made while a session works")
+    expect(said).toContain("Withdraw a ticket or put it back only when no session works on it and no ruling on what changed is awaited")
+    // Nor does the limit say that only the files not committed are put to the user, or that nothing a session committed is asked about.
+    expect(said).not.toContain("only each file not committed is put to you")
+    expect(said).not.toContain("what a session committed of its own is not asked about")
+  })
+
   it("the instructions and the guide assume no knowledge of the framework's source", () => {
     for (const word of SOURCE_WORDS) {
       expect(instructions, word).not.toContain(word)
@@ -151,9 +193,11 @@ describe("REQ-INTERFACE-003 the product is installed from a release, with instru
     expect(readFileSync(join(kept, GUIDE), "utf8")).toBe(guide)
   })
 
-  it("the guide names the release and the date of the run it is written from, and each figure it states is one that run gave", () => {
-    expect(guide).toContain(`release ${RUN.release}`)
+  it("the guide names the date of the run it is written from, each figure it states is one that run gave, and each version it names is the release's own", () => {
     expect(guide).toContain(RUN.date)
+    // The guide of 3.2.0 named another release, and a version line in a form the product does not print (R-23).
+    expect(guide).not.toContain("<version>")
+    expect(guide).toContain(`stdo-builder v${RELEASE_VERSION}`)
     const found = (pattern: RegExp): string[] => [...guide.matchAll(pattern)].map((m) => m[1] ?? "")
     // Each version, date, count of sessions and cost the guide states.
     const versions = found(/\bv?(\d+\.\d+\.\d+(?:-[0-9A-Za-z.]*[0-9A-Za-z])?)/g)
@@ -163,7 +207,7 @@ describe("REQ-INTERFACE-003 the product is installed from a release, with instru
     expect(versions.length).toBeGreaterThan(0)
     expect(sessions.length).toBeGreaterThan(0)
     expect(costs.length).toBeGreaterThan(0)
-    for (const v of versions) expect(RUN.versions, v).toContain(v)
+    for (const v of versions) expect(v).toBe(RELEASE_VERSION)
     for (const d of dates) expect(d).toBe(RUN.date)
     for (const s of sessions) expect(RUN.sessions, `${s} sessions`).toContain(s)
     for (const c of costs) expect(RUN.costs, `${c} USD`).toContain(c)
@@ -196,6 +240,13 @@ describe("REQ-INTERFACE-003 the product is installed from a release, with instru
     }
     // What a run with nothing changed printed is what the product prints for it.
     expect(guide).toContain("The run is refused before any step: there is nothing to build.")
+    // It reports no stop that a reader who follows it does not meet (R-23).
+    expect(guide).not.toContain("the limit the settings set")
+    // It gives the questions a run ends at as the release prints them, each among the lines given as printed, which the cut checks.
+    const printed = [...guide.matchAll(/^```text\n([\s\S]*?)^```$/gm)].flatMap((m) => (m[1] ?? "").split("\n"))
+    const asked = guide.split("\n").filter((l) => /Is the ticket inducted|Do you accept/.test(l))
+    expect(asked.length).toBeGreaterThanOrEqual(3)
+    for (const line of asked) expect(printed, line).toContain(line)
 
     // Each command of the product the guide gives is one the instructions give.
     const commands = [...guide.matchAll(/^stdo-builder ([a-z][a-z-]*) /gm)].map((m) => m[1] ?? "")
@@ -295,7 +346,7 @@ describe("REQ-INTERFACE-004 the product is released as its sibling products are"
     expect(held, GUIDE).toBeDefined()
     expect(held?.bytes).toBe(statSync(join(made.release, GUIDE)).size)
     expect(held?.sha256).toBe(sha256(join(made.release, GUIDE)))
-    expect(readFileSync(join(made.release, GUIDE), "utf8")).toBe(readFileSync(join(tenant, "packaging", GUIDE), "utf8"))
+    expect(readFileSync(join(made.release, GUIDE), "utf8")).toBe(readFileSync(join(tenant, "packaging", GUIDE), "utf8").replaceAll("<version>", RELEASE_VERSION))
 
     // The installation page: the install command it gives, run from the release's folder as it says, installs.
     const page = readFileSync(join(made.release, "INSTALL.md"), "utf8")
@@ -345,7 +396,7 @@ describe("REQ-INTERFACE-004 the product is released as its sibling products are"
     // Beside the instructions, the installation page, the getting-started guide, the release note, the licences, the
     // manifest and the install, the release holds lib/ alone, and in it only code, the package.json files node reads,
     // and the method's graph.
-    expect(readdirSync(made.release).sort()).toEqual(["GETTING_STARTED.md", "INSTALL.md", "INSTRUCTIONS.md", "RELEASE_NOTE.md", "install.sh", "lib", "licenses", "manifest.json"])
+    expect(readdirSync(made.release).sort()).toEqual(["GETTING_STARTED.md", "INSTALL.md", "INSTRUCTIONS.md", "LICENSE", "RELEASE_NOTE.md", "install.sh", "lib", "licenses", "manifest.json"])
     const lib = filesUnder(join(made.release, "lib"))
     const runs = (f: string): boolean => /\.(js|mjs|cjs|node|wasm)$/.test(f) || basename(f) === "package.json" || f === "src/method/graph.json" || f === "src/method/registry.json"
     expect(lib.filter((f) => !runs(f))).toEqual([])
@@ -394,4 +445,29 @@ describe("REQ-INTERFACE-004 the product is released as its sibling products are"
     expect(r.status).not.toBe(0)
     expect(readdirSync(join(there, "into"))).toEqual([])
   }, 120_000)
+})
+
+describe("REQ-INTERFACE-005 a release holds the product's own licence", () => {
+  const APACHE = (text: string): boolean => /^\s*Apache License\s*\n\s*Version 2\.0, January 2004/.test(text)
+
+  it("the product's source and the release hold the Apache License 2.0, the licence of the method's standards", () => {
+    // The note of 3.2.0 granted a licence no file of Builder's source named (R-7).
+    expect(APACHE(readFileSync(join(tenant, "packaging", "LICENSE"), "utf8"))).toBe(true)
+    expect(readFileSync(join(made.release, "LICENSE"), "utf8")).toBe(readFileSync(join(tenant, "packaging", "LICENSE"), "utf8"))
+    expect(manifest.files.some((f) => f.path === "LICENSE")).toBe(true)
+    expect((JSON.parse(readFileSync(join(made.release, "lib", "package.json"), "utf8")) as { license?: string }).license).toBe("Apache-2.0")
+  })
+
+  it("the release note names what is under the Apache License 2.0, and says that each library the release ships keeps its own licence, which the release holds", () => {
+    const note = readFileSync(join(made.release, "RELEASE_NOTE.md"), "utf8")
+    expect(note).toMatch(/STDO Builder's own files[^\n]* are under the Apache License 2\.0, in `LICENSE`\./)
+    expect(note).toContain("Each library the release ships keeps its own licence")
+    // It grants no licence "for the whole bundle", which libraries under another licence made untrue (R-7).
+    expect(note).not.toContain("whole")
+    for (const name of shippedPackages(made.release)) {
+      const meta = JSON.parse(readFileSync(join(made.release, "lib", "node_modules", name, "package.json"), "utf8")) as { version: string; license: string }
+      expect(note, name).toContain(`- ${name} ${meta.version}, licence ${meta.license}`)
+      expect(readdirSync(join(made.release, "licenses", name)).some((f) => /^licen[cs]e/i.test(f)), name).toBe(true)
+    }
+  })
 })

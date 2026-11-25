@@ -1,6 +1,7 @@
 #!/bin/sh
 # Installs STDO Builder from this release into the folder you name
-# (REQ-INTERFACE-003, REQ-INTERFACE-004):
+# (REQ-INTERFACE-003, REQ-INTERFACE-004), with the product's own licence
+# beside it (REQ-INTERFACE-005):
 #
 #   sh install.sh <folder>
 #
@@ -87,7 +88,10 @@ if ! name=$(node -e "$check" "$release"); then
   exit 5
 fi
 
-mkdir -p "$1"
+if ! mkdir -p "$1" 2>/dev/null; then
+  echo "The folder $1 cannot be made, so nothing is installed: name a folder you may write in." >&2
+  exit 2
+fi
 place=$(cd "$1" && pwd -P)
 case "$place" in
   *\'*) echo "The folder's path holds a quote mark ('), which the command cannot carry. Name another folder." >&2; exit 2 ;;
@@ -97,7 +101,7 @@ lib="$place/lib/stdo-builder/$name"
 rm -rf "$lib"
 mkdir -p "$place/lib/stdo-builder" "$place/bin"
 cp -R "$release/lib" "$lib"
-cp -R "$release/INSTALL.md" "$release/GETTING_STARTED.md" "$release/INSTRUCTIONS.md" "$release/RELEASE_NOTE.md" "$release/manifest.json" "$release/licenses" "$lib/"
+cp -R "$release/INSTALL.md" "$release/GETTING_STARTED.md" "$release/INSTRUCTIONS.md" "$release/RELEASE_NOTE.md" "$release/LICENSE" "$release/manifest.json" "$release/licenses" "$lib/"
 {
   echo "#!/bin/sh"
   echo "# STDO Builder $name, installed by its install.sh."

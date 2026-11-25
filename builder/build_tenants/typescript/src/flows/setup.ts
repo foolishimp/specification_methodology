@@ -29,7 +29,7 @@
  * judged before the code (REQ-METHOD-004).
  *
  * @uses C15 C14 C13 C1 C9 C17
- * @is REQ-FLOW-002 REQ-FLOW-010 REQ-FLOW-007
+ * @is REQ-FLOW-002 REQ-FLOW-010 REQ-FLOW-007 REQ-INTERFACE-001
  */
 import { decide, each, end, fault, repeat, sequence, using } from "../kit/calculus.js"
 import { write } from "../kit/lossless_encoding.js"
@@ -39,11 +39,11 @@ import type { Flow } from "../services/services.js"
 import { committed } from "./commit.js"
 import { note } from "./events.js"
 import { writeTicket } from "./ticket.js"
-import { at, defaultSettings, DefinitionShape, IGNORE, PLACES, running, SettingsShape, type Builder, type Fault, releaseWords } from "./workspace.js"
+import { at, defaultSettings, DefinitionShape, gitTooOld, IGNORE, insideSession, PLACES, running, SettingsShape, type Builder, type Fault, releaseWords } from "./workspace.js"
 
 /** A method release, by its exact identity. */
 export interface Release {
-  /** For example `stdo://releases/v3.1.0-rc.2/`. */
+  /** Of the form `stdo://releases/<cut>/`. */
   readonly uri: string
   readonly manifest: string
 }
@@ -167,6 +167,8 @@ This product is built under STDO Builder. Its commands, given in this folder:
 - Show where the work stands: \`stdo-builder show .\`
 - List the registry: \`stdo-builder registry .\`
 - Record the release that builds the product, in place of the one recorded: \`stdo-builder record-release .\`
+
+These commands are the user's. Given from inside a session STDO Builder started on this workspace, each is refused and changes nothing.
 ${END}
 `
 
@@ -174,7 +176,8 @@ const FIRST_TICKET = "Write the intent and the product definition of the system 
 
 /** Set-up refused before it wrote anything: the folder lies inside the git repository whose top folder is `top`, above it, and that repository ignores it (D201). */
 export interface Refused {
-  readonly refused: { readonly folder: string; readonly top: string }
+  /** The folder lies inside a repository that ignores it; or inside the workspace of the session this command was given from (D217); or git's version, as found, reads as older than the product needs (D248). */
+  readonly refused: { readonly folder: string; readonly top: string } | { readonly inside: string } | { readonly olderGit: string }
 }
 
 /** The folder a path lies in; the root of the file system lies in itself. */
@@ -195,7 +198,8 @@ type Put = { readonly wrote: string } | { readonly there: string }
  * with the method's graph and registry read from where the library keeps
  * them; where they are not there it fails.
  *
- * Before it writes anything, it asks git where the folder lies: in the folder,
+ * Before anything else, it reads git's version, and is refused where it reads
+ * as older than the product needs (D248). Before it writes anything, it asks git where the folder lies: in the folder,
  * or, where it is not there yet, in the nearest folder on its path that is. A
  * folder not yet there lies below the top of any repository its nearest
  * folder lies in. Below the top, git is asked whether that repository ignores
@@ -205,6 +209,11 @@ type Put = { readonly wrote: string } | { readonly there: string }
  * there and set up in the larger repository, which set-up names (D201).
  */
 export const setUp = (folder: string, name: string, release: Release, method: Method): Flow<SetUp | Refused, Fault> =>
+  // Git's version is read before anything else; where it reads as older than the product needs, set-up is refused and changes nothing (REQ-INTERFACE-001, D248).
+  decide(gitTooOld, (found): Flow<SetUp | Refused, Fault> => found !== undefined ? end({ refused: { olderGit: found } }) :
+    decide(insideSession(folder), (inside): Flow<SetUp | Refused, Fault> => inside !== undefined ? end({ refused: { inside } }) : setUpOutside(folder, name, release, method)))
+
+const setUpOutside = (folder: string, name: string, release: Release, method: Method): Flow<SetUp | Refused, Fault> =>
   using(Files, (files) =>
     using(Git, (git) =>
       decide(files.read(method.graph), (graph) =>

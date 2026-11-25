@@ -87,7 +87,7 @@ export function placed(node: Node, named: ReadonlyMap<string, readonly string[]>
 
 /** What runs a check. The kinds are the graph language's whole set. */
 export type Run =
-  /** A command, run in the checkout; yes when it exits with zero. */
+  /** A command, run in the workspace's folder; yes when it exits with zero. */
   | { readonly kind: "command"; readonly argv: readonly string[] }
   /** A field of the branch's ticket: present; or equal to `is`; or not equal to `is_not` (absent counts as not equal). */
   | { readonly kind: "ticket_field"; readonly field: string; readonly is?: string; readonly is_not?: string }

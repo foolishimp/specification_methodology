@@ -162,8 +162,8 @@ describe("the design's checks (section 6)", () => {
   it("the first review's planted breaks: five of six are refused", () => {
     says("src/flows/hash.ts:8, computes a hash by hand; content identities are C1's")
     says("src/services/gitlike.ts:6, names the program git; only C1 and C13 start git")
-    says("src/services/gitlike.ts:5, imports the code of C12, which only C1, C13, services/checks.ts, services/files.ts, services/sessions.ts may run")
-    says("src/algorithms/spawn.ts:5, imports the code of C12, which only C1, C13, services/checks.ts, services/files.ts, services/sessions.ts may run")
+    says("src/services/gitlike.ts:5, imports the code of C12, which only C1, C11, C13, services/checks.ts, services/files.ts, services/sessions.ts, services/hold.ts, services/stand_in.ts may run")
+    says("src/algorithms/spawn.ts:5, imports the code of C12, which only C1, C11, C13, services/checks.ts, services/files.ts, services/sessions.ts, services/hold.ts, services/stand_in.ts may run")
     says("src/flows/net.ts:8, uses the global fetch, which no module of the product uses")
     says('src/programs/rule.ts:7, a program holds "if": it passes commands to the library and decides nothing')
     says("src/programs/rule.ts:7, a program holds a number: the library gives the exit code")

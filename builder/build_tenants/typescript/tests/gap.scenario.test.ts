@@ -37,12 +37,12 @@ const logs: LogEntry[][] = []
 
 /** The lines of a packet a session of the ticket was given. */
 const packet = (ticket: string, name: string): readonly string[] =>
-  readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", name), "utf8").split("\n")
+  readFileSync(ws.path(".stdo-builder", "local", "briefs", name), "utf8").split("\n")
 const standing = (lines: readonly string[]): readonly string[] => lines.filter((l) => l.startsWith("- as it stands, "))
-/** The identity a line names for what changed, and what `git show` gives for it in the ticket's checkout. */
+/** The identity a line names for what changed, and what `git show` gives for it in the workspace's folder. */
 const shown = (ticket: string, line: string, suffix = ""): { readonly id: string; readonly out: string } => {
   const id = /as it was: `git show ([0-9a-f]+)`/.exec(line)?.[1] ?? ""
-  return { id, out: ws.git(["-C", ws.checkout(ticket), "show", `${id}${suffix}`]) }
+  return { id, out: ws.git(["-C", ws.path(), "show", `${id}${suffix}`]) }
 }
 const sessions = (log: readonly LogEntry[]) => log.filter((e) => e.event === "session started").map((e) => `${e.vector ?? ""} ${e.kind ?? ""}`)
 const asked = (log: readonly LogEntry[]) => log.filter((e) => e.event === "user asked").map((e) => e.vector)
@@ -97,7 +97,7 @@ describe("REQ-ALG-007 acceptance 9: a change flows through what depends on it, a
     expect(sessions(logs[0] ?? [])).toEqual(["write-requirements work"])
   })
 
-  it("the requirements' working packet names the user's yes and the product definition as it was, which git shows in the checkout", () => {
+  it("the requirements' working packet names the user's yes and the product definition as it was, which git shows in the workspace's folder", () => {
     const lines = standing(packet(tickets[0] ?? "", "write-requirements.work.md"))
     expect(lines).toHaveLength(1)
     expect(lines[0]).toMatch(/^- as it stands, requirements: there; the user said yes to it \(in the ticket \S+ on the commit [0-9a-f]{40}\); changed since: product \(as it was: `git show [0-9a-f]+`\)\.$/)
@@ -116,7 +116,7 @@ describe("REQ-ALG-007 acceptance 9: a change flows through what depends on it, a
     expect([...sessions(logs[1] ?? [])].sort()).toEqual(["write-code evaluation", "write-design evaluation", "write-tests evaluation"])
   })
 
-  it("the design's evaluating packet names the evaluation's yes and the requirements as they were, which git shows in the checkout", () => {
+  it("the design's evaluating packet names the evaluation's yes and the requirements as they were, which git shows in the workspace's folder", () => {
     const lines = standing(packet(tickets[1] ?? "", "write-design.evaluation.md"))
     expect(lines).toHaveLength(1)
     expect(lines[0]).toMatch(/^- as it stands, design: there; the evaluation said yes to it \(in the ticket \S+ on the commit [0-9a-f]{40}\); changed since: requirements \(as it was: `git show [0-9a-f]+`\)\.$/)

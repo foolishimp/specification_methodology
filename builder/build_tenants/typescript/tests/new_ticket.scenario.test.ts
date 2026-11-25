@@ -57,7 +57,7 @@ describe("REQ-FLOW-004: a ticket is confirmed and merged, and a new ticket is th
     const from = ws.log().length
     first = await ws.run(fixtures)
     firstLog = ws.log().slice(from)
-    packet = readFileSync(ws.checkout(ticket, ".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8").split("\n")
+    packet = readFileSync(ws.path(".stdo-builder", "local", "briefs", "induct-ticket.work.md"), "utf8").split("\n")
     answered = await ws.answer("yes")
     const again = ws.log().length
     next = await ws.run(fixtures)

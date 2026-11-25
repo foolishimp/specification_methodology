@@ -1,16 +1,20 @@
 /**
  * Scenario S2, interrupt and resume: S1 under way with the code step running;
  * S1's term is the specification and then the build, so that is the build,
- * which writes the design, the tests and the code (REQ-METHOD-006). The driver places a marker beside the files
- * the session has written, kills the framework and the session, and the user
- * starts a run.
+ * which writes the design, the tests and the code (REQ-METHOD-006). Its
+ * working session is a process of its own, apart from the framework's: the
+ * agent the settings name for it is a script that writes the stand-in's files
+ * for that step and then waits. The driver places a marker beside the files
+ * the session has written, kills the framework and the session, each by the
+ * number of its process, and the user starts a run.
  *
  * @uses C14 C5 C6
  * @is REQ-VERIFY-002 REQ-FLOW-003 REQ-FLOW-005 REQ-FLOW-007 REQ-METHOD-006
  */
-import { rmSync } from "node:fs"
+import { readFileSync, rmSync, writeFileSync } from "node:fs"
 import { join } from "node:path"
 import { afterAll, beforeAll, describe, expect, it } from "vitest"
+import { existsSync } from "node:fs"
 import { answersOf, resolvedOnMain, build, clean, gated, onMain, S1_ASKED, S1_ASSETS, s1ToRequirements, temporary, testsPass, until, Workspace, write, wroteAll, type LogEntry, type Said } from "./scenario_driver.js"
 
 const MARKER = "build_tenants/main/code/MARKER"
@@ -25,14 +29,32 @@ beforeAll(async () => {
   ws = new Workspace(build())
   // The build's working session, once it has written its files, waits at a gate the driver never opens.
   const fixtures = gated(join(temporary("stdo-builder-gate-"), "never"))
+  await ws.setup()
+  // The build's working session is a process of its own: a script the settings name for it, which writes the stand-in's files for the step, notes its number and waits.
+  const state = temporary("stdo-builder-s2-")
+  const script = join(state, "build.mjs")
+  writeFileSync(script, `
+    import { cpSync, writeFileSync } from "node:fs"
+    const [files, pid] = process.argv.slice(2)
+    cpSync(files, process.cwd(), { recursive: true })
+    writeFileSync(pid, String(process.pid))
+    setInterval(() => {}, 1000)
+  `)
+  const settings = ws.path(".stdo-builder", "settings.json")
+  const s = JSON.parse(readFileSync(settings, "utf8")) as { agents: Record<string, string[]>; vectors?: Record<string, { work?: string }> }
+  s.agents.builder = [process.execPath, script, join(fixtures, "write-build", "work", "files"), join(state, "pid")]
+  s.vectors = { ...s.vectors, "write-build": { work: "builder" } }
+  writeFileSync(settings, `${JSON.stringify(s, null, 2)}\n`)
+  // Set-up again changes nothing; the first run commits the settings as the user's change on main.
   const before = await s1ToRequirements(ws, fixtures)
   ticket = before.ticket
-  const running = ws.start(["run", ws.root, "--stand-in", fixtures])
-  // The kill waits until the session has written every file it writes: it writes the code first, so the code alone is not the session at its gate.
-  await until(() => wroteAll(fixtures, "write-build", "work", ws.checkout(ticket)), 60)
-  write(ws.checkout(ticket, MARKER), "placed by the driver\n")
+  const running = ws.start(["run", ws.root])
+  // The kill waits until the session has written every file it writes.
+  await until(() => wroteAll(fixtures, "write-build", "work", ws.path()) && existsSync(join(state, "pid")), 60)
+  write(ws.path(MARKER), "placed by the driver\n")
   running.kill()
   await running.ended
+  process.kill(Number(readFileSync(join(state, "pid"), "utf8")), "SIGKILL")
   killedAt = ws.log().length
   rmSync(join(fixtures, "write-build", "work", "gate"))
   said.push(await ws.run(fixtures), await ws.answer("yes"), await ws.run(fixtures))

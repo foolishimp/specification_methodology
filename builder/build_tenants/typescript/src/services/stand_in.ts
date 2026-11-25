@@ -4,7 +4,7 @@
  * acceptance 1). No flow changes when it is used. Its fixed files are given to
  * it as a folder, which holds, for a vector and a kind of session:
  *
- * - `<vector>/<kind>/files/...`: files written into the checkout at the same
+ * - `<vector>/<kind>/files/...`: files written into the workspace's folder at the same
  *   paths;
  * - `<vector>/<kind>/append`: text added to the end of the file the brief names
  *   to produce (for the first vector, the ticket);
@@ -17,6 +17,10 @@
  * stands in for whichever agent the settings name, and is named in the event
  * log as the stand-in for that agent.
  *
+ * The stand-in works in the framework's own process, so its session has no
+ * process to end; a session that is a process of its own is started by the
+ * command the settings name (S2, S14; D41, D220).
+ *
  * @uses C12 C16 H2
  * @is REQ-FLOW-001 REQ-VERIFY-002
  */
@@ -25,6 +29,7 @@ import * as FileSystem from "effect/FileSystem"
 import * as Layer from "effect/Layer"
 import { now } from "../kit/clock.js"
 import { byName } from "../kit/order_by_name.js"
+import { bindSignals, goNoFurther, inherited, settled } from "../kit/supervised_child.js"
 import { Sessions, type End } from "./sessions.js"
 
 /** The longest a gate holds a session. */
@@ -37,9 +42,13 @@ export const standInSessions = (fixtures: string): Layer.Layer<Sessions, never, 
     Sessions,
     Effect.gen(function*() {
       const fs = yield* FileSystem.FileSystem
+      bindSignals()
       return Sessions.of({
         // It stands in for the agent the settings name, and the log says both.
         agentOf: (named) => `stand-in for ${named}`,
+        goNoFurther,
+        settled: () => Effect.sync(settled),
+        within: () => Effect.sync(inherited),
         start: (call) =>
           Effect.gen(function*() {
             const began = now().millis
@@ -52,13 +61,13 @@ export const standInSessions = (fixtures: string): Layer.Layer<Sessions, never, 
             if (yield* fs.exists(files)) {
               for (const path of byName(yield* fs.readDirectory(files, { recursive: true }))) {
                 if ((yield* fs.stat(`${files}/${path}`)).type !== "File") continue
-                const to = `${call.checkout}/${path}`
+                const to = `${call.folder}/${path}`
                 yield* fs.makeDirectory(folderOf(to), { recursive: true })
                 yield* fs.writeFile(to, yield* fs.readFile(`${files}/${path}`))
               }
             }
             if ((yield* fs.exists(`${here}/append`)) && call.brief.kind === "work") {
-              yield* fs.writeFileString(`${call.checkout}/${call.brief.produce[0]?.place ?? ""}`, yield* fs.readFileString(`${here}/append`), { flag: "a" })
+              yield* fs.writeFileString(`${call.folder}/${call.brief.produce[0]?.place ?? ""}`, yield* fs.readFileString(`${here}/append`), { flag: "a" })
             }
             if (yield* fs.exists(`${here}/seconds`)) yield* Effect.sleep(Number((yield* fs.readFileString(`${here}/seconds`)).trim()) * 1000)
             // A gate: the session returns only once the file the gate names is there, so a driver can act while it is at work.
